@@ -1,0 +1,90 @@
+---
+title: Underhåll av Commerce Project
+description: Ställa in standarder med hög kvalitet och inrätta mekanismer för att bibehålla dessa standarder över tid.
+source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+workflow-type: tm+mt
+source-wordcount: '709'
+ht-degree: 0%
+
+---
+
+
+# Uppgraderingar, säkerhetskopiering och underhåll
+
+Att upprätthålla en stark kodbas, funktioner och funktionalitet samt upprätthålla en stark säkerhetsposition är avgörande för att kunna erbjuda en konkurrenskraftig e-handelsbutik.
+
+Det finns flera sätt att effektivt uppgradera en e-handelsplats beroende på vilken infrastruktur som är tillgänglig, men den här processen varierar från företag till företag. Beroende på verksamhetens tekniska mognad kan detta vara en mycket utmanande och kostsam åtgärd.
+
+>[!NOTE]
+>
+>Säkerhetskopiera alltid filer innan du kör en uppgradering.
+
+## Varför det är vettigt att uppgradera
+
+Eftersom förändringen och anpassningen till nya kundbeteenden är normen är på en äldre plattform blir det dyrare och mer tidskrävande att ta hand om eller imitera ny teknik och nya beteenden, och det är kanske helt enkelt inte möjligt. Dessutom kan schemaläggningen och kostnaden för att anpassa projekt vara oöverkomliga när allt fler utvecklare flyttar fokus till ny teknik.
+
+Genom att uppgradera är ni framtidssäkra på er verksamhet och ger er möjlighet att bättre betjäna föränderliga kundbehov.
+
+## Planera uppgraderingen
+
+Här följer en kort lista med frågor du bör ställa när du planerar en uppgradering:
+
+- **Rensning** av webbplatser - Vad kan jag behålla och vad kan ändras? Vilka nya saker vill jag implementera? Vilka ändringar vill jag göra i taxonomi och produktstruktur, eller innehållsändringar?
+
+- **Analyskontroll** - Vad är mina nuvarande KPI:er? Vad säger mina uppgifter om hur min webbplats skulle kunna förbättras? Finns det nya nyckeltal som jag vill implementera för min nya webbplats?
+
+- **Tillägg** - Behöver jag dem ändå? Vilka tillägg från tredje part täcker mina behov?
+
+- **Integrationer** - Vilka tredjepartssystem, som ERP och redovisning, behöver jag integrera med? Har de specifika kopplingar eller behövs anpassade integreringar?
+
+- **Utbildning** - Har uppgraderingsteamet rätt kunskaper och utbildning? Vad är
+min plan att utbilda slutanvändare om hur de ska använda den nya administratören innan den blir aktiv?
+
+- **Upgrade team** - Vem riktar sig till uppgraderingsprojektet (både interna och externa experter)? Har de nödvändigt stöd från ledningen och andra interna team?
+
+## Vanliga uppgraderingsfrågor
+
+F: Hur lång tid tar en vanlig uppgradering?
+
+S: Det beror på plattform och arkitektur. Det finns många variabler, och om du gör om designen tar det längre tid. När identifieringsprocessen är klar kan implementeringsteamet ge dig en mer exakt tidsram för ditt projekt.
+
+
+F: Vad kostar det att uppgradera?
+
+S: Återigen beror det på din nuvarande situation och dina krav på din nya webbplats. Den goda nyheten är att när partner och utvecklare har blivit mer bekanta med er Commerce-plattform så har uppgraderingskostnaderna och projektens längd sjunkit. Vi rekommenderar att du kontaktar din Solution Partner för att få en uppskattning.
+
+F: Finns det Adobe Commerce 2-versioner av tillägg 1 för Adobe Commerce 1?
+
+S: Praktiskt taget alla verksamhetskritiska behov täcks. Vi har sett en dramatisk ökning av antalet tillägg, och av mångfalden, i Commerce Marketplace när Adobe Commerce har blivit mer välbekant med och blivit allt vanligare, från innehåll och anpassningar samt leverans och leverans till webbplatsoptimering.
+
+Exempel på ledande globala teknikföretag som har skapat tillägg är:
+
+- PayPal
+- dotmailer
+- TaxJar
+- Nosto
+- Adobe
+- Snabbt
+- Hörn
+- Amastisk
+- Celebros
+- Logicbroker
+
+Kvalitetssäkringskontroller som implementeras för alla tillägg ger också en konsekvent hög produktkvalitet, så det är mycket troligt att ditt tillägg eller ett högkvalitativt alternativ till ditt tillägg redan finns i Commerce Marketplace.
+
+Många handlare har upptäckt att de inbyggda funktionerna i Adobe Commerce har minskat deras behov och beroendet av utbyggnadsmoduler, förenklat utvecklings- och underhållsarbetet och förbättrat det övergripande resultatet. Om du inte redan har det rekommenderar vi att du gör en noggrann uppgraderingsplanering för att upptäcka dessa typer av möjligheter.
+
+F: Vad händer om mina tillägg och integreringar inte är kompatibla med plattformen?
+
+S: Beroende på plattformens flexibilitet och värdlösningar kan olika anpassningsalternativ vara ett alternativ för de flesta program och system. Dessa anpassningar kan utvecklas under uppgraderingsprocessen.
+
+
+F: Hur kommer SEO att påverkas?
+
+S: Med korrekt planering bör SEO förbättras. Vår partner Corra rekommenderar:
+
+- Skapa en koncis omdirigeringsplan för 301
+- Bygga en strategi runt URL-taxonomi
+- Göra en XML-platskartkontroll
+- Arbeta med tagghantering (Google)
+- Diskutera i detalj med implementeringsteamet
