@@ -1,21 +1,21 @@
 ---
-user-guide-title: Commerce Operational Playbook
+user-guide-title: Operativ spelningsbok
 user-guide-description: Lär dig hur ni gör ert företag redo för att driva en framgångsrik e-handelsplats.
-source-git-commit: 6eeb6547d06d416c50fcf97cb07cbc94729ebcd0
+source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '132'
 ht-degree: 0%
 
 ---
 
 
-# Commerce Operational Playbook {#operational-playbook}
+# Operativ spelningsbok {#operational-playbook}
 
 - [Översikt](overview.md)
 - Handel {#intro}
    - [Adobe Commerce](intro/commerce.md)
    - [Vad är e-handel?](intro/ecommerce.md)
-   - [Affärsmodell](intro/business-model.md)
+   - [Business model](intro/business-model.md)
    - [Handelsåtgärder](intro/operations.md)
    - [Funktioner för handel](intro/features.md)
 - Ledarskap {#leadership}
@@ -39,7 +39,7 @@ ht-degree: 0%
    - [Orderhantering](process/order-management.md)
    - [Projektplan](process/project-plan.md)
    - [Projektomfång](process/project-scope.md)
-   - [Projektledning](process/project-management.md)
+   - [Project management](process/project-management.md)
    - [DACI-modell](process/project-management-framework.md)
    - [Agile Scrum-metod](process/agile-scrum.md)
    - [Gemensamma projektseminarier](process/project-workshops.md)
@@ -69,6 +69,6 @@ ht-degree: 0%
    - [SEO](product/search-engine-optimization.md)
    - [E-postmarknadsföring](product/marketing.md)
    - [Personalisering](product/personalization.md)
-   - [Klicka och samla](product/click-collect.md)
+   - [Click and collect](product/click-collect.md)
    - [PWA](product/progressive-web-app.md)
-- [Checklistor och mallar](checklists-templates/home.md)
+- [Checklists and templates](checklists-templates/home.md)
