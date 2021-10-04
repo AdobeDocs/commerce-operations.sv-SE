@@ -1,15 +1,15 @@
 ---
-title: Optimera Adobe Commerce-prestanda
+title: Adobe Commerce Performance Optimization
 description: Förbered ditt Adobe Commerce-projekt för att använda Adobe Experience Manager som CMS genom att ändra vissa standardinställningar.
-source-git-commit: 6ad72d5110ae3e3a7cf341282f2af9b700874f09
+exl-id: 55d77af7-508c-4ef7-888b-00911cc6e920
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
-
-# Optimera Adobe Commerce-prestanda
+# Prestandaoptimering för Adobe Commerce
 
 ## Geografisk plats för infrastruktur för AEM och Adobe Commerce
 
