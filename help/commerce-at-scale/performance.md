@@ -1,15 +1,15 @@
 ---
-title: Prestandaoptimering
+title: Optimering av AEM
 description: Optimera din standardkonfiguration av Adobe Experience Manager för att stödja stora laster på Adobe Commerce.
-source-git-commit: 1cff7359ddb4caeca6773ff74b92048c89676f12
+exl-id: 923a709f-9048-4e67-a5b0-ece831d2eb91
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '2248'
 ht-degree: 0%
 
 ---
 
-
-# AEM prestandaoptimeringar under inläsning från standardkonfigurationer
+# Optimering av AEM
 
 AEM är en omvänd proxy som hjälper till att leverera en miljö som är både snabb och dynamisk. Den fungerar som en del av en statisk HTML-server, till exempel Apache HTTP Server, i syfte att lagra (eller &quot;cachelagra&quot;) så mycket som möjligt av webbplatsinnehållet i form av statiska resurser. Den här metoden syftar till att minimera behovet av att få tillgång till AEM sidåtergivningsfunktioner och Adobe Commerce GraphQL-tjänsten så mycket som möjligt. Resultatet av att hantera en stor del av sidorna som statisk HTML, CSS och JS ger användarna prestandafördelar och minskar behovet av infrastruktur i miljön. Alla sidor eller frågor som troligen upprepas från användare till användare ska cachelagras.
 
@@ -54,7 +54,7 @@ Varje mappnivå skulle ha&quot;statusnivå&quot; - vilket visas i tabellen ovan.
 
 | innehåll (docroot) | e-handel | oss | en | produkter | product-page.tml |
 |-------------------|-----------|----|----|----------|------------------|
-| 0 | 3 | 2 | 1 | 4 | - |
+| 0 | 1 | 2 | 3 | 4 | - |
 
 I det här fallet, om du har lämnat statfillevel-egenskapen inställd på standardvärdet &quot;0&quot; och product-page.html-mallen uppdateras och aktiveras så att en ogiltigförklaring aktiveras, kommer alla .stat-filer från docroot till level 4 att påverkas och filerna ogiltigförklaras, vilket ger en ytterligare begäran från AEM publiceringsinstanser för alla sidor på webbplatsen (inklusive andra webbplatser, länder och språk) från den enskilda ändringen.
 

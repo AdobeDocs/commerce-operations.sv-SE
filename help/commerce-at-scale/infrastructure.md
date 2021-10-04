@@ -1,13 +1,13 @@
 ---
 title: Adobe Commerce och Adobe Experience Manager Infrastructure Alignment
 description: Anpassa er Adobe Commerce och Adobe Experience Manager infrastruktur för att ange godtagbara tidsgränser och anslutningsgränser.
-source-git-commit: 1cff7359ddb4caeca6773ff74b92048c89676f12
+exl-id: f9cb818f-1461-4b23-b931-e7cee70912fd
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
-
 
 # Infrastrukturanpassning (tidsgränser och anslutningsgränser)
 
@@ -25,11 +25,11 @@ Om det finns en belastningsutjämnare för AWS-program i infrastrukturen och fle
 
 1. Hälsokontroller av utgivare bör granskas för att förhindra att utskickare lämnar tjänsten i onödan tidigt på grund av belastningsökningar. Timeoutinställningarna för hälsokontrollen för belastningsutjämnaren ska justeras mot utgivarens timeoutinställningar.
 
-   ![Skärmbild som visar hälsokontroller AEM belastningsutjämnaren](../assets/commerce-at-scale/health-checks.svg)
+   ![Skärmbild som visar hälsokontroller AEM belastningsutjämnaren](../assets/commerce-at-scale/health-checks.png)
 
 1. Identifiering av målgrupp för dispatcher kan inaktiveras och algoritmen för Round Robin-belastningsutjämning kan användas. Detta förutsätter att det inte finns någon AEM specifik funktionalitet eller AEM användarsessioner som skulle kräva att sessionens varaktighet ställs in. Det förutsätter att användarinloggning och sessionshantering endast sker i Adobe Commerce via GraphQL.
 
-   ![Skärmbild som visar AEM av webbplatsens klistermärken](../assets/commerce-at-scale/session-stickiness.svg)
+   ![Skärmbild som visar AEM av webbplatsens klistermärken](../assets/commerce-at-scale/session-stickiness.png)
 
 1. Observera att om du aktiverar klisterlappning för sessioner kan detta göra att begäranden snabbt inte cachas, eftersom Fastly som standard inte cachelagrar sidor med huvudet Set-Cookies. Adobe Commerce ställer in cookies även på cacheable-sidor (TTL > 0), men med standardinställningen Fast VCL raderas dessa cookies på cacheable-sidor för att Snabb cachelagring ska fungera. Om sidorna inte cachelagras kontrollerar du eventuella egna cookies som du använder och överför även Snabbt VCL och kontrollerar webbplatsen igen.
 
@@ -49,8 +49,8 @@ Tidsgränsen för http-anslutningen och http-sockettidsgränsen bör anges till 
 
 Följande bild visar konfigurationsfabriken för klienten Magento CIF GraphQL. Inställningarna som visas här är bara exempel och behöver justeras från fall till fall:
 
-![Skärmbild av konfigurationsinställningar för Commerce-integreringsramverk](../assets/commerce-at-scale/cif-config.svg)
+![Skärmbild av konfigurationsinställningar för Commerce-integreringsramverk](../assets/commerce-at-scale/cif-config.png)
 
 Följande bilder visar snabbgående backend-konfigurationer. Inställningarna som visas här är bara exempel och behöver justeras från fall till fall:
 
-![Skärmbild av konfigurationsinställningar för Commerce Admin för snabbt](../assets/commerce-at-scale/cif-config-advanced.svg)
+![Skärmbild av konfigurationsinställningar för Commerce Admin för snabbt](../assets/commerce-at-scale/cif-config-advanced.png)

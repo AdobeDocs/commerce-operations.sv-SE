@@ -1,23 +1,19 @@
 ---
-title: Ändra standardinställningar
+title: Adobe Commerce Performance Optimization
 description: Förbered ditt Adobe Commerce-projekt för att använda Adobe Experience Manager som CMS genom att ändra vissa standardinställningar.
-source-git-commit: 1cff7359ddb4caeca6773ff74b92048c89676f12
+exl-id: 55d77af7-508c-4ef7-888b-00911cc6e920
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1143'
 ht-degree: 0%
 
 ---
 
-
-# Ändra standardinställningarna för Adobe Commerce
+# Prestandaoptimering för Adobe Commerce
 
 ## Geografisk plats för infrastruktur för AEM och Adobe Commerce
 
 För att minska fördröjningen mellan den AEM utgivaren och Adobe Commerce GraphQL när du skapar sidor, bör den första etableringen av de två separata infrastrukturerna vara värd inom samma AWS-region (eller Azure-region). Den geografiska plats som väljs för båda molnen bör också vara närmast huvuddelen av kundbasen, så att GraphQL-begäranden på klientsidan hanteras från en geografiskt nära plats till majoriteten av era kunder.
-
-## AWS/Azure PrivateLink - länka AEM och Adobe Commerce på molnbaserade virtuella datorer
-
-För att förbättra svarstiderna och ytterligare minska latensen för webbplatser med extrema inläsningsförväntningar kan en AWS (eller Azure) Privatelink-anslutning övervägas mellan AEM VPC och Adobe Commerce på molnets VPC. Detta skulle få till följd att all nätverkstrafik mellan de AEM förlagen och Adobe Commerce ligger kvar på det globala nätet AWS och inte behöver gå över det offentliga internet.
 
 ## GraphQL-cachelagring i Adobe Commerce
 

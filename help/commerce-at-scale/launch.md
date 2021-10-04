@@ -1,15 +1,15 @@
 ---
-title: Förbered för start
+title: Tips för prestandatestning
 description: Lär dig hur du ställer in nyckeltal för att starta Adobe Commerce och Adobe Experience Manager.
-source-git-commit: 1cff7359ddb4caeca6773ff74b92048c89676f12
+exl-id: 4b0d9c4f-e611-452d-a80f-27f82705935d
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1147'
 ht-degree: 0%
 
 ---
 
-
-# Förbered start
+# Tips för prestandatestning
 
 För att utvärdera effekten av alla ändringar ovan bör grundliga prestandatestningar köras före driftsättning och före framtida större driftsättningar i produktionsmiljöerna. När du planerar din lasttestning är det viktigt att simulera konsumenttrafik i realtid så mycket som möjligt.
 

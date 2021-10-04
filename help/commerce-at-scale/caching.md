@@ -1,17 +1,17 @@
 ---
 title: Effektiv cacheplanering
 description: Se rekommenderade riktmärken för cachelagring för att säkerställa att webbplatsen som läses in fungerar som den ska.
-source-git-commit: 41c0ba17b3d731a82ad6ecd8b16fac151a597e75
+exl-id: 275eb21d-fa52-4b97-9453-8f8553128b53
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '354'
 ht-degree: 0%
 
 ---
 
-
 # Planerar effektiv cachelagring för lyckad e-handel under inläsning
 
-Att leverera en shoppingupplevelse under belastning kräver en välplanerad cachningsstrategi. Inledningsvis kan det vara så att företagsintressenter alltid visar produktdata i realtid för kunder, men det är inte en optimal användning av systemresurser, och effekterna av slutanvändarnas webbplatsprestanda skulle bli betydligt större än fördelarna med att konsekvent visa realtidsinformation.
+För att kunna leverera en shoppingupplevelse under belastning krävs en välplanerad cachelagringsstrategi. Inledningsvis kan det vara så att företagsintressenter alltid visar produktdata i realtid för kunder, men det är inte en optimal användning av systemresurser, och effekterna av slutanvändarnas webbplatsprestanda skulle bli betydligt större än fördelarna med att konsekvent visa realtidsinformation.
 
 Det inledande steget i cachningsstrategin bör därför vara att tillsammans med berörda intressenter definiera en matris med godtagbara tidsangivelser för cachning för olika delar av webbplatsen, till exempel:
 

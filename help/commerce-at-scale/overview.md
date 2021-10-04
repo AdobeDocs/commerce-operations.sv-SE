@@ -1,13 +1,13 @@
 ---
 title: Leverera upplevelser i stor skala
 description: Lär dig leverera upplevelser i stor skala med Adobe Commerce och Adobe Experience Manager.
-source-git-commit: 1cff7359ddb4caeca6773ff74b92048c89676f12
+exl-id: e3166c46-fc9d-4ff4-a3a9-2cd740a95e9b
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '581'
 ht-degree: 0%
 
 ---
-
 
 # Leverera upplevelser i stor skala med Adobe Commerce, Commerce Integration Framework och Adobe Experience Manager
 
@@ -30,6 +30,6 @@ E-handelssidor som produktinformationssidor (PDP) och produktlistsidor (PLP) än
 
 ## Återgivning på klientsidan
 
-Om mer dynamiska attribut som aktienivåer/tillgänglighet eller pris visas, till exempel på produktinformationssidor (PDP), kan komponenter på klientsidan användas. Mallsidan kan byggas och cachas på dispatchern med serversidans renderingsmetod ovan, men inom den statiska sidan kan det finnas dynamiska webbkomponenter på klientsidan. Dessa dynamiska komponenter kan hämta data direkt i klientens webbläsare från Adobe Commerce via GraphQL-API:er för att till exempel kontrollera aktuell pris- eller stocknivå i realtid på PDP. Detta säkerställer att innehåll som vanligtvis är viktigt att kunna visas i realtid alltid hämtas vid sidinläsning. Exempel på detta visas i de gula rutorna i exemplet ovan.
+Om mer dynamiska attribut som aktienivåer/tillgänglighet eller pris visas, till exempel på produktinformationssidor (PDP), kan komponenter på klientsidan användas. Mallsidan kan byggas och cachas på dispatchern med serversidans renderingsmetod ovan, men inom den statiska sidan kan det finnas dynamiska webbkomponenter på klientsidan. Dessa dynamiska komponenter kan hämta data direkt i klientens webbläsare från Adobe Commerce via GraphQL-API:er för att till exempel kontrollera aktuell pris- eller stocknivå i realtid på PDP. Detta säkerställer att innehåll som vanligtvis är viktigt att kunna visas i realtid alltid hämtas vid sidinläsning. Exempel på detta visas i de röda rutorna i exemplet ovan.
 
 En kombination av AEM och klientåtergivning kan också användas under utcheckningsprocessen: kundens kundvagnskomponenter återger kundvagnen, kassaformuläret och integreringen med betaltjänstleverantören. Den här hybridmetoden kan också användas för kontohanteringsfunktioner i Adobe Commerce, till exempel skapa konto, logga in och glömt lösenord.
