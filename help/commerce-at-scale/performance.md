@@ -1,15 +1,15 @@
 ---
 title: Optimering av AEM
 description: Optimera din standardkonfiguration av Adobe Experience Manager för att stödja stora laster på Adobe Commerce.
-exl-id: 923a709f-9048-4e67-a5b0-ece831d2eb91
-source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
+source-git-commit: 6ad72d5110ae3e3a7cf341282f2af9b700874f09
 workflow-type: tm+mt
-source-wordcount: '2248'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
-# Optimering av AEM
+
+# AEM prestandaoptimeringar under inläsning från standardkonfigurationer
 
 AEM är en omvänd proxy som hjälper till att leverera en miljö som är både snabb och dynamisk. Den fungerar som en del av en statisk HTML-server, till exempel Apache HTTP Server, i syfte att lagra (eller &quot;cachelagra&quot;) så mycket som möjligt av webbplatsinnehållet i form av statiska resurser. Den här metoden syftar till att minimera behovet av att få tillgång till AEM sidåtergivningsfunktioner och Adobe Commerce GraphQL-tjänsten så mycket som möjligt. Resultatet av att hantera en stor del av sidorna som statisk HTML, CSS och JS ger användarna prestandafördelar och minskar behovet av infrastruktur i miljön. Alla sidor eller frågor som troligen upprepas från användare till användare ska cachelagras.
 

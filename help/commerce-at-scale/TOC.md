@@ -1,9 +1,10 @@
 ---
 user-guide-title: Leverera affärsupplevelser i stor skala
 user-guide-description: Lär dig leverera upplevelser i stor skala med Adobe Commerce med Adobe Experience Manager.
-source-git-commit: 63f153365398c3ae7dc7e6214b67705c8a4c7686
+hide: true
+source-git-commit: 6ad72d5110ae3e3a7cf341282f2af9b700874f09
 workflow-type: tm+mt
-source-wordcount: '41'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -13,8 +14,8 @@ ht-degree: 0%
 
 - [Översikt](overview.md)
 - [Planera effektiv cachning](caching.md)
-- [Optimering av AEM](performance.md)
+- [Optimera Adobe Experience Manager prestanda](performance.md)
 - [Justera infrastruktur](infrastructure.md)
-- [Prestandaoptimering för Adobe Commerce](default-settings.md)
+- [Optimera Adobe Commerce-prestanda](default-settings.md)
 - [Tips för prestandatestning](launch.md)
 - [Slutsats](conclusion.md)
