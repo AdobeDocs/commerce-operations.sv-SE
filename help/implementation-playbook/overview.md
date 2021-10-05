@@ -2,9 +2,9 @@
 title: Implementera spelningsbok
 description: Målet för spelboken för handelsimplementering
 exl-id: 2f82c68c-60c7-4a62-837b-492afc06e0db
-source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
+source-git-commit: 7bad54402e4698545f3436d4195170adb7b48c15
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Dessutom gäller dessa processer och överväganden alla typer av Adobe Commerce
 - Lansering på en eller flera marknader
 - Omfattande integreringar med eller utan mellanvara
 
-Vi hoppas att den här spelboken ger insikter och vägledning till en mängd olika intressenter som vanligtvis skulle vara engagerade i ett e-handelsprojekt, som:
+Vi hoppas att den här spelboken ger insikter och vägledning till en mängd olika intressenter som vanligtvis skulle vara engagerade i ett e-handelsprojekt, inklusive:
 
 - VD:er och den allmänna ledningen, som bör ha en gedigen uppfattning om vad en e-handel innebär
 - Marknadschefer och digitala chefer som kommer att arbeta med affärsanvändare på själva plattformen
