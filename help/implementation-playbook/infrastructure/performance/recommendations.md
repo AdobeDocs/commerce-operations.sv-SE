@@ -1,17 +1,17 @@
 ---
 title: Prestandaoptimering - Recommendations
-description: Optimera resultatet av implementeringen av Adobe Commerce genom att följa dessa rekommendationer.
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+description: Optimera Adobe Commerce-implementeringens prestanda genom att följa dessa rekommendationer.
+exl-id: c5d62e23-be43-4eea-afdb-bb1b156848f9
+source-git-commit: a7ccb83cbcfc2f12882fa8d8a879118db2b20ede
 workflow-type: tm+mt
-source-wordcount: '1287'
+source-wordcount: '1289'
 ht-degree: 0%
 
 ---
 
-
 # Granskning av prestandaoptimering
 
-Även om prestandaoptimering kan komma från många olika aspekter, finns det vissa allmänna rekommendationer som bör beaktas för de flesta scenarier. Detta inkluderar konfigurationsoptimering för infrastrukturelement, backend-konfiguration för Adobe Commerce och skalbarhetsplanering för arkitektur.
+Även om prestandaoptimering kan komma från många olika aspekter, finns det vissa allmänna rekommendationer som bör beaktas för de flesta scenarier. Detta inkluderar konfigurationsoptimering för infrastrukturelement, Adobe Commerce serverdelskonfiguration och arkitekturskalbarhetsplanering.
 
 ## Infrastruktur
 
@@ -37,11 +37,11 @@ Eftersom Adobe Commerce effektivt utnyttjar cachelagring för höga prestanda ka
 
 ### Operativsystem (OS)
 
-Operativsystemskonfigurationer och optimeringar liknar dem för Adobe Commerce jämfört med andra högbelastade webbapplikationer. När antalet samtidiga anslutningar som hanteras av servern ökar kan antalet tillgängliga socketar allokeras helt.
+Operativsystemskonfigurationer och optimeringar liknar för Adobe Commerce jämfört med andra högbelastade webbprogram. När antalet samtidiga anslutningar som hanteras av servern ökar kan antalet tillgängliga socketar allokeras helt.
 
 ### CPU för webnoder
 
-En CPU-kärna kan hantera cirka 2-4 Adobe Commerce-begäranden utan cache effektivt. Använd följande ekvation för att avgöra hur många webbnoder/kärnor som behövs för att bearbeta alla inkommande begäranden utan att placera dem i kö:
+En processorkärna kan hantera cirka 2-4 Adobe Commerce-begäranden utan cache effektivt. Använd följande ekvation för att avgöra hur många webbnoder/kärnor som behövs för att bearbeta alla inkommande begäranden utan att placera dem i kö:
 
 ```
 N[Cores] = (N [Expected Requests] / 2) + N [Expected Cron Processes])
@@ -51,15 +51,15 @@ N[Cores] = (N [Expected Requests] / 2) + N [Expected Cron Processes])
 
 Optimering av de här inställningarna beror på prestandatestresultaten för olika projekt.
 
-- **ByteCode** - För att få ut så mycket tid som möjligt från Adobe Commerce med PHP 7 måste du aktivera  `opcache` modulen och konfigurera den på rätt sätt.
+- **ByteCode**- För att få ut så mycket som möjligt av Adobe Commerce på PHP 7 måste du aktivera `opcache` och konfigurera den.
 
-- **APCU** - Vi rekommenderar att du aktiverar PHP APCu-tillägget och konfigurerar Composer för optimering för maximala prestanda. Det här tillägget cachelagrar filplatser för öppnade filer, vilket ökar prestanda för serveranrop från Adobe Commerce, inklusive sidor, Ajax-anrop och slutpunkter.
+- **APCU**- Vi rekommenderar att du aktiverar PHP APCu-tillägget och konfigurerar Composer för att optimera för maximala prestanda. Det här tillägget cachelagrar filplatser för öppnade filer, vilket ökar prestanda för Adobe Commerce-serveranrop, inklusive sidor, Ajax-anrop och slutpunkter.
 
-- **Realpath_cacheConfiguration** - Optimering  `realpath_cache` gör att PHP-processer kan cachelagra sökvägar till filer i stället för att leta upp dem varje gång en sida läses in.
+- **Realpath_cacheConfiguration**—Optimering `realpath_cache` gör att PHP-processer kan cachelagra sökvägar till filer i stället för att leta upp dem varje gång en sida läses in.
 
 ### Webbserver
 
-Endast en liten omkonfiguration behövs för att använda nginx som webbserver. nginx-webbservern ger bättre prestanda och är enkel att konfigurera med exempelkonfigurationsfilen från Adobe Commerce ([`nginx.conf.sample`](https://github.com/magento/magento2/blob/2.4/nginx.conf.sample)).
+Endast en liten omkonfiguration behövs för att använda nginx som webbserver. Nginx-webbservern ger bättre prestanda och är enkel att konfigurera med exempelkonfigurationsfilen från Adobe Commerce ([`nginx.conf.sample`](https://github.com/magento/magento2/blob/2.4/nginx.conf.sample)).
 
 - Konfigurera PHP-FPM med TCP korrekt
 
@@ -71,9 +71,9 @@ Endast en liten omkonfiguration behövs för att använda nginx som webbserver. 
 
 Det här dokumentet innehåller inga detaljerade MySQL-justeringsanvisningar eftersom varje butik och miljö är olika, men vi kan göra några allmänna rekommendationer.
 
-Adobe Commerce-databasen (och alla andra databaser) är känslig för mängden tillgängligt minne för lagring av data och index. För att utnyttja MySQL-dataindexeringen effektivt bör mängden tillgängligt minne vara minst hälften så stor som storleken på de data som lagras i databasen.
+Adobe Commerce-databasen (och alla andra databaser) är beroende av hur mycket minne som finns tillgängligt för lagring av data och index. För att utnyttja MySQL-dataindexeringen effektivt bör mängden tillgängligt minne vara minst hälften så stor som storleken på de data som lagras i databasen.
 
-Optimera `innodb_buffer_pool_instances`-inställningen för att undvika problem med flera trådar som försöker få åtkomst till samma instans. Värdet för parametern `max_connections` ska korrelera med det totala antalet PHP-trådar som konfigurerats i programservern. Använd följande formel för att beräkna det bästa värdet för `innodb-thread-concurrency`:
+Optimera `innodb_buffer_pool_instances` för att undvika problem med flera trådar som försöker få åtkomst till samma instans. Värdet för `max_connections` parametern ska korrelera med det totala antalet PHP-trådar som konfigurerats i programservern. Använd följande formel för att beräkna det bästa värdet för `innodb-thread-concurrency`:
 
 ```
 innodb-thread-concurrency = 2 * (NumCPUs+NumDisks)
@@ -87,7 +87,7 @@ Redis bör ha tillräckligt med minne för att rymma alla andra cacheminnen för
 
 ### Cachelagring av sidor
 
-Vi rekommenderar att du använder lack för helsidescache i din Adobe Commerce Store. Modulen `PageCache` finns fortfarande i kodbasen, men den bör bara användas i utvecklingssyfte.
+Vi rekommenderar att du använder Varnish för helsidescache i din Adobe Commerce Store. The `PageCache` modulen finns fortfarande i kodbasen, men den bör endast användas i utvecklingssyfte.
 
 Installera lack på en separat server framför webbskiktet. Den ska acceptera alla inkommande begäranden och tillhandahålla cachelagrade sidkopior. För att Varnish ska kunna arbeta effektivt med skyddade sidor kan en SSL-termineringsproxy placeras framför Varnish. Nginx kan användas för detta ändamål.
 
@@ -103,11 +103,11 @@ Prestandatestning före varje produktionsrelease rekommenderas alltid för att f
 
 >[!NOTE]
 >
-> Adobe Commerce on cloud Infrastructure tillämpar redan alla de ovanstående optimeringarna av infrastruktur och arkitektur, förutom DNS-sökningen eftersom den ligger utanför räckvidden.
+> Adobe Commerce i molninfrastruktur tillämpar redan alla ovanstående optimeringar av infrastruktur och arkitektur, förutom DNS-sökningen eftersom den ligger utanför räckvidden.
 
 ### Sök
 
-Elasticsearch krävs från och med Adobe Commerce version 2.4, men det är också en god vana att aktivera det för versioner före 2.4.
+Elasticsearch krävs från och med Adobe Commerce version 2.4, men det är också en bra metod att aktivera det för tidigare versioner än 2.4.
 
 ## Operativmodeller
 
@@ -115,11 +115,11 @@ Förutom de tidigare nämnda rekommendationerna om optimering av den gemensamma 
 
 ### Headless-arkitektur
 
-Vi har ett separat avsnitt som beskriver vad [headless](../../architecture/headless/adobe-commerce.md) är och olika alternativ. Sammanfattningsvis separerar den butikslagret från själva plattformen. Det är fortfarande samma serverdel, men Adobe Commerce hanterar inte längre begäranden direkt och stöder i stället bara anpassade butiker via GraphQL API.
+Vi har ett separat avsnitt som handlar om vad [headless](../../architecture/headless/adobe-commerce.md) är och andra alternativ. Sammanfattningsvis separerar den butikslagret från själva plattformen. Det är fortfarande samma serverdel, men Adobe Commerce bearbetar inte längre begäranden direkt, utan stöder bara anpassade butiker via GraphQL API.
 
-### Behåll Adobe Commerce uppdaterad
+### Håll Adobe Commerce uppdaterat
 
-Adobe Commerce har alltid bättre prestanda när den senaste versionen körs. Även om det inte är möjligt att hålla Adobe Commerce uppdaterad efter att varje ny version släppts rekommenderas det fortfarande att uppgradera när Adobe Commerce inför betydande prestandaoptimeringar.
+Adobe Commerce har alltid bättre prestanda när den senaste versionen körs. Även om det inte är möjligt att hålla Adobe Commerce uppdaterat efter att varje ny version släppts, rekommenderar vi ändå att [uppgradera](../../../assets/upgrade-guide/adobe-commerce-2-4-upgrade-guide.pdf) när Adobe Commerce introducerar betydande prestandaoptimeringar.
 
 År 2020 lanserade Adobe t.ex. en optimering av Redis-lagret, som åtgärdade en hel del ineffektivitet, anslutningsproblem och onödig dataöverföring mellan Redis och Adobe Commerce. Den övergripande prestandan mellan 2.3 och 2.4 är natt och dag och vi har sett avsevärda förbättringar vad gäller kundvagn, utcheckning, samtidiga användare, bara på grund av Redis-optimeringen.
 
@@ -131,7 +131,7 @@ Det ser bra ut om du testar några anslutningar, men ser bra ut i produktionen n
 
 För de attribut som inte påverkar affärslogiken men som måste finnas på butiken kan du kombinera dem till ett fåtal attribut (till exempel JSON-format).
 
-För att optimera plattformsprestanda behöver man inte lägga till det attributet i Adobe Commerce om det inte krävs någon affärslogik i butiken från data eller attribut som hämtats från en PIM eller en ERP.
+För att optimera plattformsprestanda behöver du inte lägga till det attributet i Adobe Commerce om det inte krävs någon affärslogik i butiken från data eller attribut som hämtats från en PIM eller en ERP.
 
 ### Design för skalbarhet
 
