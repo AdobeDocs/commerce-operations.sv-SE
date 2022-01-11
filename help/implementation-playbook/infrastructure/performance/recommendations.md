@@ -2,7 +2,7 @@
 title: Prestandaoptimering - Recommendations
 description: Optimera Adobe Commerce-implementeringens prestanda genom att följa dessa rekommendationer.
 exl-id: c5d62e23-be43-4eea-afdb-bb1b156848f9
-source-git-commit: a7ccb83cbcfc2f12882fa8d8a879118db2b20ede
+source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
 workflow-type: tm+mt
 source-wordcount: '1289'
 ht-degree: 0%
@@ -119,7 +119,7 @@ Vi har ett separat avsnitt som handlar om vad [headless](../../architecture/head
 
 ### Håll Adobe Commerce uppdaterat
 
-Adobe Commerce har alltid bättre prestanda när den senaste versionen körs. Även om det inte är möjligt att hålla Adobe Commerce uppdaterat efter att varje ny version släppts, rekommenderar vi ändå att [uppgradera](../../../assets/upgrade-guide/adobe-commerce-2-4-upgrade-guide.pdf) när Adobe Commerce introducerar betydande prestandaoptimeringar.
+Adobe Commerce har alltid bättre prestanda när den senaste versionen körs. Även om det inte är möjligt att hålla Adobe Commerce uppdaterat efter att varje ny version släppts, rekommenderar vi ändå att [uppgradera](../../../upgrade/overview.md) när Adobe Commerce introducerar betydande prestandaoptimeringar.
 
 År 2020 lanserade Adobe t.ex. en optimering av Redis-lagret, som åtgärdade en hel del ineffektivitet, anslutningsproblem och onödig dataöverföring mellan Redis och Adobe Commerce. Den övergripande prestandan mellan 2.3 och 2.4 är natt och dag och vi har sett avsevärda förbättringar vad gäller kundvagn, utcheckning, samtidiga användare, bara på grund av Redis-optimeringen.
 
