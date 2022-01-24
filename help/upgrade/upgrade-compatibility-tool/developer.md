@@ -1,17 +1,17 @@
 ---
-title: Information om uppgraderingskompatibilitetsverktyg för utvecklare
-description: Anpassa verktyget för uppgraderingskompatibilitet med API-indexintegrering.
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+title: '[!DNL Upgrade Compatibility Tool] Utvecklarinformation'
+description: Anpassa [!DNL Upgrade Compatibility Tool] med API-indexintegrering.
+source-git-commit: 3d9a721e33621b78f03f16b932a1ba2904ae4010
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '432'
 ht-degree: 0%
 
 ---
 
 
-# Utvecklarinformation för verktyget Kompatibilitet för uppgradering
+# [!DNL Upgrade Compatibility Tool] utvecklarinformation
 
-Det här avsnittet innehåller information för utvecklare som arbetar nära med Adobe Commerce-koden och vill veta mer om Upgrade Compatibility Tool. Du kan använda den här kunskapen för att anpassa verktygets komponenter.
+Det här avsnittet innehåller information för utvecklare som har ett nära samarbete med Adobe Commerce-koden och vill veta mer om [!DNL Upgrade Compatibility Tool]. Du kan använda den här kunskapen för att anpassa verktygets komponenter.
 
 ## Integrering av Adobe Commerce API-index
 
@@ -29,7 +29,7 @@ Redigera den här filen för att anpassa svaret efter installationen. Ersätt v�
 
 `sut\Domain\MRay\MRayInterface : "@sut_mray_mock"`
 
-I föregående exempel använder verktyget Kompatibilitet för uppgradering `@sut_mray_mock` som `MRayInterface` implementering. Svaren från `api()` och `modules()` -metoder kommer från följande filer:
+I föregående exempel [!DNL Upgrade Compatibility Tool] använder `@sut_mray_mock` som `MRayInterface` implementering. Svaren från `api()` och `modules()` -metoder kommer från följande filer:
 
 - `dev/mray_mock_files/api.json`
 - `dev/mray_mock_files/modules.json`
@@ -117,7 +117,7 @@ Poängen baseras på resultaten från analysen:
 - Antal identifierade problem
 - Allvarlighetsgrad för identifierade problem
 
-Upgrade Compatibility Tool beräknar poängen enligt nedanstående formel.
+The [!DNL Upgrade Compatibility Tool] beräknar poängen enligt nedanstående formel för komplexitetspoäng.
 
 ### Formel för komplexitetspoäng
 

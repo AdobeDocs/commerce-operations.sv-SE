@@ -1,9 +1,9 @@
 ---
 title: Bästa praxis
 description: Använd de bästa metoderna som rekommenderas av Adobe för att hantera uppgraderingsprocessen för Adobe Commerce- och Magento Open Source-projekt.
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+source-git-commit: 3d9a721e33621b78f03f16b932a1ba2904ae4010
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1092'
 ht-degree: 0%
 
 ---
@@ -74,7 +74,7 @@ Utvärdera det arbete som ska utföras för uppgradering:
 
 - Granska [versionsinformation](https://devdocs.magento.com/guides/v2.4/release-notes/bk-release-notes.html) för att förstå den nya versionens omfång och effekt.
 
-- Använd [Kompatibilitetsverktyg för uppgradering](../upgrade-compatibility-tool/overview.md) för att identifiera eventuella problem som måste åtgärdas i din anpassade kod innan du försöker uppgradera till en nyare version.
+- Använd [[!DNL Upgrade Compatibility Tool]](../upgrade-compatibility-tool/overview.md) för att identifiera eventuella problem som måste åtgärdas i din anpassade kod innan du försöker uppgradera till en nyare version.
 
 - Om du använder tillägg från tredje part ska du validera deras kompatibilitet med den målversion du planerar att uppgradera till.
 

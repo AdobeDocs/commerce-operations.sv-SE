@@ -1,9 +1,9 @@
 ---
 title: Implementering av uppgradering
 description: Läs om de olika faserna i uppgraderingsimplementeringen för Adobe Commerce- och Magento Open Source-projekt.
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+source-git-commit: 3d9a721e33621b78f03f16b932a1ba2904ae4010
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '877'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ Här följer några punkter som du kanske vill ta med i en grundlig analys:
 
 - **Omfattning av målrelease**—Dokumentation på [Commerce DevDocs](https://devdocs.magento.com) och information från webbinarier om partnerreleaser innehåller all information du behöver veta om måluppgraderingen.
 
-- **Resultat av verktyget Kompatibilitet för uppgradering**- Med det här verktyget kan du uppgradera snabbare och enklare genom att jämföra den aktuella koden med målversionens kod och ta fram en rapport över alla problem som behöver åtgärdas. Se [Kompatibilitetsverktyg för uppgradering](../upgrade-compatibility-tool/overview.md). Bland huvuduppgifterna i rapporten finns:
+- **[!DNL Upgrade Compatibility Tool]resultat**- Med det här verktyget kan du uppgradera snabbare och enklare genom att jämföra den aktuella koden med målversionens kod och ta fram en rapport över alla problem som behöver åtgärdas. Se [[!DNL Upgrade Compatibility Tool]](../upgrade-compatibility-tool/overview.md). Bland huvuduppgifterna i rapporten finns:
 
    - Aktuell installerad version
    - Uppgradera målversion

@@ -1,9 +1,9 @@
 ---
 title: Översikt över uppgraderingsprocessen
 description: Läs om hur du genom att uppgradera Adobe Commerce och Magento Open Source kan skydda din butik och arbeta effektivt.
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+source-git-commit: 8f983e6791da852350fa061fd3119abcdaa03cbf
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '1054'
 ht-degree: 0%
 
 ---
@@ -59,9 +59,16 @@ Att fördröja eller fördröja uppgraderingen av plattformen beror ofta på den
 
 Det kan verka kontraintuitivt, men att utföra regelbundna plattformsuppdateringar kräver mindre insatser totalt sett än att göra ovanliga uppdateringar på grund av den samlade tekniska skuld som uppstår till följd av försening. Vi arbetade nyligen tillsammans med en partner som har en återförsäljare som brukade göra uppgraderingar sällan och inkonsekvent (årligen eller längre). Genom att förändra hur de närmar sig uppgraderingar och efter att ha följt ett regelbundet uppgraderingssätt som rekommenderas av Adobe under en tolvmånadersperiod, kunde partnern spara sina kunder fyra veckors kumulativ utvecklingstid, arbetsinsats och därmed sammanhängande kostnader, som alla omdirigerades till initiativ som driver tillväxten i verksamheten.
 
-![](../assets/upgrade-guide/waiting-is-not-a-winning-strategy.jpg)
-
 När uppdateringarna utförs regelbundet blir ändringarna stegvisa och motsvarande uppgraderingsarbete speglar detta. När plattformsuppdateringar fördröjs under en längre period kan de bli mer involverade. Dessutom kan du använda tillägg från [Marketplace](https://marketplace.magento.com/) och andra integreringar med tredje part kan också påverkas. Slutligen förlängs den tid det tar att undersöka, planera och genomföra en försenad uppgradering, vilket ger oundvikliga kostnader.
+
+Några av de allmänna faktorer som påverkar graden av arbete med att uppgradera ditt projekt är bland annat:
+
+| Teknisk komplexitet | Planering och strategi |
+|-----------------------------------------------------------|--------------------------------------------------------------|
+| Omfattningen av anpassningar | Klarhet i krav, beslut om våglängd och krypande omfång |
+| Antal tillägg | Din uppgraderingsfrekvens |
+| Antal integreringar med tredje part (OMS, ERP) | Din teststrategi |
+| Kodning enligt bästa praxis |  |
 
 Den fortsatta tillväxten inom den digitala e-handeln har ökat trycket på företagen att utvecklas snabbare, oftare och på ett oförutsägbart sätt. Underlåtenhet att hålla jämna steg med och förutse kundernas köpbeteende har lett till lika konkurrensvillkor för även de största, mest etablerade varumärkena. Ni måste kunna leverera robusta, personaliserade upplevelser över alla kontaktytor, utan avbrott i prestanda och drifttid. Ni måste kunna förnya er snabbare, utan begränsningar, för att ligga steget före globala konkurrenter. Genom att uppgradera kan ni framtidssäkra er om er verksamhet och anpassa er till nya dynamiska kundbehov.
 
@@ -69,11 +76,11 @@ Den fortsatta tillväxten inom den digitala e-handeln har ökat trycket på för
 
 Adobe publicerar en [publiceringsschema](https://devdocs.magento.com/release/) årligen för att underlätta handlarnas planeringsprocess och rekommenderar uppgradering av varje korrigeringsrelease-cykel. För att vara PCI-kompatibel måste handlarna finnas på den senaste patchen eller säkerhetsuppdateringen. I följande tidslinje visas de viktigaste utgivnings- och EOL-händelserna 2022.
 
-![](../assets/upgrade-guide/2022-release-timeline.svg)
+![](../assets/upgrade-guide/2022-release-timeline.jpg)
 
 Viktiga händelser att notera är:
 
-- 2.3.x support upphör efter 22 april
-- 2.4.0 till 2.4.3 (baserat på PHP 7.4) når slutet på kvalitetsstödet i november 22, när PHP 7.4 når slutet av sin livscykel
-- Baserat på dessa två händelser ovan är det viktigt att uppgradera till version 2.4.4 eller senare före den 22 november
-- I linje med Adobe Commerce [livscykelprincip](https://devdocs.magento.com/release/lifecycle-policy.html)stöds versionerna 2.4.4 och 2.4.5 fram till 24 november
+- 2.3.x-serien når slutet av supporten (EOS) i september 2022
+- 2.4.0 till 2.4.3 (baserat på PHP 7.4) når EOS i november 2022, när PHP 7.4 når slutet av livscykeln (EOL)
+- Baserat på dessa två EOS-händelser **det är viktigt att uppgradera till version 2.4.4 eller senare före november 2022**
+- I linje med Adobe Commerce [livscykelprincip](https://devdocs.magento.com/release/lifecycle-policy.html), version 2.4.4 och 2.4.5 får support- och säkerhetsuppdateringar av hög kvalitet fram till november 2024

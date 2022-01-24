@@ -1,19 +1,19 @@
 ---
-title: Krav för verktyget Kompatibilitet för uppgradering
-description: 'Kontrollera att datorn uppfyller de krav som krävs för att köra verktyget för kompatibilitetsuppgradering för ditt Adobe Commerce-projekt. '
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+title: '[!DNL Upgrade Compatibility Tool] Förutsättningar'
+description: 'Verifiera att systemet uppfyller de krav som krävs för att köra [!DNL Upgrade Compatibility Tool] för ditt Adobe Commerce-projekt. '
+source-git-commit: 3d9a721e33621b78f03f16b932a1ba2904ae4010
 workflow-type: tm+mt
-source-wordcount: '161'
+source-wordcount: '137'
 ht-degree: 0%
 
 ---
 
 
-# Krav för verktyget Kompatibilitet för uppgradering
+# [!DNL Upgrade Compatibility Tool] krav
 
-Genom att köra verktyget för uppgraderingskompatibilitet kan du identifiera vad du måste göra **före** uppgradera din Adobe Commerce-version.
+Kör [!DNL Upgrade Compatibility Tool] hjälper dig att identifiera vad du måste göra **före** uppgradera din Adobe Commerce-version.
 
-Minimikraven för att köra verktyget Kompatibilitet för uppgradering är:
+Minimikraven för att köra [!DNL Upgrade Compatibility Tool] är:
 
 | **Krav** | **Begränsningar** |
 |----------------|-----------------|
@@ -24,6 +24,6 @@ Minimikraven för att köra verktyget Kompatibilitet för uppgradering är:
 | Adobe Commerce Access-tangenter | ingen |
 | Adobe Commerce (Open Source eller Enterprise) | ingen |
 
-Du kan köra verktyget Kompatibilitet för uppgradering i vilket operativsystem som helst. Du behöver inte köra verktyget Kompatibilitet för uppgradering där Adobe Commerce-instansen finns.
+Du kan köra [!DNL Upgrade Compatibility Tool] i alla operativsystem. Du behöver inte köra [!DNL Upgrade Compatibility Tool] där din Adobe Commerce-instans finns.
 
-Du måste ha tillgång till källkoden för Adobe Commerce-instansen för verktyget Kompatibilitet för uppgradering. Du kan t.ex. installera det på en server och peka det vid din Adobe Commerce-installation på en annan server. Se [installera](../upgrade-compatibility-tool/install.md) för mer information.
+Det är nödvändigt för [!DNL Upgrade Compatibility Tool] för att få tillgång till källkoden för Adobe Commerce-instansen. Du kan t.ex. installera det på en server och peka det vid din Adobe Commerce-installation på en annan server. Se [installera](../upgrade-compatibility-tool/install.md) för mer information.

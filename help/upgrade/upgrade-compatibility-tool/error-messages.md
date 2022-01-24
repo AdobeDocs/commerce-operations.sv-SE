@@ -1,17 +1,17 @@
 ---
-title: Felmeddelanden för verktyget Kompatibilitet för uppgradering
-description: Läs mer om felmeddelanden du får när du använder verktyget Kompatibilitet för uppgradering i ditt Adobe Commerce-projekt.
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+title: '[!DNL Upgrade Compatibility Tool] Felmeddelanden'
+description: Läs mer om felmeddelanden du får när du använder [!DNL Upgrade Compatibility Tool] i ditt Adobe Commerce-projekt.
+source-git-commit: 3d9a721e33621b78f03f16b932a1ba2904ae4010
 workflow-type: tm+mt
-source-wordcount: '3759'
+source-wordcount: '3747'
 ht-degree: 0%
 
 ---
 
 
-# Felmeddelanden i verktyget Kompatibilitet för uppgradering
+# [!DNL Upgrade Compatibility Tool] felmeddelanden
 
-Den här felmeddelandereferensen innehåller information om fel som kan inträffa när verktyget Kompatibilitet för uppgradering körs.
+Den här felmeddelandereferensen innehåller information om fel som kan uppstå när [!DNL Upgrade Compatibility Tool].
 
 Felmeddelanden kategoriseras efter nivå (kritiska problem, fel och varningar) och typ (huvudkod, anpassad kod och GraphQL-scheman). Varje typ innehåller följande information:
 
