@@ -2,9 +2,9 @@
 title: Effektiv cacheplanering
 description: Se rekommenderade riktmärken för cachelagring för att säkerställa att webbplatsen som läses in fungerar som den ska.
 exl-id: 275eb21d-fa52-4b97-9453-8f8553128b53
-source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
+source-git-commit: 87e379aff4ec57f15ce914a13b4e9bc2769e6d1c
 workflow-type: tm+mt
-source-wordcount: '354'
+source-wordcount: '357'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Det inledande steget i cachningsstrategin bör därför vara att tillsammans med
 
 | Cacheområde | Hur ofta ändras? | Inverkan om inaktuellt innehåll hanteras från cache | Godtagbar cachelagring av TTL (time-to-live)? |
 |---------------------------------------------------------------|--------------------|-------------------------------------------|-----------------------------------------------------|
-| HTML-sidor med webbplatsinnehåll, uppdaterade via CMS | Ovanligt | Låg | 1 dag |
+| HTML sidor med webbplatsinnehåll, uppdaterade via CMS | Ovanligt | Låg | 1 dag |
 | Mallmedier/resurser för webbplatsinnehåll - logotyp, CSS-design, bilder | Ovanligt | Låg | 1 vecka |
 | Produktlistsidor (PLP) | Ovanligt | Medel | 1 dag |
 | Produktinformationssida (PDP) | Ibland | Medel | 1 timme |
@@ -31,4 +31,4 @@ Det inledande steget i cachningsstrategin bör därför vara att tillsammans med
 
 När den här inledande planeringen är klar kan den tekniska konfigurationen börja användas för att konfigurera cacheminnen baserat på dessa krav.
 
-Även om innehållet uppdateras och behöver göras tillgängligt i den cachelagrade TTL-nivån är det i de flesta fall möjligt att manuellt rensa cacheminnet för AEM avsändare och Adobe Commerce-cachen selektivt för det innehållet, vilket innebär att brådskande ändringar omedelbart kommer att återspeglas. Processen runt manuell cacherensning bör också planeras och testas i förväg, så om det behövs att manuellt framtvinga en uppdatering av visst innehåll, dokumenteras den i en körningsbok för webbplatsoperationer och klargör hur och vem som behöver göra detta. Här visas ett exempel på en manuell cacherensningsåtgärd för AEM och Adobe Commerce.
+Även om innehållet uppdateras och behöver göras tillgängligt i TTL-filen för cachelagring är det i de flesta fall möjligt att manuellt rensa cacheminnen för [AEM](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=en) och [Adobe Commerce](https://devdocs.magento.com/guides/v2.4/config-guide/cli/config-cli-subcommands-cache.html#config-cli-subcommands-cache-clean) cachelagra selektivt för det innehållet, vilket innebär att brådskande ändringar omedelbart återspeglas. Processen runt manuell cacherensning bör också planeras och testas i förväg, så om det behövs att manuellt framtvinga en uppdatering av visst innehåll, dokumenteras den i en körningsbok för webbplatsoperationer och klargör hur och vem som behöver göra detta.
