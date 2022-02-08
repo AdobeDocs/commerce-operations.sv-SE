@@ -1,17 +1,17 @@
 ---
 title: Process och tidslinje
-description: Se exempel på vanliga tidslinjer för implementering av Adobe Commerce och tidslinjeaktiviteter.
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+description: Se exempel på typiska tidslinjer för Adobe Commerce-implementering och tidslinjeaktiviteter.
+exl-id: 73e38098-db2b-4ad3-9f2d-ac8a377f2525
+source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
 workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 0%
 
 ---
 
-
 # Vanlig process och tidslinje
 
-Många organisationer förbereder sig för en handelsomformning genom att skapa en anbudsförfrågan. Detta inkluderar detaljerade krav, aktuella registersystem, ett affärsärende och specifika mål (t.ex. intäkt, konvertering, genomsnittligt ordervärde) för att definiera framgång. Varumärket närmar sig sedan två till tre olika integratörer av handelssystem eller digitala byråer för att utvärdera, granska uppskattningar och förslag, välja ett företag och börja arbeta mot den planerade tidslinjen för lansering.
+Många organisationer förbereder sig för en handelsomformning genom att skapa en anbudsförfrågan. Detta inkluderar detaljerade krav, aktuella registersystem, ett affärsärende och specifika mål (t.ex. intäkt, konvertering, genomsnittligt ordervärde) för att definiera framgång. Varumärket närmar sig då två till tre olika integratörer av handelssystem eller digitala byråer för att utvärdera, granska uppskattningar och förslag, välja ett företag och börja arbeta mot en prognostiserad tidslinje att lansera.
 
 Detta kan vara ett framgångsrikt tillvägagångssätt. Men en rekommendation som minskar riskerna (innan man förbinder sig till en fullständig implementering) är att arbeta med en organisation i en process för kravbedömning eller identifiering som kan bekräfta organisationens beredskap, projektets omfattning, tidslinje, budget, affärskrav och tekniska tillvägagångssätt. I genomsnitt bör den här processen ta mellan fyra och sex veckor, men den varierar beroende på projektets storlek.
 

@@ -2,7 +2,7 @@
 title: Prestandaoptimering - Recommendations
 description: Optimera Adobe Commerce-implementeringens prestanda genom att följa dessa rekommendationer.
 exl-id: c5d62e23-be43-4eea-afdb-bb1b156848f9
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
 workflow-type: tm+mt
 source-wordcount: '1289'
 ht-degree: 0%
@@ -103,7 +103,7 @@ Prestandatestning före varje produktionsrelease rekommenderas alltid för att f
 
 >[!NOTE]
 >
-> Adobe Commerce i molninfrastruktur tillämpar redan alla ovanstående optimeringar av infrastruktur och arkitektur, förutom DNS-sökningen eftersom den ligger utanför räckvidden.
+> Adobe Commerce i molninfrastruktur tillämpar redan alla ovanstående optimeringar av infrastruktur och arkitektur, förutom DNS-sökningen eftersom den ligger utanför omfånget.
 
 ### Sök
 
@@ -111,7 +111,7 @@ Elasticsearch krävs från och med Adobe Commerce version 2.4, men det är ocks�
 
 ## Operativmodeller
 
-Förutom de tidigare nämnda rekommendationerna om optimering av den gemensamma infrastrukturen finns det också metoder för att förbättra prestandan för specifika affärslägen och skalor. Det här dokumentet innehåller inga detaljerade justeringsinstruktioner för alla eftersom varje scenario är olika, men vi kan tillhandahålla några alternativ på hög nivå för din referens.
+Förutom de tidigare nämnda rekommendationerna om optimering av infrastruktur finns det också strategier för att förbättra prestandan för specifika affärslägen och skalor. Det här dokumentet innehåller inga detaljerade justeringsinstruktioner för alla eftersom varje scenario är olika, men vi kan tillhandahålla några alternativ på hög nivå för din referens.
 
 ### Headless-arkitektur
 

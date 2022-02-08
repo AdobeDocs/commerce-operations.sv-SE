@@ -1,13 +1,13 @@
 ---
 title: Adobe Commerce Global Reference Architecture
-description: Få ut mesta möjliga av er implementering av Adobe Commerce genom att utnyttja en global referensarkitektur.
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+description: Få ut mesta möjliga av er Adobe Commerce-implementering genom att utnyttja en global referensarkitektur.
+exl-id: a18529a3-da9b-4e1b-8048-0a906e65c740
+source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
 workflow-type: tm+mt
 source-wordcount: '194'
 ht-degree: 0%
 
 ---
-
 
 # Global referensarkitektur (GRA)
 
@@ -46,4 +46,3 @@ GRA-effekter:
 - Hur nya marknader aktiveras
 
    - Förenklar lanseringen av flera kanaler och marknader som annars skulle kosta betydligt mer tid och pengar.
-

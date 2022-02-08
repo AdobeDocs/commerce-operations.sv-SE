@@ -1,15 +1,15 @@
 ---
 title: Integreringsalternativ för Adobe Commerce
-description: Utforska dina alternativ för att integrera andra system med implementeringen av Adobe Commerce.
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+description: Utforska vilka alternativ du har för att integrera andra system med implementeringen av Adobe Commerce.
+exl-id: 10de70d2-ff3b-4f10-b370-01d805b745dc
+source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
 workflow-type: tm+mt
 source-wordcount: '581'
 ht-degree: 0%
 
 ---
 
-
-# Typical integration points and dataflows
+# Typiska integreringspunkter och dataflöden
 
 Det finns två huvudstrategier för integreringar och dataflöden, som är mycket lika men har en viktig skillnad.
 
@@ -17,19 +17,19 @@ Det finns två huvudstrategier för integreringar och dataflöden, som är mycke
 
 I följande diagram beskrivs en monolitisk metod som använder Adobe Commerce som både backend-system och storefront-program:
 
-![Monolitdiagram för Adobe Commerce](../../assets/playbooks/integration-monolith.svg)
+![Adobe Commerce monolitdiagram](../../assets/playbooks/integration-monolith.svg)
 
 ## Headless
 
-I följande diagram beskrivs en headless-metod som använder Adobe Commerce som backend-system integrerat med en DXP/CMS/anpassad applikation som storefront-applikation:
+I följande diagram beskrivs ett headless-tillvägagångssätt som använder Adobe Commerce som backend-system integrerat med ett DXP/CMS/anpassat program som storefront-program:
 
-![Diagram utan rubrik för Adobe Commerce](../../assets/playbooks/integration-headless.svg)
+![Adobe Commerce headless-diagram](../../assets/playbooks/integration-headless.svg)
 
-Den enda skillnaden mellan det monolitiska och det headless-baserade tillvägagångssättet är integrering av butiker, vilket påverkar användarupplevelsen för kunderna. Monolithic använder Adobe Commerce storefront direkt för att integrera med tredjepartstjänster, medan headless är beroende av sin egen butik för att anpassa och integrera med samma tjänster. Vissa tjänster som betalning och enkel inloggning (SSO) behöver både butiks- och Adobe Commerce-anpassning för att slutföra integreringsflödet.
+Den enda skillnaden mellan det monolitiska och det headless-baserade tillvägagångssättet är integrering av butiker, vilket påverkar användarupplevelsen för kunderna. Monolitisk använder Adobe Commerce storefront direkt för att integrera med tredjepartstjänster, medan headless är beroende av sin egen butik för att anpassa och integrera med samma tjänster. Vissa tjänster, som betalning och enkel inloggning (SSO), behöver både butiks- och Adobe Commerce-anpassning för att slutföra integreringsflödet.
 
 ## Tredjepartssystem
 
-Vissa populära tjänster har redan utökade möjligheter att stödja lösningar för Adobe Commerce eller populära butikslösningar som PWA Studio, Adobe Experience Manager och Vue Storefront, som finns på deras utökade marknadsplats eller från andra tredjepartswebbplatser. Even if there is no existing extension, the effort to implement the integration between Adobe Commerce and other headless storefronts are similar. Alla tredjepartstjänster har vanligtvis dokument som förklarar hur de kan integreras med dem. Dessa tjänster är bara några exempel. olika länder och marknader kan ha olika val.
+Vissa populära tjänster har redan bra tillägg för att stödja Adobe Commerce eller populära butikslösningar som PWA Studio, Adobe Experience Manager och Vue Storefront, som finns på deras utökade marknadsplats eller från andra tredjepartswebbplatser. Även om det inte finns någon befintlig utökning är det lika viktigt att implementera integreringen mellan Adobe Commerce och andra headless-butiker. Alla tredjepartstjänster har vanligtvis dokument som förklarar hur de kan integreras med dem. Dessa tjänster är bara några exempel. olika länder och marknader kan ha olika val.
 
 ## Företagsintegreringar
 
@@ -41,6 +41,6 @@ Produktkataloger, metadata och marknadsföringsmaterial kan hanteras separat av 
 
 Beställningsdata omfattar beställnings-, offert- (B2B), leverans-, retur- och utbytesdata som vanligtvis hanteras från ett centraliserat OMS- och WMS-system. Beställningsdata ska synkroniseras så snart som möjligt, så REST API är vanligtvis det bästa alternativet. För bättre prestanda bör du överväga att minska antalet API-anrop. För orderstatus, leveranser, retur och datautbyte bör du överväga att schemalägga REST-API:er för batchuppdatering i timmar eller minuter.
 
-B2B data is usually managed from a centralized CRM. Ett realtids-API används för att verifiera befintliga kunder och skapa nya kunder. För B2B kan det krävas fler API:er för att synkronisera olika anställda, grupper och prislistor mellan Adobe Commerce och CRM eller CPQ.
+B2B-data hanteras vanligtvis från en centraliserad CRM. Ett realtids-API används för att verifiera befintliga kunder och skapa nya kunder. För B2B kan det krävas fler API:er för att synkronisera olika medarbetare, grupper och prislistor mellan Adobe Commerce och CRM eller CPQ.
 
 Det finns andra systemintegreringar som eDM för e-postmarknadsföring och affärsintelligens för affärsdataanalys, som vanligtvis görs antingen via REST API eller export/import av filer, som vanligtvis stöds av befintliga tillägg.

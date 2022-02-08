@@ -1,25 +1,25 @@
 ---
 title: Översikt över molninfrastruktur
-description: Läs om Adobe Commerce om molninfrastruktur.
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+description: Läs om Adobe Commerce i molninfrastruktur.
+exl-id: 94cf1505-0853-4e01-ba55-befc1117fbdb
+source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
 workflow-type: tm+mt
 source-wordcount: '536'
 ht-degree: 0%
 
 ---
 
-
 # Översikt
 
-En av de vanligaste värdalternativen för Adobe Commerce på AWS erbjuds av Adobe Commerce. Adobe Commerce on cloud infrastructure är en helhanterad automatiserad värdplattform för Adobe Commerce-programmet.
+Ett av de vanligaste värdalternativen för Adobe Commerce på AWS erbjuds av Adobe Commerce. Adobe Commerce i molninfrastruktur är en helhanterad automatiserad värdplattform för Adobe Commerce-program.
 
-Adobe Commerce on cloud infrastructure är ett paket för att plattforms-as-service (PaaS) som möjliggör snabb driftsättning av fullt anpassningsbara, säkra och skalbara webbutiker i kombination med en ledande infrastruktur för hosting och hanterade tjänster. Det finns två planer med olika infrastrukturer. Adobe Commerce Starter passar bäst för mindre butiker med mindre komplexitet och mindre kataloger. Adobe Commerce Pro är byggt för större butiker med större komplexitet, större produktkataloger eller trafik som når ända fram. Adobe Commerce kommer att fastställa lämplig arkitektur med synpunkter från partners.
+Adobe Commerce i molninfrastruktur är en lösning för att hantera plattforms-as-service (PaaS) som möjliggör snabb driftsättning av fullt anpassningsbara, säkra och skalbara webbutiker i kombination med en ledande infrastruktur för värdtjänster och hanterade tjänster. Det finns två planer med olika infrastrukturer. Adobe Commerce Starter passar bäst för mindre butiker med mindre komplexitet och mindre kataloger. Adobe Commerce Pro är skapat för större butiker med större komplexitet, större produktkataloger eller trafik som når ända fram. Adobe Commerce kommer att fastställa lämplig arkitektur med synpunkter från våra partners.
 
-Adobe Commerce är molnklar med en helt redundant hosting-infrastruktur i flera moln som ger optimerade prestanda, flexibilitet och elastisk skalbarhet. Du kan effektivt köra din handelsplattform på Fastly&#39;s content delivery network (CDN), och med New Relic för övervakning och hantering kan du få din butiksmiljö att fungera smidigt.
+Adobe Commerce är molnklart med en helt redundant hosting-infrastruktur i flera moln som ger optimerade prestanda, flexibilitet och elastisk skalbarhet. Du kan effektivt köra din handelsplattform på Fastly&#39;s content delivery network (CDN), och med New Relic för övervakning och hantering kan du få din butiksmiljö att fungera smidigt.
 
-Adobe Commerce erbjuder alla fördelar med modern cloud computing som vanligtvis är kopplade till SaaS-lösningar: elastisk skalbarhet, hög motståndskraft och tillgänglighet, PCI-kompatibilitet och global tillgänglighet och automatiserad korrigering, samtidigt som den flexibilitet i programvaruanpassningen som våra handlare kräver bibehålls.
+Adobe Commerce erbjuder alla fördelar med modern cloud computing som vanligtvis förknippas med SaaS-lösningar: elastisk skalbarhet, hög återhämtningsförmåga och tillgänglighet, PCI-kompatibilitet och global tillgänglighet och automatiserad korrigering, samtidigt som den flexibilitet i programvaruanpassningen som våra handlare kräver bibehålls.
 
-![Diagram som visar arkitektoniska element i Adobe Commerce om molninfrastruktur](../../../assets/playbooks/adobe-commerce-cloud-infrastructure.svg)
+![Bild som visar arkitektoniska element i Adobe Commerce på molninfrastruktur](../../../assets/playbooks/adobe-commerce-cloud-infrastructure.svg)
 
 ## Fördelar
 
@@ -31,13 +31,13 @@ Andra fördelar med Adobe Commerce är:
 
 - **Flexibilitet för partners**. Ett fullt REST API och ett skriptbart kommandoradsgränssnitt gör det enkelt att integrera med externa system och kompatibiliteten med befintliga arbetsflöden för kodhantering.
 
-- **Flexibla verktyg** för driftsättning. Snabb snurra upp, sammanfoga, klona och slipp obegränsade miljöer efter behov för utvecklingsuppgifter, kvalitetstestning eller diagnos av produktionsproblem.
+- **Flexibla verktyg för driftsättning**. Snabb snurra upp, sammanfoga, klona och slipp obegränsade miljöer efter behov för utvecklingsuppgifter, kvalitetstestning eller diagnos av produktionsproblem.
 
 - **Kontinuerlig molnleverans**. Gå tryggt direkt från utveckling till UAT till produktion, på ett kontinuerligt sätt mellan olika kodgrenar och utvecklingsteam.
 
 ## Tredjepartstjänster
 
-Låt oss också titta på programvaran som gör Adobe Commerce till verklighet.
+Låt oss också titta på programvaran som gör Adobe Commerce fördelar till verklighet.
 
 ![Bild som visar Adobe Commerce i molninfrastrukturens teknikstack](../../../assets/playbooks/cloud-tech-stack.svg)
 
@@ -51,4 +51,4 @@ Låt oss också titta på programvaran som gör Adobe Commerce till verklighet.
 
 - Platform-as-a-Service (PaaS) tillhandahåller en förprovisionerad infrastruktur som omfattar PHP, MySQL, Redis, RabbitMQ och Elasticsearch.
 
-- AWS eller Azure’s cloud hosting driver den underliggande Infrastructure-as-a-Service (IaaS), som erbjuder en skalbar och säker miljö för onlineförsäljning och webbutik.
+- AWS eller Azure:s molnhosting driver den underliggande infrastruktur-som-en-Service (IaaS), som erbjuder en skalbar och säker miljö för onlineförsäljning och -detaljhandel.

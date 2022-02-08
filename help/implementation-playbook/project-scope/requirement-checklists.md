@@ -1,13 +1,13 @@
 ---
 title: Checklistor för krav
-description: Använd den här listan med utförliga frågor för att förbereda er för implementeringen av Adobe Commerce.
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+description: Använd den här listan med utförliga frågor för att förbereda er för en implementering av Adobe Commerce.
+exl-id: 9ac485c5-d491-4022-9366-5e3a382513b6
+source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
 workflow-type: tm+mt
-source-wordcount: '1509'
+source-wordcount: '1536'
 ht-degree: 0%
 
 ---
-
 
 # Checklistor för krav
 
@@ -29,7 +29,7 @@ Följande frågor kan fungera som en utgångspunkt för att se vilken informatio
 
 - Hur många av dina tekniska analytiker kommer att tilldelas det här projektet?
 
-- Hur många HTML-utvecklare kommer att tilldelas det här projektet?
+- Hur många av dina HTML-utvecklare kommer att tilldelas det här projektet?
 
 - Vilken dokumentation finns för de aktuella affärsprocesserna?
 
@@ -45,7 +45,7 @@ Följande frågor kan fungera som en utgångspunkt för att se vilken informatio
 
 - Vilken utbildning kommer att genomföras efter att man gått ut?
 
-- Vilket stöd för Adobe Commerce kommer att krävas efter lanseringen?
+- Vilken Adobe Commerce-support krävs efter lanseringen?
 
 - Är projektet beroende av andra systemutvecklingsprojekt?
 
@@ -55,11 +55,11 @@ Följande frågor kan fungera som en utgångspunkt för att se vilken informatio
 
 - Var ser ni den framtida tillväxten i er verksamhet?
 
-- Vilken roll spelar digital handel i er affärsstrategi? Vilka är era främsta mål för att skapa denna e-handelsplattform?
+- Vilken roll spelar digital handel i er affärsstrategi? Vilka är era främsta mål med att skapa denna e-handelsplattform?
 
 - Har ni varumärken/företag som ni använder som referens för hur ni utvecklar ert flerkanalsföretag?
 
-- Vilka team eller individer driver strategin för e-handeln? Beskriv de relevanta positionerna.
+- Vilka team eller individer driver e-handelsstrategin? Beskriv de relevanta positionerna.
 
 ## Aktuell plattform
 
@@ -93,7 +93,7 @@ Följande frågor kan fungera som en utgångspunkt för att se vilken informatio
 
 ## Förväntade plattformskrav
 
-- Vilken version av Adobe Commerce ska du använda?
+- Vilken Adobe Commerce-version ska du använda?
 
 - Hur kommer den framtida plattformen att hanteras? Intern, värdtjänstleverantör, privata molnservrar eller värdbaserade molnservrar?
 
@@ -149,9 +149,9 @@ Följande frågor kan fungera som en utgångspunkt för att se vilken informatio
 
 - Eventuella webbläsare som ska testas (förutom standardwebbläsarna IE9+, Firefox, Chrome, Safari)?
 
-- Vilka språk har varje front? Är det översatta innehållet tillgängligt eller krävs det support?
+- Vilka är språk för varje frontend? Är det översatta innehållet tillgängligt eller krävs det support?
 
-- Finns det flera webbplatser? I så fall, kan kunderna använda sina autentiseringsuppgifter för alla webbplatser?
+- Finns det flera webbplatser? Om så är fallet, kan kunderna använda sina inloggningsuppgifter för alla webbplatser?
 
 - Är produktdata delade på alla webbplatser?
 
@@ -169,11 +169,11 @@ Finns det befintliga API:er som kan användas?
 
 - Har hantering av systemfel utformats och utvecklats för denna integrering med system från tredje part?
 
-- Vilket ERP-system kommer att integreras med Adobe Commerce? (Exempel: SAP, MS Dynamics NAV)
+- Vilket ERP-system ska integreras med Adobe Commerce? (Exempel: SAP, MS Dynamics NAV)
 
 - Vilket transportsystem kommer att integreras med Adobe Commerce?
 
-- Vilket skattesystem kommer att integreras med Adobe Commerce? (Exempel:Taxware)
+- Vilket skattesystem kommer att integreras med Adobe Commerce? (Exempel: Taxware)
 
 - Från vilket system importeras produktdata till Adobe Commerce?
 
@@ -183,11 +183,11 @@ Finns det befintliga API:er som kan användas?
 
 - Hur ofta exporterade produktdata läses in?
 
-- Från vilket system kommer data att beställas till Adobe Commerce?
+- Från vilket system beställs data till Adobe Commerce?
 
 - Hur ofta importerade orderdata läses in?
 
-- I vilket system kommer Adobe Commerce att exportera orderdata?
+- I vilket system exporterar Adobe Commerce orderdata?
 
 - Hur ofta exporterade orderdata läses in?
 
@@ -205,11 +205,11 @@ Finns det befintliga API:er som kan användas?
 
 - Vilket orderhanteringssystem kommer att integreras med Adobe Commerce? (Exempel: Microsoft Dynamics, SAP, Retail Pro)
 
-- Vilket produktlagerhanteringssystem kommer att integreras med Adobe Commerce? (Exempel: Akeneo, InRiver, Bluestone)
+- Vilket produktinventeringssystem kommer att integreras med Adobe Commerce? (Exempel: Akeneo, InRiver, Bluestone)
 
-- Vilket kundrelationshanteringssystem kommer att integreras med Adobe Commerce? (Exempel: Hubspot, Salesforce, Klaviyo)
+- Vilket kundhanteringssystem kommer att integreras med Adobe Commerce? (Exempel: Hubspot, Salesforce, Klaviyo)
 
-## Adobe handelsspecifika funktioner
+## Adobe Commerce-specifika funktioner
 
 - Behöver du någon typ av A/B-testning?
 
@@ -257,9 +257,9 @@ Finns det befintliga API:er som kan användas?
 
 - Kommer ni att tillåta kunden att initiera returer av objekt från webbplatsen?
 
-- Kommer Adobe Commerce att utfärda ett returavtal för RMA?
+- Kommer Adobe Commerce att skicka tillbaka RMA?
 
-- Vill du spara återbetalningsinformation i Adobe Commerce?
+- Spara återbetalningsinformation i Adobe Commerce?
 
 - Kräver ni onlineorderspårning för en registrerad kund?
 
@@ -285,7 +285,7 @@ Finns det befintliga API:er som kan användas?
 
 - Belöningspunkter
 
-- &quot;Bill Me Later&quot;- mer allmänt känt&quot;Buy Now, Pay Later&quot; eftersom det är fakturerat omedelbart men ännu inte betalat
+- &quot;Bill Me Later&quot; - mer allmänt känt som &quot;Buy Now, Pay Later&quot; eftersom det är fakturerat omedelbart men ännu inte betalat
 
 - Kommer det att finnas olika produktpriser på olika webbplatser?
 
@@ -307,9 +307,9 @@ Finns det befintliga API:er som kan användas?
 
 - Kundvagn: Produkter i varukorgar, övergivna konstverk
 
-- Produkter: Beställ produkter, beställda, mest visade, låglagrade, nedladdningar
+- Produkter: Bestandesförsäljare, beställda produkter, mest visade, låg lagerhållning, nedladdningar
 
-- Kunder: Nyhetskonton,kunder efter ordersumma,kunder efter antal order,kundsegment,kundrecensioner
+- Kunder: Nya konton, kunder efter ordersumma, kunder efter antal order, kundsegment, kundrecensioner
 
 - Recensioner
 
@@ -323,7 +323,7 @@ Finns det befintliga API:er som kan användas?
 
 - Behöver ni Adobe Commerce för att generera rapporter baserade på säljdata?
 
-- Behöver du anpassade Adobe Commercere-portar?
+- Behöver ni skräddarsydda Adobe Commerce-rapporter?
 
 - Vad är er nuvarande SEO-strategi?
 
@@ -331,7 +331,7 @@ Finns det befintliga API:er som kan användas?
 
 - Vilka är dina krav för SEO-migrering?
 
-- Vill du lagra fasta räntor i Adobe Commerce?
+- Vill du lagra fasta priser i Adobe Commerce?
 
 - Vill du tillåta partiell leverans?
 

@@ -1,17 +1,17 @@
 ---
-title: Maintenance and Support Models
-description: 'Använd dessa vanliga underhålls- och supportmodeller för att få en smidig implementering av Adobe Commerce. '
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+title: Underhålls- och supportmodeller
+description: Använd dessa vanliga underhålls- och supportmodeller för att få en smidig implementering av Adobe Commerce.
+exl-id: 44469b83-a10b-44c2-8721-9a7daa2733d3
+source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 0%
 
 ---
 
-
 # Underhålls- och supportmodeller
 
-Det finns inte bara ett sätt att hantera stödet för e-handelsplatsen. We have outlined four options, depending on the needs and goals of your brand.
+Det finns inte bara ett sätt att hantera stödet för e-handelsplatsen. Vi har skisserat fyra alternativ, beroende på varumärkesets behov och mål.
 
 ## Typiska modeller
 
@@ -21,7 +21,7 @@ Alternativet med hanterade tjänster med ett åtagande om SLA och fast underhål
 
    - Fast kapacitet avser ett begränsat antal utfästa timmar för resurser enligt avtal. För enkla e-handelssajter kan det här antalet normalt variera mellan 40 och 160 timmar per månad.
 
-   - Typ av arbete och typ av resurser beror på omfattningen av det stöd som behövs. This is suited for smaller organizations with relatively simple digital ecosystems, and also in specific engagements where the brand already has a sizable technology team.
+   - Typ av arbete och typ av resurser beror på omfattningen av det stöd som behövs. Detta är lämpligt för mindre organisationer med relativt enkla digitala ekosystem, och även för specifika engagemang där varumärket redan har ett stort teknikteam.
 
 - **Stöd för SLA med snabbkorrigering**
    - Stöd för 24*7, allvarlighetsgrad 1 (tillval)
@@ -29,24 +29,24 @@ Alternativet med hanterade tjänster med ett åtagande om SLA och fast underhål
    - Månadstilldelning av resurser för support/leveransarbete
    - Ytterligare resurser för att följa överenskommen process för ändringshantering
 
-- **SLA support for critical incidents with dedicated delivery capacity**
-   - Optional 24*7 support with SLA for severity 1 incidents
+- **SLA-support för allvarliga incidenter med dedikerad leveranskapacitet**
+   - 24*7-support med SLA som tillval för incidenter av allvarlighetsgrad 1
    - Fasta leveransresurser och obegränsat driftsstöd
-   - Additional delivery resources to follow agreed change management process
+   - Ytterligare leveransresurser som följer den överenskomna processen för ändringshantering
    - Täcker alla roller (Dev/QA/SA/PM/RM) och operativt stöd
 
-- **Managed service support with a fixed maintenance capacity**
+- **Hanterad servicesupport med fast underhållskapacitet**
    - SLA för alla supportärenden, inklusive svarstid på 24*7
    - Fasta leveransresurser och obegränsat driftsstöd för att uppfylla gällande SLA
-   - Complete DevOps for HotFix support
+   - Fullständigt DevOps för HotFix-stöd
    - Ytterligare leveransresurser som följer den överenskomna processen för ändringshantering
-   - Covers all roles (Dev/QA/SA/PM/RM) and operational support
+   - Täcker alla roller (Dev/QA/SA/PM/RM) och operativt stöd
 
 ## Vanliga servicenivåer
 
 Vanliga servicenivåer definieras som drift och felkorrigering, förbättringar (kallas även nivå 3- eller L3-tjänster) och valfria tjänster (valfria L3-tjänster).
 
-Operations and break-fix activities can be further divided into L1 (Level 1: monitoring and incident management) and L2 (Level 2: problem management and continuous service improvement). Dessa verksamheter omfattar följande:
+Verksamheter och åtgärder för att åtgärda fel kan delas in ytterligare i L1 (nivå 1: övervakning och incidenthantering) och L2 (nivå 2: problemhantering och kontinuerlig serviceförbättring). Dessa verksamheter omfattar följande:
 
 - **Drift och felkorrigering**
    - Händelsehantering
@@ -58,33 +58,33 @@ Operations and break-fix activities can be further divided into L1 (Level 1: mon
    - Stöd för toppvärden
 
 - **Förbättringar**
-   - Backlog grooming + prioritization
+   - Grooming av eftersläpning + prioritering
    - Sprint + lanseringsplanering
-   - Design + development
-   - Functional sprint testing
+   - Design + utveckling
+   - Funktionell Sprint-testning
    - Stöd för prestanda- och säkerhetstestning
    - Distributionsplanering
 
 - **Valfria tjänster**
    - Arkitekturgranskning och rekommendationer
    - Prestanda- och säkerhetstestning
-   - Business Operations support
+   - Företagsstöd
    - Innehållsproduktion
    - Merchandizing Operations
    - Strategisk rådgivning
-   - Uppdateringar för Adobe Commerce
+   - Adobe Commerce-uppdateringar
 
-Leverans- och servicehantering är också en viktig del av support- och förbättringsfunktionen. Here are the activities typically included in the scope under this function:
+Leverans- och servicehantering är också en viktig del av support- och förbättringsfunktionen. Här är de aktiviteter som vanligtvis ingår i omfånget under den här funktionen:
 
 - Kontroll av leveranser och tjänster, styrning av golv och skift
 - Incident och problemlösning
-- Stakeholder communication and management
-- Service reporting and governance
-- Continuous improvement
+- Intressentkommunikation och -hantering
+- Servicerapportering och styrning
+- Kontinuerlig förbättring
 - Bearbeta granskning
 - Dokumentation och rapportering
-- Uppdateringar för Adobe Commerce-plattformen
+- Adobe Commerce plattformsuppdateringar
 
-The support model works seamlessly with clear accountability distributed across client teams and L1, L2, L3 teams, with a proven governance and communication model.
+Supportmodellen fungerar smidigt med tydlig ansvarsskyldighet som fördelas mellan olika kundteam och L1, L2, L3-team, med en beprövad styrnings- och kommunikationsmodell.
 
 ![Bild som visar supportmodellen](../../assets/playbooks/support-model-diagram.svg)

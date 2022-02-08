@@ -1,13 +1,13 @@
 ---
 title: Knowledge is Power
-description: Läs om varför det är så viktigt att alla i organisationen investerar i implementeringen av Adobe Commerce.
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+description: Se varför det är så viktigt att alla i organisationen investerar i er Adobe Commerce-implementering.
+exl-id: a3929586-5ad2-4b30-8bc4-84da8f8b9eb5
+source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '168'
 ht-degree: 0%
 
 ---
-
 
 # Kunskap är makt
 

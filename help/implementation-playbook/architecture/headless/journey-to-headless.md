@@ -1,14 +1,14 @@
 ---
 title: Resa till Headless
-description: Granska en tidslinje i Adobe Commerce's jouirney för att stödja headless-arkitekturer.
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+description: Se en tidslinje för Adobe Commerce resa för att få stöd för headless Architecture.
+exl-id: 9286e6b3-3c29-4428-b353-f66eb4bc382d
+source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
 workflow-type: tm+mt
 source-wordcount: '28'
 ht-degree: 0%
 
 ---
 
-
-# Adobe Commerce&#39;s Journey to Headless
+# Adobe Commerce resa till Headless
 
 ![Tidslinje för Adobe Commerce resa till en headless-arkitektur](../../../assets/playbooks/journey-to-headless.svg)
