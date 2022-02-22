@@ -1,9 +1,9 @@
 ---
 title: Översikt över [!DNL Upgrade Compatibility Tool]
 description: Läs mer om [!DNL Upgrade Compatibility Tool] och hur det kan hjälpa dig med ditt Adobe Commerce-projekt.
-source-git-commit: 3d9a721e33621b78f03f16b932a1ba2904ae4010
+source-git-commit: e6b6c61aa3fc7c3f22e3a1450b43015f1a7ffed7
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '284'
 ht-degree: 0%
 
 ---
@@ -25,12 +25,16 @@ Se [Installera](../upgrade-compatibility-tool/install.md) för de första stegen
 
 ## Förbättra [!DNL Upgrade Compatibility Tool]
 
-Ansluta till [!DNL Upgrade Compatibility Tool] team, kontakta oss på Engineering Slack channel [[!DNL Upgrade Compatibility Tool]](https://magentocommeng.slack.com/archives/C019Y143U9F).
+Ansluta till [!DNL Upgrade Compatibility Tool] team, kontakta oss på Engineering Slack channel [[!DNL Upgrade Compatibility Tool]](https://magentocommeng.slack.com/archives/C019Y143U9F). Vi vill gärna få synpunkter, problem och förslag som hjälper oss att förbättra verktyget.
 
->[!NOTE]
->
->Vi vill gärna få synpunkter, problem och förslag som hjälper oss att förbättra verktyget.
+The [!DNL Upgrade Compatibility Tool] använder regler som definierats i [Kodstandarder](https://devdocs.magento.com/guides/v2.4/coding-standards/bk-coding-standards.html) för att säkerställa att ditt projekt följer Adobe Commerce bästa praxis och för att hjälpa dig att förbättra och utöka [!DNL Upgrade Compatibility Tool].
 
-Har du någon aning om hur vi kan förbättra vår kompatibilitetsanalys? Kontrollera [Contribute](https://devdocs.magento.com/guides/v2.4/coding-standards/contributing.html) sida för mer information.
+Se [Contribute](https://devdocs.magento.com/guides/v2.4/coding-standards/contributing.html)  om du vill ha mer information om hur du bidrar till projektet.
 
-Se [Resurser](https://devdocs.magento.com/community/resources/resources.html) sida för mer information.
+## Resurser
+
+Vi har tagit fram följande resurser som hjälper dig att förstå Adobe Commerce uppgraderingar:
+
+- [Uppgraderingsguide](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/overview.html)
+- [Kommande versioner](https://devdocs.magento.com/release/)
+- [Community-resurser](https://devdocs.magento.com/community/resources/resources.html) sida för mer information.
