@@ -1,9 +1,9 @@
 ---
 title: Så här fungerar korrigeringar
 description: Lär dig mer om de olika typerna av patchar för Adobe Commerce och Magento Open Source och hur de fungerar.
-source-git-commit: 38b054bbae8ba116557ce367c8397c646c837558
+source-git-commit: 06ac3169a5e3813e4f50246f54f91998e14b5985
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -91,8 +91,8 @@ index c8a6fef58d31..7d01c195791e 100644
 Du kan använda patchar på följande sätt:
 
 - [Verktyget Korrigeringar](https://devdocs.magento.com/quality-patches/tool.html)
-- [Kommandorad](../patches/apply.md#command-line)
-- [Disposition](../patches/apply.md#composer)
+- [Kommandorad](/help/upgrade/patches/apply.md#command-line)
+- [Disposition](/help/upgrade/patches/apply.md#composer)
 
 >[!NOTE]
 >
