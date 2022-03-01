@@ -1,9 +1,9 @@
 ---
 title: Översikt över [!DNL Upgrade Compatibility Tool]
 description: Läs mer om [!DNL Upgrade Compatibility Tool] och hur det kan hjälpa dig med ditt Adobe Commerce-projekt.
-source-git-commit: e6b6c61aa3fc7c3f22e3a1450b43015f1a7ffed7
+source-git-commit: 708eb0bcbc9cff9332eade6377032d91f770644a
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '277'
 ht-degree: 0%
 
 ---
@@ -11,9 +11,7 @@ ht-degree: 0%
 
 # Översikt över [!DNL Upgrade Compatibility Tool]
 
->[!NOTE]
->
->The [!DNL Upgrade Compatibility Tool] finns endast för Adobe Commerce-instanser.
+{{commerce-only}}
 
 The [!DNL Upgrade Compatibility Tool] är ett kommandoradsverktyg som kontrollerar en Adobe Commerce-anpassad instans mot en viss version genom att analysera alla moduler och all kärnkod som är installerade i den. Den returnerar en lista med allvarliga problem, fel och varningar som måste åtgärdas innan du uppgraderar till den senaste versionen av Adobe Commerce. Den identifierar också potentiella problem som måste åtgärdas i koden innan du försöker uppgradera till en nyare version av Adobe Commerce.
 

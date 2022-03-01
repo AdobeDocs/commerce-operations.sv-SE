@@ -1,15 +1,17 @@
 ---
 title: '"[!DNL Upgrade Compatibility Tool] Förutsättningar"'
 description: 'Verifiera att systemet uppfyller de krav som krävs för att köra [!DNL Upgrade Compatibility Tool] för ditt Adobe Commerce-projekt. '
-source-git-commit: 97295df89fda393c8cf8675f8f4be92ac6f38a6a
+source-git-commit: 2e2f55ff659c36ffce7cf26224d5ceb61e53c42d
 workflow-type: tm+mt
-source-wordcount: '137'
+source-wordcount: '134'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL Upgrade Compatibility Tool] krav
+
+{{commerce-only}}
 
 Kör [!DNL Upgrade Compatibility Tool] hjälper dig att identifiera vad du måste göra **före** uppgradera din Adobe Commerce-version.
 
@@ -22,7 +24,7 @@ Minimikraven för att köra [!DNL Upgrade Compatibility Tool] är:
 | Node.js | [Node.js](https://nodejs.org/) (`^12.22.0`, `^14.17.0`, eller `>=16.0.0`) |
 | Minnesbegränsningar | Minst 2 GB RAM |
 | Adobe Commerce Access-tangenter | ingen |
-| Adobe Commerce (Open Source eller Enterprise) | ingen |
+| Adobe Commerce | ingen |
 
 Du kan köra [!DNL Upgrade Compatibility Tool] i alla operativsystem. Du behöver inte köra [!DNL Upgrade Compatibility Tool] där din Adobe Commerce-instans finns.
 

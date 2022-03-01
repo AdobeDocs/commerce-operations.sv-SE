@@ -1,9 +1,9 @@
 ---
 title: Hantera moduler och tillägg
 description: Hantera moduler och tillägg för Adobe Commerce och Magento Open Source med kommandoradsgränssnittet och Composer-pakethanteraren.
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+source-git-commit: 7bcfbc4483f4b6d4c1a5e852adbd1cd81bc136b7
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '142'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,7 @@ Bidra utvecklare att uppgradera moduler och tillägg genom att ange versioner i 
 
 Du kan antingen lägga till en `require` till `composer.json` eller så kan du använda `composer require` enligt följande:
 
-1. Logga in på servern.
-1. Växla till [ägare av filsystem](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
-1. Byt till den katalog där du klonade programmet. Till exempel:
-
-   ```bash
-   cd /var/www/magento2
-   ```
+{{$include /help/_includes/server-login.md}}
 
 Du har följande alternativ:
 

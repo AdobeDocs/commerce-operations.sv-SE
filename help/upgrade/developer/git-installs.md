@@ -1,9 +1,9 @@
 ---
 title: Uppgradera en Git-baserad installation
 description: Uppgradera en Adobe Commerce- eller Magento Open Source-installation som du klonat från en Git-databas.
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+source-git-commit: 7bcfbc4483f4b6d4c1a5e852adbd1cd81bc136b7
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '126'
 ht-degree: 0%
 
 ---
@@ -15,15 +15,7 @@ I det här avsnittet beskrivs hur en utvecklare som bidrar till att uppdatera Ad
 
 Så här uppgraderar du om du är en bidragsgivare:
 
-1. Logga in på servern.
-
-1. Växla till [ägare av filsystem](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
-
-1. Byt till den katalog där du klonade programmet. Till exempel:
-
-   ```bash
-   cd /var/www/magento2
-   ```
+{{$include /help/_includes/server-login.md}}
 
 1. Spara ändringar som du har gjort i `composer.json` eftersom nästa steg skriver över den.
 

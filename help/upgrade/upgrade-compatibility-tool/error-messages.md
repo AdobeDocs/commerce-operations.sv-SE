@@ -1,15 +1,17 @@
 ---
 title: '"[!DNL Upgrade Compatibility Tool] Felmeddelanden"'
 description: Läs mer om felmeddelanden du får när du använder [!DNL Upgrade Compatibility Tool] i ditt Adobe Commerce-projekt.
-source-git-commit: 97295df89fda393c8cf8675f8f4be92ac6f38a6a
+source-git-commit: 317a044e66fe796ff66b9d8cf7b308f741eb82c1
 workflow-type: tm+mt
-source-wordcount: '3638'
+source-wordcount: '3639'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL Upgrade Compatibility Tool] felmeddelanden
+
+{{commerce-only}}
 
 Den här felmeddelandereferensen innehåller information om fel som kan uppstå när [!DNL Upgrade Compatibility Tool].
 
