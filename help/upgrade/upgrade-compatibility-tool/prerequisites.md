@@ -1,9 +1,9 @@
 ---
 title: '"[!DNL Upgrade Compatibility Tool] Förutsättningar"'
 description: 'Verifiera att systemet uppfyller de krav som krävs för att köra [!DNL Upgrade Compatibility Tool] för ditt Adobe Commerce-projekt. '
-source-git-commit: 2e2f55ff659c36ffce7cf26224d5ceb61e53c42d
+source-git-commit: c4769b555df49ed2f0b2fffbeaf458c5a64816ba
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -29,3 +29,5 @@ Minimikraven för att köra [!DNL Upgrade Compatibility Tool] är:
 Du kan köra [!DNL Upgrade Compatibility Tool] i alla operativsystem. Du behöver inte köra [!DNL Upgrade Compatibility Tool] där din Adobe Commerce-instans finns.
 
 Det är nödvändigt för [!DNL Upgrade Compatibility Tool] för att få tillgång till källkoden för Adobe Commerce-instansen. Du kan t.ex. installera det på en server och peka det vid din Adobe Commerce-installation på en annan server. Se [installera](../upgrade-compatibility-tool/install.md) för mer information.
+
+Om du kör [!DNL Upgrade Compatibility Tool] för en Adobe Commerce-instans med stora moduler och filer kan verktyget kräva en hög mängd RAM-minne, minst 2 GB RAM-minne.

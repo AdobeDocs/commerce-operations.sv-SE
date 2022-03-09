@@ -1,9 +1,9 @@
 ---
 title: Översikt över [!DNL Upgrade Compatibility Tool]
 description: Läs mer om [!DNL Upgrade Compatibility Tool] och hur det kan hjälpa dig med ditt Adobe Commerce-projekt.
-source-git-commit: 708eb0bcbc9cff9332eade6377032d91f770644a
+source-git-commit: 218b099caa883f66ddda48407fb789e51fedc203
 workflow-type: tm+mt
-source-wordcount: '277'
+source-wordcount: '610'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,37 @@ The [!DNL Upgrade Compatibility Tool] gör att du kan identifiera när viktiga k
 Det distribueras som ett Composer-paket med varje version av Adobe Commerce. Se [Utvecklare](../upgrade-compatibility-tool/developer.md) för mer information.
 
 Se [Installera](../upgrade-compatibility-tool/install.md) för de första stegen med [!DNL Upgrade Compatibility Tool].
+
+## Arbetsflöde
+
+I följande diagram visas det förväntade arbetsflödet vid körning av [!DNL Upgrade Compatibility Tool]:
+
+![[!DNL Upgrade Compatibility Tool] Diagram](../../assets/upgrade-guide/mvp-diagram-v3.png)
+
+## The [!DNL Upgrade Compatibility Tool] användningsfall
+
+Följande exempel beskriver den vanliga processen för en Adobe Commerce-partner att uppgradera en klientinstans:
+
+1. Ladda ned [!DNL Upgrade Compatibility Tool] paketet från [Adobe Commerce](https://repo.magento.com/). Se [Ladda ned [!DNL Upgrade Compatibility Tool]](../upgrade-compatibility-tool/install.md#download-the-upgrade-compatibility-tool) för mer information.
+1. Kör [!DNL Upgrade Compatibility Tool] under [beta](https://devdocs.magento.com/release/beta-program.html) fas av nyaste [Adobe Commerce release](https://devdocs.magento.com/release/).
+1. Huvudkommandot är `upgrade:check`. Det här kommandot analyserar instansen och söker efter fel, varningar och kritiska problem i instansen. Så här optimerar du resultat:
+
+   - Lägg till alternativ `--ignore-current-version-compatibility-issues` om du vill ignorera alla kända allvarliga problem, fel och varningar i den aktuella Adobe Commerce-versionen. Visar endast resultat av den önskade versionen.
+   - Använd alternativ `--min-issue-level` för att ange minsta emissionsnivå. Hjälper dig att prioritera endast de viktigaste problemen med uppgraderingen. Om du bara vill analysera en viss leverantör, modul eller katalog kan du även ange sökvägen. Se [Kör verktyget](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/run.html?lang=en) om du vill ha mer information.
+
+1. Generera en vanilj-instans för den specifika version av Adobe Commerce som är installerad. Se [Contributor Guide](https://devdocs.magento.com/contributor-guide/contributing.html#vanilla-pr) för mer information om hur du använder `instance` för att generera en vaniljinstallation.
+
+   >[!NOTE]
+   >
+   >En vanilj-instans är en ren installation av en angiven versionstagg eller gren för en specifik version.
+
+1. The [!DNL Upgrade Compatibility Tool] Identifierar anpassade brutna områden. Programvaruteknikern kan förstå hur komplicerad uppgraderingen är och uppskatta uppgraderingens arbete. Denna information delas med intressenter.
+1. En budget och en tidslinje kommer att definieras för uppgraderingen.
+1. Programutvecklare kan sedan arbeta med nödvändiga kodändringar för att åtgärda de trasiga modulerna.
+1. The [!DNL Upgrade Compatibility Tool] kan köras för att spåra uppgraderingsförloppet.
+1. Allt som checkas ut och konstruktion kan nu föra ut koden till en staging-miljö där regressionstester bekräftar att alla tester är gröna, vilket gör att de kan släppa den senaste Adobe Commerce-versionen till produktion samma dag som Adobe Commerce-förhandsversionen släpps.
+
+   ![[!DNL Upgrade Compatibility Tool] publik](../../assets/upgrade-guide/audience-uct-v3.png)
 
 ## Förbättra [!DNL Upgrade Compatibility Tool]
 
