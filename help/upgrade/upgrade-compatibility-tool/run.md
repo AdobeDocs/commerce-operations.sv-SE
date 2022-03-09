@@ -1,9 +1,9 @@
 ---
 title: Kör [!DNL Upgrade Compatibility Tool]
 description: Följ de här stegen för att köra [!DNL Upgrade Compatibility Tool] i ditt Adobe Commerce-projekt.
-source-git-commit: bcb8fced43c5d9972291f15a5039dbbc2a692a59
+source-git-commit: ee80753da5327ebf593e007e3b4316e2b01c5a61
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1864'
 ht-degree: 0%
 
 ---
@@ -73,11 +73,11 @@ Tillgänglig `--help` för `upgrade:check` kommando:
 
 - `-m, --module-path[=MODULE-PATH]`: Sökväg till de moduler som ska analyseras
 - `-a, --current-version[=CURRENT-VERSION]`: Aktuell Adobe Commerce-version, version av Adobe Commerce-installationen, används om den utelämnas.
-- `-c, --coming-version[=COMING-VERSION]`: Adobe Commerce-målversion, version av Adobe Commerce-installationen, används om den utelämnas.
+- `-c, --coming-version[=COMING-VERSION]`: Adobe Commerce-målversion, den senaste versionen av Adobe Commerce kommer att användas om den utelämnas.
 - `--json-output-path[=JSON-OUTPUT-PATH]`: Sökväg till filen där utdata ska exporteras i json-format.
 - `--html-output-path[=HTML-OUTPUT-PATH]`: Sökväg till filen där utdata ska exporteras i HTML-format.
 - `--min-issue-level`: Minsta utgivningsnivå som ska visas i rapporten. Standard är [VARNING].
-- `--ignore-current-version-compatibility-issues`: Använd det här alternativet om du inte vill inkludera kända allvarliga problem, fel och varningar i [!DNL Upgrade Compatibility Tool] rapport.
+- `-i, --ignore-current-version-compatibility-issues`: Använd det här alternativet om du inte vill inkludera kända allvarliga problem, fel och varningar i [!DNL Upgrade Compatibility Tool] rapport.
 - `--context=CONTEXT`: Körningskontext. Det här alternativet är avsett för integrering och påverkar inte körningsresultatet.
 - `-h, --help`: Visa hjälp för det specifika kommandot. Om inget kommando anges `list` är standardresultatet.
 - `-q, --quiet`: Skriv inga meddelanden när kommandot körs.
