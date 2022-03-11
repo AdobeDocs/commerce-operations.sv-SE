@@ -1,7 +1,7 @@
 ---
 title: Översikt över uppgraderingsprocessen
 description: Läs om hur du genom att uppgradera Adobe Commerce och Magento Open Source kan skydda din butik och arbeta effektivt.
-source-git-commit: 8f983e6791da852350fa061fd3119abcdaa03cbf
+source-git-commit: 18f5e9c96377e0299fdc776a69393f2ceef3618b
 workflow-type: tm+mt
 source-wordcount: '1054'
 ht-degree: 0%
@@ -76,7 +76,7 @@ Den fortsatta tillväxten inom den digitala e-handeln har ökat trycket på för
 
 Adobe publicerar en [publiceringsschema](https://devdocs.magento.com/release/) årligen för att underlätta handlarnas planeringsprocess och rekommenderar uppgradering av varje korrigeringsrelease-cykel. För att vara PCI-kompatibel måste handlarna finnas på den senaste patchen eller säkerhetsuppdateringen. I följande tidslinje visas de viktigaste utgivnings- och EOL-händelserna 2022.
 
-![](../assets/upgrade-guide/2022-release-timeline.jpg)
+![](../assets/upgrade-guide/2022-release-timeline.png)
 
 Viktiga händelser att notera är:
 
