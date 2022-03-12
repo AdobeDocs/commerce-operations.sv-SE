@@ -2,9 +2,9 @@
 keywords: Adobe Commerce;home;populära topics
 title: Startsida
 description: Bläddra i ett index över Adobe Commerce produktdokumentation.
-source-git-commit: 3637e81bf3951d0130941613d88488405073e7e1
+source-git-commit: 63ceb5bad64a7ed5bce3ad2af76966eb6883d62e
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '205'
 ht-degree: 0%
 
 ---
@@ -12,18 +12,7 @@ ht-degree: 0%
 
 # Adobe Commerce drifthandledningar
 
-På den här sidan finns länkar till alla drifthandledningar för Adobe Commerce och Magento Open Source.
-
-## Nyheter
-
-Tabellen nedan innehåller de senaste ändringarna som vi tror att du vill veta om, t.ex. nya ämnen och viktiga uppdateringar av befintliga ämnen:
-
-| Beskrivning | Typ |
-|------------------------------------------------------------------------------------------------------------------------------------|--------------|
-| Tillagd [information](../upgrade/upgrade-compatibility-tool/overview.md) om hur regler definieras för verktyget Kompatibilitet med uppgraderingar. | Viktig uppdatering |
-| Borttagen föråldrad uppgraderingskompatibilitet [felkoder](../upgrade/upgrade-compatibility-tool/error-messages.md). | Teknik |
-
-## Stödlinjer
+Få praktisk information om koncept, processer, verktyg och bästa metoder för att utveckla, driftsätta och underhålla affärsprojekt som körs på Adobe Commerce och Magento Open Source.
 
 <table>
 <tr>
@@ -63,7 +52,7 @@ Tabellen nedan innehåller de senaste ändringarna som vi tror att du vill veta 
 <tr>
   <td valign="top">
     <a href="../upgrade/overview.md">
-      <img alt="Uppgradera" src="../assets/icons/download-cloud.svg" width="40" height="40"/>
+      <img alt="Uppgradera" src="../assets/icons/upload-cloud.svg" width="40" height="40"/>
     </a>
     <div>
       <a href="../upgrade/overview.md"><strong>Uppgradera</strong></a>
@@ -129,3 +118,12 @@ Tabellen nedan innehåller de senaste ändringarna som vi tror att du vill veta 
   </td>
 </tr>
 </table>
+
+## Nyheter
+
+Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
+
+| Ändra | Typ |
+|----------------------------------------------------------------------------------------------------------------------------------------|--------------|
+| Tillagd [information](../upgrade/upgrade-compatibility-tool/overview.md) om hur regler definieras för verktyget Kompatibilitet med uppgraderingar. | Viktig uppdatering |
+| Borttagen föråldrad uppgraderingskompatibilitet [felkoder](../upgrade/upgrade-compatibility-tool/error-messages.md). | Teknik |
