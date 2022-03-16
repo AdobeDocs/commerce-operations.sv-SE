@@ -1,15 +1,15 @@
 ---
-title: Om Adobe Commerce
+title: Adobe Commerce
 description: Beskrivning av Adobe Commerce
 exl-id: 130bae23-8a22-4523-abe2-8dc97b3881d2
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+source-git-commit: 3432ba8640a82269cb725b8b15854f20c270b1e3
 workflow-type: tm+mt
 source-wordcount: '284'
 ht-degree: 0%
 
 ---
 
-# Adobe Commerce
+# Om Adobe Commerce
 
 Adobe Commerce är den ledande plattformen för innovation inom öppen handel. Varje år hanterar Adobe Commerce över 100 miljarder dollar i bruttoförsäljning. Adobe Commerce ger kunderna möjlighet att skapa unika och engagerande shoppingupplevelser, färdiga funktioner och obegränsade möjligheter att anpassa, en flexibel headless-arkitektur och sömlösa integreringar från tredje part.
 

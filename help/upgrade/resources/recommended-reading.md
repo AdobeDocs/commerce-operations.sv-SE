@@ -1,9 +1,9 @@
 ---
 title: Rekommenderad läsning för uppgraderingar
 description: Läs vad som rekommenderas för att planera uppgraderingen till Adobe Commerce eller Magento Open Source.
-source-git-commit: 3d9a721e33621b78f03f16b932a1ba2904ae4010
+source-git-commit: 01ece828514da11459010f2633e370dd53e4e82e
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '328'
 ht-degree: 0%
 
 ---
@@ -13,39 +13,65 @@ ht-degree: 0%
 
 Lär dig mer om Adobe Commerce och Magento Open Source genom att använda resurserna på den här sidan.
 
-## Frisläppningsstrategi
-
-- [Accelerate Innovation through a Simplified Release Strategy](https://magento.com/blog/accelerating-innovation-through-simplified-release-strategy)
-- [Livscykelprincip](https://magento.com/sites/default/files/magento-software-lifecycle-policy.pdf)
-- [Frigör schema](https://devdocs.magento.com/release/)
-- [Vanliga frågor](https://support.magento.com/hc/en-us/articles/4409421516301-FAQ-for-New-Adobe-Commerce-Release-Strategy-and-Updated-Lifecycle-Policy)
-- [Versionstyper](https://devdocs.magento.com/release/policy/)
-- [Partneraktivering](https://solutionpartners.adobe.com/content/dam/spp_assets/restricted/community/Community_47/Webinar_Recording_Commerce_Q4_Product_Update.URL)
-
-## Planering
-
-- [NYHETER: 2.4.4 betaversioner kommer snart](https://community.magento.com/t5/Magento-DevBlog/BREAKING-NEWS-2-4-4-beta-releases-are-coming-soon/ba-p/484310)
-- [2.4.4 plattformsändringar](https://community.magento.com/t5/Magento-DevBlog/Technical-platform-changes-to-expect-in-Adobe-Commerce-2-4-4/ba-p/485506)
-- [Checklista för Upgrade Plan](https://support.magento.com/hc/en-us/articles/360057968951)
-- [Uppgradera bästa praxis](../prepare/best-practices.md)
-- [Ladda ned uppgraderingshandbok för 2.4.4](../../assets/upgrade-guide/adobe-commerce-2-4-upgrade-guide.pdf)
-
-## [!DNL Upgrade Compatibility Tool]
-
-- [Förbered dig för nästa uppgradering med Adobe Commerce [!DNL Upgrade Compatibility Tool]](https://community.magento.com/t5/Magento-DevBlog/Prepare-for-Your-Next-Upgrade-with-the-Adobe-Commerce-Upgrade/ba-p/483372)
-- [Översikt](../upgrade-compatibility-tool/overview.md)
-- [PHPStorm och [!DNL Upgrade Compatibility Tool]](https://devdocs.magento.com/guides/v2.3/ext-best-practices/phpstorm/uct-run-configuration.html)
-
-## Säkerhet
-
-- [Verktyg för säkerhetsgenomsökning](https://magento.com/blog/magento-news/secure-your-storefront-enhanced-magento-security-scan-tool)
-- [Introduktion till den nya säkerhetspatchen](https://community.magento.com/t5/Magento-DevBlog/Introducing-the-New-Security-Patch-Release/ba-p/141287)
-
-## Teknik
-
-- [Versionsinformation 2.4.x](https://devdocs.magento.com/guides/v2.4/release-notes/bk-release-notes.html)
-- [Översikt över uppgraderingsprocessen](../overview.md)
-- [Programvarutillgänglighet](https://devdocs.magento.com/release/availability.html)
-- [Bakåtkompatibel utveckling](https://devdocs.magento.com/contributor-guide/backward-compatible-development/index.html)
-- [Åtkomst till förhandsversioner](https://support.magento.com/hc/en-us/articles/360034120932)
-- [Versionshanteringsschema](https://devdocs.magento.com/guides/v2.3/extension-dev-guide/versioning/)
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Versionsinformation och meddelanden</strong>
+        <ul>
+            <li><a href="https://blog.adobe.com/">Adobe blogg</a></li>
+            <li><a href="https://support.magento.com/hc/en-us">Adobe Help Center</a></li>
+            <li><a href="https://helpx.adobe.com/security/products/magento/apsb22-12.html">Adobe säkerhetsbulletin</a></li>
+            <li><a href="https://community.magento.com/t5/Magento-DevBlog/bg-p/devblog">Devblog</a></li>
+            <li><a href="https://devdocs.magento.com/guides/v2.4/release-notes/bk-release-notes.html">Versionsinformation</a></li>
+            <li><a href="https://solutionpartners.adobe.com/solution-partners.html">Partnerportal för lösningar</a> (för partners med giltig inloggning)</li>
+          </ul>
+        </td>
+      <td><strong>verktyg</strong>
+        <ul>
+            <li><a href="https://magento.com/tech-resources/downloads">Ladda ned Adobe Commerce-versioner</li>
+            <li><a href="https://experienceleague.adobe.com/docs/commerce-learn/tutorials/uct-phpstorm.html?lang=en">Så här använder du verktyget för uppgradering av kompatibilitet med PHPStorm-pluginprogrammet</a> (video)</li>
+            <li><a href="https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/overview.html?lang=en">Kompatibilitetsverktyg för uppgradering</a></li>
+            <li><a href="https://magentocommeng.slack.com/archives/C019Y143U9F">#UpgradeCompatibilityTool Slack-kanal</a></li>
+            <li><a href="https://devdocs.magento.com/quality-patches/usage.html">Verktyget Korrigeringar</a></li>
+          </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Kalendrar och policy</strong>
+        <ul>
+            <li><a href="https://marketplacesupport.magento.com/hc/en-us/articles/4413722432653">Commerce Marketplace policy</a></li>
+            <li><a href="https://support.magento.com/hc/en-us/articles/4409421516301-FAQ-for-New-Adobe-Commerce-Release-Strategy-and-Updated-Lifecycle-Policy">Frågor och svar om nya Adobe Commerce Release Strategy, Updated Lifecycle Policy och Extended Support</a></li>
+            <li><a href="https://www.adobe.com/content/dam/cc/en/legal/terms/enterprise/pdfs/Adobe-Commerce-Software-Lifecycle-Policy.pdf">Livscykelprincip</a></li>
+            <li><a href="https://devdocs.magento.com/release/">Frigör schema</a></li>
+            <li><a href="https://devdocs.magento.com/release/policy/">Versionstyper</a></li>
+          </ul>
+        </td>
+      <td><strong>Funktioner och oberoende tjänster</strong>
+        <ul>
+            <li><a href="https://marketplace.magento.com/">Commerce Marketplace</a></li>
+            <li><a href="https://marketplace.magento.com/magento-live-search.html">Live Search</a></li>
+            <li><a href="https://marketplace.magento.com/magento-payment-services.html">Betalningstjänster</a></li>
+            <li><a href="https://marketplace.magento.com/magento-product-recommendations.html">Recommendations</a></li>
+            <li><a href="https://developer.adobe.com/commerce/pwa-studio/guides/upgrading-versions">Uppgraderar PWA Studio</a></li>
+          </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Uppgraderingsresurser</strong>
+        <ul>
+             <li><a href="https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/resources/recommended-upgrade-paths-2022.html?lang=en">Rekommenderade uppgraderingssökvägar för 2022</a></li>
+            <li><a href="https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/overview.html">2.4 Uppgraderingshandbok</a></li>
+            <li><a href="https://experienceleague.adobe.com/docs/commerce-learn/tutorials/upgrade-workshop.html?lang=en">2.4 Technical Upgrade Workshop - inspelning</a></li>
+            <li><a href="https://support.magento.com/hc/en-us/articles/360034120932">Åtkomst till förhandsversioner</a></li>
+            <li><a href="https://devdocs.magento.com/release/beta-program.html">Betaprogram - översikt</a></li>
+            <li><a href="https://devdocs.magento.com/contributor-guide/backward-compatible-development/index.html">Bakåtkompatibel utveckling</a></li>
+            <li><a href="https://devdocs.magento.com/guides/v2.4/release-notes/backward-incompatible-changes/index.html">Bakåtkompatibla ändringar</a></li>
+            <li><a href="https://support.magento.com/hc/en-us/articles/360057968951-Upgrade-plan-checklist-for-Adobe-Commerce">Checklista för Upgrade Plan</a></li>
+            <li><a href="https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/prepare/best-practices.html?lang=en">Bästa praxis för uppgradering</a></li>
+            <li><a href="https://devdocs.magento.com/release/availability.html">Programvarutillgänglighet</a></li>
+          </ul>
+      </td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
