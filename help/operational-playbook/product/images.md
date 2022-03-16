@@ -1,13 +1,13 @@
 ---
 title: Produktbilder
 description: Ge era kunder högkvalitativa produktbilder och videor för att öka konverteringsgraden.
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+exl-id: 080f177e-f668-4154-8a05-ea4724c29c5f
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 0%
 
 ---
-
 
 # Produktbilder
 
@@ -51,19 +51,19 @@ Olika typer av bilder kan användas beroende på verksamhetens behov.
 
 ## God praxis
 
-- **Demonstrera produkten** - Om produkten har ett definierat syfte kan du demonstrera den och visa funktioner och funktioner.
+- **Demo av produkten**- Om produkten har ett definierat syfte kan du demonstrera produkten för att visa funktioner och funktioner.
 
-- **Marknadsför användargenererade bilder** - Användare som överför sina bilder med produkten som en recension, vilket motiverar andra kunder att köpa produkten.
+- **Befordra användargenererade bilder**- Användare som laddar upp sina bilder med produkten som recension, vilket motiverar andra kunder att köpa produkten.
 
-- **360-gradersvy över produkten** - Om du överför en 360-gradersvy eller en GIF-bild av produkten kan du ge kunden en detaljerad bild och motivera dem att köpa produkten.
+- **360-gradersvy över produkten**—Att ladda upp en 360-gradersvideo eller GIF av produkten kan ge en detaljerad bild till kunden och motivera dem att köpa produkten.
 
-- **Namnkonvention** - Gör det till en regel att följa en namngivningskonvention för produktbilden, vilket minimerar felen med att överföra en felaktig bild för en produkt och hjälper teamet att enkelt hantera bilder.
+- **Namngivningskonvention**- Gör det till en regel att följa en namngivningskonvention för produktbilden, vilket minimerar felen med att överföra en felaktig bild för en produkt och hjälper teamet att enkelt hantera bilder.
 
-- **Sidinläsning** - Överför inte bilder som ökar sidinläsningstiden. Om en kund måste vänta på att bilden ska visas kan han eller hon lämna webbplatsen.
+- **Sidinläsning**- Överför inte bilder som kan öka sidans inläsningstid. Om en kund måste vänta på att bilden ska visas kan han eller hon lämna webbplatsen.
 
-- **Enkelt innehåll** - Förenkla inte innehållet för mycket. Försök att göra innehållet enkelt och attraktivt där det är produkten som är i fokus. Ett bra exempel är att ha produktbilden mot en vit bakgrund för att förbättra produktbilden.
+- **Enkelt innehåll**—Komplexa inte innehållet för mycket. Försök att göra innehållet enkelt och attraktivt där det är produkten som är i fokus. Ett bra exempel är att ha produktbilden mot en vit bakgrund för att förbättra produktbilden.
 
-- **Bild** - När en kund köper en produkt online förväntar de sig att se produkten som den är på webbplatsen. Undvik att använda filter eller förbättra bilden för att ändra hur den ser ut. Det är viktigt att vara transparent med kunden, annars kan ni få hög avkastning.
+- **Real product image**- När en kund köper en produkt online förväntar de sig att se produkten som den är på webbplatsen. Undvik att använda filter eller förbättra bilden för att ändra hur den ser ut. Det är viktigt att vara transparent med kunden, annars kan ni få hög avkastning.
 
 >[!TIP]
 >

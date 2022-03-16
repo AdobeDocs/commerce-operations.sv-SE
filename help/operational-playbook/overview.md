@@ -1,17 +1,17 @@
 ---
-title: Operational Playbook
+title: Operativ spelningsbok
 description: Målet för handelns operativa spelbok
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+exl-id: f072f6ca-3654-4bd2-a32e-000358bb67b3
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '426'
 ht-degree: 0%
 
 ---
 
+# Aktuell spelningsbok
 
-# Operational playbook
-
-Målet med den här spelboken är att göra verksamheten redo för en framgångsrik e-handelsplats. Detta hjälper dig och din organisation att få ut maximalt av dina teknikinvesteringar. Although we have seen many websites succeed, others have faltered due to a lack of internal investment in the businesses to ensure they are operationally ready to run an ecommerce site successfully.
+Målet med den här spelboken är att göra verksamheten redo för en framgångsrik e-handelsplats. Detta hjälper dig och din organisation att få ut maximalt av dina teknikinvesteringar. Även om vi har sett många webbplatser lyckas har andra misslyckats på grund av brist på interna investeringar i företagen för att säkerställa att de är redo att driva en e-handelsplats med framgång.
 
 Vi har skapat denna spelbok för alla branscher och kunder (B2C och B2B) som kan användas som en del av deras dagliga e-handelsverksamhet och den framgångsrika hanteringen av deras e-handelsplattform.
 
@@ -25,24 +25,24 @@ Målgruppen för den här spelboken är:
 - Head of Digital, Head of Strategy, Head of Marketing
 - Head of Content, Head of UX, Content Production Lead, Content Strategiist, Content Producers, UX Designer
 - Solution Architect, Head of Implementation, Lead Developer
-- Program Manager, Project Manager
+- Programchef, projektledare
 - e-handelsansvarig, affärsanalytiker
 
 ## Om den här spelboken
 
-This document follows a structure designed to help you understand the key focus areas to drive maximum value from your investment in Adobe Commerce. This structure is based on the Deloitte and Adobe Commerce Governance Framework, which creates the appropriate business environment for digital operations and transformations to succeed. Den innehåller följande uppgifter:
+Det här dokumentet följer en struktur som hjälper dig att förstå de viktigaste fokusområdena för att få ut så mycket som möjligt av er investering i Adobe Commerce. Denna struktur bygger på Deloitte och Adobe Commerce Governance Framework, som skapar en lämplig affärsmiljö för digitala operationer och omvandlingar för att lyckas. Den innehåller följande uppgifter:
 
-- **Ledarskap** - Företagsledningens inköp och support för en framgångsrik hantering av en e-handelsplattform.
+- **Ledarskap**- Verkställande inköps- och support för en framgångsrik hantering av en e-handelsplattform.
 
-- **Strategy**—Clarity and alignment around key business goals for evaluating digital performance and ecommerce operations.
+- **Strategi**- Klarhet och anpassning kring viktiga affärsmål för utvärdering av digitala prestanda och e-handelsverksamhet.
 
-- **Solution**—Hosting and infrastructure evaluation for varying business and ecommerce requirements.
+- **Lösning**- Värdtjänster och utvärdering av infrastruktur för olika affärs- och e-handelskrav.
 
-- **People**—Resources, expertise, and the appropriate team structure to run ecommerce operations effectively.
+- **Folk**- Resurser, sakkunskap och lämplig teamstruktur för att effektivt kunna driva e-handelsverksamhet.
 
-- **Process** - Förfaranden, projekthantering och arbetsflöden för effektiv hantering av en e-handelsplats.
+- **Process**- Förfaranden, projekthantering och arbetsflöden för effektiv hantering av en e-handelsplats.
 
-- **Product**—General ecommerce solutions, common integrations, and automations.
+- **Produkt**- Allmänna e-handelslösningar, vanliga integreringar och automatiseringar.
 
 >[!NOTE]
 >

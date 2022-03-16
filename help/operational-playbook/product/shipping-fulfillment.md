@@ -1,13 +1,13 @@
 ---
 title: Leverans
 description: Bestäm leveransmetoder och kostnader innan du slutför e-handelsprojektet.
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+exl-id: 07d303ab-f229-4b6a-b35a-b6d2a3be89b3
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '628'
 ht-degree: 0%
 
 ---
-
 
 # Leverans
 
@@ -19,27 +19,27 @@ En hel del arbete läggs på att ge kunderna den bästa onlineupplevelsen. På d
 
 Leverans och slutförande har några grundläggande faktorer som fungerar som grund, bland annat:
 
-- **Leveransmetoder och kostnader** - Företagen måste analysera och dela upp hela fraktkostnaden och avgöra om de ska absorbera fraktkostnader, överföra kostnader till kunderna eller dela kostnaden? Hur kommer företaget att erbjuda fri frakt eller frakt? Hur levereras produkterna? Kommer det att finnas mer än en fraktmetod och fraktkostnader?
+- **Leveransmetoder och kostnader**—Företagen måste analysera och dela upp hela fraktkostnaden och avgöra om de ska absorbera fraktkostnaderna, föra över kostnaderna till kunderna eller dela kostnaderna? Hur kommer företaget att erbjuda fri frakt eller frakt? Hur levereras produkterna? Kommer det att finnas mer än en fraktmetod och fraktkostnader?
 
-- **Produkt** - Varje produkt skiljer sig åt när det gäller antal artiklar, vikt, destination och hållbarhet. Företagen måste analysera dessa uppgifter för att förstå den totala fraktkostnaden eftersom olika produkter har olika fraktkostnader.
+- **Produkt**- Varje produkt är annorlunda i fråga om antal artiklar, vikt, destination och hållbarhet. Företagen måste analysera dessa uppgifter för att förstå den totala fraktkostnaden eftersom olika produkter har olika fraktkostnader.
 
-- **Paketering** - Paketeringen spelar också en viktig roll när det gäller att förstå leveranssätt och kostnad. Är produkten till exempel skört eller packad som en gåva?
+- **Paketering**—Paketeringen spelar också en viktig roll när det gäller att förstå leveranssätt och kostnad. Är produkten till exempel skört eller packad som en gåva?
 
-- **Säsong** - Vilka förändringar bör man göra under högsäsong, som klickfreni och festivaler.
+- **Säsong**—Vilka förändringar bör man göra under högsäsong, som klickfreni och festivaler.
 
-- **Bärare** - Vilket tredjepartsrederi passar bäst för företaget? Vilka tjänster tillhandahåller rederierna? Vad kostar det?
+- **Operatörer**—Vilket tredjepartsrederi passar bäst för verksamheten? Vilka tjänster tillhandahåller rederierna? Vad kostar det?
 
 ## Leveransmetoder
 
 Innan ett företag levererar sin produkt måste man bestämma sig för leveransmetoder och fraktkostnader. Det finns olika leveranssätt:
 
-- **Fri frakt** - Att erbjuda fri frakt till kunder kan vara den bästa kundupplevelsen, men passar kanske inte verksamheten.
+- **Fri frakt**—Erbjudandet om fri frakt till kunder kan vara den bästa kundupplevelsen, men kanske inte passar verksamheten.
 
-- **Realtidspriser** - Genom att samarbeta med tredjepartsleverantörer kan återförsäljarna bokföra fraktmetoden och kostnaderna som fraktbolaget för närvarande debiterar. På så sätt kan kunderna välja leveranssätt.
+- **Realtidshastigheter**- Genom att samarbeta med tredjepartsleverantörer kan återförsäljarna bokföra den fraktmetod och de kostnader som fraktbolaget för närvarande tar ut. På så sätt kan kunderna välja leveranssätt.
 
-- **Schablonbelopp** - ett av de populäraste leveransalternativen. Tricket här är att se till att handlarna inte överbelastar eller undertrycker kunderna. Detta fungerar också om detaljhandlarna har en standardprodukt men kan bli komplicerade om detaljhandlarna har en mängd olika produkter.
+- **Schablonbelopp**- Ett av de populäraste leveransalternativen. Tricket här är att se till att handlarna inte överbelastar eller undertrycker kunderna. Detta fungerar också om detaljhandlarna har en standardprodukt men kan bli komplicerade om detaljhandlarna har en mängd olika produkter.
 
-- **Kostnadsfri frakt över ett visst belopp** - Återförsäljare kan erbjuda fri frakt när kunden köper mer än ett visst belopp. Återförsäljare måste beräkna det beloppet för att kunna tillhandahålla den här tjänsten.
+- **Kostnadsfri frakt över ett visst belopp**—Återförsäljare kan erbjuda fri frakt när kunden köper mer än ett visst belopp. Återförsäljare måste beräkna det beloppet för att kunna tillhandahålla den här tjänsten.
 
 Leverans och slutförande krävde samordning av teamet både internt och externt. En strategi för leverans och uppfyllande bör delas med hela organisationen så att de anpassas efter varandra. Om marknadsföringsteamet till exempel vill skicka ut en kampanj som inkluderar fri frakt, måste de anpassa den efter frakt- och leveransstrategin och teamet för att eliminera negativa kundupplevelser.
 

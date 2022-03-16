@@ -44,7 +44,7 @@ Felet inträffar om det returnerade värdet är `mysql` eller `elasticsearch`.
 >composer require-commerce magento/product-community-edition=<version>
 >```
 >
->Plats `<version>` är den version av Magento som du körde **före** uppgraderingen. Till exempel: `2.3.5`.
+>Plats `<version>` är den version av Magento som du körde **före** uppgraderingen. Exempel, `2.3.5`.
 
 Följ riktlinjerna som beskrivs i följande avsnitt för att återställa efter ett inkonsekvent tillstånd.
 

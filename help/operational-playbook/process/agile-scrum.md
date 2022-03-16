@@ -1,13 +1,13 @@
 ---
 title: Agile Scrum Method
 description: Se hur en kombination av Agile- och Scrum-metoder kan snabba upp ert e-handelsprojekt.
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+exl-id: 2c46acad-bff9-4a9f-acfb-622ffbf97288
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 0%
 
 ---
-
 
 # Agile Scrum-metod
 
@@ -19,12 +19,12 @@ Scrum uppmuntrar självorganiserade, funktionsövergripande team att lösa probl
 
 I Scrum-metoden finns det flera möten som används för att driva på transparensen och framstegen i ett e-handelsprojekt:
 
-- **Sprint-planering** - ett planeringsmöte där teammedlemmar samlas för att bestämma hur mycket arbete som kan utföras i en utskrift.
+- **Sprint-planering**—Ett planeringsmöte där teammedlemmarna samlas för att bestämma hur mycket arbete som kan utföras i en svep.
 
-- **Dagligt samarbete** - Ett 15-minuters möte där man delar med sig av uppdateringar om vad varje teammedlem arbetar med.
+- **Daglig trumma**- Ett 15-minuters möte som används för att dela uppdateringar om vad varje teammedlem arbetar med.
 
-- **Sprint review** - ett möte som används för att visa status från sprint.
+- **Sprint-granskning**—Ett möte som används för att visa status från fjädringen.
 
-- **Sprint retrospective** - ett möte som används för att reflektera över föregående utkast och för att identifiera möjligheter till förbättring.
+- **Sprint retrospective**—Ett möte som används för att reflektera över det föregående seminariet och för att identifiera möjligheter till förbättring.
 
 I slutet av varje utskrift bör en värdeökning (till exempel nya funktioner, felkorrigeringar, uppgraderingar eller allmänna koduppdateringar) levereras och kunna frisläppas till kunderna.

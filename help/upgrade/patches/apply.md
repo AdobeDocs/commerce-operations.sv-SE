@@ -37,7 +37,7 @@ Så här använder du en anpassad korrigering med Composer:
    - **Titel:** *\&quot;MAGETWO-56934: Checkout page freezes when order with Authorize.net with invalid credit card\&quot;*
    - **Sökväg till korrigering:** *\&quot;patches/composer/github-issue-6474.diff\&quot;*
 
-   Till exempel:
+   Exempel:
 
    ```json
    "extra": {

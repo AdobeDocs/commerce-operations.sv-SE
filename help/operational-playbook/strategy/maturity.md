@@ -1,13 +1,13 @@
 ---
 title: Löptid
 description: Utvärdera vilket stadium ert företag befinner sig i baserat på denna mognadsmodell.
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+exl-id: 5cf9f080-0ac4-4426-837f-3c245d10e504
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '1048'
 ht-degree: 0%
 
 ---
-
 
 # Löptidsmodell
 

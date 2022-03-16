@@ -1,13 +1,13 @@
 ---
 title: Team
 description: Lär dig mer om olika typer av team som gör e-handelsprojekt framgångsrika.
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+exl-id: b1a007b2-49ff-475f-9ad7-5fa100cdfa3b
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '1224'
 ht-degree: 0%
 
 ---
-
 
 # Team
 
@@ -71,7 +71,7 @@ Tänk dig till exempel en organisation som bygger och testar en webbplats, men s
 
 ## C-nivå
 
-Chefer på C-nivå vill alltid att deras organisationer ska prestera på optimal nivå och öka konverteringsgraden för att få avkastning på sina investeringar. För att lyckas med detta måste hela organisationen vara engagerad och arbeta tillsammans. Det är också mycket viktigt att chefer på C-nivå och andra högsta nivå är mer involverade och förstår processen för att fastställa mål.
+Chefer på C-nivå vill alltid att deras organisationer ska prestera på optimal nivå och öka konverteringsgraden för att få avkastning på sina investeringar. För att lyckas med detta måste hela organisationen vara engagerad och arbeta tillsammans. Det är också mycket viktigt att chefer på C-nivå och andra högsta nivå blir mer involverade och förstår processen för att fastställa mål.
 
 Inköp på C-nivå och andra ledande chefer är avgörande för att ett större e-handelsprojekt ska lyckas. Det kräver både direkt engagemang och korrekt kommunikation mellan alla team.
 
@@ -87,8 +87,8 @@ När du startar ett e-handelsprojekt bör du tänka på C-nivån och verksamhete
 
 Det finns andra team som antingen ingår i ett befintligt team eller är fristående, inklusive:
 
-- **Innehållsteamet** - De måste vara i linje med alla team för att kunna skapa effektivt innehåll. Innehåll på webbplatsen kräver regelbundna uppdateringar. Innehållsteamet ansvarar för att skapa innehåll på produktsidan, kategorisidor, bloggar och sidfötter, som lockar webbplatstrafiken och ökar konverteringsgraden.
+- **Innehållsteamet**- De måste vara i linje med alla team för att kunna skapa effektivt innehåll. Innehåll på webbplatsen kräver regelbundna uppdateringar. Innehållsteamet ansvarar för att skapa innehåll på produktsidan, kategorisidor, bloggar och sidfötter, som lockar webbplatstrafiken och ökar konverteringsgraden.
 
-- **Datateam** - e-handelssajter genererar mycket data som ni kan samla in och analysera, inklusive kundinformation, utgiftsvanor, populära produkter och den tid som webbplatsen har mest trafik. Datateamet bearbetar all den här informationen för att få insikt i hur webbplatsen fungerar och var webbplatsen behöver förbättras. Datateamet kan rekommendera vilka trender som kommer och var verksamheten behöver fokusera.
+- **Datateam**—E-handelsplatser genererar mycket data som ni kan samla in och analysera, inklusive kundinformation, utgiftsvanor, populära produkter och den tid som webbplatsen har mest trafik. Datateamet bearbetar all den här informationen för att få insikt i hur webbplatsen fungerar och var webbplatsen behöver förbättras. Datateamet kan rekommendera vilka trender som kommer och var verksamheten behöver fokusera.
 
-- **Finans- och redovisningsteamet** - Vissa företag har ett litet finans- och redovisningsteam, som kan vara antingen internt eller externt. De fokuserar på budgetering, prognoser och hantering av den ekonomiska aspekten av att skapa och driva en e-handelsplats.
+- **Finans och redovisning**- Vissa företag har ett litet finans- och redovisningsteam, som kan vara antingen interna eller externa. De fokuserar på budgetering, prognoser och hantering av den ekonomiska aspekten av att skapa och driva en e-handelsplats.

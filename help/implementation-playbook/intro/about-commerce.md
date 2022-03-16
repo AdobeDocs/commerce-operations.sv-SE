@@ -1,21 +1,21 @@
 ---
-title: About Adobe Commerce
+title: Om Adobe Commerce
 description: Beskrivning av Adobe Commerce
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+exl-id: a9ebd4a6-87b4-47b9-8ae8-72d99e1797eb
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '300'
 ht-degree: 0%
 
 ---
 
-
 # Om Adobe Commerce
 
-Adobe Commerce gives merchants the power to create unique and engaging shopping experiences. The platform provides rich, out-of-the-box features, an unlimited ability to customize, a flexible headless architecture, and seamless third-party integrations. Detta är kopplat till ett globalt ekosystem av implementeringspartners och en stor marknadsplats med tillägg för att ge liv åt affärsprojekt.
+Adobe Commerce ger handlare möjlighet att skapa unika och engagerande shoppingupplevelser. Plattformen har avancerade, körklara funktioner, obegränsade möjligheter att anpassa, flexibel headless-arkitektur och smidiga integreringar från tredje part. Detta är kopplat till ett globalt ekosystem av implementeringspartners och en stor marknadsplats med tillägg för att ge liv åt affärsprojekt.
 
 ## Leverera meningsfulla e-handelsupplevelser
 
-När man marknadsför innehåll med e-handel för att uppfylla kundernas krav på felfria varumärkesinteraktioner utvecklas alltid Adobe Commerces funktioner med konsumenten i åtanke. Med Adobe Commerce kan varumärken äga kundupplevelsen, skapa personaliserat innehåll och kampanjer och leverera en smidig köpväg via följande funktioner:
+Adobe Commerce funktioner utvecklas alltid med konsumenterna i åtanke när man marknadsför innehåll för att tillgodose kundernas krav på felfria varumärkesinteraktioner. Adobe Commerce gör det möjligt för varumärken att äga kundupplevelsen, skapa personaliserat innehåll och kampanjer samt leverera en smidig köpväg via följande funktioner:
 
 - Page Builder
 - Recommendations
@@ -38,20 +38,20 @@ Handelstillväxten främjas genom att kundernas behov tillgodoses oavsett var de
 
 ## Hantera intelligenta och effektiva åtgärder
 
-Effektivitet, automatisering och dataåtkomst krävs för att man ska kunna konkurrera i det moderna e-handelslandskapet. Adobe Commerce makes it easy for merchants to transform into, and operate as, an effective, data-driven commerce organization to grow their business.
+Effektivitet, automatisering och dataåtkomst krävs för att man ska kunna konkurrera i det moderna e-handelslandskapet. Adobe Commerce gör det enkelt för handlare att omvandla sig till och fungera som en effektiv, datadriven e-handelsorganisation för att utöka sin verksamhet.
 
-- Business intelligence
+- Business Intelligence
 - Leverans
-- Inventory management
+- Lagerhantering
 - Orderhantering och kundtjänst
 
 ## Tillförlitlig drift
 
-Kunderna förväntar sig mycket av de varumärken de interagerar med - från höga prestanda och säkerhet till innovativa interaktioner. Kör e-handelsverksamheten i trygg förvissning om att ni kan uppfylla och överträffa förväntningarna.
+Kunderna förväntar sig mycket av de varumärken de interagerar med - från höga prestanda och säkerhet till innovativa interaktioner. Kör e-handelsåtgärderna i trygg förvissning om att ni kan uppfylla och överträffa förväntningarna.
 
 - Öppen och anpassningsbar
 - Driftsättning i molnet
 - Säkerhet och förtroende
-- Performance and scale
+- Prestanda och skala
 - API:er
 - Marketplace

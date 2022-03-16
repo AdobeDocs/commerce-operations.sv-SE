@@ -1,13 +1,13 @@
 ---
 title: Klicka och samla
 description: Följ de här tio tipsen för att skapa en tilltalande klickning och samla in upplevelser åt era kunder.
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+exl-id: 5f5743ac-75a5-41f1-8819-2de088f56387
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '802'
 ht-degree: 0%
 
 ---
-
 
 # Klicka och samla
 
@@ -34,13 +34,13 @@ Företagen bör följa de här tio tipsen för att skapa ett bra klick och samla
 
 När man bestämmer sig för att implementera klickning och samla in måste man tänka på hur man planerar att leverera klickningar och samla in till kunder, som till exempel tjänstetyper:
 
-- **Betalning online och inhämtning i butik** - Användaren betalar för produkten online och när betalningen har bekräftats meddelar butiken kunden när produkten är klar att samlas in baserat på kundens val i butik. Genom att samla in betalning först kan du reservera produkten.
+- **Onlinebetalning och inkassering i butik**- Användaren betalar för produkten online och när betalningen har bekräftats meddelar butiken kunden när produkten är klar att samlas in baserat på kundens val i butik. Genom att samla in betalning först kan du reservera produkten.
 
-- **Reservera produkter online, betalning och insamling i butik** - I den här tjänsttypen betalar kunden inte online när man reserverar en produkt. I den här typen av tjänst kan kunden ändra sig och kanske inte köpa produkten.
+- **Reservera produkt online, betalning och insamling i butik**- I den här tjänstetypen betalar kunden inte online när man reserverar en produkt. I den här typen av tjänst kan kunden ändra sig och kanske inte köpa produkten.
 
-- **Integrering** - När leveranstypen har valts måste företagen bestämma sig för integreringsstrukturen (var beställningarna skickas, där beställningarna är klara). Lagret kan fullgöras antingen från ett centralt lager eller direkt från enskilda butiker.
+- **Integrering**- När leveranstypen har valts måste företagen bestämma sig för integreringsstrukturen (där beställningarna skickas, där beställningarna är klara). Lagret kan fullgöras antingen från ett centralt lager eller direkt från enskilda butiker.
 
-- **Returer** - Returer kan vara komplexa. Företagen måste ha en tydlig strategi för att hantera avkastningen på levererade produkter och produkter som beställts med hjälp av klickning och insamling. Företag måste tillåta kunderna att returnera produkter som de beställer genom att klicka och samla in för att kunna erbjuda heltäckande kundservice.
+- **Returnerar**—Returer kan vara komplexa. Företagen måste ha en tydlig strategi för att hantera avkastningen på levererade produkter och produkter som beställts med hjälp av klickning och insamling. Företag måste tillåta kunderna att returnera produkter som de beställer genom att klicka och samla in för att kunna erbjuda heltäckande kundservice.
 
 ## Kampanj
 

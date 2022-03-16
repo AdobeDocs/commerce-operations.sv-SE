@@ -1,13 +1,13 @@
 ---
 title: Roller och ansvarsområden
 description: Lär dig mer om de olika roller och ansvarsområden som ingår i ett framgångsrikt e-handelsprojekt.
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+exl-id: 6e61dcce-ad71-4380-bae4-48be1a3d88b9
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '1170'
 ht-degree: 0%
 
 ---
-
 
 # Roller och ansvarsområden
 
@@ -52,7 +52,7 @@ Marknadschefen för ett digitalt implementeringsprojekt måste också fokusera p
 
 En marknadschef bör ständigt kommunicera med chefen för Digital, e-handelsförvaltaren, kundtjänstgruppen och lagerteamet för att anpassa sina kampanjer och kampanjer. Om en Marketing Manager planerar och skickar ut en kampanj för en produkt som har ett lågt lager kan det finnas många problem för kunderna och öka kundtjänstteamets arbetsbörda. Det är viktigt att alla team är samordnade.
 
-Marknadsföringsansvariga måste även beakta olika kundtjänstmetoder för att förbättra kundupplevelsen och kundlojaliteten, inklusive, men inte begränsat till:
+Marknadsföringsansvariga måste också följa olika kundtjänstmetoder för att förbättra kundupplevelsen och kundlojaliteten, inklusive, men inte begränsat till:
 
 - Lojalitet
 - Belöningspunkter
@@ -130,12 +130,12 @@ Innehållsteamet sitter antingen inom marknadsföringsteamet, e-handelsteamet el
 
 Innehållsteamet ansvarar för följande:
 
-- **Att ordna innehållet** - Elements, URL:er, navigering och sidstruktur måste vara enkelt och användarvänligt. Om sajten är för komplicerad går kunderna förlorade.
+- **Ordna innehållet**—Element, URL:er, navigering och sidstruktur måste vara enkla och användarvänliga. Om sajten är för komplicerad går kunderna förlorade.
 
-- **Åtgärda skadat innehåll** - Brutna bilder, sidor, saknade sidor, utcheckningsflöde och felmeddelanden gör att kunderna lämnar er webbplats och lämnar ett negativt intryck.
+- **Korrigera brutet innehåll**- Brutna bilder, sidor, saknade sidor, utcheckningsflöde och felmeddelanden gör att kunderna lämnar er webbplats och lämnar ett negativt intryck.
 
-- **Uppdatera innehåll** - innehållet på webbplatsen måste vara uppdaterat. Om webbplatsen består av inaktuellt innehåll, påverkar det kundupplevelsen och ökar kundtjänstteamets arbetsbörda. De måste till exempel svara på kundfrågor som borde ha besvarats av innehåll på webbplatsen.
+- **Uppdaterar innehåll**—Innehållet på webbplatsen måste vara uppdaterat. Om webbplatsen består av inaktuellt innehåll, påverkar det kundupplevelsen och ökar kundtjänstteamets arbetsbörda. De måste till exempel svara på kundfrågor som borde ha besvarats av innehåll på webbplatsen.
 
-- **Förenklat innehåll** - Innehållsteamet måste skapa enkelt och rakt framåtriktat innehåll. Enkelt språk fungerar bäst när ni interagerar med kunderna.
+- **Förenkla innehållet**- Innehållsteamet behöver skapa enkelt och rakt framåtriktat innehåll. Enkelt språk fungerar bäst när ni interagerar med kunderna.
 
 Innehållsteamet skapar, testar, hanterar och optimerar allt innehåll på webbplatsen, vilket ökar avkastningen.

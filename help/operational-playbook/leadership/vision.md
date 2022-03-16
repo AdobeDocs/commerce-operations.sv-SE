@@ -1,13 +1,13 @@
 ---
 title: Commerce Vision
-description: Inspirera ditt team genom att skapa en vision för ert projekt inom Adobe Commerce.
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+description: Inspirera ditt team genom att skapa en vision för ditt Adobe Commerce-projekt.
+exl-id: 0eed719a-50fe-4ed7-9838-ec51d9b222b4
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '94'
 ht-degree: 0%
 
 ---
-
 
 # Vision
 

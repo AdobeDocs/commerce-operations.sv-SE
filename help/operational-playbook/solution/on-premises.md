@@ -1,18 +1,17 @@
 ---
 title: Commerce Hosting On-Premises
 description: Molnbaserade värdlösningar är mycket populära, men lokala värdtjänster kan vara bra för ditt e-handelsprojekt.
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+exl-id: e505c216-2d6c-4ca4-a4ec-4853cd9347fe
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 0%
 
 ---
 
-
 # Lokal hosting
 
-Molnbaserade värdlösningar är extremt populära och fungerar verkligen som
-En viktig roll för många organisationer är dock fortfarande lokal infrastruktur ett lämpligt alternativ för vissa organisationer och handlare.
+Molnbaserade värdlösningar är mycket populära och har en viktig roll i många organisationer, men lokal infrastruktur är fortfarande ett lämpligt alternativ för vissa organisationer och handlare.
 
 Du måste ta hänsyn till flera faktorer innan du väljer lokal hosting, bland annat avsevärda kostnader, en lättillgänglig pool av kompetent/kostnadseffektiv IT-expertis och det faktum att lokala applikationer ofta kan skräddarsys och anpassas efter organisationens behov.
 

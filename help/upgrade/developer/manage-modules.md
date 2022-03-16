@@ -4,7 +4,7 @@ description: Hantera moduler och tillägg för Adobe Commerce och Magento Open S
 source-git-commit: 7bcfbc4483f4b6d4c1a5e852adbd1cd81bc136b7
 workflow-type: tm+mt
 source-wordcount: '142'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -27,7 +27,7 @@ Kommandoanvändning:
 composer show --all <vendor>/<name>
 ```
 
-Till exempel:
+Exempel:
 
 ```bash
 composer show --all example/module
@@ -41,7 +41,7 @@ Kommandoanvändning:
 composer require <vendor>/<name>:<version>
 ```
 
-Till exempel:
+Exempel:
 
 ```bash
 composer require example/module:1.0.0

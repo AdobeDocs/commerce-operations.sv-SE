@@ -1,13 +1,13 @@
 ---
 title: Resportering och instrumentpaneler
-description: 'Övervaka nyckeltal, håll koll på försäljningen och mät framgången för er e-handelsplats med rapporter och kontrollpaneler. '
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+description: Övervaka nyckeltal, håll koll på försäljningen och mät framgången för er e-handelsplats med rapporter och kontrollpaneler.
+exl-id: 7b57c11b-ff32-440f-85bd-6b6d09c522b7
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 0%
 
 ---
-
 
 # Rapportering och kontrollpaneler
 
@@ -37,13 +37,13 @@ Det är så mycket som pågår inom e-handeln att det kan vara svårt att hålla
 
 De fyra viktigaste rapporterna och kontrollpanelerna som B2B-företag använder är:
 
-- **Företagsprofil** - B2B-företag måste spåra sina kundföretagsprofiler för att förstå inköpshistorik, betalningsinformation och vilken kanal de använde för att köpa. Kontrollpanelen kan hjälpa till att identifiera potentiella risker och problem.
+- **Företagsprofil**—B2B-företag måste spåra sina kundföretagsprofiler för att förstå inköpshistorik, betalningsinformation och vilken kanal de använde för att köpa. Kontrollpanelen kan hjälpa till att identifiera potentiella risker och problem.
 
-- **Katalog** - En katalograpport och kontrollpanel hjälper B2B-företag att se resultatet för varje produkt i katalogen, kampanjerna och lagernivåerna, vilket hjälper dem att identifiera vilken typ av kampanj som fungerar bäst och vilka produkter som efterfrågas. Detta hjälper företag att inventera och få konkurrensfördelar.
+- **Katalog**- En katalograpport och kontrollpanel hjälper B2B-företag att se resultatet för varje produkt i katalogen, kampanjerna och lagernivåerna, vilket hjälper dem att identifiera vilken typ av kampanj som fungerar bäst och vilka produkter som efterfrågas. Detta hjälper företag att inventera och få konkurrensfördelar.
 
-- **Offerter** - B2B-affärsmodellen bygger på offerter och priser. B2B-företag måste gå igenom en process där de analyserar en offert så att de antingen kan godkänna den eller försöka förhandla. En offertrapport och en kontrollpanel hjälper er att förbättra konverteringsgraden för offerter genom att spåra kundens framgångsgrad, konkurrensnivåer, resultat och totala kundlojalitet.
+- **Citat**- B2B-modellen bygger på offerter och priser. B2B-företag måste gå igenom en process där de analyserar en offert så att de antingen kan godkänna den eller försöka förhandla. En offertrapport och en kontrollpanel hjälper er att förbättra konverteringsgraden för offerter genom att spåra kundens framgångsgrad, konkurrensnivåer, resultat och totala kundlojalitet.
 
-- **Försäljning** - Även om B2B-företag kan arbeta online är en säljare fortfarande nödvändig för att komma igång med att identifiera offerter som behöver förhandlas, spåra offerter som snart går ut, spåra kontrakt som ska förnyas, spåra teamets prestanda och hjälpa till att effektivisera den dagliga verksamheten.
+- **Försäljning**- Även om B2B-företag kan arbeta online är en säljare fortfarande nödvändig för att få saker och ting att röra sig i när det gäller att identifiera offerter som behöver förhandlas, spåra offerter som snart går ut, spåra kontrakt som ska förnyas, följa upp teamets prestanda och hjälpa till att effektivisera den dagliga verksamheten.
 
 ## Bättre tillsammans
 

@@ -1,13 +1,13 @@
 ---
 title: Innehållsstrategi
 description: Utnyttja ert innehåll för att skapa engagerande kampanjer som engagerar era kunder.
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+exl-id: fabfed9e-63ff-4be3-8bb7-192ccdb9dde6
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 0%
 
 ---
-
 
 # Innehållsstrategi
 
@@ -37,10 +37,10 @@ Oavsett om ni hanterar grundläggande webbinnehåll eller innehåll som ska slä
 
 Adobe Experience Manager kombinerar ett antal funktioner på infrastruktur- och applikationsnivå i ett enda integrerat paket. Erbjudandeadresserna:
 
-- **Webbplatser** - Skapa och leverera snabbt relevanta webbplatser och mobilappar och uppdatera innehållet när som helst utan att IT-avdelningen behöver belastas.
-- **Resurser** - Hantera enkelt bilder, videor och andra resurser i alla digitala kanaler och leverera personaliserade kundupplevelser.
-- **Communities** - Skapa framgångsrika communityn och engagerande konversationer i alla era sociala kanaler så att ni kan inspirera till nya nivåer av lärande och kundlojalitet.
-- **Forms** - Integrera blanketter på företagsnivå på era webbplatser och i era mobila upplevelser och förenkla framtagningen av blanketter och slutförandet av transaktioner.
-- **Appar** - Skapa och leverera mobilappar med en lösning som överbryggar klyftan mellan marknadsförare och IT så att marknadsförare enkelt kan uppdatera innehåll (även efter lanseringen).
+- **Webbplatser**- Skapa och leverera snabbt relevanta webbplatser och mobilappar och uppdatera innehållet när som helst utan att IT-avdelningen behöver belastas.
+- **Resurser**- Hantera enkelt bilder, videor och andra resurser i alla digitala kanaler och leverera personaliserade kundupplevelser.
+- **Communities**- Skapa framgångsrika communityn och engagerande konversationer i alla era sociala kanaler så att ni kan inspirera till nya nivåer av lärande och kundlojalitet.
+- **Forms**- Integrera blanketter på företagsnivå på era webbplatser och i era mobila upplevelser och förenkla framtagningen av blanketter och slutförandet av transaktioner.
+- **Appar**—Skapa och leverera mobilappar med en lösning som överbryggar klyftan mellan marknadsförare och IT så att marknadsförarna enkelt kan uppdatera innehåll (även efter lanseringen).
 
 ![Ramverksdiagram för innehållsstrategi](../../assets/playbooks/content-strategy-framework2.png)

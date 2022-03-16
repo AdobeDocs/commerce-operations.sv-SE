@@ -1,13 +1,13 @@
 ---
 title: Personalisering
 description: Lär dig mer om vilken typ av upplevelseanpassning som bör ge era kunder.
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+exl-id: ea829c53-1f98-4e23-90ee-5424a4ef0324
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 0%
 
 ---
-
 
 # Personalisering
 
@@ -25,21 +25,21 @@ Personaliseringen bör omfatta följande:
 
 Exempel på personalisering är:
 
-- **Kundens intresse** - Ändra hemsida och navigering baserat på kundprofil. Om en användare till exempel har besökt webbplatsen tidigare och utforskat kvinnans avsnitt, navigerar de nästa gång när de anger webbadressen till kvinnans hemsida.
+- **Kundränta**- Ändra hemsida och navigering baserat på kundprofil. Om en användare till exempel har besökt webbplatsen tidigare och utforskat kvinnans avsnitt, navigerar de nästa gång när de anger webbadressen till kvinnans hemsida.
 
-- **Rekommenderade produkter** - Rekommendera produkter baserat på kundernas surfbeteende.
+- **Rekommenderade produkter**- Rekommendera produkter baserat på kundernas surfbeteende.
 
-- **Sök** - Visa anpassade sökresultat baserat på kundernas tidigare sökbeteenden.
+- **Sök**- Visa personaliserade sökresultat baserat på kundernas tidigare sökbeteenden.
 
-- **E-post** - Skicka personliga e-postmeddelanden om produkter om en kund har lämnat artikeln i kundvagnen eller om produkten inte fanns i lager, skicka ett meddelande när den är i lager igen.
+- **E-post**—Skicka personaliserade e-postmeddelanden om produkter om kunden har lämnat artikeln i kundvagnen eller om produkten inte fanns i lagret skickar du ett meddelande när den finns i lager igen.
 
-- **Geografisk plats** - Visa flera geografiska platser för platsen. En kund besöker till exempel AU-sajten, men alternativet USA-sajt visas också för att ge kunden ett val.
+- **Geo-location**—Visar flera geografiska platser för platsen. En kund besöker till exempel AU-sajten, men alternativet USA-sajt visas också för att ge kunden ett val.
 
-- **Rabattkod** - Visa specifika kategorirabattkoder för att marknadsföra produkter i en viss kategori.
+- **Rabattkod**—Visa specifika kategorirabattkoder för att marknadsföra produkter i en viss kategori.
 
-- **Kompletterande produkter** - Visa kompletterande produkter när kunden besöker en produkt. En kund kan till exempel se en klänning och visa kostnadsfria produkter som skor, väskor och tillbehör som följer med klänningen.
+- **Kompletterande produkter**- Visa kompletterande produkter när kunden besöker en produkt. En kund kan till exempel se en klänning och visa kostnadsfria produkter som skor, väskor och tillbehör som följer med klänningen.
 
-- **Personaliserad hemsida** - Visa en personlig hemsida för en registrerad användare så att de kan känna sig speciella.
+- **Personaliserad hemsida**—Visa en personlig hemsida där en registrerad användare kan känna sig speciell.
 
 ![Exempel på personaliserade produkter](../../assets/playbooks/personalization-example.png)
 

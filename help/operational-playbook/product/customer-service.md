@@ -1,13 +1,13 @@
 ---
 title: Kundtjänst
 description: En god kundservice kan vara en konkurrensfördel inom e-handeln.
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+exl-id: ef798b1b-96d0-493e-b125-1d67aa7644a1
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 0%
 
 ---
-
 
 # Kundtjänst
 
@@ -17,11 +17,11 @@ E-handeln är digitalt baserad och det enda teamet som interagerar med den verkl
 
 Återförsäljarna måste vara proaktiva när det gäller kundservice eftersom inte bara varumärkesnamnet står på spel, utan framför allt kundens lojalitet. För att återförsäljarna ska lyckas leverera den bästa kundupplevelsen finns det några bästa metoder som de kan följa:
 
-- **Flerstödskanal** - Det räcker inte att tillhandahålla tjänster via e-post eller telefon i dagens tid. Kundtjänst måste tillhandahållas i olika kanaler, som live chatt, e-post, telefonsamtal, sociala medier och textmeddelanden. Var och en av dem har sina egna proffs och ikoner som återförsäljarna behöver analysera.
+- **Flerstödskanal**—Det räcker inte att tillhandahålla tjänster via e-post eller telefon i dagens samhälle. Kundtjänst måste tillhandahållas i olika kanaler, som live chatt, e-post, telefonsamtal, sociala medier och textmeddelanden. Var och en av dem har sina egna proffs och ikoner som återförsäljarna behöver analysera.
 
-- **Personlig service** - Alla kundaktiviteter görs online, som återförsäljarna kan spåra för att förstå kundbeteendet. När en kund t.ex. kontaktar kundtjänstteamet får teamet information i förväg, t.ex. namn, e-postadress, orderhistorik och returer. Detta hjälper kundtjänst att tillhandahålla snabb och korrekt service och även ge kunderna skräddarsydd service.
+- **Personlig tjänst**—All kundaktivitet görs online, som återförsäljarna kan spåra för att förstå kundbeteendet. När en kund t.ex. kontaktar kundtjänstteamet får teamet information i förväg, t.ex. namn, e-postadress, orderhistorik och returer. Detta hjälper kundtjänst att tillhandahålla snabb och korrekt service och även ge kunderna skräddarsydd service.
 
-- **Självbetjäning** - Kunderna kan också få tillgång till självbetjäning, t.ex. frågor och svar, sekretesspolicy, villkor och forum.
+- **Självbetjäning**—Kunderna kan också få tillgång till självbetjäning, t.ex. frågor och svar, integritetspolicy, villkor och forum.
 
 Återförsäljarna bör sätta sig i kundens skor för att förstå sina problem och tillhandahålla den bästa kundupplevelsen. Kundupplevelsen håller kunderna lojala och främjar varumärket.
 

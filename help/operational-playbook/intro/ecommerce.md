@@ -1,19 +1,19 @@
 ---
 title: Vad är e-handel?
 description: Beskrivning av e-handel
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+exl-id: b418d36b-7dc6-49c7-95a8-03a55c69cb6f
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 0%
 
 ---
 
-
 # Vad är e-handel?
 
 I den överlappande e-handeln - social försäljning och digitala marknadsplatser - ger kundupplevelsen konsumenterna möjlighet att välja vilken kanal de vill ha, så det har aldrig varit viktigare att kunna välja rätt sätt att interagera och sälja online. E-handel och onlinehandel används ofta omväxlande, men i sin kärnmarknadsföring är den mycket bredare än så. Det innehåller ett koncept för att göra affärer online och innehåller en mängd olika tjänster.
 
-E-handeln har en enorm tillväxt. Den gick från att vara en 1,3 biljoner dollar-industri 2014 till en 3,5 biljoner dollar-industri 2019. Experterna förutser att det kommer att nå över 6,5 biljoner år 2023, vilket innebär att det finns en enorm möjlighet för varumärken att utnyttja konverteringsoptimeringen. Den stora kraften i e-handeln bör inte underskattas eftersom den fortsätter att leva i vardagslivet och ger betydande möjligheter för små, medelstora och stora företag samt investerare på nätet.
+E-handeln har en enorm tillväxt. Den gick från att vara en 1,3 biljoner dollar-industri 2014 till en 3,5 biljoner dollar-industri 2019. Experterna förutser att det kommer att nå över 6,5 biljoner år 2023, vilket innebär att det finns en enorm möjlighet för e-handelsvarumärken att utnyttja konverteringsoptimeringen. Den stora kraften i e-handeln bör inte underskattas eftersom den fortsätter att leva i vardagslivet och ger betydande möjligheter för små, medelstora och stora företag samt investerare på nätet.
 
 Oavsett om du just har börjat med e-handel eller om du har varit i branschen ett tag så vet du antagligen att det är svårt att bli framgångsrik, och därför har vi sammanställt den här guiden om hur du ska driva ett framgångsrikt e-handelsföretag.
 

@@ -1,18 +1,17 @@
 ---
 title: Orderhantering
 description: Se hur ett orderhanteringssystem är nödvändigt för ert e-handelsföretag.
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+exl-id: 62edc895-d725-4252-9a43-e03427579444
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '426'
 ht-degree: 0%
 
 ---
 
-
 # Orderhantering
 
-För helt nya företag är ordernivåerna låga och det är enklare att
-slutför beställningar till lägre kostnad. Men när efterfrågan ökar ökar beställningarna och det blir svårt att hantera beställningar med ett litet team eller dig själv till en lägre kostnad. Du kan behöva en större anläggning, som ett lagerställe eller mer än ett lagerställe beroende på verksamhetens art, som kan vara kostsam och kräver mer personal. Det är här som orderhantering kommer in i bilden.
+För helt nya företag är ordernivåerna låga och det är enklare att göra beställningar till en lägre kostnad. Men när efterfrågan ökar ökar beställningarna och det blir svårt att hantera beställningar med ett litet team eller dig själv till en lägre kostnad. Du kan behöva en större anläggning, som ett lagerställe eller mer än ett lagerställe beroende på verksamhetens art, som kan vara kostsam och kräver mer personal. Det är här som orderhantering kommer in i bilden.
 
 Med orderhantering kan man hantera förändrade driftskrav för hantering av efterfrågan, lager, paketering och frakt. Genom att integrera ett orderhanteringssystem med plattformen kan företag möta de föränderliga kraven och få nöjda kunder, återkommande kunder, högre konverteringsgrad och lojalitet. Alla dessa faktorer påverkar direkt och indirekt företagets prestanda och intäktsökning.
 

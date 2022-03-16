@@ -1,13 +1,13 @@
 ---
 title: Kvalitetskontroll
-description: Läs om Adobe Commerce-processer för kvalitetskontroll i samband med implementeringsprojekt.
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+description: Läs om Adobe Commerce kvalitetskontrollprocesser för implementeringsprojekt.
+exl-id: 0eb62b24-21f6-4cec-8ef9-eeaa1ee6ae52
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '658'
 ht-degree: 0%
 
 ---
-
 
 # Processer och verktyg för kvalitetskontroll
 
@@ -142,7 +142,7 @@ Kvalitetskontrollprocessen i det föregående diagrammet kan kortfattat beskriva
 </tbody>
 </table>
 
-Ungefär som i [verktygen](project-management-tools.md) vi identifierade för utvecklingsprocessen har vi valt en handfull vallösningar och plattformar som vi ofta använder för kvalitetskontrolltestning.
+Liknar [verktyg](project-management-tools.md) som vi har identifierat för utvecklingsprocessen har vi valt en handfull vallösningar och plattformar som vi ofta använder för kvalitetskontrolltester.
 
 | Syfte | Verktyg |
 |---------------------------|---------------------------------------------------|
@@ -172,7 +172,7 @@ OWASPZAP (Zed Attack Proxy) är avsedd att användas både av dem som inte har a
 
 ## UI-testning
 
-Med Perfekt Pixel kan utvecklare och designers lägga en halvgenomskinlig bildövertäckning ovanpå den utvecklade HTML-koden och göra en pixelperfekt jämförelse mellan dem.
+Med Perfekt Pixel kan utvecklare och designers lägga en halvgenomskinlig bildövertäckning ovanpå HTML och göra en perfekt jämförelse mellan dem.
 
 BrowserStack är en webb- och mobiltestningsplattform i molnet som gör att utvecklare kan testa sina webbplatser och mobilappar i olika webbläsare, operativsystem och riktiga mobilenheter.
 
@@ -184,4 +184,4 @@ SoapUI är ett testprogram för webbtjänster med öppen källkod för SOAP (Sim
 
 ## Automatiseringstestning
 
-Selenium består av flera komponenter (Selenium client API, Selenium WebDriver) som var och en har en särskild roll när det gäller att utveckla automatisering av testning av webbapplikationer.
+Selenium består av flera komponenter (Selenium client API, Selenium WebDriver) som var och en har en specifik roll när det gäller att utveckla automatisering av testning av webbapplikationer.

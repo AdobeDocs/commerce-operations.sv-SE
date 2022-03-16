@@ -1,13 +1,13 @@
 ---
 title: Handelsstrategi
 description: Lås upp kärnfunktioner för e-handel med vårt föreslagna strategiska ramverk.
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+exl-id: 0efb424b-9026-439d-a50c-d2d935c07c8c
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '350'
 ht-degree: 0%
 
 ---
-
 
 # Handelsstrategi
 

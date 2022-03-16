@@ -1,13 +1,13 @@
 ---
 title: Kommunikationsprocess och -verktyg
 description: Använd de kommunikationsprocesser och verktyg som passar ert e-handelsteam.
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+exl-id: e7eca8f1-aec0-4a45-8b57-2851b2df2de0
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 0%
 
 ---
-
 
 # Kommunikation
 
@@ -79,7 +79,7 @@ När problem spåras under ett arbetsflöde får alla medlemmar i teamet, avdeln
 
 Att skapa en rik kunskaps- och informationsbank kan vara jobbigt. Det krävs ett villigt team för att komma ihop och lägga vikt vid att skapa processer för hur dokumentationen hanteras. Om du skapar en proaktiv kunskapsbas på rätt sätt kan du dock minska antalet problem i supportkön avsevärt och spara teamets arbetstider.
 
-Oavsett om du lanserar eller underhåller en webbplats eller dokumenterar grundläggande e-handelsprocesser är Confluence ett interaktivt utrymme där individer från hela företaget kan skapa, planera och ge feedback på alla typer av dokumentation.
+Vare sig du lanserar eller underhåller en webbplats eller dokumenterar grundläggande e-handelsprocesser är Confluence ett interaktivt utrymme där individer från hela företaget kan skapa, planera och ge feedback på alla typer av dokumentation.
 
 E-handelsteam kan skapa standardiserade mallar och checklistor för driftsättningsförberedelser, produktlanseringar, instruktionsartiklar, testskript och felsökning. Dessutom är Confluence-applikationen en Atlassisk produkt och är väl integrerad med JIRA. De två programmen kan fungera tillsammans på ett harmoniskt sätt. Det material som skapas är enkelt att komma åt i hela organisationen och gör det möjligt för alla att samarbeta om ämnen på ett och samma ställe.
 

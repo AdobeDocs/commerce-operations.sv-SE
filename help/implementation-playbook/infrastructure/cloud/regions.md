@@ -1,19 +1,19 @@
 ---
 title: Infrastrukturregioner i molnet
-description: Review diagrams that show the AWS and Azure regions available for Adobe Commerce.
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+description: Granska diagram som visar vilka AWS- och Azure-regioner som är tillgängliga för Adobe Commerce.
+exl-id: d8f59845-8281-4c9f-8101-51f9c35a0455
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '62'
 ht-degree: 0%
 
 ---
 
+# Molnregioner
 
-# Cloud regions
+Följande avsnitt innehåller information om de olika AWS- och Azure-regionerna som är tillgängliga för Adobe Commerce i molninfrastrukturen.
 
-Följande avsnitt innehåller information om de olika AWS- och Azure-regionerna som är tillgängliga för Adobe Commerce i molninfrastruktur.
-
-## AWS-regioner
+## AWS
 
 ![Diagram som visar AWS-områden](../../../assets/playbooks/aws-regions.svg)
 
@@ -21,9 +21,9 @@ Följande avsnitt innehåller information om de olika AWS- och Azure-regionerna 
 >
 > Endast lokalt i Kina och Ryssland.
 
-## Azure regions
+## Azure-regioner
 
-![Diagram showing Azure regions](../../../assets/playbooks/azure-regions.svg)
+![Diagram som visar Azure-regioner](../../../assets/playbooks/azure-regions.svg)
 
 >[!NOTE]
 >

@@ -1,17 +1,17 @@
 ---
 title: Projekthanteringsverktyg
-description: Choose recommended project management tools for your Adobe Commerce implementation.
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+description: Välj rekommenderade projekthanteringsverktyg för implementeringen av Adobe Commerce.
+exl-id: 5c87d762-06ce-4716-946a-f0fe5348fa18
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '373'
 ht-degree: 0%
 
 ---
 
-
 # Projekthanteringsverktyg
 
-Att ta sig ut ur den verkliga handelsmiljön i Adobe, men lika viktigt, är de verktyg och lösningar som gör samarbetet och hela utvecklingsprocessen så smidigt som möjligt.
+Att flytta sig ut ur själva Adobe Commerce-miljön, men lika viktigt, är de verktyg och lösningar som gör samarbetet och hela utvecklingsprocessen så smidigt som möjligt.
 
 Följande tabell innehåller rekommenderade projekthanteringsverktyg:
 
@@ -19,7 +19,7 @@ Följande tabell innehåller rekommenderade projekthanteringsverktyg:
 |------------------------------------------------------|--------------------------------------|
 | Biljetthantering | Atlassiska JIRA |
 | SLA-hantering | Atlassisk JIRA Service Management |
-| Dokumenthantering | Atlassian Confluence |
+| Dokumenthantering | Atlassisk konferens |
 | Källkodshantering | Atlassian Bitbucket, GitHub |
 | Continuous Integration (CI)/Continuous Delivery (CD) | Jenkins |
 | Kommunikation | E-post, Microsoft Teams, telefon, Slack |
@@ -31,7 +31,7 @@ Jira Service Management ger utvecklings- och verksamhetsteamen möjlighet att sa
 
 ## Dokumenthantering
 
-Confluence is great tool to build, organize, and collaborate on work in one place from virtually anywhere. Konferensen levereras med mallar för bästa praxis, så du behöver inte förnya hjulet. Kom igång enkelt och bibehåll enhetligheten mellan team och projekt.
+Konferens är ett utmärkt verktyg för att skapa, ordna och samarbeta kring material på ett och samma ställe, från praktiskt taget var som helst. Konferensen levereras med mallar för bästa praxis, så du behöver inte förnya hjulet. Kom igång enkelt och bibehåll enhetligheten mellan team och projekt.
 
 ## Biljetthantering
 
@@ -46,7 +46,7 @@ Jira är ett system för uppföljning och hantering av biljetter (inklusive hant
 
 Bitbucket är mer än bara Git-kodhantering. Bitbucket ger team en plats att planera projekt, samarbeta om kod, testa och driftsätta. Med Bitbucket kan du godkänna kodgranskningar effektivare med pull-förfrågningar. Du kan också skapa en sammanfogad checklista med utsedda godkännare och hålla diskussioner direkt i källkoden med textbundna kommentarer.
 
-GitHub is similar to Bitbucket, which is also used in some projects.
+GitHub liknar Bitbucket, som också används i vissa projekt.
 
 ## Kommunikation
 

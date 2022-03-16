@@ -1,17 +1,17 @@
 ---
 title: Leveranser
-description: Läs mer om de olika produkter som är kopplade till en implementering av Adobe Commerce.
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+description: Läs mer om de olika produkter som är kopplade till en Adobe Commerce-implementering.
+exl-id: 6f5e603b-bbe5-411d-ad72-696cb4eae246
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '266'
 ht-degree: 0%
 
 ---
 
-
 # Leveranser
 
-Identifieringsprocessen identifierar specifika implementeringsprodukter för Adobe Commerce. Läs mer i följande avsnitt.
+Identifieringsprocessen identifierar specifika Adobe Commerce-implementeringsprodukter. Läs mer i följande avsnitt.
 
 ## Affärskrav
 
@@ -19,7 +19,7 @@ Det här dokumentet innehåller godkännanden av affärskrav för funktionella s
 
 ## Systemdiagram
 
-Ett systemdiagram bör visa data (t.ex. order, produkter, integreringar med tredje part) som flödar till och från de olika berörda systemen (Adobe Commerce, OMS, ESP, betalningsleverantörer).
+Ett systemdiagram bör visa data (t.ex. order, produkter, integreringar med tredje part) som flödar till och från de olika berörda systemen (Adobe Commerce, OMS, ESP, betalare).
 
 ## Tekniska specifikationer
 
@@ -27,11 +27,11 @@ I det här dokumentet definieras den tekniska implementeringsmetoden och tilläm
 
 ## Datamappning
 
-Ett datamappningsdokument omfattar kategorier, produkter, rekommendationer, prisuppgifter och lager och innehåller nödvändiga attribut för att mappa aktuella produkter och kategorier till din produktkatalog för Adobe Commerce.
+Ett datamappningsdokument omfattar kategorier, produkter, rekommendationer, prisuppgifter och lager och innehåller de attribut som krävs för att mappa aktuella produkter och kategorier till din Adobe Commerce produktkatalog.
 
 ## Flödesdiagram
 
-Visar användarflödena för kritiska och/eller unika processer, särskilt när de anpassas utifrån Adobe standardbeteende.
+Visar användarflöden för kritiska och/eller unika processer, särskilt när de anpassas utifrån Adobe Commerce standardbeteende.
 
 ## Omfång och leverantörer
 
@@ -39,8 +39,8 @@ Det här är en fullständig lista över namngivna tredjepartsleverantörer som 
 
 ## Produktdata
 
-En granskning av en organisations befintliga produkter, priser och lagerdata liksom en plan för att kartlägga dataattribut som används för att fylla i Adobe Commerce.
+En granskning av en organisations befintliga produkter, priser och inventeringsdata samt en plan för att mappa dataattribut som används för att fylla i Adobe Commerce.
 
 ## Projektplan
 
-I en projektplan beskrivs de högnivåuppgifter och tidslinjer som är kopplade till implementeringsinitiativet, inklusive överlappande integreringar och tredjepartsberoenden. Planen kan även innehålla en ansvarsmatris, eller [RACI](../planning/ownership.md), som visar vem som är ansvarig, ansvarig, konsulterad och informerad.
+I en projektplan beskrivs de högnivåuppgifter och tidslinjer som är kopplade till implementeringsinitiativet, inklusive överlappande integreringar och tredjepartsberoenden. Planen kan även innehålla en ansvarsmatris, eller [RACI](../planning/ownership.md), diagram som visar vem som är ansvarig, ansvarig, konsulterad och informerad.

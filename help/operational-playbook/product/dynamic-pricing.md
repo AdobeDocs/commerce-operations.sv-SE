@@ -1,13 +1,13 @@
 ---
 title: Dynamisk prishantering
 description: Få konkurrensfördelar genom att skapa en strategi för att dynamiskt ändra produktpriserna baserat på marknadsvillkoren.
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+exl-id: 913dba96-d939-4e9a-b382-f22c6669fed1
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 0%
 
 ---
-
 
 # Dynamisk prishantering
 
@@ -15,11 +15,11 @@ Dynamisk prissättning är en responsiv prisstrategi där priset ändras baserat
 
 Det finns tre faktorer som driver på den dynamiska prissättningen, bland annat:
 
-- **Bransch** - Återförsäljarna måste kontrollera vad som är det mest grundläggande priset för en produkt bland andra varumärken.
+- **Bransch**—Återförsäljarna måste kontrollera vad som är det mest grundläggande priset på en produkt bland andra varumärken.
 
-- **Market** - Vad är den nuvarande tillgången och efterfrågan? Vad är förväntad tillgång och efterfrågan?
+- **marknad**—Vad är nuvarande utbud och efterfrågan? Vad är förväntad tillgång och efterfrågan?
 
-- **Kunder** - Vad är kundens köpbeteende? Vilket pris är kunden beredd att betala för en produkt?
+- **Kunder**—Vad är kundens köpbeteende? Vilket pris är kunden beredd att betala för en produkt?
 
 Ni måste ta hänsyn till alla aspekter när ni arbetar med en dynamisk prissättningsstrategi.
 

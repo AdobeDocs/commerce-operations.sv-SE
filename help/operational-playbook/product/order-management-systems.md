@@ -1,13 +1,13 @@
 ---
 title: Orderhanteringssystem
 description: Slutför ert e-handelsprojekt med ett system för paketering, leverans och returer.
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+exl-id: 2a5f19fa-e8fe-452b-9ab6-65428dda691d
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 0%
 
 ---
-
 
 # Orderhanteringssystem (OMS)
 
@@ -19,13 +19,13 @@ Ett OMS-system ger integrering och automatisering genom kundorderresan i bakgrun
 
 OMS är viktigt för en e-handelsplats eftersom det hjälper varumärken att växa. Kunderna har höga förväntningar, vilket ger inget utrymme för misstag. Några av skälen till att ett system för allmän information är nödvändigt är:
 
-- **Ger snabbare leverans** - I nästa eller tvådagars leveransålder måste företagen leta efter sätt att skicka ut sina beställningar snabbare när orderperioden blir smalare. Ett OMS-system meddelas omedelbart när en order läggs och OMS-systemet kan välja det närmaste lagerstället till orderdestinationen för att underlätta leveransen. OMS skickar automatiserad orderinformation till lagerteamet för att förbereda och packa beställningen för leverans med en kostnadseffektiv leveransmetod.
+- **Ger snabbare leverans**- I nästa eller tvådagars leveranstid måste företagen leta efter sätt att lägga ut sina order snabbare när orderperioden blir smalare. Ett OMS-system meddelas omedelbart när en order läggs och OMS-systemet kan välja det närmaste lagerstället till orderdestinationen för att underlätta leveransen. OMS skickar automatiserad orderinformation till lagerteamet för att förbereda och packa beställningen för leverans med en kostnadseffektiv leveransmetod.
 
 - **Begränsade fel**: Ett felmeddelande hjälper till att minska antalet mänskliga fel. Dessa fel kan vara tidskrävande och dyra. Ett OMS-system meddelar teamet när lagernivåerna är låga, när en produkt inte säljer eller vilken produkt som har den högsta avkastningen. På så sätt kan företaget åtgärda leveransfel och analysera orsaken till returer.
 
-- **Ökad skalbarhet** - En OMS kan skalas efter verksamhetens behov, till skillnad från äldre manuella system. OMS ger företag möjlighet att anpassa sig efter marknaden.
+- **Ökad skalbarhet**—Ett system för automatisk systemkonfiguration kan skalas efter verksamhetens behov, till skillnad från äldre manuella system. OMS ger företag möjlighet att anpassa sig efter marknaden.
 
-- **Fler flerkanalsmöjligheter** - I en era av flerkanalsförsäljning på webbplatser, marknadsplatser eller partners (Facebook och Instagram) kan det vara komplicerat att spåra beställningar eftersom de skickas till flera platser med en eller flera leveransmetoder. Ett OMS-system sammanför det och ökar kundupplevelsen.
+- **Fler möjligheter för flera kanaler**- I en era av flerkanalsförsäljning på webbplatser, marknadsplatser eller partners (Facebook och Instagram) kan det vara komplicerat att spåra beställningar eftersom de skickas till flera platser med en eller flera leveransmetoder. Ett OMS-system sammanför det och ökar kundupplevelsen.
 
 ## Viktiga funktioner
 
@@ -56,7 +56,7 @@ Företag/återförsäljare måste välja rätt OMS-system som bäst passar deras
 
 ![Systemdiagram för orderhantering](../../assets/playbooks/order-management-system.png)
 
-Ett företagssystem kan hjälpa till att kontrollera kostnaderna, öka avkastningen på investeringen, snabba upp leveransprocessen och förbättra kundupplevelsen och den interna teamupplevelsen.
+Ett företagsstyrt system kan hjälpa till att hålla kostnaderna i schack, öka avkastningen, snabba upp leveransprocessen och förbättra kundernas och teamets upplevelse.
 
 Beställningshanteringen i B2B-företag är komplicerad jämfört med B2C-verksamhet. B2B-företag har vanligtvis en högre kostnad när det gäller att behålla kunder eftersom de har en annan inköpscykel än B2C-företag. B2B-inköpscykeln tar längre tid eftersom den innehåller offertförfrågningar och inköpsorder. B2B-beställningar brukar vara beställningar där B2C-beställningar ofta är stora och mindre.
 

@@ -1,13 +1,13 @@
 ---
 title: Utcheckningsflöden och -process
 description: Öka konverteringsgraden genom att ge kunderna en smidig utcheckningsupplevelse.
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+exl-id: 692236fd-b909-4061-8038-0db19e0ed72b
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '680'
 ht-degree: 0%
 
 ---
-
 
 # Utcheckningsflöden och -process
 
@@ -56,7 +56,7 @@ Kunder som handlar online är alltid intresserade av säkerheten. Om du vill fö
 
 ## Utcheckningsalternativ
 
-Ange olika utcheckningsalternativ, som:
+Ange olika alternativ för utcheckning, som:
 
 - Gästanvändare
 - Registrerad användare
@@ -68,7 +68,7 @@ Tvinga inte en typ av alternativ för användaren.
 
 Återförsäljarna bör tillhandahålla olika leveransmetoder för att tillgodose behoven hos olika kunder.
 
-Förutom betalningsalternativ kan återförsäljarna även tillhandahålla alternativ som [klicka och samla in](click-collect.md).
+Förutom betalningsalternativ kan återförsäljarna även erbjuda alternativ som [klicka och samla in](click-collect.md).
 
 ## Betalningsinformation
 

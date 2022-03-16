@@ -15,7 +15,7 @@ ht-degree: 0%
 - Handel {#intro}
    - [Adobe Commerce](intro/commerce.md)
    - [Vad är e-handel?](intro/ecommerce.md)
-   - [Business model](intro/business-model.md)
+   - [Affärsmodell](intro/business-model.md)
    - [Handelsåtgärder](intro/operations.md)
    - [Funktioner för handel](intro/features.md)
 - Ledarskap {#leadership}
@@ -39,12 +39,12 @@ ht-degree: 0%
    - [Orderhantering](process/order-management.md)
    - [Projektplan](process/project-plan.md)
    - [Projektomfång](process/project-scope.md)
-   - [Project management](process/project-management.md)
+   - [Projektledning](process/project-management.md)
    - [DACI-modell](process/project-management-framework.md)
    - [Agile Scrum-metod](process/agile-scrum.md)
    - [Gemensamma projektseminarier](process/project-workshops.md)
    - [Testning](process/testing.md)
-- Personer {#people}
+- Folk {#people}
    - [Team](people/teams.md)
    - [Teamstruktur](people/team-structure.md)
    - [Organisationsstruktur](people/organizational-structure.md)
@@ -69,6 +69,6 @@ ht-degree: 0%
    - [SEO](product/search-engine-optimization.md)
    - [E-postmarknadsföring](product/marketing.md)
    - [Personalisering](product/personalization.md)
-   - [Click and collect](product/click-collect.md)
+   - [Klicka och samla](product/click-collect.md)
    - [PWA](product/progressive-web-app.md)
-- [Checklists and templates](checklists-templates/home.md)
+- [Checklistor och mallar](checklists-templates/home.md)

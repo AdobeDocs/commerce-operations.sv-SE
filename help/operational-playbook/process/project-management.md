@@ -1,13 +1,13 @@
 ---
 title: Projektledning
 description: Använd välkända ramverk för att hantera ert e-handelsprojekt.
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+exl-id: 514e2317-f409-4079-bdee-1596f6635467
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 0%
 
 ---
-
 
 # Projektledning
 
@@ -30,23 +30,23 @@ Vissa team väljer Scrum-projektledningsmetod för sina e-handelsprojekt. Scrum-
 
 ![Scrum Agile-livscykeldiagram](../../assets/playbooks/scrum-lifecycle.png)
 
-Scrum hjälper till att hantera ändringar under projektet, gör det möjligt för team att visa snabba resultat, är flexibel och ökar samarbetet.
+Scrum hjälper till att hantera ändringar under projektet, gör det möjligt för team att visa snabba resultat, är flexibla och ökar samarbetet.
 
 ## Grundläggande projektplan
 
 En grundläggande plan för hantering av e-handelsprojekt omfattar:
 
-- **Analys** - I det inledande skedet av ett projekt måste företaget utföra analyser, inklusive analys av marknads- och konkurrenternas verksamhet, för att förstå organisationens styrkor och svagheter.
+- **Analys**- I det inledande skedet av ett projekt måste företaget utföra analyser, inklusive analys av marknads- och konkurrenternas verksamhet, för att förstå organisationens styrkor och svagheter.
 
-- **Krav** - Definiera detaljerade krav för vad organisationen vill ha i slutet av projektet när det gäller att förbättra befintliga färdigheter och/eller implementera nya funktioner och/eller integreringar.
+- **Krav**—Definiera detaljerade krav på vad organisationen vill ha i slutet av projektet när det gäller att förbättra befintliga färdigheter och/eller implementera nya funktioner och/eller integreringar.
 
-- **Tredjepartsleverantörer** - I det här steget kan du kartlägga vilka tredjepartsintegreringar som krävs (till exempel betalning, frakt, omdömen och recensioner).
+- **Tredjepartsleverantörer**—I det här steget ska du kartlägga vilka tredjepartsintegreringar som krävs (till exempel betalning, frakt, omdömen och recensioner).
 
-- **Design** - Brainstorm designspecifika krav för mallar och företagets varumärkesbok.
+- **Design**- Brainstorm designspecifika krav för mallar och företagets varumärkesbok.
 
-- **Migrering** - Planera stegen för migrering av innehåll och data.
+- **Migrering**- Planera stegen för att migrera innehåll och data.
 
-- **E-handelsplattform** - Analysera och färdigställ den plattform som företaget behöver för att uppfylla kraven.
+- **E-handelsplattform**—Analysera och färdigställ den plattform som företaget behöver för att uppfylla kraven.
 
 ## God praxis
 

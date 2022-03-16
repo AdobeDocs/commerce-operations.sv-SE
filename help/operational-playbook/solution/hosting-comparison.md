@@ -1,13 +1,13 @@
 ---
 title: Jämförelse av Commerce Hosting
 description: Fatta det bästa beslutet om värdtjänster för ert e-handelsprojekt genom att läsa den här jämförelsetabellen.
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+exl-id: 8d1f0b85-2874-4a4b-9fae-1fb367a7f85e
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 0%
 
 ---
-
 
 # Moln jämfört med lokala
 

@@ -1,31 +1,31 @@
 ---
 title: Projektledning
-description: Använd våra rekommendationer för projektstyrning i implementeringen av Adobe Commerce.
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+description: Använd våra rekommendationer för projektstyrning i er implementering av Adobe Commerce.
+exl-id: adf53a2a-1673-441a-84d3-4cdda47d6aa5
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '474'
 ht-degree: 0%
 
 ---
 
-
 # Projektstyrning
 
 Projektstyrning är en tillsynsfunktion som är anpassad till organisationens styrningsstruktur och omfattar projektets livscykel. Det ger projektledaren och teamet struktur, processer, beslutsmodeller och verktyg för att hantera och styra projektet, samtidigt som man ser till att projektet genomförs korrekt. Projektstyrning är en viktig faktor, särskilt för komplexa och strategiska projekt.
 
-The governance model defines, documents, and communicates custom and effective practices to provide a comprehensive method of controlling the project and providing periodic visibility at every level to ensure success. It contains a framework for making decisions; defines roles, responsibilities, and liabilities for the accomplishment of the project; and governs the effectiveness. Styrningsstrukturen samlas i ledningsgruppen hela vägen till den verkställande ledningen, där man definierar aktiviteter, rapportering, eskalering och informationsflöde.
+I styrningsmodellen definieras, dokumenteras och kommuniceras anpassade och effektiva rutiner för att tillhandahålla en heltäckande metod för att styra projektet och ge periodisk synlighet på alla nivåer för att säkerställa framgång. Det innehåller en ram för beslutsfattande. Definiera roller, ansvar och ansvar för projektets genomförande. och styr effektiviteten. Styrningsstrukturen samlas i ledningsgruppen hela vägen till den verkställande ledningen, där man definierar aktiviteter, rapportering, eskalering och informationsflöde.
 
 ![Infografik om projektstyrning](../../assets/playbooks/project-governance.svg)
 
 På olika nivåer undersöker teamen specifika käpp- och projektmått för att förstå framstegen och vidta nödvändiga åtgärder. Dessa värden för Sprint-nivå kan omfatta hastigheten och nedbränningen av varje sprint.
 
-## Regular meeting details
+## Regelbunden mötesinformation
 
-- Quarterly business review
+- Kvartalsvis affärsöversyn
 
-   - Discuss growth escalation strategies
+   - Diskutera strategier för eskalering av tillväxt
 
-   - Highlight current success &amp; goals
+   - Markera aktuella framgångar och mål
 
    - Justera efter önskade resultat för de kommande kvartalen
 
@@ -47,11 +47,11 @@ På olika nivåer undersöker teamen specifika käpp- och projektmått för att 
 
    - Demonstrera plattform och funktioner
 
-   - Escalate requests/issues/suggestions
+   - Eskalera förfrågningar/problem/förslag
 
 - Dagligt möte
 
-   - Discuss and follow up on action items, including current sprint/boards/outstanding tickets
+   - Diskutera och följ upp konkreta saker, inklusive aktuella tidningar/ritytor/utestående biljetter
 
    - Övervaka projektförlopp
 
@@ -59,7 +59,7 @@ På olika nivåer undersöker teamen specifika käpp- och projektmått för att 
 
 Förutom Sprint-mätvärdena är det också viktigt att mäta nyckeltal för projekt- och kvalitetsprestanda. Detta bidrar inte bara till att säkerställa kvalitetsnivån i hela planen, det håller teamet på rätt spår och förhindrar att projektet rullar av.
 
-## Storyboard and velocity
+## Storyboard och hastighet
 
 ![Exempel på Kanban-tavla](../../assets/playbooks/kanban-board-chart.svg)
 
@@ -79,22 +79,22 @@ Utmaningar eller förändringar inträffar under hela projektet. Att ge rätt pe
 </thead>
 <tbody>
   <tr>
-    <td>Test Coverage</td>
+    <td>Testtäckning</td>
     <td>%</td>
     <td>Antal testbara krav som täcks av provningsfall VS Totalt antal testbara grundtester</td>
   </tr>
   <tr>
     <td>Defekt densitet</td>
     <td>%</td>
-    <td># of valid Defects found VS Total of Test cases executed</td>
+    <td>Antal giltiga fel som påträffats VS Totalt antal testfall som körts</td>
   </tr>
   <tr>
-    <td>Defect Leakage to SIT/ UAT / Production</td>
+    <td>Defekt läckage till SIT/UAT/produktion</td>
     <td>%</td>
-    <td>Defects reported in Production VS Defects reported in Production + Defects reported by QA+UAT</td>
+    <td>Defekter rapporterade i produktion VS Defekter rapporterade i produktion + Defekter rapporterade av QA+UAT</td>
   </tr>
   <tr>
-    <td>Test Effectiveness</td>
+    <td>Testeffektivitet</td>
     <td>%</td>
     <td>Giltiga defekter upphöjda/giltiga defekter upphöjda nekade defekter</td>
   </tr>

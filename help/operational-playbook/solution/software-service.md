@@ -1,13 +1,13 @@
 ---
 title: Commerce Software Services
 description: Lär dig mer om viktiga skillnader mellan SaaS-program och andra alternativ för e-handel med öppen källkod som är självbetjänade (lokalt).
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+exl-id: 9be70e1e-76d5-4696-862e-f2b71eb1abb0
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '576'
 ht-degree: 0%
 
 ---
-
 
 # SaaS (Software-as-a-service)
 
@@ -33,7 +33,7 @@ SaaS e-handelsplattformar är körklara lösningar där användarna utnyttjar in
 
 ### Underhåll
 
-En av de största fördelarna med SaaS e-handelsplattform är underhållet. Leverantören ansvarar för att vara värd för och underhålla programvara, drifttid, prestanda, uppdateringar och felkorrigeringar. E-handels- eller IT-teamen kan i sin tur fokusera på att utveckla onlinebutikens kodbas, medan SaaS-leverantören (Adobe Commerce) kan förbättra infrastrukturen.
+En av de största fördelarna med SaaS e-handelsplattform är underhållet. Leverantören ansvarar för att vara värd för och underhålla programvara, drifttid, prestanda, uppdateringar och felkorrigeringar. e-handels- eller IT-teamen kan i sin tur fokusera på att utveckla onlinebutikens kodbas, medan SaaS-leverantören (Adobe Commerce) kan förbättra infrastrukturen.
 
 ### Säkerhet och PCI-kompatibilitet
 
@@ -49,5 +49,4 @@ De lockande återförsäljarna behöver e-handelsplattformar som kan skalas när
 
 Vi rekommenderar att återförsäljarna använder det bästa av sina system, vilket innebär att de använder det bästa systemet för varje del av sin verksamhet. För det mesta håller er inte längre med att välja en plattform för att utföra alla aspekter och funktioner i ert företag.
 
-Företagen bör i stället kunna använda valfritt antal system för
-sina ERP-, POS-, 3PL- och e-handelssystem och integrera dessa system för att synkronisera lager, order, kunder, artiklar och data för leverans/spårning automatiserar era affärsprocesser. Molnbaserade SaaS-plattformar uppfyller ofta dessa affärskrav på ett flexibelt och enkelt sätt.
+Företagen bör i stället kunna använda ett valfritt antal system för sina ERP-, POS-, 3PL- och e-handelssystem och integrera dessa system för att synkronisera lager, order, kunder, artiklar och data för leverans/spårning automatiserar era affärsprocesser. Molnbaserade SaaS-plattformar uppfyller ofta dessa affärskrav på ett flexibelt och enkelt sätt.

@@ -1,13 +1,13 @@
 ---
 title: Commerce Platform Services
 description: Granska fördelar och nackdelar med att använda PaaS-lösningar för din värdinfrastruktur för att avgöra vad som passar ert e-handelsprojekt.
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+exl-id: 071e6e9b-6874-4d08-90b4-036d6cdca4c2
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '368'
 ht-degree: 0%
 
 ---
-
 
 # Platform-as-a-service (PaaS)
 
@@ -17,9 +17,9 @@ PaaS tillhandahålls som en tjänst i leverantörens infrastruktur och kan nås 
 
 PaaS fungerar på privata, offentliga och hybridmoln:
 
-- **Privat moln** - PaaS levereras i klientens brandvägg av säkerhetsskäl, där data lagras lokalt.
-- **Offentligt moln** - Klienten har kontroll över distributionerna och providern ansvarar för alla andra komponenter, till exempel nätverk och operativsystem.
-- **Hybrid cloud** - Hybrid blandar funktionerna både privat och offentligt så att klienten kan ha flexibilitet.
+- **Privat moln**—PaaS levereras innanför klientens brandvägg för säkerhetsändamål, där data lagras lokalt.
+- **Offentligt moln**- Klienten har kontroll över distributionerna och providern ansvarar för alla andra komponenter, till exempel nätverk och operativsystem.
+- **Hybrid cloud**—Hybrid blandar funktionerna både privat och offentligt så att klienten kan ha flexibilitet.
 
 ## Fördelar
 
@@ -39,8 +39,7 @@ PaaS fungerar på privata, offentliga och hybridmoln:
 
 - Kan leda till ett säkerhetshot eftersom allt lagras i molnet
 - Beroende av tjänsteleverantören
-- Om leverantören upplever ett driftstopp är det ett problem för
-klient
+- Om leverantören upplever ett driftstopp är det ett problem för kunden
 - Gör det enkelt och snabbt att uppdatera
 
 När kunden använder PaaS i e-handeln behöver de inte hantera systemet och operativprogramvaran. Klienten har en plattform för att konfigurera sin e-handelsplats där de skapar och konfigurerar innehåll, koddata och produkter. som är skilt från administrationssidan av saker som rör PaaS.

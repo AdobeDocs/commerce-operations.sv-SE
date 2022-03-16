@@ -1,17 +1,17 @@
 ---
 title: Prestandaoptimering
-description: Lär dig allt om prestandaoptimering och åtgärder som ska vidtas för att granska resultatet av implementeringen av Adobe Commerce.
-source-git-commit: 748c302527617c6a9bf7d6e666c6b3acff89e021
+description: Lär dig allt om prestandaoptimering och steg som krävs för att se hur din Adobe Commerce-implementering fungerar.
+exl-id: 506ef2cc-c6fd-4401-afa5-a71e7b9871e6
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '306'
 ht-degree: 0%
 
 ---
 
-
 # Prestandaoptimering
 
-Prestanda är ett stort ämne. När en webbplats är långsam eller inte svarar påverkas konverteringen. Vi rekommenderar att du följer dessa steg för att optimera prestanda för din Adobe Commerce när det gäller implementering av molninfrastruktur:
+Prestanda är ett stort ämne. När en webbplats är långsam eller inte svarar påverkas konverteringen. Vi rekommenderar att du följer de här stegen för att optimera prestanda för din Adobe Commerce när det gäller implementering av molninfrastruktur:
 
 - Utvärdera problemet
 - Mät prestanda
@@ -22,9 +22,9 @@ Prestanda är ett stort ämne. När en webbplats är långsam eller inte svarar 
 
 ## Vanliga prestandaproblem
 
-The impact of a slow experience is usually defined by two indicators, and each factor can be caused for tons of reasons.
+Effekten av en långsam upplevelse definieras vanligen av två indikatorer, och varje faktor kan orsakas av många olika anledningar.
 
-TTFB (High time-to-first-byte) betraktas vanligtvis som en indikator som definierar serverns svarshastighet. The time not only comes from source code execution for handling the request, but it can also be impacted by the following factors:
+TTFB (High time-to-first-byte) betraktas vanligtvis som en indikator som definierar serverns svarshastighet. Tiden kommer inte bara från körning av källkod för att hantera begäran, utan kan också påverkas av följande faktorer:
 
 - DNS-sökning
 - Långsam fråga från DB-lager
@@ -36,14 +36,14 @@ TTFB (High time-to-first-byte) betraktas vanligtvis som en indikator som definie
 - Felaktig cachelagring
 - Felaktig kod
 - Felaktig integreringsmetod
-- Dependency of slow third-party service response
+- Beroende av långsam service från tredje part
 - Arkitektur utan skalbarhet
 
 Långsammare inläsning betraktas vanligtvis som en indikator som definierar den statiska resursen (CSS, JavaScript, bilder, videor, Ajax-anropssvar från tredje part).
 
-Adobe Commerce kan skalas upp med er verksamhet genom sina funktioner:
+Adobe Commerce kan byggas ut med verksamheten genom sina funktioner:
 
-![Diagram som visar Adobe handels skalbara kapacitet](../../../assets/playbooks/scalable-capabilities.svg)
+![Bild som visar Adobe Commerce skalbara funktioner](../../../assets/playbooks/scalable-capabilities.svg)
 
 Det finns också viktiga faktorer som driver på handelns skala, vilket också påverkar det övergripande resultatet.
 
@@ -51,9 +51,9 @@ Det finns också viktiga faktorer som driver på handelns skala, vilket också p
 - Ett stort antal administratörer
 - Globala butiker
 - Högvarig trafik
-- Expanding touchpoints
+- Expandera kontaktytor
 - Transaktioner med stora volymer
 
 För skalbara och cacheable-arkitekturer kan du använda det här diagrammet som referens.
 
-![Bild som visar hur du använder API:t för GraphQL i Adobe Commerce i en cachebar arkitektur](../../../assets/playbooks/cacheable-architecture.svg)
+![Bild som visar hur du använder Adobe Commerce GraphQL API i en cacheable-arkitektur](../../../assets/playbooks/cacheable-architecture.svg)

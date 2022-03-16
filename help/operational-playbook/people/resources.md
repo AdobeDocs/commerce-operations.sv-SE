@@ -1,13 +1,13 @@
 ---
 title: Resurser
 description: Läs om interna, externa och hybrida resurser som kan hjälpa ert e-handelsteam.
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+exl-id: 8c5067ed-6dbe-4306-b825-959606d1b254
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 0%
 
 ---
-
 
 # Resurser
 
@@ -49,7 +49,7 @@ När företag inte har det interna team som krävs måste de anställa externa t
 
 Medan projektet utvecklas kan externa team även hjälpa till att möjliggöra interna team så att de kan hantera plattformen när det externa teamet har slutfört projektet.
 
-Externa team kan vara konsulter, betalningsgateways, SEO-/SEM-relaterade aktiviteter och marknadsföring. Företagen måste analysera och avgöra vad deras interna team saknar så att de kan anställa den tredje part de behöver. I likhet med andra resurser har tredje parter också fördelar och nackdelar.
+Externa team kan vara konsulter, betalningsgateways, SEO-/SEM-relaterade aktiviteter och marknadsföring. Företagen måste analysera och avgöra vad deras interna team saknar, så att de kan anställa den tredje part de behöver. I likhet med andra resurser har tredje parter också fördelar och nackdelar.
 
 ### Fördelarna med ett externt team är bland annat:
 

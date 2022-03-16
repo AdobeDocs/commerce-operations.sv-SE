@@ -1,13 +1,13 @@
 ---
 title: Betalningsgateways
 description: Välj en leverantör av betaltjänster för ditt e-handelsprojekt baserat på ditt företags behov.
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+exl-id: eab50191-0744-41da-99ba-2e06ea61da27
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 0%
 
 ---
-
 
 # Betalningsgateways
 
@@ -42,8 +42,7 @@ När ett företag bestämmer sig för att integrera en betalningstjänst med sin
 
 B2B- och B2C-företag har liknande betalningssystem, men B2B-företag har fler regler, bestämmelser och processer. B2B-företag tenderar att handla i större volymer jämfört med B2C-företag.
 
-B2C-kunder köper produkter eller tjänster för enskilt bruk. Kunderna betalar vanligtvis samma pris som andra kunder och det är ingen förhandling. B2B-kunder har olika
-som gör godkännandet mer komplicerat och dyrt.
+B2C-kunder köper produkter eller tjänster för enskilt bruk. Kunderna betalar vanligtvis samma pris som andra kunder och det är ingen förhandling. B2B-kunder har olika intressenter, vilket gör godkännandet mer komplicerat och dyrt.
 
 B2B-kunder har olika beställningar och krav som måste behandlas och godkännas av säljaren eller en säljare måste involveras när en kund köper online med en anbudsförfrågan eller en inköpsorder.
 

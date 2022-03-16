@@ -1,13 +1,13 @@
 ---
 title: Underhåll av Commerce Project
 description: Ställa in standarder med hög kvalitet och inrätta mekanismer för att bibehålla dessa standarder över tid.
-source-git-commit: 226f1925d9ca628c94b67a86888084a21cd7e336
+exl-id: 8f394ae0-02c4-4efc-a313-40b8c48aecbb
+source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
 source-wordcount: '709'
 ht-degree: 0%
 
 ---
-
 
 # Uppgraderingar, säkerhetskopiering och underhåll
 
@@ -29,18 +29,17 @@ Genom att uppgradera är ni framtidssäkra på er verksamhet och ger er möjligh
 
 Här följer en kort lista med frågor du bör ställa när du planerar en uppgradering:
 
-- **Rensning** av webbplatser - Vad kan jag behålla och vad kan ändras? Vilka nya saker vill jag implementera? Vilka ändringar vill jag göra i taxonomi och produktstruktur, eller innehållsändringar?
+- **Platsrensning**—Vad kan jag behålla och vad kan ändras? Vilka nya saker vill jag implementera? Vilka ändringar vill jag göra i taxonomi och produktstruktur, eller innehållsändringar?
 
-- **Analyskontroll** - Vad är mina nuvarande KPI:er? Vad säger mina uppgifter om hur min webbplats skulle kunna förbättras? Finns det nya nyckeltal som jag vill implementera för min nya webbplats?
+- **Analyskontroll**—Vad är mina nuvarande KPI:er? Vad säger mina uppgifter om hur min webbplats skulle kunna förbättras? Finns det nya nyckeltal som jag vill implementera för min nya webbplats?
 
-- **Tillägg** - Behöver jag dem ändå? Vilka tillägg från tredje part täcker mina behov?
+- **Tillägg**—Behöver jag dem fortfarande? Vilka tillägg från tredje part täcker mina behov?
 
-- **Integrationer** - Vilka tredjepartssystem, som ERP och redovisning, behöver jag integrera med? Har de specifika kopplingar eller behövs anpassade integreringar?
+- **Integreringar**—Vilka tredjepartssystem, som ERP och redovisning, behöver jag integrera med? Har de specifika kopplingar eller behövs anpassade integreringar?
 
-- **Utbildning** - Har uppgraderingsteamet rätt kunskaper och utbildning? Vad är
-min plan att utbilda slutanvändare om hur de ska använda den nya administratören innan den blir aktiv?
+- **Utbildning**—Har uppgraderingsteamet rätt kunskaper och utbildning? Vad har jag för plan för att utbilda slutanvändare om hur de ska använda den nya administratören innan den publiceras?
 
-- **Upgrade team** - Vem riktar sig till uppgraderingsprojektet (både interna och externa experter)? Har de nödvändigt stöd från ledningen och andra interna team?
+- **Uppgradera team**—Vem riktar sig till uppgraderingsprojektet (både interna och externa experter)? Har de nödvändigt stöd från ledningen och andra interna team?
 
 ## Vanliga uppgraderingsfrågor
 
@@ -53,9 +52,9 @@ F: Vad kostar det att uppgradera?
 
 S: Återigen beror det på din nuvarande situation och dina krav på din nya webbplats. Den goda nyheten är att när partner och utvecklare har blivit mer bekanta med er Commerce-plattform så har uppgraderingskostnaderna och projektens längd sjunkit. Vi rekommenderar att du kontaktar din Solution Partner för att få en uppskattning.
 
-F: Finns det Adobe Commerce 2-versioner av tillägg 1 för Adobe Commerce 1?
+F: Finns det Adobe Commerce 2-versioner av mina Adobe Commerce 1-tillägg?
 
-S: Praktiskt taget alla verksamhetskritiska behov täcks. Vi har sett en dramatisk ökning av antalet tillägg, och av mångfalden, i Commerce Marketplace när Adobe Commerce har blivit mer välbekant med och blivit allt vanligare, från innehåll och anpassningar samt leverans och leverans till webbplatsoptimering.
+S: Praktiskt taget alla verksamhetskritiska behov täcks. Vi har sett en dramatisk ökning av antalet tillägg och deras mångfald i Commerce Marketplace i takt med att Adobe Commerce har blivit mer välbekant och har blivit allt vanligare bland både innehåll och anpassningar, leveranser och webbplatsoptimering.
 
 Exempel på ledande globala teknikföretag som har skapat tillägg är:
 
@@ -72,7 +71,7 @@ Exempel på ledande globala teknikföretag som har skapat tillägg är:
 
 Kvalitetssäkringskontroller som implementeras för alla tillägg ger också en konsekvent hög produktkvalitet, så det är mycket troligt att ditt tillägg eller ett högkvalitativt alternativ till ditt tillägg redan finns i Commerce Marketplace.
 
-Många handlare har upptäckt att de inbyggda funktionerna i Adobe Commerce har minskat deras behov och beroendet av utbyggnadsmoduler, förenklat utvecklings- och underhållsarbetet och förbättrat det övergripande resultatet. Om du inte redan har det rekommenderar vi att du gör en noggrann uppgraderingsplanering för att upptäcka dessa typer av möjligheter.
+Många handlare har upptäckt att de inbyggda funktionerna i Adobe Commerce har minskat deras behov och beroendet av tillägg, förenklat utvecklings- och underhållsoperationer och förbättrat den övergripande prestandan. Om du inte redan har det rekommenderar vi att du gör en noggrann uppgraderingsplanering för att upptäcka dessa typer av möjligheter.
 
 F: Vad händer om mina tillägg och integreringar inte är kompatibla med plattformen?
 
