@@ -1,9 +1,9 @@
 ---
 title: Rekommenderad läsning för uppgraderingar
 description: Läs vad som rekommenderas för att planera uppgraderingen till Adobe Commerce eller Magento Open Source.
-source-git-commit: 01ece828514da11459010f2633e370dd53e4e82e
+source-git-commit: 9700c0066d2f765ff22419f6b61beda4cf1e61bc
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '319'
 ht-degree: 0%
 
 ---
@@ -23,13 +23,13 @@ Lär dig mer om Adobe Commerce och Magento Open Source genom att använda resurs
             <li><a href="https://helpx.adobe.com/security/products/magento/apsb22-12.html">Adobe säkerhetsbulletin</a></li>
             <li><a href="https://community.magento.com/t5/Magento-DevBlog/bg-p/devblog">Devblog</a></li>
             <li><a href="https://devdocs.magento.com/guides/v2.4/release-notes/bk-release-notes.html">Versionsinformation</a></li>
-            <li><a href="https://solutionpartners.adobe.com/solution-partners.html">Partnerportal för lösningar</a> (för partners med giltig inloggning)</li>
+            <li><a href="https://solutionpartners.adobe.com/solution-partners.html">Partnerportal för lösningar</a></li>
           </ul>
         </td>
       <td><strong>verktyg</strong>
         <ul>
             <li><a href="https://magento.com/tech-resources/downloads">Ladda ned Adobe Commerce-versioner</li>
-            <li><a href="https://experienceleague.adobe.com/docs/commerce-learn/tutorials/uct-phpstorm.html?lang=en">Så här använder du verktyget för uppgradering av kompatibilitet med PHPStorm-pluginprogrammet</a> (video)</li>
+            <li><a href="https://experienceleague.adobe.com/docs/commerce-learn/tutorials/uct-phpstorm.html?lang=en">Upgrade Compatibility Tool PhpStorm plugin</a> (video)</li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/overview.html?lang=en">Kompatibilitetsverktyg för uppgradering</a></li>
             <li><a href="https://magentocommeng.slack.com/archives/C019Y143U9F">#UpgradeCompatibilityTool Slack-kanal</a></li>
             <li><a href="https://devdocs.magento.com/quality-patches/usage.html">Verktyget Korrigeringar</a></li>
@@ -60,7 +60,7 @@ Lär dig mer om Adobe Commerce och Magento Open Source genom att använda resurs
       <td><strong>Uppgraderingsresurser</strong>
         <ul>
              <li><a href="https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/resources/recommended-upgrade-paths-2022.html?lang=en">Rekommenderade uppgraderingssökvägar för 2022</a></li>
-            <li><a href="https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/overview.html">2.4 Uppgraderingshandbok</a></li>
+            <li><a href="https://experienceleague.adobe.com/docs/commerce-operations/assets/adobe-commerce-2-4-upgrade-guide.pdf">2.4 Uppgraderingshandbok</a> (PDF)</li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-learn/tutorials/upgrade-workshop.html?lang=en">2.4 Technical Upgrade Workshop - inspelning</a></li>
             <li><a href="https://support.magento.com/hc/en-us/articles/360034120932">Åtkomst till förhandsversioner</a></li>
             <li><a href="https://devdocs.magento.com/release/beta-program.html">Betaprogram - översikt</a></li>
