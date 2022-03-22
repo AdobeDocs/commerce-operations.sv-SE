@@ -2,9 +2,9 @@
 title: Om Adobe Commerce
 description: Beskrivning av Adobe Commerce
 exl-id: a9ebd4a6-87b4-47b9-8ae8-72d99e1797eb
-source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
+source-git-commit: 219cbe839e40afa19b3754a9d5929074ed238920
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '297'
 ht-degree: 0%
 
 ---
@@ -26,9 +26,9 @@ Adobe Commerce funktioner utvecklas alltid med konsumenterna i åtanke när man 
 
 ## Sömlös shopping överallt
 
-Handelstillväxten främjas genom att kundernas behov tillgodoses oavsett var de befinner sig. Utvidga er räckvidd och utöka er till nya kanaler, platser och sälj online till både företag och konsumenter på en och samma plattform. För ut e-handeln till era kunder var de vill, när de vill och hur de föredrar att handla.
+Handelstillväxten drivs vidare av att tillgodose era kunders behov. Utvidga er räckvidd och utöka er till nya kanaler, platser och sälj online till både företag och konsumenter på en och samma plattform. För ut e-handeln till era kunder var de vill, när de vill och hur de föredrar att handla.
 
-- Mobil e-handel
+- Mobile commerce
 - B2B-e-handel
 - PWA Studio
 - Global expansion
@@ -42,7 +42,7 @@ Effektivitet, automatisering och dataåtkomst krävs för att man ska kunna konk
 
 - Business Intelligence
 - Leverans
-- Lagerhantering
+- Inventory management
 - Orderhantering och kundtjänst
 
 ## Tillförlitlig drift
