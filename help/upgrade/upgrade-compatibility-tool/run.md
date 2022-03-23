@@ -1,9 +1,9 @@
 ---
 title: Kör [!DNL Upgrade Compatibility Tool]
 description: Följ de här stegen för att köra [!DNL Upgrade Compatibility Tool] i ditt Adobe Commerce-projekt.
-source-git-commit: ee80753da5327ebf593e007e3b4316e2b01c5a61
+source-git-commit: ba077f5d5429f2971dfbca8edd8ebd5ea44922c8
 workflow-type: tm+mt
-source-wordcount: '1864'
+source-wordcount: '1885'
 ht-degree: 0%
 
 ---
@@ -73,10 +73,10 @@ Tillgänglig `--help` för `upgrade:check` kommando:
 
 - `-m, --module-path[=MODULE-PATH]`: Sökväg till de moduler som ska analyseras
 - `-a, --current-version[=CURRENT-VERSION]`: Aktuell Adobe Commerce-version, version av Adobe Commerce-installationen, används om den utelämnas.
-- `-c, --coming-version[=COMING-VERSION]`: Adobe Commerce-målversion, den senaste versionen av Adobe Commerce kommer att användas om den utelämnas.
+- `-c, --coming-version[=COMING-VERSION]`: Adobe Commerce-målversion, den senaste versionen av Adobe Commerce kommer att användas om den utelämnas. Innehåller en lista över alla tillgängliga Adobe Commerce-versioner.
 - `--json-output-path[=JSON-OUTPUT-PATH]`: Sökväg till filen där utdata ska exporteras i json-format.
 - `--html-output-path[=HTML-OUTPUT-PATH]`: Sökväg till filen där utdata ska exporteras i HTML-format.
-- `--min-issue-level`: Minsta utgivningsnivå som ska visas i rapporten. Standard är [VARNING].
+- `--min-issue-level`: Minsta utgivningsnivå som ska visas i rapporten. Standardnivån är [VARNING].
 - `-i, --ignore-current-version-compatibility-issues`: Använd det här alternativet om du inte vill inkludera kända allvarliga problem, fel och varningar i [!DNL Upgrade Compatibility Tool] rapport.
 - `--context=CONTEXT`: Körningskontext. Det här alternativet är avsett för integrering och påverkar inte körningsresultatet.
 - `-h, --help`: Visa hjälp för det specifika kommandot. Om inget kommando anges `list` är standardresultatet.
@@ -267,6 +267,10 @@ Du måste ange versionen som en parameter när du kör kommandot:
 ```bash
 bin/uct upgrade:check <dir> -c 2.4.3
 ```
+
+>[!NOTE]
+>
+>Den här parametern innehåller en lista med alla tillgängliga Adobe Commerce-versioner.
 
 Var:
 
