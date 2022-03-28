@@ -1,7 +1,7 @@
 ---
 title: Förutsättningar
 description: Förbered ditt Adobe Commerce- eller Magento Open Source-projekt för en uppgradering genom att slutföra dessa nödvändiga steg.
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+source-git-commit: fbe47245623469a93cce5cc5a83baf467a007bc4
 workflow-type: tm+mt
 source-wordcount: '1316'
 ht-degree: 0%
@@ -71,7 +71,7 @@ Vi rekommenderar att du kontaktar din sökmotorleverantör för att avgöra om t
 
 Genom att ange gränsen för antalet öppna filer (ulimit) kan du undvika fel vid flera rekursiva anrop av långa frågesträngar eller problem med att använda `bin/magento setup:rollback` -kommando. Det här kommandot är annorlunda för olika UNIX-skal. Mer information om `ulimit` -kommando.
 
-Adobe rekommenderar att du anger öppna filer [ulimit](http://ss64.com/bash/ulimit.html) till ett värde av `65536` eller mer, men du kan använda ett större värde om det behövs. Du kan ange gränsen på kommandoraden eller göra den till en permanent inställning för användarens skal.
+Adobe rekommenderar att du anger öppna filer [ulimit](https://ss64.com/bash/ulimit.html) till ett värde av `65536` eller mer, men du kan använda ett större värde om det behövs. Du kan ange gränsen på kommandoraden eller göra den till en permanent inställning för användarens skal.
 
 Så här anger du gränsen från kommandoraden:
 

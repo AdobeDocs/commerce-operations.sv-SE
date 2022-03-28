@@ -1,9 +1,9 @@
 ---
 title: Översikt över [!DNL Upgrade Compatibility Tool]
 description: Läs mer om [!DNL Upgrade Compatibility Tool] och hur det kan hjälpa dig med ditt Adobe Commerce-projekt.
-source-git-commit: 218b099caa883f66ddda48407fb789e51fedc203
+source-git-commit: fbe47245623469a93cce5cc5a83baf467a007bc4
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '608'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ I följande diagram visas det förväntade arbetsflödet vid körning av [!DNL U
 
 Följande exempel beskriver den vanliga processen för en Adobe Commerce-partner att uppgradera en klientinstans:
 
-1. Ladda ned [!DNL Upgrade Compatibility Tool] paketet från [Adobe Commerce](https://repo.magento.com/). Se [Ladda ned [!DNL Upgrade Compatibility Tool]](../upgrade-compatibility-tool/install.md#download-the-upgrade-compatibility-tool) för mer information.
+1. Ladda ned [!DNL Upgrade Compatibility Tool] paket från Adobe Commerce-databasen (`https://repo.magento.com/`). Se [Ladda ned [!DNL Upgrade Compatibility Tool]](../upgrade-compatibility-tool/install.md#download-the-upgrade-compatibility-tool) för mer information.
 1. Kör [!DNL Upgrade Compatibility Tool] under [beta](https://devdocs.magento.com/release/beta-program.html) fas av nyaste [Adobe Commerce release](https://devdocs.magento.com/release/).
 1. Huvudkommandot är `upgrade:check`. Det här kommandot analyserar instansen och söker efter fel, varningar och kritiska problem i instansen. Så här optimerar du resultat:
 
