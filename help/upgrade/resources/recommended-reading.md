@@ -1,9 +1,9 @@
 ---
 title: Rekommenderad läsning för uppgraderingar
 description: Läs vad som rekommenderas för att planera uppgraderingen till Adobe Commerce eller Magento Open Source.
-source-git-commit: de3ab30a0831f6bbf92313c568ac624212868afe
+source-git-commit: 1cecdf89df9a870d57347468ce9220f74d46cd73
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '446'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,6 @@ Lär dig mer om Adobe Commerce och Magento Open Source genom att använda resurs
             <li><a href="https://marketplace.magento.com/magento-live-search.html">Live Search</a></li>
             <li><a href="https://marketplace.magento.com/magento-payment-services.html">Betalningstjänster</a></li>
             <li><a href="https://marketplace.magento.com/magento-product-recommendations.html">Recommendations</a></li>
-            <li><a href="https://developer.adobe.com/commerce/pwa-studio/guides/upgrading-versions">Uppgraderar PWA Studio</a></li>
           </ul>
       </td>
     </tr>
@@ -77,7 +76,13 @@ Lär dig mer om Adobe Commerce och Magento Open Source genom att använda resurs
             <li><a href="https://devdocs.magento.com/release/availability.html">Programvarutillgänglighet</a></li>
           </ul>
       </td>
-      <td></td>
+      <td><strong>Storefront Experience</strong>
+        <p>Läs om den senaste tekniken som ni kan använda för att skapa unika upplevelser för era kunder.</p>
+          <ul>
+            <li><a href="https://developer.adobe.com/commerce/pwa-studio/">PWA Studio</a></li>
+            <li><a href="https://developer.adobe.com/commerce/pwa-studio/guides/upgrading-versions">Uppgraderar PWA Studio</a></li>
+          </ul>
+      </td>
     </tr>
   </tbody>
 </table>
