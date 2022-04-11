@@ -1,9 +1,9 @@
 ---
 user-guide-title: Uppgraderingshandbok
 user-guide-description: Lär dig varför det är så viktigt att uppgradera din Adobe Commerce- eller Magento Open Source-app och hur du kan planera och genomföra en uppgradering.
-source-git-commit: 3d9a721e33621b78f03f16b932a1ba2904ae4010
+source-git-commit: d4aac5687b299603f763b7fee14c768c67754e63
 workflow-type: tm+mt
-source-wordcount: '122'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -35,6 +35,7 @@ ht-degree: 0%
    - [Förutsättningar](upgrade-compatibility-tool/prerequisites.md)
    - [Installera](upgrade-compatibility-tool/install.md)
    - [Kör verktyget](upgrade-compatibility-tool/run.md)
+   - [Integrera [!DNL Site-Wide Analysis Tool]](upgrade-compatibility-tool/integrate-analysis-tool.md)
    - [Utvecklarinformation](upgrade-compatibility-tool/developer.md)
    - [Felmeddelanden](upgrade-compatibility-tool/error-messages.md)
 - Medverkande utvecklare {#developer}
