@@ -1,9 +1,9 @@
 ---
 title: Förutsättningar
 description: Förbered ditt Adobe Commerce- eller Magento Open Source-projekt för en uppgradering genom att slutföra dessa nödvändiga steg.
-source-git-commit: fbe47245623469a93cce5cc5a83baf467a007bc4
+source-git-commit: ea5de44ab40b873fa30393359dd714534bd789e3
 workflow-type: tm+mt
-source-wordcount: '1316'
+source-wordcount: '1477'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Det är viktigt att förstå vad som krävs för att köra Adobe Commerce eller 
 När du har granskat systemkraven måste du uppfylla följande krav innan du uppgraderar systemet:
 
 - Uppdatera all programvara
-- Kontrollera att Elasticsearch är installerat
+- Kontrollera att en sökmotor som stöds är installerad
 - Ange gräns för öppna filer
 - Verifiera att cron-jobb körs
 - Ange `DATA_CONVERTER_BATCH_SIZE`
@@ -30,13 +30,17 @@ The [systemkrav](https://devdocs.magento.com/guides/v2.4/install-gde/system-requ
 
 Se till att du har uppdaterat alla systemkrav och beroenden i din miljö. Se PHP [7.4](https://www.php.net/manual/en/migration74.php), PHP [8.0](https://www.php.net/manual/en/migration80.php), PHP [8.1](https://www.php.net/manual/en/migration81.php)och [obligatoriska PHP-inställningar](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/php-settings.html#php-required-set).
 
-## Kontrollera att Elasticsearch är installerat
+## Kontrollera att en sökmotor som stöds är installerad
 
-Adobe Commerce och Magento Open Source kräver att Elasticsearch är installerade för att kunna använda programmet. Innan du uppgraderar från 2.3.x till 2.4 måste du kontrollera om du använder MySQL, Elasticsearch eller ett tillägg från tredje part som katalogsökmotor i din 2.3.x-instans. Resultatet avgör vad du måste göra _före_ uppgradering till 2.4.
+Adobe Commerce och Magento Open Source kräver att Elasticsearch eller OpenSearch är installerade för att programmet ska kunna användas.
+
+**Om du uppgraderar från 2.3.x till 2.4** måste du kontrollera om du använder MySQL, Elasticsearch eller ett tillägg från tredje part som katalogsökmotor i din 2.3.x-instans. Resultatet avgör vad du måste göra _före_ uppgradering till 2.4.
+
+**Om du uppgraderar korrigeringsfiler i versionerna 2.3.x eller 2.4.x** om Elasticsearch 7.x redan är installerat kan du [migrera till OpenSearch](opensearch-migration.md).
 
 Du kan använda kommandoraden eller Admin för att bestämma katalogsökmotorn:
 
-- Ange `bin/magento config:show catalog/search/engine` -kommando. Kommandot returnerar värdet `mysql`, `elasticsearch` (vilket anger att Elasticsearch 2 är konfigurerad), `elasticsearch5`, `elasticsearch6`, `elasticsearch7`, eller ett anpassat värde, som anger att du har installerat en sökmotor från tredje part.
+- Ange `bin/magento config:show catalog/search/engine` -kommando. Kommandot returnerar värdet `mysql`, `elasticsearch` (vilket anger att Elasticsearch 2 är konfigurerad), `elasticsearch5`, `elasticsearch6`, `elasticsearch7`, eller ett anpassat värde, som anger att du har installerat en sökmotor från tredje part. Värdet för `elasticsearch7` anger att antingen Elasticsearch 7 eller OpenSearch är installerat.
 
 - Kontrollera värdet för **[!UICONTROL Stores]** > [!UICONTROL Settings] > **[!UICONTROL Configuration]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog Search]** > **[!UICONTROL Search Engine]** fält.
 
@@ -44,24 +48,38 @@ I följande avsnitt beskrivs vilka åtgärder du måste vidta innan du uppgrader
 
 ### MySQL
 
-Från och med 2.4 är MySQL inte längre en katalogsökmotor som stöds. Du måste installera och konfigurera Elasticsearch innan du uppgraderar. Använd följande resurser för att hjälpa dig igenom den här processen:
+Från och med 2.4 är MySQL inte längre en katalogsökmotor som stöds. Du måste installera och konfigurera Elasticsearch eller OpenSearch innan du uppgraderar. Använd följande resurser för att hjälpa dig igenom den här processen:
 
 - [Installera och konfigurera Elasticsearch](https://devdocs.magento.com/guides/v2.4/config-guide/elasticsearch/es-overview.html)
 - [Installerar Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)
-- Konfigurera Elasticsearch för att arbeta med [nginx](https://devdocs.magento.com/guides/v2.4/config-guide/elasticsearch/es-config-nginx.html) eller [Apache](https://devdocs.magento.com/guides/v2.4/config-guide/elasticsearch/es-config-apache.html)
+- Konfigurera [nginx](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/es-config-nginx.html) eller [Apache](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/es-config-apache.html) för att arbeta med din sökmotor
 - [Konfigurera Commerce att använda Elasticsearch](https://devdocs.magento.com/guides/v2.4/config-guide/elasticsearch/configure-magento.html) och indexera om
 
 Vissa katalogsökmotorer från tredje part körs ovanpå Adobe Commerce sökmotor. Kontakta leverantören för att avgöra om du måste uppdatera tillägget.
 
 ### Elasticsearch
 
-Du måste installera och konfigurera Elasticsearch innan du uppgraderar till 2.4.0. Adobe stöder inte längre Elasticsearch 2.x, 5.x och 6.x.
+Du måste installera och konfigurera Elasticsearch 7.6 eller senare eller OpenSearch 1.2 innan du uppgraderar till 2.4.0. Adobe stöder inte längre Elasticsearch 2.x, 5.x och 6.x.
 
 Se [Uppgraderar Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html) om du vill ha fullständiga anvisningar om hur du säkerhetskopierar data, upptäcker potentiella migreringsproblem och testar uppgraderingar innan du distribuerar till produktionen. Beroende på vilken version av Elasticsearch du använder behöver du kanske inte starta om hela klustret.
 
 Elasticsearch kräver JDK 1.8 eller senare. Se [Installera Java Software Development Kit (JDK)](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/elasticsearch.html#prereq-java) för att kontrollera vilken version av JDK som är installerad.
 
 [Konfigurera Magento att använda Elasticsearch](https://devdocs.magento.com/guides/v2.4/config-guide/elasticsearch/configure-magento.html) beskriver de uppgifter du måste utföra efter att ha uppdaterat Elasticsearch 2 till en version som stöds.
+
+### OpenSearch
+
+OpenSearch är en öppen källkodsgaffel i Elasticsearch 7.10.2 efter Elasticsearch licenschange. I följande versioner av Adobe Commerce och Magento Open Source finns stöd för OpenSearch:
+
+- 2.4.4
+- 2.4.3-p2
+- 2.3.7-p3
+
+Du kan [migrera från Elasticsearch till OpenSearch](opensearch-migration.md) endast om du uppgraderar till en version av Adobe Commerce eller Magento Open Source som listas ovan (eller senare).
+
+OpenSearch kräver JDK 1.8 eller senare. Se [Installera Java Software Development Kit (JDK)](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/elasticsearch.html#prereq-java) för att kontrollera vilken version av JDK som är installerad.
+
+[Konfigurera Magento att använda Elasticsearch](https://devdocs.magento.com/guides/v2.4/config-guide/elasticsearch/configure-magento.html) beskriver de åtgärder du måste utföra efter att du har ändrat sökmotorer.
 
 ### Tredjepartstillägg
 

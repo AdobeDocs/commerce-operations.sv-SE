@@ -1,9 +1,9 @@
 ---
 user-guide-title: Uppgraderingshandbok
 user-guide-description: Lär dig varför det är så viktigt att uppgradera din Adobe Commerce- eller Magento Open Source-app och hur du kan planera och genomföra en uppgradering.
-source-git-commit: d4aac5687b299603f763b7fee14c768c67754e63
+source-git-commit: ea5de44ab40b873fa30393359dd714534bd789e3
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '129'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,7 @@ ht-degree: 0%
    - [God praxis](prepare/best-practices.md)
    - [Granska plattformsändringar](prepare/platform-changes.md)
    - [Krav för fullständig uppgradering](prepare/prerequisites.md)
+   - [Migrera från Elasticsearch till OpenSearch](prepare/opensearch-migration.md)
    - [Förstå uppgraderingsomfång](prepare/scope.md)
 - Implementering {#implementation}
    - [Uppgradera](implementation/perform-upgrade.md)

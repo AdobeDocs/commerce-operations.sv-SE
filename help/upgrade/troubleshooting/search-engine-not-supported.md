@@ -1,9 +1,9 @@
 ---
 title: Aktuell sökmotor stöds inte
 description: Felsök uppgraderingen av Adobe Commerce eller Magento Open Source efter att ha upptäckt ett fel om en sökmotor som inte stöds.
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+source-git-commit: 96534d5307062aa4fda8f6433630d2d39e2848e7
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '473'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Aktuell sökmotor stöds inte
 
-Följande felmeddelande anger att den Magento-version du uppgraderar från är konfigurerad att använda en katalogsökmotor som inte stöds i den Magento-version du uppgraderar till:
+Följande felmeddelande anger att den version av Adobe Commerce eller Magento Open Source som du uppgraderar från är konfigurerad att använda en katalogsökmotor som inte stöds i den version som du uppgraderar till:
 
 ```terminal
 Your current search engine, <Engine Name>, is not supported. You must install a supported search engine before upgrading. See the System Upgrade Guide for more information.
@@ -32,7 +32,7 @@ Felet inträffar om det returnerade värdet är `mysql` eller `elasticsearch`.
 
 >[!WARNING]
 >
->Om du har fått det här felet är Magento i ett inkonsekvent tillstånd och du kan inte komma åt administratören. Vi rekommenderar att du återgår till den tidigare versionen medan du åtgärdar det här felet. Om du vill göra det kör du något av följande kommandon:
+>Om du har fått det här felet är installationen i ett inkonsekvent tillstånd och du kan inte komma åt administratören. Vi rekommenderar att du återgår till den tidigare versionen medan du åtgärdar det här felet. Om du vill göra det kör du något av följande kommandon:
 >
 >
 ```bash
@@ -50,7 +50,7 @@ Följ riktlinjerna som beskrivs i följande avsnitt för att återställa efter 
 
 ## Om sökmotorn är `mysql`
 
-Före 2.4 var MySQL standardkatalogsökmotorn, men MySQL stöds inte längre i den här kapaciteten. Nu måste du installera och konfigurera Elasticsearch som sökmotor innan du uppgraderar till 2.4.
+Före 2.4 var MySQL standardkatalogsökmotorn, men MySQL stöds inte längre i den här kapaciteten. Nu måste du installera och konfigurera Elasticsearch eller OpenSearch som sökmotor innan du uppgraderar till 2.4.
 
 Använd följande resurser för att hjälpa dig igenom den här processen:
 
@@ -59,7 +59,7 @@ Använd följande resurser för att hjälpa dig igenom den här processen:
 - Konfigurera Elasticsearch för att arbeta med [nginx](https://devdocs.magento.com/guides/v2.3/config-guide/elasticsearch/es-config-nginx.html) eller [Apache](https://devdocs.magento.com/guides/v2.3/config-guide/elasticsearch/es-config-apache.html)
 - [Konfigurera Magento att använda Elasticsearch](https://devdocs.magento.com/guides/v2.3/config-guide/elasticsearch/configure-magento.html)
 
-När du har konfigurerat Elasticsearch och indexerat om är du redo att uppgradera till 2.4.
+När du har konfigurerat sökmotorn och indexerat om är du redo att uppgradera till 2.4.
 
 ## Om sökmotorn är `elasticsearch`
 
@@ -67,7 +67,7 @@ Värdet för `elasticsearch` visar att din äldre version av Adobe Commerce elle
 
 Du måste utföra följande åtgärder innan du uppgraderar till 2.4:
 
-1. Uppdatera Elasticsearch. Vi rekommenderar att du uppdaterar till Elasticsearch 7.x. Se [Uppgraderar Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html) om du vill ha fullständiga anvisningar om hur du säkerhetskopierar data, upptäcker potentiella migreringsproblem och testar uppgraderingar innan du distribuerar till produktionen. Beroende på vilken version av Elasticsearch du använder behöver du kanske inte starta om hela klustret.
+1. Uppdatera till en version av Elasticsearch som stöds av Commerce. Se [Uppgraderar Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html) om du vill ha fullständiga anvisningar om hur du säkerhetskopierar data, upptäcker potentiella migreringsproblem och testar uppgraderingar innan du distribuerar till produktionen. Beroende på vilken version av Elasticsearch du använder behöver du kanske inte starta om hela klustret.
 
    >[!NOTE]
    >
@@ -75,4 +75,4 @@ Du måste utföra följande åtgärder innan du uppgraderar till 2.4:
 
 1. [Konfigurera Magento att använda Elasticsearch](https://devdocs.magento.com/guides/v2.3/config-guide/elasticsearch/configure-magento.html) och indexera om.
 
-När du har konfigurerat Elasticsearch och indexerat om är du redo att uppgradera till 2.4.
+När du har konfigurerat sökmotorn och indexerat om är du redo att uppgradera till 2.4.

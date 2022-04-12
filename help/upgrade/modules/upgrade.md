@@ -1,9 +1,9 @@
 ---
 title: Uppgraderingsmoduler och tillägg
 description: Använd kommandoradsgränssnittet och Composer för att uppgradera moduler och tillägg för Adobe Commerce och Magento Open Source.
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+source-git-commit: 70f1bda91023526fbc0024b6a6fef93c7633ecc2
 workflow-type: tm+mt
-source-wordcount: '96'
+source-wordcount: '161'
 ht-degree: 0%
 
 ---
@@ -44,3 +44,9 @@ Så här uppdaterar eller uppgraderar du en modul eller ett tillägg:
    ```bash
    bin/magento cache:clean
    ```
+
+## VBE (Leverantör bundled extensions)
+
+Adobe har tagit bort alla [VBE](https://devdocs.magento.com/extensions/vendor/) i 2.4.4. Leverantörer fortsätter att ha stöd för dessa tillägg på Adobe Commerce Marketplace.
+
+Om du vill fortsätta använda dessa tillägg med Adobe Commerce och Magento Open Source 2.4.4 och senare måste du uppdatera motsvarande paketberoenden i `composer.json` fil _före_ uppgradering till 2.4.4. Kontakta leverantören för det paketnamn och den version som ska användas.
