@@ -2,9 +2,9 @@
 keywords: Adobe Commerce;home;populära topics
 title: Startsida
 description: Bläddra i ett index över Adobe Commerce produktdokumentation.
-source-git-commit: d3eac6db56f658ead240e8244858d0bd80a43908
+source-git-commit: 29b8d64cd700531f04166ad20694fa342ea0e186
 workflow-type: tm+mt
-source-wordcount: '209'
+source-wordcount: '197'
 ht-degree: 0%
 
 ---
@@ -60,18 +60,18 @@ Få praktisk information om koncept, processer, verktyg och bästa metoder för 
   </td>
   <td valign="top">
     <a href="https://devdocs.magento.com/extensions/">
-       <img alt="Tillägg" src="../assets/icons/extension.svg" width="40" height="40"/>
+       <img alt="Extensions" src="../assets/icons/extension.svg" width="40" height="40"/>
     </a>
     <div>
       <a href="https://devdocs.magento.com/extensions/"><strong>Tillägg</strong></a>
     </div>
   </td>
   <td valign="top">
-    <a href="https://devdocs.magento.com/guides/v2.4/performance-best-practices/introduction.html">
+    <a href="../performance/overview.md">
        <img alt="Prestanda" src="../assets/icons/gauge.svg" width="40" height="40"/>
     </a>
     <div>
-      <a href="https://devdocs.magento.com/guides/v2.4/performance-best-practices/introduction.html"><strong>Bästa praxis för prestanda</strong></a>
+      <a href="../performance/overview.md"><strong>Bästa praxis för prestanda</strong></a>
     </div>
   </td>
   <td valign="top">
@@ -79,14 +79,14 @@ Få praktisk information om koncept, processer, verktyg och bästa metoder för 
        <img alt="verktyg" src="../assets/icons/wrench.svg" width="40" height="40"/>
     </a>
     <div>
-      <a href="https://experienceleague.corp.adobe.com/docs/commerce-operations/tools/overview.html?lang=en"><strong>verktyg</strong></a>
+      <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/overview.html?lang=en"><strong>verktyg</strong></a>
     </div>
   </td>
 </tr>
 <tr>
   <td valign="top">
     <a href="https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html">
-       <img alt="Referens för kommandoradsverktyg" src="../assets/icons/page-rule.svg" width="40" height="40"/>
+       <img alt="Command-line tools reference" src="../assets/icons/page-rule.svg" width="40" height="40"/>
     </a>
     <div>
       <a href="https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html"><strong>Referens för kommandoradsverktyg</strong></a>
@@ -123,7 +123,7 @@ Få praktisk information om koncept, processer, verktyg och bästa metoder för 
 
 Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
 
-| Ändra | Typ |
+| Ändra | Type |
 |----------------------------------------------------------------------------------------------------------------------------------------|--------------|
 | Tillagd [information](../upgrade/upgrade-compatibility-tool/overview.md) om hur regler definieras för verktyget Kompatibilitet med uppgraderingar. | Viktig uppdatering |
 | Borttagen föråldrad uppgraderingskompatibilitet [felkoder](../upgrade/upgrade-compatibility-tool/error-messages.md). | Teknik |
