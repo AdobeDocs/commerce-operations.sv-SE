@@ -2,9 +2,9 @@
 keywords: Adobe Commerce;home;populära topics
 title: Startsida
 description: Bläddra i ett index över Adobe Commerce produktdokumentation.
-source-git-commit: 29b8d64cd700531f04166ad20694fa342ea0e186
+source-git-commit: bca5208cb5a53ac839c666cb42f2124de5d96be2
 workflow-type: tm+mt
-source-wordcount: '197'
+source-wordcount: '212'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ Få praktisk information om koncept, processer, verktyg och bästa metoder för 
   </td>
   <td valign="top">
     <a href="https://devdocs.magento.com/extensions/">
-       <img alt="Extensions" src="../assets/icons/extension.svg" width="40" height="40"/>
+       <img alt="Tillägg" src="../assets/icons/extension.svg" width="40" height="40"/>
     </a>
     <div>
       <a href="https://devdocs.magento.com/extensions/"><strong>Tillägg</strong></a>
@@ -86,7 +86,7 @@ Få praktisk information om koncept, processer, verktyg och bästa metoder för 
 <tr>
   <td valign="top">
     <a href="https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html">
-       <img alt="Command-line tools reference" src="../assets/icons/page-rule.svg" width="40" height="40"/>
+       <img alt="Referens för kommandoradsverktyg" src="../assets/icons/page-rule.svg" width="40" height="40"/>
     </a>
     <div>
       <a href="https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html"><strong>Referens för kommandoradsverktyg</strong></a>
@@ -123,7 +123,8 @@ Få praktisk information om koncept, processer, verktyg och bästa metoder för 
 
 Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
 
-| Ändra | Type |
+| Ändra | Typ |
 |----------------------------------------------------------------------------------------------------------------------------------------|--------------|
 | Tillagd [information](../upgrade/upgrade-compatibility-tool/overview.md) om hur regler definieras för verktyget Kompatibilitet med uppgraderingar. | Viktig uppdatering |
 | Borttagen föråldrad uppgraderingskompatibilitet [felkoder](../upgrade/upgrade-compatibility-tool/error-messages.md). | Teknik |
+| Flyttad [Handbok för Site-Wide Analysis Tool](../tools/site-wide-analysis-tool/intro.md) från [devdocs.magento.com](https://devdocs.magento.com/tools/site-wide-analysis.html) till Experience League. | Nytt |
