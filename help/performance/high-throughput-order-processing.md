@@ -1,9 +1,9 @@
 ---
 title: Bearbetning av beställning med hög genomströmning
 description: Optimera beställnings- och utcheckningsupplevelsen för Adobe Commerce eller Magento Open Source.
-source-git-commit: 0a902d7fe967bbcee5019fea83e5be66ce2aefd0
+source-git-commit: c4c52baa9e04a4e935ccc29fcce2ac2745a454ee
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -14,23 +14,23 @@ ht-degree: 0%
 Du kan optimera orderplaceringen och utcheckningen genom att konfigurera följande uppsättning moduler för **orderhantering med hög genomströmning**:
 
 - [AsyncOrder](#asynchronous-order-placement)—Beställningar bearbetas asynkront med en kö.
-- [NegotiableQuoteAsyncOrder](#negotiable-quote-asyn-order)—Bearbetar NegotiableQuote-objekt för sparad ordning asynkront.
-- [UppskjutenTotalBeräkning](#deferred-total-calculation)—Uppskjuter beräkningar för ordersummor tills utcheckningen börjar.
+- [Uppskjuten total beräkning](#deferred-total-calculation)—Uppskjuter beräkningar för ordersummor tills utcheckningen börjar.
+- [Lagerkontroll vid offertinläsning](#disable-inventory-check)- Välj att hoppa över lagervalidering av kundvagnsartiklar.
 
-Alla funktioner fungerar oberoende av varandra. Du kan använda alla funktioner samtidigt eller aktivera och inaktivera funktioner i valfri kombination.
-
-Använd kommandoradsgränssnittet för att aktivera dessa funktioner eller redigera `app/etc/env.php` enligt motsvarande README-filer som definieras i [_Referenshandbok för modul_][mrg].
+Alla funktioner - AsyncOrder, Deferred Total Calculation och Inventory Check - fungerar oberoende av varandra. Du kan använda alla tre funktionerna samtidigt eller aktivera och inaktivera funktioner i valfri kombination.
 
 ## Asynkron orderplacering
 
 The _Asynkron ordning_ aktiverar asynkron placering av order, vilket markerar ordningen som `received`, placerar ordern i en kö och bearbetar order från kön först-i-först-ut-baserat. AsyncOrder är **inaktiverad** som standard.
 
-For example, a customer adds a product to their shopping cart and selects **[!UICONTROL Proceed to Checkout]**. They fill out the **[!UICONTROL Shipping Address]** form, select their preferred **[!UICONTROL Shipping Method]**, select a payment method, and place the order. Kundvagnen är rensad, ordern är markerad som **[!UICONTROL Received]**, men produktkvantiteten har inte justerats ännu och inte heller skickas ett säljmejl till kunden. Ordern tas emot, men orderinformationen är inte tillgänglig än eftersom ordern inte har bearbetats fullständigt. Den finns kvar i kön tills `placeOrderProcess` konsumenten börjar, verifierar beställningen med [lagerkontroll](#disable-inventory-check) funktionen (aktiverad som standard) och uppdaterar ordningen enligt följande:
+En kund t.ex. lägger till en produkt i kundvagnen och väljer **[!UICONTROL Proceed to Checkout]**. De fyller ut **[!UICONTROL Shipping Address]** formulär, välj önskat **[!UICONTROL Shipping Method]**, väljer en betalningsmetod och gör en beställning. Kundvagnen är rensad, ordern är markerad som **[!UICONTROL Received]**, men produktkvantiteten har inte justerats ännu och inte heller skickas ett säljmejl till kunden. Ordern tas emot, men orderinformationen är inte tillgänglig än eftersom ordern inte har bearbetats fullständigt. Den finns kvar i kön tills `placeOrderProcess` konsumenten börjar, verifierar beställningen med [lagerkontroll](#disable-inventory-check) funktionen (aktiverad som standard) och uppdaterar ordningen enligt följande:
 
 - **Produkten finns tillgänglig**—orderstatusen ändras till _Väntande_, produktkvantiteten justeras, ett e-postmeddelande med beställningsinformation skickas till kunden och beställningsinformationen blir tillgänglig för visning i **Beställningar och returer** lista med alternativ som kan ändras, t.ex. ändra ordning.
 - **Produkt som inte finns i lager eller som har låg tillgång**—orderstatusen ändras till _Avvisad_, produktkvantiteten inte justeras, ett e-postmeddelande med beställningsinformation om problemet skickas till kunden och den avvisade beställningsinformationen blir tillgänglig i **Beställningar och returer** lista utan alternativ som kan användas.
 
-Så här aktiverar du AsyncOrder:
+Använd kommandoradsgränssnittet för att aktivera dessa funktioner eller redigera `app/etc/env.php` enligt motsvarande README-filer som definieras i [_Referenshandbok för modul_][mrg].
+
+**Aktivera AsyncOrder**:
 
 Du kan aktivera AsyncOrder med kommandoradsgränssnittet:
 
@@ -49,7 +49,7 @@ The `set` skriver följande till `app/etc/env.php` fil:
 
 Se [AsyncOrder] i _Referenshandbok för modul_.
 
-Så här inaktiverar du AsyncOrder:
+**Så här inaktiverar du AsyncOrder**:
 
 >[!WARNING]
 >
@@ -77,14 +77,14 @@ AsyncOrder har stöd för en begränsad uppsättning [!DNL Commerce] funktioner.
 | Kategori | Funktion som stöds |
 |---------------- | -----------------------|
 | Utcheckningstyper | OnePage-utcheckning<br>Standardutcheckning<br>B2B - överlåtbar offert |
-| Payment methods | Check-/penningorder<br>Kontant vid leverans<br>Braintree<br>PayPal PayFlow Pro |
+| Betalningsmetoder | Check-/penningorder<br>Kontant vid leverans<br>Braintree<br>PayPal PayFlow Pro |
 | Leveransmetoder | Alla leveransmetoder stöds. |
 
-The following features are **not** supported by AsyncOrder, but continue to work synchronously:
+Följande funktioner är **not** stöds av AsyncOrder, men fortsätter att fungera synkront:
 
 - Betalningsmetoder som inte ingår i listan över funktioner som stöds
-- Multi Address Checkout
-- Admin Order Creation
+- Checka ut flera adresser
+- Skapa administratörsorder
 
 #### Stöd för webb-API
 
@@ -109,7 +109,7 @@ När AsyncOrder-modulen är aktiverad körs följande REST-slutpunkter och Graph
 
 Utvecklare kan uttryckligen utesluta vissa betalningsmetoder från Asynchronous Order-placeringen genom att lägga till dem i `Magento\AsyncOrder\Model\OrderManagement::paymentMethods` array. Order som använder uteslutna betalningsmetoder behandlas synkront.
 
-## Asynk order för överlåtbar offert
+### Asynk order för överlåtbar offert
 
 The _Asynk order för överlåtbar offert_ Med B2B-modulen kan du spara orderobjekt asynkront för `NegotiableQuote` funktionalitet. AsyncOrder och NegotiableQuote måste vara aktiverade.
 
@@ -117,9 +117,9 @@ The _Asynk order för överlåtbar offert_ Med B2B-modulen kan du spara orderobj
 
 The _Uppskjuten total beräkning_ i kan du optimera utcheckningsprocessen genom att skjuta upp den totala beräkningen tills den begärs för kundvagnen eller under de slutliga utcheckningsstegen. När det här alternativet är aktiverat beräknas endast delsumman när kunden lägger till produkter i kundvagnen.
 
-DeferredTotalCalculation is **disabled** by default.
+DeferredTotalCalculation är **inaktiverad** som standard. Använd kommandoradsgränssnittet för att aktivera dessa funktioner eller redigera `app/etc/env.php` enligt motsvarande README-filer som definieras i [_Referenshandbok för modul_][mrg].
 
-Så här aktiverar du DeferredTotalCalculation:
+**Aktivera uppskjutenTotalCalculation**:
 
 Du kan aktivera DeferredTotalCalculation med kommandoradsgränssnittet:
 
@@ -136,9 +136,9 @@ The `set` skriver följande till `app/etc/env.php` fil:
    ]
 ```
 
-Så här inaktiverar du DeferredTotalCalculation:
+**Inaktivera uppskjutenTotalCalculation**:
 
-You can disable DeferredTotalCalculation using the command-line interface:
+Du kan inaktivera DeferredTotalCalculation med kommandoradsgränssnittet:
 
 ```bash
 bin/magento setup:config:set --deferred-total-calculating 0
@@ -165,9 +165,7 @@ The _Aktivera lager vid kundvagnsinläsning_ global inställning avgör om en in
 
 När alternativet är inaktiverat görs ingen lagerkontroll när en produkt läggs till i kundvagnen. Om inventeringskontrollen hoppas över kan vissa scenarier utanför lagret ge upphov till andra typer av fel. En lagerkontroll _alltid_ inträffar vid orderplaceringssteget, även när det är inaktiverat.
 
-Aktivera lager vid kundvagnsbeläggning är **aktiverad** som standard.
-
-Om du vill inaktivera lagerkontrollen när vagnen läses in anger du **[!UICONTROL Enable Inventory Check On Cart Load]** till `No` i administratörsgränssnittet. Se [Konfigurera globala alternativ][global] och [Kataloginventering][inventory] i _Användarhandbok_.
+**Aktivera lagerkontroll vid vagninläsning** är aktiverat (inställt på Ja) som standard. Om du vill inaktivera lagerkontrollen när vagnen läses in anger du **[!UICONTROL Enable Inventory Check On Cart Load]** till `No` i administratörsgränssnittet **Lager** > **Konfiguration** > **Katalog** > **Lager** > **Alternativ för Stock** -avsnitt. Se [Konfigurera globala alternativ][global] och [Kataloginventering][inventory] i _Användarhandbok_.
 
 <!-- link definitions -->
 
