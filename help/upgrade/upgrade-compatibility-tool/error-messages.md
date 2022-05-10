@@ -1,9 +1,9 @@
 ---
 title: '"[!DNL Upgrade Compatibility Tool] Felmeddelanden"'
 description: Läs mer om felmeddelanden du får när du använder [!DNL Upgrade Compatibility Tool] i ditt Adobe Commerce-projekt.
-source-git-commit: 9bdf64177b4cecab5dd3562fef0bcc507a57ccf0
+source-git-commit: d62299d23d73b8566ed1c9b9739ca59fb0535d6f
 workflow-type: tm+mt
-source-wordcount: '3816'
+source-wordcount: '3756'
 ht-degree: 4%
 
 ---
@@ -141,16 +141,6 @@ Anpassade kodfel uppstår när anpassad kod använder Adobe Commerce-startpunkte
 | 5026 | Använd inte `"text/javascript"` type-attribut | Använd bara publika medlemmar. |
 | 5028 | Tillgång till skyddade och privata medlemmar i `Block` klassen är föråldrad i FTML-mallar | Använd bara publika medlemmar. |
 | 5031 | Innehåller föråldrad metod | Använd `getConnection()` i stället. |
-| 5032 | `loadLayout` metoden är inaktuell | Använd `\Magento\Framework\View\Layout\Builder::build` i stället. |
-| 5033 | `renderLayout` metoden är inaktuell | Använd `\Magento\Framework\Controller\ResultInterface::renderResult` i stället. |
-| 5034 | `_redirect` metoden är inaktuell | Använd `\Magento\Backend\Model\View\Result\Redirect::render` i stället. |
-| 5035 | `_forward` metoden är inaktuell | Använd `\Magento\Backend\Model\View\Result\Forward::forward` i stället. |
-| 5036 | `_setActiveMenu` metoden är inaktuell | Använd `\Magento\Backend\Model\View\Result\Page::setActiveMenu` i stället. |
-| 5037 | `_addBreadcrumb` metoden är inaktuell | Använd `\Magento\Backend\Model\View\Result\Page::addBreadcrumb` i stället. |
-| 5038 | `_addContent` metoden är inaktuell | Använd `\Magento\Backend\Model\View\Result\Page::addContent` i stället. |
-| 5039 | `_addLeft` metoden är inaktuell | Använd `\Magento\Backend\Model\View\Result\Page::addLeft` i stället. |
-| 5040 | `_addJs` metoden är inaktuell | Använd `\Magento\Backend\Model\View\Result\Page::addJs` i stället. |
-| 5041 | `_moveBlockToContainer` metoden är inaktuell | Använd `\Magento\Backend\Model\View\Result\Page::moveBlockToContainer` i stället. |
 | 5042 | Felaktigt format för PHP-klassreferens | Kontrollera att klassen bara refereras med cameraCased-bokstäver, siffror och inget inledande snedstreck. |
 | 5043 | Felaktigt format för modulreferens | Kontrollera att modulen bara har bokstäver, siffror, understreck och inget inledande snedstreck som referens. |
 | 5044 | Klass `Zend_Db_Select` är begränsad | Föreslagen ersättning: `\Magento\Framework\DB\Select`. |
