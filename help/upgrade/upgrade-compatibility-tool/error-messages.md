@@ -1,9 +1,9 @@
 ---
 title: '"[!DNL Upgrade Compatibility Tool] Felmeddelanden"'
 description: Läs mer om felmeddelanden du får när du använder [!DNL Upgrade Compatibility Tool] i ditt Adobe Commerce-projekt.
-source-git-commit: d62299d23d73b8566ed1c9b9739ca59fb0535d6f
+source-git-commit: a13b0ea5aa109ce2f5d33e0966b194d64bad5d0c
 workflow-type: tm+mt
-source-wordcount: '3756'
+source-wordcount: '3782'
 ht-degree: 4%
 
 ---
@@ -233,6 +233,7 @@ Anpassade kodvarningar visas när referenser till inaktuell kod identifieras. S�
 | 1338 | Implementerad Adobe Commerce `@deprecated` gränssnitt | Det borttagna gränssnittet tas bort i kommande versioner. Överväg att ta bort gränssnittsarvet med ett gränssnitt som är markerat som `@api` eller ett gränssnitt som introducerats i implementeringen istället. |
 | 1430 | Anropet har inte deklarerats som dataobjektmetod | De magiska metoder som inte har deklarerats kan ändras. Överväg att förlita dig på gränssnittsmetoder i stället. |
 | 1439 | Ring Adobe Commerce `@deprecated` method | Den borttagna metoden tas bort i kommande versioner. Överväg att förlita dig på metoder som deklarerats i API-gränssnitt i stället. |
+| 1440 | Felmatchad metodsignatur | Ett anrop eller åsidosättning av huvudmetoden upptäcks med parametrar, argument eller returtyp som inte matchar metodsignaturen. |
 | 1534 | Använda Adobe Commerce `@deprecated` property | Den borttagna metoden tas bort i kommande versioner. Överväg att förlita dig på metoder som deklarerats i API-gränssnitt i stället. |
 | 1535 | Åsidosätta Adobe Commerce `@deprecated` property | Den borttagna egenskapen tas bort i kommande versioner. Du bör i stället förlita dig på metoder som deklarerats i API-gränssnitt eller använda en privat egenskap i implementeringen. |
 | 1536 | Tilldelning av Adobe Commerce `@deprecated` property | Den borttagna metoden tas bort i kommande versioner. Överväg att förlita dig på metoder som deklarerats i API-gränssnitt i stället. |
