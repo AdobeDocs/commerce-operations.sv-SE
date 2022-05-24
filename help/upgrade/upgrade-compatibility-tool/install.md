@@ -1,9 +1,9 @@
 ---
-title: Installera [!DNL Upgrade Compatibility Tool]
-description: Följ de här stegen för att installera [!DNL Upgrade Compatibility Tool] för ditt Adobe Commerce-projekt.
-source-git-commit: 218b099caa883f66ddda48407fb789e51fedc203
+title: Ladda ned [!DNL Upgrade Compatibility Tool]
+description: Följ de här stegen för att hämta [!DNL Upgrade Compatibility Tool] för ditt Adobe Commerce-projekt.
+source-git-commit: 5ff08d231269ea0bcb69f8c80aa546b171a5e4a0
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,12 @@ ht-degree: 0%
 
 The [!DNL Upgrade Compatibility Tool] är ett kommandoradsverktyg som kontrollerar en Adobe Commerce-anpassad instans mot en viss version genom att analysera alla installerade moduler. Den returnerar en lista med fel och varningar som måste åtgärdas innan du uppgraderar till den senaste versionen av Adobe Commerce.
 
+## Förutsättningar
+
+Så här installerar du [!DNL Upgrade Compatibility Tool]måste du installera de nödvändiga förutsättningarna.
+
+Se [krav](../upgrade-compatibility-tool/prerequisites.md) för mer information.
+
 ## Ladda ned [!DNL Upgrade Compatibility Tool]
 
 Ladda ned [!DNL Upgrade Compatibility Tool]kör du följande kommando:
@@ -22,18 +28,6 @@ Ladda ned [!DNL Upgrade Compatibility Tool]kör du följande kommando:
 ```bash
 composer create-project magento/upgrade-compatibility-tool uct --repository https://repo.magento.com
 ```
-
-## Installera
-
-Så här installerar du [!DNL Upgrade Compatibility Tool]måste du installera de nödvändiga kraven:
-
-* Adobe Commerce åtkomstnycklar
-* Disposition
-* Node.js
-
-## Förutsättningar
-
-Se [krav](../upgrade-compatibility-tool/prerequisites.md) för mer information.
 
 ### Adobe Commerce åtkomstnycklar
 
@@ -58,11 +52,11 @@ The **publik nyckel** motsvarar _användarnamn_ Med **privat nyckel** är _löse
 
 ### Disposition
 
-Klona [!DNL Upgrade Compatibility Tool] databas och köra `composer install` i terminalen för att installera beroenden.
+Ladda ned [!DNL Upgrade Compatibility Tool] databas och köra `composer install` i terminalen för att installera beroenden.
 
 >[!WARNING]
 >
->Om **Adobe Commerce åtkomstnycklar** är inte korrekt konfigurerade, [!DNL Upgrade Compatibility Tool] installeras inte och du får felmeddelanden när du kör `composer install` -kommando.
+>Om **Adobe Commerce åtkomstnycklar** är inte korrekt konfigurerade kan du inte hämta [!DNL Upgrade Compatibility Tool] och när du kör `composer create-project` kommer det att misslyckas.
 
 ### Node.js
 
