@@ -1,7 +1,7 @@
 ---
 title: '"Översikt över [!DNL Upgrade Compatibility Tool]"'
 description: Läs mer om [!DNL Upgrade Compatibility Tool] och hur det kan hjälpa dig med ditt Adobe Commerce-projekt.
-source-git-commit: ee949c72e42d329fdfb7f4068aeeb3cdc20e1758
+source-git-commit: fd624a97d74c7f6a9e29223227dae425bb6fa68c
 workflow-type: tm+mt
 source-wordcount: '350'
 ht-degree: 0%
@@ -27,13 +27,13 @@ Du kan använda [!DNL Upgrade Compatibility Tool] via:
 - Integrera [!DNL Upgrade Compatibility Tool] med [[!DNL Site-Wide Analysis Tool]](../upgrade-compatibility-tool/integrate-analysis-tool.md).
 - En körningskonfiguration i [Magento PHPStorm-plugin](../upgrade-compatibility-tool/run-configuration-phpstorm-plugin.md).
 
-### Arbetsflöde
+## Arbetsflöde
 
 I följande diagram visas möjliga arbetsflöden när du kör [!DNL Upgrade Compatibility Tool]:
 
 ![[!DNL Upgrade Compatibility Tool] Diagram](../../assets/upgrade-guide/uct-diagram-v5.png)
 
-### Förbättra [!DNL Upgrade Compatibility Tool]
+## Förbättra [!DNL Upgrade Compatibility Tool]
 
 Om du behöver information eller har frågor som inte ingår i den här handboken använder du följande resurser:
 
@@ -43,7 +43,7 @@ The [!DNL Upgrade Compatibility Tool] använder regler som definierats i [Kodsta
 
 Se [Contribute](https://devdocs.magento.com/guides/v2.4/coding-standards/contributing.html) för mer information om bidragande kodningsstandarder.
 
-### Resurser
+## Resurser
 
 Se följande resurser som hjälper dig att förstå Adobe Commerce uppgraderingar:
 
