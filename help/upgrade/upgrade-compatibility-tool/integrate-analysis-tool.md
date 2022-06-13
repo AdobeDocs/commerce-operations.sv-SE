@@ -1,9 +1,9 @@
 ---
 title: '"Integrera [!DNL Site-Wide Analysis Tool]"'
 description: Följ de här stegen för att hämta [!DNL Upgrade Compatibility Tool] rapport från [!DNL Site-Wide Analysis Tool] dashboard i ditt Adobe Commerce-projekt.
-source-git-commit: c70e431035f0e0b2c495715563faf6be46aa514e
+source-git-commit: 0d4ccc8c2e1a470b5fb3a7d59e81230e8986c257
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '171'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ The [!DNL Upgrade Compatibility Tool] är nu integrerat med [!DNL Site-Wide Anal
 
 Se [[!DNL Site-Wide Analysis Tool] användarhandbok](https://docs.magento.com/user-guide/reports/site-wide-analysis-tool.html) för mer information.
 
-## Kör [!DNL Upgrade Compatibility Tool] från SWAT
+## Kör [!DNL Upgrade Compatibility Tool] från [!DNL Site-Wide Analysis Tool]
 
 Navigera till [!DNL Site-Wide Analysis Tool] kontrollpanel för ditt projekt och leta upp [!DNL Upgrade Compatibility Tool] widget.
 
@@ -32,3 +32,5 @@ När skanningen är klar visas de högnivåresultat som visas i widgeten.
 ![SWAT-widget - Resultat](../../assets/upgrade-guide/uct-swat-results.png)
 
 Klicka **[!UICONTROL Download Report]** för att hämta [!DNL Upgrade Compatibility Tool] [HTML rapport](../upgrade-compatibility-tool/reports.md#html-report) och granska detaljerna.
+
+När du kör [!DNL Upgrade Compatibility Tool] via [!DNL Site-Wide Analysis Tool] rapporten visar resultat som jämför projektets version med den senaste versionen.
