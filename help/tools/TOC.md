@@ -1,9 +1,9 @@
 ---
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
-source-git-commit: b073fedf07e0e8ea63c84cc847f8ae9f2761208e
+source-git-commit: ccabf273ab899955a8b545da2fdf40563a3cf975
 workflow-type: tm+mt
-source-wordcount: '42'
+source-wordcount: '43'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,10 @@ ht-degree: 0%
    - [Statusattribut](site-wide-analysis-tool/status.md)
    - [Flikarna Funktioner](site-wide-analysis-tool/features-tabs.md)
    - [Kontrollpanel](site-wide-analysis-tool/dashboard.md)
+   - [Recommendations](site-wide-analysis-tool/recommendations.md)
    - [Information](site-wide-analysis-tool/information.md)
    - [Undantag](site-wide-analysis-tool/exceptions.md)
    - [Tillägg](site-wide-analysis-tool/extensions.md)
-   - [Varningar](site-wide-analysis-tool/alerts.md)
    - [Patchar](site-wide-analysis-tool/patches.md)
+   - [Varningar](site-wide-analysis-tool/alerts.md)
 
