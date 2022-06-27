@@ -1,9 +1,9 @@
 ---
 title: Så här fungerar korrigeringar
 description: Lär dig mer om de olika typerna av patchar för Adobe Commerce och Magento Open Source och hur de fungerar.
-source-git-commit: 06ac3169a5e3813e4f50246f54f91998e14b5985
+source-git-commit: 45a44d98f149b4b9a1fbb4ac0bcea3eb372f49a8
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Patch-filer (eller diff-filer) är textfiler som innehåller följande informati
 - Radnumret som börjar ändringen och antalet rader som ska ändras.
 - Den nya koden som ska bytas in.
 
-När [patch](https://en.wikipedia.org/wiki/Patch_(Unix)) programmet körs, filen läses in och de angivna ändringarna görs i filen/filerna.
+När korrigeringsprogrammet körs läses den här filen in och de angivna ändringarna görs i filen/filerna.
 
 Det finns tre typer av patchar:
 
