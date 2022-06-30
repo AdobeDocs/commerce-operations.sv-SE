@@ -1,9 +1,9 @@
 ---
 title: '"Integrera [!DNL Site-Wide Analysis Tool]"'
 description: Följ de här stegen för att hämta [!DNL Upgrade Compatibility Tool] rapport från [!DNL Site-Wide Analysis Tool] dashboard i ditt Adobe Commerce-projekt.
-source-git-commit: 0d4ccc8c2e1a470b5fb3a7d59e81230e8986c257
+source-git-commit: 1fc12289125a5954243e177a0c21505234eb2e81
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '191'
 ht-degree: 0%
 
 ---
@@ -33,4 +33,7 @@ När skanningen är klar visas de högnivåresultat som visas i widgeten.
 
 Klicka **[!UICONTROL Download Report]** för att hämta [!DNL Upgrade Compatibility Tool] [HTML rapport](../upgrade-compatibility-tool/reports.md#html-report) och granska detaljerna.
 
-När du kör [!DNL Upgrade Compatibility Tool] via [!DNL Site-Wide Analysis Tool] rapporten visar resultat som jämför projektets version med den senaste versionen.
+
+>[!NOTE]
+>
+> Kör [!DNL Upgrade Compatibility Tool] via [!DNL Site-Wide Analysis Tool] optimerar resultaten och hjälper dig att fokusera på frågor som är nya och viktiga för måluppgraderingen. Den använder [`--ignore-current-version-compatibility-errors`](run.md#optimize-your-results) och visar alltid resultat som jämför projektets version med den senaste versionen.
