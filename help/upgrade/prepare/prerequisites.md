@@ -1,9 +1,9 @@
 ---
 title: Förutsättningar
 description: Förbered ditt Adobe Commerce- eller Magento Open Source-projekt för en uppgradering genom att slutföra dessa nödvändiga steg.
-source-git-commit: ea5de44ab40b873fa30393359dd714534bd789e3
+source-git-commit: 0729e84adabcded6d50cf28a7525b97fd50d45f5
 workflow-type: tm+mt
-source-wordcount: '1477'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -176,7 +176,7 @@ Så här anger du miljövariabeln:
 1. Ange variabeln:
 
    ```bash
-   export DATA_CONVERTER_BATCH_SIZE 100000
+   export DATA_CONVERTER_BATCH_SIZE=100000
    ```
 
    >[!NOTE]
