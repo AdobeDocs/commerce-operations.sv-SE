@@ -2,9 +2,9 @@
 keywords: Adobe Commerce;home;populära topics
 title: Startsida
 description: Bläddra i ett index över Adobe Commerce produktdokumentation.
-source-git-commit: e38d4f1c3e7618e77afb638f4a996cd7e5ebdbd5
+source-git-commit: 8b40946fc65d9089de752376abbd31e37f60c541
 workflow-type: tm+mt
-source-wordcount: '214'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -59,11 +59,11 @@ Få praktisk information om koncept, processer, verktyg och bästa metoder för 
     </div>
   </td>
   <td valign="top">
-    <a href="https://devdocs.magento.com/extensions/">
-       <img alt="Tillägg" src="../assets/icons/extension.svg" width="40" height="40"/>
+    <a href="https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html">
+       <img alt="Referens för kommandoradsverktyg" src="../assets/icons/page-rule.svg" width="40" height="40"/>
     </a>
     <div>
-      <a href="https://devdocs.magento.com/extensions/"><strong>Tillägg</strong></a>
+      <a href="https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html"><strong>Referens för kommandoradsverktyg</strong></a>
     </div>
   </td>
   <td valign="top">
@@ -84,14 +84,6 @@ Få praktisk information om koncept, processer, verktyg och bästa metoder för 
   </td>
 </tr>
 <tr>
-  <td valign="top">
-    <a href="https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html">
-       <img alt="Referens för kommandoradsverktyg" src="../assets/icons/page-rule.svg" width="40" height="40"/>
-    </a>
-    <div>
-      <a href="https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html"><strong>Referens för kommandoradsverktyg</strong></a>
-    </div>
-  </td>
   <td valign="top">
     <a href="../implementation-playbook/overview.md">
       <img alt="Implementering" src="../assets/icons/play.svg" width="40" height="40"/>
