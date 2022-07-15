@@ -3,7 +3,7 @@ user-guide-title: Handböcker
 user-guide-description: Lär dig mer om hur du underhåller Adobe Commerce- eller Magento Open Source-program.
 source-git-commit: 8b40946fc65d9089de752376abbd31e37f60c541
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '118'
 ht-degree: 0%
 
 ---
