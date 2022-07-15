@@ -1,9 +1,9 @@
 ---
 title: '"Kör [!DNL Upgrade Compatibility Tool]"'
 description: Följ de här stegen för att köra [!DNL Upgrade Compatibility Tool] i ett kommandoradsgränssnitt för ditt Adobe Commerce-projekt.
-source-git-commit: 1dde98ab903f54aee0a094efd86dbf296065e92c
+source-git-commit: a0bb188eea38688c5bfe68e8c6bb7b3d040f5e0a
 workflow-type: tm+mt
-source-wordcount: '1081'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,12 @@ Så här kommer du igång med [!DNL Upgrade Compatibility Tool] i ett kommandora
 
 ```bash
 composer create-project magento/upgrade-compatibility-tool uct --repository https://repo.magento.com
+```
+
+Du kan behöva ge verktyget körbara behörigheter med `chmod` kommando:
+
+```bash
+chmod +x ./uct/bin/uct
 ```
 
 ## The [!DNL Upgrade Compatibility Tool] i ett kommandoradsgränssnitt
