@@ -3,7 +3,7 @@ title: '"[!DNL Upgrade Compatibility Tool] rapporter"'
 description: Följ de här stegen för att köra [!DNL Upgrade Compatibility Tool] i ditt Adobe Commerce-projekt.
 source-git-commit: 1ce02c3215b01f64e86383938a257514f0e4257c
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -127,7 +127,7 @@ bin/uct upgrade:check <dir> --html-output-path[=HTML-OUTPUT-PATH]
 
 Där argumenten är följande:
 
-- `<dir>`: Installationskatalogen för {{site.data.var.ee}}.
+- `<dir>`: {{site.data.var.ee}} installationskatalog.
 - `[=HTML-OUTPUT-PATH]`: Sökvägskatalog som ska exporteras `.html` utdatafil.
 
 >[!NOTE]

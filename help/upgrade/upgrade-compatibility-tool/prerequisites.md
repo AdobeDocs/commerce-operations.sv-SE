@@ -3,7 +3,7 @@ title: '"[!DNL Upgrade Compatibility Tool] krav"'
 description: 'Verifiera att systemet uppfyller de krav som krävs för att köra [!DNL Upgrade Compatibility Tool] i ett kommandoradsgränssnitt för ditt Adobe Commerce-projekt. '
 source-git-commit: 7ec999f9122eb0707ac6c37b7b49f9c423945318
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
