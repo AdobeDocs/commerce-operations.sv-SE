@@ -3,7 +3,7 @@ title: Hantera moduler och tillägg (utvecklare)
 description: Hantera moduler och tillägg för Adobe Commerce och Magento Open Source med kommandoradsgränssnittet och Composer-pakethanteraren.
 source-git-commit: 3432ba8640a82269cb725b8b15854f20c270b1e3
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '139'
 ht-degree: 2%
 
 ---
