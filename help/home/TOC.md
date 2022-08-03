@@ -1,9 +1,9 @@
 ---
 user-guide-title: Handböcker
 user-guide-description: Lär dig mer om hur du underhåller Adobe Commerce- eller Magento Open Source-program.
-source-git-commit: 8b40946fc65d9089de752376abbd31e37f60c541
+source-git-commit: 6c462d615675615b317c6de529d1af5846d26e69
 workflow-type: tm+mt
-source-wordcount: '118'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 - [Startsida](home.md)
 - [Versionsinformation](https://devdocs.magento.com/guides/v2.4/release-notes/bk-release-notes.html)
 - [Installation](https://devdocs.magento.com/guides/v2.4/install-gde/install-flow-diagram.html)
-- [Konfiguration](https://devdocs.magento.com/guides/v2.4/config-guide/bk-config-guide.html)
+- [Konfiguration](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/overview.html)
 - [Migrering](https://devdocs.magento.com/guides/v2.4/migration/bk-migration-guide.html)
 - [Uppgradera](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/overview.html?lang=en)
 - [Bästa praxis för prestanda](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/overview.html)
