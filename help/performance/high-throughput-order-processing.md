@@ -1,9 +1,9 @@
 ---
 title: Bearbetning av beställning med hög genomströmning
 description: Optimera beställnings- och utcheckningsupplevelsen för Adobe Commerce eller Magento Open Source.
-source-git-commit: 4ce6f01ab6c3e0bb408657727b65bcb2f84dd954
+source-git-commit: 6afdb941ce3753af02bde3dddd4e66414f488957
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '1046'
 ht-degree: 0%
 
 ---
@@ -166,6 +166,21 @@ The _Aktivera lager vid kundvagnsinläsning_ global inställning avgör om en in
 När alternativet är inaktiverat görs ingen lagerkontroll när en produkt läggs till i kundvagnen. Om inventeringskontrollen hoppas över kan vissa scenarier utanför lagret ge upphov till andra typer av fel. En lagerkontroll _alltid_ inträffar vid orderplaceringssteget, även när det är inaktiverat.
 
 **Aktivera lagerkontroll vid vagninläsning** är aktiverat (inställt på Ja) som standard. Om du vill inaktivera lagerkontrollen när vagnen läses in anger du **[!UICONTROL Enable Inventory Check On Cart Load]** till `No` i administratörsgränssnittet **Lager** > **Konfiguration** > **Katalog** > **Lager** > **Alternativ för Stock** -avsnitt. Se [Konfigurera globala alternativ][global] och [Kataloginventering][inventory] i _Användarhandbok_.
+
+## Belastningsutjämning
+
+Du kan hjälpa till att balansera inläsningen mellan olika noder genom att aktivera sekundära anslutningar för MySQL-databasen och Redis-instansen.
+
+Adobe Commerce kan läsa flera databaser eller Redis-instanser asynkront. Om du använder Commerce i molninfrastruktur kan du konfigurera de sekundära anslutningarna genom att redigera [MYSQL_USE_SLAVE_CONNECTION](https://devdocs.magento.com/cloud/env/variables-deploy.html#mysql_use_slave_connection) och [REDIS_USE_SLAVE_CONNECTION](https://devdocs.magento.com/cloud/env/variables-deploy.html#redis_use_slave_connection) värden i `.magento.env.yaml` -fil. Endast en nod behöver hantera läs- och skrivtrafik, så variabeln måste anges till `true` resulterar i att en sekundär anslutning skapas för skrivskyddad trafik. Ange värdena till `false` om du vill ta bort en befintlig skrivskyddad anslutningsmatris från `env.php` -fil.
+
+Exempel på `.magento.env.yaml` fil:
+
+```yaml
+stage:
+  deploy:
+    MYSQL_USE_SLAVE_CONNECTION: true
+    REDIS_USE_SLAVE_CONNECTION: true
+```
 
 <!-- link definitions -->
 
