@@ -1,9 +1,9 @@
 ---
 title: Utför en uppgradering
 description: Följ de här stegen för att uppgradera ett Adobe Commerce- eller Magento Open Source-projekt.
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+source-git-commit: 3c3966a904b0568e0255020d8880d348c357ea95
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -43,6 +43,28 @@ Du måste fylla i [uppgraderingskrav](../prepare/prerequisites.md) för att för
    ```
 
    Se [Aktivera eller inaktivera underhållsläge](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-subcommands-maint.html) för ytterligare alternativ. Du kan också skapa en [sida för anpassat underhållsläge](https://devdocs.magento.com/guides/v2.4/comp-mgr/trouble/cman/maint-mode.html).
+
+1. Om du startar uppgraderingsprocessen medan asynkrona processer, som meddelandeköanvändare, körs, kan det medföra att data skadas. Inaktivera alla kroniska jobb för att förhindra att data skadas.
+
+   _Adobe Commerce om molninfrastruktur:_
+
+   ```bash
+   ./vendor/bin/ece-tools cron:disable
+   ```
+
+   _Magento Open Source:_
+
+   ```bash
+   bin/magento cron:remove
+   ```
+
+1. Starta alla meddelandekökonsumenter manuellt för att säkerställa att alla meddelanden förbrukas.
+
+   ```bash
+   bin/magento cron:run --group=consumers
+   ```
+
+   Vänta på att kron-jobbet slutförs. Du kan övervaka jobbets status med ett processvisningsprogram eller genom att köra `ps aux | grep 'bin/magento queue'` kommandot flera gånger tills alla processer är slutförda.
 
 1. Skapa en säkerhetskopia av `composer.json` -fil.
 
