@@ -1,9 +1,9 @@
 ---
 title: Hantera indexerare
 description: Se exempel på hur du visar och hanterar Commerce-indexerare.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: dd84039be22b6bd25d57912615d64bad91970926
 workflow-type: tm+mt
-source-wordcount: '611'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,6 @@ bin/magento indexer:status [indexer]
 ```
 
 Plats `[indexer]` är en blankstegsavgränsad lista med indexerare. Uteslut `[indexer]` för att visa status för alla indexerare.
-
 
 Exempelresultat:
 
@@ -120,8 +119,9 @@ Du kan köra följande index i parallellt läge:
 - `Catalog Search Fulltext` kan jämföras med butiksvyer.
 - `Category Product` kan jämföras med butiksvyer.
 - `Catalog Price` kan kombineras av webbplats- och kundgrupper.
+- `Catalog Permissions` kan jämföras med kundgrupper.
 
-Om du vill använda parallellisering måste du ange ett av de tillgängliga dimensionslägena för produktprisindexeraren:
+Om du vill använda parallellisering anger du ett av de tillgängliga dimensionslägena för produktprisindexeraren:
 
 - `none` (standard)
 - `website`
@@ -133,6 +133,11 @@ Så här anger du till exempel läge per webbplats:
 ```bash
 bin/magento indexer:set-dimensions-mode catalog_product_price website
 ```
+
+Om du vill använda parallellisering för katalogbehörigheter anger du ett av de tillgängliga dimensionslägena för indexeraren för katalogbehörigheter:
+
+- `none` (standard)
+- `customer_group`
 
 Eller för att kontrollera det aktuella läget:
 

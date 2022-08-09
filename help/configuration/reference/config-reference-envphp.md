@@ -1,9 +1,9 @@
 ---
 title: env.php reference
 description: Se en lista med värden för filen env.php.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: 7ecd54b40690ec046e9a3d46a6ef9ad44ffaf4ab
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '732'
 ht-degree: 0%
 
 ---
@@ -22,6 +22,7 @@ The `env.php` filen innehåller följande avsnitt:
 | `cron` | Aktivera eller inaktivera cron-jobb |
 | `crypt` | Krypteringsnyckeln för kryptografiska funktioner |
 | `db` | Inställningar för databasanslutning |
+| `default_connection` | Standardanslutning för meddelandeköer |
 | `directories` | Mappningsinställningar för Commerce-kataloger |
 | `downloadable_domains` | Lista över hämtningsbara domäner |
 | `install` | Installationsdatum |
@@ -168,6 +169,19 @@ Alla databaskonfigurationer är tillgängliga i den här noden.
   ]
 ]
 ```
+
+## default_connection
+
+Definierar standardanslutningen för meddelandeköer. Värdet kan vara `db`, `amqp`eller ett anpassat kösystem som `redismq`. Om du anger något annat värde än `db`måste meddelandeköprogrammet först installeras och konfigureras. Annars kommer meddelanden inte att behandlas korrekt.
+
+```conf
+'queue' => [
+    'default_connection' => 'amqp'
+]
+```
+
+If `queue/default_connection` anges i systemet `env.php` den här anslutningen används för alla meddelandeköer via systemet, såvida inte en viss anslutning definieras i en `queue_topology.xml`, `queue_publisher.xml` eller `queue_consumer.xml` -fil.
+Om `queue/default_connection` är `amqp` in `env.php` men en `db` anslutningen anges i kökonfigurations-XML-filerna för en modul, använder modulen MySQL som meddelandehanterare.
 
 ## kataloger
 
