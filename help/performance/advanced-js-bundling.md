@@ -1,7 +1,7 @@
 ---
 title: Avancerat [!DNL JavaScript] Paket
 description: Läs om hur JavaScript-paketering kan minska storleken och frekvensen på serverförfrågningar.
-source-git-commit: 09c4d0e09354230c8779b930f085d8c7c131b85b
+source-git-commit: c65c065c5f9ac2847caa8898535afdacf089006a
 workflow-type: tm+mt
 source-wordcount: '2137'
 ht-degree: 0%
@@ -88,7 +88,7 @@ Följande steg kräver att du installerar och känner till följande verktyg:
 
 - [nodejs](https://nodejs.org/en/download/)
 - [r.js](http://requirejs.org/docs/optimization.html#download)
-- [[!DNL PhantomJS]](http://phantomjs.org/) (valfritt)
+- [[!DNL PhantomJS]](https://phantomjs.org/) (valfritt)
 
 ### Exempelkod
 

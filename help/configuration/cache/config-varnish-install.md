@@ -1,9 +1,9 @@
 ---
 title: Installera lack
 description: Se råd om hur du installerar Varnish.
-source-git-commit: 688db9fcc9cd196d1560e49719b03ef32d13870d
+source-git-commit: c65c065c5f9ac2847caa8898535afdacf089006a
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '165'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 Installation av programvara för lack ligger utanför den här handbokens räckvidd. Mer information om hur du installerar Varnish finns i:
 
-- [installationswiki](http://wiki.mikejung.biz/Varnish)
+- [installationsguide](https://www.varnish-software.com/developers/tutorials/installing-varnish-ubuntu/)
 - [Installationsguider för lack](https://www.varnish-cache.org/docs)
-- [Så här installerar du Varnish (Tecmint)](http://www.tecmint.com/install-varnish-cache-web-accelerator)
+- [Så här installerar du Varnish (Tecmint)](https://www.tecmint.com/install-varnish-cache-web-accelerator/)
 
 >[!INFO]
 >

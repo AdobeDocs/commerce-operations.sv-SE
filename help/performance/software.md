@@ -1,7 +1,7 @@
 ---
 title: Software Recommendations
 description: Granska en lista över rekommenderade program för optimala prestanda i Adobe Commerce- och Magento Open Source-distributioner.
-source-git-commit: 1d5956ce22c1a159336e9e7d64064b618fc2e63f
+source-git-commit: c65c065c5f9ac2847caa8898535afdacf089006a
 workflow-type: tm+mt
 source-wordcount: '1476'
 ht-degree: 0%
@@ -180,7 +180,7 @@ Du bör också konfigurera antalet trådar för bearbetning av indatabegäran en
 | Webbserver | Attributnamn | Plats | Relaterad information |
 |--- | --- | --- | ---|
 | Nginx | `worker_connections` | `/etc/nginx/nginx.conf` (Debian) | [Justera NGINX för prestanda](https://www.nginx.com/blog/tuning-nginx/) |
-| Apache 2.2 | `MaxClients` | `/etc/httpd/conf/httpd.conf` (CentOS) | [Prestandajustering för Apache](http://httpd.apache.org/docs/2.2/misc/perf-tuning.html) |
+| Apache 2.2 | `MaxClients` | `/etc/httpd/conf/httpd.conf` (CentOS) | [Prestandajustering för Apache](https://httpd.apache.org/docs/2.2/misc/perf-tuning.html) |
 | Apache 2.4 | `MaxRequestWorkers` | `/etc/httpd/conf/httpd.conf` (CentOS) | [Gemensamma Apache MPM-direktiv](https://httpd.apache.org/docs/2.4/mod/mpm_common.html#maxrequestworkers) |
 
 ## [!DNL MySQL]
@@ -208,7 +208,7 @@ Installera [!DNL Varnish] på en separat server framför webbnivån. Den ska acc
 * **Behagelläge** låter dig instruera [!DNL Varnish] för att behålla ett objekt i cacheminnet efter dess TTL-period (Time to Live) och leverera det inaktuella innehållet om [!DNL Commerce] är inte hälsosamt eller om nytt innehåll inte har hämtats än.
 * **Saint-läge** svarta listor ohälsosamma [!DNL Commerce] servrar för en konfigurerbar tidsperiod. På grund av detta kan ohälsosamma backend-objekt inte användas för trafik när de använder [!DNL Varnish] som belastningsutjämnare.
 
-See [Advanced [!DNL Varnish] configuration](https://devdocs.magento.com/guides/v2.4/config-guide/varnish/config-varnish-advanced.html) for more information about implementing these features.
+Se [Avancerat [!DNL Varnish] konfiguration](https://devdocs.magento.com/guides/v2.4/config-guide/varnish/config-varnish-advanced.html) om du vill ha mer information om hur du implementerar dessa funktioner.
 
 ### Optimera resursprestanda
 

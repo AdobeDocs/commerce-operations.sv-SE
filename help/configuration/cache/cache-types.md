@@ -1,9 +1,9 @@
 ---
 title: Cachetyper
 description: Associera cachegränser med cachetyper.
-source-git-commit: 80abb0180fcd8ecc275428c23b68feb5883cbc28
+source-git-commit: c65c065c5f9ac2847caa8898535afdacf089006a
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: '271'
 ht-degree: 0%
 
 ---
@@ -67,10 +67,11 @@ Du kan ange konfigurationsalternativ för klientcache och serverdelscache i `env
 
 där
 
-- `<frontend_type>` är klientens lågnivå-cachetyp. Ange namnet på en klass som är kompatibel med [Zend\Cache\Core](https://framework.zend.com/apidoc/1.7/Zend_Cache/Zend_Cache_Core.html).
-
-   Om du utelämnar `<frontend_type>`, [Magento\Framework\Cache\Core](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Cache/Core.php) används.
+- `<frontend_type>` är klientens lågnivå-cachetyp. Ange namnet på en klass som är kompatibel med `Zend\Cache\Core`.
+Om du utelämnar `<frontend_type>`, [Magento\Framework\Cache\Core](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Cache/Core.php) används.
 
 - `<frontend_option>`, `<frontend_option_value>` är namnet på och värdet på de alternativ som skickas som en associativ array till klientcache när den skapas.
-- `<backend_type>` är serverdelens lågnivåcache. Ange namnet på en klass som är kompatibel med [Zend_Cache_Backend](https://framework.zend.com/apidoc/1.7/Zend_Cache/Zend_Cache_Backend/Zend_Cache_Backend.html) och som implementerar [Zend_Cache_Backend_Interface](https://framework.zend.com/apidoc/1.6/Zend_Cache/Zend_Cache_Backend/Zend_Cache_Backend_Interface.html).
+- `<backend_type>` är serverdelens lågnivåcache. Ange namnet på en klass som är kompatibel med `Zend_Cache_Backend` och som implementerar `Zend_Cache_Backend_Interface`.
 - `<backend_option>` och `<backend_option_value>` är namnet på och värdet på de alternativ som Commerce Framework skickar som en associativ array till serverdelscachen när det skapas.
+
+Se [Laminas dokumentation](https://docs.laminas.dev/) för den senaste Zend-informationen.

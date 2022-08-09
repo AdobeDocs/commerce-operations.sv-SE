@@ -1,9 +1,9 @@
 ---
 title: Kommandoradsverktyg
 description: Använd kommandoradsverktyget i Commerce för att köra installations- och konfigureringsuppgifter.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: c65c065c5f9ac2847caa8898535afdacf089006a
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '325'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Ytterligare fördelar:
 - CLI är utbyggbart så att tredjepartsutvecklare kan&quot;ansluta&quot; till det. Detta innebär också att man slipper inlärningskurva.
 - Kommandon för inaktiverade moduler visas inte.
 
-I det här avsnittet diskuteras hur du konfigurerar Adobe Commerce och Magento Open Source med hjälp av CLI. Mer information om hur du installerar Commerce finns i [Installationsöversikt](https://devdocs.magento.com/guides/2.4/install-gde/bk-install-guide.html) i _Installationsguide_.
+I det här avsnittet diskuteras hur du konfigurerar Adobe Commerce och Magento Open Source med hjälp av CLI. Mer information om hur du installerar Commerce finns i [Installationsflöde](https://devdocs.magento.com/guides/v2.4/install-gde/install-flow-diagram.html) i _Installationsguide_.
 
 ## Förutsättningar
 

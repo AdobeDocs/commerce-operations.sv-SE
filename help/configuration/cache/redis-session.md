@@ -1,9 +1,9 @@
 ---
 title: Använd Redis för sessionslagring
 description: Lär dig hur du konfigurerar Redis för sessionslagring.
-source-git-commit: 53448b11a2d000fe8e8a7eecf2ffcef4b7e248fa
+source-git-commit: c65c065c5f9ac2847caa8898535afdacf089006a
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '724'
 ht-degree: 1%
 
 ---
@@ -38,7 +38,7 @@ där
 | session-save-redis-timeout | timeout | Anslutningens timeout, i sekunder. | 2.5 |
 | session-save-redis-persistent-id | persistent_identifier | Unik sträng för att aktivera beständiga anslutningar (till exempel sess-db0).<br>[Kända fel med phpredis och php-fpm](https://github.com/phpredis/phpredis/issues/70). |
 | session-save-redis-db | databas | Unikt Redis-databasnummer som rekommenderas för att skydda mot dataförlust.<br><br>**Viktigt**: Om du använder Redis för mer än en typ av cachning måste databasnumren vara olika. Vi rekommenderar att du tilldelar standardvärdet för cachningsdatabasen till 0, sidcachningsdatabasnumret till 1 och sessionslagringsdatabasnumret till 2. | 0 |
-| session-save-redis-compression-threshold | compression_threshold | Ange 0 om du vill inaktivera komprimering (rekommenderas när [suhosin.session.encrypt = On](https://suhosin.org/stories/howtos.html)).<br>[Känt problem med strängar som är större än 64 kB](https://github.com/colinmollenhour/Cm_Cache_Backend_Redis/issues/18). | 2048 |
+| session-save-redis-compression-threshold | compression_threshold | Ange 0 om du vill inaktivera komprimering (rekommenderas när `suhosin.session.encrypt = On`).<br>[Känt problem med strängar som är större än 64 kB](https://github.com/colinmollenhour/Cm_Cache_Backend_Redis/issues/18). | 2048 |
 | session-save-redis-compression-lib | compression_library | Alternativ: gzip, lzf, lz4 eller snappy. | gzip |
 | session-save-redis-log-level | log_level | Ange något av följande, i ordning från minst utförlig till mest utförlig:<ul><li>0 (kris: endast de allvarligaste felen)<li>1 (varning: omedelbar åtgärd krävs)<li>2 (kritiskt: programkomponent ej tillgänglig)<li>3 (fel: körningsfel, inte kritiska men måste övervakas)<li>4 (varning: ytterligare information, rekommenderas)<li>5 (meddelande: normalt men signifikant)<li>6 (info: informationsmeddelanden)<li>7 (debug: den mest informationen för utveckling eller testning)</ul> | 1 |
 | session-save-redis-max-concurrency | max_concurrency | Maximalt antal processer som kan vänta på ett lås i en session. För stora produktionskluster ska detta anges till minst 10 % av antalet PHP-processer. | 6 |

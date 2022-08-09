@@ -1,9 +1,9 @@
 ---
 title: Cachelagring med lack
 description: Lär dig hur cacherensning fungerar med lack och hur du använder det som en accelerator för webb-cachning för Adobe Commerce-programmet.
-source-git-commit: 80abb0180fcd8ecc275428c23b68feb5883cbc28
+source-git-commit: c65c065c5f9ac2847caa8898535afdacf089006a
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '395'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ När du har installerat och konfigurerat lack för att arbeta med Commerce kan f
 
 ## Konfigurera Commerce för att rensa lack
 
-Commerce tömmer varnish-värdar efter att du har konfigurerat varnish-värdar med [`magento setup:config:set`](https://devdocs.magento.com/guides/2.4/install-gde/install/cli/install-cli-subcommands-deployment.html) -kommando.
+Commerce tömmer varnish-värdar efter att du har konfigurerat varnish-värdar med [`magento setup:config:set`](https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html#setupconfigset) -kommando.
 
 Du kan använda den valfria parametern `--http-cache-hosts` -parameter för att ange en kommaavgränsad lista med Varnish-värdar och avlyssningsportar. Konfigurera alla varniska värdar, oavsett om du har en eller flera. (Separera inte värdar med ett blanksteg.)
 
@@ -57,4 +57,4 @@ Du kan sedan rensa varnish-värdar när du uppdaterar Commerce Cache (kallas äv
 
 Om du vill uppdatera cachen med hjälp av administratören klickar du på **[!UICONTROL SYSTEM]** > Verktyg > **Cachehantering** och sedan klicka **Rensa Magento-cache** överst på sidan. (Du kan också uppdatera enskilda cachetyper.)
 
-Om du vill uppdatera cachen med kommandoraden använder du vanligtvis kommandot [`magento cache:clean <type>`](../cli/manage-cache.md#clean-and-flush-cache-types) kommandot som [ägare av filsystem](https://devdocs.magento.com/guides/2.4/install-gde/prereq/file-sys-perms-over.html).
+Om du vill uppdatera cachen med kommandoraden använder du vanligtvis kommandot [`magento cache:clean <type>`](../cli/manage-cache.md#clean-and-flush-cache-types) kommandot som [ägare av filsystem](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
