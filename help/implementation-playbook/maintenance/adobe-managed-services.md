@@ -2,29 +2,463 @@
 title: Adobes hanterade tjänster
 description: Läs om hur Adobes hanterade tjänster kan hjälpa er att stödja och underhålla er implementering av Adobe Commerce.
 exl-id: b600b0e3-c6fd-4b86-ad2a-a445e599f1bd
-source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
+source-git-commit: 2affc555c2e719d0f8b8de06df3a8c080effb425
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '1108'
 ht-degree: 0%
 
 ---
 
+
 # Adobes hanterade tjänster
 
-Adobe Commerce är en plattform för att leverera e-handelsfunktioner, inklusive färdiga funktioner, möjlighet att anpassa och tredjepartsintegreringar.
+Adobe Commerce är en plattform för att leverera e-handelsfunktioner som innehåller stabila färdiga funktioner, omfattande anpassningsmöjligheter och tredjepartsintegreringar.
 
-Adobe Managed Services är en värdbaserad och hanterad applikation och infrastruktur för Adobe Commerce om molninfrastrukturplaner för Pro.
+Adobes hanterade tjänster tillhandahåller värdbaserade och hanterade program och infrastrukturer för Adobe Commerce i molnbaserade infrastrukturplaner för Pro.
 
 ## Fördelar
 
-![Infografik som visar på fördelarna med Adobes hanterade tjänster](../../assets/playbooks/managed-services-benefits.svg)
+![Infografik som visar på fördelarna med Adobes hanterade tjänster](../../assets/playbooks/managed-services-benefits.png)
+
+### Jämförelse av implementeringsalternativ
+
+Adobes hanterade tjänster ger viktiga fördelar jämfört med lokala och icke-hanterade molnimplementeringar, bland annat:
+
+- **Förbättrade servicenivåmål (SLT)**- Snabbare svarstider än Adobe Commerce standardsupport.
+- **Förbättrade servicenivåavtal (SLA)**- 99,9 % av de program som Adobe Commerce regelbundet använder i molninfrastruktur ligger steget före infrastrukturnivån på 99,99 %.
+- **Utsedd molnexpertis**—Managed Services förser kunderna med en utsedd Customer Success Engineer (CSE) som fungerar som expert på program- och molninfrastruktur. CSE samarbetar med kunder och deras partner för att ge dem bästa praxis och vägledning som snabbar upp time-to-market, inklusive:
+   - Guide och support via introduktionsprocessen
+   - Hantera etablering och plattformskonfiguration
+   - Rådgivning om arkitektoniska principer för integreringar och anpassningar
+   - Driv incidenthantering och affärskontinuitet
+   - Ge händelsestöd genom planering, genomförande och övervakning
+   - Molnsupport och expertis (proaktiv optimering, rapportering och bästa praxis)
+
+Se följande bild för en mer detaljerad jämförelse av fördelarna med Managed Services:
+
+![Infografik som visar en jämförelse mellan Adobes hanterade tjänster och andra implementeringsalternativ för Adobe Commerce](../../assets/playbooks/managed-services-compare.png)
+
+## Roller och ansvarsområden
+
+Adobe tillhandahåller en uppsättning tjänster för tillhandahållande, utveckling, staging och produktion av Adobe Commerce i Managed Services-system. För att utvecklingen och driftsättningen av lösningen ska kunna fortsätta så effektivt som möjligt är det viktigt att kunden och partnern förstår och uppfyller sina roller enligt beskrivningen nedan:
+
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>Kund</th>
+            <th>Partner</th>
+            <th>Customer Success Engineer</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="4" style="background:lightgray;"><strong>Provisionering</strong></td>
+        </tr>
+        <tr>
+            <td>Val av molnregion</td>
+            <td>Ägare</td>
+            <td>Medarbetare</td>
+            <td>Rådgivare</td>
+        </tr>
+        <tr>
+            <td>Instansetablering</td>
+            <td></td>
+            <td></td>
+            <td>Ägare</td>
+        </tr>
+        <tr>
+            <td>Intern nätverkskonfiguration och säkerhet</td>
+            <td></td>
+            <td></td>
+            <td>Ägare</td>
+        </tr>
+        <tr>
+            <td>Adobe Commerce Application Provisioning</td>
+            <td></td>
+            <td></td>
+            <td>Ägare</td>
+        </tr>
+        <tr>
+            <td>Adobe Commerce Source Code Access</td>
+            <td></td>
+            <td></td>
+            <td>Ägare</td>
+        </tr>
+        <tr>
+            <td>Tillhandahållande av CDN-tjänster</td>
+            <td></td>
+            <td></td>
+            <td>Ägare</td>
+        </tr>
+        <tr>
+            <td>Lokal utvecklingsmiljö</td>
+            <td>Medarbetare</td>
+            <td>Ägare</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="4" style="background:lightgray;"><strong>Utveckling och kvalitetskontroll</strong></td>
+        </tr>
+        <tr>
+            <td>Insamling av krav och projekthantering</td>
+            <td>Medarbetare</td>
+            <td>Ägare</td>
+            <td>Rådgivare</td>
+        </tr>
+        <tr>
+            <td>Programutveckling</td>
+            <td>Medarbetare</td>
+            <td>Ägare</td>
+            <td>Rådgivare</td>
+        </tr>
+        <tr>
+            <td>Programtestning</td>
+            <td>Medarbetare</td>
+            <td>Ägare</td>
+            <td>Rådgivare</td>
+        </tr>
+        <tr>
+            <td colspan="4" style="background:lightgray;"><strong>Mellanlagring och övergång</strong></td>
+        </tr>
+        <tr>
+            <td>Koddistribution till utveckling, integrering och mellanlagring</td>
+            <td>Medarbetare</td>
+            <td>Ägare</td>
+            <td>Rådgivare</td>
+        </tr>
+        <tr>
+            <td>Distribution av innehåll</td>
+            <td>Medarbetare</td>
+            <td>Ägare</td>
+            <td>Rådgivare</td>
+        </tr>
+        <tr>
+            <td>Testutveckling för användargodkännande</td>
+            <td>Ägare</td>
+            <td>Medarbetare</td>
+            <td>Rådgivare</td>
+        </tr>
+        <tr>
+            <td>Testning av användargodkännande</td>
+            <td>Ägare</td>
+            <td>Medarbetare</td>
+            <td>Rådgivare</td>
+        </tr>
+        <tr>
+            <td>Krav på anpassad övervakning</td>
+            <td>Medarbetare</td>
+            <td>Ägare</td>
+            <td>Rådgivare</td>
+        </tr>
+        <tr>
+            <td>SSL-certifikat som tillhandahålls av kund</td>
+            <td>Ägare</td>
+            <td></td>
+            <td>Medarbetare</td>
+        </tr>
+        <tr>
+            <td>Prestanda- och belastningstestutveckling</td>
+            <td>Medarbetare</td>
+            <td>Ägare</td>
+            <td>Rådgivare</td>
+        </tr>
+        <tr>
+            <td>Prestanda- och belastningstestning</td>
+            <td>Medarbetare</td>
+            <td>Ägare</td>
+            <td>Rådgivare</td>
+        </tr>
+        <tr>
+            <td>Anpassningsutveckling och kvalitetskontroll</td>
+            <td>Medarbetare</td>
+            <td>Ägare</td>
+            <td>Rådgivare</td>
+        </tr>
+        <tr>
+            <td>Slutförande av Runbook</td>
+            <td>Ägare</td>
+            <td>Medarbetare</td>
+            <td>Medarbetare</td>
+        </tr>
+        <tr>
+            <td>Runbook-granskning</td>
+            <td></td>
+            <td></td>
+            <td>Ägare</td>
+        </tr>
+        <tr>
+            <td colspan="4" style="background:lightgray;"><strong>Starta</strong></td>
+        </tr>
+        <tr>
+            <td>GoLive checklist</td>
+            <td>Medarbetare</td>
+            <td>Medarbetare</td>
+            <td>Ägare</td>
+        </tr>
+        <tr>
+            <td>Konferensrum för live-event</td>
+            <td>Medarbetare</td>
+            <td>Medarbetare</td>
+            <td>Ägare</td>
+        </tr>
+        <tr>
+            <td>Driftsättning av produktionskod</td>
+            <td>Medarbetare</td>
+            <td>Medarbetare</td>
+            <td>Ägare</td>
+        </tr>
+        <tr>
+            <td colspan="4" style="background:lightgray;"><strong>Produktion</strong></td>
+        </tr>
+        <tr>
+            <td>Övervakning av produktionsinfrastruktur</td>
+            <td></td>
+            <td></td>
+            <td>Ägare</td>
+        </tr>
+        <tr>
+            <td>Principiell programövervakning</td>
+            <td>Medarbetare</td>
+            <td>Medarbetare</td>
+            <td>Ägare</td>
+        </tr>
+        <tr>
+            <td>Produktionshändelsens svar</td>
+            <td>Medarbetare</td>
+            <td>Medarbetare</td>
+            <td>Ägare</td>
+        </tr>
+        <tr>
+            <td>Underhåll på infrastruktur- och operativsystemnivå</td>
+            <td></td>
+            <td></td>
+            <td>Ägare</td>
+        </tr>
+        <tr>
+            <td>Kodunderhåll och säkerhetspatchar</td>
+            <td>Medarbetare</td>
+            <td>Ägare</td>
+            <td>Rådgivare</td>
+        </tr>
+        <tr>
+            <td>Ge tillgång till Adobe Commerce produktuppdateringar och uppgraderingar</td>
+            <td>Medarbetare</td>
+            <td>Medarbetare</td>
+            <td>Ägare</td>
+        </tr>
+        <tr>
+            <td>Använda Adobe Commerce produktuppdateringar och uppgraderingar</td>
+            <td>Medarbetare</td>
+            <td>Ägare</td>
+            <td>Rådgivare</td>
+        </tr>
+        <tr>
+            <td>Ändra godkännandenämnden för att godkänna produktionsdistributioner</td>
+            <td>Medarbetare</td>
+            <td>Medarbetare</td>
+            <td>Ägare</td>
+        </tr>
+        <tr>
+            <td>Administration av produktionsprogram</td>
+            <td>Ägare</td>
+            <td>Medarbetare</td>
+            <td>Rådgivare</td>
+        </tr>
+        <tr>
+            <td>Anpassa produktionsinfrastruktur</td>
+            <td>Medarbetare</td>
+            <td>Medarbetare</td>
+            <td>Ägare</td>
+        </tr>
+        <tr>
+            <td>Skalbar produktionsarkitektur</td>
+            <td></td>
+            <td></td>
+            <td>Ägare</td>
+        </tr>
+        <tr>
+            <td>Säkerhetskopiering och återställning av produktion</td>
+            <td></td>
+            <td>Medarbetare</td>
+            <td>Ägare</td>
+        </tr>
+        <tr>
+            <td colspan="4" style="background:lightgray;"><strong>Säkerhet och efterlevnad</strong></td>
+        </tr>
+        <tr>
+            <td>SOC-2 Granskning av tjänsten</td>
+            <td></td>
+            <td></td>
+            <td>Ägare</td>
+        </tr>
+        <tr>
+            <td>PCI-certifiering av infrastrukturen</td>
+            <td></td>
+            <td></td>
+            <td>Ägare</td>
+        </tr>
+        <tr>
+            <td>PCI-certifiering av det anpassade programmet</td>
+            <td>Ägare</td>
+            <td>Medarbetare</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Säkerhetsrevisioner av de centrala tillämpningarna</td>
+            <td>Ägare</td>
+            <td>Medarbetare</td>
+            <td>Rådgivare</td>
+        </tr>
+        <tr>
+            <td>Säkerhetsrevisioner av anpassningar och tillägg</td>
+            <td>Ägare</td>
+            <td>Medarbetare</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Träningstestning av kundens instanser av programmen</td>
+            <td>Ägare</td>
+            <td>Medarbetare</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Brandväggsregler för webbaserade program (WAF)</td>
+            <td>Medarbetare</td>
+            <td>Medarbetare</td>
+            <td>Ägare</td>
+        </tr>
+        <tr>
+            <td>Övervakning av intrångsdetektering</td>
+            <td></td>
+            <td></td>
+            <td>Ägare</td>
+        </tr>
+        <tr>
+            <td>Övervakning av program- och databashändelser</td>
+            <td>Medarbetare</td>
+            <td>Medarbetare</td>
+            <td>Ägare</td>
+        </tr>
+        <tr>
+            <td>Händelseövervakning för brandväggen för webbprogram</td>
+            <td>Medarbetare</td>
+            <td>Medarbetare</td>
+            <td>Ägare</td>
+        </tr>
+        <tr>
+            <td>Användarhantering och SSO-integrering</td>
+            <td>Ägare</td>
+            <td>Medarbetare</td>
+            <td>Medarbetare</td>
+        </tr>
+        <tr>
+            <td>Säkerhetshändelsesvar</td>
+            <td>Medarbetare</td>
+            <td>Medarbetare</td>
+            <td>Ägare</td>
+        </tr>
+        <tr>
+            <td>Konfigurera, skydda och underhålla anslutning till företagsnätverk och resurser </td>
+            <td>Ägare</td>
+            <td>Rådgivare</td>
+            <td>Rådgivare</td>
+        </tr>
+    </tbody>
+</table>
 
 ## Säkerhet
 
-Säkerhetsstacken Adobe för Managed Services bygger säkerhet på alla nivåer med automatisering och konsekvens för att minska antalet fel. Utvecklings- och verksamhetsteamen ärver automatiskt säkerhetskontroller från olika nivåer i stacken.
+Adobe säkerhetsstack för Managed Services bygger säkerhet på alla nivåer med automatisering och konsekvens för att minska antalet fel. Utvecklings- och verksamhetsteamen ärver automatiskt säkerhetskontroller från olika nivåer i stacken.
 
-Plattformspartners som Amazon Web Services och Microsoft Azure säkerställer maximal säkerhetstäckning vid användning av plattformsanpassningar, medan Adobe Managed Services-team tillhandahåller centrala säkerhetstjänster som regelefterlevnad, loggning, autentisering, skanning och övervakning samt serversäkerhet och säker programkonfiguration. Dentsu commerce will be responsibility for custom development &amp; integrations, and the associated security processes for custom code.
+Plattformspartners, som Amazon Web Services och Microsoft Azure, säkerställer maximal säkerhetstäckning vid användning av plattformsanpassningar, medan Adobe Managed Services-team tillhandahåller centrala säkerhetstjänster som regelefterlevnad, loggning, autentisering, skanning och övervakning samt serversäkerhet och säker programkonfiguration. Se [Adobe Commerce Security](https://business.adobe.com/products/magento/secure-ecommerce.html) för mer information.
 
-I följande diagram visas Adobe Managed Services säkerhetsteknikstack:
+I följande diagram visas Adobe Managed Services-säkerhetstekniker:
 
 ![Bild som visar säkerhetsstacken för Adobe Managed Services](../../assets/playbooks/managed-services-security-stack.svg)
+
+## Uppgraderingshjälp
+
+Managed Services team har en aktiv roll när det gäller att planera och hjälpa till med uppgraderingsprocessen. Din Customer Success Engineer (CSE) samarbetar med ditt uppgraderingsprojektteam, inklusive projektledare och utvecklare (ämnesexperter, Adobe-certifierade partners eller proffs från Adobe Consulting) för att hjälpa ditt team att planera och följa bästa praxis under uppgraderingen.
+
+Managed Services CSE har samarbetat med Adobe Commerce kunder för att genomföra uppgraderingar i stora miljöer. CSE kan hjälpa er att utnyttja expertkunskaperna för att maximera uppgraderingen och samtidigt minimera driftstoppen och minska den totala risken. Dessutom fungerar Managed Services CSE tillsammans med den dedikerade mellanlagringsmiljön för uppgraderingen så att befintliga produktionsprocesser inte påverkas när uppgraderingen valideras.
+
+Adobe tillhandahåller en uppsättning tjänster för provisionering, utveckling, staging och produktion av ditt Managed Services-system. I följande tabell visas en översikt över de roller som varje deltagare spelar i uppgraderingsprocessen:
+
+<table>
+<thead>
+  <tr>
+    <th>Steg</th>
+    <th>Uppgift</th>
+    <th>Kund</th>
+    <th>Utvecklingspartner*</th>
+    <th>Managed Services</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td rowspan="3">Planuppgradering</td>
+    <td>Skapa uppgraderingsprojektplan</td>
+    <td>Ägare</td>
+    <td>Medarbetare</td>
+    <td>Medarbetare<br />CSE tillhandahåller uppgraderingsmallar och exempel på uppgraderingsplan, ger råd och tips om de effektivaste strategierna.</td>
+  </tr>
+  <tr>
+    <td>Identifiera nödvändiga infrastrukturändringar</td>
+    <td></td>
+    <td>Medarbetare</td>
+    <td>Ägare<br />CSE granskar staging- och produktionsinfrastruktur för att säkerställa en korrekt storlek.</td>
+  </tr>
+  <tr>
+    <td>Utvärdera komplexiteten i uppgraderingen<br />Identifiera och dokumentera paket, utgåvor och korrigeringar samt anpassade moduler från tredje part</td>
+    <td>Medarbetare</td>
+    <td>Ägare</td>
+    <td>Medarbetare<br />CSE tillhandahåller rapporter och rekommendationer för verktyget Kompatibilitet för uppgradering.</td>
+  </tr>
+  <tr>
+    <td rowspan="3">Kör uppgradering</td>
+    <td>Upgrade Infrastructure Services<br />[MariaDB, Redis, Open Search och Rabbit MQ] (Staging and Production)</td>
+    <td></td>
+    <td></td>
+    <td>Ägare<br />CSE koordinerar uppgraderingar av infrastrukturtjänster.<br />CSE planerar konferensmöte för uppgraderingar.<br />CSE underlättar datamigrering från produktion till mellanlagring.</td>
+  </tr>
+  <tr>
+    <td>Uppdatera bas och anpassningar för handelskoder, kodomkompilering och kodomfaktorisering</td>
+    <td>Medarbetare</td>
+    <td>Ägare</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Genomför efteruppgraderingskontroller och felsökning</td>
+    <td></td>
+    <td>Ägare</td>
+    <td>Medarbetare<br />CSE kör en runbook efter uppgraderingen för att upptäcka och åtgärda problem med uppgraderingen.</td>
+  </tr>
+  <tr>
+    <td rowspan="3">UAT och Launch</td>
+    <td>Kör prestanda- och säkerhetstester</td>
+    <td>Medarbetare</td>
+    <td>Ägare</td>
+    <td>Medarbetare<br />CSE underlättar lasttestning genom att övervaka prestanda för applikationer och infrastruktur.<br />CSE hjälper till att konfigurera Commerce Security Scan Tool.</td>
+  </tr>
+  <tr>
+    <td>Testning av användargodkännande vid mellanlagring</td>
+    <td>Ägare</td>
+    <td>Medarbetare</td>
+    <td>Medarbetare<br />CSE validerar att programmet och infrastrukturen fungerar korrekt efter uppgraderingen.</td>
+  </tr>
+  <tr>
+    <td>Starta i produktion</td>
+    <td>Medarbetare</td>
+    <td>Ägare</td>
+    <td>Medarbetare<br />CSE planerar att starta konferensmöte.</td>
+  </tr>
+  <tr>
+    <td>Efter start</td>
+    <td></td>
+    <td>Medarbetare</td>
+    <td>Medarbetare</td>
+    <td>Ägare<br />CSE övervakar prestanda för program och infrastruktur.</td>
+  </tr>
+</tbody>
+</table>
