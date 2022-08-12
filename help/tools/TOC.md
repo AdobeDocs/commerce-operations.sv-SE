@@ -1,9 +1,9 @@
 ---
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
-source-git-commit: 8ffca231710146be4f91a556ca35597f7131614b
+source-git-commit: 3f2a401bb916fc04405f21ba2acfc42f7defdccb
 workflow-type: tm+mt
-source-wordcount: '43'
+source-wordcount: '106'
 ht-degree: 0%
 
 ---
@@ -25,3 +25,23 @@ ht-degree: 0%
    - [Tillägg](site-wide-analysis-tool/extensions.md)
    - [Varningar](site-wide-analysis-tool/alerts.md)
    - [Patchar](site-wide-analysis-tool/patches.md)
+- Observation för Adobe Commerce {#observation-for-adobe-commerce}
+   - [Introduktion](observation-for-adobe-commerce/intro.md)
+   - [Åtkomst](observation-for-adobe-commerce/access.md)
+   - [Välja konto och tidsram](observation-for-adobe-commerce/selecting-the-account.md)
+   - [Välja fokusflikar](observation-for-adobe-commerce/choosing-focus-tabs.md)
+   - [Fliken Sammanfattning](observation-for-adobe-commerce/summary.md)
+   - [Fliken Elasticsearch](observation-for-adobe-commerce/elasticsearch.md)
+   - [Fliken Redis](observation-for-adobe-commerce/redis-tab.md)
+   - [Fliken MySQL](observation-for-adobe-commerce/mysql-tab.md)
+   - [Fliken PHP](observation-for-adobe-commerce/php-tab.md)
+   - [Fliken Distribuera](observation-for-adobe-commerce/deploy-tab.md)
+   - [Fliken Varningar](observation-for-adobe-commerce/alerts-tab.md)
+   - [Fliken WAF](observation-for-adobe-commerce/waf-tab.md)
+   - [CDN-fliken](observation-for-adobe-commerce/cdn-tab.md)
+   - [Fliken KaninMQ](observation-for-adobe-commerce/rabbitmq-tab.md)
+   - [Fliken Kron](observation-for-adobe-commerce/cron-tab.md)
+   - [Fliken Indexering](observation-for-adobe-commerce/indexing-tab.md)
+   - [Fliken Säkerhet](observation-for-adobe-commerce/security-tab.md)
+   - [Så här använder du Observation for Adobe Commerce](observation-for-adobe-commerce/how-to-use.md)
+
