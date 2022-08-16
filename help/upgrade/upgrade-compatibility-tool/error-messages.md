@@ -1,9 +1,9 @@
 ---
 title: '"[!DNL Upgrade Compatibility Tool] Felmeddelanden"'
 description: Läs mer om felmeddelanden du får när du använder [!DNL Upgrade Compatibility Tool] i ditt Adobe Commerce-projekt.
-source-git-commit: a13b0ea5aa109ce2f5d33e0966b194d64bad5d0c
+source-git-commit: 038cb256cb19c253ae9c0375258a555601428847
 workflow-type: tm+mt
-source-wordcount: '3781'
+source-wordcount: '4140'
 ht-degree: 4%
 
 ---
@@ -64,6 +64,17 @@ Allvarliga fel uppstår när den anpassade koden refererar till entiteter som in
 | 5072 | Möjlig överträdelse av designen Magento 2. Identifierade en typisk Magento 1.x-konstruktion | Uppdatera konstruktionen enligt Magento 2-standarden. |
 | 5076 | Det går inte att använda i namnutrymmet eftersom det är reserverat sedan PHP 7 | Ersätt det reserverade ordet i namnutrymmet med ett icke-reserverat nyckelord. |
 | 5077 | Det går inte att använda som klassnamn eftersom det är reserverat sedan PHP 7 | Ersätt det reserverade klassnamnet med ett icke-reserverat namn. |
+
+{style=&quot;table-layout:auto&quot;}
+
+### DB-schema
+
+Allvarliga problem med databasscheman rapporteras om borttagna huvudtabeller eller kolumner refereras av anpassade begränsningar.
+
+| Felkod | Felbeskrivning | Föreslagen åtgärd |
+| --- | --- | --- |
+| 7009 | Den anpassade begränsningen refererar till en huvudtabell som har tagits bort i målversionen | Ta bort begränsningen eller uppdatera attributen referenceTable och referenceColumn |
+| 7010 | Den anpassade begränsningen refererar till en huvudkolumn som har tagits bort i målversionen | Ta bort begränsningen eller uppdatera attributet referenceColumn |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -199,6 +210,23 @@ Anpassade kodfel uppstår när anpassad kod använder Adobe Commerce-startpunkte
 | 6009 | `jQuery.isArray()` är föråldrad | Använd metoden Array.isArray i stället. |
 | 6009 | `jQuery.parseJSON()` är föråldrad | Om du vill analysera JSON-strängar använder du den systemspecifika JSON.parse-metoden i stället. |
 | 6010 | (`jQuery.expr[":"]`, `jQuery.expr.filters`) är föråldrat | Använd jQuery.expr.pseudos i stället. |
+
+{style=&quot;table-layout:auto&quot;}
+
+### DB-schema
+
+Databasschemafel uppstår om databastabeller, kolumner, index eller begränsningar, som har lagts till eller tagits bort i Adobe Commerce-målversionen, kan orsaka konflikter med det anpassade databasschemat.
+
+| Felkod | Felbeskrivning | Föreslagen åtgärd |
+| --- | --- | --- |
+| 7001 | Målkärnversionen innehåller en tabell med samma namn som en tabell som deklarerats av en anpassad modul | Använd den nya huvudtabellen (om den är lämplig) eller byt namn på den anpassade tabellen |
+| 7002 | Kärntabellen som utökats av en anpassad modul togs bort i målversionen | Alla borttagna huvudtabellreferenser ska tas bort från kodbasen |
+| 7003 | Målkärnversionen innehåller en kolumn med samma namn som en kolumn som deklarerats av en anpassad modul | Använd den nya kärnkolumnen (om det är lämpligt) eller byt namn på den anpassade kolumnen |
+| 7004 | Kärnkolumnen som utökas av en anpassad modul togs bort i målversionen | Alla borttagna kärnkolumnreferenser ska tas bort från kodbasen |
+| 7005 | Målkärnversionen introducerar ett index med samma referenceId som ett index som deklarerats av en anpassad modul | Ta bort (om det är duplicerat till det nya kärnindexet) eller byt namn på det anpassade indexet |
+| 7006 | Det huvudindex som utökas av en anpassad modul togs bort i målversionen | Alla borttagna kärnindexreferenser ska tas bort från kodbasen |
+| 7007 | Målkärnversionen introducerar en begränsning med samma namn som en begränsning som deklarerats av en anpassad modul | Ta bort (om det är en dubblett till den nya grundbegränsningen) eller byt namn på den anpassade begränsningen |
+| 7008 | Kärnbegränsningen som utökas av en anpassad modul togs bort i målversionen | Använd den nya grundbegränsningen (om den är lämplig) eller byt namn på den anpassade begränsningen |
 
 {style=&quot;table-layout:auto&quot;}
 
