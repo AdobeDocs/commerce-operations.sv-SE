@@ -1,7 +1,7 @@
 ---
 title: Känsliga och systemspecifika sökvägar
 description: Se en lista med systemspecifika och känsliga konfigurationsvärden.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: 019d638403f2dc3e170a56842335da203126d8a6
 workflow-type: tm+mt
 source-wordcount: '3711'
 ht-degree: 0%
@@ -144,9 +144,9 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Sökväg till Solr-server | `catalog/search/solr_server_path` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |  | ![Sys-specifik](/help/assets/configuration/cloud-env.png) | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 | Värdnamn för Elasticsearch Server | `catalog/search/elasticsearch_server_hostname` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  | ![Sys-specifik](/help/assets/configuration/cloud-env.png) | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 | Elasticsearch Server-port | `catalog/search/elasticsearch_server_port` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  | ![Sys-specifik](/help/assets/configuration/cloud-env.png) | ![Känslig](/help/assets/configuration/cloud-sens.png) |
-| Elasticsearch-indexprefix | `catalog/search/elasticsearch_index_prefix` | !<!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  | ![Sys-specifik](/help/assets/configuration/cloud-env.png) | ![Känslig](/help/assets/configuration/cloud-sens.png) |
+| Elasticsearch-indexprefix | `catalog/search/elasticsearch_index_prefix` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  | ![Sys-specifik](/help/assets/configuration/cloud-env.png) | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 | Aktivera Elasticsearch HTTP-autentisering | `catalog/search/elasticsearch_enable_auth` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  | ![Sys-specifik](/help/assets/configuration/cloud-env.png) |
-| Elasticsearch HTTP-användarnamn | `catalog/search/elasticsearch_username` | !<!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  | ![Sys-specifik](/help/assets/configuration/cloud-env.png) |
+| Elasticsearch HTTP-användarnamn | `catalog/search/elasticsearch_username` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  | ![Sys-specifik](/help/assets/configuration/cloud-env.png) |
 | Elasticsearch HTTP-lösenord | `catalog/search/elasticsearch_password` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  | ![Sys-specifik](/help/assets/configuration/cloud-env.png) |
 | Elasticsearch Server-timeout | `catalog/search/elasticsearch_server_timeout` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  | ![Sys-specifik](/help/assets/configuration/cloud-env.png) |
 
@@ -711,7 +711,7 @@ I det här avsnittet visas variabelnamn och konfigurationssökvägar som är til
 | SFTP-autentiseringsuppgifter |
 | SFTP-autentiseringsuppgifter | `payment_nz/paypal_group_all_in_one/wps_other/settings_ec/settings_ec_advanced/express_checkout_settlement_report/heading_sftp` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 | SFTP-autentiseringsuppgifter | `payment_nz/paypal_payment_gateways/paypal_payflowpro_nz/settings_paypal_payflow/settings_paypal_payflow_advanced/paypal_payflow_settlement_report/heading_sftp` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
-| API-inloggnings-ID | `payment_nz/authorizenet_directpost/login` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | !![Commerce-only]([enc] |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
+| API-inloggnings-ID | `payment_nz/authorizenet_directpost/login` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | ![Krypterad](/help/assets/configuration/cloud-enc.png) |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 | Merchant MD5 | `payment_nz/authorizenet_directpost/trans_md5` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | ![Krypterad](/help/assets/configuration/cloud-enc.png) |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 | E-postkund | `payment_nz/authorizenet_directpost/email_customer` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 | Merchant&#39;s Email | `payment_nz/authorizenet_directpost/merchant_email` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
