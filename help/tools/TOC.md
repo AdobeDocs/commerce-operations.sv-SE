@@ -1,9 +1,9 @@
 ---
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
-source-git-commit: 3f2a401bb916fc04405f21ba2acfc42f7defdccb
+source-git-commit: 1b9f57460f5b336c4ccacef01709c696acbc8316
 workflow-type: tm+mt
-source-wordcount: '106'
+source-wordcount: '112'
 ht-degree: 0%
 
 ---
@@ -42,6 +42,7 @@ ht-degree: 0%
    - [Fliken KaninMQ](observation-for-adobe-commerce/rabbitmq-tab.md)
    - [Fliken Kron](observation-for-adobe-commerce/cron-tab.md)
    - [Fliken Indexering](observation-for-adobe-commerce/indexing-tab.md)
+   - [Fliken QuickView](observation-for-adobe-commerce/oac-quickview-tab.md)
    - [Fliken Säkerhet](observation-for-adobe-commerce/security-tab.md)
+   - [Fliken Infra](observation-for-adobe-commerce/oac-infra.md)
    - [Så här använder du Observation for Adobe Commerce](observation-for-adobe-commerce/how-to-use.md)
-
