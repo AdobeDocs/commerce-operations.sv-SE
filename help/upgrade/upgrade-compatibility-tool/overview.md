@@ -1,9 +1,9 @@
 ---
 title: '"Översikt över [!DNL Upgrade Compatibility Tool]"'
 description: Läs mer om [!DNL Upgrade Compatibility Tool] och hur det kan hjälpa dig med ditt Adobe Commerce-projekt.
-source-git-commit: 9b0f97d36092d2a1057cdc905671cda8540881c9
+source-git-commit: ded2204fe0b3327f72bbce2ec03f8d66aa1b9353
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---
@@ -32,6 +32,12 @@ Du kan använda [!DNL Upgrade Compatibility Tool] via:
 I följande diagram visas möjliga arbetsflöden när du kör [!DNL Upgrade Compatibility Tool]:
 
 ![[!DNL Upgrade Compatibility Tool] Diagram](../../assets/upgrade-guide/uct-diagram-v5.png)
+
+## [!DNL Upgrade Compatibility Tool] demo
+
+I den här videon får du veta mer om [!DNL Upgrade Compatibility Tool]:
+
+>[!VIDEO](https://video.tv.adobe.com/v/341245?quality=12)
 
 ## Förbättra [!DNL Upgrade Compatibility Tool]
 

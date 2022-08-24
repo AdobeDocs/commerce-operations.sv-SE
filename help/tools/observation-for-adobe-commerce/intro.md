@@ -1,9 +1,9 @@
 ---
 title: '"[!DNL Observation for Adobe Commerce]"'
 description: Läs mer om [!DNL Observation for Adobe Commerce], dess användningsområden, när de ska användas och hur du får tillgång till dem.
-source-git-commit: 0ee158cb33757b33307d0ca669b921a82665cefe
+source-git-commit: e042acac00d9aaa7d2f49beb8ce98e213ae369e7
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---
@@ -31,3 +31,9 @@ Handlare och partners som vill optimera sina prestanda på Adobe Commerce webbpl
 * Förenkla datainsamling och -parsning med visuella sammanfattningar av viktiga felmeddelanden från loggarna.
 
 * Få perspektiv över olika tjänster som frekvens för IP-förfrågningar, vilka URL:er som används, vilka API:er som används med mera.
+
+## [!DNL Observation for Adobe Commerce] demo
+
+Titta på den här videon om du vill veta mer om [!DNL Observation for Adobe Commerce]:
+
+>[!VIDEO](https://video.tv.adobe.com/v/344444?quality=12)
