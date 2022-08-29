@@ -1,9 +1,9 @@
 ---
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
-source-git-commit: 1b9f57460f5b336c4ccacef01709c696acbc8316
+source-git-commit: 2ad429bf3676055f3ae199450f75906afc6542e5
 workflow-type: tm+mt
-source-wordcount: '112'
+source-wordcount: '162'
 ht-degree: 0%
 
 ---
@@ -46,3 +46,26 @@ ht-degree: 0%
    - [Fliken Säkerhet](observation-for-adobe-commerce/security-tab.md)
    - [Fliken Infra](observation-for-adobe-commerce/oac-infra.md)
    - [Så här använder du Observation for Adobe Commerce](observation-for-adobe-commerce/how-to-use.md)
+- Datamigreringsverktyg {#data-migration}
+   - [Så fungerar migrering](data-migration-tool/how-migration-works.md)
+   - [God praxis](data-migration-tool/best-practices.md)
+   - [Versioner som stöds](data-migration-tool/supported-versions.md)
+   - Grunderna {#basics}
+      - [Skapa en plan](data-migration-tool/create-plan.md)
+      - [Förutsättningar](data-migration-tool/prerequisites.md)
+      - [Installera](data-migration-tool/install.md)
+      - [Uppgradera](data-migration-tool/upgrade.md)
+      - [Konfigurera](data-migration-tool/configure.md)
+      - [Anpassa](data-migration-tool/customize.md)
+      - [Teknisk specifikation](data-migration-tool/technical-specification.md)
+   - Migrera data {#migrate-data}
+      - [Översikt](data-migration-tool/migrate-data/overview.md)
+      - [Inställningar](data-migration-tool/migrate-data/settings.md)
+      - [Data](data-migration-tool/migrate-data/data.md)
+      - [Ändringar](data-migration-tool/migrate-data/delta.md)
+      - [Uppföljning](data-migration-tool/migrate-data/follow-up.md)
+      - [Data som kräver manuell migrering](data-migration-tool/migrate-data/manual.md)
+      - [Steg efter datamigrering](data-migration-tool/migrate-data/post-migration.md)
+   - Resurser {#resources}
+      - [Felsökning](https://support.magento.com/hc/en-us/articles/360033020451)
+      - [Changelog](https://github.com/magento/data-migration-tool/blob/2.4/CHANGELOG.md)
