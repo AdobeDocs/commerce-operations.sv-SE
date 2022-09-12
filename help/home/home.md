@@ -2,9 +2,9 @@
 keywords: Adobe Commerce;home;populära topics
 title: Startsida
 description: Bläddra i ett index över Adobe Commerce produktdokumentation.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 64e697a357e10005d02abeca13bd09c8a823bc00
 workflow-type: tm+mt
-source-wordcount: '156'
+source-wordcount: '155'
 ht-degree: 0%
 
 ---
@@ -42,10 +42,10 @@ Få praktisk information om koncept, processer, verktyg och bästa metoder för 
   </td>
   <td valign="top">
     <a href="../tools/data-migration-tool/how-migration-works.md">
-      <img alt="Migrering" src="../assets/icons/move-to.svg" width="40" height="40"/>
+      <img alt="Datamigrering" src="../assets/icons/move-to.svg" width="40" height="40"/>
     </a>
     <div>
-      <a href="../tools/data-migration-tool/how-migration-works.md"><strong>Migrering</strong></a>
+      <a href="../tools/data-migration-tool/how-migration-works.md"><strong>Datamigrering</strong></a>
     </div>
   </td>
 </tr>
@@ -117,6 +117,5 @@ Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
 
 | Ändra | Typ |
 |----------------------------------------------------------------------------------------------------------------------------------------|--------------|
-| Tillagd [information](../upgrade/upgrade-compatibility-tool/overview.md) om hur regler definieras för verktyget Kompatibilitet med uppgraderingar. | Viktig uppdatering |
-| Borttagen föråldrad uppgraderingskompatibilitet [felkoder](../upgrade/upgrade-compatibility-tool/error-messages.md). | Teknik |
-| Flyttad [Handbok för Site-Wide Analysis Tool](../tools/site-wide-analysis-tool/intro.md) från [devdocs.magento.com](https://devdocs.magento.com/tools/site-wide-analysis.html) till Experience League. | Nytt |
+| Flyttade [Installationshandbok på plats](../installation/overview.md) från [devdocs.magento.com](https://devdocs.magento.com/guides/v2.4/install-gde/install-flow-diagram.html) till Experience League. | Nytt |
+| Flyttade [Handbok för datamigrering](../tools/data-migration-tool/how-migration-works.md) från [devdocs.magento.com](https://devdocs.magento.com/guides/v2.4/migration/bk-migration-guide.html) till Experience League. | Nytt |
