@@ -1,9 +1,9 @@
 ---
 title: Konfigurera överordnad databaser manuellt
 description: Mer information om hur du konfigurerar lösningen för delad databas manuellt.
-source-git-commit: 52f92ef79586d618fd4ac51c00eaa1446a2dc98f
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1388'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Adobe rekommenderar starkt att du säkerhetskopierar din aktuella databas och di
 
 **Säkerhetskopiera systemet**:
 
-1. Logga in på din Commerce-server som eller växla till [ägare av filsystem](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+1. Logga in på din Commerce-server som eller växla till [ägare av filsystem](../../installation/prerequisites/file-system/overview.md).
 1. Ange följande kommandon:
 
    ```bash
@@ -476,7 +476,7 @@ Det sista steget i att dela databaser manuellt är att lägga till anslutnings- 
 
 Så här uppdaterar du distributionskonfigurationen:
 
-1. Logga in på din Commerce-server som eller växla till [ägare av filsystem](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+1. Logga in på din Commerce-server som eller växla till [ägare av filsystem](../../installation/prerequisites/file-system/overview.md).
 1. Säkerhetskopiera din distributionskonfiguration:
 
    ```bash

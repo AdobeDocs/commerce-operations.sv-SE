@@ -1,9 +1,9 @@
 ---
 title: Migrera ändringar
 description: Lär dig hur du migrerar endast data som har ändrats sedan den senaste datamigreringen för Magento 1 med [!DNL Data Migration Tool].
-source-git-commit: b5a2c362b09de993e1dc196bdda90e74cf4a8ba2
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '359'
 ht-degree: 0%
 
 ---
@@ -24,8 +24,8 @@ Med verktyget för inkrementell migrering installerar du deltabeller (med prefix
 
 Innan du börjar utför du följande steg:
 
-1. Logga in på Magento-server som [filsystemets ägare](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
-1. Byt till Magento `/bin` eller se till att den har lagts till i systemets PATH.
+1. Logga in på programservern som [filsystemets ägare](../../../installation/prerequisites/file-system/overview.md).
+1. Ändra till `/bin` eller se till att den läggs till i systemet `PATH`.
 
 Se [första steget](overview.md#first-steps) för mer information.
 

@@ -1,9 +1,9 @@
 ---
 title: Översikt över sökmotorn
 description: Översikt över sökmotoralternativ för Adobe Commerce och Magento Open Source.
-source-git-commit: 52c472bf80942339b511292243b5da9babf829d9
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '161'
+source-wordcount: '132'
 ht-degree: 0%
 
 ---
@@ -25,10 +25,9 @@ När du har installerat och integrerat sökmotorn med Adobe Commerce måste du u
 
 <!-- Link Definitions -->
 
-[Krav för sökmotor]: https://devdocs.magento.com/guides/v2.4/install-gde/prereq/elasticsearch.html
-[Konfigurera nginx för sökmotorn]: https://devdocs.magento.com/guides/v2.4/install-gde/prereq/es-config-nginx.html
-[Konfigurera Apache för sökmotorn]: https://devdocs.magento.com/guides/v2.4/install-gde/prereq/es-config-apache.html
+[Krav för sökmotor]: ../../installation/prerequisites/search-engine/overview.md
+[Konfigurera nginx för sökmotorn]: ../../installation/prerequisites/search-engine/configure-nginx.md
+[Konfigurera Apache för sökmotorn]: ../../installation/prerequisites/search-engine/configure-apache.md
 [Elasticsearch]: https://www.elastic.co
-[Elasticsearch documentation]: https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html
-[Installera Commerce-programvaran]: https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-install.html
+[Installera Commerce-programvaran]: ../../installation/composer.md
 [OpenSearch]: https://opensearch.org/docs/latest/opensearch/install/index/

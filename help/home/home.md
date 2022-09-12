@@ -2,9 +2,9 @@
 keywords: Adobe Commerce;home;populära topics
 title: Startsida
 description: Bläddra i ett index över Adobe Commerce produktdokumentation.
-source-git-commit: 6c462d615675615b317c6de529d1af5846d26e69
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '156'
 ht-degree: 0%
 
 ---
@@ -25,27 +25,27 @@ Få praktisk information om koncept, processer, verktyg och bästa metoder för 
     </div>
   </td>
   <td valign="top">
-    <a href="https://devdocs.magento.com/guides/v2.4/install-gde/install-flow-diagram.html">
+    <a href="../installation/overview.md">
       <img alt="Installation" src="../assets/icons/servers.svg" width="40" height="40"/>
     </a>
     <div>
-      <a href="https://devdocs.magento.com/guides/v2.4/install-gde/install-flow-diagram.html"><strong>Installation</strong></a>
+      <a href="../installation/overview.md"><strong>Installation</strong></a>
     </div>
   </td>
   <td valign="top">
-    <a href="https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/overview.html">
+    <a href="../configuration/overview.md">
       <img alt="Konfiguration" src="../assets/icons/settings.svg" width="40" height="40"/>
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/overview.html"><strong>Konfiguration</strong></a>
+      <a href="../configuration/overview.md"><strong>Konfiguration</strong></a>
     </div>
   </td>
   <td valign="top">
-    <a href="https://devdocs.magento.com/guides/v2.4/migration/bk-migration-guide.html">
+    <a href="../tools/data-migration-tool/how-migration-works.md">
       <img alt="Migrering" src="../assets/icons/move-to.svg" width="40" height="40"/>
     </a>
     <div>
-      <a href="https://devdocs.magento.com/guides/v2.4/migration/bk-migration-guide.html"><strong>Migrering</strong></a>
+      <a href="../tools/data-migration-tool/how-migration-works.md"><strong>Migrering</strong></a>
     </div>
   </td>
 </tr>
@@ -75,11 +75,11 @@ Få praktisk information om koncept, processer, verktyg och bästa metoder för 
     </div>
   </td>
   <td valign="top">
-    <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/overview.html">
+    <a href="../tools/overview.md">
        <img alt="verktyg" src="../assets/icons/wrench.svg" width="40" height="40"/>
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/overview.html?lang=en"><strong>verktyg</strong></a>
+      <a href="../tools/overview.md"><strong>verktyg</strong></a>
     </div>
   </td>
 </tr>

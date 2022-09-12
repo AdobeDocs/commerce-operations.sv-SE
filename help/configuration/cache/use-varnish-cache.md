@@ -1,9 +1,9 @@
 ---
 title: Cachelagring med lack
 description: Lär dig hur cacherensning fungerar med lack och hur du använder det som en accelerator för webb-cachning för Adobe Commerce-programmet.
-source-git-commit: c65c065c5f9ac2847caa8898535afdacf089006a
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '388'
 ht-degree: 0%
 
 ---
@@ -57,4 +57,4 @@ Du kan sedan rensa varnish-värdar när du uppdaterar Commerce Cache (kallas äv
 
 Om du vill uppdatera cachen med hjälp av administratören klickar du på **[!UICONTROL SYSTEM]** > Verktyg > **Cachehantering** och sedan klicka **Rensa Magento-cache** överst på sidan. (Du kan också uppdatera enskilda cachetyper.)
 
-Om du vill uppdatera cachen med kommandoraden använder du vanligtvis kommandot [`magento cache:clean <type>`](../cli/manage-cache.md#clean-and-flush-cache-types) kommandot som [ägare av filsystem](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+Om du vill uppdatera cachen med kommandoraden använder du vanligtvis kommandot [`magento cache:clean <type>`](../cli/manage-cache.md#clean-and-flush-cache-types) kommandot som [ägare av filsystem](../../installation/prerequisites/file-system/overview.md).

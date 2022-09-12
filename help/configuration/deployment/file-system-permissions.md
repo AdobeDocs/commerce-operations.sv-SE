@@ -1,9 +1,9 @@
 ---
 title: Åtkomstbehörigheter för filsystem
 description: Se hur du konfigurerar ägare eller ägare av Commerce-programmets filsystem för ett utvecklings- och produktionssystem.
-source-git-commit: 80abb0180fcd8ecc275428c23b68feb5883cbc28
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '866'
 ht-degree: 0%
 
 ---
@@ -11,9 +11,9 @@ ht-degree: 0%
 
 # Åtkomstbehörigheter för filsystem
 
-I det här avsnittet beskrivs hur du ställer in ägare eller ägare av Commerce-filsystemet för ett utvecklings- och produktionssystem. Innan du fortsätter bör du läsa de koncept som beskrivs i [Översikt över ägarskap och behörigheter i filsystemet](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+I det här avsnittet beskrivs hur du ställer in ägare eller ägare av Commerce-filsystemet för ett utvecklings- och produktionssystem. Innan du fortsätter bör du läsa de koncept som beskrivs i [Översikt över ägarskap och behörigheter i filsystemet](../../installation/prerequisites/file-system/overview.md).
 
-Det här ämnet handlar om utveckling och produktion av handel. Om du installerar Commerce kan du läsa [Ange ägarskap och behörigheter för förinstallation](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-system-perms.html).
+Det här ämnet handlar om utveckling och produktion av handel. Om du installerar Commerce kan du läsa [Ange ägarskap och behörigheter för förinstallation](../../installation/prerequisites/file-system/configure-permissions.md).
 
 De avsnitt som följer behandlar kraven för en eller två ägare av filsystem. Det innebär:
 
@@ -103,7 +103,7 @@ Så här gör du filer och kataloger skrivbara så att du kan uppdatera komponen
 
 ### Valfritt angivet `magento_umask`
 
-Se [Ange en mask om du vill](https://devdocs.magento.com/guides/v2.4/install-gde/install/post-install-umask.html) i _Installationsguide_.
+Se [Ange en mask om du vill](../../installation/next-steps/set-umask.md) i _Installationsguide_.
 
 ## Ägarskap för produktionsfilsystem för privat värdtjänst (två användare)
 
@@ -121,7 +121,7 @@ Om du använder en egen server (inklusive en värdleverantörs privata serverkon
    >
    >Kommandoradsanvändaren kallas även _ägare av filsystem_.
 
-Eftersom de här användarna kräver åtkomst till samma filer rekommenderar vi att du skapar en [delad grupp](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-system-perms.html#mage-owner-about-group) som de båda tillhör. Följande procedurer förutsätter att du redan har gjort detta.
+Eftersom de här användarna kräver åtkomst till samma filer rekommenderar vi att du skapar en [delad grupp](../../installation/prerequisites/file-system/configure-permissions.md#about-the-shared-group) som de båda tillhör. Följande procedurer förutsätter att du redan har gjort detta.
 
 Se något av följande avsnitt:
 

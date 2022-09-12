@@ -1,9 +1,9 @@
 ---
 title: Steg efter datamigrering
 description: Lär dig hur du gör när du har använt [!DNL Data Migration Tool] för att migrera data från Magento 1 till Magento 2.
-source-git-commit: b5a2c362b09de993e1dc196bdda90e74cf4a8ba2
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '93'
+source-wordcount: '77'
 ht-degree: 0%
 
 ---
@@ -17,8 +17,8 @@ Utför följande uppgifter när du är klar med migreringen och har testat din n
 
 * Starta Magento 2 cron-jobb
 
-* [Rensa alla cachetyper för Magento 2](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-cache.html#clean-and-flush-cache-types)
+* [Rensa alla cachetyper för Magento 2](../../../configuration/cli/manage-cache.md#clean-and-flush-cache-types)
 
-* [Indexera om alla Magento 2-index](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html#reindex)
+* [Indexera om alla Magento 2-index](../../../configuration/cli/manage-indexers.md#reindex)
 
 * Ändra DNS och belastningsutjämnare så att de pekar på produktionsmaskinvaran för Magento 2

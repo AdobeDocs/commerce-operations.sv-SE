@@ -1,9 +1,9 @@
 ---
 title: Hantera cacheminnet
 description: Hantera cachetyper och visa cachestatus.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '870'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ Med det här kommandot kan du aktivera eller inaktivera alla cachetyper eller en
 
 >[!INFO]
 >
->Från och med version 2.2 kan du bara aktivera eller inaktivera cachetyper med kommandoraden när du kör Commerce i produktionsläge. Om du kör Commerce i utvecklarläge kan du aktivera eller inaktivera cachetyper med kommandoraden eller manuellt. Innan du gör det måste du göra `<magento_root>/app/etc/env.php` skrivbar av [ägare av filsystem](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-system-perms.html).
+>Från och med version 2.2 kan du bara aktivera eller inaktivera cachetyper med kommandoraden när du kör Commerce i produktionsläge. Om du kör Commerce i utvecklarläge kan du aktivera eller inaktivera cachetyper med kommandoraden eller manuellt. Innan du gör det måste du göra `<magento_root>/app/etc/env.php` skrivbar av [ägare av filsystem](../../installation/prerequisites/file-system/overview.md).
 
 Du kan rengöra (kallas även _flush_ eller _uppdatera_) cachetyper med antingen kommandoraden eller administratören.
 

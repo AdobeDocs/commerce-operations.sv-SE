@@ -1,9 +1,9 @@
 ---
 title: Development Environment Recommendations
 description: Lär dig mer om prestandarekommendationer för att konfigurera din lokala Adobe Commerce- eller Magento Open Source-utvecklingsmiljö.
-source-git-commit: 87b353b408ecd7f55cea5b4775a0c8523952abc0
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '241'
 ht-degree: 0%
 
 ---
@@ -47,5 +47,5 @@ Om du utvecklar på en virtuell dator och det tar längre tid än två sekunder 
 
 <!-- Link definitions -->
 
-[rengöra cacheminnen]: https://devdocs.magento.com/guides/v2.4/config-guide/cli/config-cli-subcommands-cache.html#config-cli-subcommands-cache-clean
-[inaktivera caches]: https://devdocs.magento.com/guides/v2.4/config-guide/cli/config-cli-subcommands-cache.html#config-cli-subcommands-cache-en
+[rengöra cacheminnen]: ../configuration/cli/manage-cache.md#clean-and-flush-cache-types
+[inaktivera caches]: ../configuration/cli/manage-cache.md#enable-or-disable-cache-types

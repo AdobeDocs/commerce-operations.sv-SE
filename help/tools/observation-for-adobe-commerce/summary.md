@@ -1,9 +1,9 @@
 ---
-title: '"Den [!UICONTROL Summary] tab"'
+title: "Den [!UICONTROL Summary] tab"
 description: Läs mer om [!UICONTROL Summary] flik för [!DNL Observation for Adobe Commerce].
-source-git-commit: 22df5b80262fbc98f3dd929ec8fdf6f697734c9b
+source-git-commit: 5bcb834bc563c52cd5b169b9f4f20dab31d404cd
 workflow-type: tm+mt
-source-wordcount: '2650'
+source-wordcount: '2637'
 ht-degree: 0%
 
 ---
@@ -109,7 +109,7 @@ The **[!UICONTROL Deployment State]** bildrutan utnyttjar särskilda distributio
 
 **Distributionsloggfraser:**
 
-* &quot;%Startar genereringskommando%&quot;) som &quot;start_gen&quot;
+* %Startar genereringskommando%) som start_gen
 * &#39;%git apply /app/vendor/magento/ece-tools/patches%&#39;) as &#39;apply_patches&#39;
 * &#39;%Set flag: .static_content_deploy%) som SCD
 * &#39;%OBS! Genereringskommandot slutfördes%) som gen_compl
@@ -122,7 +122,7 @@ The **[!UICONTROL Deployment State]** bildrutan utnyttjar särskilda distributio
 
 ![IP-frekvens](../../assets/tools/ip-frequency.jpg)
 
-The **[!UICONTROL IP Frequency]** antalet bildrutor som räknas (MISS- och PASS-status) för varje IP-adress från [!DNL Fastly] loggar. Webbförfrågningar med dessa statusvärden kommer till den ursprungliga servern och kommer att lägga till inläsning till servern. Den visar de tjugo översta adresserna i frekvens. Den här bildrutan kan användas för att identifiera IP-attacker eller källor med hög belastning på en webbplats.
+The **[!UICONTROL IP Frequency]** bildrutan räknar (&#39;MISS&#39; och &#39;PASS&#39;)-status för varje IP-adress från [!DNL Fastly] loggar. Webbförfrågningar med dessa statusvärden kommer till den ursprungliga servern och kommer att lägga till inläsning till servern. Den visar de tjugo översta adresserna i frekvens. Den här bildrutan kan användas för att identifiera IP-attacker eller källor med hög belastning på en webbplats.
 
 ## [!UICONTROL IP Response – top 20 URLs in duration]
 
@@ -152,7 +152,7 @@ Ibland är det svårt att se vilken IP-adress som har flest förfrågningar på 
 
 ![potentiella stötar](../../assets/tools/potential-bots.jpg)
 
-The **[!UICONTROL Potential Bots]** frame tittar på begäranden med ett request_user_agent-namn som NULL eller %bot%. Vanligtvis följer &quot;%bot%&quot; request_user_agent principinställningarna i `robots.txt` -fil.
+The **[!UICONTROL Potential Bots]** frame tittar på begäranden med ett request_user_agent-namn som NULL eller &#39;%bot%&#39;. Vanligtvis följer %bot%&#39; request_user_agent principinställningarna i `robots.txt` -fil.
 
 ## [!UICONTROL Transaction Errors]
 
@@ -181,7 +181,7 @@ The **[!UICONTROL Nginx access by node]** bildrutan tittar på antalet från `ac
 * &#39;%self-leave%&#39;) som &#39;sgroups_node&#39;
 * &#39;%members = 3/3 (join/total)%&#39;) som &#39;3of3&#39;
 * &#39;%members = 2/3 (join/total)%&#39;) as &#39;2of3&#39;
-* &#39;%members = 2/2%&#39;) as &#39;2of2&#39; ・ &#39;%members = 1/2%&#39;) as &#39;1of2&#39; ・ &#39;%members = 1/3%&#39;) as &#39;1of3&#39;
+* &#39;%members = 2/2%&#39;) as &#39;2of2&#39; * &#39;%members = 1/2%&#39;) as &#39;1of2&#39; * &#39;%members = 1/3%&#39;) as &#39;1of3&#39;
 * %members = 1/1%) as &#39;1of1&#39;
 * &#39;%\[Obs\] /usr/sbin/mysqld (mysqld 10).%) som sql_launch
 * &#39;%kvorum: Ingen nod med fullständigt läge:%) som no_node_count
@@ -190,7 +190,7 @@ The **[!UICONTROL Nginx access by node]** bildrutan tittar på antalet från `ac
 * %WSREP: Medlem 2 %) som &#39;mem2&#39;
 * %WSREP: Synkroniserad med grupp, klar för anslutningar (%) som klar
 * %/usr/sbin/mysqld, Version:%) som mysql_launch_mysql.slow
-* &quot;%\[Obs\] WSREP: Ny klustervy: globalt läge:%) som galera_Cluster_view_chng
+* &#39;%\[Obs\] WSREP: Ny klustervy: globalt läge:%) som galera_Cluster_view_chng
 
 Dessa signaler kan tyda på problem med lagring, minne eller frågor om tillståndet ändras ofta.
 
@@ -228,7 +228,7 @@ Dessa signaler kan tyda på problem med lagring, minne eller frågor om tillstå
 * &#39;%1062 \[\ERROR\] InnoDB:%&#39;) som &#39;sql_1062_e&#39;
 * &#39;%\[Obs\] WSREP: Tömmer minnesmappning till disk...%&#39;) som &#39;mem_map_flush&#39;
 * %Internal MariaDB-felkod: 1146%) som &#39;sql_1146&#39;
-* %Internal MariaDB-felkod: 1062%) som &#39;sql_1062&#39; ・ &#39;%1062 \[Warning\] InnoDB:%&#39;) som &#39;sql_1062_w&#39;
+* %Internal MariaDB-felkod: 1062%) som &#39;sql_1062&#39; * &#39;%1062 \[Warning\] InnoDB:%&#39;) som &#39;sql_1062_w&#39;
 * %Internal MariaDB-felkod: 1064%) som &#39;sql_1064&#39;
 * &#39;%InnoDB: Kontrollfel i filen %) som assertion_err
 * &#39;%mysqld_safe Antal processer som körs nu: 0%) som mysql_oom
@@ -289,7 +289,7 @@ Hur PHP-processer beter sig beror på [konfiguration](https://www.php.net/manual
 
 ![php-fel](../../assets/tools/php-errors.jpg)
 
-The **[!UICONTROL PHP errors]** antalet PHP-fel med arbetare under den valda tidsramen. Mer information finns i [Adobe Commerce PHP-inställningar](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/php-settings.html).
+The **[!UICONTROL PHP errors]** antalet PHP-fel med arbetare under den valda tidsramen. Mer information finns i [Adobe Commerce PHP-inställningar](../../installation/prerequisites/php-settings.md).
 
 **PHP-fel och -meddelanden**
 
@@ -309,7 +309,7 @@ The **[!UICONTROL PHP errors]** antalet PHP-fel med arbetare under den valda tid
 
 ![php-processer](../../assets/tools/php-processes.jpg)
 
-[PHP-FPM](https://php-fpm.org/), a [!UICONTROL FastCGI Process Manager] används av [!DNL Nginx]. Mer information om systemkrav finns i [Krav för PHP-versioner mappade till Adobe Commerce-versioner](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html). The **[!UICONTROL PHP processes]** bildrutan visar antalet PHP-processer som körs vid en viss tidpunkt på den valda tidslinjen.
+[PHP-FPM](https://php-fpm.org/), a [!UICONTROL FastCGI Process Manager] används av [!DNL Nginx]. Mer information om systemkrav finns i [Krav för PHP-versioner mappade till Adobe Commerce-versioner](../../installation/system-requirements.md). The **[!UICONTROL PHP processes]** bildrutan visar antalet PHP-processer som körs vid en viss tidpunkt på den valda tidslinjen.
 
 ## [!UICONTROL Secondary processes]
 
@@ -321,7 +321,7 @@ Sekundära processer kan påverka webbplatsens respons. The **[!UICONTROL Second
 
 ![trafik jämfört med vecka sedan](../../assets/tools/traffic-vs-week-ago.jpg)
 
-The **[!UICONTROL Traffic vs Week Ago]** läser webbplatsens trafik (förfrågningar) från [!DNL Fastly] loggar med cachestatus (&quot;MISS&quot;,&quot;PASS&quot;). De här förfrågningarna lägger till inläsning till de ursprungliga servrarna. Den här bildrutan visar volymen för webbförfrågningar jämfört med för en vecka sedan under samma tidsram.
+The **[!UICONTROL Traffic vs Week Ago]** läser webbplatsens trafik (förfrågningar) från [!DNL Fastly] loggar med cachestatus (&#39;MISS&#39;, &#39;PASS&#39;). De här förfrågningarna lägger till inläsning till de ursprungliga servrarna. Den här bildrutan visar volymen för webbförfrågningar jämfört med för en vecka sedan under samma tidsram.
 
 ## [!UICONTROL Fastly Cache]
 
@@ -402,7 +402,7 @@ The **[!UICONTROL Cron view]** bildrutan söker i kronloggen efter en balans mel
 * %Could not obtain lock for cron job%&#39; as &#39;cron_lock&#39;
 * &#39;%Allmänt fel: 2006 MySQL-servern har gått bort% som mysql_has_away
 * %error% som error
-* &#39;%Allmänt fel: 1205 Timeout för låsuppehåll överskreds% som sql_1205_cron
+* &#39;%Allmänt fel: 1205 Tidsgränsen för låsuppehåll överskreds% som sql_1205_cron
 
 ## [!UICONTROL cron_schedule table updates]
 

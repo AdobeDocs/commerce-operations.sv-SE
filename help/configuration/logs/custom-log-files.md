@@ -3,7 +3,7 @@ title: Skriv till anpassad loggfil
 description: Lär dig hur du ställer in anpassade loggfiler.
 contributor_name: Atwix
 contributor_link: https://www.atwix.com/
-source-git-commit: 2c12c6ea6e7b6ffeb07bbda17ded34e39de6656a
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 0%
@@ -32,9 +32,9 @@ Du kan använda någon av följande metoder för att logga in i en anpassad fil:
 
 ## Konfigurera en anpassad loggfil i `di.xml`
 
-I det här exemplet visas hur du använder [virtuella typer](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/build/di-xml-file.html#virtual-types) till logg `debug` meddelanden till en anpassad loggfil i stället för en standard `/var/log/debug.log`.
+I det här exemplet visas hur du använder [virtuella typer](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types) till logg `debug` meddelanden till en anpassad loggfil i stället för en standard `/var/log/debug.log`.
 
-1. I `di.xml` -fil i modulen, definiera en anpassad loggfil som [virtuell typ](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/build/di-xml-file.html#virtual-types).
+1. I `di.xml` -fil i modulen, definiera en anpassad loggfil som [virtuell typ](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types).
 
    ```xml
    <virtualType name="Magento\Payment\Model\Method\MyCustomDebug" type="Magento\Framework\Logger\Handler\Base">
@@ -46,7 +46,7 @@ I det här exemplet visas hur du använder [virtuella typer](https://devdocs.mag
 
    The `name` värde för `Magento\Payment\Model\Method\MyCustomDebug` måste vara unika.
 
-1. Definiera hanteraren i en annan [virtuell typ](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/build/di-xml-file.html#virtual-types) med ett unikt `name`:
+1. Definiera hanteraren i en annan [virtuell typ](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types) med ett unikt `name`:
 
    ```xml
    <virtualType name="Magento\Payment\Model\Method\MyCustomLogger" type="Magento\Framework\Logger\Monolog">
@@ -58,7 +58,7 @@ I det här exemplet visas hur du använder [virtuella typer](https://devdocs.mag
    </virtualType>
    ```
 
-1. Mata in `MyCustomLogger` [virtuell typ](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/build/di-xml-file.html#virtual-types) i `Magento\Payment\Model\Method\Logger` objekt:
+1. Mata in `MyCustomLogger` [virtuell typ](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types) i `Magento\Payment\Model\Method\Logger` objekt:
 
    ```xml
    <type name="Magento\Payment\Model\Method\Logger">
@@ -117,7 +117,7 @@ I det här exemplet visas hur du använder en anpassad logghanterarklass för at
    }
    ```
 
-1. Definiera hanteraren för den här klassen som en [virtuell typ](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/build/di-xml-file.html#virtual-types) i modulen `di.xml` -fil.
+1. Definiera hanteraren för den här klassen som en [virtuell typ](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types) i modulen `di.xml` -fil.
 
    ```xml
    <virtualType name="MyCustomLogger" type="Magento\Framework\Logger\Monolog">

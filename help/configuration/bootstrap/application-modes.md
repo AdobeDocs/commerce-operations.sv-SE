@@ -1,9 +1,9 @@
 ---
 title: Programlägen
 description: Commerce-programmet kan fungera i olika lägen beroende på dina behov. Visa en detaljerad lista över tillgängliga programlägen.
-source-git-commit: 53448b11a2d000fe8e8a7eecf2ffcef4b7e248fa
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '790'
 ht-degree: 0%
 
 ---
@@ -69,6 +69,6 @@ I produktionsläge:
 
 Kör Commerce-programmet i underhållsläge för att koppla från din webbplats medan du slutför underhålls-, uppgraderings- eller konfigureringsuppgifter. I underhållsläge dirigerar webbplatsen om besökare till en standard `Service Temporarily Unavailable` sida.
 
-Du kan skapa en [anpassad underhållssida](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/troubleshooting/maintenance-mode-options.html), aktivera och inaktivera underhållsläge manuellt och konfigurera underhållsläge så att besökare från auktoriserade IP-adresser kan visa butiken normalt. Se [aktivera och inaktivera underhållsläge](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-subcommands-maint.html).
+Du kan skapa en [anpassad underhållssida](../../upgrade/troubleshooting/maintenance-mode-options.md), aktivera och inaktivera underhållsläge manuellt och konfigurera underhållsläge så att besökare från auktoriserade IP-adresser kan visa butiken normalt. Se [aktivera och inaktivera underhållsläge](../../installation/tutorials/maintenance-mode.md).
 
 Om du använder Commerce på molninfrastruktur körs Commerce-programmet i underhållsläge under distributionsfasen. När distributionen har slutförts återgår Commerce-programmet till att köras i produktionsläge. Se [Distributionskopplingar](https://devdocs.magento.com/cloud/reference/discover-deploy.html#cloud-deploy-over-phases-hook) i _Commerce Cloud guide_.

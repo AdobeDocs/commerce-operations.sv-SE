@@ -1,9 +1,9 @@
 ---
 title: Bästa praxis
 description: Använd de bästa metoderna som rekommenderas av Adobe för att hantera uppgraderingsprocessen för Adobe Commerce- och Magento Open Source-projekt.
-source-git-commit: 3d9a721e33621b78f03f16b932a1ba2904ae4010
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1089'
 ht-degree: 0%
 
 ---
@@ -41,8 +41,8 @@ Om ditt projekt är direktsänt föreslår vi att du kör en granskning för att
 
 Från det att du börjar arbeta med ett projekt bör du fundera över hur framtida uppgraderingar kommer att påverkas av ditt nuvarande arbete. Följ alltid de effektivaste strategierna för Adobe Commerce-utveckling som beskrivs här:
 
-- [Utveckla bästa praxis](https://devdocs.magento.com/guides/v2.4/ext-best-practices/bk-ext-best-practices.html)
-- [Kodstandarder](https://devdocs.magento.com/guides/v2.4/coding-standards/bk-coding-standards.html)
+- [Utveckla bästa praxis](https://developer.adobe.com/commerce/php/best-practices/)
+- [Kodstandarder](https://developer.adobe.com/commerce/php/coding-standards/)
 
 Börja använda Adobe Commerce Extensibility-plattformen om du inte redan har gjort det. Plattformen gör det möjligt att effektivt anpassa processer, integrera system och driftsätta nya funktioner samtidigt som SaaS-liknande uppgraderingsmöjligheter bibehålls. Funktionerna är:
 
@@ -80,7 +80,7 @@ Utvärdera det arbete som ska utföras för uppgradering:
 
 ### Testning efter uppgradering
 
-Testning är den fas av en uppgradering som kräver mest tid. Därför bör denna process vara så automatiserad som möjligt. Du kan dra nytta av att använda de viktigaste testverktygen. The [Programtestguide](https://devdocs.magento.com/guides/v2.4/test/testing.html) innehåller information.
+Testning är den fas av en uppgradering som kräver mest tid. Därför bör denna process vara så automatiserad som möjligt. Du kan dra nytta av att använda de viktigaste testverktygen. The [Programtestguide](https://developer.adobe.com/commerce/testing/guide/) innehåller information.
 
 Använd en testmiljö för att testa och validera uppgraderingen innan du går över till produktion.
 

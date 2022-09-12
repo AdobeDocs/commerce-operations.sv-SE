@@ -1,9 +1,9 @@
 ---
-title: '"Kör [!DNL Upgrade Compatibility Tool]"'
+title: "Kör [!DNL Upgrade Compatibility Tool]"
 description: Följ de här stegen för att köra [!DNL Upgrade Compatibility Tool] i ett kommandoradsgränssnitt för ditt Adobe Commerce-projekt.
-source-git-commit: c10afb6632fa4e77f46b540c2b89f54b9cab430c
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '1071'
+source-wordcount: '1072'
 ht-degree: 0%
 
 ---
@@ -156,7 +156,7 @@ The `bin/uct core:code:changes` -kommandot kontrollerar om det finns en vanilj-i
 
 Du kan köra en [!DNL Upgrade Compatibility Tool] med `--vanilla-dir` om du vill ange installationskatalogen för Adobe Commerce vanilla.
 
-Se [Distribuera vanilj-instans](https://devdocs.magento.com/contributor-guide/contributing.html#vanilla-pr) för mer information.
+Se [Distribuera vanilj-instans](https://developer.adobe.com/commerce/contributor/guides/code-contributions/#deploy-vanilla-magento-open-source-instance) för mer information.
 
 ## Använd `refactor` kommando
 
@@ -249,7 +249,7 @@ Detta returnerar specifika alternativ som kan köras för `upgrade:check` komman
 ## Följ Adobe Commerce metodtips
 
 - Undvik att ha två moduler med samma namn.
-- Följ Adobe Commerce [kodstandarder](https://devdocs.magento.com/guides/v2.4/coding-standards/bk-coding-standards.html).
+- Följ Adobe Commerce [kodstandarder](https://developer.adobe.com/commerce/php/coding-standards/).
 - Adobe Commerce 2.4 [Uppgraderingsguide](https://experienceleague.adobe.com/docs/commerce-operations/assets/adobe-commerce-2-4-upgrade-guide.pdf) bästa praxis.
 
 ## Optimera resultatet

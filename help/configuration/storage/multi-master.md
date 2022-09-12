@@ -1,9 +1,9 @@
 ---
 title: Lösningar för delad databasprestanda
 description: Läs om den delade databaslösningen för Adobe Commerce och Magento Open Source.
-source-git-commit: 52f92ef79586d618fd4ac51c00eaa1446a2dc98f
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,7 @@ Det innebär även att du kan:
 
    >[!WARNING]
    >
-   >Du måste säkerhetskopiera de två ytterligare databasinstanserna manuellt. Endast huvuddatabasinstansen säkerhetskopieras. The [`magento setup:backup --db`](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-backup.html) kommando- och administratörsalternativen säkerhetskopierar inte de ytterligare tabellerna.
+   >Du måste säkerhetskopiera de två ytterligare databasinstanserna manuellt. Endast huvuddatabasinstansen säkerhetskopieras. The [`magento setup:backup --db`](../../installation/tutorials/backup.md) kommando- och administratörsalternativen säkerhetskopierar inte de ytterligare tabellerna.
 
 ## Förutsättningar
 

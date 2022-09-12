@@ -1,7 +1,7 @@
 ---
 title: Exportera konfigurationsinställningar
 description: Exportera Adobe Commerce konfigurationsinställningar till konfigurationsfiler, som också kallas config dump.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
 source-wordcount: '222'
 ht-degree: 0%
@@ -47,6 +47,6 @@ Den innehåller känsliga och systemspecifika inställningar för enskilda milj�
 
 Ställa in känsliga inställningar skrivna till `env.php`, använder du [`bin/magento config:sensitive:set`](set-configuration-values.md#set-values) -kommando.
 
-Konfigurationsvärden anges antingen som känsliga eller systemspecifika genom referens [`Magento\Config\Model\Config\TypePool`](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Config/Model/Config/TypePool.php) i modulen [`di.xml`](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/configuration/sensitive-and-environment-settings.html#how-to-specify-values-as-sensitive-or-system-specific) -fil.
+Konfigurationsvärden anges antingen som känsliga eller systemspecifika genom referens [`Magento\Config\Model\Config\TypePool`](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Config/Model/Config/TypePool.php) i modulen [`di.xml`](https://developer.adobe.com/commerce/php/development/configuration/sensitive-environment-settings/#how-to-specify-values-as-sensitive-or-system-specific) -fil.
 
 Exportera ytterligare systeminställningar när du använder `config_types`kan du använda [`bin/magento config:set`](set-configuration-values.md#set-values) -kommando.

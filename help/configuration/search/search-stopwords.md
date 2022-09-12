@@ -1,9 +1,9 @@
 ---
 title: Konfigurera sökstoppord
 description: Lär dig hur du hanterar stoppord för Adobe Commerce med CSV-filer.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '672'
+source-wordcount: '658'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Standardlivstid för stoppordsfilen [cache](https://glossary.magento.com/cache) 
 
 **Redigera stoppord**:
 
-1. Logga in på din Commerce-server eller växla till [ägare av filsystem](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+1. Logga in på din Commerce-server eller växla till [ägare av filsystem](../../installation/prerequisites/file-system/overview.md).
 1. Använda en textredigerare för att öppna en stoppordsfil i `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords` katalog.
 
    CSV-filer använder namnkonventionen `stopwords_<locale_code>.csv`. Exempel: den tyska stoppordsfilen heter `stopwords_de_DE.csv`.
@@ -60,7 +60,7 @@ Standardlivstid för stoppordsfilen [cache](https://glossary.magento.com/cache) 
 
 **Lägga till stoppord för en språkinställning**:
 
-1. Logga in på din Commerce-server eller växla till [ägare av filsystem](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+1. Logga in på din Commerce-server eller växla till [ägare av filsystem](../../installation/prerequisites/file-system/overview.md).
 
 1. Använda en textredigerare för att skapa en stoppordsfil med namnet `stopwords_<locale_code>.csv` i `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords` katalog.
 
@@ -125,7 +125,7 @@ Platsen beror på hur du installerade Commerce-programmet. Om du klonade GitHub-
 
 ## Ändra katalogen från modulen
 
-1. [Skapa en modul](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/build/module-file-structure.html)
+1. [Skapa en modul](https://developer.adobe.com/commerce/php/development/build/component-file-structure/)
 1. I modulen `etc/di.xml` lägg till instruktioner:
 
    ```xml

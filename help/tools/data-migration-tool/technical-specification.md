@@ -1,9 +1,9 @@
 ---
-title: '"[!DNL Data Migration Tool] teknisk specifikation"'
-description: '"Läs mer om implementeringsdetaljer i [!DNL Data Migration Tool] och hur man kan utöka när data överförs mellan Magento 1 och Magento 2."'
-source-git-commit: d609c497fdf00c5e5f975a5679b1d072cec4f8a2
+title: "[!DNL Data Migration Tool] teknisk specifikation"
+description: "Läs mer om implementeringsdetaljer i [!DNL Data Migration Tool] och hur man kan utöka när data överförs mellan Magento 1 och Magento 2."
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '2091'
+source-wordcount: '2085'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Så här öppnar du [!DNL Data Migration Tool] källkod, se GitHub [databas](htt
 
 ## Systemkrav
 
-The [systemkrav](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html) för [!DNL Data Migration Tool] är samma som för Magento 2.
+The [systemkrav](../../installation/system-requirements.md) för [!DNL Data Migration Tool] är samma som för Magento 2.
 
 ## Intern struktur
 

@@ -1,9 +1,9 @@
 ---
 title: Utför en uppgradering
 description: Följ de här stegen för att uppgradera ett Adobe Commerce- eller Magento Open Source-projekt.
-source-git-commit: 3c3966a904b0568e0255020d8880d348c357ea95
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '808'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Du kan uppgradera ditt Adobe Commerce- eller Magento Open Source-program från k
 >
 >Använd inte den här metoden för att uppgradera om du klonade GitHub-databasen. Istället kan du se [Uppgradera en Git-baserad installation](../developer/git-installs.md) för uppgraderingsinstruktioner.
 
-Följande instruktioner visar hur du uppgraderar med Composer. Adobe Commerce 2.4.2 har nu stöd för Composer 2. Om du försöker uppgradera från &lt;2.4.1 måste du först uppgradera till en version som är kompatibel med Composer 2 (t.ex. 2.4.2) med Composer 1 _före_ uppgradera till Composer 2 för >2.4.2-uppgraderingar. Dessutom måste du köra en [version som stöds](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html) PHP.
+Följande instruktioner visar hur du uppgraderar med Composer. Adobe Commerce 2.4.2 har nu stöd för Composer 2. Om du försöker uppgradera från &lt;2.4.1 måste du först uppgradera till en version som är kompatibel med Composer 2 (t.ex. 2.4.2) med Composer 1 _före_ uppgradera till Composer 2 för >2.4.2-uppgraderingar. Dessutom måste du köra en [version som stöds](../../installation/system-requirements.md) PHP.
 
 >[!WARNING]
 >
@@ -42,7 +42,7 @@ Du måste fylla i [uppgraderingskrav](../prepare/prerequisites.md) för att för
    bin/magento maintenance:enable
    ```
 
-   Se [Aktivera eller inaktivera underhållsläge](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-subcommands-maint.html) för ytterligare alternativ. Du kan också skapa en [sida för anpassat underhållsläge](https://devdocs.magento.com/guides/v2.4/comp-mgr/trouble/cman/maint-mode.html).
+   Se [Aktivera eller inaktivera underhållsläge](../../installation/tutorials/maintenance-mode.md) för ytterligare alternativ. Du kan också skapa en [sida för anpassat underhållsläge](../troubleshooting/maintenance-mode-options.md).
 
 1. Om du startar uppgraderingsprocessen medan asynkrona processer, som meddelandeköanvändare, körs, kan det medföra att data skadas. Inaktivera alla kroniska jobb för att förhindra att data skadas.
 
@@ -253,7 +253,7 @@ composer require-commerce magento/product-enterprise-edition 2.4.3-p1 --no-updat
 
 Om programmet misslyckas med en  `We're sorry, an error has occurred while generating this email.` fel:
 
-1. Återställ [ägarskap och behörigheter för filsystem](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-system-perms.html) som en användare med `root` behörighet.
+1. Återställ [ägarskap och behörigheter för filsystem](../../installation/prerequisites/file-system/configure-permissions.md) som en användare med `root` behörighet.
 1. Rensa följande kataloger:
    - `var/cache/`
    - `var/page_cache/`

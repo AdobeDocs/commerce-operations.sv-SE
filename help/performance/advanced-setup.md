@@ -1,9 +1,9 @@
 ---
 title: Avancerade inställningar
 description: Granska vedertagna rutiner och rekommendationer för stora företagssystem som utformats för att bearbeta stora datavolymer.
-source-git-commit: 9ab52374e031bd2b0a846dd5f47c89ff788dcafa
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '1203'
+source-wordcount: '1192'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Om du till exempel kör en profil som liknar B2B Medium kan du åsidosätta konf
 
 Ett stort antal SKU:er, webbplatser, kundgrupper eller delade kataloger påverkar körtiden för indexerarna för produktpriser och katalogregler. Detta beror på att som standard tilldelas alla webbplatser till alla kundgrupper (delade kataloger).
 
-Om du vill minska indexeringstiden kan du [utelämna vissa webbplatser från kundgrupper (delade kataloger)](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/indexer-optimization.html#customer-group-limitations-by-websites).
+Om du vill minska indexeringstiden kan du [utelämna vissa webbplatser från kundgrupper (delade kataloger)](https://developer.adobe.com/commerce/php/development/components/indexing/optimization/#customer-group-limitations-by-websites).
 
 ## Konfigurera Redis
 
@@ -56,7 +56,7 @@ Magento Open Source och Adobe [!DNL Commerce] supportmeddelandeköer som impleme
 
 >[!WARNING]
 >
->Den delade databasfunktionen var [föråldrad](https://community.magento.com/t5/Magento-DevBlog/Deprecation-of-Split-Database-in-Magento-Commerce/ba-p/465187) i version 2.4.2 av Adobe Commerce. Se [Återgå från en delad databas till en enda databas](https://devdocs.magento.com/guides/v2.4/config-guide/revert-split-database.html).
+>Den delade databasfunktionen var [föråldrad](https://community.magento.com/t5/Magento-DevBlog/Deprecation-of-Split-Database-in-Magento-Commerce/ba-p/465187) i version 2.4.2 av Adobe Commerce. Se [Återgå från en delad databas till en enda databas](../configuration/storage/revert-split-database.md).
 
 Med Adobe Commerce kan du konfigurera skalbar databaslagring som uppfyller behoven i ett växande företag. Du kan skapa tre separata överordnad databaser som hanterar specifika domäner:
 
@@ -95,7 +95,7 @@ Det här kommandot utför konfigurationsändringar men konfigurerar inte själva
 När du har delat upp din överordnad databas och ställt in slave-databaser, [!DNL Commerce] reglerar automatiskt anslutningar till en viss databas och fattar beslut baserat på typ av begäran (POST, PUT, GET osv.) och dataresurs. If [!DNL Commerce] eller dess tillägg utför skrivåtgärder på en GET-begäran, så växlar systemet automatiskt anslutningen från slav till överordnad databas. Det fungerar på samma sätt med överordnad databaser: så snart du arbetar med en utcheckningsrelaterad tabell dirigeras alla frågor om till en viss databas. Under tiden kommer alla katalogrelaterade frågor att gå till huvuddatabasen.
 
 Mer information om konfiguration och fördelarna med flera överordnad/slavkonfigurationer finns i
-[Lösningar för delad databasprestanda](https://devdocs.magento.com/guides/v2.4/config-guide/multi-master/multi-master.html).
+[Lösningar för delad databasprestanda](../configuration/storage/multi-master.md).
 
 ## Hantera mediematerial
 

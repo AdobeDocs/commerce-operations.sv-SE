@@ -1,9 +1,9 @@
 ---
 title: Gemensamma kommandon
 description: Visa ett exempel på vanliga kommandon och användningsområden för Commerce CLI.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
@@ -44,10 +44,10 @@ Kommandona visas endast i sammanfattad form. Om du vill ha mer information om et
 | [`magento dev:tests:run`](../cli/unit-tests.md) | Kör automatiska tester |
 | [`magento dev:xml:convert`](../cli/convert-layout-files.md) | Uppdatera dina XML-layoutfiler så att de matchar den nya XSLT-formatmallen (Extensible Stylesheet Language Transformations) |
 | [`magento setup:perf:generate-fixtures`](../cli/generate-data.md) | Generera data som ska användas för prestandatestning. |
-| [`magento sampledata:install`](https://devdocs.magento.com/guides/v2.4/install-gde/install/sample-data.html) | Installerar valfria exempeldata när du har installerat Commerce-programmet.<br><br>Mer information om exempeldata finns i [Valfria exempeldata](https://devdocs.magento.com/guides/v2.4/install-gde/install/sample-data.html). |
+| [`magento sampledata:install`](../../installation/sample-data/overview.md) | Installerar valfria exempeldata när du har installerat Commerce-programmet.<br><br>Mer information om exempeldata finns i [Valfria exempeldata](../../installation/sample-data/overview.md). |
 | [`magento config:{set/sensitive:set/show/}`](../cli/set-configuration-values.md) | Hanterar serverdelskonfigurationer |
-| [`magento admin:user:{create/unlock}`](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-subcommands-admin.html) | Skapar/redigerar/låser upp administratörsanvändare. |
-| [`magento dev:template-hints:{enable/disable}`](https://devdocs.magento.com/guides/v2.4/frontend-dev-guide/themes/debug-theme.html) | Aktiverar/inaktiverar tips för utvecklarmallar. |
+| [`magento admin:user:{create/unlock}`](../../installation/tutorials/admin.md#create-edit-or-unloack-an-administrator-account) | Skapar/redigerar/låser upp administratörsanvändare. |
+| [`magento dev:template-hints:{enable/disable}`](https://developer.adobe.com/commerce/frontend-core/guide/themes/debug/) | Aktiverar/inaktiverar tips för utvecklarmallar. |
 
 ## Vanliga argument
 

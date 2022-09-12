@@ -1,9 +1,9 @@
 ---
 title: Sökmotorkonfiguration
 description: Konfigurera en sökmotor med Adobe Commerce och Magento Open Source.
-source-git-commit: 80abb0180fcd8ecc275428c23b68feb5883cbc28
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '637'
 ht-degree: 0%
 
 ---
@@ -41,8 +41,8 @@ Om du inte har ändrat serverinställningarna för sökmotorn bör standardinst�
 
    Fortsätt med:
 
-   - [Konfigurera Apache för sökmotorn](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/es-config-apache.html)
-   - [Konfigurera nginx för sökmotorn](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/es-config-nginx.html)
+   - [Konfigurera Apache för sökmotorn](../../installation/prerequisites/search-engine/configure-apache.md)
+   - [Konfigurera nginx för sökmotorn](../../installation/prerequisites/search-engine/configure-nginx.md)
 
    eller du ser:
 
@@ -53,7 +53,7 @@ Prova i så fall följande:
 - Kontrollera att sökmotorservern körs.
 - Om servern finns på en annan värd än Commerce loggar du in på Commerce-servern och pingar sökmotorvärden. Lös problem med nätverksanslutningen och testa anslutningen igen.
 - Undersök kommandofönstret där du startade Elasticsearch eller OpenSearch för stackspår och undantag. Du måste lösa dem innan du fortsätter. Kontrollera särskilt att du har startat sökmotorn som en användare med `root` behörighet.
-- Se till att [UNIX-brandväggen och SELinux](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/elasticsearch.html#firewall-selinux) är båda inaktiverade eller konfigurerade regler som gör att din sökmotor och Commerce kan kommunicera med varandra.
+- Se till att [UNIX-brandväggen och SELinux](../../installation/prerequisites/search-engine/overview.md#firewall-and-selinux) är båda inaktiverade eller konfigurerade regler som gör att din sökmotor och Commerce kan kommunicera med varandra.
 - Verifiera värdet för **Värdnamn för Elasticsearch Server** fält. Kontrollera att servern är tillgänglig. Du kan testa serverns IP-adress i stället.
 - Använd `netstat -an | grep <listen-port>` för att verifiera att porten som anges i **Elasticsearch Server-port** fältet används inte av en annan process.
 
@@ -85,7 +85,7 @@ Så här rensar du cachen med kommandoraden: [`bin/magento cache:clean`](../cli/
 
 Så här indexerar du om med kommandoraden:
 
-1. Logga in på din Commerce-server som eller växla till [ägare av filsystem](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+1. Logga in på din Commerce-server som eller växla till [ägare av filsystem](../../installation/prerequisites/file-system/overview.md).
 1. Ange något av följande kommandon:
 
    Ange följande kommando om du bara vill indexera om katalogsökindexet:

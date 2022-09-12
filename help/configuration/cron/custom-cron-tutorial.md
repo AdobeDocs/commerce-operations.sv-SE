@@ -1,9 +1,9 @@
 ---
 title: Konfigurera ett anpassat cron-jobb och en cron-grupp (självstudiekurs)
 description: Använd den här stegvisa självstudiekursen för att skapa ett anpassat cron-jobb.
-source-git-commit: 53448b11a2d000fe8e8a7eecf2ffcef4b7e248fa
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '808'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ I den här självstudiekursen antar vi följande:
 
 - Commerce-programmet är installerat i `/var/www/html/magento2`
 - Ditt användarnamn och lösenord för Commerce-databasen är båda `magento`
-- Du utför alla åtgärder som [ägare av filsystem](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html)
+- Du utför alla åtgärder som [ägare av filsystem](../../installation/prerequisites/file-system/overview.md)
 
 ## Steg 1: Hämta en exempelmodul
 
@@ -31,7 +31,7 @@ Om du redan har en exempelmodul kan du använda den; hoppa över det här steget
 
 **Hämta en exempelmodul**:
 
-1. Logga in på din Commerce-server som eller växla till [ägare av filsystem](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+1. Logga in på din Commerce-server som eller växla till [ägare av filsystem](../../installation/prerequisites/file-system/overview.md).
 1. Byt till en katalog som inte finns i Commerce-programmets rot (till exempel din arbetskatalog).
 1. Klona [`magento2-samples` databas][samples].
 

@@ -1,9 +1,9 @@
 ---
 title: Distributionsflöde
-description: 'Lär dig mer om de steg som krävs för att distribuera Adobe Commerce eller Magento Open Source i en produktionsmiljö. '
-source-git-commit: 9ab52374e031bd2b0a846dd5f47c89ff788dcafa
+description: Lär dig mer om de steg som krävs för att distribuera Adobe Commerce eller Magento Open Source i en produktionsmiljö.
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '468'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ bin/magento setup:di:compile
 
 ## Uppdatera den automatiska inläsaren
 
-När kompileringen är klar bekräftar du att [APCu är aktiverat](https://devdocs.magento.com/guides/v2.4/performance-best-practices/software.html#php-settings) och uppdatera den automatiska inläsaren:
+När kompileringen är klar bekräftar du att [APCu är aktiverat](../performance/software.md#php-settings) och uppdatera den automatiska inläsaren:
 
 Så här uppdaterar du den automatiska inläsaren:
 
@@ -82,7 +82,7 @@ Distribuera statiskt innehåll orsakar [!DNL Commerce] för att utföra följand
 
 Om ditt statiska innehåll inte distribueras, [!DNL Commerce] utför alla listade åtgärder på direkten, vilket leder till en avsevärd ökning av svarstiden.
 
-Du kan använda en mängd alternativ för att anpassa distributionsåtgärder baserat på butikens storlek och leveransbehov. Den vanligaste är den kompakta distributionsstrategin. Se [Distributionsstrategier för statiska filer](https://devdocs.magento.com/guides/v2.4/config-guide/cli/config-cli-subcommands-static-deploy-strategies.html)
+Du kan använda en mängd alternativ för att anpassa distributionsåtgärder baserat på butikens storlek och leveransbehov. Den vanligaste är den kompakta distributionsstrategin. Se [Distributionsstrategier för statiska filer](../configuration/cli/static-view-file-strategy.md)
 
 Så här distribuerar du statiskt innehåll:
 

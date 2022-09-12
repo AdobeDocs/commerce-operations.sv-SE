@@ -2,9 +2,9 @@
 title: Effektiv cacheplanering
 description: Se rekommenderade riktmärken för cachelagring för att säkerställa att webbplatsen som läses in fungerar som den ska.
 exl-id: 275eb21d-fa52-4b97-9453-8f8553128b53
-source-git-commit: 87e379aff4ec57f15ce914a13b4e9bc2769e6d1c
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '349'
 ht-degree: 0%
 
 ---
@@ -31,4 +31,4 @@ Det inledande steget i cachningsstrategin bör därför vara att tillsammans med
 
 När den här inledande planeringen är klar kan den tekniska konfigurationen börja användas för att konfigurera cacheminnen baserat på dessa krav.
 
-Även om innehållet uppdateras och behöver göras tillgängligt i TTL-filen för cachelagring är det i de flesta fall möjligt att manuellt rensa cacheminnen för [AEM](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=en) och [Adobe Commerce](https://devdocs.magento.com/guides/v2.4/config-guide/cli/config-cli-subcommands-cache.html#config-cli-subcommands-cache-clean) cachelagra selektivt för det innehållet, vilket innebär att brådskande ändringar omedelbart återspeglas. Processen runt manuell cacherensning bör också planeras och testas i förväg, så om det behövs att manuellt framtvinga en uppdatering av visst innehåll, dokumenteras den i en körningsbok för webbplatsoperationer och klargör hur och vem som behöver göra detta.
+Även om innehållet uppdateras och behöver göras tillgängligt i TTL-filen för cachelagring är det i de flesta fall möjligt att manuellt rensa cacheminnen för [AEM](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=en) och [Adobe Commerce](../configuration//cli/manage-cache.md#clean-and-flush-cache-types) cachelagra selektivt för det innehållet, vilket innebär att brådskande ändringar omedelbart återspeglas. Processen runt manuell cacherensning bör också planeras och testas i förväg, så om det behövs att manuellt framtvinga en uppdatering av visst innehåll, dokumenteras den i en körningsbok för webbplatsoperationer och klargör hur och vem som behöver göra detta.

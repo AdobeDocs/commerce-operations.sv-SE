@@ -1,9 +1,9 @@
 ---
 title: Använd korrigeringar
 description: Lär dig mer om metoderna för att använda korrigeringsfiler i ett Adobe Commerce- eller Magento Open Source-projekt.
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '338'
+source-wordcount: '330'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ Så här använder du en anpassad korrigering med Composer:
 Så här använder du patchar från kommandoraden:
 
 1. Överför den lokala filen till `<Magento_root>` på servern med hjälp av FTP, SFTP, SSH eller din normala transportmetod.
-1. Logga in på servern som [admin-användare](https://devdocs.magento.com/guides/v2.4/config-guide/cli/config-cli.html#config-install-cli-first) och kontrollera att filen finns i rätt katalog.
+1. Logga in på servern som [admin-användare](../../configuration/cli/config-cli.md#prerequisites) och kontrollera att filen finns i rätt katalog.
 1. Kör följande kommandon i kommandoradsgränssnittet enligt patch-tillägget:
 
    ```bash

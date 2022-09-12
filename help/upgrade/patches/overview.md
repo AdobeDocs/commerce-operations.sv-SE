@@ -1,9 +1,9 @@
 ---
 title: Så här fungerar korrigeringar
 description: Lär dig mer om de olika typerna av patchar för Adobe Commerce och Magento Open Source och hur de fungerar.
-source-git-commit: 45a44d98f149b4b9a1fbb4ac0bcea3eb372f49a8
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '606'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->Vi rekommenderar starkt att du testar alla korrigeringsfiler i en staging- eller utvecklingsmiljö innan du distribuerar till produktionen. Vi rekommenderar starkt att du säkerhetskopierar dina data innan du implementerar en korrigering. Se [Säkerhetskopiera och återställa filsystemet](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-backup.html).
+>Vi rekommenderar starkt att du testar alla korrigeringsfiler i en staging- eller utvecklingsmiljö innan du distribuerar till produktionen. Vi rekommenderar starkt att du säkerhetskopierar dina data innan du implementerar en korrigering. Se [Säkerhetskopiera och återställa filsystemet](../../installation/tutorials/backup.md).
 
 Patch-filer (eller diff-filer) är textfiler som innehåller följande information:
 

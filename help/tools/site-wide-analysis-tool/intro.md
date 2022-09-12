@@ -1,9 +1,9 @@
 ---
-title: '"[!DNL Site-Wide Analysis Tool]"'
+title: "[!DNL Site-Wide Analysis Tool]"
 description: Läs mer om [!DNL Site-Wide Analysis] Verktyg, dess användningsområden, installationsprocessen och hur du får åtkomst
-source-git-commit: ded2204fe0b3327f72bbce2ec03f8d66aa1b9353
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '411'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Se alla viktiga insikter om er webbplats på ett och samma ställe. [!DNL Site-W
 
 - [**[!DNL Security Scan Tool]**](https://docs.magento.com/user-guide/magento/security-scan.html) - Ger kunder med öppen källkod i Adobe Commerce och Magento realtid insikter om butikens säkerhetsstatus genom att proaktivt identifiera skadlig kod och meddela dem om deras butik är komprometterad.
 
-- [**[!DNL Upgrade Compatability Tool]**](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/overview.html?lang=en) - Kör Adobe Commerce anpassade instans mot måluppgraderingsversionen och returnerar en sammanfattning av viktiga problem, fel och varningar som måste åtgärdas, vilket gör uppgraderingsanalysen enklare, snabbare och billigare.
+- [**[!DNL Upgrade Compatability Tool]**](../../upgrade/upgrade-compatibility-tool/overview.md) - Kör Adobe Commerce anpassade instans mot måluppgraderingsversionen och returnerar en sammanfattning av viktiga problem, fel och varningar som måste åtgärdas, vilket gör uppgraderingsanalysen enklare, snabbare och billigare.
 
 - [**[!DNL Managed Alerts]**](https://support.magento.com/hc/en-us/sections/360010758472-Managed-alerts-for-Adobe-Commerce) - Övervaka flera mätvärden för att proaktivt spåra plattformens prestanda och ge specifika anvisningar om hur man felsöker problem så att handlarna kan undvika kritiska driftavbrott och hålla sig informerade om sin processor, sina programprestanda, hårddisk, minne och databas.
 

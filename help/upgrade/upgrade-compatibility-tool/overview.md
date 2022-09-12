@@ -1,9 +1,9 @@
 ---
-title: '"Översikt över [!DNL Upgrade Compatibility Tool]"'
+title: "Översikt över [!DNL Upgrade Compatibility Tool]"
 description: Läs mer om [!DNL Upgrade Compatibility Tool] och hur det kan hjälpa dig med ditt Adobe Commerce-projekt.
-source-git-commit: ded2204fe0b3327f72bbce2ec03f8d66aa1b9353
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '344'
 ht-degree: 0%
 
 ---
@@ -45,15 +45,15 @@ Om du behöver information eller har frågor som inte ingår i den här handboke
 
 Ansluta till [!DNL Upgrade Compatibility Tool] team, kontakta oss på Engineering Slack channel [#upgrade-compatibility-tool](https://magentocommeng.slack.com/archives/C019Y143U9F). Vi vill gärna få synpunkter, problem och förslag som hjälper oss att förbättra verktyget.
 
-The [!DNL Upgrade Compatibility Tool] använder regler som definierats i [Kodstandarder](https://devdocs.magento.com/guides/v2.4/coding-standards/bk-coding-standards.html) för att säkerställa att ditt projekt följer Adobe Commerce bästa praxis och för att hjälpa dig att förbättra och utöka [!DNL Upgrade Compatibility Tool].
+The [!DNL Upgrade Compatibility Tool] använder regler som definierats i [Kodstandarder](https://developer.adobe.com/commerce/php/coding-standards/) för att säkerställa att ditt projekt följer Adobe Commerce bästa praxis och för att hjälpa dig att förbättra och utöka [!DNL Upgrade Compatibility Tool].
 
-Se [Contribute](https://devdocs.magento.com/guides/v2.4/coding-standards/contributing.html) för mer information om bidragande kodningsstandarder.
+Se [Contribute](https://developer.adobe.com/commerce/php/coding-standards/contributing/) för mer information om bidragande kodningsstandarder.
 
 ## Resurser
 
 Se följande resurser som hjälper dig att förstå Adobe Commerce uppgraderingar:
 
-- The [uppgraderingsguide](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/overview.html) ger en översikt över den typiska uppgraderingsresan för Adobe Commerce eller Magento Open Source och de bästa sätten att följa under den resan.
+- The [uppgraderingsguide](../overview.md) ger en översikt över den typiska uppgraderingsresan för Adobe Commerce eller Magento Open Source och de bästa sätten att följa under den resan.
 - The [kommande versioner](https://devdocs.magento.com/release/) sidan innehåller datum för schemalagda och kommande versioner.
 - The [communityresurser](https://developer.adobe.com/commerce/contributor/community/) ska du placera för att starta diskussioner eller hitta mer information.
 - Kontrollera [relaterade verktyg](../upgrade-compatibility-tool/related-tools.md) sida där du hittar användbara verktyg under den normala uppgraderingsresan.

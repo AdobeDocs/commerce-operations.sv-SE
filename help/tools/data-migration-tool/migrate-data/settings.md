@@ -1,9 +1,9 @@
 ---
 title: Inställningar för datamigrering
 description: Lär dig hur du börjar migrera inställningar från Magento 1 till Magento 2 med [!DNL Data Migration Tool].
-source-git-commit: b5a2c362b09de993e1dc196bdda90e74cf4a8ba2
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '298'
 ht-degree: 0%
 
 ---
@@ -15,9 +15,9 @@ The `Settings` Läget migrerar butiker, webbplatser och systemkonfigurationer so
 
 Innan du börjar utför du följande steg:
 
-1. Logga in på servern med din Magento 2-instans som [filsystemets ägare](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+1. Logga in på programservern som [ägare av filsystem](../../../installation/prerequisites/file-system/overview.md).
 
-1. Byt till Magento 2 `/bin` eller se till att den har lagts till i systemets PATH.
+1. Ändra till `/bin` eller se till att den läggs till i systemet `PATH`.
 
 >[!NOTE]
 >
@@ -53,15 +53,15 @@ The `Migration completed` visas när inställningarna har överförts.
 
 Du kan ignorera, byta namn på eller ändra systemkonfigurationerna när du migrerar inställningar. För detta anger du dina anpassade regler i `settings.xml` -fil.
 
-1. Logga in på servern med Magento 2-instansen som eller växla till [ägare av filsystem](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+1. Logga in på programservern som eller växla till [ägare av filsystem](../../../installation/prerequisites/file-system/overview.md).
 
 1. Ändra till följande katalog:
 
    ```bash
-   cd <your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/<edition-to-edition>
+   cd <your application 2 install dir>/vendor/magento/data-migration-tool/etc/<edition-to-edition>
    ```
 
-   Om Magento 2 till exempel är installerat i `/var/www/html`, `settings.xml.dist` filen finns i någon av följande kataloger:
+   Om programmet till exempel är installerat i `/var/www/html`, `settings.xml.dist` filen finns i någon av följande kataloger:
 
    * `/var/www/html/vendor/magento/data-migration-tool/etc/opensource-to-commerce`
 

@@ -1,10 +1,10 @@
 ---
 title: Konfigurera överordnad databaser automatiskt
 description: Mer information om hur du konfigurerar den delade databaslösningen automatiskt.
-source-git-commit: 52f92ef79586d618fd4ac51c00eaa1446a2dc98f
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '358'
+ht-degree: 1%
 
 ---
 
@@ -27,7 +27,7 @@ I det här avsnittet beskrivs hur du kommer igång med den delade databaslösnin
 
 ## Installera Adobe Commerce
 
-Du kan när som helst aktivera delade databaser efter att du har installerat Adobe Commerce. Med andra ord kan du lägga till delade databaser i ett Adobe Commerce-system som redan har utchecknings- och orderdata. Använd instruktionerna i Adobe Commerce README eller [installationsguide](https://devdocs.magento.com/guides/v2.4/install-gde/bk-install-guide.html) för att installera Adobe Commerce-programmet med en enda överordnad databas.
+Du kan när som helst aktivera delade databaser efter att du har installerat Adobe Commerce. Med andra ord kan du lägga till delade databaser i ett Adobe Commerce-system som redan har utchecknings- och orderdata. Använd instruktionerna i Adobe Commerce README eller [installationsguide](../../installation/overview.md) för att installera Adobe Commerce-programmet med en enda överordnad databas.
 
 ## Ställ in ytterligare överordnad databaser
 

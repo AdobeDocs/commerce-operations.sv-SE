@@ -1,9 +1,9 @@
 ---
 title: Konfigurera och köra cron-jobb
 description: Lär dig hur du hanterar cron-jobb.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '745'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ I Commerce-programmet används kroniska uppgifter som kan köras med olika konfi
 
 >[!WARNING]
 >
->- För att undvika problem under installation och uppgradering rekommenderar vi att du använder samma PHP-inställningar både på PHP-kommandoradskonfigurationen och på PHP-webbserverpluginens konfiguration. Mer information finns i [Nödvändiga PHP-inställningar](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/php-settings.html).
+>- För att undvika problem under installation och uppgradering rekommenderar vi att du använder samma PHP-inställningar både på PHP-kommandoradskonfigurationen och på PHP-webbserverpluginens konfiguration. Mer information finns i [Nödvändiga PHP-inställningar](../../installation/prerequisites/php-settings.md).
 >- I ett flernodssystem kan crontab endast köras på en nod. Detta gäller endast dig om du konfigurerar mer än en webbnod på grund av prestanda eller skalbarhet.
 
 
@@ -58,7 +58,7 @@ Commerce crontab är inuti `#~ MAGENTO START` och `#~ MAGENTO END` kommentarer p
 
 Så här skapar du Commerce crontab:
 
-1. Logga in som eller växla till [ägare av filsystem](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+1. Logga in som eller växla till [ägare av filsystem](../../installation/prerequisites/file-system/overview.md).
 1. Ändra till installationskatalogen för Commerce.
 1. Ange följande kommando:
 
@@ -100,7 +100,7 @@ Du bör bara ta bort Commerce crontab innan du avinstallerar Commerce-programmet
 
 Så här tar du bort fliken Commerce:
 
-1. Logga in som eller växla till [ägare av filsystem](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+1. Logga in som eller växla till [ägare av filsystem](../../installation/prerequisites/file-system/overview.md).
 1. Ändra till installationskatalogen för Commerce.
 1. Ange följande kommando:
 

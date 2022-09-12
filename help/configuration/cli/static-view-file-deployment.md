@@ -1,9 +1,9 @@
 ---
 title: Distribuera statiska vyfiler
 description: Lär dig skriva statiska filer i Commerce-filsystemet i produktionsläge.
-source-git-commit: 80abb0180fcd8ecc275428c23b68feb5883cbc28
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1135'
 ht-degree: 0%
 
 ---
@@ -31,11 +31,11 @@ Du måste skriva statiska vyfiler till Commerce-filsystemet manuellt med det kom
 
 >[!WARNING]
 >
->_Endast i utvecklarläget_: När du installerar eller aktiverar en ny modul kan ny JavaScript, CSS, layouter och så vidare läsas in. För att undvika problem med statiska filer måste du rensa de gamla filerna så att du ser till att du får alla ändringar för den nya modulen. Du kan rensa genererade statiska vyfiler på flera sätt. Se [Rensa cacheämne för statiska filer för detaljer](https://devdocs.magento.com/guides/v2.4/frontend-dev-guide/cache_for_frontdevs.html#clean_static_cache) för mer information.
+>_Endast i utvecklarläget_: När du installerar eller aktiverar en ny modul kan ny JavaScript, CSS, layouter och så vidare läsas in. För att undvika problem med statiska filer måste du rensa de gamla filerna så att du ser till att du får alla ändringar för den nya modulen. Du kan rensa genererade statiska vyfiler på flera sätt. Se [Rensa cacheämne för statiska filer för detaljer](https://developer.adobe.com/commerce/frontend-core/guide/caching/#clean-static-files-cache) för mer information.
 
 **Distribuera statiska vyfiler**:
 
-1. Logga in på Commerce Server som, eller [växla till filsystemets ägare](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+1. Logga in på Commerce Server som, eller [växla till filsystemets ägare](../../installation/prerequisites/file-system/overview.md).
 1. Ta bort innehållet i `<magento_root>/pub/static`, förutom `.htaccess` -fil. Ta inte bort den här filen.
 1. Köra distributionsverktyget för statiska vyfiler `<magento_root>/bin/magento setup:static-content:deploy`.
 
@@ -158,7 +158,7 @@ Gör så här:
 
 ## Felsöka distributionsverktyget för statiska vyfiler
 
-[Installera Commerce-programvaran först](https://devdocs.magento.com/guides/v2.4/install-gde/bk-install-guide.html); Annars kan du inte köra distributionsverktyget för statiska vyfiler.
+[Installera Commerce-programvaran först](../../installation/overview.md); Annars kan du inte köra distributionsverktyget för statiska vyfiler.
 
 **Symptom**: Följande fel visas när du kör distributionsverktyget för statiska vyfiler:
 
@@ -170,9 +170,9 @@ ERROR: You need to install the Commerce application before running this utility.
 
 Gör så här:
 
-1. Installera Commerce-programvaran med [kommandorad](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli.html).
-1. Logga in på Commerce Server som, eller [växla till](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html), filsystemets ägare.
-1. Ta bort innehållet i `<magento_root>/pub/static` katalog, förutom `.htaccess` -fil. Ta inte bort den här filen.
+1. Installera Commerce-programvaran med [kommandorad](../../installation/composer.md).
+1. Logga in på programservern som, eller [växla till](../../installation/prerequisites/file-system/overview.md), filsystemets ägare.
+1. Ta bort innehållet i `<app_root>/pub/static` katalog, förutom `.htaccess` -fil. Ta inte bort den här filen.
 1. Distribuera statiska vyfiler: `bin/magento setup:static-content:deploy`
 
 ## Tips för utvecklare som anpassar verktyget för statisk innehållsdistribution

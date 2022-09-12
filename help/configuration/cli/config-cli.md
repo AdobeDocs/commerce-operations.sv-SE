@@ -1,9 +1,9 @@
 ---
 title: Kommandoradsverktyg
 description: Använd kommandoradsverktyget i Commerce för att köra installations- och konfigureringsuppgifter.
-source-git-commit: c65c065c5f9ac2847caa8898535afdacf089006a
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '299'
 ht-degree: 0%
 
 ---
@@ -28,15 +28,15 @@ Ytterligare fördelar:
 - CLI är utbyggbart så att tredjepartsutvecklare kan&quot;ansluta&quot; till det. Detta innebär också att man slipper inlärningskurva.
 - Kommandon för inaktiverade moduler visas inte.
 
-I det här avsnittet diskuteras hur du konfigurerar Adobe Commerce och Magento Open Source med hjälp av CLI. Mer information om hur du installerar Commerce finns i [Installationsflöde](https://devdocs.magento.com/guides/v2.4/install-gde/install-flow-diagram.html) i _Installationsguide_.
+I det här avsnittet diskuteras hur du konfigurerar Adobe Commerce och Magento Open Source med hjälp av CLI. Mer information om hur du installerar Commerce finns i [Installationsflöde](../../installation/overview.md) i _Installationsguide_.
 
 ## Förutsättningar
 
 Innan du börjar använda CLI bör du kontrollera att:
 
-1. Ditt system uppfyller kraven i [Systemkrav](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html) i _Installationsguide_.
-1. Du har slutfört alla nödvändiga uppgifter som diskuterades i [Förutsättningar](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/prereq-overview.html) i _Installationsguide_.
-1. När du har loggat in på Commerce-servern växlar du till en användare som har behörighet att skriva till Commerce-filsystemet. Se [växla till filsystemets ägare](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html) i _Installationsguide_.
+1. Ditt system uppfyller kraven i [Systemkrav](../../installation/system-requirements.md) i _Installationsguide_.
+1. Du har slutfört alla nödvändiga uppgifter som diskuterades i [Förutsättningar](../../installation/prerequisites/overview.md) i _Installationsguide_.
+1. När du har loggat in på Commerce-servern växlar du till en användare som har behörighet att skriva till Commerce-filsystemet. Se [växla till filsystemets ägare](../../installation/prerequisites/file-system/overview.md) i _Installationsguide_.
 
 ## Kör kommandon
 

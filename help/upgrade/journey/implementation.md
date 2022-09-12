@@ -1,9 +1,9 @@
 ---
 title: Implementering av uppgradering
 description: Läs om de olika faserna i uppgraderingsimplementeringen för Adobe Commerce- och Magento Open Source-projekt.
-source-git-commit: 3d9a721e33621b78f03f16b932a1ba2904ae4010
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '870'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ Här följer några punkter som du kanske vill ta med i en grundlig analys:
    - Uppgradera målversion
    - Antal och information om kritiska fel som påträffats
 
-- Uppgraderar tjänster som stöder målversion. Använd följande tabellmall för att mappa ut vilka tjänster du måste uppgradera. Använd [systemkrav](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html) för att avgöra vad som ska läggas till i _Uppgradera till_ kolumn.
+- Uppgraderar tjänster som stöder målversion. Använd följande tabellmall för att mappa ut vilka tjänster du måste uppgradera. Använd [systemkrav](../../installation/system-requirements.md) för att avgöra vad som ska läggas till i _Uppgradera till_ kolumn.
 
 
    | Tjänst | Aktuell version | Uppgradera till | Anteckningar |
@@ -64,7 +64,7 @@ Dessutom kan partners delta i [Adobe Commerce Beta Program](https://devdocs.mage
 
 ## Utveckling och kvalitetssäkring
 
-Testning är den fas av en uppgradering som kräver mest tid. Därför bör denna process vara så automatiserad som möjligt. The _[Programtestguide](https://devdocs.magento.com/guides/v2.4/test/testing.html)_ innehåller information om hur du konfigurerar och använder plattforms- och systemtestverktyg för snabbare kvalitetskontroll. Använd en testmiljö för att testa och validera uppgraderingen innan du går över till produktion.
+Testning är den fas av en uppgradering som kräver mest tid. Därför bör denna process vara så automatiserad som möjligt. The _[Programtestguide](https://developer.adobe.com/commerce/testing/guide/)_ innehåller information om hur du konfigurerar och använder plattforms- och systemtestverktyg för snabbare kvalitetskontroll. Använd en testmiljö för att testa och validera uppgraderingen innan du går över till produktion.
 
 ## UAT och förberedelse för att starta
 

@@ -1,9 +1,9 @@
 ---
 title: Förutsättningar
 description: Förbered ditt Adobe Commerce- eller Magento Open Source-projekt för en uppgradering genom att slutföra dessa nödvändiga steg.
-source-git-commit: 0729e84adabcded6d50cf28a7525b97fd50d45f5
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1338'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Krav för fullständig uppgradering
 
-Det är viktigt att förstå vad som krävs för att köra Adobe Commerce eller Magento Open Source. Du måste först granska [systemkrav](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html) för den version du tänker uppgradera till.
+Det är viktigt att förstå vad som krävs för att köra Adobe Commerce eller Magento Open Source. Du måste först granska [systemkrav](../../installation/system-requirements.md) för den version du tänker uppgradera till.
 
 När du har granskat systemkraven måste du uppfylla följande krav innan du uppgraderar systemet:
 
@@ -26,9 +26,9 @@ När du har granskat systemkraven måste du uppfylla följande krav innan du upp
 
 ## Uppdatera all programvara
 
-The [systemkrav](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html) beskriv exakt vilka versioner av tredjepartsprogram som har testats med Adobe Commerce och Magento Open Source.
+The [systemkrav](../../installation/system-requirements.md) beskriv exakt vilka versioner av tredjepartsprogram som har testats med Adobe Commerce och Magento Open Source.
 
-Se till att du har uppdaterat alla systemkrav och beroenden i din miljö. Se PHP [7.4](https://www.php.net/manual/en/migration74.php), PHP [8.0](https://www.php.net/manual/en/migration80.php), PHP [8.1](https://www.php.net/manual/en/migration81.php)och [obligatoriska PHP-inställningar](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/php-settings.html#php-required-set).
+Se till att du har uppdaterat alla systemkrav och beroenden i din miljö. Se PHP [7.4](https://www.php.net/manual/en/migration74.php), PHP [8.0](https://www.php.net/manual/en/migration80.php), PHP [8.1](https://www.php.net/manual/en/migration81.php)och [obligatoriska PHP-inställningar](../../installation/prerequisites/php-settings.md#php-settings).
 
 ## Kontrollera att en sökmotor som stöds är installerad
 
@@ -50,10 +50,10 @@ I följande avsnitt beskrivs vilka åtgärder du måste vidta innan du uppgrader
 
 Från och med 2.4 är MySQL inte längre en katalogsökmotor som stöds. Du måste installera och konfigurera Elasticsearch eller OpenSearch innan du uppgraderar. Använd följande resurser för att hjälpa dig igenom den här processen:
 
-- [Installera och konfigurera Elasticsearch](https://devdocs.magento.com/guides/v2.4/config-guide/elasticsearch/es-overview.html)
+- [Installera och konfigurera Elasticsearch](../../configuration/search/overview-search.md)
 - [Installerar Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)
-- Konfigurera [nginx](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/es-config-nginx.html) eller [Apache](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/es-config-apache.html) för att arbeta med din sökmotor
-- [Konfigurera Commerce att använda Elasticsearch](https://devdocs.magento.com/guides/v2.4/config-guide/elasticsearch/configure-magento.html) och indexera om
+- Konfigurera [nginx](../../installation/prerequisites/search-engine/configure-nginx.md) eller [Apache](../../installation/prerequisites/search-engine/configure-apache.md) för att arbeta med din sökmotor
+- [Konfigurera Commerce att använda Elasticsearch](../../configuration/search/configure-search-engine.md) och indexera om
 
 Vissa katalogsökmotorer från tredje part körs ovanpå Adobe Commerce sökmotor. Kontakta leverantören för att avgöra om du måste uppdatera tillägget.
 
@@ -63,9 +63,9 @@ Du måste installera och konfigurera Elasticsearch 7.6 eller senare eller OpenSe
 
 Se [Uppgraderar Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html) om du vill ha fullständiga anvisningar om hur du säkerhetskopierar data, upptäcker potentiella migreringsproblem och testar uppgraderingar innan du distribuerar till produktionen. Beroende på vilken version av Elasticsearch du använder behöver du kanske inte starta om hela klustret.
 
-Elasticsearch kräver JDK 1.8 eller senare. Se [Installera Java Software Development Kit (JDK)](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/elasticsearch.html#prereq-java) för att kontrollera vilken version av JDK som är installerad.
+Elasticsearch kräver JDK 1.8 eller senare. Se [Installera Java Software Development Kit (JDK)](../../installation/prerequisites/search-engine/overview.md#install-the-java-software-development-kit-jdk) för att kontrollera vilken version av JDK som är installerad.
 
-[Konfigurera Magento att använda Elasticsearch](https://devdocs.magento.com/guides/v2.4/config-guide/elasticsearch/configure-magento.html) beskriver de uppgifter du måste utföra efter att ha uppdaterat Elasticsearch 2 till en version som stöds.
+[Konfigurera Elasticsearch](../../configuration/search/configure-search-engine.md) beskriver de uppgifter du måste utföra efter att ha uppdaterat Elasticsearch 2 till en version som stöds.
 
 ### OpenSearch
 
@@ -77,9 +77,9 @@ OpenSearch är en öppen källkodsgaffel i Elasticsearch 7.10.2 efter Elasticsea
 
 Du kan [migrera från Elasticsearch till OpenSearch](opensearch-migration.md) endast om du uppgraderar till en version av Adobe Commerce eller Magento Open Source som listas ovan (eller senare).
 
-OpenSearch kräver JDK 1.8 eller senare. Se [Installera Java Software Development Kit (JDK)](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/elasticsearch.html#prereq-java) för att kontrollera vilken version av JDK som är installerad.
+OpenSearch kräver JDK 1.8 eller senare. Se [Installera Java Software Development Kit (JDK)](../../installation/prerequisites/search-engine/overview.md#install-the-java-software-development-kit-jdk) för att kontrollera vilken version av JDK som är installerad.
 
-[Konfigurera Magento att använda Elasticsearch](https://devdocs.magento.com/guides/v2.4/config-guide/elasticsearch/configure-magento.html) beskriver de åtgärder du måste utföra efter att du har ändrat sökmotorer.
+[Konfigurera Magento att använda Elasticsearch](../../configuration/search/configure-search-engine.md) beskriver de åtgärder du måste utföra efter att du har ändrat sökmotorer.
 
 ### Tredjepartstillägg
 
@@ -93,8 +93,8 @@ Adobe rekommenderar att du anger öppna filer [ulimit](https://ss64.com/bash/uli
 
 Så här anger du gränsen från kommandoraden:
 
-1. Växla till [ägare av filsystem](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
-1. Ange gränsen till 65536.
+1. Växla till [ägare av filsystem](../../installation/prerequisites/file-system/overview.md).
+1. Ange gränsvärdet till `65536`.
 
    ```bash
    ulimit -s 65536
@@ -106,7 +106,7 @@ Så här anger du gränsen från kommandoraden:
 
 Så här anger du värdet i Bash-skalet:
 
-1. Växla till [ägare av filsystem](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+1. Växla till [ägare av filsystem](../../installation/prerequisites/file-system/overview.md).
 1. Öppna `/home/<username>/.bashrc` i en textredigerare.
 1. Lägg till följande rad:
 
@@ -150,7 +150,7 @@ Klicka på **Systemmeddelanden** högst upp i fönstret enligt följande:
 
 ![](../../assets/upgrade-guide/system-messages.png)
 
-Se [Konfigurera och kör cron](https://devdocs.magento.com/guides/v2.4/config-guide/cli/config-cli-subcommands-cron.html) för mer information.
+Se [Konfigurera och kör cron](../../configuration/cli/configure-cron-jobs.md) för mer information.
 
 ## Ange DATA_CONVERTER_BATCH_SIZE
 
@@ -172,7 +172,7 @@ Om du har en stor mängd data kan du förbättra prestandan genom att ange värd
 
 Så här anger du miljövariabeln:
 
-1. Växla till [ägare av filsystem](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+1. Växla till [ägare av filsystem](../../installation/prerequisites/file-system/overview.md).
 1. Ange variabeln:
 
    ```bash
@@ -191,9 +191,9 @@ Så här anger du miljövariabeln:
 
 ## Verifiera behörigheter i filsystemet
 
-Av säkerhetsskäl kräver Adobe Commerce och Magento Open Source vissa behörigheter i filsystemet. Behörigheterna skiljer sig från _[ägarskap](https://devdocs.magento.com/guides/v2.4/comp-mgr/prereq/prereq_compman-checklist.html#magento-owner-group)_. Ägarskapet avgör vem som kan utföra åtgärder i filsystemet. behörigheter bestämmer vad användaren kan göra.
+Av säkerhetsskäl kräver Adobe Commerce och Magento Open Source vissa behörigheter i filsystemet. Behörigheterna skiljer sig från _[ägarskap](../../upgrade/prepare/prerequisites.md#verify-file-system-permissions)_. Ägarskapet avgör vem som kan utföra åtgärder i filsystemet. behörigheter bestämmer vad användaren kan göra.
 
-Kataloger i filsystemet måste vara skrivbara av [filsystemets ägare](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html) grupp.
+Kataloger i filsystemet måste vara skrivbara av [filsystemets ägare](../../installation/prerequisites/file-system/overview.md) grupp.
 
 Om du vill verifiera att filsystembehörigheterna är korrekt loggar du antingen in på programservern eller använder värdtjänstleverantörens filhanterarprogram.
 
@@ -252,13 +252,13 @@ Om du vill ha mer detaljerad information anger du följande kommando:
 ls -la /var/www/html/magento2/pub
 ```
 
-Eftersom Adobe Commerce och Magento Open Source distribuerar statiska filresurser till underkataloger till `pub`är det en bra idé att även verifiera behörigheter och ägarskap där.
+Eftersom Adobe Commerce och Magento Open Source distribuerar statiska filresurser till underkataloger till `pub`, det är en bra idé att även verifiera behörigheter och ägarskap där.
 
-Mer information finns i [Filsystembehörigheter och ägarskap](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
+Mer information finns i [Filsystembehörigheter och ägarskap](../../installation/prerequisites/file-system/overview.md).
 
 ## Ange `pub/` katalogrot
 
-Se [Förbättra säkerheten genom att ändra dokumentroten](https://devdocs.magento.com/guides/v2.4/install-gde/tutorials/change-docroot-to-pub.html) för mer information.
+Se [Förbättra säkerheten genom att ändra dokumentroten](../../installation/tutorials/docroot.md) för mer information.
 
 ## Installera plugin-programmet för Composer-uppdatering
 

@@ -1,9 +1,9 @@
 ---
 title: Återställ delad databas
 description: Återgå från en borttagen implementering av delade databaser till en enda databasimplementering.
-source-git-commit: bda758381d8d1b9209110adb168c36e1d504c4fa
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '257'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ I det här exemplet loggar vi in på alla tre databaser som är installerade på
 
 ## Verifiera ditt arbete
 
-För att verifiera att implementeringen av en databas fungerar som den ska, utför du följande åtgärder och kontrollerar att data har lagts till i `magento_main` databastabeller med hjälp av ett databasverktyg som [phpMyAdmin](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/optional.html#install-optional-phpmyadmin):
+För att verifiera att implementeringen av en databas fungerar som den ska, utför du följande åtgärder och kontrollerar att data har lagts till i `magento_main` databastabeller med hjälp av ett databasverktyg som [phpMyAdmin](../../installation/prerequisites/optional-software.md#phpmyadmin):
 
 1. Kontrollera att externa nycklar har återställts. Till exempel `QUOTE_STORE_ID_STORE_STORE_ID` i `quote` databastabell.
 1. Verifiera att kunderna kan lägga order från butiken.

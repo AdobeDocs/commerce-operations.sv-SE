@@ -1,9 +1,9 @@
 ---
 title: Ändra öknings-ID
 description: Ändra ID för ökning för en Commerce-databasenhet.
-source-git-commit: 5c0d285717a79d654af769cb734ec385d2d4046f
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '391'
+source-wordcount: '384'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ I den här artikeln beskrivs hur du ändrar tilläggs-ID för en enhet i en Comm
 
 - Adobe Commerce (lokalt): 2.x.x
 - Adobe Commerce om molninfrastruktur: 2.x.x
-- MySQL: [alla versioner som stöds]
+- MySQL: [alla versioner som stöds](../../installation/prerequisites/database/mysql.md)
 
 ## När behöver du ändra ID för ökning
 
@@ -75,4 +75,4 @@ Innan du kör `ALTER TABLE` fråga om en produktionsmiljö i Adobe Commerce om m
 
 [PayPal-gateway avvisade begäran - dubblettfakturautleverans]: https://support.magento.com/hc/en-us/articles/115002457473
 [Skapa en DB-säkerhetskopia]: https://support.magento.com/hc/en-us/articles/360003254334
-[alla versioner som stöds]: https://devdocs.magento.com/guides/v2.4/install-gde/prereq/mysql.html
+[alla versioner som stöds]

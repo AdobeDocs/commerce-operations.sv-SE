@@ -1,9 +1,9 @@
 ---
 title: Software Recommendations
 description: Granska en lista över rekommenderade program för optimala prestanda i Adobe Commerce- och Magento Open Source-distributioner.
-source-git-commit: c65c065c5f9ac2847caa8898535afdacf089006a
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '1476'
+source-wordcount: '1415'
 ht-degree: 0%
 
 ---
@@ -13,18 +13,18 @@ ht-degree: 0%
 
 Vi kräver följande program för produktionsinstanser [!DNL Commerce]:
 
-* [PHP](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html)
+* [PHP](../installation/system-requirements.md)
 * Nginx och [PHP-FPM](https://php-fpm.org/)
-* [[!DNL MySQL]](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/mysql.html)
-* [[!DNL Elasticsearch] eller OpenSearch](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/elasticsearch.html)
+* [[!DNL MySQL]](../installation/prerequisites/database/mysql.md)
+* [[!DNL Elasticsearch] eller OpenSearch](../installation/prerequisites/search-engine/overview.md)
 
 För driftsättningar med flera servrar eller för handlare som planerar att skala sin verksamhet rekommenderar vi följande:
 
-* [[!DNL Varnish] cache](https://devdocs.magento.com/guides/v2.4/config-guide/varnish/config-varnish.html)
-* [Redis](https://devdocs.magento.com/guides/v2.4/config-guide/redis/redis-session.html) för sessioner (från 2.0.6+)
-* En separat Redis-instans som din [standardcache](https://devdocs.magento.com/guides/v2.4/config-guide/redis/redis-pg-cache.html) (använd inte den här instansen för sidcache)
+* [[!DNL Varnish] cache](../configuration/cache/config-varnish.md)
+* [Redis](../configuration/cache/redis-session.md) för sessioner (från 2.0.6+)
+* En separat Redis-instans som din [standardcache](../configuration/cache/redis-pg-cache.md) (använd inte den här instansen för sidcache)
 
-Se [systemkrav](https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html) om du vill ha information om vilka versioner som stöds av respektive programtyp.
+Se [systemkrav](../installation/system-requirements.md) om du vill ha information om vilka versioner som stöds av respektive programtyp.
 
 ## Operativsystem
 
@@ -146,7 +146,7 @@ opcache.validate_timestamps=0
 opcache.enable_cli=1
 ```
 
-När du finjusterar minnesallokeringen för opcache bör du ta hänsyn till storleken på Magento kodbas och alla tillägg. Magento&#39;s performance team använder värdena i det föregående exemplet för testning eftersom det ger tillräckligt med utrymme i opcache för det genomsnittliga antalet installerade tillägg.
+När du finjusterar minnestilldelningen för opcache bör du ta hänsyn till storleken på Magento-kodbasen och alla dina tillägg. Magento prestandateam använder värdena i det föregående exemplet för testning eftersom det ger tillräckligt med utrymme i opcache för det genomsnittliga antalet installerade tillägg.
 
 Om du har en dator med lite minne och du inte har många tillägg eller anpassningar installerade kan du använda följande inställningar för att få ett liknande resultat:
 
@@ -157,7 +157,7 @@ opcache.max_accelerated_files=60000
 
 #### APCU
 
-Vi rekommenderar att du aktiverar [PHP APCu-tillägg](https://getcomposer.org/doc/articles/autoloader-optimization.md#optimization-level-2-b-apcu-cache) och [konfigurera `composer` för att stödja](https://devdocs.magento.com/guides/v2.4/performance-best-practices/deployment-flow.html#preprocess-dependency-injection-instructions) optimera för maximala prestanda. Det här tillägget cachelagrar filplatser för öppnade filer, vilket ökar prestanda för [!DNL Commerce] serveranrop som sidor, Ajax-anrop och slutpunkter.
+Vi rekommenderar att du aktiverar [PHP APCu-tillägg](https://getcomposer.org/doc/articles/autoloader-optimization.md#optimization-level-2-b-apcu-cache) och [konfigurera `composer` för att stödja](../performance/deployment-flow.md#preprocess-dependency-injection-instructions) optimera för maximala prestanda. Det här tillägget cachelagrar filplatser för öppnade filer, vilket ökar prestanda för [!DNL Commerce] serveranrop som sidor, Ajax-anrop och slutpunkter.
 
 Redigera `apcu.ini` som ska innehålla följande:
 
@@ -208,7 +208,7 @@ Installera [!DNL Varnish] på en separat server framför webbnivån. Den ska acc
 * **Behagelläge** låter dig instruera [!DNL Varnish] för att behålla ett objekt i cacheminnet efter dess TTL-period (Time to Live) och leverera det inaktuella innehållet om [!DNL Commerce] är inte hälsosamt eller om nytt innehåll inte har hämtats än.
 * **Saint-läge** svarta listor ohälsosamma [!DNL Commerce] servrar för en konfigurerbar tidsperiod. På grund av detta kan ohälsosamma backend-objekt inte användas för trafik när de använder [!DNL Varnish] som belastningsutjämnare.
 
-Se [Avancerat [!DNL Varnish] konfiguration](https://devdocs.magento.com/guides/v2.4/config-guide/varnish/config-varnish-advanced.html) om du vill ha mer information om hur du implementerar dessa funktioner.
+Se [Avancerat [!DNL Varnish] konfiguration](../configuration/cache/config-varnish-advanced.md) om du vill ha mer information om hur du implementerar dessa funktioner.
 
 ### Optimera resursprestanda
 
@@ -231,7 +231,7 @@ if (req.url ~ "^/(pub/)?(media|static)/.*\.(ico|html|css|js|jpg|jpeg|png|gif|tif
 ```
 
 I `vcl_backend_response` subrutin, leta efter `if` programsats som tar bort cookien för `GET` eller `HEAD` förfrågningar.
-Den uppdaterade `if` -blocket ska se ut så här:
+Den uppdaterade `if` -block ska se ut så här:
 
 ```javascript
 # validate if we need to cache it and prevent from setting cookie

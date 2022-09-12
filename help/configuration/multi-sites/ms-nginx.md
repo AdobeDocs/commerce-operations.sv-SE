@@ -1,9 +1,9 @@
 ---
 title: Konfigurera flera webbplatser med Nginx
 description: Följ den här självstudiekursen för att konfigurera flera webbplatser med Nginx.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '954'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ Genom att bara använda en [nginx virtuell värdfil](#step-2-create-nginx-virtua
 
 **Skapa en virtuell värd** (förenklad):
 
-Den här konfigurationen utökas [Nginx-konfiguration](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/nginx.html).
+Den här konfigurationen utökas [nginx-konfiguration](../../installation/prerequisites/web-server/nginx.md).
 
 1. Öppna en textredigerare och lägg till följande innehåll i en ny fil med namnet `/etc/nginx/sites-available/magento`:
 

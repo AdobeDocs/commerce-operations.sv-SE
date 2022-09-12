@@ -1,9 +1,9 @@
 ---
 title: Ange åtgärdsläge
 description: Läs om hur du ställer in Adobe Commerce driftslägen.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '383'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Undantag:
 
 ## Visa det aktuella läget
 
-Det enklaste sättet är att köra det här kommandot som [ägare av filsystem](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html). Om du har delat värdskap är detta den användare som din leverantör ger dig att logga in på servern. Om du har en privat server är det vanligtvis ett lokalt användarkonto på Commerce-servern.
+Det enklaste sättet är att köra det här kommandot som [ägare av filsystem](../../installation/prerequisites/file-system/overview.md). Om du har delat värdskap är detta den användare som din leverantör ger dig att logga in på servern. Om du har en privat server är det vanligtvis ett lokalt användarkonto på Commerce-servern.
 
 Kommandoanvändning:
 

@@ -1,9 +1,9 @@
 ---
 title: Skapa en datamigreringsplan
 description: Följ de här stegen för att skapa en datamigreringsplan för att säkerställa en lyckad uppgradering från Magento 1 till Magento 2.
-source-git-commit: b5a2c362b09de993e1dc196bdda90e74cf4a8ba2
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '902'
 ht-degree: 0%
 
 ---
@@ -116,6 +116,6 @@ Nu när webbplatsen Magento 2 är uppdaterad med Magento 1 och fungerar normalt 
 1. Magento 2 Store är nu klar att användas. Du och dina kunder kan återuppta alla aktiviteter.
 
 <!-- LINK ADDRESSES -->
-[Systemkrav för Magento]: https://devdocs.magento.com/guides/v2.4/install-gde/system-requirements.html
+[Systemkrav för Magento]: ../../installation/system-requirements.md
 [Commerce Marketplace]: https://marketplace.magento.com
-[Konfigurationsguide]: https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html
+[Konfigurationsguide]: ../../configuration/cli/manage-indexers.md

@@ -1,9 +1,9 @@
 ---
 title: Kodkompilator
 description: Lär dig hur du kör kodkompilatorn från kommandoraden.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '191'
+source-wordcount: '183'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ I vissa fall kanske du vill kompilera kod innan du installerar Commerce-programm
 
    Använd `[-c|--clear-static-content]` alternativ för att rensa [statiskt innehåll](https://glossary.magento.com/static-content). Detta är nödvändigt om du tidigare aktiverat eller inaktiverat moduler och du måste rensa det statiska innehåll som tidigare genererats för dem.
 
-   Se [Aktivera moduler](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-subcommands-enable.html).
+   Se [Aktivera moduler](../../installation/tutorials/manage-modules.md).
 
 1. Kompilera koden.
 

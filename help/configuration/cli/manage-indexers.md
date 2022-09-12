@@ -1,9 +1,9 @@
 ---
 title: Hantera indexerare
 description: Se exempel på hur du visar och hanterar Commerce-indexerare.
-source-git-commit: dd84039be22b6bd25d57912615d64bad91970926
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '622'
 ht-degree: 0%
 
 ---
@@ -220,7 +220,7 @@ Catalog Search:                                    Update on Save
 
 >[!INFO]
 >
->Innan du byter indexeringsläge rekommenderar vi att du skickar webbplatsen till [underhåll](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-subcommands-maint.html) läge och [inaktivera cron-jobb](https://devdocs.magento.com/cloud/configure/setup-cron-jobs.html#disable-cron-jobs). Detta säkerställer att du inte drabbas av databaslås.
+>Innan du byter indexeringsläge rekommenderar vi att du skickar webbplatsen till [underhåll](../../installation/tutorials/maintenance-mode.md) läge och [inaktivera cron-jobb](https://devdocs.magento.com/cloud/configure/setup-cron-jobs.html#disable-cron-jobs). Detta säkerställer att du inte drabbas av databaslås.
 
 Så här anger du indexerarkonfigurationen:
 

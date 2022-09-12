@@ -1,9 +1,9 @@
 ---
 title: Uppgradera [!DNL Data Migration Tool]
 description: Så här uppgraderar du [!DNL Data Migration Tool] att överföra data mellan Magento 1 och Magento 2.
-source-git-commit: b5a2c362b09de993e1dc196bdda90e74cf4a8ba2
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Innan du uppgraderar [!DNL Data Migration Tool]måste du:
 
 ### Uppgradera Magento
 
-Om du inte redan har gjort det, [uppgradera Magento](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/overview.html).
+Om du inte redan har gjort det, [uppgradera Magento](../../upgrade/overview.md).
 
 ### Säkerhetskopiera `vendor/magento/data-migration-tool` katalog
 
@@ -56,8 +56,8 @@ Se [Installera [!DNL Data Migration Tool]](install.md) för att lära dig mer om
 
 ## Uppgradera [!DNL Data Migration Tool]
 
-1. Logga in på Magento-servern som eller växla till [filsystemets ägare](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/file-sys-perms-over.html).
-1. Byt till rotkatalog för Magento 2.
+1. Logga in på programservern som eller växla till [filsystemets ägare](../../installation/prerequisites/file-system/overview.md).
+1. Byt till programmets rotkatalog.
 1. Ange följande kommando:
 
    ```bash

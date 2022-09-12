@@ -1,9 +1,9 @@
 ---
 user-guide-title: Handböcker
 user-guide-description: Lär dig mer om hur du underhåller Adobe Commerce- eller Magento Open Source-program.
-source-git-commit: 6c462d615675615b317c6de529d1af5846d26e69
+source-git-commit: 9e089ed1fd8c8dcacd15f1a9364f5510f8251eb0
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '108'
 ht-degree: 0%
 
 ---
@@ -16,10 +16,10 @@ ht-degree: 0%
 - [Installation](https://devdocs.magento.com/guides/v2.4/install-gde/install-flow-diagram.html)
 - [Konfiguration](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/overview.html)
 - [Migrering](https://devdocs.magento.com/guides/v2.4/migration/bk-migration-guide.html)
-- [Uppgradera](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/overview.html?lang=en)
+- [Uppgradera](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/overview.html)
 - [Bästa praxis för prestanda](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/overview.html)
-- [verktyg](https://experienceleague.adobe.com/docs/commerce-operations/tools/overview.html?lang=en)
+- [verktyg](https://experienceleague.adobe.com/docs/commerce-operations/tools/overview.html)
 - [Kommandoradsverktyg](https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html)
-- [Implementera spelningsbok](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/overview.html?lang=en)
-- [Operativ spelningsbok](https://experienceleague.adobe.com/docs/commerce-operations/operational-playbook/overview.html?lang=en)
-- [Handel i skala](https://experienceleague.adobe.com/docs/commerce-operations/operational-playbook/overview.html?lang=en)
+- [Implementera spelningsbok](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/overview.html)
+- [Operativ spelningsbok](https://experienceleague.adobe.com/docs/commerce-operations/operational-playbook/overview.html)
+- [Handel i skala](https://experienceleague.adobe.com/docs/commerce-operations/operational-playbook/overview.html)

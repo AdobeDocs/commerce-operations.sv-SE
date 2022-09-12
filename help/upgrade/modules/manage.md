@@ -1,9 +1,9 @@
 ---
 title: Hantera moduler och tillägg
 description: Använd kommandoradsgränssnittet för att aktivera, inaktivera och avinstallera moduler och tillägg för Adobe Commerce och Magento Open Source.
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '100'
+source-wordcount: '76'
 ht-degree: 0%
 
 ---
@@ -15,10 +15,10 @@ Du måste använda kommandoraden för att hantera moduler och tillägg för Adob
 
 ## Aktivera eller inaktivera en modul
 
-Information om hur du aktiverar eller inaktiverar en modul finns i [Aktivera eller inaktivera moduler](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-subcommands-enable.html).
+Information om hur du aktiverar eller inaktiverar en modul finns i [Aktivera eller inaktivera moduler](../../installation/tutorials/manage-modules.md).
 
 ## Avinstallera en modul
 
-Information om hur du avinstallerar en modul finns i [Avinstallera moduler](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-uninstall-mods.html).
+Information om hur du avinstallerar en modul finns i [Avinstallera moduler](../../installation/tutorials/uninstall-modules.md).
 
-Om du vill avinstallera ett tema använder du [`theme:uninstall`](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-theme-uninstall.html) -kommando.
+Om du vill avinstallera ett tema använder du [`theme:uninstall`](../../installation/tutorials/themes.md) -kommando.

@@ -1,9 +1,9 @@
 ---
 title: Modulkonfigurationsfiler
 description: Lär dig hur du anpassar en modul med hjälp av konfigurationstyper.
-source-git-commit: 53448b11a2d000fe8e8a7eecf2ffcef4b7e248fa
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '2019'
+source-wordcount: '2024'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Här följer några vanliga termer som används i det här avsnittet:
 
 - **Konfigurationsfas**—Stegen definieras som _primär_, _global_ och _area_. Varje steg avgör när konfigurationstypen läses in och sammanfogas med konfigurationstyper med samma namn. Till exempel: `module.xml` filer sammanfogas med andra `module.xml` filer.
 
-- **Konfigurationsomfattning**- Som komplement till konfigurationsfaser definierar ett omfång konfigurationsmodellen. Till exempel: `adminhtml` är ett områdesomfång som läses in med på scenen med andra moduler `adminhtml` konfigurationer. Mer information finns i [Moduler och områden](https://devdocs.magento.com/guides/v2.4/architecture/archi_perspectives/components/modules/mod_and_areas.html).
+- **Konfigurationsomfattning**- Som komplement till konfigurationsfaser definierar ett omfång konfigurationsmodellen. Till exempel: `adminhtml` är ett områdesomfång som läses in med på scenen med andra moduler `adminhtml` konfigurationer. Mer information finns i [Moduler och områden](https://developer.adobe.com/commerce/php/architecture/modules/areas/).
 
 ## Inläsning och sammanfogning av konfiguration
 
@@ -73,9 +73,6 @@ När konfigurationsfilerna har sammanfogats innehåller det resulterande dokumen
 
 I följande avsnitt finns information om konfigurationstyper, deras motsvarande konfigurationsobjekt och gränssnitt som du kan använda för att arbeta med objekten:
 
-- [Konfigurationstyper och objekt](#config-files-classes-objects)
-- [Konfigurationsgränssnitt](#config-files-classes-int)
-
 ### Konfigurationstyper och objekt
 
 I följande tabell visas varje konfigurationstyp och det Commerce-konfigurationsobjekt som den hör till.
@@ -83,40 +80,40 @@ I följande tabell visas varje konfigurationstyp och det Commerce-konfigurations
 | Konfigurationsfil | Beskrivning | Scen | Konfigurationsobjekt |
 | --- | --- | --- | --- |
 | `address_formats.xml` | Deklaration om adressformat | primär, global | [\Magento\Customer\Model\Address\Config](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Customer/Model/Address/Config.php) |
-| `acl.xml` | [Åtkomstkontrollista](https://devdocs.magento.com/guides/v2.4/get-started/authentication/gs-authentication.html#relationship-between-aclxml-and-webapixml) | global | [\Magento\Framework\Acl\AclResource\Provider](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Acl/AclResource/Provider.php) |
+| `acl.xml` | [Åtkomstkontrollista](https://developer.adobe.com/commerce/webapi/get-started/authentication/#relationship-between-aclxml-and-webapixml) | global | [\Magento\Framework\Acl\AclResource\Provider](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Acl/AclResource/Provider.php) |
 | `analytics.xml` | [Avancerad rapportering](https://devdocs.magento.com/guides/v2.4/advanced-reporting/data-collection.html) | primär, global | [\Magento\Analytics\Model\Config\Reader](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Analytics/Model/Config/Reader.php) |
 | `cache.xml` | Cache-typdeklaration | primär, global | [\Magento\Framework\Cache\Config\Data](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Cache/Config/Data.php) |
 | `catalog_attributes.xml` | Katalogattributskonfiguration | global | [\Magento\Catalog\Model\Attribute\Config\Data](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Catalog/Model/Attribute/Config/Data.php) |
 | `config.php` och `env.php` | [Distributionskonfiguration](../reference/deployment-files.md) | Dessa filer kan läsas/skrivas av den interna konfigurationsprocessorn. | Har inget objekt, kan inte anpassas |
 | `config.xml` | Systemkonfiguration | primär, global | [\Magento\Framework\App\Config](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/App/Config.php) |
-| `communication.xml` | [Definierar aspekter av meddelandekösystemet](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/message-queues/config-mq.html#communicationxml) | global | [\Magento\WebapiAsync\Code\Generator\Config\RemoteServiceReader\Communication](https://github.com/magento/magento2/blob/2.4/app/code/Magento/WebapiAsync/Code/Generator/Config/RemoteServiceReader/Communication.php) |
+| `communication.xml` | [Definierar aspekter av meddelandekösystemet](https://developer.adobe.com/commerce/php/development/components/message-queues/configuration/#communicationxml) | global | [\Magento\WebapiAsync\Code\Generator\Config\RemoteServiceReader\Communication](https://github.com/magento/magento2/blob/2.4/app/code/Magento/WebapiAsync/Code/Generator/Config/RemoteServiceReader/Communication.php) |
 | `crontab.xml` | [Konfigurerar cron-grupper](../cron/custom-cron-reference.md#configure-cron-groups) | global | [\Magento\Cron\Model\Config\Data](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Cron/Model/Config/Data.php) |
 | `cron_groups.xml` | [Anger alternativ för cron-grupp](../cron/custom-cron-reference.md) | global | [\Magento\Cron\Model\Groups\Config\Data](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Cron/Model/Groups/Config/Data.php) |
-| `db_schema.xml` | [Deklarativt schema](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/declarative-schema/db-schema.html) | global | [Magento\Framework\Setup\Declaration\Schema](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Setup/Declaration/Schema/SchemaConfig.php) |
-| `di.xml` | [Beroendeinjektion](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/depend-inj.html) konfiguration | primär, global, area | [\Magento\Framework\ObjectManager\Config](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/ObjectManager/Config/Config.php) |
+| `db_schema.xml` | [Deklarativt schema](https://developer.adobe.com/commerce/php/development/components/declarative-schema/configuration/) | global | [Magento\Framework\Setup\Declaration\Schema](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Setup/Declaration/Schema/SchemaConfig.php) |
+| `di.xml` | [Beroendeinjektion](https://developer.adobe.com/commerce/php/development/components/dependency-injection/) konfiguration | primär, global, area | [\Magento\Framework\ObjectManager\Config](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/ObjectManager/Config/Config.php) |
 | `eav_attributes.xml` | Tillhandahåller konfiguration för EAV-attribut | global | [\Magento\Eav\Model\Entity\Attribute\Config](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Eav/Model/Entity/Attribute/Config.php) |
 | `email_templates.xml` | Konfiguration av e-postmallar | global | [\Magento\Email\Model\Template\Config\Data](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Email/Model/Template/Config/Data.php) |
 | `esconfig.xml` | [Konfigurering av stoppord för sökmotorns språkområde](../search/search-stopwords.md#create-stopwords-for-a-new-locale) | global | [\Magento\Elasticsearch\Model\Adapter\Index\Config\EsConfig](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Elasticsearch/Model/Adapter/Index/Config/EsConfig.php) |
 | `events.xml` | Konfiguration av händelse/observatör | globalt, område | [\Magento\Framework\Event](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Event.php) |
 | `export.xml` | Exportera enhetskonfiguration | global | [\Magento\ImportExport\Model\Export\Config](https://github.com/magento/magento2/blob/2.4/app/code/Magento/ImportExport/Model/Export/Config.php) |
-| `extension_attributes.xml` | [Tilläggsattribut](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/attributes.html#extension) | global | [\Magento\Framework\Api\ExtensionAttribute\Config](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Api/ExtensionAttribute/Config.php) |
+| `extension_attributes.xml` | [Tilläggsattribut](https://developer.adobe.com/commerce/php/development/components/attributes/#extension-attributes) | global | [\Magento\Framework\Api\ExtensionAttribute\Config](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Api/ExtensionAttribute/Config.php) |
 | `fieldset.xml` | Definierar fältuppsättningar | global | [\Magento\Framework\DataObject\Copy\Config\Reader](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/DataObject/Copy/Config/Reader.php) |
-| `indexer.xml` | [Deklarerar indexerare](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/indexing-custom.html) | global | [\Magento\Framework\Indexer\Config\Reader](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Indexer/Config/Reader.php) |
+| `indexer.xml` | [Deklarerar indexerare](https://developer.adobe.com/commerce/php/development/components/indexing/custom-indexer/) | global | [\Magento\Framework\Indexer\Config\Reader](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Indexer/Config/Reader.php) |
 | `import.xml` | Deklarerar importenheter | global | [\Magento\ImportExport\Model\Import\Config](https://github.com/magento/magento2/blob/2.4/app/code/Magento/ImportExport/Model/Import/Config.php) |
 | `menu.xml` | Definierar menyalternativ för administratören | adminhtml | [\Magento\Backend\Model\Menu\Config\Reader](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Backend/Model/Menu/Config/Reader.php) |
 | `module.xml` | Definierar modulens konfigurationsdata och mjuka beroende | primär, global | [\Magento\Framework\Module\ModuleList\Loader](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Module/ModuleList/Loader.php) |
-| `mview.xml` | [MView-konfiguration](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/indexing-custom.html#mview-configuration) | primär, global | [\Magento\Framework\Mview\Config\Data](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Mview/Config/Data.php) |
+| `mview.xml` | [MView-konfiguration](https://developer.adobe.com/commerce/php/development/components/indexing/custom-indexer/#mview-configuration) | primär, global | [\Magento\Framework\Mview\Config\Data](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Mview/Config/Data.php) |
 | `payment.xml` | Konfiguration av betalningsmodul | primär, global | [\Magento\Payment\Model\Config](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Payment/Model/Config.php) |
-| `persistent.xml` | [Magento_Beständig](https://devdocs.magento.com/guides/v2.4/mrg/module-persistent.html) konfigurationsfil | global | [\Magento\Persistent\Helper\Data](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Persistent/Helper/Data.php) |
+| `persistent.xml` | [Magento_Beständig](https://developer.adobe.com/commerce/php/module-reference/module-persistent/) konfigurationsfil | global | [\Magento\Persistent\Helper\Data](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Persistent/Helper/Data.php) |
 | `pdf.xml` | Inställningar för PDF | global | [\Magento\Sales\Model\Order\Pdf\Config\Reader](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Sales/Model/Order/Pdf/Config/Reader.php) |
 | `product_options.xml` | Tillhandahåller konfiguration av produktalternativ | global | [\Magento\Catalog\Model\ProductOptions\Config](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Catalog/Model/ProductOptions/Config.php) |
 | `product_types.xml` | Definierar produkttyp | global | [\Magento\Catalog\Model\ProductTypes\Config](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Catalog/Model/ProductTypes/Config.php) |
-| `queue_consumer.xml` | [Definierar relationen mellan en befintlig kö och dess konsument](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/message-queues/config-mq.html#queueconsumerxml) | global | [\Magento\Framework\MessageQueue\Consumer\Config\Xml\Reader](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/MessageQueue/Consumer/Config/Xml/Reader.php) |
-| `queue_publisher.xml` | [Definierar det utbyte där ett ämne publiceras.](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/message-queues/config-mq.html#queuepublisherxml) | global | [\Magento\WebapiAsync\Code\Generator\Config\RemoteServiceReader\Publisher](https://github.com/magento/magento2/blob/2.4/app/code/Magento/WebapiAsync/Code/Generator/Config/RemoteServiceReader/Publisher.php) |
-| `queue_topology.xml` | [Definierar regler för meddelandedirigering, deklarerar köer och utbyten](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/message-queues/config-mq.html#queuetopologyxml) | global | [\Magento\Framework\MessageQueue\Topology\Config\Xml\Reader](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/MessageQueue/Topology/Config/Xml/Reader.php) |
+| `queue_consumer.xml` | [Definierar relationen mellan en befintlig kö och dess konsument](https://developer.adobe.com/commerce/php/development/components/message-queues/configuration/#queue_consumerxml) | global | [\Magento\Framework\MessageQueue\Consumer\Config\Xml\Reader](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/MessageQueue/Consumer/Config/Xml/Reader.php) |
+| `queue_publisher.xml` | [Definierar det utbyte där ett ämne publiceras.](https://developer.adobe.com/commerce/php/development/components/message-queues/configuration/#queue_publisherxml) | global | [\Magento\WebapiAsync\Code\Generator\Config\RemoteServiceReader\Publisher](https://github.com/magento/magento2/blob/2.4/app/code/Magento/WebapiAsync/Code/Generator/Config/RemoteServiceReader/Publisher.php) |
+| `queue_topology.xml` | [Definierar regler för meddelandedirigering, deklarerar köer och utbyten](https://developer.adobe.com/commerce/php/development/components/message-queues/configuration/#queue_topologyxml) | global | [\Magento\Framework\MessageQueue\Topology\Config\Xml\Reader](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/MessageQueue/Topology/Config/Xml/Reader.php) |
 | `reports.xml` | [Avancerade rapporter](https://devdocs.magento.com/guides/v2.4/advanced-reporting/report-xml.html) | global | [\Magento\Analytics\ReportXml\Config](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Analytics/ReportXml/Config.php) |
 | `resources.xml` | Definierar modulresurs | global | [\Magento\Framework\App\ResourceConnection\Config\Reader](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/App/ResourceConnection/Config/Reader.php) |
-| `routes.xml` | [Flöde](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/routing.html) konfiguration | area | [Magento\Framework\App\Route\Config](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/App/Route/Config.php) |
+| `routes.xml` | [Flöde](https://developer.adobe.com/commerce/php/development/components/routing/) konfiguration | area | [Magento\Framework\App\Route\Config](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/App/Route/Config.php) |
 | `sales.xml` | Definierar total konfiguration för försäljning | global | [\Magento\Sales\Model\Config\Data](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Sales/Model/Config/Data.php) |
 | `search_engine.xml` | Tillhandahåller sökmotorkonfiguration | global | [Magento\Search\Model\SearchEngine\Config](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Search/Model/SearchEngine/Config.php) |
 | `search_request.xml` | Definierar katalogsökningskonfiguration | global | [\Magento\Framework\Search\Request\Config](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Search/Request/Config.php) |
@@ -124,8 +121,8 @@ I följande tabell visas varje konfigurationstyp och det Commerce-konfigurations
 | `system.xml` | Definierar alternativ för sidan för systemkonfiguration | adminhtml | [\Magento\Framework\App\Config](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/App/Config.php) |
 | `validation.xml` | Konfigurationsfil för modulvalidering | global | [\Magento\Framework\Validator\Factory](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Validator/Factory.php) |
 | `view.xml` | Definierar visningskonfigurationsvärden för Vendor_Module | global | [\Magento\Framework\View\Config](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/View/Config.php) |
-| `webapi.xml` | [Konfigurerar ett webb-API](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/service-contracts/service-to-web-service.html) | global | [\Magento\Webapi\Model\Config](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Webapi/Model/Config.php) |
-| `webapi_async.xml` | [Definierar egna REST-vägar](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/webapi/custom-routes.html) | global | [\Magento\WebapiAsync\Model\ServiceConfig](https://github.com/magento/magento2/blob/2.4/app/code/Magento/WebapiAsync/Model/ServiceConfig.php) |
+| `webapi.xml` | [Konfigurerar ett webb-API](https://developer.adobe.com/commerce/php/development/components/web-api/services/) | global | [\Magento\Webapi\Model\Config](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Webapi/Model/Config.php) |
+| `webapi_async.xml` | [Definierar egna REST-vägar](https://developer.adobe.com/commerce/php/development/components/web-api/custom-routes/) | global | [\Magento\WebapiAsync\Model\ServiceConfig](https://github.com/magento/magento2/blob/2.4/app/code/Magento/WebapiAsync/Model/ServiceConfig.php) |
 | `widget.xml` | Definierar widgetar | global | [\Magento\Widget\Model\Config\Reader](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Widget/Model/Config/Reader.php) |
 | `zip_codes.xml` | Definierar postnummerformat för varje land | global | [\Magento\Directory\Model\Country\Postcode\Config\Data](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Directory/Model/Country/Postcode/Config/Data.php) |
 

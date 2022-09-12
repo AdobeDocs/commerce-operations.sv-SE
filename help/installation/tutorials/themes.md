@@ -1,0 +1,105 @@
+---
+title: Avinstallera teman
+description: Följ de här stegen för att avinstallera ett Adobe Commerce- eller Magento Open Source-tema.
+source-git-commit: f6f438b17478505536351fa20a051d355f5b157a
+workflow-type: tm+mt
+source-wordcount: '491'
+ht-degree: 0%
+
+---
+
+
+# Avinstallera teman
+
+Innan du använder det här kommandot måste du känna till den relativa sökvägen till temat. Teman finns i en underkatalog till `<magento_root>/app/design/<area name>`. Du måste ange sökvägen till temat som börjar med området, vilket antingen är `frontend` (för storefront-teman) eller `adminhtml` (for [Administratör](https://glossary.magento.com/magento-admin) teman).
+
+Till exempel sökvägen till Luma [tema](https://glossary.magento.com/theme) tillhandahålls med Adobe Commerce och Magento Open Source är `frontend/Magento/luma`.
+
+Mer information om teman finns i [temastruktur](https://developer.adobe.com/commerce/frontend-core/guide/themes/structure/).
+
+## Översikt över avinstallation av teman
+
+I det här avsnittet beskrivs hur du avinstallerar ett eller flera teman, och du kan även ta med temats kod från filsystemet. Du kan skapa säkerhetskopior först så att du kan återställa data senare.
+
+Det här kommandot avinstallerar *endast* teman som anges i `composer.json`; med andra ord, teman som tillhandahålls som [Disposition](https://glossary.magento.com/composer) paket. Om temat inte är ett Composer-paket måste du avinstallera det manuellt genom att:
+
+* Uppdaterar `parent` nodinformation i `theme.xml` för att ta bort referenser till temat.
+* Tar bort temakod från filsystemet.
+
+   [Mer information om temarv](https://developer.adobe.com/commerce/frontend-core/guide/themes/inheritance/).
+
+## Avinstallera teman
+
+Kommandoanvändning:
+
+```bash
+bin/magento theme:uninstall [--backup-code] [-c|--clear-static-content] {theme path} ... {theme path}
+```
+
+Plats
+
+* `{theme path}` är den relativa sökvägen till temat, med början från områdesnamnet. Sökvägen till det tomma temat som medföljer Adobe Commerce och Magento Open Source är `frontend/Magento/blank`.
+* `--backup-code` säkerhetskopierar kodbasen enligt beskrivningen i de följande styckena.
+* `--clear-static-content` rensningar som genererats [statiska vyfiler](../../configuration/cli/static-view-file-deployment.md), vilket är nödvändigt för att statiska vyfiler ska visas korrekt.
+
+Kommandot utför följande uppgifter:
+
+1. Verifierar att de angivna temana-sökvägarna finns, om det inte är det avslutas kommandot.
+1. Verifierar att temat är ett Composer-paket, om det inte är det avslutas kommandot.
+1. Kontrollerar om det finns beroenden och avslutar kommandot om det finns några beroenden som inte uppfylls.
+
+   Du kan undvika detta genom att antingen avinstallera alla teman samtidigt eller avinstallera dem beroende på tema först.
+
+1. Verifierar att temat inte används. om det används avslutas kommandot.
+1. Verifierar att temat inte är basen för det virtuella temat. Om det är basen för ett virtuellt tema avslutas kommandot.
+1. Placerar butiken i underhållsläge.
+1. If `--backup-code` är specificerat, säkerhetskopiera kodbasen, förutom `pub/static`, `pub/media`och `var` kataloger.
+
+   Namnet på säkerhetskopieringsfilen är `var/backups/<timestamp>_filesystem.tgz`
+
+   Du kan återställa säkerhetskopior när som helst med [`magento setup:rollback`](uninstall-modules.md#roll-back-the-file-system-database-or-media-files) -kommando.
+
+1. Tar bort teman från `theme` databastabell.
+1. Ta bort teman från kodbasen med `composer remove`.
+1. Rensar [cache](https://glossary.magento.com/cache).
+1. Rensar genererade klasser
+1. If `--clear-static-content` anges, rengöringar [genererade statiska vyfiler](../../configuration/cli/static-view-file-deployment.md).
+
+Om du till exempel försöker avinstallera ett tema som ett annat tema är beroende av visas följande meddelande:
+
+```terminal
+Cannot uninstall frontend/ExampleCorp/SampleModuleTheme because the following package(s) depend on it:
+        ExampleCorp/sample-module-theme-depend
+```
+
+Ett alternativ är att avinstallera båda temana samtidigt enligt följande för att säkerhetskopiera kodbasen:
+
+```bash
+bin/magento theme:uninstall frontend/ExampleCorp/SampleModuleTheme frontend/ExampleCorp/SampleModuleThemeDepend --backup-code
+```
+
+Meddelanden som liknar följande:
+
+```terminal
+Code backup is starting...
+Code backup filename: 1435261098_filesystem_code.tgz (The archive can be uncompressed with 7-Zip on Windows systems)
+Code backup path: /var/www/html/magento2/var/backups/1435261098_filesystem_code.tgz
+[SUCCESS]: Code backup completed successfully.Removing frontend/ExampleCorp/SampleModuleTheme, frontend/ExampleCorp/SampleModuleThemeDepend from database
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Removing frontend/ExampleCorp/SampleModuleTheme, frontend/ExampleCorp/SampleModuleThemeDepend from Magento codebase
+  - Removing ExampleCorp/sample-module-theme-depend (dev-master)
+Removing ExampleCorp/SampleThemeDepend
+  - Removing ExampleCorp/sample-module-theme (dev-master)
+Removing ExampleCorp/SampleTheme
+Writing lock file
+Generating autoload files
+Cache cleared successfully.
+Alert: Generated static view files were not cleared. You can clear them using the --clear-static-content option.
+Failure to clear static view files might cause display issues in the Admin and storefront.
+Disabling maintenance mode
+```
+
+>[!NOTE]
+>
+>Så här avinstallerar du en [Administratör](https://glossary.magento.com/admin) -temat måste du också ta bort det från komponentens [beroendeinjektion](https://glossary.magento.com/dependency-injection) konfiguration, `<component root directory>/etc/di.xml`.

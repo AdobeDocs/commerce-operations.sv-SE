@@ -1,7 +1,7 @@
 ---
 title: Konvertera layoutfiler
 description: Konvertera XML-layoutfiler.
-source-git-commit: 02f02393878d04b4a0fcdae256ac1ac5dd13b7f6
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
 source-wordcount: '94'
 ht-degree: 0%
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 Använd det här kommandot för att uppdatera XML-layoutfiler om du uppdaterar motsvarande XSLT-formatmall (Extensible Stylesheet Language Transformations).
 
-- [Layoutinstruktioner](https://devdocs.magento.com/guides/v2.4/frontend-dev-guide/layouts/xml-instructions.html)
-- [Layoutfiltyper](https://devdocs.magento.com/guides/v2.4/frontend-dev-guide/layouts/layout-types.html)
+- [Layoutinstruktioner](https://developer.adobe.com/commerce/frontend-core/guide/layouts/xml-instructions/)
+- [Layoutfiltyper](https://developer.adobe.com/commerce/frontend-core/guide/layouts/types/)
 
 Kommandoalternativ:
 

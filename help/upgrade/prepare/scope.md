@@ -1,9 +1,9 @@
 ---
 title: Förstå uppgraderingsomfång
 description: Lär dig mer om bakåtkompatibla ändringar i en release som kan påverka anpassade moduler eller tillägg från tredje part från Adobe Commerce eller Magento Open Source.
-source-git-commit: 3d9a721e33621b78f03f16b932a1ba2904ae4010
+source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '930'
 ht-degree: 0%
 
 ---
@@ -22,11 +22,11 @@ Adobe Commerce och Magento Open Source kan innehålla ändringar som är inkompa
 
 ## Tredjepartstillägg
 
-Adobe Commerce Marketplace:s nya kompatibilitetspolicy säkerställer att _alla_ listade tillägg är kompatibla med den senaste versionen inom 30 dagar från GA-datumet. Därför är det viktigt att du alltid har tillgång till tredjepartstillägg via Marketplace.
+Adobe Commerce Marketplace har en ny kompatibilitetspolicy som säkerställer att _alla_ listade tillägg är kompatibla med den senaste versionen inom 30 dagar från GA-datumet. Därför är det viktigt att du alltid har tillgång till tredjepartstillägg via Marketplace.
 
 ## Anpassade moduler
 
-Alla anpassade moduler ska kontrolleras mot målversionen som du vill uppgradera till. Det här är den mest tids- och resursintensiva uppgraderingsprocessen. När du utvärderar dina anpassade moduler måste du leta efter bakåtkompatibla ändringar och vara medveten om nya metoder, som till exempel att kontrollenheten har kopplats ned. Du kan läsa mer om detta i [versionsinformation](https://devdocs.magento.com/guides/v2.4/release-notes/bk-release-notes.html). Se även till att du följer [bästa praxis](https://devdocs.magento.com/guides/v2.4/ext-best-practices/extension-coding/common-programming-bp.html) för modulutveckling.
+Alla anpassade moduler ska kontrolleras mot målversionen som du vill uppgradera till. Det här är den mest tids- och resursintensiva uppgraderingsprocessen. När du utvärderar dina anpassade moduler måste du leta efter bakåtkompatibla ändringar och vara medveten om nya metoder, som till exempel att kontrollenheten har kopplats ned. Du kan läsa mer om detta i [versionsinformation](https://devdocs.magento.com/guides/v2.4/release-notes/bk-release-notes.html). Se även till att du följer [bästa praxis](https://developer.adobe.com/commerce/php/best-practices/extensions/) för modulutveckling.
 
 ## [!DNL Upgrade Compatibility Tool]
 
