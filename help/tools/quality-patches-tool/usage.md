@@ -1,16 +1,16 @@
 ---
 title: Användning
 description: Lär dig använda [!DNL Quality Patches Tool].
-source-git-commit: 356ee307e0199d70c0e391e0d903e8f2e1600e63
+source-git-commit: 83fa1c77dd6105f4c97f697fd6636773d94fb5ee
 workflow-type: tm+mt
-source-wordcount: '876'
+source-wordcount: '872'
 ht-degree: 0%
 
 ---
 
 # Användning
 
-The [Verktyget Korrigeringar](https://github.com/magento/quality-patches) levererar individuella plåster som utvecklats av Adobe och Magento Open Source-communityn. Med den kan du tillämpa, återställa och visa allmän information om alla enskilda korrigeringsfiler som är tillgängliga för den installerade versionen av Adobe Commerce eller Magento Open Source. Du kan använda korrigeringsfiler i Adobe Commerce- och Magento Open Source-projekt oavsett vem som har utvecklat korrigeringsfilen. Du kan till exempel använda en korrigering som utvecklats av communityn på Adobe Commerce-projekt.
+The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) levererar individuella plåster som utvecklats av Adobe och Magento Open Source-communityn. Med den kan du tillämpa, återställa och visa allmän information om alla enskilda korrigeringsfiler som är tillgängliga för den installerade versionen av Adobe Commerce eller Magento Open Source. Du kan använda korrigeringsfiler i Adobe Commerce- och Magento Open Source-projekt oavsett vem som har utvecklat korrigeringsfilen. Du kan till exempel använda en korrigering som utvecklats av communityn på Adobe Commerce-projekt.
 
 
 >[!INFO]
@@ -25,7 +25,7 @@ The [Verktyget Korrigeringar](https://github.com/magento/quality-patches) levere
 
 >[!INFO]
 > 
->Om det inte redan är installerat måste du installera [Git](https://github.com/git-guides/install-git) eller [Lappa](https://man7.org/linux/man-pages/man1/patch.1.html) innan du installerar [!DNL Quality Patches Tool]. Lägg till `magento/quality-patches` Disposition-paket till `composer.json` fil:
+>Om det inte redan är installerat måste du installera [[!DNL Git]](https://github.com/git-guides/install-git) eller [Lappa](https://man7.org/linux/man-pages/man1/patch.1.html) innan du installerar [!DNL Quality Patches Tool]. Lägg till `magento/quality-patches` Disposition-paket till `composer.json` fil:
 
 ```bash
 composer require magento/quality-patches
