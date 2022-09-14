@@ -1,8 +1,8 @@
 ---
-source-git-commit: ec60f7f2baecbdfe40971d17abe61aa52e30d1bd
+source-git-commit: b86cd1ee5a46917e383d79c6b5fa4194691dd6d2
 workflow-type: tm+mt
-source-wordcount: '246'
-ht-degree: 60%
+source-wordcount: '236'
+ht-degree: 63%
 
 ---
 # Systemkrav
@@ -642,6 +642,6 @@ ht-degree: 60%
   </tbody>
 </table>
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Tjänstversion och kompatibilitetsstöd för Adobe Commerce i molninfrastruktur avgörs av vilka versioner som distribueras i molninfrastrukturen, och skiljer sig ibland från de versioner som stöds av Adobe Commerce lokala distributioner. Mer information om vilka program och tjänster som stöds och som distribueras på Adobe Commerce i molninfrastruktur finns i [Programvara och tjänster som stöds](https://devdocs.magento.com/cloud/requirements/cloud-requirements.html#cloud-arch-software).
+>Tjänstversion och kompatibilitetsstöd för Adobe Commerce i molninfrastruktur avgörs av vilka versioner som distribueras i molninfrastrukturen, och skiljer sig ibland från de versioner som stöds av Adobe Commerce lokala distributioner. Se [Programvara och tjänster som stöds](https://devdocs.magento.com/cloud/requirements/cloud-requirements.html#cloud-arch-software) i _Molnguide_.

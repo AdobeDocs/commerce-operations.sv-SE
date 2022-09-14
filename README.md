@@ -1,8 +1,8 @@
 ---
-source-git-commit: 3fcc6d98509da4fcb8705ea69e708ad8e038b65c
+source-git-commit: 5a950079e8b445ef363217c085da92f0991a3a7f
 workflow-type: tm+mt
-source-wordcount: '432'
-ht-degree: 0%
+source-wordcount: '548'
+ht-degree: 5%
 
 ---
 # Användardokumentation för Adobe Commerce
@@ -11,7 +11,7 @@ Vi välkomnar bidrag från både vår community och från Adobe anställda utanf
 
 ## Adobe uppförandekod med öppen källkod
 
-Det här projektet har antagit [Adobe regler för öppen källkod](code-of-conduct.md) eller [.NET Foundation Code of Conduct](https://dotnetfoundation.org/code-of-conduct). Mer information finns i artikeln [Contributing](contributing.md).
+Detta projekt har antagit [Adobe Open Source Code of Conduct](code-of-conduct.md) eller [.NET Foundation Code of Conduct](https://dotnetfoundation.org/code-of-conduct). Mer information finns i artikeln [Contributing](contributing.md).
 
 ## Om dina bidrag till Adobe innehåll
 
@@ -21,7 +21,7 @@ Hur du bidrar beror på vem du är och vilken typ av ändringar du vill bidra me
 
 ### Mindre ändringar
 
-Om du bidrar med mindre uppdateringar av ditt hjärta kan du gå till artikeln och klicka på länken **Redigera** i artikeln som går till artikelns GitHub-källa. Använd sedan bara GitHub-gränssnittet för att göra uppdateringarna. Mer information finns i den allmänna [handboken för medverkande på Adobe Docs](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html).
+Om du bidrar med mindre uppdateringar av ditt hjärta kan du gå till artikeln och klicka på knappen **Redigera** i artikeln som går till artikelns GitHub-källa. Använd sedan bara GitHub-gränssnittet för att göra uppdateringarna. Se det allmänna [Adobe Docs Contributor Guide](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html) för mer information.
 
 Mindre korrigeringar och förtydliganden som du lämnar in för dokumentation och kodexempel i den här rapporten omfattas av Adobe användarvillkoren.
 
@@ -35,7 +35,7 @@ If you submit a pull request with significant changes to documentation and code 
 
 ### Stora förändringar för anställda i Adobe
 
-Om du är teknikskribent, programchef eller utvecklare för en Adobe Experience Cloud-lösning och det är ditt jobb att bidra till eller skriva tekniska artiklar bör du använda den privata databasen på `https://git.corp.adobe.com/AdobeDocs`.
+Om du är teknikskribent, programchef eller utvecklare för en Adobe Experience Cloud-lösning och det är ditt jobb att bidra till eller skriva tekniska artiklar bör du använda det privata arkivet på `https://git.corp.adobe.com/AdobeDocs`.
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
@@ -43,7 +43,7 @@ Om du är teknikskribent, programchef eller utvecklare för en Adobe Experience 
 
 Deltagare i communityn kan använda GitHub-gränssnittet för grundläggande redigering eller förgrena rapporten för att göra större insatser.
 
-Mer information finns i [Adobe Docs Contributor Guide](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html).
+Se [Adobe Docs Contributor Guide](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html) för mer information.
 
 ## Så här använder du kod för att formatera ditt ämne
 
@@ -54,7 +54,33 @@ Alla artiklar i den här databasen använder smaksatt GitHub-kod. Om du inte är
 
 ## Etiketter
 
-I den offentliga databasen tilldelas automatiska etiketter för att hämta begäranden som hjälper oss att hantera pull-arbetsflödet och som hjälper dig att få reda på vad som pågår med din pull-begäran:
+I den offentliga databasen tilldelas automatiska etiketter för att hämta begäranden som hjälper oss att hantera arbetsflödet för pull-begäran och som hjälper dig att få reda på vad som pågår med din pull-begäran:
 
 * **Ändringen har skickats till författaren**: Författaren har underrättats om den väntande pull-begäran.
-* **klar för sammanslagning**: Redo för granskning av vårt team för granskning av pull-förfrågningar.
+* **redo att sammanfogas**: Redo för granskning av vårt team för granskning av pull-förfrågningar.
+
+## Mallar
+
+The `_jekyll` -katalogen innehåller mallämnen och obligatoriska resurser.
+Mallarna som använder mallspråket Flytande finns i `_jekyll` som HTML-filer.
+The `_jekyll/_data` -katalogen innehåller filer med de data som används för att återge mallarna.
+
+Så här återger du alla mallar:
+
+1. Navigera till `_jekyll` katalog.
+
+   cd_jekyll
+
+1. Kör återgivningsskriptet.
+
+```
+_scripts/render
+```
+
+> **OBS!** Du måste köra skriptet från `_jekyll` katalog.
+> **OBS!** Du måste ha installerat Ruby för att köra skriptet.
+
+Skriptet kör återgivning, skriver återgivna filer till `_jekyll/_rendered` som HTML-filer och kopierar dem till `help/_includes` katalog som `.md` filer.
+
+
+Läs Jekyll-dokumentationen för mer information om [Datafiler](https://jekyllrb.com/docs/datafiles, [Flytande filter](https://jekyllrb.com/docs/liquid/filters/)och andra funktioner.
