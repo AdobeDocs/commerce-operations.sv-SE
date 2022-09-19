@@ -1,9 +1,9 @@
 ---
-title: '"[!DNL Observation for Adobe Commerce]"'
+title: "[!DNL Observation for Adobe Commerce]"
 description: Läs mer om [!DNL Observation for Adobe Commerce], dess användningsområden, när de ska användas och hur du får tillgång till dem.
-source-git-commit: e042acac00d9aaa7d2f49beb8ce98e213ae369e7
+source-git-commit: 6523372cd5fe3219dc582123471cc85f3c47f37d
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Den här guiden ger en helhetsöversikt över [!DNL Observation for Adobe Commer
 
 När det uppstår problem kan det vara tidskrävande att identifiera var problemet har sitt ursprung och få kunskap om hur man åtgärdar det. Adobe supportorganisation har samlat på sig statiska kunskaper som bygger på åratal av att titta på loggar och kommandoradsutdata samtidigt som man felsöker problem. Verktyget utnyttjar sådan kunskap för att identifiera viktiga signaler mot en gemensam tidslinje. Tidslinjen kan utökas eller kontrakteras så att du kan visualisera dina loggdata och få hjälp med prestandahantering och problemlösning.
 
-Använda [!DNL Observation]kan du analysera komplexa problem som stöds för att identifiera rotorsaker. Istället för att spåra olika data kan ni lägga tid på att korrelera händelser och fel för att få djupgående insikter om orsakerna till flaskhalsar i prestandan. Verktyget är avsett att ge en tydligare bild av vissa av de problem som webbplatser upplever för att hjälpa dig att identifiera potentiella orsaker till problem och se till att webbplatserna fungerar optimalt.
+Använda [!DNL Observation]kan du analysera komplexa problem som stöds för att identifiera rotorsaker. Istället för att spåra olika data kan ni lägga tid på att korrelera händelser och fel för att få djupgående insikter om orsakerna till flaskhalsar i prestandan. Verktyget är avsett att ge en tydligare bild av vissa av de problem som webbplatser upplever för att hjälpa dig att identifiera potentiella orsaker till problem och se till att webbplatserna fungerar optimalt. Detta inbegriper att identifiera om och vad [!DNL bots] orsakar webbplatsproblem.
 
 ## Vem är den här guiden till?
 
