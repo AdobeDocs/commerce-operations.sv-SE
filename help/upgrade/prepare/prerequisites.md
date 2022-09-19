@@ -1,9 +1,9 @@
 ---
 title: Förutsättningar
 description: Förbered ditt Adobe Commerce- eller Magento Open Source-projekt för en uppgradering genom att slutföra dessa nödvändiga steg.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: c2d0c1d46a5f111a245b34ed6bc706dcd52be31c
 workflow-type: tm+mt
-source-wordcount: '1338'
+source-wordcount: '1291'
 ht-degree: 0%
 
 ---
@@ -97,12 +97,8 @@ Så här anger du gränsen från kommandoraden:
 1. Ange gränsvärdet till `65536`.
 
    ```bash
-   ulimit -s 65536
+   ulimit -n 65536
    ```
-
-   >[!NOTE]
-   >
-   > Gränsen för syntax för öppna filer beror på det UNIX-skal du använder. Inställningen ovan ska fungera med CentOS och Ubuntu med Bash-skalet. För Mac OS är dock den korrekta inställningen ulimit -S 65532. Mer information finns på en huvudsida eller i en referens till operativsystemet.
 
 Så här anger du värdet i Bash-skalet:
 
@@ -111,7 +107,7 @@ Så här anger du värdet i Bash-skalet:
 1. Lägg till följande rad:
 
    ```bash
-   ulimit -s 65536
+   ulimit -n 65536
    ```
 
 1. Spara ändringarna i `.bashrc` och avsluta textredigeraren.
