@@ -1,7 +1,7 @@
 ---
 title: Distribuera statiska vyfiler
 description: Lär dig skriva statiska filer i Commerce-filsystemet i produktionsläge.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 4fe6d6a76a5d4849d4f96b61b95a9a3dae7fc76a
 workflow-type: tm+mt
 source-wordcount: '1135'
 ht-degree: 0%
@@ -56,7 +56,7 @@ I följande tabell förklaras det här kommandots parametrar och värden.
 | `<languages>` | Blankstegsavgränsad lista med [ISO-639](http://www.loc.gov/standards/iso639-2/php/code_list.php) språkkoder som statiska vyfiler ska skrivas ut för. (Standard är `en_US`.)<br>Hitta listan genom att köra: `bin/magento info:language:list` | Nej |
 | `--language (-l)` | Generera filer endast för de angivna språken. Standardinställningen, utan att något alternativ har angetts, är att generera filer för alla ISO-639-språkkoder. Du kan ange namnet på en språkkod i taget. Standardvärdet är **alla**.<br>Exempel: `--language en_US --language es_ES` | Nej |
 | `--exclude-language` | Generera filer för de angivna språkkoderna. Standardinställningen, utan något alternativ angivet, är att ingenting ska uteslutas. Du kan ange namnet på en språkkod eller en kommaavgränsad lista med språkkoder. Standardvärdet är **ingen**. | Nej |
-| `--theme <theme>` | teman som statiskt innehåll ska distribueras för. Standardvärdet är **alla**.<br>Exempel: `--theme Magento/blank --theme Magento/luma` | Nej |
+| `--theme <theme>` | Teman där statiskt innehåll ska distribueras. Standardvärdet är **alla**.<br>Exempel: `--theme Magento/blank --theme Magento/luma` | Nej |
 | `--exclude-theme <theme>` | Teman som ska uteslutas vid distribution av statiskt innehåll. Standardvärdet är **ingen**.<br>Exempel, `--exclude-theme Magento/blank` | Nej |
 | `--area (-a)` | Generera filer endast för de angivna områdena. Standardinställningen, utan att något alternativ har angetts, är att generera filer för alla områden. Giltiga värden är `adminhtml` och `frontend`. Standardvärdet är **alla**.<br>Exempel: `--area adminhtml` | Nej |
 | `--exclude-area` | Generera inga filer för de angivna områdena. Standardinställningen, utan något alternativ angivet, är att ingenting ska uteslutas. Standardvärdet är **ingen**. | Nej |
