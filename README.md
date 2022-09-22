@@ -1,7 +1,7 @@
 ---
-source-git-commit: 5a950079e8b445ef363217c085da92f0991a3a7f
+source-git-commit: 3ba17b62f595e5a02ca56753d81d67166ddbc413
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '538'
 ht-degree: 5%
 
 ---
@@ -62,7 +62,7 @@ I den offentliga databasen tilldelas automatiska etiketter för att hämta begä
 ## Mallar
 
 The `_jekyll` -katalogen innehåller mallämnen och obligatoriska resurser.
-Mallarna som använder mallspråket Flytande finns i `_jekyll` som HTML-filer.
+Mallarna som använder mallspråket Flytande finns i `_jekyll/templated` som HTML-filer.
 The `_jekyll/_data` -katalogen innehåller filer med de data som används för att återge mallarna.
 
 Så här återger du alla mallar:
@@ -80,7 +80,6 @@ _scripts/render
 > **OBS!** Du måste köra skriptet från `_jekyll` katalog.
 > **OBS!** Du måste ha installerat Ruby för att köra skriptet.
 
-Skriptet kör återgivning, skriver återgivna filer till `_jekyll/_rendered` som HTML-filer och kopierar dem till `help/_includes` katalog som `.md` filer.
-
+Skriptet kör återgivning och skriver återgivna mallar till `help/_includes/templated` katalog.
 
 Läs Jekyll-dokumentationen för mer information om [Datafiler](https://jekyllrb.com/docs/datafiles, [Flytande filter](https://jekyllrb.com/docs/liquid/filters/)och andra funktioner.
