@@ -1,7 +1,7 @@
 ---
 title: PHP-inställningar
 description: Följ de här stegen för att installera nödvändiga PHP-tillägg och konfigurera PHP-inställningar för lokala installationer av Adobe Commerce och Magento Open Source.
-source-git-commit: f6f438b17478505536351fa20a051d355f5b157a
+source-git-commit: df8240b71efe992bc1c0655aa30c32778297a3c6
 workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 0%
@@ -42,7 +42,7 @@ I CentOS [ytterligare steg kan behövas](https://wiki.centos.org/HowTos/php7).
 
 Adobe Commerce och Magento Open Source kräver att en uppsättning tillägg installeras.
 
-{{$include /help/_includes/php-extensions.md}}
+{{$include /help/_includes/templated/php-extensions.md}}
 
 Så här verifierar du installerade tillägg:
 

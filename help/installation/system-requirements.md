@@ -1,7 +1,7 @@
 ---
 title: Systemkrav
 description: Använd den här referensen för att identifiera nödvändiga programvaruberoenden som har testats med Adobe Commerce och Magento Open Source.
-source-git-commit: 3ba17b62f595e5a02ca56753d81d67166ddbc413
+source-git-commit: df8240b71efe992bc1c0655aa30c32778297a3c6
 workflow-type: tm+mt
 source-wordcount: '534'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Linux-distributioner, till exempel RedHat Enterprise Linux (RHEL), CentOS, Ubunt
 >
 >The [Installationsanvisningar för PHP](prerequisites/php-settings.md) innehåller ett steg för att installera dessa tillägg.
 
-{{$include /help/_includes/php-extensions.md}}
+{{$include /help/_includes/templated/php-extensions.md}}
 
 Se [officiell PHP-dokumentation](https://php.net/manual/en/extensions.php) för installationsinformation.
 
