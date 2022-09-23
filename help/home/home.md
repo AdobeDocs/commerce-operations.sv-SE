@@ -2,9 +2,9 @@
 keywords: Adobe Commerce;home;populära topics
 title: Startsida
 description: Bläddra i ett index över Adobe Commerce produktdokumentation.
-source-git-commit: 64e697a357e10005d02abeca13bd09c8a823bc00
+source-git-commit: 8605fa5c791a48c112efa997b14d7bffe5f3028c
 workflow-type: tm+mt
-source-wordcount: '155'
+source-wordcount: '162'
 ht-degree: 0%
 
 ---
@@ -59,11 +59,11 @@ Få praktisk information om koncept, processer, verktyg och bästa metoder för 
     </div>
   </td>
   <td valign="top">
-    <a href="https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html">
+    <a href="https://experienceleague.adobe.com/docs/commerce-operations/reference/commerce.html">
        <img alt="Referens för kommandoradsverktyg" src="../assets/icons/page-rule.svg" width="40" height="40"/>
     </a>
     <div>
-      <a href="https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html"><strong>Referens för kommandoradsverktyg</strong></a>
+      <a href="https://experienceleague.adobe.com/docs/commerce-operations/reference/commerce.html"><strong>Referens för kommandoradsverktyg</strong></a>
     </div>
   </td>
   <td valign="top">
@@ -117,5 +117,6 @@ Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
 
 | Ändra | Typ |
 |----------------------------------------------------------------------------------------------------------------------------------------|--------------|
-| Flyttade [Installationshandbok på plats](../installation/overview.md) från [devdocs.magento.com](https://devdocs.magento.com/guides/v2.4/install-gde/install-flow-diagram.html) till Experience League. | Nytt |
-| Flyttade [Handbok för datamigrering](../tools/data-migration-tool/how-migration-works.md) från [devdocs.magento.com](https://devdocs.magento.com/guides/v2.4/migration/bk-migration-guide.html) till Experience League. | Nytt |
+| Flyttade [Referens för kommandoradsverktyg](../reference/commerce.md) från [devdocs.magento.com](https://devdocs.magento.com/guides/v2.4/reference/cli/magento-cloud.html). | Nytt |
+| Flyttade [Installationshandbok på plats](../installation/overview.md) från [devdocs.magento.com](https://devdocs.magento.com/guides/v2.4/install-gde/install-flow-diagram.html). | Nytt |
+| Flyttade [Handbok för datamigrering](../tools/data-migration-tool/how-migration-works.md) från [devdocs.magento.com](https://devdocs.magento.com/guides/v2.4/migration/bk-migration-guide.html). | Nytt |
