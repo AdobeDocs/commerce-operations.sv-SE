@@ -1,7 +1,7 @@
 ---
 title: Konfigurera och använda engelska
 description: Förstå hur lack lagrar filer och förbättrar HTTP-trafiken.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 974c3480ccf5d1e1a5308e1bd2b27fcfaf3c72b2
 workflow-type: tm+mt
 source-wordcount: '1088'
 ht-degree: 0%
@@ -90,7 +90,7 @@ Cachelagring av lack fungerar tillsammans med Commerce med:
 
 - [`nginx.conf.sample`](https://github.com/magento/magento2/blob/2.4/nginx.conf.sample) från GitHub-databasen Magento 2
 - `.htaccess` distribuerad konfigurationsfil för Apache som tillhandahålls med Commerce
-- `default.vcl` konfiguration för lack som genererats med [Administratör](../cache/config-varnish-magento.md)
+- `default.vcl` konfiguration för lack som genererats med [Administratör](../cache/configure-varnish-commerce.md)
 
 >[!INFO]
 Det här avsnittet omfattar endast standardalternativen i föregående lista. Det finns många andra sätt att konfigurera cachelagring i komplexa scenarier (till exempel med hjälp av ett leveransnätverk). Dessa metoder ligger utanför den här handbokens räckvidd.

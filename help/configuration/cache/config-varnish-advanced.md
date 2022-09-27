@@ -1,7 +1,7 @@
 ---
 title: Avancerad lack-konfiguration
 description: Konfigurera avancerade lack-funktioner, inklusive hälsokontroll, respitläge och helskärmsläge.
-source-git-commit: bda758381d8d1b9209110adb168c36e1d504c4fa
+source-git-commit: 974c3480ccf5d1e1a5308e1bd2b27fcfaf3c72b2
 workflow-type: tm+mt
 source-wordcount: '907'
 ht-degree: 0%
@@ -48,7 +48,7 @@ The `vcl_hit` subrutin definierar hur lack svarar på en begäran om objekt som 
 
 ### När Commerce-serverdelen är hälsosam
 
-När hälsokontrollerna avgör att Commerce-serverdelen är hälsosam kontrollerar lack om tiden ligger kvar inom fristen. Standardrespitperioden är 300 sekunder, men en handlare kan ange värdet från [Administratör](https://glossary.magento.com/admin) enligt beskrivning i [Konfigurera Commerce att använda engelska](config-varnish-magento.md). Om respitperioden inte har gått ut levererar engelska det inaktuella innehållet och uppdaterar objektet asynkront från Commerce-servern. Om respitperioden har gått ut, skickar Varnish det inaktuella innehållet och uppdaterar objektet synkront från Commerce-serverdelen.
+När hälsokontrollerna avgör att Commerce-serverdelen är hälsosam kontrollerar lack om tiden ligger kvar inom fristen. Standardrespitperioden är 300 sekunder, men en handlare kan ange värdet från [Administratör](https://glossary.magento.com/admin) enligt beskrivning i [Konfigurera Commerce att använda engelska](configure-varnish-commerce.md). Om respitperioden inte har gått ut levererar engelska det inaktuella innehållet och uppdaterar objektet asynkront från Commerce-servern. Om respitperioden har gått ut, skickar Varnish det inaktuella innehållet och uppdaterar objektet synkront från Commerce-serverdelen.
 
 Den maximala tid som varnish skickar ett inaktuellt objekt är summan av respitperioden (300 sekunder som standard) och TTL-värdet (86400 sekunder som standard).
 

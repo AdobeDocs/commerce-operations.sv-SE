@@ -1,9 +1,9 @@
 ---
 user-guide-title: Konfigurationshandbok
 user-guide-description: Konfigurera funktioner och tjänster i Adobe Commerce eller Magento Open Source.
-source-git-commit: 53448b11a2d000fe8e8a7eecf2ffcef4b7e248fa
+source-git-commit: d451ea025a6f4fc8a4a9f15ca83896a63058a3a0
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 0%
       - [Finska - översikt](cache/config-varnish.md)
       - [Installera lack](cache/config-varnish-install.md)
       - [Webbserver](cache/config-varnish-server.md)
-      - [Konfigurera Commerce-program](cache/config-varnish-magento.md)
+      - [Konfigurera Commerce-program](cache/configure-varnish-commerce.md)
       - [Avancerad lack-konfiguration](cache/config-varnish-advanced.md)
       - [Cacherensning](cache/use-varnish-cache.md)
       - [Cachelagra flera varianter](cache/use-multiple-varnish-cache.md)
