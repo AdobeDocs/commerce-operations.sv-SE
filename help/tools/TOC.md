@@ -1,9 +1,9 @@
 ---
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
-source-git-commit: 5b623d713d8950b362a9fa66ad97e444811d23fa
+source-git-commit: 5edd2839a611fc20b1978b01923a692b21a8dd55
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '168'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,7 @@ ht-degree: 0%
    - [Patchar](site-wide-analysis-tool/patches.md)
 - Verktyget Korrigeringar {#quality-patches-tool}
    - [Användning](quality-patches-tool/usage.md)
+   - [Versionsinformation](quality-patches-tool/release-notes.md)
 - Observation för Adobe Commerce {#observation-for-adobe-commerce}
    - [Introduktion](observation-for-adobe-commerce/intro.md)
    - [Åtkomst](observation-for-adobe-commerce/access.md)
@@ -40,7 +41,6 @@ ht-degree: 0%
    - [Fliken Distribuera](observation-for-adobe-commerce/deploy-tab.md)
    - [Fliken Varningar](observation-for-adobe-commerce/alerts-tab.md)
    - [Fliken WAF](observation-for-adobe-commerce/waf-tab.md)
-   - [Fliken Bots](observation-for-adobe-commerce/bots.md)
    - [CDN-fliken](observation-for-adobe-commerce/cdn-tab.md)
    - [Fliken KaninMQ](observation-for-adobe-commerce/rabbitmq-tab.md)
    - [Fliken Kron](observation-for-adobe-commerce/cron-tab.md)
