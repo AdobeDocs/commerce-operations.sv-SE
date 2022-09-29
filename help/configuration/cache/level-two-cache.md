@@ -1,9 +1,9 @@
 ---
 title: L2-cachekonfiguration
 description: Lär dig att konfigurera L2-cachen.
-source-git-commit: 02f02393878d04b4a0fcdae256ac1ac5dd13b7f6
+source-git-commit: e5e4cf0b3979a457e706823dd16c88508ec4abd8
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '428'
 ht-degree: 0%
 
 ---
@@ -76,8 +76,81 @@ Adobe rekommenderar att du använder [`cache preload`](redis-pg-cache.md#redis-p
 
 ## Alternativ för inaktuell cache
 
-Börja med [!DNL Commerce] 2.4, `stale_cache` kan förbättra prestandan i vissa specifika fall.
+Börja med [!DNL Commerce] 2.4, `use_stale_cache` kan förbättra prestandan i vissa specifika fall.
 
 I allmänhet accepteras en kompromiss med låsväntetider från prestandasidan, men ju fler block eller cacheminne handlaren har desto mer tid går det att vänta på lås. I vissa scenarier kan du vänta **antal tangenter** \* **timeout för sökning** hur lång tid processen tar. I vissa sällsynta fall kan handlaren ha hundratals nycklar i `Block/Config` cache, så även liten timeout för låsningen kan kosta sekunder.
 
 Inaktuell cache fungerar bara med L2-cache. Med en inaktuell cache kan du skicka en inaktuell cache, medan en ny genereras i en parallell process. Om du vill aktivera inaktuell cache lägger du till `'use_stale_cache' => true` till högsta konfigurationen av L2-cachen.
+
+Adobe rekommenderar att du aktiverar `use_stale_cache` endast för cachetyper som drar störst nytta av det, inklusive:
+
+- `block_html`
+- `config_integration_api`
+- `config_integration`
+- `full_page`
+- `layout`
+- `reflection`
+- `translate`
+
+I följande kod visas en exempelkonfiguration:
+
+```php
+'cache' => [
+    'frontend' => [
+        'default' => [
+            'backend' => '\\Magento\\Framework\\Cache\\Backend\\RemoteSynchronizedCache',
+            'backend_options' => [
+                'remote_backend' => '\\Magento\\Framework\\Cache\\Backend\\Redis',
+                'remote_backend_options' => [
+                    'persistent' => 0,
+                    'server' => 'localhost',
+                    'database' => '0',
+                    'port' => '6379',
+                    'password' => '',
+                    'compress_data' => '1',
+                ],
+                'local_backend' => 'Cm_Cache_Backend_File',
+                'local_backend_options' => [
+                    'cache_dir' => '/dev/shm/'
+                ],
+                'use_stale_cache' => false,
+            ],
+            'frontend_options' => [
+                'write_control' => false,
+            ],
+        ],
+         'stale_cache_enabled' => [
+            'backend' => '\\Magento\\Framework\\Cache\\Backend\\RemoteSynchronizedCache',
+            'backend_options' => [
+                'remote_backend' => '\\Magento\\Framework\\Cache\\Backend\\Redis',
+                'remote_backend_options' => [
+                    'persistent' => 0,
+                    'server' => 'localhost',
+                    'database' => '0',
+                    'port' => '6379',
+                    'password' => '',
+                    'compress_data' => '1',
+                ],
+                'local_backend' => 'Cm_Cache_Backend_File',
+                'local_backend_options' => [
+                    'cache_dir' => '/dev/shm/'
+                ],
+                'use_stale_cache' => true,
+            ],
+            'frontend_options' => [
+                'write_control' => false,
+            ],
+        ]
+    ],
+    'type' => [
+        'default' => ['frontend' => 'default'],
+        'layout' => ['frontend' => 'stale_cache_enabled'],
+        'block_html' => ['frontend' => 'stale_cache_enabled'],
+        'reflection' => ['frontend' => 'stale_cache_enabled'],
+        'config_integration' => ['frontend' => 'stale_cache_enabled'],
+        'config_integration_api' => ['frontend' => 'stale_cache_enabled'],
+        'full_page' => ['frontend' => 'stale_cache_enabled'],
+        'translate' => ['frontend' => 'stale_cache_enabled']
+    ],
+],
+```
