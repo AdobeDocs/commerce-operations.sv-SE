@@ -2,9 +2,9 @@
 keywords: Adobe Commerce;home;populära topics
 title: Startsida
 description: Bläddra i ett index över Adobe Commerce produktdokumentation.
-source-git-commit: 8605fa5c791a48c112efa997b14d7bffe5f3028c
+source-git-commit: e247b0bd2765e425da033f32ab99f79cfe6cc0b2
 workflow-type: tm+mt
-source-wordcount: '162'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -17,11 +17,11 @@ Få praktisk information om koncept, processer, verktyg och bästa metoder för 
 <table>
 <tr>
   <td valign="top">
-    <a href="https://devdocs.magento.com/guides/v2.4/release-notes/bk-release-notes.html">
+    <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/versions.html">
       <img alt="Versionsinformation" src="../assets/icons/promote.svg" width="40" height="40"/>
     </a>
     <div>
-      <a href="https://devdocs.magento.com/guides/v2.4/release-notes/bk-release-notes.html"><strong>Versionsinformation</strong></a>
+      <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/versions.html"><strong>Versionsinformation</strong></a>
     </div>
   </td>
   <td valign="top">
@@ -117,6 +117,7 @@ Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
 
 | Ändra | Typ |
 |----------------------------------------------------------------------------------------------------------------------------------------|--------------|
+| Flyttade [Handbok för versionsinformation](../release/roadmap.md) från [devdocs.magento.com](https://devdocs.magento.com/release/versions.html). | Nytt |
 | Flyttade [Referens för kommandoradsverktyg](../reference/commerce.md) från [devdocs.magento.com](https://devdocs.magento.com/guides/v2.4/reference/cli/magento-cloud.html). | Nytt |
 | Flyttade [Installationshandbok på plats](../installation/overview.md) från [devdocs.magento.com](https://devdocs.magento.com/guides/v2.4/install-gde/install-flow-diagram.html). | Nytt |
 | Flyttade [Handbok för datamigrering](../tools/data-migration-tool/how-migration-works.md) från [devdocs.magento.com](https://devdocs.magento.com/guides/v2.4/migration/bk-migration-guide.html). | Nytt |
