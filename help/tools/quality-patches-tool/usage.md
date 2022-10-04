@@ -1,7 +1,7 @@
 ---
 title: Användning
 description: Lär dig använda [!DNL Quality Patches Tool].
-source-git-commit: 83fa1c77dd6105f4c97f697fd6636773d94fb5ee
+source-git-commit: 7ce26f10b92632c077d37ae03d68594ba2444098
 workflow-type: tm+mt
 source-wordcount: '872'
 ht-degree: 0%
@@ -14,8 +14,8 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 
 
 >[!INFO]
-> 
->Se [Tillämpa enskilda patchar](#apply-individual-patches) för instruktioner om hur du använder korrigeringsfiler i dina Adobe Commerce- eller Magento Open Source-projekt. Se [Tillgängliga korrigeringar](https://devdocs.magento.com/quality-patches/tool.html#patch-grid) för att se en fullständig lista över de släppta plåstren.
+>
+>Se [Tillämpa enskilda patchar](#apply-individual-patches) för instruktioner om hur du använder korrigeringsfiler i dina Adobe Commerce- eller Magento Open Source-projekt. Se [Tillgängliga korrigeringar](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) för att se en fullständig lista över de släppta plåstren.
 
 >[!WARNING]
 >
@@ -24,7 +24,7 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 ## Installera
 
 >[!INFO]
-> 
+>
 >Om det inte redan är installerat måste du installera [[!DNL Git]](https://github.com/git-guides/install-git) eller [Lappa](https://man7.org/linux/man-pages/man1/patch.1.html) innan du installerar [!DNL Quality Patches Tool]. Lägg till `magento/quality-patches` Disposition-paket till `composer.json` fil:
 
 ```bash
@@ -72,7 +72,7 @@ Statusregistret innehåller:
    - `Recommended replacement` — Den korrigering som rekommenderas som ersättning för en borttagen patch.
 
 >[!INFO]
-> 
+>
 >När du har uppgraderat till en ny version av Adobe Commerce eller Magento Open Source måste du tillämpa korrigeringarna igen om de inte ingår i den nya versionen. Se [Tillämpa patchar igen efter en uppgradering](#re-apply-patches-after-an-upgrade).
 
 ## Tillämpa enskilda patchar {#apply-individual-patches}

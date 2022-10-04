@@ -1,7 +1,7 @@
 ---
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
-source-git-commit: ead062ac2f5dbf07293aef2a5a5d9f1f21255402
+source-git-commit: ea89232bba442add673a0024753f7a5dfdc8d1f8
 workflow-type: tm+mt
 source-wordcount: '9233'
 ht-degree: 0%
@@ -14,7 +14,7 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 
 >[!INFO]
 >
->Se [Tillämpa patchar](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html#apply-individual-patches) för instruktioner om hur du använder korrigeringsfiler i dina Adobe Commerce- eller Magento Open Source-projekt. Se [Tillgängliga korrigeringar](https://devdocs.magento.com/quality-patches/tool.html#patch-grid) i programuppdateringshandboken för att se en fullständig lista över de släppta korrigeringsfilerna.
+>Se [Tillämpa patchar](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html#apply-individual-patches) för instruktioner om hur du använder korrigeringsfiler i dina Adobe Commerce- eller Magento Open Source-projekt. Se [Tillgängliga korrigeringar](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) i programuppdateringshandboken för att se en fullständig lista över de släppta korrigeringsfilerna.
 
 >[!INFO]
 >
@@ -542,4 +542,3 @@ Mindre korrigeringar för korrigeringsversioner
 * **MDVA-30052** (*för Adobe Commerce >=2.3.2-p2 &lt;2.3.5*) - Korrigerar problemet med att privat innehåll (lokal lagring) inte fylldes i korrekt, vilket resulterade i prestandaproblem.
 * **MDVA-30131** (*för Adobe Commerce >=2.3.4 &lt;2.3.6 || 2.4.0*) - Åtgärdar problemet med lagerstyrd navigering, där *Nej* värdet för booleska typproduktattribut inkluderades inte i lagerstyrd navigering om [!DNL Elasticsearch] användes som sökmotor.
 * **MDVA-35514** (*för Adobe Commerce >=2.4.0 &lt;2.4.1*) - Korrigerar problemet med att skapa en leveransetikett och lägga till beställda produkter i ett paket i det modala fönstret Skapa paket.
-
