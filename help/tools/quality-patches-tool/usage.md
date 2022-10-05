@@ -1,9 +1,9 @@
 ---
 title: Användning
 description: Lär dig använda [!DNL Quality Patches Tool].
-source-git-commit: 7ce26f10b92632c077d37ae03d68594ba2444098
+source-git-commit: 9e719cdf888caa3fa34f6416650e62bbf1b81175
 workflow-type: tm+mt
-source-wordcount: '872'
+source-wordcount: '901'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,8 @@ ht-degree: 0%
 
 The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) levererar individuella plåster som utvecklats av Adobe och Magento Open Source-communityn. Med den kan du tillämpa, återställa och visa allmän information om alla enskilda korrigeringsfiler som är tillgängliga för den installerade versionen av Adobe Commerce eller Magento Open Source. Du kan använda korrigeringsfiler i Adobe Commerce- och Magento Open Source-projekt oavsett vem som har utvecklat korrigeringsfilen. Du kan till exempel använda en korrigering som utvecklats av communityn på Adobe Commerce-projekt.
 
+
+Titta på detta [teknisk video](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/tools/quality-patch-tool.html?lang=en) och lär dig hur du använder kvalitetslappningsverktyget för Adobe Commerce och Magento Open Source.
 
 >[!INFO]
 >
