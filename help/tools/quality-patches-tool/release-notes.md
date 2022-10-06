@@ -1,9 +1,9 @@
 ---
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
-source-git-commit: ea89232bba442add673a0024753f7a5dfdc8d1f8
+source-git-commit: bb1cb17b75a799409336068967c9d0facefeaf41
 workflow-type: tm+mt
-source-wordcount: '9233'
+source-wordcount: '9467'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,21 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som skapats av gemenskapen för Magento Open Source, se [versionsinformation](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.21 {#v1-1-21}
+
+* **ACSD-46809** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.6) - Korrigerar problemet där en användare får ett fel när de tilldelar ett stort antal produktkällor.
+* **ACSD-46856** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.6) - Förbättrar prestanda genom att uppdatera nivåpriser via System > Konfiguration > Importera > Avancerade priser.
+* **ACSD-46541** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.4) - Korrigerar problemet där en administratörsanvändare inte kan skapa en kreditnota om ett orderobjekt tas bort.
+* **ACSD-46581** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.6) - Korrigerar problemet där den beräknade momssumman inte uppdateras efter att du har valt ett land i kundvagnen.
+* **ACSD-46618** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.6) - Korrigerar problemet där produktlistwidgeten visar felaktiga cachelagrade priser för en inloggad kund.
+* **ACSD-46674** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.6) - Korrigerar problemet där anpassade alternativ för en bildtyp visas som HTML i kundens e-postmeddelanden.
+* **ACSD-46988** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.6) - Korrigerar problemet där API-begäran GraphQL &#39;currency&#39; returnerar NULL-värden för en anpassad valuta.
+* **ACSD-47076** (för Adobe Commerce och Magento Open Source >=2.4.1 &lt;2.4.5) - Korrigerar problemet där Vimeo-videor inte kan spelas upp i butiken.
+* **ACSD-45071** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.4) - Korrigerar problemet där standardkällan läggs till i produkten under importen.
+* **AC-3023** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.6) - Uppdatera DHL-schemat till den senaste versionen, 10.0.
+* Uppdaterade patchar: MDVA-42584.
+* Ersatta patchar: MDVA-36572, ACSD-45241.
 
 ## v1.1.20 {#v1-1-20}
 
