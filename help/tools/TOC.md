@@ -1,9 +1,9 @@
 ---
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
-source-git-commit: 3914a9bb185a18fa80497630f8a6e09b58bdec22
+source-git-commit: 5e8e2730a0cc30997365bd70c4409e0eb8923dfb
 workflow-type: tm+mt
-source-wordcount: '178'
+source-wordcount: '181'
 ht-degree: 0%
 
 ---
@@ -39,6 +39,7 @@ ht-degree: 0%
    - [Fliken Redis](observation-for-adobe-commerce/redis-tab.md)
    - [Fliken MySQL](observation-for-adobe-commerce/mysql-tab.md)
    - [Fliken PHP](observation-for-adobe-commerce/php-tab.md)
+   - [Fliken Bots](observation-for-adobe-commerce/bots.md)
    - [Fliken Distribuera](observation-for-adobe-commerce/deploy-tab.md)
    - [Fliken Varningar](observation-for-adobe-commerce/alerts-tab.md)
    - [Fliken WAF](observation-for-adobe-commerce/waf-tab.md)
