@@ -1,16 +1,16 @@
 ---
 title: Konfigurera AWS S3-bucket för fjärrlagring
 description: Konfigurera ditt Commerce-projekt så att du kan använda lagringstjänsten AWS S3 för fjärrlagring.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: 9a5993c9a65ad210f1a9682734730f235bbc3d44
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
 
 # Konfigurera AWS S3-bucket för fjärrlagring
 
-The [Amazon Simple Storage Service (Amazon S3)][AWS S3] är en objektlagringstjänst som erbjuder branschledande skalbarhet, datatillgänglighet, säkerhet och prestanda. AWS S3-tjänsten använder bucket, eller behållare, för datalagring. Den här konfigurationen kräver att du skapar en _private_ bucket.
+The [Amazon Simple Storage Service (Amazon S3)][AWS S3] är en objektlagringstjänst som erbjuder branschledande skalbarhet, datatillgänglighet, säkerhet och prestanda. AWS S3-tjänsten använder bucket, eller behållare, för datalagring. Den här konfigurationen kräver att du skapar en _private_ bucket. Information om Adobe Commerce molninfrastruktur finns på [Konfigurera fjärrlagring för Commerce i molninfrastruktur](cloud-support.md).
 
 >[!WARNING]
 >
@@ -36,7 +36,7 @@ The [Amazon Simple Storage Service (Amazon S3)][AWS S3] är en objektlagringstj�
 
 ## Konfigurera Nginx
 
-Nginx kräver ytterligare en konfiguration för att utföra autentisering med `proxy_pass` -direktivet. Lägg till följande proxyinformation i `nginx.conf` fil:
+Nginx kräver ytterligare konfiguration för att utföra autentisering med `proxy_pass` -direktivet. Lägg till följande proxyinformation i `nginx.conf` fil:
 
 >nginx.conf
 
@@ -63,15 +63,14 @@ Om du använder åtkomst och hemliga nycklar i stället för [AWS IAM] roller, d
 
 ### Behörigheter
 
-S3-integreringen bygger på möjligheten att generera och lagra cachelagrade bilder i det lokala filsystemet. därför måste du ha mappbehörigheter för `pub/media` och liknande kataloger är samma för S3 som de är när de använder lokal lagring.
+S3-integreringen bygger på möjligheten att generera och lagra cachelagrade bilder i det lokala filsystemet. Därför bör du ha mappbehörigheter för `pub/media` och liknande kataloger är samma för S3 som de är när de använder lokal lagring.
 
 ### Filåtgärder
 
-Vi rekommenderar att du använder [!DNL Commerce] -metoder i kodningen eller tilläggsutvecklingen, oavsett fillagringstyp. Använd inte I/O-åtgärder för PHP-filer, som exempelvis när S3 används för lagring `copy`, `rename` eller `file_put_contents`, eftersom S3-filer inte finns i filsystemet. Se [DriverInterface.php] för kodexempel.
+Vi rekommenderar att du använder [!DNL Commerce] -metoder i kodningen eller tilläggsutvecklingen, oavsett fillagringstyp. Använd inte I/O-åtgärder för PHP-filer, som exempelvis när S3 används för lagring `copy`, `rename`, eller `file_put_contents`, eftersom S3-filer inte finns i filsystemet. Se [DriverInterface.php](https://github.com/magento/magento2/blob/2.4-develop/lib/internal/Magento/Framework/Filesystem/DriverInterface.php#L18) för kodexempel.
 
 <!-- link definitions -->
 
 [AWS S3]: https://aws.amazon.com/s3
 [AWS IAM]: https://aws.amazon.com/iam/
 [ngx repo]: https://github.com/anomalizer/ngx_aws_auth
-[DriverInterface.php]: https://github.com/magento/magento2/blob/2.4-develop/lib/internal/Magento/Framework/Filesystem/DriverInterface.php#L18

@@ -1,24 +1,28 @@
 ---
 title: Konfigurera storleksändring av bilder för fjärrlagring
 description: Optimera diskresurserna genom att konfigurera storleksändring av bilder på serversidan.
-source-git-commit: 96fe0c5eeaa029347c829c39547ee5e473c8d04d
+source-git-commit: 7fc5d561baa3c2a4aab160a35a1c8a302a62a3b1
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '247'
 ht-degree: 1%
 
 ---
 
 # Konfigurera storleksändring av bilder för fjärrlagring
 
-Som standard [!DNL Commerce] har stöd för att ändra storlek på bilder på programsidan. Genom att aktivera modulen Fjärrlagring kan du emellertid använda Nginx för att avlasta en bild som ändrar storlek till serversidan, där du kan spara diskresurser och optimera diskanvändningen.
+Som standard har Adobe Commerce stöd för storleksändring av bilder på programsidan. Genom att aktivera modulen Fjärrlagring kan du emellertid använda Nginx för att avlasta en bild som ändrar storlek till serversidan, där du kan spara diskresurser och optimera diskanvändningen.
 
 I följande diagram visas hur Nginx hämtar, ändrar storlek på och lagrar bilder i cachen. Storleksändringen bestäms av de parametrar som finns i URL-adressen, till exempel höjd och bredd.
 
 ![bildstorlek](../../assets/configuration/remote-storage-nginx-image-resize.png)
 
-## Konfigurera URL-format i [!DNL Commerce]
+>[!TIP]
+>
+>Information om projekt för molninfrastruktur för Adobe Commerce finns på [Konfigurera fjärrlagring för Commerce i molninfrastruktur](cloud-support.md)
 
-Om du vill ändra storlek på bilder på serversidan måste du konfigurera Commerce så att den innehåller argument för bildens höjd, bredd och plats (URL).
+## Konfigurera URL-format i Adobe Commerce
+
+Om du vill ändra storlek på bilder på serversidan måste du konfigurera Adobe Commerce så att det innehåller argument för bildens höjd, bredd och plats (URL).
 
 **Så här konfigurerar du Commerce för storleksändring av serverbilder**:
 
