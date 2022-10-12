@@ -1,9 +1,9 @@
 ---
-title: '"[!DNL Dashboard]"'
+title: "[!DNL Dashboard]"
 description: Läs mer om [!DNL Dashboard] i [!DNL Site-Wide Analysis Tool], element, när de ska användas, fördelar och bästa praxis.
-source-git-commit: 87a8d411de32f051037ade5ecc90aaa709a54e82
+source-git-commit: d176b6a82fbea2f3c611be0fbea85814086feed9
 workflow-type: tm+mt
-source-wordcount: '700'
+source-wordcount: '698'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 # [!UICONTROL Dashboard]
 
 The [!UICONTROL Dashboard] i korthet [!DNL widgets] som ger en&quot;enda ruta av glasvy&quot; av hälsotillståndet och den aktuella statusen på din Adobe Commerce-webbplats. Dessa [!DNL widgets] innehåller en länk till varje funktions sida, till varje verktyg eller till rapporter (beroende på [!DNL widget]).
-Det finns också en lista över [!UICONTROL External Resources] länkar till Adobe Commerce, inklusive [Adobe Commerce Help Center Support Knowledge Base (Help Center)](https://support.magento.com/), [Adobe Commerce Developer Documentation (DevDocs)](https://devdocs.magento.com/), [Verktyget Korrigeringar](https://devdocs.magento.com/quality-patches/tool.html#patch-grid), [Security Center](https://magento.com/security)och [Observation för Adobe Commerce (OAC)](https://support.magento.com/hc/en-us/articles/4402379845901-Use-Observation-for-Adobe-Commerce).
+Det finns också en lista över [!UICONTROL External Resources] länkar till Adobe Commerce, inklusive [Adobe Commerce Help Center Support Knowledge Base (Help Center)](https://support.magento.com/), [Adobe Commerce Developer Documentation (DevDocs)](https://devdocs.magento.com/), [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target=&quot;_blank&quot;}, [Security Center](https://magento.com/security)och [Observation för Adobe Commerce (OAC)](https://support.magento.com/hc/en-us/articles/4402379845901-Use-Observation-for-Adobe-Commerce).
 
 ## Element
 
@@ -29,7 +29,7 @@ The [!UICONTROL Upgrade Compatibility Tool] gör att du kan identifiera när vik
 
 * **[!UICONTROL Non-recommended software in use]**: Visar den programvara som inte rekommenderas och som används av din Adobe Commerce-instans, baserat på din Adobe Commerce-version. Programvaran som inte rekommenderas listas i [!UICONTROL Name], [!UICONTROL Installed Version]och [!UICONTROL Recommended Version].
 
-* **[!UICONTROL Recommended Patches]**: Visar en kort lista över rekommenderade korrigeringsfiler baserat på båda korrigeringsfilerna som du har installerat och din Adobe Commerce-version. En fullständig lista över rekommenderade korrigeringar finns på **[!UICONTROL Patches]** -fliken, som också finns i [!DNL Site-Wide Analysis Tool]. Patcharna finns i [Verktyget Korrigeringar](https://devdocs.magento.com/quality-patches/tool.html). Alla korrigeringsfiler i listan är kompatibla med din aktuella Adobe Commerce-instans.
+* **[!UICONTROL Recommended Patches]**: Visar en kort lista över rekommenderade korrigeringsfiler baserat på båda korrigeringsfilerna som du har installerat och din Adobe Commerce-version. En fullständig lista över rekommenderade korrigeringar finns på **[!UICONTROL Patches]** -fliken, som också finns i [!DNL Site-Wide Analysis Tool]. Patcharna finns i [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target=&quot;_blank&quot;}. Alla korrigeringsfiler i listan är kompatibla med din aktuella Adobe Commerce-instans.
 Om det inte finns några rekommenderade korrigeringar att visa för din Adobe Commerce-instans är detta [!DNL widget] kommer att visas, **[!UICONTROL No Recommended Patches]**.
 
 ## När ska användas
@@ -54,4 +54,4 @@ The **[!UICONTROL Dashboard]** finns i kommandocentralen på [!DNL Site-Wide Ana
 
 * Gå till [!UICONTROL Security Scan Tool] [!DNL widget] och klicka [!UICONTROL View Report] för att visa en [!UICONTROL Recommendations] för din webbplats.
 
-* Använd [!DNL External Resources] länkar för att antingen lära sig mer information, hålla sig uppdaterad om säkerhetsuppdateringar, uppdateringar och bästa praxis, eller utnyttja insikterna i [Adobe Commerce Help Center Support Knowledge Base (Help Center)](https://support.magento.com/), [Adobe Commerce Developer Documentation (DevDocs)](https://devdocs.magento.com/), [Verktyget Korrigeringar](https://devdocs.magento.com/quality-patches/tool.html#patch-grid), [Security Center](https://helpx.adobe.com/security.html)och [Observation för Adobe Commerce (OAC)](https://support.magento.com/hc/en-us/articles/4402379845901-Use-Observation-for-Adobe-Commerce).
+* Använd [!DNL External Resources] länkar för att antingen lära sig mer information, hålla sig uppdaterad om säkerhetsuppdateringar, uppdateringar och bästa praxis, eller utnyttja insikterna i [Adobe Commerce Help Center Support Knowledge Base (Help Center)](https://support.magento.com/), [Adobe Commerce Developer Documentation (DevDocs)](https://devdocs.magento.com/), [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target=&quot;_blank&quot;}, [Security Center](https://helpx.adobe.com/security.html)och [Observation för Adobe Commerce (OAC)](https://support.magento.com/hc/en-us/articles/4402379845901-Use-Observation-for-Adobe-Commerce).

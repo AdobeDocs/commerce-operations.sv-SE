@@ -1,7 +1,7 @@
 ---
 title: Använd korrigeringar
 description: Lär dig mer om metoderna för att använda korrigeringsfiler i ett Adobe Commerce- eller Magento Open Source-projekt.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: e2ddb30da8dd86236e1dcf33a3f911b67384a6d7
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Du kan använda patchar på följande sätt:
 
-- [Verktyget Korrigeringar](https://devdocs.magento.com/quality-patches/tool.html)
+- [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target=&quot;_blank&quot;}
 - [Kommandorad](../patches/apply.md#command-line)
 - [Disposition](../patches/apply.md#composer)
 
@@ -21,7 +21,7 @@ Du kan använda patchar på följande sätt:
 
 >[!IMPORTANT]
 >
->Om du vill använda officiella kvalitetspatchar använder du [Verktyget Korrigeringar](https://devdocs.magento.com/quality-patches/tool.html). Utför alltid omfattande testning innan du distribuerar någon anpassad patch.
+>Om du vill använda officiella kvalitetspatchar använder du [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target=&quot;_blank&quot;}. Utför alltid omfattande testning innan du distribuerar någon anpassad patch.
 
 Så här använder du en anpassad korrigering med Composer:
 

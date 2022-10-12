@@ -1,7 +1,7 @@
 ---
 title: Så här fungerar korrigeringar
 description: Lär dig mer om de olika typerna av patchar för Adobe Commerce och Magento Open Source och hur de fungerar.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 1a18a445cb104420dd9b853b7c4d42ce3bddf2ac
 workflow-type: tm+mt
 source-wordcount: '606'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Du hittar snabbkorrigeringar i [Security Center](https://magento.com/security/pa
 
 Enskilda korrigeringsfiler innehåller korrigeringar av låg kvalitet för ett specifikt problem. Dessa korrigeringar tillämpas på den senaste delversionen som stöds (till exempel 2.4.x), men kan saknas i den tidigare delversionen som stöds (till exempel 2.3.x). Adobe släpper enskilda patchar efter behov.
 
-Använd [Verktyget Korrigeringar](https://devdocs.magento.com/quality-patches/tool.html) för att lägga på individuella plåster.
+Använd [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target=&quot;_blank&quot;} om du vill använda enskilda korrigeringsfiler.
 
 >[!NOTE]
 >
@@ -81,7 +81,7 @@ index c8a6fef58d31..7d01c195791e 100644
              clearTimeout: function () {
                  clearTimeout(this.timeoutId);
 +                this.fail();
- 
+
                  return this;
              },
 ```
@@ -90,7 +90,7 @@ index c8a6fef58d31..7d01c195791e 100644
 
 Du kan använda patchar på följande sätt:
 
-- [Verktyget Korrigeringar](https://devdocs.magento.com/quality-patches/tool.html)
+- [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target=&quot;_blank&quot;}
 - [Kommandorad](/help/upgrade/patches/apply.md#command-line)
 - [Disposition](/help/upgrade/patches/apply.md#composer)
 
