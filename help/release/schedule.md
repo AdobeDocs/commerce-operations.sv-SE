@@ -1,9 +1,9 @@
 ---
 title: Frigör schema
 description: Lär dig när specifika versioner av Adobe Commerce är schemalagda för betaversion, förhandsversioner och allmän tillgänglighet.
-source-git-commit: 1c302d312eeeb7512d8b91063f06f8e7c9bf98bd
+source-git-commit: c0609aef52f6c8c24a6ccb036b9d44bed9b3c597
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -24,8 +24,6 @@ I följande tabell visas datumen för schemalagda releaser (datum kan ändras):
 | Juni 2022<br>Funktionsrelease | \-\- | \-\- | \-\- | 21 juni 2022 |
 | Augusti 2022<br>Funktion + patch + säkerhetspatchrelease | 2.4.5<br>2.4.4-p1<br>2.4.3-p3<br>2.3.7-p4<sup>1</sup> | \-\- | 26 juli 2022 | 9 augusti 2022 |
 | Oktober 2022<br>Funktion + säkerhetsuppdatering | 2.4.5-p1<sup>2</sup><br>2.4.4-p2 | \-\- | 27 september 2022 | 11 oktober 2022 |
-| Januari 2023<br>Funktionsrelease | \-\- | \-\- | \-\- | 17 januari 2023 |
-| Mars 2023<br>Funktion + patch + säkerhetspatchrelease | 2.4.6<br>2.4.5-p2<br>2.4.4-p3 | Januari 2023 | 28 februari 2023 | 14 mars 2023 |
 
 <sup>\-\- Anger objekt som inte är tillämpliga i den här versionen.</sup><br>
 <sup>1 Detta är den sista korrigeringsversionen för version 2.3.x. Versionslinjen för 2.3.x når slutet av supporten (EOS) i september 2022.</sup><br>
