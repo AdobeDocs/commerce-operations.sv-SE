@@ -1,9 +1,9 @@
 ---
 user-guide-title: Handböcker
 user-guide-description: Lär dig mer om hur du underhåller Adobe Commerce- eller Magento Open Source-program.
-source-git-commit: 14379c68e319104336f3aa8c79255ea67a57c62b
+source-git-commit: 035c60de7234e15c0ace3ffbf60aa771587c432c
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '118'
 ht-degree: 0%
 
 ---
@@ -23,3 +23,4 @@ ht-degree: 0%
 - [Implementera spelningsbok](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/overview.html)
 - [Operativ spelningsbok](https://experienceleague.adobe.com/docs/commerce-operations/operational-playbook/overview.html)
 - [Handel i skala](https://experienceleague.adobe.com/docs/commerce-operations/operational-playbook/overview.html)
+- [Säkerhet och efterlevnad](https://experienceleague.adobe.com/docs/commerce-operations/security-and-compliance/overview.html)

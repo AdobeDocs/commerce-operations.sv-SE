@@ -2,7 +2,7 @@
 keywords: Adobe Commerce;home;populära topics
 title: Startsida
 description: Bläddra i ett index över Adobe Commerce produktdokumentation.
-source-git-commit: e247b0bd2765e425da033f32ab99f79cfe6cc0b2
+source-git-commit: 441bbcf15901b9ca547780eb6f3a20efc8025d91
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -108,6 +108,14 @@ Få praktisk information om koncept, processer, verktyg och bästa metoder för 
       <a href="../commerce-at-scale/overview.md"><strong>Handel i skala</strong></a>
     </div>
   </td>
+  <td valign="top">
+    <a href="../security-and-compliance/overview.md">
+       <img alt="Enterprise" src="../assets/icons/alert-circle.svg" width="40" height="40"/>
+    </a>
+    <div>
+      <a href="../security-and-compliance/overview.md"><strong>Säkerhet och efterlevnad</strong></a>
+    </div>
+  </td>
 </tr>
 </table>
 
@@ -116,8 +124,6 @@ Få praktisk information om koncept, processer, verktyg och bästa metoder för 
 Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
 
 | Ändra | Typ |
-|----------------------------------------------------------------------------------------------------------------------------------------|--------------|
-| Flyttade [Handbok för versionsinformation](../release/roadmap.md) från [devdocs.magento.com](https://devdocs.magento.com/release/versions.html). | Nytt |
-| Flyttade [Referens för kommandoradsverktyg](../reference/commerce.md) från [devdocs.magento.com](https://devdocs.magento.com/guides/v2.4/reference/cli/magento-cloud.html). | Nytt |
-| Flyttade [Installationshandbok på plats](../installation/overview.md) från [devdocs.magento.com](https://devdocs.magento.com/guides/v2.4/install-gde/install-flow-diagram.html). | Nytt |
-| Flyttade [Handbok för datamigrering](../tools/data-migration-tool/how-migration-works.md) från [devdocs.magento.com](https://devdocs.magento.com/guides/v2.4/migration/bk-migration-guide.html). | Nytt |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------|
+| Flyttade [Handbok för säkerhet och efterlevnad](../security-and-compliance/overview.md) från [devdocs.magento.com](https://devdocs.magento.com/security/security-and-compliance.html). | Nytt |
+| Flyttade [Handbok för versionsinformation](../release/roadmap.md) från [devdocs.magento.com](https://devdocs.magento.com/release/released-versions.html). | Nytt |
