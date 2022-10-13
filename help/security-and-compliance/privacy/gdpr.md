@@ -1,9 +1,9 @@
 ---
 title: Allmänna dataskyddsförordningen (GDPR)
 description: Läs om den allmänna dataskyddsförordningen (GDPR), som är en lagstiftning som reglerar dataskydd och sekretess för alla enskilda personer i EU och EES.
-source-git-commit: 1a608e8a5986026d5a187dc8cbd358fed2db5d9e
+source-git-commit: 2120e5bb912a89c58611ef9e23661a54e40a14f1
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -17,14 +17,14 @@ ht-degree: 0%
 
 Europeiska unionen (EU) antog [Allmän dataskyddsförordning](https://ec.europa.eu/info/law/law-topic/data-protection_en) (GDPR) för att ge medborgarna bättre kontroll över sina personuppgifter. GDPR gäller alla organisationer som är verksamma inom EU. Det gäller också organisationer utanför EU som erbjuder varor eller tjänster till kunder eller företag inom EU.
 
-Systemintegratörer kan använda dataflödesdiagram och databasinformation i personinformationsreferensen för att skapa skript för att lösa användningsfall som liknar följande:
+Systemintegratörer kan använda dataflödesdiagram och databasinformation i personinformationsreferensen för att skapa skript för att lösa användningsområden som liknar de här:
 
 - En kund ber om en kopia av de data som handlaren har lagrat om dem
 - En kund begär att få ta bort sin information
 
-## Referens för personlig information
+## Referens för personuppgifter
 
-Teknisk information finns i dataflödesdiagram och mappningar av databasentiteter i personinformationsreferensen som gäller för alla versioner av Adobe Commerce och Magento Open Source som du stöder.
+Teknisk information finns i dataflödesdiagrammen och mappningarna av databasentiteter i personinformationsreferensen som gäller för alla versioner av Adobe Commerce och Magento Open Source som du stöder.
 
 - [Kundens personuppgifter (version 2.x)](data-m2.md)
 - [Kundens personuppgifter - referens (version) 1.x](data-m1.md)

@@ -1,9 +1,9 @@
 ---
 title: California Consumer Privacy Act (CCPA)
 description: Läs om California Consumer Privacy Act (CCPA), som utökar konsumenternas rättigheter i Kalifornien att avgöra hur deras personuppgifter samlas in, lagras och används.
-source-git-commit: 495dfd515759e4df507479de57118586eac14fda
+source-git-commit: 2120e5bb912a89c58611ef9e23661a54e40a14f1
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ CCPA ger konsumenterna följande nya rättigheter:
 - **Rätt att avanmäla sig** om försäljningen av deras personuppgifter.
 - **Rätt till icke-diskriminering** i termer av pris eller tjänst för att ha utövat en integritetsrätt enligt CCPA.
 
-## CCPA-kompatibilitetshandbok
+## CCPA-kompatibilitet
 
 Utvecklingen och genomförandet av en CCPA-efterlevnadsplan kräver en samordnad insats. Vi uppmuntrar handlare att sätta ihop ett funktionsövergripande team och följa den färdplan som beskrivs i [CCPA-kompatibilitetshandbok](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-ccpa.html) för att se till att deras företag följer förordningen. Som utvecklare kan du bli inbjuden att delta som intressent med tonvikt på steg 2 till 5 i processen. Se [CCPA-kompatibilitetshandbok](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-ccpa.html) för mer information.
 
@@ -44,9 +44,9 @@ Utvecklingen och genomförandet av en CCPA-efterlevnadsplan kräver en samordnad
 
 1. Dokumentera alla CCPA-relaterade procedurer och föra register.
 
-## Referens för personlig information
+## Referens för personuppgifter
 
-Teknisk information finns i dataflödesdiagram och mappningar av databasentiteter i personinformationsreferensen som gäller för alla versioner av Adobe Commerce och Magento Open Source som du stöder.
+Teknisk information finns i dataflödesdiagrammen och mappningarna av databasentiteter i personinformationsreferensen som gäller för alla versioner av Adobe Commerce och Magento Open Source som du stöder.
 
-- [Referens till personuppgifter (version 2.x)](data-m2.md)
-- [Referens till personuppgifter (version 1.x)](data-m1.md)
+- [Kundens personuppgifter (version 2.x)](data-m2.md)
+- [Kundens personuppgifter - referens (version) 1.x](data-m1.md)
