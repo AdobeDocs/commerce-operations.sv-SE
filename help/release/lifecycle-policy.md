@@ -1,7 +1,7 @@
 ---
 title: Policy för programvarans livscykel
 description: Läs om viktiga datum för när supporten för Adobe Commerce upphör.
-source-git-commit: 79f36e3728e6bc436e8093bd4051143a48e681d6
+source-git-commit: ffa8b957828833d2c3f9bc79c31dc3fa2c6035a5
 workflow-type: tm+mt
 source-wordcount: '368'
 ht-degree: 5%
@@ -13,7 +13,7 @@ ht-degree: 5%
 
 För Adobe Commerce 2.4 och senare:
 
-- För att effektivisera vår livscykelpolicy kan Adobe tillhandahålla kvalitetsfixar till version 2.4 fram till supportdatumet för den PHP-version som den baseras på. Kunden kan få tillgång till kvalitetskorrigeringar genom att kontakta [Adobe Commerce Support](https://developer.adobe.com/commerce/contributor/community/support/) eller genom självbetjäningen [Verktyget Korrigeringar](https://devdocs.magento.com/quality-patches/tool.html) om de fortfarande har rätt till kvalitetssupport. Se tabellen nedan för&quot;End of Software Support&quot; för Adobe Commerce versionsrader.
+- För att effektivisera vår livscykelpolicy kan Adobe tillhandahålla kvalitetsfixar till version 2.4 fram till supportdatumet för den PHP-version som den baseras på. Kunden kan få tillgång till kvalitetskorrigeringar genom att kontakta [Adobe Commerce Support](https://developer.adobe.com/commerce/contributor/community/support/) eller genom självbetjäningen [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target=&quot;_blank&quot;} om deras version fortfarande är berättigad till kvalitetssupport. Se tabellen nedan för&quot;End of Software Support&quot; för Adobe Commerce versionsrader.
 
 - Adobe tillhandahåller bara säkerhetskorrigeringar via den senaste patchen eller säkerhetsuppdateringen, även om en kunds version fortfarande är berättigad till kvalitetssupport. Till skillnad från kvalitetskorrigeringar kan säkerhetskorrigeringar inte säkerhetskopieras till tidigare mindre utgåvor eller till tidigare korrigeringsutgåvor inom de mindre utgåvor som stöds.
 
