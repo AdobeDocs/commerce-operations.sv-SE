@@ -1,9 +1,9 @@
 ---
 title: Frigör schema
 description: Lär dig när specifika versioner av Adobe Commerce är schemalagda för betaversion, förhandsversioner och allmän tillgänglighet.
-source-git-commit: c0609aef52f6c8c24a6ccb036b9d44bed9b3c597
+source-git-commit: 77ef9c276306700a9ff62795d05075e8731f5d5a
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '428'
 ht-degree: 0%
 
 ---
@@ -24,6 +24,8 @@ I följande tabell visas datumen för schemalagda releaser (datum kan ändras):
 | Juni 2022<br>Funktionsrelease | \-\- | \-\- | \-\- | 21 juni 2022 |
 | Augusti 2022<br>Funktion + patch + säkerhetspatchrelease | 2.4.5<br>2.4.4-p1<br>2.4.3-p3<br>2.3.7-p4<sup>1</sup> | \-\- | 26 juli 2022 | 9 augusti 2022 |
 | Oktober 2022<br>Funktion + säkerhetsuppdatering | 2.4.5-p1<sup>2</sup><br>2.4.4-p2 | \-\- | 27 september 2022 | 11 oktober 2022 |
+| Januari 2023<br>Funktionsrelease | \-\- | \-\- | \-\- | 17 januari 2023 |
+| Mars 2023<br>Funktion + patch + säkerhetspatchrelease | 2.4.6<br>2.4.5-p2<br>2.4.4-p3 | Januari 2023 | 28 februari 2023 | 14 mars 2023 |
 
 <sup>\-\- Anger objekt som inte är tillämpliga i den här versionen.</sup><br>
 <sup>1 Detta är den sista korrigeringsversionen för version 2.3.x. Versionslinjen för 2.3.x når slutet av supporten (EOS) i september 2022.</sup><br>
@@ -32,10 +34,6 @@ I följande tabell visas datumen för schemalagda releaser (datum kan ändras):
 >[!TIP]
 >
 >Patch and Security Patch Releases är möjligheter att uppgradera kärnkodbasen för att hålla plattformen säker, tillförlitlig och effektiv. Funktionsreleaser sker varannan månad. Funktionsreleaser är oberoende av kärnkodbasen och är tillgängliga via externa moduler eller tillägg. Eventuella uppdateringar av befintliga oberoende funktioner släpps under funktionens releasetider och inträffar inte automatiskt om funktionen redan är implementerad.
-
->[!NOTE]
->
->Vi har infört en [ny policy](https://www.adobe.com/content/dam/cc/en/legal/terms/enterprise/pdfs/Adobe-Commerce-Software-Lifecycle-Policy.pdf) som gäller våra versionsrader som stöds. Om du vill veta mer om den nya strategin bakom vår kalender och livscykelpolicy för 2022 kan du besöka [blogg](https://business.adobe.com/blog/how-to/accelerating-innovation-through-simplified-release-strategy).
 
 ## Tidig åtkomst
 
