@@ -1,9 +1,9 @@
 ---
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
-source-git-commit: bb1cb17b75a799409336068967c9d0facefeaf41
+source-git-commit: e9ba2d0ad8568c40335e8643ef0070d9e2bb9b3f
 workflow-type: tm+mt
-source-wordcount: '9467'
+source-wordcount: '9581'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,14 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som skapats av gemenskapen för Magento Open Source, se [versionsinformation](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.22 {#v1-1-22}
+
+* **ACSD-47444** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.3) - Korrigerar _Försöker få åtkomst till matrisförskjutning på värde av typen bool_ fel vid åtkomst till vissa kategorisökvägar som inte finns för kända produkter i PHP 7.4.
+* **ACSD-47332** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.6) - Korrigerar problemet där kron inte fungerar med ett fel som bara rapporteras när den körs mellan 00:00 och 00:59 UTC.
+* **ACSD-47280** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.6) - Korrigerar problemet där inaktivering av den delade katalogfunktionen i ett specifikt omfång inte fungerar korrekt.
+* **ACSD-47106** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.6) - Korrigerar problemet där ett värde inte kan sparas i ett nytt anpassat attribut på en företagsskapandesida.
+* Uppdaterad patch: ACSD-45143.
 
 ## v1.1.21 {#v1-1-21}
 
