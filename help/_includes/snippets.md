@@ -1,7 +1,7 @@
 ---
-source-git-commit: 2c12c6ea6e7b6ffeb07bbda17ded34e39de6656a
+source-git-commit: 74cb55f4552bc1b2dace37d9a6f7e68939d1c262
 workflow-type: tm+mt
-source-wordcount: '97'
+source-wordcount: '197'
 ht-degree: 0%
 
 ---
@@ -40,3 +40,15 @@ ht-degree: 0%
 >Den delade databasfunktionen var [föråldrad](https://community.magento.com/t5/Magento-DevBlog/Deprecation-of-Split-Database-in-Magento-Commerce/ba-p/465187?_ga=2.128934671.2024864496.1657558157-1596100530.1657558157) i version 2.4.2 av Adobe Commerce. Se [Återgå från en delad databas till en enda databas](/help/configuration/storage/revert-split-database.md).
 
 <!-- End of Configuration guide snippets -->
+
+## Bakåtkompatibla ändringar {#bics}
+
+>[!NOTE]
+>
+>Adobe Commerce och Magento Open Source kan innehålla ändringar som är inkompatibla bakåt (BIC). Om du vill granska ändringar som är inkompatibla bakåt kan du läsa [BIC-referens](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/reference/). Viktiga bakåtkompatibla problem beskrivs i [BIC i korthet](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/highlights/). Inte alla releaser innehåller viktiga BIC:er.
+
+## CVE-meddelande {#cve-notice}
+
+>[!NOTE]
+>
+>Från och med version 2.3.2 kommer vi att tilldela och publicera indexerade CVE-nummer (Common Vulnerabilities and Exposure) med varje säkerhetsfel som rapporteras till oss av externa parter. Detta gör det enklare för användare att identifiera oadresserade säkerhetsluckor i driftsättningen. Du kan läsa mer om CVE-identifierare på [CVE](https://cve.mitre.org/).

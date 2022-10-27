@@ -1,7 +1,7 @@
 ---
 title: Frigör schema
 description: Lär dig när specifika versioner av Adobe Commerce är schemalagda för betaversion, förhandsversioner och allmän tillgänglighet.
-source-git-commit: 77ef9c276306700a9ff62795d05075e8731f5d5a
+source-git-commit: 261aecd7d217e5c2e22f1a6c97242baa2923af60
 workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Frigör schema
 
-Adobe strävar hela tiden efter att hitta den rätta balansen mellan att göra produktuppgraderingar enkla och förutsägbara och leverera förbättringar och nya funktioner till tidiga användare snabbare. Under det senaste året har vi finslipat hur vi levererar programvara för denna balans. Mer information finns i [publiceringsprincip](policy.md).
+Adobe strävar hela tiden efter att hitta den rätta balansen mellan att göra produktuppgraderingar enkla och förutsägbara och leverera förbättringar och nya funktioner till tidiga användare snabbare. Under det senaste året har vi finslipat hur vi levererar programvara för denna balans. Mer information finns i [versionsprincip](versioning-policy.md).
 
 Adobe släpper säkerhets- och funktionspatchar för alla utgåvor av Adobe Commerce och Magento Open Source som stöds.
 

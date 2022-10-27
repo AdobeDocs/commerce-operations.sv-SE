@@ -2,9 +2,9 @@
 keywords: Adobe Commerce;home;populära topics
 title: Startsida
 description: Bläddra i ett index över Adobe Commerce produktdokumentation.
-source-git-commit: 441bbcf15901b9ca547780eb6f3a20efc8025d91
+source-git-commit: 80163ec1c40a19ea4eb138c3753b08daa231dc41
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '148'
 ht-degree: 0%
 
 ---
@@ -126,4 +126,4 @@ Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
 | Ändra | Typ |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------|
 | Flyttade [Handbok för säkerhet och efterlevnad](../security-and-compliance/overview.md) från [devdocs.magento.com](https://devdocs.magento.com/security/security-and-compliance.html). | Nytt |
-| Flyttade [Handbok för versionsinformation](../release/roadmap.md) från [devdocs.magento.com](https://devdocs.magento.com/release/released-versions.html). | Nytt |
+| Flyttade [Handbok för versionsinformation](../release/release-notes/overview.md) från [devdocs.magento.com](https://devdocs.magento.com/release/released-versions.html). | Nytt |

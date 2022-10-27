@@ -1,0 +1,24 @@
+---
+title: Produkttillgänglighet
+description: Läs mer om vilka Adobe Commerce-funktioner som finns, hur du får tillgång till dem och hur du kontrollerar deras kompatibilitet med specifika Adobe Commerce-utgåvor.
+source-git-commit: f9bbfb86d2197ee7252602edba455ebcae5a2b18
+workflow-type: tm+mt
+source-wordcount: '376'
+ht-degree: 0%
+
+---
+
+
+# Produkttillgänglighet
+
+I följande tabell beskrivs statusen för Adobe Commerce programvarutillgänglighet och var den ska hämtas, särskilt för program som är tillgängliga utanför det vanliga Adobe Commerce Composer-paketet.
+
+| Produkt | Tillgänglighet | Så här skaffar du den | |-|-|-| | **Adobe Commerce 2.4.5**                  | Finns nu | [Disposition](../installation/composer.md)  | | **Adobe Commerce on cloud infrastructure Tools (även ECE-Tools)** | Finns nu | [Disposition](https://devdocs.magento.com/cloud/project/ece-tools-update.html) | | **Live Search**                                 | Finns nu | [Commerce Marketplace](https://marketplace.magento.com/magento-live-search.html) \| [Dokumentation för utvecklare](https://devdocs.magento.com/live-search/overview.html) \| [Versionsinformation](https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/release-notes.html) \| [Användarhandbok](https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/overview.html) | | **Betalningstjänster**                            | Finns nu | [Commerce Marketplace](https://marketplace.magento.com/magento-payment-services.html) \| [Versionsinformation](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/release-notes.html) \| [Användarhandbok](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/guide-overview.html) | | **Snabb utcheckning** | Finns nu | [Commerce Marketplace](https://marketplace.magento.com/magento-quick-checkout.html) \| [Versionsinformation](https://experienceleague.adobe.com/docs/commerce-merchant-services/quick-checkout/release-notes.html) \| [Användarhandbok](https://experienceleague.adobe.com/docs/commerce-merchant-services/quick-checkout/overview.html) | | **Lagra uppfyllelse för Adobe Commerce** | Finns nu | [Commerce Marketplace](https://marketplace.magento.com/store-fulfillment-magento-walmart.html) \| [Användarhandbok](https://experienceleague.adobe.com/docs/commerce-merchant-services/store-fulfillment/introduction.html) | | **Recommendations**                     | Finns nu | [Commerce Marketplace](https://marketplace.magento.com/magento-product-recommendations.html) \| [Dokumentation för utvecklare](https://devdocs.magento.com/recommendations/product-recs.html) \| [Versionsinformation](https://experienceleague.adobe.com/docs/commerce-merchant-services/product-recommendations/release-notes.html) \| [Användarhandbok](https://experienceleague.adobe.com/docs/commerce-merchant-services/product-recommendations/overview.html) | | **PWA Studio**                                  | Finns nu | [Dokumentation](https://developer.adobe.com/commerce/pwa-studio/) och [GitHub](https://github.com/magento/pwa-studio) | | **Kanalhanteraren**                             | Finns nu | [Commerce Marketplace](https://marketplace.magento.com/magento-channel-manager.html) \| [Användarhandbok](https://experienceleague.adobe.com/docs/commerce-channels/channel-manager/intro-to-channel-manager/overview.html) | | **Amazon Sales Channel**                        | Finns nu för Adobe Commerce version 2.4.x och 2.3.x (USA, Kanada, Mexico och UK) | [Commerce Marketplace](https://marketplace.magento.com/magento-module-amazon.html) \| [Versionsinformation](https://experienceleague.adobe.com/docs/commerce-channels/amazon/release-notes.html) \| [Användarhandbok](https://experienceleague.adobe.com/docs/commerce-channels/amazon/overview.html) | | **Experience Platform Connector**                     | Finns nu | [Commerce Marketplace](https://marketplace.magento.com/magento-experience-platform-connector.html) \| [Versionsinformation](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/release-notes.html?lang=en) \| [Användarhandbok](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/overview.html?lang=en) |
+
+## Kompatibilitet
+
+Läs det här avsnittet om du vill veta mer om Adobe Commerce-moduler som inte längre är kopplade till kärnreleaseveransprocessen. Detta gör att Adobe kan släppa versioner av dessa moduler snabbare för handlare som är villiga att ta en liten risk i utbyte mot tidigare åtkomst till nya funktioner.
+
+I följande tabell visas statusen för tilläggsversionerna i förhållande till Adobe Commerce.
+
+{{$include /help/_includes/templated/release/compatibility-mde.md}}
