@@ -1,9 +1,9 @@
 ---
 title: L2-cachekonfiguration
 description: Lär dig att konfigurera L2-cachen.
-source-git-commit: e5e4cf0b3979a457e706823dd16c88508ec4abd8
+source-git-commit: 2ef8b48fab84221c8e6423f41126bbee37706809
 workflow-type: tm+mt
-source-wordcount: '428'
+source-wordcount: '427'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Commerce lagrar den hashade dataversionen i Redis, med suffixet &#39;:hash&#39; 
 
 >[!INFO]
 >
->För Adobe Commerce om molninfrastruktur bör du överväga de bästa metoderna i [Utökad Redis-cacheimplementering](https://support.magento.com/hc/en-us/articles/360049292532) supportartikel.
+>För Adobe Commerce i molninfrastruktur kan du använda [driftsättningsvariabler](https://devdocs.magento.com/cloud/env/variables-deploy.html#redis_backend) för L2-cachekonfiguration.
 
 ## Konfigurationsexempel
 
