@@ -2,7 +2,7 @@
 title: Adobe Commerce Global Reference Architecture
 description: Få ut mesta möjliga av er Adobe Commerce-implementering genom att utnyttja en global referensarkitektur.
 exl-id: a18529a3-da9b-4e1b-8048-0a906e65c740
-source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
+source-git-commit: f713e07b57705e8720c773f9f762a357c173e29d
 workflow-type: tm+mt
 source-wordcount: '194'
 ht-degree: 0%
@@ -10,6 +10,8 @@ ht-degree: 0%
 ---
 
 # Global referensarkitektur (GRA)
+
+>[!VIDEO](https://video.tv.adobe.com/v/3410528/?quality=12&learn=on)
 
 När man driver företag som har flera webbplatser för flera varumärken på flera lokala marknader (med lokaliserade valutor, språk, medier, delade kataloger och unika kundvagnar) och som vill undvika onödiga kostnader för implementering av samma funktioner och integreringar är GRA (Global Reference Architecture) alltid ett bra alternativ.
 
