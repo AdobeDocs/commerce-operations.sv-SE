@@ -1,15 +1,16 @@
 ---
-title: Process och tidslinje
+title: Implementeringsprocess och tidslinje
 description: Se exempel på typiska tidslinjer för Adobe Commerce-implementering och tidslinjeaktiviteter.
 exl-id: 73e38098-db2b-4ad3-9f2d-ac8a377f2525
-source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
+source-git-commit: 6e07f8c958adedd2a98d3fe0d174865a3b9ebead
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '170'
 ht-degree: 0%
 
 ---
 
-# Vanlig process och tidslinje
+
+# Normal implementeringsprocess och tidslinje
 
 Många organisationer förbereder sig för en handelsomformning genom att skapa en anbudsförfrågan. Detta inkluderar detaljerade krav, aktuella registersystem, ett affärsärende och specifika mål (t.ex. intäkt, konvertering, genomsnittligt ordervärde) för att definiera framgång. Varumärket närmar sig då två till tre olika integratörer av handelssystem eller digitala byråer för att utvärdera, granska uppskattningar och förslag, välja ett företag och börja arbeta mot en prognostiserad tidslinje att lansera.
 

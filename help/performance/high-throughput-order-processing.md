@@ -1,9 +1,9 @@
 ---
 title: Bearbetning av beställning med hög genomströmning
 description: Optimera beställnings- och utcheckningsupplevelsen för Adobe Commerce eller Magento Open Source.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 45ffa6487d94feba3d6c2a6d5d938108b1fef91d
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1048'
 ht-degree: 0%
 
 ---
@@ -75,7 +75,7 @@ The `set` skriver följande till `app/etc/env.php` fil:
 AsyncOrder har stöd för en begränsad uppsättning [!DNL Commerce] funktioner.
 
 | Kategori | Funktion som stöds |
-|---------------- | -----------------------|
+|------------------|--------------------------------------------------------------------------|
 | Utcheckningstyper | OnePage-utcheckning<br>Standardutcheckning<br>B2B - överlåtbar offert |
 | Betalningsmetoder | Check-/penningorder<br>Kontant vid leverans<br>Braintree<br>PayPal PayFlow Pro |
 | Leveransmetoder | Alla leveransmetoder stöds. |
@@ -184,8 +184,8 @@ stage:
 
 <!-- link definitions -->
 
-[global]: https://docs.magento.com/user-guide/catalog/inventory-options-global.html
-[inventory]: https://docs.magento.com/user-guide/configuration/catalog/inventory.html
+[global]: https://experienceleague.adobe.com/docs/commerce-admin/inventory/configuration/global-options.html
+[inventory]: https://experienceleague.adobe.com/docs/commerce-admin/inventory/guide-overview.html
 [mrg]: https://developer.adobe.com/commerce/php/module-reference/
 [AsyncOrder]: https://developer.adobe.com/commerce/php/module-reference/module-async-order/
 [UppskjutenTotalBeräkning]: https://developer.adobe.com/commerce/php/module-reference/module-deferred-total-calculating/
