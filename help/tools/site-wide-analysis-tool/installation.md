@@ -1,9 +1,9 @@
 ---
 title: Installationshandbok
 description: Använd den här guiden för att installera [!DNL Site-Wide Analysis Tool] för din webbplats
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 434fb9eb9570f183d9bf9d4b56b8e56a69e8005d
 workflow-type: tm+mt
-source-wordcount: '1063'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,7 @@ Din lokala infrastruktur måste uppfylla följande krav innan du installerar age
 
 ## [!DNL Commerce Services Connector]
 
-Agenten kräver [[!DNL Commerce Services Connector]](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/saas.html) tillägg som ska installeras på datorn och [konfigurerad](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/saas.html) med API-nycklar. Kontrollera att tillägget är installerat genom att köra följande kommando:
+Agenten kräver [[!DNL Commerce Services Connector]](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html) tillägg som ska installeras på datorn och [konfigurerad](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html) med API-nycklar. Kontrollera att tillägget är installerat genom att köra följande kommando:
 
 ```bash
 bin/magento module:status Magento_ServicesConnector
@@ -83,7 +83,7 @@ Om du har installerat tillägget och konfigurerat det med en befintlig API-nycke
 
 1. Klicka **[!UICONTROL Delete]** bredvid den befintliga API-nyckeln.
 
-1. [Konfigurera](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/saas.html) en ny API-nyckel.
+1. [Konfigurera](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html) en ny API-nyckel.
 
 >[!IMPORTANT]
 >
@@ -109,7 +109,7 @@ Om tillägget inte är installerat installerar du det enligt följande:
    bin/magento setup:upgrade
    ```
 
-1. [Konfigurera API-nycklar](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/saas.html) för att ansluta tillägget till systemet.
+1. [Konfigurera API-nycklar](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html) för att ansluta tillägget till systemet.
 
 ## Installera agenten
 
