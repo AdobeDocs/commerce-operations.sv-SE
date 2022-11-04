@@ -1,7 +1,7 @@
 ---
 title: Systemkrav
 description: Använd den här referensen för att identifiera nödvändiga programvaruberoenden som har testats med Adobe Commerce och Magento Open Source.
-source-git-commit: df8240b71efe992bc1c0655aa30c32778297a3c6
+source-git-commit: 3692dcfd5b50c2f036b005d40a22db061b9ea5fd
 workflow-type: tm+mt
 source-wordcount: '534'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 I den här tabellen visas versioner av tredjepartsprogramvaruberoenden som Adobe har testat med specifika versioner av Adobe Commerce och Magento Open Source. Adobe stöder endast den kombination av systemkrav som beskrivs i följande tabell.
 
-Exempelvis testas 2.4.3 fullständigt med MariaDB 10.4. Adobe rekommenderar att du uppgraderar till MariaDB 10.4 innan du uppgraderar till 2.4.3.
+2.4.5 har till exempel testats fullt ut med MariaDB 10.4. Adobe rekommenderar att du uppgraderar till MariaDB 10.4 innan du uppgraderar till 2.4.5.
 
 {{$include /help/_includes/templated/system-requirements-table.md}}
 

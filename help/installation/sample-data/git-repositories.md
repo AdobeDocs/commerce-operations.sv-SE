@@ -1,9 +1,9 @@
 ---
 title: Klona exempeldata i Git-databaser
 description: Följ de här stegen för att installera exempeldata för Adobe Commerce och Magento Open Source genom att klona Git-databaser.
-source-git-commit: f6f438b17478505536351fa20a051d355f5b157a
+source-git-commit: 3692dcfd5b50c2f036b005d40a22db061b9ea5fd
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '764'
 ht-degree: 0%
 
 ---
@@ -73,12 +73,10 @@ Så här klonar du GitHub-databasen med exempeldata med SSH-protokollet:
 
    Om du använde `2.4-develop` grenen Sample Data i Magento Open Source GitHub-databasen ska `2.4-develop`.
 
-   Om du använde `2.4.3` grenen Sample Data i Magento Open Source GitHub-databasen ska `2.4.3`.
-
-   Om du vill checka ut rätt gren kör du följande kommando från exempeldatalagrets rotkatalog (förutsatt att du behöver `2.4.3` gren):
+   Om du vill checka ut rätt gren kör du följande kommando från exempeldatalagrets rotkatalog (förutsatt att du behöver `2.4-develop` gren):
 
    ```bash
-   git checkout 2.4.3
+   git checkout 2.4-develop
    ```
 
 1. Ändra till `<app_root>`.
@@ -129,12 +127,10 @@ Så här klonar du GitHub-databasen med exempeldata med HTTPS-protokollet:
 
    Om du använde `2.4-develop` grenen Sample Data i Magento Open Source GitHub-databasen ska `2.4-develop`.
 
-   Om du använde `2.4.3` grenen Sample Data i Magento Open Source GitHub-databasen ska `2.4.3`.
-
-   Om du vill checka ut rätt gren kör du följande kommando från exempeldatalagrets rotkatalog (förutsatt att du behöver `2.4.3` gren):
+   Om du vill checka ut rätt gren kör du följande kommando från exempeldatalagrets rotkatalog (förutsatt att du behöver `2.4-develop` gren):
 
    ```bash
-   git checkout 2.4.3
+   git checkout 2.4-develop
    ```
 
 1. Ändra till `<magento_root>`.

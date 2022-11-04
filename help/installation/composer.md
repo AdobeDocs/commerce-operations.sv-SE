@@ -1,9 +1,9 @@
 ---
 title: Snabbstart av lokal installation
 description: Följ de här stegen för att installera Adobe Commerce eller Magento Open Source på en infrastruktur som du äger.
-source-git-commit: f6f438b17478505536351fa20a051d355f5b157a
+source-git-commit: 3692dcfd5b50c2f036b005d40a22db061b9ea5fd
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -95,32 +95,32 @@ Så här hämtar du metapaketet för Adobe Commerce eller Magento Open Source:
 
    >[!NOTE]
    >
-   >Adobe Commerce-kunder har tillgång till patchar på 2.4.x och 2.3.x två veckor före General Availability-datumet (GA). Förhandsversionspaket är bara tillgängliga via Composer. Du kan inte komma åt förhandsversioner på Developer Portal eller GitHub förrän GA. Om du inte hittar dessa paket i Composer kontaktar du Adobe Commerce Support.
+   >Adobe Commerce-kunder har tillgång till patchar två veckor före det allmänna tillgänglighetsdatumet (GA). Förhandsversionspaket är bara tillgängliga via Composer. Du kan inte komma åt förhandsversioner på Developer Portal eller GitHub förrän GA. Om du inte hittar dessa paket i Composer kontaktar du Adobe Commerce Support.
 
 ### Exempel - Mindre version
 
-Mindre releaser innehåller nya funktioner, kvalitetskorrigeringar och säkerhetskorrigeringar. Använd Composer för att ange en mindre release. Om du till exempel vill ange metapaketet för Adobe Commerce 2.4.3:
+Mindre releaser innehåller nya funktioner, kvalitetskorrigeringar och säkerhetskorrigeringar. Använd Composer för att ange en mindre release. Om du till exempel vill ange metapaketet för Adobe Commerce 2.4.5:
 
 ```bash
-composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.4.3 <install-directory-name>
+composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.4.5 <install-directory-name>
 ```
 
 ### Exempel - Kvalitetskorrigering
 
-Patchar för kvalitet innehåller i första hand funktioner _och_ säkerhetskorrigeringar. De kan dock ibland även innehålla nya bakåtkompatibla funktioner. Använd Composer för att hämta en kvalitetskorrigering. Om du till exempel vill ange metapaketet för Adobe Commerce 2.4.3:
+Patchar för kvalitet innehåller i första hand funktioner _och_ säkerhetskorrigeringar. De kan dock ibland även innehålla nya bakåtkompatibla funktioner. Använd Composer för att hämta en kvalitetskorrigering. Om du till exempel vill ange metapaketet för Adobe Commerce 2.4.5:
 
 ```bash
-composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.4.3 <install-directory-name>
+composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.4.5 <install-directory-name>
 ```
 
 ### Exempel - Säkerhetsuppdatering
 
 Säkerhetsuppdateringar innehåller endast säkerhetskorrigeringar. De är utformade för att göra uppgraderingsprocessen snabbare och enklare.
 
-Säkerhetsuppdateringar använder namnkonventionen för Composer `2.4.3-px`. Använd Composer för att ange en korrigering. Om du till exempel vill hämta metapaketet Adobe Commerce 2.4.3-p1:
+Säkerhetsuppdateringar använder namnkonventionen för Composer `2.4.5-px`. Använd Composer för att ange en korrigering. Om du till exempel vill hämta metapaketet Adobe Commerce 2.4.5-p1:
 
 ```bash
-composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.4.3-p1 <install-directory-name>
+composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.4.5-p1 <install-directory-name>
 ```
 
 ## Ange filbehörigheter
