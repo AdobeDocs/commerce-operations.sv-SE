@@ -1,7 +1,7 @@
 ---
-title: '"Den [!UICONTROL Deploy] tab"'
+title: "Den [!UICONTROL Deploy] tab"
 description: Läs mer om [!UICONTROL Deploy] flik för [!DNL Observation for Adobe Commerce].
-source-git-commit: 3f2a401bb916fc04405f21ba2acfc42f7defdccb
+source-git-commit: b95a35ee64cd8e844a51a9ff699eceb9c3a9266c
 workflow-type: tm+mt
 source-wordcount: '1114'
 ht-degree: 0%
@@ -40,7 +40,7 @@ The **[!UICONTROL Deploy State]** bildrutan visar de distributionshändelser som
 
 The **[!UICONTROL Deploy Log Detail]** bildrutan visar sammanfattningsinformation för distributionsloggmeddelanden som inträffade under den valda tidsramen. Bildrutan tolkas för följande strängar i distributionsloggarna:
 
-* &quot;%OBS! Startar distributionen.%) som start_dply
+* &#39;%OBS! Startar distributionen.%) som start_dply
 * &#39;%INFO: Startscenario(n): scenario/deploy.xml%) som start_scenario
 * &#39;%OBS! Startar pre-deploy%) som start_predply
 * &#39;% INFO: Återställer korrigeringsloggfilen %) som rstr_ptch_log

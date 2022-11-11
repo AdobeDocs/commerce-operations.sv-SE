@@ -1,9 +1,9 @@
 ---
 title: "Den [!UICONTROL Summary] tab"
 description: Läs mer om [!UICONTROL Summary] flik för [!DNL Observation for Adobe Commerce].
-source-git-commit: 5bcb834bc563c52cd5b169b9f4f20dab31d404cd
+source-git-commit: 5058441eb64d59b3e1aa329603a87f75c826996e
 workflow-type: tm+mt
-source-wordcount: '2637'
+source-wordcount: '2655'
 ht-degree: 0%
 
 ---
@@ -23,29 +23,29 @@ The [!UICONTROL Summary] flik för [!DNL Observation for Adobe Commerce] är tä
 
 ### Typer av transaktioner:
 
-**Webb:** Transaktioner initieras med en HTTP-begäran. För de flesta organisationer representerar dessa kundcentrerade interaktioner och är därför de viktigaste transaktionerna att övervaka.
+**Webb:** Webbtransaktioner initieras med en HTTP-begäran. För de flesta organisationer representerar dessa kundcentrerade interaktioner och är därför de viktigaste transaktionerna att övervaka.
 
 **Ej webb:** Andra transaktioner än webbtransaktioner initieras inte med en webbförfrågan. De kan omfatta icke-webbarbetsprocesser, bakgrundsprocesser, skript, meddelandeköaktivitet och andra uppgifter.
 
-Titta på **[!UICONTROL Transaction Overview]** bildruta fanns det nästan 53 000 transaktioner med en genomsnittlig APDEX-poäng på 0,76, och 95 % av dessa transaktioner skedde på under 2 313 sekunder. Detta är en bildruta där en tätare tidsram kan visa avvikelser från det aktuella genomsnittet om en APDEX-träff inträffar under en kort tidsram.
+Om du tittar på **[!UICONTROL Transaction Overview]** ovan fanns det nästan 53 000 transaktioner med ett genomsnittligt APDEX-poäng på 0,76, och 95 % av dessa transaktioner gjordes på under 2 313 sekunder. Detta är en bildruta där en tätare tidsram kan visa avvikelser från det aktuella genomsnittet om en APDEX-träff inträffar under en kort tidsram.
 
 ## [!UICONTROL 404 page errors frame]
 
 ![Bildruta med 404 sidfel](../../assets/tools/404-page-errors.jpg)
 
-The **[!UICONTROL 404 page errors]** ramlistor [URI](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier) och antalet 404 sidfel under den valda tidsramen.
+The **[!UICONTROL 404 page errors]** ramlistor [URI](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier) och antalet 404 sidfel för en vald tidsram.
 
 ## [!UICONTROL % of Storage Free frame]
 
 ![procent av lagringsfri bildruta](../../assets/tools/percent-of-storage-free.jpg)
 
-The **[!UICONTROL % of Storage Free]** bildrutan visar medelvärdet i % fritt från lagringsutrymme över alla noder i klustret. Om du till exempel har ett kluster med tre noder visas \&lt;mount point=&quot;&quot;>, \&lt;environment name=&quot;&quot;>. Den här bildrutan kan vara bedräglig om det finns en varians över tre noder. Ett exempel på en varians skulle vara om `/data/mysql` den kostnadsfria monteringspunkten var ett annat värde i det tre nodklustret. Det finns en ram under [!UICONTROL MySQL] som facetterar monteringspunkterna efter nodnamn för att mer exakt se vilka `/data/mysql` lagringsutrymme på varje nod är faktiskt fritt.
+The **[!UICONTROL % of Storage Free]** bildrutan visar den genomsnittliga procentandelen fritt lagringsutrymme över alla noder i klustret. Om du till exempel har ett kluster med tre noder visas \&lt;mount point=&quot;&quot;>, \&lt;environment name=&quot;&quot;>. Den här bildrutan kan vara bedräglig om det finns en varians över tre noder. Ett exempel på en varians skulle vara om `/data/mysql` den kostnadsfria monteringspunkten var ett annat värde i det tre nodklustret. Det finns en ram under [!UICONTROL MySQL] som facetterar monteringspunkterna efter nodnamn för att mer exakt se vilka `/data/mysql` lagringsutrymme på varje nod är faktiskt fritt.
 
 ## [!UICONTROL % of system memory that is free frame]
 
 ![procent systemminne som är ledigt bildruta](../../assets/tools/percent-of-system-memory-that-is-free.jpg)
 
-Den här bildrutan visar, per nod, mängden systemminne som är ledigt på varje nod.
+The **% ledigt systemminne** bildrutan visar, per nod, mängden systemminne som är ledigt på varje nod.
 
 ## [!UICONTROL Swap memory free in bytes]
 
@@ -57,19 +57,19 @@ The **[!UICONTROL Swap memory free in bytes]** bildrutan visar, per nod, mängde
 
 ![Processor, procent per värd](../../assets/tools/cpu-percent-by-host.jpg)
 
-Sammanställningen av alla miljöer och noder visas i **[!UICONTROL CPU % by host]** bildruta. Du bör avmarkera icke-produktionsmiljöer. Observera alla instanser där alla noder för produktionsmiljön inte finns. Den här artikeln innehåller tips om hög processoranvändning: [Felsöka prestanda med New Relic på Adobe Commerce](https://support.magento.com/hc/en-us/articles/360042149832#high_cpu_usage).
+Sammanställningen av alla miljöer och noder visas i **[!UICONTROL CPU % by host]** bildruta. Du bör avmarkera icke-produktionsmiljöer. Observera även alla instanser där alla noder för produktionsmiljön inte finns. Mer tips om hög processoranvändning finns i [Felsöka prestanda med New Relic på Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html).
 
 ## [!UICONTROL Alerts during timeframe]
 
 ![varningar under tidsram](../../assets/tools/alerts-during-timeframe.jpg)
 
-The **[!UICONTROL Alerts during timeframe]** visar alla varningar, inklusive [!UICONTROL Managed Alerts] som lagts till av Adobe Commerce Support.
+The **[!UICONTROL Alerts during timeframe]** visar alla varningar, inklusive [!UICONTROL Managed Alerts] som lagts till av Adobe Commerce support.
 
 ## [!UICONTROL CPU Usage]
 
 ![CPU-användning](../../assets/tools/cpu-usage.jpg)
 
-Om **[!UICONTROL CPU Usage]** bildrutan är tom, det är en indikator på att infrastrukturtillämpningen av [!DNL New Relic] är inte aktiverat. Om webbplatsen finns på Starter visas inte den här informationen. Om din webbplats är på Pro kan du öppna en supportanmälan och få [!DNL New Relic Infrastructure] aktiverat för din webbplats.
+Om **[!UICONTROL CPU Usage]** bildrutan är tom, det är en indikation på att infrastrukturtillämpningen av [!DNL New Relic] är inte aktiverat. Om din webbplats finns på Starter visas inte den här informationen. Öppna en [supportanmälan](https://experienceleague.corp.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=en) att ha [!DNL New Relic Infrastructure] aktiverat för din webbplats.
 
 ## [!UICONTROL Average Response Time]
 
@@ -87,13 +87,13 @@ The **[!UICONTROL cron_schedule]** tabellen skrivs i början och slutet av kroni
 
 ![svarskod](../../assets/tools/response-code.jpg)
 
-The **[!UICONTROL Response Code]** frame är en bra indikation på webbtrafik och svarskoden för förfrågningar. Det är [!DNL New Relic] transaktionsdata, och de kan hanteras av `httpResponseCode` returnerat.
+The **[!UICONTROL Response Code]** frame är en bra indikation på webbtrafik och svarskoden för förfrågningar. Det är [!DNL New Relic's] transaktionsdata, och de kan hanteras av `httpResponseCode` returnerat.
 
 ## [!UICONTROL Web Traffic volume compared with one week ago Magento Managed Alerts Information]
 
 ![webbtrafik jämfört med för en vecka sedan](../../assets/tools/web-traffic-volume-compared.jpg)
 
-Den här bildrutan visar webbtrafikvolymen för en vecka sedan jämfört med den aktuella volymen.
+Den här bildrutan visar den jämförande webbtrafikvolymen för den senaste veckan och den aktuella veckan.
 
 ## [!UICONTROL Deployment Log Entries]
 
@@ -105,9 +105,9 @@ The **[!UICONTROL Deployment Log Entries]** bildrutan visar antalet distribuerin
 
 ![distributionstillstånd](../../assets/tools/deployment-state.jpg)
 
-The **[!UICONTROL Deployment State]** bildrutan utnyttjar särskilda distributionsfraser från distributionsloggarna. Här är några exempel på fraser som räknas i loggen och ansiktsnamnet:
+The **[!UICONTROL Deployment State]** bildrutan utnyttjar särskilda distributionsfaser från distributionsloggarna. Här är några exempel på faser som räknas i loggen och ansiktsnamnet:
 
-**Distributionsloggfraser:**
+**Distributionsloggfaser:**
 
 * %Startar genereringskommando%) som start_gen
 * &#39;%git apply /app/vendor/magento/ece-tools/patches%&#39;) as &#39;apply_patches&#39;
@@ -122,13 +122,13 @@ The **[!UICONTROL Deployment State]** bildrutan utnyttjar särskilda distributio
 
 ![IP-frekvens](../../assets/tools/ip-frequency.jpg)
 
-The **[!UICONTROL IP Frequency]** bildrutan räknar (&#39;MISS&#39; och &#39;PASS&#39;)-status för varje IP-adress från [!DNL Fastly] loggar. Webbförfrågningar med dessa statusvärden kommer till den ursprungliga servern och kommer att lägga till inläsning till servern. Den visar de tjugo översta adresserna i frekvens. Den här bildrutan kan användas för att identifiera IP-attacker eller källor med hög belastning på en webbplats.
+The **[!UICONTROL IP Frequency]** bildrutan räknar (&#39;MISS&#39; och &#39;PASS&#39;)-status för varje IP-adress från [!DNL Fastly] loggar. Webbförfrågningar med dessa statusvärden når den ursprungliga servern och lägger till inläsning till servern. Den visar de tjugo översta adresserna i frekvens. Den här bildrutan kan användas för att identifiera IP-attacker eller källor med hög belastning på en webbplats.
 
 ## [!UICONTROL IP Response – top 20 URLs in duration]
 
 ![ip-svar - de 20 högsta URL:erna i varaktighet](../../assets/tools/ip-response-top-20-urls.jpg)
 
-I den här bildrutan visas URL-adresser med den längsta svarstiden. Det kan indikera stora bildfiler eller sidor, API eller sidor med den längsta svarstiden.
+The **[!UICONTROL IP Response – top 20 URLs in duration]** bildrutan visar URL-adresser med den längsta svarstiden. Det kan indikera stora bildfiler eller sidor, API eller sidor med den längsta svarstiden.
 
 ## [!UICONTROL API Calls by IP]
 
@@ -164,13 +164,13 @@ The **[!UICONTROL Transaction Errors]** bildrutan visar antalet transaktionsfel 
 
 ![nginx-åtkomst per nod](../../assets/tools/nginx-access-by-node.jpg)
 
-The **[!UICONTROL Nginx access by node]** bildrutan tittar på antalet från `access.log` efter nod. Det är praktiskt att se om lasten är jämnt fördelad. Det visas ofta när en nod släpps. Detta visar även inläsning över hela webbplatsen.
+The **[!UICONTROL Nginx access by node]** bildrutan tittar på antalet från `access.log` efter nod. Det är praktiskt att se om lasten är jämnt fördelad. Det visas ofta när en nod släpps. Bildrutan visar även inläsningen över webbplatsen.
 
 ## [!UICONTROL Galera Log]
 
 ![galerlogg](../../assets/tools/galera-log.jpg)
 
-[Galera](https://galeracluster.com/library/galera-documentation.pdf) används för databaskluster. Den här bildrutan fokuserar på särskilda signaler från [!UICONTROL Galera] kluster. Dessa signaler fokuserar på noder som kommer in i och avslutar klustret, vilket är ett normalt beteende för att upprätthålla databasens dataintegritet. Noderna hålls synkroniserade som [!UICONTROL Galera] klusterstatus ändras.
+[[!DNL Galera]](https://galeracluster.com/library/galera-documentation.pdf) används för databaskluster. Den här bildrutan fokuserar på särskilda signaler från [!UICONTROL Galera] kluster. Signalerna fokuserar på noder som kommer in i och avslutar klustret, vilket är ett normalt beteende för att upprätthålla databasens dataintegritet. Noderna hålls synkroniserade som [!UICONTROL Galera] klusterstatus ändras.
 
 **Lista över [!UICONTROL Galera] lägesändringar:**
 
@@ -256,9 +256,9 @@ The **[!UICONTROL Database mysql-slow.log]** bildrutan innehåller ett antal pos
 
 ![återkallar synkronisering från logg](../../assets/tools/redis-synchronization-from-log.jpg)
 
-[Redis](https://redis.io/docs/about/) är ett databasarkiv med öppen källkod (BSD-licensierad) i minnet som används som databas, cache och meddelandehanterare. Den kan utföra databas- och sessionscachning om den är konfigurerad. The **[!UICONTROL Redis synchronization from Log]** fokuserar bildrutan på [Synkronisera igen](https://redis.io/docs/manual/replication/). Ju större desto [!DNL Redis] datauppsättningen, desto större sannolikhet kommer det att uppstå problem med synkroniseringen (fler data att synkronisera).
+[[!DNL Redis]](https://redis.io/docs/about/) är ett databasarkiv med öppen källkod (BSD-licensierad) i minnet som används som databas, cache och meddelandehanterare. Den kan utföra databas- och sessionscachning om den är konfigurerad. The **[!UICONTROL Redis synchronization from Log]** fokuserar bildrutan på [[!DNL Redis] synkronisering](https://redis.io/docs/manual/replication/). Ju större desto [!DNL Redis] datauppsättningen, desto större sannolikhet kommer det att uppstå problem med synkroniseringen (fler data att synkronisera).
 
-**[!DNL Redis]fel och meddelanden**
+**[!DNL Redis]fel och meddelanden:**
 
 * %SLAVE-synkronisering: Det finns inget utrymme kvar på enheten %) som space
 * %Server startad, Redis version%) som serv_start
@@ -291,7 +291,7 @@ Hur PHP-processer beter sig beror på [konfiguration](https://www.php.net/manual
 
 The **[!UICONTROL PHP errors]** antalet PHP-fel med arbetare under den valda tidsramen. Mer information finns i [Adobe Commerce PHP-inställningar](../../installation/prerequisites/php-settings.md).
 
-**PHP-fel och -meddelanden**
+**PHP-fel och -meddelanden:**
 
 * %worker_connections are not enough%) as &#39;worker&#39;
 * &#39;%PHP Allvarligt fel: Tillåten minnesstorlek!%&#39;) som &#39;mem_size&#39;
@@ -309,31 +309,31 @@ The **[!UICONTROL PHP errors]** antalet PHP-fel med arbetare under den valda tid
 
 ![php-processer](../../assets/tools/php-processes.jpg)
 
-[PHP-FPM](https://php-fpm.org/), a [!UICONTROL FastCGI Process Manager] används av [!DNL Nginx]. Mer information om systemkrav finns i [Krav för PHP-versioner mappade till Adobe Commerce-versioner](../../installation/system-requirements.md). The **[!UICONTROL PHP processes]** bildrutan visar antalet PHP-processer som körs vid en viss tidpunkt på den valda tidslinjen.
+[PHP-FPM](https://php-fpm.org/) är en [!UICONTROL FastCGI Process Manager] används av [!DNL Nginx]. Mer information om systemkrav finns i [Krav för PHP-versioner mappade till Adobe Commerce-versioner](../../installation/system-requirements.md). The **[!UICONTROL PHP processes]** bildrutan visar antalet PHP-processer som körs vid en viss tidpunkt på den valda tidslinjen.
 
 ## [!UICONTROL Secondary processes]
 
 ![sekundära processer](../../assets/tools/secondary-processes.jpg)
 
-Sekundära processer kan påverka webbplatsens respons. The **[!UICONTROL Secondary processes]** bildrutan kan indikera en eller flera processer som kan lägga till inläsning på platsen. Databasen har i första hand de mest sekundära processerna som körs.
+Sekundära processer kan påverka webbplatsens respons. The **[!UICONTROL Secondary processes]** bildruta anger en eller flera processer som kan lägga till inläsning på platsen. Databasen har i första hand de mest sekundära processerna som körs.
 
 ## [!UICONTROL Traffic vs Week Ago]
 
 ![trafik jämfört med vecka sedan](../../assets/tools/traffic-vs-week-ago.jpg)
 
-The **[!UICONTROL Traffic vs Week Ago]** läser webbplatsens trafik (förfrågningar) från [!DNL Fastly] loggar med cachestatus (&#39;MISS&#39;, &#39;PASS&#39;). De här förfrågningarna lägger till inläsning till de ursprungliga servrarna. Den här bildrutan visar volymen för webbförfrågningar jämfört med för en vecka sedan under samma tidsram.
+The **[!UICONTROL Traffic vs Week Ago]** läser webbplatsens trafik (förfrågningar) från [!DNL Fastly] loggar med cachestatus (&#39;MISS&#39;, &#39;PASS&#39;). De här förfrågningarna lägger till inläsning till de ursprungliga servrarna. Den här bildrutan visar den jämförande volymen för webbförfrågningar för den aktuella veckan och den senaste veckan under samma tidsram.
 
 ## [!UICONTROL Fastly Cache]
 
 ![snabbt cacheminne](../../assets/tools/fastly-cache.jpg)
 
-The **[!UICONTROL Fastly Cache]** bildrutan visar en sammanställd vy över cachestatus för begäranden från snabbloggarna. Om du klickar på FEL visas procentandelen fel i begäran. Detta ökar vanligtvis när den ursprungliga servern inte svarar tillräckligt snabbt på sidförfrågningar.
+The **[!UICONTROL Fastly Cache]** bildrutan visar en sammanställd vy över cachestatus för begäranden från [!DNL Fastly] loggar. Om du väljer FEL visas procentandelen fel i begäran. Detta ökar vanligtvis när ursprungsservern inte svarar tillräckligt snabbt på sidförfrågningar.
 
 ## [!UICONTROL Page Rendering]
 
 ![sidåtergivning](../../assets/tools/page-rendering.jpg)
 
-The **[!UICONTROL Page Rendering]** bildrutan visar den genomsnittliga sidåtergivningstiden från sidvykällan för [!DNL New Relic] jämfört med samma tidsperiod föregående vecka.
+The **[!UICONTROL Page Rendering]** bildrutan visar den aktuella veckans genomsnittliga återgivningstid från sidvykällan för [!DNL New Relic] jämfört med föregående vecka under samma tidsperiod.
 
 ## [!UICONTROL Page loading detail]
 
@@ -359,7 +359,7 @@ The **[!UICONTROL Admin Activities]** bildruta identifierar transaktioner med en
 
 ![Standardordertransaktioner](../../assets/tools/order-transactions-default.jpg)
 
-The **[!UICONTROL Order transactions (default?)]** ramutseenden för transaktioner `request.headers.host` från transaktioner där namnet = &#39;WebTransaction/Action/checkout/onpage/success&#39;. Om orderns URL är en annan kommer den här bildrutan inte att ha några data.
+The **[!UICONTROL Order transactions (default?)]** ramutseenden för transaktioner `request.headers.host` från transaktioner där namnet = `WebTransaction/Action/checkout/onepage/success`. Om orderns URL är en annan kommer den här bildrutan inte att ha några data.
 
 ## [!UICONTROL Elasticsearch Index information]
 

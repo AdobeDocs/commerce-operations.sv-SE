@@ -1,7 +1,7 @@
 ---
-title: '"Den [!UICONTROL MySQL] tab"'
+title: "Den [!UICONTROL MySQL] tab"
 description: Läs mer om [!UICONTROL MySQL] flik för [!DNL Observation for Adobe Commerce].
-source-git-commit: 3f2a401bb916fc04405f21ba2acfc42f7defdccb
+source-git-commit: 8c9753fe5b9038978859cc101d53f897267ecfe9
 workflow-type: tm+mt
 source-wordcount: '2030'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ![MySQL% kostnadsfritt lagringsutrymme per nod](../../assets/tools/observation-for-adobe-commerce/mysql-tab-1.jpg)
 
-Många problem orsakas av att MySQL-lagringsutrymmet i det tilldelade lagringsutrymmet för MySQL (`datadir` MySQL-konfigurationsinställning, standard är `/data/mysql`) eller `tmpdir` tar slut på utrymme. Standardvärdet `tmpdir` (MySQL-inställning) är `/tmp`. Den här bildrutan tittar på `/, /tmp` (om det definieras som en separat montering) och `/data/mysql` % gratisutrymme. Från och med MySQL version 5.7 (MariaDB version 10.2) skrivs okomprimerade tmp-tabeller till ett tmp-tabellutrymme i `/data/mysql` i filen (ibtmp1). Filen utökas automatiskt utan gräns som standard. Eftersom det är ett tabellutrymme minskar det inte i storlek och återställs till 12 MB när MySQL startas om.
+Många problem orsakas av att MySQL-lagringsutrymmet i det tilldelade lagringsutrymmet för MySQL (`datadir` MySQL-konfigurationsinställning, standard är `/data/mysql`) eller `tmpdir` tar slut på utrymme. Standardvärdet `tmpdir` (MySQL-inställning) är `/tmp`. The **[!UICONTROL MySQL% free storage by node]** bildrutan ser ut på `/, /tmp` (om det definieras som en separat montering) och `/data/mysql` procenttal för gratis lagring. Från och med MySQL version 5.7 (MariaDB version 10.2), okomprimerad `tmp` tabeller skrivs till `tmp` tabellutrymme i `/data/mysql` i filen (ibtmp1). Filen utökas automatiskt utan gräns som standard. Eftersom det är ett tabellutrymme minskar det inte i storlek och återställs till 12 MB när MySQL startas om.
 
 ## [!UICONTROL MySQL Connections by Node]
 
@@ -38,13 +38,13 @@ The **[!UICONTROL Galera Number of Nodes in cluster]** bildrutan visar informati
 
 ![MySQL stänger och startar](../../assets/tools/observation-for-adobe-commerce/mysql-tab-5.jpg)
 
-The **[!UICONTROL MySQL shutdowns and starts]** frame identifierar när en nod stängs av. [!DNL Galera] noderna kommer att avlägsnas och tas bort från [!DNL Galera] nod. Detta resulterar vanligtvis i en omstart av MySQL-tjänsten.
+The **[!UICONTROL MySQL shutdowns and starts]** frame identifierar när en nod stängs av. The [!DNL Galera] noderna kommer att avlägsnas och tas bort från [!DNL Galera] nod. Detta resulterar vanligtvis i en omstart av MySQL-tjänsten.
 
 ## [!UICONTROL Galera log]
 
 ![Galera-logg](../../assets/tools/observation-for-adobe-commerce/mysql-tab-6.jpg)
 
-The **[!UICONTROL Galera log]** bildrutan visar antal särskilda signaler från MySQL-loggarna som gäller [!DNL Galera] noder, deras lägen och lägesändringar för [!DNL Galera] kluster.
+The **[!UICONTROL Galera log]** bildrutan visar antalet särskilda signaler från MySQL-loggarna som gäller [!DNL Galera] noder, deras lägen och lägesändringar för [!DNL Galera] kluster.
 
 * &#39;%1047 WSREP har ännu inte förberett nod för programanvändning (%) som &#39;node_not_prep_for_use&#39;
 * %\[FEL\] WSREP: Det gick inte att läsa från: wsrep_sst_xtrabackup-v2%) som xtrabackup_read_fails
@@ -55,8 +55,8 @@ The **[!UICONTROL Galera log]** bildrutan visar antal särskilda signaler från 
 * &#39;%members = 2/3 (join/total)%&#39;) as&#39;2of3&#39;
 * &#39;%members = 2/2%&#39;) as &#39;2of2&#39;
 * %members = 1/2%) as &#39;1of2&#39;
-* &quot;%members = 1/3%&quot;) as &#39;1of3&#39;
-* &quot;%members = 1/1%&quot;) as &#39;1of1&#39;
+* %members = 1/3%) as &#39;1of3&#39;
+* %members = 1/1%) as &#39;1of1&#39;
 * &#39;%\[Obs\] /usr/sbin/mysqld (mysqld 10).%&#39;) as&#39;sql_launch&#39;
 * &#39;%kvorum: Ingen nod med fullständigt läge:%) som no_node_count
 * %WSREP: Medlem 0%) som &#39;mem_0&#39;
@@ -102,7 +102,7 @@ The **[!UICONTROL Cron_schedule table updates]** frame visar den maximala längd
 
 ![Långsam frågespår](../../assets/tools/observation-for-adobe-commerce/mysql-tab-11.jpg)
 
-The **[!UICONTROL Slow Query Traces]** -bildrutan visar tabellen och begärantypen där det finns långsamma frågekalkeringar. En långsam frågespårning skapas för frågetransaktioner som tar längre tid än 5 sekunder. Uppdateringsfrågorna är av betydelse för den här bildrutan. Om en tabell uppdateras av `UPDATE`, `DELETE`och `INSERT` -programsatser kan de låsa tabeller för en viss tidsperiod.
+The **[!UICONTROL Slow Query Traces]** -bildrutan visar tabellen och begärantypen där det finns långsamma frågekalkeringar. En långsam frågespårning skapas för frågetransaktioner som tar längre tid än fem sekunder. Uppdateringsfrågorna är av betydelse för den här bildrutan. Om en tabell uppdateras av `UPDATE`, `DELETE`och `INSERT` -programsatser kan de låsa tabeller för en viss tidsperiod.
 
 Jämn `SELECT` kan låsa rader om de används med FOR UPDATE.
 
@@ -114,13 +114,13 @@ Jämn `SELECT` kan låsa rader om de används med FOR UPDATE.
 
 ![Ändring av cron table](../../assets/tools/observation-for-adobe-commerce/mysql-tab-13.jpg)
 
-The **[!UICONTROL Cron table change]** bildrutan söker efter felmeddelanden av typen&quot;det gick inte att hämta lås för kron-jobb:&quot; tillsammans med ett specifikt PHP-minnesfel och lås som innehåller `cron_schedule` tabell. Om `cron_schedule` tabellen är låst (t.ex. av `DELETE` som körs mot den) kommer andra crons att hindras från att köras.
+The **[!UICONTROL Cron table change]** söker efter felmeddelanden om att &quot;det inte gick att hämta lås för kron-jobb:&quot; tillsammans med ett specifikt PHP-minnesfel och lås som innehåller `cron_schedule` tabell. Om `cron_schedule` tabellen är låst (t.ex. av `DELETE` som körs mot den) kommer andra crons att hindras från att köras.
 
 ## [!UICONTROL Deadlocks]
 
 ![Deadlocks](../../assets/tools/observation-for-adobe-commerce/mysql-tab-14.jpg)
 
-The **[!UICONTROL Deadlocks]** söker efter följande strängar som har tolkats från MySQL-loggarna.
+The **[!UICONTROL Deadlocks]** läser följande strängar från MySQL-loggarna:
 
 * &#39;%PHP Allvarligt fel: Tillåten minnesstorlek på %&#39;) som php_mem_error
 * %get lock; try restarting transaction, query was: DELETE FRÅN \`cron_schedule%) as cron_sched_lock_del
@@ -145,7 +145,7 @@ The **[!UICONTROL Deadlocks]** söker efter följande strängar som har tolkats 
 * &#39;% lås för kron-jobb: sales_send_order_creditmemo_emails%) as &#39;lock_sales_send_order_creditmemo_emails&#39;
 * &#39;% lås för kron-jobb: sales_grid_order_creditmemo_async_insert%) as &#39;lock_sales_grid_order_creditmemo_async_insert&#39;
 * &#39;% lås för kron-jobb: bulk_cleanup%) as &#39;lock_bulk_cleanup&#39;
-* &#39;% lås för kron-jobb: flush_preview_ratices%) as &#39;lock_flush_preview_ratios&#39;
+* &#39;% lås för kron-jobb: flush_preview_buttons%) as &#39;lock_flush_preview_buttons&#39;
 * &#39;% lås för kron-jobb: sales_send_order_invoice_emails%) as &#39;lock_sales_send_order_invoice_emails&#39;
 * &#39;% lås för kron-jobb: sales_send_order_invoice_emails%) as &#39;lock_sales_send_order_invoice_emails&#39;
 * &#39;% lås för kron-jobb: captcha_delete_utgången_images%) as &#39;lock_captcha_delete_utgången_images&#39;
@@ -198,7 +198,7 @@ The **[!UICONTROL DB Statistics]** bildrutan visar borttagningar, skrivningar, r
 
 ![Databasfel](../../assets/tools/observation-for-adobe-commerce/mysql-tab-17.jpg)
 
-The **[!UICONTROL Database Errors]** bildrutan visar en mängd olika databaser [varningar och fel](https://mariadb.com/kb/en/mariadb-error-codes/).
+The **[!UICONTROL Database Errors]** bildrutan visar en mängd olika databaser [varningar och fel](https://mariadb.com/kb/en/mariadb-error-codes/):
 
 * %Minnesstorleken som allokerats för den temporära tabellen är mer än 20 % av oskyldig_buffer_pool_size% som temp_tbl_buff_pool
 * %\[FEL\] WSREP: rbr write fails%) as &#39;rbr_write_fails&#39;
@@ -225,9 +225,9 @@ The **[!UICONTROL Database Errors]** bildrutan visar en mängd olika databaser [
 * %SQLSTATE[HY000]: Allmänt fel: 2014%) som &#39;sql_2014&#39;
 * %1927 Anslutningen avbröts%) som sql_1927
 * &#39;%1062 \[ERROR\] InnoDB:%&#39;) som &#39;sql_1062_e&#39;
-* &quot;%[Anteckning] WSREP: Tömmer minnesmappning till disk...%&#39;) som &#39;mem_map_flush&#39;
+* &#39;%&#39;[Anteckning] WSREP: Tömmer minnesmappning till disk...%&#39;) som &#39;mem_map_flush&#39;
 * %Internal MariaDB-felkod: 1146%) som &#39;sql_1146&#39;
-* %Internal MariaDB-felkod: 1062%) som &#39;sql_1062&#39; ・ &#39;%1062 [Varning] InnoDB:%) som sql_1062_w
+* %Internal MariaDB-felkod: 1062%) som &#39;sql_1062&#39; * &#39;%1062 [Varning] InnoDB:%) som sql_1062_w
 * %Internal MariaDB-felkod: 1064%) som &#39;sql_1064&#39;
 * &#39;%InnoDB: Kontrollfel i filen %) som assertion_err
 * &#39;%mysqld_safe Antal processer som körs nu: 0%) som mysql_oom

@@ -1,9 +1,9 @@
 ---
-title: '"Den [!UICONTROL PHP] tab"'
-description: Läs mer om [!UICONTROL PHP] i [!DNS Observation for Adobe Commerce].
-source-git-commit: f71fc3b2a66a4cc0b0d7865138184135e4a874e0
+title: "Den [!UICONTROL PHP] tab"
+description: Läs mer om [!UICONTROL PHP] flik för [!DNL Observation for Adobe Commerce].
+source-git-commit: 28055eb09235912c66c637990e2081a70e1c7808
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '591'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ The **[!UICONTROL PHP active process details]** bildrutan visar PHP-processerna,
 
 ![Inläsning av PHP-process](../../assets/tools/php-process-load.jpg)
 
-Den här bildrutan visar processorbelastningen från PHP-FPM-processer under den valda tidsramen.
+The **[!UICONTROL PHP process load (# of PHP processes and % of CPU load)]** bildrutan visar processorbelastningen från PHP-FPM-processer under den valda tidsramen.
 
 ## [!UICONTROL PHP Memory detail]
 
@@ -106,7 +106,7 @@ The **[!UICONTROL Database Errors]** bildrutan visar databasfel i den valda tids
 * &#39;%1062 \[ERROR\] InnoDB:%&#39;) som &#39;sql_1062_e&#39;
 * &#39;%[Anteckning] WSREP: Tömmer minnesmappning till disk...%&#39;) som &#39;mem_map_flush&#39;
 * %Internal MariaDB-felkod: 1146%) som &#39;sql_1146&#39;
-* %Internal MariaDB-felkod: 1062%) som &#39;sql_1062&#39; ・ &#39;%1062 [Varning] InnoDB:%) som sql_1062_w
+* %Internal MariaDB-felkod: 1062%) som &#39;sql_1062&#39; * &#39;%1062 [Varning] InnoDB:%) som sql_1062_w
 * %Internal MariaDB-felkod: 1064%) som &#39;sql_1064&#39;
 * &#39;%InnoDB: Kontrollfel i filen %) som assertion_err
 * &#39;%mysqld_safe Antal processer som körs nu: 0%) som mysql_oom

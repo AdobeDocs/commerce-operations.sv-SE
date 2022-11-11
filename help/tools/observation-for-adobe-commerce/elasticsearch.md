@@ -1,9 +1,9 @@
 ---
-title: '"Den [!UICONTROL Elasticsearch] tab"'
+title: "Den [!UICONTROL Elasticsearch] tab"
 description: Läs mer om [!UICONTROL Elasticsearch] flik för [!DNL Observation for Adobe Commerce].
-source-git-commit: 2427a18ea67833bc50912ef78be29d4320b5b205
+source-git-commit: b3cc9033eb9445af3edafd8c7ae9809dbb8174fc
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '536'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 ![Sammanfattning av klusterstatus](../../assets/tools/cluster-status-summary.jpg)
 
-Under den valda tidsramen visas **[!UICONTROL Cluster Status Summary]** bildrutan visar de färglägen som [!DNL Elasticsearch] klustret har gått igenom. I det här exemplet befann sig klustret en gång under den valda tidsramen med statusen Grönt och en gång med statusen Gul under den valda tidsramen.
+Under den valda tidsramen visas **[!UICONTROL Cluster Status Summary]** bildrutan visar de färglägen som [!DNL Elasticsearch] klustret har gått igenom. I det här exemplet hade klustret en gång i tiden status grönt under den valda tidsramen och hade en gult status en gång under den valda tidsramen.
 
 ## [!UICONTROL Active Primary Shards]
 
 ![Aktiva primära kort](../../assets/tools/active-primary-shards.jpg)
 
-The **[!UICONTROL Active Primary Shards]** bildrutan visar olika nummer beroende på antalet aktiva primära kort för det valda kontots [!DNL Elasticsearch] service.
+The **[!UICONTROL Active Primary Shards]** bildrutan visar de olika numren beroende på antalet aktiva primära kort för det valda kontots [!DNL Elasticsearch] service.
 
 Från [!DNL Elasticsearch]: Den definitiva guiden [2.x]:
 
@@ -33,31 +33,31 @@ När ett index skapas, skapas flera skuggor med det indexet. Som standard tillde
 
 ![Aktiva skuggningar i kluster](../../assets/tools/active-shards-in-cluster.jpg)
 
-**[!UICONTROL Active Shards in Cluster]** - ALLA primära och replikerade delningar i en [!DNL Elasticsearch] kluster.
+The **[!UICONTROL Active Shards in Cluster]** bildrutan visar det totala antalet primära och replikerade delningar i en [!DNL Elasticsearch] kluster.
 
 ## [!UICONTROL Index health - this will show the index name and color status]
 
 ![Indexhälsa](../../assets/tools/index-health.jpg)
 
-Den här bildrutan visar indexnamnet och antalet indexfärger. Om du bläddrar nedåt i tabellen ser du samma indexnamn med gula och röda färglägen. Siffran som följer efter 27 indexnamn är antalet statusfärger. Om det är noll fanns det inga instanser av indexet med den färgstatusen under de valda tidsramarna.
+I den här bildrutan visas indexnamnet och antalet indexfärger. Om du bläddrar nedåt i tabellen ser du samma indexnamn med gula och röda färglägen. Siffran som följer efter 27 indexnamn är antalet statusfärger. Om det är noll fanns det inga instanser av indexet med den färgstatusen under de valda tidsbildrutorna.
 
 ## [!UICONTROL Elasticsearch Status by node information]
 
 ![Status för Elasticsearch](../../assets/tools/elasticsearch-status-by-node.jpg)
 
-The **[!UICONTROL Elasticsearch Status by node information]** bildrutan visar [!DNL Elasticsearch] klusterstatus efter färg, efter nod. Detta hjälper till att indikera vilken nod i [!DNL Elasticsearch] kluster returnerar vilken status under den valda tidsramen.
+The **[!UICONTROL Elasticsearch Status by node information]** bildrutan visar [!DNL Elasticsearch] klusterstatus efter färg och nod. Detta hjälper till att indikera vilken nod i [!DNL Elasticsearch] kluster returnerar vilken status under den valda tidsramen.
 
 ## [!UICONTROL Elasticsearch index information]
 
 ![Elasticsearch indexinformation](../../assets/tools/elasticsearch-tab-elasticsearch-index-information-image-1.jpg)
 
-Detta **[!UICONTROL Elasticsearch index information]** tabellen visar indexnamnet, vilken nod det är på, antalet indexerade dokument, indexhälsan och indexstorleken i MB vid en viss tidpunkt.
+The **[!UICONTROL Elasticsearch index information]** tabellen visar indexnamnet, vilken nod det är på, antalet indexerade dokument, indexhälsan och indexstorleken i MB vid en viss tidpunkt.
 
 ## [!UICONTROL Elasticsearch process CPU %]
 
 ![Processorn Elasticsearch](../../assets/tools/elasticsearch-process-cpu.jpg)
 
-The **[!UICONTROL Elasticsearch process CPU %]** bildrutan visar processprocessorn i % av [!DNL Elasticsearch] bearbeta den markerade tidsramen.
+The **[!UICONTROL Elasticsearch process CPU %]** processorn visas i procent av [!DNL Elasticsearch] bearbeta den markerade tidsramen.
 
 ## [!UICONTROL Elasticsearch Memory garbage collection]
 
@@ -81,7 +81,7 @@ The **[!UICONTROL Elasticsearch Index Size]** bildrutan anger indexnamnet och st
 
 ![Elasticsearch-fel](../../assets/tools/elasticsearch-tab-elasticsearch-errors.jpg)
 
-The **[!UICONTROL Elasticsearch Errors]** bildrutan kommer att visa fel med [!DNL Elasticsearch] som att det börjar ta slut på utrymme, växla från gula till röda, när alla kort inte fungerar, när det finns parameterproblem med sökningar, versionsfel och när alla noder inte är tillgängliga.
+The **[!UICONTROL Elasticsearch Errors]** bildrutan visar fel med [!DNL Elasticsearch] som att det börjar ta slut på utrymme, växla från gula till röda, när alla kort inte fungerar, när det finns parameterproblem med sökningar, versionsfel och när alla noder inte är tillgängliga.
 
 ## [!UICONTROL Elasticsearch Unassigned Shards]:
 
