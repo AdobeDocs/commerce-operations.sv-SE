@@ -1,7 +1,7 @@
 ---
 title: "Den [!UICONTROL Summary] tab"
 description: Läs mer om [!UICONTROL Summary] flik för [!DNL Observation for Adobe Commerce].
-source-git-commit: 5058441eb64d59b3e1aa329603a87f75c826996e
+source-git-commit: 808018aca0630f725eebdd279b9314e2ee80eccc
 workflow-type: tm+mt
 source-wordcount: '2655'
 ht-degree: 0%
@@ -363,7 +363,7 @@ The **[!UICONTROL Order transactions (default?)]** ramutseenden för transaktion
 
 ## [!UICONTROL Elasticsearch Index information]
 
-![indexinformation för elasticsearch](../../assets/tools/elasticsearch-Index-information.jpg)
+![indexinformation för elasticsearch](../../assets/tools/elasticsearch-index-information.jpg)
 
 **[Statusen Elasticsearch:](https://www.elastic.co/guide/en/elasticsearch/reference/current/cluster-health.html)**
 
