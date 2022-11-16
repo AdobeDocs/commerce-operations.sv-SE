@@ -4,9 +4,9 @@ description: Lär dig mer om de effektivaste strategierna för implementering i 
 role: Developer, Admin, User
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: 510f2d4cdaec1034cb04a01fab0948c4261c6d10
+source-git-commit: 78308f9cb3d2ebe8af41c42f9bb146409367ab6c
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
@@ -67,13 +67,14 @@ I följande avsnitt beskrivs de effektivaste strategierna för prestandaoptimeri
 
 ## **Försäljning och marknadsföring**
 
-- [Bästa tillvägagångssätt för &#x200B;](product-cart.md)
+- [Bästa tillvägagångssätt för produktvagnsgräns](product-cart.md)
 - [Bästa tillvägagångssätt för att konfigurera kampanjer](product-cart-promotions.md)
 
 ## **Projektomfång**
 
 - [Eskaleringar av partners](partner-escalation.md)
+- [Betalningslagringsbearbetning](payment-processing-storage.md)
 
 ## **Köptillägg**
 
-- [Bästa tillvägagångssätt för att använda tillägg från tredje part i Adobe Commerce &#x200B;](extensions.md)
+- [Bästa tillvägagångssätt för att använda tillägg från tredje part i Adobe Commerce](extensions.md)
