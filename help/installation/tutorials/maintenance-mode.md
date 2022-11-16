@@ -1,9 +1,9 @@
 ---
 title: Aktivera eller inaktivera underhållsläge
 description: Följ de här stegen för att anpassa vad kunderna ser när driftsättningen av Adobe Commerce eller Magento Open Source är nere för underhåll.
-source-git-commit: f6f438b17478505536351fa20a051d355f5b157a
+source-git-commit: bc025217ed7bc2195c0a2d919139abe13d184259
 workflow-type: tm+mt
-source-wordcount: '599'
+source-wordcount: '553'
 ht-degree: 0%
 
 ---
@@ -81,9 +81,10 @@ The `--none` alternativet rensar listan.
 
 ## Inställningar för flera butiker
 
-Om du vill skapa flera butiker med olika layout och lokaliserat innehåll skapar du ett skal för varje och placerar det i `pub/errors/{name}` där `{name}` är butikskoden. Om du vill skilja mellan butiker och webbplatser med samma instans använder du `pub/errors/{type}-{name}` där `{type}` är antingen `store` eller `website` och matchar `MAGE_RUN_TYPE` i serverkonfigurationen.
+<!-- To set up multiple stores, each with a different layout and localized content, create a skin for each and put it into `pub/errors/{name}` where `{name}` is the store code. To distinguish between stores and websites with the same instance, use `pub/errors/{type}-{name}` where `{type}` is either `store` or `website` and matches the `MAGE_RUN_TYPE` in your server configuration. Another option is to pass the `$_GET['skin']` parameter to the intended processor. This method requires a specific configuration on your server. -->
+<!-- Replace the line below with the commented text after https://github.com/magento/magento2/pull/35095 is merged. -->
 
-Ett annat alternativ är att skicka `$_GET['skin']` -parametern till den avsedda processorn. Den här metoden kräver en specifik konfiguration på servern.
+Om du vill skapa flera butiker, var och en med olika layouter och lokaliserat innehåll, skickar du `$_GET['skin']` -parametern till den avsedda processorn.
 
 I följande exempel använder vi en `503` skriv error template file, som kräver lokaliserat innehåll.
 
