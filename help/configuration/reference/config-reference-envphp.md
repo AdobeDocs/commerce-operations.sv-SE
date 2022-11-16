@@ -1,7 +1,7 @@
 ---
 title: env.php reference
 description: Se en lista med värden för filen env.php.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: fe5e16d44213d1864a62230029e9e206eecd1717
 workflow-type: tm+mt
 source-wordcount: '717'
 ht-degree: 0%
@@ -185,7 +185,7 @@ Om `queue/default_connection` är `amqp` in `env.php` men en `db` anslutningen a
 
 ## kataloger
 
-Valfria katalogmappningsalternativ som måste anges när webbservern är konfigurerad för att hantera Commerce-appen från `/pub` katalog för [förbättrad säkerhet][change-docroot-to-pub].
+Valfria katalogmappningsalternativ som måste anges när webbservern är konfigurerad för att hantera Commerce-appen från `/pub` katalog för [förbättrad säkerhet](../../installation/tutorials/docroot.md).
 
 ```conf
 'directories' => [
@@ -219,7 +219,7 @@ Installationsdatumet för Commerce-programmet.
 
 Lås providerinställningar konfigureras med `lock` nod.
 
-Läs mer om [Lås providerkonfiguration][lock-provider-config].
+Läs mer om [Lås providerkonfiguration](../../installation/tutorials/lock-provider.md).
 
 ## MAGE_MODE
 
@@ -299,6 +299,4 @@ Läs mer i [env-php-config-set](../cli/set-configuration-values.md).
 
 <!-- Link definitions -->
 
-[change-docroot-to-pub]: ../../installation/tutorials/docroot.md
-[lock-provider-config]: ../../installation/tutorials/lock-provider.md
 [message-queue]: https://developer.adobe.com/commerce/php/development/components/message-queues/
