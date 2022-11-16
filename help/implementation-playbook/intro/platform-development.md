@@ -2,9 +2,9 @@
 title: Principer för plattformsutveckling
 description: Förstå grundläggande principer för plattformsutveckling när du arbetar med Adobe Commerce.
 exl-id: 3d822a8c-0e81-4a80-a820-46cf2702e0bf
-source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
+source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
@@ -32,6 +32,6 @@ Adobe Commerce i molninfrastruktur är en hanterad, automatiserad värdplattform
 
 ![Adobe Commerce-komponentinfografik](../../assets/playbooks/commerce-cloud.svg)
 
-Adobe Commerce i molninfrastruktur erbjuder en företablerad infrastruktur som omfattar PHP-, MySQL-, Redis-, RabbitMQ- och Elasticsearch-teknik. Ett Git-baserat arbetsflöde med automatiska bygg- och driftsättningsåtgärder för effektiv snabb utveckling och kontinuerlig driftsättning varje gång kodändringar görs i en plattformsmiljö som en tjänst-miljö (PaaS). mycket anpassningsbara filer och verktyg för miljökonfiguration, och AWS hosting som erbjuder en skalbar och säker miljö för onlineförsäljning och detaljhandel.
+Adobe Commerce i molninfrastruktur erbjuder en förprovisionerad infrastruktur som omfattar PHP, MySQL, Redis, [!DNL RabbitMQ]och Elasticsearch-teknik, Ett Git-baserat arbetsflöde med automatiska bygg- och driftsättningsåtgärder för effektiv snabb utveckling och kontinuerlig driftsättning varje gång kodändringar görs i en plattformsmiljö som en tjänst-miljö (PaaS). mycket anpassningsbara filer och verktyg för miljökonfiguration, och AWS hosting som erbjuder en skalbar och säker miljö för onlineförsäljning och detaljhandel.
 
 ![Adobe Commerce-komponentinfografik](../../assets/playbooks/cloud-tech-stack.svg)

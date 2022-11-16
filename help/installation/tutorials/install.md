@@ -1,9 +1,9 @@
 ---
 title: Installera Adobe Commerce
 description: Följ de här stegen för att installera Adobe Commerce eller Magento Open Source på en infrastruktur som du äger.
-source-git-commit: 46302eb8e8fd9bb7c9e7fbf990abb149bedd0ff4
+source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
 workflow-type: tm+mt
-source-wordcount: '2118'
+source-wordcount: '2106'
 ht-degree: 0%
 
 ---
@@ -132,16 +132,16 @@ I Adobe Commerce version 2.2.8 och senare kan du skapa administratörsanvändare
 | `--elasticsearch-username` | Användar-ID för autentisering | Nej, om inte autentisering är aktiverat |
 | `--elasticsearch-password` | Lösenordet som ska autentiseras | Nej, om inte autentisering är aktiverat |
 
-**Konfigurationsalternativ för RabbitMQ:**
+**[!DNL RabbitMQ]konfigurationsalternativ:**
 
 | Namn | Värde | Obligatoriskt? |
 |--- |--- |--- |
-| `--amqp-host` | Använd inte `--amqp` om du inte redan har konfigurerat en installation av RabbitMQ. Mer information om hur du installerar och konfigurerar RabbitMQ finns i Installation av RabbitMQ.<br><br>Värdnamnet där RabbitMQ är installerat. | Nej |
-| `--amqp-port` | Den port som ska användas för att ansluta till RabbitMQ. Standardvärdet är 5672. | Nej |
-| `--amqp-user` | Användarnamnet för anslutning till RabbitMQ. Använd inte standardanvändaren `guest`. | Nej |
-| `--amqp-password` | Lösenordet för att ansluta till RabbitMQ. Använd inte standardlösenordet `guest`. | Nej |
-| `--amqp-virtualhost` | Det virtuella värdsystemet för anslutning till RabbitMQ. Standardvärdet är `/`. | Nej |
-| `--amqp-ssl` | Anger om anslutning till RabbitMQ ska ske. Standardvärdet är `false`. Mer information om hur du konfigurerar SSL för RabbitMQ finns i RabbitMQ. | Nej |
+| `--amqp-host` | Använd inte `--amqp` om du inte redan har konfigurerat en installation av [!DNL RabbitMQ]. Se [!DNL RabbitMQ] för mer information om installation och konfigurering [!DNL RabbitMQ].<br><br>Värdnamnet där [!DNL RabbitMQ] är installerat. | Nej |
+| `--amqp-port` | Porten som ska användas för att ansluta till [!DNL RabbitMQ]. Standardvärdet är 5672. | Nej |
+| `--amqp-user` | Användarnamn för anslutning till [!DNL RabbitMQ]. Använd inte standardanvändaren `guest`. | Nej |
+| `--amqp-password` | Lösenordet för att ansluta till [!DNL RabbitMQ]. Använd inte standardlösenordet `guest`. | Nej |
+| `--amqp-virtualhost` | Det virtuella värdsystemet för anslutning till [!DNL RabbitMQ]. Standardvärdet är `/`. | Nej |
+| `--amqp-ssl` | Anger om anslutning ska ske till [!DNL RabbitMQ]. Standardvärdet är `false`. Se [!DNL RabbitMQ] om du vill ha information om hur du konfigurerar SSL för [!DNL RabbitMQ]. | Nej |
 | `--consumers-wait-for-messages` | Ska konsumenterna vänta på ett meddelande från kön? 1 - Ja, 0 - Nej | Nej |
 
 **Alternativ för fjärrlagring:**

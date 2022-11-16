@@ -1,9 +1,9 @@
 ---
 title: Konfigurera programmet
 description: Lär dig mer om den konfiguration efter installation som krävs för Adobe Commerce och Magento Open Source lokala distributioner.
-source-git-commit: 61638d373408d9a7c3c3a935eee61927acfac7a6
+source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '731'
 ht-degree: 0%
 
 ---
@@ -93,7 +93,7 @@ Elasticsearch eller OpenSearch krävs för alla installationer från och med 2.4
 
 Sedan version 2.3.0 innehåller Adobe Commerce och Magento Open Source funktioner för meddelandekö. I tidigare versioner är den endast tillgänglig för Adobe Commerce.
 
-* [KaninMQ](../../configuration/queues/message-queue-framework.md)
+* [[!DNL RabbitMQ]](../../configuration/queues/message-queue-framework.md)
 
 ## Endast inställningar för Adobe Commerce
 

@@ -2,9 +2,9 @@
 title: Prestandaoptimering - Recommendations
 description: Optimera Adobe Commerce-implementeringens prestanda genom att följa dessa rekommendationer.
 exl-id: c5d62e23-be43-4eea-afdb-bb1b156848f9
-source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
+source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
 workflow-type: tm+mt
-source-wordcount: '1289'
+source-wordcount: '1288'
 ht-degree: 0%
 
 ---
@@ -95,7 +95,7 @@ Installera lack på en separat server framför webbskiktet. Den ska acceptera al
 
 ### Meddelandeköer
 
-MQF (Message Queue Framework) är ett system som gör att en modul kan publicera meddelanden till köer. Det definierar också de konsumenter som tar emot meddelandena asynkront. Adobe Commerce stöder RabbitMQ som meddelandeförmedlare, som tillhandahåller en skalbar plattform för att skicka och ta emot meddelanden.
+MQF (Message Queue Framework) är ett system som gör att en modul kan publicera meddelanden till köer. Det definierar också de konsumenter som tar emot meddelandena asynkront. Adobe Commerce stöder [!DNL RabbitMQ] som meddelandeförmedlare, som tillhandahåller en skalbar plattform för att skicka och ta emot meddelanden.
 
 ### Prestandatestning och övervakning
 

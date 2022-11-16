@@ -1,9 +1,9 @@
 ---
 title: Konfigurera Amazon Message Queue
 description: Lär dig hur du konfigurerar Commerce att använda AWS MQ-tjänsten.
-source-git-commit: ee2e446edf79efcd7cbbd67248f8e7ece06bfefd
+source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
 workflow-type: tm+mt
-source-wordcount: '342'
+source-wordcount: '337'
 ht-degree: 0%
 
 ---
@@ -65,20 +65,20 @@ async.V1.inventory.bulk-product-source-unassign.POST
 async.V1.inventory.bulk-product-source-transfer.POST
 ```
 
-Standardkonfigurationen för `InventoryCatalog` inte publicerar meddelanden till RabbitMQ, standardbeteendet är att utföra åtgärden i samma användartråd. Att berätta `InventoryCatalog` för att publicera meddelanden, aktivera `cataloginventory/bulk_operations/async`. Gå till **Lager** > Konfiguration > **Katalog** > **Lager** > Administrera gruppåtgärder och ange  `Run asynchronously`till **Ja**.
+Standardkonfigurationen för `InventoryCatalog` publicerar inte meddelanden till [!DNL RabbitMQ]; standardbeteendet är att utföra åtgärden i samma användartråd. Att berätta `InventoryCatalog` för att publicera meddelanden, aktivera `cataloginventory/bulk_operations/async`. Gå till **Lager** > Konfiguration > **Katalog** > **Lager** > Administrera gruppåtgärder och ange  `Run asynchronously`till **Ja**.
 
 ## Testar meddelandekön
 
-Så här testar du meddelanden som skickas från Commerce till RabbitMQ:
+Så här testar du meddelanden som skickas från Commerce till [!DNL RabbitMQ]:
 
-1. Logga in på webbkonsolen RabbitMQ i AWS för att övervaka köer.
+1. Logga in på [!DNL RabbitMQ] webbkonsol i AWS för att övervaka köer.
 1. Skapa en produkt i Admin.
 1. Skapa en lagerkälla.
 1. Aktivera **Lager** > Konfiguration > **Katalog** > **Lager** > Admin - gruppåtgärder > Kör asynkront.
 1. Gå till **Katalog** > Produkter. Välj den produkt som skapats ovan i rutnätet och klicka på **Tilldela lagerkälla**.
 1. Klicka **Spara och stäng** för att slutföra processen.
 
-   Du bör nu se meddelanden i webbkonsolen RabbitMQ.
+   Nu bör meddelanden visas i [!DNL RabbitMQ] webbkonsol.
 
 1. Starta `async.operations.all` meddelandekökonsument.
 
@@ -86,5 +86,5 @@ Så här testar du meddelanden som skickas från Commerce till RabbitMQ:
    bin/magento queue:consumers:start async.operations.all
    ```
 
-Du bör nu se meddelandet som står i kö bearbetas i webbkonsolen RabbitMQ.
+Du bör nu se meddelandet som står i kö bearbetas i [!DNL RabbitMQ] webbkonsol.
 Kontrollera att lagerkällor har ändrats i produkten i Admin.

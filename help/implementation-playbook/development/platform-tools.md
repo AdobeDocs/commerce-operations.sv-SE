@@ -2,9 +2,9 @@
 title: Plattformsverktyg
 description: Välj rekommenderade plattformsverktyg för implementeringen av Adobe Commerce.
 exl-id: 3fc164f9-a0fc-46e7-a54e-08ce101ccae7
-source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
+source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '730'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Följande tabell innehåller lösningar som vi rekommenderar och kan användas i
 | Webbserver | Nginx, Apache |
 | Cachelagring | Redis, lack |
 | Söktjänster | Elasticsearch |
-| Meddelandekötjänster | KaninMQ |
+| Meddelandekötjänster | [!DNL RabbitMQ] |
 | Verktyget för säkerhetsgenomsökning | SonarQube, ZAP |
 
 ## Databas
@@ -61,7 +61,7 @@ För Adobe Commerce version 2.4 och senare måste alla installationer vara konfi
 
 ## Meddelandekötjänster
 
-Meddelandeköer är en asynkron kommunikationsmekanism där avsändaren och mottagaren av ett meddelande inte kontaktar varandra. RabbitMQ är en meddelandeansvarig med öppen källkod som erbjuder ett tillförlitligt, skalbart och portabelt meddelandesystem med hög tillgänglighet.
+Meddelandeköer är en asynkron kommunikationsmekanism där avsändaren och mottagaren av ett meddelande inte kontaktar varandra. [!DNL RabbitMQ] är en meddelandeansvarig med öppen källkod som erbjuder ett tillförlitligt, skalbart och portabelt meddelandesystem med hög tillgänglighet.
 
 ## Säkerhetsverktyg
 

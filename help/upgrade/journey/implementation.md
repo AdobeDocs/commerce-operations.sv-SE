@@ -1,9 +1,9 @@
 ---
 title: Implementering av uppgradering
 description: Läs om de olika faserna i uppgraderingsimplementeringen för Adobe Commerce- och Magento Open Source-projekt.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '869'
 ht-degree: 1%
 
 ---
@@ -40,7 +40,7 @@ Här följer några punkter som du kanske vill ta med i en grundlig analys:
    |-----------------|-----------------|------------|----------------------------------------------------------|
    | PHP | 7.2.33 | 8.1 |  |
    | Redis | 5.05 | 6.0 |  |
-   | KaninMQ | 3.7 | 3.8 | Används inte just nu, men vi bör överväga att använda den |
+   | [!DNL RabbitMQ] | 3.7 | 3.8 | Används inte just nu, men vi bör överväga att använda den |
    | MariaDB (molnet) | 10.2.33 | 10.4 |  |
    | MySQL | 8.0 |  |  |
    | Disposition | 1.9.2 | 2.0 |  |

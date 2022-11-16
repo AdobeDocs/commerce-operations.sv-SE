@@ -2,9 +2,9 @@
 title: Översikt över molninfrastruktur
 description: Läs om Adobe Commerce i molninfrastruktur.
 exl-id: 94cf1505-0853-4e01-ba55-befc1117fbdb
-source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
+source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '535'
 ht-degree: 0%
 
 ---
@@ -49,6 +49,6 @@ Låt oss också titta på programvaran som gör Adobe Commerce fördelar till ve
 
 - Git är din kod i databaser. Det ger lokal förgrening, praktiska mellanlagringsplatser och flera arbetsflöden med automatisk konstruktion och driftsättning för snabb utveckling och kontinuerlig driftsättning.
 
-- Platform-as-a-Service (PaaS) tillhandahåller en förprovisionerad infrastruktur som omfattar PHP, MySQL, Redis, RabbitMQ och Elasticsearch.
+- Platform-as-a-Service (PaaS) tillhandahåller en förprovisionerad infrastruktur som inkluderar PHP, MySQL, Redis, [!DNL RabbitMQ]och Elasticsearch.
 
 - AWS eller Azure:s molnhosting driver den underliggande infrastruktur-som-en-Service (IaaS), som erbjuder en skalbar och säker miljö för onlineförsäljning och -detaljhandel.
