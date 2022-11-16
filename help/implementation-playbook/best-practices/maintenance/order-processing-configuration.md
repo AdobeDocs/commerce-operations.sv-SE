@@ -4,9 +4,9 @@ description: Lär dig de bästa sätten att förbättra utcheckning och prestand
 role: Admin, User
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: fbeaa486d32d77135ab97f4819ef4df9e64c6471
+source-git-commit: fb30b18c9b9f6a9f538189eeafda9ee7a29d436c
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '249'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ När ordervolymen ökar på dina Commerce-sajter kan du optimera utcheckningspre
 
 - **[!UICONTROL Asynchronous indexing]**—Aktivera det här alternativet om du vill förhindra databaslås och långsammare bearbetning som kan inträffa när ett stort antal order placeras samtidigt.
 - **[!UICONTROL Asynchronous email notifications]**—Aktivera det här alternativet om du vill snabba upp utcheckningen genom att skicka utcheckning och beställa e-postmeddelanden med angivna intervall i stället för att skicka dem direkt.
-- **[!UICONTROL Enable Archiving]**—Aktivera det här alternativet om du vill förbättra prestanda för rutnät för beställningar, fakturor, leveranser och kreditnotor och hålla arbetsytan fri från onödig information så att du kan fokusera på den aktuella verksamheten. Se [Aktivera arkivering](https://docs.magento.com/user-guide/sales/order-archive.html#to-enable-archiving).
+- **[!UICONTROL Enable Archiving]**—Aktivera det här alternativet om du vill förbättra prestanda för order, fakturor, leveranser och kreditnotor och hålla arbetsytan fri från onödig information så att du kan fokusera på den aktuella verksamheten. Se [Aktivera arkivering](https://docs.magento.com/user-guide/sales/order-archive.html#to-enable-archiving).
 
 ## Berörda produkter och versioner
 
