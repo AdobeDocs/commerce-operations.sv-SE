@@ -1,7 +1,7 @@
 ---
 title: Software Recommendations
 description: Granska en lista över rekommenderade program för optimala prestanda i Adobe Commerce- och Magento Open Source-distributioner.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 8572cc8702d6f7e9c40b64110a9ba18aa5784f44
 workflow-type: tm+mt
 source-wordcount: '1415'
 ht-degree: 0%
@@ -34,13 +34,15 @@ Operativsystemskonfigurationer och optimeringar liknar varandra för [!DNL Comme
 >
 >Om du aktiverar net.ipv4.tcp_tw_reuse påverkas inte inkommande anslutningar.
 
-```terminal
+```text
 net.ipv4.tcp_tw_reuse = 1
 ```
 
 Kernelparametern `net.core.somaxconn` styr det maximala antalet öppna socketar som väntar på anslutningar. Det här värdet kan ökas till 1024, men bör vara relaterat till serverns förmåga att hantera den här mängden. Om du vill aktivera den här kernel-parametern anger du följande värde i `/etc/sysctl.conf`:
 
-`net.core.somaxconn = 1024`
+```text
+net.core.somaxconn = 1024
+```
 
 ## PHP
 
@@ -121,7 +123,9 @@ Om du lägger till fler tillägg tar det längre tid att läsa in biblioteket.
 
 För att garantera att alla [!DNL Commerce] instanser utan att dumpa data eller kod till disken, ange minnesgränsen enligt följande:
 
-`memory_limit=1G`
+```text
+memory_limit=1G
+```
 
 För felsökning ökar du värdet till 2G.
 
@@ -231,7 +235,7 @@ if (req.url ~ "^/(pub/)?(media|static)/.*\.(ico|html|css|js|jpg|jpeg|png|gif|tif
 ```
 
 I `vcl_backend_response` subrutin, leta efter `if` programsats som tar bort cookien för `GET` eller `HEAD` förfrågningar.
-Den uppdaterade `if` -block ska se ut så här:
+Den uppdaterade `if` -blocket ska se ut så här:
 
 ```javascript
 # validate if we need to cache it and prevent from setting cookie
