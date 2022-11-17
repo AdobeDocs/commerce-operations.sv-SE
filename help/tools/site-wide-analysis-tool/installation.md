@@ -1,9 +1,9 @@
 ---
 title: Installationshandbok
 description: Använd den här guiden för att installera [!DNL Site-Wide Analysis Tool] för din webbplats
-source-git-commit: 434fb9eb9570f183d9bf9d4b56b8e56a69e8005d
+source-git-commit: 23ad424a913c5ee58f4092aae008a47fe37b5382
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1067'
 ht-degree: 0%
 
 ---
@@ -57,13 +57,17 @@ Din lokala infrastruktur måste uppfylla följande krav innan du installerar age
 
 - Bash/shell-verktyg
 
-   - `grep`
+   - `php`
+
+   - `wget`
 
    - `awk`
 
    - `nice`
 
    - `grep`
+
+   - `openssl`
 
 ## [!DNL Commerce Services Connector]
 
@@ -185,7 +189,7 @@ Om du inte vill använda våra [gränssnittsskript](https://github.com/magento-s
       curl -O https://updater.swat.magento.com/launcher/launcher.linux-arm64.tar.gz
       ```
 
-   1. Packa in startarkivet.
+   1. Packa upp startarkivet.
 
       ```bash
       tar -xf launcher.linux-arm64.tar.gz
