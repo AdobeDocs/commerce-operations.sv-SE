@@ -4,7 +4,7 @@ description: Lär dig de bästa sätten att konfigurera produktlagringsenheter (
 role: Admin
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: 510f2d4cdaec1034cb04a01fab0948c4261c6d10
+source-git-commit: 3a187ae8c066e56df0d7f4981d26ffb934f64576
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 0%
@@ -14,9 +14,11 @@ ht-degree: 0%
 
 # Bästa tillvägagångssätt för SKU-konfiguration av produkter
 
-För att maximera prestandan rekommenderas ett maximum på 10 miljoner för effektiva produktlagringsenheter (SKU). Detta produktmaximum beräknas som:
+För att maximera prestandan rekommenderas ett maximum för effektiv produktlagringsenhet (SKU) på 242 miljoner. Detta produktmaximum beräknas som:
 
-`Effective SKU = N\[SKUs\] * Stores/Websites * Customer Groups`
+```text
+Effective SKU = N\[SKUs\] * Stores/Websites * Customer Groups
+```
 
 Om du har fler än det maximala antalet aktiva SKU:er tar det längre tid att hämta produktdata och slutföra administratörsåtgärder.
 
