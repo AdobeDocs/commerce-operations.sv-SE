@@ -1,9 +1,9 @@
 ---
 title: Rubriken X-Frame-Options
 description: Använd X-Frame-Options för att styra sidåtergivningen.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: db696b8ca501d128db655c5ebb161c654c6378a7
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 För att förhindra [Klickjacking](https://owasp.org/www-community/attacks/Clickjacking) explosioner, vi har lagt till ett alternativ för att använda [X-frame-options](https://datatracker.ietf.org/doc/html/rfc7034) HTTP-begärandehuvud i begäranden till butiken.
 
-The `X-Frame-Options` Med kan du ange om en webbläsare ska kunna återge en sida i en `<frame>`, `<iframe>`, eller `<object>` enligt följande:
+The `X-Frame-Options` I kan du ange om en webbläsare ska kunna återge en sida i en `<frame>`, `<iframe>`, eller `<object>` enligt följande:
 
 - `DENY`: Det går inte att visa sidan i en ram.
 - `SAMEORIGIN`: (standard) Sidan kan bara visas i en ram med samma ursprung som själva sidan.
@@ -28,11 +28,13 @@ The `X-Frame-Options` Med kan du ange om en webbläsare ska kunna återge en sid
 
 ## Implementera `X-Frame-Options`
 
-Ange ett värde för `X-Frame-Options` in `<magento_root>/app/etc/env.php`. Följande är standardvärdet:
+Ange ett värde för `X-Frame-Options` in `<project-root>/app/etc/env.php`. Standardvärdet är följande:
 
 ```php
 'x-frame-options' => 'SAMEORIGIN',
 ```
+
+Distribuera om vid ändringar i `env.php` som ska träda i kraft.
 
 >[!TIP]
 >
@@ -40,14 +42,12 @@ Ange ett värde för `X-Frame-Options` in `<magento_root>/app/etc/env.php`. Föl
 
 ## Verifiera inställningarna för `X-Frame-Options`
 
-Kontrollera inställningarna genom att visa HTTP-rubriker på alla butikssidor. Det finns flera sätt att göra detta, bland annat genom att använda en webbläsarkontroll.
+Kontrollera inställningarna genom att visa HTTP-rubrikerna på alla butikssidor. Det finns flera sätt att göra detta, bland annat genom att använda en webbläsarkontroll.
 
 I följande exempel används curl, som du kan köra från alla datorer som kan ansluta till din Commerce-server via HTTP-protokollet.
 
-Använd följande kommando:
-
 ```bash
-curl -I -v --location-trusted '<your storefront URL>'
+curl -I -v --location-trusted '<storefront-URL>'
 ```
 
 Leta efter `X-Frame-Options` i rubrikerna.
