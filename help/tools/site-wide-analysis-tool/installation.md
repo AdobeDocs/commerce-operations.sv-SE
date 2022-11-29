@@ -1,7 +1,7 @@
 ---
 title: Installationshandbok
-description: Använd den här guiden för att installera [!DNL Site-Wide Analysis Tool] för din webbplats
-source-git-commit: 23ad424a913c5ee58f4092aae008a47fe37b5382
+description: "Använd den här guiden för att installera [!DNL Site-Wide Analysis Tool] för din webbplats"
+source-git-commit: bfcedda38f91f5dba8880bb1593ad40a6e3f8041
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 0%
