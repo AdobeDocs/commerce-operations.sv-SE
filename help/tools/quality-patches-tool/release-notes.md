@@ -1,9 +1,9 @@
 ---
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
-source-git-commit: 6d0b5515792afe33eab440290413b84d251796cc
+source-git-commit: aad242e3a458e40fb1977399649ffe3e31696cd3
 workflow-type: tm+mt
-source-wordcount: '9752'
+source-wordcount: '10066'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,22 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som skapats av gemenskapen för Magento Open Source, se [versionsinformation](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.24 {#v1-1-24}
+
+* **ACSD-45168** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.6) - Korrigerar problemet där SEO-vänliga URL:er inte genereras för produkter som har *url_key* attribut åsidosätts på butiksvynivå.
+* **ACSD-46865** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.6) - Korrigerar problemet där rutnätet för utleverans och kreditnota inte fylls i när asynkron indexering är aktiverat.
+* **ACSD-47004** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.6) - Korrigerar problemet där moms inte tillämpas på en faktureringsadress utan moms-ID.
+* **ACSD-47803** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.6) - Korrigerar problemet där ej lagrade konfigurerbara produktfärgrutor visas som tillgängliga.
+* **ACSD-47137** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.6) - Förbättrar inläsningshastigheten för bildgalleriet när mappen pub/media är mycket stor.
+* **ACSD-46770** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.6) - Korrigerar problemet där e-postmeddelanden om administratörsorder skickas även när *E-postorderbekräftelse* är inte markerad.
+* **ACSD-47955** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.6) - Korrigerar problemet där GraphQL inte visar kundvagnsrabatten korrekt.
+* **ACSD-46617** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.6) - Korrigerar problemet där *Fortsätt till kassan* knappen är nedtonad även om delsumman är större än den konfigurerade *Minsta orderbelopp*.
+* **ACSD-47079** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.5) - Korrigerar problemet där sammansatta produkter (bundle, grouped och configurable) inte uppdateras när delproduktens lagerstatus ändras via REST API-POSTEN /rest/V1/lager/source-items.
+* **ACSD-47336** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.6) - Korrigeringar *Något gick fel.* fel vid inaktivering av meddelanden i Commerce Admin.
+* **ACSD-47559** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.6) - Korrigerar problemet där e-postmallen för förhandsgranskning inte är helt synlig.
+* **ACSD-47920** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.6) - Korrigerar problemet där beställningar kan göras via Rest API som gästanvändare även när *Tillåt gästutcheckning* är avstängd.
+* Ersatta patchar: MDVA-39305, MDVA-42855.
 
 ## v1.1.23 {#v1-1-23}
 
@@ -465,7 +481,7 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 * **MDVA-31236** (*för Adobe Commerce >=2.4.0 &lt;2.4.2*) - Korrigerar problemet där administratörer med anpassad resursåtkomst inte kan konfigurera 2FA eller logga in.
 * **MDVA-30845** (*för Adobe Commerce >=2.3.5 &lt;2.3.7*) - Korrigerar problemet där *Det finns tyvärr inga offerter för den här beställningen* fel visas när det inte går att ansluta till UPS XML/USPS/DHL och ingen annan leveransmetod är tillgänglig.
 * **MDVA-32133** (*för Adobe Commerce >=2.4.0 &lt;2.4.1*) - Korrigerar problemet där mediegalleriet inte läses in från Page Builder i vissa fall.
-* **MDVA-12304** (*för Adobe Commerce >=2.3.0 &lt;2.4.2*) - Ökar det maximala antalet cookies från 50 till 200.
+* **MDVA-12304** (*för Adobe Commerce >=2.3.0*) - Ökar det maximala antalet cookies från 50 till 200.
 * **MDVA-32632** (*för Adobe Commerce >=2.3.2 &lt;2.3.5*) - Korrigerar problemet där order visas i betalningssystemet, men inte i Adobe Commerce.
 * **MDVA-32449** (*för Adobe Commerce >=2.3.0 &lt;2.3.6 || 2.4.0 || >=2.4.1 &lt;2.4.2 med B2B-tillägg*) - Korrigerar problemet där orderhistoriken läses in mycket långsamt eller inte läses in alls.
 * **MDVA-32739** (*för Adobe Commerce >=2.3.0 &lt;2.4.2*) - Korrigerar problemet där aktivering av asynkrona e-postmeddelanden skickar gamla e-postmeddelanden.
