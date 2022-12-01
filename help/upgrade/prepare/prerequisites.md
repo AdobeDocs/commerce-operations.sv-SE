@@ -1,9 +1,9 @@
 ---
 title: Förutsättningar
 description: Förbered ditt Adobe Commerce- eller Magento Open Source-projekt för en uppgradering genom att slutföra dessa nödvändiga steg.
-source-git-commit: c2d0c1d46a5f111a245b34ed6bc706dcd52be31c
+source-git-commit: 6782498985d4fd6540b0481e2567499f74d04d97
 workflow-type: tm+mt
-source-wordcount: '1291'
+source-wordcount: '1401'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,7 @@ När du har granskat systemkraven måste du uppfylla följande krav innan du upp
 
 - Uppdatera all programvara
 - Kontrollera att en sökmotor som stöds är installerad
+- Konvertera databastabellformat
 - Ange gräns för öppna filer
 - Verifiera att cron-jobb körs
 - Ange `DATA_CONVERTER_BATCH_SIZE`
@@ -29,6 +30,10 @@ När du har granskat systemkraven måste du uppfylla följande krav innan du upp
 The [systemkrav](../../installation/system-requirements.md) beskriv exakt vilka versioner av tredjepartsprogram som har testats med Adobe Commerce och Magento Open Source.
 
 Se till att du har uppdaterat alla systemkrav och beroenden i din miljö. Se PHP [7.4](https://www.php.net/manual/en/migration74.php), PHP [8.0](https://www.php.net/manual/en/migration80.php), PHP [8.1](https://www.php.net/manual/en/migration81.php)och [obligatoriska PHP-inställningar](../../installation/prerequisites/php-settings.md#php-settings).
+
+>[!NOTE]
+>
+>För Adobe Commerce i molnbaserade infrastrukturprojekt måste du skapa en [Support](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) biljett för att installera eller uppdatera tjänster i mellanlagrings- och produktionsmiljöer. Ange vilka tjänständringar som krävs och inkludera dina uppdaterade `.magento.app.yaml` och `services.yaml` filer och PHP-version i biljetten. Det kan ta upp till 48 timmar för molninfrastrukturteamet att uppdatera ditt projekt. Se [Programvara och tjänster som stöds](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/cloud-architecture.html#supported-software-and-services).
 
 ## Kontrollera att en sökmotor som stöds är installerad
 
@@ -63,7 +68,7 @@ Du måste installera och konfigurera Elasticsearch 7.6 eller senare eller OpenSe
 
 Se [Uppgraderar Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html) om du vill ha fullständiga anvisningar om hur du säkerhetskopierar data, upptäcker potentiella migreringsproblem och testar uppgraderingar innan du distribuerar till produktionen. Beroende på vilken version av Elasticsearch du använder behöver du kanske inte starta om hela klustret.
 
-Elasticsearch kräver JDK 1.8 eller senare. Se [Installera Java Software Development Kit (JDK)](../../installation/prerequisites/search-engine/overview.md#install-the-java-software-development-kit-jdk) för att kontrollera vilken version av JDK som är installerad.
+Elasticsearch kräver Java Development Kit (JDK) 1.8 eller senare. Se [Installera Java Software Development Kit (JDK)](../../installation/prerequisites/search-engine/overview.md#install-the-java-software-development-kit-jdk) för att kontrollera vilken version av JDK som är installerad.
 
 [Konfigurera Elasticsearch](../../configuration/search/configure-search-engine.md) beskriver de uppgifter du måste utföra efter att ha uppdaterat Elasticsearch 2 till en version som stöds.
 
@@ -79,11 +84,15 @@ Du kan [migrera från Elasticsearch till OpenSearch](opensearch-migration.md) en
 
 OpenSearch kräver JDK 1.8 eller senare. Se [Installera Java Software Development Kit (JDK)](../../installation/prerequisites/search-engine/overview.md#install-the-java-software-development-kit-jdk) för att kontrollera vilken version av JDK som är installerad.
 
-[Konfigurera Magento att använda Elasticsearch](../../configuration/search/configure-search-engine.md) beskriver de åtgärder du måste utföra efter att du har ändrat sökmotorer.
+[Sökmotorkonfiguration](../../configuration/search/configure-search-engine.md) beskriver de åtgärder som du måste utföra efter att du har ändrat sökmotorer.
 
 ### Tredjepartstillägg
 
 Vi rekommenderar att du kontaktar din sökmotorleverantör för att avgöra om tillägget är helt kompatibelt med version 2.4.
+
+## Konvertera databastabellformat
+
+Du måste konvertera formatet för alla databastabeller från `COMPACT` till `DYNAMIC`. Du måste också konvertera lagringsmotortypen från `MyISAM` till `InnoDB`. Se [bästa praxis](../../implementation-playbook/best-practices/maintenance/commerce-235-upgrade-prerequisites-mariadb.md).
 
 ## Ange gräns för öppna filer
 
@@ -118,7 +127,7 @@ Så här anger du värdet i Bash-skalet:
 
 ## Verifiera att cron-jobb körs
 
-UNIX-uppgiftsschemaläggaren `cron` är avgörande för den dagliga verksamheten inom Adobe Commerce och Magento Open Source. Det schemalägger saker som omindexering, nyhetsbrev, e-post, webbplatskartor och så vidare. Flera funktioner kräver minst ett cron-jobb som körs som filsystemets ägare.
+UNIX-uppgiftsschemaläggaren `cron` är avgörande för den dagliga verksamheten inom Adobe Commerce och Magento Open Source. Det schemalägger saker som omindexering, nyhetsbrev, e-post och webbplatskartor. Flera funktioner kräver minst ett cron-jobb som körs som filsystemets ägare.
 
 Kontrollera på fliken crontab genom att ange följande kommando som ägare av filsystemet för att kontrollera att ditt cron-jobb är korrekt konfigurerat:
 
