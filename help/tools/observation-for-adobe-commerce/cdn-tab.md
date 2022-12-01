@@ -1,9 +1,9 @@
 ---
-title: '"Den [!UICONTROL CDN] tab"'
+title: "Den [!UICONTROL CDN] tab"
 description: Läs mer om [!UICONTROL CDN] flik för [!DNL Observation for Adobe Commerce].
-source-git-commit: 3f2a401bb916fc04405f21ba2acfc42f7defdccb
+source-git-commit: 424c832ba7580e5d766dea33e3b776eaca7a0d77
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '699'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ The **[!UICONTROL Error Percentage]** I visas värdet för procentandelen FEL f�
 
 ![Snabbt cachelagra genomsnittssvar för den valda tidsperioden i sekunder](../../assets/tools/observation-for-adobe-commerce/cdn-tab-9.png)
 
-I den här bildrutan visas längden i sekunder för cachelagrade begäranden, vilket innebär att om en `cache_response` är ett MISS-fel, visar medelvärdet för missade cachelagrade svar för den valda tiden.
+I den här bildrutan visas längden i sekunder för cachelagrade begäranden, vilket innebär att om en `cache_response` är en [!UICONTROL MISS]visar det genomsnittliga värdet för ej cachelagrade svar för den valda tiden.
 
 ## [!UICONTROL Fastly Cache Average Response for selected time period in seconds, faceted by POP]
 
@@ -70,7 +70,7 @@ I den här bildrutan visas längden i sekunder för cachelagrade begäranden, vi
 
 ![Begäranden - sedan den valda tidsramen jämfördes med för en vecka sedan](../../assets/tools/observation-for-adobe-commerce/cdn-tab-12.png)
 
-Den här bildrutan liknar sammanfattningsrutan för Totalt antal begäranden överst, men visar antalet föregående veckor. Det här är alla förfrågningar, inte bara cacheförfrågningar (där `is_cacheable` är sant).
+Den här bildrutan liknar sammanfattningsrutan för [!UICONTROL Total Requests] överst, men visar antalet föregående veckors förfrågningar. Det här är alla förfrågningar, inte bara cacheförfrågningar (där `is_cacheable` är sant).
 
 ## [!UICONTROL Response Count]
 
@@ -126,4 +126,4 @@ The **[!UICONTROL Duration by Response status, top 25 client IP, non 200 status]
 
 ![IP-frekvens](../../assets/tools/observation-for-adobe-commerce/cdn-tab-22.jpeg)
 
-The **[!UICONTROL IP Frequency]** antalet bildrutor som räknas (MISS- och PASS-status) för varje IP-adress från [!DNL Fastly] loggar. Webbförfrågningar med dessa statusvärden kommer till den ursprungliga servern och kommer att lägga till inläsning till servern. Den visar de tjugo översta adresserna i frekvens. Den här bildrutan kan användas för att identifiera IP-attacker eller källor med hög belastning på en webbplats. Det här diagrammet finns också på sammanfattningsfliken och placeras här för att enkelt kunna jämföra med mer information på [!DNL Fastly] logginformation som visas på den här fliken.
+The **[!UICONTROL IP Frequency]** bildrutan räknar (&#39;MISS&#39; och &#39;PASS&#39;)-status för varje IP-adress från [!DNL Fastly] loggar. Webbförfrågningar med dessa statusvärden kommer till den ursprungliga servern och kommer att lägga till inläsning till servern. Den visar de tjugo översta adresserna i frekvens. Den här bildrutan kan användas för att identifiera IP-attacker eller källor med hög belastning på en webbplats. Det här diagrammet finns också på sammanfattningsfliken och placeras här för att enkelt kunna jämföra med mer information på [!DNL Fastly] logginformation som visas på den här fliken.
