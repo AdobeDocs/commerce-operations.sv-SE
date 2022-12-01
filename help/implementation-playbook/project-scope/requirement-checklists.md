@@ -2,7 +2,7 @@
 title: Checklistor för krav
 description: Använd den här listan med utförliga frågor för att förbereda er för en implementering av Adobe Commerce.
 exl-id: 9ac485c5-d491-4022-9366-5e3a382513b6
-source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
+source-git-commit: d18be812626723e203d2308be8c3f9783a19b43b
 workflow-type: tm+mt
 source-wordcount: '1536'
 ht-degree: 0%
@@ -205,7 +205,7 @@ Finns det befintliga API:er som kan användas?
 
 - Vilket orderhanteringssystem kommer att integreras med Adobe Commerce? (Exempel: Microsoft Dynamics, SAP, Retail Pro)
 
-- Vilket produktinventeringssystem kommer att integreras med Adobe Commerce? (Exempel: Akeneo, InRiver, Bluestone)
+- Vilket produktinformationshanteringssystem kommer att integreras med Adobe Commerce? (Exempel: Akeneo, InRiver, Bluestone)
 
 - Vilket kundhanteringssystem kommer att integreras med Adobe Commerce? (Exempel: Hubspot, Salesforce, Klaviyo)
 
