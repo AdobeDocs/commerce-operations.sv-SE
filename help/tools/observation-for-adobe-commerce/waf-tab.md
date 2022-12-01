@@ -1,55 +1,55 @@
 ---
-title: '"Den [!UICONTROL WAF] tab"'
-description: Läs mer om [!UICONTROL WAF] flik för [!DNL Observation for Adobe Commerce].
-source-git-commit: 431bc7c06e76b061a94026aa380d8be88d227099
+title: "Den [!DNL WAF] tab"
+description: Läs mer om [!DNL WAF] flik för [!DNL Observation for Adobe Commerce].
+source-git-commit: d3d178c333e6f1436a96993611930cb12cd66a71
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '160'
 ht-degree: 0%
 
 ---
 
-# The [!UICONTROL WAF] tab
+# The [!DNL WAF] tab
 
-The **[!UICONTROL WAF]** -fliken visar trafik som skickas och blockeras av brandväggen.
+The **[!DNL WAF]** -fliken visar trafik som skickas och blockeras av [!DNL firewall].
 
-## [!UICONTROL WAF traffic summary]
+## [!DNL WAF traffic summary]
 
 ![Sammanfattning av WAF-trafik](../../assets/tools/observation-for-adobe-commerce/waf-1.png)
 
-The **[!UICONTROL WAF traffic summary]** bildrutan visar antalet trafik som har passerat, loggats, blockerats och misslyckats av brandväggen.
+The **[!DNL WAF traffic summary]** visas antalet trafik som passerat, loggat, blockerat och misslyckats av [!DNL firewall].
 
-## [!UICONTROL WAF Top 10 blocked IP Addresses]
+## [!DNL WAF Top 10 blocked IP Addresses]
 
 ![De 10 blockerade IP-adresserna för WAF-toppen](../../assets/tools/observation-for-adobe-commerce/waf-2.png)
 
-The **[!UICONTROL WAF Top 10 blocked IP Addresses]** Bildrutan visar de 10 mest blockerade IP-adresserna av brandväggen.
+The **[!DNL WAF Top 10 blocked IP Addresses]** bildrutan visar de 10 mest blockerade IP-adresserna av [!DNL firewall].
 
-## [!UICONTROL WAF Top 10 countries for blocked requests]
+## [!DNL WAF Top 10 countries for blocked requests]
 
 ![De 10 bästa WAF-länderna för blockerade förfrågningar](../../assets/tools/observation-for-adobe-commerce/waf-3.jpg)
 
-The **[!UICONTROL WAF Top 10 countries for blocked requests]** bildrutan visar antalet blockerade begäranden för länder inom de tio främsta för blockerade begäranden från brandväggen.
+The **[!DNL WAF Top 10 countries for blocked requests]** visas antalet blockerade begäranden för länder inom de tio översta för blockerade begäranden från [!DNL firewall].
 
-## [!UICONTROL WAF Top 10 logged IP Addresses]
+## [!DNL WAF Top 10 logged IP Addresses]
 
 ![De tio vanligaste loggade IP-adresserna för WAF](../../assets/tools/observation-for-adobe-commerce/waf-4.jpg)
 
-The **[!UICONTROL WAF Top 10 logged IP Addresses]** Bildrutan visar IP-adresser i de 10 främsta loggade IP-adresserna från brandväggen.
+The **[!DNL WAF Top 10 logged IP Addresses]** bildrutan visar IP-adresser i de tio vanligaste loggade IP-adresserna av [!DNL firewall].
 
-## [!UICONTROL Top 10 WAF Rules Executed and Logged by IP address]
+## [!DNL Top 10 WAF Rules Executed and Logged by IP address]
 
 ![De tio vanligaste WAF-reglerna har körts och loggats av IP-adressen](../../assets/tools/observation-for-adobe-commerce/waf-5.jpg)
 
-The **[!UICONTROL Top 10 WAF Rules Executed and Logged by IP address]** bildrutan visar IP-adresser som finns i de tio vanligaste brandväggsreglerna.
+The **[!DNL Top 10 WAF Rules Executed and Logged by IP address]** bildrutan visar IP-adresser som finns i de 10 översta som oftast matchar [!DNL firewall] regler.
 
-## [!UICONTROL WAF Logged Details]
+## [!DNL WAF Logged Details]
 
 ![Information om WAF-loggad](../../assets/tools/observation-for-adobe-commerce/waf-6.jpg)
 
-The **[!UICONTROL WAF Logged Details]** bildrutan visar begäranden som loggats av brandväggen, inklusive information som tidsstämpel, ort, region och datacenter.
+The **[!DNL WAF Logged Details]** bildrutan visar begäranden som loggats av [!DNL firewall], inklusive information som tidsstämpel, ort, region och datacenter.
 
-## [!UICONTROL WAF Blocked Details]
+## [!DNL WAF Blocked Details]
 
 ![WAF-blockerad information](../../assets/tools/observation-for-adobe-commerce/waf-7.jpg)
 
-The **[!UICONTROL WAF Blocked Details]** bildrutan visar begäranden som blockerats av brandväggen, inklusive information som tidsstämpel, ort, region och datacenter.
+The **[!DNL WAF Blocked Details]** visas begäranden som blockerats av [!DNL firewall], inklusive information som tidsstämpel, ort, region och datacenter.
