@@ -1,9 +1,9 @@
 ---
 title: Fjärrlagring för Commerce i molninfrastruktur
 description: Mer information om hur du konfigurerar fjärrlagring för Adobe Commerce om molninfrastruktur finns i vägledningen.
-source-git-commit: 9a5993c9a65ad210f1a9682734730f235bbc3d44
+source-git-commit: 8102c083bb0216bbdcad2882f39f7711b9cee52b
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Om du väljer att använda fjärrlagringslösningen med ett Adobe Commerce-projekt för molninfrastruktur använder du [Amazon S3](https://docs.fastly.com/en/guides/amazon-s3) i _Snabbt_ dokumentation som säkerställer att Snabb bildoptimering fungerar med AWS S3.
 
-Var redo med [Autentiseringsuppgifter snabbt](https://devdocs.magento.com/cloud/cdn/configure-fastly.html#cloud-fastly-creds). I Pro-projekt kan du använda SSH för att ansluta till servern och hämta inloggningsuppgifterna snabbt från `/mnt/shared/fastly_tokens.txt` -fil. För mellanlagrings- och produktionsmiljöer finns unika autentiseringsuppgifter. Du måste hämta autentiseringsuppgifterna för varje miljö.
+Var redo med [Autentiseringsuppgifter snabbt](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/setup-fastly/fastly-configuration.html#get-fastly-credentials). I Pro-projekt kan du använda SSH för att ansluta till servern och hämta inloggningsuppgifterna snabbt från `/mnt/shared/fastly_tokens.txt` -fil. För mellanlagrings- och produktionsmiljöer finns unika autentiseringsuppgifter. Du måste hämta autentiseringsuppgifterna för varje miljö.
 
 Fortsätt konfigurera fjärrlagring för molnprojekt med följande uppgifter:
 

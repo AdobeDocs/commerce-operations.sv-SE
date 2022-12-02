@@ -1,9 +1,9 @@
 ---
 title: Översikt över konfigurationsguiden
 description: Lär dig mer om alla konfigurerbara funktioner och tjänster för ditt Adobe Commerce- eller Magento Open Source-program.
-source-git-commit: 573b407bf29fd4dea2c0e9a52593f65fa64ffa2d
+source-git-commit: 8102c083bb0216bbdcad2882f39f7711b9cee52b
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -29,4 +29,4 @@ Det finns motsvarande ämnen i [Handbok för Commerce](https://docs.magento.com/
 
 ## Molnkonfiguration
 
-[!DNL Commerce on cloud infrastructure] använder [uppsättning konfigurationsfiler](https://devdocs.magento.com/cloud/env/environments.html) för att uppdatera [!DNL Commerce] programfunktioner och tjänster i värdmiljöer. På grund av den unika naturen i Adobe molnbaserade miljöer bör du alltid granska [Molnguide](https://devdocs.magento.com/cloud/bk-cloud.html) för ytterligare konfigurationskrav.
+[!DNL Commerce on cloud infrastructure] använder [uppsättning konfigurationsfiler](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/overview.html) för att uppdatera funktioner och tjänster i Commerce-applikationer i värdmiljöer. På grund av den unika naturen hos molnbaserade miljöer i Adobe bör du alltid granska [Molnguide](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/overview.html) för ytterligare konfigurationskrav.

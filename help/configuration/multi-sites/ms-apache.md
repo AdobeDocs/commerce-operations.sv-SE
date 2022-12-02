@@ -1,9 +1,9 @@
 ---
 title: Konfigurera flera webbplatser med Apache
 description: Följ den här självstudiekursen för att konfigurera flera webbplatser med Apache.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: 8102c083bb0216bbdcad2882f39f7711b9cee52b
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Om det behövs kopierar du den befintliga `index.php` startpunktsskript för din
 
    Ytterligare uppgifter kan behövas för att driftsätta flera webbplatser i en hostingmiljö. kontakta din värdleverantör för mer information.
 
-   Ytterligare uppgifter krävs för att konfigurera Adobe Commerce i molninfrastrukturen. När du har slutfört de uppgifter som beskrivs i det här avsnittet, se [Konfigurera flera webbplatser eller butiker](https://devdocs.magento.com/cloud/project/project-multi-sites.html) i _Commerce Cloud guide_.
+   Ytterligare uppgifter krävs för att konfigurera Adobe Commerce i molninfrastrukturen. När du har slutfört de uppgifter som beskrivs i det här avsnittet, se [Konfigurera flera webbplatser eller butiker](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html) i _Guide för Commerce on Cloud Infrastructure_.
 
 - Du använder en virtuell värd per webbplats; konfigurationsfilen för det virtuella värdsystemet är `/etc/httpd/httpd.conf`
 
@@ -95,8 +95,8 @@ Om du inte har ställt in DNS för butikernas URL:er måste du lägga till en st
 1. Lägg till den statiska vägen i formatet:
 
    ```conf
-   <ip address> french.mysite.mg
-   <ip address> german.mysite.mg
+   <ip-address> french.mysite.mg
+   <ip-address> german.mysite.mg
    ```
 
 1. Gå till en av följande URL:er i webbläsaren:
@@ -110,7 +110,7 @@ Om du inte har ställt in DNS för butikernas URL:er måste du lägga till en st
 >[!INFO]
 >
 >- Ytterligare uppgifter kan behövas för att driftsätta flera webbplatser i en hostingmiljö. kontakta din värdleverantör för mer information.
->- Det krävs ytterligare uppgifter för att konfigurera Adobe Commerce för molninfrastruktur. se [Konfigurera flera olika Creative Cloud-webbplatser eller -butiker](https://devdocs.magento.com/cloud/project/project-multi-sites.html) i _Commerce Cloud guide_.
+>- Det krävs ytterligare uppgifter för att konfigurera Adobe Commerce för molninfrastruktur. se [Konfigurera flera olika Creative Cloud-webbplatser eller -butiker](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html) i _Guide för Commerce on Cloud Infrastructure_.
 
 
 ### Felsökning
