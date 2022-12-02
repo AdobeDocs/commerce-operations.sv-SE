@@ -4,9 +4,9 @@ description: Lär dig hur du förbereder din Adobe Commerce-databas för uppgrad
 role: Developer
 feature-set: Commerce
 feature: Best Practices
-source-git-commit: 1abe86197de68336e10c50cab7ad38eebb098aeb
+source-git-commit: 071e88c6a07df0f74b6d4b09cce858710c9332cc
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 I den här artikeln beskrivs hur du förbereder databasen när du uppgraderar till Adobe Commerce 2.3.5 från version 2.3.4 eller tidigare.
 
-Uppgraderingen kräver att supportteamet uppgraderar MariaDB i molninfrastrukturen från MariaDB 10.0 till 10.2 för att uppfylla kraven för Adobe Commerce. Adobe Commerce version 2.3.5 och senare.
+Uppgraderingen kräver att supportteamet uppgraderar MariaDB i molninfrastrukturen från MariaDB 10.0 till 10.2 för att uppfylla kraven för Adobe Commerce version 2.3.5 och senare.
 
 ## Berörda produkter och versioner
 
@@ -24,77 +24,118 @@ Adobe Commerce i molninfrastruktur med Adobe Commerce version 2.3.4 eller tidiga
 
 ## Förbered databasen för uppgraderingen
 
-Innan Adobe Commerce supportteam börjar uppgraderingsprocessen måste du förbereda databasen genom att konvertera formatet för alla tabeller från `COMPACT` till `DYNAMIC`. Du måste också konvertera lagringsmotortypen från `MyISAM` till `InnoDB`.
+Innan Adobe Commerce supportteam börjar uppgraderingsprocessen förbereder du databasen genom att konvertera databastabellerna:
 
-Tänk på följande när du skapar en plan och ett schema för att konvertera databasen.
+- Konvertera radformatet från `COMPACT` till `DYNAMIC`
+- Konvertera lagringsmotorn från `MyISAM` till `InnoDB`
+
+Tänk på följande när du planerar och schemalägger konverteringen:
 
 - Konverterar från `COMPACT` till `DYNAMIC` tabeller kan ta flera timmar med en stor databas.
 
-- För att förhindra att data skadas ska du inte göra konverteringen när webbplatsen publiceras.
+- För att förhindra att data skadas ska du inte slutföra konverteringsarbetet på en aktiv webbplats.
 
 - Slutför konverteringsarbetet under en begränsad trafikperiod på webbplatsen.
 
-- Byt till [underhållsläge](../../../installation/tutorials/maintenance-mode.md) innan du kör `ALTER` kommandon.
+- Byt till [underhållsläge](../../../installation/tutorials/maintenance-mode.md) innan du kör kommandona för att konvertera databastabeller.
 
-### Konvertera databastabeller
+### Konvertera radformat för databastabell
 
-Du kan konvertera tabeller på en nod i klustret. Ändringarna replikeras till de andra kärnnoderna i klustret.
+Du kan konvertera tabeller på en nod i klustret. Ändringarna replikeras automatiskt till de andra tjänstnoderna.
 
 1. Använd SSH för att ansluta till nod 1 från din Adobe Commerce i molninfrastrukturmiljö.
 
 1. Logga in på MariaDB.
 
-1. Konvertera tabellformatet.
+1. Identifiera tabeller som ska konverteras från kompakt till dynamiskt format.
 
-   - Identifiera tabeller som ska konverteras från kompakt till dynamiskt format.
+   ```mysql
+   SELECT table_name, row_format FROM information_schema.tables WHERE table_schema=DATABASE() and row_format 'Compact';
+   ```
 
-      ```mysql
-      SELECT table_name, row_format FROM information_schema.tables WHERE table_schema=DATABASE() and row_format 'Compact';
-      ```
+1. Bestäm tabellstorlekarna så att du kan schemalägga konverteringsarbetet.
 
-   - Bestäm tabellstorlekarna så att du kan schemalägga konverteringsarbetet.
+   ```mysql
+   SELECT table_schema as 'Database', table_name AS 'Table', round(((data_length + index_length) / 1024 / 1024), 2) 'Size in MB' FROM information_schema.TABLES ORDER BY (data_length + index_length) DESC;
+   ```
 
-      ```mysql
-      SELECT table_schema as 'Database', table_name AS 'Table', round(((data_length + index_length) / 1024 / 1024), 2) 'Size in MB' FROM information_schema.TABLES ORDER BY (data_length + index_length) DESC;
-      ```
+   Det tar längre tid att konvertera större tabeller. Granska tabellerna och batchbearbeta konverteringsarbetet efter prioritet och tabellstorlek för att hjälpa till att planera nödvändiga underhållsperioder.
 
-      Det tar längre tid att konvertera större tabeller. Du bör planera i enlighet med detta när du övertar platsen i och utanför underhållsläge, vilka grupper av tabeller som ska konverteras i vilken ordning, så att du kan planera tidsangivelserna för de underhållsfönster som behövs
+1. Konvertera alla tabeller till ett dynamiskt format i taget.
 
-   - Konvertera alla tabeller till ett dynamiskt format i taget.
+   ```mysql
+   ALTER TABLE [ table name here ] ROW_FORMAT=DYNAMIC;
+   ```
 
-      ```mysql
-      ALTER TABLE [ table name here ] ROW_FORMAT=DYNAMIC;
-      ```
+### Konvertera lagringsformat för databastabell
 
-1. Uppdatera tabelllagringsmotorn.
+Du kan konvertera tabeller på en nod i klustret. Ändringarna replikeras automatiskt till de andra tjänstnoderna.
 
-   - Identifiera tabeller som använder `MyISAM` lagring.
+Processen att konvertera lagringsformatet skiljer sig åt för Adobe Commerce Starter- och Adobe Commerce Pro-projekt.
 
-      ```mysql
-      SELECT table_name FROM INFORMATION_SCHEMA.TABLES WHERE engine = 'MyISAM';
-      ```
+- För Starter-arkitekturen använder du MySQL `ALTER` för att konvertera formatet.
+- På Pro-arkitekturen använder du MySQL `CREATE` och `SELECT` kommandon för att skapa en databastabell med `InnoDB` lagra och kopiera data från den befintliga tabellen till den nya tabellen. Den här metoden ser till att ändringarna replikeras till alla noder i klustret.
 
-   - Konvertera tabeller som använder `MyISAM` lagring till `InnoDB` lagring.
+**Konvertera tabelllagringsformat för Adobe Commerce Pro-projekt**
 
-      ```mysql
-      ALTER TABLE [ table name here ] ENGINE=InnoDB;
-      ```
+1. Identifiera tabeller som använder `MyISAM` lagring.
 
-1. Verifiera konverteringen.
+   ```mysql
+   SELECT table_name FROM INFORMATION_SCHEMA.TABLES WHERE engine = 'MyISAM';
+   ```
 
-   Det här steget är obligatoriskt eftersom koddistributioner som görs efter att du har slutfört konverteringen kan göra att vissa tabeller återställs till den ursprungliga konfigurationen.
+1. Konvertera alla tabeller till `InnoDB` lagringsformat en åt gången.
 
-   - Dagen före den schemalagda uppgraderingen till MariaDB version 10.2 loggar du in i databasen och kör frågorna för att kontrollera format och lagringsmotor.
-
-      ```mysql
-      SELECT table_name, row_format FROM information_schema.tables WHERE table_schema=DATABASE() and row_format = 'Compact';
-      ```
+   - Byt namn på den befintliga tabellen för att förhindra namnkonflikter.
 
       ```mysql
-      SELECT table_name FROM INFORMATION_SCHEMA.TABLES WHERE engine = 'MyISAM';
+      RENAME TABLE <existing_table> <table_old>;
       ```
 
-   - Om några tabeller har återställts upprepar du stegen för att ändra tabellformatet och lagringsmotorn.
+   - Skapa en tabell som använder `InnoDB` lagring med data från den befintliga tabellen.
+
+      ```mysql
+      CREATE TABLE <existing_table> ENGINE=InnoDB SELECT * from <table_old>;
+      ```
+
+   - Kontrollera att den nya tabellen har alla nödvändiga data.
+
+   - Ta bort den ursprungliga tabell som du har ändrat namn på.
+
+
+**Konvertera tabelllagringsformat för Adobe Commerce Starter-projekt**
+
+1. Identifiera tabeller som använder `MyISAM` lagring.
+
+   ```mysql
+   SELECT table_name FROM INFORMATION_SCHEMA.TABLES WHERE engine = 'MyISAM';
+   ```
+
+1. Konvertera tabeller som använder `MyISAM` lagring till `InnoDB` lagring.
+
+   ```mysql
+   ALTER TABLE [ table name here ] ENGINE=InnoDB;
+   ```
+
+### Verifiera databaskonverteringen
+
+Dagen före den schemalagda uppgraderingen till MariaDB version 10.2 kontrollerar du att alla tabeller har rätt radformat och lagringsmotor. Verifiering krävs eftersom koddistributioner som görs efter att du har slutfört konverteringen kan göra att vissa tabeller återställs till den ursprungliga konfigurationen.
+
+1. Logga in i databasen.
+
+1. Kontrollera om det finns tabeller som fortfarande har `COMPACT` radformat.
+
+   ```mysql
+   SELECT table_name, row_format FROM information_schema.tables WHERE table_schema=DATABASE() and row_format = 'Compact';
+   ```
+
+1. Kontrollera om det finns tabeller som fortfarande använder `MyISAM` lagringsformat
+
+   ```mysql
+   SELECT table_name FROM INFORMATION_SCHEMA.TABLES WHERE engine = 'MyISAM';
+   ```
+
+1. Om några tabeller har återställts upprepar du stegen för att ändra tabellradformatet och lagringsmotorn.
 
 ## Ytterligare information
 
