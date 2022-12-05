@@ -1,9 +1,9 @@
 ---
 title: Ange konfigurationsvärden
 description: Lär dig hur du anger konfigurationsvärden och ändrar värden som är låsta i Admin.
-source-git-commit: ee2e446edf79efcd7cbbd67248f8e7ece06bfefd
+source-git-commit: cb8edb8de8f8419e9992b180ea927ba55cbd839b
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -133,8 +133,8 @@ I följande tabell beskrivs `set` kommandoparametrar:
 | --- | --- |
 | `--scope` | Konfigurationens omfattning. Möjliga värden är `default`, `website`, eller `store`. Standardvärdet är `default`. |
 | `--scope-code` | Konfigurationens omfattningskod (webbplatskod eller butiksvykod) |
-| `-le or --lock-env` | Låser värdet så att det inte kan redigeras i administratören eller ändrar en inställning som redan är låst i Admin. Kommandot skriver värdet till `<Commerce base dir>/app/etc/env.php` -fil. |
-| `-lc or --lock-config` | Låser värdet så att det inte kan redigeras i administratören eller ändrar en inställning som redan är låst i Admin. Kommandot skriver värdet till `<Commerce base dir>/app/etc/config.php` -fil. The `--lock-config` alternativ skriver över `--lock-env` om du anger båda alternativen. |
+| `-e or --lock-env` | Låser värdet så att det inte kan redigeras i administratören eller ändrar en inställning som redan är låst i Admin. Kommandot skriver värdet till `<Commerce base dir>/app/etc/env.php` -fil. |
+| `-c or --lock-config` | Låser värdet så att det inte kan redigeras i administratören eller ändrar en inställning som redan är låst i Admin. Kommandot skriver värdet till `<Commerce base dir>/app/etc/config.php` -fil. The `--lock-config` alternativ skriver över `--lock-env` om du anger båda alternativen. |
 | `path` | _Obligatoriskt_. Konfigurationssökvägen |
 | `value` | _Obligatoriskt_. Konfigurationens värde |
 
