@@ -1,9 +1,9 @@
 ---
 title: "Den [!UICONTROL [!DNL RabbitMQ]] tab"
 description: Läs mer om [!UICONTROL [!DNL RabbitMQ]] flik för [!DNL Observation for Adobe Commerce].
-source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
+source-git-commit: e59b8db21c449fcf91466df7482849a0454bfe3e
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
@@ -18,24 +18,24 @@ The **[!UICONTROL [!DNL RabbitMQ]]** har information som är fokuserad på [!DNL
 
 The **[!UICONTROL [!DNL RabbitMQ] Infrastructure events]** bildruta visar infrastrukturshändelser som innehåller [!DNL RabbitMQ] som inträffade under den valda tidsramen:
 
-* %Svar [fel] för nod [rabbit@host1]: oväntat http-svar från %) som &#39;unknown_resp_node1&#39;
-* %Svar [fel] för nod [rabbit@host2]: oväntat http-svar från %) som &#39;unknown_resp_node2&#39;
-* %Svar [fel] för nod [rabbit@host3]: oväntat http-svar från %) som &#39;unknown_resp_node3&#39;
-* %Svar [fel] för nod [rabbit@host3]: Hämta &quot;http://localhost:15672/api/healthchecks/node/rabbit@host3&quot;: deadline för kontext har överskridits%) som node3_timeout_har överskridits
-* %Svar [fel] för nod [rabbit@host1]: Hämta &quot;http://localhost:15672/api/healthchecks/node/rabbit@host1&quot;: deadline för kontext har överskridits%) som node1_timeout_har överskridits
-* %Svar [fel] för nod [rabbit@host2]: Hämta &quot;http://localhost:15672/api/healthchecks/node/rabbit@host2&quot;: deadline för kontext har överskridits%) som node2_timeout_har överskridits
-* &quot;%401 Unauthorized%&quot;) as &#39;401_unauth&#39;
-* &#39;%401 Unauthorized%&#39;) as &#39;401_unauth&#39;
-* %Tjänsten har startats om: rabbitmq-server%) as &#39;rmq_service_launch&#39;
-* %Svar [misslyckades] för nod [rabbit@host1]: nodedown%) as &#39;rmq_node1_down&#39;
-* %Svar [misslyckades] för nod [rabbit@host2]: nodedown%) as &#39;rmq_node2_down&#39;
-* %Svar [misslyckades] för nod [rabbit@host2]: nodedown%) as &#39;rmq_node2_down&#39;
-* %Entiteten har ändrats: exchange/bindings.destination%) as &#39;rmq_entity_modified&#39;
-* %Entiteten har ändrats: exchange/bindings.destination%) as &#39;rmq_entity_modified&#39;
-* %Entiteten har ändrats: queue/exclusive%&#39;) as &#39;rmq_entity_created_q_exclusive&#39;&#39;%Entity modified: queue/auto_delete%) as &#39;rmq_entity_q_delete&#39;
-* %Entiteten har ändrats: queue/durable%&#39;) as &#39;rmq_entity_modified_q_durable&#39;
-* %Entiteten har ändrats: version/management%&#39;) as &#39;rmq_entity_modified_ver_mgt&#39;
-* %Entiteten har ändrats: version/management%&#39;) as &#39;rmq_entity_modified_ver_mgt&#39;
+* `%Response [error] for node [rabbit@host1]: unexpected http response from%`) as `unexpected_resp_node1`
+* `%Response [error] for node [rabbit@host2]: unexpected http response from%`) as `unexpected_resp_node2`
+* `%Response [error] for node [rabbit@host3]: unexpected http response from%`) as `unexpected_resp_node3`
+* `%Response [error] for node [rabbit@host3]: Get "http://localhost:15672/api/healthchecks/node/rabbit@host3": context deadline exceeded%`) as `node3_timeout_exceeded`
+* `%Response [error] for node [rabbit@host1]: Get "http://localhost:15672/api/healthchecks/node/rabbit@host1": context deadline exceeded%`) as `node1_timeout_exceeded`
+* `%Response [error] for node [rabbit@host2]: Get "http://localhost:15672/api/healthchecks/node/rabbit@host2": context deadline exceeded%`) as `node2_timeout_exceeded`
+* `%401 Unauthorized%`) as `401_unauth`
+* `%401 Unauthorized%`) as `401_unauth`
+* `%Service restarted: rabbitmq-server%`) as `rmq_service_restart`
+* `%Response [failed] for node [rabbit@host1]: nodedown%`) as `rmq_node1_down`
+* `%Response [failed] for node [rabbit@host2]: nodedown%`) as `rmq_node2_down`
+* `%Response [failed] for node [rabbit@host2]: nodedown%`) as `rmq_node2_down`
+* `%Entity modified: exchange/bindings.destination%`) as `rmq_entity_modified`
+* `%Entity modified: exchange/bindings.destination%`) as `rmq_entity_modified`
+* `%Entity modified: queue/exclusive%`) as `rmq_entity_created_q_exclusive` `%Entity modified: queue/auto_delete%`) as `rmq_entity_q_delete`
+* `%Entity modified: queue/durable%`) as `rmq_entity_modified_q_durable`
+* `%Entity modified: version/management%`) as `rmq_entity_modified_ver_mgt`
+* `%Entity modified: version/management%`) as `rmq_entity_modified_ver_mgt`
 
 ## [!UICONTROL [!DNL RabbitMQ] service start/stop signals]
 
@@ -43,8 +43,8 @@ The **[!UICONTROL [!DNL RabbitMQ] Infrastructure events]** bildruta visar infras
 
 Den här bildrutan visas [!DNL RabbitMQ] start-/stoppsignaler för tjänsten som inträffade under den valda tidsramen:
 
-* &#39;%[!DNL RabbitMQ] uppmanas att avbryta..%&#39;) som &#39;kaninitmq_stop&#39;
-* %Startar [!DNL RabbitMQ]%&#39;) som &#39;kaninitmq_start&#39;
+* `%RabbitMQ is asked to stop...%`) as `rabbitmq_stop`
+* `%Starting RabbitMQ%`) as `rabbitmq_start`
 
 ## [!UICONTROL [!DNL RabbitMQ] errors]
 
@@ -52,22 +52,22 @@ Den här bildrutan visas [!DNL RabbitMQ] start-/stoppsignaler för tjänsten som
 
 Den här bildrutan visas [!DNL RabbitMQ] fel som inträffade under den valda tidsramen:
 
-* &#39;%exit med orsak {case_clause,timeout} och stacktrace {rabbit_mgmt_wm_hälsothchecks%&#39;} som &#39;exit_timeout&#39;
-* %client oväntat stängd TCP-anslutning%) som client_closed_tcp_conn
-* &#39;%vid odefinierad avslutning med orsak avstängning i kontextavstängning_error%) som &#39;undef_exit&#39;
-* %Connection try from disallowed node%) as &#39;disallowed_node&#39;
-* %closing AMQP connection%) as &#39;rmq_err_amqp_conn&#39;
+* `%exit with reason {case_clause,timeout} and stacktrace {rabbit_mgmt_wm_healthchecks%}` as `exit_timeout`
+* `%client unexpectedly closed TCP connection%`) as `client_closed_tcp_conn`
+* `%at undefined exit with reason shutdown in context shutdown_error%`) as `undef_exit`
+* `%Connection attempt from disallowed node%`) as `disallowed_node`
+* `%closing AMQP connection%`) as `rmq_err_amqp_conn`
 
 ## [!UICONTROL [!DNL RabbitMQ] node status]
 
 ![[!DNL RabbitMQ] nodstatus](../../assets/tools/observation-for-adobe-commerce/rabbitmq-tab-4.jpeg)
 
-* &#39;%kanin på nod rabbit@host1 ned%&#39;) som &#39;rmq_node1_down&#39;
-* &#39;%kanin på nod rabbit@host2 ned%&#39;) som &#39;rmq_node2_down&#39;
-* &#39;%kanin på nod rabbit@host3 ned%&#39;) som &#39;rmq_node3_down&#39;
-* %rabbit på nod rabbit@host1 up%) as &#39;rmq_node1_up&#39;
-* %rabbit på nod rabbit@host2 up%) as &#39;rmq_node2_up&#39;
-* %rabbit på nod rabbit@host3 up%) as &#39;rmq_node3_up&#39;
+* `%rabbit on node rabbit@host1 down%`) as `rmq_node1_down`
+* `%rabbit on node rabbit@host2 down%`) as `rmq_node2_down`
+* `%rabbit on node rabbit@host3 down%`) as `rmq_node3_down`
+* `%rabbit on node rabbit@host1 up%`) as `rmq_node1_up`
+* `%rabbit on node rabbit@host2 up%`) as `rmq_node2_up`
+* `%rabbit on node rabbit@host3 up%`) as `rmq_node3_up`
 
 ## [!UICONTROL [!DNL RabbitMQ] Message High-Level Summary status by Queue]
 
@@ -79,10 +79,10 @@ The **[!UICONTROL [!DNL RabbitMQ] Message High-Level Summary status by Queue]** 
 
 ![[!DNL RabbitMQ] Sammanfattning av meddelandedetaljer](../../assets/tools/observation-for-adobe-commerce/rabbitmq-tab-6.jpeg)
 
-* &#39;%report.ERROR: Cron Job containers_runner har ett fel: NOT_FOUND - ingen kö%) som queue_err
-* &#39;%report.ERROR: Cron Job containers_runner har ett fel: NOT_FOUND - ingen kö%) som queue_err
-* %authenticated and granted access to vhost%&#39;) as &#39;auth&#39;
-* %closing AMQP connection%) as &#39;close_conn&#39;
+* `%report.ERROR: Cron Job consumers_runner has an error: NOT_FOUND - no queue%`) as `queue_err`
+* `%report.ERROR: Cron Job consumers_runner has an error: NOT_FOUND - no queue%`) as `queue_err`
+* `%authenticated and granted access to vhost%`) as `auth`
+* `%closing AMQP connection%`) as `close_conn`
 
 ## [!UICONTROL [!DNL RabbitMQ] Queue Consumption MB]
 
