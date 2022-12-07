@@ -1,9 +1,9 @@
 ---
 title: Installationshandbok
 description: "Använd den här guiden för att installera [!DNL Site-Wide Analysis Tool] för din webbplats"
-source-git-commit: bfcedda38f91f5dba8880bb1593ad40a6e3f8041
+source-git-commit: 5603d0feee6ec9dd5e8b534a0e64df274d7ab84d
 workflow-type: tm+mt
-source-wordcount: '1067'
+source-wordcount: '1092'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ The [!DNL Site-Wide Analysis Tool] tillhandahåller prestandaövervakning, rappo
 >
 >Lär dig [aktivera](../site-wide-analysis-tool/access.md) den [!DNL Site-Wide Analysis Tool] och generera rapporter.
 
-Om du har en lokal installation av Adobe Commerce måste du installera en agent på din infrastruktur för att kunna använda verktyget. Du behöver inte installera agenten på Adobe Commerce i molninfrastrukturprojekt.
+Om du har en lokal installation av Adobe Commerce installerar du en agent på din infrastruktur för att använda verktyget. Du behöver inte installera agenten på Adobe Commerce i molninfrastrukturprojekt.
 
 ## Agent
 
@@ -36,7 +36,7 @@ Följande steg krävs för att installera agenten:
 
 >[!INFO]
 >
->Agenten stöder Adobe Commerce-installationer med flera noder. Du måste installera och konfigurera agenten på varje nod.
+>Agenten stöder Adobe Commerce-installationer med flera noder. Installera och konfigurera agenten på varje nod.
 
 ## Systemkrav
 
@@ -44,7 +44,7 @@ Din lokala infrastruktur måste uppfylla följande krav innan du installerar age
 
 - Operativsystem
 
-   - [!DNL Linux x86-64] distributioner, som [!DNL RedHat Enterprise Linux (RHEL)], [!DNL CentOS], [!DNL Ubuntu], [!DNL Debian]och liknande
+   - [!DNL Linux x86-64] distributioner, som [!DNL Red Hat® Enterprise Linux (RHEL)], [!DNL CentOS], [!DNL Ubuntu], [!DNL Debian]och liknande
    >[!IMPORTANT]
    >
    >Adobe Commerce stöds inte på [!DNL Microsoft Windows] eller [!DNL macOS].
@@ -81,7 +81,11 @@ Om du har installerat tillägget och konfigurerat det med en befintlig API-nycke
 
 1. Lägg in webbsajten i [underhållsläge](../../installation/tutorials/maintenance-mode.md).
 
-1. Logga in [accounts.magento.com](https://account.magento.com/customer/account/login?_ga=2.164207871.117144580.1649172612-1623400270.1640858671).
+1. Logga in [account.magento.com](https://account.magento.com/customer/account/login?_ga=2.164207871.117144580.1649172612-1623400270.1640858671).
+
+   >[!NOTE]
+   >
+   > Om du har problem med att komma åt ditt konto kan du läsa [Det går inte att logga in på Adobe Commerce support eller molnkonto](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/unable-to-log-in-to-support-or-cloud-project.html) för felsökningshjälp.
 
 1. Klicka på **[!UICONTROL API Portal]**.
 
@@ -91,7 +95,7 @@ Om du har installerat tillägget och konfigurerat det med en befintlig API-nycke
 
 >[!IMPORTANT]
 >
-> Om du genererar nya nycklar i API-portalen ska du omedelbart uppdatera API-nycklarna i [!DNL Admin configuration]. Om du genererar nya nycklar och inte uppdaterar dem i [!DNL Admin]kommer SaaS-tilläggen inte längre att fungera och du kommer att förlora värdefulla data.
+> Om du genererar nya nycklar i API-portalen ska du omedelbart uppdatera API-nycklarna i [!DNL Admin configuration]. Om du genererar nya nycklar och inte uppdaterar nycklarna i [!DNL Admin]kommer SaaS-tilläggen inte längre att fungera och du kommer att förlora värdefulla data.
 
 Om tillägget inte är installerat installerar du det enligt följande:
 
@@ -146,7 +150,7 @@ Vi har skapat en [gränssnittsskript](https://github.com/magento-swat/install-ag
    Success exit.
    ```
 
-1. När du har hämtat och installerat agenten måste du [konfigurera det att köras](#run-the-agent) med någon av följande metoder:
+1. När du har hämtat och installerat agenten [konfigurera det att köras](#run-the-agent) med någon av följande metoder:
 
    - [Tjänst](#service) (helst om du har rotåtkomst)
 
@@ -257,7 +261,7 @@ Vi rekommenderar att du konfigurerar agenten så att den körs som en tjänst. O
 
 ### Tjänst {#service}
 
-1. Skapa en systemenhetsfil `(/etc/systemd/system/scheduler.service)` med följande konfiguration (ersätt `<filesystemowner>` med Unix-användaren som äger katalogen där agenten och Adobe Commerce är installerade). Om du hämtade agenten som rotanvändare ändrar du ägare av katalogen och de kapslade filerna.
+1. Skapa en systemenhetsfil `(/etc/systemd/system/scheduler.service)` med följande konfiguration (ersätt `<filesystemowner>` med den UNIX®-användare som äger katalogen där agenten och Adobe Commerce är installerade). Om du hämtade agenten som rotanvändare ändrar du ägare av katalogen och de kapslade filerna.
 
    ```config
    [Unit]
