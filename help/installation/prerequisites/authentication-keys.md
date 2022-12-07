@@ -1,9 +1,9 @@
 ---
 title: Hämta dina autentiseringsnycklar
 description: Följ de här stegen för att hämta inloggningsuppgifter för att komma åt Adobe Commerce- och Magento Open Source Composer-paket på repo.magento.com.
-source-git-commit: 8f05fb6fc212c2b3fda80457bbf27ecf16fb1194
+source-git-commit: d209d3f7fde55f7495488f2cbeeebf21024875ed
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '512'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,15 @@ ht-degree: 0%
 
 The `repo.magento.com` är den plats där Adobe Commerce-, Magento Open Source- och tredjepartspaket för disposition lagras och kräver autentisering. Använd ditt Commerce Marketplace-konto för att skapa ett par med 32 tecken *autentiseringsnycklar* för att komma åt databasen.
 
->[!NOTE]
+För åtkomsträttigheter till Adobe Commerce- och Magento Open Source-paket måste du använda nycklar som är kopplade till ett MAGEID som har beviljats åtkomst till dessa paket. MAGEID är vanligtvis den primära kontakten på Adobe Commerce-kontot och är kanske inte alltid projektägare till Adobe Commerce i molninfrastrukturprojekt.
+
+>[!TIP]
 >
->För åtkomsträttigheter till Adobe Commerce- och Magento Open Source-paket måste du använda nycklar som är kopplade till ett MAGEID som har beviljats åtkomst till dessa paket. MAGEID är vanligtvis **Faktureringskontakt** på Adobe Commerce-kontot och kanske inte alltid är **Projektägare** av Adobe Commerce om molninfrastrukturprojekt. Om du stöter på [fel](https://support.magento.com/hc/en-us/articles/360040296392)kanske du inte har åtkomstbehörighet för paketet eller så har åtkomsträttigheterna gått ut på grund av en utestående faktura på kontot. Kontakt [Adobe Commerce Support](https://support.magento.com/hc/en-us) om du behöver hjälp med ditt MAGEID.
+>Om du stöter på [fel](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-commerce-cloud-repo-could-not-be-accessed-403-forbidden-or-404-not-found-error-when-deploying.html)kanske du inte har åtkomstbehörighet för paketet eller så har åtkomsträttigheterna gått ut på grund av en utestående faktura på ditt konto.
+>
+>* Om du är primär kontaktperson för kontot kontrollerar du att det inte finns någon utestående faktura på kontot.
+>* Om nycklarna från den primära kontakten inte fungerar och det inte finns några utestående fakturor på kontot kontaktar du [Adobe Commerce Support](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för hjälp med MAGEID för den primära kontakten.
+
 
 Så här skapar du autentiseringsnycklar:
 
