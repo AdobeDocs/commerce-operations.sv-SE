@@ -1,15 +1,15 @@
 ---
-title: '"Den [!UICONTROL QuickView] tab"'
-description: Fliken QuickView förklarar de olika varningstyper som du kan se, inklusive de som ligger på låg diskutrymme och serveranvändning.
-source-git-commit: 4d700c04be5cd1ec2dc1c43c627feeed93f0fbee
+title: "Den [!DNL QuickView] tab"
+description: The [!DNL QuickView] På -fliken förklaras de olika varningstyper som du kan se, inklusive de som har låg diskutrymme och serveranvändning.
+source-git-commit: 38467ebd2ec29f9e1679182fb1ee7076d738664b
 workflow-type: tm+mt
-source-wordcount: '129'
+source-wordcount: '128'
 ht-degree: 0%
 
 ---
 
 
-# The [!UICONTROL QuickView] tab
+# The [!DNL QuickView] tab
 
 The **[!UICONTROL QuickView]** På -fliken förklaras de olika varningstyper som du kan se, inklusive de som har låg diskutrymme och serveranvändning. Därefter beskrivs flikens ramar.
 

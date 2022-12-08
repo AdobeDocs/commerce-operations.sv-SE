@@ -1,17 +1,17 @@
 ---
-title: '"Den [!UICONTROL Infra] tab"'
-description: The [!UICONTROL Infra] tabben isolerar problem och orsaker till infrastrukturproblem.
-source-git-commit: b0d80d97f60b24bc801063dc484f3a495cf0a036
+title: "Den [!DNL Infra] tab"
+description: The [!DNL Infra] tabben isolerar problem och orsaker till infrastrukturproblem.
+source-git-commit: 38467ebd2ec29f9e1679182fb1ee7076d738664b
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '252'
 ht-degree: 0%
 
 ---
 
 
-# The [!UICONTROL Infra] tab
+# The [!DNL Infra] tab
 
-The **[!UICONTROL Infra]** tabben isolerar problem och orsaker till infrastrukturproblem. Dessutom beskrivs de ramar du kan se på fliken.
+The **[!DNL Infra]** tabben isolerar problem och orsaker till infrastrukturproblem. Dessutom beskrivs de ramar du kan se på fliken.
 
 ## [!UICONTROL Service Alerts – Infrastructure Alerts by Application name]
 
@@ -23,7 +23,7 @@ The **[!UICONTROL Service Alerts – Infrastructure Alerts by Application name]*
 
 ![Inodanvändning vid montering](../../assets/tools/observation-for-adobe-commerce/inode-usage-mount.jpg)
 
-The **[!UICONTROL Inode usage by mount]** bildrutan visar hur noden används vid montering över den valda tidsramen. Även om det kan finnas mycket lagringsutrymme utan kostnad, så visar det sig att det inte finns något tillgängligt lagringsutrymme om noden får slut på noder. Om du tar bort filer (särskilt små filer) frigörs både utrymme och så att det blir möjligt att ta bort noder.
+The **[!UICONTROL Inode usage by mount]** bildspel [!DNL inode] användning genom att montera över den valda tidsramen. Även om det kan finnas mycket lagringsutrymme ledigt kan en nod få slut på [!DNL inodes], visar det sig att det inte finns något tillgängligt lagringsutrymme. Om du tar bort filer (särskilt små) frigörs både utrymme och gör [!DNL inodes] tillgängliga.
 
 ## [!UICONTROL vCPU tier view over timeline GREATER 2 weeks]
 
