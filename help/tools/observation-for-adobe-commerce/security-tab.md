@@ -1,9 +1,9 @@
 ---
-title: '"Den [!UICONTROL Security] tab"'
+title: "Den [!UICONTROL Security] tab"
 description: Läs mer om [!UICONTROL Security] flik för [!DNL Observation for Adobe Commerce].
-source-git-commit: 5e4babd14bb918db7f894b7ca6a0344a4652704c
+source-git-commit: 297c3fed4c0f7ad1a3cb40addef1d33fa8d41525
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '374'
 ht-degree: 0%
 
 ---
@@ -33,24 +33,24 @@ The **[!UICONTROL Create Account access]** visas antalet nya kontoaktiviteter un
 
 ## [!UICONTROL POST activities]
 
-The **[!UICONTROL POST activities]** bildrutan visar webbplatsens POST, som fasetteras på client_ip från [!DNL Fastly] loggar. Den visar också den URL som är tillgänglig för IP-adressen.
+The **[!UICONTROL POST activities]** bildrutan visar `POST` aktiviteter för platsen, facetterade på `client_ip` från [!DNL Fastly] loggar. Den visar också den URL som är tillgänglig för IP-adressen.
 
 ![POST](../../assets/tools/observation-for-adobe-commerce/POST-activities.jpg)
 
 ## [!UICONTROL POST activities summary table]
 
-The **Sammanfattningsregister för POSTER** bildrutan visar de summerade POSTERNA för webbplatsen, som fasetteras på client_ip från [!DNL Fastly] loggar. Den visar även antalet för den URL som är tillgänglig för IP-adressen. Antalet gäller för den valda tidsramen.
+The **[!UICONTROL POST activities summary table]** bildrutan visar sammanfattningen `POST` aktiviteter för platsen, facetterade på `client_ip` från [!DNL Fastly] loggar. Den visar även antalet för den URL som är tillgänglig för IP-adressen. Antalet gäller för den valda tidsramen.
 
 ![Sammanfattning av POSTER](../../assets/tools/observation-for-adobe-commerce/POST-activities-summary.jpg)
 
 ## [!UICONTROL POST activities details table]
 
-The **[!UICONTROL POST activities details table]** bildrutan visar webbplatsens POSTER från [!DNL Fastly] loggar. Den visar även all information från [!DNL Fastly] logga för dessa förfrågningar. Den är begränsad till de senaste 2000 ansökningarna.
+The **[!UICONTROL POST activities details table]** bildrutan visar `POST` aktiviteter för webbplatsen från [!DNL Fastly] loggar. Den visar även all information från [!DNL Fastly] logga för dessa förfrågningar. Den är begränsad till de senaste 2000 ansökningarna.
 ![POST-aktiviteter-details](../../assets/tools/observation-for-adobe-commerce/POST-activities-details.jpg)
 
 ## [!UICONTROL Guest Carts activities]
 
-The **[!UICONTROL Guest Carts activities]** Bildrutan visar antalet gästvagnsaktiviteter under en vald tidsram, uppdelat efter IP-adress och URL. Gästvagnar kan användas i en kardinfarkt. I den här bildrutan visas det totala antalet begäranden där URL:er för gästvagnar är tillgängliga.
+The **[!UICONTROL Guest Carts activities]** Bildrutan visar antalet gästvagnsaktiviteter under en vald tidsram, uppdelat efter IP-adress och URL. Gästvagnar kan användas i en kardinfarkt. I den här bildrutan visas det totala antalet begäranden där gästvagnens URL:er är tillgängliga.
 
 ![Gästvagnsaktiviteter](../../assets/tools/observation-for-adobe-commerce/guest-carts-activities.jpg)
 
