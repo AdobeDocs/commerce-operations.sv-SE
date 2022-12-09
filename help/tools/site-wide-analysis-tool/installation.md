@@ -1,9 +1,9 @@
 ---
 title: Installationshandbok
 description: "Använd den här guiden för att installera [!DNL Site-Wide Analysis Tool] för din webbplats"
-source-git-commit: 5603d0feee6ec9dd5e8b534a0e64df274d7ab84d
+source-git-commit: 696f1624fe43fdd637b374b880667d35daca04de
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1095'
 ht-degree: 0%
 
 ---
@@ -74,7 +74,7 @@ Din lokala infrastruktur måste uppfylla följande krav innan du installerar age
 Agenten kräver [[!DNL Commerce Services Connector]](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html) tillägg som ska installeras på datorn och [konfigurerad](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html) med API-nycklar. Kontrollera att tillägget är installerat genom att köra följande kommando:
 
 ```bash
-bin/magento module:status Magento_ServicesConnector
+bin/magento module:status Magento_ServicesId
 ```
 
 Om du har installerat tillägget och konfigurerat det med en befintlig API-nyckel för en annan tjänst, **API-nyckeln MÅSTE genereras om** och uppdatera den i Adobe Commerce Admin för agenten.
@@ -102,19 +102,25 @@ Om tillägget inte är installerat installerar du det enligt följande:
 1. Lägg till tillägget i `composer.json` och installera det.
 
    ```bash
-   composer require magento/services-connector:1.*
+   composer require magento/services-id
    ```
 
 1. Aktivera tillägget.
 
    ```bash
-   bin/magento module:enable Magento_ServicesConnector
+   bin/magento module:enable Magento_ServicesId
    ```
 
 1. Uppdatera databasschemat.
 
    ```bash
    bin/magento setup:upgrade
+   ```
+
+1. Rensa cachen.
+
+   ```bash
+   bin/magento cache:clean
    ```
 
 1. [Konfigurera API-nycklar](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html) för att ansluta tillägget till systemet.
