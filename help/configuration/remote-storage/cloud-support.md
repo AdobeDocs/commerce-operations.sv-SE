@@ -1,9 +1,9 @@
 ---
 title: Fjärrlagring för Commerce i molninfrastruktur
 description: Mer information om hur du konfigurerar fjärrlagring för Adobe Commerce om molninfrastruktur finns i vägledningen.
-source-git-commit: 0653d90d92e264b62fcc648f2b1307c013e9be54
+source-git-commit: 2080950852e3c4e6da556733e56f68e0e8005530
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '630'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ Ange `REMOTE_STORAGE` variabel som [miljönivåvariabel](https://experienceleagu
 magento-cloud variable:create --level environment --name REMOTE_STORAGE --json true --inheritable false --value '{"driver":"aws-s3","prefix":"uat","config":{"bucket":"aws-bucket-id","region":"eu-west-1","key":"optional-key","secret":"optional-secret"}}'
 ```
 
-Detta skapar en `REMOTE_STORAGE` variabel med angiven JSON-konfiguration. The `REMOTE_STORAGE` variabeln använder en JSON-sträng för att konfigurera fjärrlagring. Nedan finns ett exempel på en JSON-konfiguration.
+Detta skapar en `REMOTE_STORAGE` variabel med angiven JSON-konfiguration. The `REMOTE_STORAGE` variabeln använder en JSON-sträng för att konfigurera fjärrlagring. Följande är ett exempel på JSON-konfiguration:
 
 ```json
 {
