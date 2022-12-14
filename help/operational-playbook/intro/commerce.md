@@ -2,9 +2,9 @@
 title: Adobe Commerce
 description: Beskrivning av Adobe Commerce
 exl-id: 130bae23-8a22-4523-abe2-8dc97b3881d2
-source-git-commit: 3432ba8640a82269cb725b8b15854f20c270b1e3
+source-git-commit: 1611a8cab95ec24a1420fac31958853e28033af6
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Adobe Commerce kan köras lokalt. Så du kan vara värd för och utveckla lokalt
 Adobe Commerce är en komplett e-handelslösning med följande nya funktioner:
 
 - B2B-funktionalitet, som offert, anpassade kataloger och hantera köparroller och behörigheter
-- Magento BI-instrumentpaneler med visualisering och anpassad rapportgenerering
+- Adobe Commerce Reporting-kontrollpaneler med visualisering och anpassad rapportgenerering
 - Magento chatt (med stöd av dotdigital)
 - Avancerade marknadsföringsverktyg
 - [!DNL Product Recommendations] som drivs av Adobe Sensei

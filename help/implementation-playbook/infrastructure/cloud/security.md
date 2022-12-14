@@ -2,9 +2,9 @@
 title: Säkerhet för molninfrastruktur
 description: Läs om hur vi skyddar Adobe Commerce i molninfrastrukturen.
 exl-id: cd5d1106-c8db-4b70-b1c7-12378d7d77a7
-source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
+source-git-commit: 50882bebb4712e6cf095a81297684f37e15b1a6b
 workflow-type: tm+mt
-source-wordcount: '1639'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ Alla AWS-aktiviteter loggas i AWS CloudTrail. Linux-, programserver- och databas
 
 Känsliga data kan omfatta antingen personuppgifter från konsumenter eller konfidentiella uppgifter från Managed Services-kunder. Skyddet av känsliga data från kunder och konsumenter är en viktig skyldighet för Adobe Commerce Managed Services. Både Managed Services och våra kunder har juridiska skyldigheter när det gäller personligt identifierbar information. Förutom arkitekturens säkerhetsfunktioner finns det andra kontroller som begränsar distributionen och åtkomsten till känsliga data.
 
-Kunderna äger sina data och har kontroll över var dessa data kommer att placeras. Kunden anger var deras produktions- och utvecklingsinstanser finns. De anger också vilken plats som ska användas för Magento Business Intelligence-miljön (MBI) i samverkan med Commerce, och om MBI-programmet har tillgång till personligt identifierbar information eller inte. Produktionsinstanser kan finnas i de flesta AWS-regioner, medan utvecklings- och MBI-miljöer för närvarande kan vara både i USA och i EU.
+Kunderna äger sina data och har kontroll över var dessa data kommer att placeras. Kunden anger var deras produktions- och utvecklingsinstanser finns. De anger också vilken plats som ska användas för Adobe Commerce rapporteringsmiljö i samarbete med Commerce och om Adobe Commerce Reporting-programmet har tillgång till personligt identifierbar information eller inte. Produktionsinstanser kan finnas i de flesta AWS-regioner, medan utvecklings- och Adobe Commerce Reporting-miljöer för närvarande finns antingen i USA eller i EU.
 
 Känsliga data kan passera genom snabbnätverket för CDN-servrar, men lagras inte i snabbnätverket. Alla partners som ingår i Adobe Commerce Managed Services har avtalsenliga skyldigheter att skydda känsliga uppgifter. Managed Services flyttar inte känsliga kund- eller konsumentdata från de platser som kunden anger.
 
