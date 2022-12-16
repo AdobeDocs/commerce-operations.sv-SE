@@ -1,7 +1,7 @@
 ---
 title: Starta användare i meddelandekön
 description: Lär dig hur du startar en användare i en meddelandekö.
-source-git-commit: 02f02393878d04b4a0fcdae256ac1ac5dd13b7f6
+source-git-commit: 3e3dac0c75622b210cf1168639b8804003f3c538
 workflow-type: tm+mt
 source-wordcount: '189'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 {{file-system-owner}}
 
-Du måste starta en meddelandekökonsument för att kunna aktivera asynkrona åtgärder som t.ex. Inventory management massåtgärder och REST bulk- och asynkrona slutpunkter. Om du vill aktivera B2B-funktioner måste du starta flera konsumenter. Tredjepartsmoduler kan också kräva att du startar en anpassad konsument.
+Du måste starta en [meddelandekökonsument](../queues/consumers.md) för att aktivera asynkrona åtgärder som Inventory management massåtgärder och REST bulk- och asynkrona slutpunkter. Om du vill aktivera B2B-funktioner måste du starta flera konsumenter. Tredjepartsmoduler kan också kräva att du startar en anpassad konsument.
 
 Så här visar du en lista över alla konsumenter:
 

@@ -1,9 +1,9 @@
 ---
 user-guide-title: Konfigurationshandbok
 user-guide-description: Konfigurera funktioner och tjänster i Adobe Commerce eller Magento Open Source.
-source-git-commit: b872a61f74818990833ba6b48e061fa1ca69b7cb
+source-git-commit: 31f9ff21a848e248d2c3da7cfb3cfc8bfd5785be
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '353'
 ht-degree: 0%
 
 ---
@@ -108,6 +108,7 @@ ht-degree: 0%
    + [Ramverk för meddelandekö](queues/message-queue-framework.md)
    + [Hantera meddelandeköer](queues/manage-message-queues.md)
    + [Konfigurera Amazon MQ](queues/aws-mq.md)
+   + [Konsumenter](queues/consumers.md)
 + Flera platser {#multi-sites}
    + [Flera webbplatser och vyer](multi-sites/ms-overview.md)
    + [Stegnings-ID för databasentitet](multi-sites/change-increment-id.md)

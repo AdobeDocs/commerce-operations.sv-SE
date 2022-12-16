@@ -1,9 +1,9 @@
 ---
 title: Översikt över meddelandeköer
 description: Läs om meddelandeköramverket och hur det fungerar med Adobe Commerce och Magento Open Source.
-source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
+source-git-commit: 78ad565f051f254229424ddcdb8ce633d3a78ec6
 workflow-type: tm+mt
-source-wordcount: '308'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Översikt över meddelandeköer
 
-MQF (Message Queue Framework) är ett system som tillåter en [modul](https://glossary.magento.com/module) för att publicera meddelanden till köer. Det definierar också de konsumenter som ska ta emot meddelandena asynkront. MQF använder [[!DNL RabbitMQ]](https://www.rabbitmq.com) som meddelandeförmedlare, som tillhandahåller en skalbar plattform för att skicka och ta emot meddelanden. Den innehåller även en mekanism för att lagra olevererade meddelanden. [!DNL RabbitMQ] baseras på specifikationen Advanced Message Queuing Protocol (AMQP) 0.9.1.
+MQF (Message Queue Framework) är ett system som tillåter en [modul](https://glossary.magento.com/module) för att publicera meddelanden till köer. Den definierar även [konsumenter](consumers.md) som tar emot meddelanden asynkront. MQF använder [[!DNL RabbitMQ]](https://www.rabbitmq.com) som meddelandeförmedlare, som tillhandahåller en skalbar plattform för att skicka och ta emot meddelanden. Den innehåller även en mekanism för att lagra olevererade meddelanden. [!DNL RabbitMQ] baseras på specifikationen Advanced Message Queuing Protocol (AMQP) 0.9.1.
 
 Följande diagram visar Message Queue Framework:
 
