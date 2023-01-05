@@ -1,9 +1,9 @@
 ---
 title: Installationshandbok
 description: "Använd den här guiden för att installera [!DNL Site-Wide Analysis Tool] för din webbplats"
-source-git-commit: 696f1624fe43fdd637b374b880667d35daca04de
+source-git-commit: 0c27d4cf5854161e14a482912941cd144ca654f7
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1074'
 ht-degree: 0%
 
 ---
@@ -381,27 +381,27 @@ Om du konfigurerade agenten att köras med cron i stället, ska du göra följan
    rm -rf swat-agent
    ```
 
-## Åsidosätt konfigurationsfilen
+## Felsökning
 
-Du kan åsidosätta de värden som du angav i konfigurationsfilen under installationen genom att använda systemvariabler. Detta bevarar bakåtkompatibiliteten med tidigare versioner av agenten. I följande tabell finns rekommenderade värden:
+### Åtkomstnycklar har inte tolkats korrekt
 
-| EGENSKAP | BESKRIVNING |
-| --- | --- |
-| `SWAT_AGENT_APP_NAME` | Företag- eller platsnamn som du angav när du installerade agenten |
-| `SWAT_AGENT_APPLICATION_PHP_PATH` | Sökväg till CLI-tolken i PHP (vanligen `/usr/bin/php`) |
-| `SWAT_AGENT_APPLICATION_MAGENTO_PATH` | Rotkatalog där ditt Adobe Commerce-program är installerat (oftast `/var/www/html`) |
-| `SWAT_AGENT_APPLICATION_DB_USER` | Databasanvändare för din Adobe Commerce-installation |
-| `SWAT_AGENT_APPLICATION_DB_PASSWORD` | Databaslösenord för den angivna användaren för Adobe Commerce-installationen |
-| `SWAT_AGENT_APPLICATION_DB_HOST` | Databasvärd för din Adobe Commerce-installation |
-| `SWAT_AGENT_APPLICATION_DB_NAME` | Databasnamn för din Adobe Commerce-installation |
-| `SWAT_AGENT_APPLICATION_DB_PORT` | Databasport för din Adobe Commerce-installation (vanligen `3306`) |
-| `SWAT_AGENT_APPLICATION_DB_TABLE_PREFIX` | Tabellprefix för din Adobe Commerce-installation (standardvärde: `empty`) |
-| `SWAT_AGENT_APPLICATION_DB_REPLICATED` | Om din Adobe Commerce-installation har en sekundär databasinstans (vanligtvis `false`) |
-| `SWAT_AGENT_APPLICATION_CHECK_REGISTRY_PATH` | Tillfällig katalog för agenten (vanligen `/usr/local/swat-agent/tmp`) |
-| `SWAT_AGENT_RUN_CHECKS_ON_START` | Samla in data vid första körningen (vanligen `1`) |
-| `SWAT_AGENT_LOG_LEVEL` | Avgör vilka händelser som loggas baserat på allvarlighetsgrad (vanligtvis `error`) |
-| `SWAT_AGENT_ENABLE_AUTO_UPGRADE` | Aktiverar automatisk uppgradering (omstart krävs efter en uppgradering); agenten inte söker efter uppgraderingar om alternativet är inaktiverat, `true` eller `false`) |
-| `SWAT_AGENT_IS_SANDBOX=false` | Aktivera sandlådeläge för att använda agenten i mellanlagringsmiljön |
+Följande fel kan uppstå om dina nycklar inte tolkas som de ska:
+
+```terminal
+ERRO[2022-10-10 00:01:41] Error while refreshing token: error while getting jwt from magento: invalid character 'M' looking for beginning of value
+FATA[2022-12-10 20:38:44] bad http status from https://updater.swat.magento.com/linux-amd64.json: 403 Forbidden
+```
+
+Lös det här felet genom att försöka med följande steg:
+
+1. Gör en [skriptad installation](#scripted), spara utdata och granska utdata för fel.
+1. Granska den genererade `config.yaml` och verifiera att sökvägen till din Commerce-instans och PHP är korrekt.
+1. Kontrollera att användaren som kör schemaläggaren finns i [ägare av filsystem](../../installation/prerequisites/file-system/overview.md) Unix-gruppen eller är samma användare som filsystemets ägare.
+1. Se till att [Commerce Services Connector](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html) knapparna är korrekt installerade och försöker uppdatera dem för att ansluta tillägget till systemet.
+1. [Avinstallera](#uninstall) agenten när nycklarna har uppdaterats och ominstallerats med [installationsskript](#scripted).
+1. Kör schemaläggaren och se om du fortfarande får samma fel.
+1. Om du fortfarande får samma fel ökar du loggnivån i dialogrutan `config.yaml` för att felsöka och öppna en supportanmälan.
+
 
 >[!INFO]
 >
