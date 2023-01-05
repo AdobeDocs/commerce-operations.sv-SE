@@ -1,9 +1,9 @@
 ---
 title: Implementeringsunderhållsfas
 description: Lär dig mer om de effektivaste strategierna för implementering i underhållsfasen av Adobe Commerce-projekt.
-source-git-commit: 46c06a74f221877391196894abc1f5f217c5b073
+source-git-commit: ae9573f3766c59887aea177cb85bf889c2161bfc
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '277'
 ht-degree: 0%
 
 ---
@@ -29,9 +29,7 @@ Följande avsnitt innehåller information om bästa praxis för underhållsfasen
 - [Prestanda för granskningsfronder](frontend-performance.md)
 - [Klar, Ställ in, Underhåll](https://business.adobe.com/blog/basics/ready-set-maintain)
 - [Använd SWAT-verktyget för att säkerställa säkerheten och användbarheten för Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-operations/tools/site-wide-analysis-tool/intro.html?lang=en#integrations-with-other-adobe-commerce-support-tools) - KTAG
-- New Relic
-- Loggar
-- Diskutrymme
+- [Använd New Relic- och hälsomeddelanden för att övervaka prestanda, diskutrymme och loggar för Adobe Commerce webbplatser som distribueras i molninfrastrukturen](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/performance.html)
 
 ## Databashantering
 
@@ -53,14 +51,15 @@ Följande avsnitt innehåller information om bästa praxis för underhållsfasen
 - [Indexera om](https://developer.adobe.com/commerce/php/development/components/indexing/#how-to-reindex)
 - [Bästa praxis för konfiguration av &#x200B;](indexer-configuration.md)
 - [Bästa praxis för konfiguration av orderbearbetning](order-processing-configuration.md)
-- KTAG
-- Planera uppgradering för planerade trafikökningar under kampanjer eller helger - CTAG-däcksinnehåll
+
+<!-- Asset not yet integrated from CTAG deck:
+- Plan upsizing for planned traffic increases during promotions or holidays -->
 
 ## Konfiguration
 
 - [Schemalägga administratörsuppdateringar på produktionsplatser](scheduling-admin-updates-in-production.md)
 
-- Planering för högsäsong och kampanjperioder (uppgradering) - CTAG-däcksinnehåll
+<!-- Asset not yet integrated from CTAG deck: Planning for peak season and promotional periods (upsizing)-->
 
 ## Felkorrigeringar
 

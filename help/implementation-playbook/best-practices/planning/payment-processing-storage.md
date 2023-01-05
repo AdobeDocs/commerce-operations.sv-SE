@@ -4,9 +4,9 @@ description: Lär dig hur du på ett säkert sätt hanterar och lagrar betalning
 role: Developer
 feature-set: Commerce
 feature: Best Practices
-source-git-commit: 124eaf6e7b465b320d3d7e6a3694130edb93f187
+source-git-commit: cf8626bfab170a1e12cc72f0bc344c9beb9349a7
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Bästa metoder för betalningshantering och lagring
 
-En av de viktigaste principerna för att upprätthålla [PCI-kompatibilitet](https://nam04.safelinks.protection.outlook.com/GetUrlReputation) har en strategi för att hantera och lagra kreditkortsbetalningar på rätt sätt.
+En av de viktigaste principerna för att upprätthålla [PCI-kompatibilitet](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/payments/compliance-pci.html) har en strategi för att hantera och lagra kreditkortsbetalningar på rätt sätt.
 
 Att lagra kortinnehavardata i Adobe Commerce är **strikt förbjudet** och det kan vara ett brott mot dina skyldigheter som handlare enligt PCI-DSS (Payment Card Industry Data Security Standard). Mer information om vår modell för delat ansvar och riktlinjer för handlares skyldigheter finns i vår [guide för delat ansvar för Adobe Commerce](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-commerce-shared-responsibility-guide.pdf) på Adobe Trust Center.
 

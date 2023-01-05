@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar databas- och programinställningar fö
 role: Developer, Admin
 feature-set: Commerce
 feature: Best Practices
-source-git-commit: 85f9355d0e8c704be3760334b07414d3e15b3b97
+source-git-commit: cf8626bfab170a1e12cc72f0bc344c9beb9349a7
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '687'
 ht-degree: 0%
 
 ---
@@ -99,6 +99,6 @@ Se [Aktivera arkivering](https://experienceleague.adobe.com/docs/commerce-admin/
 
 ## Ytterligare information
 
-- [Vilka är de viktigaste skillnaderna mellan InnoDB och MYISAM?](http://www.expertphp.in/article/what-are-the-main-differences-between-innodb-and-myisam)
+- [MySQL-lagringsmotorer](https://dev.mysql.com/doc/refman/8.0/en/storage-engines.html)
 - [Adobe Commerce 2.3.5 - uppgraderingskrav för MariaDB](../maintenance/commerce-235-upgrade-prerequisites-mariadb.md)
 - [Bästa tillvägagångssätt för att lösa databasprestandaproblem](../maintenance/resolve-database-performance-issues.md)

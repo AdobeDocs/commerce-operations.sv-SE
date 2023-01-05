@@ -1,9 +1,9 @@
 ---
 title: Implementeringsutvecklingsfas
 description: Lär dig mer om de effektivaste strategierna för implementering i utvecklingsfasen av Adobe Commerce-projekt.
-source-git-commit: c717d45525c7893fa2c38183326534e0fa4ee0c6
+source-git-commit: ae9573f3766c59887aea177cb85bf889c2161bfc
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '158'
 ht-degree: 0%
 
 ---
@@ -27,18 +27,15 @@ Följande avsnitt innehåller information om god praxis för utvecklingsfasen.
 
 ### Granska, sammanfoga och testa kod
 
-- Riktlinjer och standarder
-
 <!--Assets not yet integrated
+- Guidelines and standards
   - [Development best practices](https://wiki.corp.adobe.com/x/nT4ykw)
   - [Code Review](https://wiki.corp.adobe.com/x/qT4ykw)
   - [Debugging Magento 2](https://wiki.corp.adobe.com/x/nz4ykw) (wiki)
 -->
 - [Optimera CSS- och JS-filer](optimize-css-js-files.md)
 - [Bästa tillvägagångssätt för privata innehållsblock](private-content-block-configuration.md)
-
-- Lägg till egen kod
-   - [Bästa tillvägagångssätt för tilläggsutvecklare](https://developer.adobe.com/commerce/php/best-practices/)
+- [Bästa tillvägagångssätt för tilläggsutvecklare](https://developer.adobe.com/commerce/php/best-practices/)
 
 <!--Assets not yet integrated
 
@@ -61,13 +58,13 @@ Följande avsnitt innehåller information om god praxis för utvecklingsfasen.
 
 ### Lokal konfiguration och mellanlagringsmiljö
 
-- [Utvecklingsarbetsflöde för molninfrastruktur](https://devdocs.magento.com/cloud/architecture/pro-develop-deploy-workflow.html) - har lagts till från molnguiden
+- [Utvecklingsarbetsflöde för molninfrastruktur](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow.html)
 
 ## Kod, sammanfoga, testa
 
-- [Bästa tillvägagångssätt för byggen och driftsättningen](https://devdocs.magento.com/cloud/reference/discover-deploy.html#best-practices)
+- [Bästa tillvägagångssätt för byggen och driftsättningen](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/best-practices.html)
 - [Statisk innehållsdistribution - moln](static-content-deployment.md)
 - [Optimera CSS- och JS-filer](optimize-css-js-files.md)
 - [Optimera bilder för en mer responsiv webbplats](image-optimization.md)
-- [Felsökning av metodtips för Adobe Commerce om &#x200B; i molnet](troubleshooting.md)
-- [Lär dig när och hur du ändrar &#x200B; för databastabeller](modifying-core-and-third-party-tables.md)
+- [Felsökning av bästa praxis för Adobe Commerce i molninfrastruktur](troubleshooting.md)
+- [Ta reda på när och hur databastabeller ändras](modifying-core-and-third-party-tables.md)

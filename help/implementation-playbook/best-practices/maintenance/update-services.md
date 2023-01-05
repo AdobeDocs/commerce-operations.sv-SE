@@ -4,7 +4,7 @@ description: Lär dig hur du uppdaterar din Adobe Commerce i molninfrastrukturss
 role: Developer
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: 48c5666ee9b83bbf8a5c6375ec53762d918bcece
+source-git-commit: cf8626bfab170a1e12cc72f0bc344c9beb9349a7
 workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Uppgradera de tjänster och komponenter som används av Adobe Commerce innan de 
 
 Kunder som har Starter-planer kan själva tjäna på uppgraderingar av tjänster. Se [Ändra tjänstversion](https://devdocs.magento.com/cloud/project/services.html#change-service-version) om du vill ha mer information om hur du gör detta.
 
-Kunder som har Pro-planer kan bara själva få uppgraderingar av sina tjänster [Integreringsmiljö](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.md). För uppgraderingar av tjänster i produktionen måste du [skicka en supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) begär uppgraderingen.
+Kunder som har Pro-planer kan bara själva få uppgraderingar av sina tjänster [Integreringsmiljö](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html). För uppgraderingar av tjänster i produktionen måste du [skicka en supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) begär uppgraderingen.
 
 >[!WARNING]
 >

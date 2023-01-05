@@ -4,7 +4,7 @@ description: Lär dig hur du skickar instruktioner om din Adobe Commerce webbpla
 role: Developer
 feature-set: Commerce
 feature: Best Practices
-source-git-commit: 48c5666ee9b83bbf8a5c6375ec53762d918bcece
+source-git-commit: cf8626bfab170a1e12cc72f0bc344c9beb9349a7
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 0%
@@ -107,11 +107,11 @@ För steg redigerar du `robots.txt` och ta bort alla poster i administratörssö
 
 >[!TIP]
 >
->Om du behöver hjälp, [skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.md#submit-ticket).
+>Om du behöver hjälp, [skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket).
 
 ## Ytterligare information
 
 - [Förstå webbplatser, butiker och butiksvyer](https://devdocs.magento.com/cloud/configure/configure-best-practices.html#sites)
 - [Lägga till webbplatser](https://docs.magento.com/user-guide/stores/stores-all-create-website.html)
 - [Använd Snabbt för att blockera skadlig trafik för dina Adobe Commerce-sajter](https://devdocs.magento.com/cloud/cdn/fastly-vcl-blocking.html)
-- [robots.txt ger 404 fel i Adobe Commerce i molninfrastruktur 2.3.x](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/robots.txt-gives-404-error-magento-commerce-cloud-2.3.x.md)
+- [robots.txt ger 404 fel i Adobe Commerce i molninfrastruktur 2.3.x](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/robots.txt-gives-404-error-magento-commerce-cloud-2.3.x.html)

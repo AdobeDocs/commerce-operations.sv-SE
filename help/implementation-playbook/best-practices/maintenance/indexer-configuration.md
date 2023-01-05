@@ -4,9 +4,9 @@ description: Underhåll och optimera webbplatsens prestanda genom att följa ved
 role: Admin, User
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: 510f2d4cdaec1034cb04a01fab0948c4261c6d10
+source-git-commit: ae9573f3766c59887aea177cb85bf889c2161bfc
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '280'
 ht-degree: 0%
 
 ---
@@ -38,6 +38,10 @@ Så här maximerar du webbplatsens prestanda:
 - Granska indexkonfigurationen.
 - Ställ in indexerarna på _[!UICONTROL Update on Schedule]_för stora webbplatser och webbplatser med ofta återkommande uppdateringar och stor trafik. Se [Indexhantering](https://docs.magento.com/user-guide/system/index-management.html#change-the-index-mode).
 - Följ [bästa praxis](../../../performance/configuration.md) för att hantera index.
+
+>[!IMPORTANT]
+>
+>The [!DNL Customer Grid] kan bara indexeras om med [!UICONTROL Update on Save] alternativ. Indexet stöder inte `Update by Schedule` alternativ.
 
 ## Ytterligare information
 
