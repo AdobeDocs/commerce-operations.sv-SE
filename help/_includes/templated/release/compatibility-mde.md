@@ -1,7 +1,7 @@
 ---
-source-git-commit: c6b2c0715ae7ddd1a5f64facba6fbd2919875850
+source-git-commit: da1cbeba30059be1b71c18ef08dd1f7ab4674a78
 workflow-type: tm+mt
-source-wordcount: '1907'
+source-wordcount: '1957'
 ht-degree: 0%
 
 ---
@@ -820,6 +820,73 @@ the updated content: https://github.com/AdobeDocs/commerce-operations.en/blob/ma
       <td>Kompatibel</span>
       </td>
       <td>Stöds</span>
+      </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th colspan="15">Katalogtjänst</th>
+    </tr>
+    <tr>
+      <td>Katalogtjänst 1.1</td>
+      <td>Stöds</span>
+      </td>
+      <td>Stöds</span>
+      </td>
+      <td>Stöds</span>
+      </td>
+      <td>Stöds</span>
+      </td>
+      <td>Stöds</span>
+      </td>
+      <td>Stöds</span>
+      </td>
+      <td>Stöds inte</span>
+      </td>
+      <td>Stöds inte</span>
+      </td>
+      <td>Stöds inte</span>
+      </td>
+      <td>Stöds inte</span>
+      </td>
+      <td>Stöds inte</span>
+      </td>
+      <td>Stöds inte</span>
+      </td>
+      <td>Stöds inte</span>
+      </td>
+      <td>Stöds inte</span>
+      </td>
+    </tr>
+    <tr>
+      <td>Katalogtjänst 1.0</td>
+      <td>Stöds</span>
+      </td>
+      <td>Stöds</span>
+      </td>
+      <td>Stöds</span>
+      </td>
+      <td>Stöds</span>
+      </td>
+      <td>Stöds</span>
+      </td>
+      <td>Stöds</span>
+      </td>
+      <td>Stöds inte</span>
+      </td>
+      <td>Stöds inte</span>
+      </td>
+      <td>Stöds inte</span>
+      </td>
+      <td>Stöds inte</span>
+      </td>
+      <td>Stöds inte</span>
+      </td>
+      <td>Stöds inte</span>
+      </td>
+      <td>Stöds inte</span>
+      </td>
+      <td>Stöds inte</span>
       </td>
     </tr>
   </tbody>
