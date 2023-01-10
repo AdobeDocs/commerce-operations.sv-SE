@@ -1,7 +1,7 @@
 ---
 title: Hantera meddelandeköer
 description: Lär dig hur du hanterar meddelandeköer från kommandoraden för Adobe Commerce.
-source-git-commit: 8102c083bb0216bbdcad2882f39f7711b9cee52b
+source-git-commit: 0d106b36f479ecf2eda3fecf6740b28d4b6793eb
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -31,7 +31,7 @@ I följande exempel visas `crontab` konfiguration för konsumenter:
 
 >[!INFO]
 >
->Hur ofta du kontrollerar meddelandeköer beror på din affärslogik och tillgängliga systemresurser. I allmänhet kanske du vill söka efter nya kunder och skicka välkomstmeddelanden oftare än med en mer resurskrävande process, som att uppdatera katalogen. Du bör definiera `cron` scheman efter företagets behov.
+>Hur ofta du kontrollerar meddelandeköer kan bero på din affärslogik och tillgängliga systemresurser. I allmänhet kanske du vill söka efter nya kunder och skicka välkomstmeddelanden oftare än med en mer resurskrävande process, som att uppdatera katalogen. Du bör definiera `cron` scheman efter företagets behov.
 >
 >Den kan konfigureras i Admin Stores > Settings > Configuration > Advanced > System > Cron configuration options for group: konsumenter.
 >

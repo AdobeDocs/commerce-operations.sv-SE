@@ -1,9 +1,9 @@
 ---
 title: Konfigurera Redis
 description: Få en översikt över Redis-funktioner och starta konfigurationen av Redis.
-source-git-commit: 5c0d285717a79d654af769cb734ec385d2d4046f
+source-git-commit: 0d106b36f479ecf2eda3fecf6740b28d4b6793eb
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Du kan också aktivera både RDB- och AOF-alternativen samtidigt. Mer informatio
 
 För cacheinstansen ställer du in instansen så att den är tillräckligt stor för att lagra hela Commerce-cachen. Storlekskraven beror på olika faktorer som antalet produkter och butiksvyer. Som utgångspunkt kan du använda storleken på cachemappen i filsystemet. Om `var/cache` -mappen i filsystemet är 5 GB. Konfigurera Redis-instansen med minst 5 GB för att starta. Det krävs ingen beständighet för cacheinstansen eftersom Commerce-cachen kan återställas. Se [Redis Cache Guide](https://redis.io/docs/manual/eviction/).
 
-För prestandajustering kan du även aktivera följande inställningar för asynkron borttagning. De här inställningarna ändrar inte Redis beteende. Se även [redis news](http://antirez.com/news/93) om du vill ha information om asynkron borttagning.
+För prestandajustering kan du aktivera följande inställningar för asynkron borttagning. De här inställningarna ändrar inte Redis beteende.
 
 ```ini
 lazyfree-lazy-eviction yes

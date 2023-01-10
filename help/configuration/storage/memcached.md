@@ -1,7 +1,7 @@
 ---
 title: Använd cachelagrat för sessionslagring
 description: Lär dig hur du använder cachelagrade data för Commerce-sessionslagring.
-source-git-commit: 53448b11a2d000fe8e8a7eecf2ffcef4b7e248fa
+source-git-commit: 0d106b36f479ecf2eda3fecf6740b28d4b6793eb
 workflow-type: tm+mt
 source-wordcount: '285'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Minnescache är ett allmänt, distribuerat minnescachningssystem. Den används ofta för att snabba upp dynamiska databasdrivna webbplatser genom att data och objekt cachelagras i RAM för att minska det antal gånger som en extern datakälla (som en databas eller API) måste läsas.
 
-Memcache-lagrade tillhandahåller en stor hashtabell som kan distribueras på flera datorer. När tabellen är full gör efterföljande infogningar att äldre data rensas i LRU-ordning (minimum recently used). Storleken på den här hashtabellen är ofta mycket stor. (Källa: [memcached.org](http://memcached.org/))
+Memcache-lagrade tillhandahåller en stor hashtabell som kan distribueras på flera datorer. När tabellen är full gör efterföljande infogningar att äldre data rensas i LRU-ordning (minimum recently used). Storleken på den här hashtabellen är ofta mycket stor. (Källa: [memcached.org](https://www.memcached.org/))
 
 I Commerce används cachelagrade data för sessionslagring, men inte för sidcachelagring. Vi rekommenderar cachning av sidor [Redis](../cache/redis-pg-cache.md) eller [Varnish](../cache/config-varnish.md).
 
@@ -39,7 +39,7 @@ I Commerce används cachelagrade data för sessionslagring, men inte för sidcac
    ),
    ```
 
-   i cache-minnet har valfria startparametrar som ligger utanför den här guidens omfång. Mer information om dem finns i [memcache](https://php.net/manual/en/memcached.sessions.php) dokumentation, källkod och ändringshundar.
+   i cache-minnet har valfria startparametrar som ligger utanför den här guidens omfång. Mer information om dem finns i [memcache](https://www.php.net/manual/en/memcached.sessions.php) dokumentation, källkod och ändringshundar.
 
 1. Fortsätt med nästa avsnitt.
 
@@ -80,5 +80,5 @@ I Commerce används cachelagrade data för sessionslagring, men inte för sidcac
    STAT items:3:outofmemory 0
    STAT items:3:tailrepairs 0
    
-   [Look at the keys in more detail](http://www.darkcoding.net/software/memcached-list-all-keys/)
+   [Look at the keys in more detail](https://darkcoding.net/software/memcached-list-all-keys/)
    ```
