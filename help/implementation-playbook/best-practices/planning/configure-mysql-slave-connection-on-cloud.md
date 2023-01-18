@@ -4,7 +4,7 @@ description: Lär dig hur du konfigurerar MySQL-slavanslutningen för Adobe Comm
 role: Developer
 feature-set: Commerce
 feature: Best Practices
-source-git-commit: 0866272e02a7a223d35e14842bfb42a827e0468d
+source-git-commit: a5a6e25e3fd303e07a07110b85aa1d460f53cd54
 workflow-type: tm+mt
 source-wordcount: '286'
 ht-degree: 0%
@@ -14,8 +14,9 @@ ht-degree: 0%
 
 # Bästa sättet att konfigurera MySQL-slavanslutningen
 
->!![NOTE]
-Vi är medvetna om att den här artikeln fortfarande innehåller programtermer som är branschstandard och som vissa kan finna som rasistiska, sexistiska eller förtryckande och som kan få läsaren att känna sig sårad, traumatiserad eller ovälkommen. Adobe arbetar med att ta bort dessa villkor från vår kod, dokumentation och användarupplevelse.
+>[!NOTE]
+>
+>Vi är medvetna om att den här artikeln fortfarande innehåller programtermer som är branschstandard och som vissa kan finna som rasistiska, sexistiska eller förtryckande och som kan få läsaren att känna sig sårad, traumatiserad eller ovälkommen. Adobe arbetar med att ta bort dessa villkor från vår kod, dokumentation och användarupplevelse.
 
 För Adobe Commerce-webbplatser som distribueras på en molninfrastruktur rekommenderar Adobe att du aktiverar MYSQL-slavanslutningen för databasen som standard.
 
