@@ -1,7 +1,7 @@
 ---
-source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
+source-git-commit: 4391091cce32618dc02b0bddb62ff9d16dd12f10
 workflow-type: tm+mt
-source-wordcount: '2191'
+source-wordcount: '2192'
 ht-degree: 0%
 
 ---
@@ -725,7 +725,7 @@ wikimedia/less.php: ^3.0.0
       <a href="https://github.com/php-amqplib/php-amqplib.git">php-amqplib/php-amqplib</a>
     </td>
     <td>bibliotek</td>
-    <td>Tidigare videlalvaro/php-amqplib.  Det här biblioteket är en ren PHP-implementering av AMQP-protokollet. Den har testats mot [!DNL RabbitMQ].</td>
+    <td>Tidigare videlalvaro/php-amqplib.  Det här biblioteket är en ren PHP-implementering av AMQP-protokollet. Den har testats mot RabbitMQ.</td>
   </tr>
   </tbody>
 </table>
@@ -1278,7 +1278,7 @@ wikimedia/less.php: ^3.0.0
       <a href="https://github.com/webonyx/graphql-php.git">webonyx/graphql-php</a>
     </td>
     <td>bibliotek</td>
-    <td>En PHP-port för GraphQL-referensimplementering</td>
+    <td>En PHP-port för GraphQL referensimplementering</td>
   </tr>
   </tbody>
 </table>

@@ -1,5 +1,5 @@
 ---
-source-git-commit: a2747c1d62c4a22179c1177e7c4e76e028f66cea
+source-git-commit: 4391091cce32618dc02b0bddb62ff9d16dd12f10
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 7%
@@ -54,7 +54,7 @@ Stöd för versionslinjen 2.4.4-2.4.6 upphör den 25 november 2024.
 
 ## 2.4.0-2.4.3
 
-Stöd för versionslinjen 2.4.0-2.4.3 upphör den 28 november 2022.
+Stöd för versionslinjen 2.4.0-2.4.3 upphörde den 28 november 2022.
 
 <table>
   <thead>
