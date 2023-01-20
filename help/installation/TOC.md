@@ -1,9 +1,9 @@
 ---
 user-guide-title: Installationshandbok
 user-guide-description: Lär dig hur du installerar Adobe Commerce och Magento Open Source för lokala distributioner.
-source-git-commit: 949ef8d2036ceeef3cc892a5063ddecc2586a6a9
+source-git-commit: 338a99f4f047640ac4bb944ac8599301cba5f646
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '178'
 ht-degree: 0%
 
 ---
@@ -66,3 +66,4 @@ ht-degree: 0%
    - [Avinstallera eller installera om Commerce](tutorials/uninstall.md)
    - [Avinstallera teman](tutorials/themes.md)
    - [Uppgradera databasschemat](tutorials/database-upgrade.md)
+- [Återgå till bruksanvisningar](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
