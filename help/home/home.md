@@ -2,9 +2,9 @@
 keywords: Adobe Commerce;home;populära topics
 title: Startsida
 description: Bläddra i ett index över Adobe Commerce produktdokumentation.
-source-git-commit: f66183c3dc01e0f8c049edf767cd6c74aae1a1cf
+source-git-commit: a1e74edb232b818dea9a2723bf506fac49acbd9f
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '109'
 ht-degree: 0%
 
 ---
@@ -119,12 +119,4 @@ Få praktisk information om koncept, processer, verktyg och bästa metoder för 
 </tr>
 </table>
 
-## Nyheter
-
-Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
-
-| Ändra | Typ |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|
-| Ett nytt ämne som beskriver alla har lagts till [användare av meddelandekön](../configuration/queues/consumers.md). | Nytt |
-| Tillagd [instruktioner](../implementation-playbook/best-practices/maintenance/commerce-235-upgrade-prerequisites-mariadb.md) för konvertering av lagringformat för databastabeller för Adobe Commerce i molninfrastrukturprojekt. | Uppdaterat |
-| Tillagd [instruktioner](../configuration/remote-storage/cloud-support.md) för att aktivera fjärrlagring för Adobe Commerce i molninfrastrukturprojekt. | Uppdaterat |
+{{$include /help/_includes/templated/whats-new.md}}
