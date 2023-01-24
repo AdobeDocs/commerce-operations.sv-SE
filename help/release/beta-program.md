@@ -1,9 +1,9 @@
 ---
 title: Betaprogram
 description: Läs om betaprogrammet för Adobe Commerce och hur du deltar.
-source-git-commit: 79f36e3728e6bc436e8093bd4051143a48e681d6
+source-git-commit: b92053ae4b5454a686d314bdbbad97a212082046
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -13,8 +13,11 @@ ht-degree: 0%
 
 Välkommen till Adobe Commerce Beta Program och tack för ditt intresse för att delta.
 
-Programmet är tillgängligt för alla Adobe Commerce partners och kunder.
-Läs och följ stegen nedan för att registrera dig för betaprogrammet.
+Programmet är tillgängligt för alla Adobe Commerce partners och kunder. Läs och följ stegen nedan för att registrera dig för betaprogrammet.
+
+>[!IMPORTANT]
+>
+>Adobe Commerce 2.4.6 är den senaste versionen som programmet stöder. Från och med juni 2023 och framåt kommer Adobe att släppa offentliga betaversioner för Adobe Commerce och Magento Open Source. Se [publiceringsschema](schedule.md) för en lista över allmänna betaversionsdatum.
 
 ## Varför delta?
 

@@ -1,15 +1,36 @@
 ---
-source-git-commit: 4391091cce32618dc02b0bddb62ff9d16dd12f10
+source-git-commit: 0de0d58da491b3fac449c16a6a7328bbaffbcd38
 workflow-type: tm+mt
-source-wordcount: '953'
-ht-degree: 7%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 # Släppta versioner
 
-## 2.4.4-2.4.6
+## 2.4.6
 
-Stöd för versionslinjen 2.4.4-2.4.6 upphör den 25 november 2024.
+Stöd för version 2.4.6 upphör den 14 mars 2026.
+
+<table>
+  <thead>
+    <tr>
+      <th>Korrigeringsversion</th>
+      <th>Releasedatum</th><th>Versionsinformation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td>2.4.6</td>
+        <td>14 mars 2023</td>
+          <td><a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/adobe-commerce/2-4-6.html">Versionsinformation</a><br>
+          </td>
+    </tr><!-- patch_releases -->
+  </tbody>
+</table>
+
+## 2.4.5
+
+Stöd för version 2.4.5 upphör 9 augusti 2025.
 
 <table>
   <thead>
@@ -22,31 +43,46 @@ Stöd för versionslinjen 2.4.4-2.4.6 upphör den 25 november 2024.
     <tr>
         <td>2.4.5-p1</td>
         <td>11 oktober 2022</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.4/release-notes/2-4-5-p1.html">Versionsinformation</a><br>
+          <td><a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-5-p1.html">Versionsinformation</a><br>
           </td>
     </tr>
     <tr>
         <td>2.4.5</td>
         <td>9 augusti 2022</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.4/release-notes/commerce-2-4-5.html">Versionsinformation för Adobe Commerce</a><br><a href="https://devdocs.magento.com/guides/v2.4/release-notes/open-source-2-4-5.html">Versionsinformation för Magento Open Source</a><br>
+          <td><a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/adobe-commerce/2-4-5.html">Versionsinformation</a><br>
           </td>
+    </tr><!-- patch_releases -->
+  </tbody>
+</table>
+
+## 2.4.4
+
+Stöd för version 2.4.4 upphör den 12 april 2025.
+
+<table>
+  <thead>
+    <tr>
+      <th>Korrigeringsversion</th>
+      <th>Releasedatum</th><th>Versionsinformation</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
         <td>2.4.4-p2</td>
         <td>11 oktober 2022</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.4/release-notes/2-4-4-p2.html">Versionsinformation</a><br>
+          <td><a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-4-p2.html">Versionsinformation</a><br>
           </td>
     </tr>
     <tr>
         <td>2.4.4-p1</td>
         <td>9 augusti 2022</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.4/release-notes/2-4-4-p1.html">Versionsinformation</a><br>
+          <td><a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-4-p1.html">Versionsinformation</a><br>
           </td>
     </tr>
     <tr>
         <td>2.4.4</td>
         <td>12 april 2022</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.4/release-notes/commerce-2-4-4.html">Versionsinformation för Adobe Commerce</a><br><a href="https://devdocs.magento.com/guides/v2.4/release-notes/open-source-2-4-4.html">Versionsinformation för Magento Open Source</a><br>
+          <td><a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/adobe-commerce/2-4-4.html">Versionsinformation</a><br>
           </td>
     </tr><!-- patch_releases -->
   </tbody>
@@ -67,31 +103,31 @@ Stöd för versionslinjen 2.4.0-2.4.3 upphörde den 28 november 2022.
     <tr>
         <td>2.4.3-p3</td>
         <td>9 augusti 2022</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.4/release-notes/2-4-3-p3.html">Versionsinformation</a><br>
+          <td><a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-3-p3.html">Versionsinformation</a><br>
           </td>
     </tr>
     <tr>
         <td>2.4.3-p2</td>
         <td>12 april 2022</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.4/release-notes/2-4-3-p2.html">Versionsinformation</a><br>
+          <td><a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-3-p2.html">Versionsinformation</a><br>
           </td>
     </tr>
     <tr>
         <td>2.4.3-p1</td>
         <td>12 oktober 2021</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.4/release-notes/2-4-3-p1.html">Versionsinformation</a><br>
+          <td><a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-3-p1.html">Versionsinformation</a><br>
           </td>
     </tr>
     <tr>
         <td>2.4.3</td>
         <td>10 augusti 2021</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.4/release-notes/commerce-2-4-3.html">Versionsinformation för Adobe Commerce</a><br><a href="https://devdocs.magento.com/guides/v2.4/release-notes/open-source-2-4-3.html">Versionsinformation för Magento Open Source</a><br>
+          <td><a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/commerce-2-4-3.html">Versionsinformation för Adobe Commerce</a><br>
           </td>
     </tr>
     <tr>
         <td>2.4.2-p2</td>
         <td>10 augusti 2021</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.4/release-notes/2-4-2-p2.html">Versionsinformation</a><br>
+          <td><a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-2-p2.html">Versionsinformation</a><br>
           </td>
     </tr>
     <tr>
@@ -103,7 +139,7 @@ Stöd för versionslinjen 2.4.0-2.4.3 upphörde den 28 november 2022.
     <tr>
         <td>2.4.2</td>
         <td>9 februari 2021</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.4/release-notes/commerce-2-4-2.html">Versionsinformation för Adobe Commerce</a><br><a href="https://devdocs.magento.com/guides/v2.4/release-notes/open-source-2-4-2.html">Versionsinformation för Magento Open Source</a><br>
+          <td><a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/adobe-commerce/2-4-2.html">Versionsinformation</a><br>
           </td>
     </tr>
     <tr>
@@ -115,7 +151,7 @@ Stöd för versionslinjen 2.4.0-2.4.3 upphörde den 28 november 2022.
     <tr>
         <td>2.4.1</td>
         <td>15 oktober 2020</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.4/release-notes/commerce-2-4-1.html">Versionsinformation för Adobe Commerce</a><br><a href="https://devdocs.magento.com/guides/v2.4/release-notes/open-source-2-4-1.html">Versionsinformation för Magento Open Source</a><br>
+          <td><a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/adobe-commerce/2-4-1.html">Versionsinformation</a><br>
           </td>
     </tr>
     <tr>
@@ -127,7 +163,7 @@ Stöd för versionslinjen 2.4.0-2.4.3 upphörde den 28 november 2022.
     <tr>
         <td>2.4.0</td>
         <td>28 juli 2020</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.4/release-notes/release-notes-2-4-0-commerce.html">Versionsinformation för Adobe Commerce</a><br><a href="https://devdocs.magento.com/guides/v2.4/release-notes/release-notes-2-4-0-open-source.html">Versionsinformation för Magento Open Source</a><br>
+          <td><a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/adobe-commerce/2-4-0.html">Versionsinformation</a><br>
           </td>
     </tr><!-- patch_releases -->
   </tbody>
@@ -172,7 +208,7 @@ Stöd för version 2.3 upphörde 8 september 2022.
     <tr>
         <td>2.3.7</td>
         <td>11 maj 2021</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.3/release-notes/commerce-2-3-7.html">Versionsinformation för Adobe Commerce</a><br><a href="https://devdocs.magento.com/guides/v2.3/release-notes/open-source-2-3-7.html">Versionsinformation för Magento Open Source</a><br>
+          <td><a href="https://devdocs.magento.com/guides/v2.3/release-notes/commerce-2-3-7.html">Versionsinformation för Adobe Commerce</a><br>
           </td>
     </tr>
     <tr>
@@ -184,7 +220,7 @@ Stöd för version 2.3 upphörde 8 september 2022.
     <tr>
         <td>2.3.6</td>
         <td>15 oktober 2020</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.3/release-notes/commerce-2-3-6.html">Versionsinformation för Adobe Commerce</a><br><a href="https://devdocs.magento.com/guides/v2.3/release-notes/open-source-2-3-6.html">Versionsinformation för Magento Open Source</a><br>
+          <td><a href="https://devdocs.magento.com/guides/v2.3/release-notes/commerce-2-3-6.html">Versionsinformation för Adobe Commerce</a><br>
           </td>
     </tr>
     <tr>
@@ -208,7 +244,7 @@ Stöd för version 2.3 upphörde 8 september 2022.
     <tr>
         <td>2.3.5</td>
         <td>28 april 2020</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.3/release-notes/release-notes-2-3-5-commerce.html">Versionsinformation för Adobe Commerce</a><br><a href="https://devdocs.magento.com/guides/v2.3/release-notes/release-notes-2-3-5-open-source.html">Versionsinformation för Magento Open Source</a><br>
+          <td><a href="https://devdocs.magento.com/guides/v2.3/release-notes/release-notes-2-3-5-commerce.html">Versionsinformation för Adobe Commerce</a><br>
           </td>
     </tr>
     <tr>
@@ -220,7 +256,7 @@ Stöd för version 2.3 upphörde 8 september 2022.
     <tr>
         <td>2.3.4</td>
         <td>28 januari 2020</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.3/release-notes/release-notes-2-3-4-commerce.html">Versionsinformation för Adobe Commerce</a><br><a href="https://devdocs.magento.com/guides/v2.3/release-notes/release-notes-2-3-4-open-source.html">Versionsinformation för Magento Open Source</a><br>
+          <td><a href="https://devdocs.magento.com/guides/v2.3/release-notes/release-notes-2-3-4-commerce.html">Versionsinformation för Adobe Commerce</a><br>
           </td>
     </tr>
     <tr>
@@ -232,25 +268,25 @@ Stöd för version 2.3 upphörde 8 september 2022.
     <tr>
         <td>2.3.3</td>
         <td>8 oktober 2019</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.3/release-notes/release-notes-2-3-3-commerce.html">Versionsinformation för Adobe Commerce</a><br><a href="https://devdocs.magento.com/guides/v2.3/release-notes/release-notes-2-3-3-open-source.html">Versionsinformation för Magento Open Source</a><br>
+          <td><a href="https://devdocs.magento.com/guides/v2.3/release-notes/release-notes-2-3-3-commerce.html">Versionsinformation för Adobe Commerce</a><br>
           </td>
     </tr>
     <tr>
         <td>2.3.2</td>
         <td>25 juni 2019</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.3/release-notes/ReleaseNotes2.3.2Commerce.html">Versionsinformation för Adobe Commerce</a><br><a href="https://devdocs.magento.com/guides/v2.3/release-notes/ReleaseNotes2.3.2OpenSource.html">Versionsinformation för Magento Open Source</a><br>
+          <td><a href="https://devdocs.magento.com/guides/v2.3/release-notes/ReleaseNotes2.3.2Commerce.html">Versionsinformation för Adobe Commerce</a><br>
           </td>
     </tr>
     <tr>
         <td>2.3.1</td>
         <td>26 mars 2019</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.3/release-notes/ReleaseNotes2.3.1Commerce.html">Versionsinformation för Adobe Commerce</a><br><a href="https://devdocs.magento.com/guides/v2.3/release-notes/ReleaseNotes2.3.1OpenSource.html">Versionsinformation för Magento Open Source</a><br>
+          <td><a href="https://devdocs.magento.com/guides/v2.3/release-notes/ReleaseNotes2.3.1Commerce.html">Versionsinformation för Adobe Commerce</a><br>
           </td>
     </tr>
     <tr>
         <td>2.3.0</td>
         <td>28 november 2018</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.3/release-notes/ReleaseNotes2.3.0Commerce.html">Versionsinformation för Adobe Commerce</a><br><a href="https://devdocs.magento.com/guides/v2.3/release-notes/ReleaseNotes2.3.0OpenSource.html">Versionsinformation för Magento Open Source</a><br>
+          <td><a href="https://devdocs.magento.com/guides/v2.3/release-notes/ReleaseNotes2.3.0Commerce.html">Versionsinformation för Adobe Commerce</a><br>
           </td>
     </tr><!-- patch_releases -->
   </tbody>
@@ -264,81 +300,57 @@ Stöd för version 2.2 upphörde 1 december 2019.
   <thead>
     <tr>
       <th>Korrigeringsversion</th>
-      <th>Releasedatum</th><th>Versionsinformation</th>
+      <th>Releasedatum</th>
     </tr>
   </thead>
   <tbody>
     <tr>
         <td>2.2.11</td>
         <td>28 januari 2020</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.2/release-notes/release-notes-2-2-11-commerce.html">Versionsinformation för Adobe Commerce</a><br><a href="https://devdocs.magento.com/guides/v2.2/release-notes/release-notes-2-2-11-open-source.html">Versionsinformation för Magento Open Source</a><br>
-          </td>
     </tr>
     <tr>
         <td>2.2.10</td>
         <td>8 oktober 2019</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.2/release-notes/release-notes-2-2-10-commerce.html">Versionsinformation för Adobe Commerce</a><br><a href="https://devdocs.magento.com/guides/v2.2/release-notes/release-notes-2-2-10-open-source.html">Versionsinformation för Magento Open Source</a><br>
-          </td>
     </tr>
     <tr>
         <td>2.2.9</td>
         <td>25 juni 2019</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.2/release-notes/ReleaseNotes2.2.9EE.html">Versionsinformation för Adobe Commerce</a><br><a href="https://devdocs.magento.com/guides/v2.2/release-notes/ReleaseNotes2.2.9CE.html">Versionsinformation för Magento Open Source</a><br>
-          </td>
     </tr>
     <tr>
         <td>2.2.8</td>
         <td>26 mars 2019</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.2/release-notes/ReleaseNotes2.2.8EE.html">Versionsinformation för Adobe Commerce</a><br><a href="https://devdocs.magento.com/guides/v2.2/release-notes/ReleaseNotes2.2.8CE.html">Versionsinformation för Magento Open Source</a><br>
-          </td>
     </tr>
     <tr>
         <td>2.2.7</td>
         <td>28 november 2018</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.2/release-notes/ReleaseNotes2.2.7EE.html">Versionsinformation för Adobe Commerce</a><br><a href="https://devdocs.magento.com/guides/v2.2/release-notes/ReleaseNotes2.2.7CE.html">Versionsinformation för Magento Open Source</a><br>
-          </td>
     </tr>
     <tr>
         <td>2.2.6</td>
         <td>18 september 2018</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.2/release-notes/ReleaseNotes2.2.6EE.html">Versionsinformation för Adobe Commerce</a><br><a href="https://devdocs.magento.com/guides/v2.2/release-notes/ReleaseNotes2.2.6CE.html">Versionsinformation för Magento Open Source</a><br>
-          </td>
     </tr>
     <tr>
         <td>2.2.5</td>
         <td>27 juni 2018</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.2/release-notes/ReleaseNotes2.2.5EE.html">Versionsinformation för Adobe Commerce</a><br><a href="https://devdocs.magento.com/guides/v2.2/release-notes/ReleaseNotes2.2.5CE.html">Versionsinformation för Magento Open Source</a><br>
-          </td>
     </tr>
     <tr>
         <td>2.2.4</td>
         <td>2 maj 2018</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.2/release-notes/ReleaseNotes2.2.4EE.html">Versionsinformation för Adobe Commerce</a><br><a href="https://devdocs.magento.com/guides/v2.2/release-notes/ReleaseNotes2.2.4CE.html">Versionsinformation för Magento Open Source</a><br>
-          </td>
     </tr>
     <tr>
         <td>2.2.3</td>
         <td>27 februari 2018</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.2/release-notes/ReleaseNotes2.2.3EE.html">Versionsinformation för Adobe Commerce</a><br><a href="https://devdocs.magento.com/guides/v2.2/release-notes/ReleaseNotes2.2.3CE.html">Versionsinformation för Magento Open Source</a><br>
-          </td>
     </tr>
     <tr>
         <td>2.2.2</td>
         <td>12 december 2017</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.2/release-notes/ReleaseNotes2.2.2EE.html">Versionsinformation för Adobe Commerce</a><br><a href="https://devdocs.magento.com/guides/v2.2/release-notes/ReleaseNotes2.2.2CE.html">Versionsinformation för Magento Open Source</a><br>
-          </td>
     </tr>
     <tr>
         <td>2.2.1</td>
         <td>7 november 2017</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.2/release-notes/ReleaseNotes2.2.1EE.html">Versionsinformation för Adobe Commerce</a><br><a href="https://devdocs.magento.com/guides/v2.2/release-notes/ReleaseNotes2.2.1CE.html">Versionsinformation för Magento Open Source</a><br>
-          </td>
     </tr>
     <tr>
         <td>2.2.0</td>
         <td>26 september 2017</td>
-          <td><a href="https://devdocs.magento.com/guides/v2.2/release-notes/ReleaseNotes2.2.0EE.html">Versionsinformation för Adobe Commerce</a><br><a href="https://devdocs.magento.com/guides/v2.2/release-notes/ReleaseNotes2.2.0CE.html">Versionsinformation för Magento Open Source</a><br>
-          </td>
     </tr><!-- patch_releases -->
   </tbody>
 </table>

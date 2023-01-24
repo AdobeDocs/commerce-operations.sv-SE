@@ -1,9 +1,9 @@
 ---
 title: Släppta versioner
 description: Lär dig när vissa versioner av Adobe Commerce släpptes.
-source-git-commit: 79f36e3728e6bc436e8093bd4051143a48e681d6
+source-git-commit: 71fad9e3005d8b27f9265b2741ae7e2cb463b7fc
 workflow-type: tm+mt
-source-wordcount: '52'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -11,6 +11,6 @@ ht-degree: 0%
 
 # Släppta versioner
 
-Den här listan över versioner gäller både Magento Open Source och Adobe Commerce. Det innehåller releasedatum för varje mindre release och patch-release samt sista supportdatum. Mer information finns i [Livscykelprincip](lifecycle-policy.md).
+På den här sidan finns en lista över lanserade versioner av Adobe Commerce. Det innehåller releasedatum för alla mindre delar, patchar och säkerhetsreleaser samt slutdatum för support. Se [Livscykelprincip](lifecycle-policy.md).
 
 {{$include /help/_includes/templated/release/core-releases.md}}

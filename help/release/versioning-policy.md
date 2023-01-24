@@ -1,9 +1,9 @@
 ---
 title: Versionspolicy
 description: Läs mer om de olika typerna av Adobe Commerce-utgåvor, inklusive smärre utgåvor, korrigeringsfiler, säkerhetsuppdateringar, snabbkorrigeringar, enskilda korrigeringsfiler och anpassade korrigeringsfiler.
-source-git-commit: f9bbfb86d2197ee7252602edba455ebcae5a2b18
+source-git-commit: 1705e930b7ab0176722c4f911dd06f448f992373
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '818'
 ht-degree: 0%
 
 ---
@@ -15,10 +15,11 @@ Adobe Commerce och Magento Open Source använder [semantisk versionshantering](h
 
 - **STÖRRE UTGÅVA**—2
 - **MINDRE frisläppning**—2.4
-- **PATCH**—2.4.1
-   - **säkerhetsuppdatering**—2.4.1-p1
+- **PATCH**—2.4.5
+   - **säkerhetsuppdatering**—2.4.5-p1
       - Säkerhetsfelkorrigering
       - Säkerhetsförbättring
+- **BETA patch**—2.4.7-beta1
 - **Funktionsrelease**
 - **Hotfix**
 - **Enskild patch**
@@ -43,43 +44,23 @@ Följande riktlinjer gäller för korrigeringsversioner:
 - Ändringar som kan bryta tillägg eller kodkompatibilitet undviks. Kod som skrivits för version 2.2.0 bör till exempel fortfarande fungera med version 2.2.7.
 - I undantagsfall kan ändringar eller ytterligare patchar eller programfixar släppas för att åtgärda säkerhets- eller kompatibilitetsproblem och högkvalitativa problem. På modulnivå är detta i huvudsak förändringar på PATCH-nivå. ibland mindre ändringar.
 
-## säkerhetsuppdatering
+### säkerhetsuppdatering
 
 **Felkorrigering för säkerhet**: En programvarukodsändring som åtgärdar ett identifierat säkerhetsproblem och ger förväntade resultat i ett påverkat produktområde. Dessa korrigeringar är vanligtvis bakåtkompatibla.
 
 **Säkerhetsförbättring**: En programvaruförbättring eller konfigurationsändring som proaktivt förbättrar säkerheten i programmet. Dessa säkerhetsförbättringar hjälper till att hantera säkerhetsrisker som påverkar säkerhetsställningen i Adobe Commerce-programmet, men som kan vara inkompatibla bakåt.
 
-Med säkerhetsuppdateringar kan du skydda din webbplats utan att lägga på ytterligare kvalitetskorrigeringar och förbättringar som ingår i en fullständig kvartalsvis patch-release. Säkerhetsuppdateringar läggs till med&quot;-pN&quot;, där N är den stegvisa korrigeringsversionen som börjar med 1 (till exempel 2.3.5-p1). Säkerhetsuppdateringar kan även innehålla snabbkorrigeringar som krävs för att åtgärda viktiga problem som påverkar Adobe Commerce-programmet.
+Med säkerhetsuppdateringar kan du skydda din webbplats utan att lägga på ytterligare kvalitetskorrigeringar och förbättringar som finns i en fullständig patchversion. Säkerhetsuppdateringar läggs till med&quot;-pN&quot;, där N är den stegvisa korrigeringsversionen som börjar med 1 (till exempel 2.3.5-p1). Säkerhetsuppdateringar kan även innehålla snabbkorrigeringar som krävs för att åtgärda viktiga problem som påverkar Adobe Commerce-programmet.
 
 Varje säkerhetsuppdatering baseras på den tidigare fullständiga patchversionen. Den innehåller kvalitets- och säkerhetskorrigeringar från tidigare korrigeringsversioner och säkerhetskorrigeringar som skapats mellan den tidigare fullständiga korrigeringsversionen och säkerhetsuppdateringen.
 
-I och med kungörandet av [strategi för ny release och uppdaterad livscykelpolicy](https://business.adobe.com/blog/how-to/accelerating-innovation-through-simplified-release-strategy) (9/16/2021) skiljer sig våra säkerhetsuppdateringar åt beroende på om de gäller den senaste mindre versionen som stöds eller en del av en tidigare mindre version som fortfarande stöds:
+Instruktioner om hur du hämtar och använder säkerhetspatchar finns i [Snabbstart](../installation/composer.md#example---security-patch).
 
-- **Säkerhetsuppdateringar för den senaste mindre versionen som stöds**:
+## BETA patch
 
-   - Säkerhetsuppdateringen för den senaste mindre utgåvan som stöds (för närvarande Adobe Commerce 2.4) innehåller:
+Tillgänglighetsreleaser av Adobe Commerce-funktioner är tillgängliga för alla Adobe Commerce-kunder och Adobe-partners. Det ger extra tid innan den allmänna tillgängligheten kan granska kod och komponenter som påverkas.
 
-      - Säkerhetsfelkorrigeringar som har skapats sedan den tidigare fullständiga korrigeringsversionen.
-
-      - Dessa säkerhetsuppdateringar kan även innehålla programfixar som krävs för att åtgärda viktiga problem som kan påverka Adobe Commerce-programmet.
-   - Säkerhetsuppdateringen för den senaste mindre utgåvan som stöds (för närvarande Adobe Commerce 2.4) innehåller vanligtvis inga säkerhetsförbättringar. Dessa ingår i den fullständiga patchversionen för den senaste mindre versionen.
-
-
-- **Säkerhetsuppdateringar för tidigare mindre versioner som stöds**:
-
-   - Säkerhetsuppdateringen för en tidigare mindre version som fortfarande stöds (för närvarande Adobe Commerce 2.3) innehåller:
-
-      - Säkerhetsfelkorrigeringar som har skapats sedan den tidigare korrigerings- eller säkerhetskorrigeringsversionen samt nya säkerhetsförbättringar.
-
-      - Dessa säkerhetsuppdateringar kan även innehålla snabbkorrigeringar som krävs för att åtgärda viktiga problem som påverkar Adobe Commerce-programmet.
-
-      |  | Säkerhetsfel | Säkerhetsförbättring |
-      |--------------------------------------------------------------------------------|--------------|----------------------|
-      | Säkerhetsuppdateringar för den senaste mindre versionen som stöds (för närvarande 2.4) | X |  |
-      | Säkerhetsuppdateringar för tidigare mindre versioner som stöds (för närvarande 2.3) | X | X |
-
-
-Allmän information om säkerhetsreleaser finns i [Vi presenterar den nya patchversionen med endast säkerhet](https://community.magento.com:443/t5/Magento-DevBlog/Introducing-the-New-Security-Patch-Release/ba-p/141287). Instruktioner om hur du hämtar och använder säkerhetspatchar finns i [Snabbstart](../installation/composer.md).
+Betaversioner kan innehålla defekter och tillhandahålls i befintligt skick utan garanti av något slag. Adobe har ingen skyldighet att upprätthålla, korrigera, uppdatera, ändra, modifiera eller på annat sätt ge support (via Adobe Support Services eller på annat sätt) för betaversioner. Kunderna rekommenderas att vara försiktiga och inte på något sätt förlita sig på att betaversionerna och/eller tillhörande dokumentation eller material fungerar korrekt eller fungerar korrekt. Därför är all användning av betaversioner helt på kundens egen risk.
 
 ## Funktionsrelease
 
@@ -107,7 +88,6 @@ Skapas av annan personal än Adobe för att åtgärda ett problem eller ändra A
 
 ## Relaterade ämnen
 
-- [Planering och budgetering för Commerce-uppgraderingscykler](https://magento.com/sites/default/files8/2019-08/Magento-Release-Cycle-Infosheet_Aug_2019.pdf)
 - [Versionshantering](https://developer.adobe.com/commerce/php/development/versioning/)
 - [Kommande versioner](schedule.md)
 - [Software Lifecycle Policy](https://www.adobe.com/content/dam/cc/en/legal/terms/enterprise/pdfs/Adobe-Commerce-Software-Lifecycle-Policy.pdf)
