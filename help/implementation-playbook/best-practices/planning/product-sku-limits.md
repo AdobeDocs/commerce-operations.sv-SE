@@ -4,9 +4,9 @@ description: Lär dig de bästa sätten att konfigurera produktlagringsenheter (
 role: Admin
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: 3a187ae8c066e56df0d7f4981d26ffb934f64576
+source-git-commit: e259f9b999566447469200c93db3bc4ba06434c0
 workflow-type: tm+mt
-source-wordcount: '267'
+source-wordcount: '356'
 ht-degree: 0%
 
 ---
@@ -14,13 +14,18 @@ ht-degree: 0%
 
 # Bästa tillvägagångssätt för SKU-konfiguration av produkter
 
-För att maximera prestandan rekommenderas ett maximum för effektiv produktlagringsenhet (SKU) på 242 miljoner. Detta produktmaximum beräknas som:
+För att maximera prestandan rekommenderas ett maximum för effektiv produktlagringsenhet (SKU) på 242 miljoner. Denna gällande produkt-SKU-maxgräns beräknas som:
 
 ```text
-Effective SKU = N\[SKUs\] * Stores/Websites * Customer Groups
+Effective SKU = N[SKUs] x N[Stores] x N[Customer groups]
 ```
 
-Om du har fler än det maximala antalet aktiva SKU:er tar det längre tid att hämta produktdata och slutföra administratörsåtgärder.
+Var:
+
+- N står som antalet objekt i den kategorin
+- Kundgrupper inkluderar delade kataloger eftersom de skapar ytterligare en kundgrupp.
+
+Om du har fler än det maximala antalet aktiva SKU:er tar det längre tid att hämta produktdata och slutföra åtgärder eller indexeringar på administratörspanelen.
 
 ## Berörda produkter och versioner
 
@@ -34,12 +39,14 @@ Om du har fler än det maximala antalet aktiva SKU:er tar det längre tid att h�
 Använd följande strategier för att minska antalet produkter (SKU):
 
 - Minimera multiplikatorer—
-   - Flyttade butiker eller webbplatser minskar multiplikatorn. Om ni har 50 000 SKU:er, tio webbplatser och tio kundgrupper är antalet SKU:er 5 miljoner. Genom att ta bort fem kundgrupper minskas antalet effektiva SKU:er till 2,5 miljoner.
+   - Konsolidering av webbplatser minskar multiplikatorn. Om ni har 50 000 SKU:er, tio webbplatser och tio kundgrupper är antalet SKU:er 5 miljoner. Genom att ta bort fem kundgrupper minskas antalet effektiva SKU:er till 2,5 miljoner.
    - Använd alternativa produktfunktioner för anpassade priser för att ersätta delade kataloger och kundgruppmultiplikatorer.
+   - Både kundgrupper och delade kataloger fungerar som multiplikatorer för antalet aktiva SKU:er i en butik.
 - Strukturera om katalogen—
    - Minska antalet produkter som tilldelas kategorier.
-   - Minska antalet SKU genom att minska antalet butiker, webbplatser, kundgrupper eller produktantal.
+   - Minska antalet SKU:er genom att minska antalet webbplatser, kundgrupper, delade kataloger, antalet produkter eller antalet konfigurerbara produktalternativ
 - Skapa fler produktvarianter genom att använda anpassade alternativ istället för att skapa separata produkter.
+- Med tanke på att en effektiv SKU kan innehålla ett antal möjliga permutationer av priserna, eftersom priserna kan anges olika för varje butik eller kundgrupp.
 - Inaktivera eller ta bort oanvända systemkomponenter som moduler. (Se  [Avinstallera moduler](../../../installation/tutorials/uninstall-modules.md).)
 - Hantera produkter i ett externt plattformshanteringssystem (PMS).
 
@@ -47,6 +54,7 @@ Använd följande strategier för att minska antalet produkter (SKU):
 
 - [Skapa en produkt](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/product-create.html)
 - [Produkttilldelningar](https://experienceleague.adobe.com/docs/commerce-admin/catalog/categories/products-in-category/categories-product-assignments.html)
+- [Arbeta med delade kataloger](https://experienceleague.adobe.com/docs/commerce-admin/b2b/shared-catalogs/catalog-shared.html)
 - Molninfrastruktur: [Konfigurera flera webbplatser och butiker](https://devdocs.magento.com/cloud/project/project-multi-sites.html)
 - Lokalt: [Flera webbplatser eller butiker](../../../configuration/multi-sites/ms-overview.md)
 - [Adobe Commerce om molninfrastruktur: Bästa tillvägagångssätt för butikskonfiguration](https://devdocs.magento.com/cloud/configure/configure-best-practices.html)
