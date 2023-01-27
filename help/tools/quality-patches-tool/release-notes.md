@@ -1,9 +1,9 @@
 ---
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
-source-git-commit: 2754ce0c8e27d51777924f4640b81628fbb2ea81
+source-git-commit: 230e457a783707c2447fab046a6d139ac97a20c5
 workflow-type: tm+mt
-source-wordcount: '10379'
+source-wordcount: '10584'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,17 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som skapats av gemenskapen för Magento Open Source, se [versionsinformation](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.26 {#v1-1-26}
+
+* **ACSD-47937** (för Adobe Commerce och Magento Open Source 2.4.4) || >=2.4.5 &lt;2.4.6) - Korrigerar problemet där meddelanden om prisfall inte alltid skickas på grund av cachelagring på programnivå.
+* **ACSD-48661** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.7) - Korrigerar problemet där företagets kreditgräns är större än 99, där kommaavgränsaren förhindrar att företaget sparas på grund av ett valideringsfel.
+* **ACSD-48773** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.7) - Korrigerar problemet där e-postmallen för belöningspoäng hämtas från fel butik.
+* **ACSD-48587** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.7) - Korrigerar problemet där HTML-specialtecken i produktwidgetens matchningsregler förhindrar att de visar matchande produkter.
+* **ACSD-48212** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.6) - Korrigerar problemet där produkten tilldelas fel källa vid import.
+* **ACSD-47988** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.6) - Korrigerar problemet där produktexport trimmar HTML-taggar från produktbeskrivningen i Page Builder.
+* **ACSD-48366** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.6) - Korrigerar problemet där produktbilden inte visas i e-postmallen Tillbaka till Stock.
+* **ACSD-48417** (för Adobe Commerce och Magento Open Source >=2.4.5 &lt;2.4.7) - Korrigerar problemet där ett SQL-fel uppstår efter att en schemaändring för en produkt har skapats och en annan produkt har sparats.
 
 ## v1.1.25 {#v1-1-25}
 
@@ -134,7 +145,7 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 
 * **MDVA-44703** (*för Adobe Commerce och Magento Open Source >=2.4.3 &lt;2.4.4*) - Korrigerar problemet där ordersummor i orderrapporten inte beräknas korrekt för den begränsade administratörsanvändaren.
 * **MDVA-44940** (*för Adobe Commerce och Magento Open Source >=2.4.3 &lt;2.4.4*) - Korrigerar det SQL-fel som inträffar när kategorin sparas från Admin.
-* **MDVA-44562** (*för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.2-p2*) - Korrigerar problemet där det icke-förvalda arkiv-ID:t för offertobjekt åsidosätts av standardarkiv-ID:t, trots GraphQL-begäran som kommer från den icke-standardbutiksvyn.
+* **MDVA-44562** (*för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.2-p2*) - Korrigerar problemet där det icke-förvalda arkiv-ID:t för offertobjekt åsidosätts av standardarkiv-ID:t, trots att GraphQL-begäran som kommer från den icke-förvalda butiksvyn.
 * **MDVA-43167** (*för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.4*) - Korrigerar problemet där massåtgärden för administratörsorderraster inte gäller för flersidiga dokument när administratören väljer alla order.
 * **MDVA-44044** (*för Adobe Commerce och Magento Open Source >=2.3.0 &lt;2.4.2-p2*) - Korrigerar problemet där en produkt inte visas på kategorisidan efter att den har tilldelats till en ny webbplats.
 * **MDVA-42509** (*för Adobe Commerce och Magento Open Source >=2.3.3 &lt;2.4.4*) - Korrigerar problemet där en CSV-fil inte kunde överföras för en snabborder som resulterade i ett *Det går inte att skicka cookien* fel.
@@ -299,7 +310,7 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 
 ## v1.1.3 {#v1-1-3}
 
-* **MDVA-40262** (*för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.4*) - Korrigerar problemet där GraphQL sökfrågor inte visas i vanliga söktermer i Admin.
+* **MDVA-40262** (*för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.4*) - Korrigerar problemet där GraphQL-sökfrågor inte visas i vanliga söktermer i Admin.
 * **MDVA-40601** (*för Adobe Commerce och Magento Open Source >=2.3.1 &lt;=2.4.2-p2*) - Korrigerar problemet där användare får ett fel när de försöker få information om den kategori som ändrats av den schemalagda uppdateringen via GraphQL.
 * **MDVA-37234** (*för Adobe Commerce och Magento Open Source >=2.3.5 &lt;2.4.0 || >=2.4.1 &lt;=2.4.2-p2*) - Korrigerar problemet där ett objekt läggs till i kundvagnen flera gånger (parallell begäran) för samma SKU skapar en dubblettradobjekt för samma kundvagn-ID.
 * **MDVA-33606** (*för Adobe Commerce och Magento Open Source >=2.4.1 &lt;=2.4.2-p2*) - Korrigerar problemet där användarna får en *Unik begränsningsöverträdelse* fel när en CMS-sida som tilldelats en hierarki sparas.
@@ -369,7 +380,7 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 * **MDVA-37225** (*för Adobe Commerce >=2.4.1 &lt;=2.4.2-p1*) - Korrigerar problemet där överföringsprocessen fastnar när snabborder skapas när det finns ett heltalsvärde i importerade SKU:er.
 * **MDVA-37224** (*för Adobe Commerce >=2.3.3 &lt;=2.4.2-p1*) - Korrigerar problemet där kunderna inte kan betala för överlåtbar offert med [!DNL PayFlow Pro] med en annan produkt i varukorgen.
 * **MDVA-36286** (*för Adobe Commerce >=2.3.6 &lt;=2.4.2-p1*) - Korrigerar problemet där förhandsvisningen i Page Builder-widgeten bryts om samma SKU har en annan position i underkategorier.
-* **MDVA-30186** (*för Adobe Commerce >=2.3.4 &lt;=2.3.5-p2, >=2.4.0 &lt;=2.4.0-p1, >=2.4.2 &lt;=2.4.2-p1*) - Korrigerar problemet där attributalternativen sorteras efter alternativvärde i stället för efter antalet attributobjekt i GraphQL svar.
+* **MDVA-30186** (*för Adobe Commerce >=2.3.4 &lt;=2.3.5-p2, >=2.4.0 &lt;=2.4.0-p1, >=2.4.2 &lt;=2.4.2-p1*) - Korrigerar problemet där attributalternativen sorteras efter alternativvärde i stället för attributobjektantal i GraphQL-svar.
 
 ## v1.0.22 {#v1-0-22}
 
@@ -391,7 +402,7 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 
 ## v1.0.20 {#v1-0-20}
 
-* **MDVA-36170** (*för Adobe Commerce >=2.3.4 &lt;2.4.2*) - Detta åtgärdar problemet där GraphQL-frågan inte cachelagras med cache-taggen category.
+* **MDVA-36170** (*för Adobe Commerce >=2.3.4 &lt;2.4.2*) - Detta åtgärdar ett problem där GraphQL-frågan inte cachelagras med hjälp av kategorins cachetagg.
 * **MDVA-33168** (*för Adobe Commerce >=2.3.3 &lt;2.4.2*) - Åtgärdar problemet när ett produktattribut uppdateras via API. Alla andra attribut ändras till ett tomt värde.
 * **MDVA-19640** (*för Adobe Commerce >=2.3.0*) - Åtgärdar problemet där [!DNL Advanced Reporting] visar inga data.
 * **MDVA-11189** (*för Adobe Commerce >=2.3.0 &lt;2.3.5*) - Korrigerar problemet när du har importerat en CSV-fil för att uppdatera produktlager, rader från `cataloginventory_stock` tabellen tas bort.
@@ -488,7 +499,7 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 * **MDVA-23426** (*för Adobe Commerce >=2.3.3 &lt;2.3.5*) - Korrigerar problemet där e-postmeddelanden från Adobe Commerce innehåller en tom brödtext med innehåll som läggs till som bilaga.
 * **MDVA-22150** (*för Adobe Commerce >=2.3.1 &lt;2.3.4*) - Korrigerar problemet där kunder med en konfigurerbar produkt i kundvagn och en kupong som används inte kan logga in om den konfigurerbara produkten är inaktiverad i Admin.
 * **MDVA-32545** (*för Adobe Commerce >=2.3.0 &lt;2.4.2*) - Korrigerar problemet där fakturor inte skickas ut automatiskt när du skapar order från administratören.
-* **MDVA-32714** (*för Adobe Commerce >=2.3.4 &lt;2.4.1*) - Korrigerar problemet där kundgruppspriset inte fungerar i GraphQL-produktfrågan.
+* **MDVA-32714** (*för Adobe Commerce >=2.3.4 &lt;2.4.1*) - Korrigerar problemet där kundgruppspriset inte fungerar i GraphQL produktfråga.
 
 ## v1.0.12 {#v1-0-12}
 
