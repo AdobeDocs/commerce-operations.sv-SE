@@ -4,9 +4,9 @@ description: Lär dig hur du förbättrar cachelagringsprestanda med den utökad
 role: Developer, Admin
 feature-set: Commerce
 feature: Best Practices
-source-git-commit: 85f9355d0e8c704be3760334b07414d3e15b3b97
+source-git-commit: 12de523cc7ea1486c894d54efe6944d92d87ded0
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '380'
 ht-degree: 0%
 
 ---
@@ -51,6 +51,11 @@ Mer information finns i [Distribuera variabler > `REDIS_BACKEND`](https://devdoc
 >[!NOTE]
 >
 > Kontrollera vilken version av hjälpverktygen som är installerad i den lokala molnmiljön från kommandoraden med hjälp av `composer show magento/ece-tools` -kommando. Vid behov [uppdatera versionen för verktygen](https://devdocs.magento.com/cloud/project/ece-tools-update.html).
+
+>[!WARNING]
+>
+>Gör _not_ konfigurera en Redis-slavanslutning för molninfrastrukturprojekt med en [skalad arkitektur](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/scaled-architecture.html). Detta orsakar Redis-anslutningsfel. Se [Redis konfigurationsguide](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_use_slave_connection) i _Commerce on Cloud Infrastructure_ guide.
+
 
 ### Konfiguration för lokala distributioner
 
