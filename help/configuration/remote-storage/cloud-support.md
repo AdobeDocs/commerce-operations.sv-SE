@@ -1,7 +1,7 @@
 ---
 title: Fjärrlagring för Commerce i molninfrastruktur
 description: Mer information om hur du konfigurerar fjärrlagring för Adobe Commerce om molninfrastruktur finns i vägledningen.
-source-git-commit: 2080950852e3c4e6da556733e56f68e0e8005530
+source-git-commit: 4c89ef65ffb559ad4ad3f3fc45bd73079fbacd1b
 workflow-type: tm+mt
 source-wordcount: '630'
 ht-degree: 0%
@@ -78,7 +78,7 @@ Du kan också använda Project Web Interface för att lägga till variabeln i l�
 
 1. Klicka **Lägg till variabel**.
 
-1. I _Namn_ fält, ange `env:REMOTE_STORAGE`
+1. I _Namn_ fält, ange `REMOTE_STORAGE`
 
 1. I _Värde_ lägger du till JSON-konfigurationen.
 
