@@ -1,10 +1,10 @@
 ---
 title: Driftsättning av en dator
 description: Lär dig hur du distribuerar uppdateringar till Commerce på en produktionsserver med kommandoraden.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 2e1a06b59fda7db4a9b32d000e1b2a3ca88926d3
 workflow-type: tm+mt
 source-wordcount: '186'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -14,7 +14,7 @@ Det här avsnittet innehåller anvisningar om hur du distribuerar uppdateringar 
 
 ## Antaganden
 
-- Du installerade Commerce med [Disposition].
+- Du installerade Commerce med [Disposition](../../installation/composer.md).
 - Du installerar uppdateringar direkt på servern.
 
 >[!WARNING]
@@ -24,7 +24,7 @@ Det här avsnittet innehåller anvisningar om hur du distribuerar uppdateringar 
 
 ## Distributionssteg
 
-1. Logga in på produktionsservern som eller växla till [ägare av filsystem][file-owner].
+1. Logga in på produktionsservern som eller växla till [ägare av filsystem](../../installation/prerequisites/file-system/overview.md).
 
 1. Ändra katalog till Commerce-baskatalogen:
 
@@ -46,7 +46,7 @@ Det här avsnittet innehåller anvisningar om hur du distribuerar uppdateringar 
 
    **package**: Namnet på det paket som du vill uppdatera.
 
-   Exempel:
+   Till exempel:
 
    - `magento/product-community-edition`
    - `magento/product-enterprise-edition`
@@ -92,5 +92,3 @@ Det här avsnittet innehåller anvisningar om hur du distribuerar uppdateringar 
 <!-- link definitions -->
 
 [install]: https://developer.adobe.com/commerce/contributor/guides/install/update-dependencies/
-[composer]: ../../installation/composer.md
-[file-owner]: ../../installation/prerequisites/file-system/overview.md

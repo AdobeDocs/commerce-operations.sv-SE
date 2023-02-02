@@ -1,7 +1,7 @@
 ---
 title: Så fungerar datamigrering
 description: Lär dig mer om datamigreringsprocessen mellan Magento 1 och Magento 2, inklusive terminologi, arbetsflödesdiagram och steg.
-source-git-commit: b5a2c362b09de993e1dc196bdda90e74cf4a8ba2
+source-git-commit: 2e1a06b59fda7db4a9b32d000e1b2a3ca88926d3
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 0%
@@ -62,14 +62,7 @@ Mappningsfiler beskrivs mer ingående i [[!DNL Data Migration Tool] Teknisk spec
 
 ![Migreringsflöde](../../assets/data-migration/migration_flow.png)
 
-<!-- Link definitions -->
 [[!DNL Data Migration Tool] Teknisk specifikation]: technical-specification.md
-
-[Migration Modes]: ../../assets/data-migration/MigrationModes2.png
-
-[Migration Overview]: ../../assets/data-migration/MigrationOverview2.png
-
-[Migration Steps]: ../../assets/data-migration/MigrationSteps2.png
 
 Vi är glada över att du funderar på att gå över från världens främsta e-handelsplattform - Magento 1.x - till framtidens plattform, Magento 2. Vi är glada att kunna dela med oss av detaljerna om den här processen, som vi kallar migrering.
 

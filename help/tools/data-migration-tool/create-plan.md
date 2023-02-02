@@ -1,9 +1,9 @@
 ---
 title: Skapa en datamigreringsplan
 description: Följ de här stegen för att skapa en datamigreringsplan för att säkerställa en lyckad uppgradering från Magento 1 till Magento 2.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 2e1a06b59fda7db4a9b32d000e1b2a3ca88926d3
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '900'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Migrering är ett perfekt tillfälle att göra allvarliga ändringar och förber
 
 * Konfigurera ett maskinvarusystem för Magento 2 med hjälp av topologi och design som åtminstone matchar ditt befintliga Magento 1-system
 
-* Installera Magento 2.x (med alla moduler i den här versionen) och [!DNL Data Migration Tool] på ett system som uppfyller [Systemkrav för Magento]
+* Installera Magento 2.x (med alla moduler i den här versionen) och [!DNL Data Migration Tool] på ett system som uppfyller [systemkrav](../../installation/system-requirements.md)
 
 * Gör dina egna justeringar i [!DNL Data Migration Tool] kod om du inte behöver migrera vissa data (som CMS-sidor, försäljningsregler) eller om du vill konvertera din anpassning av Magento under migreringen. Läs [!DNL Data Migration Tool]&#39;s [Teknisk specifikation](technical-specification.md) för att bättre förstå hur migrering fungerar inifrån
 
@@ -73,7 +73,7 @@ Gör så här för att testa migreringen:
 
    Om några av tilläggen innehåller data som du vill migrera kan du behöva installera dessa tillägg som är anpassade för Magento 2. Om tilläggen har en annan struktur i Magento 2-databasen använder du mappningsfilerna som finns i [!DNL Data Migration Tool].
 
-1. Indexera om alla Magento 2.x-indexerare. Mer information finns i [Konfigurationsguide].
+1. Indexera om alla Magento 2.x-indexerare. Mer information finns i [Hantera index](../../configuration/cli/manage-indexers.md) i _Konfigurationsguide_.
 
 ## Steg 5: Gör ändringar i migrerade data (om det behövs)
 
@@ -116,6 +116,5 @@ Nu när webbplatsen Magento 2 är uppdaterad med Magento 1 och fungerar normalt 
 1. Magento 2 Store är nu klar att användas. Du och dina kunder kan återuppta alla aktiviteter.
 
 <!-- LINK ADDRESSES -->
-[Systemkrav för Magento]: ../../installation/system-requirements.md
+
 [Commerce Marketplace]: https://marketplace.magento.com
-[Konfigurationsguide]: ../../configuration/cli/manage-indexers.md
