@@ -1,7 +1,7 @@
 ---
 title: Implementeringsfaser
 description: Lär dig mer om de bästa metoderna för implementeringsfaserna i Adobe Commerce-projekt.
-source-git-commit: 2aa9511c4bf7c3feb6cae5e7879502b4f7cb028b
+source-git-commit: bb49e4f239d49393b5b8c82deabe15f6f53c26f7
 workflow-type: tm+mt
 source-wordcount: '157'
 ht-degree: 0%
@@ -59,3 +59,5 @@ Dessa metodtips är ordnade efter implementeringsfas så att du kan hitta rekomm
   </td>
 </tr>
 </table>
+
+{{$include /help/_includes/templated/whats-new-bp.md}}

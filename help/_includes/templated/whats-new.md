@@ -1,7 +1,7 @@
 ---
-source-git-commit: a0b8a6131d9bccb819c846c873d2044da4009989
+source-git-commit: e7c10f28e241e47af8722fd41da0a9e86709b871
 workflow-type: tm+mt
-source-wordcount: '293'
+source-wordcount: '419'
 ht-degree: 0%
 
 ---
@@ -11,9 +11,69 @@ ht-degree: 0%
 
 Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
 
+### 27 januari 2023
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Källa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Publicerad <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html">versionsinformation</a> för QPT-paketversionen (1.1.26 Quality Patches Tool).</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/08210f356354d20adf7360d18e2ddba9fe9a565a">08210f</a> (implementera)</td>
+    </tr>
+  </tbody>
+</table>
+
+### 24 januari 2023
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Källa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Uppdaterade <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/planning/schedule.html">publiceringsschema</a> och <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/planning/lifecycle-policy.html">livscykelpolicy för programvara</a> ämnen för 2023.</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/979a6d481021eb26121e79974b2ce6e9280d51c3">979a6d</a> (implementera)</td>
+    </tr>
+  </tbody>
+</table>
+
+### 23 januari 2023
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Källa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Versionsinformation för Adobe Commerce 2.4.6 beta 2 har lagts till. Se <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/adobe-commerce/2-4-6.html">Versionsinformation om Adobe Commerce 2.4.6</a>.</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/af347fea185d2a3c02180216feb2fd13f5868081">af347f</a> (implementera)</td>
+    </tr>
+  </tbody>
+</table>
+
 ### 19 januari 2023
 
-<table>
+<table style="table-layout:auto;">
   <thead>
     <tr>
       <th>Beskrivning</th>
@@ -33,7 +93,7 @@ Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
 
 ### 10 januari 2023
 
-<table>
+<table style="table-layout:auto;">
   <thead>
     <tr>
       <th>Beskrivning</th>
@@ -53,7 +113,7 @@ Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
 
 ### 9 januari 2023
 
-<table>
+<table style="table-layout:auto;">
   <thead>
     <tr>
       <th>Beskrivning</th>
@@ -73,7 +133,7 @@ Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
 
 ### 20 december 2022
 
-<table>
+<table style="table-layout:auto;">
   <thead>
     <tr>
       <th>Beskrivning</th>
@@ -93,7 +153,7 @@ Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
 
 ### 16 december 2022
 
-<table>
+<table style="table-layout:auto;">
   <thead>
     <tr>
       <th>Beskrivning</th>
@@ -113,7 +173,7 @@ Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
 
 ### 2 december 2022
 
-<table>
+<table style="table-layout:auto;">
   <thead>
     <tr>
       <th>Beskrivning</th>
@@ -133,7 +193,7 @@ Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
 
 ### 1 december 2022
 
-<table>
+<table style="table-layout:auto;">
   <thead>
     <tr>
       <th>Beskrivning</th>
