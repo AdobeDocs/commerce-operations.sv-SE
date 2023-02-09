@@ -1,9 +1,9 @@
 ---
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
-source-git-commit: 230e457a783707c2447fab046a6d139ac97a20c5
+source-git-commit: 76ff1bbcc3a1ca8f73dfdd2ba4f516a201986f62
 workflow-type: tm+mt
-source-wordcount: '10584'
+source-wordcount: '10848'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,21 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som skapats av gemenskapen för Magento Open Source, se [versionsinformation](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.27 {#v1-1-27}
+
+* **ACSD-48362** (för Adobe Commerce >=2.4.1 &lt;2.4.7) - Korrigerar problemet där standardleveransadressen används i stället för en ny när en order läggs med en överlåtbar offert.
+* **ACSD-48059** (för Adobe Commerce >=2.3.7 &lt;2.4.7) - Korrigerar problemet där handlare inte kan spara &quot;[!UICONTROL Match product by rule]&quot; i kategorin.
+* **ACSD-48216** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.3.8 || >=2.4.0 &lt;2.4.7) - Korrigerar problemet där [!UICONTROL AUTO_INCREMENT] i [!UICONTROL inventory_source_item] tabellökningar på [!UICONTROL UPDATE] operation.
+* **ACSD-47908** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.3.8 || >=2.4.0 &lt;2.4.7) - Korrigerar felet &quot;Ett värde som är mindre än eller lika med 0 förväntas&quot; när källan och kvantiteten väljs i leveranssteget vid utcheckning.
+* **ACSD-49497** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.6) - Korrigerar problemet där en order ligger kvar i bearbetningstillståndet efter leveransen och en partiell återbetalning tillämpas.
+* **ACSD-48694** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.3.8 || >=2.4.1 &lt;2.4.7) - Korrigerar problemet där felet&quot;Ogiltig begärd statusändring&quot; förhindrar en kund från att göra en beställning.
+* **ACSD-49013** (för Adobe Commerce och Magento Open Source >=2.4.3 &lt;2.4.7) - Korrigerar problemet där e-postbekräftelse inte översätts till webbplatsens språkområde när kunder skapas med hjälp av bulk-API.
+* **ACSD-48164** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.7) - Korrigerar problemet där en begränsad administratör inte kan spara ett webbplatsnivåvärde.
+* **ACSD-48404** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.4) - Korrigerar problemet där &quot;Kom ihåg kategorisidnumrering = Ja&quot; orsakar ett fel när användaren trycker på webbläsarens bakåtknapp.
+* **ACSD-48634** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.7) - Korrigerar JS-fel på en mellanlagringsuppdateringssida när &quot;[!UICONTROL Google Analytics Content Experiments]&quot; är aktiverat.
+* **ACSD-49042** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.5) - Korrigerar problemet där en produkt med oändlig backorder inte kan beställas från Storefront.
+* Uppdaterade patchar: ACSD-48366, ACSD-48661.
 
 ## v1.1.26 {#v1-1-26}
 
@@ -90,7 +105,7 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 * **ACSD-46581** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.6) - Korrigerar problemet där den beräknade momssumman inte uppdateras efter att du har valt ett land i kundvagnen.
 * **ACSD-46618** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.6) - Korrigerar problemet där produktlistwidgeten visar felaktiga cachelagrade priser för en inloggad kund.
 * **ACSD-46674** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.6) - Korrigerar problemet där anpassade alternativ för en bildtyp visas som HTML i kundens e-postmeddelanden.
-* **ACSD-46988** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.6) - Korrigerar problemet där API-begäran GraphQL &#39;currency&#39; returnerar NULL-värden för en anpassad valuta.
+* **ACSD-46988** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.6) - Korrigerar problemet där GraphQL &#39;currency&#39; API-begäran returnerar NULL-värden för en anpassad valuta.
 * **ACSD-47076** (för Adobe Commerce och Magento Open Source >=2.4.1 &lt;2.4.5) - Korrigerar problemet där Vimeo-videor inte kan spelas upp i butiken.
 * **ACSD-45071** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.4) - Korrigerar problemet där standardkällan läggs till i produkten under importen.
 * **AC-3023** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.6) - Uppdatera DHL-schemat till den senaste versionen, 10.0.
@@ -201,7 +216,7 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 * **MDVA-42645** (*för Adobe Commerce och Magento Open Source >=2.4.3 &lt;2.4.5*) - Korrigerar problemet där administratören inte kan återbetala belöningspoäng om butikskreditfunktionen är inaktiverad.
 * **MDVA-43414** (*för Adobe Commerce och Magento Open Source >=2.3.6 &lt;=2.3.7-p2*) - Korrigerar det allvarliga PHP-fel som inträffar när `inventory.reservations.updateSalabilityStatus` kökonsument på numeriska SKU:er.
 * **MDVA-41628** (*för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.5*) - Korrigerar problemet där befintliga begränsade administratörsanvändare får åtkomst till de nya resurserna när nya moduler läggs till.
-* **MDVA-43348** (*för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.5*) - Korrigerar problemet där GraphQL-begäran för presentkort visar ett fel om `gift_card_options` innehåller *uid*.
+* **MDVA-43348** (*för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.5*) - Korrigerar problemet där ett fel uppstår på presentkortet som GraphQL begär om `gift_card_options` innehåller *uid*.
 * **MDVA-39546** (*för Adobe Commerce och Magento Open Source >=2.3.0 &lt;2.4.5*) - Korrigerar problemet där startdatumet för mellanlagringsuppdateringen kan anges till ett tidigare datum än det aktuella datumet under redigeringen.
 * **MDVA-42950** (*för Adobe Commerce och Magento Open Source >=2.3.0 &lt;2.4.5*) - Korrigerar problemet där videoklipp inte spelas upp på produktsidan.
 * **MDVA-42689** (*för Adobe Commerce och Magento Open Source >=2.3.0 &lt;2.4.4*) - Korrigerar problemet där Adobe Commerce orsakar en *Överträdelse av integritetsbegränsning* fel vid uppdatering av produktkategorier under import.
@@ -228,7 +243,7 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 * **MDVA-38728** (*för Adobe Commerce och Magento Open Source >=2.3.2 &lt;2.4.5*) - Korrigerar problemet där massattributsuppdatering skapar URL-omskrivning för standardlagring endast efter ändring *Produktsynlighet*.
 * **MDVA-43091** (*för Adobe Commerce och Magento Open Source >=2.4.3 &lt;2.4.4*) - Korrigerar problemet där beställning av en paketprodukt från administratören i serverdelen ger felet *Du kan inte använda decimalkvantitet för den här produkten*.
 * **MDVA-40816** (*för Adobe Commerce och Magento Open Source >=2.3.0 &lt;2.4.5*) - Korrigerar problemet där relaterade produktregler visar produkter från kategorier som inte definierats i regelvillkoren.
-* **MDVA-41305** (*för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.5*) - Korrigerar problemet där GraphQL-mutationen inte returnerar konfigurerbara produktalternativ när den har lagts till i önskelistan.
+* **MDVA-41305** (*för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.5*) - Korrigerar problemet där GraphQL-mutation inte returnerar konfigurerbara produktalternativ efter att den lagts till i önskelistan.
 * **MDVA-39181** (*för Adobe Commerce och Magento Open Source >=2.4.1 &lt;2.4.5*) - Korrigerar problemet där relaterade produktregler visar produkter från kategorier som inte definierats i regelvillkoren.
 * **MDVA-42584** (*för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.3*) - Korrigerar problemet där konfigurerbar lagerstatus i serverdelen inte uppdateras efter att kvantitet och lagerstatus har ändrats via Import eller API.
 * **MDVA-40175** (*för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.3*) - Åtgärdar problemet där *Klicka för att ändra leveranssätt* I visas inte alternativknappar för att välja leveransmetoder i Admin vid omsortering.
@@ -264,7 +279,7 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 
 * **MDVA-39711** (*för Adobe Commerce och Magento Open Source >=2.3.0 &lt;2.4.3*) - Korrigerar problemet där administratörsanvändare inte kan komma åt kundens rutnät efter att webbplatsen har tagits bort.
 * **MDVA-40311** (*för Adobe Commerce och Magento Open Source >=2.4.2-p2 &lt;2.4.4*) - Korrigerar problemet där administratörsanvändare får felmeddelandet *Ogiltig säkerhets- eller formulärnyckel. Uppdatera sidan* efter inloggning på administratören om den anpassade administratörssökvägen är konfigurerad och den hemliga nyckeln är aktiverad.
-* **MDVA-41631** (*för Adobe Commerce och Magento Open Source >=2.4.1 &lt;2.4.4*) - Korrigerar problemet där användare får ett fel vid försök att hämta orderinformation utan ett valfritt *telefon* värde via GraphQL.
+* **MDVA-41631** (*för Adobe Commerce och Magento Open Source >=2.4.1 &lt;2.4.4*) - Korrigerar problemet där användare får ett fel vid försök att hämta orderinformation utan ett valfritt *telefon* genom GraphQL.
 * **MDVA-27239** (*för Adobe Commerce och Magento Open Source >=2.3.0 &lt;2.3.6*) - Korrigerar problemet där korsförsäljningsprodukter inte visas.
 * Uppdaterade patchar: MDVA-37068, MDVA-35254, MDVA-41164, MDVA-37916, MDVA-37478, MDVA-34551, MDVA-31791.
 
@@ -310,7 +325,7 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 
 ## v1.1.3 {#v1-1-3}
 
-* **MDVA-40262** (*för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.4*) - Korrigerar problemet där GraphQL-sökfrågor inte visas i vanliga söktermer i Admin.
+* **MDVA-40262** (*för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.4*) - Korrigerar problemet där GraphQL sökfrågor inte visas i vanliga söktermer i Admin.
 * **MDVA-40601** (*för Adobe Commerce och Magento Open Source >=2.3.1 &lt;=2.4.2-p2*) - Korrigerar problemet där användare får ett fel när de försöker få information om den kategori som ändrats av den schemalagda uppdateringen via GraphQL.
 * **MDVA-37234** (*för Adobe Commerce och Magento Open Source >=2.3.5 &lt;2.4.0 || >=2.4.1 &lt;=2.4.2-p2*) - Korrigerar problemet där ett objekt läggs till i kundvagnen flera gånger (parallell begäran) för samma SKU skapar en dubblettradobjekt för samma kundvagn-ID.
 * **MDVA-33606** (*för Adobe Commerce och Magento Open Source >=2.4.1 &lt;=2.4.2-p2*) - Korrigerar problemet där användarna får en *Unik begränsningsöverträdelse* fel när en CMS-sida som tilldelats en hierarki sparas.
@@ -329,7 +344,7 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 * **MDVA-39966** (*för Adobe Commerce och Magento Open Source >=2.3.0 &lt;=2.3.5-p2 || >=2.4.0 &lt;=2.4.0-p1*) - Åtgärdar problemet med att distribuera felaktiga språkområden.
 * **MDVA-38852** (*för Adobe Commerce och Magento Open Source >=2.3.0 &lt;=2.3.5-p2*) - Korrigerar problemet där kataloginventeringen efter design låser tabeller för uppdateringar som avsevärt försämrar prestanda vid flera parallella order.
 * **MDVA-39986** (*för Adobe Commerce och Magento Open Source >=2.4.1 &lt;2.4.3*) - Korrigerar problemet där användaren inte kan göra en beställning i Admin på MacOS med webbläsaren Safari.
-* **MDVA-38447** (*för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.4*) - Korrigerar två problem: där *Inte synlig separat* konfigurerbara underordnade produkter returneras i GraphQL-svaret och optimera MySQL-frågan för GraphQL-produktfrågan med kategorifilter.
+* **MDVA-38447** (*för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.4*) - Korrigerar två problem: där *Inte synlig separat* konfigurerbara underordnade produkter returneras i GraphQL-svar och optimera MySQL-frågan för GraphQL-produktfråga med kategorifilter.
 * **MDVA-40134** (*för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.3*) - Korrigerar problemet där GraphQL inte returnerar relaterade produkter när den delade katalogen är aktiverad.
 * **MDVA-39935** (*för Adobe Commerce och Magento Open Source >=2.4.1 &lt;2.4.4*) - Korrigerar problemet där GraphQL returnerar konfigurerbara underordnade produkter som är inaktiverade på webbplatsnivå.
 
@@ -375,12 +390,12 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 ## v1.0.23 {#v1-0-23}
 
 * **MDVA-37478** (*för Adobe Commerce >=2.3.0 &lt;=2.3.7*) - Korrigerar problemet där Adobe Commerce genererar ett fel när en delfaktura skapas för order som läggs med *Betalning à conto* betalningsmetod via REST API.
-* **MDVA-37362** (*för Adobe Commerce >=2.3.4 &lt;=2.4.2-p1*) - Korrigerar problemet där konfigurerbara produktalternativvärden och variantattributvärden var tomma i GraphQL-svaret.
-* **MDVA-37288** (*för Adobe Commerce 2.4.2*) - Korrigerar problemet där felaktiga nivåpriser returnerades efter GraphQL-begäran.
+* **MDVA-37362** (*för Adobe Commerce >=2.3.4 &lt;=2.4.2-p1*) - Korrigerar problemet där konfigurerbara produktalternativvärden och variantattributvärden var tomma i GraphQL svar.
+* **MDVA-37288** (*för Adobe Commerce 2.4.2*) - Korrigerar problemet där felaktiga nivåpriser returnerades efter GraphQL begäran.
 * **MDVA-37225** (*för Adobe Commerce >=2.4.1 &lt;=2.4.2-p1*) - Korrigerar problemet där överföringsprocessen fastnar när snabborder skapas när det finns ett heltalsvärde i importerade SKU:er.
 * **MDVA-37224** (*för Adobe Commerce >=2.3.3 &lt;=2.4.2-p1*) - Korrigerar problemet där kunderna inte kan betala för överlåtbar offert med [!DNL PayFlow Pro] med en annan produkt i varukorgen.
 * **MDVA-36286** (*för Adobe Commerce >=2.3.6 &lt;=2.4.2-p1*) - Korrigerar problemet där förhandsvisningen i Page Builder-widgeten bryts om samma SKU har en annan position i underkategorier.
-* **MDVA-30186** (*för Adobe Commerce >=2.3.4 &lt;=2.3.5-p2, >=2.4.0 &lt;=2.4.0-p1, >=2.4.2 &lt;=2.4.2-p1*) - Korrigerar problemet där attributalternativen sorteras efter alternativvärde i stället för attributobjektantal i GraphQL-svar.
+* **MDVA-30186** (*för Adobe Commerce >=2.3.4 &lt;=2.3.5-p2, >=2.4.0 &lt;=2.4.0-p1, >=2.4.2 &lt;=2.4.2-p1*) - Korrigerar problemet där attributalternativen sorteras efter alternativvärde i stället för efter antalet attributobjekt i GraphQL svar.
 
 ## v1.0.22 {#v1-0-22}
 
@@ -427,7 +442,7 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 * **MDVA-33704** (*för Adobe Commerce >=2.4.0 &lt;2.4.3*) - Korrigerar problemet där *Hämtning i butik* Leveransalternativet visas inte, men är konfigurerat att vara tillgängligt.
 * **MDVA-34928** (*för Adobe Commerce >=2.3.5 &lt;2.3.5-p2*) - Korrigerar problemet där sidinläsaren visas i oändlighet efter att butikskrediten tagits bort från betalningen.
 * **MDVA-35254** (*för Adobe Commerce >=2.3.1 &lt;2.4.3*) - Korrigerar problemen med CAPTCHA vid utcheckning.
-* **MDVA-35569** (*för Adobe Commerce >=2.3.4 &lt;2.4.2*) - Korrigerar problemet där *fast produktskatt* fältet fylls inte i i GraphQL-svaret när tillstånd anges.
+* **MDVA-35569** (*för Adobe Commerce >=2.3.4 &lt;2.4.2*) - Korrigerar problemet där *fast produktskatt* fält fylls inte i i GraphQL-svar när tillstånd anges.
 * **MDVA-35847** (*för Adobe Commerce >=2.4.1 &lt;2.4.3*) - Korrigerar B2B-problemet där företagsanvändare tar bort information om ett anpassat kundattribut används.
 * **MDVA-31307** (*för Adobe Commerce >=2.4.0 &lt;2.4.2*) - Korrigerar problemet där det finns *Slut på minne* fel i vissa kategorier på grund av problem med dynamisk CSP-vitlista för cachelagrade block.
 
@@ -436,7 +451,7 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 * **MDVA-32655** (*för Adobe Commerce >=2.3.0 &lt;2.4.3*) - Korrigerar fel *pågår* meddelandestatus till rätt *complete* meddelande till konsument `quoteItemCleaner` efter att flera produkter har tagits bort.
 * **MDVA-34102** (*för Adobe Commerce >=2.3.0 &lt;2.4.3*) - Anger att standardlagret är noll för inaktiverade produkter i produktstödrastret och Redigera produktsidor i administratörsområdet.
 * **MDVA-35286** (*för Adobe Commerce >=2.4.0 &lt;2.4.2*) - Korrigerar problemet där ett fel uppstår om en kund har paketerat produkter i kundvagnen och växlar från utcheckning av flera adresser till utcheckning av en sida.
-* **MDVA-35312** (*för Adobe Commerce >=2.4.1-p1 &lt;2.4.2*) - Korrigerar svarskod 500 när en tom GraphQL-begäran anges.
+* **MDVA-35312** (*för Adobe Commerce >=2.4.1-p1 &lt;2.4.2*) - Korrigerar svarskod 500 när en tom GraphQL-begäran begärs.
 * **MDVA-34189** (*för Adobe Commerce >=2.3.4 &lt;2.4.3*) - Korrigerar 503-bytetimeout på [!DNL Visual Merchandiser] frågar när sidan Administratörskategori läses in.
 * **MDVA-34695** (*för Adobe Commerce >=2.3.0 &lt;2.4.1*) - Korrigerar negativ `children_count` efter att kategorier har tagits bort.
 
@@ -445,7 +460,7 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 * **MDVA-34012** (*för Adobe Commerce >=2.3.1 &lt;2.4.3*) - Korrigerar problemet där *Använd standardvärde* kryssrutan rensas när de schemalagda ändringarna har tillämpats. Problemet uppstår när de schemalagda ändringarna inte längre gäller.
 * **MDVA-35064** (*för Adobe Commerce >=2.3.3 &lt;2.4.3*) - Korrigerar problemet där URL-omskrivningar inte genereras för konfigurerbara produkter som skapas via API.
 * **MDVA-34943** (*för Adobe Commerce >=2.3.0 &lt;2.4.2*) - Korrigerar problemet där snabbbeställning cachelagrar de tidigare angivna SKU:erna.
-* **MDVA-35197** (*för Adobe Commerce >=2.3.5 &lt;2.4.0*) - Korrigerar problemet där ett fel uppstod när GraphQL lades till i kundvagnen om tidigare tillagda produkter inte fanns i lager.
+* **MDVA-35197** (*för Adobe Commerce >=2.3.5 &lt;2.4.0*) - Korrigerar problemet där det uppstod ett fel när du lade till i kundvagnen med GraphQL om tidigare tillagda produkter inte fanns i lager.
 * **MDVA-34850** (*för Adobe Commerce >=2.3.1 &lt;2.4.0*) - Korrigerar problemet där alternativen för utlagring för en konfigurerbar produkt inte visas i stället för att visas som genomstruken.
 * **MDVA-34867** (*för Adobe Commerce >=2.3.0 &lt;2.4.3*) - Korrigerar problemet där värden för ett villkorsfält som angetts för en schemalagd uppdatering inte sparas.
 * **MDVA-35092** (*för Adobe Commerce >=2.3.5 &lt;2.4.3*) - Korrigerar problemet där användare inte kan lägga till [!DNL Vimeo] videoklipp på grund av inaktuella [!DNL Vimeo] API.
