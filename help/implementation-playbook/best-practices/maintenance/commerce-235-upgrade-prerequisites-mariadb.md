@@ -4,19 +4,19 @@ description: Lär dig hur du förbereder din Adobe Commerce-databas för uppgrad
 role: Developer
 feature-set: Commerce
 feature: Best Practices
-source-git-commit: 35efea20181b112e97bfae803c8d0168cfc88dfc
+source-git-commit: bc38dd658401d3cd4c64159b1b2b2efe89979a93
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
 
-# Krav för Adobe Commerce 2.3.5-uppgradering
+# Krav för uppgradering av MariaDB
 
-I den här artikeln beskrivs hur du förbereder databasen när du uppgraderar till Adobe Commerce 2.3.5 från version 2.3.4 eller tidigare.
+Om du uppgraderar från Adobe Commerce 2.3.4 eller tidigare till en senare version måste du uppgradera MariaDB-tjänsten i molninfrastrukturen från version 10.0 eller 10.2 till version 10.3 eller 10.4. MariaDB version 10.3 och senare kräver att databasen använder det dynamiska tabellradformatet och Adobe Commerce kräver att du använder InnoDB-lagringsmotorn för tabeller. I den här artikeln beskrivs hur du uppdaterar din databas så att den uppfyller dessa MariaDB-krav.
 
-Uppgraderingen kräver att supportteamet uppgraderar MariaDB i molninfrastrukturen från MariaDB 10.0 till 10.2 för att uppfylla kraven för Adobe Commerce version 2.3.5 och senare.
+När du har förberett databasen skickar du en Adobe Commerce supportanmälan för att uppdatera MariaDB-tjänstversionen i din molninfrastruktur innan du fortsätter med uppgraderingsprocessen för Adobe Commerce.
 
 ## Berörda produkter och versioner
 
@@ -27,7 +27,7 @@ Adobe Commerce i molninfrastruktur med Adobe Commerce version 2.3.4 eller tidiga
 Innan Adobe Commerce supportteam börjar uppgraderingsprocessen förbereder du databasen genom att konvertera databastabellerna:
 
 - Konvertera radformatet från `COMPACT` till `DYNAMIC`
-- Konvertera lagringsmotorn från `MyISAM` till `InnoDB`
+- Ändra lagringsmotorn från `MyISAM` till `InnoDB`
 
 Tänk på följande när du planerar och schemalägger konverteringen:
 
@@ -137,6 +137,12 @@ Dagen före den schemalagda uppgraderingen till MariaDB version 10.2 kontrollera
 
 1. Om några tabeller har återställts upprepar du stegen för att ändra tabellradformatet och lagringsmotorn.
 
+## Ändra lagringsmotorn
+
+Se [Konvertera MyISAM-tabeller till InnoDB](../planning/database-on-cloud.md).
+
 ## Ytterligare information
 
-[Bästa databaspraxis för Adobe Commerce om molninfrastruktur](../planning/database-on-cloud.md)
+- [Bästa databaspraxis för Adobe Commerce om molninfrastruktur](../planning/database-on-cloud.md)
+- [Uppdaterar MariaDB från 10.0 till 12.0 för Adobe Commerce i molnet](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/upgrade-mariadb-10.0-to-10.2-for-magento-commerce-cloud.html)
+

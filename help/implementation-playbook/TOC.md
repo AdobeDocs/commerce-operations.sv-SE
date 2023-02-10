@@ -2,9 +2,9 @@
 user-guide-title: Implementera spelningsbok
 user-guide-description: Läs om strategier för att planera och implementera en framgångsrik Adobe Commerce-webbplats.
 mini-toc-levels: 3
-source-git-commit: 338a99f4f047640ac4bb944ac8599301cba5f646
+source-git-commit: 5559d412ab58d392098cfff7a4cabb473c38cb0d
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -110,6 +110,6 @@ ht-degree: 0%
       - [Schemalägga administratörsuppdateringar på produktionsplatser](best-practices/maintenance/scheduling-admin-updates-in-production.md)
       - [Uppdatera tjänster](best-practices/maintenance/update-services.md)
       - [Checklista för uppgradering](best-practices/maintenance/upgrade-checklist.md)
-      - [Åtgärda problem med databasprestanda &#x200B;](best-practices/maintenance/resolve-database-performance-issues.md)
-      - [Adobe Commerce 2.3.5 - uppgraderingskrav för MariaDB &#x200B;](best-practices/maintenance/commerce-235-upgrade-prerequisites-mariadb.md)
+      - [Åtgärda problem med databasprestanda](best-practices/maintenance/resolve-database-performance-issues.md)
+      - [Krav för uppgradering av MariaDB](best-practices/maintenance/commerce-235-upgrade-prerequisites-mariadb.md)
 - [Återgå till bruksanvisningar](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
