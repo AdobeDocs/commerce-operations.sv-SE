@@ -1,11 +1,10 @@
 ---
 title: system.xml, referens
 description: Lär dig hur systemets XML-fil hanterar Commerce-programmets konfiguration.
-contributor_name: David Lambauer
-contributor_link: https://github.com/DavidLambauer
-source-git-commit: 5c0d285717a79d654af769cb734ec385d2d4046f
+badge: label="Contributed by David Lambauer" type="Informative" url="https://github.com/DavidLambauer" tooltip="David Lambauer"
+source-git-commit: d7f32690b25c61fa31a99e6d02f9f1025de2bb99
 workflow-type: tm+mt
-source-wordcount: '2671'
+source-wordcount: '2685'
 ht-degree: 0%
 
 ---
@@ -385,7 +384,7 @@ Följande valideringsregler är tillgängliga:
 | `integer` | Tillåter ett positivt eller negativt icke-decimaltal. |
 | `ipv4` | Tillåter en giltig IP v4-adress. |
 | `ipv6` | Tillåter en giltig IP v6-adress. |
-| `letters-only` | Endast bokstäver tillåts. Exempel, `abcABC`. |
+| `letters-only` | Endast bokstäver tillåts. Till exempel: `abcABC`. |
 | `letters-with-basic-punc` | Tillåter endast bokstäver och skiljetecken.<br>Följande uttryck måste skickas: `/^[a-z\-.,()\u0027\u0022\s]+$/i`. |
 | `mobileUK` | Tillåter ett (Storbritannien) mobiltelefonnummer. |
 | `no-marginal-whitespace` | Tillåt inte blanktecken i början eller slutet av värdet. |
@@ -394,7 +393,7 @@ Följande valideringsregler är tillgängliga:
 | `phoneUS` | Tillåter ett (US) telefonnummer. |
 | `required-entry` | Tillåter inte ett tomt värde (motsvarande validering som `validate-no-empty`).<br>Meddelande om misslyckad validering: &quot;Detta är ett obligatoriskt fält.&quot; |
 | `time` | Tillåter en giltig tid i 24-timmarsformat, mellan 00:00 och 23:59. Till exempel `15`, `15:05` eller `15:05:48`. |
-| `time12h` | Tillåter en giltig tid i 12-timmarsformat, mellan 12:00 och 11:59:17.00. Exempel `3 am`, `11:30 pm`, `02:15:00 pm`. |
+| `time12h` | Tillåter en giltig tid i 12-timmarsformat, mellan 12:00 och 11:59:17.00. Till exempel `3 am`, `11:30 pm`, `02:15:00 pm`. |
 | `validate-admin-password` | Tillåter 7 eller fler tecken med både numeriska och alfabetiska tecken. |
 | `validate-alphanum-with-spaces` | Tillåter användning av bokstäver (a-z eller A-Z), siffror (0-9) eller mellanslag. |
 | `validate-clean-url` | Tillåter en giltig URL. Till exempel: `https://www.example.com` eller `www.example.com`. |
