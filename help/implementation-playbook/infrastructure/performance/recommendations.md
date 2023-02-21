@@ -2,7 +2,7 @@
 title: Prestandaoptimering - Recommendations
 description: Optimera Adobe Commerce-implementeringens prestanda genom att följa dessa rekommendationer.
 exl-id: c5d62e23-be43-4eea-afdb-bb1b156848f9
-source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
+source-git-commit: 065c56f20ba5b1eef8c331c5c2f5649902f1442b
 workflow-type: tm+mt
 source-wordcount: '1288'
 ht-degree: 0%
@@ -105,7 +105,7 @@ Prestandatestning före varje produktionsrelease rekommenderas alltid för att f
 >
 > Adobe Commerce i molninfrastruktur tillämpar redan alla ovanstående optimeringar av infrastruktur och arkitektur, förutom DNS-sökningen eftersom den ligger utanför omfånget.
 
-### Sök
+### Sök {#search-heading}
 
 Elasticsearch krävs från och med Adobe Commerce version 2.4, men det är också en bra metod att aktivera det för tidigare versioner än 2.4.
 
@@ -115,7 +115,7 @@ Förutom de tidigare nämnda rekommendationerna om optimering av infrastruktur f
 
 ### Headless-arkitektur
 
-Vi har ett separat avsnitt som handlar om vad [headless](../../architecture/headless/adobe-commerce.md) är och andra alternativ. Sammanfattningsvis separerar den butikslagret från själva plattformen. Det är fortfarande samma serverdel, men Adobe Commerce bearbetar inte längre begäranden direkt, utan stöder bara anpassade butiker via GraphQL API.
+Vi har ett separat avsnitt som handlar om vad [headless](../../architecture/headless/adobe-commerce.md) är och andra alternativ. Sammanfattningsvis separerar den butikslagret från själva plattformen. Det är fortfarande samma serverdel, men Adobe Commerce hanterar inte längre förfrågningar direkt och stöder istället bara anpassade butiker via GraphQL API.
 
 ### Håll Adobe Commerce uppdaterat
 

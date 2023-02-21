@@ -1,7 +1,7 @@
 ---
 title: Referensarkitektur
 description: Granska diagram över den rekommenderade referensarkitekturen för Adobe Commerce och Magento Open Source.
-source-git-commit: 9ab52374e031bd2b0a846dd5f47c89ff788dcafa
+source-git-commit: 065c56f20ba5b1eef8c331c5c2f5649902f1442b
 workflow-type: tm+mt
 source-wordcount: '426'
 ht-degree: 0%
@@ -53,7 +53,7 @@ I följande avsnitt ges rekommendationer och överväganden för varje avsnitt i
 * Överväg att använda en slave DB för snabb återställning och säkerhetskopiering av data
 * Platser med låg trafik kan lagra bilder i databasen
 
-### Sök
+### Sök {#search-heading}
 
 * Justera antalet instanser baserat på söktrafik
 
