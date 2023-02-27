@@ -1,8 +1,8 @@
 ---
-source-git-commit: 9f6110d359ffb31b04ebef369b82c25d4d0b9058
+source-git-commit: 8f4575e529cff1e11544f6df66bd486709e3d826
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 63%
+source-wordcount: '238'
+ht-degree: 62%
 
 ---
 # Systemkrav
@@ -123,7 +123,7 @@ ht-degree: 63%
             1.2
       </td>
       <td>
-          —
+          --
       </td>
       <td>
           --
@@ -244,7 +244,7 @@ ht-degree: 63%
       </td>
     </tr>
     <tr>
-      <td><span class="uicontrol">KaninMQ</span></td>
+      <td><span class="uicontrol">RabbitMQ</span></td>
       <td>
             3.9
       </td>
@@ -644,4 +644,4 @@ ht-degree: 63%
 
 >[!IMPORTANT]
 >
->Tjänstversion och kompatibilitetsstöd för Adobe Commerce i molninfrastruktur avgörs av vilka versioner som distribueras i molninfrastrukturen, och skiljer sig ibland från de versioner som stöds av Adobe Commerce lokala distributioner. Se [Programvara och tjänster som stöds](https://devdocs.magento.com/cloud/requirements/cloud-requirements.html#cloud-arch-software) i _Molnguide_.
+>Tjänstversion och kompatibilitetsstöd för Adobe Commerce i molninfrastruktur avgörs av vilka versioner som distribueras i molninfrastrukturen, och skiljer sig ibland från de versioner som stöds av Adobe Commerce lokala distributioner. Se [Programvara och tjänster som stöds](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/cloud-architecture.html#supported-software-and-services) i _Molnguide_.
