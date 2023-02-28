@@ -3,7 +3,7 @@ title: Frigör schema
 description: Lär dig när specifika versioner av Adobe Commerce är schemalagda för betaversion, förhandsversioner och allmän tillgänglighet.
 source-git-commit: 18338316c78e9c2ef87614044e65517b1f11b16d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '504'
 ht-degree: 0%
 
 ---
