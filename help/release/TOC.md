@@ -1,10 +1,10 @@
 ---
 user-guide-title: Versionsinformation
 user-guide-description: Läs om Adobe Commerce och Magento Open Source.
-source-git-commit: 338a99f4f047640ac4bb944ac8599301cba5f646
+source-git-commit: c08c48b0dc01867ba0a67871d01f1150f43242e4
 workflow-type: tm+mt
-source-wordcount: '87'
-ht-degree: 14%
+source-wordcount: '90'
+ht-degree: 15%
 
 ---
 
@@ -23,6 +23,7 @@ ht-degree: 14%
       - [2.4.1](release-notes/commerce/2-4-1.md)
       - [2.4.0](release-notes/commerce/2-4-0.md)
    - Magento Open Source {#magento-open-source}
+      - [2.4.6](release-notes/open-source/2-4-6.md)
       - [2.4.5](release-notes/open-source/2-4-5.md)
       - [2.4.4](release-notes/open-source/2-4-4.md)
       - [2.4.3](release-notes/open-source/2-4-3.md)
@@ -30,13 +31,15 @@ ht-degree: 14%
       - [2.4.1](release-notes/open-source/2-4-1.md)
       - [2.4.0](release-notes/open-source/2-4-0.md)
    - Säkerhetsuppdateringar {#security-patches}
-      - [2.4.5-p1](release-notes/security/2-4-5-p1.md)
-      - [2.4.4-p2](release-notes/security/2-4-4-p2.md)
-      - [2.4.4-p1](release-notes/security/2-4-4-p1.md)
-      - [2.4.3-p3](release-notes/security/2-4-3-p3.md)
-      - [2.4.3-p2](release-notes/security/2-4-3-p2.md)
-      - [2.4.3-p1](release-notes/security/2-4-3-p1.md)
-      - [2.4.2-p2](release-notes/security/2-4-2-p2.md)
+   - [2.4.5-p2](release-notes/security/2-4-5-p2.md)
+   - [2.4.5-p1](release-notes/security/2-4-5-p1.md)
+   - [2.4.4-p3](release-notes/security/2-4-4-p3.md)
+   - [2.4.4-p2](release-notes/security/2-4-4-p2.md)
+   - [2.4.4-p1](release-notes/security/2-4-4-p1.md)
+   - [2.4.3-p3](release-notes/security/2-4-3-p3.md)
+   - [2.4.3-p2](release-notes/security/2-4-3-p2.md)
+   - [2.4.3-p1](release-notes/security/2-4-3-p1.md)
+   - [2.4.2-p2](release-notes/security/2-4-2-p2.md)
 - [Släppta versioner](versions.md)
 - [Funktioner efter version](features.md)
 - [Produkttillgänglighet](product-availability.md)
