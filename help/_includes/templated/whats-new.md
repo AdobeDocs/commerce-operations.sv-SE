@@ -1,7 +1,7 @@
 ---
-source-git-commit: 5014cdc2ce236798a57d1c537aeefab135d03559
+source-git-commit: e4387672c28795a90d5f2d7ef83eb9a101799d49
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '303'
 ht-degree: 0%
 
 ---
@@ -10,6 +10,26 @@ ht-degree: 0%
 ## Nyheter
 
 Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
+
+### 1 mars 2023
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Källa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Information om bidrag från communityn till Adobe Commerce och Magento Open Source 2.4.6 förhandsversionsinformation. Se <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/overview.html">Versionsinformation för Adobe Commerce och Magento Open Source</a>.</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/710bfc501d63a7e0c3b41bd2a56d8d1d5cd27d53">710 bfc</a> (implementera)</td>
+    </tr>
+  </tbody>
+</table><!-- date_group -->
 
 ### 23 februari 2023
 
@@ -113,126 +133,6 @@ Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
 </td>
       <td>större uppdatering</td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/64cb70ebc9f2bd6533581a302e15aa6301ae4869">64cb70</a> (implementera)</td>
-    </tr>
-  </tbody>
-</table><!-- date_group -->
-
-### 27 januari 2023
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Källa</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Publicerad <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html">versionsinformation</a> för QPT-paketversionen (1.1.26 Quality Patches Tool).</p>
-</td>
-      <td>större uppdatering</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/08210f356354d20adf7360d18e2ddba9fe9a565a">08210f</a> (implementera)</td>
-    </tr>
-  </tbody>
-</table>
-
-### 24 januari 2023
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Källa</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Uppdaterade <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/planning/schedule.html">publiceringsschema</a> och <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/planning/lifecycle-policy.html">livscykelpolicy för programvara</a> ämnen för 2023.</p>
-</td>
-      <td>större uppdatering</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/979a6d481021eb26121e79974b2ce6e9280d51c3">979a6d</a> (implementera)</td>
-    </tr>
-  </tbody>
-</table>
-
-### 23 januari 2023
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Källa</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Versionsinformation för Adobe Commerce 2.4.6 beta 2 har lagts till. Se <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/adobe-commerce/2-4-6.html">Versionsinformation om Adobe Commerce 2.4.6</a>.</p>
-</td>
-      <td>större uppdatering</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/af347fea185d2a3c02180216feb2fd13f5868081">af347f</a> (implementera)</td>
-    </tr>
-  </tbody>
-</table>
-
-### 19 januari 2023
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Källa</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Korrigerade ett SQL-frågesyntaxfel i <a href="https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/commerce-235-upgrade-prerequisites-mariadb.html">uppgraderingskrav</a> metodavsnitt.</p>
-<p><i>Zifius bidrag från gemenskapen</i></p></td>
-      <td>teknisk</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/pull/77">77</a> (pull-begäran)</td>
-    </tr>
-  </tbody>
-</table>
-
-### 10 januari 2023
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Källa</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Tillagd <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/adobe-commerce/2-4-6.html">versionsinformation</a> för Adobe Commerce 2.4.6-beta1.</p>
-</td>
-      <td>new-topic</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/108fe16a62c51c53d1850583cfd33938e39c7a6c">108fe1</a> (implementera)</td>
-    </tr>
-  </tbody>
-</table>
-
-### 9 januari 2023
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Källa</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Katalogtjänsten har lagts till i <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/product-availability.html">kompatibilitetstabell</a>.</p>
-</td>
-      <td>större uppdatering</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/0ffc4e9c9b0bb4fe629d0f0fb46bfbb287d5fdcc">0ffc4e</a> (implementera)</td>
     </tr>
   </tbody>
 </table><!-- date_group --><!-- month_group --><!-- year_group -->
