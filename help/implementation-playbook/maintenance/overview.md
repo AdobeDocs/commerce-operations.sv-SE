@@ -2,9 +2,9 @@
 title: Översikt över underhåll och support
 description: Underhålla och ge support för den nya Adobe Commerce-implementeringen.
 exl-id: 5a104148-74f1-469b-84ca-9bce740a7865
-source-git-commit: 514426d622ba47b8a7e517368132c86c9236b63a
+source-git-commit: 10d65d3453e260e105c1e90acbdfe678ca15c4e3
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
@@ -33,4 +33,4 @@ Att hitta rätt supportmodell för ert företag för att fortsätta förbättra 
 
 När du driftsätter Adobe Commerce är det viktigt att tänka på vad du ska inkludera i din underhålls- och supportstrategi.
 Expertsupport ingår i en Adobe Commerce-licens. Mer information om Expert Support och Adobe Support Plans finns på [Adobe supportavtal](https://business.adobe.com/customers/consulting-services/premier-support.html).
-Förutom Adobe Support-planer finns det även äldre supportvillkor för Magento. För att förstå vilka supporttjänster som är tillämpliga på dig, referera till ditt avtal och se vilket supportavtal du har eller tala med din Customer Success Manager (CSM).
+Förutom Adobe Support-planer finns det även äldre supportvillkor för Magento. Om du vill veta vilka supporttjänster som är tillämpliga på dig kan du hänvisa till ditt avtal och se vilket supportavtal du har eller prata med ditt kontoteam på Adobe.

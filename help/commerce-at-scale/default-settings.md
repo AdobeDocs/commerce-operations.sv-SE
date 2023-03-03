@@ -2,7 +2,7 @@
 title: Adobe Commerce Performance Optimization
 description: Förbered ditt Adobe Commerce-projekt för att använda Adobe Experience Manager som CMS genom att ändra vissa standardinställningar.
 exl-id: 55d77af7-508c-4ef7-888b-00911cc6e920
-source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
+source-git-commit: a11f3ef0519a4a6c08ea1d4e520ce0462e88885d
 workflow-type: tm+mt
 source-wordcount: '1143'
 ht-degree: 0%
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 ## AEM och Adobe Commerce infrastruktur
 
-För att minska fördröjningen mellan den AEM utgivaren och Adobe Commerce GraphQL när du skapar sidor, bör den första provisioneringen av de två separata infrastrukturerna finnas i samma AWS- (eller Azure-region). Den geografiska plats som väljs för båda molnen bör också vara närmast huvuddelen av kundbasen, så att GraphQL-begäranden på klientsidan hanteras från en geografiskt nära plats till majoriteten av era kunder.
+För att minska fördröjningen mellan den AEM utgivaren och Adobe Commerce GraphQL när du skapar sidor bör den första provisioneringen av de två separata infrastrukturerna finnas i samma AWS (eller Azure)-region. Den geografiska plats som väljs för båda molnen bör också vara närmast huvuddelen av kundbasen, så att kundens GraphQL-förfrågningar betjänas från en geografiskt nära plats till majoriteten av era kunder.
 
-## GraphQL-cachelagring i Adobe Commerce
+## GraphQL-cachning i Adobe Commerce
 
-När användarens webbläsare eller AEM anropar Adobe Commerce GraphQL cachelagras vissa anrop i Snabb. De frågor som cachelagras är vanligtvis de som innehåller icke-personuppgifter och som sannolikt inte ändras så ofta. Dessa är till exempel: kategorier, categoryList och produkter. De som uttryckligen inte cachelagras är de som ändras regelbundet och om de cachelagras kan medföra risker för personuppgifter och webbplatsåtgärder, t.ex. frågor som cart och customerPaymentTokens.
+När användarens webbläsare eller AEM anropar Adobe Commerce GraphQL cachelagras vissa samtal i Snabb. De frågor som cachelagras är vanligtvis de som innehåller icke-personuppgifter och som sannolikt inte ändras så ofta. Dessa är till exempel: kategorier, categoryList och produkter. De som uttryckligen inte cachelagras är de som ändras regelbundet och om de cachelagras kan medföra risker för personuppgifter och webbplatsåtgärder, t.ex. frågor som cart och customerPaymentTokens.
 
-Med GraphQL kan du göra flera frågor i ett enda anrop. Observera att om du anger en enda fråga som Adobe Commerce inte cachelagrar med många andra som inte är cachelagrade, kommer Adobe Commerce att kringgå cacheminnet för alla frågor i samtalet. Detta bör beaktas av utvecklare när de kombinerar flera frågor för att säkerställa att frågor som kan vara tillgängliga inte oavsiktligt kringgås‡.
+Med GraphQL kan du göra flera frågor i ett enda samtal. Observera att om du anger en enda fråga som Adobe Commerce inte cachelagrar med många andra som inte är cachelagrade, kommer Adobe Commerce att kringgå cacheminnet för alla frågor i samtalet. Detta bör beaktas av utvecklare när de kombinerar flera frågor för att säkerställa att frågor som kan vara tillgängliga inte oavsiktligt kringgås‡.
 
 >[!NOTE]
 >
@@ -31,7 +31,7 @@ Användning av platta tabeller för produkter och kategorier rekommenderas inte.
 
 ## Avskärning med fast ursprung
 
-Som standard är Skärmsläckning med nollpunkt inte aktiverat. Syftet med att skydda Fastly:s ursprung är att minska trafiken direkt till Adobe Commerce ursprung: När en begäran tas emot, söker en snabbkantsplats (eller &quot;point of presence&quot;/POP) efter cachelagrat innehåll och tillhandahåller det. Om den inte cachelagras fortsätter den till sköldens POP för att kontrollera om den cachelagras där (om innehållet tidigare har begärts även från en annan global POP cachelagras det). Om den inte cachelagras på Shield POP fortsätter den bara till origin-servern.
+Som standard är Skärmsläckning med nollpunkt inte aktiverat. Syftet med Fastlyys skydd mot ursprung är att minska trafiken direkt till Adobe Commerce ursprung: När en begäran tas emot, söker en snabbkantsplats (eller &quot;point of presence&quot;/POP) efter cachelagrat innehåll och tillhandahåller det. Om den inte cachelagras fortsätter den till sköldens POP för att kontrollera om den cachelagras där (om innehållet tidigare har begärts även från en annan global POP cachelagras det). Om den inte cachelagras på Shield POP fortsätter den bara till origin-servern.
 
 Skärmsläckning med snabb origo kan aktiveras i Adobe Commerce-administratörens snabbkonfigurationsinställningar för backend. Du bör välja en sköldplats som ligger närmast Adobe Commerce datacenter för bästa prestanda.
 
@@ -45,7 +45,7 @@ Snabb bildoptimering kan aktiveras genom&quot;aktivera djupbildsoptimering&quot;
 
 ## Inaktivera oanvända moduler
 
-Om du kör Adobe Commerce headless, endast skickar begäranden via GraphQL-slutpunkten och inga front-end store-sidor skickas direkt från Adobe Commerce, blir många moduler överflödiga och används inte. Genom att inaktivera oanvända moduler blir Adobe Commerce-kodbasen mindre, mindre komplex och kan därför ge prestandaförbättringar. Inaktivering av moduler på Adobe Commerce kan hanteras med Composer. Vilka moduler som kan inaktiveras beror på webbplatsens behov, och ingen rekommenderad lista kan anges eftersom den är specifik för varje kunds implementering av Adobe Commerce.
+Om du kör Adobe Commerce utan huvud, bara skickar begäranden via GraphQL slutpunkt och inga front end store-sidor skickas direkt från Adobe Commerce, blir många moduler överflödiga och används inte. Genom att inaktivera oanvända moduler blir Adobe Commerce-kodbasen mindre, mindre komplex och kan därför ge prestandaförbättringar. Inaktivering av moduler på Adobe Commerce kan hanteras med Composer. Vilka moduler som kan inaktiveras beror på webbplatsens behov, och ingen rekommenderad lista kan anges eftersom den är specifik för varje kunds implementering av Adobe Commerce.
 
 ## Aktivera MySQL- och Redis-anslutning
 
@@ -72,4 +72,4 @@ Om, efter alla konfigurationer ovan, lasttestresultat eller analys av prestanda 
 
 Med en Pro-standardarkitektur finns det tre noder, som vart och ett innehåller en fullständig teknisk stack. Genom att konvertera till en arkitektur med delad nivå ändras detta till minst 6 noder: varav 3 innehåller Elasticsearch, MariaDB, Redis och andra bastjänster. de andra 3 för bearbetning av webbtrafik innehåller phppm och NGINX. Det finns större skalningsmöjligheter med delad nivå: Kärnnoder som innehåller databaser kan skalas lodrätt. webbnoder kan skalas vågrätt och lodrätt, vilket ger stor flexibilitet att utöka infrastrukturen on demand under en viss period med hög belastning och på noder där de extra resurserna behövs.
 
-Om du har beslutat att byta till en arkitektur med delad nivå på grund av stora lastförväntningar för din webbplats, bör du diskutera med din Customer Success Manager vilka steg som ska aktiveras.
+Om du har beslutat att byta till en arkitektur med delad nivå på grund av stora lastförväntningar för din webbplats, bör du diskutera med ditt Adobe-kontoteam vilka steg som ska aktiveras.
