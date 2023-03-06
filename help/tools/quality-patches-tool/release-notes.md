@@ -1,9 +1,9 @@
 ---
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
-source-git-commit: 76ff1bbcc3a1ca8f73dfdd2ba4f516a201986f62
+source-git-commit: f1c6c816695e01fc30d0ab0a7a9c43122a130cb5
 workflow-type: tm+mt
-source-wordcount: '10848'
+source-wordcount: '11145'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,22 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som skapats av gemenskapen för Magento Open Source, se [versionsinformation](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.28 {#v1-1-28}
+
+* **ACSD-48204** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.3) - Korrigerar problemet där en katalogprisregel som skapats baserat på attributet Ja/Nej inte tar hänsyn till det valda omfånget.
+* **ACSD-47704** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.7) - Korrigerar problemet där priset på den paketerade produkten endast anges för lagerprodukter.
+* **ACSD-49370** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.7) - Korrigerar problemet där *Datum och tid* produktattributet har en *FilterMatchTypeInput* skriv i GraphQL-schema.
+* **ACSD-48807** (för Adobe Commerce och Magento Open Source >=2.4.1 &lt;2.4.7) - Korrigerar problemet där kundproduktrecensioner inte filtreras genom butiksgranskning via GraphQL.
+* **ACSD-49433** (för Adobe Commerce och Magento Open Source >=2.4.3 &lt;2.4.7) - Korrigerar problemet där standardbeloppet visas som delsumma i kundvagnen för presentkort med ett öppet belopp.
+* **ACSD-48866** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.7) - Korrigerar problemet där ett fel inträffar när RSS-flöde begärs för kategorier.
+* **ACSD-48784** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.7) - Korrigerar problemet där kundsegmentpriserna inte cachas korrekt mellan kundgrupper.
+* **ACSD-48857** (för Adobe Commerce och Magento Open Source >=2.4.3 &lt;2.4.7) - Korrigerar problemet där en användare inte kan spara ändringar efter redigering med Page Builder.
+* **ACSD-49065** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.7) - Korrigerar problemet där offertobjekt inte visas i Admin om de bara tilldelats det anpassade lagret.
+* **ACSD-49179** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.7) - Korrigerar problemet där orderrapporten visar felaktiga belopp för olika valutor för olika butiker.
+* **ACSD-49286** (för Adobe Commerce och Magento Open Source >=2.4.3 &lt;2.4.7) - Korrigerar problemet där en produkt läggs till två gånger i en kundvagn när det finns flera produktwidgetar på sidan.
+* **ACSD-49574** (för Adobe Commerce >=2.4.4 &lt;2.4.7) - Lägger till funktioner som stöder produktuppdateringar med presentkort i en kundvagn via GraphQL.
+* Uppdaterad patch: ACSD-48694.
 
 ## v1.1.27 {#v1-1-27}
 
