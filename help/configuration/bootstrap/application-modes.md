@@ -1,9 +1,9 @@
 ---
 title: Programlägen
 description: Commerce-programmet kan fungera i olika lägen beroende på dina behov. Visa en detaljerad lista över tillgängliga programlägen.
-source-git-commit: 8102c083bb0216bbdcad2882f39f7711b9cee52b
+source-git-commit: e7c325aef90d4135218b984cc57df2c8d1d921d2
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '719'
 ht-degree: 0%
 
 ---
@@ -13,62 +13,68 @@ ht-degree: 0%
 
 Du kan köra Commerce-programmet i något av följande _lägen_:
 
-| Modulnamn | Beskrivning |
-| ----------- | ----------- |
-| standard | Gör att du kan distribuera Commerce-programmet på en enda server utan att ändra några inställningar. Standardläget är dock inte optimerat för produktion.<br>Om du vill distribuera Commerce-programmet på mer än en server eller optimera det för produktion ändrar du till något av de andra lägena.<ul><li>Filcachning för statisk vy har aktiverats</li><li>Undantag visas inte för användaren. I stället skrivs undantag till loggfiler.</li><li>Döljer egna `X-Magento-*` Rubriker för HTTP-begäran och -svar</li></ul> |
-| utvecklare | Detta läge är endast avsett för utveckling:<ul><li>Inaktiverar cachelagring av statiska visningsfiler</li><li>Avancerad loggning</li><li>Aktiverar [automatisk kodkompilering](../cli/code-compiler.md)</li><li>Aktiverar förbättrad felsökning</li><li>Visar anpassade `X-Magento-*` Rubriker för HTTP-begäran och -svar</li><li>Resultat i långsammaste prestanda</li><li>Visar fel i förgrunden</li></ul> |
-| produktion | Avsett för driftsättning i ett produktionssystem:<ul><li>Visar inte undantag för användaren (undantag skrivs endast till loggar).</li><li>Fungerar endast för statiska vyfiler från cache.</li><li>Förhindrar automatisk kompilering av kodfiler. Nya eller uppdaterade filer skrivs inte till filsystemet.</li><li>**Du kan inte aktivera eller inaktivera cachetyper i Admin.** Se [aktivera och inaktivera cache](../cli/manage-cache.md#enable-or-disable-cache-types).</li><li>Vissa fält, till exempel avsnitten om avancerad systemkonfiguration och utvecklarsystemkonfiguration i Admin, är inte tillgängliga i produktionsläge.</li></ul> |
-| underhåll | Avsikten är att förhindra åtkomst till en plats medan den uppdateras eller konfigureras om är följande läge:<ul><li>Omdirigerar besökare till en standardplats `Service Temporarily Unavailable` sida.</li><li>När platsen är i underhållsläge, `var/` katalogen innehåller `.maintenance.flag` -fil.</li><li>Du kan konfigurera underhållsläge för att tillåta besökaråtkomst från en angiven lista med IP-adresser.</li></ul> |
+| Lägesnamn | Beskrivning | Molnsupport |
+| ------------------------ | ------------------- | ------------- |
+| [standard](#default-mode) | Distribuera och kör Commerce-programmet på en enda server utan att ändra inställningarna. _Inte_ optimerad för produktion. | no |
+| [utvecklare](#developer-mode) | Perfekt för utveckling när du utökar eller anpassar Commerce-programmet. | no |
+| [produktion](#production-mode) | Distribuera och kör Commerce-programmet till ett produktionssystem. | Ja |
+| [underhåll](#maintenance-mode) | Förhindra åtkomst till en webbplats när du utför uppdateringar och konfigurationer. | Ja |
 
->[!INFO]
->
->[Adobe Commerce i molninfrastruktur](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/overview.html) stöder endast produktions- och underhållslägen.
+Se [Ange åtgärdsläge](../cli/set-mode.md) om du vill lära dig hur du ändrar Adobe Commerce driftslägen manuellt.
+
+## Molnsupport
+
+Du behöver inte hantera programlägena för ett molninfrastrukturprojekt. På grund av det skrivskyddade filsystemet kan du inte ändra lägen i fjärrmolnmiljöer. Adobe Commerce i molninfrastrukturen kör automatiskt programmet i _underhåll_ under en distribution, vilket gör att webbplatsen är offline tills distributionen är klar. Annars stannar programmet kvar i _produktion_ läge. Se [Distributionsprocess](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/process.html#deploy-phase) i _Guide för Commerce on Cloud Infrastructure_.
+
+Om du använder Cloud Docker för Commerce som utvecklingsverktyg kan du driftsätta ditt molninfrastrukturprojekt i en Docker-miljö i _utvecklare_ men prestanda är långsammare på grund av ytterligare filsynkroniseringsåtgärder. Se [Distribuera Docker-miljön](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/#launch-mode) i _Handbok för Cloud Docker for Commerce_.
 
 ## Standardläge
 
-Som namnet antyder är standardläget hur Commerce fungerar om inget annat läge anges. Med standardläget kan du distribuera Commerce-programmet på en enda server utan att ändra några inställningar. Standardläget är dock inte lika optimerat för produktion som produktionsläget.
-
-Om du vill distribuera Commerce-programmet på mer än en server eller optimera det för produktion ändrar du till något av de andra lägena.
+The _standard_ I kan du distribuera Commerce-programmet på en enda server utan att ändra några inställningar. Standardläget är dock inte optimerat för produktion på grund av de statiska filernas negativa prestandapåverkan. Att skapa statiska filer och cacha dem har större prestandapåverkan än att generera dem med verktyget för att skapa statiska filer.
 
 I standardläge:
 
-- Fel loggas i filrapporter på servern och visas aldrig för en användare
+- Undantag skrivs till loggfiler i stället för att visas
 - Statiska visningsfiler cachelagras
-- Standardläget är inte optimerat för en produktionsmiljö, främst på grund av de negativa prestandaeffekterna av [statiska filer](https://glossary.magento.com/static-files) som genereras dynamiskt i stället för att materialiseras. Det innebär att när du skapar statiska filer och cachelagrar dem får det en större prestandaeffekt än om du genererar dem med verktyget för att skapa statiska filer.
+- Döljer egna `X-Magento-*` Rubriker för HTTP-begäran och -svar
 
-Se [Ange åtgärdsläge](../cli/set-mode.md).
+Commerce körs i standardläge om inget annat läge anges.
 
 ## Utvecklarläge
 
-Kör Commerce-programmet i utvecklarläge när du utökar eller anpassar det.
+The _utvecklare_ Du bör använda läget för att utöka och anpassa Commerce-programmet. Filer i statisk vy cachelagras inte, utan skrivs till `pub/static` on demand.
 
 I utvecklarläge:
 
-- Statiska vyfiler cachelagras inte. de skrivs till `pub/static` katalog varje gång de anropas
+- Aktiverar [automatisk kodkompilering](../cli/code-compiler.md) och förbättrad felsökning
 - Visning av ej infångade undantag i webbläsaren
 - Systeminloggning `var/report` är mycket detaljerad
-- An [undantag](https://glossary.magento.com/exception) genereras i felhanteraren i stället för att loggas
-- Ett undantag genereras när en [event](https://glossary.magento.com/event) prenumeranten kan inte anropas
-
-Se [Ange åtgärdsläge](../cli/set-mode.md).
+- Ett undantag genereras i felhanteraren i stället för att loggas
+- Ett undantag genereras när en händelseprenumerant inte kan anropas
+- Visar anpassade `X-Magento-*` Rubriker för HTTP-begäran och -svar
 
 ## Produktionsläge
 
-Kör Commerce i produktionsläge när den distribueras till en produktionsserver. När du har optimerat servermiljön, t.ex. databasen och webbservern, bör du köra [distributionsverktyg för statiska vyfiler](../cli/static-view-file-deployment.md) för att skriva statiska vyfiler till `pub/static` katalog.
+The _produktion_ är bäst för att distribuera Commerce-programmet på ett produktionssystem. När du har optimerat servermiljön, t.ex. databasen och webbservern, bör du köra [distributionsverktyg för statiska vyfiler](../cli/static-view-file-deployment.md) för att skriva statiska vyfiler till `pub/static` katalog. Detta förbättrar prestandan genom att tillhandahålla alla nödvändiga statiska filer vid distributionen i stället för att tvinga Commerce-programmet att dynamiskt leta reda på och kopiera (materialisera) statiska filer vid behov under körningen.
 
-Detta förbättrar prestandan genom att tillhandahålla alla nödvändiga statiska filer vid distributionen i stället för att tvinga Commerce att dynamiskt leta reda på och kopiera (materialisera) statiska filer vid behov under körningen.
+Vissa fält, till exempel avsnitten om avancerad systemkonfiguration och utvecklarsystemkonfiguration i Admin, är inte tillgängliga i produktionsläge. Du kan till exempel _inte_ aktivera eller inaktivera cachetyper med Admin. Du kan aktivera och inaktivera cachetyper _endast_ med [kommandorad](../cli/manage-cache.md#config-cli-subcommands-cache-en).
 
 I produktionsläge:
 
-- Statiska visningsfiler materialiseras inte, och URL:er för dem skapas direkt. Filer i statisk vy hanteras från [cache](https://glossary.magento.com/cache) endast.
-- Fel loggas i filsystemet och visas aldrig för användaren.
-- Du kan aktivera och inaktivera cachetyper _endast_ med [kommandorad](../cli/manage-cache.md#config-cli-subcommands-cache-en).
-- Du _inte_ aktivera eller inaktivera cachetyper med Admin.
+- Filer i statisk vy hanteras endast från cacheminnet
+- Fel och undantag loggas i filsystemet och visas aldrig för användaren
+- Vissa konfigurationsfält i Admin är inte tillgängliga
 
 ## Underhållsläge
 
-Kör Commerce-programmet i underhållsläge för att koppla från din webbplats medan du slutför underhålls-, uppgraderings- eller konfigureringsuppgifter. I underhållsläge dirigerar webbplatsen om besökare till en standard `Service Temporarily Unavailable` sida.
+The _underhåll_ Läget begränsar eller förhindrar åtkomst till en plats under förbättringar, uppdateringar och konfigurationsåtgärder. Som standard dirigeras besökarna om till ett standardvärde `Service Temporarily Unavailable` sida.
 
-Du kan skapa en [anpassad underhållssida](../../upgrade/troubleshooting/maintenance-mode-options.md), aktivera och inaktivera underhållsläge manuellt och konfigurera underhållsläge så att besökare från auktoriserade IP-adresser kan visa butiken normalt. Se [aktivera och inaktivera underhållsläge](../../installation/tutorials/maintenance-mode.md).
+Du kan skapa en [anpassad underhållssida](../../upgrade/troubleshooting/maintenance-mode-options.md), aktivera och inaktivera underhållsläge manuellt och konfigurera underhållsläge så att besökare från auktoriserade IP-adresser kan visa butiken normalt. Se [aktivera och inaktivera underhållsläge](../../installation/tutorials/maintenance-mode.md) i _Installationshandbok_.
 
 Om du använder Commerce på molninfrastruktur körs Commerce-programmet i underhållsläge under distributionsfasen. När distributionen har slutförts återgår Commerce-programmet till att köras i produktionsläge. Se [Distributionskopplingar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/best-practices.html#phase-5%3A-deployment-hooks) i _Guide för Commerce on Cloud Infrastructure_.
+
+I underhållsläge:
+
+- Webbplatsbesökare omdirigeras till en standard `Service Temporarily Unavailable` page
+- The `var/` katalogen innehåller `.maintenance.flag` fil
+- Du kan begränsa besökaråtkomst baserat på IP-adresser
