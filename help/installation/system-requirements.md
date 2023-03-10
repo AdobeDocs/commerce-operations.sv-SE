@@ -1,9 +1,9 @@
 ---
 title: Systemkrav
 description: Använd den här referensen för att identifiera nödvändiga programvaruberoenden som har testats med Adobe Commerce och Magento Open Source.
-source-git-commit: 3692dcfd5b50c2f036b005d40a22db061b9ea5fd
+source-git-commit: 61a477ec6118e4a228ddbb956e613fa3bec9c91c
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '525'
 ht-degree: 0%
 
 ---
@@ -67,15 +67,15 @@ Uppgradering av program och tillägg från Commerce Marketplace och andra källo
 
 Adobe Commerce och Magento Open Source kräver följande systemverktyg för vissa åtgärder:
 
-- [bash](https://www.gnu.org/software/bash/)
-- [gzip](https://www.gzip.org/)
-- [lsof](https://linux.die.net/man/8/lsof)
-- [mysql](https://www.mysql.com/)
-- [mysqldump](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html)
-- [trevlig](https://linux.die.net/man/1/nice)
-- [php](https://www.php.net/)
-- [används](https://www.gnu.org/software/sed/manual/sed.html)
-- [tar](https://linux.die.net/man/1/tar)
+- [[!DNL bash]](https://www.gnu.org/software/bash/)
+- [[!DNL gzip]](https://www.gzip.org/)
+- [[!DNL lsof]](https://linux.die.net/man/8/lsof)
+- [[!DNL mysql]](https://www.mysql.com/)
+- [[!DNL mysqldump]](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html)
+- [[!DNL nice]](https://linux.die.net/man/1/nice)
+- [[!DNL php]](https://www.php.net/)
+- [[!DNL sed]](https://www.gnu.org/software/sed/manual/sed.html)
+- [[!DNL tar]](https://linux.die.net/man/1/tar)
 
 ### SSL
 
