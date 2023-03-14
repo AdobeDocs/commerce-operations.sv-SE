@@ -1,9 +1,9 @@
 ---
 title: Sökmotorkonfiguration
-description: Konfigurera en sökmotor med Adobe Commerce och Magento Open Source.
-source-git-commit: 66681f06c15907a5d25e71005c27785f0745ed63
+description: Konfigurera en sökmotor för lokala distributioner av Adobe Commerce och Magento Open Source.
+source-git-commit: 4c18f00e0b92e49924676274c4ed462a175a7e4b
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '652'
 ht-degree: 0%
 
 ---
@@ -11,29 +11,38 @@ ht-degree: 0%
 
 # Sökmotorkonfiguration
 
-I det här avsnittet beskrivs de minimiinställningar som du måste välja för att testa Elasticsearch eller OpenSearch med Adobe Commerce och Magento Open Source. Från och med version 2.4.4 och 2.4.3-p2 är alla fält märkta **Elasticsearch** gäller även OpenSearch.
+I det här avsnittet beskrivs de minimiinställningar som du måste välja för att testa Elasticsearch eller OpenSearch med lokala distributioner av Adobe Commerce och Magento Open Source.
+
+>[!TIP]
+>
+>I version 2.4.4 och 2.4.3-p2 är alla fält märkta **Elasticsearch** gäller även OpenSearch.
+>När stöd för Elasticsearch 8.x infördes i version 2.4.6 skapades nya etiketter för att skilja mellan Elasticsearch och OpenSearch-konfigurationer.
 
 Mer information om hur du konfigurerar sökmotorn finns i [Användarhandbok](https://experienceleague.adobe.com/docs/commerce-admin/catalog/catalog/search/search-configuration.html).
 
 ## Konfigurera sökmotorn från administratören
 
+>[!TIP]
+>
+>Instruktioner om hur du uppgraderar till en ny sökmotorversion finns i [uppgraderingskrav](../../upgrade/prepare/prerequisites.md).
+
 Så här konfigurerar du systemet att använda Elasticsearch eller OpenSearch:
 
 1. Logga in på administratören som administratör.
-1. Klicka **Lager** > Inställningar > **Konfiguration** > **Katalog** > **Katalog** > **Katalogsökning**.
-1. Från **Sökmotor** markera motsvarande version av sökmotorn Om du använder OpenSearch måste du välja Elasticsearch7.
+1. Klicka **[!UICONTROL Stores]** > [!UICONTROL Settings] > **[!UICONTROL Configuration]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog Search]**.
+1. Från **[!UICONTROL Search Engine]** väljer du motsvarande version av sökmotorn.
 
-   I följande tabell visas de konfigurationsalternativ som krävs för att konfigurera och testa anslutningen med Commerce.
-Om du inte har ändrat serverinställningarna för sökmotorn bör standardinställningarna fungera. Gå till nästa steg.
+   I följande tabell visas de alternativ som krävs för att konfigurera och testa anslutningen med Commerce. Om du inte har ändrat serverinställningarna för sökmotorn bör standardinställningarna fungera. Gå till nästa steg.
 
    | Alternativ | Beskrivning |
    |--- |--- |
-   | **Värdnamn för Elasticsearch Server** | Ange det fullständiga värdnamnet eller IP-adressen för datorn som kör Elasticsearch eller OpenSearch.<br>Adobe Commerce om molninfrastruktur: Få ut det här värdet av ditt integreringssystem. |
-   | **Elasticsearch Server-port** | Ange webbserverproxyporten. Standardvärdet är 9 200<br>Adobe Commerce om molninfrastruktur: Få ut det här värdet av ditt integreringssystem. |
-   | **Elasticsearch-indexprefix** | Ange indexprefixet för sökmotorn. Om du använder en enda instans för mer än en Commerce-installation (mellanlagrings- och produktionsmiljöer) måste du ange ett unikt prefix för varje installation. I annat fall kan du använda standardprefixet magento2. |
-   | **Aktivera Elasticsearch HTTP-autentisering** | Klicka **Ja** bara om du har aktiverat autentisering för sökmotorservern. Ange i så fall ett användarnamn och lösenord i de angivna fälten. |
+   | **[!UICONTROL Server Hostname]** | Ange det fullständiga värdnamnet eller IP-adressen för datorn som kör Elasticsearch eller OpenSearch.<br>Adobe Commerce om molninfrastruktur: Få ut det här värdet av ditt integreringssystem. |
+   | **[!UICONTROL Server Port]** | Ange webbserverproxyporten. Standardvärdet är 9 200<br>Adobe Commerce om molninfrastruktur: Få ut det här värdet av ditt integreringssystem. |
+   | **[!UICONTROL Index Prefix]** | Ange indexprefixet för sökmotorn. Om du använder en enda instans för mer än en Commerce-installation (mellanlagrings- och produktionsmiljöer) måste du ange ett unikt prefix för varje installation. I annat fall kan du använda standardprefixet magento2. |
+   | **[!UICONTROL Enable HTTP Auth]** | Klicka **[!UICONTROL Yes]** bara om du har aktiverat autentisering för sökmotorservern. Ange i så fall ett användarnamn och lösenord i de angivna fälten. |
+   | **[!UICONTROL Server Timeout]** | Ange hur lång tid (i sekunder) som du vill vänta när du försöker upprätta en anslutning till Elasticsearch eller OpenSearch-servern. |
 
-1. Klicka **Testanslutning**.
+1. Klicka **[!UICONTROL Test Connection]**.
 
    Exempelsvar:
 
@@ -54,8 +63,8 @@ Prova i så fall följande:
 - Om servern finns på en annan värd än Commerce loggar du in på Commerce-servern och pingar sökmotorvärden. Lös problem med nätverksanslutningen och testa anslutningen igen.
 - Undersök kommandofönstret där du startade Elasticsearch eller OpenSearch för stackspår och undantag. Du måste lösa dem innan du fortsätter. Kontrollera särskilt att du har startat sökmotorn som en användare med `root` behörighet.
 - Se till att [UNIX-brandväggen och SELinux](../../installation/prerequisites/search-engine/overview.md#firewall-and-selinux) är båda inaktiverade eller konfigurerade regler som gör att din sökmotor och Commerce kan kommunicera med varandra.
-- Verifiera värdet för **Värdnamn för Elasticsearch Server** fält. Kontrollera att servern är tillgänglig. Du kan testa serverns IP-adress i stället.
-- Använd `netstat -an | grep <listen-port>` för att verifiera att porten som anges i **Elasticsearch Server-port** fältet används inte av en annan process.
+- Verifiera värdet för **[!UICONTROL Server Hostname]** fält. Kontrollera att servern är tillgänglig. Du kan testa serverns IP-adress i stället.
+- Använd `netstat -an | grep <listen-port>` för att verifiera att porten som anges i **[!UICONTROL Server Port]** fältet används inte av en annan process.
 
    Om du till exempel vill se om sökmotorn körs på standardporten använder du följande kommando:
 
@@ -75,9 +84,9 @@ När du har ändrat sökmotorkonfigurationen måste du indexera om katalogens s�
 
 Så här uppdaterar du cachen med hjälp av administratören:
 
-1. Klicka på Admin **System** > **Cachehantering**.
-1. Markera kryssrutan bredvid **Sidcache**.
-1. Från **Åtgärder** i övre högra hörnet klickar du på **Uppdatera**.
+1. Klicka på Admin **[!UICONTROL System]** > **[!UICONTROL Cache Management]**.
+1. Markera kryssrutan bredvid **[!UICONTROL Page Cache]**.
+1. Från **[!UICONTROL Actions]** i övre högra hörnet klickar du på **Uppdatera**.
 
    ![cachehantering](../../assets/configuration/refresh-cache.png)
 

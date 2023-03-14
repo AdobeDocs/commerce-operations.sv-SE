@@ -1,9 +1,9 @@
 ---
 user-guide-title: Versionsinformation
-user-guide-description: Läs om Adobe Commerce och Magento Open Source.
-source-git-commit: 841c6861c6b7a7341f334ba449b6270b31a34e94
+user-guide-description: Få tillgång till all versionsinformation för Adobe Commerce patchar och tjänster på ett och samma ställe.
+source-git-commit: 1ca3d530051b0f59084bf370951f8f0b03dcfc28
 workflow-type: tm+mt
-source-wordcount: '90'
+source-wordcount: '92'
 ht-degree: 15%
 
 ---
@@ -43,8 +43,7 @@ ht-degree: 15%
 - [Släppta versioner](versions.md)
 - [Funktioner efter version](features.md)
 - [Produkttillgänglighet](product-availability.md)
-- [Produktöversikt](product-roadmap.md)
-- [Betaprogram](beta-program.md)
+- [Betaversioner](beta.md)
 - Planering och policy {#planning}
    - [Livscykelprincip](lifecycle-policy.md)
    - [Versionspolicy](versioning-policy.md)

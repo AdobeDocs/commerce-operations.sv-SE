@@ -1,9 +1,9 @@
 ---
 title: Känsliga och systemspecifika sökvägar
 description: Se en lista med systemspecifika och känsliga konfigurationsvärden.
-source-git-commit: 019d638403f2dc3e170a56842335da203126d8a6
+source-git-commit: 4c18f00e0b92e49924676274c4ed462a175a7e4b
 workflow-type: tm+mt
-source-wordcount: '3711'
+source-wordcount: '3702'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Använd endast HTTP | `web/cookie/cookie_httponly` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  | ![Sys-specifik](/help/assets/configuration/cloud-env.png) |
 | Begränsningsläge för cookie | `web/cookie/cookie_restriction` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  | ![Sys-specifik](/help/assets/configuration/cloud-env.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Känsliga och systemspecifika sökvägar för valutainställningar
 
@@ -63,7 +63,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 |--------------|--------------|--------------|--------------|--------------|--------------|
 | E-postmottagare med fel | `currency/import/error_email` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Lagra e-postadresskänsliga och systemspecifika sökvägar
 
@@ -82,7 +82,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Avsändarens namn | `trans_email/ident_custom2/name` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 | Avsändarens e-postadress | `trans_email/ident_custom2/email` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Kontaktkänsliga och systemspecifika sökvägar
 
@@ -94,22 +94,22 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | E-postavsändare | `contact/email/sender_email_identity` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 | E-postmall | `contact/email/email_template` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-### New Relic Reporting sensitive and system-specific paths
+### New Relic rapporterar känsliga och systemspecifika sökvägar
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Allmänt** > **Ny Relic-rapportering**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Allmänt** > **New Relic Reporting**.
 
 | Namn | Konfigurationssökväg | Endast handel? | Krypterad? | Systemspecifik? | Känslig? |
 |--------------|--------------|--------------|--------------|--------------|--------------|
-| Nytt Relic-konto-ID | `newrelicreporting/general/account_id` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
-| Nytt Relic-program-ID | `newrelicreporting/general/app_id` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
-| Ny Relic API-nyckel | `newrelicreporting/general/api` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | ![Krypterad](/help/assets/configuration/cloud-enc.png) |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
+| New Relic konto-ID | `newrelicreporting/general/account_id` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
+| New Relic-program-ID | `newrelicreporting/general/app_id` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
+| New Relic API-nyckel | `newrelicreporting/general/api` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | ![Krypterad](/help/assets/configuration/cloud-enc.png) |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 | API-nyckel för insikter | `newrelicreporting/general/insights_insert_key` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | ![Krypterad](/help/assets/configuration/cloud-enc.png) |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
-| Ny Relic API-URL | `newrelicreporting/general/api_url` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  | ![Sys-specifik](/help/assets/configuration/cloud-env.png) | ![Känslig](/help/assets/configuration/cloud-sens.png) |
+| New Relic API-URL | `newrelicreporting/general/api_url` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  | ![Sys-specifik](/help/assets/configuration/cloud-env.png) | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 | API-URL för insikter | `newrelicreporting/general/insights_api_url` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  | ![Sys-specifik](/help/assets/configuration/cloud-env.png) | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Kundernas kategorikänsliga och systemspecifika sökvägar
 
@@ -123,7 +123,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 |--------------|--------------|--------------|--------------|--------------|--------------|
 | Standarddomän för e-post | `customer/create_account/email_domain` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  | ![Sys-specifik](/help/assets/configuration/cloud-env.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Katalogkategori
 
@@ -149,8 +149,22 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Elasticsearch HTTP-användarnamn | `catalog/search/elasticsearch_username` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  | ![Sys-specifik](/help/assets/configuration/cloud-env.png) |
 | Elasticsearch HTTP-lösenord | `catalog/search/elasticsearch_password` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  | ![Sys-specifik](/help/assets/configuration/cloud-env.png) |
 | Elasticsearch Server-timeout | `catalog/search/elasticsearch_server_timeout` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  | ![Sys-specifik](/help/assets/configuration/cloud-env.png) |
+| Elasticsearch HTTP-användarnamn | `catalog/search/elasticsearch_username` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> |  | !![Sys-specific]({{ site.baseurl }}/common/images/cloud_env.png) |
+| Elasticsearch HTTP-lösenord | `catalog/search/elasticsearch_password` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> |  | !![Sys-specific]({{ site.baseurl }}/common/images/cloud_env.png) |
+| Elasticsearch Server-timeout | `catalog/search/elasticsearch_server_timeout` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> |  | !![Sys-specific]({{ site.baseurl }}/common/images/cloud_env.png) |
+| OpenSearch Server-värdnamn | `catalog/search/opensearch_server_hostname` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> |  | !![Sys-specific]({{ site.baseurl }}/common/images/cloud_env.png) | ![Känslig](/help/assets/configuration/cloud-sens.png) |
+| OpenSearch Server-port | `catalog/search/opensearch_server_port` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> |  | !![Sys-specific]({{ site.baseurl }}/common/images/cloud_env.png) | ![Känslig](/help/assets/configuration/cloud-sens.png) |
+| Indexprefix för OpenSearch | `catalog/search/opensearch_index_prefix` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> |  | !![Sys-specific]({{ site.baseurl }}/common/images/cloud_env.png) | ![Känslig](/help/assets/configuration/cloud-sens.png) |
+| Aktivera OpenSearch HTTP-autentisering | `catalog/search/opensearch_enable_auth` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> |  | !![Sys-specific]({{ site.baseurl }}/common/images/cloud_env.png) |
+| OpenSearch HTTP-användarnamn | `catalog/search/opensearch_username` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> |  | !![Sys-specific]({{ site.baseurl }}/common/images/cloud_env.png) |
+| OpenSearch HTTP-lösenord | `catalog/search/opensearch_password` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> |  | !![Sys-specific]({{ site.baseurl }}/common/images/cloud_env.png) |
+| Timeout för OpenSearch Server | `catalog/search/opensearch_server_timeout` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> |  | !![Sys-specific]({{ site.baseurl }}/common/images/cloud_env.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
+
+>[!NOTE]
+>
+>OpenSearch-inställningarna infördes i Adobe Commerce 2.4.6.
 
 ### Lagerkänsliga och systemspecifika sökvägar
 
@@ -160,7 +174,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 |--------------|--------------|--------------|--------------|--------------|--------------|
 | Google API-nyckel | `cataloginventory/source_selection_distance_based_google/api_key` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | ![Krypterad](/help/assets/configuration/cloud-enc.png) |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### XML - systemspecifika sökvägar
 
@@ -170,7 +184,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 |--------------|--------------|--------------|--------------|--------------|--------------|
 | E-postmottagare med fel | `sitemap/generate/error_email` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Försäljningskategori
 
@@ -190,7 +204,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Gatuadress 2 | `shipping/origin/street_line2` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 | Live-konto | `carriers/ups/is_account_live` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  | ![Sys-specifik](/help/assets/configuration/cloud-env.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### E-postmeddelanden som är känsliga och systemspecifika
 
@@ -208,7 +222,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Skicka e-postkopia av kreditnotskommentar till | `sales_email/creditmemo_comment/copy_to` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 | Skicka e-postkopia för plockningsklar till | `sales_email/temando_pickup/copy_to` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Checka ut känsliga och systemspecifika sökvägar
 
@@ -218,7 +232,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 |--------------|--------------|--------------|--------------|--------------|--------------|
 | Skicka misslyckad e-postkopia till betalning | `checkout/payment_failed/copy_to` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Google API-känsliga och systemspecifika sökvägar
 
@@ -228,7 +242,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 |--------------|--------------|--------------|--------------|--------------|--------------|
 | Behållar-ID | `google/analytics/container_id` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Leveransmetoder, känsliga och systemspecifika sökvägar
 
@@ -259,7 +273,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Gateway-URL | `carriers/dhl/gateway_url` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 | Sandlådeläge | `carriers/fedex/sandbox_mode` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Säljkänsliga och systemspecifika sökvägar
 
@@ -279,7 +293,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Skicka e-postkopia av RMA-kommentar till | `sales_email/magento_rma_comment/copy_to` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 | Skicka e-postkopia av RMA-kommentar till | `sales_email/magento_rma_customer_comment/copy_to` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Google API-sökvägar
 
@@ -289,7 +303,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 |--------------|--------------|--------------|--------------|--------------|--------------|
 | Kontonummer | `google/analytics/account` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Avancerad kategori
 
@@ -304,7 +318,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | URL för anpassad administratör | `admin/url/custom` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 | Anpassad administratörssökväg | `admin/url/custom_path` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Systemkänsliga och systemspecifika sökvägar
 
@@ -316,7 +330,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Åtkomstlista | `system/full_page_cache/varnish/access_list` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 | E-postavsändare med fel | `system/magento_scheduled_import_export_log/error_email_identity` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Användarkänsliga och systemspecifika sökvägar
 
@@ -326,7 +340,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 |--------------|--------------|--------------|--------------|--------------|--------------|
 | Tillåtna IP-adresser (kommaavgränsade) | `dev/restrict/allow_ips` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  | ![Sys-specifik](/help/assets/configuration/cloud-env.png) | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Avancerad kategori
 
@@ -343,7 +357,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Serverdelsvärd | `system/full_page_cache/varnish/backend_host` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  | ![Sys-specifik](/help/assets/configuration/cloud-env.png) | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 | Backend-port | `system/full_page_cache/varnish/backend_port` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  | ![Sys-specifik](/help/assets/configuration/cloud-env.png) | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Utvecklarsökvägar
 
@@ -353,7 +367,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 |--------------|--------------|--------------|--------------|--------------|--------------|
 | Logga JS-fel i sessionslagringsnyckeln | `dev/js/session_storage_key` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  | ![Sys-specifik](/help/assets/configuration/cloud-env.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Betalningskänsliga och systemspecifika sökvägar
 
@@ -365,7 +379,7 @@ I det här avsnittet visas variabelnamn och konfigurationssökvägar som är til
 |--------------|--------------|--------------|--------------|
 | Handelsland | `paypal/general/merchant_country` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!INFO]
 >
@@ -386,7 +400,7 @@ I det här avsnittet visas variabelnamn och konfigurationssökvägar som är til
 | Felsökningsläge | `payment/paypal_billing_agreement/debug` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  | ![Sys-specifik](/help/assets/configuration/cloud-env.png) |
 | SFTP-autentiseringsuppgifter | `payment_all_paypal/express_checkout/settings_ec/settings_ec_advanced/express_checkout_settlement_report/heading_sftp` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### PayPal Payflow Pro-känsliga och systemspecifika sökvägar
 
@@ -405,7 +419,7 @@ I det här avsnittet visas variabelnamn och konfigurationssökvägar som är til
 | SFTP-autentiseringsuppgifter | `payment_all_paypal/paypal_payflowpro/settings_paypal_payflow/settings_paypal_payflow_advanced/paypal_payflow_settlement_report/heading_sftp` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  | ![Sys-specifik](/help/assets/configuration/cloud-env.png) |
 | Kreditkortsinställningar | `payment_all_paypal/paypal_payflowpro/settings_paypal_payflow/heading_cc` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### PayPal Payflow Link-känsliga och systemspecifika sökvägar
 
@@ -422,7 +436,7 @@ I det här avsnittet visas variabelnamn och konfigurationssökvägar som är til
 | Felsökningsläge | `payment/payflow_express/debug` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  | ![Sys-specifik](/help/assets/configuration/cloud-env.png) |
 | SFTP-autentiseringsuppgifter | `payment_all_paypal/payflow_link/settings_payflow_link/settings_payflow_link_advanced/payflow_link_settlement_report/heading_sftp` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### PayPal Payments Pro-känsliga och systemspecifika sökvägar
 
@@ -437,7 +451,7 @@ I det här avsnittet visas variabelnamn och konfigurationssökvägar som är til
 | Sandlådeläge | `paypal/wpp/sandbox_flag` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  | ![Sys-specifik](/help/assets/configuration/cloud-env.png) |
 | SFTP-autentiseringsuppgifter | `payment_all_paypal/payments_pro_hosted_solution_without_bml/pphs_settings/pphs_settings_advanced/pphs_settlement_report/heading_sftp` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### PayPal Payments Pro Hosted sensitive and system-specific paths
 
@@ -447,7 +461,7 @@ I det här avsnittet visas variabelnamn och konfigurationssökvägar som är til
 | SFTP-autentiseringsuppgifter | `payment_all_paypal/payments_pro_hosted_solution/pphs_settings/pphs_settings_advanced/pphs_settlement_report/heading_sftp` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 | SFTP-autentiseringsuppgifter | `payment_au/paypal_group_all_in_one/payments_pro_hosted_solution_au/pphs_settings/pphs_settings_advanced/pphs_settlement_report/heading_sftp` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### systemspecifika sökvägar som är känsliga för Braintree
 
@@ -462,7 +476,7 @@ I det här avsnittet visas variabelnamn och konfigurationssökvägar som är til
 | Telefon | `payment/braintree/descriptor_phone` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 | URL | `payment/braintree/descriptor_url` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  | ![Sys-specifik](/help/assets/configuration/cloud-env.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Kontrollera/beställ pengar
 
@@ -471,7 +485,7 @@ I det här avsnittet visas variabelnamn och konfigurationssökvägar som är til
 | Skicka kontroll till | `payment/checkmo/mailing_address` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 | Skicka kontroll till | `payment_us/checkmo/mailing_address` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Internationella sökvägar
 
@@ -864,4 +878,4 @@ I det här avsnittet visas variabelnamn och konfigurationssökvägar som är til
 | Installations-ID för fjärradministratör | `payment_it/worldpay/admin_installation_id` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 | MD5-hemlighet för transaktioner | `payment_it/worldpay/md5_secret` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

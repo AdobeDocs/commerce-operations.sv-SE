@@ -1,7 +1,7 @@
 ---
-source-git-commit: 23d55385046de18b238c90f6a99be692f1ce7561
+source-git-commit: 177f301802e1ab1d0560ee98594b8128440efa7c
 workflow-type: tm+mt
-source-wordcount: '15643'
+source-wordcount: '19444'
 ht-degree: 0%
 
 ---
@@ -11,9 +11,9 @@ ht-degree: 0%
 
 <!-- The template to render with above values -->
 
-**Version**: 2.4.5
+**Version**: 2.4.6-beta2
 
-Referensen innehåller 118 kommandon som är tillgängliga via `bin/magento` kommandoradsverktyg.
+Referensen innehåller 130 kommandon som är tillgängliga via `bin/magento` kommandoradsverktyg.
 Den inledande listan genereras automatiskt med `bin/magento list` i utgåvan.
 Använd [&quot;Lägg till CLI-kommandon&quot;](https://developer.adobe.com/commerce/php/development/cli-commands/) för att lägga till ett eget CLI-kommando.
 
@@ -24,6 +24,158 @@ Använd [&quot;Lägg till CLI-kommandon&quot;](https://developer.adobe.com/comme
 >[!NOTE]
 >
 >Den här referensen genereras från programmets kodbas. Om du vill ändra innehållet kan du uppdatera källkoden för motsvarande kommandoimplementering i [kodbas](https://github.com/magento) arkivera och skicka in dina ändringar för granskning. Ett annat sätt är att _Ge oss feedback_ (hitta länken i det övre högra hörnet). Information om riktlinjer för bidrag finns i [Kodavgifter](https://developer.adobe.com/commerce/contributor/guides/code-contributions/).
+
+## `_complete`
+
+Internt kommando för att ge förslag på komplettering av skalet
+
+```bash
+bin/magento _complete [-s|--shell SHELL] [-i|--input INPUT] [-c|--current CURRENT] [-S|--symfony SYMFONY]
+```
+
+### `--shell`, `-s`
+
+Gränssnittstypen (&quot;bash&quot;)
+
+- Kräver ett värde
+
+### `--input`, `-i`
+
+En array med indatatoken (t.ex. COMP_WORDS eller argv)
+
+- Standard: `[]`
+- Kräver ett värde
+
+### `--current`, `-c`
+
+Indexvärdet för den inmatningsarray där markören finns (t.ex. COMP_CWORD)
+
+- Kräver ett värde
+
+### `--symfony`, `-S`
+
+Versionen av det slutförda skriptet
+
+- Kräver ett värde
+
+### `--help`, `-h`
+
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--quiet`, `-q`
+
+Skriv inget meddelande
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--verbose`, `-v|-vv|-vvv`
+
+Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--version`, `-V`
+
+Visa den här programversionen
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--ansi`
+
+Tvinga (eller inaktivera) ANSI-utdata
+
+- Accepterar inte ett värde
+
+### `--no-ansi`
+
+Ignorera alternativet &quot;—ansi&quot;
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--no-interaction`, `-n`
+
+Ställ inga interaktiva frågor
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+
+## `completion`
+
+Dumpa skriptet för gränssnittets slutförande
+
+```bash
+bin/magento completion [--debug] [--] [<shell>]
+```
+
+
+### `shell`
+
+Skaltypen (t.ex. &quot;bash&quot;) används värdet för &quot;$SHELL&quot; env var om det inte anges
+
+
+### `--debug`
+
+Avsluta felsökningsloggen
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--help`, `-h`
+
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--quiet`, `-q`
+
+Skriv inget meddelande
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--verbose`, `-v|-vv|-vvv`
+
+Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--version`, `-V`
+
+Visa den här programversionen
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--ansi`
+
+Tvinga (eller inaktivera) ANSI-utdata
+
+- Accepterar inte ett värde
+
+### `--no-ansi`
+
+Ignorera alternativet &quot;—ansi&quot;
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--no-interaction`, `-n`
+
+Ställ inga interaktiva frågor
+
+- Standard: `false`
+- Accepterar inte ett värde
+
 
 ## `help`
 
@@ -57,7 +209,7 @@ Hjälp för att skriva ut råformat
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -85,14 +237,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -110,7 +261,7 @@ Ställ inga interaktiva frågor
 Listkommandon
 
 ```bash
-bin/magento list [--raw] [--format FORMAT] [--] [<namespace>]
+bin/magento list [--raw] [--format FORMAT] [--short] [--] [<namespace>]
 ```
 
 
@@ -133,18 +284,16 @@ Utdataformatet (txt, xml, json eller md)
 - Standard: `txt`
 - Kräver ett värde
 
+### `--short`
 
-## `admin:adobe-ims:disable`
+Så här beskriver du inte kommandots argument
 
-Inaktivera Adobe IMS-modul
-
-```bash
-bin/magento admin:adobe-ims:disable
-```
+- Standard: `false`
+- Accepterar inte ett värde
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -172,14 +321,70 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--no-interaction`, `-n`
+
+Ställ inga interaktiva frågor
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+
+## `admin:adobe-ims:disable`
+
+Inaktivera Adobe IMS-modul
+
+```bash
+bin/magento admin:adobe-ims:disable
+```
+
+### `--help`, `-h`
+
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--quiet`, `-q`
+
+Skriv inget meddelande
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--verbose`, `-v|-vv|-vvv`
+
+Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--version`, `-V`
+
+Visa den här programversionen
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--ansi`
+
+Tvinga (eller inaktivera) ANSI-utdata
+
+- Accepterar inte ett värde
+
+### `--no-ansi`
+
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -226,7 +431,7 @@ Kontrollera om 2FA är aktiverat för Organisation i Adobe Admin Console. Krävs
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -254,14 +459,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -284,7 +488,7 @@ bin/magento admin:adobe-ims:info
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -312,14 +516,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -342,7 +545,7 @@ bin/magento admin:adobe-ims:status
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -370,14 +573,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -436,7 +638,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -464,14 +666,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -501,7 +702,7 @@ Administratörens användarnamn som ska låsas upp
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -529,14 +730,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -560,7 +760,7 @@ bin/magento app:config:dump [<config-types>...]
 
 ### `config-types`
 
-Blankstegsavgränsad lista med konfigurationstyper eller utelämna att dumpa alla [omfång, teman, system, i18n]
+Blankstegsavgränsad lista med konfigurationstyper eller utelämna att dumpa alla [scope, system, teman, i18n]
 
 - Standard: `[]`
 
@@ -568,7 +768,7 @@ Blankstegsavgränsad lista med konfigurationstyper eller utelämna att dumpa all
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -596,14 +796,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -626,7 +825,7 @@ bin/magento app:config:import
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -654,14 +853,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -684,7 +882,7 @@ bin/magento app:config:status
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -712,14 +910,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -766,7 +963,7 @@ Lösenord
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -794,14 +991,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -839,7 +1035,7 @@ lägga till eller åsidosätta parametrar för bootstrap
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -867,14 +1063,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -912,7 +1107,7 @@ lägga till eller åsidosätta parametrar för bootstrap
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -940,14 +1135,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -985,7 +1179,7 @@ lägga till eller åsidosätta parametrar för bootstrap
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1013,14 +1207,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1058,7 +1251,7 @@ lägga till eller åsidosätta parametrar för bootstrap
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1086,14 +1279,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1122,7 +1314,7 @@ lägga till eller åsidosätta parametrar för bootstrap
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1150,14 +1342,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1194,7 +1385,7 @@ Bearbeta inte bilder som markerats som dolda från produktsidan
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1222,14 +1413,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1252,7 +1442,7 @@ bin/magento catalog:product:attributes:cleanup
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1280,14 +1470,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1317,7 +1506,7 @@ y\n
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1345,14 +1534,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1407,7 +1595,7 @@ Omfångskod för konfiguration, tom sträng som standard
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1435,14 +1623,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1512,7 +1699,7 @@ Inaktuellt använder du alternativet —lock-env i stället.
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1540,14 +1727,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1590,7 +1776,7 @@ Omfångskod (krävs endast om omfånget inte är det `default`)
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1618,14 +1804,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1662,7 +1847,7 @@ Installera endast icke-valfria (standard) uppgifter
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1690,14 +1875,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1720,7 +1904,7 @@ bin/magento cron:remove
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1748,14 +1932,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1790,7 +1973,7 @@ Lägga till eller åsidosätta parametrar för bootstrap
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1818,14 +2001,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1848,7 +2030,7 @@ bin/magento customer:hash:upgrade
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1876,14 +2058,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1920,7 +2101,7 @@ Hoppar över rensning och omgenerering av statiskt innehåll (genererad kod, fö
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1948,14 +2129,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1978,7 +2158,7 @@ bin/magento deploy:mode:show
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2006,14 +2186,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2043,7 +2222,7 @@ Klassnamn
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2071,14 +2250,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2101,7 +2279,7 @@ bin/magento dev:email:newsletter-compatibility-check
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2129,14 +2307,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2159,7 +2336,7 @@ bin/magento dev:email:override-compatibility-check
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2187,14 +2364,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2217,7 +2393,7 @@ bin/magento dev:profiler:disable
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2245,14 +2421,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2281,7 +2456,7 @@ Profilerartyp
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2309,14 +2484,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2339,7 +2513,7 @@ bin/magento dev:query-log:disable
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2367,14 +2541,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2418,7 +2591,7 @@ Inkludera anropsstacken. [true\|false]
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2446,14 +2619,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2513,7 +2685,7 @@ Tema: [Leverantör/tema]
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2541,14 +2713,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2571,7 +2742,7 @@ bin/magento dev:template-hints:disable
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2599,14 +2770,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2629,7 +2799,7 @@ bin/magento dev:template-hints:enable
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2657,14 +2827,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2687,7 +2856,7 @@ bin/magento dev:template-hints:status
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2715,14 +2884,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2760,7 +2928,7 @@ Ytterligare argument för PHPUnit. Exempel: &quot;-c&#39;—filter=MyTest&#39;&q
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2788,14 +2956,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2832,7 +2999,7 @@ Formatet som katalogen ska skapas i. Stöds: [oväder, vscode]
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2860,14 +3027,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2910,7 +3076,7 @@ Skriv över XML-fil
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2938,14 +3104,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2977,7 +3142,7 @@ Domännamn
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3005,14 +3170,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3044,7 +3208,7 @@ Domännamn
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3072,14 +3236,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3102,7 +3265,7 @@ bin/magento downloadable:domains:show
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3130,14 +3293,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3160,7 +3322,7 @@ bin/magento encryption:payment-data:update
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3188,14 +3350,612 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--no-interaction`, `-n`
+
+Ställ inga interaktiva frågor
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+
+## `events:create-event-provider`
+
+Skapa en anpassad händelseprovider i Adobe I/O Events för den här instansen. Om du inte anger alternativ för etikett och beskrivning måste de definieras i systemets app/etc/event-types.json.
+
+```bash
+bin/magento events:create-event-provider [--label [LABEL]] [--description [DESCRIPTION]]
+```
+
+
+```bash
+bin/magento events:provider:create 
+```
+
+### `--label`
+
+En etikett som definierar din anpassade leverantör.
+
+- Accepterar ett värde
+
+### `--description`
+
+En beskrivning av din leverantör.
+
+- Accepterar ett värde
+
+### `--help`, `-h`
+
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--quiet`, `-q`
+
+Skriv inget meddelande
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--verbose`, `-v|-vv|-vvv`
+
+Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--version`, `-V`
+
+Visa den här programversionen
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--ansi`
+
+Tvinga (eller inaktivera) ANSI-utdata
+
+- Accepterar inte ett värde
+
+### `--no-ansi`
+
+Ignorera alternativet &quot;—ansi&quot;
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--no-interaction`, `-n`
+
+Ställ inga interaktiva frågor
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+
+## `events:generate:module`
+
+Generera modul baserat på plugin-programlista
+
+```bash
+bin/magento events:generate:module
+```
+
+### `--help`, `-h`
+
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--quiet`, `-q`
+
+Skriv inget meddelande
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--verbose`, `-v|-vv|-vvv`
+
+Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--version`, `-V`
+
+Visa den här programversionen
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--ansi`
+
+Tvinga (eller inaktivera) ANSI-utdata
+
+- Accepterar inte ett värde
+
+### `--no-ansi`
+
+Ignorera alternativet &quot;—ansi&quot;
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--no-interaction`, `-n`
+
+Ställ inga interaktiva frågor
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+
+## `events:info`
+
+Returnerar nyttolasten för den angivna händelsen.
+
+```bash
+bin/magento events:info [--depth [DEPTH]] [--] <event-code>
+```
+
+
+### `event-code`
+
+Händelsekod
+
+- Obligatoriskt
+
+### `--depth`
+
+Antalet nivåer i händelsens nyttolast som ska returneras
+
+- Standard: `2`
+- Accepterar ett värde
+
+### `--help`, `-h`
+
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--quiet`, `-q`
+
+Skriv inget meddelande
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--verbose`, `-v|-vv|-vvv`
+
+Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--version`, `-V`
+
+Visa den här programversionen
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--ansi`
+
+Tvinga (eller inaktivera) ANSI-utdata
+
+- Accepterar inte ett värde
+
+### `--no-ansi`
+
+Ignorera alternativet &quot;—ansi&quot;
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--no-interaction`, `-n`
+
+Ställ inga interaktiva frågor
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+
+## `events:list`
+
+Visar en lista över prenumererade händelser
+
+```bash
+bin/magento events:list
+```
+
+### `--help`, `-h`
+
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--quiet`, `-q`
+
+Skriv inget meddelande
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--verbose`, `-v|-vv|-vvv`
+
+Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--version`, `-V`
+
+Visa den här programversionen
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--ansi`
+
+Tvinga (eller inaktivera) ANSI-utdata
+
+- Accepterar inte ett värde
+
+### `--no-ansi`
+
+Ignorera alternativet &quot;—ansi&quot;
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--no-interaction`, `-n`
+
+Ställ inga interaktiva frågor
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+
+## `events:list:all`
+
+Returnerar en lista med prenumererbara händelser som definieras i den angivna modulen
+
+```bash
+bin/magento events:list:all <module_name>
+```
+
+
+### `module_name`
+
+Modulnamn
+
+- Obligatoriskt
+
+### `--help`, `-h`
+
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--quiet`, `-q`
+
+Skriv inget meddelande
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--verbose`, `-v|-vv|-vvv`
+
+Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--version`, `-V`
+
+Visa den här programversionen
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--ansi`
+
+Tvinga (eller inaktivera) ANSI-utdata
+
+- Accepterar inte ett värde
+
+### `--no-ansi`
+
+Ignorera alternativet &quot;—ansi&quot;
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--no-interaction`, `-n`
+
+Ställ inga interaktiva frågor
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+
+## `events:metadata:populate`
+
+Skapar metadata i Adobe I/O från konfigurationslistan (XML och programkonfigurationer)
+
+```bash
+bin/magento events:metadata:populate
+```
+
+### `--help`, `-h`
+
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--quiet`, `-q`
+
+Skriv inget meddelande
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--verbose`, `-v|-vv|-vvv`
+
+Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--version`, `-V`
+
+Visa den här programversionen
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--ansi`
+
+Tvinga (eller inaktivera) ANSI-utdata
+
+- Accepterar inte ett värde
+
+### `--no-ansi`
+
+Ignorera alternativet &quot;—ansi&quot;
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--no-interaction`, `-n`
+
+Ställ inga interaktiva frågor
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+
+## `events:subscribe`
+
+Prenumererar på evenemanget
+
+```bash
+bin/magento events:subscribe [-f|--force] [--fields FIELDS] [--parent PARENT] [--rules RULES] [--] <event-code>
+```
+
+
+### `event-code`
+
+Händelsekod
+
+- Obligatoriskt
+
+### `--force`, `-f`
+
+Tvingar den angivna händelsen att prenumereras, även om den inte har definierats lokalt.
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--fields`
+
+Listan med fält i händelsedatanyttolasten.
+
+- Standard: `[]`
+- Kräver ett värde
+
+### `--parent`
+
+Den överordnade händelsekoden för en händelseprenumeration med regler.
+
+- Kräver ett värde
+
+### `--rules`
+
+Listan med regler för händelseprenumerationen, där varje regel formateras som&quot;field\|operator\|value&quot;.
+
+- Standard: `[]`
+- Kräver ett värde
+
+### `--help`, `-h`
+
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--quiet`, `-q`
+
+Skriv inget meddelande
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--verbose`, `-v|-vv|-vvv`
+
+Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--version`, `-V`
+
+Visa den här programversionen
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--ansi`
+
+Tvinga (eller inaktivera) ANSI-utdata
+
+- Accepterar inte ett värde
+
+### `--no-ansi`
+
+Ignorera alternativet &quot;—ansi&quot;
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--no-interaction`, `-n`
+
+Ställ inga interaktiva frågor
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+
+## `events:sync-events-metadata`
+
+Synkronisera händelsemetadata för den här instansen
+
+```bash
+bin/magento events:sync-events-metadata [-d|--delete]
+```
+
+### `--delete`, `-d`
+
+Ta bort metadata för händelser som inte längre behövs
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--help`, `-h`
+
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--quiet`, `-q`
+
+Skriv inget meddelande
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--verbose`, `-v|-vv|-vvv`
+
+Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--version`, `-V`
+
+Visa den här programversionen
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--ansi`
+
+Tvinga (eller inaktivera) ANSI-utdata
+
+- Accepterar inte ett värde
+
+### `--no-ansi`
+
+Ignorera alternativet &quot;—ansi&quot;
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--no-interaction`, `-n`
+
+Ställ inga interaktiva frågor
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+
+## `events:unsubscribe`
+
+Tar bort prenumerationen på den angivna händelsen
+
+```bash
+bin/magento events:unsubscribe <event-code>
+```
+
+
+### `event-code`
+
+Händelsekod att avbryta prenumerationen på
+
+- Obligatoriskt
+
+### `--help`, `-h`
+
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--quiet`, `-q`
+
+Skriv inget meddelande
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--verbose`, `-v|-vv|-vvv`
+
+Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--version`, `-V`
+
+Visa den här programversionen
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--ansi`
+
+Tvinga (eller inaktivera) ANSI-utdata
+
+- Accepterar inte ett värde
+
+### `--no-ansi`
+
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3237,7 +3997,7 @@ Använd parametern —magento för att tolka den aktuella Magento-kodbasen. Utel
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3265,14 +4025,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3322,7 +4081,7 @@ Använd parametern —allow-duplicates för att tillåta att dubbletter av trans
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3350,14 +4109,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3397,7 +4155,7 @@ Säkerhetskopiera kod och konfigurationsfiler (förutom temporära filer)
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3425,14 +4183,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3455,7 +4212,7 @@ bin/magento indexer:info
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3483,14 +4240,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3522,7 +4278,7 @@ Blankstegsavgränsad lista med indextyper eller utelämna detta för alla index.
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3550,14 +4306,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3589,7 +4344,7 @@ Blankstegsavgränsad lista med indextyper eller utelämna detta för alla index.
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3617,14 +4372,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3658,7 +4412,7 @@ Dimensionslägena katalog_product_price none,webbplats,kundgrupp,webbplats_och_k
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3686,14 +4440,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3730,7 +4483,7 @@ Blankstegsavgränsad lista med indextyper eller utelämna detta för alla index.
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3758,14 +4511,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3797,7 +4549,7 @@ Blankstegsavgränsad lista med indextyper eller utelämna den för alla index (c
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3825,14 +4577,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3864,7 +4615,7 @@ Blankstegsavgränsad lista med indextyper eller utelämna detta för alla index.
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3892,14 +4643,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3931,7 +4681,7 @@ Blankstegsavgränsad lista med indextyper eller utelämna detta för alla index.
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3959,14 +4709,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3989,7 +4738,7 @@ bin/magento info:adminuri
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4017,14 +4766,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4047,7 +4795,7 @@ bin/magento info:backups:list
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4075,14 +4823,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4105,7 +4852,7 @@ bin/magento info:currency:list
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4133,14 +4880,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4170,7 +4916,7 @@ Rapportfilnamn
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4198,14 +4944,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4235,7 +4980,7 @@ Rapportfilnamn
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4263,14 +5008,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4300,7 +5044,7 @@ Rapportfilnamn
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4328,14 +5072,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4358,7 +5101,7 @@ bin/magento info:language:list
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4386,14 +5129,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4416,7 +5158,7 @@ bin/magento info:timezone:list
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4444,14 +5186,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4490,7 +5231,7 @@ Råutdata
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4518,14 +5259,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4576,7 +5316,7 @@ Råutdata
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4604,14 +5344,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4644,7 +5383,7 @@ Lista över landskoder som ska importeras
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4672,14 +5411,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4731,7 +5469,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4759,14 +5497,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4802,7 +5539,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4830,14 +5567,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4873,7 +5609,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4901,14 +5637,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4937,7 +5672,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4965,14 +5700,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4995,7 +5729,7 @@ bin/magento media-content:sync
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5023,14 +5757,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5053,7 +5786,7 @@ bin/magento media-gallery:sync
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5081,14 +5814,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5111,7 +5843,7 @@ bin/magento module:config:status
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5139,14 +5871,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5205,7 +5936,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5233,14 +5964,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5299,7 +6029,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5327,14 +6057,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5386,7 +6115,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5414,14 +6143,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5502,7 +6230,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5530,14 +6258,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5583,7 +6310,7 @@ Revision
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5611,14 +6338,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5641,7 +6367,7 @@ bin/magento queue:consumers:list
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5669,14 +6395,70 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--no-interaction`, `-n`
+
+Ställ inga interaktiva frågor
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+
+## `queue:consumers:restart`
+
+Starta om MessageQueue-användare
+
+```bash
+bin/magento queue:consumers:restart
+```
+
+### `--help`, `-h`
+
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--quiet`, `-q`
+
+Skriv inget meddelande
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--verbose`, `-v|-vv|-vvv`
+
+Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--version`, `-V`
+
+Visa den här programversionen
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--ansi`
+
+Tvinga (eller inaktivera) ANSI-utdata
+
+- Accepterar inte ett värde
+
+### `--no-ansi`
+
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5743,7 +6525,7 @@ Filsökvägen för att spara PID (det här alternativet är föråldrat, använd
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5771,14 +6553,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5801,7 +6582,7 @@ bin/magento remote-storage:sync
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5829,14 +6610,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5866,7 +6646,7 @@ Uppdatera Composer.json utan att köra Composer-uppdatering
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5894,14 +6674,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5931,7 +6710,7 @@ Uppdatera Composer.json utan att köra Composer-uppdatering
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5959,14 +6738,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5989,7 +6767,7 @@ bin/magento sampledata:reset
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6017,14 +6795,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6047,7 +6824,7 @@ bin/magento security:recaptcha:disable-for-user-forgot-password
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6075,14 +6852,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6105,7 +6881,7 @@ bin/magento security:recaptcha:disable-for-user-login
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6133,14 +6909,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6176,7 +6951,7 @@ Hemlighet
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6204,14 +6979,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6234,7 +7008,7 @@ bin/magento security:tfa:providers
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6262,14 +7036,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6305,7 +7078,7 @@ Providerkod
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6333,14 +7106,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6390,7 +7162,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6418,14 +7190,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6443,7 +7214,7 @@ Ställ inga interaktiva frågor
 Skapar eller ändrar distributionskonfigurationen
 
 ```bash
-bin/magento setup:config:set [--backend-frontname BACKEND-FRONTNAME] [--enable-debug-logging ENABLE-DEBUG-LOGGING] [--enable-syslog-logging ENABLE-SYSLOG-LOGGING] [--remote-storage-driver REMOTE-STORAGE-DRIVER] [--remote-storage-prefix REMOTE-STORAGE-PREFIX] [--remote-storage-endpoint REMOTE-STORAGE-ENDPOINT] [--remote-storage-bucket REMOTE-STORAGE-BUCKET] [--remote-storage-region REMOTE-STORAGE-REGION] [--remote-storage-key REMOTE-STORAGE-KEY] [--remote-storage-secret REMOTE-STORAGE-SECRET] [--remote-storage-path-style REMOTE-STORAGE-PATH-STYLE] [--checkout-async CHECKOUT-ASYNC] [--amqp-host AMQP-HOST] [--amqp-port AMQP-PORT] [--amqp-user AMQP-USER] [--amqp-password AMQP-PASSWORD] [--amqp-virtualhost AMQP-VIRTUALHOST] [--amqp-ssl AMQP-SSL] [--amqp-ssl-options AMQP-SSL-OPTIONS] [--consumers-wait-for-messages CONSUMERS-WAIT-FOR-MESSAGES] [--queue-default-connection QUEUE-DEFAULT-CONNECTION] [--deferred-total-calculating DEFERRED-TOTAL-CALCULATING] [--key KEY] [--db-host DB-HOST] [--db-name DB-NAME] [--db-user DB-USER] [--db-engine DB-ENGINE] [--db-password DB-PASSWORD] [--db-prefix DB-PREFIX] [--db-model DB-MODEL] [--db-init-statements DB-INIT-STATEMENTS] [-s|--skip-db-validation] [--http-cache-hosts HTTP-CACHE-HOSTS] [--db-ssl-key DB-SSL-KEY] [--db-ssl-cert DB-SSL-CERT] [--db-ssl-ca DB-SSL-CA] [--db-ssl-verify] [--session-save SESSION-SAVE] [--session-save-redis-host SESSION-SAVE-REDIS-HOST] [--session-save-redis-port SESSION-SAVE-REDIS-PORT] [--session-save-redis-password SESSION-SAVE-REDIS-PASSWORD] [--session-save-redis-timeout SESSION-SAVE-REDIS-TIMEOUT] [--session-save-redis-persistent-id SESSION-SAVE-REDIS-PERSISTENT-ID] [--session-save-redis-db SESSION-SAVE-REDIS-DB] [--session-save-redis-compression-threshold SESSION-SAVE-REDIS-COMPRESSION-THRESHOLD] [--session-save-redis-compression-lib SESSION-SAVE-REDIS-COMPRESSION-LIB] [--session-save-redis-log-level SESSION-SAVE-REDIS-LOG-LEVEL] [--session-save-redis-max-concurrency SESSION-SAVE-REDIS-MAX-CONCURRENCY] [--session-save-redis-break-after-frontend SESSION-SAVE-REDIS-BREAK-AFTER-FRONTEND] [--session-save-redis-break-after-adminhtml SESSION-SAVE-REDIS-BREAK-AFTER-ADMINHTML] [--session-save-redis-first-lifetime SESSION-SAVE-REDIS-FIRST-LIFETIME] [--session-save-redis-bot-first-lifetime SESSION-SAVE-REDIS-BOT-FIRST-LIFETIME] [--session-save-redis-bot-lifetime SESSION-SAVE-REDIS-BOT-LIFETIME] [--session-save-redis-disable-locking SESSION-SAVE-REDIS-DISABLE-LOCKING] [--session-save-redis-min-lifetime SESSION-SAVE-REDIS-MIN-LIFETIME] [--session-save-redis-max-lifetime SESSION-SAVE-REDIS-MAX-LIFETIME] [--session-save-redis-sentinel-master SESSION-SAVE-REDIS-SENTINEL-MASTER] [--session-save-redis-sentinel-servers SESSION-SAVE-REDIS-SENTINEL-SERVERS] [--session-save-redis-sentinel-verify-master SESSION-SAVE-REDIS-SENTINEL-VERIFY-MASTER] [--session-save-redis-sentinel-connect-retries SESSION-SAVE-REDIS-SENTINEL-CONNECT-RETRIES] [--cache-backend CACHE-BACKEND] [--cache-backend-redis-server CACHE-BACKEND-REDIS-SERVER] [--cache-backend-redis-db CACHE-BACKEND-REDIS-DB] [--cache-backend-redis-port CACHE-BACKEND-REDIS-PORT] [--cache-backend-redis-password CACHE-BACKEND-REDIS-PASSWORD] [--cache-backend-redis-compress-data CACHE-BACKEND-REDIS-COMPRESS-DATA] [--cache-backend-redis-compression-lib CACHE-BACKEND-REDIS-COMPRESSION-LIB] [--cache-id-prefix CACHE-ID-PREFIX] [--allow-parallel-generation] [--page-cache PAGE-CACHE] [--page-cache-redis-server PAGE-CACHE-REDIS-SERVER] [--page-cache-redis-db PAGE-CACHE-REDIS-DB] [--page-cache-redis-port PAGE-CACHE-REDIS-PORT] [--page-cache-redis-password PAGE-CACHE-REDIS-PASSWORD] [--page-cache-redis-compress-data PAGE-CACHE-REDIS-COMPRESS-DATA] [--page-cache-redis-compression-lib PAGE-CACHE-REDIS-COMPRESSION-LIB] [--page-cache-id-prefix PAGE-CACHE-ID-PREFIX] [--lock-provider LOCK-PROVIDER] [--lock-db-prefix LOCK-DB-PREFIX] [--lock-zookeeper-host LOCK-ZOOKEEPER-HOST] [--lock-zookeeper-path LOCK-ZOOKEEPER-PATH] [--lock-file-path LOCK-FILE-PATH] [--document-root-is-pub DOCUMENT-ROOT-IS-PUB] [--magento-init-params MAGENTO-INIT-PARAMS]
+bin/magento setup:config:set [--backend-frontname BACKEND-FRONTNAME] [--enable-debug-logging ENABLE-DEBUG-LOGGING] [--enable-syslog-logging ENABLE-SYSLOG-LOGGING] [--id_salt ID_SALT] [--remote-storage-driver REMOTE-STORAGE-DRIVER] [--remote-storage-prefix REMOTE-STORAGE-PREFIX] [--remote-storage-endpoint REMOTE-STORAGE-ENDPOINT] [--remote-storage-bucket REMOTE-STORAGE-BUCKET] [--remote-storage-region REMOTE-STORAGE-REGION] [--remote-storage-key REMOTE-STORAGE-KEY] [--remote-storage-secret REMOTE-STORAGE-SECRET] [--remote-storage-path-style REMOTE-STORAGE-PATH-STYLE] [--checkout-async CHECKOUT-ASYNC] [--amqp-host AMQP-HOST] [--amqp-port AMQP-PORT] [--amqp-user AMQP-USER] [--amqp-password AMQP-PASSWORD] [--amqp-virtualhost AMQP-VIRTUALHOST] [--amqp-ssl AMQP-SSL] [--amqp-ssl-options AMQP-SSL-OPTIONS] [--consumers-wait-for-messages CONSUMERS-WAIT-FOR-MESSAGES] [--queue-default-connection QUEUE-DEFAULT-CONNECTION] [--deferred-total-calculating DEFERRED-TOTAL-CALCULATING] [--key KEY] [--db-host DB-HOST] [--db-name DB-NAME] [--db-user DB-USER] [--db-engine DB-ENGINE] [--db-password DB-PASSWORD] [--db-prefix DB-PREFIX] [--db-model DB-MODEL] [--db-init-statements DB-INIT-STATEMENTS] [-s|--skip-db-validation] [--http-cache-hosts HTTP-CACHE-HOSTS] [--db-ssl-key DB-SSL-KEY] [--db-ssl-cert DB-SSL-CERT] [--db-ssl-ca DB-SSL-CA] [--db-ssl-verify] [--session-save SESSION-SAVE] [--session-save-redis-host SESSION-SAVE-REDIS-HOST] [--session-save-redis-port SESSION-SAVE-REDIS-PORT] [--session-save-redis-password SESSION-SAVE-REDIS-PASSWORD] [--session-save-redis-timeout SESSION-SAVE-REDIS-TIMEOUT] [--session-save-redis-persistent-id SESSION-SAVE-REDIS-PERSISTENT-ID] [--session-save-redis-db SESSION-SAVE-REDIS-DB] [--session-save-redis-compression-threshold SESSION-SAVE-REDIS-COMPRESSION-THRESHOLD] [--session-save-redis-compression-lib SESSION-SAVE-REDIS-COMPRESSION-LIB] [--session-save-redis-log-level SESSION-SAVE-REDIS-LOG-LEVEL] [--session-save-redis-max-concurrency SESSION-SAVE-REDIS-MAX-CONCURRENCY] [--session-save-redis-break-after-frontend SESSION-SAVE-REDIS-BREAK-AFTER-FRONTEND] [--session-save-redis-break-after-adminhtml SESSION-SAVE-REDIS-BREAK-AFTER-ADMINHTML] [--session-save-redis-first-lifetime SESSION-SAVE-REDIS-FIRST-LIFETIME] [--session-save-redis-bot-first-lifetime SESSION-SAVE-REDIS-BOT-FIRST-LIFETIME] [--session-save-redis-bot-lifetime SESSION-SAVE-REDIS-BOT-LIFETIME] [--session-save-redis-disable-locking SESSION-SAVE-REDIS-DISABLE-LOCKING] [--session-save-redis-min-lifetime SESSION-SAVE-REDIS-MIN-LIFETIME] [--session-save-redis-max-lifetime SESSION-SAVE-REDIS-MAX-LIFETIME] [--session-save-redis-sentinel-master SESSION-SAVE-REDIS-SENTINEL-MASTER] [--session-save-redis-sentinel-servers SESSION-SAVE-REDIS-SENTINEL-SERVERS] [--session-save-redis-sentinel-verify-master SESSION-SAVE-REDIS-SENTINEL-VERIFY-MASTER] [--session-save-redis-sentinel-connect-retries SESSION-SAVE-REDIS-SENTINEL-CONNECT-RETRIES] [--cache-backend CACHE-BACKEND] [--cache-backend-redis-server CACHE-BACKEND-REDIS-SERVER] [--cache-backend-redis-db CACHE-BACKEND-REDIS-DB] [--cache-backend-redis-port CACHE-BACKEND-REDIS-PORT] [--cache-backend-redis-password CACHE-BACKEND-REDIS-PASSWORD] [--cache-backend-redis-compress-data CACHE-BACKEND-REDIS-COMPRESS-DATA] [--cache-backend-redis-compression-lib CACHE-BACKEND-REDIS-COMPRESSION-LIB] [--cache-id-prefix CACHE-ID-PREFIX] [--allow-parallel-generation] [--page-cache PAGE-CACHE] [--page-cache-redis-server PAGE-CACHE-REDIS-SERVER] [--page-cache-redis-db PAGE-CACHE-REDIS-DB] [--page-cache-redis-port PAGE-CACHE-REDIS-PORT] [--page-cache-redis-password PAGE-CACHE-REDIS-PASSWORD] [--page-cache-redis-compress-data PAGE-CACHE-REDIS-COMPRESS-DATA] [--page-cache-redis-compression-lib PAGE-CACHE-REDIS-COMPRESSION-LIB] [--page-cache-id-prefix PAGE-CACHE-ID-PREFIX] [--lock-provider LOCK-PROVIDER] [--lock-db-prefix LOCK-DB-PREFIX] [--lock-zookeeper-host LOCK-ZOOKEEPER-HOST] [--lock-zookeeper-path LOCK-ZOOKEEPER-PATH] [--lock-file-path LOCK-FILE-PATH] [--document-root-is-pub DOCUMENT-ROOT-IS-PUB] [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
 
 ### `--backend-frontname`
@@ -6461,6 +7232,12 @@ Aktivera felsökningsloggning
 ### `--enable-syslog-logging`
 
 Aktivera syslog-loggning
+
+- Kräver ett värde
+
+### `--id_salt`
+
+GraphQl Salt
 
 - Kräver ett värde
 
@@ -6969,7 +7746,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6997,14 +7774,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7033,7 +7809,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7061,14 +7837,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7118,7 +7893,7 @@ Ta reda på vilken typ av korrigering som ska skapas. Tillgängliga värden: `da
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7146,14 +7921,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7183,7 +7957,7 @@ Namn på modulen där vitlistan ska genereras
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7211,14 +7985,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7294,7 +8067,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7322,14 +8095,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7396,7 +8168,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7424,14 +8196,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7498,7 +8269,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7526,14 +8297,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7569,7 +8339,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7597,14 +8367,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7633,7 +8402,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7661,14 +8430,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7691,7 +8459,7 @@ bin/magento setup:di:compile
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7719,14 +8487,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7744,7 +8511,7 @@ Ställ inga interaktiva frågor
 Installerar programmet Magento
 
 ```bash
-bin/magento setup:install [--backend-frontname BACKEND-FRONTNAME] [--enable-debug-logging ENABLE-DEBUG-LOGGING] [--enable-syslog-logging ENABLE-SYSLOG-LOGGING] [--remote-storage-driver REMOTE-STORAGE-DRIVER] [--remote-storage-prefix REMOTE-STORAGE-PREFIX] [--remote-storage-endpoint REMOTE-STORAGE-ENDPOINT] [--remote-storage-bucket REMOTE-STORAGE-BUCKET] [--remote-storage-region REMOTE-STORAGE-REGION] [--remote-storage-key REMOTE-STORAGE-KEY] [--remote-storage-secret REMOTE-STORAGE-SECRET] [--remote-storage-path-style REMOTE-STORAGE-PATH-STYLE] [--checkout-async CHECKOUT-ASYNC] [--amqp-host AMQP-HOST] [--amqp-port AMQP-PORT] [--amqp-user AMQP-USER] [--amqp-password AMQP-PASSWORD] [--amqp-virtualhost AMQP-VIRTUALHOST] [--amqp-ssl AMQP-SSL] [--amqp-ssl-options AMQP-SSL-OPTIONS] [--consumers-wait-for-messages CONSUMERS-WAIT-FOR-MESSAGES] [--queue-default-connection QUEUE-DEFAULT-CONNECTION] [--deferred-total-calculating DEFERRED-TOTAL-CALCULATING] [--key KEY] [--db-host DB-HOST] [--db-name DB-NAME] [--db-user DB-USER] [--db-engine DB-ENGINE] [--db-password DB-PASSWORD] [--db-prefix DB-PREFIX] [--db-model DB-MODEL] [--db-init-statements DB-INIT-STATEMENTS] [-s|--skip-db-validation] [--http-cache-hosts HTTP-CACHE-HOSTS] [--db-ssl-key DB-SSL-KEY] [--db-ssl-cert DB-SSL-CERT] [--db-ssl-ca DB-SSL-CA] [--db-ssl-verify] [--session-save SESSION-SAVE] [--session-save-redis-host SESSION-SAVE-REDIS-HOST] [--session-save-redis-port SESSION-SAVE-REDIS-PORT] [--session-save-redis-password SESSION-SAVE-REDIS-PASSWORD] [--session-save-redis-timeout SESSION-SAVE-REDIS-TIMEOUT] [--session-save-redis-persistent-id SESSION-SAVE-REDIS-PERSISTENT-ID] [--session-save-redis-db SESSION-SAVE-REDIS-DB] [--session-save-redis-compression-threshold SESSION-SAVE-REDIS-COMPRESSION-THRESHOLD] [--session-save-redis-compression-lib SESSION-SAVE-REDIS-COMPRESSION-LIB] [--session-save-redis-log-level SESSION-SAVE-REDIS-LOG-LEVEL] [--session-save-redis-max-concurrency SESSION-SAVE-REDIS-MAX-CONCURRENCY] [--session-save-redis-break-after-frontend SESSION-SAVE-REDIS-BREAK-AFTER-FRONTEND] [--session-save-redis-break-after-adminhtml SESSION-SAVE-REDIS-BREAK-AFTER-ADMINHTML] [--session-save-redis-first-lifetime SESSION-SAVE-REDIS-FIRST-LIFETIME] [--session-save-redis-bot-first-lifetime SESSION-SAVE-REDIS-BOT-FIRST-LIFETIME] [--session-save-redis-bot-lifetime SESSION-SAVE-REDIS-BOT-LIFETIME] [--session-save-redis-disable-locking SESSION-SAVE-REDIS-DISABLE-LOCKING] [--session-save-redis-min-lifetime SESSION-SAVE-REDIS-MIN-LIFETIME] [--session-save-redis-max-lifetime SESSION-SAVE-REDIS-MAX-LIFETIME] [--session-save-redis-sentinel-master SESSION-SAVE-REDIS-SENTINEL-MASTER] [--session-save-redis-sentinel-servers SESSION-SAVE-REDIS-SENTINEL-SERVERS] [--session-save-redis-sentinel-verify-master SESSION-SAVE-REDIS-SENTINEL-VERIFY-MASTER] [--session-save-redis-sentinel-connect-retries SESSION-SAVE-REDIS-SENTINEL-CONNECT-RETRIES] [--cache-backend CACHE-BACKEND] [--cache-backend-redis-server CACHE-BACKEND-REDIS-SERVER] [--cache-backend-redis-db CACHE-BACKEND-REDIS-DB] [--cache-backend-redis-port CACHE-BACKEND-REDIS-PORT] [--cache-backend-redis-password CACHE-BACKEND-REDIS-PASSWORD] [--cache-backend-redis-compress-data CACHE-BACKEND-REDIS-COMPRESS-DATA] [--cache-backend-redis-compression-lib CACHE-BACKEND-REDIS-COMPRESSION-LIB] [--cache-id-prefix CACHE-ID-PREFIX] [--allow-parallel-generation] [--page-cache PAGE-CACHE] [--page-cache-redis-server PAGE-CACHE-REDIS-SERVER] [--page-cache-redis-db PAGE-CACHE-REDIS-DB] [--page-cache-redis-port PAGE-CACHE-REDIS-PORT] [--page-cache-redis-password PAGE-CACHE-REDIS-PASSWORD] [--page-cache-redis-compress-data PAGE-CACHE-REDIS-COMPRESS-DATA] [--page-cache-redis-compression-lib PAGE-CACHE-REDIS-COMPRESSION-LIB] [--page-cache-id-prefix PAGE-CACHE-ID-PREFIX] [--lock-provider LOCK-PROVIDER] [--lock-db-prefix LOCK-DB-PREFIX] [--lock-zookeeper-host LOCK-ZOOKEEPER-HOST] [--lock-zookeeper-path LOCK-ZOOKEEPER-PATH] [--lock-file-path LOCK-FILE-PATH] [--document-root-is-pub DOCUMENT-ROOT-IS-PUB] [--base-url BASE-URL] [--language LANGUAGE] [--timezone TIMEZONE] [--currency CURRENCY] [--use-rewrites USE-REWRITES] [--use-secure USE-SECURE] [--base-url-secure BASE-URL-SECURE] [--use-secure-admin USE-SECURE-ADMIN] [--admin-use-security-key ADMIN-USE-SECURITY-KEY] [--admin-user [ADMIN-USER]] [--admin-password [ADMIN-PASSWORD]] [--admin-email [ADMIN-EMAIL]] [--admin-firstname [ADMIN-FIRSTNAME]] [--admin-lastname [ADMIN-LASTNAME]] [--search-engine SEARCH-ENGINE] [--elasticsearch-host ELASTICSEARCH-HOST] [--elasticsearch-port ELASTICSEARCH-PORT] [--elasticsearch-enable-auth ELASTICSEARCH-ENABLE-AUTH] [--elasticsearch-username ELASTICSEARCH-USERNAME] [--elasticsearch-password ELASTICSEARCH-PASSWORD] [--elasticsearch-index-prefix ELASTICSEARCH-INDEX-PREFIX] [--elasticsearch-timeout ELASTICSEARCH-TIMEOUT] [--cleanup-database] [--sales-order-increment-prefix SALES-ORDER-INCREMENT-PREFIX] [--use-sample-data] [--enable-modules [ENABLE-MODULES]] [--disable-modules [DISABLE-MODULES]] [--convert-old-scripts [CONVERT-OLD-SCRIPTS]] [-i|--interactive] [--safe-mode [SAFE-MODE]] [--data-restore [DATA-RESTORE]] [--dry-run [DRY-RUN]] [--magento-init-params MAGENTO-INIT-PARAMS]
+bin/magento setup:install [--backend-frontname BACKEND-FRONTNAME] [--enable-debug-logging ENABLE-DEBUG-LOGGING] [--enable-syslog-logging ENABLE-SYSLOG-LOGGING] [--id_salt ID_SALT] [--remote-storage-driver REMOTE-STORAGE-DRIVER] [--remote-storage-prefix REMOTE-STORAGE-PREFIX] [--remote-storage-endpoint REMOTE-STORAGE-ENDPOINT] [--remote-storage-bucket REMOTE-STORAGE-BUCKET] [--remote-storage-region REMOTE-STORAGE-REGION] [--remote-storage-key REMOTE-STORAGE-KEY] [--remote-storage-secret REMOTE-STORAGE-SECRET] [--remote-storage-path-style REMOTE-STORAGE-PATH-STYLE] [--checkout-async CHECKOUT-ASYNC] [--amqp-host AMQP-HOST] [--amqp-port AMQP-PORT] [--amqp-user AMQP-USER] [--amqp-password AMQP-PASSWORD] [--amqp-virtualhost AMQP-VIRTUALHOST] [--amqp-ssl AMQP-SSL] [--amqp-ssl-options AMQP-SSL-OPTIONS] [--consumers-wait-for-messages CONSUMERS-WAIT-FOR-MESSAGES] [--queue-default-connection QUEUE-DEFAULT-CONNECTION] [--deferred-total-calculating DEFERRED-TOTAL-CALCULATING] [--key KEY] [--db-host DB-HOST] [--db-name DB-NAME] [--db-user DB-USER] [--db-engine DB-ENGINE] [--db-password DB-PASSWORD] [--db-prefix DB-PREFIX] [--db-model DB-MODEL] [--db-init-statements DB-INIT-STATEMENTS] [-s|--skip-db-validation] [--http-cache-hosts HTTP-CACHE-HOSTS] [--db-ssl-key DB-SSL-KEY] [--db-ssl-cert DB-SSL-CERT] [--db-ssl-ca DB-SSL-CA] [--db-ssl-verify] [--session-save SESSION-SAVE] [--session-save-redis-host SESSION-SAVE-REDIS-HOST] [--session-save-redis-port SESSION-SAVE-REDIS-PORT] [--session-save-redis-password SESSION-SAVE-REDIS-PASSWORD] [--session-save-redis-timeout SESSION-SAVE-REDIS-TIMEOUT] [--session-save-redis-persistent-id SESSION-SAVE-REDIS-PERSISTENT-ID] [--session-save-redis-db SESSION-SAVE-REDIS-DB] [--session-save-redis-compression-threshold SESSION-SAVE-REDIS-COMPRESSION-THRESHOLD] [--session-save-redis-compression-lib SESSION-SAVE-REDIS-COMPRESSION-LIB] [--session-save-redis-log-level SESSION-SAVE-REDIS-LOG-LEVEL] [--session-save-redis-max-concurrency SESSION-SAVE-REDIS-MAX-CONCURRENCY] [--session-save-redis-break-after-frontend SESSION-SAVE-REDIS-BREAK-AFTER-FRONTEND] [--session-save-redis-break-after-adminhtml SESSION-SAVE-REDIS-BREAK-AFTER-ADMINHTML] [--session-save-redis-first-lifetime SESSION-SAVE-REDIS-FIRST-LIFETIME] [--session-save-redis-bot-first-lifetime SESSION-SAVE-REDIS-BOT-FIRST-LIFETIME] [--session-save-redis-bot-lifetime SESSION-SAVE-REDIS-BOT-LIFETIME] [--session-save-redis-disable-locking SESSION-SAVE-REDIS-DISABLE-LOCKING] [--session-save-redis-min-lifetime SESSION-SAVE-REDIS-MIN-LIFETIME] [--session-save-redis-max-lifetime SESSION-SAVE-REDIS-MAX-LIFETIME] [--session-save-redis-sentinel-master SESSION-SAVE-REDIS-SENTINEL-MASTER] [--session-save-redis-sentinel-servers SESSION-SAVE-REDIS-SENTINEL-SERVERS] [--session-save-redis-sentinel-verify-master SESSION-SAVE-REDIS-SENTINEL-VERIFY-MASTER] [--session-save-redis-sentinel-connect-retries SESSION-SAVE-REDIS-SENTINEL-CONNECT-RETRIES] [--cache-backend CACHE-BACKEND] [--cache-backend-redis-server CACHE-BACKEND-REDIS-SERVER] [--cache-backend-redis-db CACHE-BACKEND-REDIS-DB] [--cache-backend-redis-port CACHE-BACKEND-REDIS-PORT] [--cache-backend-redis-password CACHE-BACKEND-REDIS-PASSWORD] [--cache-backend-redis-compress-data CACHE-BACKEND-REDIS-COMPRESS-DATA] [--cache-backend-redis-compression-lib CACHE-BACKEND-REDIS-COMPRESSION-LIB] [--cache-id-prefix CACHE-ID-PREFIX] [--allow-parallel-generation] [--page-cache PAGE-CACHE] [--page-cache-redis-server PAGE-CACHE-REDIS-SERVER] [--page-cache-redis-db PAGE-CACHE-REDIS-DB] [--page-cache-redis-port PAGE-CACHE-REDIS-PORT] [--page-cache-redis-password PAGE-CACHE-REDIS-PASSWORD] [--page-cache-redis-compress-data PAGE-CACHE-REDIS-COMPRESS-DATA] [--page-cache-redis-compression-lib PAGE-CACHE-REDIS-COMPRESSION-LIB] [--page-cache-id-prefix PAGE-CACHE-ID-PREFIX] [--lock-provider LOCK-PROVIDER] [--lock-db-prefix LOCK-DB-PREFIX] [--lock-zookeeper-host LOCK-ZOOKEEPER-HOST] [--lock-zookeeper-path LOCK-ZOOKEEPER-PATH] [--lock-file-path LOCK-FILE-PATH] [--document-root-is-pub DOCUMENT-ROOT-IS-PUB] [--base-url BASE-URL] [--language LANGUAGE] [--timezone TIMEZONE] [--currency CURRENCY] [--use-rewrites USE-REWRITES] [--use-secure USE-SECURE] [--base-url-secure BASE-URL-SECURE] [--use-secure-admin USE-SECURE-ADMIN] [--admin-use-security-key ADMIN-USE-SECURITY-KEY] [--admin-user [ADMIN-USER]] [--admin-password [ADMIN-PASSWORD]] [--admin-email [ADMIN-EMAIL]] [--admin-firstname [ADMIN-FIRSTNAME]] [--admin-lastname [ADMIN-LASTNAME]] [--search-engine SEARCH-ENGINE] [--elasticsearch-host ELASTICSEARCH-HOST] [--elasticsearch-port ELASTICSEARCH-PORT] [--elasticsearch-enable-auth ELASTICSEARCH-ENABLE-AUTH] [--elasticsearch-username ELASTICSEARCH-USERNAME] [--elasticsearch-password ELASTICSEARCH-PASSWORD] [--elasticsearch-index-prefix ELASTICSEARCH-INDEX-PREFIX] [--elasticsearch-timeout ELASTICSEARCH-TIMEOUT] [--opensearch-host OPENSEARCH-HOST] [--opensearch-port OPENSEARCH-PORT] [--opensearch-enable-auth OPENSEARCH-ENABLE-AUTH] [--opensearch-username OPENSEARCH-USERNAME] [--opensearch-password OPENSEARCH-PASSWORD] [--opensearch-index-prefix OPENSEARCH-INDEX-PREFIX] [--opensearch-timeout OPENSEARCH-TIMEOUT] [--cleanup-database] [--sales-order-increment-prefix SALES-ORDER-INCREMENT-PREFIX] [--use-sample-data] [--enable-modules [ENABLE-MODULES]] [--disable-modules [DISABLE-MODULES]] [--convert-old-scripts [CONVERT-OLD-SCRIPTS]] [-i|--interactive] [--safe-mode [SAFE-MODE]] [--data-restore [DATA-RESTORE]] [--dry-run [DRY-RUN]] [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
 
 ### `--backend-frontname`
@@ -7762,6 +8529,12 @@ Aktivera felsökningsloggning
 ### `--enable-syslog-logging`
 
 Aktivera syslog-loggning
+
+- Kräver ett värde
+
+### `--id_salt`
+
+GraphQl Salt
 
 - Kräver ett värde
 
@@ -8348,7 +9121,7 @@ Administratörens efternamn
 
 ### `--search-engine`
 
-Sökmotor. Värden: elasticsearch5, elasticsearch6, elasticsearch7
+Sökmotor. Värden: elasticsearch5, elasticsearch7, elasticsearch8, opensearch
 
 - Kräver ett värde
 
@@ -8391,6 +9164,48 @@ Elasticsearch-indexprefix.
 ### `--elasticsearch-timeout`
 
 Servertimeout för Elasticsearch.
+
+- Kräver ett värde
+
+### `--opensearch-host`
+
+OpenSearch-servervärd.
+
+- Kräver ett värde
+
+### `--opensearch-port`
+
+OpenSearch-serverport.
+
+- Kräver ett värde
+
+### `--opensearch-enable-auth`
+
+Ange 1 för att aktivera autentisering. (standard är 0, inaktiverad)
+
+- Kräver ett värde
+
+### `--opensearch-username`
+
+OpenSearch-användarnamn. Gäller endast om HTTP-autentisering är aktiverat
+
+- Kräver ett värde
+
+### `--opensearch-password`
+
+Lösenord för OpenSearch. Gäller endast om HTTP-autentisering är aktiverat
+
+- Kräver ett värde
+
+### `--opensearch-index-prefix`
+
+Indexprefix för OpenSearch.
+
+- Kräver ett värde
+
+### `--opensearch-timeout`
+
+Tidsgräns för OpenSearch-server.
 
 - Kräver ett värde
 
@@ -8467,7 +9282,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -8495,14 +9310,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -8539,7 +9353,7 @@ Hoppa över omindexering
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -8567,14 +9381,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -8621,7 +9434,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -8649,14 +9462,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -8848,7 +9660,7 @@ Kompilera inte överordnade teman. Stöds endast i snabba och standardiserade st
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -8876,14 +9688,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -8966,7 +9777,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -8994,14 +9805,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9030,7 +9840,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9058,14 +9868,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9127,7 +9936,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9155,14 +9964,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9185,7 +9993,7 @@ bin/magento store:list
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9213,14 +10021,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9243,7 +10050,7 @@ bin/magento store:website:list
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9271,14 +10078,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9320,7 +10126,7 @@ Inkludera loggar
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9348,14 +10154,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9404,7 +10209,7 @@ Ignorera sanering
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9432,14 +10237,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9469,7 +10273,7 @@ Kontrollera bara nödvändiga konsolverktyg
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9497,14 +10301,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9534,7 +10337,7 @@ Tvinga
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9562,14 +10365,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9616,7 +10418,7 @@ Rensa genererade statiska vyfiler.
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9644,14 +10446,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9715,7 +10516,7 @@ Sökväg till filen som ska skrivas vcl
 
 ### `--help`, `-h`
 
-Visa det här hjälpmeddelandet
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9743,14 +10544,13 @@ Visa den här programversionen
 
 ### `--ansi`
 
-Framtvinga ANSI-utdata
+Tvinga (eller inaktivera) ANSI-utdata
 
-- Standard: `false`
 - Accepterar inte ett värde
 
 ### `--no-ansi`
 
-Inaktivera ANSI-utdata
+Ignorera alternativet &quot;—ansi&quot;
 
 - Standard: `false`
 - Accepterar inte ett värde

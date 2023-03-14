@@ -1,9 +1,9 @@
 ---
 title: Versionsinformation om Adobe Commerce och Magento Open Source
 description: Lär dig var du hittar information om specifika versioner av Adobe Commerce och Magento Open Source.
-source-git-commit: d63d1dd03cbf166f6fbce1df7113d1e861363f28
+source-git-commit: da6741586d0fb8e029ee5a9342e1299176df298e
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '413'
 ht-degree: 0%
 
 ---
@@ -63,6 +63,7 @@ Använd följande tabell för att hitta versionsinformation och viktig informati
         <p>Läs om de senaste förbättringarna av verktyg som gör det enklare för dig att hitta och använda Adobe Commerce och Magento Open Source.</p>
           <ul>
             <li><a href="https://developer.adobe.com/graphql-mesh-gateway/">API Mesh för Adobe APP Builder Developer</a></li>
+            <li><a href="https://developer.adobe.com/commerce/events/get-started/release-notes/">Adobe I/O Events for Adobe Commerce</a></li>
             <li><a href="../../tools/quality-patches-tool/release-notes.md">Verktyget Korrigeringar</a></li>
             <li><a href="../../tools/site-wide-analysis-tool/intro.md">Site-Wide Analysis Tool</a></li>
             <li><a href="../../upgrade/upgrade-compatibility-tool/overview.md">Kompatibilitetsverktyg för uppgradering</a></li>

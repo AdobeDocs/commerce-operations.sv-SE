@@ -2,9 +2,9 @@
 title: Prestandaoptimering - Recommendations
 description: Optimera Adobe Commerce-implementeringens prestanda genom att följa dessa rekommendationer.
 exl-id: c5d62e23-be43-4eea-afdb-bb1b156848f9
-source-git-commit: 065c56f20ba5b1eef8c331c5c2f5649902f1442b
+source-git-commit: 821ef18c1b0f00a6b9574be968ad76f0c230335c
 workflow-type: tm+mt
-source-wordcount: '1288'
+source-wordcount: '1290'
 ht-degree: 0%
 
 ---
@@ -107,7 +107,7 @@ Prestandatestning före varje produktionsrelease rekommenderas alltid för att f
 
 ### Sök {#search-heading}
 
-Elasticsearch krävs från och med Adobe Commerce version 2.4, men det är också en bra metod att aktivera det för tidigare versioner än 2.4.
+Elasticsearch (eller OpenSearch) krävs från och med Adobe Commerce version 2.4, men det är också en god vana att aktivera det för versioner före 2.4.
 
 ## Operativmodeller
 

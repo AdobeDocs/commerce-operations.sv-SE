@@ -1,10 +1,10 @@
 ---
 title: Konfigurera överordnad databaser automatiskt
 description: Mer information om hur du konfigurerar den delade databaslösningen automatiskt.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: d029d1ac66bff2ac34b22b2d3b8aafbfc062e082
 workflow-type: tm+mt
 source-wordcount: '358'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -101,7 +101,7 @@ Kommandosyntax:
 bin/magento setup:db-schema:split-quote --host="<checkout db host or ip>" --dbname="<name>" --username="<checkout db username>" --password="<password>"
 ```
 
-Exempel:
+Till exempel:
 
 ```bash
 bin/magento setup:db-schema:split-quote --host="localhost" --dbname="magento_quote" --username="magento_quote" --password="magento_quote"
@@ -121,10 +121,14 @@ Kommandosyntax:
 bin/magento setup:db-schema:split-sales --host="<checkout db host or ip>" --dbname="<name>" --username="<checkout db username>" --password="<password>"
 ```
 
-Exempel:
+Till exempel:
 
 ```bash
 bin/magento setup:db-schema:split-sales --host="localhost" --dbname="magento_sales" --username="magento_sales" --password="magento_sales"
+```
+
+```bash
+bin/magento setup:upgrade
 ```
 
 Följande meddelande visas för att bekräfta att installationen lyckades:

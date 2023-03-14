@@ -1,9 +1,9 @@
 ---
 title: Avancerad lokal installation
 description: Lär dig mer om avancerade installationsscenarier för Adobe Commerce och Magento Open Source om infrastruktur som du äger.
-source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
+source-git-commit: 4c18f00e0b92e49924676274c4ed462a175a7e4b
 workflow-type: tm+mt
-source-wordcount: '2327'
+source-wordcount: '2406'
 ht-degree: 0%
 
 ---
@@ -127,7 +127,7 @@ Följande tabeller innehåller många men inte alla tillgängliga installationsp
 | `--admin-lastname` | Administratörsanvändarens efternamn. | Ja |
 | `--admin-email` | Administratörsanvändarens e-postadress. | Ja |
 | `--admin-user` | Administratörsanvändarnamn. | Ja |
-| `--admin-password` | Administratörslösenord. Lösenordet måste innehålla minst 7 tecken och innehålla minst en bokstav och minst ett numeriskt tecken. Vi rekommenderar ett längre och mer komplext lösenord. Omsluter hela lösenordssträngen med enkla citattecken. Exempel: `--admin-password='A0b9%t3g'` | Ja |
+| `--admin-password` | Administratörslösenord. Lösenordet måste innehålla minst 7 tecken och innehålla minst en bokstav och minst ett numeriskt tecken. Vi rekommenderar ett längre och mer komplext lösenord. Omsluter hela lösenordssträngen med enkla citattecken. Till exempel: `--admin-password='A0b9%t3g'` | Ja |
 
 **Konfigurationsalternativ för plats och databas:**
 
@@ -161,14 +161,21 @@ Följande tabeller innehåller många men inte alla tillgängliga installationsp
 
 | Namn | Värde | Obligatoriskt? |
 |--- |--- |--- |
-| `--search-engine` | Den version av Elasticsearch eller OpenSearch som ska användas som sökmotor. Möjliga värden är `elasticsearch7`, `elasticsearch6`och `elasticsearch5`. Standardvärdet är `elasticsearch7`. Om du vill använda OpenSearch anger du `elasticsearch7`. Elasticsearch 5 har tagits bort och rekommenderas inte. | Nej |
-| `--elasticsearch-host` | Värdnamnet eller IP-adressen där sökmotorn körs. Standardvärdet är `localhost`. | Nej |
-| `--elasticsearch-port` | Porten för inkommande HTTP-begäranden. Standardvärdet är `9200`. | Nej |
-| `--elasticsearch-index-prefix` | Ett prefix som identifierar sökmotorindexet. Standardvärdet är `magento2`. | Nej |
+| `--search-engine` | Den version av Elasticsearch eller OpenSearch som ska användas som sökmotor. Standardvärdet är `elasticsearch7`. Elasticsearch 5 har tagits bort och rekommenderas inte. | Nej |
+| `--elasticsearch-host` | Värdnamnet eller IP-adressen där Elasticsearch körs. Standardvärdet är `localhost`. | Nej |
+| `--elasticsearch-port` | Elasticsearch-porten för inkommande HTTP-begäranden. Standardvärdet är `9200`. | Nej |
+| `--elasticsearch-index-prefix` | Ett prefix som identifierar sökindexet för Elasticsearch. Standardvärdet är `magento2`. | Nej |
 | `--elasticsearch-timeout` | Antalet sekunder innan systemet timeout. Standardvärdet är `15`. | Nej |
-| `--elasticsearch-enable-auth` | Aktiverar autentisering på sökmotorservern. Standardvärdet är `false`. | Nej |
-| `--elasticsearch-username` | Användar-ID för att autentisera sökmotorn | Nej, om inte autentisering är aktiverat |
-| `--elasticsearch-password` | Lösenordet för att autentisera sökmotorn | Nej, om inte autentisering är aktiverat |
+| `--elasticsearch-enable-auth` | Aktiverar autentisering på Elasticsearch-servern. Standardvärdet är `false`. | Nej |
+| `--elasticsearch-username` | Användar-ID för autentisering till Elasticsearch-servern. | Nej, om inte autentisering är aktiverat |
+| `--elasticsearch-password` | Lösenordet för autentisering till Elasticsearch-servern. | Nej, om inte autentisering är aktiverat |
+| `--opensearch-host` | Värdnamnet eller IP-adressen där OpenSearch körs. Standardvärdet är `localhost`. | Nej |
+| `--opensearch-port` | OpenSearch-porten för inkommande HTTP-begäranden. Standardvärdet är `9200`. | Nej |
+| `--opensearch-index-prefix` | Ett prefix som identifierar OpenSearch-sökindexet. Standardvärdet är `magento2`. | Nej |
+| `--opensearch-timeout` | Antalet sekunder innan systemet timeout. Standardvärdet är `15`. | Nej |
+| `--opensearch-enable-auth` | Aktiverar autentisering på OpenSearch-servern. Standardvärdet är `false`. | Nej |
+| `--opensearch-username` | Användar-ID för autentisering till OpenSearch-servern. | Nej, om inte autentisering är aktiverat |
+| `--opensearch-password` | Lösenordet som ska autentiseras på OpenSearch-servern. | Nej, om inte autentisering är aktiverat |
 
 **[!DNL RabbitMQ]konfigurationsalternativ:**
 
@@ -188,7 +195,7 @@ Följande tabeller innehåller många men inte alla tillgängliga installationsp
 |--- |--- |--- |
 | `--lock-provider` | Lås leverantörens namn.<br><br>Tillgängliga låsleverantörer: `db`, `zookeeper`, `file`.<br><br>Standardlåsleverantör: `db` | Nej |
 | `--lock-db-prefix` | Det specifika db-prefixet för att undvika låskonflikter när du använder `db` låsleverantör.<br><br>Standardvärdet: `NULL` | Nej |
-| `--lock-zookeeper-host` | Värd och port för att ansluta till Zookeeper-klustret när du använder `zookeeper` låsleverantör.<br><br>Exempel: `127.0.0.1:2181` | Ja, om du anger `--lock-provider=zookeeper` |
+| `--lock-zookeeper-host` | Värd och port för att ansluta till Zookeeper-klustret när du använder `zookeeper` låsleverantör.<br><br>Till exempel: `127.0.0.1:2181` | Ja, om du anger `--lock-provider=zookeeper` |
 | `--lock-zookeeper-path` | Sökvägen där Zookeeper sparar lås.<br><br>Standardsökvägen är: `/magento/locks` | Nej |
 | `--lock-file-path` | Sökvägen där fillås sparas. | Ja, om du anger `--lock-provider=file` |
 
@@ -231,7 +238,7 @@ I följande exempel installeras Adobe Commerce eller Magento Open Source med fö
 * Standardspråket är `en_US` (på eng)
 * Standardvalutan är amerikanska dollar
 * Standardtidszonen är U.S. Central (America/Chicago)
-* OpenSearch 1.2 är installerat på `es-host.example.com` och ansluts till port 9200
+* OpenSearch 1.2 är installerat på `os-host.example.com` och ansluts till port 9200
 
 ```bash
 magento setup:install --base-url=http://127.0.0.1/magento2/ \
@@ -239,8 +246,8 @@ magento setup:install --base-url=http://127.0.0.1/magento2/ \
 --admin-firstname=Magento --admin-lastname=User --admin-email=user@example.com \
 --admin-user=admin --admin-password=admin123 --language=en_US \
 --currency=USD --timezone=America/Chicago --use-rewrites=1 \
---search-engine=elasticsearch7 --elasticsearch-host=es-host.example.com \
---elasticsearch-port=9200
+--search-engine=opensearch --opensearch-host=os-host.example.com \
+--opensearch-port=9200
 ```
 
 Meddelanden som liknar följande för att ange att installationen lyckades:
@@ -261,8 +268,8 @@ Du kan installera Adobe Commerce eller Magento Open Source utan att skapa admini
 magento setup:install --base-url=http://127.0.0.1/magento2/ \
 --db-host=localhost --db-name=magento --db-user=magento --db-password=magento \
 --language=en_US --currency=USD --timezone=America/Chicago --use-rewrites=1 \
---search-engine=elasticsearch7 --elasticsearch-host=es-host.example.com \
---elasticsearch-port=9200
+--search-engine=opensearch --opensearch-host=os-host.example.com \
+--opensearch-port=9200
 ```
 
 Meddelanden som följande om installationen lyckas:
@@ -303,7 +310,7 @@ I följande exempel installeras Adobe Commerce eller Magento Open Source med fö
 * Du kan använda prefixet för ökning av försäljningsorder `ORD$` (eftersom det innehåller ett specialtecken [`$`]måste värdet omges av citattecken)
 * Sessionsdata sparas i databasen
 * Använder serveromskrivning
-* Elasticsearch 7 är installerat på `es-host.example.com` och ansluts till port 9200
+* OpenSearch är installerat på `os-host.example.com` och ansluts till port 9200
 
 ```bash
 magento setup:install --base-url=http://127.0.0.1/magento2/ \
@@ -312,8 +319,8 @@ magento setup:install --base-url=http://127.0.0.1/magento2/ \
 --admin-user=admin --admin-password=admin123 --language=en_US \
 --currency=USD --timezone=America/Chicago --cleanup-database \
 --sales-order-increment-prefix="ORD$" --session-save=db --use-rewrites=1 \
---search-engine=elasticsearch7 --elasticsearch-host=es-host.example.com \
---elasticsearch-port=9200
+--search-engine=opensearch --opensearch-host=os-host.example.com \
+--opensearch-port=9200
 ```
 
 >[!NOTE]

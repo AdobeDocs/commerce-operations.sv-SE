@@ -1,9 +1,9 @@
 ---
 title: Konfigurera Nginx för sökmotorn
 description: Följ de här stegen för att konfigurera en sökmotor med Nginx-webbservern för lokala installationer av Adobe Commerce och Magento Open Source.
-source-git-commit: a0f2c6480edcda5540ca83835580d18f401de72f
+source-git-commit: d3cfd97450164d38fd340b538099739601573d64
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '636'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Stöd för OpenSearch har lagts till i 2.4.4. OpenSearch är en kompatibel gaffel för Elasticsearch. Alla instruktioner för att konfigurera Elasticsearch 7 gäller för OpenSearch. Se [Migrera Elasticsearch till OpenSearch](../../../upgrade/prepare/opensearch-migration.md) för mer information.
+>Stöd för OpenSearch lades till i 2.4.4. OpenSearch är en kompatibel gaffel för Elasticsearch. Se [Migrera Elasticsearch till OpenSearch](../../../upgrade/prepare/opensearch-migration.md) för mer information.
 
-I det här avsnittet beskrivs hur du konfigurerar index som *osäker* så att Adobe Commerce eller Magento Open Source kan använda en sökmotor som körs på den här servern. I det här avsnittet behandlas inte konfiguration av grundläggande HTTP-autentisering. som diskuteras i [Säker kommunikation med nginx](#secure-communication-with-nginx).
+I det här avsnittet beskrivs hur du konfigurerar index som *osäker* så att Adobe Commerce kan använda en sökmotor som körs på den här servern. I det här avsnittet behandlas inte konfiguration av grundläggande HTTP-autentisering. som diskuteras i [Säker kommunikation med nginx](#secure-communication-with-nginx).
 
 >[!NOTE]
 >
@@ -80,7 +80,7 @@ I det här avsnittet beskrivs hur du anger vilka som får åtkomst till [nginx](
 
 ## Säker kommunikation med nginx
 
-I det här avsnittet beskrivs hur du konfigurerar [Grundläggande HTTP-autentisering](https://nginx.org/en/docs/http/ngx_http_auth_basic_module.html) med din säkra proxy. Användning av TLS och HTTP Basic-autentisering tillsammans förhindrar alla från att kommunicera med Elasticsearch eller med din Adobe Commerce- eller Magento Open Source-server.
+I det här avsnittet beskrivs hur du konfigurerar [Grundläggande HTTP-autentisering](https://nginx.org/en/docs/http/ngx_http_auth_basic_module.html) med din säkra proxy. Användning av TLS och HTTP Basic-autentisering tillsammans förhindrar alla från att kommunicera med Elasticsearch eller OpenSearch eller med programservern.
 
 Eftersom ursprungligt stöd för HTTP Basic-autentisering rekommenderas det, till exempel, över [Sammanfattad autentisering](https://www.nginx.com/resources/wiki/modules/auth_digest/)som inte rekommenderas i produktionen.
 

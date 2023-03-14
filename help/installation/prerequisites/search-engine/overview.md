@@ -1,9 +1,9 @@
 ---
 title: Krav för sökmotor
 description: Följ de här stegen för att installera och konfigurera de sökmotorprogram som stöds för lokala installationer av Adobe Commerce och Magento Open Source.
-source-git-commit: 61638d373408d9a7c3c3a935eee61927acfac7a6
+source-git-commit: d3cfd97450164d38fd340b538099739601573d64
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '789'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,11 @@ Från och med Adobe Commerce och Magento Open Source 2.4 måste alla installatio
 
 >[!NOTE]
 >
->Stöd för OpenSearch har lagts till i 2.4.4. OpenSearch är en kompatibel gaffel för Elasticsearch. Alla instruktioner för att konfigurera Elasticsearch 7 gäller för OpenSearch. [Migrera från Elasticsearch till OpenSearch](../../../upgrade/prepare/opensearch-migration.md) ger vägledning om hur du går över till OpenSearch.
+>Stöd för OpenSearch lades till i 2.4.4. OpenSearch är en kompatibel gaffel för Elasticsearch. Alla instruktioner för att konfigurera Elasticsearch 7 gäller för OpenSearch. [Migrera från Elasticsearch till OpenSearch](../../../upgrade/prepare/opensearch-migration.md) ger vägledning om hur du går över till OpenSearch.
 
 ## Versioner som stöds
 
-Du måste installera och konfigurera antingen Elasticsearch eller OpenSearch innan du installerar Adobe Commerce eller Magento Open Source 2.4.4.
+Du måste installera och konfigurera antingen Elasticsearch eller OpenSearch innan du installerar Adobe Commerce 2.4.4 och senare.
 
 Se [Systemkrav](../../system-requirements.md) för specifik versionsinformation.
 
@@ -164,4 +164,4 @@ Elasticsearch kräver JDK 1.8 eller senare. Se [Installera Java Software Develop
 
 ## Ytterligare resurser
 
-Mer information finns i [Elasticsearch dokumentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html).
+Se [Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html) eller [OpenSearch](https://opensearch.org/docs/latest/) dokumentation.

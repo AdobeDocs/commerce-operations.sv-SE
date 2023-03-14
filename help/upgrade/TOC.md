@@ -1,9 +1,9 @@
 ---
 user-guide-title: Uppgraderingshandbok
-user-guide-description: Lär dig varför det är så viktigt att uppgradera din Adobe Commerce- eller Magento Open Source-app och hur du kan planera och genomföra en uppgradering.
-source-git-commit: f5fadcae219dce9d3aa19cb916d08a104377f22e
+user-guide-description: Lär dig varför det är så viktigt att uppgradera ditt Adobe Commerce-program och hur du kan planera och genomföra en uppgradering.
+source-git-commit: 6965e8213a7293f55c9b51e3e556715ccdad9daf
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '144'
 ht-degree: 0%
 
 ---
@@ -51,5 +51,5 @@ ht-degree: 0%
    - [Alternativ för underhållsläge vid uppgradering](troubleshooting/maintenance-mode-options.md)
 - Resurser {#resources}
    - [Rekommenderad läsning](resources/recommended-reading.md)
-   - [Modernisera din plattform med Adobe Commerce 2.4.4+](resources/recommended-upgrade-paths-2022.md)
+   - [Modernisera plattformen med Adobe Commerce](resources/recommended-upgrade-paths.md)
 - [Återgå till bruksanvisningar](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

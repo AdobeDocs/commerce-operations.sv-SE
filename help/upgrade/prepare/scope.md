@@ -1,9 +1,9 @@
 ---
 title: Förstå uppgraderingsomfång
 description: Lär dig mer om bakåtkompatibla ändringar i en release som kan påverka anpassade moduler eller tillägg från tredje part från Adobe Commerce eller Magento Open Source.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 682963fb66519097e54f14f2b84ed71528030054
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: '928'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Se följande avsnitt för att komma igång med [!DNL Upgrade Compatibility Tool]
 
 ### Hämta verktyget
 
-Hämta verktyget med Composer. Det kräver PHP 7.3 eller senare, minst 2 GB RAM, Node.js (om du kontrollerar GraphQL-kompatibilitet) och en Adobe Commerce-licens.
+Hämta verktyget med Composer. Det kräver PHP 7.3 eller senare, minst 2 GB RAM, Node.js (om du kontrollerar kompatibiliteten med GraphQL) och en Adobe Commerce-licens.
 
 ```bash
 composer create-project magento/upgrade-compatibility-tool uct --repository https://repo.magento.com
@@ -54,7 +54,7 @@ bin/uct upgrade:check <dir> -c <coming version>
 
 >[!NOTE]
 >
-> The `<dir>` -argument är den katalog där kodbasen lagras. The `-c` Alternativet jämför kodbasen med den angivna versionen (till exempel 2.4.4).
+> The `<dir>` -argument är den katalog där kodbasen lagras. The `-c` -alternativet jämför kodbasen med den angivna versionen.
 
 Så här identifierar du de mest kritiska problemen som ditt team måste ta itu med:
 

@@ -1,9 +1,9 @@
 ---
 title: Implementering av uppgradering
-description: Läs om de olika faserna i uppgraderingsimplementeringen för Adobe Commerce- och Magento Open Source-projekt.
-source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
+description: Läs om de olika faserna i uppgraderingsimplementeringen för Adobe Commerce-projekt.
+source-git-commit: 5e02f300bb0b5601c653fdea1dd5b85f4e18ed9c
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '824'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Analys är enligt andra ord den viktigaste delen i uppgraderingsprocessen. En v�
 
 Här följer några punkter som du kanske vill ta med i en grundlig analys:
 
-- **Omfattning av målrelease**—Dokumentation på [Commerce DevDocs](https://devdocs.magento.com) och information från webbinarier om partnerreleaser innehåller all information du behöver veta om måluppgraderingen.
+- **Omfattning av målrelease**—Dokumentation på [Experience League](../../release/release-notes/overview.md) och information från webbinarier om partnerreleaser innehåller all information du behöver veta om måluppgraderingen.
 
 - **[!DNL Upgrade Compatibility Tool]resultat**- Med det här verktyget kan du uppgradera snabbare och enklare genom att jämföra den aktuella koden med målversionens kod och ta fram en rapport över alla problem som behöver åtgärdas. Se [[!DNL Upgrade Compatibility Tool]](../upgrade-compatibility-tool/overview.md). Bland huvuduppgifterna i rapporten finns:
 
@@ -38,13 +38,13 @@ Här följer några punkter som du kanske vill ta med i en grundlig analys:
 
    | Tjänst | Aktuell version | Uppgradera till | Anteckningar |
    |-----------------|-----------------|------------|----------------------------------------------------------|
-   | PHP | 7.2.33 | 8.1 |  |
-   | Redis | 5.05 | 6.0 |  |
-   | [!DNL RabbitMQ] | 3.7 | 3.8 | Används inte just nu, men vi bör överväga att använda den |
-   | MariaDB (molnet) | 10.2.33 | 10.4 |  |
-   | MySQL | 8.0 |  |  |
-   | Disposition | 1.9.2 | 2.0 |  |
-   | Elasticsearch | 7.7 | 7.10 |  |
+   | PHP | 7.4 | 8.1 |  |
+   | Redis | 6.0 | 6.2 |  |
+   | [!DNL RabbitMQ] | 3.8 | 3.9 | Används inte just nu, men vi bör överväga att använda den |
+   | MariaDB (molnet) | 10.4 | 10.6 |  |
+   | MySQL | 8.0 | -/-/ |  |
+   | Disposition | 1.9.2 | 2.2 |  |
+   | Elasticsearch | 7.10 | 7.17 |  |
 
 - **Tillägg och tredjepartsmoduler**- Använd den här tabellmallen för att få en förståelse för status för tillägg och anpassningar, så att du kan fatta strategiska beslut och definiera åtgärder. Detta är en möjlighet att ersätta tillägg som kan vara inbyggda i Adobe Commerce eller Magento Open Source för att minimera komplexiteten i ditt projekt. Använd `bin/magento module:status` om du vill visa en lista med moduler och tillägg.
 
@@ -60,7 +60,7 @@ Här följer några punkter som du kanske vill ta med i en grundlig analys:
 
 - **Composer-paket och beroenden i Composer.json som kräver en uppdatering.**
 
-Dessutom kan partners delta i [Adobe Commerce Beta Program](https://devdocs.magento.com/release/beta-program.html) och använda förhandsversioner för att få tidig åtkomst till koden för en kommande release. Genom att få tillgång till koden i ett tidigt skede kan utvecklarna förbereda sig för att slutföra uppgraderingen till datumet General Availability (GA). Betakoden släpps vanligtvis fem veckor före GA-datumet och förhandsversioner släpps två veckor i förväg. För version 2.4.4 började Adobe lansera betakod fem månader före GA-datumet (8 mars 2022), så partners kan börja förbereda sig för uppgraderingen nu senast [registrera sig för programmet](https://community.magento.com/t5/Magento-DevBlog/BREAKING-NEWS-2-4-4-beta-releases-are-coming-soon/ba-p/484310).
+Dessutom kan partners delta i [Adobe Commerce betaversioner](../../release/beta.md) och använda förhandsversioner för att få tidig åtkomst till koden för en kommande release. Genom att få tillgång till koden i ett tidigt skede kan utvecklarna förbereda sig för att slutföra uppgraderingen till datumet General Availability (GA). Betakoden släpps vanligtvis fem veckor före GA-datumet och förhandsversioner släpps två veckor i förväg.
 
 ## Utveckling och kvalitetssäkring
 
@@ -84,4 +84,4 @@ Till sist kan du diskutera med teamet för att ta reda på vad de lärt sig och 
 
 När webbplatsen har startats bör du kontrollera dina analysdata, Google Search Console och andra resurser så att du kan vara säker på att inga oväntade problem uppstår och att allt fungerar som förväntat.
 
-Det är alltid en bra idé att hålla ett öga på prestanda med väldesignade övervakningsverktyg. Det finns många verktyg och verktyg för att övervaka webbplatsens prestanda, så se till att du väljer ett som passar bra ihop med din organisation. Vi rekommenderar att Adobe Commerce-kunder som använder vårt molninfrastrukturhanteringssystem drar nytta av tjänster som [New Relic](https://devdocs.magento.com/cloud/project/new-relic.html) för att övervaka webbplatsens prestanda.
+Det är alltid en bra idé att hålla ett öga på prestanda med väldesignade övervakningsverktyg. Det finns många verktyg och verktyg för att övervaka webbplatsens prestanda, så se till att du väljer ett som passar bra ihop med din organisation. Vi rekommenderar att Adobe Commerce-kunder som använder vårt molninfrastrukturhanteringssystem drar nytta av tjänster som [New Relic](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic.html) för att övervaka webbplatsens prestanda.

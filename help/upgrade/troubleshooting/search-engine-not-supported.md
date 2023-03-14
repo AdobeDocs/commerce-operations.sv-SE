@@ -1,9 +1,9 @@
 ---
 title: Aktuell sökmotor stöds inte
 description: Felsök uppgraderingen av Adobe Commerce eller Magento Open Source efter att ha upptäckt ett fel om en sökmotor som inte stöds.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 4c18f00e0b92e49924676274c4ed462a175a7e4b
 workflow-type: tm+mt
-source-wordcount: '424'
+source-wordcount: '416'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Använd följande kommando för att kontrollera den aktuella sökmotorn:
 bin/magento config:show catalog/search/engine
 ```
 
-Felet inträffar om det returnerade värdet är `mysql` eller `elasticsearch`.
+Felet inträffar om det returnerade värdet är `mysql`, `elasticsearch`, eller `elasticsearch6`.
 
 >[!WARNING]
 >
@@ -44,7 +44,7 @@ Felet inträffar om det returnerade värdet är `mysql` eller `elasticsearch`.
 >composer require-commerce magento/product-community-edition=<version>
 >```
 >
->Plats `<version>` är den version av Magento som du körde **före** uppgraderingen. Exempel, `2.3.5`.
+>Plats `<version>` är den version av Magento som du körde **före** uppgraderingen. Till exempel: `2.3.5`.
 
 Följ riktlinjerna som beskrivs i följande avsnitt för att återställa efter ett inkonsekvent tillstånd.
 
@@ -54,14 +54,14 @@ Före 2.4 var MySQL standardkatalogsökmotorn, men MySQL stöds inte längre i d
 
 Använd följande resurser för att hjälpa dig igenom den här processen:
 
-- [Installera och konfigurera Elasticsearch](../../configuration/search/overview-search.md)
-- [Installerar Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)
-- Konfigurera Elasticsearch för att arbeta med [nginx](../../installation/prerequisites/search-engine/configure-nginx.md) eller [Apache](../../installation/prerequisites/search-engine/configure-apache.md)
-- [Konfigurera Elasticsearch](../../configuration/search/configure-search-engine.md)
+- [Installera och konfigurera sökmotorn](../../configuration/search/overview-search.md)
+- [Sökmotorkonfiguration](../../configuration/search/configure-search-engine.md)
 
 När du har konfigurerat sökmotorn och indexerat om är du redo att uppgradera till 2.4.
 
 ## Om sökmotorn är `elasticsearch`
+
+Elasticsearch 6 och tidigare stöds inte längre.
 
 Värdet för `elasticsearch` visar att din äldre version av Adobe Commerce eller Magento Open Source är konfigurerad att använda Elasticsearch 2.x. Den här versionen av Elasticsearch stöds inte längre.
 

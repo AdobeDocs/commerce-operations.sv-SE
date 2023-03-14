@@ -1,9 +1,9 @@
 ---
 title: Konfigurera Apache för sökmotorn
 description: Följ de här stegen för att konfigurera en sökmotor med webbservern Apache för lokala installationer av Adobe Commerce och Magento Open Source.
-source-git-commit: f6f438b17478505536351fa20a051d355f5b157a
+source-git-commit: d3cfd97450164d38fd340b538099739601573d64
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '651'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Stöd för OpenSearch har lagts till i 2.4.4. OpenSearch är en kompatibel gaffel för Elasticsearch. Alla instruktioner för att konfigurera Elasticsearch 7 gäller för OpenSearch. Se [Migrera Elasticsearch till OpenSearch](../../../upgrade/prepare/opensearch-migration.md) för mer information.
+>Stöd för OpenSearch lades till i 2.4.4. OpenSearch är en kompatibel gaffel för Elasticsearch. Se [Migrera Elasticsearch till OpenSearch](../../../upgrade/prepare/opensearch-migration.md) för mer information.
 
-I det här avsnittet beskrivs hur du konfigurerar Apache som *osäker* så att Adobe Commerce eller Magento Open Source kan använda en sökmotor som körs på den här servern. I det här avsnittet behandlas inte konfiguration av grundläggande HTTP-autentisering. som diskuteras i [Säker kommunikation med Apache](#secure-communication-with-apache).
+I det här avsnittet beskrivs hur du konfigurerar Apache som *osäker* så att Adobe Commerce kan använda en sökmotor som körs på den här servern. I det här avsnittet behandlas inte konfiguration av grundläggande HTTP-autentisering. som diskuteras i [Säker kommunikation med Apache](#secure-communication-with-apache).
 
 >[!NOTE]
 >
@@ -174,7 +174,7 @@ htpasswd /usr/local/apache/password/.htpasswd <username>
 
 ### Säker kommunikation med Apache
 
-I det här avsnittet beskrivs hur du konfigurerar [Grundläggande HTTP-autentisering](https://httpd.apache.org/docs/2.2/howto/auth.html). Användning av TLS och HTTP Basic-autentisering tillsammans förhindrar alla från att kommunicera med Elasticsearch eller med programservern.
+I det här avsnittet beskrivs hur du konfigurerar [Grundläggande HTTP-autentisering](https://httpd.apache.org/docs/2.2/howto/auth.html). Användning av TLS och HTTP Basic-autentisering tillsammans förhindrar alla från att kommunicera med Elasticsearch eller OpenSearch eller med programservern.
 
 I det här avsnittet beskrivs hur du anger vilka som får åtkomst till Apache-servern.
 
@@ -188,7 +188,7 @@ I det här avsnittet beskrivs hur du anger vilka som får åtkomst till Apache-s
        Allow from all
    
        AuthType Basic
-       AuthName "Elastic Server"
+       AuthName "Elasticsearch Server" # or OpenSearch Server
        AuthBasicProvider file
        AuthUserFile /usr/local/apache/password/.htpasswd_elasticsearch
        Require valid-user

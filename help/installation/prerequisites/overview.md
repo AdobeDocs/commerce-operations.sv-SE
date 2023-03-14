@@ -1,10 +1,10 @@
 ---
 title: Lokala installationskrav
 description: Läs mer om vilka programvaruberoenden som krävs för lokala installationer av Adobe Commerce och Magento Open Source.
-source-git-commit: 8f05fb6fc212c2b3fda80457bbf27ecf16fb1194
+source-git-commit: 4c18f00e0b92e49924676274c4ed462a175a7e4b
 workflow-type: tm+mt
-source-wordcount: '325'
-ht-degree: 1%
+source-wordcount: '334'
+ht-degree: 0%
 
 ---
 
@@ -74,7 +74,7 @@ Se [systemkrav](../system-requirements.md) för de versioner av PHP som stöds o
 mysql -u <database root user or database owner name> -p
 ```
 
-Exempel:
+Till exempel:
 
 ```bash
 mysql -u magento -p
@@ -100,13 +100,21 @@ Retur `exit` på `mysql>` fråga om du vill avsluta.
 
 Information om hur du installerar eller uppgraderar MySQL finns i [MySQL](database/mysql.md).
 
-### Elasticsearch eller OpenSearch
+### Sökmotor
+
+Så här verifierar du OpenSearch-installationen:
+
+```bash
+curl -XGET '<opensearch-hostname>:<opensearch-port>'
+```
+
+Så här verifierar du installationen av Elasticsearch:
 
 ```bash
 curl -XGET '<elasticsearch-hostname>:<elasticsearch-port>'
 ```
 
-Exempel:
+Till exempel:
 
 ```bash
 curl -XGET 'localhost:9200'

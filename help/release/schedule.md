@@ -1,9 +1,9 @@
 ---
 title: Frigör schema
 description: Lär dig när specifika versioner av Adobe Commerce är schemalagda för betaversion, förhandsversioner och allmän tillgänglighet.
-source-git-commit: 18338316c78e9c2ef87614044e65517b1f11b16d
+source-git-commit: 5e02f300bb0b5601c653fdea1dd5b85f4e18ed9c
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '500'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ I följande tabell visas datumen för schemalagda releaser (datum kan ändras):
 | Augusti 2023 Feature + Security patch release | 2.4.6-p2<br>2.4.5-p4<br>2.4.4-p5 | 25 juli 2023 | 8 augusti 2023 |
 | Oktober 2023 Funktion + betatestning + säkerhetspatchrelease | 2.4.7-beta2<br>2.4.6-p3<br>2.4.5-p5<br>2.4.4-p6 | 26 september 2023 | 10 oktober 2023 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 <sup>\-\- Anger objekt som inte är tillämpliga i den här versionen.</sup><br>
 <sup>1 betaversion planerad till januari 2023</sup><br>
@@ -39,7 +39,7 @@ I följande tabell visas datumen för schemalagda releaser (datum kan ändras):
 
 Förhandsversionen är den allmänna tillgänglighetskoden som är tillgänglig för Adobe Commerce handlare och alla partners två veckor före den allmänna tillgängligheten. Det gör att koden kan driftsättas snabbare än den allmänna tillgängligheten.
 
-Mer information finns i [Betaprogram](beta-program.md).
+Mer information finns i [betaversioner](beta.md).
 
 ## Versionstyper
 

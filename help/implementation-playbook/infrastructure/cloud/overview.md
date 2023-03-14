@@ -2,9 +2,9 @@
 title: Översikt över molninfrastruktur
 description: Läs om Adobe Commerce i molninfrastruktur.
 exl-id: 94cf1505-0853-4e01-ba55-befc1117fbdb
-source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
+source-git-commit: ea912c48176fb060e48654d05ae6b533436a2432
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '537'
 ht-degree: 0%
 
 ---
@@ -37,18 +37,18 @@ Andra fördelar med Adobe Commerce är:
 
 ## Tredjepartstjänster
 
-Låt oss också titta på programvaran som gör Adobe Commerce fördelar till verklighet.
+Låt oss också titta på programmet som gör Adobe Commerce förmåner till verklighet.
 
 ![Bild som visar Adobe Commerce i molninfrastrukturens teknikstack](../../../assets/playbooks/cloud-tech-stack.svg)
 
 - Snabb CDN: När kunderna kommer in på er webbplats och i era butiker går förfrågningarna igenom snabbt för att läsa in cachelagrade sidor snabbare. Snabbt erbjuder WAF även DDoS-skyddstjänster.
 
-- Med New Relic får du en komplett bild av dina program och din operativmiljö. Ni kan kombinera viktiga mätvärden från mobil- och webbläsarapplikationer med stödtjänster, datalager och värdar så att ni kan optimera prestandan på ett enhetligt sätt och se till att alla initiativ blir framgångsrika.
+- New Relic ger dig en komplett bild av dina program och din operativmiljö. Ni kan kombinera viktiga mätvärden från mobil- och webbläsarapplikationer med stödtjänster, datalager och värdar så att ni kan optimera prestandan på ett enhetligt sätt och se till att alla initiativ blir framgångsrika.
 
 - Composer hanterar beroenden och uppgraderingar i Adobe Commerce och ger kontext om de inkluderade paketen, vad paketen gör och hur de passar ihop.
 
 - Git är din kod i databaser. Det ger lokal förgrening, praktiska mellanlagringsplatser och flera arbetsflöden med automatisk konstruktion och driftsättning för snabb utveckling och kontinuerlig driftsättning.
 
-- Platform-as-a-Service (PaaS) tillhandahåller en förprovisionerad infrastruktur som inkluderar PHP, MySQL, Redis, [!DNL RabbitMQ]och Elasticsearch.
+- Platform-as-a-Service (PaaS) tillhandahåller en förprovisionerad infrastruktur som inkluderar PHP, MySQL, Redis, [!DNL RabbitMQ]och OpenSearch eller Elasticsearch.
 
 - AWS eller Azure:s molnhosting driver den underliggande infrastruktur-som-en-Service (IaaS), som erbjuder en skalbar och säker miljö för onlineförsäljning och -detaljhandel.

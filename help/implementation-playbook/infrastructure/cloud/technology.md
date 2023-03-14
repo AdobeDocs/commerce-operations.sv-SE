@@ -2,9 +2,9 @@
 title: Cloud Infrastructure Technologies
 description: Ta en närmare titt på vår samling av teknik för Adobe Commerce i molninfrastruktur.
 exl-id: de1b3a64-d32b-455f-bdb0-ad883dedd6d4
-source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
+source-git-commit: 683ce0a72aca0319ade2e4ccfd7a8e541a228156
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '229'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,8 @@ Som vi har nämnt utnyttjar Adobe Commerce ett antal programlösningar för att 
 - **Redis**—En server per VM med endast en aktiv och de andra två som repliker.
 
 - **Elasticsearch**—Sök efter Adobe Commerce version 2.2.x och senare.
+
+- **OpenSearch**—Sök efter Adobe Commerce version 2.4.6 och senare.
 
 - **Galera**—Databaskluster med en MariaDB MySQL-databas per nod med en inställning för automatisk ökning på tre för unika ID:n i alla databaser.
 

@@ -2,9 +2,9 @@
 title: Plattformsverktyg
 description: Välj rekommenderade plattformsverktyg för implementeringen av Adobe Commerce.
 exl-id: 3fc164f9-a0fc-46e7-a54e-08ce101ccae7
-source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
+source-git-commit: ea912c48176fb060e48654d05ae6b533436a2432
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '732'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ Vi rekommenderar att du använder Varnish som helsidesserver för din butik. Ado
 
 ## Söktjänster
 
-För Adobe Commerce version 2.4 och senare måste alla installationer vara konfigurerade att använda Elasticsearch som katalogsökningslösning. Elasticsearch erbjuder snabba och avancerade sökningar på produkter i katalogen. Elasticsearch är valfritt för versioner före 2.4, men rekommenderas.
+För Adobe Commerce version 2.4 och senare måste alla installationer vara konfigurerade att använda Elasticsearch eller OpenSearch som katalogsökningslösning. Elasticsearch erbjuder snabba och avancerade sökningar på produkter i katalogen. Elasticsearch är valfritt för versioner före 2.4, men rekommenderas.
 
 ## Meddelandekötjänster
 
@@ -67,6 +67,6 @@ Meddelandeköer är en asynkron kommunikationsmekanism där avsändaren och mott
 
 The [Adobe Commerce Security Scan Tool](https://docs.magento.com/user-guide/magento/security-scan.html) gör att du regelbundet kan övervaka dina butikers webbplatser och få uppdateringar för kända säkerhetsrisker, skadlig kod och inaktuell programvara. Vanligtvis börjar du använda det här verktyget när du börjar testa användargodkännande (UAT). Förutom verktyget Adobe Commerce Security Scan, som är kostnadsfritt och tillgängligt för alla implementeringar och versioner av Adobe Commerce, finns det andra alternativ som kan användas under CI/CD-processen och före varje release.
 
-SonarQube är en plattform för kvalitetshantering med öppen källkod som är utformad för att analysera och mäta kodens tekniska kvalitet. SonarQube ger inte bara en fullständig rapport över kodfel, syntaxfel och sårbarheter, utan också förslag och exempel på hur du kan åtgärda koden. SonarQube är perfekt att använda i en CI/CD-miljö som ett verktyg som kan analysera koden innan den driftsätts.
+SonarQube är en plattform för kvalitetshantering med öppen källkod som är utformad för att analysera och mäta kodens tekniska kvalitet. SonarQube ger inte bara en fullständig rapport över kodfel, syntaxfel och sårbarheter, utan också förslag och exempel på hur du kan åtgärda koden. SonarQube är perfekt att använda i en CI/CD-miljö som ett verktyg som kan analysera koden innan den distribueras.
 
 Zed Attack Proxy (ZAP) är ett kostnadsfritt säkerhetstestverktyg som används av tusentals testare runt om i världen. ZAP har utvecklats av OWASP och är ett av de verktyg som rekommenderas för manuell säkerhetstestning.

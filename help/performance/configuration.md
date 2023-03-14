@@ -1,9 +1,9 @@
 ---
 title: Bästa praxis för konfiguration
 description: Optimera svarstiden för driftsättningen av Adobe Commerce eller Magento Open Source med hjälp av dessa metodtips.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 5b455cb1285ce764a0517008fb8b692f3899066d
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '1348'
 ht-degree: 0%
 
 ---
@@ -21,10 +21,9 @@ Alla asynkrona åtgärder i [!DNL Commerce] utförs med Linux `cron` -kommando. 
 
 En indexerare kan köras i **[!UICONTROL Update on Save]** eller **[!UICONTROL Update on Schedule]** läge. The **[!UICONTROL Update on Save]** indexeras omedelbart när katalogen eller andra data ändras. I det här läget används låg intensitet för uppdaterings- och bläddringsåtgärder i din butik. Det kan leda till betydande förseningar och otillgänglighet av data vid höga belastningar. Vi rekommenderar att du använder **Uppdatera enligt schema** i produktionen eftersom information om datauppdateringar lagras och indexeras av delar i bakgrunden via ett specifikt kroniskt jobb. Du kan ändra läge för varje [!DNL Commerce] indexeraren separat på  **[!UICONTROL System]** > [!UICONTROL Tools] > **[!UICONTROL Index Management]** konfigurationssida.
 
-Omindexering av MariaDB 10.4 tar längre tid jämfört med andra MariaDB eller [!DNL MySQL] versioner. Som en tillfällig lösning föreslår vi att du ändrar standardkonfigurationen för MariaDB och anger följande parametrar:
-
-* [`optimizer_switch='rowid_filter=off'`](https://mariadb.com/kb/en/optimizer-switch/)
-* [`optimizer_use_condition_selectivity = 1`](https://mariadb.com/products/skysql/docs/reference/es/system-variables/optimizer_use_condition_selectivity/)
+>[!TIP]
+>
+>Omindexering av MariaDB 10.4 och 10.6 tar längre tid jämfört med andra MariaDB eller [!DNL MySQL] versioner. Vi föreslår att du ändrar standardkonfigurationsinställningen för MariaDB, som beskrivs i [installationskrav](../installation/prerequisites/database/mysql.md).
 
 ## Cacheminnen
 
@@ -49,6 +48,10 @@ I tider med intensiv försäljning [!DNL Commerce] kan skjuta upp lageruppdateri
 >[!INFO]
 >
 >Det här alternativet är bara tillgängligt om **[!UICONTROL Backorder with any mode]** är aktiverat.
+
+>[!INFO]
+>
+>Det här alternativet fungerar även med [Asynkron orderplacering](high-throughput-order-processing.md#asynchronous-order-placement) i kombination med [Inventory management](https://experienceleague.adobe.com/docs/commerce-admin/inventory/guide-overview.html).
 
 ## Optimeringsinställningar på klientsidan
 
@@ -80,6 +83,18 @@ När du aktiverar **[!UICONTROL Enable [!DNL JavaScript] Bundling]** kan du till
 * Att aktivera HTTP2-protokollet kan vara ett bra alternativ till att använda JS-paketering. Protokollet ger i stort sett samma fördelar.
 * Vi rekommenderar inte att du använder föråldrade inställningar som att sammanfoga JS- och CSS-filer, eftersom de bara är utformade för synkront inläst JS i sidans HEAD-avsnitt. Om du använder den här tekniken kan paketeringen och requireJS-logiken fungera felaktigt.
 
+## Validering av kundsegment
+
+Handlare som har ett stort antal [kundsegment](https://docs.magento.com/user-guide/marketing/customer-segments.html) kan försämra prestandan avsevärt med kundens aktiviteter, som kundinloggning och tillägg av produkter i kundvagnen.
+
+Kundåtgärder utlöser en valideringsprocess för kundsegment, vilket kan leda till sämre prestanda. Som standard validerar Adobe Commerce varje segment i realtid för att definiera vilka kundsegment som matchas och vilka som inte gör det.
+
+För att undvika prestandaförsämringar kan du ange **[!UICONTROL Real-time Check if Customer is Matched by Segment]** systemkonfigurationsalternativ till **Nej** för att validera kundsegment med en enda kombinerad SQL-villkorsfråga.
+
+Om du vill aktivera optimeringen går du till **[!UICONTROL Stores]> [!UICONTROL Settings] > [!UICONTROL Configuration] > [!UICONTROL Customers] > [!UICONTROL Customer Configuration] > [!UICONTROL Customer Segments] >[!UICONTROL Real-time Check if Customer is Matched by Segment]**.
+
+Den här inställningen förbättrar prestandan vid validering av kundsegment om det finns många kundsegment i systemet. Det fungerar dock inte med [delad databas](../configuration/storage/multi-master.md) implementeringar eller när det inte finns några registrerade kunder.
+
 ## Databasunderhållsschema {#database}
 
 Vi rekommenderar att du gör regelbundna databassäkerhetskopieringar för instanserna Staging och Production. På grund av I/O-intensiva säkerhetskopieringsåtgärder kan det uppstå långsammare säkerhetskopiering och potentiella problem. Att köra databasprocesser för flera miljöer samtidigt kan eventuellt gå långsammare på grund av att det finns invändningar mot tillgängliga resurser.
@@ -87,3 +102,24 @@ Vi rekommenderar att du gör regelbundna databassäkerhetskopieringar för insta
 För bättre prestanda bör du schemalägga säkerhetskopieringar så att de körs i följd, en åt gången, vid låg belastning. Med den här metoden undviker du I/O-problem och förkortar tiden för slutförande, särskilt för mindre instanser, större databaser och så vidare.
 
 Vi rekommenderar till exempel att du schemalägger en säkerhetskopia av din produktionsdatabas som följs av mellanlagringsdatabasen när dina butiker stöter på lägre besök.
+
+## Begränsa antalet produkter i rutnätet
+
+För att förbättra prestanda för stora kataloger rekommenderar vi att du begränsar antalet produkter i rutnätet med **[!UICONTROL Stores]> [!UICONTROL Settings] > [!UICONTROL Configuration] > [!UICONTROL Advanced] > [!UICONTROL Admin] > [!UICONTROL Admin Grids] >[!UICONTROL Limit Number of Products in Grid]** systemkonfigurationsinställning.
+
+Den här systemkonfigurationsinställningen är inaktiverad som standard. Genom att aktivera det kan du begränsa antalet produkter i rutnätet till ett visst värde. **[!UICONTROL Records Limit]** är en anpassningsbar inställning som har standardvärdet `20000`.
+När **[!UICONTROL Limit Number of Products in Grid]** inställningen är aktiverad och antalet produkter i rutnätet är större än postgränsen, så returneras den begränsade mängden poster. När gränsen nås döljs de totala antalet poster som hittats, antalet valda poster och sidnumreringselementen från rutnätets rubrik.
+
+När det totala antalet produkter i rutnätet är begränsat påverkas inte massåtgärder i produktrutnätet. Det påverkar bara presentationsskiktet för produktrutnät. Det finns t.ex. ett begränsat antal `20000` produkter i rutnätet klickar användaren på **[!UICONTROL Select All]**, markerar **[!UICONTROL Update attributes]** massåtgärd och uppdaterar vissa attribut. Därför uppdateras alla produkter, inte den begränsade samlingen av `20000` poster.
+
+Begränsningen för produktstödraster påverkar bara produktsamlingar som används av gränssnittskomponenter. Därför påverkas inte alla produktrutnät av den här begränsningen. Endast de som använder `Magento\Catalog\Ui\DataProvider\Product\ProductCollection`.
+Du kan endast begränsa produktstödrastersamlingar på följande sidor:
+
+* Katalogproduktrutnät
+* Lägg till relaterat/merförsäljning/korsförsäljning av produkter
+* Lägg till produkter i programpaketet
+* Lägg till produkter i gruppprodukt
+* Admin - Skapa ordersida
+
+Om du inte vill att produktrutnätet ska begränsas bör du använda filter mer exakt så att resultatsamlingen har färre objekt än **[!UICONTROL Records Limit]**.
+

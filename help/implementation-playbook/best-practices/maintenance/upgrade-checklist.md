@@ -4,7 +4,7 @@ description: Lär dig hur du skapar och använder en checklista för uppgraderin
 role: Leader
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: 644970b350c7591896f7c00d4c94661c76495c73
+source-git-commit: 5e02f300bb0b5601c653fdea1dd5b85f4e18ed9c
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 0%
@@ -61,7 +61,7 @@ Använd checklistan under årliga och kvartalsvisa samtal med ert e-handelsteam.
 
 ▢ Tidig tillgång
 
-- Partnern deltar i [Beta](../../../release/beta-program.md)
+- Partnern deltar i [Beta](../../../release/beta.md)
 - Granskning av betaversionsinformation.
 
 ▢ Godkänn budget, tidslinje, omfattning.

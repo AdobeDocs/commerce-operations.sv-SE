@@ -1,9 +1,9 @@
 ---
 title: Förutsättningar
-description: Förbered ditt Adobe Commerce- eller Magento Open Source-projekt för en uppgradering genom att slutföra dessa nödvändiga steg.
-source-git-commit: 6782498985d4fd6540b0481e2567499f74d04d97
+description: Förbered ditt Adobe Commerce-projekt för en uppgradering genom att slutföra dessa nödvändiga steg.
+source-git-commit: 45c544a5ec9a17ad631fce55e322e2949ecdd3c2
 workflow-type: tm+mt
-source-wordcount: '1401'
+source-wordcount: '1639'
 ht-degree: 0%
 
 ---
@@ -11,23 +11,23 @@ ht-degree: 0%
 
 # Krav för fullständig uppgradering
 
-Det är viktigt att förstå vad som krävs för att köra Adobe Commerce eller Magento Open Source. Du måste först granska [systemkrav](../../installation/system-requirements.md) för den version du tänker uppgradera till.
+Det är viktigt att förstå vad som krävs för att köra Adobe Commerce. Du måste först granska [systemkrav](../../installation/system-requirements.md) för den version du tänker uppgradera till.
 
 När du har granskat systemkraven måste du uppfylla följande krav innan du uppgraderar systemet:
 
-- Uppdatera all programvara
-- Kontrollera att en sökmotor som stöds är installerad
-- Konvertera databastabellformat
-- Ange gräns för öppna filer
-- Verifiera att cron-jobb körs
-- Ange `DATA_CONVERTER_BATCH_SIZE`
-- Verifiera behörigheter i filsystemet
-- Ange `pub/` katalogrot
-- Installera plugin-programmet för Composer-uppdatering
+* Uppdatera all programvara
+* Kontrollera att en sökmotor som stöds är installerad
+* Konvertera databastabellformat
+* Ange gräns för öppna filer
+* Verifiera att cron-jobb körs
+* Ange `DATA_CONVERTER_BATCH_SIZE`
+* Verifiera behörigheter i filsystemet
+* Ange `pub/` katalogrot
+* Installera plugin-programmet för Composer-uppdatering
 
 ## Uppdatera all programvara
 
-The [systemkrav](../../installation/system-requirements.md) beskriv exakt vilka versioner av tredjepartsprogram som har testats med Adobe Commerce och Magento Open Source.
+The [systemkrav](../../installation/system-requirements.md) beskriv exakt vilka versioner av tredjepartsprogram som har testats med Adobe Commerce-releaser.
 
 Se till att du har uppdaterat alla systemkrav och beroenden i din miljö. Se PHP [7.4](https://www.php.net/manual/en/migration74.php), PHP [8.0](https://www.php.net/manual/en/migration80.php), PHP [8.1](https://www.php.net/manual/en/migration81.php)och [obligatoriska PHP-inställningar](../../installation/prerequisites/php-settings.md#php-settings).
 
@@ -37,7 +37,7 @@ Se till att du har uppdaterat alla systemkrav och beroenden i din miljö. Se PHP
 
 ## Kontrollera att en sökmotor som stöds är installerad
 
-Adobe Commerce och Magento Open Source kräver att Elasticsearch eller OpenSearch är installerade för att programmet ska kunna användas.
+Adobe Commerce kräver att Elasticsearch eller OpenSearch är installerade för att programmet ska kunna användas.
 
 **Om du uppgraderar från 2.3.x till 2.4** måste du kontrollera om du använder MySQL, Elasticsearch eller ett tillägg från tredje part som katalogsökmotor i din 2.3.x-instans. Resultatet avgör vad du måste göra _före_ uppgradering till 2.4.
 
@@ -45,9 +45,9 @@ Adobe Commerce och Magento Open Source kräver att Elasticsearch eller OpenSearc
 
 Du kan använda kommandoraden eller Admin för att bestämma katalogsökmotorn:
 
-- Ange `bin/magento config:show catalog/search/engine` -kommando. Kommandot returnerar värdet `mysql`, `elasticsearch` (vilket anger att Elasticsearch 2 är konfigurerad), `elasticsearch5`, `elasticsearch6`, `elasticsearch7`, eller ett anpassat värde, som anger att du har installerat en sökmotor från tredje part. Värdet för `elasticsearch7` anger att antingen Elasticsearch 7 eller OpenSearch är installerat.
+* Ange `bin/magento config:show catalog/search/engine` -kommando. Kommandot returnerar värdet `mysql`, `elasticsearch` (vilket anger att Elasticsearch 2 är konfigurerad), `elasticsearch5`, `elasticsearch6`, `elasticsearch7`, eller ett anpassat värde, som anger att du har installerat en sökmotor från tredje part. För tidigare versioner än 2.4.6 använder du `elasticsearch7` för Elasticsearch 7- eller OpenSearch-motorn. För version 2.4.6 och senare använder du `opensearch` för OpenSearch-motorn.
 
-- Kontrollera värdet för **[!UICONTROL Stores]** > [!UICONTROL Settings] > **[!UICONTROL Configuration]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog Search]** > **[!UICONTROL Search Engine]** fält.
+* Kontrollera värdet för **[!UICONTROL Stores]** > [!UICONTROL Settings] > **[!UICONTROL Configuration]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog Search]** > **[!UICONTROL Search Engine]** fält.
 
 I följande avsnitt beskrivs vilka åtgärder du måste vidta innan du uppgraderar till 2.4.0.
 
@@ -55,40 +55,120 @@ I följande avsnitt beskrivs vilka åtgärder du måste vidta innan du uppgrader
 
 Från och med 2.4 är MySQL inte längre en katalogsökmotor som stöds. Du måste installera och konfigurera Elasticsearch eller OpenSearch innan du uppgraderar. Använd följande resurser för att hjälpa dig igenom den här processen:
 
-- [Installera och konfigurera Elasticsearch](../../configuration/search/overview-search.md)
-- [Installerar Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)
-- Konfigurera [nginx](../../installation/prerequisites/search-engine/configure-nginx.md) eller [Apache](../../installation/prerequisites/search-engine/configure-apache.md) för att arbeta med din sökmotor
-- [Konfigurera Commerce att använda Elasticsearch](../../configuration/search/configure-search-engine.md) och indexera om
+* [Installera och konfigurera Elasticsearch](../../configuration/search/overview-search.md)
+* [Installerar Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)
+* Konfigurera [nginx](../../installation/prerequisites/search-engine/configure-nginx.md) eller [Apache](../../installation/prerequisites/search-engine/configure-apache.md) för att arbeta med din sökmotor
+* [Konfigurera Commerce att använda Elasticsearch](../../configuration/search/configure-search-engine.md) och indexera om
 
 Vissa katalogsökmotorer från tredje part körs ovanpå Adobe Commerce sökmotor. Kontakta leverantören för att avgöra om du måste uppdatera tillägget.
 
-### Elasticsearch
+#### MariaDB
 
-Du måste installera och konfigurera Elasticsearch 7.6 eller senare eller OpenSearch 1.2 innan du uppgraderar till 2.4.0. Adobe stöder inte längre Elasticsearch 2.x, 5.x och 6.x.
+{{$include /help/_includes/maria-db-config.md}}
+
+### Sökmotor
+
+Du måste installera och konfigurera Elasticsearch 7.6 eller senare eller OpenSearch 1.2 innan du uppgraderar till 2.4.0. Adobe stöder inte längre Elasticsearch 2.x, 5.x och 6.x. [Sökmotorkonfiguration](../../configuration/search/configure-search-engine.md) i _Konfigurationshandbok_ beskriver de uppgifter du måste utföra efter att ha uppgraderat Elasticsearch till en version som stöds.
 
 Se [Uppgraderar Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html) om du vill ha fullständiga anvisningar om hur du säkerhetskopierar data, upptäcker potentiella migreringsproblem och testar uppgraderingar innan du distribuerar till produktionen. Beroende på vilken version av Elasticsearch du använder behöver du kanske inte starta om hela klustret.
 
 Elasticsearch kräver Java Development Kit (JDK) 1.8 eller senare. Se [Installera Java Software Development Kit (JDK)](../../installation/prerequisites/search-engine/overview.md#install-the-java-software-development-kit-jdk) för att kontrollera vilken version av JDK som är installerad.
 
-[Konfigurera Elasticsearch](../../configuration/search/configure-search-engine.md) beskriver de uppgifter du måste utföra efter att ha uppdaterat Elasticsearch 2 till en version som stöds.
+#### OpenSearch
 
-### OpenSearch
+OpenSearch är en öppen källkodsgaffel i Elasticsearch 7.10.2 efter Elasticsearch licenschange. I följande versioner av Adobe Commerce finns stöd för OpenSearch:
 
-OpenSearch är en öppen källkodsgaffel i Elasticsearch 7.10.2 efter Elasticsearch licenschange. I följande versioner av Adobe Commerce och Magento Open Source finns stöd för OpenSearch:
+* 2.4.6 (OpenSearch har en separat modul och inställningar)
+* 2.4.5
+* 2.4.4
+* 2.4.3-p2
+* 2.3.7-p3
 
-- 2.4.4
-- 2.4.3-p2
-- 2.3.7-p3
-
-Du kan [migrera från Elasticsearch till OpenSearch](opensearch-migration.md) endast om du uppgraderar till en version av Adobe Commerce eller Magento Open Source som listas ovan (eller senare).
+Du kan [migrera från Elasticsearch till OpenSearch](opensearch-migration.md) endast om du uppgraderar till en version av Adobe Commerce som listas ovan (eller senare).
 
 OpenSearch kräver JDK 1.8 eller senare. Se [Installera Java Software Development Kit (JDK)](../../installation/prerequisites/search-engine/overview.md#install-the-java-software-development-kit-jdk) för att kontrollera vilken version av JDK som är installerad.
 
-[Sökmotorkonfiguration](../../configuration/search/configure-search-engine.md) beskriver de åtgärder som du måste utföra efter att du har ändrat sökmotorer.
+[Sökmotorkonfiguration](../../configuration/search/configure-search-engine.md) beskriver de åtgärder du måste utföra efter att du har ändrat sökmotorer.
+
+#### Uppgradera Elasticsearch
+
+Stöd för Elasticsearch 8.x introducerades i Adobe Commerce 2.4.6. Följande instruktioner visar ett exempel på hur du uppgraderar Elasticsearch från 7.x till 8.x:
+
+1. Uppgradera servern Elasticsearch 7.x till 8.x och kontrollera att den är igång. Se [Elasticsearch dokumentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html).
+
+1. Aktivera `id_field_data` genom att lägga till följande konfiguration i `elasticsearch.yml` och starta om tjänsten Elasticsearch 8.x.
+
+   ```yaml
+   indices:
+     id_field_data:
+       enabled: true
+   ```
+
+   >[!INFO]
+   >
+   >Adobe Commerce 2.4.6 tillåter inte att Elasticsearch 8.x stöds `indices.id_field_data` som standard och använder `_id` i `docvalue_fields` -egenskap.
+
+1. Uppdatera dina Composer-beroenden i Adobe Commerce-projektets rotkatalog för att ta bort `Magento_Elasticsearch7` och installera `Magento_Elasticsearch8` -modul.
+
+   ```bash
+   composer update magento/module-elasticsearch-8 --update-with-all-dependencies
+   ```
+
+1. Uppdatera projektkomponenterna.
+
+   ```bash
+   bin/magento setup:upgrade
+   ```
+
+1. [Konfigurera Elasticsearch](../../configuration/search/configure-search-engine.md#configure-your-search-engine-from-the-admin) i [!DNL Admin].
+
+1. Indexera om katalogindexet.
+
+   ```bash
+   bin/magento indexer:reindex catalogsearch_fulltext
+   ```
+
+1. Ta bort alla objekt från de aktiverade cachetyperna.
+
+   ```bash
+   bin/magento cache:clean
+   ```
+
+#### Nedgradera Elasticsearch
+
+Om du av misstag uppgraderar Elasticsearch på servern eller av någon annan anledning måste du också uppdatera dina Adobe Commerce projektberoenden. Om du till exempel vill nedgradera från Elasticsearch 8.x till 7.x
+
+1. Uppgradera servern Elasticsearch 8.x till 7.x och kontrollera att den är igång. Se [Elasticsearch dokumentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html).
+
+1. Uppdatera dina Composer-beroenden i Adobe Commerce-projektets rotkatalog för att ta bort `Magento_Elasticsearch8` och dess Composer-beroenden och installera `Magento_Elasticsearch7` -modul.
+
+   ```bash
+   composer remove magento/module-elasticsearch-8
+   ```
+
+1. Uppdatera projektkomponenterna.
+
+   ```bash
+   bin/magento setup:upgrade
+   ```
+
+1. [Konfigurera Elasticsearch](../../configuration/search/configure-search-engine.md#configure-your-search-engine-from-the-admin) i [!DNL Admin].
+
+1. Indexera om katalogindexet.
+
+   ```bash
+   bin/magento indexer:reindex catalogsearch_fulltext
+   ```
+
+1. Ta bort alla objekt från de aktiverade cachetyperna.
+
+   ```bash
+   bin/magento cache:clean
+   ```
 
 ### Tredjepartstillägg
 
-Vi rekommenderar att du kontaktar din sökmotorleverantör för att avgöra om tillägget är helt kompatibelt med version 2.4.
+Vi rekommenderar att du kontaktar din sökmotorleverantör för att avgöra om ditt tillägg är helt kompatibelt med en Adobe Commerce-release.
 
 ## Konvertera databastabellformat
 
@@ -127,7 +207,7 @@ Så här anger du värdet i Bash-skalet:
 
 ## Verifiera att cron-jobb körs
 
-UNIX-uppgiftsschemaläggaren `cron` är avgörande för den dagliga verksamheten inom Adobe Commerce och Magento Open Source. Det schemalägger saker som omindexering, nyhetsbrev, e-post och webbplatskartor. Flera funktioner kräver minst ett cron-jobb som körs som filsystemets ägare.
+UNIX-uppgiftsschemaläggaren `cron` är avgörande för Adobe Commerce dagliga verksamhet. Det schemalägger saker som omindexering, nyhetsbrev, e-post och webbplatskartor. Flera funktioner kräver minst ett cron-jobb som körs som filsystemets ägare.
 
 Kontrollera på fliken crontab genom att ange följande kommando som ägare av filsystemet för att kontrollera att ditt cron-jobb är korrekt konfigurerat:
 
@@ -163,15 +243,15 @@ Adobe Commerce 2.4 innehåller säkerhetsförbättringar som kräver att vissa d
 
 Följande tabeller påverkas mest:
 
-- `catalogrule`
-- `core_config_data`
-- `magento_reward_history`
-- `quote_payment`
-- `quote`
-- `sales_order_payment`
-- `sales_order`
-- `salesrule`
-- `url_rewrite`
+* `catalogrule`
+* `core_config_data`
+* `magento_reward_history`
+* `quote_payment`
+* `quote`
+* `sales_order_payment`
+* `sales_order`
+* `salesrule`
+* `url_rewrite`
 
 Om du har en stor mängd data kan du förbättra prestandan genom att ange värdet för en miljövariabel, `DATA_CONVERTER_BATCH_SIZE`. Som standard är värdet inställt på `50,000`.
 
@@ -196,7 +276,7 @@ Så här anger du miljövariabeln:
 
 ## Verifiera behörigheter i filsystemet
 
-Av säkerhetsskäl kräver Adobe Commerce och Magento Open Source vissa behörigheter i filsystemet. Behörigheterna skiljer sig från _[ägarskap](../../upgrade/prepare/prerequisites.md#verify-file-system-permissions)_. Ägarskapet avgör vem som kan utföra åtgärder i filsystemet. behörigheter bestämmer vad användaren kan göra.
+Av säkerhetsskäl kräver Adobe Commerce vissa behörigheter i filsystemet. Behörigheterna skiljer sig från _[ägarskap](../../upgrade/prepare/prerequisites.md#verify-file-system-permissions)_. Ägarskapet avgör vem som kan utföra åtgärder i filsystemet. behörigheter bestämmer vad användaren kan göra.
 
 Kataloger i filsystemet måste vara skrivbara av [filsystemets ägare](../../installation/prerequisites/file-system/overview.md) grupp.
 
@@ -246,10 +326,10 @@ drwxrws---. 29 magento_user apache   4096 Jun  7 07:53 vendor
 
 Se följande för en förklaring av exempelresultatet:
 
-- De flesta filerna är `-rw-rw----`, som `660`
-- `drwxrwx---` = `770`
-- `-rw-rw-rw-` = `666`
-- Ägaren av filsystemet är `magento_user`
+* De flesta filerna är `-rw-rw----`, som `660`
+* `drwxrwx---` = `770`
+* `-rw-rw-rw-` = `666`
+* Ägaren av filsystemet är `magento_user`
 
 Om du vill ha mer detaljerad information anger du följande kommando:
 
@@ -257,7 +337,7 @@ Om du vill ha mer detaljerad information anger du följande kommando:
 ls -la /var/www/html/magento2/pub
 ```
 
-Eftersom Adobe Commerce och Magento Open Source distribuerar statiska filresurser till underkataloger till `pub`, det är en bra idé att även verifiera behörigheter och ägarskap där.
+Eftersom Adobe Commerce distribuerar statiska filresurser till underkataloger till `pub`, det är en bra idé att även verifiera behörigheter och ägarskap där.
 
 Mer information finns i [Filsystembehörigheter och ägarskap](../../installation/prerequisites/file-system/overview.md).
 

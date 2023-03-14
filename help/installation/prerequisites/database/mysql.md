@@ -1,9 +1,9 @@
 ---
 title: MySQL-riktlinjer
 description: Följ de här stegen för att installera och konfigurera MySQL och MariaDB för lokala installationer av Adobe Commerce och Magento Open Source.
-source-git-commit: 8f05fb6fc212c2b3fda80457bbf27ecf16fb1194
+source-git-commit: c65217cd277be5226681ef239d6a3cf34c251a9f
 workflow-type: tm+mt
-source-wordcount: '1179'
+source-wordcount: '1142'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Adobe _starkt_ rekommenderar att du följer följande standard när du konfigure
 
 >[!WARNING]
 >
->Adobe Commerce och Magento Open Source använder `CREATE TEMPORARY TABLE` programsatser inuti transaktioner, som [inkompatibel](https://dev.mysql.com/doc/refman/5.7/en/replication-gtids-restrictions.html) med databasimplementeringar använder GTID-baserad replikering, som [Andra generationens instanser av Google Cloud SQL](https://cloud.google.com/sql/docs/features#differences). Överväg MySQL för Cloud SQL 8.0 som ett alternativ.
+>Adobe Commerce använder `CREATE TEMPORARY TABLE` programsatser inuti transaktioner, som [inkompatibel](https://dev.mysql.com/doc/refman/5.7/en/replication-gtids-restrictions.html) med databasimplementeringar använder GTID-baserad replikering, som [Andra generationens instanser av Google Cloud SQL](https://cloud.google.com/sql/docs/features#differences). Överväg MySQL för Cloud SQL 8.0 som ett alternativ.
 
 >[!NOTE]
 >
@@ -198,7 +198,4 @@ Så här konfigurerar du en MySQL-databasinstans:
 >
 >För Adobe Commerce i molninfrastrukturprojekt finns `explicit_defaults_for_timestamp` inställningen för MySQL (MariaDB) är som standard _AV_.
 
-Omindexering av MariaDB 10.4 tar längre tid jämfört med andra versioner av MariaDB eller MySQL. För att påskynda omindexeringen rekommenderar vi att du ställer in följande konfigurationsparametrar för MariaDB:
-
-* optimizer_switch=&#39;rowid_filter=off&#39;
-* optimizer_use_condition_selectivity = 1
+{{$include /help/_includes/maria-db-config.md}}
