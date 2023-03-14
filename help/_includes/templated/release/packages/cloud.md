@@ -1,7 +1,7 @@
 ---
-source-git-commit: 4391091cce32618dc02b0bddb62ff9d16dd12f10
+source-git-commit: a1f99f839f11ab42356b87a69398999bb03cd544
 workflow-type: tm+mt
-source-wordcount: '2426'
+source-wordcount: '2674'
 ht-degree: 0%
 
 ---
@@ -23,17 +23,17 @@ Adobe Commerce i molninfrastruktur använder Composer för att hantera PHP-paket
 
 The `composer.json` filen deklarerar paketlistan, medan `composer.lock` filen lagrar en fullständig lista över de paket (en fullständig version av varje paket och dess beroenden) som används för att skapa en installation av Adobe Commerce eller Magento Open Source.
 
-Följande referensdokumentation genereras från `composer.lock` och täcker de paket som ingår i Adobe Commerce om molninfrastruktur 2.4.4.
+Följande referensdokumentation genereras från `composer.lock` och täcker de paket som ingår i Adobe Commerce om molninfrastruktur 2.4.6.
 
 ## Beroenden
 
-`magento/magento-cloud-metapackage 2.4.4` har följande beroenden:
+`magento/magento-cloud-metapackage 2.4.6` har följande beroenden:
 
 ```config
 fastly/magento2: ^1.2.34
 magento/ece-tools: ^2002.1.0
-magento/module-paypal-on-boarding: ~100.4.0
-magento/product-enterprise-edition: >=2.4.4 <2.4.5
+magento/module-paypal-on-boarding: ~100.5.0
+magento/product-enterprise-edition: >=2.4.6 <2.4.7
 ```
 
 ## Tredjepartslicenser
@@ -51,10 +51,17 @@ magento/product-enterprise-edition: >=2.4.4 <2.4.5
   <tbody>
   <tr>
     <td>
-      <a href="https://github.com/elastic/elasticsearch-php.git">elasticsearch/elasticsearch</a>
+      elasticsearch/elasticsearch
     </td>
     <td>bibliotek</td>
     <td>PHP-klient för Elasticsearch</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/opensearch-project/opensearch-php.git">opensearch-project/opensearch-php</a>
+    </td>
+    <td>bibliotek</td>
+    <td>PHP-klient för OpenSearch</td>
   </tr>
   </tbody>
 </table>
@@ -103,7 +110,7 @@ magento/product-enterprise-edition: >=2.4.4 <2.4.5
       <a href="https://github.com/wikimedia/less.php.git">wikimedia/less.php</a>
     </td>
     <td>bibliotek</td>
-    <td>PHP-port för Javascript-versionen av LESS http://lesscss.org (som ursprungligen underhålls av Josh Schmidt)</td>
+    <td>PHP-port för LESS-processor</td>
   </tr>
   </tbody>
 </table>
@@ -170,13 +177,6 @@ magento/product-enterprise-edition: >=2.4.4 <2.4.5
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/colinmollenhour/Cm_Cache_Backend_Redis.git">colinblöenhour/cache-backend-redis</a>
-    </td>
-    <td>magento-module</td>
-    <td>Zend_Cache backend använder Redis med fullständigt stöd för taggar.</td>
-  </tr>
-  <tr>
-    <td>
       <a href="https://github.com/colinmollenhour/php-redis-session-abstract.git">colinblöenhour/php-redis-session-abstract</a>
     </td>
     <td>bibliotek</td>
@@ -187,7 +187,14 @@ magento/product-enterprise-edition: >=2.4.4 <2.4.5
       <a href="https://github.com/fastly/fastly-magento2.git">fast/magento2</a>
     </td>
     <td>magento2-module</td>
-    <td>Snabb CDN-modul för Magento 2.3.x | 2.4.x</td>
+    <td>Snabb CDN-modul för Magento 2.4.x</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/firebase/php-jwt.git">firebase/php-jwt</a>
+    </td>
+    <td>bibliotek</td>
+    <td>Ett enkelt bibliotek för kodning och avkodning av JSON Web Tokens (JWT) i PHP. Ska överensstämma med aktuell specifikation.</td>
   </tr>
   <tr>
     <td>
@@ -219,17 +226,17 @@ magento/product-enterprise-edition: >=2.4.4 <2.4.5
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/laminas/laminas-crypt.git">laminas/laminas-crypt</a>
+    </td>
+    <td>bibliotek</td>
+    <td>Kraftfulla krypteringsverktyg och lösenordshash</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/laminas/laminas-db.git">laminas/laminas-db</a>
     </td>
     <td>bibliotek</td>
     <td>Databasförkortningslager, SQL-förkortning, resultatuppsättningsabstraktion och implementeringar av RowDataGateway och TableDataGateway</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-dependency-plugin.git">laminas/laminas-Berodency-plugin</a>
-    </td>
-    <td>comser-plugin</td>
-    <td>Ersätt zendframework- och zfcampus-paket med motsvarande Laminas Project-paket.</td>
   </tr>
   <tr>
     <td>
@@ -257,7 +264,21 @@ magento/product-enterprise-edition: >=2.4.4 <2.4.5
       <a href="https://github.com/laminas/laminas-feed.git">laminas/laminas-feed</a>
     </td>
     <td>bibliotek</td>
-    <td>innehåller funktioner för att använda RSS- och Atom-flöden</td>
+    <td>innehåller funktioner för att skapa och använda RSS- och Atom-flöden</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/laminas/laminas-file.git">laminas/laminas-file</a>
+    </td>
+    <td>bibliotek</td>
+    <td>Hitta PHP-klassfiler</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/laminas/laminas-filter.git">laminas/laminas-filter</a>
+    </td>
+    <td>bibliotek</td>
+    <td>Filtrera och normalisera data och filer</td>
   </tr>
   <tr>
     <td>
@@ -265,6 +286,13 @@ magento/product-enterprise-edition: >=2.4.4 <2.4.5
     </td>
     <td>bibliotek</td>
     <td>Ger ett enkelt gränssnitt för att utföra HTTP-begäranden (Hyper-Text Transfer Protocol)</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/laminas/laminas-i18n.git">laminas/laminas-i18n</a>
+    </td>
+    <td>bibliotek</td>
+    <td>Ange översättningar för programmet och filtrera och validera internationella värden</td>
   </tr>
   <tr>
     <td>
@@ -314,6 +342,20 @@ magento/product-enterprise-edition: >=2.4.4 <2.4.5
     </td>
     <td>bibliotek</td>
     <td>Laminas händelsestyrda MVC-lager, inklusive MVC-program, styrenheter och plugin-program</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/laminas/laminas-oauth.git">laminas/laminas-oauth</a>
+    </td>
+    <td>bibliotek</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/laminas/laminas-permissions-acl.git">laminas/laminas-permissions-acl</a>
+    </td>
+    <td>bibliotek</td>
+    <td>Tillhandahåller en enkel och flexibel ACL-implementering (access control list) för behörighetshantering</td>
   </tr>
   <tr>
     <td>
@@ -423,6 +465,27 @@ magento/product-enterprise-edition: >=2.4.4 <2.4.5
   </tbody>
 </table>
 
+### BSD-3-Clause-Modification
+
+<table>
+  <thead>
+    <tr>
+      <th>Namn</th>
+      <th>Typ</th>
+      <th>Beskrivning</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>
+      <a href="https://github.com/colinmollenhour/Cm_Cache_Backend_Redis.git">colinblöenhour/cache-backend-redis</a>
+    </td>
+    <td>magento-module</td>
+    <td>Zend_Cache backend använder Redis med fullständigt stöd för taggar.</td>
+  </tr>
+  </tbody>
+</table>
+
 ### LGPL-2.1-eller-senare
 
 <table>
@@ -434,6 +497,13 @@ magento/product-enterprise-edition: >=2.4.4 <2.4.5
     </tr>
   </thead>
   <tbody>
+  <tr>
+    <td>
+      <a href="https://github.com/ezyang/htmlpurifier.git">ezyang/htmlpurifier</a>
+    </td>
+    <td>bibliotek</td>
+    <td>Standardkompatibelt HTML-filter skrivet i PHP</td>
+  </tr>
   <tr>
     <td>
       <a href="https://github.com/php-amqplib/php-amqplib.git">php-amqplib/php-amqplib</a>
@@ -499,6 +569,13 @@ magento/product-enterprise-edition: >=2.4.4 <2.4.5
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/composer/class-map-generator.git">dispositör/klass-map-generator</a>
+    </td>
+    <td>bibliotek</td>
+    <td>Verktyg för att skanna PHP-kod och generera klasskartor.</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/composer/composer.git">disposition</a>
     </td>
     <td>bibliotek</td>
@@ -541,6 +618,27 @@ magento/product-enterprise-edition: >=2.4.4 <2.4.5
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/doctrine/annotations.git">doktrin/anteckningar</a>
+    </td>
+    <td>bibliotek</td>
+    <td>Dokumentblockanteckningsparser</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/doctrine/deprecations.git">doktrin/borttagning</a>
+    </td>
+    <td>bibliotek</td>
+    <td>Ett litet lager ovanpå trigger_error(E_USER_DEPRECATED) eller PSR-3-loggning med alternativ för att inaktivera alla borttagningar eller selektivt för paket.</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/doctrine/lexer.git">doctrine/lexer</a>
+    </td>
+    <td>bibliotek</td>
+    <td>PHP Doctrine Lexer-parserbibliotek som kan användas i uppifrån och ned, rekursiva fallparametrar.</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/endroid/qr-code.git">endroid/qr-code</a>
     </td>
     <td>bibliotek</td>
@@ -559,13 +657,6 @@ magento/product-enterprise-edition: >=2.4.4 <2.4.5
     </td>
     <td>bibliotek</td>
     <td>Gummigaffel/RingPHP (övergiven) som ska användas med elasticsearch-php</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/fgrosse/PHPASN1.git">fgrosse/phpans1</a>
-    </td>
-    <td>bibliotek</td>
-    <td>Ett PHP-ramverk som gör att du kan koda och avkoda godtyckliga ASN.1-strukturer med ITU-T X.690-kodningsreglerna.</td>
   </tr>
   <tr>
     <td>
@@ -730,6 +821,13 @@ magento/product-enterprise-edition: >=2.4.4 <2.4.5
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/php-fig/cache.git">psr/cache</a>
+    </td>
+    <td>bibliotek</td>
+    <td>Gemensamt gränssnitt för cachelagring av bibliotek</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/php-fig/container.git">psr/container</a>
     </td>
     <td>bibliotek</td>
@@ -828,6 +926,13 @@ magento/product-enterprise-edition: >=2.4.4 <2.4.5
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/Seldaek/signal-handler.git">seld/signal-handler</a>
+    </td>
+    <td>bibliotek</td>
+    <td>Enkel, enkel signalhanterare som tyst misslyckas där signaler inte stöds för enkel plattformsoberoende utveckling</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/Spomky-Labs/aes-key-wrap.git">spomky-labs/aes-key-wrap</a>
     </td>
     <td>bibliotek</td>
@@ -835,17 +940,17 @@ magento/product-enterprise-edition: >=2.4.4 <2.4.5
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/Spomky-Labs/base64url.git">spomky-labs/base64url</a>
-    </td>
-    <td>bibliotek</td>
-    <td>Base 64 URL Safe Encoding/Decoding PHP Library</td>
-  </tr>
-  <tr>
-    <td>
       <a href="https://github.com/Spomky-Labs/otphp.git">spomky-labs/otphp</a>
     </td>
     <td>bibliotek</td>
     <td>Ett PHP-bibliotek för generering av engångslösenord enligt RFC 4226 (HOTP-algoritm) och RFC 6238 (TOTP-algoritm) som är kompatibelt med Google Authenticator</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/Spomky-Labs/pki-framework.git">spomky-labs/pki-framework</a>
+    </td>
+    <td>bibliotek</td>
+    <td>Ett PHP-ramverk för hantering av infrastrukturer med publik nyckel. Det omfattar X.509-certifikat för offentlig nyckel, attributcertifikat, certifieringsbegäranden och validering av certifieringssökväg.</td>
   </tr>
   <tr>
     <td>
@@ -867,13 +972,6 @@ magento/product-enterprise-edition: >=2.4.4 <2.4.5
     </td>
     <td>bibliotek</td>
     <td>Konverterar CSS-väljare till XPath-uttryck</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/symfony/debug.git">symfony/debug</a>
-    </td>
-    <td>bibliotek</td>
-    <td>Tillhandahåller verktyg som underlättar felsökning av PHP-kod</td>
   </tr>
   <tr>
     <td>
@@ -926,13 +1024,6 @@ magento/product-enterprise-edition: >=2.4.4 <2.4.5
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/http-client-contracts.git">symfony/http-client-agreements</a>
-    </td>
-    <td>bibliotek</td>
-    <td>Allmänna abstraktioner relaterade till HTTP-klienter</td>
-  </tr>
-  <tr>
-    <td>
       <a href="https://github.com/symfony/http-foundation.git">symfony/http-foundation</a>
     </td>
     <td>bibliotek</td>
@@ -947,10 +1038,24 @@ magento/product-enterprise-edition: >=2.4.4 <2.4.5
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/symfony/intl.git">symfony/intl</a>
+    </td>
+    <td>bibliotek</td>
+    <td>Tillhandahåller ett PHP-ersättningslager för C intl-tillägget som innehåller ytterligare data från ICU-biblioteket</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/symfony/polyfill-ctype.git">symfony/polyfill-type</a>
     </td>
     <td>bibliotek</td>
     <td>Symfonisk polyfyllning för typfunktioner</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/symfony/polyfill-intl-grapheme.git">symfony/polyfill-intl-grapteme</a>
+    </td>
+    <td>bibliotek</td>
+    <td>Symfony polyfill for intl's grapheme_* functions</td>
   </tr>
   <tr>
     <td>
@@ -1031,6 +1136,13 @@ magento/product-enterprise-edition: >=2.4.4 <2.4.5
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/symfony/string.git">symfony/string</a>
+    </td>
+    <td>bibliotek</td>
+    <td>Ger ett objektorienterat API för strängar och hanterar byte, UTF-8-kodpunkter och grafemkluster på ett enhetligt sätt</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/symfony/translation.git">symfony/translation</a>
     </td>
     <td>bibliotek</td>
@@ -1083,7 +1195,7 @@ magento/product-enterprise-edition: >=2.4.4 <2.4.5
       <a href="https://github.com/webonyx/graphql-php.git">webonyx/graphql-php</a>
     </td>
     <td>bibliotek</td>
-    <td>En PHP-port för GraphQL-referensimplementering</td>
+    <td>En PHP-port för GraphQL referensimplementering</td>
   </tr>
   <tr>
     <td>
