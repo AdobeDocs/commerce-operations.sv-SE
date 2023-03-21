@@ -1,7 +1,7 @@
 ---
 title: Förutsättningar
 description: Förbered ditt Adobe Commerce-projekt för en uppgradering genom att slutföra dessa nödvändiga steg.
-source-git-commit: 45c544a5ec9a17ad631fce55e322e2949ecdd3c2
+source-git-commit: 5f86717d79569cac3f95a4c10a55b48f92858466
 workflow-type: tm+mt
 source-wordcount: '1639'
 ht-degree: 0%
@@ -111,7 +111,7 @@ Stöd för Elasticsearch 8.x introducerades i Adobe Commerce 2.4.6. Följande in
 1. Uppdatera dina Composer-beroenden i Adobe Commerce-projektets rotkatalog för att ta bort `Magento_Elasticsearch7` och installera `Magento_Elasticsearch8` -modul.
 
    ```bash
-   composer update magento/module-elasticsearch-8 --update-with-all-dependencies
+   composer require magento/module-elasticsearch-8 --update-with-all-dependencies
    ```
 
 1. Uppdatera projektkomponenterna.
