@@ -1,9 +1,9 @@
 ---
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
-source-git-commit: f1c6c816695e01fc30d0ab0a7a9c43122a130cb5
+source-git-commit: b71819d123856d03dab872a1652b325ffe7178a6
 workflow-type: tm+mt
-source-wordcount: '11145'
+source-wordcount: '11561'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,27 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som skapats av gemenskapen för Magento Open Source, se [versionsinformation](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.29 {#v1-1-29}
+
+* **ACSD-49389** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.7) - Korrigerar problemet där ett meddelande som är klart att hämtas skickas av API när beställningen inte är klar att hämtas.
+* **ACSD-49822** (för Adobe Commerce >=2.3.7 &lt;2.4.7) - Korrigerar problemet där uppdateringar i [!UICONTROL Requisition List] visas inte på sidan [!UICONTROL Print Requisition List].
+* **ACSD-48771** (för Adobe Commerce och Magento Open Source >=2.4.5 &lt;2.4.7) - Korrigerar problemet med uppgradering av kolumnblocksinnehållstypen från äldre [!DNL Page Builder] versioner.
+* **ACSD-49464** (för Adobe Commerce >=2.3.7 &lt;2.4.7) - Korrigerar problemet där fakturor, leveranser och kreditnotor inte flyttas tillbaka från arkivet när orderId är annorlunda.
+* **ACSD-49773** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.6) - Korrigerar problemet där produktexporten misslyckas när AWS S3 används som fjärrlagring.
+* **ACSD-49748** (för Adobe Commerce >=2.3.7 &lt;2.4.7) - Korrigerar problemet där inbjudningar inte kan skickas.
+* **ACSD-49502** (för Adobe Commerce >=2.4.3 &lt;2.4.7) - Korrigerar problemet där den hämtningsbara länken inte uppdateras korrekt efter att en mellanlagringsuppdatering har tillämpats på den hämtningsbara produkten.
+* **ACSD-49527** (för Adobe Commerce >=2.4.2 &lt;2.4.7) - Korrigerar problemet där GraphQL företagsroller inte visar sidnumrering korrekt.
+* **ACSD-49706** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.7) - Korrigerar problemet där standardvärdet sparas för ett visuellt färgruteattribut när inget värde har valts.
+* **ACSD-49835** (för Adobe Commerce och Magento Open Source >=2.4.5 &lt;2.4.7) - Korrigerar problemet där kryssrutans standardvärde inte sparas korrekt på en butiksnivå för ett flervalsattribut.
+* **ACSD-49898** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.6) - Korrigerar problemet där stödrastret för produkter genererar ett undantag när en paketerad produkt har ett specialpris som överstiger 1000.
+* **ACSD-50234** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.5) - Korrigerar problemet med fel kundnamn i bekräftelsemeddelandet om en beställning med [!DNL PayPal].
+* **ACSD-49960** (för Adobe Commerce och Magento Open Source >=2.4.5 &lt;2.4.7) - Korrigerar problemet där filtrering efter datum inte fungerar för kundorderrastret.
+* **ACSD-49849** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.6) - Korrigerar problemet där kundens e-post ersattes med [!DNL PayPal] e-post när du beställer med [!DNL PayPal Express] via GraphQL.
+* **ACSD-49839** (för Adobe Commerce >=2.3.7 &lt;2.4.7) - Korrigerar problemet där priser och struktur för delad katalog genererar ett fel i Admin när produkter har enkla eller dubbla citattecken i SKU.
+* **ACSD-49970** (för Adobe Commerce och Magento Open Source >=2.4.5 &lt;2.4.7) - Korrigerar felaktig hantering av GraphQL-fel när [!DNL New Relic] rapportering är aktiverad.
+* **ACSD-50260** (för Adobe Commerce och Magento Open Source >=2.4.5 &lt;2.4.7) - Korrigerar problemet där GraphQL produktsökresultat begränsas till 10 000 resultat.
+* **ACSD-48813** (för Adobe Commerce och Magento Open Source >=2.4.3 &lt;2.4.7) - Korrigerar problemet där sökningen inte visar relevanta resultat baserat på attributens sökvikt.
 
 ## v1.1.28 {#v1-1-28}
 
