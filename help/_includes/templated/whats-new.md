@@ -1,7 +1,7 @@
 ---
-source-git-commit: 9f9dc61a7cf10b3b1890878dc774e95a0adff27a
+source-git-commit: e1c40ccea2524704abd4d6b0f0a627f8809f6fa8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1043'
 ht-degree: 0%
 
 ---
@@ -10,6 +10,66 @@ ht-degree: 0%
 ## Nyheter
 
 Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
+
+### 23 mars 2023
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Källa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Publicerad <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html">versionsinformation</a> för QPT-paketversionen (1.1.29 Quality Patches Tool).</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/c720c867eecfce0ba584da55aefd8f09ccb3b9f6">c720c8</a> (implementera)</td>
+    </tr>
+  </tbody>
+</table>
+
+### 17 mars 2023
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Källa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Lagt till information om nya <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/adobe-commerce/2-4-6.html#known-issue">känt problem</a> för Adobe Commerce 2.4.6.</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/2cf389ad5aaa198cdffb0a32adab3774a613bdc1">2cf389</a> (implementera)</td>
+    </tr>
+  </tbody>
+</table>
+
+### 16 mars 2023
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Källa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Uppdaterat <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/versions.html&lt;br/&gt;">Släppta versioner</a>.</p>
+</td>
+      <td>teknisk</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/07e0a497aec1f4fc5d0ce7226b4406ef756e8359">07e0a4</a> (implementera)</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 14 mars 2023
 
