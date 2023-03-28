@@ -1,9 +1,9 @@
 ---
 title: Referens för katalogkonfigurationssökvägar
 description: Se en lista med katalogkonfigurationsvärden.
-source-git-commit: bd1bf6edd131ec93902246e95ce857b509f2a619
+source-git-commit: e4b7ea70b96143629b245409537459ad259393e0
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -72,6 +72,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Sök efter Recommendations Count | `catalog/search/search_recommendations_count` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Visa resultatantal för varje rekommendation | `catalog/search/search_recommendations_count_results_enabled` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Minimivillkor att matcha | `catalog/search/minimum_should_match` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
+| Generera URL-omskrivningar för&quot;kategori/produkt&quot; | `catalog/seo/generate_category_product_rewrites` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Vanliga sökvillkor | `catalog/seo/search_terms` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Produkt-URL-suffix | `catalog/seo/product_url_suffix` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Kategori-URL-suffix | `catalog/seo/category_url_suffix` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -115,7 +116,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Visa merförsäljning | `catalog/magento_targetrule/upsell_position_behavior` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Rotationsläge för produkter i merförsäljningsproduktlista | `catalog/magento_targetrule/upsell_rotation_mode` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Lagersökvägar
 
@@ -145,7 +146,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Beräkningsläge | `cataloginventory/source_selection_distance_based_google/mode` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Värde | `cataloginventory/source_selection_distance_based_google/value` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Visual Merchandiser paths
 
@@ -158,7 +159,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Färgattributkod | `visualmerchandiser/options/color_attribute_code` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Färgordning | `visualmerchandiser/options/color_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Sökvägar för XML-webbplatskartor
 
@@ -182,7 +183,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Maximal filstorlek | `sitemap/limit/max_file_size` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Aktivera överföring till Robots.txt | `sitemap/search_engines/submission_robots` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Sökvägar för RSS-flöden
 
@@ -198,7 +199,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Kategori på översta nivån | `rss/catalog/category` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Meddelande om kundorderstatus | `rss/order/status` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## E-post till en vän
 
@@ -213,4 +214,4 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Max antal skickade produkter inom 1 timme | `sendfriend/email/max_per_hour` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Begränsa sändning med | `sendfriend/email/check_by` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
