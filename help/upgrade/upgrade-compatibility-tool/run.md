@@ -1,9 +1,9 @@
 ---
 title: "Kör [!DNL Upgrade Compatibility Tool]"
 description: Följ de här stegen för att köra [!DNL Upgrade Compatibility Tool] i ett kommandoradsgränssnitt för ditt Adobe Commerce-projekt.
-source-git-commit: e704748a7ceaa58a5a8d7004c81ac766dec4e7f1
+source-git-commit: 653d755023f96c0a6acc312f74fd4a0292f13a73
 workflow-type: tm+mt
-source-wordcount: '1090'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -182,7 +182,7 @@ Tillgängliga alternativ för `refactor` kommando:
 
 ## Använd `graphql:compare` kommando
 
-Det här kommandot ger möjlighet att [!DNL Upgrade Compatibility Tool] för att granska två GraphQL-slutpunkter och jämföra deras scheman för att hitta banbrytande och farliga förändringar mellan dem:
+Det här kommandot ger möjlighet att [!DNL Upgrade Compatibility Tool] för att presentera två GraphQL-slutpunkter och jämföra sina scheman för att hitta nya och farliga förändringar mellan dem:
 
 ```bash
 bin/uct graphql:compare <schema1> <schema2>
@@ -207,7 +207,7 @@ Returnera en lista med [!DNL Upgrade Compatibility Tool] tillgängliga kommandon
 bin/uct list
 ```
 
-## Använd `--help` kommando
+## Använd `help` kommando
 
 Om du vill se [!DNL Upgrade Compatibility Tool] allmänna kommandoalternativ och hjälp, kör:
 
@@ -260,6 +260,7 @@ Detta returnerar specifika alternativ som kan köras för `upgrade:check` komman
 - Undvik att ha två moduler med samma namn.
 - Följ Adobe Commerce [kodstandarder](https://developer.adobe.com/commerce/php/coding-standards/).
 - Adobe Commerce 2.4 [Uppgraderingsguide](https://experienceleague.adobe.com/docs/commerce-operations/assets/adobe-commerce-2-4-upgrade-guide.pdf) bästa praxis.
+- Kör [!DNL Upgrade Compatibility Tool] från [[!DNL Site-Wide Analysis Tool]](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool.html) for [Adobe Commerce i molninfrastruktur](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html){target=_blank} projekt.
 
 ## Optimera resultatet
 
