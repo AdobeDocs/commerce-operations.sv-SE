@@ -1,17 +1,17 @@
 ---
-source-git-commit: d17847a7151c5e88f763b334e1ee659ca3ca6bcf
+source-git-commit: 4b767014f325bef7e07cea11d01089206bf44caf
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 5%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
-# Användardokumentation för Adobe Commerce
+# Adobe Commerce tekniska dokumentation
 
 Vi välkomnar bidrag från både vår community och från Adobe anställda utanför dokumentationsteamen.
 
 ## Adobe uppförandekod med öppen källkod
 
-Detta projekt har antagit [Adobe Open Source Code of Conduct](code-of-conduct.md) eller [.NET Foundation Code of Conduct](https://dotnetfoundation.org/code-of-conduct). Mer information finns i artikeln [Contributing](contributing.md).
+Detta projekt har antagit [Adobe uppförandekod med öppen källkod](code-of-conduct.md) eller [.NET Foundation - uppförandekod](https://dotnetfoundation.org/code-of-conduct). Mer information finns i [Bidrar](contributing.md) artikel.
 
 ## Om dina bidrag till Adobe innehåll
 
@@ -51,13 +51,6 @@ Alla artiklar i den här databasen använder smaksatt GitHub-kod. Om du inte är
 
 * [Grunderna i markeringar](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
 * [Utskrivbart markeringsdatablad](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
-
-## Etiketter
-
-I den offentliga databasen tilldelas automatiska etiketter för att hämta begäranden som hjälper oss att hantera arbetsflödet för pull-begäran och som hjälper dig att få reda på vad som pågår med din pull-begäran:
-
-* **Ändringen har skickats till författaren**: Författaren har underrättats om den väntande pull-begäran.
-* **redo att sammanfogas**: Redo för granskning av vårt team för granskning av pull-förfrågningar.
 
 ## Mallar
 
