@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar MySQL-slavanslutningen för Adobe Comm
 role: Developer
 feature-set: Commerce
 feature: Best Practices
-source-git-commit: a5a6e25e3fd303e07a07110b85aa1d460f53cd54
+source-git-commit: cb86772e9ceabc580ec32ad6ae1206a71ea03946
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '313'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Vi är medvetna om att den här artikeln fortfarande innehåller programtermer som är branschstandard och som vissa kan finna som rasistiska, sexistiska eller förtryckande och som kan få läsaren att känna sig sårad, traumatiserad eller ovälkommen. Adobe arbetar med att ta bort dessa villkor från vår kod, dokumentation och användarupplevelse.
+>Den här artikeln innehåller programtermer som är branschstandard och som vissa kan finna rasistiska, sexistiska eller förtryckande och som kan få läsaren att känna sig sårad, traumatiserad eller ovälkommen. Adobe arbetar med att ta bort dessa villkor från vår kod, dokumentation och användarupplevelse.
 
 För Adobe Commerce-webbplatser som distribueras på en molninfrastruktur rekommenderar Adobe att du aktiverar MYSQL-slavanslutningen för databasen som standard.
 
-Adobe Commerce kan läsa flera databaser asynkront.  När du aktiverar MYSQL-slavanslutningen använder Adobe Commerce en skrivskyddad anslutning till databasen för att ta emot skrivskyddad trafik på en icke-överordnad nod. Detta förbättrar prestanda genom lastbalansering eftersom bara en nod behöver hantera trafik med läs- och skrivbehörighet.
+Adobe Commerce kan läsa flera databaser asynkront. När du aktiverar MYSQL-slavanslutningen använder Adobe Commerce en skrivskyddad anslutning till databasen för att ta emot skrivskyddad trafik på en icke-överordnad nod. Prestandan förbättras genom lastbalansering när bara en nod hanterar läs- och skrivtrafik.
 
 ## Berörda versioner
 
@@ -28,24 +28,27 @@ Adobe Commerce om molninfrastruktur, Pro-arkitektur
 
 ## Konfigurera MySQL-slavanslutning
 
-Konfigurationen för MYSQL-slavanslutningen anges av [MYSQL_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#mysql_use_slave_connection) distribuera variabeln i Adobe Commerce i konfigurationsfilen för molninfrastrukturen, `.magento.env.yaml`. Ange variabeln till `true` för att aktivera anslutningen.
+I Adobe Commerce om molninfrastruktur kan du åsidosätta standardkonfigurationen för MYSQL-slavanslutningen genom att ange [MYSQL_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#mysql_use_slave_connection) variabel. Ange den här variabeln till true om du automatiskt vill använda en skrivskyddad anslutning till databasen.
 
-Så här aktiverar du MySQL-slavanslutningen:
+**Aktivera MySQL-slavanslutningen**:
 
-1. Redigera `.magento.env.yaml` och verifiera att `MYSQL_USE_SLAVE_CONNECTION` är aktiverat.
+1. Byt till din projektkatalog på din lokala arbetsstation.
+
+1. I `.magento.env.yaml` -fil, ange `MYSQL_USE_SLAVE_CONNECTION` till true.
 
    ```
    stage:
-      deploy:
-      MYSQL_USE_SLAVE_CONNECTION: true
+     deploy:
+       MYSQL_USE_SLAVE_CONNECTION: true
    ```
 
-1. Genomför ändringarna och skicka dem sedan till miljögrenen för att distribuera uppdateringen.
+1. Verkställ `.magento.env.yaml` och skickas till fjärrmiljön.
 
-   När distributionen har slutförts aktiveras MySQL-slavanslutningen i din molninfrastruktur.
+   När distributionen har slutförts aktiveras MySQL-slavanslutningen för molnmiljön.
+
+Läs mer om hur du anpassar molnmiljön genom att åsidosätta din befintliga Commerce-konfiguration med [Miljövariabler](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/configure-env-yaml.html#environment-variables) i _Adobe Commerce i molninfrastrukturguide_.
 
 ## Ytterligare information
 
-- [Miljövariabler](https://devdocs.magento.com/cloud/env/variables-intro.html)
 - [MySQL-flaskhalsar med hög belastning i Adobe Commerce i molninfrastruktur](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/database/mysql-high-load-bottleneck-in-magento-commerce-cloud.html?lang=en)
 - [Bästa databaspraxis för Adobe Commerce om molninfrastruktur](database-on-cloud.md)
