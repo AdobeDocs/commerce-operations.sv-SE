@@ -1,9 +1,9 @@
 ---
 title: Uppföljning av datamigrering
 description: Lär dig hur du validerar att datamigreringen mellan Magento 1 och Magento 2 lyckades och att alla funktioner fungerar som förväntat.
-source-git-commit: d609c497fdf00c5e5f975a5679b1d072cec4f8a2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '301'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Referensnummer för beställningar, fakturor, leveranser, kreditnotor och RMA-mi
 
 ### Spara om kundsegment [Endast Adobe Commerce]
 
-Efter migreringen måste kundsegmenten sparas om från [Administratör](https://glossary.magento.com/admin) Panel för att komma igång.
+Efter migreringen måste kundsegment sparas om från adminpanelen för att de ska komma igång.
 
 ### Konfigurera tidszon
 

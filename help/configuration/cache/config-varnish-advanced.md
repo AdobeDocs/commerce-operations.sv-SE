@@ -1,9 +1,9 @@
 ---
 title: Avancerad lack-konfiguration
 description: Konfigurera avancerade lack-funktioner, inklusive hälsokontroll, respitläge och helskärmsläge.
-source-git-commit: 974c3480ccf5d1e1a5308e1bd2b27fcfaf3c72b2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '907'
+source-wordcount: '892'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ I Commerce definieras följande standardhälsokontroll:
     }
 ```
 
-Var femte sekund anropar den här hälsokontrollen `pub/health_check.php` skript. Det här skriptet kontrollerar tillgängligheten för servern, varje databas och Redis (om det är installerat). Skriptet måste returnera ett svar inom 2 sekunder. Om skriptet fastställer att någon av dessa resurser inte fungerar returneras en HTTP-felkod på 500. Om den här felkoden tas emot i sex av tio försök visas [serverdel](https://glossary.magento.com/backend) anses vara ohälsosamt.
+Var femte sekund anropar den här hälsokontrollen `pub/health_check.php` skript. Det här skriptet kontrollerar tillgängligheten för servern, varje databas och Redis (om det är installerat). Skriptet måste returnera ett svar inom 2 sekunder. Om skriptet fastställer att någon av dessa resurser inte fungerar returneras en HTTP-felkod på 500. Om den här felkoden tas emot i sex av tio försök anses serverdelen vara felfri.
 
 The `health_check.php` skriptet finns i `pub` katalog. Om Commerce-rotkatalogen är `pub`och se sedan till att ändra banan i `url` parameter från `/pub/health_check.php` till `health_check.php`.
 
@@ -39,7 +39,7 @@ Mer information finns i [Djurhälsokontroller](https://varnish-cache.org/docs/6.
 
 ## Behagelläge
 
-Med Grace-läget kan du behålla ett objekt i [cache](https://glossary.magento.com/cache) bortom dess TTL-värde. Slutgiltigt innehåll kan sedan användas medan det hämtar en ny version. Detta förbättrar trafikflödet och minskar inläsningstiden. Det används i följande situationer:
+Med Grace-läget kan Varnish behålla ett objekt i cachen utanför dess TTL-värde. Slutgiltigt innehåll kan sedan användas medan det hämtar en ny version. Detta förbättrar trafikflödet och minskar inläsningstiden. Det används i följande situationer:
 
 - När Commerce-serverdelen är felfri, men en begäran tar längre tid än normalt
 - När Commerce-serverdelen inte är hälsosam.
@@ -48,7 +48,7 @@ The `vcl_hit` subrutin definierar hur lack svarar på en begäran om objekt som 
 
 ### När Commerce-serverdelen är hälsosam
 
-När hälsokontrollerna avgör att Commerce-serverdelen är hälsosam kontrollerar lack om tiden ligger kvar inom fristen. Standardrespitperioden är 300 sekunder, men en handlare kan ange värdet från [Administratör](https://glossary.magento.com/admin) enligt beskrivning i [Konfigurera Commerce att använda engelska](configure-varnish-commerce.md). Om respitperioden inte har gått ut levererar engelska det inaktuella innehållet och uppdaterar objektet asynkront från Commerce-servern. Om respitperioden har gått ut, skickar Varnish det inaktuella innehållet och uppdaterar objektet synkront från Commerce-serverdelen.
+När hälsokontrollerna avgör att Commerce-serverdelen är hälsosam kontrollerar lack om tiden ligger kvar inom fristen. Standardrespitperioden är 300 sekunder, men en handlare kan ange värdet från administratören enligt beskrivningen i [Konfigurera Commerce att använda engelska](configure-varnish-commerce.md). Om respitperioden inte har gått ut levererar engelska det inaktuella innehållet och uppdaterar objektet asynkront från Commerce-servern. Om respitperioden har gått ut, skickar Varnish det inaktuella innehållet och uppdaterar objektet synkront från Commerce-serverdelen.
 
 Den maximala tid som varnish skickar ett inaktuellt objekt är summan av respitperioden (300 sekunder som standard) och TTL-värdet (86400 sekunder som standard).
 
@@ -74,7 +74,7 @@ Ange en dator som primär installation. Installera huvudinstansen av Commerce, m
 
 På alla andra datorer måste Commerce-instansen ha åtkomst till den primära datorns mySQL-databas. De sekundära datorerna bör också ha tillgång till filerna för den primära Commerce-instansen.
 
-Alternativt kan [statiska filer](https://glossary.magento.com/static-files) versionshantering kan inaktiveras på alla datorer. Det här kan du komma åt från administratören under **Lager** > Inställningar > **Konfiguration** > **Avancerat** > **Utvecklare** > **Inställningar för statiska filer** > **Signera statiska filer** = **Nej**.
+Alternativt kan versionshantering av statiska filer inaktiveras på alla datorer. Det här kan du komma åt från administratören under **Lager** > Inställningar > **Konfiguration** > **Avancerat** > **Utvecklare** > **Inställningar för statiska filer** > **Signera statiska filer** = **Nej**.
 
 Slutligen måste alla handelsinstanser vara i produktionsläge. Rensa cacheminnet för varje instans innan lack startas. Gå till Admin **System** > Verktyg > **Cachehantering** och klicka **Rensa Magento-cache**. Du kan också köra följande kommando för att rensa cachen:
 
@@ -89,7 +89,7 @@ Saint-läget ingår inte i Varnish-paketet. Det är en separat version `vmod` so
 - [Installerar lack 6.4](https://varnish-cache.org/docs/6.4/installation/install.html)
 - [Installerar lack 6.0](https://varnish-cache.org/docs/6.0/installation/install.html) (LTS)
 
-När du har kompilerat om kan du installera helskärmsläget [modul](https://glossary.magento.com/module). I allmänhet gör du så här:
+När du har kompilerat om kan du installera modulen för det smarta läget. I allmänhet gör du så här:
 
 1. Hämta källkoden från [Finska moduler](https://github.com/varnish/varnish-modules). Klona Git-versionen (överordnad version) eftersom 0.9.x-versionerna innehåller ett källkodsfel.
 1. Bygg källkoden med autoverktyg:

@@ -1,9 +1,9 @@
 ---
 title: Installera ett tillägg
 description: Följ de här stegen för att installera ett Adobe Commerce- eller Magento Open Source-tillägg.
-source-git-commit: 61638d373408d9a7c3c3a935eee61927acfac7a6
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '645'
 ht-degree: 0%
 
 ---
@@ -16,12 +16,12 @@ Kod som utökar eller anpassar beteendet Adobe Commerce och Magento Open Source 
 Tillägg:
 
 - Moduler (utöka funktionerna för Adobe Commerce och Magento Open Source)
-- Teman (ändra utseende och känsla för dina [storefront](https://glossary.magento.com/storefront) och Admin)
+- Teman (ändra utseende och känsla för din butik och administratör)
 - Språkpaket (lokalisera butiken och administratören)
 
 >[!TIP]
 >
->I det här avsnittet beskrivs hur du använder kommandoraden för att installera tillägg som du köper från Commerce Marketplace. Du kan använda samma procedur för att installera _alla_ Utökning. allt du behöver är tilläggets [Disposition](https://glossary.magento.com/composer) namn och version. Öppna tilläggets `composer.json` och notera värdena för `"name"` och `"version"`.
+>I det här avsnittet beskrivs hur du använder kommandoraden för att installera tillägg som du köper från Commerce Marketplace. Du kan använda samma procedur för att installera _alla_ Utökning. Allt du behöver är tilläggets dispositionsnamn och version. Öppna tilläggets `composer.json` och notera värdena för `"name"` och `"version"`.
 
 Före installationen kanske du vill:
 
@@ -85,7 +85,7 @@ Lägg till tilläggets namn och version i din `composer.json` fil:
    composer require <component-name>:<version>
    ```
 
-   Exempel:
+   Till exempel:
 
    ```bash
    composer require j2t/module-payplug:2.0.2

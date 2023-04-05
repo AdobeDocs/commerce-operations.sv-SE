@@ -1,9 +1,9 @@
 ---
 title: Konfigurera cachelagrade data för Ubuntu
 description: Installera och konfigurera cachelagrade filer på Ubuntu.
-source-git-commit: 80abb0180fcd8ecc275428c23b68feb5883cbc28
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '449'
 ht-degree: 0%
 
 ---
@@ -78,7 +78,7 @@ Så här verifierar du att cachelagrade data känns igen av webbservern:
    phpinfo();
    ```
 
-1. Gå till den sidan i webbläsaren. Exempel:
+1. Gå till den sidan i webbläsaren. Till exempel:
 
    ```http
    http://192.0.2.1/phpinfo.php
@@ -94,7 +94,7 @@ Så här verifierar du att cachelagrade data känns igen av webbservern:
 
 ### Verifiera att cachelagrade data kan cachelagra
 
-I det här testet används ett PHP-skript för att verifiera att det går att lagra och hämta [cache](https://glossary.magento.com/cache) data.
+I det här testet används ett PHP-skript för att verifiera att cachelagrade data kan lagra och hämta cachedata.
 
 Mer information om testet finns i [Installera och använda PMcache i självstudiekursen](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-memcache-on-ubuntu-14-04).
 
@@ -117,7 +117,7 @@ if ($result) {
 
 Plats `<memcached hostname or ip>` är antingen `localhost`, `127.0.0.1`, eller minnesvärdnamnet eller IP-adressen. The `<memcached port>` är avlyssningsport, som standard, `11211`.
 
-Gå till den sidan i en webbläsare. Exempel
+Gå till den sidan i en webbläsare. Till exempel
 
 ```http
 http://192.0.2.1/cache-test.php

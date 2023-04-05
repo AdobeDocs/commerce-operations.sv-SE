@@ -1,9 +1,9 @@
 ---
 title: Migreringsöversikt
 description: Lär dig hur du börjar migrera data från Magento 1 till Magento 2 med [!DNL Data Migration Tool].
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '303'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Följ följande allmänna regler för en lyckad migrering under migreringsproces
 
 1. **Gör inte** göra ändringar i Magento 1 Admin, utom för orderhantering (frakt, skapa faktura och kreditnotor)
 1. **Gör inte** ändra kod
-1. **Gör inte** gör ändringar i Magento 2 Admin och [storefront](https://glossary.magento.com/storefront)
+1. **Gör inte** gör ändringar i Magento 2 Admin och storefront
 
 >[!TIP]
 >

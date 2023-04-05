@@ -1,9 +1,9 @@
 ---
 title: Avinstallera eller installera om Adobe Commerce
 description: Följ de här stegen för att avinstallera och installera om lokala installationer av Adobe Commerce och Magento Open Source.
-source-git-commit: f6f438b17478505536351fa20a051d355f5b157a
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '281'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ Följande meddelande visas för att bekräfta att avinstallationen lyckades:
 
 Som standard `bin/magento setup:upgrade` rensar kompilerad kod och cachen. Vanligtvis använder du `bin/magento setup:upgrade` för att uppdatera komponenter och varje komponent kan kräva olika kompilerade klasser.
 
-I vissa situationer (särskilt vid distribution till produktion) kanske du vill undvika att rensa kompilerad kod eftersom det kan ta en stund. (Med [cache](https://glossary.magento.com/cache) är fortfarande rensad.) Så här uppdaterar du [databasschema](https://glossary.magento.com/database-schema) och data *utan* rensa kompilerad kod, ange:
+I vissa situationer (särskilt vid distribution till produktion) kanske du vill undvika att rensa kompilerad kod eftersom det kan ta en stund. (Cachen är fortfarande rensad.) Uppdatera databasschemat och data *utan* rensa kompilerad kod, ange:
 
 ```bash
 bin/magento setup:upgrade --keep-generated

@@ -1,9 +1,9 @@
 ---
 title: Steg efter datamigrering
 description: Lär dig hur du gör när du har använt [!DNL Data Migration Tool] för att migrera data från Magento 1 till Magento 2.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '77'
+source-wordcount: '74'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Utför följande uppgifter när du är klar med migreringen och har testat din nya Magento 2-plats noggrant:
 
-* Placera Magento 1 i underhållsläge och stoppa alla permanent [Administratör](https://glossary.magento.com/admin) verksamhet
+* Placera Magento 1 i underhållsläge och stoppa alla administratörsaktiviteter permanent
 
 * Starta Magento 2 cron-jobb
 

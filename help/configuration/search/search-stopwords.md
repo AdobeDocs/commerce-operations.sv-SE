@@ -1,9 +1,9 @@
 ---
 title: Konfigurera sökstoppord
 description: Lär dig hur du hanterar stoppord för Adobe Commerce med CSV-filer.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '658'
+source-wordcount: '652'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Mer information om hur Elasticsearch och OpenSearch använder stoppord finns i f
 
 Stoppord finns i `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords` katalog. Adobe Commerce och Magento Open Source levereras med en CSV-fil som innehåller stoppord för standardspråkinställningarna och ytterligare en fil, `stopwords.csv`, som har stoppord för alla språk som inte representeras av en annan CSV-fil.
 
-Standardlivstid för stoppordsfilen [cache](https://glossary.magento.com/cache) är 15 minuter.
+Standardlivstiden för stoppordsfilcachen är 15 minuter.
 
 ### Redigera stoppord för en befintlig språkinställning
 
@@ -54,7 +54,7 @@ Standardlivstid för stoppordsfilen [cache](https://glossary.magento.com/cache) 
       php <magento_root>/bin/magento cache:clean config
       ```
 
-1. Sök efter termer på [storefront](https://glossary.magento.com/storefront).
+1. Kontrollera resultatet genom att söka efter termer i din butik.
 
 ### Skapa stoppord för en ny språkinställning
 

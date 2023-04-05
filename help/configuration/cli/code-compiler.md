@@ -1,9 +1,9 @@
 ---
 title: Kodkompilator
 description: Lär dig hur du kör kodkompilatorn från kommandoraden.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '174'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 0%
 Kodkompileringen innehåller följande (ingen särskild ordning):
 
 - Programkodgenerering (fabriker, proxies)
-- Aggregering för områdeskonfiguration (optimerad) [beroendeinjektion](https://glossary.magento.com/dependency-injection) konfigurationer per område)
+- Aggregering för områdeskonfiguration (optimerade beroendeinjektionskonfigurationer per område)
 - Generering av spärrar (optimerad kodgenerering av spärrar)
 - Generering av cacheminne för spärr
 - Databasgenerering av kod (genererad kod för API:er)
-- Generering av servicedataattribut (genererad) [extension](https://glossary.magento.com/extension) klasser för dataobjekt)
+- Generering av servicedataattribut (genererade tilläggsklasser för dataobjekt)
 
 Du kan hitta klasser för kodkompilering i [\Magento\Setup\Module\Di\App\Task\Operation][operation] namnutrymme.
 
@@ -44,7 +44,7 @@ I vissa fall kanske du vill kompilera kod innan du installerar Commerce-programm
    bin/magento module:enable --all [-c|--clear-static-content]
    ```
 
-   Använd `[-c|--clear-static-content]` alternativ för att rensa [statiskt innehåll](https://glossary.magento.com/static-content). Detta är nödvändigt om du tidigare aktiverat eller inaktiverat moduler och du måste rensa det statiska innehåll som tidigare genererats för dem.
+   Använd `[-c|--clear-static-content]` för att rensa statiskt innehåll. Detta är nödvändigt om du tidigare aktiverat eller inaktiverat moduler och du måste rensa det statiska innehåll som tidigare genererats för dem.
 
    Se [Aktivera moduler](../../installation/tutorials/manage-modules.md).
 

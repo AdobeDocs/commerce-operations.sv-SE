@@ -1,9 +1,9 @@
 ---
 title: Inställningar för datamigrering
 description: Lär dig hur du börjar migrera inställningar från Magento 1 till Magento 2 med [!DNL Data Migration Tool].
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '295'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Var:
 
 >[!NOTE]
 >
->Det här kommandot migrerar inte alla konfigurationsinställningar. Kontrollera alla inställningar i Magento 2 [Administratör](https://glossary.magento.com/admin) innan du fortsätter.
+>Det här kommandot migrerar inte alla konfigurationsinställningar. Kontrollera alla inställningar i Magento 2 Admin innan du fortsätter.
 
 
 The `Migration completed` visas när inställningarna har överförts.

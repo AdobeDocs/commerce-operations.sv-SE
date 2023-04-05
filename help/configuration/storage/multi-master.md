@@ -1,9 +1,9 @@
 ---
 title: Lösningar för delad databasprestanda
 description: Läs om den delade databaslösningen för Adobe Commerce och Magento Open Source.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '626'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Adobe Commerce använder tre överordnad databaser och ett konfigurerbart antal 
 På grund av hur prestandalösningen för den delade databasen är utformad kan du skapa anpassad kod och installerade komponenter _inte_ gör något av följande:
 
 - Skriv direkt till databasen (i stället måste du använda Adobe Commerce databasgränssnitt)
-- Använd JOIN-koder som påverkar försäljningen eller [citat](https://glossary.magento.com/quote) databaser
+- Använd JOIN-koder som påverkar försäljnings- eller offertdatabaserna
 - Använd sekundärnycklar för tabeller i kassan, försäljning eller huvuddatabaser
 
 >[!WARNING]
@@ -76,7 +76,7 @@ Det innebär även att du kan:
 
 Den delade databasen kräver att du skapar tre överordnad MySQL-databaser på en värd (alla tre på Commerce-servern, varje databas på en separat server och så vidare). Dessa är _överordnad_ databaser och de används på följande sätt:
 
-- En överordnad databas för [utcheckning](https://glossary.magento.com/checkout) tabeller
+- En överordnad databas för utcheckningstabeller
 - En överordnad databas för försäljningstabeller (kallas även _Orderhanteringssystem_, eller _OMS_, tabeller)
 - En överordnad databas för resten av Commerce 2-programtabellerna
 

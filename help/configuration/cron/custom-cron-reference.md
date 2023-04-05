@@ -1,9 +1,9 @@
 ---
 title: Anpassat cron-jobb och cron-gruppreferens
 description: Lär dig att anpassa kroner med hjälp av cron-grupper.
-source-git-commit: ee2e446edf79efcd7cbbd67248f8e7ece06bfefd
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Anpassa crons-referens
 
-I det här avsnittet får du hjälp med att konfigurera konstanter och (valfritt) kundgrupper för anpassade moduler. Om din egen [modul](https://glossary.magento.com/module) måste schemalägga aktiviteter regelbundet, du måste skapa en crontab för den modulen. A _crontab_ är en konfiguration för cron-jobb.
+I det här avsnittet får du hjälp med att konfigurera konstanter och (valfritt) kundgrupper för anpassade moduler. Om din anpassade modul behöver schemalägga aktiviteter regelbundet måste du skapa en crontab för den modulen. A _crontab_ är en konfiguration för cron-jobb.
 
 Du kan också konfigurera en anpassad grupp, vilket bland annat gör att du kan köra cron-jobb som definierats i den gruppen oberoende av andra cron-jobb.
 
@@ -38,7 +38,8 @@ Skapa en `crontab.xml` i modulkatalogen:
 För en grupp bör filen ha följande innehåll:
 
 ```xml
-<config>
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
     <group id="<group_name>">
         <job name="<job_name>" instance="<classpath>" method="<method>">
             <schedule><time></schedule>
@@ -60,7 +61,8 @@ Var:
 Resultatet `crontab.xml` med två grupper kan se ut så här:
 
 ```xml
-<config>
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
     <group id="default">
         <job name="<job_1_name>" instance="<classpath>" method="<method_name>">
             <schedule>* * * * *</schedule>
@@ -84,7 +86,7 @@ Ett exempel finns i [Magento_Customer crontab.xml](https://github.com/magento/ma
 
 ### Ange alternativ för Cron-grupp
 
-Du kan deklarera en ny grupp och ange dess konfigurationsalternativ (som alla körs i [butiksvy](https://glossary.magento.com/store-view) omfång) via `cron_groups.xml` -fil, som finns i:
+Du kan deklarera en ny grupp och ange dess konfigurationsalternativ (som alla körs i butiksvyn) via `cron_groups.xml` -fil, som finns i:
 
 ```text
 <your component base dir>/<vendorname>/module-<name>/etc/cron_groups.xml
@@ -93,7 +95,8 @@ Du kan deklarera en ny grupp och ange dess konfigurationsalternativ (som alla k�
 Nedan visas ett exempel på `cron_groups.xml` fil:
 
 ```xml
-<config>
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/cron_groups.xsd">
     <group id="<group_name>">
         <schedule_generate_every>1</schedule_generate_every>
         <schedule_ahead_for>4</schedule_ahead_for>

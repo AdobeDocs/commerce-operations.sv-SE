@@ -1,9 +1,9 @@
 ---
 title: Valfri programvara
 description: Läs mer om valfri programvara som du kan installera för att få support på lokala installationer av Adobe Commerce och Magento Open Source.
-source-git-commit: f6f438b17478505536351fa20a051d355f5b157a
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '641'
+source-wordcount: '635'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Så här installerar och konfigurerar du NTP:
    yum search ntp
    ```
 
-1. Välj ett paket som ska installeras. Exempel, `ntp.x86_64`.
+1. Välj ett paket som ska installeras. Till exempel: `ntp.x86_64`.
 
 1. Installera paketet.
 
@@ -99,7 +99,7 @@ Det är upp till dig att välja poolservrar. Om du använder NTP-poolservrar rek
 
 ## Skapa phpinfo.php
 
-The [`phpinfo.php`](https://www.php.net/manual/en/function.phpinfo.php) filen innehåller mycket information om [PHP](https://glossary.magento.com/php) och dess tillägg.
+The [`phpinfo.php`](https://www.php.net/manual/en/function.phpinfo.php) -filen visar mycket information om PHP och dess tillägg.
 
 >[!NOTE]
 >
@@ -115,7 +115,7 @@ phpinfo();
 
 Mer information finns i [manuell phpinfo-sida](https://www.php.net/manual/en/function.phpinfo.php).
 
-Om du vill visa resultaten anger du följande [URL](https://glossary.magento.com/url) i webbläsarens plats- eller adressfält:
+Om du vill visa resultatet anger du följande URL i webbläsarens plats eller adressfält:
 
 ```http
 http://<web server host or IP>/phpinfo.php

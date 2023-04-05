@@ -1,9 +1,9 @@
 ---
 title: Avinstallera språkpaket
 description: Följ de här stegen för att avinstallera ett Adobe Commerce- eller Magento Open Source-språkpaket.
-source-git-commit: f6f438b17478505536351fa20a051d355f5b157a
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '213'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 I det här avsnittet beskrivs hur du avinstallerar ett eller flera språkpaket, inklusive språkpaketets kod från filsystemet. Du kan skapa säkerhetskopior först så att du kan återställa data senare.
 
-Det här kommandot avinstallerar *endast* språkpaket som anges i `composer.json`; med andra ord, språkpaket som tillhandahålls som [Disposition](https://glossary.magento.com/composer) paket. Om [språkpaket](https://glossary.magento.com/language-package) är inte ett Composer-paket. Du måste avinstallera det manuellt genom att ta bort språkpaketkoden från filsystemet.
+Det här kommandot avinstallerar *endast* språkpaket som anges i `composer.json`; d.v.s. språkpaket som tillhandahålls som Composer-paket. Om språkpaketet inte är ett Composer-paket måste du avinstallera det manuellt genom att ta bort språkpaketkoden från filsystemet.
 
 Du kan återställa säkerhetskopior när som helst med [`magento setup:rollback`](uninstall-modules.md#roll-back-the-file-system-database-or-media-files) -kommando.
 
@@ -31,7 +31,7 @@ Avinstallationskommandot för språkpaket utför följande åtgärder:
 
 1. If `--backup code` är specificerat, säkerhetskopiera filsystemet (förutom `var` och `pub/static` till `var/backups/<timestamp>_filesystem.tgz`
 1. Tar bort språkpaketfiler från koddatabasen med `composer remove`.
-1. Rensar [cache](https://glossary.magento.com/cache).
+1. Rensar cachen.
 
 Om du till exempel försöker avinstallera ett språkpaket som ett annat språkpaket är beroende av visas följande meddelande:
 

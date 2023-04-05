@@ -1,9 +1,9 @@
 ---
 title: Konfigurera cachelagrade i CentOS
 description: Installera och konfigurera cachelagrade filer i CentOS.
-source-git-commit: 65060d067bbbfe139736df3800688ce897cb17be
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '561'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ Om du vill installera cachelagrade filer i CentOS utför du följande åtgärder
 1. Ändra den cachelagrade konfigurationsinställningen för `CACHESIZE` och `OPTIONS`:
 
    1. Öppna `/etc/sysconfig/memcached` i en textredigerare.
-   1. Leta reda på värdet för `CACHESIZE` och ändra den till minst 1 GB. Exempel:
+   1. Leta reda på värdet för `CACHESIZE` och ändra den till minst 1 GB. Till exempel:
 
       ```config
       CACHESIZE="1GB"
@@ -101,7 +101,7 @@ Så här verifierar du att cachelagrade data känns igen av webbservern:
 
 1. Gå till den sidan i webbläsaren.
 
-   Exempel: `http://192.0.2.1/phpinfo.php`
+   Till exempel: `http://192.0.2.1/phpinfo.php`
 
 1. Se till att minnet visas enligt följande:
 
@@ -113,7 +113,7 @@ Om minnet inte visas startar du om webbservern och uppdaterar webbläsarsidan. O
 
 ### Skapa ett memcache-test som består av en MySQL-databas och ett PHP-skript
 
-Testet använder en MySQL-databas, tabell och data för att verifiera att du kan hämta databasdata och lagra dem i memcache. Ett PHP-skript söker först igenom [cache](https://glossary.magento.com/cache). Om resultatet inte finns frågar skriptet databasen. När frågan har slutförts av den ursprungliga databasen lagrar skriptet resultatet i memcache med hjälp av `set` -kommando.
+Testet använder en MySQL-databas, tabell och data för att verifiera att du kan hämta databasdata och lagra dem i memcache. Ett PHP-skript söker först i cachen. Om resultatet inte finns frågar skriptet databasen. När frågan har slutförts av den ursprungliga databasen lagrar skriptet resultatet i memcache med hjälp av `set` -kommando.
 
 [Mer information om det här testet](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-memcache-on-ubuntu-12-04)
 

@@ -1,9 +1,9 @@
 ---
 user-guide-title: Operativ spelningsbok
 user-guide-description: Lär dig hur ni gör ert företag redo för att driva en framgångsrik e-handelsplats.
-source-git-commit: 338a99f4f047640ac4bb944ac8599301cba5f646
+source-git-commit: ed6b9cb5acd35ce8213fafddcd00be1c32127a86
 workflow-type: tm+mt
-source-wordcount: '142'
+source-wordcount: '143'
 ht-degree: 0%
 
 ---
@@ -72,4 +72,5 @@ ht-degree: 0%
    - [Klicka och samla](product/click-collect.md)
    - [PWA](product/progressive-web-app.md)
 - [Checklistor och mallar](checklists-templates/home.md)
+- [Ordlista](glossary.md)
 - [Återgå till bruksanvisningar](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

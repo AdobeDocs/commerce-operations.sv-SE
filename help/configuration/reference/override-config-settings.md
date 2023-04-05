@@ -1,9 +1,9 @@
 ---
 title: Åsidosätt konfigurationsinställningar
 description: Lär dig hur du använder miljövariabler för att åsidosätta konfigurationsinställningar.
-source-git-commit: 8102c083bb0216bbdcad2882f39f7711b9cee52b
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1225'
 ht-degree: 0%
 
 ---
@@ -134,7 +134,7 @@ Om du till exempel vill hitta ett värde för webbplatsens eller butikens visnin
 
 Så här hämtar du dessa värden från databasen:
 
-1. Logga in på ditt utvecklingssystem som [ägare av filsystem](https://glossary.magento.com/magento-file-system-owner) om du inte redan har gjort det.
+1. Logga in på utvecklingssystemet som filsystemsägare om du inte redan har gjort det.
 1. Ange följande kommando:
 
    ```bash
@@ -253,6 +253,6 @@ Ett steg-för-steg-exempel visas i [Ange konfigurationsvärden med hjälp av sys
 >
 >- Använd värden som du anger i dialogrutan `$_ENV` array, du måste ange `variables_order = "EGPCS"`(Miljö, Get, Post, Cookie och Server) i `php.ini` -fil. Mer information finns i [PHP-dokumentation](https://www.php.net/manual/en/ini.core.php).
 >
->- Om du försöker åsidosätta konfigurationsinställningarna med hjälp av [Project Web Interface](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html#configure-the-project)måste variabelnamnet föregås av `env:`. Exempel:
+>- Om du försöker åsidosätta konfigurationsinställningarna med hjälp av [Project Web Interface](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html#configure-the-project)måste variabelnamnet föregås av `env:`. Till exempel:
 >
 >![Exempel på miljövariabel](../../assets/configuration/cloud-console-envvariable.png)

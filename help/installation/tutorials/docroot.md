@@ -1,9 +1,9 @@
 ---
 title: Förbättra säkerheten genom att ändra dokumentroten
 description: Förhindra obehörig webbläsarbaserad åtkomst till Adobe Commerce eller Magento Open Source lokala filsystem.
-source-git-commit: 8f05fb6fc212c2b3fda80457bbf27ecf16fb1194
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '592'
 ht-degree: 0%
 
 ---
@@ -165,9 +165,9 @@ Att växla mellan lägen är ett viktigt steg när du vill verifiera att serverk
 
 ## 5. Verifiera butiken
 
-Gå till [storefront](https://glossary.magento.com/storefront) i en webbläsare för att verifiera att allt fungerar.
+Gå till butiken i en webbläsare och kontrollera att allt fungerar.
 
-1. Öppna en webbläsare och ange serverns värdnamn eller IP-adress i adressfältet. Exempel, `http://192.168.33.10`.
+1. Öppna en webbläsare och ange serverns värdnamn eller IP-adress i adressfältet. Till exempel: `http://192.168.33.10`.
 
    I bilden nedan visas ett exempel på en butikssida. Om den visas på följande sätt har installationen lyckats!
 

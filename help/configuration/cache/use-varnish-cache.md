@@ -1,9 +1,9 @@
 ---
 title: Cachelagring med lack
 description: Lär dig hur cacherensning fungerar med lack och hur du använder det som en accelerator för webb-cachning för Adobe Commerce-programmet.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '382'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ I det här avsnittet diskuteras grunderna i hur du använder Varnish som acceler
 
 ## Finska renar
 
-Enligt [Varnish-dokumentation](https://www.varnish-cache.org/docs/trunk/users-guide/purging.html), &quot;A *rensa* är vad som händer när du väljer ut ett objekt från [cache](https://glossary.magento.com/cache) och ta bort det tillsammans med dess varianter.&quot; En finsk tömning liknar ett cachelagrat kommando (eller klicka på **Rensa Magento-cache** i Admin).
+Enligt [Varnish-dokumentation](https://www.varnish-cache.org/docs/trunk/users-guide/purging.html), &quot;A *rensa* är vad som händer när du plockar ut ett objekt från cachen och tar bort det tillsammans med dess varianter.&quot; En finsk tömning liknar ett cachelagrat kommando (eller klicka på **Rensa Magento-cache** i Admin).
 
 Faktum är att när du rensar, tömmer eller uppdaterar Commerce-cachen så töms även varnish.
 
 När du har installerat och konfigurerat lack för att arbeta med Commerce kan följande åtgärder resultera i en tömning av lack:
 
-- Upprätthålla [webbplats](https://glossary.magento.com/website).
+- Underhålla en webbplats.
 
    Till exempel allt du gör i Admin i:
 
@@ -47,7 +47,7 @@ Du kan använda den valfria parametern `--http-cache-hosts` -parameter för att 
 
 Parameterformatet måste vara `<hostname or ip>:<listen port>`där du kan utesluta `<listen port>` om det är port 80.
 
-Exempel:
+Till exempel:
 
 ```bash
 bin/magento setup:config:set --http-cache-hosts=192.0.2.100,192.0.2.155:6081

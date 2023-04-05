@@ -1,9 +1,9 @@
 ---
 title: Skaffa Adobe Commerce
 description: Lär dig hur du laddar ned Adobe Commerce och Magento Open Source.
-source-git-commit: 8f05fb6fc212c2b3fda80457bbf27ecf16fb1194
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '374'
 ht-degree: 0%
 
 ---
@@ -62,4 +62,4 @@ UNIX-system kräver `root` behörighet att installera och konfigurera programvar
 
 Gör *not* installera programmet i webbserverns dokument som `root` eftersom webbservern kanske inte kan interagera med dessa filer.
 
-Du behöver `root` behörighet att skapa [ägare av filsystem](file-system/overview.md) och lägg till den ägaren i webbservergruppen. Du använder [ägare av filsystem](https://glossary.magento.com/magento-file-system-owner) att köra `bin/magento` kommandon från kommandoraden och för att ställa in cron-jobb, som schemalägger uppgifter åt dig.
+Du behöver `root` behörighet att skapa [ägare av filsystem](file-system/overview.md) och lägg till den ägaren i webbservergruppen. Du använder filsystemets ägare för att köra `bin/magento` kommandon från kommandoraden och för att ställa in cron-jobb, som schemalägger uppgifter åt dig.

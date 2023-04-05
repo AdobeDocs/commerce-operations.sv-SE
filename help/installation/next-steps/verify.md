@@ -1,9 +1,9 @@
 ---
 title: Verifiera installationen
 description: Följ de här stegen för att bekräfta att din lokala installation av Adobe Commerce eller Magento Open Source lyckades.
-source-git-commit: f6f438b17478505536351fa20a051d355f5b157a
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '259'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Verifiera installationen
 
-Gå till [storefront](https://glossary.magento.com/storefront) i en webbläsare. Om din installationsbas till exempel [URL](https://glossary.magento.com/url) är `http://www.example.com`, anger du den i webbläsarens adress- eller platsfält.
+Gå till butiken i en webbläsare. Om t.ex. din installationsbas-URL är `http://www.example.com`, anger du den i webbläsarens adress- eller platsfält.
 
 I bilden nedan visas ett exempel på en butikssida. Om den visas på följande sätt har installationen lyckats!
 
@@ -29,9 +29,9 @@ Om sidan visar en `404 (Not Found)` fel eller visar inte format, se [felsökning
 
 ## Verifiera administratören
 
-Gå till [Administratör](https://glossary.magento.com/magento-admin) i en webbläsare. Om t.ex. din installationsbas-URL är `http://www.example.com`och Admin-URI är `admin_au1nT`, ange `http://www.example.com/admin_au1nT` i webbläsarens adress eller platsfält.
+Gå till administratören i en webbläsare. Om t.ex. din installationsbas-URL är `http://www.example.com`och Admin-URI är `admin_au1nT`, ange `http://www.example.com/admin_au1nT` i webbläsarens adress eller platsfält.
 
-(Med [Administratör](https://glossary.magento.com/admin) URI anges av värdet för `backend-frontname` installationsparameter.)
+(Admin-URI anges av värdet för `backend-frontname` installationsparameter.)
 
 Logga in som administratör när du uppmanas till detta.
 

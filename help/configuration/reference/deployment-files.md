@@ -1,9 +1,9 @@
 ---
 title: Konfigurationsfiler för distribution
 description: Förstå hur konfigurationsfilerna fungerar för installation av Commerce-programmet.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '478'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ På den översta nivån i den här arrayen finns _konfigurationssegment_. Ett se
 
 [Magento\Framework\App\DeploymentConfig](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/App/DeploymentConfig.php) ger dig bara åtkomst till dessa avsnitt, men du kan inte utöka dem.
 
-På nästa hierarkinivå ordnas objekten i varje segment enligt [modul](https://glossary.magento.com/module) sekvensdefinition, som erhålls genom att sammanfoga alla modulers konfigurationsfiler, förutom inaktiverade moduler.
+På nästa hierarkinivå ordnas objekt i varje segment enligt modulsekvensdefinitionen, som hämtas genom att alla modulers konfigurationsfiler sammanfogas, förutom inaktiverade moduler.
 
 I följande avsnitt beskrivs strukturen och innehållet i distributionskonfigurationen:
 
@@ -78,6 +78,6 @@ return array (
 
 Värdet `1` eller `0` anger om en modul är aktiverad eller inaktiverad.
 
-Inaktiverade moduler känns inte igen av handelsprogrammet. med andra ord deltar de inte i sammanslagningskonfigurationen, i beroendeinjektioner, händelser, plugin-program och så vidare. Inaktiverade moduler ändrar inte [storefront](https://glossary.magento.com/storefront) eller [Administratör](https://glossary.magento.com/admin) och påverkar inte routningen.
+Inaktiverade moduler känns inte igen av handelsprogrammet. med andra ord deltar de inte i sammanslagningskonfigurationen, i beroendeinjektioner, händelser, plugin-program och så vidare. Inaktiverade moduler ändrar inte butiken eller administratören och påverkar inte routningen.
 
 Den enda praktiska skillnaden mellan en inaktiverad modul och en modul som inte finns i kodbasen är att en inaktiverad modul hittas av den automatiska inläsaren och dess klasser och konstanter är tillgängliga för återanvändning i annan kod.

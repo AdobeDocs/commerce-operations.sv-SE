@@ -1,9 +1,9 @@
 ---
 title: Konfigurera överordnad databaser manuellt
 description: Mer information om hur du konfigurerar lösningen för delad databas manuellt.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1379'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Om Commerce-programmet redan är i produktion eller om du redan har installerat 
 
 Manuell delning av databaser innefattar:
 
-- Skapa [utcheckning](https://glossary.magento.com/checkout) OMS-databaser (Order Management System)
+- Skapa OMS-databaser (checkout and order management system)
 - Kör en serie SQL-skript som:
 
    - Släpp sekundärnycklar
@@ -62,7 +62,7 @@ Adobe rekommenderar starkt att du säkerhetskopierar din aktuella databas och di
 
 ## Ställ in ytterligare överordnad databaser
 
-I det här avsnittet beskrivs hur du skapar databasinstanser för försäljning och [citat](https://glossary.magento.com/quote) tabeller.
+I det här avsnittet beskrivs hur du skapar databasinstanser för försäljnings- och offerttabeller.
 
 **Skapa offertdatabaser för försäljning och OMS**:
 
@@ -211,7 +211,7 @@ Kör föregående skript:
    source <path>/<script>.sql
    ```
 
-   Exempel:
+   Till exempel:
 
    ```shell
    source /root/sql-scripts/1_foreign-sales.sql
@@ -336,7 +336,7 @@ Kör skriptet på följande sätt:
 1. På `mysql >` kör du skriptet enligt följande:
    `source <path>/<script>.sql`
 
-   Exempel:
+   Till exempel:
 
    ```shell
    source /root/sql-scripts/2_foreign-key-quote.sql
@@ -462,7 +462,7 @@ Kör skriptet på följande sätt:
    source <path>/<script>.sql
    ```
 
-   Exempel:
+   Till exempel:
 
    ```shell
    source /root/sql-scripts/3_drop-tables.sql
@@ -549,7 +549,7 @@ Leta reda på blocket som börjar med `'resource'` och lägga till `'checkout'` 
 
 ## Referensskript
 
-I det här avsnittet finns skript som du kan köra för att skriva ut en fullständig lista över tabeller som påverkas utan att utföra några åtgärder på dem. Du kan använda dem för att se vilka tabeller som påverkas innan du delar databaser manuellt, vilket kan vara användbart om du använder tillägg som anpassar [databasschema](https://glossary.magento.com/database-schema).
+I det här avsnittet finns skript som du kan köra för att skriva ut en fullständig lista över tabeller som påverkas utan att utföra några åtgärder på dem. Du kan använda dem för att se vilka tabeller som påverkas innan du delar databaser manuellt, vilket kan vara användbart om du använder tillägg som anpassar databasschemat.
 
 Så här använder du dessa skript:
 

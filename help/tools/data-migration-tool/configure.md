@@ -1,9 +1,9 @@
 ---
 title: Konfigurera [!DNL Data Migration Tool]
 description: Lär dig mer om de två metoderna för att konfigurera [!DNL Data Migration Tool] att överföra data mellan Magento 1 och Magento 2.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '789'
 ht-degree: 0%
 
 ---
@@ -176,7 +176,7 @@ Du kan också ansluta till en databas med TLS-protokollet (dvs. med offentliga/p
 * `ssl_cert`
 * `ssl_key`
 
-Exempel:
+Till exempel:
 
 ```xml
 <source>
@@ -203,7 +203,7 @@ Mappningsfiler för Magento-versioner som stöds finns i underkataloger till `<y
 
 Så här använder du mappningsfilerna:
 
-1. Kopiera dem från `<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/<migration edition>/<ce or version>/` till `<your Magento 2 install dir>/app/code/Vendor/Migration/etc/<migration edition>/<ce or version>/` och ta bort `.dist` [extension](https://glossary.magento.com/extension).
+1. Kopiera dem från `<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/<migration edition>/<ce or version>/` till `<your Magento 2 install dir>/app/code/Vendor/Migration/etc/<migration edition>/<ce or version>/` och ta bort `.dist` tillägg.
 
 1. Uppdatera sökvägen till den nyligen kopierade filen i `<options>` nod på `config.xml`. Den uppdaterade sökvägen ska vara någon av följande:
 

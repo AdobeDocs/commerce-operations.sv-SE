@@ -1,9 +1,9 @@
 ---
 title: Kontrollera databasstatus
 description: Följ de här stegen för att kontrollera databasstatusen för Adobe Commerce eller Magento Open Source.
-source-git-commit: f6f438b17478505536351fa20a051d355f5b157a
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '111'
+source-wordcount: '108'
 ht-degree: 2%
 
 ---
@@ -35,4 +35,4 @@ Kommandot returnerar en av följande avslutskoder:
 |--------------|--------------|---------------|
 | 0 | Normal | Ingen |
 | 1 | Vissa moduler använder kodversioner som är nyare eller äldre än databasen | Kör [`magento setup:upgrade`](database-upgrade.md) för att uppdatera databasschemat och köra `composer update` från programmets rotkatalog för att uppdatera komponentberoenden |
-| 2 | `magento setup:upgrade` krävs | [`magento setup:upgrade`](database-upgrade.md) för att uppdatera [databasschema](https://glossary.magento.com/database-schema) |
+| 2 | `magento setup:upgrade` krävs | [`magento setup:upgrade`](database-upgrade.md) för att uppdatera databasschemat |

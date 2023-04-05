@@ -1,9 +1,9 @@
 ---
 title: Konfigurera programmet
 description: Lär dig mer om den konfiguration efter installation som krävs för Adobe Commerce och Magento Open Source lokala distributioner.
-source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '728'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Om du använder webbservern Apache måste du aktivera serveromskrivningar för a
 
 Om du har flera webbnoder *inte* använder programmets standardfilcachning eftersom det inte finns någon synkronisering mellan webbnoder. Aktiviteten på en webbnod skrivs med andra ord endast till den webbnodens filsystem. Efterföljande aktivitet, om den utförs på en annan webbnod, kan resultera i att onödiga filer skrivs eller att fel kan uppstå.
 
-Använd i stället [Redis](../../configuration/cache/config-redis.md) för båda standardvärdena [cache](https://glossary.magento.com/cache) och sidcachen.
+Använd i stället [Redis](../../configuration/cache/config-redis.md) för både standardcachen och sidcachen.
 
 ## Serverinställningar
 

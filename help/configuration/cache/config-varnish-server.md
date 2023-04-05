@@ -1,9 +1,9 @@
 ---
 title: Konfigurera webbserver
 description: Lär dig hur du konfigurerar webbservern så att den fungerar med lack.
-source-git-commit: ee2e446edf79efcd7cbbd67248f8e7ece06bfefd
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '746'
+source-wordcount: '740'
 ht-degree: 0%
 
 ---
@@ -196,7 +196,7 @@ backend default {
 
 ## Verifiera HTTP-svarshuvuden
 
-Nu kan du verifiera att Varnish serverar sidor genom att titta på [HTML](https://glossary.magento.com/html) svarshuvuden returneras från vilken sida som helst.
+Nu kan du verifiera att Varnish serverar sidor genom att titta på HTML svarshuvuden som returneras från vilken sida som helst.
 
 Innan du kan titta på rubriker måste du ange Commerce för utvecklarläge. Det finns flera sätt att göra det på. Det enklaste är att ändra `.htaccess` i Commerce-programmets rot. Du kan också använda [`magento deploy:mode:set`](../cli/set-mode.md) -kommando.
 
@@ -235,7 +235,7 @@ Om rubriker som dessa gör det _not_ visa, stoppa Varnish, kontrollera `default.
 
 ### Titta på sidhuvuden för svar från HTML
 
-Det finns flera sätt att se på svarshuvuden, bland annat genom att använda en webbläsare [plugin-program](https://glossary.magento.com/plug-in) eller en webbläsarkontroll.
+Det finns flera sätt att titta på svarshuvuden, bland annat med hjälp av ett webbläsarplugin-program eller en webbläsarkontroll.
 
 I följande exempel används `curl`. Du kan ange det här kommandot från alla datorer som har åtkomst till Commerce-servern med HTTP.
 
@@ -243,7 +243,7 @@ I följande exempel används `curl`. Du kan ange det här kommandot från alla d
 curl -I -v --location-trusted '<your Commerce base URL>'
 ```
 
-Exempel:
+Till exempel:
 
 ```bash
 curl -I -v --location-trusted 'http://192.0.2.55/magento2'

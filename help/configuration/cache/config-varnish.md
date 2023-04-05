@@ -1,9 +1,9 @@
 ---
 title: Konfigurera och använda engelska
 description: Förstå hur lack lagrar filer och förbättrar HTTP-trafiken.
-source-git-commit: 974c3480ccf5d1e1a5308e1bd2b27fcfaf3c72b2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1079'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ I föregående bild resulterar användarens HTTP-begäran över Internet i mång
 
 Efterhand som webbservern returnerar resurser lagras cachelagrade resurser i svenska. Efterföljande förfrågningar om dessa resurser besvaras av Varnish (vilket innebär att förfrågningarna inte når webbservern). Finska returnerar cachelagrat innehåll extremt snabbt. Resultatet blir snabbare svarstider för att återsända innehållet till användarna och ett minskat antal förfrågningar som måste uppfyllas av Commerce.
 
-Resurser som cachas av Varnish förfaller vid ett konfigurerbart intervall eller ersätts av senare versioner av samma resurser. Du kan även rensa cacheminnet manuellt med [Administratör](https://glossary.magento.com/magento-admin) eller [`magento cache:clean`](../cli/manage-cache.md#clean-and-flush-cache-types) -kommando.
+Resurser som cachas av Varnish förfaller vid ett konfigurerbart intervall eller ersätts av senare versioner av samma resurser. Du kan även rensa cacheminnet manuellt antingen med hjälp av Admin eller [`magento cache:clean`](../cli/manage-cache.md#clean-and-flush-cache-types) -kommando.
 
 ## Processöversikt
 
@@ -97,7 +97,7 @@ Det här avsnittet omfattar endast standardalternativen i föregående lista. De
 
 På den första webbläsarbegäran levereras cachelagrade resurser till klientwebbläsaren från Varnish och cachelagras i webbläsaren.
 
-Dessutom använder varnish en [Entitet](https://glossary.magento.com/entity) Tagg (ETag) för statiska resurser. Med ETag kan du avgöra när [statiska filer](https://glossary.magento.com/static-files) på servern. Detta innebär att statiska resurser skickas till klienten när de ändras på servern, antingen på en ny begäran från en webbläsare eller när klienten uppdaterar webbläsarens cache, vanligtvis genom att trycka på F5 eller Ctrl+F5.
+Dessutom används en enhetstagg (ETag) för statiska resurser i lack. Med ETag kan du avgöra när statiska filer ändras på servern. Detta innebär att statiska resurser skickas till klienten när de ändras på servern, antingen på en ny begäran från en webbläsare eller när klienten uppdaterar webbläsarens cache, vanligtvis genom att trycka på F5 eller Ctrl+F5.
 
 Mer information finns i följande avsnitt.
 

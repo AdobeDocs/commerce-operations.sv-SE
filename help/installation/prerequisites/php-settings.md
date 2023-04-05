@@ -1,9 +1,9 @@
 ---
 title: PHP-inställningar
 description: Följ de här stegen för att installera nödvändiga PHP-tillägg och konfigurera PHP-inställningar för lokala installationer av Adobe Commerce och Magento Open Source.
-source-git-commit: df8240b71efe992bc1c0655aa30c32778297a3c6
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '804'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # PHP-inställningar
 
-I det här avsnittet beskrivs hur du ställer in krav [PHP](https://glossary.magento.com/php) alternativ.
+I det här avsnittet beskrivs hur du ställer in obligatoriska PHP-alternativ.
 
 >[!NOTE]
 >
@@ -25,7 +25,7 @@ De flesta versioner av Linux har PHP installerat som standard. Det här avsnitte
 php -v
 ```
 
-If [PHP](https://glossary.magento.com/php) installeras, ett meddelande som liknar följande visas:
+Om PHP är installerat visas ett meddelande som liknar följande:
 
 ```terminal
 PHP 7.4.0 (cli) (built: Aug 14 2019 16:42:46) ( NTS )
@@ -156,7 +156,7 @@ Så här anger du PHP-alternativ:
 
 1. Ändra värdet för `memory_limit` till ett av de värden som rekommenderas i början av det här avsnittet.
 
-   Exempel:
+   Till exempel:
 
    ```conf
    memory_limit=2G

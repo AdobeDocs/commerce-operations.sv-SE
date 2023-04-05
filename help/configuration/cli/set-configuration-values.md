@@ -1,9 +1,9 @@
 ---
 title: Ange konfigurationsvärden
 description: Lär dig hur du anger konfigurationsvärden och ändrar värden som är låsta i Admin.
-source-git-commit: cb8edb8de8f8419e9992b180ea927ba55cbd839b
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '982'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Du kan ange värden vid följande tidpunkter:
 
 - Innan du installerar Commerce kan du bara ange konfigurationsvärden för standardomfånget eftersom det är det enda giltiga omfånget.
 
-- När du har installerat Commerce kan du ange konfigurationsvärden för alla webbplatser eller [butiksvy](https://glossary.magento.com/store-view) omfång.
+- När du har installerat Commerce kan du ange konfigurationsvärden för alla webbplatser och butiksvyer.
 
 Använd följande kommandon:
 

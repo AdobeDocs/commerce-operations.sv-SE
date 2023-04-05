@@ -1,9 +1,9 @@
 ---
 title: Installation av produktionssystem
 description: Lär dig hur du skapar ett produktionssystem för Commerce-programmet.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '376'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Du kan ha ett produktionssystem. Alla följande måste vara true:
 
 Så här konfigurerar du en produktionsmaskin:
 
-1. När du har installerat Commerce eller dragit in den från källkontrollen loggar du in på produktionsservern som eller växlar till [ägare av filsystem](https://glossary.magento.com/magento-file-system-owner).
+1. När du har installerat Commerce eller dragit in det från källkontrollen loggar du in på produktionsservern som, eller växlar till, ägaren av filsystemet.
 1. Skapa `~/.ssh/.composer/auth.json` om du inte redan har gjort det.
 
    Skapa katalogen:

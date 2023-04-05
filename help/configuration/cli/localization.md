@@ -1,9 +1,9 @@
 ---
 title: Översättningsordlistor och språkpaket
 description: Lär dig hur du genererar översättningsordlistor och bygger språkpaket.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '1509'
+source-wordcount: '1503'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Se [Översikt över översättningar].
 
 ## Generera en översättningsordlista
 
-Du kan generera en [översättningsordlista] om du vill anpassa befintliga strängar, översätta ord och fraser i en anpassad modul, lokalisera ett tema eller skapa [språkpaket](https://glossary.magento.com/language-package).
+Du kan generera en [översättningsordlista] om du vill anpassa befintliga strängar, översätta ord och fraser i en anpassad modul, lokalisera ett tema eller skapa språkpaket.
 
 Om du vill börja översätta använder du ett kommando för att generera en CSV-ordlistefil med en insamlad lista över alla befintliga fraser och ord.
 
@@ -63,7 +63,7 @@ Använd följande riktlinjer när du översätter ord och fraser:
 - När du skapar ordlistor för språkområden ska du använda de vanliga Commerce-strängarna.
 - Var uppmärksam på platshållare när du översätter: `%1`, `%2`
 
-I Commerce används platshållarna för att infoga kontextvärden. de _not_ används för översättningar. Exempel:
+I Commerce används platshållarna för att infoga kontextvärden. de _not_ används för översättningar. Till exempel:
 
 ```text
 Product '%1' has been added to shopping cart.
@@ -139,7 +139,7 @@ Så här skapar du dessa filer:
 
 När ett språkpaket deklareras i `language.xml` konfigurationsfilen måste du ange språkarvssekvensen för det här paketet.
 
-Med språkarv kan du skapa en översättning som kallas _child_ baserat på en befintlig översättning som kallas _parent_. De underordnade översättningarna åsidosätter den överordnade. Men om den underordnade översättningen inte kan överföras eller visas, eller om en fras eller ett ord saknas, används den överordnade [locale](https://glossary.magento.com/locale). [Exempel på arv av språkpaket](#example-of-language-inheritance).
+Med språkarv kan du skapa en översättning som kallas _child_ baserat på en befintlig översättning som kallas _parent_. De underordnade översättningarna åsidosätter den överordnade. Om den underordnade översättningen inte kan överföras eller visas, eller om en fras eller ett ord saknas, används det överordnade språkområdet i Commerce. [Exempel på arv av språkpaket](#example-of-language-inheritance).
 
 Om du vill deklarera ett paket anger du följande information:
 
@@ -247,7 +247,7 @@ Generera en CSV-fil på ungefär samma sätt som i föregående exempel, men i s
 
 1. Skapa en katalog för språkpaketet.
 
-   Exempel: `/var/www/html/magento2/app/i18n/ExampleCorp/xx_yy`
+   Till exempel: `/var/www/html/magento2/app/i18n/ExampleCorp/xx_yy`
 
 1. Lägg till följande i den katalogen:
 

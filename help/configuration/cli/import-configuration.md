@@ -1,9 +1,9 @@
 ---
 title: Importera data från konfigurationsfiler
 description: Importera konfigurationsinställningar för Adobe Commerce från konfigurationsfiler.
-source-git-commit: 5c0d285717a79d654af769cb734ec385d2d4046f
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '503'
 ht-degree: 0%
 
 ---
@@ -66,7 +66,7 @@ I följande avsnitt beskrivs i detalj vilka data vi importerar.
 
 I Commerce används värden direkt i `system` arrayen i `config.php` eller `env.php` i stället för att importera dem till databasen, eftersom de kräver vissa för- och efterbearbetningsåtgärder.
 
-Värdet för konfigurationssökvägen `web/secure/base_url` måste valideras med [serverdel](https://glossary.magento.com/backend) modeller.
+Värdet för konfigurationssökvägen `web/secure/base_url` måste valideras med backend-modeller.
 
 #### Backend-modeller
 
@@ -94,7 +94,7 @@ De föregående konfigurationerna kan importeras i följande lägen:
 
 >[!INFO]
 >
->Vi importerar inte roten [kategori](https://glossary.magento.com/category) som är kopplade till butiker. Du måste associera en rotkategori med en butik med Commerce [Administratör](https://glossary.magento.com/admin).
+>Vi importerar inte den rotkategori som är associerad med butiker. Du måste associera en rotkategori med en butik med hjälp av Commerce Admin.
 
 ### Temakonfiguration
 
@@ -104,8 +104,8 @@ Temakonfigurationen innehåller alla teman som är registrerade i ert handelssys
 
 Nyckeln till arrayen är fullständig temats sökväg: `area` + `theme path`
 
-Exempel, `frontend/Magento/luma`.
-`frontend` är area och `Magento/luma` är [tema](https://glossary.magento.com/theme) bana.
+Till exempel: `frontend/Magento/luma`.
+`frontend` är area och `Magento/luma` är temats sökväg.
 
 Värdet för arrayen är data om temat: kod, titel, sökväg, överordnat id
 

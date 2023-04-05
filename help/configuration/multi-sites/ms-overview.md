@@ -1,9 +1,9 @@
 ---
 title: Flera webbplatser eller butiker
 description: Lär dig hur du kan starta flera webbplatser eller implementera butiksvyer med olika alternativ, domäner och innehåll.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '433'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ Med en enda instans av Adobe Commerce kan du starta flera webbplatser eller lagr
 - Produkter
 - Valutor
 
-Denna flexibla lösning möjliggör en enda Commerce-kodbas och [Administratör](https://glossary.magento.com/magento-admin) för att administrera och visa olika butiker. Du konfigurerar webbplatser, butiker och butiksvyer i Admin. Använd vissa variabler i virtuella värdar för att starta Commerce-programmet med dessa webbplatser eller butiksvyer.
+Denna flexibla lösning gör att en Commerce-kodbas och administratör kan administrera och visa olika butiker. Du konfigurerar webbplatser, butiker och butiksvyer i Admin. Använd vissa variabler i virtuella värdar för att starta Commerce-programmet med dessa webbplatser eller butiksvyer.
 
 Ett vanligt användningsområde är att konfigurera butiker med olika alternativ i olika domäner. Du kan till exempel ha en uppsättning kategorier och produkter på en domän och en annan uppsättning kategorier och produkter på en separat domän på ett annat språk.
 
-Du konfigurerar webbplatser, butiker och butiksvyer i Commerce [Administratör](https://glossary.magento.com/admin). Använd `MAGE_RUN_TYPE` och `MAGE_RUN_CODE` variabler i virtuella värdar för att starta Commerce-programmet med dessa webbplatser eller butiksvyer.
+Du konfigurerar webbplatser, butiker och butiksvyer i Commerce Admin. Använd `MAGE_RUN_TYPE` och `MAGE_RUN_CODE` variabler i virtuella värdar för att starta Commerce-programmet med dessa webbplatser eller butiksvyer.
 
 Tänk på följande termer:
 

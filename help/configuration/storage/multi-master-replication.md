@@ -1,9 +1,9 @@
 ---
 title: Databasreplikering
 description: Se fördelarna med att konfigurera databasreplikering.
-source-git-commit: 52f92ef79586d618fd4ac51c00eaa1446a2dc98f
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '178'
+source-wordcount: '175'
 ht-degree: 0%
 
 ---
@@ -121,7 +121,7 @@ Följande är mer avancerat och finns endast i din information:
 
 ## Prestandaförbättring
 
-Om du vill förbättra prestanda för överordnad-slave-replikering kan du filtrera vissa tabeller på slavinstanser. Vi rekommenderar att du filtrerar alla temporära tabeller med namnmönster `search\_tmp\_%` som används för [katalog](https://glossary.magento.com/catalog) sökning.
+Om du vill förbättra prestanda för överordnad-slave-replikering kan du filtrera vissa tabeller på slavinstanser. Vi rekommenderar att du filtrerar alla temporära tabeller med namnmönster `search\_tmp\_%` som används för katalogsökning.
 
 Lägg till följande rad i `my.cnf` på dina slavförekomster:
 

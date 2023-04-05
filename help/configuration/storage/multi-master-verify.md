@@ -1,9 +1,9 @@
 ---
 title: Verifiera delad databas
 description: Lär dig hur du kontrollerar att en konfiguration för en delad databas i Commerce fungerar som den ska.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '155'
+source-wordcount: '152'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 Efter konfigurationen konfigureras de överordnad databaserna enligt följande:
 
 - Main Commerce database: 369 tabeller
-- Handel [citat](https://glossary.magento.com/quote) databas: 11 tabeller
+- Databas för handelsoffert: 11 tabeller
 - Försäljningsdatabas: 55 tabeller
 
 För att verifiera att de delade databaserna fungerar som de ska utför du följande åtgärder och kontrollerar att data har lagts till i databastabellerna med hjälp av ett databasverktyg som [phpmyadmin](../../installation/prerequisites/optional-software.md#phpmyadmin):

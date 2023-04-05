@@ -1,10 +1,10 @@
 ---
 title: Generera data för prestandatestning
 description: Lär dig hur du genererar en stor mängd data som kan användas för prestandatestning.
-source-git-commit: ee2e446edf79efcd7cbbd67248f8e7ece06bfefd
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 9%
+source-wordcount: '749'
+ht-degree: 8%
 
 ---
 
@@ -19,7 +19,7 @@ Så här använder du [Performance Toolkit](https://github.com/magento/magento2/
 
 Du kan justera mängden data som du skapar med _profiler_ (liten, medelstor, stor och extra stor). Profilerna finns i `<magento_root>/setup/performance-toolkit/profiles/<ce|ee>` katalog.
 
-Exempel: `/var/www/html/magento2/setup/performance-toolkit/profiles/ce`
+Till exempel: `/var/www/html/magento2/setup/performance-toolkit/profiles/ce`
 
 Följande bild visar hur en produkt visas i butiken med _liten_ profil:
 
@@ -32,18 +32,18 @@ Följande tabell innehåller information om datageneratorprofilerna: small, medi
 | `websites` | 1 | 3 | 25 | 5 | 5 |
 | `store_groups` | 1 | 3 | 25 | 5 | 5 |
 | `store_views` | 1 | 3 | 50 | 5 | 5 |
-| `simple_products` | 800 | 24 000 | 4 000 | 300 000 | 600 000 |
+| `simple_products` | 800 | 24,000 | 4,000 | 300,000 | 600,000 |
 | `configurable_products` | 16 med 24 alternativ | 640 med 24 alternativ | 800 med 24 alternativ och 79 med 200 alternativ | 8 000 med 24 alternativ | 16 000 med 24 alternativ |
 | `product_images` | 100 bilder/3 bilder per produkt | 1 000 bilder/3 bilder per produkt | 1 000 bilder/3 bilder per produkt | 2 000 bilder/3 bilder per produkt | 2 000 bilder/3 bilder per produkt |
-| `categories` | 30 | 300 | 100 | 3 000 | 6 000 |
+| `categories` | 30 | 300 | 100 | 3,000 | 6,000 |
 | `categories_nesting_level` | 3 | 3 | 3 | 5 | 5 |
 | `catalog_price_rules` | 20 | 20 | 20 | 20 | 20 |
 | `catalog_target_rules` | 5 | 5 | 5 | 5 | 5 |
 | `cart_price_rules` | 20 | 20 | 20 | 20 | 20 |
 | `cart_price_rules_floor` | 2 | 2 | 2 | 2 | 2 |
-| `customers` | 200 | 2 000 | 2 000 | 5 000 | 10 000 |
-| `tax rates` | 130 | 40 000 | 40 000 | 40 000 | 40 000 |
-| `orders` | 80 | 50 000 | 50 000 | 100 000 | 150 000 |
+| `customers` | 200 | 2,000 | 2,000 | 5,000 | 10,000 |
+| `tax rates` | 130 | 40,000 | 40,000 | 40,000 | 40,000 |
+| `orders` | 80 | 50,000 | 50,000 | 100,000 | 150,000 |
 
 ### Kör datageneratorn
 
@@ -61,7 +61,7 @@ bin/magento setup:perf:generate-fixtures <path-to-profile>
 
 Plats `<path-to-profile>` anger den absoluta filsystemsökvägen till och namnet på en profil.
 
-Exempel:
+Till exempel:
 
 ```bash
 bin/magento setup:perf:generate-fixtures /var/www/html/magento2/setup/performance-toolkit/profiles/ce/small.xml
@@ -100,7 +100,7 @@ Generating simple products...  done in <time>
 
 ### Administratörsanvändare
 
-Genererar [admin](https://glossary.magento.com/admin) -användare. [XML](https://glossary.magento.com/xml) profilnod:
+Skapar administratörsanvändare. XML-profilnod:
 
 ```xml
 <!-- Number of admin users -->
@@ -124,7 +124,7 @@ Genererar attributuppsättningar med angiven konfiguration. XML-profilnod:
 
 ### Paketprodukter
 
-Skapar paketprodukter. Genererade paketmarkeringar visas inte individuellt i dialogrutan [katalog](https://glossary.magento.com/catalog). Produkterna är jämnt fördelade per kategori och webbplats. If  `assign_entities_to_all_websites` från profilen är inställd på `1`. Produkterna tilldelas alla webbplatser.
+Skapar paketprodukter. Genererade paketmarkeringar visas inte individuellt i katalogen. Produkterna är jämnt fördelade per kategori och webbplats. If  `assign_entities_to_all_websites` från profilen är inställd på `1`. Produkterna tilldelas alla webbplatser.
 
 XML-profilnod:
 
@@ -162,7 +162,7 @@ Skapar katalogprisregler. XML-profilnod:
 
 ### Kategorier
 
-Genererar kategorier. If `assign_entities_to_all_websites` är inställd på `0`alla kategorier är jämnt fördelade per rotkategori, annars tilldelas alla kategorier till en rot [kategori](https://glossary.magento.com/category).
+Genererar kategorier. If `assign_entities_to_all_websites` är inställd på `0`alla kategorier är jämnt fördelade per rotkategori, I annat fall tilldelas alla kategorier till en rotkategori.
 
 XML-profilnod:
 
@@ -231,7 +231,7 @@ Följande XML-nodformat stöds:
    </configurable_products>
    ```
 
-- Generera produkter baserat på en dynamiskt skapad [attributuppsättning](https://glossary.magento.com/attribute-set) med ett visst antal attribut och alternativ:
+- Generera produkter baserat på en dynamiskt skapad attributuppsättning med ett angivet antal attribut och alternativ:
 
    ```xml
    <configurable_products>

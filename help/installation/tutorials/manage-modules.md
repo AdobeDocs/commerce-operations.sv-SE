@@ -1,9 +1,9 @@
 ---
 title: Aktivera eller inaktivera moduler
 description: Följ de här stegen för att hantera Adobe Commerce- eller Magento Open Source-moduler.
-source-git-commit: f6f438b17478505536351fa20a051d355f5b157a
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '551'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Plats
 
 * `--enabled` visar alla aktiverade moduler.
 * `--disabled` visar alla inaktiverade moduler.
-* `<module-list>` är en blankstegsavgränsad lista med moduler som kontrollerar statusen. Om någon [modul](https://glossary.magento.com/module) namnet innehåller specialtecken, omge namnet med enkla eller dubbla citattecken.
+* `<module-list>` är en blankstegsavgränsad lista med moduler som kontrollerar statusen. Om ett modulnamn innehåller specialtecken omger du namnet med enkla eller dubbla citattecken.
 
 ## Aktivera modul, inaktivera
 
@@ -41,7 +41,7 @@ bin/magento module:disable [-c|--clear-static-content] [-f|--force] [--all] <mod
 
 Plats
 
-* `<module-list>` är en blankstegsavgränsad lista med moduler som ska aktiveras eller inaktiveras. Om någon [modul](https://glossary.magento.com/module) namnet innehåller specialtecken, omge namnet med enkla eller dubbla citattecken.
+* `<module-list>` är en blankstegsavgränsad lista med moduler som ska aktiveras eller inaktiveras. Om ett modulnamn innehåller specialtecken omger du namnet med enkla eller dubbla citattecken.
 * `--all` om du vill aktivera eller inaktivera alla moduler samtidigt.
 * `-f` eller `--force` för att tvinga en modul att aktiveras eller inaktiveras trots beroenden. Innan du använder det här alternativet finns mer information i [Aktivera och inaktivera moduler](#about-enabling-and-disabling-modules).
 * `-c` eller `--clear-static-content` rengöringar [genererade statiska vyfiler](../../configuration/cli/static-view-file-deployment.md).

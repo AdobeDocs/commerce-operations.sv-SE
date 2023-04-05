@@ -1,9 +1,9 @@
 ---
 title: Underhållslägesalternativ för uppgradering
-description: 'Skapa en anpassad sida för underhållsläge som kunderna ser på Adobe Commerce eller Magento Open Source i butiken medan du utför en uppgradering. '
-source-git-commit: bbc412f1ceafaa557d223aabfd4b2a381d6ab04a
+description: Skapa en anpassad sida för underhållsläge som kunderna ser på Adobe Commerce eller Magento Open Source i butiken medan du utför en uppgradering.
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '384'
+source-wordcount: '381'
 ht-degree: 0%
 
 ---
@@ -104,7 +104,7 @@ I det här avsnittet beskrivs hur du skapar en anpassad underhållssida och hur 
 
 Så här omdirigerar du trafik till en anpassad underhållssida:
 
-1. Använd en textredigerare för att öppna [nginx](https://glossary.magento.com/nginx) konfigurationsfil som innehåller serverblocket.
+1. Använd ett textredigeringsprogram för att öppna konfigurationsfilen nginx som innehåller serverblocket.
 1. Lägg till följande i serverblocket (`server` endast visas för tydlighet, lägg inte till ett andra serverblock).
 
    Följande tillåtslista IP-adressen 192.0.2.110 och 192.0.2.115 för på ett system där Magento är installerat i `/var/www/html/magento2`:

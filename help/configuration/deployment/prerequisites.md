@@ -1,9 +1,9 @@
 ---
 title: Krav för distribution
 description: Se en lista över förutsättningar för att distribuera Commerce till ett utvecklings-, bygg- eller produktionssystem.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '161'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Filbehörigheter och ägarskap måste vara enhetliga i alla utvecklings-, bygg- 
 
 - Allt av följande:
 
-   - Konfigurera samma [ägare av filsystem](https://glossary.magento.com/magento-file-system-owner) användarnamn på alla system
+   - Ställ in samma användarnamn för filsystemets ägare på alla system
    - Se till att webbservern körs som samma användare i alla system
    - Kontrollera att filsystemägaren finns i webbservergruppen på alla system
 

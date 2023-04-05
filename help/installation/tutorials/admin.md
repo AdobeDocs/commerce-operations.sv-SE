@@ -1,9 +1,9 @@
 ---
 title: Skapa, redigera eller låsa upp ett administratörskonto
 description: Följ de här stegen för att hantera administratörskontot för ditt Adobe Commerce- eller Magento Open Source Admin-program.
-source-git-commit: f6f438b17478505536351fa20a051d355f5b157a
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Innan du kan använda det här kommandot måste du göra följande:
 
 - [Skapa distributionskonfigurationen](deployment.md)
 - [Aktivera minst modulerna Magento_Authorization och Magento_User](manage-modules.md)
-- Skapa [databasschema](https://glossary.magento.com/database-schema)
+- Skapa databasschemat
 
 >[!NOTE]
 >

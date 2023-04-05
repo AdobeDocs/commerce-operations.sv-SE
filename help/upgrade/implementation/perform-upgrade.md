@@ -1,9 +1,9 @@
 ---
 title: Utför en uppgradering
 description: Följ de här stegen för att uppgradera ett Adobe Commerce- eller Magento Open Source-projekt.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '805'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Du kan uppgradera ditt Adobe Commerce- eller Magento Open Source-program från kommandoraden om du har installerat programmet genom att:
 
-- Hämtar [metapackage](https://glossary.magento.com/metapackage) med `composer create-project` -kommando.
+- Hämta metapaketet med `composer create-project` -kommando.
 - Installerar det komprimerade arkivet.
 
 >[!NOTE]
@@ -108,7 +108,7 @@ Du måste fylla i [uppgraderingskrav](../prepare/prerequisites.md) för att för
 
    - `<product>` —(Obligatoriskt) Paketet som ska uppgraderas. För lokala installationer måste värdet vara antingen `product-community-edition` eller `product-enterprise-edition`.
 
-   - `<version>` —(Obligatoriskt) Den version av Adobe Commerce eller Magento Open Source som du uppgraderar till. Exempel, `2.4.3`.
+   - `<version>` —(Obligatoriskt) Den version av Adobe Commerce eller Magento Open Source som du uppgraderar till. Till exempel: `2.4.3`.
 
    - `--no-update` —(Obligatoriskt) Inaktiverar den automatiska uppdateringen av beroenden.
 

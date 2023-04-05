@@ -1,9 +1,9 @@
 ---
 title: Konfigurera flera webbplatser med Nginx
 description: Följ den här självstudiekursen för att konfigurera flera webbplatser med Nginx.
-source-git-commit: 8102c083bb0216bbdcad2882f39f7711b9cee52b
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '959'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ Se [Konfigurera flera webbplatser, butiker och butiksvyer i administratören](ms
 
 ## Steg 2: Skapa nya virtuella värdar
 
-I det här steget beskrivs hur du läser in webbplatser på [storefront](https://glossary.magento.com/storefront). Du kan antingen använda webbplatser eller butiksvyer; Om du använder butiksvyer måste du justera parametervärdena därefter. Du måste slutföra uppgifterna i det här avsnittet som en användare med `sudo` behörighet.
+I det här steget beskrivs hur du läser in webbplatser i butiken. Du kan antingen använda webbplatser eller butiksvyer; Om du använder butiksvyer måste du justera parametervärdena därefter. Du måste slutföra uppgifterna i det här avsnittet som en användare med `sudo` behörighet.
 
 Genom att bara använda en [nginx virtuell värdfil](#step-2-create-nginx-virtual-hosts)kan du göra din ursprungliga konfiguration enkel och ren. Genom att använda flera virtuella värdfiler kan du anpassa varje butik (och använda en anpassad plats för `french.mysite.mg` till exempel).
 

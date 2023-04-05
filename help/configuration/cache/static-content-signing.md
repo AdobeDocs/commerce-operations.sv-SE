@@ -1,9 +1,9 @@
 ---
 title: Cache för statiskt innehåll
 description: Få en förståelse för hur man signerar statiskt innehåll och hur man aktiverar eller inaktiverar funktionen.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '433'
 ht-degree: 0%
 
 ---
@@ -15,12 +15,12 @@ Ange `Expires` för en statisk resurs anger för webbläsaren att cachelagra res
 Detta är en vanlig [bästa praxis](https://developer.yahoo.com/performance/rules.html#expires=) för cachelagring av statiska resurser.
 
 När webbläsaren cachelagrar en statisk resurs och resursändringarna på servern måste du rensa webbläsarens cache så att den kan hämta den nya versionen.
-Manuell rensning av webbläsarens cache fungerar om du är en [webbplats](https://glossary.magento.com/website) -administratör, men det här är inte en lämplig förfrågan till dina användare när du vill att de ska hämta nya versioner av en statisk resurs.
+Manuell rensning av webbläsarens cache fungerar om du är webbplatsadministratör, men det här är inte en lämplig begäran om att användarna ska kunna hämta nya versioner av en statisk resurs.
 
 ## Statisk innehållssignering
 
-[Statiskt innehåll](https://glossary.magento.com/static-content) signering är en Commerce-funktion som gör att du kan göra webbläsarcachen ogiltig för statiska resurser.
-Commerce uppnår detta genom att lägga till en distributionsversion till URL:en för [statiska filer](https://glossary.magento.com/static-files).
+Statisk innehållssignering är en Commerce-funktion som gör att du kan göra webbläsarens cache ogiltig för statiska resurser.
+Commerce åstadkommer detta genom att lägga till en distributionsversion till URL:en för statiska filer.
 
 Följande är ett exempel på en URL som signerats med en version:
 

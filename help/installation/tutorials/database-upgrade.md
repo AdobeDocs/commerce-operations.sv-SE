@@ -1,9 +1,9 @@
 ---
 title: Uppgradera databasschemat och data
 description: Följ de här stegen för att uppgradera databasschemat för Adobe Commerce eller Magento Open Source.
-source-git-commit: f6f438b17478505536351fa20a051d355f5b157a
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '173'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Innan du använder kommandot måste du [installera programmet](../advanced.md).
 
 ## Uppgradera databasschemat och data
 
-När som helst utför du en åtgärd som orsakar [databasschema](https://glossary.magento.com/database-schema) För data som ska ändras måste du uppdatera dem genom att köra det kommando som beskrivs i det här avsnittet. En partiell förteckning över orsaker följer:
+När du utför en åtgärd som gör att databasschemat eller data ändras, måste du uppdatera dem genom att köra det kommando som beskrivs i det här avsnittet. En partiell förteckning över orsaker följer:
 
 * Du uppgraderade programmet med kommandoraden
 * Du installerade eller uppdaterade en komponent med kommandoraden

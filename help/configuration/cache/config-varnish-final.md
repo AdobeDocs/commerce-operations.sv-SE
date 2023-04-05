@@ -1,9 +1,9 @@
 ---
 title: Slutlig verifiering
 description: Kontrollera att din lack-konfiguration är korrekt konfigurerad för att fungera med Adobe Commerce-programmet.
-source-git-commit: 80abb0180fcd8ecc275428c23b68feb5883cbc28
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '354'
+source-wordcount: '345'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Använd `curl` eller något annat verktyg för att visa HTTP-svarshuvuden när d
 
 Kontrollera först att du använder [utvecklarläge](../cli/set-mode.md#change-to-developer-mode); I annat fall visas inte sidhuvudena.
 
-Exempel:
+Till exempel:
 
 ```bash
 curl -I -v --location-trusted 'http://192.0.2.55/magento2'
@@ -39,7 +39,7 @@ X-Magento-Cache-Debug: MISS
 
 ## Kontrollera sidinläsningstider
 
-Om lack fungerar bör alla Commerce-sidor med cache-lagrade block läsas in på mindre än 150 ms. Exempel på sådana sidor är ytterdörren och [storefront](https://glossary.magento.com/storefront) [kategori](https://glossary.magento.com/category) sidor.
+Om lack fungerar bör alla Commerce-sidor med cache-lagrade block läsas in på mindre än 150 ms. Exempel på sådana sidor är kategorisidorna för ytterdörren och butiken.
 
 Använd en webbläsarkontroll för att mäta sidinläsningstiden.
 
@@ -66,7 +66,7 @@ Så här använder du till exempel Chrome-kontrollen:
 
 Se till att `<magento_root>/var/page_cache` katalogen är tom:
 
-1. Logga in på din Commerce-server eller växla till [ägare av filsystem](https://glossary.magento.com/magento-file-system-owner).
+1. Logga in på Commerce-servern eller växla till filsystemets ägare.
 1. Ange följande kommando:
 
    ```bash

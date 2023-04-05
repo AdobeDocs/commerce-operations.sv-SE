@@ -1,9 +1,9 @@
 ---
 title: Data som kräver manuell migrering
-description: 'Lär dig mer om data som måste migreras manuellt under en datamigrering från Magento 1 till Magento 2 och hur du gör det. '
-source-git-commit: d609c497fdf00c5e5f975a5679b1d072cec4f8a2
+description: Lär dig mer om data som måste migreras manuellt under en datamigrering från Magento 1 till Magento 2 och hur du gör det.
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
@@ -15,9 +15,9 @@ Det finns fyra typer av data som behöver migreras manuellt:
 
 * Media
 
-* [Storefront](https://glossary.magento.com/storefront) design
+* Layout för butiker
 
-* [Administratör](https://glossary.magento.com/admin) användarkonton
+* Administratörsanvändarkonton
 
 * ACL-listor (Access Control Lists)
 
@@ -40,7 +40,7 @@ Det här avsnittet gäller dig *endast* om du sparar mediefiler i Magento-databa
 
 1. I den högra rutan bläddrar du till **Lagringskonfiguration för media**.
 
-1. Från **Välj mediedatabas** klickar du på namnet på [medielagring](https://glossary.magento.com/media-storage) databas.
+1. Från **Välj mediedatabas** klickar du på namnet på din medielagringsdatabas.
 
 1. Klicka **Synkronisera**.
 
@@ -48,15 +48,15 @@ Upprepa sedan samma steg på administratörspanelen i Magento 2.
 
 ### Mediefiler i filsystemet
 
-Alla mediefiler (bilder för produkter, kategorier, [WYSIWYG](https://glossary.magento.com/wysiwyg) (och så vidare) ska kopieras manuellt från `<your Magento 1 install dir>/media` till `<your Magento 2 install dir>/pub/media`.
+Alla mediefiler (bilder för produkter, kategorier, WYSIWYG-redigeraren och så vidare) ska kopieras manuellt från `<your Magento 1 install dir>/media` till `<your Magento 2 install dir>/pub/media`.
 
 Men gör *not* kopiera `.htaccess` filer i Magento 1 `media` mapp. Magento 2 har sin egen `.htaccess` som bör bevaras.
 
 ## Layout för butiker
 
-* Designa i filer (CSS, JS, mallar, [XML](https://glossary.magento.com/xml) layouter) ändrade plats och format
+* Design i filer (CSS, JS, mallar, XML-layouter) ändrade plats och format
 
-* [Layout](https://glossary.magento.com/layout) Uppdateringar som lagras i databasen. Placerad via Magento 1 Admin i [CMS](https://glossary.magento.com/cms) Sidor, CMS-widgetar, [Kategori](https://glossary.magento.com/category) Sidor och produktsidor
+* Layoutuppdateringar sparas i databasen. Placerad via Magento 1-administratör på CMS-sidor, CMS-widgetar, kategorisidor och produktsidor
 
 ## ACL-listor (Access Control Lists)
 

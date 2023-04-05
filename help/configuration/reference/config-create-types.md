@@ -1,9 +1,9 @@
 ---
 title: Konfigurationstyper
 description: Skapa eller utöka konfigurationstyper.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '591'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## Utöka konfigurationstyper
 
-Om du vill utöka en befintlig konfigurationstyp behöver du bara skapa en konfigurationsfil i [modul](https://glossary.magento.com/module).
+Om du vill utöka en befintlig konfigurationstyp behöver du bara skapa en konfigurationsfil i modulen.
 
 Om du till exempel vill lägga till en händelseobservatör skapar du `app/code/{VendorName}/{ModuleName}/etc/events.xml` och deklarera en ny observatör.
 
@@ -29,11 +29,11 @@ Om du vill skapa en konfigurationstyp måste du lägga till minst:
 - XSD-valideringsschema
 - XML-konfigurationsfiler
 
-Om du till exempel vill infoga en [adapter](https://glossary.magento.com/adapter) Om du vill ha en ny sökserver som tillåter tillägg att konfigurera hur entiteterna indexeras på den servern skapar du:
+Om du till exempel vill lägga till ett kort för en ny sökserver som gör att tillägg kan konfigurera hur entiteterna indexeras på den servern, skapar du:
 
 - En inläsare
 - En XSD-schemafil
-- En konfigurationsfil med rätt namn. Exempel, `search.xml`. Den här filen läses och valideras mot ditt schema.
+- En konfigurationsfil med rätt namn. Till exempel: `search.xml`. Den här filen läses och valideras mot ditt schema.
 - Andra klasser som krävs för ditt arbete.
 
 >[!INFO]
@@ -132,7 +132,7 @@ Nya konfigurationsfiler måste åtföljas av XSD-valideringsscheman. En XML-konf
 
 Om du måste använda två XSD-filer för en enda XML-fil, bör schemanamnen vara identifierbara och associerade med XML-filen.
 Om du har en `events.xml` och en första `events.xsd` -filen, XSD-filerna för den sammanfogade filen `events.xml` filen kan ha ett namn `events_merged.xsd`.
-För att XML-filen ska kunna valideras med en lämplig XSD-fil måste du lägga till URN (Uniform Resource Name) i XSD-filen i XML-filen. Exempel:
+För att XML-filen ska kunna valideras med en lämplig XSD-fil måste du lägga till URN (Uniform Resource Name) i XSD-filen i XML-filen. Till exempel:
 
 ```xml
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager:etc/config.xsd">

@@ -1,9 +1,9 @@
 ---
 title: Konfigurera flera webbplatser med Apache
 description: Följ den här självstudiekursen för att konfigurera flera webbplatser med Apache.
-source-git-commit: 8102c083bb0216bbdcad2882f39f7711b9cee52b
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '505'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Vi antar att:
 
-Om det behövs kopierar du den befintliga `index.php` startpunktsskript för din webbplats eller [butiksvy](https://glossary.magento.com/store-view) och lägg till följande:
+Om det behövs kopierar du den befintliga `index.php` startpunktsskript för webbplatsen eller butiksvyn och lägg till följande i det:
 
 - Du arbetar på en utvecklingsmaskin (bärbar dator, virtuell dator osv.)
 

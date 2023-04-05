@@ -1,9 +1,9 @@
 ---
 title: Programinitiering och bootstrap
 description: Läs om initierings- och bootstrap-logik för Commerce-programmet.
-source-git-commit: 5c0d285717a79d654af769cb734ec385d2d4046f
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '863'
 ht-degree: 0%
 
 ---
@@ -104,7 +104,7 @@ När begäran omdirigeras till startpunkten, tolkar Commerce-programmet den beg�
 
 ### Startpunkt för medieresurs
 
-[Magento\MediaStorage\App\Media][media] hämtar medieresurser (dvs. alla filer som överförts till medielagring) från databasen. Den används när databasen har konfigurerats som en [medielagring](https://glossary.magento.com/media-storage).
+[Magento\MediaStorage\App\Media][media] hämtar medieresurser (dvs. alla filer som överförts till medielagring) från databasen. Den används när databasen har konfigurerats som en medielagring.
 
 `\Magento\Core\App\Media` försöker hitta mediefilen i den konfigurerade databaslagringen och skriva den i `pub/static` och sedan returnera innehållet. Vid fel returneras HTTP 404-statuskoden (Hittades inte) i huvudet utan innehåll.
 

@@ -1,9 +1,9 @@
 ---
 title: Systemkrav
 description: Använd den här referensen för att identifiera nödvändiga programvaruberoenden som har testats med Adobe Commerce och Magento Open Source.
-source-git-commit: 61a477ec6118e4a228ddbb956e613fa3bec9c91c
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '522'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Adobe Commerce och Magento Open Source kräver följande systemverktyg för viss
 
 ### SSL
 
-- Ett giltigt [säkerhetscertifikat](https://glossary.magento.com/security-certificate) krävs för HTTPS.
+- Ett giltigt säkerhetscertifikat krävs för HTTPS.
 - Självsignerade SSL-certifikat stöds inte.
 - TLS-krav (Transport Layer Security) - PayPal och `repo.magento.com` båda kräver TLS 1.2 eller senare.
 

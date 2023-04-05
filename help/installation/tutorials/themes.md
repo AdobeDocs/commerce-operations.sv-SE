@@ -1,9 +1,9 @@
 ---
 title: Avinstallera teman
 description: Följ de här stegen för att avinstallera ett Adobe Commerce- eller Magento Open Source-tema.
-source-git-commit: f6f438b17478505536351fa20a051d355f5b157a
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '473'
 ht-degree: 0%
 
 ---
@@ -11,9 +11,9 @@ ht-degree: 0%
 
 # Avinstallera teman
 
-Innan du använder det här kommandot måste du känna till den relativa sökvägen till temat. Teman finns i en underkatalog till `<magento_root>/app/design/<area name>`. Du måste ange sökvägen till temat som börjar med området, vilket antingen är `frontend` (för storefront-teman) eller `adminhtml` (for [Administratör](https://glossary.magento.com/magento-admin) teman).
+Innan du använder det här kommandot måste du känna till den relativa sökvägen till temat. Teman finns i en underkatalog till `<magento_root>/app/design/<area name>`. Du måste ange sökvägen till temat som börjar med området, vilket antingen är `frontend` (för storefront-teman) eller `adminhtml` (för administratörsteman).
 
-Till exempel sökvägen till Luma [tema](https://glossary.magento.com/theme) tillhandahålls med Adobe Commerce och Magento Open Source är `frontend/Magento/luma`.
+Sökvägen till Luma-temat som finns i Adobe Commerce och Magento Open Source är `frontend/Magento/luma`.
 
 Mer information om teman finns i [temastruktur](https://developer.adobe.com/commerce/frontend-core/guide/themes/structure/).
 
@@ -21,7 +21,7 @@ Mer information om teman finns i [temastruktur](https://developer.adobe.com/comm
 
 I det här avsnittet beskrivs hur du avinstallerar ett eller flera teman, och du kan även ta med temats kod från filsystemet. Du kan skapa säkerhetskopior först så att du kan återställa data senare.
 
-Det här kommandot avinstallerar *endast* teman som anges i `composer.json`; med andra ord, teman som tillhandahålls som [Disposition](https://glossary.magento.com/composer) paket. Om temat inte är ett Composer-paket måste du avinstallera det manuellt genom att:
+Det här kommandot avinstallerar *endast* teman som anges i `composer.json`; Med andra ord, teman som tillhandahålls som Composer-paket. Om temat inte är ett Composer-paket måste du avinstallera det manuellt genom att:
 
 * Uppdaterar `parent` nodinformation i `theme.xml` för att ta bort referenser till temat.
 * Tar bort temakod från filsystemet.
@@ -61,7 +61,7 @@ Kommandot utför följande uppgifter:
 
 1. Tar bort teman från `theme` databastabell.
 1. Ta bort teman från kodbasen med `composer remove`.
-1. Rensar [cache](https://glossary.magento.com/cache).
+1. Rensar cachen.
 1. Rensar genererade klasser
 1. If `--clear-static-content` anges, rengöringar [genererade statiska vyfiler](../../configuration/cli/static-view-file-deployment.md).
 
@@ -102,4 +102,4 @@ Disabling maintenance mode
 
 >[!NOTE]
 >
->Så här avinstallerar du en [Administratör](https://glossary.magento.com/admin) -temat måste du också ta bort det från komponentens [beroendeinjektion](https://glossary.magento.com/dependency-injection) konfiguration, `<component root directory>/etc/di.xml`.
+>Om du vill avinstallera ett Admin-tema måste du även ta bort det från komponentens konfiguration för beroendeinjicering, `<component root directory>/etc/di.xml`.

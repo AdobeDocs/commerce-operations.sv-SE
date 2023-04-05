@@ -1,9 +1,9 @@
 ---
 title: Konfigurera överordnad databaser automatiskt
 description: Mer information om hur du konfigurerar den delade databaslösningen automatiskt.
-source-git-commit: d029d1ac66bff2ac34b22b2d3b8aafbfc062e082
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '355'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 I det här avsnittet beskrivs hur du kommer igång med den delade databaslösningen genom att:
 
 1. Installera Adobe Commerce med en enda överordnad databas (namngiven `magento`)
-1. Skapa ytterligare två överordnad databaser för [utcheckning](https://glossary.magento.com/checkout) och OMS (namngivna `magento_quote` och `magento_sales`)
+1. Skapa ytterligare två överordnad databaser för utcheckning och OMS (namngivna `magento_quote` och `magento_sales`)
 1. Konfigurera Adobe Commerce för att använda utchecknings- och säljdatabaser
 
 >[!INFO]

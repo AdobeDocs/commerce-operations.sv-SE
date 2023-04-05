@@ -1,16 +1,16 @@
 ---
 title: Cachealternativ
 description: Konfigurera åtkomst till cachelagring på låg nivå.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '125'
 ht-degree: 0%
 
 ---
 
 # Cachealternativ på låg nivå
 
-I Commerce-programmet används en låg nivå [cache](https://glossary.magento.com/cache) [frontend](https://glossary.magento.com/frontend) och [serverdel](https://glossary.magento.com/backend) för att ge åtkomst till cacheminnet.
+I Commerce-programmet används en cacheklientdel och serverdel på låg nivå för att ge åtkomst till cachelagringen.
 
 ## Lättnivåcache för klientservrar
 

@@ -1,9 +1,9 @@
 ---
 title: Konfigurera en MySQL-fjärrdatabasanslutning
 description: Följ de här stegen för att konfigurera en fjärrdatabasanslutning för lokala installationer av Adobe Commerce och Magento Open Source.
-source-git-commit: 61638d373408d9a7c3c3a935eee61927acfac7a6
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '746'
+source-wordcount: '743'
 ht-degree: 0%
 
 ---
@@ -117,7 +117,7 @@ Så här beviljar du åtkomst till en databasanvändare:
    GRANT ALL ON <local database name>.* TO <remote web node username>@<remote web node server ip address> IDENTIFIED BY '<database user password>';
    ```
 
-   Exempel:
+   Till exempel:
 
    ```shell
    GRANT ALL ON magento_remote.* TO dbuser@192.0.2.50 IDENTIFIED BY 'dbuserpassword';
@@ -154,7 +154,7 @@ Om webbservern är klustrad anger du kommandot på varje webbservervärd.
 
 När du installerar Adobe Commerce eller Magento Open Source måste du ange följande:
 
-* Basen [URL](https://glossary.magento.com/url) (kallas även *butiksadress*) anger värdnamnet eller IP-adressen för *webbnod*
+* Bas-URL (kallas även *butiksadress*) anger värdnamnet eller IP-adressen för *webbnod*
 * Databasvärden är *fjärrdatabasserver* IP-adress (eller belastningsutjämnare om databasservern är klustrad)
 * Databasens användarnamn är *lokal webbnod* databasanvändare som du gav åtkomst till
 * Databaslösenordet är den lokala webbnodens användarlösenord

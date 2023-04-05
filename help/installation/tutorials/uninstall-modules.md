@@ -1,9 +1,9 @@
 ---
 title: Avinstallera moduler
 description: Följ de här stegen för att avinstallera en Adobe Commerce- eller Magento Open Source-modul.
-source-git-commit: f6f438b17478505536351fa20a051d355f5b157a
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '741'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Du bör endast avinstallera en modul om du är säker på att du inte kommer att
 
 >[!NOTE]
 >
->Det här kommandot kontrollerar att endast beroenden som deklarerats i `composer.json` -fil. Om du avinstallerar en [modul](https://glossary.magento.com/module) det _not_ definieras i `composer.json` avinstallerar det här kommandot modulen utan att kontrollera om det finns beroenden. Det här kommandot gör _not_ Ta dock bort modulens kod från filsystemet. Du måste använda filsystemverktygen för att ta bort modulens kod (till exempel `rm -rf <path to module>`). Som ett alternativ kan du [disable](manage-modules.md) icke-dispositionsmoduler.
+>Det här kommandot kontrollerar att endast beroenden som deklarerats i `composer.json` -fil. Om du avinstallerar en modul som är _not_ definieras i `composer.json` avinstallerar det här kommandot modulen utan att kontrollera om det finns beroenden. Det här kommandot gör _not_ Ta dock bort modulens kod från filsystemet. Du måste använda filsystemverktygen för att ta bort modulens kod (till exempel `rm -rf <path to module>`). Som ett alternativ kan du [disable](manage-modules.md) icke-dispositionsmoduler.
 
 Kommandoanvändning:
 
@@ -30,7 +30,7 @@ Plats `{ModuleName}` anger modulnamnet i `<VendorName>_<ModuleName>` format. Kun
 
 Avinstallationskommandot för modulen utför följande åtgärder:
 
-1. Verifierar att de angivna modulerna finns i kodbasen och är paket som installeras av [Disposition](https://glossary.magento.com/composer).
+1. Verifierar att de angivna modulerna finns i kodbasen och är paket som har installerats av Composer.
 
    Det här kommandot fungerar _endast_ med moduler definierade som Composer-paket.
 
@@ -60,7 +60,7 @@ Avinstallationskommandot för modulen utför följande åtgärder:
    >
    >Avinstallera en modul _alltid_ körningar `composer remove`. The `--remove-data` tar bort databasdata och schema som definieras av modulens `Uninstall` klassen.
 
-1. Rensar [cache](https://glossary.magento.com/cache).
+1. Rensar cachen.
 1. Uppdateringsgenererade klasser.
 1. If `--clear-static-content` anges, rengöringar [genererade statiska vyfiler](../../configuration/cli/static-view-file-deployment.md).
 1. Tar arkivet ur underhållsläge.
@@ -73,7 +73,7 @@ magento module:uninstall Magento_SampleMinimal
         Magento_SampleModifyContent
 ```
 
-Ett alternativ är att avinstallera båda modulerna efter säkerhetskopiering av modulens filsystem, `pub/media` filer och databastabeller, men _not_ tar bort modulens [databasschema](https://glossary.magento.com/database-schema) eller data:
+Ett alternativ är att avinstallera båda modulerna efter säkerhetskopiering av modulens filsystem, `pub/media` filer och databastabeller, men _not_ ta bort modulens databasschema eller data:
 
 ```bash
 bin/magento module:uninstall Magento_SampleMinimal Magento_SampleModifyContent --backup-code --backup-media --backup-db

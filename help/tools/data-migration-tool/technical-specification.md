@@ -1,9 +1,9 @@
 ---
 title: "[!DNL Data Migration Tool] teknisk specifikation"
 description: "Läs mer om implementeringsdetaljer i [!DNL Data Migration Tool] och hur man kan utöka när data överförs mellan Magento 1 och Magento 2."
-source-git-commit: c56cc6d97f69770aa718333c02514ab3cfce774c
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '2085'
+source-wordcount: '2079'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ I följande diagram visas katalogstrukturen för [!DNL Data Migration Tool]:
 │       │   ├── Data.php
 │       │   ├── Delta.php
 │       │   └── Settings.php
-│       ├── ResourceModel                   --- contains [adapter](https://glossary.magento.com/adapter) for connection to data storage and classes to work with structured data
+│       ├── ResourceModel                   --- contains adapter for connection to data storage and classes to work with structured data
 │       │   ├── Adapter
 │       │   │   └── Mysql.php
 │       │   ├── AbstractCollection.php
@@ -75,7 +75,7 @@ I följande diagram visas katalogstrukturen för [!DNL Data Migration Tool]:
 │       │   ├── Source.php
 │       │   └── Structure.php
 │       ├── Config.php
-│       ├── [Exception](https://glossary.magento.com/exception).php
+│       ├── Exception.php
 │       └── Step                            --- functionality for migrating specific data
 │           ├── Eav
 │           │   ├── Data.php
@@ -209,7 +209,7 @@ Du kan också ansluta till en databas med TLS-protokollet (dvs. med offentliga/p
 * `ssl_cert`
 * `ssl_key`
 
-Exempel:
+Till exempel:
 
 ```xml
 <source>
@@ -342,7 +342,7 @@ I det här läget migreras merparten av data. Före datamigrering körs integrit
 
 #### Kartsteg
 
-Kartsteget används för att överföra större delen av data från Magento 1 till Magento 2. Det här steget läser instruktioner från filen map.xml (finns i `etc/` katalog). I filen beskrivs skillnaderna mellan datastrukturerna för källan (Magento 1) och målet (Magento 2). Om Magento 1 innehåller tabeller eller fält som tillhör vissa [extension](https://glossary.magento.com/extension) som inte finns i Magento 2, kan dessa enheter placeras här för att ignorera dem via Mappa steg. Annars visas ett felmeddelande.
+Kartsteget används för att överföra större delen av data från Magento 1 till Magento 2. Det här steget läser instruktioner från filen map.xml (finns i `etc/` katalog). I filen beskrivs skillnaderna mellan datastrukturerna för källan (Magento 1) och målet (Magento 2). Om Magento 1 innehåller tabeller eller fält som tillhör ett tillägg som inte finns i Magento 2, kan dessa enheter placeras här för att ignorera dem via Mappa steg. Annars visas ett felmeddelande.
 
 Kartfilen har nästa format:
 
@@ -464,7 +464,7 @@ Här följer ett klassdiagram över dessa klasser:
 
 ## Loggning
 
-För att implementera utdata från migreringsprocessen och kontrollera alla möjliga nivåer tillämpas PSR-loggare, som används i Magento. `\Migration\Logger\Logger` klassen implementerades för att tillhandahålla loggningsfunktioner. Om du vill använda loggen bör du injicera den via konstruktorn [beroendeinjektion](https://glossary.magento.com/dependency-injection).
+För att implementera utdata från migreringsprocessen och kontrollera alla möjliga nivåer tillämpas PSR-loggare, som används i Magento. `\Migration\Logger\Logger` klassen implementerades för att tillhandahålla loggningsfunktioner. För att använda loggningsfunktionen ska du injicera den via en konstruktorberoendeinjektion.
 
 ```php
 class SomeClass
@@ -532,7 +532,7 @@ Det finns tre typer av tester i [!DNL Data Migration Tool]:
 * Enhet
 * Integrering
 
-De finns i verktygets `tests/` katalog, som är samma som testtypen (enhetstester finns i `tests/unit` katalog). Om du vill starta testet bör du ha phpunit installerat. Ändra den aktuella katalogen till testkatalogen och starta phpunit. Exempel:
+De finns i verktygets `tests/` katalog, som är samma som testtypen (enhetstester finns i `tests/unit` katalog). Om du vill starta testet bör du ha phpunit installerat. Ändra den aktuella katalogen till testkatalogen och starta phpunit. Till exempel:
 
 ```bash
 [10:32 AM]-[vagrant@debian-70rc1-x64-vbox4210]-[/var/www/magento2/vendor/magento/data-migration-tool]-[git master]

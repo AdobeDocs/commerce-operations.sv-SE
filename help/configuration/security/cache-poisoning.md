@@ -1,9 +1,9 @@
 ---
 title: Förhindra cacheförgiftning
 description: Lär dig hur du förhindrar att sidcachen förgiftas för din Commerce Store.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '266'
+source-wordcount: '260'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Förhindra cacheförgiftning
 
-I det här avsnittet beskrivs hur du förhindrar [cache](https://glossary.magento.com/cache) förgiftning om du använder webbservern Microsoft Internet Information Server (IIS). _Cacheförgiftning_ är ett sätt att ändra cacheinnehåll så att det inkluderar olika sidor från samma plats. Det går till exempel att mata in en felsida för HTTP 404 (Hittades inte) istället för en benign sida (till exempel [storefront](https://glossary.magento.com/storefront) startsida), vilket kan leda till denial of service-attacker. De skadliga sidans URL:er cachas av Varnish eller Redis, därav namnet _sidcacheförgiftning_.
+I det här avsnittet beskrivs hur du förhindrar cacheförgiftning om du använder webbservern Microsoft Internet Information Server (IIS). _Cacheförgiftning_ är ett sätt att ändra cacheinnehåll så att det inkluderar olika sidor från samma plats. Du kan till exempel mata in en HTTP 404-felsida (Hittades inte) istället för en benign sida (till exempel hemsidan för butiken), vilket kan leda till en denial of service-sida (DoS). De skadliga sidans URL:er cachas av Varnish eller Redis, därav namnet _sidcacheförgiftning_.
 
 Den här typen av attacker kan vara svåra att upptäcka eftersom de inte leder till fel i webbserverloggar.
 

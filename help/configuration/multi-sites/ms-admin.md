@@ -1,9 +1,9 @@
 ---
 title: Konfigurera flera webbplatser, butiker och butiksvyer i administratören
 description: Konfigurera ytterligare webbplatser, butiker och butiksvyer i Commerce Admin.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '1016'
+source-wordcount: '1013'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Den här aktiviteten kräver att du skapar en rotkategori (och ytterligare kateg
 
 ## Steg 1: Skapa rotkategorier
 
-Det är valfritt att skapa en rotkategori, men vi visar hur du gör det i den här självstudiekursen i [event](https://glossary.magento.com/event) du vill att varje webbplats ska ha en unik rotkategori. Om du vill kan du skapa ytterligare kategorier.
+Det är valfritt att skapa en rotkategori, men vi visar hur du gör det i den här självstudiekursen om du vill att varje webbplats ska ha en unik rotkategori. Om du vill kan du skapa ytterligare kategorier.
 
 Så här skapar du en rotkategori:
 

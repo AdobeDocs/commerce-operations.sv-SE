@@ -1,9 +1,9 @@
 ---
 title: Konfigurera cachelagring
 description: Lär dig mer om cachelagring och hur du konfigurerar cachemekanismer för Adobe Commerce och Magento Open Source.
-source-git-commit: ee2e446edf79efcd7cbbd67248f8e7ece06bfefd
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '245'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 [!DNL Commerce] I kan du konfigurera alternativ till standardfilsystemets cachning. I den här guiden diskuteras några av dessa alternativ. ,
 
-- Ställ in följande [cache](https://glossary.magento.com/cache) i [!DNL Commerce] konfiguration:
+- Ställ in följande cacheminnesmekanismer i [!DNL Commerce] konfiguration:
 
    - [Databas](https://developer.adobe.com/commerce/php/development/cache/partial/database-caching/)
    - [Redis](config-redis.md)
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 - Ändra angiven `default` cachefrontend—
 
-   Du ändrar bara `<magento_root>/app/etc/di.xml` -fil, Commerce-programmets globala [beroendeinjektion](https://glossary.magento.com/dependency-injection) konfiguration.
+   Du ändrar bara `<magento_root>/app/etc/di.xml` -filen, Commerce-programmets globala beroendeinjektionskonfiguration.
 
 - Konfigurera en egen anpassad cacheklientserver -
 

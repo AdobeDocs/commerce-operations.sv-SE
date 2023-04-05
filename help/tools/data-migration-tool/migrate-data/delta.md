@@ -1,9 +1,9 @@
 ---
 title: Migrera ändringar
 description: Lär dig hur du migrerar endast data som har ändrats sedan den senaste datamigreringen för Magento 1 med [!DNL Data Migration Tool].
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '350'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 Med verktyget för inkrementell migrering installerar du deltabeller (med prefix) `m2_cl_*`) och utlösare (för att spåra ändringar) i Magento 1-databasen under [migrering av data](data.md). Dessa tabeller och utlösare är viktiga för att du ska kunna migrera endast de ändringar som gjorts i Magento 1 sedan du senast migrerade data. Dessa ändringar är:
 
-* Data som kunderna lagt till via [storefront](https://glossary.magento.com/storefront) (order, recensioner och förändringar i kundprofiler)
+* Data som kunderna lagt till via butiken (skapade order, recensioner och ändringar i kundprofiler)
 
-* Alla operationer med order, produkter och kategorier i [Administratör](https://glossary.magento.com/magento-admin) panel
+* Alla åtgärder med order, produkter och kategorier på panelen Admin
 
 >[!NOTE]
 >
@@ -54,7 +54,7 @@ Var:
 
 I `Delta` läge, [!DNL Data Migration Tool] migrerar data som bara skapats av Magento egna moduler och ansvarar inte för kod eller tillägg som skapats av tredjepartsutvecklare. Om dessa tillägg skapade data i storefront-databasen och handlaren vill ha dessa data i Magento 2 - konfigurationsfiler för [!DNL Data Migration Tool] bör skapas och ändras i enlighet med detta.
 
-Om en [extension](https://glossary.magento.com/extension) har egna tabeller, och du måste spåra deras ändringar för deltamigrering genom att följa dessa steg:
+Om ett tillägg har egna tabeller, och du behöver spåra ändringar för deltamigrering, gör du så här:
 
 1. Lägg till de tabeller som ska spåras i `deltalog.xml` fil
 1. Skapa ytterligare en delta-klass som utökar `Migration\App\Step\AbstractDelta`
