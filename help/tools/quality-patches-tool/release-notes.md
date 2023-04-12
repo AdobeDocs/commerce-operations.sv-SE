@@ -1,9 +1,9 @@
 ---
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
-source-git-commit: b71819d123856d03dab872a1652b325ffe7178a6
+source-git-commit: ef501b34947f24f8028bd5876bd4a167551e03ec
 workflow-type: tm+mt
-source-wordcount: '11561'
+source-wordcount: '11914'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,25 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som skapats av gemenskapen för Magento Open Source, se [versionsinformation](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.30 {#v1-1-30}
+
+* **ACSD-50336** (för Adobe Commerce och Magento Open Source >=2.4.4-p1 &lt;2.4.4-p3) - Korrigerar problemet där e-postmeddelanden om produktaviseringar inte skickas när en produkt finns i lager igen eller priset ändras.
+* **ACSD-50367** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.7) - Korrigerar problemet där kundadressexport inte fungerar när ett flervalsattribut för kundadress utan värden skapas.
+* **ACSD-49877** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.7) - Korrigerar problemet där automatisk uppspelning av video inte fungerar på mobilen [!DNL Safari] när videon är länkad direkt till en fjärrvideofil och inte till en direktuppspelningstjänst.
+* **ACSD-50165** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.7) - Korrigerar felet *Det går inte att ta bort filen. Varning!unlink: Ingen sådan fil eller katalog* när JS/CSS-cache töms från administratören.
+* **ACSD-49737** (för Adobe Commerce och Magento Open Source >=2.4.1-p1 &lt;2.4.7) - Korrigerar problemet där en kupong felaktigt markerats som använd efter en misslyckad kortbetalning.
+* **ACSD-50814** (för Adobe Commerce och Magento Open Source >=2.4.6 &lt;2.4.7) - Korrigerar problemet där en administratörsanvändare inte kan skapa en kreditnota.
+* **ACSD-50116** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.7) - Korrigerar problemet där en administratörsanvändare inte kan skapa en URL-omskrivning för underkategorierna nivå 3 eller lägre.
+* **ACSD-49513** (för Adobe Commerce och Magento Open Source >=2.4.3 &lt;2.4.5) - Korrigerar problemet där fjärrlagringssynkronisering misslyckas på grund av filer på 0 byte.
+* **ACSD-46683** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.7) - Korrigerar problemet där fraktpriset anges *Ej beräknat*.
+* **ACSD-49129** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.6) - Korrigerar problemet där *[!UICONTROL content]* attribute (base64 image code) is not returned in `rest/V1/products/sku/media` API-svar för produktmedia.
+* **ACSD-50276** (för Adobe Commerce >=2.4.0 &lt;2.4.7) - Korrigerar problemet där kundregistreringsformuläret inte fungerar i butiken om ett kundattribut med flera val skapas.
+* **ACSD-50527** (för Adobe Commerce >=2.3.7 &lt;2.4.7) - Korrigerar felet som inträffar när en sida sparas med ett tomt dynamiskt block.
+* **ACSD-49973** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.5) - Förbättrar prestanda för hämtning av paketerade produkter via GraphQL.
+* **BB2B-2598** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.7) - Lägg till cachelagring i [!UICONTROL availableStores], [!UICONTROL countries], [!UICONTROL country], [!UICONTROL currency]och [!UICONTROL storeConfig] GraphQL-frågor.
+* Lagt till nya versioner för MDVA-42806, ACSD-48627, ACSD-46815.
+* Uppdaterade patchmetadata för ACSD-49773, ACSD-47179, ACSD-48300.
 
 ## v1.1.29 {#v1-1-29}
 
