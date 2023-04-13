@@ -1,9 +1,9 @@
 ---
 title: Hantera indexerare
 description: Se exempel på hur du visar och hanterar Commerce-indexerare.
-source-git-commit: 8102c083bb0216bbdcad2882f39f7711b9cee52b
+source-git-commit: a7ead687c681914d90e9ed2680c8f7494eba74d4
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '638'
 ht-degree: 0%
 
 ---
@@ -120,6 +120,10 @@ Du kan köra följande index i parallellt läge:
 - `Category Product` kan jämföras med butiksvyer.
 - `Catalog Price` kan kombineras av webbplats- och kundgrupper.
 - `Catalog Permissions` kan jämföras med kundgrupper.
+
+>[!INFO]
+>
+>Parallellering för fulltext och kategoriprodukt för katalogsökning är aktiverat som standard.
 
 Om du vill använda parallellisering anger du ett av de tillgängliga dimensionslägena för produktprisindexeraren:
 
