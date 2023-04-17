@@ -2,9 +2,9 @@
 user-guide-title: Implementera spelningsbok
 user-guide-description: Läs om strategier för att planera och implementera en framgångsrik Adobe Commerce-webbplats.
 mini-toc-levels: 3
-source-git-commit: 5559d412ab58d392098cfff7a4cabb473c38cb0d
+source-git-commit: 5aa1669e556e5b7bf5ed3777db0f026ccfff5e70
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '269'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,13 @@ ht-degree: 0%
       - [Headless-arkitektur](architecture/headless/adobe-commerce.md)
 - Infrastruktur och driftsättning {#infrastructure}
    - [Översikt](infrastructure/overview.md)
-   - [Lokal infrastruktur](infrastructure/on-premises.md)
+   - Självvärdande {#self-hosting}
+      - [Översikt](infrastructure/self-hosting/overview.md)
+      - [Lokal infrastruktur](infrastructure/self-hosting/on-premises.md)
+      - [Säkerhetskoncept](infrastructure/self-hosting/security-concepts.md)
+      - [Övervaka telemetri och verktyg](infrastructure/self-hosting/monitoring-tools.md)
+      - [idéer om katastrofåterställning](infrastructure/self-hosting/disaster-recovery-ideas.md)
+      - [Prestandapstips](infrastructure/self-hosting/performance-tips.md)
    - Molninfrastruktur {#cloud}
       - [Översikt](infrastructure/cloud/overview.md)
       - [Regioner](infrastructure/cloud/regions.md)
