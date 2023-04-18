@@ -7,9 +7,9 @@ kt: 11420
 doc-type: tutorial
 audience: all
 last-substantial-update: 2023-04-13T00:00:00Z
-source-git-commit: 66abe9f234aa44f7e07cc024607eeb6591a99d07
+source-git-commit: ab099b2a8a353c2462424831cf8100e7e281b1be
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '1304'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Innan du inaktiverar oanvända moduler bör du kontrollera att du inte har någr
 
 ## Kräv att Adobe Commerce- och PHP-kodningsstandarder följs för varje pull-begäran
 
-Adobe Commerce har en uppsättning [Kodstandarder](https://developer.adobe.com/commerce/php/coding-standards/){target="_blank"}. Dessa hjälper till att säkerställa att liknande mönster, format och förväntad design följs oavsett typ av programutveckling. När detta är ett ablösningskrav är det när du bidrar till Adobe Commerce-kodbasen. Men om man följer den här metoden för anpassad utveckling blir det också en solid hörnsten för alla utvecklare, både nuvarande och framtida. När alla pull-begäranden måste skicka en kodstandard, blir det lättare att se och förvänta sig samma enhetliga utvecklingsmönster.
+Adobe Commerce har en uppsättning [Kodstandarder](https://developer.adobe.com/commerce/php/coding-standards/){target="_blank"}. Dessa hjälper till att säkerställa att liknande mönster, format och förväntad design följs oavsett typ av programutveckling. När du bidrar till Adobe Commerce-kodbasen är detta ett krav. Om du väljer att följa den här metoden för anpassad utveckling skapar du emellertid en solid hörnsten för alla utvecklare, både nuvarande och framtida. När alla pull-begäranden måste skicka en kodstandard, blir det lättare att se och förvänta sig samma enhetliga utvecklingsmönster.
 
 Som en del av Adobe Commerce kodningsstandarder används även PHP:s grundläggande kodningsstandarder. Det bör tydligt definieras i utvecklarhandböckerna vilka standarder du måste följa och eventuella avvikelser som är godtagbara. En reservdel bör dock utgå från den allmänna handboken på [PHP-FIG](https://www.php-fig.org){target="_blank"}.
 

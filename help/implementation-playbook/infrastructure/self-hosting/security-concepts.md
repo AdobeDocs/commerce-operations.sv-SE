@@ -7,7 +7,7 @@ kt: 11420
 doc-type: tutorial
 audience: all
 last-substantial-update: 2023-04-13T00:00:00Z
-source-git-commit: 0d5c2d3ae44008142797c7ac91530a9df98ae004
+source-git-commit: cca195c20ddcba634a8fc39c0867e0ae28f43683
 workflow-type: tm+mt
 source-wordcount: '1571'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Följande koncept finns inte i någon speciell ordning. De är avsedda att ge vi
 
 ## Skrivskyddat filsystem
 
-Skrivskyddat filsystem lånades från [Adobe Commerce i molnbaserad infrastruktur](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/getting-started/cloud/1-overview.html){target="_blank"}. Detta tar helt bort ett större område som används av en dålig skådespelare. Många utnyttjanden har dragit nytta av att ändra en fil som förväntas finnas i Commerce-programmet för att undvika identifiering. I stället för att skapa en så ändras innehållet i en befintlig fil så att en oväntad åtgärd utförs. Om du skrivskyddar filsystemet minskar den här attackvektorn avsevärt.
+Skrivskyddat filsystem lånades från [Adobe Commerce i molninfrastruktur](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/getting-started/cloud/1-overview.html){target="_blank"}. Detta tar helt bort ett större område som används av en dålig skådespelare. Många utnyttjanden har dragit nytta av att ändra en fil som förväntas finnas i Commerce-programmet för att undvika identifiering. I stället för att skapa en så ändras innehållet i en befintlig fil så att en oväntad åtgärd utförs. Om du skrivskyddar filsystemet minskar den här attackvektorn avsevärt.
 
 ## Använd TWO Factor Authentication och lösenordshanterare
 
