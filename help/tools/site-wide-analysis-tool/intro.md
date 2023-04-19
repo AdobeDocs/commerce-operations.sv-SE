@@ -1,9 +1,9 @@
 ---
 title: "[!DNL Site-Wide Analysis Tool]"
 description: Läs mer om [!DNL Site-Wide Analysis] Verktyg, dess användningsområden, installationsprocessen och hur du får åtkomst
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+source-git-commit: 3801cb9cf8cdf00d450347e8fd023a18ec60bf54
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '501'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,14 @@ Se det här [introduktionsvideo](https://www.youtube.com/watch?v=KW2R8ki_RG4) om
 
 ## Verktygsöversikt
 
-- **Kontrollpanel** - Visar det övergripande hälsotillståndet för ditt system med meddelanden om identifierade problem och specifika rekommendationer efter prioritet. Den innehåller också ett historiskt diagram som visar hur webbplatsens hälsa förändras över tid.
+- **Kontrollpanel**
+   - Visar den övergripande hälsan i systemet med meddelanden om identifierade problem och specifika rekommendationer efter prioritet.<br>
+Den innehåller också ett historiskt diagram som visar hur webbplatsens hälsa förändras över tid.
+   - Visar **[!UICONTROL Security Center Widget]** som ger dig tillgång till:
+      - [Tech [!DNL Stack] Versionskompatibilitet med [!DNL end of life (EOL)]](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)
+      - [Adobe säkerhetsbulletin](https://helpx.adobe.com/security/security-bulletin.html)
+      - [Recommendations från [!DNL Security Scan Tool]](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-scan.html)
+      - [[!DNL Site-Wide Analysis Tool] Best Practice Security Recommendations](https://experienceleague.adobe.com/docs/commerce-operations/tools/site-wide-analysis-tool/recommendations.html)
 
 - **Information** - Tillhandahåller kontaktinformation och en sammanfattning av aktuella biljetter med detaljerad information om varje installerad Adobe Commerce-produkt.
 
@@ -34,9 +41,11 @@ Se det här [introduktionsvideo](https://www.youtube.com/watch?v=KW2R8ki_RG4) om
 
 ## Integrering med andra Adobe Commerce supportverktyg
 
-Se alla viktiga insikter om er webbplats på ett och samma ställe. [!DNL Site-Wide Analysis Tool] ger dig direktåtkomst till och information från [!DNL Security Scan Tool], [!DNL Upgrade Compatability Tool]och [!DNL Managed Alerts].
+Se alla viktiga insikter om er webbplats på ett och samma ställe. [!DNL Site-Wide Analysis Tool] ger dig direktåtkomst till och information från [!UICONTROL Security Center Widget], [!DNL Upgrade Compatability Tool]och [!DNL Managed Alerts].
 
-- [**[!DNL Security Scan Tool]**](https://docs.magento.com/user-guide/magento/security-scan.html) - Ger kunder med öppen källkod i Adobe Commerce och Magento realtid insikter om butikens säkerhetsstatus genom att proaktivt identifiera skadlig kod och meddela dem om deras butik är komprometterad.
+- [**[!UICONTROL Security Center Widget]**] - Visar säkerhetsinsikter för din webbplats.<br>
+Den säkerhetsinformation som visas innehåller [Tech [!DNL Stack] Versionskompatibilitet med [!DNL end of life (EOL)]](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html), [Adobe Security Bulletin](https://helpx.adobe.com/security/security-bulletin.html), [Recommendations from the [!DNL Security Scan Tool]](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-scan.html), and [[!DNL Site-Wide Analysis Tool] Best Practice Security Recommendations](https://experienceleague.adobe.com/docs/commerce-operations/tools/site-wide-analysis-tool/recommendations.html).<br>
+The [[!DNL Security Scan Tool]](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-scan.html) ger kunder med öppen källkod i Adobe Commerce och Magento realtid insikter om butikens säkerhetsstatus genom att proaktivt identifiera skadlig kod och meddela dem om deras butik är komprometterad.
 
 - [**[!DNL Upgrade Compatability Tool]**](../../upgrade/upgrade-compatibility-tool/overview.md) - Kör Adobe Commerce anpassade instans mot måluppgraderingsversionen och returnerar en sammanfattning av viktiga problem, fel och varningar som måste åtgärdas, vilket gör uppgraderingsanalysen enklare, snabbare och billigare.
 
