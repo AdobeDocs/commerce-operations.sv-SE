@@ -1,9 +1,9 @@
 ---
 title: Konsumenter i meddelandekön
 description: Läs om användare av meddelandekön i Adobe Commerce och Magento Open Source, inklusive funktioner och systemkonfigurationsinställningar som är kopplade till dem.
-source-git-commit: 1006a5761849b1d455469c6dfcb79a66cb90ec40
+source-git-commit: f9db986510a3ec8e62b9d628da40fdfd9741479f
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,8 @@ I följande tabell visas alla meddelandeköanvändare, vad de gör och vilka kon
 | Skapar meddelanden för varje enskild åtgärd i en [gruppåtgärd](https://developer.adobe.com/commerce/php/development/components/message-queues/bulk-operations/), till exempel importera eller exportera artiklar, ändra priser i massskala och tilldela produkter till ett lager. Krävs när [**[!UICONTROL Admin bulk operations]**](https://docs.magento.com/user-guide/configuration/catalog/inventory.html?#admin-bulk-operations) option is set to **[!UICONTROL Run asynchronously]**i konfigurationsinställningarna för administratörssystemet. |  |  |  |
 | `codegeneratorProcessor` | + | + | + |
 | Genererar automatiskt kuponger i bakgrunden. Krävs för att använda [batchkuponggenerering](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/price-rules-cart-coupon.html#method-2%3A-generate-a-batch-of-coupons) -funktion. |  |  |  |
+| `commerce.eventing.event.publish` | + | + |  |
+| Söker efter händelser som har registrerats som prioritet i [Adobe I/O Events for Adobe Commerce](https://developer.adobe.com/commerce/events/get-started/). |
 | `exportProcessor` | + | + | + |
 | Förhindrar timeout för anslutningen under [export](https://experienceleague.adobe.com/docs/commerce-admin/systems/data-transfer/data-export.html) av stora datauppsättningar (till exempel 200 000 produkter). |  |  |  |
 | `inventoryQtyCounter` | + | + |  |
