@@ -1,7 +1,7 @@
 ---
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
-source-git-commit: ab9d80140833e2d21feffe04a73fcd8ac5f1e980
+source-git-commit: 760f7f5e2e27dba8e77e564230ab3f1cf374dac2
 workflow-type: tm+mt
 source-wordcount: '11946'
 ht-degree: 0%
@@ -36,7 +36,7 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 * **ACSD-50527** (för Adobe Commerce >=2.3.7 &lt;2.4.7) - Korrigerar felet som inträffar när en sida sparas med ett tomt dynamiskt block.
 * **ACSD-49973** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.5) - Förbättrar prestanda för hämtning av paketerade produkter via GraphQL.
 * **ACSD-5114** (för Adobe Commerce och Magento Open Source >=2.4.3 &lt;2.4.7) - Korrigerar problemet där en slumpmässig produkt försvinner från stora kataloger när asynkron indexering är aktiverat. Förbättrar prestanda för asynkron omindexering för stora kataloger.
-* **BB2B-2598** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.7) - Lägg till cachelagring i [!UICONTROL availableStores], [!UICONTROL countries], [!UICONTROL country], [!UICONTROL currency]och [!UICONTROL storeConfig] GraphQL-frågor.
+* **B2B-2598** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.7) - Lägg till cachelagring i [!UICONTROL availableStores], [!UICONTROL countries], [!UICONTROL country], [!UICONTROL currency]och [!UICONTROL storeConfig] GraphQL-frågor.
 * Lagt till nya versioner för MDVA-42806, ACSD-48627, ACSD-46815.
 * Uppdaterade patchmetadata för ACSD-49773, ACSD-47179, ACSD-48300.
 
