@@ -1,7 +1,7 @@
 ---
 title: "Den [!DNL Infra] tab"
 description: The [!DNL Infra] tabben isolerar problem och orsaker till infrastrukturproblem.
-source-git-commit: 38467ebd2ec29f9e1679182fb1ee7076d738664b
+source-git-commit: 5e4ab9e62f395b0967c3a632659c70a22770e9db
 workflow-type: tm+mt
 source-wordcount: '252'
 ht-degree: 0%
