@@ -1,7 +1,7 @@
 ---
-source-git-commit: 7dca677d6bde3f2700de5dc527a0f581e06032ad
+source-git-commit: 8bf5cb032671bbb1cd6ff05d4a26c699592d33db
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1058'
 ht-degree: 0%
 
 ---
@@ -10,6 +10,72 @@ ht-degree: 0%
 ## Nyheter
 
 Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
+
+### 19 april 2023
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Källa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Ytterligare information om en nyligen släppt patch för ett känt fel i 2.4.6. Se <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/overview.html">Versionsinformation för Adobe Commerce och Magento Open Source</a>.</p>
+</td>
+      <td>teknisk</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/fdbb0959b615689eba3068bc93c4c9876c7a7972">fdbb09</a> (implementera)</td>
+    </tr>
+    <tr>
+      <td><p>Lagt till information om <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/site-wide-analysis-tool/dashboard.html">Widget Security Center</a> på kontrollpanelen för Site-Wide Assessment Tool.</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/1e84ee6db07ec9080971de22a24fe8a7d8705916">1e84ee</a> (implementera)</td>
+    </tr>
+  </tbody>
+</table>
+
+### 17 april 2023
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Källa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Lagt till en <a href="https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/infrastructure/self-hosting/overview.html">nytt avsnitt</a> om självbetjäningskoncept, inklusive prestanda, säkerhet, övervakning och katastrofåterställning.</p>
+</td>
+      <td>new-topic</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/699c512de9c6d28ba354f02b4db76975eb5410a9">699c51</a> (implementera)</td>
+    </tr>
+  </tbody>
+</table>
+
+### 12 april 2023
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Källa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Publicerad <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html">versionsinformation</a> för QPT-paketversionen (1.1.30 Quality Patches Tool).</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/84ed7dd2c24eef437d6719d9758da43423347eeb">84ed7d</a> (implementera)</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 5 april 2023
 
