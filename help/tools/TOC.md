@@ -1,7 +1,7 @@
 ---
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
-source-git-commit: 67ec373cde21db066d3c0675c9ff479912ae229c
+source-git-commit: 786be8bfa915fe82d9316f51662b20bde71abbaa
 workflow-type: tm+mt
 source-wordcount: '191'
 ht-degree: 0%
@@ -26,7 +26,7 @@ ht-degree: 0%
    - [Varningar](site-wide-analysis-tool/alerts.md)
    - [Patchar](site-wide-analysis-tool/patches.md)
 - Verktyget Korrigeringar {#quality-patches-tool}
-   - [Verktyget Korrigeringar](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
+   - [[!DNL Quality Patches Tool]: Sök efter patchar](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
    - [Användning](quality-patches-tool/usage.md)
    - [Versionsinformation](quality-patches-tool/release-notes.md)
 - Observation för Adobe Commerce {#observation-for-adobe-commerce}

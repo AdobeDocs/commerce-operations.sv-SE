@@ -1,9 +1,10 @@
 ---
 title: Användning
 description: Lär dig använda [!DNL Quality Patches Tool].
-source-git-commit: e35469adb1b3278cf787416e1bc829fae9979efc
+exl-id: f9ad37e9-2d0f-4bc8-a98b-6d60b6f56d42
+source-git-commit: 786be8bfa915fe82d9316f51662b20bde71abbaa
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '910'
 ht-degree: 0%
 
 ---
@@ -17,7 +18,7 @@ Titta på detta [teknisk video](https://experienceleague.adobe.com/docs/commerce
 
 >[!INFO]
 >
->Se [Tillämpa enskilda patchar](#apply-individual-patches) för instruktioner om hur du använder korrigeringsfiler i dina Adobe Commerce- eller Magento Open Source-projekt. Se [Tillgängliga korrigeringar](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) för att se en fullständig lista över de släppta plåstren.
+>Se [Tillämpa enskilda patchar](#apply-individual-patches) för instruktioner om hur du använder korrigeringsfiler i dina Adobe Commerce- eller Magento Open Source-projekt. Se [[!DNL Quality Patches Tool]: Sök efter patchar](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) för att se en fullständig lista över de släppta plåstren.
 
 >[!WARNING]
 >
@@ -60,7 +61,7 @@ Adobe Commerce 2.3.5
 Statusregistret innehåller:
 
 - **Typ**:
-   - `Optional` — Alla patchar från [!DNL Quality Patches Tool] och [Molnkorrigeringar](https://devdocs.magento.com/cloud/project/project-patch.html) för Adobe Commerce och Magento Open Source.
+   - `Optional` — Alla patchar från [!DNL Quality Patches Tool] och [Commerce on Cloud Infrastructure Guide > Apply patches](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) för Adobe Commerce och Magento Open Source.
    - `Deprecated` — Adobe har ersatt det enskilda plåstret. Om du har använt korrigeringen rekommenderar vi att du återställer den. Återställningsåtgärden tar även bort korrigeringen från statustabellen.
 
 - **Status**:
@@ -81,7 +82,7 @@ Statusregistret innehåller:
 
 >[!WARNING]
 >
->Det är bäst att testa alla korrigeringsfiler i en staging- eller utvecklingsmiljö innan de distribueras till produktionen. Vi rekommenderar även att du säkerhetskopierar dina data innan du använder en patch. Se [Säkerhetskopiera och återställa filsystemet](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-backup.html).
+>Det är bäst att testa alla korrigeringsfiler i en staging- eller utvecklingsmiljö innan de distribueras till produktionen. Vi rekommenderar även att du säkerhetskopierar dina data innan du använder en patch. Se [Säkerhetskopiera och återställa filsystemet, mediet och databasen](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/backup.html).
 
 Om du vill använda en enda korrigering kör du följande kommando där `MAGETWO-XXXX` är det korrigerings-ID som anges i statustabellen:
 
@@ -109,7 +110,7 @@ Du måste rensa cacheminnet när du har tillämpat korrigeringar för att se än
 
 >[!WARNING]
 >
->Det är bäst att testa alla korrigeringsfiler i en staging- eller utvecklingsmiljö innan de distribueras till produktionen. Vi rekommenderar även att du säkerhetskopierar dina data innan du använder en patch. Se [Säkerhetskopiera och återställa filsystemet](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-backup.html).
+>Det är bäst att testa alla korrigeringsfiler i en staging- eller utvecklingsmiljö innan de distribueras till produktionen. Vi rekommenderar även att du säkerhetskopierar dina data innan du använder en patch. Se [Säkerhetskopiera och återställa filsystemet, mediet och databasen](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/backup.html).
 
 Om du vill återställa en enskild korrigering kör du följande kommando där `MAGETWO-XXXX` är det korrigerings-ID som anges i statustabellen:
 
