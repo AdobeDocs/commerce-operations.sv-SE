@@ -1,9 +1,10 @@
 ---
-title: "Den [!UICONTROL bots] tab"
+title: The [!UICONTROL bots] tab
 description: Läs mer om [!UICONTROL bots] flik för [!DNL Observation for Adobe Commerce].
-source-git-commit: e135b8ab8b4f13de614299dd3c41c0cab52fefb2
+exl-id: 741310ca-28fb-4b08-95c7-e8d1fb952018
+source-git-commit: 043389dc6d86228e459ac2c3592f391e85aa8f68
 workflow-type: tm+mt
-source-wordcount: '1657'
+source-wordcount: '1862'
 ht-degree: 0%
 
 ---
@@ -150,3 +151,11 @@ På den här fliken finns information om hur du identifierar om och vad [!DNL bo
 ![Latens för sidvisning visas som taggar i det här diagrammet:](../../assets/tools/observation-for-adobe-commerce/pageview-latency.png)
 
 * The **[!UICONTROL Pageview Latency will show as spikes on this graph:]** bildrutan visar sidinläsning/API-svarstid som kan vara i linje med [!DNL bot] trafik.
+
+## [!UICONTROL Experimental Potential Malicious Bots] frame
+
+![Bildruta för experimentella potentiella skadliga starter](../../assets/tools/observation-for-adobe-commerce/experimental-potential-malicious-bots-frame.jpg)
+
+The **[!UICONTROL Experimental Potential Malicious Bots]** bildrutan kör tio separata, komplexa frågor. Den upptäcker skadliga IP-förfrågningssignaturer och sammanställer sedan resultaten, summerar och sorterar dem efter antal i fallande ordning. Frågorna innehåller en mängd datasignaturer av CVE-explosioner och andra skadliga förfrågningar. Även om explosionerna blockeras av säkerhetskorrigeringar/patchar och inte utgör ett hot mot webbplatsen måste begäran fortfarande hanteras av webbplatsen. Antalet förfrågningar kan bli mycket stort på kort tid. Den här bildrutan visar inte det totala antalet förfrågningar från IP-adressen, utan snarare förfrågningar som har signaler som indikerar att förfrågningarna hade misstänkt avsikt.
+
+Kontrollera att trafiken är misstänkt och att den inte kommer från en CDN-adress (Content Distributed Network) som också kan leverera giltiga förfrågningar. Om förfrågningarna kommer från en CDN IP-adress kontaktar du tjänsteleverantören för att få hjälp med att blockera den misstänkta trafiken via nätverket. Om du behöver blockera adressen eller URL:en för begäran, se [Blockera skadlig trafik för Adobe Commerce på [!DNL Fastly] nivå](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level.html) i Adobe Commerce Support Knowledge Base.
