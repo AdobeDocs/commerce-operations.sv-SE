@@ -2,9 +2,9 @@
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: 786be8bfa915fe82d9316f51662b20bde71abbaa
+source-git-commit: 205a0b67fab14a313d28355eed668d60ce477e64
 workflow-type: tm+mt
-source-wordcount: '11947'
+source-wordcount: '12066'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,16 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som skapats av gemenskapen för Magento Open Source, se [versionsinformation](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.31 {#v1-1-31}
+
+* **ACSD-50345** (för Adobe Commerce och Magento Open Source >=2.4.3 &lt;2.4.4 || >=2.4.4-p1 &lt;2.4.6) - Korrigerar problemet där Recaptcha v2 inte laddas om efter att en misslyckad betalning har skickats.
+* **ACSD-50817** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.7) - Optimerar Cron-jobb `sales_clean_quotes` att springa snabbare.
+* **ACSD-49392** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.0 || >= 2.4.1 &lt;2.4.7) - Korrigerar problemet där orderstatusen ändras till stängd efter en partiell återbetalning för en paketerad produkt.
+* **ACSD-51036** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.5) - Korrigerar problemet där konkurrensförhållandena vid samtidiga REST API-anrop resulterar i att leveransstatusinformationen skrivs över i [!UICONTROL Items Ordered] tabell.
+* **ACSD-50858** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.7) - Förbättrar prestanda för inläsning av bannerinnehåll.
+* Lagt till nya versioner för MDVA-39305-v2, ACSD-45169.
+* Uppdaterade patchar ACSD-50260-v2.
 
 ## v1.1.30 {#v1-1-30}
 
