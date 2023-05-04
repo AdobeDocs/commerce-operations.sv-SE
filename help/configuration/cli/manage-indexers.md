@@ -2,7 +2,7 @@
 title: Hantera indexerare
 description: Se exempel på hur du visar och hanterar Commerce-indexerare.
 exl-id: d2cd1399-231e-4c42-aa0c-c2ed5d7557a0
-source-git-commit: beee479caeb4145d759c105012ffc8b6b55a6e39
+source-git-commit: 795d4e9d1910d0ad826eb6c82ac451ac58e43063
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 0%
@@ -39,7 +39,7 @@ salesrule_rule                           Sales Rule
 ```
 
 >[!NOTE]
-> Adobe Commerce handlare som använder Live Search, Catalog Service eller Product Recommendations kan använda [SaaS-baserad prisindexering](https://experienceleague.adobe.com/docs/commerce-merchant-services/price-index/index.html).
+> Adobe Commerce handlare som använder Live Search, Catalog Service eller Product Recommendations kan använda [SaaS-baserad prisindexering](https://experienceleague.adobe.com/docs/commerce-merchant-services/price-indexer/index.html).
 
 ## Visa indexeringsstatus
 
