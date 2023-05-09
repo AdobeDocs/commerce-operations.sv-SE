@@ -1,7 +1,8 @@
 ---
 user-guide-title: Uppgraderingshandbok
 user-guide-description: Lär dig varför det är så viktigt att uppgradera ditt Adobe Commerce-program och hur du kan planera och genomföra en uppgradering.
-source-git-commit: 6965e8213a7293f55c9b51e3e556715ccdad9daf
+feature: Upgrade
+source-git-commit: 68c4cfc29735d2ea296f579ed0a0ff52db3fdd9f
 workflow-type: tm+mt
 source-wordcount: '144'
 ht-degree: 0%

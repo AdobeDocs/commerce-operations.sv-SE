@@ -1,7 +1,8 @@
 ---
 user-guide-title: Säkerhet och efterlevnad
 user-guide-description: Läs om hur Adobe Commerce och handlare i Magento Open Source ansvarar för att upprätthålla en säker miljö och uppfylla de rättsliga kraven och bästa metoderna för onlinehandlare inom sin jurisdiktion.
-source-git-commit: 338a99f4f047640ac4bb944ac8599301cba5f646
+feature: Security
+source-git-commit: 68c4cfc29735d2ea296f579ed0a0ff52db3fdd9f
 workflow-type: tm+mt
 source-wordcount: '72'
 ht-degree: 0%
