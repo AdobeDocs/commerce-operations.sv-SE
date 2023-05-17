@@ -1,13 +1,13 @@
 ---
 title: Hantera meddelandeköer
 description: Lär dig hur du hanterar meddelandeköer från kommandoraden för Adobe Commerce.
-source-git-commit: 0d106b36f479ecf2eda3fecf6740b28d4b6793eb
+exl-id: 619e5df1-39cb-49b6-b636-618b12682d32
+source-git-commit: caca8df48c498977f830082ef27d9afb6220ae92
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '416'
 ht-degree: 0%
 
 ---
-
 
 # Hantera meddelandeköer
 
@@ -74,7 +74,7 @@ Redigera `/app/etc/env.php` fil för att konfigurera cron-jobbet `consumers_runn
 - `cron_run` - Ett booleskt värde som aktiverar eller inaktiverar `consumers_runner` cron-jobb (standard = `true`).
 - `max_messages` - Det maximala antalet meddelanden som varje konsument måste behandla innan de avbryter (standard = `10000`). Även om vi inte rekommenderar det kan du använda 0 för att hindra konsumenten från att säga upp sig. Se [`consumers_wait_for_messages`](../reference/config-reference-envphp.md#consumerswaitformessages) för att konfigurera hur konsumenter ska bearbeta meddelanden från meddelandekön.
 - `consumers` - en array med strängar som anger vilka konsumenter som ska köras. En tom array körs *alla* konsumenter.
-- `multiple_processes` - en array med nyckelvärdepar som anger vilken konsument som ska köras i hur många processer.
+- `multiple_processes` - en array med nyckelvärdepar som anger vilken konsument som ska köras i hur många processer. Stöds i Commerce 2.4.4 eller senare.
 
    >[!INFO]
    >
