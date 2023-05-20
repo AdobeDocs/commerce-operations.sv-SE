@@ -20,7 +20,7 @@ The `X-Frame-Options` I kan du ange om en webbläsare ska kunna återge en sida 
 
 >[!WARNING]
 >
->The `ALLOW-FROM <uri>` eftersom webbläsare som stöder Commerce inte längre stöder det. Se [Webbläsarkompatibilitet](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options#browser_compatibility).
+>The `ALLOW-FROM <uri>` eftersom webbläsare som stöds i Commerce inte längre stöder det. Se [Webbläsarkompatibilitet](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options#browser_compatibility).
 
 >[!WARNING]
 >

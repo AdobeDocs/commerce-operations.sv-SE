@@ -1,6 +1,6 @@
 ---
 title: Självvärdande - översikt
-description: Lär dig mer om de bästa sätten att tänka på vid självvärdskap. Ämnena kan vara allt från säkerhetselement till katastrofåterställning. Dessa ämnen är till för att hjälpa ett företag som har bestämt sig att ha en egen version av Adobe Commerce. De presenterade objekten är inte alla inkluderade, men de bör innehålla en rad koncept för att främja en säker, stabil och flexibel webbplats.
+description: Lär dig mer om de bästa sätten att tänka på vid självvärdskap. Ämnena varierar från säkerhetselement till katastrofåterställning av många fler. Dessa ämnen är till för att hjälpa ett företag som har bestämt sig att ha en egen version av Adobe Commerce. De presenterade objekten är inte alla inkluderade, men de bör innehålla en rad koncept för att främja en säker, stabil och flexibel webbplats.
 landing-page-description: Lär dig några koncept och saker att tänka på när du är värd för Adobe Commerce på egen hand.
 short-description: Lär dig strategier och koncept för att vara värd för Adobe Commerce själv.
 kt: 11420
