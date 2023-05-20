@@ -1,13 +1,13 @@
 ---
 title: Förhindra cacheförgiftning
 description: Lär dig hur du förhindrar att sidcachen förgiftas för din Commerce Store.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 947024dd-d59d-480d-bb6c-8e0065054bb6
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 0%
 
 ---
-
 
 # Förhindra cacheförgiftning
 

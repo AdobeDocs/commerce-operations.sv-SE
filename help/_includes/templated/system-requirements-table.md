@@ -1,8 +1,8 @@
 ---
 source-git-commit: 20ebf9dc6c7a1aac1d183ed31b1a80a674d633f1
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '271'
+ht-degree: 70%
 
 ---
 # Systemkrav

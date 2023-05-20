@@ -1,13 +1,13 @@
 ---
 title: Återställ delad databas
 description: Återgå från en borttagen implementering av delade databaser till en enda databasimplementering.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+exl-id: 2ece24e0-1f85-445a-8e22-fb10611403ff
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 0%
 
 ---
-
 
 # Återgå från delad databas
 

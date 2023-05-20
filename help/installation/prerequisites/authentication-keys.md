@@ -1,13 +1,13 @@
 ---
 title: Hämta dina autentiseringsnycklar
 description: Följ de här stegen för att hämta inloggningsuppgifter för att komma åt Adobe Commerce- och Magento Open Source Composer-paket på repo.magento.com.
-source-git-commit: d209d3f7fde55f7495488f2cbeeebf21024875ed
+exl-id: 7ec2a410-d81f-476a-bf6a-f3c61982a734
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 0%
 
 ---
-
 
 # Hämta dina autentiseringsnycklar
 
@@ -58,7 +58,7 @@ Om du vill hämta Adobe Commerce-versioner med SSH måste du generera en åtkoms
 
 Du måste använda ditt MAGEID plus din token för att hämta en release. Ditt MAGEID visas längst upp till vänster på din kontosida.
 
-Exempel:
+Till exempel:
 
 ```bash
 curl -k https://MAGEID:TOKEN@www.magentocommerce.com/products/downloads/info/help

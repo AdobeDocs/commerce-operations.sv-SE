@@ -1,7 +1,8 @@
 ---
-title: "Välj [!UICONTROL focus] tabbar"
+title: Välj [!UICONTROL focus] tabbar
 description: Lär dig hur du väljer [!UICONTROL focus] att observera områden som orsakar problem.
-source-git-commit: bcb0746f3428a29a6ef03ca2dcf29347fa1b7dbd
+exl-id: 6c0a7d81-09cf-49ce-888a-9ecaaad2b7ae
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '221'
 ht-degree: 0%

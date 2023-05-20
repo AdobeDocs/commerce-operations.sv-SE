@@ -1,7 +1,8 @@
 ---
-title: "Den [!UICONTROL Deploy] tab"
+title: The [!UICONTROL Deploy] tab
 description: Läs mer om [!UICONTROL Deploy] flik för [!DNL Observation for Adobe Commerce].
-source-git-commit: 27ebd472dc4e81e58b36bf5fac529461beae4be1
+exl-id: 3e33f7b0-7a40-4598-ae2e-436118e8d99a
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 0%
@@ -158,4 +159,3 @@ The **[!UICONTROL Count of modules imported during deploy]** visas antalet modul
 ![Distribuerad modullista](../../assets/tools/observation-for-adobe-commerce/deploy-tab-7.jpg)
 
 The **[!UICONTROL Deployed module list]** bildrutan visar distribuerade moduler under den valda tidsramen.
-

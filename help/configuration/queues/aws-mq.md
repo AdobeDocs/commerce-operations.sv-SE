@@ -1,13 +1,13 @@
 ---
 title: Konfigurera Amazon Message Queue
 description: Lär dig hur du konfigurerar Commerce att använda AWS MQ-tjänsten.
-source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
+exl-id: 463e513f-e8d4-4450-845e-312cbf00d843
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera Amazon Message Queue
 

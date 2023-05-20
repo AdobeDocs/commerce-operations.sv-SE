@@ -1,13 +1,13 @@
 ---
 title: Avinstallera teman
 description: Följ de här stegen för att avinstallera ett Adobe Commerce- eller Magento Open Source-tema.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 73150e8c-2d83-4479-b96b-75f41fd9c842
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 0%
 
 ---
-
 
 # Avinstallera teman
 

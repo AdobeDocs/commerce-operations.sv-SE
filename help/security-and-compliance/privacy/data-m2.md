@@ -1,13 +1,13 @@
 ---
 title: Kundens personuppgifter (version 2.x)
 description: Läs mer om dataflödesdiagram och databastypsmappningar för kundinformation i Adobe Commerce och Magento Open Source 2.x.
-source-git-commit: 2120e5bb912a89c58611ef9e23661a54e40a14f1
+exl-id: f08f4f93-a7b6-4c43-bc07-f159822dc528
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '755'
 ht-degree: 0%
 
 ---
-
 
 # Kundens personuppgifter (version 2.x)
 

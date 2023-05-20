@@ -1,13 +1,13 @@
 ---
 title: Förbättra säkerheten genom att ändra dokumentroten
 description: Förhindra obehörig webbläsarbaserad åtkomst till Adobe Commerce eller Magento Open Source lokala filsystem.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: aabe148d-00c8-4011-a629-aa5abfa6c682
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '592'
 ht-degree: 0%
 
 ---
-
 
 # Förbättra säkerheten genom att ändra dokumentroten
 

@@ -4,13 +4,13 @@ description: Lär dig hur du konfigurerar MySQL-slavanslutningen för Adobe Comm
 role: Developer
 feature-set: Commerce
 feature: Best Practices
-source-git-commit: cb86772e9ceabc580ec32ad6ae1206a71ea03946
+exl-id: d65bc80a-c4ec-4ea4-aff1-110592838201
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 0%
 
 ---
-
 
 # Bästa sättet att konfigurera MySQL-slavanslutningen
 

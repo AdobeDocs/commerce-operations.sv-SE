@@ -1,13 +1,13 @@
 ---
 title: Lokal installationsöversikt
 description: Läs om installationsprocessen för lokal driftsättning av Adobe Commerce och Magento Open Source.
-source-git-commit: f6f438b17478505536351fa20a051d355f5b157a
+exl-id: a9f5b241-d05d-462c-8c7f-479a264c988f
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 0%
 
 ---
-
 
 # Lokal installationsöversikt
 
@@ -36,4 +36,3 @@ Det allmänna installationsflödet är följande:
    Om steget misslyckas på grund av att nödvändig programvara inte är korrekt konfigurerad kan du granska [krav](prerequisites/overview.md).
 
 1. [Verifiera](next-steps/verify.md) genom att visa din butik och administratören.
-

@@ -1,13 +1,13 @@
 ---
-title: "Kör [!DNL Upgrade Compatibility Tool]"
+title: Kör [!DNL Upgrade Compatibility Tool]
 description: Följ de här stegen för att köra [!DNL Upgrade Compatibility Tool] i ett kommandoradsgränssnitt för ditt Adobe Commerce-projekt.
-source-git-commit: 653d755023f96c0a6acc312f74fd4a0292f13a73
+exl-id: ea467a74-18eb-476b-96e2-23f4fc257d73
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1116'
 ht-degree: 0%
 
 ---
-
 
 # Ladda ned [!DNL Upgrade Compatibility Tool]
 

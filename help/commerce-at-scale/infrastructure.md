@@ -27,7 +27,7 @@ Om det finns en belastningsutjämnare för AWS-program i infrastrukturen och fle
 
    ![Skärmbild som visar hälsokontroller AEM belastningsutjämnaren](../assets/commerce-at-scale/health-checks.png)
 
-1. Identifiering av målgrupp för dispatcher kan inaktiveras och algoritmen för Round Robin-belastningsutjämning kan användas. Detta förutsätter att det inte finns någon AEM specifik funktionalitet eller AEM användarsessioner som skulle kräva att sessionens varaktighet ställs in. Det förutsätter att användarinloggning och sessionshantering endast sker på Adobe Commerce via GraphQL.
+1. Identifiering av målgrupp för dispatcher kan inaktiveras och algoritmen för Round Robin-belastningsutjämning kan användas. Detta förutsätter att det inte finns någon AEM specifik funktionalitet eller AEM användarsessioner som skulle kräva att sessionens varaktighet ställs in. Man antar att användarinloggning och sessionshantering endast sker på Adobe Commerce via GraphQL.
 
    ![Skärmbild som visar AEM av webbplatsens klistermärken](../assets/commerce-at-scale/session-stickiness.png)
 
@@ -37,17 +37,17 @@ Om det finns en belastningsutjämnare för AWS-program i infrastrukturen och fle
 
 /timeout i alternativen för dispatcher &quot;renders&quot; anger anslutningstimeout för åtkomst till AEM publiceringsinstans i millisekunder. Detta bör granskas och standardinställningen 0 (oändlig tidsgräns) bör användas om det finns en separat belastningsutjämnare för att hantera timeoutinställningarna.
 
-Om det inte finns någon belastningsutjämnare i infrastrukturen bör timeoutinställningarna i stället anges i inställningarna för dispatcher /timeout, med ett värde som matchar GraphQL-timeoutinställningarna i utgivaren.
+Om det inte finns någon belastningsutjämnare i infrastrukturen bör timeoutinställningarna i stället anges i inställningarna för dispatcher /timeout, med ett värde som matchar GraphQL timeoutinställningar i utgivaren.
 
 ## Utgivare
 
-Gränser och tidsgränser för anslutning till Publisher GraphQL: Till att börja med bör OSGI-inställningarna för Max HTTP-anslutningar i Adobe Commerce CIF GraphQL Client Configuration Factory anges till standardgränsen för snabbt högsta antal anslutningar, som för närvarande är inställd på 200. Även om det finns flera utgivare i den AEM servergruppen bör gränsen vara densamma för varje utgivare, vilket matchar inställningen Fastt. Orsaken till detta är att i vissa fall kan en utgivare hantera mer trafik än de andra utgivare, om en associerad utgivare tas bort från servergruppen till exempel. Det innebär att all trafik dirigeras genom den enda kvarvarande avsändaren och utgivaren, i det här fallet kan den enda utgivaren behöva alla HTTP-anslutningar.
+Gränser och tidsgränser för anslutning till Publisher GraphQL: Till att börja med bör inställningen Max HTTP-anslutningar i Adobe Commerce CIF GraphQL Client Configuration Factory OSGI anges till standardgränsen för snabb högsta antal anslutningar, som för närvarande är inställd på 200. Även om det finns flera utgivare i den AEM servergruppen bör gränsen vara densamma för varje utgivare, vilket matchar inställningen Fastt. Orsaken till detta är att i vissa fall kan en utgivare hantera mer trafik än de andra utgivare, om en associerad utgivare tas bort från servergruppen till exempel. Det innebär att all trafik dirigeras genom den enda kvarvarande avsändaren och utgivaren, i det här fallet kan den enda utgivaren behöva alla HTTP-anslutningar.
 
 HTTP-standardmetoden ska anges från POST till GET. Endast GET-begäranden cachelagras i Adobe Commerce GraphQL-cachen och därför bör standardmetoden alltid anges till GET.
 
 Tidsgränsen för http-anslutningen och http-sockettidsgränsen bör anges till ett värde som matchar tidsgränsen för fast anslutning.
 
-Följande bild visar konfigurationsfabriken för klienten Magento CIF GraphQL. Inställningarna som visas här är bara exempel och behöver justeras från fall till fall:
+Följande bild visar Magento CIF GraphQL Client Configuration Factory. Inställningarna som visas här är bara exempel och behöver justeras från fall till fall:
 
 ![Skärmbild av konfigurationsinställningar för Commerce-integreringsramverk](../assets/commerce-at-scale/cif-config.png)
 

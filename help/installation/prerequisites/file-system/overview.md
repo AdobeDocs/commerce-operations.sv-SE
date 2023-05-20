@@ -1,13 +1,13 @@
 ---
 title: Filägarskap och behörigheter
 description: Läs om hur viktigt det är med filsystemsbehörigheter när du arbetar med lokala installationer av Adobe Commerce och Magento Open Source.
-source-git-commit: 8f05fb6fc212c2b3fda80457bbf27ecf16fb1194
+exl-id: a84784bf-afd6-4dba-9745-3fefc0ecafcb
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 0%
 
 ---
-
 
 # Filägarskap och behörigheter
 
@@ -42,7 +42,7 @@ Om du vill öka säkerheten, särskilt i en produktionsmiljö i ett delat värds
 
 Adobe Commerce och Magento Open Source använder en trebitars standardmask: `002`. Subtrahera standardmasken från UNIX-standardvärdena 666 för filer och 777 för kataloger.
 
-Exempel:
+Till exempel:
 
 - **775 för kataloger**—Full kontroll av användaren, fullständig kontroll av gruppen och gör det möjligt för alla att gå igenom katalogen. Dessa behörigheter krävs vanligtvis av delade värdtjänstleverantörer.
 

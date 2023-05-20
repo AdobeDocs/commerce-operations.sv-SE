@@ -1,13 +1,13 @@
 ---
 title: Message Broker
 description: Följ de här stegen för att installera och konfigurera nödvändig programvara för meddelandehantering (till exempel [!DNL RabbitMQ]) för lokalinstallationer av Adobe Commerce och Magento Open Source.
-source-git-commit: 1233d2e1d80a3228626be3e20f1bd826b1283523
+exl-id: ae6200d6-540f-46b3-92ba-7df7f6bb6fae
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '581'
 ht-degree: 0%
 
 ---
-
 
 # Message Broker
 

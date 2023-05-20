@@ -1,13 +1,13 @@
 ---
 title: Bästa praxis för konfiguration
 description: Optimera svarstiden för driftsättningen av Adobe Commerce eller Magento Open Source med hjälp av dessa metodtips.
-source-git-commit: 5b455cb1285ce764a0517008fb8b692f3899066d
+exl-id: 4cb0f5e7-49d5-4343-a8c7-b8e351170f91
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '1348'
 ht-degree: 0%
 
 ---
-
 
 # Bästa praxis för konfiguration
 
@@ -122,4 +122,3 @@ Du kan endast begränsa produktstödrastersamlingar på följande sidor:
 * Admin - Skapa ordersida
 
 Om du inte vill att produktrutnätet ska begränsas bör du använda filter mer exakt så att resultatsamlingen har färre objekt än **[!UICONTROL Records Limit]**.
-

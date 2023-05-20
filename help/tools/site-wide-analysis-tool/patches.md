@@ -1,7 +1,8 @@
 ---
-title: '"[!DNL Patches]"'
+title: '[!DNL Patches]'
 description: Läs mer om [!UICONTROL Patches] i [!DNL Site-Wide Analysis Tool], när det ska användas och dess fördelar.
-source-git-commit: 9ee2e49de83c23386de624eff9515fd59923e987
+exl-id: 40bc9b38-2a70-40ec-8278-231c78193248
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '121'
 ht-degree: 0%
@@ -25,4 +26,3 @@ Använd [!UICONTROL Patches] om du vill visa tillgängliga korrigeringsfiler fö
 * Få all relevant information om patchar på ett och samma ställe.
 
 * Åtgärda problem med de patchar som finns i [!UICONTROL Patches] -fliken.
-

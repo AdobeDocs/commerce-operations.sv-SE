@@ -1,13 +1,13 @@
 ---
 title: Konfigurera flera webbplatser, butiker och butiksvyer i administratören
 description: Konfigurera ytterligare webbplatser, butiker och butiksvyer i Commerce Admin.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: e6b4d14d-7504-48f9-a2e1-7e9a1bc76ab9
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '1013'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera flera vyer i administratören
 

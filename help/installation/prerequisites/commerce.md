@@ -1,13 +1,13 @@
 ---
 title: Skaffa Adobe Commerce
 description: Lär dig hur du laddar ned Adobe Commerce och Magento Open Source.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 7a769d5b-5397-4572-8db5-7602068e6aad
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '374'
 ht-degree: 0%
 
 ---
-
 
 # Skaffa Adobe Commerce
 

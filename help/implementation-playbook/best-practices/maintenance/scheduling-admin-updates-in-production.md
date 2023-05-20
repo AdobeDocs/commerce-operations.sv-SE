@@ -4,13 +4,13 @@ description: Lär dig de bästa sätten att schemalägga viktiga uppdateringar t
 role: Admin, User
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: 510f2d4cdaec1034cb04a01fab0948c4261c6d10
+exl-id: 41c0cb87-3371-48a7-9913-264f3eea8d8d
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 0%
 
 ---
-
 
 # Bästa tillvägagångssätt för att schemalägga administratörsuppdateringar på produktionsplatser
 
@@ -36,4 +36,3 @@ Kritiska åtgärder leder till cachelagring av ogiltiga och omindexerade åtgär
 - [Privat innehåll: Gör privat innehåll ogiltigt](https://developer.adobe.com/commerce/php/development/cache/page/private-content/#invalidate-private-content)
 - [Maskinvarurekommendationer: Cacheminnen](../../../performance/hardware.md#caches)
 - [Avancerad konfiguration: Konfigurera Redis](../../../performance/advanced-setup.md#set-up-redis)
-

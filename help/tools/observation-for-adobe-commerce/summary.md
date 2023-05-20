@@ -1,13 +1,13 @@
 ---
-title: "Den [!UICONTROL Summary] tab"
+title: The [!UICONTROL Summary] tab
 description: Läs mer om [!UICONTROL Summary] flik för [!DNL Observation for Adobe Commerce].
-source-git-commit: 1d4e6ee745b656f0bc291a479e1d5bac5c8504e3
+exl-id: b07ed898-a211-4353-a1d4-1b71d4898b93
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '2653'
 ht-degree: 0%
 
 ---
-
 
 # The [!UICONTROL Summary] tab
 

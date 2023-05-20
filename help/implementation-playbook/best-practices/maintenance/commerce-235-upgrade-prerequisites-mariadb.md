@@ -4,13 +4,13 @@ description: Lär dig hur du förbereder din Adobe Commerce-databas för uppgrad
 role: Developer
 feature-set: Commerce
 feature: Best Practices
-source-git-commit: bc38dd658401d3cd4c64159b1b2b2efe89979a93
+exl-id: b86e471f-e81f-416b-a321-7aa1ac73d27c
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '641'
 ht-degree: 0%
 
 ---
-
 
 # Krav för uppgradering av MariaDB
 
@@ -145,4 +145,3 @@ Se [Konvertera MyISAM-tabeller till InnoDB](../planning/database-on-cloud.md).
 
 - [Bästa databaspraxis för Adobe Commerce om molninfrastruktur](../planning/database-on-cloud.md)
 - [Uppdaterar MariaDB från 10.0 till 12.0 för Adobe Commerce i molnet](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/upgrade-mariadb-10.0-to-10.2-for-magento-commerce-cloud.html)
-

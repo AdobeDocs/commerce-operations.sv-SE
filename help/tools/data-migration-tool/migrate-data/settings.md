@@ -1,13 +1,13 @@
 ---
 title: Inställningar för datamigrering
 description: Lär dig hur du börjar migrera inställningar från Magento 1 till Magento 2 med [!DNL Data Migration Tool].
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 6fc8285a-9f26-48a5-9034-49a6a1b66b40
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 0%
 
 ---
-
 
 # Inställningar för datamigrering
 

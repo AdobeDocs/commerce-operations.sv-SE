@@ -1,13 +1,13 @@
 ---
 title: Versioner som stöds för datamigrering
 description: Läs om vilka versioner av Magento 1 och Magento 2 som [!DNL Data Migration Tool] stöder.
-source-git-commit: 630b840f7b2b762172bc085246bb3e3e7b10e7b9
+exl-id: ba6398b4-66be-4d33-a4d3-a9f0aaa0fa81
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '83'
 ht-degree: 0%
 
 ---
-
 
 # Versioner som stöds för datamigrering
 

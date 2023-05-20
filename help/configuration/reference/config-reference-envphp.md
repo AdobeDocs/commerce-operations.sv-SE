@@ -1,13 +1,13 @@
 ---
 title: env.php reference
 description: Se en lista med värden för filen env.php.
-source-git-commit: fe5e16d44213d1864a62230029e9e206eecd1717
+exl-id: cf02da8f-e0de-4f0e-bab6-67ae02e9166f
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '717'
 ht-degree: 0%
 
 ---
-
 
 # env.php reference
 

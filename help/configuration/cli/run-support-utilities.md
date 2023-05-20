@@ -1,13 +1,13 @@
 ---
 title: Kör supportverktygen
 description: Felsök ditt Commerce-projekt med det inbyggda supportverktyget.
-source-git-commit: 2c12c6ea6e7b6ffeb07bbda17ded34e39de6656a
+exl-id: 021b795f-e00d-43b5-9cbb-5b57a4795be7
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '465'
 ht-degree: 0%
 
 ---
-
 
 # Kör supportverktygen
 
@@ -108,7 +108,7 @@ Kör följande kommandon i den ordning som visas för att visa sökvägarna till
 
 1. Ändra till installationskatalogen för Commerce.
 
-   Exempel: `cd /var/www/magento2`
+   Till exempel: `cd /var/www/magento2`
 
    >[!INFO]
    >
@@ -131,4 +131,4 @@ Ett exempel följer:
    mysql => /usr/bin/mysql
 ```
 
-För att lösa problem med att köra verktygen kontrollerar du att programmen är installerade och finns i webbserveranvändarens `$PATH` miljövariabel.
+För att lösa problem med att köra verktygen kontrollerar du att programmen är installerade och finns i webbserveranvändarens `$PATH` systemvariabel.

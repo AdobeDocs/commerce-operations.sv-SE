@@ -1,13 +1,13 @@
 ---
 title: Förstå uppgraderingsomfång
 description: Lär dig mer om bakåtkompatibla ändringar i en release som kan påverka anpassade moduler eller tillägg från tredje part från Adobe Commerce eller Magento Open Source.
-source-git-commit: 682963fb66519097e54f14f2b84ed71528030054
+exl-id: dab2a14f-dbf0-422e-afb4-642e2220ec7a
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '928'
 ht-degree: 0%
 
 ---
-
 
 # Förstå omfattningen av uppgraderingen
 

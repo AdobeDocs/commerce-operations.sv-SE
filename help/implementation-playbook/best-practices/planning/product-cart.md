@@ -4,13 +4,13 @@ description: Lär dig hur du optimerar Adobe Commerce prestanda genom att begrä
 role: User
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: 85f9355d0e8c704be3760334b07414d3e15b3b97
+exl-id: 7ea5acc2-f6b2-4244-8c07-c71fd54a18a0
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 0%
 
 ---
-
 
 # Bästa tillvägagångssätt för hantering av varukorgar
 

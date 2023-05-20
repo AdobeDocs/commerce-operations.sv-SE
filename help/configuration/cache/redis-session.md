@@ -1,13 +1,13 @@
 ---
 title: Använd Redis för sessionslagring
 description: Lär dig hur du konfigurerar Redis för sessionslagring.
-source-git-commit: c65c065c5f9ac2847caa8898535afdacf089006a
+exl-id: f93f500d-65b0-4788-96ab-f1c3d2d40a38
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '724'
 ht-degree: 1%
 
 ---
-
 
 # Använd Redis för sessionslagring
 
@@ -133,4 +133,3 @@ Om båda kommandona lyckades är Redis korrekt konfigurerat.
 ### Inspektera komprimerade data
 
 Om du vill inspektera komprimerade sessionsdata och sidcachen, [RESP.app](https://flathub.org/apps/details/app.resp.RESP) har stöd för automatisk dekomprimering av Commerce 2 Session och Page Cache och visar PHP-sessionsdata i en läsbar form.
-

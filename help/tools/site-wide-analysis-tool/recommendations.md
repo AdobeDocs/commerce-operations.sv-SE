@@ -1,7 +1,8 @@
 ---
-title: '"[!DNL Recommendations]"'
+title: '[!DNL Recommendations]'
 description: Läs mer om [!UICONTROL Recommendations] i [!DNL Site-Wide Analysis Tool], när det ska användas, dess fördelar och bästa praxis.
-source-git-commit: bc0d61a3a6210e50072733e212041f34185a8e2e
+exl-id: 17ff57e2-5b51-4afb-b505-09e46f490509
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '144'
 ht-degree: 0%
@@ -25,5 +26,3 @@ Använd [!UICONTROL Recommendations] sida för att se och implementera rekommend
 ## God praxis
 
 The [!DNL Site-Wide Analysis Tool’s] [!UICONTROL Recommendations] Sidan innehåller rekommendationer med prioritet P0 till P4. P0 är kritiskt, P1 är brådskande, P2 är högt, P3 är medelhögt och P4 är lågt. Övervaka den här sidan för att se dessa rekommendationer och implementera dem baserat på prioritet för att säkerställa optimala webbplatsprestanda.
-
-

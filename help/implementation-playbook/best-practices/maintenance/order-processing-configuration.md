@@ -4,7 +4,8 @@ description: Lär dig de bästa sätten att förbättra utcheckning och prestand
 role: Admin, User
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: fb30b18c9b9f6a9f538189eeafda9ee7a29d436c
+exl-id: d15fe845-670f-4f7e-9645-7e111e6e809f
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%

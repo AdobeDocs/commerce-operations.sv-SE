@@ -1,13 +1,13 @@
 ---
 title: Översikt över konfigurationsguiden
 description: Lär dig mer om alla konfigurerbara funktioner och tjänster för ditt Adobe Commerce- eller Magento Open Source-program.
-source-git-commit: 8102c083bb0216bbdcad2882f39f7711b9cee52b
+exl-id: c4997792-5a47-4ae5-903a-7e5d7235e42e
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '163'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurationsguide
 

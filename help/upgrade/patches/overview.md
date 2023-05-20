@@ -1,13 +1,13 @@
 ---
 title: Så här fungerar korrigeringar
 description: Lär dig mer om de olika typerna av patchar för Adobe Commerce och Magento Open Source och hur de fungerar.
-source-git-commit: 1a18a445cb104420dd9b853b7c4d42ce3bddf2ac
+exl-id: d7072ed4-7d51-41fe-881a-aae3b2000b55
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '602'
 ht-degree: 0%
 
 ---
-
 
 # Så här fungerar patchar
 
@@ -43,7 +43,7 @@ Du hittar snabbkorrigeringar i [Security Center](https://magento.com/security/pa
 
 Enskilda korrigeringsfiler innehåller korrigeringar av låg kvalitet för ett specifikt problem. Dessa korrigeringar tillämpas på den senaste delversionen som stöds (till exempel 2.4.x), men kan saknas i den tidigare delversionen som stöds (till exempel 2.3.x). Adobe släpper enskilda patchar efter behov.
 
-Använd [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target=&quot;_blank&quot;} om du vill använda enskilda korrigeringsfiler.
+Använd [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"} för att lägga på individuella plåster.
 
 >[!NOTE]
 >
@@ -62,7 +62,7 @@ Så här skapar du en anpassad patch:
 1. Skapa en `patches/composer` i ditt lokala projekt.
 1. Identifiera GitHub-implementeringen eller pull-begäran som ska användas för korrigeringen. I det här exemplet används [`2d31571`](https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede) implementering, länkad till GitHub-utgåva [#6474](https://github.com/magento/magento2/issues/6474).
 1. Lägg till `.patch` eller `.diff` tillägg till implementerings-URL:en. Använd `.diff` för en mindre filstorlek. Till exempel: [https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede.diff](https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede.diff)
-1. Spara sidan som en fil i `patches/composer` katalog. Exempel, `github-issue-6474.diff`.
+1. Spara sidan som en fil i `patches/composer` katalog. Till exempel: `github-issue-6474.diff`.
 1. Redigera filen och ta bort `app/code/<VENDOR>/<PACKAGE>` från alla sökvägar så att de är relativa till `vendor/<VENDOR>/<PACKAGE>` katalog.
 
    >[!NOTE]
@@ -90,7 +90,7 @@ index c8a6fef58d31..7d01c195791e 100644
 
 Du kan använda patchar på följande sätt:
 
-- [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target=&quot;_blank&quot;}
+- [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
 - [Kommandorad](/help/upgrade/patches/apply.md#command-line)
 - [Disposition](/help/upgrade/patches/apply.md#composer)
 

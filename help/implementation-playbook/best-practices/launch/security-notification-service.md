@@ -4,13 +4,13 @@ description: Lär dig hur du får de senaste säkerhetsuppdateringarna om Adobe-
 role: User
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: b62aa554d1f1cb9d0fda6475b710d87997a56fb6
+exl-id: 9d9521c3-d429-455a-ae28-f49a486eafe0
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '90'
 ht-degree: 0%
 
 ---
-
 
 # Bästa praxis för säkerhetsmeddelanden
 

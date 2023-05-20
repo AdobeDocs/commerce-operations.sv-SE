@@ -56,4 +56,4 @@ Det finns också viktiga faktorer som driver på handelns skala, vilket också p
 
 För skalbara och cacheable-arkitekturer kan du använda det här diagrammet som referens.
 
-![Bild som visar hur du använder Adobe Commerce GraphQL API i en cacheable-arkitektur](../../../assets/playbooks/cacheable-architecture.svg)
+![Bild som visar hur du använder Adobe Commerce GraphQL API i en tillgänglig arkitektur](../../../assets/playbooks/cacheable-architecture.svg)

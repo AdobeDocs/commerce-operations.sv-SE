@@ -4,13 +4,13 @@ description: Lär dig hur du undviker prestandaproblem som orsakas av Adobe Comm
 role: Admin
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: 510f2d4cdaec1034cb04a01fab0948c4261c6d10
+exl-id: 95d2c7bf-fd2f-4c98-8293-96d69b86341f
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
 
 ---
-
 
 # Bästa praxis för tillägg
 

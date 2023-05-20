@@ -1,13 +1,13 @@
 ---
 title: Modernisera plattformen med Adobe Commerce
 description: Se vad som rekommenderas för att planera uppgraderingen av Adobe Commerce.
-source-git-commit: 4a78c2d2a215d1b58b2f07b7a961849321f82318
+exl-id: f776b000-0085-4b77-860f-623837c3c902
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '211'
 ht-degree: 0%
 
 ---
-
 
 # Rekommenderade uppgraderingsalternativ
 

@@ -1,7 +1,8 @@
 ---
-title: "Den [!UICONTROL Indexing] tab"
+title: The [!UICONTROL Indexing] tab
 description: Läs mer om [!UICONTROL Indexing] flik för [!DNL Observation for Adobe Commerce].
-source-git-commit: e6038d6f0add9d01d650914b35a1daba885fa7f8
+exl-id: c7e123b7-2d0c-49d4-9f76-128939dc02a8
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '176'
 ht-degree: 0%

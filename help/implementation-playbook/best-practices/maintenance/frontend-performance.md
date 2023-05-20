@@ -4,13 +4,13 @@ description: Identifiera och åtgärda problem som negativt påverkar webbplatse
 role: Admin, User, Developer
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: e156fcafc5792036b37d9b199b870f1888c3f1ff
+exl-id: bafae565-9d09-4cc0-8507-e89a11dbd915
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
 
 ---
-
 
 # Bästa tillvägagångssätt för frontend-prestanda
 
@@ -40,5 +40,3 @@ Så här kontrollerar du hur din webbplatsbutik fungerar i förväg:
 - [Indexhantering för administratörer](../../../configuration/cli/manage-indexers.md#configure-indexers)
 - [Indexhantering med CLI](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html)
 - [Indexeringsöversikt för utvecklare](https://developer.adobe.com/commerce/php/development/components/indexing/)
-
-

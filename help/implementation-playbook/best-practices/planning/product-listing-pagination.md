@@ -4,13 +4,13 @@ description: Lär dig hur du optimerar Adobe Commerce prestanda genom att hanter
 role: User, Admin
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: 85f9355d0e8c704be3760334b07414d3e15b3b97
+exl-id: 473f23a9-53fb-41a6-9b3a-af7bd1208be0
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '176'
 ht-degree: 0%
 
 ---
-
 
 # Bästa tillvägagångssätt för sidnumrering av produktlistor
 

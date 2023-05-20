@@ -1,13 +1,13 @@
 ---
 title: Konfigurera programmet
 description: Lär dig mer om den konfiguration efter installation som krävs för Adobe Commerce och Magento Open Source lokala distributioner.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: b1808664-10ec-4147-8251-a99f8b58f4be
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '728'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera programmet
 

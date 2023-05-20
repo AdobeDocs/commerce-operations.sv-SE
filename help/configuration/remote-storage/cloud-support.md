@@ -1,13 +1,13 @@
 ---
 title: Fjärrlagring för Commerce i molninfrastruktur
 description: Mer information om hur du konfigurerar fjärrlagring för Adobe Commerce om molninfrastruktur finns i vägledningen.
-source-git-commit: 4c89ef65ffb559ad4ad3f3fc45bd73079fbacd1b
+exl-id: da352466-13f2-42e4-a589-3b0a89728467
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '630'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera fjärrlagring för Commerce i molninfrastruktur
 

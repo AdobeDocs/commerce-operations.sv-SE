@@ -1,7 +1,8 @@
 ---
-title: "Den [!UICONTROL CDN] tab"
+title: The [!UICONTROL CDN] tab
 description: Läs mer om [!UICONTROL CDN] flik för [!DNL Observation for Adobe Commerce].
-source-git-commit: 424c832ba7580e5d766dea33e3b776eaca7a0d77
+exl-id: db22bbca-2033-4e9a-8799-b47d84bdd720
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '699'
 ht-degree: 0%

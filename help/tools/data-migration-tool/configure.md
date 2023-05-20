@@ -1,13 +1,13 @@
 ---
 title: Konfigurera [!DNL Data Migration Tool]
 description: Lär dig mer om de två metoderna för att konfigurera [!DNL Data Migration Tool] att överföra data mellan Magento 1 och Magento 2.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 273be997-8085-4488-a455-f6005a85b406
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '789'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera [!DNL Data Migration Tool]
 

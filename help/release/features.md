@@ -1,13 +1,13 @@
 ---
 title: Funktioner
 description: Läs om vilka Adobe Commerce-funktioner som finns i en viss version.
-source-git-commit: a45883b5fc199486068c70d0cdd63b1135532038
+exl-id: ad1c22a3-74bd-4742-a025-6c326a3e4ab6
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '26'
 ht-degree: 0%
 
 ---
-
 
 # Funktioner i Adobe Commerce
 

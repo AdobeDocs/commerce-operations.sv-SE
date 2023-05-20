@@ -1,7 +1,8 @@
 ---
 title: Driftsättning av en dator
 description: Lär dig hur du distribuerar uppdateringar till Commerce på en produktionsserver med kommandoraden.
-source-git-commit: 2e1a06b59fda7db4a9b32d000e1b2a3ca88926d3
+exl-id: ca73309c-7584-4506-99de-dd933651eeb6
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%

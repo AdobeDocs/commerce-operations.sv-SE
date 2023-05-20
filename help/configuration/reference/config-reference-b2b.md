@@ -1,13 +1,13 @@
 ---
 title: Referens för konfigurationssökvägar för B2B-tillägg
 description: Se en lista över B2B-relaterade konfigurationsvärden.
-source-git-commit: ee2e446edf79efcd7cbbd67248f8e7ece06bfefd
+exl-id: 3414dea1-17c9-4462-8b8a-51a6045b0bc9
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '859'
+source-wordcount: '841'
 ht-degree: 0%
 
 ---
-
 
 # Referens för konfigurationssökvägar för B2B-tillägg
 
@@ -44,7 +44,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **[!UICONTROL Stores]** 
 | Tillämpliga betalningsmetoder | `btob/default_b2b_payment_methods/applicable_payment_methods` |  |  |  |
 | Betalningsmetoder | `btob/default_b2b_payment_methods/available_payment_methods` |  |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Kategorier
 
@@ -88,7 +88,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **[!UICONTROL Stores]** 
 | Mall för återförd e-post | `company/email/credit_refunded_email_template` |  |  |  |
 | Återställd e-postmall | `company/email/credit_reverted_email_template` |  |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Rekvisitionslistor - sökvägar
 
@@ -98,7 +98,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | -------------- | -------------- | -------------- | -------------- | -------------- |
 | Antal rekvisitionslistor | `requisitionlist/general/number_requisition_lists` |  |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Försäljningskategori
 
@@ -121,7 +121,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Skicka offertens e-postkopia till | `sales_email/quote/copy_to` |  |  | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 | Skicka offertkopieringsmetod | `sales_email/quote/copy_method` |  |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Citattecken
 
@@ -140,7 +140,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Filformat för överföring | `quote/attached_files/file_formats` |  |  |  |
 | Maximal filstorlek | `quote/attached_files/maximum_file_size` |  |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Sökvägar för betalningsmetod
 
@@ -257,4 +257,4 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Maximal ordersumma | `payment/it/companycredit/max_order_total` |  |  |  |
 | Sorteringsordning | `payment/it/companycredit/sort_order` |  |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

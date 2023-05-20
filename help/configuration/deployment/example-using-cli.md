@@ -1,13 +1,13 @@
 ---
 title: Exempel med CLI-kommandon
 description: Se ett exempel på hur du ställer in delade, systemspecifika och känsliga värden i utvecklingssystemet med kommandoraden.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+exl-id: d0058e9f-a5a9-48a6-9c66-c61515666335
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '1019'
 ht-degree: 0%
 
 ---
-
 
 # Exempel med CLI-kommandon
 

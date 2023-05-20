@@ -1,7 +1,8 @@
 ---
-title: '"Den [!UICONTROL Alerts] tab"'
+title: The [!UICONTROL Alerts] tab
 description: Läs mer om [!UICONTROL Alerts] flik för [!DNL Observation for Adobe Commerce].
-source-git-commit: 2a82a5e232de3efa3adb76aee2334e198b929947
+exl-id: e9305576-6ed2-48f3-baec-36e081b0d04b
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 0%
@@ -35,4 +36,3 @@ The **[!UICONTROL Critical Alert Details]** bildrutan visar antalet kritiska var
 ![Information om infrastrukturavisering](../../assets/tools/observation-for-adobe-commerce/alerts-tab-4.jpg)
 
 The **[!UICONTROL Infrastructure Alert Details]** bildrutan visar program, värdar och andra infrastrukturhändelser under den valda tidsramen.
-

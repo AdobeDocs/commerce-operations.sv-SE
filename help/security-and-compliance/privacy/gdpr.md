@@ -1,13 +1,13 @@
 ---
 title: Allmänna dataskyddsförordningen (GDPR)
 description: Läs om den allmänna dataskyddsförordningen (GDPR), som är en lagstiftning som reglerar dataskydd och sekretess för alla enskilda personer i EU och EES.
-source-git-commit: 2120e5bb912a89c58611ef9e23661a54e40a14f1
+exl-id: 30e60601-f4f7-419e-b2dd-8c82c8a2ed33
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '292'
 ht-degree: 0%
 
 ---
-
 
 # Allmänna dataskyddsförordningen (GDPR)
 

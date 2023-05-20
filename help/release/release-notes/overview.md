@@ -4,7 +4,7 @@ description: Lär dig var du hittar information om specifika versioner av Adobe 
 exl-id: f6385e12-5c3d-425f-939c-9dfd7ef6c4f5
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '413'
 ht-degree: 0%
 
 ---

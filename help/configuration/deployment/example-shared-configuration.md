@@ -1,13 +1,13 @@
 ---
 title: Exempel med en delad konfiguration
 description: Se ett exempel på hur du ändrar inställningar i ett utvecklingssystem med en delad konfigurationsfil.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+exl-id: c980ec01-ca2d-43db-b68d-8e9435e07e6a
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '460'
 ht-degree: 0%
 
 ---
-
 
 # Exempel med en delad konfiguration
 

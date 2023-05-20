@@ -17,9 +17,9 @@ Fördelen med Adobe Commerce arkitektur är att det inte är ett helt eller inge
 
 Varje tillvägagångssätt utesluter inte varandra. Kunderna kan bygga sin egen frontend (head), använda PWA Studio för webb-/mobilupplevelser och/eller använda Adobe Experience Manager för glaset (antingen i en fullständig eller hybridinstallation).
 
-Adobe Commerce har alltid tillåtit headless-driftsättningar med REST API:er. REST är kraftfullt, särskilt för gruppbearbetning, men när det gäller headless möjliggör GraphQL API:er snabbare utveckling med en intuitiv utvecklarupplevelse, större flexibilitet genom att tillåta ändringar som inte påverkar befintliga API:er och bättre prestanda genom att minimera mängden data som hämtas till exakt vad som behövs.
+Adobe Commerce har alltid tillåtit headless-driftsättningar med REST API:er. REST är kraftfullt, särskilt för massbearbetning, men när det gäller headless möjliggör GraphQL API:er snabbare utveckling med en intuitiv utvecklarupplevelse, större flexibilitet genom att tillåta ändringar som inte påverkar befintliga API:er och bättre prestanda genom att minimera mängden data som hämtas till exakt det som behövs.
 
-GraphQL är en branschstandard för prestanda-API:er, som används av många av de ledande e-handelsplattformarna. Det är bra eftersom det betyder att det finns en beprövad lösning och expertis på marknaden.
+GraphQL är en branschstandard för presterande API:er, som används av många av de ledande e-handelsplattformarna. Det är bra eftersom det betyder att det finns en beprövad lösning och expertis på marknaden.
 
 Även om Adobe Commerce har en kopplad butik som tillval behöver en handlare inte använda den gamla Adobe Commerce-fronten. En handlare kan utnyttja Adobe Commerce förstklassiga e-handelstjänster för att hantera affärsprocesserna och, med våra butiks-API:er, integrera sin egen fristående butik för att skapa en förstklassig upplevelse.
 

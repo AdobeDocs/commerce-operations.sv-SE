@@ -1,13 +1,13 @@
 ---
 title: Referens för tjänstkonfigurationssökvägar
 description: Visa en lista med tjänstens konfigurationsvärden.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+exl-id: 77818c54-21ae-4a66-81bf-468bd7d09cda
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '162'
+source-wordcount: '156'
 ht-degree: 0%
 
 ---
-
 
 # Referens för tjänstkonfigurationssökvägar
 
@@ -24,7 +24,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Standardsvarsdiagram | `webapi/soap/charset` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Tillåt anonym gäståtkomst | `webapi/webapisecurity/allow_insecure` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## OAuth-sökvägar
 
@@ -40,4 +40,4 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | OAuth-konsumentreferenser HTTP Post maxredirects | `oauth/consumer/post_maxredirects` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | OAuth-konsumentens autentiseringsuppgifter HTTP Post-timeout | `oauth/consumer/post_timeout` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

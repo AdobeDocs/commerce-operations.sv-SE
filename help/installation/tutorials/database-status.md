@@ -1,13 +1,13 @@
 ---
 title: Kontrollera databasstatus
 description: Följ de här stegen för att kontrollera databasstatusen för Adobe Commerce eller Magento Open Source.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 33d9b30a-4504-4955-b11a-0a642f23209b
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '108'
 ht-degree: 2%
 
 ---
-
 
 # Kontrollera databasstatus
 

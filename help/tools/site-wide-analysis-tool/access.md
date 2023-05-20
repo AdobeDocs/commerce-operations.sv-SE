@@ -1,9 +1,10 @@
 ---
 title: Åtkomst [!DNL Site-Wide Analysis Tool]
 description: Lär dig hur du använder [!DNL Site-Wide Analysis Tool]
-source-git-commit: c7fabdd83e03a288d627b70d48cdf57184d43603
+exl-id: b691fb2c-8d66-4cf9-8612-bbcb4df5b95f
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '410'
 ht-degree: 0%
 
 ---
@@ -34,7 +35,7 @@ För den anpassade roll som behöver [!DNL Site-Wide Analysis Tool] åtkomst, g�
    ![Kontrollpanel för webbplatsövergripande analyser](../../assets/tools/swat-role-access.png)
    *[!DNL Site-Wide Analysis Tool]behörighet har valts för rollen*
 
-1. Klicka på **[!UICONTROL Save Role]**.
+1. Klicka **[!UICONTROL Save Role]**.
 
 1. Meddela alla användare som har tilldelats den rollen att logga ut från [!DNL Admin]och logga in igen.
 
@@ -64,7 +65,7 @@ För den anpassade roll som behöver [!DNL Site-Wide Analysis Tool] åtkomst, g�
 
 1. Markera kryssrutan för varje **[!UICONTROL Type]** och **[!UICONTROL Priority]** som du vill ta med i rapporten.
 
-1. Klicka på **[!UICONTROL Generate Report]**.
+1. Klicka **[!UICONTROL Generate Report]**.
 
    ![Kontrollpanel för webbplatsövergripande analyser](../../assets/tools/swat-report-settings.png)
    *Rapportinställningar*

@@ -1,13 +1,13 @@
 ---
 title: Cachelagring med lack
 description: Lär dig hur cacherensning fungerar med lack och hur du använder det som en accelerator för webb-cachning för Adobe Commerce-programmet.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 866da415-c428-4092-a045-c3079493cdc4
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '382'
 ht-degree: 0%
 
 ---
-
 
 # Cachelagring med lack
 

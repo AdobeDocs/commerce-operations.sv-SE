@@ -1,13 +1,13 @@
 ---
 title: Beroenderapporter
 description: Skapa rapporter som visar summorna för modul-, cirkulär- och ramverksberoenden.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+exl-id: b7a32fe1-71c5-495f-8276-242503fb50ae
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '240'
 ht-degree: 0%
 
 ---
-
 
 # Beroenderapporter
 

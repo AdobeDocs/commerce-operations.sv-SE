@@ -1,13 +1,13 @@
 ---
 title: Konfigurera Apache för sökmotorn
 description: Följ de här stegen för att konfigurera en sökmotor med webbservern Apache för lokala installationer av Adobe Commerce och Magento Open Source.
-source-git-commit: d3cfd97450164d38fd340b538099739601573d64
+exl-id: b35c95a7-0c00-48e5-b37d-7c9e17feebec
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '651'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera Apache för sökmotorn
 

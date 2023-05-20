@@ -4,13 +4,13 @@ description: Lär dig hur du använder MySQL-utlösare effektivt med Adobe Comme
 role: Developer
 feature-set: Commerce
 feature: Best Practices
-source-git-commit: 79a825a094a80892cf1a30aa7f5c61bd351c69f5
+exl-id: acac3e47-67c8-4eea-80e3-e26f2854391a
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 0%
 
 ---
-
 
 # Bästa tillvägagångssätt för MySQL utlöser användning
 

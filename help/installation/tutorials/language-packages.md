@@ -1,13 +1,13 @@
 ---
 title: Avinstallera språkpaket
 description: Följ de här stegen för att avinstallera ett Adobe Commerce- eller Magento Open Source-språkpaket.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 9901aa0b-af1a-4ae9-968f-ac8421060f57
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '213'
 ht-degree: 0%
 
 ---
-
 
 # Avinstallera språkpaket
 

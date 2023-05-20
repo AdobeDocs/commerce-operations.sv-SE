@@ -1,13 +1,13 @@
 ---
 title: Aktivera eller inaktivera underhållsläge
 description: Följ de här stegen för att anpassa vad kunderna ser när driftsättningen av Adobe Commerce eller Magento Open Source är nere för underhåll.
-source-git-commit: bc025217ed7bc2195c0a2d919139abe13d184259
+exl-id: 5d9f1493-e771-47b4-b906-3771026cf07a
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 0%
 
 ---
-
 
 # Aktivera eller inaktivera underhållsläge
 

@@ -1,13 +1,13 @@
 ---
 title: Avancerat [!DNL JavaScript] Paket
 description: Läs om hur JavaScript-paketering kan minska storleken och frekvensen på serverförfrågningar.
-source-git-commit: c65c065c5f9ac2847caa8898535afdacf089006a
+exl-id: 81a313f8-e541-4da6-801b-8bbd892d6252
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '2137'
 ht-degree: 0%
 
 ---
-
 
 # Avancerat [!DNL JavaScript] paketering
 
@@ -405,7 +405,7 @@ Först måste du flytta det statiska innehållet från målkatalogen till en til
 mv pub/static/frontend/Magento/{theme}/{locale} pub/static/frontend/Magento/{theme}/{locale}_tmp
 ```
 
-Exempel:
+Till exempel:
 
 ```bash
 mv pub/static/frontend/Magento/luma/en_US pub/static/frontend/Magento/luma/en_US_tmp
@@ -503,7 +503,7 @@ Lägg märke till att webbläsaren läser in olika beroenden och paket när sida
 
 ![Dubbelt så snabbt](../assets/performance/images/TwiceAsFast.png)
 
-Sidinläsningstiden för en tom hemsida är nu dubbelt så snabb som om inbyggt [!DNL Commerce] paketering. Men vi kan göra ännu bättre.
+Sidinläsningstiden för en tom hemsida är nu dubbelt så snabb som när du använder inbyggd [!DNL Commerce] paketering. Men vi kan göra ännu bättre.
 
 #### 7. Optimera paketen
 

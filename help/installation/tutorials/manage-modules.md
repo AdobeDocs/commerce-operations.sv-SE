@@ -1,13 +1,13 @@
 ---
 title: Aktivera eller inaktivera moduler
 description: Följ de här stegen för att hantera Adobe Commerce- eller Magento Open Source-moduler.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 7155950a-a66a-4254-a71c-1a9aeab47606
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 0%
 
 ---
-
 
 # Aktivera eller inaktivera moduler
 

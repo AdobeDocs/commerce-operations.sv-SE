@@ -1,13 +1,13 @@
 ---
 title: Konfigurera och använda engelska
 description: Förstå hur lack lagrar filer och förbättrar HTTP-trafiken.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 57614878-e349-43bb-b22b-1aa321907be1
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '1079'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera lack
 

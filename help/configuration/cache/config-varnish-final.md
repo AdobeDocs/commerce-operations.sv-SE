@@ -1,13 +1,13 @@
 ---
 title: Slutlig verifiering
 description: Kontrollera att din lack-konfiguration är korrekt konfigurerad för att fungera med Adobe Commerce-programmet.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 01f28c93-75cd-4969-9142-b8dac0aa2adb
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '345'
 ht-degree: 0%
 
 ---
-
 
 # Slutlig verifiering av lack-konfiguration
 

@@ -1,13 +1,13 @@
 ---
 title: Konfigurera låsprovidern
 description: Följ de här stegen för att förhindra att duplicerade cron-jobb och cron-grupper körs på din Adobe Commerce- eller Magento Open Source-distribution.
-source-git-commit: 46302eb8e8fd9bb7c9e7fbf990abb149bedd0ff4
+exl-id: c54e05b7-38fd-4731-bc77-a873b44d0ae8
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera låsprovidern
 
@@ -40,6 +40,6 @@ bin/magento setup:config:set [--<parameter_name>=<value>, ...]
 |--- |--- |--- |
 | `--lock-provider` | Lås leverantörens namn: `db`, `zookeeper`, eller `file`.<br><br>Standardlåsleverantör: `db` | Nej |
 | `--lock-db-prefix` | Det specifika db-prefixet för att undvika låskonflikter när du använder `db` låsleverantör.<br><br>Standardvärdet: `NULL` | Nej |
-| `--lock-zookeeper-host` | Värd och port att ansluta till Zookeeper-klustret när du använder `zookeeper` låsleverantör.<br><br>Exempel: `127.0.0.1:2181` | Ja, om du anger `--lock-provider=zookeeper` |
+| `--lock-zookeeper-host` | Värd och port att ansluta till Zookeeper-klustret när du använder `zookeeper` låsleverantör.<br><br>Till exempel: `127.0.0.1:2181` | Ja, om du anger `--lock-provider=zookeeper` |
 | `--lock-zookeeper-path` | Sökvägen där Zookeeper sparar lås.<br><br>Standardsökvägen är: `/magento/locks` | Nej |
 | `--lock-file-path` | Sökvägen där fillås sparas. | Ja, om du anger `--lock-provider=file` |

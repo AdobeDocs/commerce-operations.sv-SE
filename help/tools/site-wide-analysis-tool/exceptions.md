@@ -1,7 +1,8 @@
 ---
-title: '"[!DNL Exceptions]"'
+title: '[!DNL Exceptions]'
 description: Läs mer om [!UICONTROL Exceptions] i [!DNL Site-Wide Analysis Tool], när det ska användas, dess fördelar och bästa praxis.
-source-git-commit: 6cbb4b4fef5e1ccc06803b5a3af5dd9f4d0e7df8
+exl-id: bd793536-b95c-47db-9372-33c00be8e144
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 0%

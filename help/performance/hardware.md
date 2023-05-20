@@ -1,13 +1,13 @@
 ---
 title: Maskinvara Recommendations
 description: Granska en lista över rekommenderad maskinvara för optimala prestanda vid driftsättning av Adobe Commerce och Magento Open Source.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+exl-id: ab548c4b-6f56-4409-a4ed-5c959939e04b
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '475'
 ht-degree: 0%
 
 ---
-
 
 # Maskinvarurekommendationer
 
@@ -33,7 +33,7 @@ Scenarier och förväntade PHP-minneskrav:
 * Webbnod som betjänar administratörssidor med en stor katalog: 1 GB
 * [!DNL Commerce] indexera en webbplats med en stor katalog: >256 MB (se [avancerad installation](../performance/advanced-setup.md) för att optimera prestanda.)
 * [!DNL Commerce] kompilera och driftsätta statiska resurser: 756 MB
-* [!DNL Commerce] generering av prestanda för verktygspaketprofil: >1 GB PHP RAM, >16 MB [!DNL MySQL] Inställningar för TMP_TABLE_SIZE &amp; MAX_HEAP_TABLE_SIZE
+* [!DNL Commerce] generering av prestanda för verktygspaketprofiler: >1 GB PHP RAM, >16 MB [!DNL MySQL] Inställningar för TMP_TABLE_SIZE &amp; MAX_HEAP_TABLE_SIZE
 
 ### [!DNL MySQL]
 

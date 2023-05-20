@@ -1,13 +1,13 @@
 ---
 title: Snabbstart av lokal installation
 description: Följ de här stegen för att installera Adobe Commerce eller Magento Open Source på en infrastruktur som du äger.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: a93476e8-2b30-461a-91df-e73eb1a14d3c
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '990'
 ht-degree: 0%
 
 ---
-
 
 # Snabbstart av lokal installation
 

@@ -1,13 +1,13 @@
 ---
 title: URN highlighter
 description: Lär dig hur du ställer in URN-markering i din IDE.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+exl-id: 6389ab58-af70-4b33-800e-be3191c5a4cc
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 0%
 
 ---
-
 
 # Översikt över URN-markering
 

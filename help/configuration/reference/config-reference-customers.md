@@ -1,13 +1,13 @@
 ---
 title: Referens för kundkonfigurationssökvägar
 description: Se en lista över kundkonfigurationsvärden.
-source-git-commit: bd1bf6edd131ec93902246e95ce857b509f2a619
+exl-id: a0571423-6fbd-4cfc-9797-a13c0c24bb53
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '907'
+source-wordcount: '883'
 ht-degree: 0%
 
 ---
-
 
 # Referens för kundkonfigurationssökvägar
 
@@ -30,7 +30,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Avbeställ e-postavsändare | `newsletter/subscription/un_email_identity` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | E-postmall för prenumeration | `newsletter/subscription/un_email_template` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Sökvägar för kundkonfiguration
 
@@ -100,7 +100,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Symboler som används i CAPTCHA | `customer/captcha/symbols` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Skiftlägeskänslig | `customer/captcha/case_sensitive` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Sökvägar i önskelistan
 
@@ -117,7 +117,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Längdgräns för e-posttext | `wishlist/email/text_limit` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Visa Önsklistesammanfattning | `wishlist/wishlist_link/use_qty` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Sökvägar för inbjudningar
 
@@ -134,7 +134,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Avsändare av e-postinbjudan till kund | `magento_invitation/email/identity` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | E-postmall för kundinbjudan | `magento_invitation/email/template` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Banor för belöningspunkter
 
@@ -168,7 +168,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | E-post om förfallovarning för belöningspunkter | `magento_reward/notification/expiry_warning_template` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Förfallovarning före (dagar) | `magento_reward/notification/expiry_day_before` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Kampanjsökvägar
 
@@ -190,7 +190,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Kodsuffix | `promo/auto_generated_coupon_codes/suffix` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Streck var X tecken | `promo/auto_generated_coupon_codes/dash` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Sökvägar för presentregister
 
@@ -208,7 +208,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | E-postmall | `magento_giftregistry/update_email/template` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | E-postavsändare | `magento_giftregistry/update_email/identity` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Beständiga kundvagnssökvägar
 
@@ -229,4 +229,4 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Behåll nyligen visade produkter | `persistent/options/recently_viewed` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Behåll kundgruppsmedlemskap och segmentering | `persistent/options/customer` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

@@ -1,13 +1,13 @@
 ---
 title: Secure cron PHP
 description: Begränsa vem som får köra filen cron.php i en webbläsare.
-source-git-commit: 80abb0180fcd8ecc275428c23b68feb5883cbc28
+exl-id: c81fcab2-1ee3-4ec7-a300-0a416db98614
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '938'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
-
 
 # Secure cron PHP
 
@@ -180,7 +180,7 @@ Det enklaste sättet att verifiera att `pub/cron.php` är säkert att verifiera 
 
 1. Logga in i databasen som Commerce-databasanvändare eller som `root`.
 
-   Exempel:
+   Till exempel:
 
    ```bash
    mysql -u magento -p
@@ -192,7 +192,7 @@ Det enklaste sättet att verifiera att `pub/cron.php` är säkert att verifiera 
    use <database-name>;
    ```
 
-   Exempel:
+   Till exempel:
 
    ```shell
    use magento;
@@ -210,7 +210,7 @@ Det enklaste sättet att verifiera att `pub/cron.php` är säkert att verifiera 
    http[s]://<Commerce hostname or ip>/cron.php?group=default
    ```
 
-   Exempel:
+   Till exempel:
 
    ```shell
    http://magento.example.com/cron.php?group=default
@@ -275,7 +275,7 @@ Om du använder en Apache-webbserver måste du ta bort begränsningen från `.ht
      </Files>
    ```
 
-   Exempel:
+   Till exempel:
 
    ```conf
    ## Deny access to cron.php
@@ -302,7 +302,7 @@ Var:
 
 - `<group name>` är ett giltigt cron group-namn (valfritt)
 
-Exempel:
+Till exempel:
 
 ```http
 https://magento.example.com/magento2/pub/cron.php?group=index

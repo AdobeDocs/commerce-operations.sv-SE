@@ -1,13 +1,13 @@
 ---
 title: Konfigurera en MySQL-fjärrdatabasanslutning
 description: Följ de här stegen för att konfigurera en fjärrdatabasanslutning för lokala installationer av Adobe Commerce och Magento Open Source.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 5fe304bd-ff38-4066-a1fd-8937575e4de4
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '743'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera en MySQL-fjärrdatabasanslutning
 

@@ -1,13 +1,13 @@
 ---
 title: Uppgradera [!DNL Data Migration Tool]
 description: Så här uppgraderar du [!DNL Data Migration Tool] att överföra data mellan Magento 1 och Magento 2.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+exl-id: c0d56d1d-b15b-437f-be72-74282dbe85c1
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 0%
 
 ---
-
 
 # Uppgradera [!DNL Data Migration Tool]
 

@@ -1,13 +1,13 @@
 ---
 title: Konfigurera filägarskap och behörigheter
 description: Följ de här stegen för att konfigurera filsystembehörigheter för lokala installationer av Adobe Commerce och Magento Open Source.
-source-git-commit: 61638d373408d9a7c3c3a935eee61927acfac7a6
+exl-id: 2410ee4f-978c-4b71-b3f6-0c042f9f4dc4
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '1005'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera filägarskap och behörigheter
 
@@ -240,7 +240,7 @@ När du har utfört de andra uppgifterna i det här avsnittet, anger du något a
 * Ubuntu: `su <username>`
 * CentOS: `su - <username>`
 
-Exempel:
+Till exempel:
 
 ```bash
 su magento_user

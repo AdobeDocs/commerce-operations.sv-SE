@@ -1,13 +1,13 @@
 ---
 title: Nginx
 description: Följ de här stegen för att installera och konfigurera Nginx-webbservern för lokala installationer av Adobe Commerce och Magento Open Source.
-source-git-commit: 8f05fb6fc212c2b3fda80457bbf27ecf16fb1194
+exl-id: 041ddb9d-868e-4021-9388-1c9ea11bfd8f
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '1180'
 ht-degree: 0%
 
 ---
-
 
 # Nginx
 

@@ -4,7 +4,7 @@ description: Utvärdera vilket stadium ert företag befinner sig i baserat på d
 exl-id: 5cf9f080-0ac4-4426-837f-3c245d10e504
 source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
-source-wordcount: '1048'
+source-wordcount: '1045'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ I följande tabell sammanfattas de olika löptidsnivåerna:
 | Walk | På den här nivån börjar man dra nytta av tidigare kunddata från olika källor, vilket kräver samarbete mellan olika avdelningar.  Organisationer på den här nivån kan utnyttja den fulla potentialen hos kampanjer som hanteras av människor och har en mogen uppsättning bästa metoder, processer och utvecklingsströmmar. |
 | Kör | Den högsta mognadsnivån möjliggör AI-baserade kampanjer i olika kanaler och använder prediktiv lagerhantering för att förhindra bortfall och produktinformationshanteringsverktyg för att berika produkterna. Det uppnås bäst av organisationer med en utvecklad datakultur, utvecklingskunskaper och processer internt och externt. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Kryp
 

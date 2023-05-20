@@ -1,13 +1,13 @@
 ---
 title: Klona exempeldata i Git-databaser
 description: Följ de här stegen för att installera exempeldata för Adobe Commerce och Magento Open Source genom att klona Git-databaser.
-source-git-commit: 3692dcfd5b50c2f036b005d40a22db061b9ea5fd
+exl-id: 748eee30-2821-457d-9c1c-62ede8bc0510
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '764'
 ht-degree: 0%
 
 ---
-
 
 # Klona exempeldata i Git-databaser
 
@@ -69,7 +69,7 @@ Så här klonar du GitHub-databasen med exempeldata med SSH-protokollet:
 
 1. Se till att du checkar ut den gren i exempeldatalagret som motsvarar den gren du använde från huvuddelen `magento2` databas.
 
-   Exempel:
+   Till exempel:
 
    Om du använde `2.4-develop` grenen Sample Data i Magento Open Source GitHub-databasen ska `2.4-develop`.
 
@@ -123,7 +123,7 @@ Så här klonar du GitHub-databasen med exempeldata med HTTPS-protokollet:
 1. Vänta tills databasen har klonats på servern.
 1. Se till att du checkar ut den gren i exempeldatalagret som motsvarar den gren du använde från huvuddelen `magento2` databas.
 
-   Exempel:
+   Till exempel:
 
    Om du använde `2.4-develop` grenen Sample Data i Magento Open Source GitHub-databasen ska `2.4-develop`.
 
@@ -140,7 +140,7 @@ Så här klonar du GitHub-databasen med exempeldata med HTTPS-protokollet:
    php -f <sample-data_clone_dir>/dev/tools/build-sample-data.php -- --ce-source="<path_to_your_magento_instance>"
    ```
 
-   Exempel:
+   Till exempel:
 
    ```bash
    php -f <sample-data_clone_dir>/dev/tools/build-sample-data.php -- --ce-source="/var/www/magento2"

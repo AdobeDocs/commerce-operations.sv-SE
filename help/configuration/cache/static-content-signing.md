@@ -1,7 +1,8 @@
 ---
 title: Cache för statiskt innehåll
 description: Få en förståelse för hur man signerar statiskt innehåll och hur man aktiverar eller inaktiverar funktionen.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: b54ceea2-b3a1-4dbb-ba87-743f2af0d2fb
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '433'
 ht-degree: 0%

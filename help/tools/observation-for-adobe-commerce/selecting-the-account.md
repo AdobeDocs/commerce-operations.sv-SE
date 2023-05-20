@@ -1,7 +1,8 @@
 ---
-title: "Börja använda: Välja konto och tidsram"
+title: '''Börja använda: Välja konto och tidsram'
 description: Lär dig hur du börjar använda [!DNL Observation for Adobe Commerce] nördlet genom att välja konto och tidsram.
-source-git-commit: 86e990e18955cce8ed0917c72ddbe99d8cb3f333
+exl-id: f2364fa4-ef83-42f2-992f-e37ff1ac96a1
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 0%

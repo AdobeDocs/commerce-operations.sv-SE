@@ -1,13 +1,13 @@
 ---
 title: Importera data från konfigurationsfiler
 description: Importera konfigurationsinställningar för Adobe Commerce från konfigurationsfiler.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 7d9f156c-e8d3-4888-b359-5d9aa8c4ea05
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 0%
 
 ---
-
 
 # Importera konfigurationsinställningar
 

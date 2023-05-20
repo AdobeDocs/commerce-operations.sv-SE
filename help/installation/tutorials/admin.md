@@ -1,13 +1,13 @@
 ---
 title: Skapa, redigera eller låsa upp ett administratörskonto
 description: Följ de här stegen för att hantera administratörskontot för ditt Adobe Commerce- eller Magento Open Source Admin-program.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: d87871a1-717d-4662-b84d-98a018518286
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 0%
 
 ---
-
 
 # Skapa, redigera eller låsa upp ett administratörskonto
 

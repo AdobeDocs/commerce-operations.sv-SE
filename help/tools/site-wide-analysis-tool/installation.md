@@ -1,7 +1,8 @@
 ---
 title: Installationshandbok
-description: "Använd den här guiden för att installera [!DNL Site-Wide Analysis Tool] för din webbplats"
-source-git-commit: 0c27d4cf5854161e14a482912941cd144ca654f7
+description: Använd den här guiden för att installera [!DNL Site-Wide Analysis Tool] för din webbplats
+exl-id: ba36dc74-806d-49c5-b4d1-ba53ed4076fb
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '1074'
 ht-degree: 0%
@@ -87,7 +88,7 @@ Om du har installerat tillägget och konfigurerat det med en befintlig API-nycke
    >
    > Om du har problem med att komma åt ditt konto kan du läsa [Det går inte att logga in på Adobe Commerce support eller molnkonto](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/unable-to-log-in-to-support-or-cloud-project.html) för felsökningshjälp.
 
-1. Klicka på **[!UICONTROL API Portal]**.
+1. Klicka **[!UICONTROL API Portal]**.
 
 1. Klicka **[!UICONTROL Delete]** bredvid den befintliga API-nyckeln.
 

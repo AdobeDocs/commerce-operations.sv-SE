@@ -3,13 +3,13 @@ title: Adobe Privacy JavaScript Library
 description: Lär dig hur du använder anpassade verktyg för att komma åt och ta bort kundpersonuppgifter som samlats in av Adobe Commerce och Magento Open Source.
 hide: true
 hidefromtoc: true
-source-git-commit: 495dfd515759e4df507479de57118586eac14fda
+exl-id: 5080e03b-0a83-405c-a232-b93311e284a3
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '341'
 ht-degree: 0%
 
 ---
-
 
 # Adobe Privacy JavaScript Library
 

@@ -1,13 +1,13 @@
 ---
 title: Konfigurera Nginx för sökmotorn
 description: Följ de här stegen för att konfigurera en sökmotor med Nginx-webbservern för lokala installationer av Adobe Commerce och Magento Open Source.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 8d2f8695-e30a-4acc-bba3-d122212b0a53
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera Nginx för sökmotorn
 

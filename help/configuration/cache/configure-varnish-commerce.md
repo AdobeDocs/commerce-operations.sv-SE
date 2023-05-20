@@ -1,13 +1,13 @@
 ---
 title: Konfigurera lack för handel
 description: Lär dig att uppdatera och hantera din konfigurationsfil för lack för Commerce-programmet.
-source-git-commit: d451ea025a6f4fc8a4a9f15ca83896a63058a3a0
+exl-id: 6c007ff9-493f-4df2-b7b4-438b41fd7e37
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '377'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera Commerce-programmet att använda engelska
 
@@ -62,7 +62,7 @@ Så här exporterar du en lack-konfigurationsfil från administratören:
 
 1. Adobe rekommenderar att du öppnar `default.vcl` och ändra värdet för `acl purge` till IP-adressen för den Varniska värden. (Du kan ange flera värdar på separata rader eller också kan du använda CIDR-notation.)
 
-   Exempel:
+   Till exempel:
 
    ```conf
     acl purge {

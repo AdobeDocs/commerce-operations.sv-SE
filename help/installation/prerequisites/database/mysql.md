@@ -1,13 +1,13 @@
 ---
 title: MySQL-riktlinjer
 description: Följ de här stegen för att installera och konfigurera MySQL och MariaDB för lokala installationer av Adobe Commerce och Magento Open Source.
-source-git-commit: c65217cd277be5226681ef239d6a3cf34c251a9f
+exl-id: dc5771a8-4066-445c-b1cd-9d5f449ec9e9
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '1142'
 ht-degree: 0%
 
 ---
-
 
 # Allmänna riktlinjer för MySQL
 

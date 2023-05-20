@@ -4,13 +4,13 @@ description: Lär dig de bästa sätten att konfigurera produktlagringsenheter (
 role: Admin
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: e259f9b999566447469200c93db3bc4ba06434c0
+exl-id: 37af7b92-05ac-4a4f-9009-11e8d9f95c2f
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 0%
 
 ---
-
 
 # Bästa tillvägagångssätt för SKU-konfiguration av produkter
 

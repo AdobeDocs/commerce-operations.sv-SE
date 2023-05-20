@@ -1,13 +1,13 @@
 ---
 title: PHP-inställningar
 description: Följ de här stegen för att installera nödvändiga PHP-tillägg och konfigurera PHP-inställningar för lokala installationer av Adobe Commerce och Magento Open Source.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 84064442-7053-42ab-a8a6-9b313e5efc78
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '804'
 ht-degree: 0%
 
 ---
-
 
 # PHP-inställningar
 

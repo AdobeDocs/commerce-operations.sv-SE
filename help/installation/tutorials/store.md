@@ -1,13 +1,13 @@
 ---
 title: Konfigurera butiken
 description: Följ de här stegen för att konfigurera din Adobe Commerce- eller Magento Open Source-butik.
-source-git-commit: 46302eb8e8fd9bb7c9e7fbf990abb149bedd0ff4
+exl-id: ab5e9c43-d914-4de9-98a9-b60d3984b23c
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '440'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera butiken
 

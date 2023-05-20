@@ -1,13 +1,13 @@
 ---
-title: "[!DNL Data Migration Tool] teknisk specifikation"
-description: "Läs mer om implementeringsdetaljer i [!DNL Data Migration Tool] och hur man kan utöka när data överförs mellan Magento 1 och Magento 2."
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+title: '''[!DNL Data Migration Tool] teknisk specifikation"'
+description: Läs mer om implementeringsdetaljer i [!DNL Data Migration Tool] och hur man kan utöka när data överförs mellan Magento 1 och Magento 2.
+exl-id: fec3ac3a-dd67-4533-a29f-db917f54d606
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '2079'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Data Migration Tool] teknisk specifikation
 

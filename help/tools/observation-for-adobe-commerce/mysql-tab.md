@@ -1,7 +1,8 @@
 ---
-title: "Den [!UICONTROL MySQL] tab"
+title: The [!UICONTROL MySQL] tab
 description: Läs mer om [!UICONTROL MySQL] flik för [!DNL Observation for Adobe Commerce].
-source-git-commit: 8c9753fe5b9038978859cc101d53f897267ecfe9
+exl-id: 1d8dd07c-15fd-4ffd-ad10-0d886bf1579e
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '2030'
 ht-degree: 0%
@@ -76,7 +77,7 @@ The **[!UICONTROL Galera Log by Host]** bildrutan är densamma som **[!UICONTROL
 
 ![Databasprestanda](../../assets/tools/observation-for-adobe-commerce/mysql-tab-8.jpg)
 
-The **[!UICONTROL Database performance]** bildrutan visar databasprestanda vid specifika begäranden. Du kan se varje mätresultat genom att klicka på dem i de färgade ikonerna nedanför diagrammet. Många av mätvärdena i [Övervaka prestanda för MySQL-databas med ny Relic](https://newrelic.com/blog/how-to-relic/how-to-monitor-mysql) finns i den här bildrutan.
+The **[!UICONTROL Database performance]** bildrutan visar databasprestanda vid specifika begäranden. Du kan se varje mätresultat genom att klicka på dem i de färgade ikonerna nedanför diagrammet. Många av mätvärdena i [Övervaka prestanda för MySQL-databas med New Relic](https://newrelic.com/blog/how-to-relic/how-to-monitor-mysql) finns i den här bildrutan.
 
 * Average(query.queriesPerSecond)
 * Average(query.slowQueriesPerSecond)
@@ -280,4 +281,3 @@ The **[!UICONTROL MySQL mem used by node]** bildrutan visar hur mycket minne som
 ![Databasen mysql-slow.log](../../assets/tools/observation-for-adobe-commerce/mysql-tab-24.jpg)
 
 The **[!UICONTROL Database mysql-slow.log]** bildrutan visar frågesutdragstyperna som finns i `mysql-slow.log` över den valda tidsramen.
-

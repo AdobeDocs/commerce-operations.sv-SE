@@ -4,13 +4,13 @@ description: Lär dig hur du optimerar Adobe Commerce prestanda genom att uppdat
 role: Developer
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: 510f2d4cdaec1034cb04a01fab0948c4261c6d10
+exl-id: 1cd48155-5d60-48b2-b07b-9b5784b81681
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 0%
 
 ---
-
 
 # Bästa praxis för konfiguration av Realpath-cache
 
@@ -39,4 +39,3 @@ Om konfigurationsvärdena för Realpath-cachen är för låga eller för höga l
    - [Bästa praxis för databaser](database-on-cloud.md)
    - [De vanligaste databasproblemen i Magento Commerce Cloud](../maintenance/resolve-database-performance-issues.md)
 - [Indexerare&quot;Update On Schedule&quot; optimerar Magento prestanda](../maintenance/indexer-configuration.md)
-

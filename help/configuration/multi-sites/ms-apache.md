@@ -1,13 +1,13 @@
 ---
 title: Konfigurera flera webbplatser med Apache
 description: Följ den här självstudiekursen för att konfigurera flera webbplatser med Apache.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 4c6890b3-f15a-46f2-a3e8-6f2a9b57a6ad
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera flera webbplatser med Apache
 

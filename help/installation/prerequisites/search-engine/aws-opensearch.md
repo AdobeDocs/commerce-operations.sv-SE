@@ -1,13 +1,13 @@
 ---
 title: AWS OpenSearch
 description: Följ de här stegen för att konfigurera webbtjänsten AWS OpenSearch för lokala installationer av Adobe Commerce och Magento Open Source.
-source-git-commit: 3692dcfd5b50c2f036b005d40a22db061b9ea5fd
+exl-id: 39ca7fd0-e21f-4f14-bda6-ff00a61a1a4d
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '343'
 ht-degree: 0%
 
 ---
-
 
 # AWS OpenSearch
 

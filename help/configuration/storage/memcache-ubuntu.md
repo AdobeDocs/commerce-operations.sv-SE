@@ -1,13 +1,13 @@
 ---
 title: Konfigurera cachelagrade data för Ubuntu
 description: Installera och konfigurera cachelagrade filer på Ubuntu.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 831193d2-3e81-472c-9b87-78a8d52959b4
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera cachelagrade data för Ubuntu
 

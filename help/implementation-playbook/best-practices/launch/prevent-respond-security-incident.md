@@ -4,13 +4,13 @@ description: Lär dig mer om de bästa sätten att undvika och hantera säkerhet
 role: Admin, Developer, Leader, User
 feature-set: Commerce
 feature: Best Practices
-source-git-commit: bb9b8cc9993a70ea50667f08c8260759ab0f91dc
+exl-id: 77275d37-4f1d-462d-ba11-29432791da6a
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '1073'
 ht-degree: 0%
 
 ---
-
 
 # Bästa metoder för att förebygga och hantera säkerhetstillbud
 
@@ -64,7 +64,7 @@ Med verktyget Observation for Adobe Commerce kan du analysera komplexa problem f
 Verktyget är avsett att ge en tydlig bild av några av de potentiella platsproblemen så att du kan identifiera grundorsaken och se till att webbplatserna fungerar optimalt. Klicka på länken till dokumentationen för verktyget Observation for Adobe Commerce ovan om du vill visa verktygets dokumentation. Det finns ett avsnitt i dokumentationen som innehåller all information som finns på sidan **Säkerhet** -fliken.
 - Analysera loggar med [New Relic Logs](https://devdocs.magento.com/cloud/project/new-relic.html#new-relic-logs). Adobe Commerce om molninfrastruktur Pro-projekten innefattar [New Relic Logs](https://docs.newrelic.com/docs/logs/new-relic-logs/get-started/introduction-new-relic-logs) service. Tjänsten är förkonfigurerad för att samla alla loggdata från dina förproduktionsmiljöer så att de kan visas på en central kontrollpanel för logghantering.
 Du kan använda tjänsten New Relic Logs för att utföra följande uppgifter:
-   - Använd [Nya Reliska frågor](https://docs.newrelic.com/docs/logs/new-relic-logs/ui-data/query-syntax-logs) om du vill söka efter aggregerade loggdata.
+   - Använd [New Relic-frågor](https://docs.newrelic.com/docs/logs/new-relic-logs/ui-data/query-syntax-logs) om du vill söka efter aggregerade loggdata.
    - Visualisera loggdata via programmet New Relic Logs.
 
 ## Ytterligare information

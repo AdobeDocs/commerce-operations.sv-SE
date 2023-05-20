@@ -4,7 +4,7 @@ description: Läs om hur vi skyddar Adobe Commerce i molninfrastrukturen.
 exl-id: cd5d1106-c8db-4b70-b1c7-12378d7d77a7
 source-git-commit: 50882bebb4712e6cf095a81297684f37e15b1a6b
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1644'
 ht-degree: 0%
 
 ---

@@ -2,13 +2,13 @@
 title: Konfigurera databasprofileraren
 description: Se ett exempel på hur du konfigurerar utdata för databasprofileraren.
 badge: label="Contributed by Atish Goswami" type="Informative" url="https://github.com/atishgoswami" tooltip="Atish Goswami"
-source-git-commit: bcb995ea417423b0cbc59c035ba5fdedbce3310e
+exl-id: 87780db5-6e50-4ebb-9591-0cf22ab39af5
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '198'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera databasprofileraren
 

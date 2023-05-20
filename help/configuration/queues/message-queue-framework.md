@@ -1,13 +1,13 @@
 ---
 title: Översikt över meddelandeköer
 description: Läs om meddelandeköramverket och hur det fungerar med Adobe Commerce och Magento Open Source.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 21e7bc3e-6265-4399-9d47-d3b9f03dfef6
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 0%
 
 ---
-
 
 # Översikt över meddelandeköer
 

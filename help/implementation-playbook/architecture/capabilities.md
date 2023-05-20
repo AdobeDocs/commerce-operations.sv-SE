@@ -26,7 +26,7 @@ Men vad gör en upplevelse bra och skiljer sig från konkurrenterna?
 
 För att skapa fantastiska shoppingupplevelser behöver företag kraftfulla, moderna plattformar som är öppna, utbyggbara, skalbara och säkra, för att inte tala om moderna verktyg för flexibel utveckling. Adobe Commerce är den perfekta plattformen för alla dessa behov.
 
-Adobe Commerce är en komplett, marknadstestad e-handelsplattform som är byggd för att leverera avancerade, personaliserade e-handelsupplevelser i alla kanaler och affärsmodeller. Adobe Commerce kan fungera som antingen ett affärssystem från början till slut eller som ett referensprogram inom ett större affärslandskap. Den är modulär och flexibel med ett omfattande API som är inbyggt i REST och GraphQL och kan användas med många huvuden - allt från WordPress och Drupal till Adobe Experience Manager och andra.
+Adobe Commerce är en komplett, marknadstestad e-handelsplattform som är byggd för att leverera avancerade, personaliserade e-handelsupplevelser i alla kanaler och affärsmodeller. Adobe Commerce kan fungera som antingen ett affärssystem från början till slut eller som ett referensprogram inom ett större affärslandskap. Den är modulär och flexibel med ett omfattande API som är inbyggt i REST och GraphQL och kan användas med många olika huvuden - allt från WordPress och Drupal till Adobe Experience Manager och andra.
 
 ## Funktionskarta
 

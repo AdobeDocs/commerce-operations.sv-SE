@@ -1,13 +1,13 @@
 ---
 title: Exempel med miljövariabler
 description: Se ett exempel på hur du ställer in delade, systemspecifika och känsliga värden i utvecklingssystemet med hjälp av systemvariabler.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+exl-id: 98438674-e7f8-4143-9a76-3cc8bf0a73dc
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '1085'
 ht-degree: 0%
 
 ---
-
 
 # Exempel med miljövariabler
 

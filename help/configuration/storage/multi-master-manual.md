@@ -1,13 +1,13 @@
 ---
 title: Konfigurera överordnad databaser manuellt
 description: Mer information om hur du konfigurerar lösningen för delad databas manuellt.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 2c357486-4a8a-4a36-9e13-b53c83f69456
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '1379'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera överordnad databaser manuellt
 

@@ -1,13 +1,13 @@
 ---
 title: Installation av utvecklingssystem
 description: Lär dig hur du konfigurerar ett utvecklingssystem för Commerce-programmet.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+exl-id: 242e9a38-2eb2-4090-8f59-3fd588f7ad3a
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 0%
 
 ---
-
 
 # Installation av utvecklingssystem
 

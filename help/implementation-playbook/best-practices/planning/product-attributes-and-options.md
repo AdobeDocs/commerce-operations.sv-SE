@@ -4,13 +4,13 @@ description: Lär dig optimera Adobe Commerce prestanda genom att begränsa anta
 role: User, Admin
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: e156fcafc5792036b37d9b199b870f1888c3f1ff
+exl-id: 81783a4c-bc82-4733-bee3-0154cf03079a
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '564'
 ht-degree: 0%
 
 ---
-
 
 # Bästa tillvägagångssätt för konfiguration av produktattribut
 
@@ -96,4 +96,3 @@ Konfigurera många **attributalternativ** kan påverka webbplatsens prestanda p�
 - [Attributuppsättningar](https://experienceleague.adobe.com/docs/commerce-admin/catalog/product-attributes/create/attribute-sets.html)
 - [Skapa en produkt](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/product-create.html)
 - [Självstudiekurser för anpassning > Anpassa formulär för att skapa produkter](https://developer.adobe.com/commerce/php/tutorials/admin/custom-product-creation-form/)
-

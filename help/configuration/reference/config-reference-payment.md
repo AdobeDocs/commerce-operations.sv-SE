@@ -1,13 +1,13 @@
 ---
 title: Referens för sökvägar för betalningskonfiguration
 description: Se en lista över konfigurerbara värden för betalningsmetoder.
-source-git-commit: bd1bf6edd131ec93902246e95ce857b509f2a619
+exl-id: f3e356aa-7262-4d99-9ed4-d77cbd93708c
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '4133'
+source-wordcount: '4100'
 ht-degree: 0%
 
 ---
-
 
 # Referens för sökvägar för betalningskonfiguration
 
@@ -84,7 +84,7 @@ Inställningarna ordnas ytterligare efter betalningsmetod.
 | Schemalagd hämtning | `payment_all_paypal/express_checkout/settings_ec/settings_ec_advanced/express_checkout_settlement_report/heading_schedule` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Format för PayPal-reklamsidor | `payment_all_paypal/express_checkout/settings_ec/settings_ec_advanced/express_checkout_frontend/paypal_pages` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## PayPal Payments Pro
 
@@ -95,7 +95,7 @@ Inställningarna ordnas ytterligare efter betalningsmetod.
 | Schemalagd hämtning | `payment_all_paypal/payments_pro_hosted_solution/pphs_settings/pphs_settings_advanced/pphs_settlement_report/heading_schedule` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Schemalagd hämtning | `payment_all_paypal/payments_pro_hosted_solution_without_bml/pphs_settings/pphs_settings_advanced/pphs_settlement_report/heading_schedule` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Payments Pro Hosted Solution (Storbritannien)
 
@@ -112,7 +112,7 @@ Dessa alternativ är bara tillgängliga om du väljer Storbritannien som [handel
 | Betalning från länder | `payment/hosted_pro/specificcountry` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Aktivera SSL-verifiering | `payment/hosted_pro/verify_peer` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## PayPal Payflow Pro
 
@@ -154,7 +154,7 @@ Dessa alternativ är bara tillgängliga om du väljer Storbritannien som [handel
 | Kräv CVV-post | `payment/payflow_advanced/csc_required` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Bekräftelse på e-post | `payment/payflow_advanced/email_confirmation` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Länk till PayPal-betalningsflöde
 
@@ -176,7 +176,7 @@ Dessa alternativ är bara tillgängliga om du väljer Storbritannien som [handel
 | Sorteringsordning | `payment/payflow_link/sort_order` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Betalningsåtgärd | `payment/payflow_link/payment_action` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Noll delsumma utcheckningsbanor
 
@@ -190,7 +190,7 @@ Dessa alternativ är bara tillgängliga om du väljer Storbritannien som [handel
 | Stöd från särskilda länder | `payment/free/specificcountry` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Sorteringsordning | `payment/free/sort_order` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Betalningsvägar för kontanter vid leverans
 
@@ -206,7 +206,7 @@ Dessa alternativ är bara tillgängliga om du väljer Storbritannien som [handel
 | Maximal ordersumma | `payment/cashondelivery/max_order_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Sorteringsordning | `payment/cashondelivery/sort_order` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Betalningsvägar för banköverföring
 
@@ -222,7 +222,7 @@ Dessa alternativ är bara tillgängliga om du väljer Storbritannien som [handel
 | Maximal ordersumma | `payment/banktransfer/max_order_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Sorteringsordning | `payment/banktransfer/sort_order` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Kontrollera och beställa pengar
 
@@ -238,7 +238,7 @@ Dessa alternativ är bara tillgängliga om du väljer Storbritannien som [handel
 | Maximal ordersumma | `payment/checkmo/max_order_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Sorteringsordning | `payment/checkmo/sort_order` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Sökvägar för inköpsorder
 
@@ -253,7 +253,7 @@ Dessa alternativ är bara tillgängliga om du väljer Storbritannien som [handel
 | Maximal ordersumma | `payment/purchaseorder/max_order_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Sorteringsordning | `payment/purchaseorder/sort_order` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Internationella sökvägar
 
@@ -1401,4 +1401,4 @@ Dessa alternativ är bara tillgängliga om du väljer Storbritannien som [handel
 | Stöd från särskilda länder | `payment_us/eway/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Sorteringsordning | `payment_us/eway/sort_order` |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

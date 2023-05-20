@@ -1,13 +1,13 @@
 ---
 title: Migreringsöversikt
 description: Lär dig hur du börjar migrera data från Magento 1 till Magento 2 med [!DNL Data Migration Tool].
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: b775ede1-9d1d-49d5-ad0f-763404b48278
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '303'
 ht-degree: 0%
 
 ---
-
 
 # Migreringsöversikt
 

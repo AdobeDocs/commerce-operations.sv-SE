@@ -1,13 +1,13 @@
 ---
 title: Utför en uppgradering
 description: Följ de här stegen för att uppgradera ett Adobe Commerce- eller Magento Open Source-projekt.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 9183f1d2-a8dd-4232-bdee-7c431e0133df
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 0%
 
 ---
-
 
 # Uppgradera
 

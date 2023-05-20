@@ -1,13 +1,13 @@
 ---
 title: Avancerad lack-konfiguration
 description: Konfigurera avancerade lack-funktioner, inklusive hälsokontroll, respitläge och helskärmsläge.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 178bd675-6ed0-40cc-9455-08a11b32c054
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '892'
 ht-degree: 0%
 
 ---
-
 
 # Avancerad lack-konfiguration
 

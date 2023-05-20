@@ -1,13 +1,13 @@
 ---
 title: Valfri programvara
 description: Läs mer om valfri programvara som du kan installera för att få support på lokala installationer av Adobe Commerce och Magento Open Source.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 533ff52b-3301-4624-b691-3dfddde6ce0b
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '635'
 ht-degree: 0%
 
 ---
-
 
 # Valfri programvara
 

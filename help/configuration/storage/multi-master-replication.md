@@ -1,13 +1,13 @@
 ---
 title: Databasreplikering
 description: Se fördelarna med att konfigurera databasreplikering.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 0e41dca0-5a23-4d12-96fe-241c511ae366
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '175'
 ht-degree: 0%
 
 ---
-
 
 # Databasreplikering
 

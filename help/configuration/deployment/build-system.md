@@ -1,13 +1,13 @@
 ---
 title: Skapa systeminställningar
 description: Lär dig hur du distribuerar Commerce till ett byggsystem.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+exl-id: f6daf5c6-6d12-46b0-b775-76791bacea53
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '376'
 ht-degree: 0%
 
 ---
-
 
 # Skapa systeminställningar
 
@@ -98,7 +98,7 @@ Så här konfigurerar du byggsystemet:
    chown -R <Commerce file system owner name>:<web server username> .
    ```
 
-   Exempel:
+   Till exempel:
 
    ```bash
    chown -R commerce-username:apache .

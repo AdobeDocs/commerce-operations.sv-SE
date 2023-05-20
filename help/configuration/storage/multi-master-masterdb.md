@@ -1,13 +1,13 @@
 ---
 title: Konfigurera överordnad databaser automatiskt
 description: Mer information om hur du konfigurerar den delade databaslösningen automatiskt.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: a27ad097-de60-4cdd-81f9-eb1ae84587e4
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '355'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera överordnad databaser automatiskt
 

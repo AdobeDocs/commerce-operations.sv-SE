@@ -1,13 +1,13 @@
 ---
 title: Ange värdet för bootstrap-parametrar
 description: Lär dig hur du ställer in bootstrap-parametrar för Commerce-programmet.
-source-git-commit: 0d106b36f479ecf2eda3fecf6740b28d4b6793eb
+exl-id: 4e1e4e5e-e1bc-49a5-8a2a-2e6b91ca9175
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '594'
 ht-degree: 0%
 
 ---
-
 
 # Bootstrap-parametrar
 
@@ -116,7 +116,7 @@ De procedurer som följer visar hur du ställer in programläget i en virtuell A
    SetEnv "<variable name>" "<variable value>"
    ```
 
-   Exempel:
+   Till exempel:
 
    ```conf
    SetEnv "MAGE_PROFILER" "firebug"
@@ -129,7 +129,7 @@ De procedurer som följer visar hur du ställer in programläget i en virtuell A
    a2ensite <virtual host config file name>
    ```
 
-   Exempel:
+   Till exempel:
 
    ```bash
    a2ensite my.magento.conf
@@ -154,7 +154,7 @@ De procedurer som följer visar hur du ställer in programläget i en virtuell A
    SetEnv "<variable name>" "<variable value>"
    ```
 
-   Exempel:
+   Till exempel:
 
    ```conf
    SetEnv "MAGE_PROFILER" "firebug"

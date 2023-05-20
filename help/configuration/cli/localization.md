@@ -1,13 +1,13 @@
 ---
 title: Översättningsordlistor och språkpaket
 description: Lär dig hur du genererar översättningsordlistor och bygger språkpaket.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: dd27ccdd-158d-40a6-a2e2-563857820ae9
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '1503'
 ht-degree: 0%
 
 ---
-
 
 # Lokalisering
 

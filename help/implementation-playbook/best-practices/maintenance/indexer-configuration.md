@@ -4,13 +4,13 @@ description: Underhåll och optimera webbplatsens prestanda genom att följa ved
 role: Admin, User
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: ae9573f3766c59887aea177cb85bf889c2161bfc
+exl-id: b35806f9-4bc6-407e-bedd-5ce3f09c1b9f
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 0%
 
 ---
-
 
 # Bästa tillvägagångssätt för indexerarkonfiguration
 

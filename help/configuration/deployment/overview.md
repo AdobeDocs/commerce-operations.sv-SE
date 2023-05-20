@@ -1,13 +1,13 @@
 ---
 title: Distributionsöversikt
 description: Läs om distributionsstrategier för Commerce-programmet.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+exl-id: d5ed6fb3-2dd2-49df-802b-6d712ecd9ccf
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '816'
 ht-degree: 0%
 
 ---
-
 
 # Distributionsöversikt
 

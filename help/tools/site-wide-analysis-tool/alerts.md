@@ -1,7 +1,8 @@
 ---
-title: '"[!DNL Alerts]"'
+title: '[!DNL Alerts]'
 description: Läs mer om [!UICONTROL Alerts] i [!DNL Site-Wide Analysis Tool], när det ska användas och dess fördelar.
-source-git-commit: 3efc01fb1f376514ebbfb1dd29b42c764a9fd4d5
+exl-id: 0d7dacfe-f66a-440b-89cc-bce5eda2a230
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '91'
 ht-degree: 0%
@@ -19,4 +20,3 @@ The [!DNL Site-Wide Analysis Tool's] [!UICONTROL Alerts] visas Adobe Commerce Ma
 ## Fördelar
 
 Förbättra webbplatsens prestanda genom att hålla dig uppdaterad på [!DNL Alerts] och uppdatera webbplatsen efter behov.
-

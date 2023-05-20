@@ -1,13 +1,13 @@
 ---
 title: Ange en mask (valfritt)
 description: Förbättra säkerhetspositionen för Adobe Commerce- eller Magento Open Source-installationen genom att begränsa filsystemsbehörigheterna.
-source-git-commit: 8f05fb6fc212c2b3fda80457bbf27ecf16fb1194
+exl-id: 18d65d75-7be0-4488-bf35-4b058e4ae5ea
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 0%
 
 ---
-
 
 # Ange en mask (valfritt)
 

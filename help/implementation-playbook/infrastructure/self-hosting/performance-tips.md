@@ -7,13 +7,13 @@ kt: 11420
 doc-type: tutorial
 audience: all
 last-substantial-update: 2023-04-13T00:00:00Z
-source-git-commit: ab099b2a8a353c2462424831cf8100e7e281b1be
+exl-id: 95ff0c79-21d0-4514-991c-d88f616db68f
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '1304'
 ht-degree: 0%
 
 ---
-
 
 # Självvärdande tips för Adobe Commerce
 

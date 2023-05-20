@@ -1,13 +1,13 @@
 ---
 title: Avinstallera moduler
 description: Följ de här stegen för att avinstallera en Adobe Commerce- eller Magento Open Source-modul.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 66879ef5-47c7-4b61-8c7e-78b60441980a
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '741'
 ht-degree: 0%
 
 ---
-
 
 # Avinstallera moduler
 

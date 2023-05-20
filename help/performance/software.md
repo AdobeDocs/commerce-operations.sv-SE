@@ -1,13 +1,13 @@
 ---
 title: Software Recommendations
 description: Granska en lista över rekommenderade program för optimala prestanda i Adobe Commerce- och Magento Open Source-distributioner.
-source-git-commit: 8572cc8702d6f7e9c40b64110a9ba18aa5784f44
+exl-id: b091a733-7655-4e91-a988-93271872c5d5
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '1415'
 ht-degree: 0%
 
 ---
-
 
 # Programvarurekommendationer
 
@@ -235,7 +235,7 @@ if (req.url ~ "^/(pub/)?(media|static)/.*\.(ico|html|css|js|jpg|jpeg|png|gif|tif
 ```
 
 I `vcl_backend_response` subrutin, leta efter `if` programsats som tar bort cookien för `GET` eller `HEAD` förfrågningar.
-Den uppdaterade `if` -blocket ska se ut så här:
+Den uppdaterade `if` -block ska se ut så här:
 
 ```javascript
 # validate if we need to cache it and prevent from setting cookie

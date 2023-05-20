@@ -1,13 +1,13 @@
 ---
 title: Ange åtgärdsläge
 description: Läs om hur du ställer in Adobe Commerce driftslägen.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 62d183fa-d4ff-441d-b8bd-64ef5ae10978
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '383'
 ht-degree: 0%
 
 ---
-
 
 # Ange åtgärdsläge
 

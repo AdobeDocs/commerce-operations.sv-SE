@@ -4,13 +4,13 @@ description: Lär dig hur du förbättrar cachelagringsprestanda med den utökad
 role: Developer, Admin
 feature-set: Commerce
 feature: Best Practices
-source-git-commit: 92faa85b51a1fd5314a5906e8650b03723118ce1
+exl-id: 8b3c9167-d2fa-4894-af45-6924eb983487
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '439'
 ht-degree: 0%
 
 ---
-
 
 # Bästa tillvägagångssätt för Redis-tjänstkonfiguration
 

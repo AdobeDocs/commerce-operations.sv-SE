@@ -1,13 +1,13 @@
 ---
 title: Systemkrav
 description: Använd den här referensen för att identifiera nödvändiga programvaruberoenden som har testats med Adobe Commerce och Magento Open Source.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 008c9edc-7d72-403c-847f-0e3b77bbb197
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '522'
 ht-degree: 0%
 
 ---
-
 
 # Systemkrav
 

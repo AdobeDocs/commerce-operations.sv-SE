@@ -1,13 +1,13 @@
 ---
 title: Allmän referens för konfigurationssökvägar
 description: Se en lista med allmänna och avancerade konfigurationsvärden.
-source-git-commit: 53448b11a2d000fe8e8a7eecf2ffcef4b7e248fa
+exl-id: 3c557746-5182-4929-aebf-5b6fe76f0d8f
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '995'
+source-wordcount: '965'
 ht-degree: 0%
 
 ---
-
 
 # Allmän och avancerad konfigurationssökvägsreferens
 
@@ -54,7 +54,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Momsnummer | `general/store_information/merchant_vat_number` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |
 | Aktivera Single Store-läge | `general/single_store_mode/enabled` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Webbsökvägar
 
@@ -86,7 +86,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Visa meddelande om JavaScript är inaktiverat | `web/browser_capabilities/javascript` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Visa meddelande om lokal lagring är inaktiverad | `web/browser_capabilities/local_storage` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Sökvägar för valutainställningar
 
@@ -111,7 +111,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | E-postavsändare med fel | `currency/import/error_email_identity` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | E-postmall för fel | `currency/import/error_email_template` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Kontaktsökvägar
 
@@ -124,7 +124,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | E-postavsändare | `contact/email/sender_email_identity` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | E-postmall | `contact/email/email_template` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Rapportsökvägar
 
@@ -135,7 +135,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Från år till datum | `reports/dashboard/ytd_start` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Aktuell månadsstart | `reports/dashboard/mtd_start` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Sökvägar för innehållshantering
 
@@ -149,19 +149,19 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Aktivera hierarkimetadata | `cms/hierarchy/metadata_enabled` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Standardlayout för hierarkimenyn | `cms/hierarchy/menu_layout` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-### Nya Relic-rapporteringsvägar
+### New Relic rapporteringsvägar
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Allmänt** > **Ny Relic-rapportering**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Allmänt** > **New Relic Reporting**.
 
 | Namn | Konfigurationssökväg | Endast handel? |
 |--------------|--------------|--------------|
-| Aktivera ny Relic-integrering | `newrelicreporting/general/enable` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Namn på nytt Relic-program | `newrelicreporting/general/app_name` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
+| Aktivera New Relic-integrering | `newrelicreporting/general/enable` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
+| New Relic-programnamn | `newrelicreporting/general/app_name` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Aktivera Cron | `newrelicreporting/cron/enable_cron` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Avancerad kategori
 
@@ -203,7 +203,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Skiftlägeskänslig | `admin/captcha/case_sensitive` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Aktiverade åtgärder | `admin/magento_logging/actions` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Systemsökvägar
 
@@ -271,7 +271,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Frekvens | `system/magento_scheduled_import_export_log/frequency` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | E-postmall för fel | `system/magento_scheduled_import_export_log/error_email_template` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Utvecklarsökvägar
 
@@ -301,4 +301,4 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Asynkron indexering | `dev/grid/async_indexing` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Cachelagra användardefinierade attribut | `dev/caching/cache_user_defined_attributes` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

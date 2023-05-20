@@ -1,13 +1,13 @@
 ---
 title: Exportera konfigurationsinställningar
 description: Exportera Adobe Commerce konfigurationsinställningar till konfigurationsfiler, som också kallas config dump.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+exl-id: db680f5e-547a-48f3-b017-d77b8cb07bfd
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '222'
 ht-degree: 0%
 
 ---
-
 
 # Exportera konfigurationsinställningar
 

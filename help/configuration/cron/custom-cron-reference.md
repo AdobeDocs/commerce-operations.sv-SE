@@ -1,13 +1,13 @@
 ---
 title: Anpassat cron-jobb och cron-gruppreferens
 description: Lär dig att anpassa kroner med hjälp av cron-grupper.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 16e342ff-aa94-4e31-8c75-dfea1ef02706
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 0%
 
 ---
-
 
 # Anpassa crons-referens
 

@@ -1,13 +1,13 @@
 ---
 title: Kronjobb
 description: Lär dig mer om cron-grupper och hur du skapar ett anpassat cron-jobb.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+exl-id: a9d83af7-9979-4653-adc9-30ffeb13a5ce
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 0%
 
 ---
-
 
 # Kronjobb
 

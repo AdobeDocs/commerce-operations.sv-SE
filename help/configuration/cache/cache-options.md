@@ -1,7 +1,8 @@
 ---
 title: Cachealternativ
 description: Konfigurera åtkomst till cachelagring på låg nivå.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: e0330108-5c55-4a33-9f93-63fbb71af761
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '125'
 ht-degree: 0%

@@ -1,13 +1,13 @@
 ---
 title: Migrera ändringar
 description: Lär dig hur du migrerar endast data som har ändrats sedan den senaste datamigreringen för Magento 1 med [!DNL Data Migration Tool].
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: c300c567-77d3-4c25-8b28-a7ae4ab0092e
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '350'
 ht-degree: 0%
 
 ---
-
 
 # Migrera ändringar
 

@@ -1,13 +1,13 @@
 ---
 title: Hantera moduler och tillägg
 description: Använd kommandoradsgränssnittet för att aktivera, inaktivera och avinstallera moduler och tillägg för Adobe Commerce och Magento Open Source.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+exl-id: a71de7c6-395a-4734-b3ad-b2879809be0b
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '76'
 ht-degree: 0%
 
 ---
-
 
 # Hantera moduler och tillägg
 

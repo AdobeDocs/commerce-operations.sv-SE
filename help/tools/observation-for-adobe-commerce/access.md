@@ -1,7 +1,8 @@
 ---
-title: '"Åtkomst till [!DNL Observation for Adobe Commerce] nerdlet"'
+title: Åtkomst till [!DNL Observation for Adobe Commerce] nerdlet
 description: Lär dig hur du använder [!DNL Observation for Adobe Commerce] nördlet.
-source-git-commit: 3f2a401bb916fc04405f21ba2acfc42f7defdccb
+exl-id: 4b6f554e-685b-465d-8676-b70e790606c6
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '61'
 ht-degree: 0%
@@ -20,6 +21,4 @@ Så här använder du [!DNL New Relic Observation for Adobe Commerce] nördlet, 
 1. Autentisera via [!UICONTROL Okta] (endast för användare i Adobe).
 1. Från [!DNL New Relic] väljer du menyalternativet Apps.
 
-   ![New Relic - startsida](../../assets/tools/observation-for-adobe-commerce/new-relic-homepage.jpeg)
-
-
+   ![New Relic hemsida](../../assets/tools/observation-for-adobe-commerce/new-relic-homepage.jpeg)

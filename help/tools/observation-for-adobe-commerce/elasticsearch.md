@@ -1,13 +1,13 @@
 ---
-title: "Den [!UICONTROL Elasticsearch] tab"
+title: The [!UICONTROL Elasticsearch] tab
 description: Läs mer om [!UICONTROL Elasticsearch] flik för [!DNL Observation for Adobe Commerce].
-source-git-commit: b3cc9033eb9445af3edafd8c7ae9809dbb8174fc
+exl-id: e98d351d-b3b1-47bc-bc0d-f96ba9ec2b80
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '536'
 ht-degree: 0%
 
 ---
-
 
 # The [!UICONTROL Elasticsearch] tab
 

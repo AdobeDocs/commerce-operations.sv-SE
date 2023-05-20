@@ -7,7 +7,7 @@ hide: true
 hidefromtoc: true
 source-git-commit: 4360a3436f013c1b2a8b95a876d2037a6987acac
 workflow-type: tm+mt
-source-wordcount: '78'
+source-wordcount: '89'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Available features: https://git.corp.adobe.com/AdobeDocs/exl-config/blob/master/
 
 Adobe Commerce i molninfrastruktur med Adobe Commerce version 2.3.4 eller tidigare och MariaDB version 10.0 eller tidigare.
 
-<!-- Business type: B2C and B2B -- specify only if needed/)-->
+&lt;!— Affärstyp: B2C och B2B - ange bara vid behov/)—>
 
 ## Sidhuvud ...
 

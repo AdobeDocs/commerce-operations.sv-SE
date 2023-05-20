@@ -4,13 +4,13 @@ description: Lär dig de bästa sätten att maximera webbplatsens prestanda geno
 role: Admin
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: e156fcafc5792036b37d9b199b870f1888c3f1ff
+exl-id: c6834b32-9ee8-4a4a-932c-9726f3feee3f
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 0%
 
 ---
-
 
 # Bästa tillvägagångssätt för kategorikonfiguration
 

@@ -1,13 +1,13 @@
 ---
 title: Data som kräver manuell migrering
 description: Lär dig mer om data som måste migreras manuellt under en datamigrering från Magento 1 till Magento 2 och hur du gör det.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 830abd81-4c6d-418b-9da4-b6acd95f5ec8
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '278'
 ht-degree: 0%
 
 ---
-
 
 # Data som kräver manuell migrering
 

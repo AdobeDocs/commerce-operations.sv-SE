@@ -1,13 +1,13 @@
 ---
 title: Anpassa [!DNL Data Migration Tool]
 description: Lär dig anpassa [!DNL Data Migration Tool] för att överföra data som skapats genom tillägg mellan Magento 1 och Magento 2.
-source-git-commit: d609c497fdf00c5e5f975a5679b1d072cec4f8a2
+exl-id: a5c1575f-9d77-416e-91fe-a82905ef2e1c
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '821'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera [!DNL Data Migration Tool]
 
@@ -132,7 +132,7 @@ Magento 2 `greatblog_post` tabellen ser nu ut så här:
 | author_id | SMALLINT |
 ```
 
-Om du vill migrera alla data från den gamla tabellstrukturen till en ny kan du skapa ett anpassat steg i `config.xml` -fil. Exempel:
+Om du vill migrera alla data från den gamla tabellstrukturen till en ny kan du skapa ett anpassat steg i `config.xml` -fil. Till exempel:
 
 ```xml
 <steps mode="data">

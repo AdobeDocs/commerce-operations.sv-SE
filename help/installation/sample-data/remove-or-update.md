@@ -1,13 +1,13 @@
 ---
 title: Ta bort eller uppdatera exempeldatamoduler
 description: Följ de här stegen för att hantera exempeldatamoduler för Adobe Commerce och Magento Open Source.
-source-git-commit: 8f05fb6fc212c2b3fda80457bbf27ecf16fb1194
+exl-id: d23f999f-18bf-449b-be23-bdf392dda539
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '128'
 ht-degree: 0%
 
 ---
-
 
 # Ta bort eller uppdatera exempeldatamoduler
 

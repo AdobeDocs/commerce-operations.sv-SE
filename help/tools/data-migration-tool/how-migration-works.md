@@ -1,13 +1,13 @@
 ---
 title: Så fungerar datamigrering
 description: Lär dig mer om datamigreringsprocessen mellan Magento 1 och Magento 2, inklusive terminologi, arbetsflödesdiagram och steg.
-source-git-commit: be2f924728853236bba786e7611b2a368c9f3054
+exl-id: 821492dc-ee5b-4c4a-9479-680ee8c5756d
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 0%
 
 ---
-
 
 # Så fungerar datamigrering
 

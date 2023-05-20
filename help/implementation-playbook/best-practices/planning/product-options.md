@@ -4,13 +4,13 @@ description: Optimera Adobe Commerce prestanda genom att begränsa antalet produ
 role: Admin
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: 85f9355d0e8c704be3760334b07414d3e15b3b97
+exl-id: 7571a163-798a-40be-b26f-4a184bceb809
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 0%
 
 ---
-
 
 # Bästa praxis för produktalternativ
 
@@ -51,4 +51,3 @@ När du konfigurerar många produktalternativ ökar mängden data som hämtas f�
 - [Logg för gruppåtgärd](https://docs.magento.com/user-guide/system/action-log-bulk-actions.html)
 - [API för massåtgärder för lager](https://developer.adobe.com/commerce/webapi/rest/inventory/bulk-inventory/)
 - [Utbildning: Hantera kataloger och produkter med Adobe Commerce](https://learning.adobe.com/catalog/adobe_commerce/cours000000000098643.html)
-

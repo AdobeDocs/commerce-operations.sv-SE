@@ -1,13 +1,13 @@
 ---
 title: Apache
 description: Följ de här stegen för att installera och konfigurera Apache-webbservern för lokala installationer av Adobe Commerce och Magento Open Source.
-source-git-commit: 61638d373408d9a7c3c3a935eee61927acfac7a6
+exl-id: a9a394c9-389f-42ef-9029-dd22c979cfb8
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '844'
 ht-degree: 0%
 
 ---
-
 
 # Apache
 
@@ -232,7 +232,7 @@ Installation och konfigurering av Apache är en process i tre steg: installera p
 
 1. Ändra värdet för `AllowOverride` till `All`.
 
-   Exempel:
+   Till exempel:
 
    ```conf
    <Directory "/var/www/">
@@ -273,7 +273,7 @@ Installation och konfigurering av Apache är en process i tre steg: installera p
 
 1. Ändra värdet för `AllowOverride` till `All`.
 
-   Exempel:
+   Till exempel:
 
    ```conf
    <Directory "/var/www/html">
@@ -310,7 +310,7 @@ Om du stöter på 403 Otillåtna fel när du försöker få åtkomst till webbpl
 
 Om du vill att webbplatsbesökare ska kunna komma åt din webbplats använder du något av [Kräv direktiv](https://httpd.apache.org/docs/2.4/howto/access.html).
 
-Exempel:
+Till exempel:
 
 ```conf
 <Directory "/var/www/">

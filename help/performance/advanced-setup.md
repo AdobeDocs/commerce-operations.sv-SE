@@ -1,13 +1,13 @@
 ---
 title: Avancerade inställningar
 description: Granska vedertagna rutiner och rekommendationer för stora företagssystem som utformats för att bearbeta stora datavolymer.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+exl-id: eb9ca9fa-b099-4e77-ab33-16cd0f382ffe
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '1192'
 ht-degree: 0%
 
 ---
-
 
 # Avancerad konfiguration
 

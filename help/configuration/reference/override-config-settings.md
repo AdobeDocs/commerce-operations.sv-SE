@@ -1,13 +1,13 @@
 ---
 title: Åsidosätt konfigurationsinställningar
 description: Lär dig hur du använder miljövariabler för att åsidosätta konfigurationsinställningar.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 788fd3cd-f8c1-4514-8141-547fed36e9ce
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '1225'
 ht-degree: 0%
 
 ---
-
 
 # Åsidosätt konfigurationsinställningar
 

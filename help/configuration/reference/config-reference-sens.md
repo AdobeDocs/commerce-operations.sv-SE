@@ -1,13 +1,13 @@
 ---
 title: Känsliga och systemspecifika sökvägar
 description: Se en lista med systemspecifika och känsliga konfigurationsvärden.
-source-git-commit: 4c18f00e0b92e49924676274c4ed462a175a7e4b
+exl-id: 127880ab-7507-4e53-8b51-dfa6557d0b18
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '3702'
 ht-degree: 0%
 
 ---
-
 
 # Känsliga och systemspecifika inställningar
 

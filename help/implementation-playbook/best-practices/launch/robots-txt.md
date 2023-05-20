@@ -4,13 +4,13 @@ description: Lär dig hur du skickar instruktioner om din Adobe Commerce webbpla
 role: Developer
 feature-set: Commerce
 feature: Best Practices
-source-git-commit: cf8626bfab170a1e12cc72f0bc344c9beb9349a7
+exl-id: f3a81bab-a47a-46ad-b334-920df98c87ab
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 0%
 
 ---
-
 
 # Bästa tillvägagångssätt för konfigurering `robots.txt` och `sitemap.xml` filer
 
@@ -73,7 +73,7 @@ Du kan konfigurera och köra flera butiker med en enda implementering av Adobe C
 
 Samma metodtips för att konfigurera `robots.txt` och `sitemap.xml` filer för [butiker för en webbplats](#single-site-storefronts) gäller för butiker med flera platser med två viktiga skillnader:
 
-- Se till att `robots.txt` och `sitemap.xml` filnamnen innehåller namnen på motsvarande platser. Exempel:
+- Se till att `robots.txt` och `sitemap.xml` filnamnen innehåller namnen på motsvarande platser. Till exempel:
    - `domaineone_robots.txt`
    - `domaintwo_robots.txt`
    - `domainone_sitemap.xml`

@@ -4,7 +4,7 @@ description: Beskrivning av Adobe Commerce
 exl-id: 130bae23-8a22-4523-abe2-8dc97b3881d2
 source-git-commit: 1611a8cab95ec24a1420fac31958853e28033af6
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '285'
 ht-degree: 0%
 
 ---

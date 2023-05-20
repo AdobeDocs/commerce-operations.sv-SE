@@ -1,13 +1,13 @@
 ---
 title: Programinitiering och bootstrap
 description: Läs om initierings- och bootstrap-logik för Commerce-programmet.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 46d1ffc0-7870-4dd1-beec-0a9ff858ab62
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '863'
 ht-degree: 0%
 
 ---
-
 
 # Översikt över initiering och bootstrap
 

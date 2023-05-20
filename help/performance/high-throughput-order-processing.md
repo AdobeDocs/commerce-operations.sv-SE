@@ -1,13 +1,13 @@
 ---
 title: Bearbetning av beställning med hög genomströmning
 description: Optimera beställnings- och utcheckningsupplevelsen för Adobe Commerce eller Magento Open Source.
-source-git-commit: 45ffa6487d94feba3d6c2a6d5d938108b1fef91d
+exl-id: dc2d0399-0d7f-42d8-a6cf-ce126e0b052d
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '1048'
 ht-degree: 0%
 
 ---
-
 
 # Bearbetning av stora mängder order
 
@@ -88,7 +88,7 @@ Följande funktioner är **not** stöds av AsyncOrder, men fortsätter att funge
 
 #### Stöd för webb-API
 
-När AsyncOrder-modulen är aktiverad körs följande REST-slutpunkter och GraphQL-mutationer asynkront:
+När modulen AsyncOrder är aktiverad körs följande REST-slutpunkter och GraphQL-mutationer asynkront:
 
 **REST:**
 

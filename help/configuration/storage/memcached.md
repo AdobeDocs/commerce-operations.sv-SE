@@ -1,13 +1,13 @@
 ---
 title: Använd cachelagrat för sessionslagring
 description: Lär dig hur du använder cachelagrade data för Commerce-sessionslagring.
-source-git-commit: 0d106b36f479ecf2eda3fecf6740b28d4b6793eb
+exl-id: 24077929-e732-4579-8d7d-717a4902fc64
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '285'
 ht-degree: 0%
 
 ---
-
 
 # Använd cachelagrat för sessionslagring
 

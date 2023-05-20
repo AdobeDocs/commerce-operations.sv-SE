@@ -5,9 +5,10 @@ role: Developer, Architect
 feature: Best Practices
 feature-set: Commerce
 last-substantial-update: 2022-11-15T00:00:00Z
-source-git-commit: 570fa4877f578f636736f0404169ed215fd06b24
+exl-id: 9e7adaaa-b165-4293-aa98-5dc4b8c23022
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '1469'
+source-wordcount: '1438'
 ht-degree: 0%
 
 ---
@@ -22,7 +23,7 @@ Migrerar från [!DNL Magento 1] och andra e-handelsplattformar, eller arbeta med
 
 Det främsta skälet till att undvika att ändra huvudtabeller är att Adobe Commerce innehåller underliggande logik som innehåller råa SQL-frågor. Ändringar i tabellstrukturen kan orsaka oväntade biverkningar som är svåra att felsöka. Ändringen kan också påverka DDL-åtgärder (Data Definition Language) som kan ge oväntade och oförutsägbara effekter på prestandan.
 
-Ett annat skäl till att undvika att ändra databastabellens struktur är att dina ändringar kan orsaka problem om huvudutvecklingsteamet eller tredjepartsutvecklare ändrar strukturen i sina databastabeller. Det finns till exempel några viktiga databastabeller som har en kolumn som kallas `additional_data`. Det här har alltid varit en `text` kolumntyp. Av prestandaskäl kan dock huvudteamet ändra kolumnen till `longtext`. Den här kolumntypen är ett alias för JSON. Genom att konvertera till den här kolumntypen läggs prestandavinster och sökbarhet till i den kolumnen, som inte finns som en `text` typ. Du kan läsa mer om det här avsnittet i [JSON-datatyp](https://mariadb.com/kb/en/json-data-type/){target=&quot;_blank&quot;}.
+Ett annat skäl till att undvika att ändra databastabellens struktur är att dina ändringar kan orsaka problem om huvudutvecklingsteamet eller tredjepartsutvecklare ändrar strukturen i sina databastabeller. Det finns till exempel några viktiga databastabeller som har en kolumn som kallas `additional_data`. Det här har alltid varit en `text` kolumntyp. Av prestandaskäl kan dock huvudteamet ändra kolumnen till `longtext`. Den här kolumntypen är ett alias för JSON. Genom att konvertera till den här kolumntypen läggs prestandavinster och sökbarhet till i den kolumnen, som inte finns som en `text` typ. Du kan läsa mer om det här avsnittet i [JSON-datatyp](https://mariadb.com/kb/en/json-data-type/){target="_blank"}.
 
 ## Ha koll på när data ska sparas eller tas bort
 
@@ -36,13 +37,13 @@ Detta kräver att databasen migreras till en server, antingen med ett webbgräns
 
 Ett annat relaterat alternativ för att göra data externa för e-handel, men som gör det möjligt att använda dem i realtid, är att utnyttja andra verktyg, som GraphQL-nät. Det här alternativet kombinerar olika datakällor och returnerar dem som ett svar.
 
-Du kan till exempel `stitch` tillsammans gamla order från en extern databas, kanske den gamla Magento 1-anläggningen som är avvecklad. Använd sedan GraphQL-nätet och visa dem som en del av kundens orderhistorik. Dessa gamla order kan kombineras med beställningarna från din nuvarande [!DNL Adobe Commerce] miljö.
+Du kan till exempel `stitch` tillsammans gamla order från en extern databas, kanske den gamla Magento 1-anläggningen som är avvecklad. Visa dem sedan som en del av kundens orderhistorik med GraphQL-nät. Dessa gamla order kan kombineras med beställningarna från din nuvarande [!DNL Adobe Commerce] miljö.
 
-Mer information om hur du använder API-nät med GraphQL finns i [Vad är API Mesh?](https://developer.adobe.com/graphql-mesh-gateway/gateway/overview/){target=&quot;_blank&quot;}) och [GraphQL Mesh Gateway](https://developer.adobe.com/graphql-mesh-gateway/){target=&quot;_blank&quot;}.
+Mer information om hur du använder API-nät med GraphQL finns i [Vad är API Mesh?](https://developer.adobe.com/graphql-mesh-gateway/gateway/overview/){target="_blank"}) and [GraphQL Mesh Gateway](https://developer.adobe.com/graphql-mesh-gateway/){target="_blank"}.
 
 ## Migrera äldre data med tilläggsattribut
 
-Om du fastställer att äldre data kräver migrering eller att nya data måste sparas i [!DNL Adobe Commerce], Adobe rekommenderar att du använder [tilläggsattribut](https://developer.adobe.com/commerce/php/development/components/add-attributes/){target=&quot;_blank&quot;}. Att använda tilläggsattribut för att spara ytterligare data ger följande fördelar:
+Om du fastställer att äldre data kräver migrering eller att nya data måste sparas i [!DNL Adobe Commerce], Adobe rekommenderar att du använder [tilläggsattribut](https://developer.adobe.com/commerce/php/development/components/add-attributes/){target="_blank"}. Att använda tilläggsattribut för att spara ytterligare data ger följande fördelar:
 
 - Du kan styra vilka data som ska bevaras och databasstrukturen, vilket säkerställer att data sparas med rätt kolumntyp och korrekta index.
 - De flesta enheter i [!DNL Adobe Commerce] och [!DNL Magento Open Source] har stöd för användning av tilläggsattribut.
@@ -52,9 +53,9 @@ Två exempel på lagringsplatser är databastabeller och [!DNL Redis]. Det vikti
 
 ### Överväg andra alternativ
 
-Som utvecklare är det viktigt att alltid överväga att använda verktyg utanför [!DNL Adobe Commerce] -miljö, till exempel GraphQL-nät och Adobe App Builder. De här verktygen kan hjälpa dig att behålla åtkomsten till data men påverkar inte centrala e-handelsprogrammet eller dess underliggande databastabeller. Med den här metoden kan du visa data via ett API. Sedan lägger du till en datakälla i din App Builder-konfiguration. Med GraphQL Mesh kan du kombinera dessa datakällor och få ett enda svar som nämns i [äldre data](#legacy-data).
+Som utvecklare är det viktigt att alltid överväga att använda verktyg utanför [!DNL Adobe Commerce] -miljö, till exempel GraphQL mesh och Adobe App Builder. De här verktygen kan hjälpa dig att behålla åtkomsten till data men påverkar inte centrala e-handelsprogrammet eller dess underliggande databastabeller. Med den här metoden kan du visa data via ett API. Sedan lägger du till en datakälla i din App Builder-konfiguration. Med GraphQL Mesh kan du kombinera dessa datakällor och få ett enda svar som nämns i [äldre data](#legacy-data).
 
-Mer information om GraphQL-nät finns i [GraphQL Mesh Gateway](https://developer.adobe.com/graphql-mesh-gateway/){target=&quot;_blank&quot;}. Mer information om Adobe App Builder finns i [Vi presenterar App Builder](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/introduction-app-builder.html?lang=en){target=&quot;_blank&quot;}.
+Mer information om GraphQL-nät finns i [GraphQL Mesh Gateway](https://developer.adobe.com/graphql-mesh-gateway/){target="_blank"}. For information about the Adobe App Builder,  see [Introducing App Builder](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/introduction-app-builder.html?lang=en){target="_blank"}.
 
 ## Ändra en bastabell eller tredjepartstabell
 
@@ -71,13 +72,13 @@ Adobe rekommenderar att du följer de här stegen när du lägger till en kolumn
 
 1. Skapa en modul med ett namn i namnutrymmet som representerar det du uppdaterar.
 
-   Exempel: `app/code/YourCompany/Customer`
+   Till exempel: `app/code/YourCompany/Customer`
 
-1. Skapa lämpliga filer för att aktivera modulen (se [Skapa en modul](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/create-module.html){target=&quot;_blank&quot;}.
+1. Skapa lämpliga filer för att aktivera modulen (se [Skapa en modul](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/create-module.html){target="_blank"}.
 
 1. Skapa en fil med namnet `db_schema.xml` i `etc` och gör lämpliga ändringar.
 
-   Generera en `db_schema_whitelist.json` -fil. Se [Deklarationsschema](https://developer.adobe.com/commerce/php/development/components/declarative-schema/configuration/){target=&quot;_blank&quot;} om du vill ha mer information.
+   Generera en `db_schema_whitelist.json` -fil. Se [Deklarationsschema](https://developer.adobe.com/commerce/php/development/components/declarative-schema/configuration/){target="_blank"} för mer information.
 
 ### Potentiella effekter
 

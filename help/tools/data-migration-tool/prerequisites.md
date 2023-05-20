@@ -1,13 +1,13 @@
 ---
-title: "[!DNL Data Migration Tool] krav"
-description: "Läs vad du behöver göra innan du börjar använda [!DNL Data Migration Tool] att överföra data mellan Magento 1 och Magento 2."
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+title: '''[!DNL Data Migration Tool] krav'
+description: Läs vad du behöver göra innan du börjar använda [!DNL Data Migration Tool] att överföra data mellan Magento 1 och Magento 2.
+exl-id: 42dfa1ca-41ed-453d-a3e4-41ff36817ca3
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Data Migration Tool] krav
 

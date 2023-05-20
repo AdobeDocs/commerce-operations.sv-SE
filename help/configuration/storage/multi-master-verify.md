@@ -1,13 +1,13 @@
 ---
 title: Verifiera delad databas
 description: Lär dig hur du kontrollerar att en konfiguration för en delad databas i Commerce fungerar som den ska.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 36295240-6521-4f3e-9ea3-f35b73de672d
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 0%
 
 ---
-
 
 # Verifiera delad databas
 

@@ -4,7 +4,7 @@ description: Läs vad som rekommenderas för att planera uppgraderingen av Adobe
 exl-id: 24ca57c0-1a68-46c4-b2fa-4a114250d0e3
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '386'
 ht-degree: 0%
 
 ---

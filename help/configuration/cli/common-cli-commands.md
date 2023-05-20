@@ -1,13 +1,13 @@
 ---
 title: Gemensamma kommandon
 description: Visa ett exempel på vanliga kommandon och användningsområden för Commerce CLI.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+exl-id: d35a1dd9-10b3-4364-b6f4-b1e259a04e3d
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 0%
 
 ---
-
 
 # Gemensamma kommandon
 

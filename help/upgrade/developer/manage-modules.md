@@ -1,13 +1,13 @@
 ---
 title: Hantera moduler och tillägg (utvecklare)
 description: Hantera moduler och tillägg för Adobe Commerce och Magento Open Source med kommandoradsgränssnittet och Composer-pakethanteraren.
-source-git-commit: 3432ba8640a82269cb725b8b15854f20c270b1e3
+exl-id: 447eb317-83e1-4900-83a5-9ac1a008e752
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '139'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
-
 
 # Hantera moduler och tillägg
 
@@ -27,7 +27,7 @@ Kommandoanvändning:
 composer show --all <vendor>/<name>
 ```
 
-Exempel:
+Till exempel:
 
 ```bash
 composer show --all example/module
@@ -41,7 +41,7 @@ Kommandoanvändning:
 composer require <vendor>/<name>:<version>
 ```
 
-Exempel:
+Till exempel:
 
 ```bash
 composer require example/module:1.0.0

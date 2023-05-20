@@ -1,13 +1,13 @@
 ---
 title: Kundens personuppgifter (version 1.x)
 description: Läs mer om dataflöde och databastypsmappningar för kundinformation i Magento 1.x.
-source-git-commit: 2120e5bb912a89c58611ef9e23661a54e40a14f1
+exl-id: 8b01418d-8ca1-48fc-9577-a324ed3109d1
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '606'
 ht-degree: 0%
 
 ---
-
 
 # Kundens personuppgifter (version 1.x)
 

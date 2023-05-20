@@ -4,7 +4,8 @@ description: Lär dig hur du sammanfogar och minimerar CSS- och JavaScript-filer
 role: Developer
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: e6e8a2d7ef059265dbcbfcd6be117828a639f6d6
+exl-id: ff0bc407-b563-418b-9d6a-7c1dc8f235df
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '379'
 ht-degree: 0%
@@ -94,4 +95,3 @@ php -f bin/magento config:set dev/js/enable_js_bundling 1
 - [Användarhandbok: Optimera resursfiler](https://docs.magento.com/user-guide/system/file-optimization.html)
 - [Utvecklarhandbok för Fornend: CSS-sammanslagning, miniatyrbilder och webbplatsprestanda](https://developer.adobe.com/commerce/frontend-core/guide/css/#css-merging-minification-and-performance)
 - [Avancerad JavaScript-paketering](../../../performance/advanced-js-bundling.md)
-

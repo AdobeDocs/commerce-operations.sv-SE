@@ -1,19 +1,19 @@
 ---
 title: Använd korrigeringar
 description: Lär dig mer om metoderna för att använda korrigeringsfiler i ett Adobe Commerce- eller Magento Open Source-projekt.
-source-git-commit: e2ddb30da8dd86236e1dcf33a3f911b67384a6d7
+exl-id: 1d5d81ad-0115-4575-adfd-dde7c2826d85
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '326'
 ht-degree: 0%
 
 ---
-
 
 # Tillämpa patchar
 
 Du kan använda patchar på följande sätt:
 
-- [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target=&quot;_blank&quot;}
+- [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
 - [Kommandorad](../patches/apply.md#command-line)
 - [Disposition](../patches/apply.md#composer)
 
@@ -21,7 +21,7 @@ Du kan använda patchar på följande sätt:
 
 >[!IMPORTANT]
 >
->Om du vill använda officiella kvalitetspatchar använder du [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target=&quot;_blank&quot;}. Utför alltid omfattande testning innan du distribuerar någon anpassad patch.
+>Om du vill använda officiella kvalitetspatchar använder du [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}. Utför alltid omfattande testning innan du distribuerar någon anpassad patch.
 
 Så här använder du en anpassad korrigering med Composer:
 
@@ -37,7 +37,7 @@ Så här använder du en anpassad korrigering med Composer:
    - **Titel:** *\&quot;MAGETWO-56934: Checkout page freezes when order with Authorize.net with invalid credit card\&quot;*
    - **Sökväg till korrigering:** *\&quot;patches/composer/github-issue-6474.diff\&quot;*
 
-   Exempel:
+   Till exempel:
 
    ```json
    "extra": {

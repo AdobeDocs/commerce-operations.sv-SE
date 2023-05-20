@@ -1,13 +1,13 @@
 ---
 title: Översikt över sökmotorn
 description: Översikt över sökmotoralternativ för Adobe Commerce och Magento Open Source.
-source-git-commit: 6d2efee51d740583a4606ffa61c972a4020d124b
+exl-id: 0ea78ca2-0bca-4d61-980a-02fb7da04553
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
 
 ---
-
 
 # Översikt över sökmotorn
 

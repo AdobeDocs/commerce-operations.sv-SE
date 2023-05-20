@@ -11,7 +11,7 @@ solution-title: Commerce
 solution: Commerce
 source-git-commit: a45baaede0cce30f98a7d988af804e2b5108fdf8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '131'
 ht-degree: 0%
 
 ---

@@ -1,9 +1,10 @@
 ---
 title: Konfigurera Redis
 description: Få en översikt över Redis-funktioner och starta konfigurationen av Redis.
-source-git-commit: 0d106b36f479ecf2eda3fecf6740b28d4b6793eb
+exl-id: e037c382-334a-4096-a417-a25fdb61a9ce
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '390'
 ht-degree: 0%
 
 ---

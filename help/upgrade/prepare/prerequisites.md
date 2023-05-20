@@ -1,13 +1,13 @@
 ---
 title: Förutsättningar
 description: Förbered ditt Adobe Commerce-projekt för en uppgradering genom att slutföra dessa nödvändiga steg.
-source-git-commit: 5f86717d79569cac3f95a4c10a55b48f92858466
+exl-id: f7775900-1d10-4547-8af0-3d1283d9b89e
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '1639'
 ht-degree: 0%
 
 ---
-
 
 # Krav för fullständig uppgradering
 

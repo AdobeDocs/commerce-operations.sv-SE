@@ -1,13 +1,13 @@
 ---
-title: '"[!DNL Upgrade Compatibility Tool] Felmeddelanden"'
+title: '''[!DNL Upgrade Compatibility Tool] Felmeddelanden'
 description: Läs mer om felmeddelanden du får när du använder [!DNL Upgrade Compatibility Tool] i ditt Adobe Commerce-projekt.
-source-git-commit: 038cb256cb19c253ae9c0375258a555601428847
+exl-id: fe4a17a9-a807-4315-b3cd-e35f34e39f6d
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '4140'
+source-wordcount: '4113'
 ht-degree: 4%
 
 ---
-
 
 # [!DNL Upgrade Compatibility Tool] felmeddelanden
 
@@ -34,7 +34,7 @@ Dessa fel rapporteras när vissa av kärnfilerna saknas eller inte matchar origi
 | 2003 | Composer-beroendet har inte installerats | Kompositörens beroende saknas, vilket kan leda till problem. Återställ beroende genom att köra `composer require package_name`. |
 | 2005 | Kärnmappen hittades inte | Kör `composer install` från projektets rotkatalog. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Egen kod
 
@@ -65,7 +65,7 @@ Allvarliga fel uppstår när den anpassade koden refererar till entiteter som in
 | 5076 | Det går inte att använda i namnutrymmet eftersom det är reserverat sedan PHP 7 | Ersätt det reserverade ordet i namnutrymmet med ett icke-reserverat nyckelord. |
 | 5077 | Det går inte att använda som klassnamn eftersom det är reserverat sedan PHP 7 | Ersätt det reserverade klassnamnet med ett icke-reserverat namn. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### DB-schema
 
@@ -76,19 +76,19 @@ Allvarliga problem med databasscheman rapporteras om borttagna huvudtabeller ell
 | 7009 | Den anpassade begränsningen refererar till en huvudtabell som har tagits bort i målversionen | Ta bort begränsningen eller uppdatera attributen referenceTable och referenceColumn |
 | 7010 | Den anpassade begränsningen refererar till en huvudkolumn som har tagits bort i målversionen | Ta bort begränsningen eller uppdatera attributet referenceColumn |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-### GraphQL-schema
+### GraphQL Schema
 
-Allvarliga problem med GraphQL-schema uppstår om schemaobjekten inte finns i målversionen.
+Allvarliga problem med GraphQL Schema uppstår om schemaobjekten inte finns i målversionen.
 
 | Felkod | Felbeskrivning | Föreslagen åtgärd |
 | --- | --- | --- |
 | 3101 | Typen har tagits bort | Visa alla frågor som refererar till det här fältet. Kontrollera om de här frågorna används av anpassningsimplementeringen. Uppdatera klientkoden för att hantera det ändrade frågegränssnittet. |
-| 3102 | Text borttagen från union | Om unionstypen används i GraphQL-begäran om att konstruera eller bearbeta svar kan det behöva uppdateras. |
+| 3102 | Text borttagen från union | Om unionstypen används i GraphQL-begärankonstruktionen eller svarsimplementeringen kan den behöva uppdateras. |
 | 3103 | Fältet har tagits bort | Kontrollera om det finns referenser till fältet i anpassningskodbasen. Justera implementeringen för att hantera den nya fälttypen korrekt. |
 | 3105 | Implementerat gränssnitt har tagits bort | Kontrollera om den typ som implementerar det borttagna gränssnittet används i anpassningen. Implementeringen kan behöva uppdateras om den förlitar sig på det borttagna gränssnittet. |
-| 3106 | Värde borttaget från enum | Om det borttagna uppräkningsvärdet används i GraphQL-begäran som konstruerar eller svarar på bearbetningen kan det behöva uppdateras. |
+| 3106 | Värde borttaget från enum | Om det borttagna uppräkningsvärdet används i implementeringen av GraphQL-begäran för konstruering eller svarsbearbetning kan det behöva uppdateras. |
 | 3107 | Argumentet har tagits bort | Kontrollera om fältet används i anpassningsdatabasen. Ta bort argumentet för det här fältet. |
 | 3109 | Direktivet borttaget | Kontrollera om direktivet används i anpassningskodbasen. Justera implementeringen för att ta bort referensen till direktivet. |
 | 3110 | Argumentet direktiv har tagits bort | Kontrollera om direktivet används i anpassningskodbasen. Ta bort argumentet för direktivet. |
@@ -101,7 +101,7 @@ Allvarliga problem med GraphQL-schema uppstår om schemaobjekten inte finns i m�
 | 3307 | Ett obligatoriskt argument har lagts till | Kontrollera om fältet används i anpassningsdatabasen. Det nya obligatoriska argumentet ska anges när fältet används. |
 | 3310 | Argumentet för obligatoriskt direktiv har lagts till | Kontrollera om direktivet används i anpassningskodbasen. Lägg till argumentet för direktivet. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Fel
 
@@ -211,7 +211,7 @@ Anpassade kodfel uppstår när anpassad kod använder Adobe Commerce-startpunkte
 | 6009 | `jQuery.parseJSON()` är föråldrad | Om du vill analysera JSON-strängar använder du den systemspecifika JSON.parse-metoden i stället. |
 | 6010 | (`jQuery.expr[":"]`, `jQuery.expr.filters`) är föråldrat | Använd jQuery.expr.pseudos i stället. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### DB-schema
 
@@ -228,7 +228,7 @@ Databasschemafel uppstår om databastabeller, kolumner, index eller begränsning
 | 7007 | Målkärnversionen introducerar en begränsning med samma namn som en begränsning som deklarerats av en anpassad modul | Ta bort (om det är en dubblett till den nya grundbegränsningen) eller byt namn på den anpassade begränsningen |
 | 7008 | Kärnbegränsningen som utökas av en anpassad modul togs bort i målversionen | Använd den nya grundbegränsningen (om den är lämplig) eller byt namn på den anpassade begränsningen |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Varningar
 
@@ -240,7 +240,7 @@ Dessa varningar rapporteras när det finns mindre inkonsekvenser i kärnkodbasen
 | --- | --- | --- |
 | 2004 | Versionsmatchningsfel för Composer-beroenden | Problemet anger att Composer-beroendeversionen i detaljerat och faktiskt projekt är annorlunda. Uppdatera beroende genom att köra `composer update <package_name>`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Egen kod
 
@@ -269,11 +269,11 @@ Anpassade kodvarningar visas när referenser till inaktuell kod identifieras. S�
 | 5074 | Användning av borttagen metod `getResource()` data för (spara/läsa in/ta bort) har identifierats. | Använd en databas i stället. |
 | 5086 | Synligheten har inte deklarerats för en konstant | Deklarera synligheten för alla konstanter. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-### GraphQL-schema
+### GraphQL Schema
 
-Varningar för GraphQL-schema visas när ytterligare objekt läggs till i schemat i den nya versionen. Vi rekommenderar att du granskar implementeringen för att se om de bör användas för begäranden.
+GraphQL Schema-varningar visas när de ytterligare objekten läggs till i schemat i den nya versionen. Vi rekommenderar att du granskar implementeringen för att se om de bör användas för begäranden.
 
 | Felkod | Felbeskrivning | Föreslagen åtgärd |
 | --- | --- | --- |
@@ -284,4 +284,4 @@ Varningar för GraphQL-schema visas när ytterligare objekt läggs till i schema
 | 3306 | Värde tillagt i enum | Ett värde lades till i en uppräkning. Om klienterna innehåller en switch-programsats i uppräkningens värde och inte innehåller något standardfall, kan den här ändringen orsaka oväntat beteende. |
 | 3308 | Valfritt argument har lagts till | Om frågan använder ett nytt argument i anpassningen kan den behöva läggas till i begäran. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

@@ -1,13 +1,13 @@
 ---
 title: Säkerhetskopiera och återställa filsystemet, mediet och databasen
 description: Följ de här stegen för att säkerhetskopiera och återställa ditt Adobe Commerce- eller Magento Open Source-program.
-source-git-commit: 8f05fb6fc212c2b3fda80457bbf27ecf16fb1194
+exl-id: b9925198-37b4-4456-aa82-7c55d060c9eb
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 0%
 
 ---
-
 
 # Säkerhetskopiera och återställa filsystemet, mediet och databasen
 

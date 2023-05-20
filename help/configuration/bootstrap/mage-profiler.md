@@ -1,13 +1,13 @@
 ---
 title: Aktivera profilering
 description: Läs mer om hur du aktiverar MAGE-profilering för användning med analysverktygen.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+exl-id: a46289ed-16dc-4a72-84ff-85fe825dac11
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 0%
 
 ---
-
 
 # Aktivera profilering
 

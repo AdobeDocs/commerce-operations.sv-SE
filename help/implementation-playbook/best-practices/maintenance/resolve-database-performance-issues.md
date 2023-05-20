@@ -4,13 +4,13 @@ description: Lär dig hur du åtgärdar databasproblem som försämrar prestanda
 role: Developer, Admin
 feature-set: Commerce
 feature: Best Practices
-source-git-commit: 1abe86197de68336e10c50cab7ad38eebb098aeb
+exl-id: e40e0564-a4eb-43a8-89dd-9f6c5cedb4a7
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '570'
 ht-degree: 0%
 
 ---
-
 
 <!--Consider moving this topic to the Maintenance section-->
 
@@ -96,4 +96,3 @@ DROP INDEX
 ## Ytterligare information
 
 [Bästa praxis för databaskonfiguration för molndistributioner](../planning/database-on-cloud.md)
-

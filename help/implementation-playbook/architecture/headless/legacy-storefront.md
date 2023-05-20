@@ -31,7 +31,7 @@ Det nuvarande standardalternativet för distribution för de flesta företagskun
 
 Låt oss börja med den mer välbekanta arkitekturen för butiker innan vi börjar använda headless. Om headless är frikopplat är detta den kopplade storefront-arkitekturen, som oftast ses med våra Luma-demos.
 
-Det är här som butiksfunktionerna är nära integrerade med de centrala e-handelstjänsterna, som inte avgränsas av det GraphQL API-lagret. Så det finns en hel del affärslogik kopplad till det temat. Det här tillvägagångssättet är inte headless, och det är inte PWA.
+Det är här som butiksfunktionerna är nära integrerade med de centrala e-handelstjänsterna, som inte avgränsas av GraphQL API-lager. Så det finns en hel del affärslogik kopplad till det temat. Det här tillvägagångssättet är inte headless, och det är inte PWA.
 
 Det här är för närvarande det vanligaste alternativet som handlare använder eftersom det har 100 % funktionsstöd med funktioner för både B2B- och B2C-handel. Den är välbekant, det finns ett välutvecklat ekosystem av expertkunskaper kring den och den är i stort sett kompatibel med Adobe Commerce Marketplace-tillägg.
 

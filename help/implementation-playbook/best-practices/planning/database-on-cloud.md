@@ -4,7 +4,8 @@ description: Lär dig hur du konfigurerar databas- och programinställningar fö
 role: Developer, Admin
 feature-set: Commerce
 feature: Best Practices
-source-git-commit: cf8626bfab170a1e12cc72f0bc344c9beb9349a7
+exl-id: ca377dc8-c8bd-4f77-a24b-22a298e2bba4
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 0%

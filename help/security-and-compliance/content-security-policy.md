@@ -1,13 +1,13 @@
 ---
 title: Översikt över skyddsprofilen för innehåll
 description: Lär dig hur du förbättrar säkerhetspositionen i din Adobe Commerce- eller Magento Open Source-butik med hjälp av en skyddsprofil för innehåll.
-source-git-commit: 1a608e8a5986026d5a187dc8cbd358fed2db5d9e
+exl-id: 81070a09-5f8f-48b1-b542-1443dbd43f5f
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '429'
 ht-degree: 0%
 
 ---
-
 
 # Översikt över skyddsprofilen för innehåll
 

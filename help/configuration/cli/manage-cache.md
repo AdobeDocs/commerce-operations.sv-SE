@@ -1,13 +1,13 @@
 ---
 title: Hantera cacheminnet
 description: Hantera cachetyper och visa cachestatus.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+exl-id: bbd76c00-727b-412e-a8e5-1e013a83a29a
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '870'
 ht-degree: 0%
 
 ---
-
 
 # Hantera cacheminnet
 

@@ -1,13 +1,13 @@
 ---
 title: Loggdatabasaktivitet
 description: Konfigurera Commerce för att logga databasaktivitet med loggningsgränssnittet.
-source-git-commit: 6a3995dd24f8e3e8686a8893be9693581d31712b
+exl-id: 2487c5ec-a01e-4d87-bc5e-c33643b032df
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 0%
 
 ---
-
 
 # Loggdatabasaktivitet
 

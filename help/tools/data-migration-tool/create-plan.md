@@ -1,13 +1,13 @@
 ---
 title: Skapa en datamigreringsplan
 description: Följ de här stegen för att skapa en datamigreringsplan för att säkerställa en lyckad uppgradering från Magento 1 till Magento 2.
-source-git-commit: 2e1a06b59fda7db4a9b32d000e1b2a3ca88926d3
+exl-id: a14237f3-c5fe-4f5f-86eb-ed4c39507bff
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '900'
 ht-degree: 0%
 
 ---
-
 
 # Skapa en datamigreringsplan
 

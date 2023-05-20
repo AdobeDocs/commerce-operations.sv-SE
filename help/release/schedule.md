@@ -4,7 +4,7 @@ description: Lär dig när specifika versioner av Adobe Commerce är schemalagda
 exl-id: ae1e09cd-966f-44a3-9e4d-b90bb838429d
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '500'
 ht-degree: 0%
 
 ---

@@ -1,13 +1,13 @@
 ---
 title: Cachelagring med flera varianter
 description: Lär dig hur cache-rensning fungerar med flera varianter.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+exl-id: 289a4e54-9e73-454c-bfb9-e78e405af56c
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '179'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
-
 
 # Cachelagra flera varianter
 
@@ -23,7 +23,7 @@ Du bör använda `--http-cache-hosts` -parameter för att ange en kommaavgränsa
 
 Parameterformatet måste vara `<hostname or ip>:<listen port>`där du kan utesluta `<listen port>` om det är port 80.
 
-Exempel:
+Till exempel:
 
 ```bash
 bin/magento setup:config:set --http-cache-hosts=192.0.2.100,192.0.2.155:8080

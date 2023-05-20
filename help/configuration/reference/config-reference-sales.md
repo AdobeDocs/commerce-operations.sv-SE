@@ -1,13 +1,13 @@
 ---
 title: Referens för försäljningskonfigurationssökvägar
 description: Visa en lista med värden för försäljningskonfigurationer.
-source-git-commit: bd1bf6edd131ec93902246e95ce857b509f2a619
+exl-id: 7981f78a-5e5f-422c-9bff-54022e1fb9f3
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '1500'
+source-wordcount: '1473'
 ht-degree: 0%
 
 ---
-
 
 # Referens för försäljningskonfigurationssökvägar
 
@@ -66,7 +66,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Aktivera RMA på produktnivå | `sales/magento_rma/enabled_on_product` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Använd butiksadress | `sales/magento_rma/use_store_address` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Sökvägar för e-post
 
@@ -139,7 +139,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Visa order-ID i sidhuvud | `sales_pdf/shipment/put_order_id` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Visa order-ID i sidhuvud | `sales_pdf/creditmemo/put_order_id` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Skattevägar
 
@@ -188,7 +188,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Tillämpa skatt på FPT | `tax/weee/apply_vat` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Inkludera FPT i delsumma | `tax/weee/include_in_subtotal` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Utcheckningsbanor
 
@@ -213,7 +213,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Mall för misslyckad betalning | `checkout/payment_failed/template` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Skicka betalning misslyckades med e-postkopieringsmetod | `checkout/payment_failed/copy_method` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Banor för leveransinställningar
 
@@ -224,7 +224,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Använd anpassad leveranspolicy | `shipping/shipping_policy/enable_shipping_policy` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Leveranspolicy | `shipping/shipping_policy/shipping_policy_content` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Banor för multileveransinställningar
 
@@ -235,7 +235,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Tillåt leverans till flera adresser | `multishipping/options/checkout_multiple` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Högsta tillåtna antal för leverans till flera adresser | `multishipping/options/checkout_multiple_maximum_qty` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Sökvägar för leveransmetoder
 
@@ -381,7 +381,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Visa metod om den inte är tillämplig | `carriers/dhl/showmethod` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Sorteringsordning | `carriers/dhl/sort_order` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Google API-sökvägar
 
@@ -407,7 +407,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Typ av konverteringsvärde | `google/adwords/conversion_value_type` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Konverteringsvärde | `google/adwords/conversion_value` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Presentkortsbanor
 
@@ -432,4 +432,4 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Ny poolstorlek | `giftcard/giftcardaccount_general/pool_size` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Pooltröskel med låg kod | `giftcard/giftcardaccount_general/pool_threshold` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

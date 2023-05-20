@@ -1,13 +1,13 @@
 ---
 title: Konfigurera cachelagrade i CentOS
 description: Installera och konfigurera cachelagrade filer i CentOS.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: fc4ad18b-7e99-496e-aebc-1d7640d8716c
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '561'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera cachelagrade i CentOS
 

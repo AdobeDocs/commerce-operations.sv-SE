@@ -1,13 +1,13 @@
 ---
 title: Skapa eller uppdatera distributionskonfigurationen
 description: Följ de här stegen för att hantera din distributionskonfiguration för Adobe Commerce eller Magento Open Source.
-source-git-commit: f6f438b17478505536351fa20a051d355f5b157a
+exl-id: 2cdde735-0c70-44e8-b2ee-ffb874c1c443
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '708'
 ht-degree: 0%
 
 ---
-
 
 # Skapa eller uppdatera distributionskonfigurationen
 
@@ -42,7 +42,7 @@ I följande tabell beskrivs innebörden av installationsparametrar och -värden.
 | `--session-save` | Använd något av följande:<br><br>- `db` för att lagra sessionsdata i [databas](https://developer.adobe.com/commerce/php/development/cache/partial/database-caching/). Välj databaslagring om du har en klustrad databas; i annat fall kanske det inte finns någon större fördel jämfört med filbaserad lagring.<br><br>- `files` för att lagra sessionsdata i filsystemet. Filbaserad sessionslagring är lämplig om inte filsystemåtkomsten är långsam, du har en klustrad databas eller du vill lagra sessionsdata i Redis.<br><br>- `redis` lagra sessionsdata i [Använd Redis för sessionslagring](../../configuration/cache/config-redis.md). Om du använder Redis som standard- eller sidcache-lagring måste Redis vara installerat. | Nej |
 | `--key` | Om du har en sådan anger du en nyckel som ska krypteras [känsliga data](#sensitive-data) i databasen. Om du inte har någon skapar programmet en åt dig. | Nej |
 | `--db-init-statements` | Avancerad MySQL-konfigurationsparameter. Använder databasinitieringssatser som ska köras vid anslutning till MySQL-databasen.<br><br>Standard är `SET NAMES utf8;`.<br><br>Använd en referens som liknar [den här](https://dev.mysql.com/doc/refman/5.6/en/server-options.html) innan du anger några värden. | Nej |
-| `--http-cache-hosts` | Kommaavgränsad lista över gateway-värdar för HTTP-cache som begäranden om rensning ska skickas till. (Till exempel Varnish-servrar.) Använd den här parametern för att ange värden som ska rensas i samma begäran. (Det spelar ingen roll om du bara har en värd eller många värdar.)<br><br>Formatet måste vara `<hostname or ip>:<listen port>`där du kan utesluta `<listen port>` om det är port 80. Exempel, `--http-cache-hosts=192.0.2.100,192.0.2.155:6081`. Separera inte värdar med ett blankstegstecken. | Nej |
+| `--http-cache-hosts` | Kommaavgränsad lista över gateway-värdar för HTTP-cache som begäranden om rensning ska skickas till. (Till exempel Varnish-servrar.) Använd den här parametern för att ange värden som ska rensas i samma begäran. (Det spelar ingen roll om du bara har en värd eller många värdar.)<br><br>Formatet måste vara `<hostname or ip>:<listen port>`där du kan utesluta `<listen port>` om det är port 80. Till exempel: `--http-cache-hosts=192.0.2.100,192.0.2.155:6081`. Separera inte värdar med ett blankstegstecken. | Nej |
 
 ## Importera konfigurationsdata
 

@@ -1,13 +1,13 @@
 ---
 title: Installera lack
 description: Se råd om hur du installerar Varnish.
-source-git-commit: c65c065c5f9ac2847caa8898535afdacf089006a
+exl-id: e1881a85-3965-42d9-a46f-c2f5f20fbacc
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%
 
 ---
-
 
 # Installera lack
 

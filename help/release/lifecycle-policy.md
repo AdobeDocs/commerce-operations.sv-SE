@@ -4,8 +4,8 @@ description: Läs om viktiga datum för när supporten för Adobe Commerce upph�
 exl-id: 9ee4ecc8-d893-412a-a605-5a8606a1b9a9
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '315'
+ht-degree: 10%
 
 ---
 

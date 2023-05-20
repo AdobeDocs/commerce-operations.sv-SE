@@ -4,13 +4,13 @@ description: Lär dig hur du undviker problem med statiskt innehåll som inte vi
 role: Developer
 feature: Best Practices
 feature-set: Commerce
-source-git-commit: 48c5666ee9b83bbf8a5c6375ec53762d918bcece
+exl-id: 9f521963-6fe4-4844-b2d1-fd457b706900
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 0%
 
 ---
-
 
 # Bästa tillvägagångssätt vid distribution av statiskt innehåll
 
@@ -54,4 +54,3 @@ I vår utvecklardokumentation:
 * [Distributionsflöde](../../../performance/deployment-flow.md)
 * [Driftsättning utan driftstopp](https://devdocs.magento.com/cloud/deploy/reduce-downtime.html)
 * [Optimera molndistributionen](https://devdocs.magento.com/cloud/deploy/optimize-cloud-deployment.html)
-

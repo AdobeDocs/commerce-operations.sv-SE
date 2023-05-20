@@ -1,7 +1,8 @@
 ---
-title: "[!DNL Observation for Adobe Commerce]"
+title: '[!DNL Observation for Adobe Commerce]'
 description: Läs mer om [!DNL Observation for Adobe Commerce], dess användningsområden, när de ska användas och hur du får tillgång till dem.
-source-git-commit: c40d78d37dc37b5ce38f61b46bcfb4d439a51ac2
+exl-id: a787be0f-5dd8-4acc-adbf-5cedd96b08d6
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%

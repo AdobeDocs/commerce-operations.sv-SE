@@ -1,13 +1,13 @@
 ---
 title: Rubriken X-Frame-Options
 description: Använd X-Frame-Options för att styra sidåtergivningen.
-source-git-commit: db696b8ca501d128db655c5ebb161c654c6378a7
+exl-id: 83cf5fd2-3eb8-4bd9-99e2-1c701dcd1382
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 0%
 
 ---
-
 
 # Rubriken X-Frame-Options
 
@@ -20,7 +20,7 @@ The `X-Frame-Options` I kan du ange om en webbläsare ska kunna återge en sida 
 
 >[!WARNING]
 >
->The `ALLOW-FROM <uri>` eftersom webbläsare som stöds i Commerce inte längre stöder det. Se [Webbläsarkompatibilitet](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options#browser_compatibility).
+>The `ALLOW-FROM <uri>` eftersom webbläsare som stöder Commerce inte längre stöder det. Se [Webbläsarkompatibilitet](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options#browser_compatibility).
 
 >[!WARNING]
 >

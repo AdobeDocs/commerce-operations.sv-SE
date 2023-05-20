@@ -1,13 +1,13 @@
 ---
 title: Konfigurera och köra cron-jobb
 description: Lär dig hur du hanterar cron-jobb.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+exl-id: 8ba2b2f9-5200-4e96-9799-1b00d7d23ce1
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '745'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera cron-jobb
 

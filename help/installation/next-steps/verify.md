@@ -1,13 +1,13 @@
 ---
 title: Verifiera installationen
 description: Följ de här stegen för att bekräfta att din lokala installation av Adobe Commerce eller Magento Open Source lyckades.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 0bd7ec01-c616-4384-ae26-db2ce3668caf
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '259'
 ht-degree: 0%
 
 ---
-
 
 # Verifiera installationen
 

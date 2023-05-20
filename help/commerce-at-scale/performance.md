@@ -68,9 +68,9 @@ En annan inställning som optimeras när statusfilnivån konfigureras är instä
 >
 > Mer detaljerad information om detta finns i [aem-dispatcher-experiment](https://github.com/adobe/aem-dispatcher-experiments/tree/main/experiments/gracePeriod) GitHub-databas.
 
-## CIF - GraphQL-cachelagring via komponenter
+## CIF - GraphQL-cachning via komponenter
 
-Enskilda komponenter i AEM kan ställas in till att cachelagras, vilket innebär att GraphQL-begäran till Adobe Commerce anropas en gång och efterföljande begäranden, upp till den konfigurerade tidsgränsen, hämtas från AEM cache och inte skulle placera ytterligare inläsning på Adobe Commerce. Exempel är en webbplatsnavigering baserad på ett kategoriträd som visas på varje sida och alternativ inom en fasetterad sökfunktion - det är bara två områden där resurskrävande frågor på Adobe Commerce behöver byggas men som sannolikt inte ändras regelbundet och därför är bra att välja mellan för cachelagring. Detta innebär att även när en PDP eller PLP återskapas av utgivaren skulle den resurskrävande GraphQL-begäran för navigeringsbygget inte drabba Adobe Commerce och skulle kunna hämtas från GraphQL-cachen AEM CIF.
+Enskilda komponenter i AEM kan ställas in för cachelagring, vilket innebär att GraphQL-begäran till Adobe Commerce anropas en gång och sedan hämtas efterföljande begäranden, upp till den konfigurerade tidsgränsen, från AEM cache och skulle inte placera ytterligare inläsning på Adobe Commerce. Exempel är en webbplatsnavigering baserad på ett kategoriträd som visas på varje sida och alternativ inom en fasetterad sökfunktion - det är bara två områden där resurskrävande frågor på Adobe Commerce behöver byggas men som sannolikt inte ändras regelbundet och därför är bra att välja mellan för cachelagring. På det här sättet kommer, till exempel, även när utgivaren återskapar en PDP eller PLP, den resurskrävande GraphQL-begäran för navigeringsbygget inte att drabba Adobe Commerce och kan hämtas från GraphQL-cachen AEM CIF.
 
 Ett exempel nedan är om navigeringskomponenten ska cachelagras eftersom samma GraphQL-fråga skickas till alla sidor på platsen. I begäran nedan cachelagras de senaste 100 posterna under 10 minuter för navigeringsstrukturen:
 
@@ -86,7 +86,7 @@ com.adobe.cq.commerce.core.search.services.SearchFilterService:true:100:3600
 
 Begäran, inklusive alla anpassade http-huvuden och variabler, måste matcha exakt för att cachen ska&quot;trätas&quot; och för att förhindra att Adobe Commerce anropas igen. Det bör noteras att det inte finns något enkelt sätt att göra cachen ogiltig manuellt när den väl har angetts. Detta kan innebära att om en ny kategori läggs till i Adobe Commerce, kommer den inte att börja visas i navigeringen förrän den förfallotid som angetts i cachen ovan har gått ut och GraphQL-begäran har uppdaterats. Detsamma gäller för sökfacets. Med tanke på de prestandafördelar som cachelagringen medför är detta dock vanligtvis en godtagbar kompromiss.
 
-Cachelagringsalternativen ovan kan ställas in med konfigurationskonsolen för AEM OSGi i &quot;GraphQL Client Configuration Factory&quot;. Varje cachekonfigurationspost kan anges med följande format:
+Cachelagringsalternativen ovan kan ställas in med konfigurationskonsolen för AEM OSGi i GraphQL Client Configuration Factory. Varje cachekonfigurationspost kan anges med följande format:
 
 ```
 • NAME:ENABLE:MAXSIZE:TIMEOUT like for example mycache:true:1000:60 where each attribute is defined as:
@@ -96,7 +96,7 @@ Cachelagringsalternativen ovan kan ställas in med konfigurationskonsolen för A
     › TIMEOUT (Integer): timeout for each cache entry (in seconds)
 ```
 
-## Hybrid-cachning - GraphQL-begäranden på klientsidan i cachelagrade dispatchersidor
+## Hybrid-cachning - klientsidan begär GraphQL-filer på cachelagrade dispatchersidor
 
 Det är också möjligt att använda en hybridmetod för cachelagring av sidor: en CIF-sida kan innehålla komponenter som alltid begär den senaste informationen från Adobe Commerce direkt från kundens webbläsare. Detta kan vara användbart för specifika delar av sidan i en mall som är viktiga att hålla uppdaterad med realtidsinformation: Produktpriser inom en PDP, till exempel. Om priserna ändras ofta på grund av dynamisk prismatchning kan den informationen konfigureras så att den inte cachas av dispatchern, i stället kan priserna hämtas på klientsidan i kundens webbläsare direkt från Adobe Commerce via GraphQL API:er med AEM CIF-webbkomponenter.
 
@@ -104,9 +104,9 @@ Detta kan konfigureras via AEM komponentinställningar - för prisinformation p�
 
 Metoderna ovan bör endast användas i de fall då det krävs information i realtid som är ständigt aktuell. I exemplet ovan med prissättning kan man komma överens med affärsintressenter om att bara uppdatera priserna dagligen vid låg trafiktid och sedan utföra cachetömning. På så sätt elimineras behovet av information om realtidspriser och den efterföljande extra belastningen på Adobe Commerce när varje sida med prisinformation skapas.
 
-## Oåtkomliga GraphQL-begäranden
+## Otillgängliga GraphQL-begäranden
 
-Specifika dynamiska datakomponenter på sidor får inte cachas och kräver alltid ett GraphQL-anrop till Adobe Commerce, t.ex. för kundvagnen och samtal på kassasidorna. Den här informationen är specifik för en användare och ändras ständigt på grund av kundens aktivitet på webbplatsen, t.ex. genom att produkter läggs till i kundvagnen.
+Specifika dynamiska datakomponenter på sidor får inte cachelagras och kräver alltid ett GraphQL-samtal till Adobe Commerce, t.ex. för kundvagnen och samtal på kassasidorna. Den här informationen är specifik för en användare och ändras ständigt på grund av kundens aktivitet på webbplatsen, t.ex. genom att produkter läggs till i kundvagnen.
 
 GraphQL Query-resultat ska inte cachas för inloggade kunder om webbplatsens design ger olika svar beroende på användarens roll. Du kan till exempel skapa flera kundgrupper och ange olika produktpriser eller olika synlighet för produktkategorier för varje grupp. Cachelagra resultat som dessa kan få kunderna att se priserna för en annan kundgrupp eller få felaktiga kategorier att visas.
 

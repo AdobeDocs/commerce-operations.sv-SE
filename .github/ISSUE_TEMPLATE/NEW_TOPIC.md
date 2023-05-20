@@ -1,7 +1,7 @@
 ---
 name: New topic
 about: Create a request to add missing information
-title: '''Begäran om nytt ämne'''
+title: 'Begäran om nytt ämne'
 labels: New Topic
 assignees: ''
 source-git-commit: b0f4671b8c214397af77cbd316e489dac1ce8601

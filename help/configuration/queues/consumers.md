@@ -1,13 +1,13 @@
 ---
 title: Konsumenter i meddelandekön
 description: Läs om användare av meddelandekön i Adobe Commerce och Magento Open Source, inklusive funktioner och systemkonfigurationsinställningar som är kopplade till dem.
-source-git-commit: f9db986510a3ec8e62b9d628da40fdfd9741479f
+exl-id: 7fd7ab3f-581f-493c-956c-731f111d1b14
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '972'
 ht-degree: 0%
 
 ---
-
 
 # Konsumenter i meddelandekön
 

@@ -1,13 +1,13 @@
 ---
 title: Underhållslägesalternativ för uppgradering
 description: Skapa en anpassad sida för underhållsläge som kunderna ser på Adobe Commerce eller Magento Open Source i butiken medan du utför en uppgradering.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 77e6d82d-5cc6-4d14-8b5c-1d2108f27b29
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 0%
 
 ---
-
 
 # Alternativ för underhållsläge vid uppgradering
 

@@ -1,13 +1,13 @@
 ---
-title: "Översikt över [!DNL Upgrade Compatibility Tool]"
+title: Översikt över [!DNL Upgrade Compatibility Tool]
 description: Läs mer om [!DNL Upgrade Compatibility Tool] och hur det kan hjälpa dig med ditt Adobe Commerce-projekt.
-source-git-commit: d263e412022a89255b7d33b267b696a8bb1bc8a2
+exl-id: 9493406a-1690-462b-b119-1b685b026c0b
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '344'
 ht-degree: 0%
 
 ---
-
 
 # Guide overview
 

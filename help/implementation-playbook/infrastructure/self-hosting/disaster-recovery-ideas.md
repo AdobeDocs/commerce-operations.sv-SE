@@ -7,13 +7,13 @@ kt: 11420
 doc-type: tutorial
 audience: all
 last-substantial-update: 2023-04-13T00:00:00Z
-source-git-commit: 6e361169889c8fe1c176d3a3283d52699dfa3b85
+exl-id: cab6213b-da44-498f-b5c1-e7f89e95038e
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '1771'
 ht-degree: 0%
 
 ---
-
 
 # Självvärdande idéer om Adobe Commerce Disaster Recovery
 

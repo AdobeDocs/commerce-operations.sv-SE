@@ -1,7 +1,8 @@
 ---
 title: Konfigurera cachelagring
 description: Lär dig mer om cachelagring och hur du konfigurerar cachemekanismer för Adobe Commerce och Magento Open Source.
-source-git-commit: 5e072a87480c326d6ae9235cf425e63ec9199684
+exl-id: 6effa069-c043-411a-b161-01210be17391
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 0%

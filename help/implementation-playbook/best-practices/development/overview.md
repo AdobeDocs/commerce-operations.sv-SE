@@ -1,13 +1,13 @@
 ---
 title: Implementeringsutvecklingsfas
 description: Lär dig mer om de effektivaste strategierna för implementering i utvecklingsfasen av Adobe Commerce-projekt.
-source-git-commit: ae9573f3766c59887aea177cb85bf889c2161bfc
+exl-id: 499c16df-0e4d-4950-8169-96356bdff1a7
+source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '158'
 ht-degree: 0%
 
 ---
-
 
 # Utvecklingsfas
 
