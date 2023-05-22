@@ -1,8 +1,9 @@
 ---
 title: Konfigurera sökstoppord
 description: Lär dig hur du hanterar stoppord för Adobe Commerce med CSV-filer.
+feature: Configuration, Search
 exl-id: 75320868-9939-4a6e-8dbb-73ca68c9f0ee
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 789b7d9dc400b1f669de0067a59e2036c2977a19
 workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 0%

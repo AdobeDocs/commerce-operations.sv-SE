@@ -1,8 +1,9 @@
 ---
 title: Konfigurera överordnad databaser automatiskt
 description: Mer information om hur du konfigurerar den delade databaslösningen automatiskt.
+recommendations: noCatalog
 exl-id: a27ad097-de60-4cdd-81f9-eb1ae84587e4
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: af45ac46afffeef5cd613628b2a98864fd7da69b
 workflow-type: tm+mt
 source-wordcount: '355'
 ht-degree: 0%

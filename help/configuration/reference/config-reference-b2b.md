@@ -1,8 +1,9 @@
 ---
 title: Referens för konfigurationssökvägar för B2B-tillägg
 description: Se en lista över B2B-relaterade konfigurationsvärden.
+feature: Configuration, B2B, Companies, Payments, Quotes
 exl-id: 3414dea1-17c9-4462-8b8a-51a6045b0bc9
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 16e9396f19693436dfc7bdac78d84624a78f0c21
 workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 0%
