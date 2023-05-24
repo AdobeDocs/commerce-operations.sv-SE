@@ -1,11 +1,19 @@
 ---
-source-git-commit: 20ebf9dc6c7a1aac1d183ed31b1a80a674d633f1
+source-git-commit: 45b3f12d3ea333624a0a8a872b1eb412a98fda6d
 workflow-type: tm+mt
-source-wordcount: '271'
-ht-degree: 70%
+source-wordcount: '289'
+ht-degree: 66%
 
 ---
 # Systemkrav
+
+>[!IMPORTANT]
+>
+>Tjänstversion och kompatibilitetsstöd för Adobe Commerce i molninfrastruktur avgörs av vilka versioner som distribueras i molninfrastrukturen, och skiljer sig ibland från de versioner som stöds av Adobe Commerce lokala distributioner. Se [Programvara och tjänster som stöds](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/cloud-architecture.html#supported-software-and-services) i _Molnguide_. Elasticsearch 7.17 stöds till exempel i 2.4.4 för anläggningsdistributioner, men Open Search 1.2 stöds i molninfrastrukturen.
+
+>[!NOTE]
+>
+><sup>*</sup>Adobe Commerce 2.4.5 och tidigare stöder endast MySQL 8.0.28 och tidigare.
 
 <table style="table-layout:auto">
   <thead>
@@ -797,11 +805,3 @@ ht-degree: 70%
     </tr>
   </tbody>
 </table>
-
->[!IMPORTANT]
->
->Tjänstversion och kompatibilitetsstöd för Adobe Commerce i molninfrastruktur avgörs av vilka versioner som distribueras i molninfrastrukturen, och skiljer sig ibland från de versioner som stöds av Adobe Commerce lokala distributioner. Se [Programvara och tjänster som stöds](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/cloud-architecture.html#supported-software-and-services) i _Molnguide_.
-
->[!NOTE]
->
-><sup>*</sup>Adobe Commerce 2.4.5 och tidigare stöder endast MySQL 8.0.28 och tidigare.
