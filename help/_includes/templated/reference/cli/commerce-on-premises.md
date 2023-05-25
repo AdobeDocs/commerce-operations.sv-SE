@@ -1,5 +1,5 @@
 ---
-source-git-commit: a1f99f839f11ab42356b87a69398999bb03cd544
+source-git-commit: ad7f05eaa5f144b5a8616307d65be635a0c499eb
 workflow-type: tm+mt
 source-wordcount: '19443'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 **Version**: 2.4.6
 
 Referensen innehåller 130 kommandon som är tillgängliga via `bin/magento` kommandoradsverktyg.
-Den inledande listan genereras automatiskt med `bin/magento list` i utgåvan.
+Den inledande listan genereras automatiskt med `bin/magento list` på Adobe Commerce.
 Använd [&quot;Lägg till CLI-kommandon&quot;](https://developer.adobe.com/commerce/php/development/cli-commands/) för att lägga till ett eget CLI-kommando.
 
 >[!NOTE]

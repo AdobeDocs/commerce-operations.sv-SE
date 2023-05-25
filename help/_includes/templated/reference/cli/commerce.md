@@ -1,7 +1,7 @@
 ---
-source-git-commit: 27e7a262fd1d8092045f5ebe2f88caaec37a6b0d
+source-git-commit: ad7f05eaa5f144b5a8616307d65be635a0c499eb
 workflow-type: tm+mt
-source-wordcount: '29783'
+source-wordcount: '29786'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 **Version**: 1.42.0
 
 Referensen innehåller 134 kommandon som är tillgängliga via `magento-cloud` kommandoradsverktyg.
-Den inledande listan genereras automatiskt med `magento-cloud list` i utgåvan.
+Den inledande listan genereras automatiskt med `magento-cloud list` på Adobe Commerce om molninfrastruktur.
 
 >[!NOTE]
 >
