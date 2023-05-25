@@ -1,26 +1,26 @@
 ---
-title: Adobe Commerce 2.3.5 - uppgraderingskrav för MariaDB
-description: Lär dig hur du förbereder din Adobe Commerce-databas för uppgradering från Adobe Commerce 2.3.5.
+title: Adobe Commerce uppgraderingskrav för MariaDB
+description: Lär dig hur du förbereder din Adobe Commerce-databas för att uppgradera MariaDB från en tidigare version.
 role: Developer
 feature-set: Commerce
 feature: Best Practices
 exl-id: b86e471f-e81f-416b-a321-7aa1ac73d27c
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 73663659dd1b3305bf8c9a167852b24dc1016e7d
 workflow-type: tm+mt
-source-wordcount: '641'
+source-wordcount: '627'
 ht-degree: 0%
 
 ---
 
 # Krav för uppgradering av MariaDB
 
-Om du uppgraderar från Adobe Commerce 2.3.4 eller tidigare till en senare version måste du uppgradera MariaDB-tjänsten i molninfrastrukturen från version 10.0 eller 10.2 till version 10.3 eller 10.4. MariaDB version 10.3 och senare kräver att databasen använder det dynamiska tabellradformatet och Adobe Commerce kräver att du använder InnoDB-lagringsmotorn för tabeller. I den här artikeln beskrivs hur du uppdaterar din databas så att den uppfyller dessa MariaDB-krav.
+Uppgradera MariaDB-tjänsten i molninfrastrukturen från version 10.0 eller 10.2 till version 10.3, 10.4 eller 10.5. MariaDB version 10.3 och senare kräver att databasen använder det dynamiska tabellradformatet och Adobe Commerce kräver att du använder InnoDB-lagringsmotorn för tabeller. I den här artikeln beskrivs hur du uppdaterar din databas så att den uppfyller dessa MariaDB-krav.
 
 När du har förberett databasen skickar du en Adobe Commerce supportanmälan för att uppdatera MariaDB-tjänstversionen i din molninfrastruktur innan du fortsätter med uppgraderingsprocessen för Adobe Commerce.
 
 ## Berörda produkter och versioner
 
-Adobe Commerce i molninfrastruktur med Adobe Commerce version 2.3.4 eller tidigare och MariaDB version 10.0 eller tidigare.
+Adobe Commerce i molninfrastruktur med MariaDB version 10.3 eller tidigare.
 
 ## Förbered databasen för uppgraderingen
 
@@ -119,7 +119,7 @@ Processen att konvertera lagringsformatet skiljer sig åt för Adobe Commerce St
 
 ### Verifiera databaskonverteringen
 
-Dagen före den schemalagda uppgraderingen till MariaDB version 10.2 kontrollerar du att alla tabeller har rätt radformat och lagringsmotor. Verifiering krävs eftersom koddistributioner som görs efter att du har slutfört konverteringen kan göra att vissa tabeller återställs till den ursprungliga konfigurationen.
+Dagen före den schemalagda uppgraderingen till MariaDB version 10.3, 10.4 eller 10.6 kontrollerar du att alla tabeller har rätt radformat och lagringsmotor. Verifiering krävs eftersom koddistributioner som görs efter att du har slutfört konverteringen kan göra att vissa tabeller återställs till den ursprungliga konfigurationen.
 
 1. Logga in i databasen.
 
