@@ -1,7 +1,7 @@
 ---
-source-git-commit: ad7f05eaa5f144b5a8616307d65be635a0c499eb
+source-git-commit: adb585771fb1353614ea600117f18ba8b55b65f0
 workflow-type: tm+mt
-source-wordcount: '29786'
+source-wordcount: '21307'
 ht-degree: 0%
 
 ---
@@ -10,135 +10,14 @@ ht-degree: 0%
 <!-- All the assigned and captured content is used in the included template -->
 
 <!-- The template to render with above values -->
-**Version**: 1.42.0
+**Version**: 1.43.0
 
-Referensen innehåller 134 kommandon som är tillgängliga via `magento-cloud` kommandoradsverktyg.
+Referensen innehåller 115 kommandon som är tillgängliga via `magento-cloud` kommandoradsverktyg.
 Den inledande listan genereras automatiskt med `magento-cloud list` på Adobe Commerce om molninfrastruktur.
 
 >[!NOTE]
 >
 >Den här referensen genereras från programmets kodbas. Om du vill ändra innehållet kan du uppdatera källkoden för motsvarande kommandoimplementering i [kodbas](https://github.com/magento) arkivera och skicka in dina ändringar för granskning. Ett annat sätt är att _Ge oss feedback_ (hitta länken i det övre högra hörnet). Information om riktlinjer för bidrag finns i [Kodavgifter](https://developer.adobe.com/commerce/contributor/guides/code-contributions/).
-
-## `_completion`
-
-BAS-slutförandekrok.
-
-```bash
-_completion [-g|--generate-hook] [-p|--program PROGRAM] [-m|--multiple] [--shell-type [SHELL-TYPE]]
-```
-
-### `--generate-hook`, `-g`
-
-Generera BASH-kod som anger slutförande för det här programmet.
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--program`, `-p`
-
-Programnamn som ska utlösa slutförande &lt;comment>(standard är den absoluta programsökvägen)&lt;/comment>.
-
-- Kräver ett värde
-
-### `--multiple`, `-m`
-
-Genererad krok kan användas för flera program.
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--shell-type`
-
-Ange gränssnittstypen (zsh eller bash). I annat fall bestäms detta automatiskt.
-
-- Accepterar ett värde
-
-
-## `bot`
-
-Magento Cloud Bot
-
-```bash
-magento-cloud bot [--party] [--parrot]
-```
-
-### `--party`
-
-
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--parrot`
-
-
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa det här hjälpmeddelandet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas exakthet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--yes`, `-y`
-
-svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`
-
-Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `clear-cache`
 
@@ -148,16 +27,6 @@ Rensa CLI-cachen
 magento-cloud clear-cache
 ```
 
-
-```bash
-clearcache
-```
-
-
-```bash
-cc
-```
-
 ### `--help`, `-h`
 
 Visa det här hjälpmeddelandet
@@ -189,34 +58,6 @@ svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, 
 ### `--no-interaction`
 
 Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -274,34 +115,6 @@ svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, 
 ### `--no-interaction`
 
 Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -372,34 +185,6 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `help`
 
@@ -419,7 +204,7 @@ Kommandonamnet
 
 ### `--format`
 
-Utdataformatet (txt, xml, json eller md)
+Utdataformatet (txt, json eller md)
 
 - Standard: `txt`
 - Kräver ett värde
@@ -462,113 +247,6 @@ svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, 
 ### `--no-interaction`
 
 Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-
-## `legacy-migrate`
-
-Migrera från den äldre filstrukturen
-
-```bash
-magento-cloud legacy-migrate [--no-backup]
-```
-
-### `--no-backup`
-
-Skapa ingen säkerhetskopia av projektet.
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa det här hjälpmeddelandet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas exakthet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--yes`, `-y`
-
-svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`
-
-Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -646,34 +324,6 @@ svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, 
 ### `--no-interaction`
 
 Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -759,34 +409,6 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `web`
 
@@ -815,12 +437,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 Miljö-ID
@@ -858,178 +474,6 @@ svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, 
 ### `--no-interaction`
 
 Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-
-## `welcome`
-
-Välkommen till Magento Cloud
-
-```bash
-magento-cloud welcome
-```
-
-### `--help`, `-h`
-
-Visa det här hjälpmeddelandet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas exakthet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--yes`, `-y`
-
-svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`
-
-Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-
-## `winky`
-
-
-
-```bash
-magento-cloud winky
-```
-
-### `--help`, `-h`
-
-Visa det här hjälpmeddelandet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas exakthet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--yes`, `-y`
-
-svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`
-
-Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1051,14 +495,14 @@ Aktivitets-ID. Standardvärdet är den senaste avbrutna aktiviteten.
 
 ### `--type`
 
-Filtrera efter typ (när du väljer en standardaktivitet). Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg. Tecknet % kan användas som jokertecken för typen, t.ex. %var% för att välja variabelrelaterade aktiviteter.
+Filtrera efter typ (när du väljer en standardaktivitet). Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg. Tecknen % och * kan användas som jokertecken för typen, t.ex. %var% för att välja variabelrelaterade aktiviteter.
 
 - Standard: `[]`
 - Kräver ett värde
 
 ### `--exclude-type`
 
-Exkludera efter typ (när du väljer en standardaktivitet). Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg. Tecknet % kan användas som jokertecken för att utesluta typer.
+Exkludera efter typ (när du väljer en standardaktivitet). Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg. Tecknen % och * kan användas som jokertecken för att utesluta typer.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -1073,12 +517,6 @@ Kontrollera senaste aktiviteter i alla miljöer (när du väljer en standardakti
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -1119,34 +557,6 @@ svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, 
 ### `--no-interaction`
 
 Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1174,14 +584,14 @@ Egenskapen som ska visas
 
 ### `--type`
 
-Filtrera efter typ (när du väljer en standardaktivitet). Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg. Tecknet % kan användas som jokertecken för typen, t.ex. %var% för att välja variabelrelaterade aktiviteter.
+Filtrera efter typ (när du väljer en standardaktivitet). Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg. Tecknen % och * kan användas som jokertecken för typen, t.ex. %var% för att välja variabelrelaterade aktiviteter.
 
 - Standard: `[]`
 - Kräver ett värde
 
 ### `--exclude-type`
 
-Exkludera efter typ (när du väljer en standardaktivitet). Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg. Tecknet % kan användas som jokertecken för att utesluta typer.
+Exkludera efter typ (när du väljer en standardaktivitet). Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg. Tecknen % och * kan användas som jokertecken för att utesluta typer.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -1219,12 +629,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 Miljö-ID
@@ -1240,7 +644,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 ### `--columns`, `-c`
 
-Kolumner att visa. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Kolumner att visa. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -1294,34 +698,6 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `activity:list`
 
@@ -1331,26 +707,16 @@ Hämta en lista över aktiviteter för en miljö eller ett projekt
 magento-cloud activity:list [-t|--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LIMIT] [--start START] [--state STATE] [--result RESULT] [-i|--incomplete] [-a|--all] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 ```
 
-
-```bash
-activities
-```
-
-
-```bash
-act
-```
-
 ### `--type`, `-t`
 
-Filtrera aktiviteter efter typ Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg. Tecknet % kan användas som jokertecken för typen, t.ex. %var% för att välja variabelrelaterade aktiviteter.
+Filtrera aktiviteter efter typ Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg. Tecknen % och * kan användas som jokertecken för typen, t.ex. %var% för att välja variabelrelaterade aktiviteter.
 
 - Standard: `[]`
 - Kräver ett värde
 
 ### `--exclude-type`, `-x`
 
-Uteslut aktiviteter efter typ. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg. Tecknet % kan användas som jokertecken för att utesluta typer.
+Uteslut aktiviteter efter typ. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg. Tecknen % och * kan användas som jokertecken för att utesluta typer.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -1404,7 +770,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 ### `--columns`, `-c`
 
-Kolumner att visa. Tillgängliga kolumner: id*, created*, description*, progress*, state*, result*, complete, environment, type (* = default columns). Tecknet&quot;+&quot; kan användas som platshållare för standardkolumnerna. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Kolumner att visa. Tillgängliga kolumner: id*, created*, description*, progress*, state*, result*, complete, environment, type (* = default columns). Tecknet&quot;+&quot; kan användas som platshållare för standardkolumnerna. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -1426,12 +792,6 @@ Datumformatet (som en PHP-datumformatsträng)
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -1476,34 +836,6 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `activity:log`
 
@@ -1535,14 +867,14 @@ Visa en tidsstämpel bredvid varje meddelande
 
 ### `--type`
 
-Filtrera efter typ (när du väljer en standardaktivitet). Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg. Tecknet % kan användas som jokertecken för typen, t.ex. %var% för att välja variabelrelaterade aktiviteter.
+Filtrera efter typ (när du väljer en standardaktivitet). Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg. Tecknen % och * kan användas som jokertecken för typen, t.ex. %var% för att välja variabelrelaterade aktiviteter.
 
 - Standard: `[]`
 - Kräver ett värde
 
 ### `--exclude-type`
 
-Exkludera efter typ (när du väljer en standardaktivitet). Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg. Tecknet % kan användas som jokertecken för att utesluta typer.
+Exkludera efter typ (när du väljer en standardaktivitet). Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg. Tecknen % och * kan användas som jokertecken för att utesluta typer.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -1587,12 +919,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 Miljö-ID
@@ -1634,172 +960,6 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-
-## `api:curl`
-
-Kör en autentiserad cURL-begäran på Magento Cloud API
-
-```bash
-magento-cloud api:curl [-X|--request REQUEST] [-d|--data DATA] [--json JSON] [-i|--include] [-I|--head] [--disable-compression] [--enable-glob] [-f|--fail] [-H|--header HEADER] [--] [<path>]
-```
-
-
-### `path`
-
-API-sökvägen
-
-
-### `--request`, `-X`
-
-Begärandemetoden som ska användas
-
-- Kräver ett värde
-
-### `--data`, `-d`
-
-Data som ska skickas
-
-- Kräver ett värde
-
-### `--json`
-
-JSON-data att skicka
-
-- Kräver ett värde
-
-### `--include`, `-i`
-
-Inkludera sidhuvuden i utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--head`, `-I`
-
-Hämta endast rubriker
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--disable-compression`
-
-Använd inte flaggan curl —compressed
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--enable-glob`
-
-Aktivera bläddring (ta bort flaggan —globoff)
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--fail`, `-f`
-
-Misslyckades utan utdata på ett felsvar
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--header`, `-H`
-
-Extra rubrik(er)
-
-- Standard: `[]`
-- Kräver ett värde
-
-### `--help`, `-h`
-
-Visa det här hjälpmeddelandet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas exakthet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--yes`, `-y`
-
-svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`
-
-Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `app:config-get`
 
@@ -1825,12 +985,6 @@ Om cachen ska uppdateras
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -1887,46 +1041,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `app:list`
 
 Visa program i projektet
 
 ```bash
-magento-cloud apps [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
-```
-
-
-```bash
-apps
+magento-cloud app:list [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 ```
 
 ### `--refresh`
@@ -1936,15 +1057,16 @@ Om cachen ska uppdateras
 - Standard: `false`
 - Accepterar inte ett värde
 
+### `--pipe`
+
+Skriv endast ut en lista med programnamn
+
+- Standard: `false`
+- Accepterar inte ett värde
+
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -1963,7 +1085,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 ### `--columns`, `-c`
 
-Kolumner att visa. Tillgängliga kolumner: namn*, typ*, disk, sökväg, storlek (* = standardkolumner). Tecknet&quot;+&quot; kan användas som platshållare för standardkolumnerna. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Kolumner att visa. Tillgängliga kolumner: namn*, typ*, disk, sökväg, storlek (* = standardkolumner). Tecknet&quot;+&quot; kan användas som platshållare för standardkolumnerna. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -2006,34 +1128,6 @@ svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, 
 ### `--no-interaction`
 
 Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2082,46 +1176,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `auth:browser-login`
 
 Logga in på Magento Cloud via en webbläsare
 
 ```bash
-magento-cloud login [-f|--force] [--browser BROWSER] [--pipe]
-```
-
-
-```bash
-login
+magento-cloud auth:browser-login [-f|--force] [--browser BROWSER] [--pipe]
 ```
 
 ### `--force`, `-f`
@@ -2179,34 +1240,6 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `auth:info`
 
@@ -2251,7 +1284,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 ### `--columns`, `-c`
 
-Kolumner att visa. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Kolumner att visa. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -2298,46 +1331,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `auth:logout`
 
 Logga ut från Magento Cloud
 
 ```bash
-magento-cloud logout [-a|--all] [--other]
-```
-
-
-```bash
-logout
+magento-cloud auth:logout [-a|--all] [--other]
 ```
 
 ### `--all`, `-a`
@@ -2389,197 +1389,6 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-
-## `auth:password-login`
-
-&lt;fg white=&quot;&quot; bg=&quot;red&quot;>[ INAKTUELL ]&lt;/> Logga in på Magento Cloud med ett användarnamn och lösenord
-
-```bash
-magento-cloud auth:password-login
-```
-
-
-```bash
-auth:login
-```
-
-### `--help`, `-h`
-
-Visa det här hjälpmeddelandet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas exakthet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--yes`, `-y`
-
-svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`
-
-Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-
-## `auth:token`
-
-Hämta en OAuth 2-åtkomsttoken för begäranden till Magento Cloud-API:er
-
-```bash
-magento-cloud auth:token [-H|--header] [-W|--no-warn]
-```
-
-### `--header`, `-H`
-
-Lägg till token som &quot;Authorization: Bearer om du vill skapa en RFC 6750-rubrik
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-warn`, `-W`
-
-Utelämna den varning som är utskriven som standard till avsändare. Det här alternativet är att föredra framför omdirigering av avsändare, eftersom det skulle dölja andra potentiellt användbara meddelanden.
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa det här hjälpmeddelandet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas exakthet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--yes`, `-y`
-
-svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`
-
-Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `blackfire:setup`
 
@@ -2604,12 +1413,6 @@ Servertoken
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -2658,318 +1461,6 @@ svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, 
 ### `--no-interaction`
 
 Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-
-## `blue-green:conclude`
-
-&lt;fg white=&quot;&quot; bg=&quot;red&quot;>[ ALFA ]&lt;/> Slutför en blå/grön distribution
-
-```bash
-magento-cloud blue-green:conclude [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
-```
-
-### `--project`, `-p`
-
-Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
-### `--environment`, `-e`
-
-Miljö-ID
-
-- Kräver ett värde
-
-### `--help`, `-h`
-
-Visa det här hjälpmeddelandet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas exakthet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--yes`, `-y`
-
-svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`
-
-Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-
-## `blue-green:deploy`
-
-&lt;fg white=&quot;&quot; bg=&quot;red&quot;>[ ALFA ]&lt;/> Utför en blå/grön distribution
-
-```bash
-magento-cloud blue-green:deploy [--routing-percentage ROUTING-PERCENTAGE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
-```
-
-### `--routing-percentage`
-
-Ange den senaste versionens routningsprocent
-
-- Standard: `100`
-- Kräver ett värde
-
-### `--project`, `-p`
-
-Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
-### `--environment`, `-e`
-
-Miljö-ID
-
-- Kräver ett värde
-
-### `--help`, `-h`
-
-Visa det här hjälpmeddelandet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas exakthet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--yes`, `-y`
-
-svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`
-
-Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-
-## `blue-green:enable`
-
-&lt;fg white=&quot;&quot; bg=&quot;red&quot;>[ ALFA ]&lt;/> Aktivera blå/gröna distributioner
-
-```bash
-magento-cloud blue-green:enable [-%|--routing-percentage ROUTING-PERCENTAGE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
-```
-
-### `--routing-percentage`, `-%`
-
-Ange den senaste versionens routningsprocent
-
-- Standard: `100`
-- Kräver ett värde
-
-### `--project`, `-p`
-
-Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
-### `--environment`, `-e`
-
-Miljö-ID
-
-- Kräver ett värde
-
-### `--help`, `-h`
-
-Visa det här hjälpmeddelandet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas exakthet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--yes`, `-y`
-
-svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`
-
-Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3008,12 +1499,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--no-wait`, `-W`
 
 Vänta inte på att åtgärden ska slutföras
@@ -3059,34 +1544,6 @@ svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, 
 ### `--no-interaction`
 
 Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3113,12 +1570,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--no-wait`, `-W`
 
 Vänta inte på att åtgärden ska slutföras
@@ -3164,34 +1615,6 @@ svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, 
 ### `--no-interaction`
 
 Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3231,12 +1654,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--help`, `-h`
 
 Visa det här hjälpmeddelandet
@@ -3272,34 +1689,6 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `certificate:list`
 
@@ -3307,16 +1696,6 @@ Visa projektcertifikat
 
 ```bash
 magento-cloud certificate:list [--domain DOMAIN] [--exclude-domain EXCLUDE-DOMAIN] [--issuer ISSUER] [--only-auto] [--no-auto] [--ignore-expiry] [--only-expired] [--no-expired] [--pipe-domains] [--date-fmt DATE-FMT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
-```
-
-
-```bash
-certificates
-```
-
-
-```bash
-certs
 ```
 
 ### `--domain`
@@ -3395,7 +1774,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 ### `--columns`, `-c`
 
-Kolumner att visa. Tillgängliga kolumner: skapad, domäner, förfaller, id, utfärdare. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Kolumner att visa. Tillgängliga kolumner: skapad, domäner, förfaller, id, utfärdare. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -3410,12 +1789,6 @@ Skriv inte ut tabellrubriken
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -3450,34 +1823,6 @@ svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, 
 ### `--no-interaction`
 
 Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3511,12 +1856,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 Miljö-ID
@@ -3529,26 +1868,6 @@ Datumformatet (som en PHP-datumformatsträng)
 
 - Standard: `c`
 - Kräver ett värde
-
-### `--format`
-
-INAKTUELL
-
-- Kräver ett värde
-
-### `--columns`
-
-INAKTUELL
-
-- Standard: `[]`
-- Kräver ett värde
-
-### `--no-header`
-
-INAKTUELL
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 ### `--help`, `-h`
 
@@ -3585,46 +1904,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `commit:list`
 
 Listimplementeringar
 
 ```bash
-magento-cloud commits [--limit LIMIT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [--] [<commit>]
-```
-
-
-```bash
-commits
+magento-cloud commit:list [--limit LIMIT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [--] [<commit>]
 ```
 
 
@@ -3646,12 +1932,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 Miljö-ID
@@ -3667,7 +1947,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 ### `--columns`, `-c`
 
-Kolumner att visa. Tillgängliga kolumner: författare, datum, sha, sammanfattning. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Kolumner att visa. Tillgängliga kolumner: författare, datum, sha, sammanfattning. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -3721,34 +2001,6 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `db:dump`
 
@@ -3756,16 +2008,6 @@ Skapa en lokal dump av fjärrdatabasen
 
 ```bash
 magento-cloud db:dump [--schema SCHEMA] [-f|--file FILE] [-d|--directory DIRECTORY] [-z|--gzip] [-t|--timestamp] [-o|--stdout] [--table TABLE] [--exclude-table EXCLUDE-TABLE] [--schema-only] [--charset CHARSET] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE]
-```
-
-
-```bash
-sql-dump
-```
-
-
-```bash
-environment:sql-dump
 ```
 
 ### `--schema`
@@ -3840,12 +2082,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 Miljö-ID
@@ -3901,34 +2137,6 @@ svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, 
 ### `--no-interaction`
 
 Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3962,12 +2170,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 Miljö-ID
@@ -3995,7 +2197,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 ### `--columns`, `-c`
 
-Kolumner att visa. Tillgängliga kolumner: max, percent_used, used. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Kolumner att visa. Tillgängliga kolumner: max, percent_used, used. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -4048,51 +2250,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `db:sql`
 
 Kör SQL på fjärrdatabasen
 
 ```bash
-magento-cloud sql [--raw] [--schema SCHEMA] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [--] [<query>]
-```
-
-
-```bash
-sql
-```
-
-
-```bash
-environment:sql
+magento-cloud db:sql [--raw] [--schema SCHEMA] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [--] [<query>]
 ```
 
 
@@ -4120,12 +2284,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 Miljö-ID
@@ -4185,41 +2343,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `domain:add`
 
 Lägg till en ny domän i projektet
 
 ```bash
-magento-cloud domain:add [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] <name>
+magento-cloud domain:add [--cert CERT] [--key KEY] [--chain CHAIN] [-r|--replace REPLACE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
 
@@ -4248,15 +2378,21 @@ Sökvägen till certifikatkedjefilen eller -filerna för det angivna certifikate
 - Standard: `[]`
 - Kräver ett värde
 
+### `--replace`, `-r`
+
+Den produktionsdomän som denna ersätter i miljöns vägar (krävs för icke-produktionsmiljödomäner)
+
+- Kräver ett värde
+
 ### `--project`, `-p`
 
 Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
+### `--environment`, `-e`
 
-Inaktuellt alternativ, används inte längre
+Miljö-ID
 
 - Kräver ett värde
 
@@ -4309,41 +2445,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `domain:delete`
 
 Ta bort en domän från projektet
 
 ```bash
-magento-cloud domain:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] <name>
+magento-cloud domain:delete [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
 
@@ -4359,9 +2467,9 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
+### `--environment`, `-e`
 
-Inaktuellt alternativ, används inte längre
+Miljö-ID
 
 - Kräver ett värde
 
@@ -4414,41 +2522,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `domain:get`
 
 Visa detaljerad information om en domän
 
 ```bash
-magento-cloud domain:get [-P|--property PROPERTY] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [--] [<name>]
+magento-cloud domain:get [-P|--property PROPERTY] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<name>]
 ```
 
 
@@ -4472,7 +2552,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 ### `--columns`, `-c`
 
-Kolumner att visa. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Kolumner att visa. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -4497,9 +2577,9 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
+### `--environment`, `-e`
 
-Inaktuellt alternativ, används inte längre
+Miljö-ID
 
 - Kräver ett värde
 
@@ -4538,46 +2618,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `domain:list`
 
 Hämta en lista över alla domäner
 
 ```bash
-magento-cloud domains [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
-```
-
-
-```bash
-domains
+magento-cloud domain:list [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 ```
 
 ### `--format`
@@ -4589,7 +2636,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 ### `--columns`, `-c`
 
-Kolumner att visa. Tillgängliga kolumner: name*, ssl*, created_at*, updated_at (* = standardkolumner). Tecknet&quot;+&quot; kan användas som platshållare för standardkolumnerna. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Kolumner att visa. Tillgängliga kolumner: name*, ssl*, created_at*, registered_name, replace_for, type, updated_at (* = standardkolumner). Tecknet&quot;+&quot; kan användas som platshållare för standardkolumnerna. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -4607,9 +2654,9 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
+### `--environment`, `-e`
 
-Inaktuellt alternativ, används inte längre
+Miljö-ID
 
 - Kräver ett värde
 
@@ -4648,41 +2695,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `domain:update`
 
 Uppdatera en domän
 
 ```bash
-magento-cloud domain:update [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] <name>
+magento-cloud domain:update [--cert CERT] [--key KEY] [--chain CHAIN] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
 
@@ -4717,9 +2736,9 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
+### `--environment`, `-e`
 
-Inaktuellt alternativ, används inte längre
+Miljö-ID
 
 - Kräver ett värde
 
@@ -4768,34 +2787,6 @@ svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, 
 ### `--no-interaction`
 
 Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4830,12 +2821,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 Miljö-ID
@@ -4891,46 +2876,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `environment:branch`
 
 Gren och miljön
 
 ```bash
-magento-cloud branch [--title TITLE] [--type TYPE] [--force] [--no-clone-parent] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [-i|--identity-file IDENTITY-FILE] [--] [<id>] [<parent>]
-```
-
-
-```bash
-branch
+magento-cloud environment:branch [--title TITLE] [--type TYPE] [--force] [--no-clone-parent] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [-i|--identity-file IDENTITY-FILE] [--] [<id>] [<parent>]
 ```
 
 
@@ -4976,12 +2928,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 Miljö-ID
@@ -5043,46 +2989,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `environment:checkout`
 
 Kolla in en miljö
 
 ```bash
-magento-cloud checkout [-i|--identity-file IDENTITY-FILE] [--] [<id>]
-```
-
-
-```bash
-checkout
+magento-cloud environment:checkout [-i|--identity-file IDENTITY-FILE] [--] [<id>]
 ```
 
 
@@ -5132,190 +3045,6 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-
-## `environment:curl`
-
-Kör en autentiserad cURL-begäran på en miljös API
-
-```bash
-magento-cloud environment:curl [-X|--request REQUEST] [-d|--data DATA] [--json JSON] [-i|--include] [-I|--head] [--disable-compression] [--enable-glob] [-f|--fail] [-H|--header HEADER] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<path>]
-```
-
-
-### `path`
-
-API-sökvägen
-
-
-### `--request`, `-X`
-
-Begärandemetoden som ska användas
-
-- Kräver ett värde
-
-### `--data`, `-d`
-
-Data som ska skickas
-
-- Kräver ett värde
-
-### `--json`
-
-JSON-data att skicka
-
-- Kräver ett värde
-
-### `--include`, `-i`
-
-Inkludera sidhuvuden i utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--head`, `-I`
-
-Hämta endast rubriker
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--disable-compression`
-
-Använd inte flaggan curl —compressed
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--enable-glob`
-
-Aktivera bläddring (ta bort flaggan —globoff)
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--fail`, `-f`
-
-Misslyckades utan utdata på ett felsvar
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--header`, `-H`
-
-Extra rubrik(er)
-
-- Standard: `[]`
-- Kräver ett värde
-
-### `--project`, `-p`
-
-Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
-### `--environment`, `-e`
-
-Miljö-ID
-
-- Kräver ett värde
-
-### `--help`, `-h`
-
-Visa det här hjälpmeddelandet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas exakthet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--yes`, `-y`
-
-svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`
-
-Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `environment:delete`
 
@@ -5326,14 +3055,9 @@ magento-cloud environment:delete [--delete-branch] [--no-delete-branch] [--type 
 ```
 
 
-```bash
-environment:deactivate
-```
-
-
 ### `environment`
 
-Den eller de miljöer som ska tas bort. Tecknet % kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Den eller de miljöer som ska tas bort. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 
@@ -5369,7 +3093,7 @@ Ta endast bort miljö(er) av en viss typ Om en lista anges som ett enskilt värd
 
 ### `--exclude`
 
-Miljö(er) som inte ska tas bort. Tecknet % kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Miljö(er) som inte ska tas bort. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -5401,12 +3125,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 Miljö-ID
@@ -5462,46 +3180,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `environment:http-access`
 
 Uppdatera HTTP-åtkomstinställningar för en miljö
 
 ```bash
-magento-cloud httpaccess [--access ACCESS] [--auth AUTH] [--enabled ENABLED] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait]
-```
-
-
-```bash
-httpaccess
+magento-cloud environment:http-access [--access ACCESS] [--auth AUTH] [--enabled ENABLED] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait]
 ```
 
 ### `--access`
@@ -5530,12 +3215,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 Miljö-ID
@@ -5591,34 +3270,6 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `environment:info`
 
@@ -5626,11 +3277,6 @@ Läs eller ange egenskaper för en miljö
 
 ```bash
 magento-cloud environment:info [--refresh] [--date-fmt DATE-FMT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<property>] [<value>]
-```
-
-
-```bash
-environment:metadata
 ```
 
 
@@ -5667,7 +3313,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 ### `--columns`, `-c`
 
-Kolumner att visa. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Kolumner att visa. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -5682,12 +3328,6 @@ Skriv inte ut tabellrubriken
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -5742,34 +3382,6 @@ svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, 
 ### `--no-interaction`
 
 Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5802,12 +3414,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 Miljö-ID
@@ -5863,34 +3469,6 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `environment:list`
 
@@ -5898,16 +3476,6 @@ Få en lista över miljöer
 
 ```bash
 magento-cloud environment:list [-I|--no-inactive] [--pipe] [--refresh REFRESH] [--sort SORT] [--reverse] [--type TYPE] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
-```
-
-
-```bash
-environments
-```
-
-
-```bash
-env
 ```
 
 ### `--no-inactive`, `-I`
@@ -5961,7 +3529,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 ### `--columns`, `-c`
 
-Kolumner att visa. Tillgängliga kolumner: id*, title*, status*, type*, created, machine_name, updated (* = standardkolumner). Tecknet&quot;+&quot; kan användas som platshållare för standardkolumnerna. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Kolumner att visa. Tillgängliga kolumner: id*, title*, status*, type*, created, machine_name, updated (* = standardkolumner). Tecknet&quot;+&quot; kan användas som platshållare för standardkolumnerna. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -5976,12 +3544,6 @@ Skriv inte ut tabellrubriken
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -6020,51 +3582,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `environment:logs`
 
 Läs en miljös loggar
 
 ```bash
-magento-cloud log [--lines LINES] [--tail] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [--] [<type>]
-```
-
-
-```bash
-log
-```
-
-
-```bash
-logs
+magento-cloud environment:logs [--lines LINES] [--tail] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [--] [<type>]
 ```
 
 
@@ -6090,12 +3614,6 @@ Avsluta loggen kontinuerligt
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -6158,46 +3676,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `environment:merge`
 
 Sammanfoga en miljö
 
 ```bash
-magento-cloud merge [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]
-```
-
-
-```bash
-merge
+magento-cloud environment:merge [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]
 ```
 
 
@@ -6209,12 +3694,6 @@ Den miljö som ska sammanfogas
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -6273,46 +3752,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `environment:push`
 
 Kodning i en miljö
 
 ```bash
-magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set-upstream] [--activate] [--parent PARENT] [--type TYPE] [--no-clone-parent] [-W|--no-wait] [--wait] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-i|--identity-file IDENTITY-FILE] [--] [<source>]
-```
-
-
-```bash
-push
+magento-cloud environment:push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set-upstream] [--activate] [--parent PARENT] [--type TYPE] [--no-clone-parent] [-W|--no-wait] [--wait] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-i|--identity-file IDENTITY-FILE] [--] [<source>]
 ```
 
 
@@ -6357,13 +3803,6 @@ Aktivera miljön innan du trycker
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--branch`
-
-INAKTUELL: alias för —activate
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 ### `--parent`
 
 Ange den nya miljön som överordnad (används endast med —activate)
@@ -6403,12 +3842,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 Miljö-ID
@@ -6456,57 +3889,18 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `environment:redeploy`
 
 Distribuera om en miljö
 
 ```bash
-magento-cloud redeploy [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait]
-```
-
-
-```bash
-redeploy
+magento-cloud environment:redeploy [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait]
 ```
 
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -6565,46 +3959,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `environment:relationships`
 
 Visa en miljös relationer
 
 ```bash
-magento-cloud relationships [-P|--property PROPERTY] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE] [--] [<environment>]
-```
-
-
-```bash
-relationships
+magento-cloud environment:relationships [-P|--property PROPERTY] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE] [--] [<environment>]
 ```
 
 
@@ -6629,12 +3990,6 @@ Om relationerna ska uppdateras
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -6691,46 +4046,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `environment:scp`
 
-Kopiera filer till och från den aktuella miljön med scp
+Kopiera filer till och från en miljö med scp
 
 ```bash
-magento-cloud scp [-r|--recursive] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE] [--] [<files>]...
-```
-
-
-```bash
-scp
+magento-cloud environment:scp [-r|--recursive] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE] [--] [<files>]...
 ```
 
 
@@ -6752,12 +4074,6 @@ Kopiera hela kataloger rekursivt
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -6826,130 +4142,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-
-## `environment:set-remote`
-
-Ange att fjärrmiljön ska mappa till en gren
-
-```bash
-magento-cloud environment:set-remote <environment> [<branch>]
-```
-
-
-### `environment`
-
-Miljödatorns namn. Ange 0 för att ta bort mappningen för en gren
-
-- Obligatoriskt
-
-### `branch`
-
-Git-grenen som ska mappas (används som standard för den aktuella grenen)
-
-
-### `--help`, `-h`
-
-Visa det här hjälpmeddelandet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas exakthet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--yes`, `-y`
-
-svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`
-
-Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `environment:ssh`
 
 SSH till den aktuella miljön
 
 ```bash
-magento-cloud ssh [--pipe] [--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE] [--] [<cmd>]...
-```
-
-
-```bash
-ssh
+magento-cloud environment:ssh [--pipe] [--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE] [--] [<cmd>]...
 ```
 
 
@@ -6981,12 +4180,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 Miljö-ID
@@ -7052,46 +4245,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `environment:synchronize`
 
 Synkronisera en miljös kod och/eller data från dess överordnade
 
 ```bash
-magento-cloud sync [--rebase] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<synchronize>]...
-```
-
-
-```bash
-sync
+magento-cloud environment:synchronize [--rebase] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<synchronize>]...
 ```
 
 
@@ -7113,12 +4273,6 @@ Synkronisera kod genom att basera om i stället för att sammanfoga
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -7177,46 +4331,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `environment:url`
 
 Hämta offentliga URL:er för en miljö
 
 ```bash
-magento-cloud url [-1|--primary] [--browser BROWSER] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
-```
-
-
-```bash
-url
+magento-cloud environment:url [-1|--primary] [--browser BROWSER] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 ```
 
 ### `--primary`, `-1`
@@ -7242,12 +4363,6 @@ Skriv ut URL-adressen som ska stoppas.
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -7292,46 +4407,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `environment:xdebug`
 
 Öppna en tunnel för Xdebug i miljön
 
 ```bash
-magento-cloud xdebug [--port PORT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
-```
-
-
-```bash
-xdebug
+magento-cloud environment:xdebug [--port PORT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
 ```
 
 ### `--port`
@@ -7344,12 +4426,6 @@ Den lokala porten
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -7414,34 +4490,6 @@ svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, 
 ### `--no-interaction`
 
 Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7478,12 +4526,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 [Inaktuellt alternativ, används inte]
@@ -7499,7 +4541,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 ### `--columns`, `-c`
 
-Kolumner att visa. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Kolumner att visa. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -7553,51 +4595,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `integration:activity:list`
 
 Få en lista över aktiviteter för en integrering
 
 ```bash
-magento-cloud i:act [--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LIMIT] [--start START] [--state STATE] [--result RESULT] [-i|--incomplete] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<id>]
-```
-
-
-```bash
-i:act
-```
-
-
-```bash
-integration:activities
+magento-cloud integration:activity:list [--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LIMIT] [--start START] [--state STATE] [--result RESULT] [-i|--incomplete] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<id>]
 ```
 
 
@@ -7615,7 +4619,7 @@ Filtrera aktiviteter efter typ. Om en lista anges som ett enda värde (t.ex. &qu
 
 ### `--exclude-type`, `-x`
 
-Uteslut aktiviteter efter typ. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg. Tecknet % kan användas som jokertecken för att utesluta typer.
+Uteslut aktiviteter efter typ. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg. Tecknen % och * kan användas som jokertecken för att utesluta typer.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -7662,7 +4666,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 ### `--columns`, `-c`
 
-Kolumner att visa. Tillgängliga kolumner: id*, created*, description*, type*, state*, result*, complete (* = standardkolumner). Tecknet&quot;+&quot; kan användas som platshållare för standardkolumnerna. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Kolumner att visa. Tillgängliga kolumner: id*, created*, description*, type*, state*, result*, complete (* = standardkolumner). Tecknet&quot;+&quot; kan användas som platshållare för standardkolumnerna. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -7684,12 +4688,6 @@ Datumformatet (som en PHP-datumformatsträng)
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -7730,34 +4728,6 @@ svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, 
 ### `--no-interaction`
 
 Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7802,12 +4772,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 [Inaktuellt alternativ, används inte]
@@ -7849,52 +4813,30 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `integration:add`
 
 Lägg till en integrering i projektet
 
 ```bash
-magento-cloud integration:add [--type TYPE] [--base-url BASE-URL] [--username USERNAME] [--token TOKEN] [--key KEY] [--secret SECRET] [--license-key LICENSE-KEY] [--server-project SERVER-PROJECT] [--repository REPOSITORY] [--build-merge-requests BUILD-MERGE-REQUESTS] [--build-pull-requests BUILD-PULL-REQUESTS] [--build-draft-pull-requests BUILD-DRAFT-PULL-REQUESTS] [--build-pull-requests-post-merge BUILD-PULL-REQUESTS-POST-MERGE] [--build-wip-merge-requests BUILD-WIP-MERGE-REQUESTS] [--merge-requests-clone-parent-data MERGE-REQUESTS-CLONE-PARENT-DATA] [--pull-requests-clone-parent-data PULL-REQUESTS-CLONE-PARENT-DATA] [--resync-pull-requests RESYNC-PULL-REQUESTS] [--fetch-branches FETCH-BRANCHES] [--prune-branches PRUNE-BRANCHES] [--url URL] [--shared-key SHARED-KEY] [--file FILE] [--events EVENTS] [--states STATES] [--environments ENVIRONMENTS] [--excluded-environments EXCLUDED-ENVIRONMENTS] [--from-address FROM-ADDRESS] [--recipients RECIPIENTS] [--channel CHANNEL] [--routing-key ROUTING-KEY] [--category CATEGORY] [--index INDEX] [--sourcetype SOURCETYPE] [--protocol PROTOCOL] [--syslog-host SYSLOG-HOST] [--syslog-port SYSLOG-PORT] [--facility FACILITY] [--message-format MESSAGE-FORMAT] [--auth-mode AUTH-MODE] [--auth-token AUTH-TOKEN] [--verify-tls VERIFY-TLS] [-p|--project PROJECT] [-W|--no-wait] [--wait]
+magento-cloud integration:add [--type TYPE] [--base-url BASE-URL] [--bitbucket-url BITBUCKET-URL] [--username USERNAME] [--token TOKEN] [--key KEY] [--secret SECRET] [--license-key LICENSE-KEY] [--server-project SERVER-PROJECT] [--repository REPOSITORY] [--build-merge-requests BUILD-MERGE-REQUESTS] [--build-pull-requests BUILD-PULL-REQUESTS] [--build-draft-pull-requests BUILD-DRAFT-PULL-REQUESTS] [--build-pull-requests-post-merge BUILD-PULL-REQUESTS-POST-MERGE] [--build-wip-merge-requests BUILD-WIP-MERGE-REQUESTS] [--merge-requests-clone-parent-data MERGE-REQUESTS-CLONE-PARENT-DATA] [--pull-requests-clone-parent-data PULL-REQUESTS-CLONE-PARENT-DATA] [--resync-pull-requests RESYNC-PULL-REQUESTS] [--fetch-branches FETCH-BRANCHES] [--prune-branches PRUNE-BRANCHES] [--url URL] [--shared-key SHARED-KEY] [--file FILE] [--events EVENTS] [--states STATES] [--environments ENVIRONMENTS] [--excluded-environments EXCLUDED-ENVIRONMENTS] [--from-address FROM-ADDRESS] [--recipients RECIPIENTS] [--channel CHANNEL] [--routing-key ROUTING-KEY] [--category CATEGORY] [--index INDEX] [--sourcetype SOURCETYPE] [--protocol PROTOCOL] [--syslog-host SYSLOG-HOST] [--syslog-port SYSLOG-PORT] [--facility FACILITY] [--message-format MESSAGE-FORMAT] [--auth-mode AUTH-MODE] [--auth-token AUTH-TOKEN] [--verify-tls VERIFY-TLS] [--header HEADER] [-p|--project PROJECT] [-W|--no-wait] [--wait]
 ```
 
 ### `--type`
 
-Integrationstypen (&#39;bitbucket&#39;, &#39;bitbucket_server&#39;, &#39;github&#39;, &#39;gitlab&#39;, &#39;webkroch&#39;, &#39;health.email&#39;, &#39;health.pageruty&#39;, &#39;health.slack&#39;, &#39;health.webkrok&#39;, &#39;script&#39;, &#39;newrelic&#39;, &#39;splunk&#39;, &#39;sumologic&#39;, &#39;syslog&#39;)
+Integrationstypen (&#39;bitbucket&#39;, &#39;bitbucket_server&#39;, &#39;github&#39;, &#39;gitlab&#39;, &#39;webkrok&#39;, &#39;health.email&#39;, &#39;health.pageruty&#39;, &#39;health.slack&#39;, &#39;health.webkrok&#39;, &#39;httplog&#39;, &#39;script&#39;, &#39;newrelic&#39;, &#39;splunk&#39;, &#39;sumologic&#39;, &#39;syslog&#39;)
 
 - Kräver ett värde
 
 ### `--base-url`
 
 Bas-URL:en för serverinstallationen
+
+- Kräver ett värde
+
+### `--bitbucket-url`
+
+Bas-URL:en för Bitbucket Server-installationen
 
 - Kräver ett värde
 
@@ -8152,15 +5094,16 @@ Om HTTPS-certifikatverifiering ska vara aktiverat (rekommenderas)
 - Standard: `true`
 - Kräver ett värde
 
+### `--header`
+
+HTTP-huvud(n) som ska användas vid POST-begäranden. Avgränsa namn och värden med kolon (:).
+
+- Standard: `[]`
+- Kräver ett värde
+
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -8209,34 +5152,6 @@ svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, 
 ### `--no-interaction`
 
 Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -8262,12 +5177,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--no-wait`, `-W`
 
 Vänta inte på att åtgärden ska slutföras
@@ -8313,34 +5222,6 @@ svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, 
 ### `--no-interaction`
 
 Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -8375,7 +5256,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 ### `--columns`, `-c`
 
-Kolumner att visa. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Kolumner att visa. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -8390,12 +5271,6 @@ Skriv inte ut tabellrubriken
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -8434,46 +5309,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `integration:list`
 
 Visa en lista över projektintegrering(ar)
 
 ```bash
-magento-cloud integrations [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
-```
-
-
-```bash
-integrations
+magento-cloud integration:list [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
 ```
 
 ### `--format`
@@ -8485,7 +5327,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 ### `--columns`, `-c`
 
-Kolumner att visa. Tillgängliga kolumner: id, summary, type. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Kolumner att visa. Tillgängliga kolumner: id, summary, type. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -8500,12 +5342,6 @@ Skriv inte ut tabellrubriken
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -8544,41 +5380,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `integration:update`
 
 Uppdatera en integrering
 
 ```bash
-magento-cloud integration:update [--type TYPE] [--base-url BASE-URL] [--username USERNAME] [--token TOKEN] [--key KEY] [--secret SECRET] [--license-key LICENSE-KEY] [--server-project SERVER-PROJECT] [--repository REPOSITORY] [--build-merge-requests BUILD-MERGE-REQUESTS] [--build-pull-requests BUILD-PULL-REQUESTS] [--build-draft-pull-requests BUILD-DRAFT-PULL-REQUESTS] [--build-pull-requests-post-merge BUILD-PULL-REQUESTS-POST-MERGE] [--build-wip-merge-requests BUILD-WIP-MERGE-REQUESTS] [--merge-requests-clone-parent-data MERGE-REQUESTS-CLONE-PARENT-DATA] [--pull-requests-clone-parent-data PULL-REQUESTS-CLONE-PARENT-DATA] [--resync-pull-requests RESYNC-PULL-REQUESTS] [--fetch-branches FETCH-BRANCHES] [--prune-branches PRUNE-BRANCHES] [--url URL] [--shared-key SHARED-KEY] [--file FILE] [--events EVENTS] [--states STATES] [--environments ENVIRONMENTS] [--excluded-environments EXCLUDED-ENVIRONMENTS] [--from-address FROM-ADDRESS] [--recipients RECIPIENTS] [--channel CHANNEL] [--routing-key ROUTING-KEY] [--category CATEGORY] [--index INDEX] [--sourcetype SOURCETYPE] [--protocol PROTOCOL] [--syslog-host SYSLOG-HOST] [--syslog-port SYSLOG-PORT] [--facility FACILITY] [--message-format MESSAGE-FORMAT] [--auth-mode AUTH-MODE] [--auth-token AUTH-TOKEN] [--verify-tls VERIFY-TLS] [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] [<id>]
+magento-cloud integration:update [--type TYPE] [--base-url BASE-URL] [--bitbucket-url BITBUCKET-URL] [--username USERNAME] [--token TOKEN] [--key KEY] [--secret SECRET] [--license-key LICENSE-KEY] [--server-project SERVER-PROJECT] [--repository REPOSITORY] [--build-merge-requests BUILD-MERGE-REQUESTS] [--build-pull-requests BUILD-PULL-REQUESTS] [--build-draft-pull-requests BUILD-DRAFT-PULL-REQUESTS] [--build-pull-requests-post-merge BUILD-PULL-REQUESTS-POST-MERGE] [--build-wip-merge-requests BUILD-WIP-MERGE-REQUESTS] [--merge-requests-clone-parent-data MERGE-REQUESTS-CLONE-PARENT-DATA] [--pull-requests-clone-parent-data PULL-REQUESTS-CLONE-PARENT-DATA] [--resync-pull-requests RESYNC-PULL-REQUESTS] [--fetch-branches FETCH-BRANCHES] [--prune-branches PRUNE-BRANCHES] [--url URL] [--shared-key SHARED-KEY] [--file FILE] [--events EVENTS] [--states STATES] [--environments ENVIRONMENTS] [--excluded-environments EXCLUDED-ENVIRONMENTS] [--from-address FROM-ADDRESS] [--recipients RECIPIENTS] [--channel CHANNEL] [--routing-key ROUTING-KEY] [--category CATEGORY] [--index INDEX] [--sourcetype SOURCETYPE] [--protocol PROTOCOL] [--syslog-host SYSLOG-HOST] [--syslog-port SYSLOG-PORT] [--facility FACILITY] [--message-format MESSAGE-FORMAT] [--auth-mode AUTH-MODE] [--auth-token AUTH-TOKEN] [--verify-tls VERIFY-TLS] [--header HEADER] [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] [<id>]
 ```
 
 
@@ -8589,13 +5397,19 @@ ID för den integrering som ska uppdateras
 
 ### `--type`
 
-Integrationstypen (&#39;bitbucket&#39;, &#39;bitbucket_server&#39;, &#39;github&#39;, &#39;gitlab&#39;, &#39;webkroch&#39;, &#39;health.email&#39;, &#39;health.pageruty&#39;, &#39;health.slack&#39;, &#39;health.webkrok&#39;, &#39;script&#39;, &#39;newrelic&#39;, &#39;splunk&#39;, &#39;sumologic&#39;, &#39;syslog&#39;)
+Integrationstypen (&#39;bitbucket&#39;, &#39;bitbucket_server&#39;, &#39;github&#39;, &#39;gitlab&#39;, &#39;webkrok&#39;, &#39;health.email&#39;, &#39;health.pageruty&#39;, &#39;health.slack&#39;, &#39;health.webkrok&#39;, &#39;httplog&#39;, &#39;script&#39;, &#39;newrelic&#39;, &#39;splunk&#39;, &#39;sumologic&#39;, &#39;syslog&#39;)
 
 - Kräver ett värde
 
 ### `--base-url`
 
 Bas-URL:en för serverinstallationen
+
+- Kräver ett värde
+
+### `--bitbucket-url`
+
+Bas-URL:en för Bitbucket Server-installationen
 
 - Kräver ett värde
 
@@ -8853,15 +5667,16 @@ Om HTTPS-certifikatverifiering ska vara aktiverat (rekommenderas)
 - Standard: `true`
 - Kräver ett värde
 
+### `--header`
+
+HTTP-huvud(n) som ska användas vid POST-begäranden. Avgränsa namn och värden med kolon (:).
+
+- Standard: `[]`
+- Kräver ett värde
+
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -8914,34 +5729,6 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `integration:validate`
 
@@ -8960,12 +5747,6 @@ Ett integrerings-ID. Lämna tomt om du vill välja från en lista.
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -9004,46 +5785,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `local:build`
 
 Bygg det aktuella projektet lokalt
 
 ```bash
-magento-cloud build [-a|--abslinks] [-s|--source SOURCE] [-d|--destination DESTINATION] [-c|--copy] [--clone] [--run-deploy-hooks] [--no-clean] [--no-archive] [--no-backup] [--no-cache] [--no-build-hooks] [--no-deps] [--working-copy] [--concurrency CONCURRENCY] [--lock] [--] [<app>]...
-```
-
-
-```bash
-build
+magento-cloud local:build [-a|--abslinks] [-s|--source SOURCE] [-d|--destination DESTINATION] [-c|--copy] [--clone] [--run-deploy-hooks] [--no-clean] [--no-archive] [--no-backup] [--no-cache] [--no-build-hooks] [--no-deps] [--working-copy] [--concurrency CONCURRENCY] [--lock] [--] [<app>]...
 ```
 
 
@@ -9193,143 +5941,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-
-## `local:clean`
-
-Ta bort gamla projektbyggen
-
-```bash
-magento-cloud clean [--keep KEEP] [--max-age MAX-AGE] [--include-active]
-```
-
-
-```bash
-clean
-```
-
-### `--keep`
-
-Maximalt antal byggen som ska behållas
-
-- Standard: `5`
-- Kräver ett värde
-
-### `--max-age`
-
-Högsta byggålder i sekunder. Ignoreras om den inte har angetts.
-
-- Kräver ett värde
-
-### `--include-active`
-
-Ta bort aktiva byggen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa det här hjälpmeddelandet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas exakthet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--yes`, `-y`
-
-svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`
-
-Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `local:dir`
 
 Hitta den lokala projektroten
 
 ```bash
-magento-cloud dir [<subdir>]
-```
-
-
-```bash
-dir
+magento-cloud local:dir [<subdir>]
 ```
 
 
@@ -9373,59 +5991,14 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
 
-Framtvinga ANSI-utdata
+## `metrics:all`
 
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-
-## `metrics:disk-usage`
-
-Visa diskanvändning för en tjänst
+&lt;fg white=&quot;&quot; bg=&quot;red&quot;> BETA &lt;/> Visa mått för processor, disk och minne för en miljö
 
 ```bash
-magento-cloud disk [-s|--service SERVICE] [--type TYPE] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-B|--bytes] [-1|--latest] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
+magento-cloud metrics [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
 ```
-
-
-```bash
-disk
-```
-
-### `--service`, `-s`
-
-Tjänstnamnet
-
-- Kräver ett värde
-
-### `--type`
-
-Servicetyp (om tjänstens namn inte anges), t.ex. mysql, pgsql, mongodb osv. Typversionen är inte obligatorisk.
-
-- Kräver ett värde
 
 ### `--range`, `-r`
 
@@ -9445,13 +6018,6 @@ Sluttiden. Standardvärdet är nu.
 
 - Kräver ett värde
 
-### `--bytes`, `-B`
-
-Visa storlekar i byte
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 ### `--latest`, `-1`
 
 Visa endast den senaste enskilda datapunkten
@@ -9459,15 +6025,23 @@ Visa endast den senaste enskilda datapunkten
 - Standard: `false`
 - Accepterar inte ett värde
 
+### `--service`, `-s`
+
+Filtrera efter tjänst- eller programnamn Tecknen % eller * kan användas som jokertecken.
+
+- Standard: `[]`
+- Kräver ett värde
+
+### `--type`
+
+Filtrera efter tjänsttyp (if —service tillhandahålls inte). Versionen är inte obligatorisk. Tecknen % och * kan användas som jokertecken.
+
+- Standard: `[]`
+- Kräver ett värde
+
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -9486,7 +6060,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 ### `--columns`, `-c`
 
-Kolumner att visa. Tillgängliga kolumner: timestamp*, used*, limit*, percent*, ipercent*, ilimit, interval, is used (* = default columns). Tecknet&quot;+&quot; kan användas som platshållare för standardkolumnerna. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Kolumner att visa. Tillgängliga kolumner: tidsstämpel*, service*, cpu_percent*, mem_percent*, disk_percent*, tmp_disk_percent*, cpu_limit, cpu_used, disk_limit, disc_used, inodes_limit, inodes_percent, inodes_used, mem_limit, mem_used, tmp_disk_limit, tmp_disk_used, tmp_inoden des_limit, tmp_inodes_percent, tmp_inodes_used, type (* = standardkolumner). Tecknet&quot;+&quot; kan användas som platshållare för standardkolumnerna. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -9540,30 +6114,392 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
 
-Framtvinga ANSI-utdata
+## `metrics:cpu`
+
+&lt;fg white=&quot;&quot; bg=&quot;red&quot;> BETA &lt;/> Visa processoranvändning i en miljö
+
+```bash
+magento-cloud metrics:cpu [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
+```
+
+### `--range`, `-r`
+
+Tidsintervall. Mätvärden läses in för den här varaktigheten till sluttiden (—to). Du kan ange enheter: timmar (h), minuter (m) eller sekunder (s). Minimum &lt;comment>5 m&lt;/comment>, max &lt;comment>8 tim&lt;/comment> eller mer (beroende på projektet), standard &lt;comment>10 m&lt;/comment>.
+
+- Kräver ett värde
+
+### `--interval`, `-i`
+
+Tidsintervallet. Standardvärdet är en division av intervallet. Du kan ange enheter: timmar (h), minuter (m) eller sekunder (s). Minimum &lt;comment>1 m&lt;/comment>, max &lt;comment>1h&lt;/comment>.
+
+- Kräver ett värde
+
+### `--to`
+
+Sluttiden. Standardvärdet är nu.
+
+- Kräver ett värde
+
+### `--latest`, `-1`
+
+Visa endast den senaste enskilda datapunkten
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--no-ansi`
+### `--service`, `-s`
 
-Inaktivera ANSI-utdata
+Filtrera efter tjänst- eller programnamn Tecknen % eller * kan användas som jokertecken.
+
+- Standard: `[]`
+- Kräver ett värde
+
+### `--type`
+
+Filtrera efter tjänsttyp (if —service tillhandahålls inte). Versionen är inte obligatorisk. Tecknen % och * kan användas som jokertecken.
+
+- Standard: `[]`
+- Kräver ett värde
+
+### `--project`, `-p`
+
+Projekt-ID eller URL
+
+- Kräver ett värde
+
+### `--environment`, `-e`
+
+Miljö-ID
+
+- Kräver ett värde
+
+### `--format`
+
+Utdataformatet: table, csv, tsv eller plain
+
+- Standard: `table`
+- Kräver ett värde
+
+### `--columns`, `-c`
+
+Kolumner att visa. Tillgängliga kolumner: tidsstämpel*, tjänst*, använd*, gräns*, procent*, typ (* = standardkolumner). Tecknet&quot;+&quot; kan användas som platshållare för standardkolumnerna. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+
+- Standard: `[]`
+- Kräver ett värde
+
+### `--no-header`
+
+Skriv inte ut tabellrubriken
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--no`, `-n`
+### `--date-fmt`
 
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
+Datumformatet (som en PHP-datumformatsträng)
+
+- Standard: `c`
+- Kräver ett värde
+
+### `--help`, `-h`
+
+Visa det här hjälpmeddelandet
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--quiet`, `-q`
+### `--verbose`, `-v|-vv|-vvv`
 
-Skriv inget meddelande
+Öka meddelandenas exakthet
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--version`, `-V`
+
+Visa den här programversionen
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--yes`, `-y`
+
+svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, inaktivera interaktion
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--no-interaction`
+
+Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+
+## `metrics:disk-usage`
+
+Visa diskanvändning i en miljö
+
+```bash
+magento-cloud metrics:disk-usage [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [--tmp] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
+```
+
+### `--bytes`, `-B`
+
+Visa storlekar i byte
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--range`, `-r`
+
+Tidsintervall. Mätvärden läses in för den här varaktigheten till sluttiden (—to). Du kan ange enheter: timmar (h), minuter (m) eller sekunder (s). Minimum &lt;comment>5 m&lt;/comment>, max &lt;comment>8 tim&lt;/comment> eller mer (beroende på projektet), standard &lt;comment>10 m&lt;/comment>.
+
+- Kräver ett värde
+
+### `--interval`, `-i`
+
+Tidsintervallet. Standardvärdet är en division av intervallet. Du kan ange enheter: timmar (h), minuter (m) eller sekunder (s). Minimum &lt;comment>1 m&lt;/comment>, max &lt;comment>1h&lt;/comment>.
+
+- Kräver ett värde
+
+### `--to`
+
+Sluttiden. Standardvärdet är nu.
+
+- Kräver ett värde
+
+### `--latest`, `-1`
+
+Visa endast den senaste enskilda datapunkten
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--service`, `-s`
+
+Filtrera efter tjänst- eller programnamn Tecknen % eller * kan användas som jokertecken.
+
+- Standard: `[]`
+- Kräver ett värde
+
+### `--type`
+
+Filtrera efter tjänsttyp (if —service tillhandahålls inte). Versionen är inte obligatorisk. Tecknen % och * kan användas som jokertecken.
+
+- Standard: `[]`
+- Kräver ett värde
+
+### `--tmp`
+
+Rapportera tillfällig diskanvändning (visar kolumner: tidsstämpel, tjänst, tmp_used, tmp_limit, tmp_percent, tmp_ipercent)
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--project`, `-p`
+
+Projekt-ID eller URL
+
+- Kräver ett värde
+
+### `--environment`, `-e`
+
+Miljö-ID
+
+- Kräver ett värde
+
+### `--format`
+
+Utdataformatet: table, csv, tsv eller plain
+
+- Standard: `table`
+- Kräver ett värde
+
+### `--columns`, `-c`
+
+Kolumner att visa. Tillgängliga kolumner: timestamp*, service*, used*, limit*, percent*, ipercent*, tmp_percent*, ilimit, iused, tmp_ilimit, tmp_ipercent, tmp_iused, tmp_limit, tmp_used, type (* = default columns). Tecknet&quot;+&quot; kan användas som platshållare för standardkolumnerna. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+
+- Standard: `[]`
+- Kräver ett värde
+
+### `--no-header`
+
+Skriv inte ut tabellrubriken
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--date-fmt`
+
+Datumformatet (som en PHP-datumformatsträng)
+
+- Standard: `c`
+- Kräver ett värde
+
+### `--help`, `-h`
+
+Visa det här hjälpmeddelandet
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--verbose`, `-v|-vv|-vvv`
+
+Öka meddelandenas exakthet
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--version`, `-V`
+
+Visa den här programversionen
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--yes`, `-y`
+
+svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, inaktivera interaktion
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--no-interaction`
+
+Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+
+## `metrics:memory`
+
+&lt;fg white=&quot;&quot; bg=&quot;red&quot;> BETA &lt;/> Visa minnesanvändning för en miljö
+
+```bash
+magento-cloud metrics:memory [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
+```
+
+### `--bytes`, `-B`
+
+Visa storlekar i byte
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--range`, `-r`
+
+Tidsintervall. Mätvärden läses in för den här varaktigheten till sluttiden (—to). Du kan ange enheter: timmar (h), minuter (m) eller sekunder (s). Minimum &lt;comment>5 m&lt;/comment>, max &lt;comment>8 tim&lt;/comment> eller mer (beroende på projektet), standard &lt;comment>10 m&lt;/comment>.
+
+- Kräver ett värde
+
+### `--interval`, `-i`
+
+Tidsintervallet. Standardvärdet är en division av intervallet. Du kan ange enheter: timmar (h), minuter (m) eller sekunder (s). Minimum &lt;comment>1 m&lt;/comment>, max &lt;comment>1h&lt;/comment>.
+
+- Kräver ett värde
+
+### `--to`
+
+Sluttiden. Standardvärdet är nu.
+
+- Kräver ett värde
+
+### `--latest`, `-1`
+
+Visa endast den senaste enskilda datapunkten
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--service`, `-s`
+
+Filtrera efter tjänst- eller programnamn Tecknen % eller * kan användas som jokertecken.
+
+- Standard: `[]`
+- Kräver ett värde
+
+### `--type`
+
+Filtrera efter tjänsttyp (if —service tillhandahålls inte). Versionen är inte obligatorisk. Tecknen % och * kan användas som jokertecken.
+
+- Standard: `[]`
+- Kräver ett värde
+
+### `--project`, `-p`
+
+Projekt-ID eller URL
+
+- Kräver ett värde
+
+### `--environment`, `-e`
+
+Miljö-ID
+
+- Kräver ett värde
+
+### `--format`
+
+Utdataformatet: table, csv, tsv eller plain
+
+- Standard: `table`
+- Kräver ett värde
+
+### `--columns`, `-c`
+
+Kolumner att visa. Tillgängliga kolumner: tidsstämpel*, tjänst*, använd*, gräns*, procent*, typ (* = standardkolumner). Tecknet&quot;+&quot; kan användas som platshållare för standardkolumnerna. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+
+- Standard: `[]`
+- Kräver ett värde
+
+### `--no-header`
+
+Skriv inte ut tabellrubriken
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--date-fmt`
+
+Datumformatet (som en PHP-datumformatsträng)
+
+- Standard: `c`
+- Kräver ett värde
+
+### `--help`, `-h`
+
+Visa det här hjälpmeddelandet
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--verbose`, `-v|-vv|-vvv`
+
+Öka meddelandenas exakthet
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--version`, `-V`
+
+Visa den här programversionen
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--yes`, `-y`
+
+svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, inaktivera interaktion
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--no-interaction`
+
+Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9637,12 +6573,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 Miljö-ID
@@ -9708,46 +6638,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `mount:list`
 
 Få en lista över monteringar
 
 ```bash
-magento-cloud mounts [--paths] [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
-```
-
-
-```bash
-mounts
+magento-cloud mount:list [--paths] [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
 ```
 
 ### `--paths`
@@ -9773,7 +6670,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 ### `--columns`, `-c`
 
-Kolumner att visa. Tillgängliga kolumner: definition, sökväg. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Kolumner att visa. Tillgängliga kolumner: definition, sökväg. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -9788,12 +6685,6 @@ Skriv inte ut tabellrubriken
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -9852,34 +6743,6 @@ svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, 
 ### `--no-interaction`
 
 Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9916,7 +6779,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 ### `--columns`, `-c`
 
-Kolumner att visa. Tillgängliga kolumner: available, max, monts, percent_used, sizes, used. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Kolumner att visa. Tillgängliga kolumner: available, max, monts, percent_used, sizes, used. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -9937,12 +6800,6 @@ En SSH-identitet (privat nyckel) som ska användas
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -10001,34 +6858,6 @@ svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, 
 ### `--no-interaction`
 
 Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -10088,12 +6917,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 Miljö-ID
@@ -10159,34 +6982,6 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `project:clear-build-cache`
 
@@ -10202,12 +6997,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--help`, `-h`
 
 Visa det här hjälpmeddelandet
@@ -10239,184 +7028,6 @@ svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, 
 ### `--no-interaction`
 
 Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-
-## `project:curl`
-
-Köra en autentiserad cURL-begäran på ett projekts API
-
-```bash
-magento-cloud project:curl [-X|--request REQUEST] [-d|--data DATA] [--json JSON] [-i|--include] [-I|--head] [--disable-compression] [--enable-glob] [-f|--fail] [-H|--header HEADER] [-p|--project PROJECT] [--] [<path>]
-```
-
-
-### `path`
-
-API-sökvägen
-
-
-### `--request`, `-X`
-
-Begärandemetoden som ska användas
-
-- Kräver ett värde
-
-### `--data`, `-d`
-
-Data som ska skickas
-
-- Kräver ett värde
-
-### `--json`
-
-JSON-data att skicka
-
-- Kräver ett värde
-
-### `--include`, `-i`
-
-Inkludera sidhuvuden i utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--head`, `-I`
-
-Hämta endast rubriker
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--disable-compression`
-
-Använd inte flaggan curl —compressed
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--enable-glob`
-
-Aktivera bläddring (ta bort flaggan —globoff)
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--fail`, `-f`
-
-Misslyckades utan utdata på ett felsvar
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--header`, `-H`
-
-Extra rubrik(er)
-
-- Standard: `[]`
-- Kräver ett värde
-
-### `--project`, `-p`
-
-Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
-### `--help`, `-h`
-
-Visa det här hjälpmeddelandet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas exakthet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--yes`, `-y`
-
-svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`
-
-Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -10427,12 +7038,7 @@ Skriv inget meddelande
 Klona ett projekt lokalt
 
 ```bash
-magento-cloud get [-e|--environment ENVIRONMENT] [--depth DEPTH] [--build] [-p|--project PROJECT] [-i|--identity-file IDENTITY-FILE] [--] [<project>] [<directory>]
-```
-
-
-```bash
-get
+magento-cloud project:get [-e|--environment ENVIRONMENT] [--depth DEPTH] [--build] [-p|--project PROJECT] [-i|--identity-file IDENTITY-FILE] [--] [<project>] [<directory>]
 ```
 
 
@@ -10468,12 +7074,6 @@ Bygg projektet efter kloning
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -10518,34 +7118,6 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `project:info`
 
@@ -10553,11 +7125,6 @@ Läsa eller ange egenskaper för ett projekt
 
 ```bash
 magento-cloud project:info [--refresh] [--date-fmt DATE-FMT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] [<property>] [<value>]
-```
-
-
-```bash
-project:metadata
 ```
 
 
@@ -10594,7 +7161,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 ### `--columns`, `-c`
 
-Kolumner att visa. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Kolumner att visa. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -10609,12 +7176,6 @@ Skriv inte ut tabellrubriken
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -10667,34 +7228,6 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `project:list`
 
@@ -10702,16 +7235,6 @@ Hämta en lista över alla aktiva projekt
 
 ```bash
 magento-cloud project:list [--pipe] [--host HOST] [--title TITLE] [--my] [--refresh REFRESH] [--sort SORT] [--reverse] [--page PAGE] [-c|--count COUNT] [--format FORMAT] [--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
-```
-
-
-```bash
-projects
-```
-
-
-```bash
-pro
 ```
 
 ### `--pipe`
@@ -10782,7 +7305,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 ### `--columns`
 
-Kolumner att visa. Tillgängliga kolumner: id*, title*, region*, created_at, endpoint, organization_id, organization_label, organization_name, region_label, status, ui_url (* = standardkolumner). Tecknet&quot;+&quot; kan användas som platshållare för standardkolumnerna. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Kolumner att visa. Tillgängliga kolumner: id*, title*, region*, created_at, endpoint, organization_id, organization_label, organization_name, region_label, status, ui_url (* = standardkolumner). Tecknet&quot;+&quot; kan användas som platshållare för standardkolumnerna. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -10832,34 +7355,6 @@ svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, 
 ### `--no-interaction`
 
 Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -10914,409 +7409,6 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-
-## `project:variable:delete`
-
-&lt;fg white=&quot;&quot; bg=&quot;red&quot;>[ INAKTUELL ]&lt;/> Ta bort en variabel från ett projekt
-
-```bash
-magento-cloud project:variable:delete [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] <name>
-```
-
-
-### `name`
-
-Variabelnamnet
-
-- Obligatoriskt
-
-### `--project`, `-p`
-
-Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
-### `--no-wait`, `-W`
-
-Vänta inte på att åtgärden ska slutföras
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--wait`
-
-Vänta tills åtgärden har slutförts (standard)
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa det här hjälpmeddelandet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas exakthet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--yes`, `-y`
-
-svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`
-
-Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-
-## `project:variable:get`
-
-&lt;fg white=&quot;&quot; bg=&quot;red&quot;>[ INAKTUELL ]&lt;/> Visa variabler för ett projekt
-
-```bash
-magento-cloud project:variable:get [--pipe] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [--] [<name>]
-```
-
-
-```bash
-project-variables
-```
-
-
-```bash
-pvget
-```
-
-
-```bash
-project:variable:list
-```
-
-
-### `name`
-
-Variabelns namn
-
-
-### `--pipe`
-
-Utdata för endast det fullständiga variabelvärdet (ett &quot;name&quot; måste anges)
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--format`
-
-Utdataformatet: table, csv, tsv eller plain
-
-- Standard: `table`
-- Kräver ett värde
-
-### `--columns`, `-c`
-
-Kolumner att visa. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
-
-- Standard: `[]`
-- Kräver ett värde
-
-### `--no-header`
-
-Skriv inte ut tabellrubriken
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--project`, `-p`
-
-Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
-### `--help`, `-h`
-
-Visa det här hjälpmeddelandet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas exakthet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--yes`, `-y`
-
-svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`
-
-Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-
-## `project:variable:set`
-
-&lt;fg white=&quot;&quot; bg=&quot;red&quot;>[ INAKTUELL ]&lt;/> Ange en variabel för ett projekt
-
-```bash
-magento-cloud pvset [--json] [--no-visible-build] [--no-visible-runtime] [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] <name> <value>
-```
-
-
-```bash
-pvset
-```
-
-
-### `name`
-
-Variabelnamnet
-
-- Obligatoriskt
-
-### `value`
-
-Variabelvärdet
-
-- Obligatoriskt
-
-### `--json`
-
-Markera värdet som JSON
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-visible-build`
-
-Visa inte den här variabeln vid byggtillfället
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-visible-runtime`
-
-Visa inte den här variabeln vid körning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--project`, `-p`
-
-Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
-### `--no-wait`, `-W`
-
-Vänta inte på att åtgärden ska slutföras
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--wait`
-
-Vänta tills åtgärden har slutförts (standard)
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa det här hjälpmeddelandet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas exakthet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--yes`, `-y`
-
-svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`
-
-Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `repo:cat`
 
@@ -11342,12 +7434,6 @@ Verkställ SHA. Detta kan även acceptera suffixen &quot;HEAD&quot; och cirkumfl
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -11388,34 +7474,6 @@ svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, 
 ### `--no-interaction`
 
 Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -11468,12 +7526,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 Miljö-ID
@@ -11515,46 +7567,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `repo:read`
 
 Läsa en katalog eller fil i projektdatabasen
 
 ```bash
-magento-cloud read [-c|--commit COMMIT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<path>]
-```
-
-
-```bash
-read
+magento-cloud repo:read [-c|--commit COMMIT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<path>]
 ```
 
 
@@ -11575,12 +7594,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 Miljö-ID
@@ -11618,34 +7631,6 @@ svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, 
 ### `--no-interaction`
 
 Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -11704,12 +7689,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 Miljö-ID
@@ -11763,51 +7742,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `route:list`
 
 Visa alla vägar för en miljö
 
 ```bash
-magento-cloud routes [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<environment>]
-```
-
-
-```bash
-routes
-```
-
-
-```bash
-environment:routes
+magento-cloud route:list [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<environment>]
 ```
 
 
@@ -11832,7 +7773,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 ### `--columns`, `-c`
 
-Kolumner att visa. Tillgängliga kolumner: route*, type*, to*, url (* = standardkolumner). Tecknet&quot;+&quot; kan användas som platshållare för standardkolumnerna. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Kolumner att visa. Tillgängliga kolumner: route*, type*, to*, url (* = standardkolumner). Tecknet&quot;+&quot; kan användas som platshållare för standardkolumnerna. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -11847,12 +7788,6 @@ Skriv inte ut tabellrubriken
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -11897,34 +7832,6 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `self:install`
 
@@ -11932,11 +7839,6 @@ Installera eller uppdatera CLI-konfigurationsfiler
 
 ```bash
 magento-cloud self:install [--shell-type SHELL-TYPE]
-```
-
-
-```bash
-local:install
 ```
 
 ### `--shell-type`
@@ -11980,165 +7882,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-
-## `self:stats`
-
-Visa statistik för hämtningar av GitHub-paket
-
-```bash
-magento-cloud self:stats [-p|--page PAGE] [-c|--count COUNT] [--format FORMAT] [--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
-```
-
-### `--page`, `-p`
-
-Sidnummer
-
-- Standard: `1`
-- Kräver ett värde
-
-### `--count`, `-c`
-
-Resultat per sida (max: 100)
-
-- Standard: `20`
-- Kräver ett värde
-
-### `--format`
-
-Utdataformatet: table, csv, tsv eller plain
-
-- Standard: `table`
-- Kräver ett värde
-
-### `--columns`
-
-Kolumner att visa. Tillgängliga kolumner: resurs, datum, nedladdningar, release. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
-
-- Standard: `[]`
-- Kräver ett värde
-
-### `--no-header`
-
-Skriv inte ut tabellrubriken
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--date-fmt`
-
-Datumformatet (som en PHP-datumformatsträng)
-
-- Standard: `c`
-- Kräver ett värde
-
-### `--help`, `-h`
-
-Visa det här hjälpmeddelandet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas exakthet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--yes`, `-y`
-
-svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`
-
-Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `self:update`
 
 Uppdatera CLI till den senaste versionen
 
 ```bash
-magento-cloud self-update [--no-major] [--unstable] [--manifest MANIFEST] [--current-version CURRENT-VERSION] [--timeout TIMEOUT]
-```
-
-
-```bash
-self-update
-```
-
-
-```bash
-update
+magento-cloud self:update [--no-major] [--unstable] [--manifest MANIFEST] [--current-version CURRENT-VERSION] [--timeout TIMEOUT]
 ```
 
 ### `--no-major`
@@ -12209,46 +7959,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `service:list`
 
 Visa tjänster i projektet
 
 ```bash
-magento-cloud services [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
-```
-
-
-```bash
-services
+magento-cloud service:list [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 ```
 
 ### `--refresh`
@@ -12258,15 +7975,16 @@ Om cachen ska uppdateras
 - Standard: `false`
 - Accepterar inte ett värde
 
+### `--pipe`
+
+Skriv endast ut en lista med tjänstnamn
+
+- Standard: `false`
+- Accepterar inte ett värde
+
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -12285,7 +8003,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 ### `--columns`, `-c`
 
-Kolumner att visa. Tillgängliga kolumner: disk, namn, storlek, typ. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Kolumner att visa. Tillgängliga kolumner: disk, namn, storlek, typ. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -12332,46 +8050,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `service:mongo:dump`
 
 Skapa en binär arkivdump av data från MongoDB
 
 ```bash
-magento-cloud mongodump [-c|--collection COLLECTION] [-z|--gzip] [-o|--stdout] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
-```
-
-
-```bash
-mongodump
+magento-cloud service:mongo:dump [-c|--collection COLLECTION] [-z|--gzip] [-o|--stdout] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 ### `--collection`, `-c`
@@ -12409,12 +8094,6 @@ En SSH-identitet (privat nyckel) som ska användas
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -12465,46 +8144,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `service:mongo:export`
 
 Exportera data från MongoDB
 
 ```bash
-magento-cloud mongoexport [-c|--collection COLLECTION] [--jsonArray] [--type TYPE] [-f|--fields FIELDS] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
-```
-
-
-```bash
-mongoexport
+magento-cloud service:mongo:export [-c|--collection COLLECTION] [--jsonArray] [--type TYPE] [-f|--fields FIELDS] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 ### `--collection`, `-c`
@@ -12551,12 +8197,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 Miljö-ID
@@ -12604,46 +8244,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `service:mongo:restore`
 
 Återställa en binär arkivdump av data till MongoDB
 
 ```bash
-magento-cloud mongorestore [-c|--collection COLLECTION] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
-```
-
-
-```bash
-mongorestore
+magento-cloud service:mongo:restore [-c|--collection COLLECTION] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 ### `--collection`, `-c`
@@ -12670,12 +8277,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 Miljö-ID
@@ -12723,46 +8324,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `service:mongo:shell`
 
 Använd MongoDB-skalet
 
 ```bash
-magento-cloud mongo [--eval EVAL] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
-```
-
-
-```bash
-mongo
+magento-cloud service:mongo:shell [--eval EVAL] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 ### `--eval`
@@ -12789,12 +8357,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 Miljö-ID
@@ -12842,46 +8404,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `service:redis-cli`
 
 Åtkomst till Redis CLI
 
 ```bash
-magento-cloud redis [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--] [<args>]
-```
-
-
-```bash
-redis
+magento-cloud service:redis-cli [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--] [<args>]
 ```
 
 
@@ -12908,12 +8437,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 Miljö-ID
@@ -12961,134 +8484,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-
-## `session:switch`
-
-&lt;fg white=&quot;&quot; bg=&quot;red&quot;>[ BETA ]&lt;/> Växla mellan sessioner
-
-```bash
-magento-cloud session:switch [<id>]
-```
-
-
-### `id`
-
-Nytt sessions-ID
-
-
-### `--help`, `-h`
-
-Visa det här hjälpmeddelandet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas exakthet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--yes`, `-y`
-
-svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`
-
-Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `snapshot:create`
 
 Ta en ögonblicksbild av en miljö
 
 ```bash
-magento-cloud backup [--live] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]
-```
-
-
-```bash
-backup
-```
-
-
-```bash
-backup:create
-```
-
-
-```bash
-environment:backup
+magento-cloud snapshot:create [--live] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]
 ```
 
 
@@ -13107,12 +8509,6 @@ Live-säkerhetskopiering: stoppa inte miljön. Om detta anges kommer miljön att
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -13136,9 +8532,78 @@ Vänta tills åtgärden har slutförts (standard)
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--unsafe`
+### `--help`, `-h`
 
-Föråldrat alternativ: use —live i stället
+Visa det här hjälpmeddelandet
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--verbose`, `-v|-vv|-vvv`
+
+Öka meddelandenas exakthet
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--version`, `-V`
+
+Visa den här programversionen
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--yes`, `-y`
+
+svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, inaktivera interaktion
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--no-interaction`
+
+Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+
+## `snapshot:delete`
+
+Ta bort en ögonblicksbild av miljön
+
+```bash
+magento-cloud snapshot:delete [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<id>]
+```
+
+
+### `id`
+
+ID för ögonblicksbilden. Krävs i icke-interaktivt läge.
+
+
+### `--project`, `-p`
+
+Projekt-ID eller URL
+
+- Kräver ett värde
+
+### `--environment`, `-e`
+
+Miljö-ID
+
+- Kräver ett värde
+
+### `--no-wait`, `-W`
+
+Vänta inte på att åtgärden ska slutföras
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--wait`
+
+Vänta tills åtgärden har slutförts (standard)
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -13178,30 +8643,77 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
 
-Framtvinga ANSI-utdata
+## `snapshot:get`
+
+Visa en ögonblicksbild av en miljö
+
+```bash
+magento-cloud snapshot:get [-P|--property PROPERTY] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--date-fmt DATE-FMT] [--] [<id>]
+```
+
+
+### `id`
+
+ID för ögonblicksbilden. Standardvärdet är den senaste.
+
+
+### `--property`, `-P`
+
+Egenskapen som ska visas.
+
+- Kräver ett värde
+
+### `--project`, `-p`
+
+Projekt-ID eller URL
+
+- Kräver ett värde
+
+### `--environment`, `-e`
+
+Miljö-ID
+
+- Kräver ett värde
+
+### `--date-fmt`
+
+Datumformatet (som en PHP-datumformatsträng)
+
+- Standard: `c`
+- Kräver ett värde
+
+### `--help`, `-h`
+
+Visa det här hjälpmeddelandet
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--no-ansi`
+### `--verbose`, `-v|-vv|-vvv`
 
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
+Öka meddelandenas exakthet
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--quiet`, `-q`
+### `--version`, `-V`
 
-Skriv inget meddelande
+Visa den här programversionen
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--yes`, `-y`
+
+svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, inaktivera interaktion
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--no-interaction`
+
+Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -13212,35 +8724,8 @@ Skriv inget meddelande
 Visa tillgängliga ögonblicksbilder av en miljö
 
 ```bash
-magento-cloud snapshots [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
+magento-cloud snapshot:list [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
 ```
-
-
-```bash
-snapshots
-```
-
-
-```bash
-backups
-```
-
-
-```bash
-backup:list
-```
-
-### `--limit`
-
-[Föråldrat] - det här alternativet används inte
-
-- Kräver ett värde
-
-### `--start`
-
-[Föråldrat] - det här alternativet används inte
-
-- Kräver ett värde
 
 ### `--format`
 
@@ -13251,7 +8736,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 ### `--columns`, `-c`
 
-Kolumner att visa. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Kolumner att visa. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -13276,12 +8761,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 Miljö-ID
@@ -13323,34 +8802,6 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `snapshot:restore`
 
@@ -13358,16 +8809,6 @@ Skriv inget meddelande
 
 ```bash
 magento-cloud snapshot:restore [--target TARGET] [--branch-from BRANCH-FROM] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<snapshot>]
-```
-
-
-```bash
-environment:restore
-```
-
-
-```bash
-backup:restore
 ```
 
 
@@ -13394,12 +8835,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 Miljö-ID
@@ -13455,30 +8890,86 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
 
-Framtvinga ANSI-utdata
+## `source-operation:list`
 
-- Standard: `false`
-- Accepterar inte ett värde
+Visa källåtgärder i en miljö
 
-### `--no-ansi`
+```bash
+magento-cloud source-operation:list [--full] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
+```
 
-Inaktivera ANSI-utdata
+### `--full`
 
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
+Begränsa inte längden på det kommando som ska visas. Standardgränsen är 24 rader.
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--quiet`, `-q`
+### `--project`, `-p`
 
-Skriv inget meddelande
+Projekt-ID eller URL
+
+- Kräver ett värde
+
+### `--environment`, `-e`
+
+Miljö-ID
+
+- Kräver ett värde
+
+### `--format`
+
+Utdataformatet: table, csv, tsv eller plain
+
+- Standard: `table`
+- Kräver ett värde
+
+### `--columns`, `-c`
+
+Kolumner att visa. Tillgängliga kolumner: app, command, operation. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+
+- Standard: `[]`
+- Kräver ett värde
+
+### `--no-header`
+
+Skriv inte ut tabellrubriken
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--help`, `-h`
+
+Visa det här hjälpmeddelandet
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--verbose`, `-v|-vv|-vvv`
+
+Öka meddelandenas exakthet
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--version`, `-V`
+
+Visa den här programversionen
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--yes`, `-y`
+
+svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, inaktivera interaktion
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--no-interaction`
+
+Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -13486,10 +8977,10 @@ Skriv inget meddelande
 
 ## `source-operation:run`
 
-&lt;fg white=&quot;&quot; bg=&quot;red&quot;>[ BETA ]&lt;/> Kör en källåtgärd
+Kör en källåtgärd
 
 ```bash
-magento-cloud source-operation:run [--variable VARIABLE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <operation>
+magento-cloud source-operation:run [--variable VARIABLE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<operation>]
 ```
 
 
@@ -13497,7 +8988,6 @@ magento-cloud source-operation:run [--variable VARIABLE] [-p|--project PROJECT] 
 
 Åtgärdsnamnet
 
-- Obligatoriskt
 
 ### `--variable`
 
@@ -13512,12 +9002,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 Miljö-ID
@@ -13569,126 +9053,6 @@ svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, 
 ### `--no-interaction`
 
 Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-
-## `ssh-cert:info`
-
-Visa information om det aktuella SSH-certifikatet
-
-```bash
-magento-cloud ssh-cert:info [--no-refresh] [-P|--property PROPERTY] [--date-fmt DATE-FMT]
-```
-
-### `--no-refresh`
-
-Uppdatera inte certifikatet om det är ogiltigt
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--property`, `-P`
-
-Certifikategenskapen som ska visas
-
-- Kräver ett värde
-
-### `--date-fmt`
-
-Datumformatet (som en PHP-datumformatsträng)
-
-- Standard: `c`
-- Kräver ett värde
-
-### `--help`, `-h`
-
-Visa det här hjälpmeddelandet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas exakthet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--yes`, `-y`
-
-svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`
-
-Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -13758,34 +9122,6 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `ssh-key:add`
 
@@ -13842,34 +9178,6 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `ssh-key:delete`
 
@@ -13920,46 +9228,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `ssh-key:list`
 
 Hämta en lista med SSH-nycklar i ditt konto
 
 ```bash
-magento-cloud ssh-keys [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
-```
-
-
-```bash
-ssh-keys
+magento-cloud ssh-key:list [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 ```
 
 ### `--format`
@@ -13971,7 +9246,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 ### `--columns`, `-c`
 
-Kolumner att visa. Tillgängliga kolumner: id*, title*, path*, fingeravtryck (* = standardkolumner). Tecknet&quot;+&quot; kan användas som platshållare för standardkolumnerna. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Kolumner att visa. Tillgängliga kolumner: id*, title*, path*, fingeravtryck (* = standardkolumner). Tecknet&quot;+&quot; kan användas som platshållare för standardkolumnerna. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -14014,34 +9289,6 @@ svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, 
 ### `--no-interaction`
 
 Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -14088,7 +9335,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 ### `--columns`, `-c`
 
-Kolumner att visa. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Kolumner att visa. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -14103,12 +9350,6 @@ Skriv inte ut tabellrubriken
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -14147,34 +9388,6 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `tunnel:close`
 
@@ -14194,12 +9407,6 @@ Stäng alla tunnlar
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -14246,34 +9453,6 @@ svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, 
 ### `--no-interaction`
 
 Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -14306,12 +9485,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 Miljö-ID
@@ -14333,7 +9506,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 ### `--columns`
 
-Kolumner att visa. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Kolumner att visa. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -14380,46 +9553,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `tunnel:list`
 
 Lista SSH-tunnlar
 
 ```bash
-magento-cloud tunnels [-a|--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
-```
-
-
-```bash
-tunnels
+magento-cloud tunnel:list [-a|--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 ```
 
 ### `--all`, `-a`
@@ -14432,12 +9572,6 @@ Visa alla tunnlar
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -14462,7 +9596,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 ### `--columns`, `-c`
 
-Kolumner att visa. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Kolumner att visa. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -14509,34 +9643,6 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `tunnel:open`
 
@@ -14556,12 +9662,6 @@ Tillåt att fjärrvärdar ansluter till lokala vidarebefordrade portar
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -14618,34 +9718,6 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `tunnel:single`
 
@@ -14671,12 +9743,6 @@ Tillåt att fjärrvärdar ansluter till lokala vidarebefordrade portar
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -14739,41 +9805,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `user:add`
 
 Lägg till en användare i projektet
 
 ```bash
-magento-cloud user:add [-r|--role ROLE] [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] [<email>]
+magento-cloud user:add [-r|--role ROLE] [--force-invite] [-p|--project PROJECT] [-W|--no-wait] [--wait] [--] [<email>]
 ```
 
 
@@ -14784,20 +9822,21 @@ Användarens e-postadress
 
 ### `--role`, `-r`
 
-Användarens projektroll (admin eller viewer) eller miljötypsroll (t.ex. &#39;staging:contributor&#39; or &#39;production:viewer&#39;). Om du vill ta bort en användare från en miljötyp anger du rollen som none. Tecknet % kan användas som jokertecken för miljötypen, t.ex. %:viewer för att ge användaren rollen &#39;viewer&#39; för alla typer. Rollen kan förkortas, t.ex. &#39;production:v&#39;.
+Användarens projektroll (admin eller viewer) eller miljötypsroll (t.ex. &#39;staging:contributor&#39; or &#39;production:viewer&#39;). Om du vill ta bort en användare från en miljötyp anger du rollen som none. Tecknen % och * kan användas som jokertecken för miljötypen, t.ex. %:viewer för att ge användaren rollen &#39;viewer&#39; för alla typer. Rollen kan förkortas, t.ex. &#39;production:v&#39;.
 
 - Standard: `[]`
 - Kräver ett värde
 
+### `--force-invite`
+
+Skicka en inbjudan, även om en inbjudan redan har skickats
+
+- Standard: `false`
+- Accepterar inte ett värde
+
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -14846,34 +9885,6 @@ svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, 
 ### `--no-interaction`
 
 Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -14900,12 +9911,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--no-wait`, `-W`
 
 Vänta inte på att åtgärden ska slutföras
@@ -14955,34 +9960,6 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `user:get`
 
@@ -14990,11 +9967,6 @@ Visa en användares roll
 
 ```bash
 magento-cloud user:get [-l|--level LEVEL] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [-r|--role ROLE] [--] [<email>]
-```
-
-
-```bash
-user:role
 ```
 
 
@@ -15019,12 +9991,6 @@ Utdata för rollen till stdout (efter att du har gjort några ändringar)
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -15089,46 +10055,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `user:list`
 
 Visa projektanvändare
 
 ```bash
-magento-cloud users [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
-```
-
-
-```bash
-users
+magento-cloud user:list [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
 ```
 
 ### `--format`
@@ -15140,7 +10073,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 ### `--columns`, `-c`
 
-Kolumner att visa. Tillgängliga kolumner: e-post, id, namn, roll. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Kolumner att visa. Tillgängliga kolumner: e-post, id, namn, roll. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -15155,12 +10088,6 @@ Skriv inte ut tabellrubriken
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -15199,34 +10126,6 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `user:update`
 
@@ -15244,7 +10143,7 @@ Användarens e-postadress
 
 ### `--role`, `-r`
 
-Användarens projektroll (admin eller viewer) eller miljötypsroll (t.ex. &#39;staging:contributor&#39; or &#39;production:viewer&#39;). Om du vill ta bort en användare från en miljötyp anger du rollen som none. Tecknet % kan användas som jokertecken för miljötypen, t.ex. %:viewer för att ge användaren rollen &#39;viewer&#39; för alla typer. Rollen kan förkortas, t.ex. &#39;production:v&#39;.
+Användarens projektroll (admin eller viewer) eller miljötypsroll (t.ex. &#39;staging:contributor&#39; or &#39;production:viewer&#39;). Om du vill ta bort en användare från en miljötyp anger du rollen som none. Tecknen % och * kan användas som jokertecken för miljötypen, t.ex. %:viewer för att ge användaren rollen &#39;viewer&#39; för alla typer. Rollen kan förkortas, t.ex. &#39;production:v&#39;.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -15252,12 +10151,6 @@ Användarens projektroll (admin eller viewer) eller miljötypsroll (t.ex. &#39;s
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -15310,41 +10203,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `variable:create`
 
 Skapa en variabel
 
 ```bash
-magento-cloud variable:create [-l|--level LEVEL] [--name NAME] [--value VALUE] [--json JSON] [--sensitive SENSITIVE] [--prefix PREFIX] [--enabled ENABLED] [--inheritable INHERITABLE] [--visible-build VISIBLE-BUILD] [--visible-runtime VISIBLE-RUNTIME] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<name>]
+magento-cloud variable:create [-u|--update] [-l|--level LEVEL] [--name NAME] [--value VALUE] [--json JSON] [--sensitive SENSITIVE] [--prefix PREFIX] [--enabled ENABLED] [--inheritable INHERITABLE] [--visible-build VISIBLE-BUILD] [--visible-runtime VISIBLE-RUNTIME] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<name>]
 ```
 
 
@@ -15352,6 +10217,13 @@ magento-cloud variable:create [-l|--level LEVEL] [--name NAME] [--value VALUE] [
 
 Variabelnamnet
 
+
+### `--update`, `-u`
+
+Uppdatera variabeln om den redan finns
+
+- Standard: `false`
+- Accepterar inte ett värde
 
 ### `--level`, `-l`
 
@@ -15373,28 +10245,28 @@ Variabelns värde
 
 ### `--json`
 
-Om variabeln är JSON-formaterad
+Om variabelvärdet är JSON-formaterat
 
 - Standard: `false`
 - Kräver ett värde
 
 ### `--sensitive`
 
-Om variabeln är känslig
+Om variabelvärdet är känsligt
 
 - Standard: `false`
 - Kräver ett värde
 
 ### `--prefix`
 
-Variabelns prefix (t.ex. &#39;none&#39; eller &#39;env:&#39;)
+Variabelnamnets prefix som kan avgöra dess typ, t.ex. &#39;env&#39;. Gäller endast om namnet inte redan innehåller ett prefix. (t.ex. &#39;none&#39; eller &#39;env:&#39;)
 
 - Standard: `none`
 - Kräver ett värde
 
 ### `--enabled`
 
-Om variabeln ska aktiveras
+Om variabeln ska aktiveras i miljön
 
 - Standard: `true`
 - Kräver ett värde
@@ -15422,12 +10294,6 @@ Om variabeln ska vara synlig vid körning
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -15482,34 +10348,6 @@ svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, 
 ### `--no-interaction`
 
 Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -15542,12 +10380,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 Miljö-ID
@@ -15599,256 +10431,6 @@ svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, 
 ### `--no-interaction`
 
 Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-
-## `variable:disable`
-
-&lt;fg white=&quot;&quot; bg=&quot;red&quot;>[ INAKTUELL ]&lt;/> Inaktivera en aktiverad miljönivåvariabel
-
-```bash
-magento-cloud variable:disable [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
-```
-
-
-### `name`
-
-Variabelns namn
-
-- Obligatoriskt
-
-### `--project`, `-p`
-
-Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
-### `--environment`, `-e`
-
-Miljö-ID
-
-- Kräver ett värde
-
-### `--no-wait`, `-W`
-
-Vänta inte på att åtgärden ska slutföras
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--wait`
-
-Vänta tills åtgärden har slutförts (standard)
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa det här hjälpmeddelandet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas exakthet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--yes`, `-y`
-
-svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`
-
-Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-
-## `variable:enable`
-
-&lt;fg white=&quot;&quot; bg=&quot;red&quot;>[ INAKTUELL ]&lt;/> Aktivera en inaktiverad miljönivåvariabel
-
-```bash
-magento-cloud variable:enable [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
-```
-
-
-### `name`
-
-Variabelns namn
-
-- Obligatoriskt
-
-### `--project`, `-p`
-
-Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
-### `--environment`, `-e`
-
-Miljö-ID
-
-- Kräver ett värde
-
-### `--no-wait`, `-W`
-
-Vänta inte på att åtgärden ska slutföras
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--wait`
-
-Vänta tills åtgärden har slutförts (standard)
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa det här hjälpmeddelandet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas exakthet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--yes`, `-y`
-
-svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`
-
-Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -15859,12 +10441,7 @@ Skriv inget meddelande
 Visa en variabel
 
 ```bash
-magento-cloud vget [-P|--property PROPERTY] [-l|--level LEVEL] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--pipe] [--] [<name>]
-```
-
-
-```bash
-vget
+magento-cloud variable:get [-P|--property PROPERTY] [-l|--level LEVEL] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--pipe] [--] [<name>]
 ```
 
 
@@ -15894,7 +10471,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 ### `--columns`, `-c`
 
-Kolumner att visa. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Kolumner att visa. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -15909,12 +10486,6 @@ Skriv inte ut tabellrubriken
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -15966,34 +10537,6 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `variable:list`
 
@@ -16001,16 +10544,6 @@ Listvariabler
 
 ```bash
 magento-cloud variable:list [-l|--level LEVEL] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
-```
-
-
-```bash
-variables
-```
-
-
-```bash
-var
 ```
 
 ### `--level`, `-l`
@@ -16028,7 +10561,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 ### `--columns`, `-c`
 
-Kolumner att visa. Tillgängliga kolumner: is_enabled, level, name, value. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Kolumner att visa. Tillgängliga kolumner: is_enabled, level, name, value. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -16046,12 +10579,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 Miljö-ID
@@ -16089,170 +10616,6 @@ svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, 
 ### `--no-interaction`
 
 Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-
-## `variable:set`
-
-&lt;fg white=&quot;&quot; bg=&quot;red&quot;>[ INAKTUELL ]&lt;/> Ange en variabel för en miljö
-
-```bash
-magento-cloud vset [--json] [--disabled] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name> <value>
-```
-
-
-```bash
-vset
-```
-
-
-### `name`
-
-Variabelnamnet
-
-- Obligatoriskt
-
-### `value`
-
-Variabelvärdet
-
-- Obligatoriskt
-
-### `--json`
-
-Markera värdet som JSON
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--disabled`
-
-Markera variabeln som inaktiverad
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--project`, `-p`
-
-Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
-### `--environment`, `-e`
-
-Miljö-ID
-
-- Kräver ett värde
-
-### `--no-wait`, `-W`
-
-Vänta inte på att åtgärden ska slutföras
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--wait`
-
-Vänta tills åtgärden har slutförts (standard)
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa det här hjälpmeddelandet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas exakthet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--yes`, `-y`
-
-svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`
-
-Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -16263,7 +10626,7 @@ Skriv inget meddelande
 Uppdatera en variabel
 
 ```bash
-magento-cloud variable:update [-l|--level LEVEL] [--value VALUE] [--json JSON] [--sensitive SENSITIVE] [--enabled ENABLED] [--inheritable INHERITABLE] [--visible-build VISIBLE-BUILD] [--visible-runtime VISIBLE-RUNTIME] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
+magento-cloud variable:update [--allow-no-change] [-l|--level LEVEL] [--value VALUE] [--json JSON] [--sensitive SENSITIVE] [--enabled ENABLED] [--inheritable INHERITABLE] [--visible-build VISIBLE-BUILD] [--visible-runtime VISIBLE-RUNTIME] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] <name>
 ```
 
 
@@ -16272,6 +10635,13 @@ magento-cloud variable:update [-l|--level LEVEL] [--value VALUE] [--json JSON] [
 Variabelnamnet
 
 - Obligatoriskt
+
+### `--allow-no-change`
+
+Returnera lyckade (noll avslutningskod) om inga ändringar har angetts
+
+- Standard: `false`
+- Accepterar inte ett värde
 
 ### `--level`, `-l`
 
@@ -16287,21 +10657,21 @@ Variabelns värde
 
 ### `--json`
 
-Om variabeln är JSON-formaterad
+Om variabelvärdet är JSON-formaterat
 
 - Standard: `false`
 - Kräver ett värde
 
 ### `--sensitive`
 
-Om variabeln är känslig
+Om variabelvärdet är känsligt
 
 - Standard: `false`
 - Kräver ett värde
 
 ### `--enabled`
 
-Om variabeln ska aktiveras
+Om variabeln ska aktiveras i miljön
 
 - Standard: `true`
 - Kräver ett värde
@@ -16332,12 +10702,6 @@ Projekt-ID eller URL
 
 - Kräver ett värde
 
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
 ### `--environment`, `-e`
 
 Miljö-ID
@@ -16393,162 +10757,13 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-
-## `version:list`
-
-&lt;fg white=&quot;&quot; bg=&quot;red&quot;>[ ALFA ]&lt;/> Listmiljöversioner
-
-```bash
-magento-cloud versions [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
-```
-
-
-```bash
-versions
-```
-
-### `--project`, `-p`
-
-Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
-
-- Kräver ett värde
-
-### `--environment`, `-e`
-
-Miljö-ID
-
-- Kräver ett värde
-
-### `--format`
-
-Utdataformatet: table, csv, tsv eller plain
-
-- Standard: `table`
-- Kräver ett värde
-
-### `--columns`, `-c`
-
-Kolumner att visa. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
-
-- Standard: `[]`
-- Kräver ett värde
-
-### `--no-header`
-
-Skriv inte ut tabellrubriken
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa det här hjälpmeddelandet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas exakthet
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--yes`, `-y`
-
-svara ja på bekräftelsefrågor, godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`
-
-Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användning av miljövariabeln: &lt;comment>Magento_CLOUD_CLI_NO_INTERACTION=1&lt;/comment>
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
 
 ## `worker:list`
 
 Hämta en lista över alla distribuerade arbetare
 
 ```bash
-magento-cloud workers [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
-```
-
-
-```bash
-workers
+magento-cloud worker:list [--refresh] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 ```
 
 ### `--refresh`
@@ -16558,15 +10773,16 @@ Om cachen ska uppdateras
 - Standard: `false`
 - Accepterar inte ett värde
 
+### `--pipe`
+
+Skriv endast ut en lista med arbetarnamn
+
+- Standard: `false`
+- Accepterar inte ett värde
+
 ### `--project`, `-p`
 
 Projekt-ID eller URL
-
-- Kräver ett värde
-
-### `--host`
-
-Inaktuellt alternativ, används inte längre
 
 - Kräver ett värde
 
@@ -16585,7 +10801,7 @@ Utdataformatet: table, csv, tsv eller plain
 
 ### `--columns`, `-c`
 
-Kolumner att visa. Tillgängliga kolumner: kommandon, namn, typ. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
+Kolumner att visa. Tillgängliga kolumner: kommandon, namn, typ. Tecknen % och * kan användas som jokertecken. Om en lista anges som ett enda värde (t.ex. &quot;a,b,c&quot;) delas den med kommatecken och/eller blanksteg.
 
 - Standard: `[]`
 - Kräver ett värde
@@ -16632,30 +10848,3 @@ Ställ inga interaktiva frågor. acceptera standardvärden. Motsvarar användnin
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ansi`
-
-Framtvinga ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Inaktivera ANSI-utdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no`, `-n`
-
-Svara&quot;nej&quot; på bekräftelsefrågor. godkänna standardvärdet för andra frågor, inaktivera interaktion
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
