@@ -2,9 +2,9 @@
 title: Installationshandbok
 description: Använd den här guiden för att installera [!DNL Site-Wide Analysis Tool] för din webbplats
 exl-id: ba36dc74-806d-49c5-b4d1-ba53ed4076fb
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 4210746509be99bb3c943906c99f70ea420ba74a
 workflow-type: tm+mt
-source-wordcount: '1074'
+source-wordcount: '1168'
 ht-degree: 0%
 
 ---
@@ -184,7 +184,7 @@ Om du inte vill använda våra [gränssnittsskript](https://github.com/magento-s
    1. Ladda ned startarkivet.
 
       ```bash
-      curl -O https://updater.swat.magento.com/launcher/launcher.linux-amd64.tar.gz
+      curl -O https://updater.supportinsights.adobe.com/launcher/launcher.linux-amd64.tar.gz
       ```
 
    1. Packa upp startarkivet.
@@ -197,7 +197,7 @@ Om du inte vill använda våra [gränssnittsskript](https://github.com/magento-s
    1. Ladda ned startarkivet.
 
       ```bash
-      curl -O https://updater.swat.magento.com/launcher/launcher.linux-arm64.tar.gz
+      curl -O https://updater.supportinsights.adobe.com/launcher/launcher.linux-arm64.tar.gz
       ```
 
    1. Packa upp startarkivet.
@@ -390,7 +390,7 @@ Följande fel kan uppstå om dina nycklar inte tolkas som de ska:
 
 ```terminal
 ERRO[2022-10-10 00:01:41] Error while refreshing token: error while getting jwt from magento: invalid character 'M' looking for beginning of value
-FATA[2022-12-10 20:38:44] bad http status from https://updater.swat.magento.com/linux-amd64.json: 403 Forbidden
+FATA[2022-12-10 20:38:44] bad http status from https://updater.supportinsights.adobe.com/linux-amd64.json: 403 Forbidden
 ```
 
 Lös det här felet genom att försöka med följande steg:
@@ -403,6 +403,12 @@ Lös det här felet genom att försöka med följande steg:
 1. Kör schemaläggaren och se om du fortfarande får samma fel.
 1. Om du fortfarande får samma fel ökar du loggnivån i dialogrutan `config.yaml` för att felsöka och öppna en supportanmälan.
 
+### *SIGFAULT* Fel
+
+Om du ser en *SIGFAULT* när du kör binära filer, kör du förmodligen inte detta som filägare för Adobe Commerce- och agentfiler.
+Kontrollera också om alla filer i agentkatalogen som har samma användare som fileägaren som Adobe Commerce-filer har och binärfiler ska köras under den användaren.
+Du kan använda `chown` om du vill ändra filens ägare och växla till rätt användare.
+Kontrollera att din daemoniseringsmekanism (Cron eller System.d) kör processen under rätt användare.
 
 >[!INFO]
 >
