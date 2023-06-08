@@ -2,9 +2,9 @@
 title: Hantera meddelandeköer
 description: Lär dig hur du hanterar meddelandeköer från kommandoraden för Adobe Commerce.
 exl-id: 619e5df1-39cb-49b6-b636-618b12682d32
-source-git-commit: caca8df48c498977f830082ef27d9afb6220ae92
+source-git-commit: 8dce1f1e961ec02d7783a7423a51a7d4567dce79
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '417'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ I följande exempel visas `crontab` konfiguration för konsumenter:
 >
 >Se [Konfigurera och kör cron](../cli/configure-cron-jobs.md) för mer information om hur du använder `cron` med Commerce.
 
-Du kan också använda en processhanterare som [Supervisor](http://supervisord.org/index.html) för att övervaka processernas status. Hanteraren kan använda kommandoraden för att starta om processerna efter behov.
+Du kan också använda en processhanterare som [Supervisor](https://supervisord.readthedocs.io/en/latest/) för att övervaka processernas status. Hanteraren kan använda kommandoraden för att starta om processerna efter behov.
 
 ## Konfiguration
 
@@ -76,12 +76,12 @@ Redigera `/app/etc/env.php` fil för att konfigurera cron-jobbet `consumers_runn
 - `consumers` - en array med strängar som anger vilka konsumenter som ska köras. En tom array körs *alla* konsumenter.
 - `multiple_processes` - en array med nyckelvärdepar som anger vilken konsument som ska köras i hur många processer. Stöds i Commerce 2.4.4 eller senare.
 
-   >[!INFO]
-   >
-   >Du bör inte köra flera användare på en MySQL-styrd kö. Se [Ändra meddelandekö från MySQL till AMQP](https://developer.adobe.com/commerce/php/development/components/message-queues/#change-message-queue-from-mysql-to-amqp) för mer information.
+  >[!INFO]
+  >
+  >Du bör inte köra flera användare på en MySQL-styrd kö. Se [Ändra meddelandekö från MySQL till AMQP](https://developer.adobe.com/commerce/php/development/components/message-queues/#change-message-queue-from-mysql-to-amqp) för mer information.
 
-   >[!INFO]
-   >
-   >Om din Adobe Commerce-butik finns på molnplattformen använder du [`CONSUMERS_WAIT_FOR_MAX_MESSAGES`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#consumers_wait_for_max_messages) för att konfigurera hur konsumenter ska bearbeta meddelanden från meddelandekön.
+  >[!INFO]
+  >
+  >Om din Adobe Commerce-butik finns på molnplattformen använder du [`CONSUMERS_WAIT_FOR_MAX_MESSAGES`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#consumers_wait_for_max_messages) för att konfigurera hur konsumenter ska bearbeta meddelanden från meddelandekön.
 
 Se [Starta användare i meddelandekön](../cli/start-message-queues.md).
