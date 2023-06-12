@@ -2,9 +2,9 @@
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: 205a0b67fab14a313d28355eed668d60ce477e64
+source-git-commit: 86f95d8fff53ab0857a3a276ba785ad26eb71241
 workflow-type: tm+mt
-source-wordcount: '12066'
+source-wordcount: '12426'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,25 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som skapats av gemenskapen för Magento Open Source, se [versionsinformation](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.32 {#v1-1-32}
+
+* **ACSD-49628** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.7) - Korrigerar problemet där [!UICONTROL Page Builder's] flera fel förhindrar administratören från att spara en produkt utan innehållsbehörighet.
+* **ACSD-51305** (för Adobe Commerce och Magento Open Source >=2.4.6 &lt;2.4.7) - Korrigerar ett fel där underordnade produkter som inte kan konfigureras utanför lagret inte är tillgängliga i GraphQL svar.
+* **ACSD-50621** (för Adobe Commerce >=2.3.7 &lt;2.4.7) - Korrigerar problemet där [!UICONTROL Tier Prices] för olika webbplatser i den delade katalogen inte visas när du försöker redigera dem i en miljö med flera webbplatser.
+* **ACSD-51041** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.0 || >=2.4.1 &lt;2.4.6) - Förbättrar prestanda för prisindexerare.
+* **ACSD-51379** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.7) - Korrigerar problemet där ändringar i sidans textinnehåll gjordes via [!UICONTROL Page Builder] sparas inte.
+* **ACSD-49480** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.6) - Korrigerar problemet där endast en kundvagnsprisregel tillämpas på vagnen.
+* **ACSD-51230** (för Adobe Commerce >=2.3.7 &lt;2.4.7) - Korrigerar problemet där presentkortskontot tas bort när en partiell återbetalning av en enkel produkt bearbetas från en order.
+* **ACSD-51238** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.7) - Korrigerar problemet där lagerkällan tas bort när konfigurerbara produkter uppdateras och priset redigeras.
+* **ACSD-50794** (för Adobe Commerce >=2.4.1 &lt;2.4.7) - Korrigerar problemet där presentationsinformation inte uppdateras i databasen när den tas bort från GraphQL.
+* **ACSD-51528** (för Adobe Commerce och Magento Open Source >=2.4.5 &lt;2.4.7) - Korrigerar problemet där *x_Vidarebefordrad_för* kolumnen har null-värden i *sales_order* tabell.
+* **ACSD-50849** (för Adobe Commerce >=2.4.4 &lt;2.4.6) - Korrigerar problemet där en ny produkt läggs till i kategorin efter att cacheminnet rensats resulterar i en felmatchning av positioner och val för de befintliga produkterna.
+* **ACSD-51294** (för Adobe Commerce och Magento Open Source >=2.4.5 &lt;2.4.7) - Korrigerar problemet där GTM/GA-pris, kvantitet, skatt, frakt och intäkter skickas som en sträng till [!DNL Google Analytics] och GTM.
+* **ACSD-51204** (för Adobe Commerce och Magento Open Source >=2.4.3 &lt;2.4.7) - Korrigerar problemet där en helt såld produkt inte återgår i lager efter att en kreditnota har skapats.
+* **ACSD-51291** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.4-p4 || >=2.4.5 &lt;2.4.5-p3) - Korrigerar problemet där en begränsad administratör med tillgång till en webbplats kan lägga till bilder/videor till produkten som tilldelats flera webbplatser.
+* Nya versioner har lagts till för ACSD-50336.
+* Ersatta patchar ACSD-49970.
 
 ## v1.1.31 {#v1-1-31}
 
