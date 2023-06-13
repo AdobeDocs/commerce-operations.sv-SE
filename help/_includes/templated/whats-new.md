@@ -1,7 +1,7 @@
 ---
-source-git-commit: f7302ddd61b354eec4da8c9a1596ca18f38ba7b3
+source-git-commit: 36ebf825705e3ffb26d595d39df8339ab1ca3c6f
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '550'
 ht-degree: 0%
 
 ---
@@ -10,6 +10,102 @@ ht-degree: 0%
 ## Nyheter
 
 Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
+
+### 13 juni 2023
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Källa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Följande dokument har lagts till för Beta:<br />- <a href="https://experienceleague.adobe.com/docs/commerce-operations/reference/commerce-on-premises-beta.html">Adobe Commerce CLI (lokal, betaversion)</a><br />- <a href="https://experienceleague.adobe.com/docs/commerce-operations/reference/magento-open-source-beta.html">Magento Open Source CLI (betaversion)</a><br />- <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/packages/adobe-commerce-beta.html">Adobe Commerce-paket (beta)</a><br />- <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/packages/cloud-beta.html">Molnpaket för Adobe Commerce (beta)</a><br />- <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/packages/magento-open-source-beta.html">Magento Open Source-paket (beta)</a></p>
+</td>
+      <td>new-topic</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/165a7f99fa173b17e436c07dc1fbcf9323478762">165a7f</a> (implementera)</td>
+    </tr>
+    <tr>
+      <td><p>Grundläggande konfigurationsinformation för betaversionen av <a href="https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/performance-best-practices/application-server.html">Application Server för GraphQL API:er</a>.</p>
+</td>
+      <td>new-topic</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/6fe8d69933b7b2260a33b55bb2b12609addd3c90">6fe8d6</a> (implementera)</td>
+    </tr>
+    <tr>
+      <td><p>Uppdaterade <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/product-availability.html">produkttillgänglighetstabeller och kompatibilitetstabeller</a> och <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/overview.html">versionsinformation, översikt</a> för versionen från juni 2023.</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/95032071bca59ad1466aed16033a871d820c40b3">950320</a> (implementera)</td>
+    </tr>
+    <tr>
+      <td><p>Publicerad versionsinformation för följande patchar:<br />- <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/adobe-commerce/2-4-7.html">2.4.7-beta1</a><br />- <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-6-p1.html">2.4.6-p1</a><br />- <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-5-p3.html">2.4.5-p3</a><br />- <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-4-p4.html">2.4.4-p4</a></p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/14ab6c2495ffb2ddd6321cd0fbb317df6fd866b3">14ab6c</a> (implementera)</td>
+    </tr>
+    <tr>
+      <td><p>Uppdaterade <a href="https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html">systemkrav</a> för patchar som släpptes i juni 2023.</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/84a82a6806e43a928be7e6743457d8fc9288338e">84a82a</a> (implementera)</td>
+    </tr>
+    <tr>
+      <td><p>Lagt till information om det nya <code class="language-plaintext highlighter-rouge">saveConfigProcessor</code> <a href="https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/consumers.html">konsument</a> som lagts till för att stödja <a href="https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/configuration.html#asynchronous-configuration-save"><code class="language-plaintext highlighter-rouge">AsyncConfig</code></a> -modul.</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/702b7f73d1bd315528c332418ed3a5f2666c3efc">702b7f</a> (implementera)</td>
+    </tr>
+    <tr>
+      <td><p>Lagt till information om hur det nya <a href="https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/configuration.html#asynchronous-configuration-save">Modulen AsyncConfig</a> kan förbättra prestandan.</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/146231fb1b559e6043b8610da02c2015b2f77d6c">146231</a> (implementera)</td>
+    </tr>
+  </tbody>
+</table>
+
+### 12 juni 2023
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Källa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Publicerad <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html">versionsinformation</a> för 1.1.32 Quality Patches Tool (QPT) package release.</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/96f6107732880601f3788ae73bebef3039aa85c3">96f610</a> (implementera)</td>
+    </tr>
+  </tbody>
+</table>
+
+### 7 juni 2023
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Källa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Lagt till en <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/site-wide-analysis-tool/access.html">instruktioner</a> för att komma åt verktyget för platsomfattande analys från verktygets domän (<code class="language-plaintext highlighter-rouge">https://supportinsights.adobe.com/commerce</code>).</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/051fe7707cef593027bcff93ae39adfc5cf1af3c">051fe7</a> (implementera)</td>
+    </tr>
+  </tbody>
+</table><!-- date_group -->
 
 ### 25 maj 2023
 
@@ -67,112 +163,6 @@ Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
 </td>
       <td>större uppdatering</td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/7f30857b612d027dfce26fac1f947006f28ecfa6">7f3085</a> (implementera)</td>
-    </tr>
-  </tbody>
-</table><!-- date_group -->
-
-### 20 april 2023
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Källa</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Lagt till <code class="language-plaintext highlighter-rouge">commerce.eventing.event.publish</code> meddelandekökonsument till <a href="https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/consumers.html">referenstabell</a>.</p>
-</td>
-      <td>teknisk</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/2f9bfcf9a8232cbe659062a9b1bc88eda3d9158c">2f9bfc</a> (implementera)</td>
-    </tr>
-  </tbody>
-</table>
-
-### 19 april 2023
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Källa</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Ytterligare information om en nyligen släppt patch för ett känt fel i 2.4.6. Se <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/overview.html">Versionsinformation för Adobe Commerce och Magento Open Source</a>.</p>
-</td>
-      <td>teknisk</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/fdbb0959b615689eba3068bc93c4c9876c7a7972">fdbb09</a> (implementera)</td>
-    </tr>
-    <tr>
-      <td><p>Lagt till information om <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/site-wide-analysis-tool/dashboard.html">Widget Security Center</a> på kontrollpanelen för Site-Wide Assessment Tool.</p>
-</td>
-      <td>större uppdatering</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/1e84ee6db07ec9080971de22a24fe8a7d8705916">1e84ee</a> (implementera)</td>
-    </tr>
-  </tbody>
-</table>
-
-### 17 april 2023
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Källa</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Lagt till en <a href="https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/infrastructure/self-hosting/overview.html">nytt avsnitt</a> om självbetjäningskoncept, inklusive prestanda, säkerhet, övervakning och katastrofåterställning.</p>
-</td>
-      <td>new-topic</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/699c512de9c6d28ba354f02b4db76975eb5410a9">699c51</a> (implementera)</td>
-    </tr>
-  </tbody>
-</table>
-
-### 12 april 2023
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Källa</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Publicerad <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html">versionsinformation</a> för QPT-paketversionen (1.1.30 Quality Patches Tool).</p>
-</td>
-      <td>större uppdatering</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/84ed7dd2c24eef437d6719d9758da43423347eeb">84ed7d</a> (implementera)</td>
-    </tr>
-  </tbody>
-</table>
-
-### 5 april 2023
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Källa</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Tillagd <a href="https://experienceleague.adobe.com/docs/commerce-operations/operational-playbook/glossary.html">Ordlista</a>. Migrerad från https://glossary.magento.com.</p>
-</td>
-      <td>new-topic</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/d9b7659e5d4c3770956f0c2a96e5c97a3dc2af19">d9b765</a> (implementera)</td>
     </tr>
   </tbody>
 </table><!-- date_group --><!-- month_group --><!-- year_group -->

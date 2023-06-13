@@ -2,9 +2,9 @@
 title: Bästa praxis för konfiguration
 description: Optimera svarstiden för driftsättningen av Adobe Commerce eller Magento Open Source med hjälp av dessa metodtips.
 exl-id: 4cb0f5e7-49d5-4343-a8c7-b8e351170f91
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 1d7f5f58f8c21013c2ab0d68ab93a125ba0f3764
 workflow-type: tm+mt
-source-wordcount: '1348'
+source-wordcount: '1448'
 ht-degree: 0%
 
 ---
@@ -40,6 +40,31 @@ Det kan finnas tillfällen då intensiv försäljning sker samtidigt som [!DNL C
 >[!WARNING]
 >
 >The **[!UICONTROL Developer]** och alternativ är bara tillgängliga i [Utvecklarläge](../configuration/cli/set-mode.md). [Adobe Commerce i molninfrastruktur](https://devdocs.magento.com/cloud/requirements/cloud-requirements.html#cloud-req-test) stöder inte `Developer` läge.
+
+## Spara asynkron konfiguration [!BADGE 2.4.7-beta1]{type=Informative url="/help/release/release-notes/commerce/2-4-7.md" tooltip="Finns endast i 2.4.7-beta1"}
+
+För projekt med ett stort antal butikskonfigurationer kan det ta oordinerad tid att spara en butikskonfiguration eller resultera i en timeout. The _Async Config_ i aktiveras asynkrona konfigurationssparningar genom att ett cron-jobb körs som använder en konsument för att bearbeta sparandet i en meddelandekö. AsyncConfig är **inaktiverad** som standard.
+
+Du kan aktivera AsyncConfig med kommandoradsgränssnittet:
+
+```bash
+bin/magento setup:config:set --config-async 1
+```
+
+The `set` skriver följande till `app/etc/env.php` fil:
+
+```conf
+...
+   'config' => [
+       'async' => 1
+   ]
+```
+
+Starta följande konsument för att börja bearbeta meddelandena i kön först-i-först-ut-baserat:
+
+```bash
+bin/magento queue:consumers:start saveConfigProcessor --max-messages=1
+```
 
 ## Uppskjuten lageruppdatering
 

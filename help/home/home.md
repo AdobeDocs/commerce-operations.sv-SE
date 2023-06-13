@@ -3,7 +3,7 @@ keywords: Adobe Commerce;home;populära topics
 title: Startsida
 description: Bläddra bland index över systemadministration och produktdokumentation för Adobe Commerce.
 exl-id: 45ec4948-338f-4276-8a70-d0db720322d9
-source-git-commit: 9e010b68f6458bafda5119308531e62477f046a9
+source-git-commit: 2b1fa24471cda7cc01ef5fdafeedbec0315d68c7
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 0%
@@ -64,11 +64,11 @@ Praktisk information om koncept, processer, verktyg och metodtips för att utvec
     </div>
   </td>
   <td valign="top">
-    <a href="https://experienceleague.adobe.com/docs/commerce-operations/reference/commerce.html">
+    <a href="https://experienceleague.adobe.com/docs/commerce-operations/reference/commerce-on-premises.html">
        <img alt="Referens för kommandoradsverktyg" src="../assets/icons/page-rule.svg" width="40" height="40"/>
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/commerce-operations/reference/commerce.html"><strong>Referens för kommandoradsverktyg</strong></a>
+      <a href="https://experienceleague.adobe.com/docs/commerce-operations/reference/commerce-on-premises.html"><strong>Referens för kommandoradsverktyg</strong></a>
       <p>Lär dig mer om kommandon, argument och alternativ för Adobe Commerce kommandoradsverktyg.</p>
     </div>
   </td>

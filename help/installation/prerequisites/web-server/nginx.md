@@ -2,16 +2,16 @@
 title: Nginx
 description: Följ de här stegen för att installera och konfigurera Nginx-webbservern för lokala installationer av Adobe Commerce och Magento Open Source.
 exl-id: 041ddb9d-868e-4021-9388-1c9ea11bfd8f
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 9ebf10bd3296495e33c91d930be023ea0124ff62
 workflow-type: tm+mt
-source-wordcount: '1180'
+source-wordcount: '1181'
 ht-degree: 0%
 
 ---
 
 # Nginx
 
-Adobe Commerce har stöd för nginx 1.18 (eller [senaste huvudversionen](https://nginx.org/en/linux_packages.html#mainline)). Du måste också installera den senaste versionen av `php-fpm`.
+Adobe Commerce har stöd för nginx 1.x (eller [senaste huvudversionen](https://nginx.org/en/linux_packages.html#mainline)). Du måste också installera den senaste versionen av `php-fpm`.
 
 Installationsanvisningarna varierar beroende på vilket operativsystem du använder. Se [PHP](../php-settings.md) för information.
 
