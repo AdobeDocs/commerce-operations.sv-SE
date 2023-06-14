@@ -1,5 +1,5 @@
 ---
-source-git-commit: 4b767014f325bef7e07cea11d01089206bf44caf
+source-git-commit: 8b82081057af7d134528988d3f9f7cf53f4d7525
 workflow-type: tm+mt
 source-wordcount: '475'
 ht-degree: 0%
@@ -75,4 +75,4 @@ _scripts/render
 
 Skriptet kör återgivning och skriver återgivna mallar till `help/_includes/templated` katalog.
 
-Läs Jekyll-dokumentationen för mer information om [Datafiler](https://jekyllrb.com/docs/datafiles, [Flytande filter](https://jekyllrb.com/docs/liquid/filters/)och andra funktioner.
+Läs Jekyll-dokumentationen för mer information om [Datafiler](https://jekyllrb.com/docs/datafiles), [Flytande filter](https://jekyllrb.com/docs/liquid/filters/)och andra funktioner.
