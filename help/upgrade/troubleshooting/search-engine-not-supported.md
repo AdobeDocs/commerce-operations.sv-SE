@@ -1,8 +1,9 @@
 ---
 title: Aktuell sökmotor stöds inte
 description: Felsök uppgraderingen av Adobe Commerce eller Magento Open Source efter att ha upptäckt ett fel om en sökmotor som inte stöds.
+feature: Upgrade, Search
 exl-id: 11479d23-53a5-4086-9f9a-c3420ccad073
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 012cba58b336b032b1c911539008c1fb961c2e07
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 0%
@@ -34,13 +35,11 @@ Felet inträffar om det returnerade värdet är `mysql`, `elasticsearch`, eller 
 >
 >Om du har fått det här felet är installationen i ett inkonsekvent tillstånd och du kan inte komma åt administratören. Vi rekommenderar att du återgår till den tidigare versionen medan du åtgärdar det här felet. Om du vill göra det kör du något av följande kommandon:
 >
->
-```bash
+>```bash
 >composer require-commerce magento/product-enterprise-edition=<version>
 >```
 >
->
-```bash
+>```bash
 >composer require-commerce magento/product-community-edition=<version>
 >```
 >
