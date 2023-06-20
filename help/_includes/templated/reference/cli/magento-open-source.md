@@ -1,5 +1,5 @@
 ---
-source-git-commit: ad7f05eaa5f144b5a8616307d65be635a0c499eb
+source-git-commit: 64c453adabb092075854b2c20bf7da73c4a5146e
 workflow-type: tm+mt
 source-wordcount: '17239'
 ht-degree: 0%
@@ -59,7 +59,7 @@ Versionen av det slutförda skriptet
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -129,7 +129,7 @@ Avsluta felsökningsloggen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -208,7 +208,7 @@ Hjälp för att skriva ut råformat
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -292,7 +292,7 @@ Så här beskriver du inte kommandots argument
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -349,7 +349,7 @@ bin/magento admin:adobe-ims:disable
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -430,7 +430,7 @@ Kontrollera om 2FA är aktiverat för Organisation i Adobe Admin Console. Krävs
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -487,7 +487,7 @@ bin/magento admin:adobe-ims:info
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -544,7 +544,7 @@ bin/magento admin:adobe-ims:status
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -637,7 +637,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -701,7 +701,7 @@ Administratörens användarnamn som ska låsas upp
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -767,7 +767,7 @@ Blankstegsavgränsad lista med konfigurationstyper eller utelämna att dumpa all
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -824,7 +824,7 @@ bin/magento app:config:import
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -881,7 +881,7 @@ bin/magento app:config:status
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -962,7 +962,7 @@ Lösenord
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1034,7 +1034,7 @@ lägga till eller åsidosätta parametrar för bootstrap
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1106,7 +1106,7 @@ lägga till eller åsidosätta parametrar för bootstrap
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1178,7 +1178,7 @@ lägga till eller åsidosätta parametrar för bootstrap
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1250,7 +1250,7 @@ lägga till eller åsidosätta parametrar för bootstrap
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1313,7 +1313,7 @@ lägga till eller åsidosätta parametrar för bootstrap
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1384,7 +1384,7 @@ Bearbeta inte bilder som markerats som dolda från produktsidan
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1441,7 +1441,7 @@ bin/magento catalog:product:attributes:cleanup
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1505,7 +1505,7 @@ y\n
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1594,7 +1594,7 @@ Omfångskod för konfiguration, tom sträng som standard
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1698,7 +1698,7 @@ Inaktuellt använder du alternativet —lock-env i stället.
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1775,7 +1775,7 @@ Omfångskod (krävs endast om omfånget inte är det `default`)
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1846,7 +1846,7 @@ Installera endast icke-valfria (standard) uppgifter
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1903,7 +1903,7 @@ bin/magento cron:remove
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1972,7 +1972,7 @@ Lägga till eller åsidosätta parametrar för bootstrap
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2029,7 +2029,7 @@ bin/magento customer:hash:upgrade
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2100,7 +2100,7 @@ Hoppar över rensning och omgenerering av statiskt innehåll (genererad kod, fö
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2157,7 +2157,7 @@ bin/magento deploy:mode:show
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2221,7 +2221,7 @@ Klassnamn
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2278,7 +2278,7 @@ bin/magento dev:email:newsletter-compatibility-check
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2335,7 +2335,7 @@ bin/magento dev:email:override-compatibility-check
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2392,7 +2392,7 @@ bin/magento dev:profiler:disable
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2455,7 +2455,7 @@ Profilerartyp
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2512,7 +2512,7 @@ bin/magento dev:query-log:disable
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2590,7 +2590,7 @@ Inkludera anropsstacken. [true\|false]
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2684,7 +2684,7 @@ Tema: [Leverantör/tema]
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2741,7 +2741,7 @@ bin/magento dev:template-hints:disable
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2798,7 +2798,7 @@ bin/magento dev:template-hints:enable
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2855,7 +2855,7 @@ bin/magento dev:template-hints:status
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2927,7 +2927,7 @@ Ytterligare argument för PHPUnit. Exempel: &quot;-c&#39;—filter=MyTest&#39;&q
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2998,7 +2998,7 @@ Formatet som katalogen ska skapas i. Stöds: [oväder, vscode]
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3075,7 +3075,7 @@ Skriv över XML-fil
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3141,7 +3141,7 @@ Domännamn
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3207,7 +3207,7 @@ Domännamn
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3264,7 +3264,7 @@ bin/magento downloadable:domains:show
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3321,7 +3321,7 @@ bin/magento encryption:payment-data:update
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3397,7 +3397,7 @@ Använd parametern —magento för att tolka den aktuella Magento-kodbasen. Utel
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3481,7 +3481,7 @@ Använd parametern —allow-duplicates för att tillåta att dubbletter av trans
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3555,7 +3555,7 @@ Säkerhetskopiera kod och konfigurationsfiler (förutom temporära filer)
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3612,7 +3612,7 @@ bin/magento indexer:info
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3678,7 +3678,7 @@ Blankstegsavgränsad lista med indextyper eller utelämna detta för alla index.
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3744,7 +3744,7 @@ Blankstegsavgränsad lista med indextyper eller utelämna detta för alla index.
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3812,7 +3812,7 @@ Indexeringens dimensionslägen catalog_product_price none,website,customer_group
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3883,7 +3883,7 @@ Blankstegsavgränsad lista med indextyper eller utelämna detta för alla index.
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3949,7 +3949,7 @@ Blankstegsavgränsad lista med indextyper eller utelämna detta för alla index 
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4015,7 +4015,7 @@ Blankstegsavgränsad lista med indextyper eller utelämna detta för alla index.
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4081,7 +4081,7 @@ Blankstegsavgränsad lista med indextyper eller utelämna detta för alla index.
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4138,7 +4138,7 @@ bin/magento info:adminuri
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4195,7 +4195,7 @@ bin/magento info:backups:list
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4252,7 +4252,7 @@ bin/magento info:currency:list
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4316,7 +4316,7 @@ Rapportfilnamn
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4380,7 +4380,7 @@ Rapportfilnamn
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4444,7 +4444,7 @@ Rapportfilnamn
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4501,7 +4501,7 @@ bin/magento info:language:list
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4558,7 +4558,7 @@ bin/magento info:timezone:list
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4616,7 +4616,7 @@ bin/magento inventory:reservation:create-compensations [-r|--raw] [--] [<compens
 
 ### `compensations`
 
-Lista över ersättningsargument i formatet&lt;order_increment_id>:&lt;sku>:&lt;quantity>:&lt;stock-id>&quot;
+Lista över ersättningsargument i formatet &quot;\&lt;order_increment_id>:\&lt;sku>:\&lt;quantity>:\&lt;stock-id>&quot;
 
 - Standard: `[]`
 
@@ -4631,7 +4631,7 @@ Råutdata
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4716,7 +4716,7 @@ Råutdata
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4783,7 +4783,7 @@ Lista över landskoder som ska importeras
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4869,7 +4869,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4939,7 +4939,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5009,7 +5009,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5072,7 +5072,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5129,7 +5129,7 @@ bin/magento media-content:sync
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5186,7 +5186,7 @@ bin/magento media-gallery:sync
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5243,7 +5243,7 @@ bin/magento module:config:status
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5336,7 +5336,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5429,7 +5429,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5515,7 +5515,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5630,7 +5630,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5710,7 +5710,7 @@ Revision
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5767,7 +5767,7 @@ bin/magento queue:consumers:list
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5824,7 +5824,7 @@ bin/magento queue:consumers:restart
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5925,7 +5925,7 @@ Filsökvägen för att spara PID (det här alternativet är föråldrat, använd
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5982,7 +5982,7 @@ bin/magento remote-storage:sync
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6046,7 +6046,7 @@ Uppdatera Composer.json utan att köra Composer-uppdatering
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6110,7 +6110,7 @@ Uppdatera Composer.json utan att köra Composer-uppdatering
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6167,7 +6167,7 @@ bin/magento sampledata:reset
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6224,7 +6224,7 @@ bin/magento security:recaptcha:disable-for-user-forgot-password
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6281,7 +6281,7 @@ bin/magento security:recaptcha:disable-for-user-login
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6351,7 +6351,7 @@ Hemlighet
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6408,7 +6408,7 @@ bin/magento security:tfa:providers
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6478,7 +6478,7 @@ Providerkod
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6562,7 +6562,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7134,7 +7134,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7197,7 +7197,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7281,7 +7281,7 @@ Ta reda på vilken typ av korrigering som ska skapas. Tillgängliga värden: `da
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7345,7 +7345,7 @@ Namn på modulen där vitlistan ska genereras
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7415,7 +7415,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7478,7 +7478,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7535,7 +7535,7 @@ bin/magento setup:di:compile
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -8346,7 +8346,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -8417,7 +8417,7 @@ Hoppa över omindexering
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -8498,7 +8498,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -8724,7 +8724,7 @@ Kompilera inte överordnade teman. Stöds endast i snabba och standardiserade st
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -8841,7 +8841,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -8904,7 +8904,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9000,7 +9000,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9057,7 +9057,7 @@ bin/magento store:list
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9114,7 +9114,7 @@ bin/magento store:website:list
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9195,7 +9195,7 @@ Rensa genererade statiska vyfiler.
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9293,7 +9293,7 @@ Sökväg till filen som ska skrivas vcl
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde

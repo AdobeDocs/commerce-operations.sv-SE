@@ -1,5 +1,5 @@
 ---
-source-git-commit: adb585771fb1353614ea600117f18ba8b55b65f0
+source-git-commit: 64c453adabb092075854b2c20bf7da73c4a5146e
 workflow-type: tm+mt
 source-wordcount: '1529'
 ht-degree: 0%
@@ -56,7 +56,7 @@ Versionen av det slutförda skriptet
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -126,7 +126,7 @@ Avsluta felsökningsloggen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -205,7 +205,7 @@ Hjälp för att skriva ut råformat
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -289,7 +289,7 @@ Så här beskriver du inte kommandots argument
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -353,7 +353,7 @@ Sökväg för att lösa problem i.
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -428,7 +428,7 @@ Sökväg till filen som ska exporteras (Json-format)
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -499,7 +499,7 @@ målversion (t.ex. 2.4.5).
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -575,7 +575,7 @@ Sökväg till filen där utdata ska exporteras (JSON-format)
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -683,7 +683,7 @@ Körningskontext. Det här alternativet är avsett för integrering och påverka
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för &lt;info>list&lt;/info> kommando
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
 
 - Standard: `false`
 - Accepterar inte ett värde
