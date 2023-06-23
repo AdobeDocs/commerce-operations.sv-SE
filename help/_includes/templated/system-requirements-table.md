@@ -1,15 +1,11 @@
 ---
-source-git-commit: 0167c2dc9862c88cc26acf820058e7ed300d6582
+source-git-commit: e790327231f6d6ad97a03460f361e5fb63b27a37
 workflow-type: tm+mt
-source-wordcount: '353'
-ht-degree: 70%
+source-wordcount: '287'
+ht-degree: 86%
 
 ---
 # Systemkrav
-
->[!IMPORTANT]
->
->Tjänstversion och kompatibilitetsstöd för Adobe Commerce i molninfrastruktur avgörs av vilka versioner som distribueras i molninfrastrukturen, och skiljer sig ibland från de versioner som stöds av Adobe Commerce lokala distributioner. Se [Programvara och tjänster som stöds](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/cloud-architecture.html#supported-software-and-services) i _Molnguide_. Elasticsearch 7.17 stöds till exempel i 2.4.4 för anläggningsdistributioner, men Open Search 1.2 stöds i molninfrastrukturen.
 
 >[!NOTE]
 >
