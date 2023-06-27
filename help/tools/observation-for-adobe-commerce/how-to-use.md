@@ -2,9 +2,10 @@
 title: Så här använder du [!DNL Observation for Adobe Commerce] nerdlet
 description: Lär dig använda [!DNL Observation for Adobe Commerce] nördlet.
 exl-id: 3c368814-0786-4e8f-ac81-9a77cec94677
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+feature: Configuration, Observability
+source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---

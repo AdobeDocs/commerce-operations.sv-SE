@@ -1,9 +1,10 @@
 ---
 user-guide-title: Leverera affärsupplevelser i stor skala
 user-guide-description: Lär dig leverera upplevelser i stor skala med Adobe Commerce och Adobe Experience Manager.
-source-git-commit: 338a99f4f047640ac4bb944ac8599301cba5f646
+feature: Integration
+source-git-commit: 76ccc5aa8e5e3358dc52a88222fd0da7c4eb9ccb
 workflow-type: tm+mt
-source-wordcount: '51'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---

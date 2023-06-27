@@ -2,9 +2,10 @@
 title: The [!UICONTROL bots] tab
 description: Läs mer om [!UICONTROL bots] flik för [!DNL Observation for Adobe Commerce].
 exl-id: 741310ca-28fb-4b08-95c7-e8d1fb952018
-source-git-commit: 6c0607713231393ec0d7e190398518f7cd9559a4
+feature: Configuration, Observability
+source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '1903'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---

@@ -2,9 +2,10 @@
 title: The [!DNL QuickView] tab
 description: The [!DNL QuickView] På -fliken förklaras de olika varningstyper som du kan se, inklusive de som har låg diskutrymme och serveranvändning.
 exl-id: 34405f9b-30de-4fab-acca-64a8e308ca90
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+feature: Configuration, Observability
+source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---

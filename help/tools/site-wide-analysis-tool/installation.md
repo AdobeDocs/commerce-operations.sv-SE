@@ -2,9 +2,10 @@
 title: Installationshandbok
 description: Använd den här guiden för att installera [!DNL Site-Wide Analysis Tool] för din webbplats
 exl-id: ba36dc74-806d-49c5-b4d1-ba53ed4076fb
-source-git-commit: 4210746509be99bb3c943906c99f70ea420ba74a
+feature: Configuration, Install
+source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -46,9 +47,10 @@ Din lokala infrastruktur måste uppfylla följande krav innan du installerar age
 - Operativsystem
 
    - [!DNL Linux x86-64] distributioner, som [!DNL Red Hat® Enterprise Linux (RHEL)], [!DNL CentOS], [!DNL Ubuntu], [!DNL Debian]och liknande
-   >[!IMPORTANT]
-   >
-   >Adobe Commerce stöds inte på [!DNL Microsoft Windows] eller [!DNL macOS].
+
+  >[!IMPORTANT]
+  >
+  >Adobe Commerce stöds inte på [!DNL Microsoft Windows] eller [!DNL macOS].
 
 - Adobe Commerce 2.4.1 eller senare
 
@@ -192,6 +194,7 @@ Om du inte vill använda våra [gränssnittsskript](https://github.com/magento-s
       ```bash
       tar -xf launcher.linux-amd64.tar.gz
       ```
+
    För **ARM64** arkitektur:
 
    1. Ladda ned startarkivet.
@@ -205,7 +208,6 @@ Om du inte vill använda våra [gränssnittsskript](https://github.com/magento-s
       ```bash
       tar -xf launcher.linux-arm64.tar.gz
       ```
-
 
 1. *(Valfritt)* Kontrollera signaturen för kontrollsummefilen.
 

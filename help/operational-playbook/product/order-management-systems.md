@@ -2,9 +2,10 @@
 title: Orderhanteringssystem
 description: Slutför ert e-handelsprojekt med ett system för paketering, leverans och returer.
 exl-id: 2a5f19fa-e8fe-452b-9ab6-65428dda691d
-source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
+feature: Best Practices, Orders
+source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '878'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---

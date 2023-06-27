@@ -2,9 +2,10 @@
 title: Jämförelse av Commerce Hosting
 description: Fatta det bästa beslutet om värdtjänster för ert e-handelsprojekt genom att läsa den här jämförelsetabellen.
 exl-id: 8d1f0b85-2874-4a4b-9fae-1fb367a7f85e
-source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
+feature: Best Practices, Cloud, Paas
+source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---

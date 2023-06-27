@@ -2,9 +2,11 @@
 title: Bästa tillvägagångssätt för datamigrering
 description: Följ de bästa sätten för datamigrering för att säkerställa en lyckad uppgradering från Magento 1 till Magento 2.
 exl-id: 0cd51987-a514-434d-b21e-2739ada2ce85
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+feature: Best Practices, Configuration
+topic: Commerce, Migration
+source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '201'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -23,9 +25,9 @@ Sådana data kan vara loggar, ordercitat, nyligen visade eller jämförda produk
 
 * För att förbättra prestanda **aktivera `direct_document_copy` option** i `config.xml` fil:
 
-   ```xml
-   <direct_document_copy>1</direct_document_copy>
-   ```
+  ```xml
+  <direct_document_copy>1</direct_document_copy>
+  ```
 
 >[!NOTE]
 >

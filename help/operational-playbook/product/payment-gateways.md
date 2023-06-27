@@ -2,9 +2,10 @@
 title: Betalningsgateways
 description: Välj en leverantör av betaltjänster för ditt e-handelsprojekt baserat på ditt företags behov.
 exl-id: eab50191-0744-41da-99ba-2e06ea61da27
-source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
+feature: Best Practices, Payments
+source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -19,7 +20,7 @@ En betalningstjänst är en tjänsteleverantör som ansluter och bearbetar betal
 
 ## Granska krav
 
-Återförsäljarna måste välja den bästa betalningsgatewayen som uppfyller deras krav. Det finns många betalningslösningar på marknaden, som Braintree och Stripe, men innan du bestämmer dig för en betalningstjänst ställer du dig själv följande frågor:
+Återförsäljarna måste välja den bästa betalningsgatewayen som uppfyller deras krav. Det finns många betalningslösningar på marknaden, som Braintree och Stripe, men innan du bestämmer dig för en betalningstjänst kan du ställa följande frågor:
 
 - Vad har jag för affärskrav?
 - Är det inom min budget?

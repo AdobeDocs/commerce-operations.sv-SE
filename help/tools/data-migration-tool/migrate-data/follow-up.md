@@ -2,9 +2,10 @@
 title: Uppföljning av datamigrering
 description: Lär dig hur du validerar att datamigreringen mellan Magento 1 och Magento 2 lyckades och att alla funktioner fungerar som förväntat.
 exl-id: a55f357b-6c95-49d6-b2f1-c2e403a8c85f
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+topic: Commerce, Migration
+source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---

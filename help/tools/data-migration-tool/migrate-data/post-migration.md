@@ -2,9 +2,10 @@
 title: Steg efter datamigrering
 description: Lär dig hur du gör när du har använt [!DNL Data Migration Tool] för att migrera data från Magento 1 till Magento 2.
 exl-id: 00171c41-ccea-4ebe-8958-becb9aa09973
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+topic: Commerce, Migration
+source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '74'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---

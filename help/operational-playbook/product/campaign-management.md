@@ -2,9 +2,10 @@
 title: Campaign Management
 description: Strukturera era e-handelskampanjer så att de passar era affärsbehov.
 exl-id: 466f2f83-ea19-4230-b33b-4435974effb7
-source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
+feature: Best Practices, Promotions/Events
+source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---

@@ -2,16 +2,17 @@
 title: Personalisering
 description: Lär dig mer om vilken typ av upplevelseanpassning som bör ge era kunder.
 exl-id: ea829c53-1f98-4e23-90ee-5424a4ef0324
-source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
+feature: Best Practices, Personalization
+source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '338'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
 # Personalisering
 
-Baslinjen för e-handelstillväxt är kundlojalitet. Att hålla kunderna nöjda är en kombination av många faktorer från produkter, innehåll, utcheckning, kunder och serviceupplevelser. Personalisering är beroende av AI, som spårar kundinformation i realtid och levererar en unik, personaliserad upplevelse. Personalisering kanske inte fungerar för alla typer av företag, men det är en extra funktion som kan leda till att trafiken till er webbplats ökar.
+Baslinjen för e-handelstillväxt är kundlojalitet. Att hålla kunderna nöjda är en kombination av många faktorer från produkter, innehåll, utcheckning, kunder och serviceupplevelser. Personalisering är beroende av AI, som spårar kundinformation i realtid och levererar en unik, personaliserad upplevelse. Personalisering kanske inte fungerar för alla typer av företag, men det är en extra funktion som kan hjälpa till att driva trafik till er webbplats.
 
 Personaliseringen bör omfatta följande:
 
@@ -25,7 +26,7 @@ Personaliseringen bör omfatta följande:
 
 Exempel på personalisering är:
 
-- **Kundränta**- Ändra hemsida och navigering baserat på kundprofil. Om en användare till exempel har besökt webbplatsen tidigare och utforskat kvinnans avsnitt, navigerar de nästa gång när de anger webbadressen till kvinnans hemsida.
+- **Kundränta**- Ändra hemsida och navigering baserat på kundprofil. Om en användare till exempel har besökt webbplatsen tidigare och utforskat kvinnans avsnitt, navigerar de nästa gång när de anger URL:en till kvinnans hemsida.
 
 - **Rekommenderade produkter**- Rekommendera produkter baserat på kundernas surfbeteende.
 

@@ -1,9 +1,10 @@
 ---
 user-guide-title: Operativ spelningsbok
 user-guide-description: Lär dig hur ni gör ert företag redo för att driva en framgångsrik e-handelsplats.
-source-git-commit: ed6b9cb5acd35ce8213fafddcd00be1c32127a86
+feature: Best Practices
+source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---

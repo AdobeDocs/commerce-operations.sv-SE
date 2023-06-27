@@ -2,9 +2,10 @@
 title: Commerce Software Services
 description: Lär dig mer om viktiga skillnader mellan SaaS-program och andra alternativ för e-handel med öppen källkod som är självbetjänade (lokalt).
 exl-id: 9be70e1e-76d5-4696-862e-f2b71eb1abb0
-source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
+feature: Best Practices, Saas
+source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---

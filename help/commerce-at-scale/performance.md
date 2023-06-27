@@ -2,9 +2,11 @@
 title: Optimering av AEM
 description: Optimera din standardkonfiguration av Adobe Experience Manager så att den stöder hög belastning på Adobe Commerce.
 exl-id: 923a709f-9048-4e67-a5b0-ece831d2eb91
-source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
+feature: Integration, Cache
+topic: Commerce, Performance
+source-git-commit: 76ccc5aa8e5e3358dc52a88222fd0da7c4eb9ccb
 workflow-type: tm+mt
-source-wordcount: '2248'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -50,7 +52,7 @@ Till exempel: Säg att du har en produktsidmall på:
 content/ecommerce/us/en/products/product-page.html
 ```
 
-Varje mappnivå skulle ha&quot;statusnivå&quot; - vilket visas i tabellen ovan.
+Varje mappnivå skulle ha &quot;statusnivå&quot; - vilket visas som uppdelat i tabellen ovan.
 
 | innehåll (docroot) | e-handel | oss | en | produkter | product-page.tml |
 |-------------------|-----------|----|----|----------|------------------|
@@ -84,12 +86,12 @@ I exemplet nedan cachelagras de senaste 100 fasetterade sökalternativen på en 
 com.adobe.cq.commerce.core.search.services.SearchFilterService:true:100:3600
 ```
 
-Begäran, inklusive alla anpassade http-huvuden och variabler, måste matcha exakt för att cachen ska&quot;trätas&quot; och för att förhindra att Adobe Commerce anropas igen. Det bör noteras att det inte finns något enkelt sätt att göra cachen ogiltig manuellt när den väl har angetts. Detta kan innebära att om en ny kategori läggs till i Adobe Commerce, kommer den inte att börja visas i navigeringen förrän den förfallotid som angetts i cachen ovan har gått ut och GraphQL-begäran har uppdaterats. Detsamma gäller för sökfacets. Med tanke på de prestandafördelar som cachelagringen medför är detta dock vanligtvis en godtagbar kompromiss.
+Begäran, inklusive alla anpassade http-huvuden och variabler, måste matcha exakt för att cachen ska få en träff och för att förhindra ett upprepat anrop till Adobe Commerce. Det bör noteras att det inte finns något enkelt sätt att göra cachen ogiltig manuellt när den väl har angetts. Detta kan innebära att om en ny kategori läggs till i Adobe Commerce, kommer den inte att börja visas i navigeringen förrän den förfallotid som angetts i cachen ovan har gått ut och GraphQL-begäran har uppdaterats. Detsamma gäller för sökfacets. Med tanke på de prestandafördelar som cachelagringen medför är detta dock vanligtvis en godtagbar kompromiss.
 
 Cachelagringsalternativen ovan kan ställas in med konfigurationskonsolen för AEM OSGi i GraphQL Client Configuration Factory. Varje cachekonfigurationspost kan anges med följande format:
 
 ```
-• NAME:ENABLE:MAXSIZE:TIMEOUT like for example mycache:true:1000:60 where each attribute is defined as:
+* NAME:ENABLE:MAXSIZE:TIMEOUT like for example mycache:true:1000:60 where each attribute is defined as:
     › NAME (String): name of the cache
     › ENABLE (true|false): enables or disables that cache entry
     › MAXSIZE (Integer): maximum size of the cache (in number of entries)
@@ -132,6 +134,6 @@ Den bör därför konfigureras så att den ignorerar alla parametrar som standar
 
 ## MPM-arbetare begränsar antalet utskickare
 
-MPM-arbetarnas inställningar är en avancerad konfiguration för Apache HTTP-servern som skulle kräva grundlig testning för att optimera baserat på Dispatcher-datorns tillgängliga processor och RAM. I den här rapporten föreslår vi dock att ServerLimit och MaxRequestWorkers ska ökas till en nivå som serverns tillgängliga processor och RAM ska stödja, och sedan ökas både MinSpareThreads och MaxSpareThreads till en nivå som matchar MaxRequestWorkers.
+MPM-arbetarnas inställningar är en avancerad konfiguration för Apache HTTP-servern som skulle kräva grundliga tester för att optimera baserat på Dispatcher-datorns tillgängliga processor och RAM. I det här whitepaper rekommenderar vi att ServerLimit och MaxRequestWorkers ökas till en nivå som serverns tillgängliga processor och RAM stöder, och sedan ökas både MinSpareThreads och MaxSpareThreads till en nivå som matchar MaxRequestWorkers.
 
 Den här konfigurationen lämnar Apache HTTP på en inställning för fullständig beredskap, vilket är en högpresterande konfiguration för servrar med stort RAM-minne och flera processorkärnor. Den här konfigurationen ger bästa möjliga svarstider från Apache HTTP genom att behålla beständiga öppna anslutningar som är klara att betjäna förfrågningar och tar bort eventuella förseningar i att skapa nya processer som svar på plötsliga trafikökningar, som vid blixtförsäljning.

@@ -2,9 +2,10 @@
 title: Sökmotoroptimering (SEO)
 description: Läs om de viktigaste skillnaderna mellan B2B- och B2C SEO-kampanjer.
 exl-id: 7b1348b5-d379-48c1-9e9d-71a8d02b2ca4
-source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
+feature: Best Practices, Search
+source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
