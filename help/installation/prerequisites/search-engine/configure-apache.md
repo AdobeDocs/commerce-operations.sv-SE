@@ -1,8 +1,9 @@
 ---
 title: Konfigurera Apache för sökmotorn
 description: Följ de här stegen för att konfigurera en sökmotor med webbservern Apache för lokala installationer av Adobe Commerce och Magento Open Source.
+feature: Install, Search
 exl-id: b35c95a7-0c00-48e5-b37d-7c9e17feebec
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: ce405a6bb548b177427e4c02640ce13149c48aff
 workflow-type: tm+mt
 source-wordcount: '651'
 ht-degree: 0%
@@ -131,10 +132,9 @@ Plats
 
    * Konfigurera cron: webbserveranvändaren eller en annan användare.
 
-   I det här exemplet använder vi webbserveranvändaren, men det är upp till dig att välja användare.
+  I det här exemplet använder vi webbserveranvändaren, men det är upp till dig att välja användare.
 
    * Konfigurera Elasticsearch: användaren har ett namn `magento_elasticsearch` i det här exemplet
-
 
 * `<password file name>` måste vara en dold fil (börjar med `.`) och bör återspegla användarens namn. Mer information finns i exemplen senare i det här avsnittet.
 

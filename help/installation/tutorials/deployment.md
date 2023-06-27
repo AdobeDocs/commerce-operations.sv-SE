@@ -1,8 +1,9 @@
 ---
 title: Skapa eller uppdatera distributionskonfigurationen
 description: Följ de här stegen för att hantera din distributionskonfiguration för Adobe Commerce eller Magento Open Source.
+feature: Install, Deploy, Configuration
 exl-id: 2cdde735-0c70-44e8-b2ee-ffb874c1c443
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: ce405a6bb548b177427e4c02640ce13149c48aff
 workflow-type: tm+mt
 source-wordcount: '708'
 ht-degree: 0%

@@ -1,8 +1,9 @@
 ---
 title: Avinstallera teman
 description: Följ de här stegen för att avinstallera ett Adobe Commerce- eller Magento Open Source-tema.
+feature: Install, Themes
 exl-id: 73150e8c-2d83-4479-b96b-75f41fd9c842
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: ce405a6bb548b177427e4c02640ce13149c48aff
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 0%
@@ -26,7 +27,7 @@ Det här kommandot avinstallerar *endast* teman som anges i `composer.json`; Med
 * Uppdaterar `parent` nodinformation i `theme.xml` för att ta bort referenser till temat.
 * Tar bort temakod från filsystemet.
 
-   [Mer information om temarv](https://developer.adobe.com/commerce/frontend-core/guide/themes/inheritance/).
+  [Mer information om temarv](https://developer.adobe.com/commerce/frontend-core/guide/themes/inheritance/).
 
 ## Avinstallera teman
 

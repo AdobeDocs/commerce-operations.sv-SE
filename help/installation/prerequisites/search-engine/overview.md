@@ -1,8 +1,9 @@
 ---
 title: Krav för sökmotor
 description: Följ de här stegen för att installera och konfigurera de sökmotorprogram som stöds för lokala installationer av Adobe Commerce och Magento Open Source.
+feature: Install, Search
 exl-id: 44ea638a-7200-4269-be1b-b0851de2c4f4
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: ce405a6bb548b177427e4c02640ce13149c48aff
 workflow-type: tm+mt
 source-wordcount: '786'
 ht-degree: 0%
@@ -40,15 +41,15 @@ I bilden ovan visas:
 
 * Commerce-programmet och sökmotorn är installerade på olika värdar.
 
-   Körning på separata värdar kräver att proxering fungerar. (Att klustera sökmotorn ligger utanför den här handbokens räckvidd, men du hittar mer information i [Elasticsearch klusterdokumentation](https://www.elastic.co/guide/en/elasticsearch/guide/current/distributed-cluster.html).)
+  Körning på separata värdar kräver att proxering fungerar. (Att klustera sökmotorn ligger utanför den här handbokens räckvidd, men du hittar mer information i [Elasticsearch klusterdokumentation](https://www.elastic.co/guide/en/elasticsearch/guide/current/distributed-cluster.html).)
 
 * Varje värd har en egen webbserver. webbservrarna behöver inte vara desamma.
 
-   Commerce-programmet kan till exempel köra Apache och sökmotorn kan köra nginx.
+  Commerce-programmet kan till exempel köra Apache och sökmotorn kan köra nginx.
 
 * Båda webbservrarna använder TLS (Transport Layer Security).
 
-   Att konfigurera TLS ligger utanför vår dokumentation.
+  Att konfigurera TLS ligger utanför vår dokumentation.
 
 Sökbegäranden behandlas på följande sätt:
 
