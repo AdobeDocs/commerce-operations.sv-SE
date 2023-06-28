@@ -2,7 +2,8 @@
 title: Säkerhet för molninfrastruktur
 description: Läs om hur vi skyddar Adobe Commerce i molninfrastrukturen.
 exl-id: cd5d1106-c8db-4b70-b1c7-12378d7d77a7
-source-git-commit: 50882bebb4712e6cf095a81297684f37e15b1a6b
+feature: Cloud, Security
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '1644'
 ht-degree: 0%
@@ -23,7 +24,7 @@ Tillhandahåller snabbt ett CDN-skydd och DoS-skydd (Distributed Denal of Servic
 
 ## Brandvägg för webbprogram (WAF)
 
-WAF (Snably Web Application Firewall) används för att ge ytterligare skydd. I Fastys molnbaserade WAF används tredjepartsregler från kommersiella och öppna källor som OWASP Core-regler. Dessutom används Adobe Commerce-specifika regler. Kunderna skyddas från viktiga attacker på applikationsnivå, inklusive injektionsangrepp och skadliga indata, korsskriptning mellan webbplatser, dataexfiltrering, HTTP-protokollöverträdelser och andra OWASP Top 10-hot.
+WAF (Snably Web Application Firewall) används för att ge ytterligare skydd. Fastly molnbaserade WAF använder tredjepartsregler från kommersiella och öppna källor som OWASP Core-regler. Dessutom används Adobe Commerce-specifika regler. Kunderna skyddas från viktiga attacker på applikationsnivå, inklusive injektionsangrepp och skadliga indata, korsskriptning mellan webbplatser, dataexfiltrering, HTTP-protokollöverträdelser och andra OWASP Top 10-hot.
 
 WAF-reglerna uppdateras av Adobe Commerce om nya säkerhetsluckor upptäcks som gör det möjligt för Managed Services att&quot;åtgärda&quot; säkerhetsproblem i stort sett innan programkorrigeringar görs. Fast WAF tillhandahåller inte hastighetsbegränsande eller robotdetekteringstjänster. Om så önskas kan kunderna licensiera en tredjepartstjänst för robotdetektering som är kompatibel med Fastly.
 
@@ -92,7 +93,7 @@ GDPR är en rättslig ram som fastställer riktlinjer för insamling och behandl
 
 I grund och botten måste besökarna informeras om de data som webbplatsen samlar in från dem och uttryckligen godkänna informationsinsamlingen. Webbplatserna måste meddela besökarna om de personuppgifter som finns på webbplatsen bryts.
 
-Den handlare eller det företag som driver webbplatsen måste också ha ett särskilt uppgiftsskyddsombud som ansvarar för webbplatsens datasäkerhet, och denna person (eller webbplatsens ledningsgrupp) ska vara tillgänglig för kontakt om en besökare begär att deras data raderas.
+Den handlare eller det företag som driver webbplatsen måste också ha ett särskilt uppgiftsskyddsombud som ansvarar för webbplatsens datasäkerhet, och den här personen (eller webbplatshanteringsteamet) ska vara tillgänglig för kontakt om en besökare begär att deras data raderas.
 
 GDPR kräver också att all personligt identifierbar information (t.ex. namn, ras och födelsedatum) som samlas in antingen ska anonymiseras eller pseudonymiseras.
 

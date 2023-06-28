@@ -2,7 +2,8 @@
 title: Kopplad butiksarkitektur
 description: Läs mer om vad en kopplad butik innebär i kontexten med headless Adobe Commerce-arkitekturer.
 exl-id: 978e6853-4fbe-45b8-8e46-f491c6724fc6
-source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
+feature: Integration
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '315'
 ht-degree: 0%
@@ -29,7 +30,7 @@ Det nuvarande standardalternativet för distribution för de flesta företagskun
 
 - **Front-end-arkitektur (Adobe Commerce UI-komponenter)**—Adobe Commerce/PHP-specialister bygger vidare på äldre butiker.
 
-Låt oss börja med den mer välbekanta arkitekturen för butiker innan vi börjar använda headless. Om headless är frikopplat är detta den kopplade storefront-arkitekturen, som oftast ses med våra Luma-demos.
+Låt oss börja med den mer välbekanta arkitekturen för butiker innan vi kommer in i headless. Om headless är frikopplat är detta den kopplade storefront-arkitekturen, som oftast ses med våra Luma-demos.
 
 Det är här som butiksfunktionerna är nära integrerade med de centrala e-handelstjänsterna, som inte avgränsas av GraphQL API-lager. Så det finns en hel del affärslogik kopplad till det temat. Det här tillvägagångssättet är inte headless, och det är inte PWA.
 

@@ -2,10 +2,9 @@
 title: Bästa praxis för konfiguration av produktattribut
 description: Lär dig optimera Adobe Commerce prestanda genom att begränsa antalet produktattribut, attributalternativ och attributuppsättningar
 role: User, Admin
-feature: Best Practices
-feature-set: Commerce
+feature: Best Practices, Catalogs
 exl-id: 81783a4c-bc82-4733-bee3-0154cf03079a
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '564'
 ht-degree: 0%
@@ -21,7 +20,6 @@ ht-degree: 0%
    - För Adobe Commerce version 2.4.2 och senare konfigurerar du upp till 1 500 produktattribut
 - **Produktattributsalternativ**-Konfigurera upp till 100 attributalternativ för varje attribut
 - **Produktattributuppsättningar**-Konfigurera högst 1 000 attributuppsättningar _
-
 >[!NOTE]
 >
 >Produktattributen anger funktioner som gäller globalt för alla produkter. Produktattributsalternativen är anpassningar för att specificera funktioner som gäller specifika produkter.

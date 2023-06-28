@@ -2,7 +2,8 @@
 title: Adobe Commerce integreringsstrategi
 description: Granska integreringsstrategier och alternativ för implementeringen av Adobe Commerce.
 exl-id: af7cc59a-3ee2-461a-8489-a35fe0288277
-source-git-commit: 639dca9ee715f2f9ca7272d3b951d3315a85346c
+feature: Integration
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '518'
 ht-degree: 0%
@@ -47,4 +48,4 @@ Adobe Commerce erbjuder tre flexibla integreringsalternativ:
 
 ![Integreringsalternativ för Adobe Commerce](../../assets/playbooks/integration-options.svg)
 
-Även om realtidsintegreringar vanligtvis önskas är det inte nödvändigt för vissa scenarier. Adobe Commerce stöder [!DNL RabbitMQ] som meddelandebuss för att aktivera asynkrona processer, vilket rekommenderas för vissa data som inte behöver utväxlas i realtid, utan istället för att uppdateras med batchfilsutbyte eller REST-batchdataprocess-API för att bearbeta asynkront.
+Även om integreringar i realtid vanligtvis önskas är det inte nödvändigt för vissa scenarier. Adobe Commerce stöder [!DNL RabbitMQ] som meddelandebuss för att aktivera asynkrona processer, vilket rekommenderas för vissa data som inte behöver utväxlas i realtid, utan istället för att uppdateras med batchfilsutbyte eller REST-batchdataprocess-API för att bearbeta asynkront.

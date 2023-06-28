@@ -2,10 +2,9 @@
 title: Bästa tillvägagångssätt för Redis-tjänstkonfiguration
 description: Lär dig hur du förbättrar cachelagringsprestanda med den utökade Redis-cacheimplementeringen för Adobe Commerce.
 role: Developer, Admin
-feature-set: Commerce
-feature: Best Practices
+feature: Best Practices, Cache
 exl-id: 8b3c9167-d2fa-4894-af45-6924eb983487
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '439'
 ht-degree: 0%
@@ -98,6 +97,7 @@ Genom att separera Redis-cachen från Redis-sessionen kan du hantera cachen och 
 
    >[!NOTE]
    >`disable_locking` måste anges till `1`.
+   >   
 
    ```yaml
    SESSION_CONFIGURATION:

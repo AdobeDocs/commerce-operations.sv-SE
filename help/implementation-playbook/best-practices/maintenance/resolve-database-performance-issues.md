@@ -2,10 +2,9 @@
 title: Bästa tillvägagångssätt för att lösa databasprestandaproblem
 description: Lär dig hur du åtgärdar databasproblem som försämrar prestandan på Adobe Commerce webbplatser som distribueras i molninfrastrukturen.
 role: Developer, Admin
-feature-set: Commerce
 feature: Best Practices
 exl-id: e40e0564-a4eb-43a8-89dd-9f6c5cedb4a7
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '570'
 ht-degree: 0%

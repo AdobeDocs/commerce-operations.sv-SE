@@ -3,9 +3,8 @@ title: Bästa praxis för konfiguration av orderbearbetning
 description: Lär dig de bästa sätten att förbättra utcheckning och prestanda för orderbearbetning.
 role: Admin, User
 feature: Best Practices
-feature-set: Commerce
 exl-id: d15fe845-670f-4f7e-9645-7e111e6e809f
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%
@@ -33,17 +32,17 @@ Vilka steg som ska aktiveras för asynkron orderbearbetning beror på distributi
 
 - För Adobe Commerce i molninfrastruktur och lokala platser i produktionsläge använder du följande Magento CLI-kommando för att aktivera asynkron indexering:
 
-   ```php
-   php bin/magento config:set dev/grid/async_indexing 1
-   ```
+  ```php
+  php bin/magento config:set dev/grid/async_indexing 1
+  ```
 
 - För Adobe Commerce lokala webbplatser i standardläge eller produktionsläge aktiverar du asynkron indexering genom att uppdatera konfigurationen för stödrasterinställningar i Admin.
 
-   Se [Aktivera schemalagda stödrasteruppdateringar och omindexering](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/order-management/orders/order-scheduled-operations.html#enable-scheduled-grid-updates-and-reindexing)
+  Se [Aktivera schemalagda stödrasteruppdateringar och omindexering](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/order-management/orders/order-scheduled-operations.html#enable-scheduled-grid-updates-and-reindexing)
 
-   >[!WARNING]
-   >
-   >Testa alltid konfigurationsändringarna i mellanlagringsmiljön innan du uppdaterar produktionsmiljön.
+  >[!WARNING]
+  >
+  >Testa alltid konfigurationsändringarna i mellanlagringsmiljön innan du uppdaterar produktionsmiljön.
 
 ## Ytterligare information
 

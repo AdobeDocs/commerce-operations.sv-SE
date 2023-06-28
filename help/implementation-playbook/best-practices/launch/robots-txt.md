@@ -2,10 +2,9 @@
 title: Bästa tillvägagångssätt för att konfigurera filerna "robots.txt" och "sitemap.xml"
 description: Lär dig hur du skickar instruktioner om din Adobe Commerce webbplats till webbcrawler.
 role: Developer
-feature-set: Commerce
 feature: Best Practices
 exl-id: f3a81bab-a47a-46ad-b334-920df98c87ab
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 0%
@@ -38,27 +37,27 @@ Följ dessa standarder när du konfigurerar `robots.txt` och `sitemap.xml` filer
 - Se till att ditt projekt använder [`ece-tools`](https://devdocs.magento.com/cloud/release-notes/ece-release-notes.html) version 2002.0.12 eller senare.
 - Använd programmet Admin för att lägga till innehåll i `robots.txt` -fil.
 
-   >[!TIP]
-   >
-   >Visa den autogenererade `robots.txt` fil för din butik på `<domain.your.project>/robots.txt`.
+  >[!TIP]
+  >
+  >Visa den autogenererade `robots.txt` fil för din butik på `<domain.your.project>/robots.txt`.
 
 - Använd administratörsprogrammet för att generera en `sitemap.xml` -fil.
 
-   >[!IMPORTANT]
-   >
-   >På grund av det skrivskyddade filsystemet i Adobe Commerce för molninfrastrukturprojekt måste du ange `pub/media` sökväg innan filen genereras.
+  >[!IMPORTANT]
+  >
+  >På grund av det skrivskyddade filsystemet i Adobe Commerce för molninfrastrukturprojekt måste du ange `pub/media` sökväg innan filen genereras.
 
 - Använd ett anpassat fast VCL-fragment för att omdirigera från platsens rot till `pub/media/` plats för båda filerna:
 
-   ```vcl
-   {
-     "name": "sitemaprobots_rewrite",
-     "dynamic": "0",
-     "type": "recv",
-     "priority": "90",
-     "content": "if ( req.url.path ~ \"^/?sitemap.xml$\" ) { set req.url = \"pub/media/sitemap.xml\"; } else if (req.url.path ~ \"^/?robots.txt$\") { set req.url = \"pub/media/robots.txt\";}"
-   }
-   ```
+  ```vcl
+  {
+    "name": "sitemaprobots_rewrite",
+    "dynamic": "0",
+    "type": "recv",
+    "priority": "90",
+    "content": "if ( req.url.path ~ \"^/?sitemap.xml$\" ) { set req.url = \"pub/media/sitemap.xml\"; } else if (req.url.path ~ \"^/?robots.txt$\") { set req.url = \"pub/media/robots.txt\";}"
+  }
+  ```
 
 - Testa omdirigeringen genom att visa filerna i en webbläsare. Till exempel: `<domain.your.project>/robots.txt` och `<domain.your.project>/sitemap.xml`. Se till att du använder rotsökvägen som du konfigurerade omdirigeringen för och inte en annan sökväg.
 
@@ -81,15 +80,15 @@ Samma metodtips för att konfigurera `robots.txt` och `sitemap.xml` filer för [
 
 - Använd ett något modifierat anpassat VCL-fragment för att dirigera om från platsens rot till `pub/media` plats för båda filerna på dina platser:
 
-   ```vcl
-   {
-     "name": "sitemaprobots_rewrite",
-     "dynamic": "0",
-     "type": "recv",
-     "priority": "90",
-     "content": "if ( req.url.path == \"/robots.txt\" ) { if ( req.http.host ~ \"(domainone|domaintwo).com$\" ) { set req.url = \"pub/media/\" re.group.1 \"_robots.txt\"; }} else if ( req.url.path == \"/sitemap.xml\" ) { if ( req.http.host ~ \"(domainone|domaintwo).com$\" ) {  set req.url = \"pub/media/\" re.group.1 \"_sitemap.xml\"; }}"
-   }
-   ```
+  ```vcl
+  {
+    "name": "sitemaprobots_rewrite",
+    "dynamic": "0",
+    "type": "recv",
+    "priority": "90",
+    "content": "if ( req.url.path == \"/robots.txt\" ) { if ( req.http.host ~ \"(domainone|domaintwo).com$\" ) { set req.url = \"pub/media/\" re.group.1 \"_robots.txt\"; }} else if ( req.url.path == \"/sitemap.xml\" ) { if ( req.http.host ~ \"(domainone|domaintwo).com$\" ) {  set req.url = \"pub/media/\" re.group.1 \"_sitemap.xml\"; }}"
+  }
+  ```
 
 ## Adobe Commerce lokalt
 

@@ -2,10 +2,9 @@
 title: Bästa praxis för databaskonfiguration för molndistributioner
 description: Lär dig hur du konfigurerar databas- och programinställningar för att förbättra prestandan när du distribuerar Adobe Commerce i molninfrastrukturen.
 role: Developer, Admin
-feature-set: Commerce
 feature: Best Practices
 exl-id: ca377dc8-c8bd-4f77-a24b-22a298e2bba4
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 0%

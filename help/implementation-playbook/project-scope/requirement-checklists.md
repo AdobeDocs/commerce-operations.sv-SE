@@ -2,7 +2,8 @@
 title: Checklistor för krav
 description: Använd den här listan med utförliga frågor för att förbereda er för en implementering av Adobe Commerce.
 exl-id: 9ac485c5-d491-4022-9366-5e3a382513b6
-source-git-commit: d18be812626723e203d2308be8c3f9783a19b43b
+feature: Best Practices
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '1536'
 ht-degree: 0%

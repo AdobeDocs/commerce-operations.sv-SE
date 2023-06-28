@@ -3,9 +3,8 @@ title: Bästa praxis för uppgradering av checklista
 description: Lär dig hur du skapar och använder en checklista för uppgradering för att planera din uppgraderingsstrategi för Adobe Commerce och Magento Open Source.
 role: Leader
 feature: Best Practices
-feature-set: Commerce
 exl-id: c9b644fa-290c-4f33-b5a7-19f7122ff08e
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 0%

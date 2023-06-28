@@ -2,7 +2,8 @@
 title: Implementeringsunderhållsfas
 description: Lär dig mer om de effektivaste strategierna för implementering i underhållsfasen av Adobe Commerce-projekt.
 exl-id: bd052412-a41c-4dbd-9aba-ba2fcac31f2d
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+feature: Best Practices
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '277'
 ht-degree: 0%
@@ -51,7 +52,6 @@ Följande avsnitt innehåller information om bästa praxis för underhållsfasen
 - [Indexera om](https://developer.adobe.com/commerce/php/development/components/indexing/#how-to-reindex)
 - [Bästa praxis för konfiguration av &#x200B;](indexer-configuration.md)
 - [Bästa praxis för konfiguration av orderbearbetning](order-processing-configuration.md)
-
 <!-- Asset not yet integrated from CTAG deck:
 - Plan upsizing for planned traffic increases during promotions or holidays -->
 

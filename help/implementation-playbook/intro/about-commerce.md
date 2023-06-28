@@ -2,7 +2,8 @@
 title: Om Adobe Commerce
 description: Beskrivning av Adobe Commerce
 exl-id: a9ebd4a6-87b4-47b9-8ae8-72d99e1797eb
-source-git-commit: 219cbe839e40afa19b3754a9d5929074ed238920
+feature: Cloud, Integration, Inventory, Orders, Security, Staging, Shipping/Delivery
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '297'
 ht-degree: 0%
@@ -26,7 +27,7 @@ Adobe Commerce funktioner utvecklas alltid med konsumenterna i åtanke när man 
 
 ## Sömlös shopping överallt
 
-Handelstillväxten drivs vidare av att tillgodose era kunders behov. Utvidga er räckvidd och utöka er till nya kanaler, platser och sälj online till både företag och konsumenter på en och samma plattform. För ut e-handeln till era kunder var de vill, när de vill och hur de föredrar att handla.
+Handelstillväxten drivs vidare av kundernas behov. Utvidga er räckvidd och utöka er till nya kanaler, platser och sälj online till både företag och konsumenter på en och samma plattform. För ut e-handeln till era kunder var de vill, när de vill och hur de föredrar att handla.
 
 - Mobile commerce
 - B2B-e-handel

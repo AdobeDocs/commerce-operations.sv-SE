@@ -2,7 +2,8 @@
 title: Headless Commerce
 description: Läs vad headless commerce innebär och hur Adobe Commerce stöder headless Architecture.
 exl-id: acf66714-c10e-4c8b-b7ca-04cb2ca2fcf9
-source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
+feature: Integration
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '303'
 ht-degree: 0%
@@ -21,7 +22,7 @@ Headless commerce är API-baserad commerce. Det skiljer affärslogik, liksom tra
 
 Headless-arkitekturen är den tekniska åtskillnaden mellan huvudet och resten av affärsapplikationen. Adobe Commerce är helt headless med en frikopplad arkitektur som ger alla e-handelstjänster och data via ett GraphQL API-lager. Med denna arkitektur kan frontend-team utveckla sina gränser oberoende av Adobe Commerce, vilket gör det enkelt att snabbt skapa och testa nya kontaktytor med ny teknik.
 
-Adobe Commerce GraphQL API:er kan också utökas med mikrotjänster som körs på Adobe i/O-miljön. Detta ger oöverträffad flexibilitet att integrera, utöka och anpassa flerkanaliga affärsprocesser utan att kodsanpassningar behöver göras i bakgrunden, vilket gör att kärnplattformen enkelt kan uppgraderas utan att det påverkar frontend-kontaktytorna. Adobe Commerce GraphQL API:er är en öppen källkod och en del av vårt community-konstruktionsprogram med betydande bidrag och tillsyn från våra utvecklare.
+Adobe Commerce GraphQL API:er kan också utökas med mikrotjänster som distribueras på Adobe I/O Runtime. Detta ger oöverträffad flexibilitet att integrera, utöka och anpassa flerkanaliga affärsprocesser utan att kodsanpassningar behöver göras i bakgrunden, vilket gör att kärnplattformen enkelt kan uppgraderas utan att det påverkar frontend-kontaktytorna. Adobe Commerce GraphQL API:er är en öppen källkod och en del av vårt community-konstruktionsprogram med betydande bidrag och tillsyn från våra utvecklare.
 
 ![Diagram över headless commerce-arkitektur](../../../assets/playbooks/headless-diagram.svg)
 

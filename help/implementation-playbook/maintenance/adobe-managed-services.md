@@ -2,7 +2,8 @@
 title: Adobes hanterade tjänster
 description: Läs om hur Adobes hanterade tjänster kan hjälpa er att stödja och underhålla er implementering av Adobe Commerce.
 exl-id: b600b0e3-c6fd-4b86-ad2a-a445e599f1bd
-source-git-commit: 2affc555c2e719d0f8b8de06df3a8c080effb425
+feature: Services
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '1108'
 ht-degree: 0%
@@ -371,7 +372,7 @@ Adobe tillhandahåller en uppsättning tjänster för tillhandahållande, utveck
 
 Adobe säkerhetsstack för Managed Services bygger säkerhet på alla nivåer med automatisering och konsekvens för att minska antalet fel. Utvecklings- och verksamhetsteamen ärver automatiskt säkerhetskontroller från olika nivåer i stacken.
 
-Plattformspartners, som Amazon Web Services och Microsoft Azure, säkerställer maximal säkerhetstäckning vid användning av plattformsanpassningar, medan Adobe Managed Services-team tillhandahåller centrala säkerhetstjänster som regelefterlevnad, loggning, autentisering, skanning och övervakning samt serversäkerhet och säker programkonfiguration. Se [Adobe Commerce Security](https://business.adobe.com/products/magento/secure-ecommerce.html) för mer information.
+Plattformspartners, som Amazon Web Services och Microsoft Azure, säkerställer maximal säkerhetstäckning vid användning av plattformsanpassningar, medan Adobe Managed Services-teamet tillhandahåller centrala säkerhetstjänster som regelefterlevnad, loggning, autentisering, skanning och övervakning samt serversäkerhet och säker programkonfiguration. Se [Adobe Commerce Security](https://business.adobe.com/products/magento/secure-ecommerce.html) för mer information.
 
 I följande diagram visas Adobe Managed Services-säkerhetstekniker:
 

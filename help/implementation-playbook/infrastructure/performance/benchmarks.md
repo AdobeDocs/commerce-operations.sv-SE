@@ -2,7 +2,8 @@
 title: Prestandatester
 description: Granska prestandatestresultat för Adobe Commerce-implementeringar på Adobe molninfrastruktur.
 exl-id: cc9b090a-a504-4df3-aa32-81882f431dd9
-source-git-commit: eeb7146a8051e8692ebf974d65db75a4999cf2e6
+feature: Cloud
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '594'
 ht-degree: 0%
@@ -49,13 +50,13 @@ Prestandamätningarna baseras på simulerade dagliga butiksaktiviteter för kund
    - 3 000 samtidiga användare i butiken
    - Ange till 30 % CDN-cache-träfffrekvens
 
-      Om du använder cache-lagret effektivt ökas antalet sidvisningar per timme.
+     Om du använder cache-lagret effektivt ökas antalet sidvisningar per timme.
 
 - **GraphQL API**
    - 250 samtidiga trådar
    - Ange 0 % CDN-cache-träfffrekvens
 
-      Svarstiderna förbättras avsevärt med ett cache-lager framför GraphQL.
+     Svarstiderna förbättras avsevärt med ett cache-lager framför GraphQL.
 
 - **Administratörswebbplats**
    - 500 samtidiga användare

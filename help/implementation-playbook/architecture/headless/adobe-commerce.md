@@ -2,7 +2,8 @@
 title: Headless Adobe Commerce Architecture
 description: Läs om vad som gör Adobe Commerce headless Architecture-strategi unik.
 exl-id: eac9d5b1-4917-4d2a-a8af-7f85c825fa0d
-source-git-commit: 6509c939c7abc5462bffbe104466b2ff9e6fadc9
+feature: Integration
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '762'
 ht-degree: 0%
@@ -21,7 +22,7 @@ Adobe Commerce har alltid tillåtit headless-driftsättningar med REST API:er. R
 
 GraphQL är en branschstandard för presterande API:er, som används av många av de ledande e-handelsplattformarna. Det är bra eftersom det betyder att det finns en beprövad lösning och expertis på marknaden.
 
-Även om Adobe Commerce har en kopplad butik som tillval behöver en handlare inte använda den gamla Adobe Commerce-fronten. En handlare kan utnyttja Adobe Commerce förstklassiga e-handelstjänster för att hantera affärsprocesserna och, med våra butiks-API:er, integrera sin egen fristående butik för att skapa en förstklassig upplevelse.
+Även om Adobe Commerce har en kopplad butik som tillval behöver en handlare inte använda den gamla Adobe Commerce-fronten. En handlare kan utnyttja Adobe Commerce ledande e-handelstjänster för att hantera affärsprocesserna och, med våra butiks-API:er, integrera sin egen fristående butik för att skapa en förstklassig upplevelse.
 
 Nu ska vi titta på de olika rubrikfria alternativen.
 
@@ -45,8 +46,8 @@ Adobe Commerce plus Adobe Experience Manager är en kraftfull historia i och med
 
 ## Anpassade huvuden
 
-Det sista alternativet att diskutera här är möjligheten att bygga en anpassad front. Det här alternativet är till för företag som har befintlig expertis och interna utvecklare som är kunniga i en viss frontgrupp, som React. Om de inte har någon kunskap om Adobe Commerce traditionella frontutveckling kan de bestämma sig för att det är mer kostnadseffektivt att bygga en egen, anpassad kontaktkarta.
+Det sista alternativet att diskutera här är möjligheten att bygga en anpassad front. Det här alternativet är till för företag som har befintlig expertis och interna utvecklare som är kunniga i en viss frontgrupp, som React. Om de inte har någon kunskap i Adobe Commerce traditionella frontutveckling kan de bestämma sig för att det är mer kostnadseffektivt att bygga en egen, anpassad kontaktledning.
 
 Den här modellen kräver naturligtvis starka kunskaper och resurser för kund- eller systemintegration i frontend, och du får inte den inbyggda kompatibiliteten med exempelvis Page Builder som du får med PWA Studio. Varje gång en handlare bygger något helt anpassat kan de förlora time-to-market-fördelar.
 
-Anpassade gränssnitt möjliggör också innovationer och experimenterande. Det talas mycket om AR/VR och rösthandel, och med en arkitektur som Adobe Commerce kan handlare utforska dessa alternativ utan att påverka sina befintliga webbutiker.
+Anpassade gränssnitt möjliggör också innovationer och experimenterande. Det talas mycket om AR/VR eller rösthandel och med en arkitektur som Adobe Commerce kan handlare utforska dessa alternativ utan att påverka sina befintliga webbutiker.

@@ -2,7 +2,8 @@
 title: Viktiga intressenter
 description: Granska viktiga intressenter som deltar i en Adobe Commerce-implementering och vem som äger olika aspekter av projektet.
 exl-id: 04d8270f-3f68-445a-8e7a-e17905a6f77c
-source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
+feature: Best Practices
+source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
 source-wordcount: '390'
 ht-degree: 0%
@@ -38,6 +39,6 @@ De flesta e-handelsimplementationer kräver flera olika plattformar för att kun
 
 ## Vem är den verkställande sponsorn?
 
-Digital Commerce 360 har rapporterat att det främsta skälet till att organisationer ännu inte har investerat i en ny handelsomformning är att de saknar ledarskapsstöd. I vilken utsträckning ledningsteamet är engagerat är avgörande för ett varumärkes framgång. Fullt stöd från följande roller, inklusive återkommande kontrollpunktsmöten under en handelsimplementering, rekommenderas:
+Digital Commerce 360 har rapporterat att den främsta anledningen till att organisationer ännu inte har investerat i en ny handelsomformning är att de saknar ledarskapsstöd. I vilken utsträckning ledningsteamet är engagerat är avgörande för ett varumärkes framgång. Fullt stöd från följande roller, inklusive återkommande kontrollpunktsmöten under en handelsimplementering, rekommenderas:
 
 - Hela C-suite
