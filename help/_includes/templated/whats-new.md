@@ -1,7 +1,7 @@
 ---
-source-git-commit: 36ebf825705e3ffb26d595d39df8339ab1ca3c6f
+source-git-commit: 79293c564f9fcded146916e9e3bfd27a28424940
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '630'
 ht-degree: 0%
 
 ---
@@ -10,6 +10,26 @@ ht-degree: 0%
 ## Nyheter
 
 Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
+
+### 23 juni 2023
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Källa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Uppdaterade <a href="https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html">Systemkrav</a> sidan i <em>Installationshandbok</em> med flikar för att växla mellan moln- och lokala beroenden.</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/3d56a01b91a71b1c615a28588e726f0b9e58abb0">3d56a0</a> (implementera)</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 13 juni 2023
 
@@ -22,6 +42,12 @@ Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td><p>Lägg till versionen från juni 2023 på <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/versions.html">Släppta versioner</a>.</p>
+</td>
+      <td>teknisk</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/8d7329c2496f4d322a83ec6bcf71ef956f4284c3">8d7329</a> (implementera)</td>
+    </tr>
     <tr>
       <td><p>Följande dokument har lagts till för Beta:<br />- <a href="https://experienceleague.adobe.com/docs/commerce-operations/reference/commerce-on-premises-beta.html">Adobe Commerce CLI (lokal, betaversion)</a><br />- <a href="https://experienceleague.adobe.com/docs/commerce-operations/reference/magento-open-source-beta.html">Magento Open Source CLI (betaversion)</a><br />- <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/packages/adobe-commerce-beta.html">Adobe Commerce-paket (beta)</a><br />- <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/packages/cloud-beta.html">Molnpaket för Adobe Commerce (beta)</a><br />- <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/packages/magento-open-source-beta.html">Magento Open Source-paket (beta)</a></p>
 </td>
