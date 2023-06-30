@@ -2,9 +2,9 @@
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: 28358ee2ebadfcbf12c67e667cbbd27599a28a80
+source-git-commit: 6299aa825c04a5afd31728e763269cee46cfe513
 workflow-type: tm+mt
-source-wordcount: '12912'
+source-wordcount: '13230'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,22 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som skapats av gemenskapen för Magento Open Source, se [versionsinformation](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.34 {#v1-1-34}
+
+* **ACSD-52277** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.7) - Korrigerar ett fel där en administratörsanvändare inte omdirigeras korrekt efter att ha valt en butiksvy när en ny order skapas i Admin.
+* **ACSD-50813** (för Adobe Commerce >=2.4.5 &lt;2.4.7) - Korrigerar problemet där Admin inte kunde lägga till paketerade produkter som innehöll ett snedstreck i SKU:n med [!UICONTROL Add Products by SKU] till administratörsordningen.
+* **ACSD-51630** (för Adobe Commerce och Magento Open Source >=2.4.3 &lt;2.4.7) - Korrigerar problemet där ett stort antal systemmeddelanden gör att det går långsammare att hämta administratörssidor.
+* **ACSD-51853** (för Adobe Commerce och Magento Open Source >=2.4.1 &lt;2.4.7) - Korrigerar problemet där kopierade textformat inte används när [!UICONTROL Page Builder].
+* **ACSD-52160** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.7) - Korrigerar problemet där produktvalideringsresultatet mot kundvagnsprisregeln inte utvärderades korrekt baserat på regelvillkoret &quot;Om ett objekt hittas/INTE hittas i kundvagnen med alla/något av dessa villkor är sant&quot;.
+* **ACSD-51636** (för Adobe Commerce >=2.4.5 &lt;2.4.7) - Korrigerar problemet där företagsadministratören inte kan lägga till nya användare från kundkontoavsnittet trots att de har alla nödvändiga roller och behörigheter.
+* **ACSD-51739** (för Adobe Commerce >=2.4.6 &lt;2.4.7) - Korrigerar problemet där ett fel returneras när `structure_id` begärs i en CompanyTeam GraphQL-begäran.
+* **ACSD-51857** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.7) - Korrigerar problemet där långsamma prestanda för `aggregate_sales_report_bestsellers_data` cron-rapport om stor sales_order och `sales_order_item` databastabellerna berodde på hur huvuddatafrågan skrevs.
+* **ACSD-48448** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.7) - Korrigerar problemet där det uppstod ett konkurrensproblem under orderannulleringarna, vilket orsakar en dubblerad post i `inventory_reservation` tabell.
+* **ACSD-52689** (för Adobe Commerce och Magento Open Source >=2.4.3 &lt;2.4.6) - Korrigerar problemet där bilder inte kan överföras till Amazon S3-lagring med REST API.
+* **B2B-2674** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.7) - Lägg till cachelagring i GraphQL-frågan 1customAttributeMetadata1.
+* Nya versioner har lagts till för ACSD-44938.
+* Lagt till krav för ACSD-46988.
 
 ## v1.1.33 {#v1-1-33}
 
