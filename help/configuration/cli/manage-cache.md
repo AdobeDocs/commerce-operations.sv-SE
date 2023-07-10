@@ -2,9 +2,9 @@
 title: Hantera cacheminnet
 description: Hantera cachetyper och visa cachestatus.
 exl-id: bbd76c00-727b-412e-a8e5-1e013a83a29a
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 5c316ade0619603eafa7ece8a7cd8c1595dee713
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '901'
 ht-degree: 0%
 
 ---
@@ -119,15 +119,19 @@ Exempelresultat:
 
 ## Rensa och tömma cachetyper
 
+>[!NOTE]
+>
+>Cacheminnet för flera sidor kan ogiltigförklaras samtidigt och automatiskt **_utan_** dessa enheter redigeras. Om en produkt i katalogen t.ex. är tilldelad en kategori, eller när någon [!UICONTROL related product rule] ändras.
+
 Om du vill ta bort inaktuella objekt från cacheminnet kan du _ren_ eller _flush_ cachetyper:
 
 - Om du rensar en cachetyp tas endast alla objekt bort från de aktiverade Commerce-cachetyperna. Det här alternativet påverkar alltså inte andra processer eller program eftersom det bara rensar den cache som används i Commerce.
 
-   Inaktiverade cachetyper rensas inte.
+  Inaktiverade cachetyper rensas inte.
 
-   >[!TIP]
-   >
-   >Rensa alltid cacheminnet efter att du uppgraderat versioner av Magento Open Source eller Adobe Commerce, uppgraderat från Magento Open Source till Adobe Commerce eller installerat B2B för Adobe Commerce eller någon modul.
+  >[!TIP]
+  >
+  >Rensa alltid cacheminnet efter att du uppgraderat versioner av Magento Open Source eller Adobe Commerce, uppgraderat från Magento Open Source till Adobe Commerce eller installerat B2B för Adobe Commerce eller någon modul.
 
 - När du tömmer en cachetyp rensas cachelagringen, vilket kan påverka andra processer som använder samma lagring.
 
