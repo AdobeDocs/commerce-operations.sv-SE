@@ -3,9 +3,9 @@ title: Installationshandbok
 description: Använd den här guiden för att installera [!DNL Site-Wide Analysis Tool] för din webbplats
 exl-id: ba36dc74-806d-49c5-b4d1-ba53ed4076fb
 feature: Configuration, Install
-source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
+source-git-commit: 163d12b1f30a3098932c62e11f24784422002c67
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1176'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Din lokala infrastruktur måste uppfylla följande krav innan du installerar age
   >
   >Adobe Commerce stöds inte på [!DNL Microsoft Windows] eller [!DNL macOS].
 
-- Adobe Commerce 2.4.1 eller senare
+- Adobe Commerce 2.4.5-p1 eller senare (på grund av beroendet av Service Connector)
 
 - [!DNL Commerce Services Connector extension]
 
