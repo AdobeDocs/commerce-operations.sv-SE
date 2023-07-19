@@ -2,9 +2,9 @@
 title: Ange konfigurationsvärden
 description: Lär dig hur du anger konfigurationsvärden och ändrar värden som är låsta i Admin.
 exl-id: 1dc2412d-50b3-41fb-ab22-3eccbb086302
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 064be78a16142fc18bf64256eafde4b14c3ad529
 workflow-type: tm+mt
-source-wordcount: '982'
+source-wordcount: '1040'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ Om du vill ange ett konfigurationsvärde måste du känna till minst ett av föl
 - Konfigurationssökvägen
 - Om du vill ange ett konfigurationsvärde för ett visst omfång måste du känna till omfångskoden.
 
-   Om du vill ange ett konfigurationsvärde för standardomfånget behöver du inte göra något.
+  Om du vill ange ett konfigurationsvärde för standardomfånget behöver du inte göra något.
 
 ### Hitta konfigurationssökvägen
 
@@ -289,3 +289,8 @@ Resultat:
 ```terminal
 web/unsecure/base_url - http://example-for-store.com/
 ```
+
+>[!INFO]
+>
+>Omfångskoden kan endast innehålla bokstäver (a-z eller A-Z), siffror (0-9) och understreck (_). Dessutom måste det första tecknet vara en bokstav. Om versaler eller kameror används när du skapar en ny webbplats- eller butiksvy är matchningen inte skiftlägeskänslig för att passa åsidosättning av konfigurationsinställningar via systemvariabler. Se [Använd miljövariabler för att åsidosätta konfigurationsinställningar](../reference/override-config-settings.md#environment-variables).
+

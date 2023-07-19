@@ -2,9 +2,9 @@
 title: Konfigurera flera webbplatser, butiker och butiksvyer i administratören
 description: Konfigurera ytterligare webbplatser, butiker och butiksvyer i Commerce Admin.
 exl-id: e6b4d14d-7504-48f9-a2e1-7e9a1bc76ab9
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 5860f5327003372909c425c13c6d03166288d903
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1067'
 ht-degree: 0%
 
 ---
@@ -172,3 +172,8 @@ Så här ändrar du bas-URL:en för butiksvyn:
    >Om du skapar en bas-URL för Adobe Commerce i molninfrastrukturen måste du ersätta den första perioden med tre streck. Om bas-URL:en till exempel är `french.branch-sbg7pPa-f3dueAiM03tpy.us.magentosite.cloud`, ange `http://french---branch-sbg7pPa-f3dueAiM03tpy.us.magentosite.cloud`
 
 1. Klicka **Spara konfiguration**.
+
+
+>[!INFO]
+>
+>Koden för webbplatsvyn, butiken och butiksvyn kan endast innehålla bokstäver (a-z eller A-Z), siffror (0-9) och understreck (_). Dessutom måste det första tecknet vara en bokstav. Om versaler eller kameravärden används är matchningen internt skiftlägeskänslig för att ge plats åt åsidosättning av konfigurationsinställningar via systemvariabler. Se [Använd miljövariabler för att åsidosätta konfigurationsinställningar](../reference/override-config-settings.md#environment-variables).
