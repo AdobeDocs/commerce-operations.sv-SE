@@ -2,7 +2,7 @@
 title: Produkttillgänglighet
 description: Läs mer om vilka Adobe Commerce-funktioner som stöds och kontrollera om de är kompatibla med vissa Adobe Commerce-utgåvor.
 exl-id: 7e8e8ac2-a0b9-4023-a813-c0f1293e54c2
-source-git-commit: ca9b786cdaa8b2122d94c24b9edad02d43128c42
+source-git-commit: 376c236f6bd4979daf896e1a49d7c6092a1c2661
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 10%
@@ -26,7 +26,7 @@ Följande tabell visar versionsstödet för varje tillägg i förhållande till 
 | **Adobe Commerce** | 2.4.7-beta1 | 2.4.6 | 2.4.5 | 2.4.4 | 2.4.3 | |
 |-|-|-|-|-|-|-|
 | _Adobe I/O Events for Adobe Commerce_ | 1.2.2 | 1.2.2 | 1.2.2 | 1.2.2 | - | [Disposition](https://developer.adobe.com/commerce/events/get-started/installation/) <br/>[Versionsinformation](https://developer.adobe.com/commerce/events/get-started/release-notes/) |
-| _B2B_ | 1.3.5 | 1.4.0 | 1.3.4 | 1.3.3 | 1.3.2 | [Disposition](https://experienceleague.adobe.com/docs/commerce-admin/b2b/install.html) <br/> [Versionsinformation](https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes.html) |
+| _B2B_ | 1.4.0 | 1.3.5 | 1.3.4 | 1.3.3 | 1.3.2 | [Disposition](https://experienceleague.adobe.com/docs/commerce-admin/b2b/install.html) <br/> [Versionsinformation](https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes.html) |
 | _Kanalhanteraren_ | - | 2.0.0 | 1.0.0+ | 1.0.0+ | 1.0.0+ | [Marketplace](https://commercemarketplace.adobe.com/magento-channel-manager.html)<br/> [Versionsinformation](https://experienceleague.adobe.com/docs/commerce-channels/channel-manager/release-notes.html) |
 | _Amazon Sales Channel_ | - | 4.1.0+ | 4.3.0+ | 4.3.0+ | 4.3.0+ | [Marketplace](https://commercemarketplace.adobe.com/magento-module-amazon.html)<br/> [Versionsinformation](https://experienceleague.adobe.com/docs/commerce-channels/amazon/release-notes.html) |
 | _Experience Platform Connector_ | 3.0.0-beta1 | 1.0.0+ | 1.0.0+ | 1.0.0+ | 1.0.0+ | [Marketplace](https://commercemarketplace.adobe.com/magento-experience-platform-connector.html)<br/>[Versionsinformation](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/release-notes.html) |
