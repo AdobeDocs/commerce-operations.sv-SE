@@ -1,7 +1,7 @@
 ---
-source-git-commit: 79293c564f9fcded146916e9e3bfd27a28424940
+source-git-commit: 2c196e0a0522dc12cc53fdad4ffec66f8e1f6e22
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '694'
 ht-degree: 0%
 
 ---
@@ -10,6 +10,86 @@ ht-degree: 0%
 ## Nyheter
 
 Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
+
+### 27 juli 2023
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Källa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Omarbetad <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/product-availability.html">produkttillgänglighet</a> för att förbättra layout och läsbarhet.</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/6ed2a3e42cd0b85aae29652b8e36acbbda1b9e72">6ed2a3</a> (implementera)</td>
+    </tr>
+  </tbody>
+</table>
+
+### 25 juli 2023
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Källa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Publicerad <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html">versionsinformation</a> för QPT-paketversionen (1.1.35 Quality Patches Tool).</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/ac0f04b7a04c5c7d3b3880b8231ffece05718558">ac0f04</a> (implementera)</td>
+    </tr>
+  </tbody>
+</table>
+
+### 11 juli 2023
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Källa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>En beskrivning av ett nytt känt fel som påverkar etiketter för mellanlagrade försäljningsregler för Adobe Commerce har lagts till <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/adobe-commerce/2-4-5.html">2.4.5</a> och <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/adobe-commerce/2-4-6.html">2.4.6</a>.</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/9e833dad884fa6146bb5e6ce6dd5ebcb23208b80">9e833d</a> (implementera)</td>
+    </tr>
+  </tbody>
+</table><!-- date_group -->
+
+### 30 juni 2023
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Källa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Publicerad <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html">versionsinformation</a> för 1.1.34 Quality Patches Tool (QPT) package release.</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/9fcbc03a1b52f8aad35f2347868b266228264fad">9fcbc0</a> (implementera)</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 23 juni 2023
 
@@ -125,70 +205,10 @@ Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
   </thead>
   <tbody>
     <tr>
-      <td><p>Lagt till en <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/site-wide-analysis-tool/access.html">instruktioner</a> för att komma åt verktyget för platsomfattande analys från verktygets domän (<code class="language-plaintext highlighter-rouge">https://supportinsights.adobe.com/commerce</code>).</p>
+      <td><p>Lagt till en <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/site-wide-analysis-tool/access.html">instruktioner</a> för att komma åt verktyget för webbplatsövergripande analys från verktygets domän (<code class="language-plaintext highlighter-rouge">https://supportinsights.adobe.com/commerce</code>).</p>
 </td>
       <td>större uppdatering</td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/051fe7707cef593027bcff93ae39adfc5cf1af3c">051fe7</a> (implementera)</td>
-    </tr>
-  </tbody>
-</table><!-- date_group -->
-
-### 25 maj 2023
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Källa</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Lagt till <a href="https://experienceleague.adobe.com/docs/commerce-operations/reference/uct.html"><code class="language-plaintext highlighter-rouge">bin/uct</code> CLI-referens</a>.</p>
-</td>
-      <td>new-topic</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/d00e8cb4ebce9cbda0218ef75f44d2ff0ec45bad">d00e8c</a> (implementera)</td>
-    </tr>
-  </tbody>
-</table>
-
-### 12 maj 2023
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Källa</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Infrastrukturinformation har lagts till i <a href="https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/infrastructure/performance/benchmarks.html">prestandatester</a>.</p>
-</td>
-      <td>större uppdatering</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/762bc2b9bdd19d92707525044a4178b6e89e4a3d">762bc2</a> (implementera)</td>
-    </tr>
-  </tbody>
-</table>
-
-### 4 maj 2023
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Källa</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Publicerad <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html">versionsinformation</a> för 1.1.31 Quality Patches Tool (QPT) package release.</p>
-</td>
-      <td>större uppdatering</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/7f30857b612d027dfce26fac1f947006f28ecfa6">7f3085</a> (implementera)</td>
     </tr>
   </tbody>
 </table><!-- date_group --><!-- month_group --><!-- year_group -->
