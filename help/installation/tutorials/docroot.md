@@ -3,9 +3,9 @@ title: Förbättra säkerheten genom att ändra dokumentroten
 description: Förhindra obehörig webbläsarbaserad åtkomst till Adobe Commerce eller Magento Open Source lokala filsystem.
 feature: Install, Security
 exl-id: aabe148d-00c8-4011-a629-aa5abfa6c682
-source-git-commit: ce405a6bb548b177427e4c02640ce13149c48aff
+source-git-commit: 32dd5005422b98923ce1bdf6c3fb3f55c2ec15bd
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '586'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ The `magento2/` katalogen innehåller följande:
 - `var/`
 
 Ansökan kommer från `/var/www/html/magento2/pub`. Resten av filsystemet är känsligt eftersom det är tillgängligt via en webbläsare.
-Ställa in webbroten på `pub/` -katalogen förhindrar besökare från att komma åt känsliga delar av filsystemet via en webbläsare.
+Ange webbroten på `pub/` -katalogen förhindrar besökare från att komma åt känsliga delar av filsystemet via en webbläsare.
 
 I det här avsnittet beskrivs hur du ändrar Apache-dokumentroten för en befintlig instans för att hantera filer från `pub/` katalog, vilket är säkrare.
 
@@ -49,7 +49,7 @@ server {
 
 ## Innan du börjar
 
-För att kunna slutföra den här självstudiekursen måste du ha tillgång till en fungerande installation som körs på en [LAMP](https://en.wikipedia.org/wiki/LAMP_(software_bundle)) hög:
+För att slutföra den här självstudiekursen behöver du tillgång till en fungerande installation som körs på en LAMP-stack:
 
 - Linux
 - Apache (2.4+)
@@ -122,7 +122,7 @@ Om du lade till ett katalognamn till serverns värdnamn eller IP-adress för att
    UPDATE core_config_data SET value='http://192.168.33.10' WHERE path='web/unsecure/base_url';
    ```
 
-## 3. Uppdatera filen env.php
+## 3. Uppdatera filen env.php.
 
 Lägg till följande nod i `env.php` -fil.
 
@@ -134,7 +134,7 @@ Lägg till följande nod i `env.php` -fil.
 
 Se [env.php reference](../../configuration/reference/config-reference-envphp.md) för mer information.
 
-## 4. Växla lägen
+## 4. Växlingslägen
 
 [Programlägen](../../configuration/bootstrap/application-modes.md), som innehåller `production` och `developer`, har utformats för att förbättra säkerheten och underlätta utvecklingen. Du bör växla till `developer` läge när du utökar eller anpassar programmet och växlar till `production` när du kör i en aktiv miljö.
 
