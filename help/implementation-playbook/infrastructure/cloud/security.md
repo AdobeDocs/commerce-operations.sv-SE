@@ -3,9 +3,9 @@ title: Säkerhet för molninfrastruktur
 description: Läs om hur vi skyddar Adobe Commerce i molninfrastrukturen.
 exl-id: cd5d1106-c8db-4b70-b1c7-12378d7d77a7
 feature: Cloud, Security
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: d05629ef21608a017cfbbfcf05e9507375689fa2
 workflow-type: tm+mt
-source-wordcount: '1644'
+source-wordcount: '1689'
 ht-degree: 0%
 
 ---
@@ -39,6 +39,10 @@ Kunder kan använda SSH-tunnlar för att skydda kommunikationen med programmet. 
 Amazon Elastic Block Store (EBS) används för lagring. Alla EBS-volymer krypteras med AES-265-algoritmen. Detta innebär att data krypteras i vila. Systemet krypterar också data som överförs mellan CDN och ursprungsservern samt mellan ursprungsservrarna. Kundlösenord lagras som hashar. Känsliga autentiseringsuppgifter, inklusive de för betalnings-gatewayen, krypteras med SHA-256-algoritmen.
 
 Adobe Commerce-programmet stöder inte kryptering på kolumn- eller radnivå eller kryptering när data inte finns tillgängliga eller inte är på väg mellan servrar. Kunden kan hantera krypteringsnycklar inifrån programmet. Tangenter som används av systemet lagras i AWS Key Management System och måste hanteras av Managed Services för att kunna tillhandahålla delar av tjänsten.
+
+## Slutpunktsidentifiering och -svar
+
+[!DNL CrowdStrike Falcon], en lättviktig, nästa generations EDR-agent (slutpunktsidentifiering och -respons) som är installerad på alla slutpunkter (inklusive servrar) i Adobe, skyddar våra data och våra system med kontinuerlig övervakning och insamling i realtid som gör att vi snabbt kan identifiera och reagera på hot.
 
 ## Testning av penetration
 
@@ -79,11 +83,11 @@ Alla AWS-aktiviteter loggas i AWS CloudTrail. Linux-, programserver- och databas
 
 ## Känsliga data
 
-Känsliga data kan omfatta antingen personuppgifter från konsumenter eller konfidentiella uppgifter från Managed Services-kunder. Skyddet av känsliga data från kunder och konsumenter är en viktig skyldighet för Adobe Commerce Managed Services. Både Managed Services och våra kunder har juridiska skyldigheter när det gäller personligt identifierbar information. Förutom arkitekturens säkerhetsfunktioner finns det andra kontroller som begränsar distributionen och åtkomsten till känsliga data.
+Känsliga data kan omfatta antingen personuppgifter från konsumenter eller konfidentiella uppgifter från Managed Services-kunder. Skyddet av känsliga data från kunder och konsumenter är en viktig skyldighet för Adobe Commerce Managed Services. Både Managed Services och våra kunder har juridiska skyldigheter avseende personligt identifierbar information. Förutom arkitekturens säkerhetsfunktioner finns det andra kontroller som begränsar distributionen och åtkomsten till känsliga data.
 
-Kunderna äger sina data och har kontroll över var dessa data kommer att placeras. Kunden anger var deras produktions- och utvecklingsinstanser finns. De anger också vilken plats som ska användas för Adobe Commerce rapporteringsmiljö i samarbete med Commerce och om Adobe Commerce Reporting-programmet har tillgång till personligt identifierbar information eller inte. Produktionsinstanser kan finnas i de flesta AWS-regioner, medan utvecklings- och Adobe Commerce Reporting-miljöer för närvarande finns antingen i USA eller i EU.
+Kunderna äger sina data och har kontroll över var dessa data kommer att placeras. Kunden anger var deras produktions- och utvecklingsinstanser finns. De anger också vilken plats som ska användas för Adobe Commerce rapporteringsmiljö i samarbete med Commerce, och om det Adobe Commerce Reporting-programmet har tillgång till personligt identifierbar information eller inte. Produktionsinstanser kan finnas i de flesta AWS-regioner, medan utvecklings- och Adobe Commerce Reporting-miljöer för närvarande finns antingen i USA eller i EU.
 
-Känsliga data kan passera genom snabbnätverket för CDN-servrar, men lagras inte i snabbnätverket. Alla partners som ingår i Adobe Commerce Managed Services har avtalsenliga skyldigheter att skydda känsliga uppgifter. Managed Services flyttar inte känsliga kund- eller konsumentdata från de platser som kunden anger.
+Känsliga data kan passera genom snabbnätverket för CDN-servrar, men lagras inte i snabbnätverket. Alla partners som ingår i Adobe Commerce Managed Services har avtalsenliga skyldigheter att säkerställa skydd av känsliga uppgifter. Managed Services flyttar inte känsliga kund- eller konsumentdata från de platser som kunden anger.
 
 Som en del av tjänsterna i Adobe Commerce Managed Services kräver Managed Services personal tillgång till produktionssystem som innehåller känsliga data. Dessa medarbetare har utbildats för att skydda känsliga kunddata och konsumentdata. Tillgång till dessa system är begränsad till medarbetare som behöver åtkomst. Dessa anställda har bara tillgång till den tid som behövs för att kunna leverera dessa tjänster.
 
@@ -113,6 +117,6 @@ Säkerhetskopieringar utförs varje timme under de senaste 24 timmarna. Efter 24
 | Vecka 8 till 12 | En säkerhetskopiering varannan vecka |
 | Vecka 12 till 22 | En säkerhetskopia per månad |
 
-Detta skapar en oberoende säkerhetskopiering av redundant lagring. Eftersom EBS-volymerna är krypterade krypteras även säkerhetskopiorna. Dessutom utför Managed Services säkerhetskopiering på begäran av kunden.
+Detta skapar en oberoende säkerhetskopiering av redundant lagring. Eftersom EBS-volymerna är krypterade krypteras även säkerhetskopiorna. Dessutom utför Managed Services på begäran säkerhetskopiering på begäran av kunden.
 
-Adobe Commerce Managed Services metod för säkerhetskopiering och återställning använder en arkitektur med hög tillgänglighet kombinerat med säkerhetskopiering i hela systemet. Varje projekt replikeras - data, kod och resurser - mellan tre olika tillgänglighetszoner för AWS. varje zon med ett separat datacenter.
+Din Adobe Commerce Managed Services metod för säkerhetskopiering och återställning använder en arkitektur med hög tillgänglighet kombinerat med säkerhetskopiering i hela systemet. Varje projekt replikeras - data, kod och resurser - mellan tre olika tillgänglighetszoner för AWS; varje zon har ett separat datacenter.
