@@ -2,9 +2,9 @@
 title: Så här fungerar korrigeringar
 description: Lär dig mer om de olika typerna av patchar för Adobe Commerce och Magento Open Source och hur de fungerar.
 exl-id: d7072ed4-7d51-41fe-881a-aae3b2000b55
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 915cac8c8d436105c4ae25f95bcaefbe19cc50c1
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '607'
 ht-degree: 0%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->Vi rekommenderar starkt att du testar alla korrigeringsfiler i en staging- eller utvecklingsmiljö innan du distribuerar till produktionen. Vi rekommenderar starkt att du säkerhetskopierar dina data innan du implementerar en korrigering. Se [Säkerhetskopiera och återställa filsystemet](../../installation/tutorials/backup.md).
+>Vi rekommenderar starkt att du testar alla korrigeringsfiler i en staging- eller utvecklingsmiljö innan du distribuerar till produktionen. Vi rekommenderar även att du säkerhetskopierar dina data innan du implementerar en korrigering. Se [Säkerhetskopiera och återställa filsystemet](../../installation/tutorials/backup.md).
 
 Patch-filer (eller diff-filer) är textfiler som innehåller följande information:
 
-- Den eller de filer som ska ändras.
+- De filer som ska ändras.
 - Radnumret som börjar ändringen och antalet rader som ska ändras.
 - Den nya koden som ska bytas in.
 
@@ -53,7 +53,7 @@ Använd [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/c
 
 Ibland tar det ett tag för Adobe Engineering Team att inkludera en felkorrigering som gjorts på GitHub i en Adobe Commerce- eller Magento Open Source Composer-version. Under tiden kan du skapa en patch från GitHub och använda [`cweagans/composer-patches`](https://github.com/cweagans/composer-patches/) plugin-program för att använda det i din Composer-baserade installation.
 
-Använd [kommandorad] eller [Disposition] om du vill använda anpassade patchar.
+Använd [kommandorad](apply.md#command-line) eller [Disposition](apply.md#composer) om du vill använda anpassade korrigeringsfiler.
 
 Det finns många sätt att skapa anpassade korrigeringsfiler. I följande exempel fokuseras på att skapa en korrigering från en känd Git-implementering.
 
@@ -88,7 +88,7 @@ index c8a6fef58d31..7d01c195791e 100644
 
 ## Tillämpar patchar
 
-Du kan använda patchar på följande sätt:
+Du kan använda patchar på något av följande sätt:
 
 - [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
 - [Kommandorad](/help/upgrade/patches/apply.md#command-line)
@@ -96,4 +96,4 @@ Du kan använda patchar på följande sätt:
 
 >[!NOTE]
 >
->Information om hur du tillämpar en korrigering på ett Adobe Commerce-infrastrukturprojekt finns i [Tillämpa patchar](https://devdocs.magento.com/cloud/project/project-patch.html) i _Molnguide_.
+>Information om hur du tillämpar en korrigering på ett Adobe Commerce-infrastrukturprojekt finns i [Tillämpa patchar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i _Handbok för Commerce on Cloud_.
