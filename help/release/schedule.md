@@ -1,54 +1,90 @@
 ---
 title: Frigör schema
-description: Lär dig när specifika versioner av Adobe Commerce är schemalagda för betaversion, förhandsversioner och allmän tillgänglighet.
+description: Lär dig när Adobe planerar att lansera nya funktioner för Adobe Commerce.
 exl-id: ae1e09cd-966f-44a3-9e4d-b90bb838429d
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 12b4f619673414f18d9697450e867681c6cb3194
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '752'
 ht-degree: 0%
 
 ---
 
 # Frigör schema
 
-Adobe strävar hela tiden efter att hitta den rätta balansen mellan att göra produktuppgraderingar enkla och förutsägbara och leverera förbättringar och nya funktioner till tidiga användare snabbare. Under det senaste året har vi finslipat hur vi levererar programvara för denna balans. Mer information finns i [versionsprincip](versioning-policy.md).
+Adobe strävar hela tiden efter att hitta rätt balans mellan att göra produktuppgraderingar enkla och förutsägbara samtidigt som man levererar förbättringar och nya funktioner till tidiga användare snabbare (se [versionsprincip](versioning-policy.md)). Syftet med denna tidsplan är att ge Adobe datum för när planerar att släppa viktiga nya funktioner. Dessa funktioner kan variera under året. Adobe släpper dock regelbundet och kontinuerligt förbättringar av utökningsverktyg, infrastruktur och SaaS-produkter (tjänster) mellan de datum som anges på den här sidan.
 
-Adobe släpper säkerhets- och funktionspatchar för alla utgåvor av Adobe Commerce som stöds.
+Adobe [patchar](versioning-policy.md#patch-release) för varje versionsrad som stöds i Adobe Commerce PHP-programmets huvudprogram. Patch-versioner är möjligheter att uppgradera kärnkodbasen för att hålla plattformen säker, tillförlitlig och effektiv. Funktionerna är oberoende av kärnkodbasen och är tillgängliga via [extern modul, tillägg, verktyg eller webbtjänst](versioning-policy.md#extensibility-infrastructure-and-services-release).
+
+>[!NOTE]
+>
+>Från och med 2024 har Adobe inte längre tillgång till förhandsversioner av patchar. För version 2.4.7 och senare kan Adobe Commerce-kunder använda [betaversioner](beta.md) för att få tillgång till pregenerell tillgänglighetskod för testnings- och utvecklingsändamål. Åtkomst före lansering planeras fortfarande för följande versioner från 2023:
+>
+> - 8 augusti 2023 är tillgång till förhandsversionen 25 juli 2023
+> - 10 oktober 2023 års åtkomst före utgivningen är 26 september 2023
 
 I följande tabell visas datumen för schemalagda releaser (datum kan ändras):
 
-| Frigör | Versioner | Förhandsversion | Allmän tillgänglighet |
-|--------------------------------------------------------------------|-------------------------------------------------|--------------------|----------------------|
-| Januari 2023-versionen | \-\- | \-\- | 17 januari 2023 |
-| Mars 2023 Funktion + patch + säkerhetspatchrelease | 2.4.6<sup>1</sup><br>2.4.5-p2<br>2.4.4-p3 | 28 februari 2023 | 14 mars 2023 |
-| Version från april 2023 | \-\- | \-\- | 25 april 2023 |
-| Funktion + betatestning + säkerhetspatchrelease från juni 2023 | 2.4.7-beta1<br>2.4.6-p1<br>2.4.5-p3<br>2.4.4-p4 | 30 maj 2023 | 13 juni 2023 |
-| Augusti 2023 Feature + Security patch release | 2.4.6-p2<br>2.4.5-p4<br>2.4.4-p5 | 25 juli 2023 | 8 augusti 2023 |
-| Oktober 2023 Funktion + betatestning + säkerhetspatchrelease | 2.4.7-beta2<br>2.4.6-p3<br>2.4.5-p5<br>2.4.4-p6 | 26 september 2023 | 10 oktober 2023 |
-
-{style="table-layout:auto"}
-
-<sup>\-\- Anger objekt som inte är tillämpliga i den här versionen.</sup><br>
-<sup>1 betaversion planerad till januari 2023</sup><br>
-
->[!TIP]
->
->Patch and Security Patch Releases är möjligheter att uppgradera kärnkodbasen för att hålla plattformen säker, tillförlitlig och effektiv. Funktionsreleaser sker varannan månad. Funktionsreleaser är oberoende av kärnkodbasen och är tillgängliga via externa moduler eller tillägg. Eventuella uppdateringar av befintliga oberoende funktioner släpps under funktionens releasetider och inträffar inte automatiskt om funktionen redan är implementerad.
-
-## Tidig åtkomst
-
-Förhandsversionen är den allmänna tillgänglighetskoden som är tillgänglig för Adobe Commerce handlare och alla partners två veckor före den allmänna tillgängligheten. Det gör att koden kan driftsättas snabbare än den allmänna tillgängligheten.
-
-Mer information finns i [betaversioner](beta.md).
-
-## Versionstyper
-
-- **Patch releases**- Uppdateringar av Adobe Commerce centrala program som omfattar säkerhets-, kompatibilitets-, prestanda- och högprioriterade kvalitetskorrigeringar.
-
-   >[!IMPORTANT]
-   >
-   >Adobe kommer att släppa betaversioner (&quot;betaversioner&quot;), som är förhandsversioner av Adobe Commerce-funktioner som är tillgängliga för alla Adobe Commerce-kunder och Adobe-partners. Betaversioner kan innehålla defekter och tillhandahålls i befintligt skick utan garanti av något slag. Adobe har ingen skyldighet att upprätthålla, korrigera, uppdatera, ändra, modifiera eller på annat sätt ge support (via Adobe Support Services eller på annat sätt) för betaversioner. Kunden rekommenderas att iaktta försiktighet och inte på något sätt förlita sig på att betaversionerna och/eller tillhörande dokumentation eller material fungerar korrekt eller fungerar korrekt. Därför är all användning av betaversioner helt på kundens egen risk.
-
-- **Betaversionskorrigeringar**- Icke-generell tillgänglighetskoduppdatering för Adobe Commerce-programmet som innehåller säkerhets-, kompatibilitets-, prestanda- och högprioriterade kvalitetskorrigeringar. Det ger extra tid att granska kod och komponenter som påverkas.
-- **Säkerhetsuppdateringar**—Säkerhetsuppdateringar av Adobe Commerce-programmet som släppts för att skydda handlarna och uppfylla kraven.
-- **Funktioner**—Nya funktioner och funktionsuppdateringar som levereras som fristående tjänster, separat från korrigeringsfilerna. Exempel är tjänster som Product Recommendations och Live Search, oberoende moduler som PWA Studio och Inventory management (MSI) samt uppdateringar av våra molntjänster och vår infrastruktur.
+<table>
+<thead>
+  <tr>
+    <th>Allmän tillgänglighet</th>
+    <th>Funktioner</th>
+    <th>PHP-kärna</th>
+  </tr>
+</thead>
+<tfoot>
+   <tr>
+      <td colspan="3"><strong>Förklaring</strong>:
+         <ul>
+            <li><strong><img alt="Funktionsikon för B2B" src="../assets/icons/enterprise.svg"></img> B2B</strong>—Nya funktioner, förbättringar och felkorrigeringar för B2B-tillägget för Adobe Commerce.</li>
+            <li><strong><img alt="Ikon för utökningsfunktion" src="../assets/icons/brackets.svg"></img> Utbyggbarhet</strong>- Nya verktyg och tjänster för utbyggbarhet som inte längre är i processen och som levereras oberoende av korrigeringsversioner. Exempel: Admin UI SDK, Adobe I/O Events for Commerce och API Mesh.</li>
+            <li><strong><img alt="Ikon för infrastrukturfunktion" src="../assets/icons/servers.svg"></img> Infrastruktur</strong>- Nya funktioner och förbättringar i Adobe Commerce i molninfrastrukturen och Cloud Tools Suite for Commerce-paketen, som är utformade för att driftsätta och hantera Adobe Commerce installationer och uppgraderingar på molnplattformen.</li>
+            <li><strong><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> Patchar</strong>- Uppdateringar av Adobe Commerce PHP-programmets kärnprogram som omfattar korrigeringar av säkerhet, regelefterlevnad, prestanda och högprioriterade kvaliteter.</li>
+            <li><strong><img alt="Ikon för tjänstefunktion" src="../assets/icons/feature.svg"></img> Tjänster</strong>- Nya SaaS-funktioner som levereras oberoende av korrigeringsversioner. Exempel: Catalog Service, Live Search och Product Recommendations.</li>
+         </ul>
+      </td>
+   </tr>
+</tfoot>
+<tbody>
+  <tr>
+    <td>8 augusti 2023</td>
+    <td><img alt="Funktionsikon för B2B" src="../assets/icons/enterprise.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes.html">B2B</a><br><img alt="Ikon för utökningsfunktion" src="../assets/icons/brackets.svg"></img> <a href="https://developer.adobe.com/commerce/extensibility/">Utbyggbarhet</a><br><img alt="Ikon för infrastrukturfunktion" src="../assets/icons/servers.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite.html">Infrastruktur</a><br><img alt="Ikon för tjänstefunktion" src="../assets/icons/feature.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/release-information/release-notes-all.html">Tjänster</a></td>
+    <td><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="release-notes/security/overview.md">Säkerhetsuppdateringar</a>: 2.4.6-p2, 2.4.5-p4, 2.4.4-p5</td>
+  </tr>
+  <tr>
+    <td>10 oktober 2023</td>
+    <td><img alt="Funktionsikon för B2B" src="../assets/icons/enterprise.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes.html">B2B</a><br><img alt="Ikon för utökningsfunktion" src="../assets/icons/brackets.svg"></img> <a href="https://developer.adobe.com/commerce/extensibility/">Utbyggbarhet</a><br><img alt="Ikon för infrastrukturfunktion" src="../assets/icons/servers.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite.html">Infrastruktur</a><br><img alt="Ikon för tjänstefunktion" src="../assets/icons/feature.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/release-information/release-notes-all.html">Tjänster</a></td>
+    <td><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="release-notes/commerce/overview.md">Betakorrigering</a>: 2.4.7-beta2<br> <img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="release-notes/security/overview.md">Säkerhetsuppdateringar</a>: 2.4.6-p3, 2.4.5-p5, 2.4.4-p6</td>
+  </tr>
+  <tr>
+    <td>13 februari 2024</td>
+    <td><img alt="Funktionsikon för B2B" src="../assets/icons/enterprise.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes.html">B2B</a><br><img alt="Ikon för utökningsfunktion" src="../assets/icons/brackets.svg"></img> <a href="https://developer.adobe.com/commerce/extensibility/">Utbyggbarhet</a><br><img alt="Ikon för infrastrukturfunktion" src="../assets/icons/servers.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite.html">Infrastruktur</a><br><img alt="Ikon för tjänstefunktion" src="../assets/icons/feature.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/release-information/release-notes-all.html">Tjänster</a></td>
+    <td><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="release-notes/security/overview.md">Säkerhetsuppdateringar</a>: 2.4.6-p4, 2.4.5-p6, 2.4.4-p7</td>
+  </tr>
+  <tr>
+    <td>19 mars 2024</td>
+    <td>--</td>
+    <td><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="release-notes/commerce/overview.md">Betakorrigering</a>: 2.4.7-beta3</td>
+  </tr>
+  <tr>
+    <td>9 april 2024</td>
+    <td><img alt="Funktionsikon för B2B" src="../assets/icons/enterprise.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes.html">B2B</a><br><img alt="Ikon för utökningsfunktion" src="../assets/icons/brackets.svg"></img> <a href="https://developer.adobe.com/commerce/extensibility/">Utbyggbarhet</a><br><img alt="Ikon för infrastrukturfunktion" src="../assets/icons/servers.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite.html">Infrastruktur</a><br><img alt="Ikon för tjänstefunktion" src="../assets/icons/feature.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/release-information/release-notes-all.html">Tjänster</a></td>
+    <td><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="release-notes/commerce/overview.md"><strong>Adobe Commerce 2.4.7</a></strong>:<ul><li>Prestandaförbättringar</li><li>Kvalitetsförbättringar</li><li>Säkerhetsförbättringar</li><li>Beroendeuppdateringar från tredje part</li></ul><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="release-notes/security/overview.md">Säkerhetsuppdateringar</a>: 2.4.6-p5, 2.4.5-p7, 2.4.4-p8</td>
+  </tr>
+  <tr>
+    <td>11 juni 2024</td>
+    <td><img alt="Funktionsikon för B2B" src="../assets/icons/enterprise.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes.html">B2B</a><br><img alt="Ikon för utökningsfunktion" src="../assets/icons/brackets.svg"></img> <a href="https://developer.adobe.com/commerce/extensibility/">Utbyggbarhet</a><br><img alt="Ikon för infrastrukturfunktion" src="../assets/icons/servers.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite.html">Infrastruktur</a><br><img alt="Ikon för tjänstefunktion" src="../assets/icons/feature.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/release-information/release-notes-all.html">Tjänster</a></td>
+    <td><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="release-notes/security/overview.md">Säkerhetsuppdateringar</a>: 2.4.7-p1, 2.4.6-p6, 2.4.5-p8, 2.4.4-p9</td>
+  </tr>
+  <tr>
+    <td>13 augusti 2024</td>
+    <td><img alt="Funktionsikon för B2B" src="../assets/icons/enterprise.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes.html">B2B</a><br><img alt="Ikon för utökningsfunktion" src="../assets/icons/brackets.svg"></img> <a href="https://developer.adobe.com/commerce/extensibility/">Utbyggbarhet</a><br><img alt="Ikon för infrastrukturfunktion" src="../assets/icons/servers.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite.html">Infrastruktur</a><br><img alt="Ikon för tjänstefunktion" src="../assets/icons/feature.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/release-information/release-notes-all.html">Tjänster</a></td>
+    <td><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="release-notes/security/overview.md">Säkerhetsuppdateringar</a>: 2.4.7-p2, 2.4.6-p7, 2.4.5-p9, 2.4.4-p10</td>
+  </tr>
+  <tr>
+    <td>8 oktober 2024</td>
+    <td><img alt="Funktionsikon för B2B" src="../assets/icons/enterprise.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes.html">B2B</a><br><img alt="Ikon för utökningsfunktion" src="../assets/icons/brackets.svg"></img> <a href="https://developer.adobe.com/commerce/extensibility/">Utbyggbarhet</a><br><img alt="Ikon för infrastrukturfunktion" src="../assets/icons/servers.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite.html">Infrastruktur</a><br><img alt="Ikon för tjänstefunktion" src="../assets/icons/feature.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/release-information/release-notes-all.html">Tjänster</a></td>
+    <td><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="release-notes/commerce/overview.md">Betakorrigering</a>: 2.4.8-beta1<br><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="release-notes/security/overview.md">Säkerhetsuppdateringar</a>: 2.4.7-p3, 2.4.6-p8, 2.4.5-p10, 2.4.4-p11</td>
+  </tr>
+</tbody>
+</table>
