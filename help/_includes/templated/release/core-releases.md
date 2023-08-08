@@ -1,15 +1,15 @@
 ---
-source-git-commit: 14f4346f4b0bfd1fa0fa44bd62c7d3611a7ffdea
+source-git-commit: 0ef5d741cf718a36f11850e3dd8a81e1f09f5bc2
 workflow-type: tm+mt
-source-wordcount: '563'
-ht-degree: 13%
+source-wordcount: '590'
+ht-degree: 12%
 
 ---
 # Släppta versioner
 
 ## 2.4.7
 
-Det datum då stöd för radslut i version 2.4.7 ännu inte har angetts.
+Stöd för version 2.4.7 upphör den 19 april 2027.
 
 <table>
   <thead>
@@ -42,6 +42,12 @@ Stöd för version 2.4.6 upphör den 14 mars 2026.
   <tbody>
     <tr>
         <td>
+          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-6-p2.html">2.4.6-p2</a>
+        </td>
+        <td>8 augusti 2023</td>
+    </tr>
+    <tr>
+        <td>
           <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-6-p1.html">2.4.6-p1</a>
         </td>
         <td>13 juni 2023</td>
@@ -57,7 +63,7 @@ Stöd för version 2.4.6 upphör den 14 mars 2026.
 
 ## 2.4.5
 
-Stöd för version 2.4.5 upphör 9 augusti 2025.
+Stöd för version 2.4.5 upphör den 9 augusti 2025.
 
 <table>
   <thead>
@@ -67,6 +73,12 @@ Stöd för version 2.4.5 upphör 9 augusti 2025.
     </tr>
   </thead>
   <tbody>
+    <tr>
+        <td>
+          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-5-p4.html">2.4.5-p4</a>
+        </td>
+        <td>8 augusti 2023</td>
+    </tr>
     <tr>
         <td>
           <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-5-p3.html">2.4.5-p3</a>
@@ -106,6 +118,12 @@ Stöd för version 2.4.4 upphör den 12 april 2025.
     </tr>
   </thead>
   <tbody>
+    <tr>
+        <td>
+          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-4-p5.html">2.4.4-p5</a>
+        </td>
+        <td>8 augusti 2023</td>
+    </tr>
     <tr>
         <td>
           <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-4-p4.html">2.4.4-p4</a>
@@ -345,7 +363,7 @@ Stöd för version 2.3 upphörde 8 september 2022.
 
 ## 2.2
 
-Stöd för version 2.2 upphörde 1 december 2019.
+Stöd för version 2.2 upphörde den 1 december 2019.
 
 <table>
   <thead>
