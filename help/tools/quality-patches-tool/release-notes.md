@@ -2,9 +2,9 @@
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: aa52895b45363ca0fb3585f603bfe66a73803427
+source-git-commit: da0c85a9f1b0ac0a3176ca5f6ef5904834e8d37e
 workflow-type: tm+mt
-source-wordcount: '13735'
+source-wordcount: '13965'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,19 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som skapats av gemenskapen för Magento Open Source, se [versionsinformation](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.36 {#v1-1-36}
+
+* **ACSD-53239** (för Adobe Commerce och Magento Open Source >=2.4.3 &lt; 2.4.6) - Korrigerar problemet där lagerindexeraren rensar alla cacheminnen i schemaläge för uppdatering.
+* **ACSD-50887** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.7) - Korrigerar problemet där egenskapen för produktattribut *[!UICONTROL Use in Search Results Layered Navigation]* kan anges till *Ja* utan *[!UICONTROL Use in search]* alternativ inställt på *Ja*.
+* **ACSD-51846** (för Adobe Commerce och Magento Open Source >=2.4.3-p2 &lt;2.4.6) - Korrigerar *Internt fel* problem som inträffar eftersom inte alla nivåer av REST API-nyttolasten valideras.
+* **ACSD-52906** (för Adobe Commerce >=2.3.7 &lt;2.4.7) - Korrigerar problemet där X-Magento-Vary-cookien inte är korrekt inställd för inloggade kunder som tillhör samma kundsegment, vilket orsakar felaktig cachelagring för vissa sidor.
+* **ACSD-52736** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.6) - Korrigerar problemet där *Kundprisregel* som innehåller krav för konfigurerbar produktkvantitet fungerar inte som förväntat.
+* **ACSD-47875** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.7) - Korrigerar problemet där administratörsanvändare inte kan lägga till en produkt i en kundvagn från Admin för ett visst butiksvy med lagerhantering.
+* **ACSD-53176** (för Adobe Commerce >=2.3.7 &lt;2.4.5) - Korrigerar problemet där *Relaterad produktregel* med *är en av* villkoret matchar inte produkterna.
+* **ACSD-5166** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.7) - Korrigerar felet *Sessionen har gått ut. Logga in igen.* som inträffar när en kund försöker logga in.
+* Nya versioner för MDVA-39305-v2 har lagts till.
+* Uppdaterade krav för ACSD-19640.
 
 ## v1.1.35 {#v1-1-35}
 
