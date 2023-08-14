@@ -1,7 +1,7 @@
 ---
-source-git-commit: e3d65a1dcb377d9bed9b27d16e057cfbb1522644
+source-git-commit: 34a0a124aeacce6cc905f979cf3f18cb2405f76e
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '441'
 ht-degree: 0%
 
 ---
@@ -10,6 +10,26 @@ ht-degree: 0%
 ## Nyheter
 
 Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
+
+### 10 augusti 2023
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Källa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Publicerad <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html">versionsinformation</a> för QPT-paketversionen (1.1.36 Quality Patches Tool).</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/778890d5840669df958e84381c2aade70a492454">778890</a> (implementera)</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 8 augusti 2023
 
@@ -22,6 +42,18 @@ Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td><p>Uppdaterat <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/versions.html">släppta versioner</a> med säkerhetsuppdateringarna från augusti 2023.</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/c9abed3c6ca156cdc19e7231f97cf2a8bd8ab100">c9abed</a> (implementera)</td>
+    </tr>
+    <tr>
+      <td><p>Information om säkerhetsuppdateringen för Adobe Commerce 8 augusti 2023 har lagts till i versionsinformationen för Adobe Commerce 2.4.4-p4, 2.4.4-p5, 2.4.5-p3, 2.4.5-p4, 2.4.6-p1 och 2.4.6-p2.  Se <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/overview.html">Versionsinformation för Adobe Commerce och Magento Open Source</a>.</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/623ada901bad9f766451d9c9166e82f1cee85c0d">623ada</a> (implementera)</td>
+    </tr>
     <tr>
       <td><p>Versionsinformation för Adobe Commerce 2.4.6-p2, 2.4.5-p4 och 2.4.4-p5 har lagts till. Se <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/overview.html">Versionsinformation för Adobe Commerce och Magento Open Source</a>.</p>
 </td>
@@ -39,6 +71,26 @@ Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
 </td>
       <td>större uppdatering</td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/7373980a0648be5e0f7dc4a307074d934f646b24">737398</a> (implementera)</td>
+    </tr>
+  </tbody>
+</table>
+
+### 7 augusti 2023
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Källa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Ytterligare information om <a href="https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/infrastructure/cloud/security.html">slutpunktsidentifiering och -svar</a> på molninfrastruktur.</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/fd3b93aaa79e84d356217b6adfe7181895e84f07">fd3b93</a> (implementera)</td>
     </tr>
   </tbody>
 </table><!-- date_group -->
