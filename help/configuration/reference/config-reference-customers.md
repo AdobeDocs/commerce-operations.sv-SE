@@ -115,7 +115,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | E-postavsändare | `wishlist/email/email_identity` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | E-postmall | `wishlist/email/email_template` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Max antal e-postmeddelanden som får skickas | `wishlist/email/number_limit` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Längdgräns för e-posttext | `wishlist/email/text_limit` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
+| Längd på e-posttext | `wishlist/email/text_limit` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Visa Önsklistesammanfattning | `wishlist/wishlist_link/use_qty` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 
 {style="table-layout:auto"}
@@ -130,7 +130,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Aktivera inbjudningar i Storefront | `magento_invitation/general/enabled_on_front` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Refererad kundgrupp | `magento_invitation/general/registration_use_inviter_group` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Registrering av nya konton | `magento_invitation/general/registration_required_invitation` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Tillåt kunder att lägga till anpassade meddelanden i e-postinbjudan | `magento_invitation/general/allow_customer_message` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Tillåt kunder att lägga till anpassat meddelande i e-postinbjudan | `magento_invitation/general/allow_customer_message` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Maximalt antal inbjudningar som kan skickas samtidigt | `magento_invitation/general/max_invitation_amount_per_send` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Avsändare av e-postinbjudan till kund | `magento_invitation/email/identity` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | E-postmall för kundinbjudan | `magento_invitation/email/template` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
@@ -151,7 +151,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Belöningspoäng förfaller om (dagar) | `magento_reward/general/expiration_days` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Beräkning av förfallodatum för belöningspunkter | `magento_reward/general/expiry_calculation` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Återbetala belöningspunkter automatiskt | `magento_reward/general/refund_automatically` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Dra automatiskt av belöningspunkter från återbetalningsbelopp | `magento_reward/general/deduct_automatically` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Ta automatiskt bort belöningspunkter från återbetalningsbelopp | `magento_reward/general/deduct_automatically` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Landningssida | `magento_reward/general/landing_page` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Inköp | `magento_reward/points/order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Registrering | `magento_reward/points/register` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
@@ -159,14 +159,14 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Konverterar inbjudan till kund | `magento_reward/points/invitation_customer` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Kvantitetsgräns för inbjudan till kundkonvertering | `magento_reward/points/invitation_customer_limit` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Konverterar inbjudan till ordning | `magento_reward/points/invitation_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Kvantitetsgräns för inbjudan att beställa konverteringar | `magento_reward/points/invitation_order_limit` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Kvantitetsgräns för inbjudan till orderkonvertering | `magento_reward/points/invitation_order_limit` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Inbjudningskonvertering till orderbelöning | `magento_reward/points/invitation_order_frequency` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Granska inlämningen | `magento_reward/points/review` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Kvantitetsgräns för mottagna granskningar | `magento_reward/points/review_limit` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | E-postavsändare | `magento_reward/notification/email_sender` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Prenumerera kunder som standard | `magento_reward/notification/subscribe_by_default` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | E-post för saldouppdatering | `magento_reward/notification/balance_update_template` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| E-post om förfallovarning för belöningspunkter | `magento_reward/notification/expiry_warning_template` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| E-postmeddelande om förfallovarning för belöningspunkter | `magento_reward/notification/expiry_warning_template` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Förfallovarning före (dagar) | `magento_reward/notification/expiry_day_before` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 
 {style="table-layout:auto"}
@@ -183,7 +183,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Minut av timmen | `promo/magento_reminder/minutes` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Starttid | `promo/magento_reminder/time` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Maximalt antal e-postmeddelanden per körning | `promo/magento_reminder/limit` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Feltröskel för e-postöverföring | `promo/magento_reminder/threshold` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Feltröskel för e-postutskick | `promo/magento_reminder/threshold` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Påminnelse - e-postavsändare | `promo/magento_reminder/identity` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Kodlängd | `promo/auto_generated_coupon_codes/length` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Kodformat | `promo/auto_generated_coupon_codes/format` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -226,7 +226,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Beständig önskelista | `persistent/options/wishlist` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Behåll nyligen sorterade objekt | `persistent/options/recently_ordered` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Behåll produkter som för närvarande jämförs | `persistent/options/compare_current` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Behåll jämförelsehistorik | `persistent/options/compare_history` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
+| Beständig jämförelsehistorik | `persistent/options/compare_history` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Behåll nyligen visade produkter | `persistent/options/recently_viewed` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Behåll kundgruppsmedlemskap och segmentering | `persistent/options/customer` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 

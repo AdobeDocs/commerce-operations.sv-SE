@@ -35,15 +35,15 @@ För bästa prestanda bör du följa de här bästa metoderna för att konfigure
 Om du har fler än det rekommenderade maximala antalet kundvagnsregler eller kuponger kan det påverka webbplatsens prestanda på följande sätt:
 
 - Ökad svarstid när produkter läggs till i kundvagnen.
-- Ökad tid för att läsa in och rendera minikortet.
+- Ökad tid för inläsning och rendering av minikortet.
 - Den tid det tog att återge kundvagnssidan ökade.
-- Ökad tid att återge **Summor** -block på utcheckningssidan.
+- Ökad tid för att återge **Summor** -block på utcheckningssidan.
 - Att tillämpa kuponger kan ta mer än 2 sekunder.
 
 ## Ytterligare information
 
 - [Förstå marknadsföringskampanjer och kampanjer](https://devdocs.magento.com/cloud/configure/configure-best-practices.html#campaigns)
 - [Kundprisregler](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/price-rules-cart.html)
-- [Självstudiekurs: Skapa en kundvagnsprisregel](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/marketing/cart-price-rules.html)
+- [Självstudie: Skapa en kundvagnsprisregel](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/marketing/cart-price-rules.html)
 - [Kupongkoder](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/price-rules-cart-coupon.html)
-- [Adobe Commerce om molninfrastruktur: Bästa tillvägagångssätt för butikskonfiguration](https://devdocs.magento.com/cloud/configure/configure-best-practices.html)
+- [Adobe Commerce om molninfrastruktur: Bästa metoder för butikskonfiguration](https://devdocs.magento.com/cloud/configure/configure-best-practices.html)

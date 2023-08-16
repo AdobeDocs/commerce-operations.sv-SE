@@ -1,5 +1,5 @@
 ---
-title: Plattformsverktyg
+title: plattformsverktyg
 description: Välj rekommenderade plattformsverktyg för implementeringen av Adobe Commerce.
 exl-id: 3fc164f9-a0fc-46e7-a54e-08ce101ccae7
 feature: Configuration
@@ -10,7 +10,7 @@ ht-degree: 0%
 
 ---
 
-# Plattformsverktyg
+# plattformsverktyg
 
 Det råder ingen brist på aspekter som måste genomsyras väl och noggrant testas för att en e-handelsplats ska fungera utan störningar. Ni måste inte bara identifiera rätt lösningar för att hantera alla delar av webbplatsen - från datalagring och programmering till cachning och säkerhet - utan även rätt process för att säkerställa att ni får en plattform som både fungerar smidigt och kan byggas och optimeras effektivt.
 
@@ -21,10 +21,10 @@ Följande tabell innehåller lösningar som vi rekommenderar och kan användas i
 | Syfte | Verktyg |
 |------------------------------------------|-------------------------|
 | Databas | MySQL, MariaDB, Percona |
-| Programmeringsspråk | PHP, JS, HTML, LESS CSS |
-| Integrerad utvecklingsmiljö (IDE) | Eclipse, PHPStorm |
+| Programmering | PHP, JS, HTML, LESS CSS |
+| Integrerad utvecklingsmiljö | Eclipse, PHPStorm |
 | Webbserver | Nginx, Apache |
-| Cachelagring | Redis, lack |
+| Cachelagringstjänster | Redis, lack |
 | Söktjänster | Elasticsearch |
 | Meddelandekötjänster | [!DNL RabbitMQ] |
 | Verktyget för säkerhetsgenomsökning | SonarQube, ZAP |
@@ -37,7 +37,7 @@ MariaDB är mer användarfokuserad och fungerar bättre för användare som bryr
 
 Percona är en gaffel i MySQL som centrerar sig kring prestanda och hantering av toppbelastning. Välj MariaDB om du behöver mer livskvalitet och DevOps-funktioner. Gå till Percona om du vill få höga prestanda i storskaliga datauppsättningar.
 
-## Programmeringsspråk
+## Programmering
 
 Adobe Commerce är ett PHP-baserat program och de senaste versionerna är alltid kompatibla med den senaste stabila PHP-versionen (Adobe Commerce version 2.4 rekommenderar till exempel att du använder PHP 7.4). För att få högre säkerhet och prestanda finns det flera faktorer att ta hänsyn till när PHP konfigureras för att få maximal hastighet och effektivitet vid behandling av begäranden. Adobe Commerce webbutik byggs med HTML, JavaScript och LESS CSS-preprocessorn.
 
@@ -50,7 +50,7 @@ Adobe Commerce har fullt stöd för webbservrarna Nginx och Apache. Adobe Commer
 
 Nginx-exemplet innehåller inställningar för bättre prestanda och är utformat så att liten omkonfiguration krävs.
 
-## Cachelagring
+## Cachelagringstjänster
 
 Adobe Commerce har flera alternativ för att lagra cacheminne och sessionsdata, bland annat Redis, Memcache, filsystem och databas. Redis är det bästa alternativet för en konfiguration med flera webbnoder.
 

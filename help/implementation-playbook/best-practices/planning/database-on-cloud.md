@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Bästa tillvägagångssätt för databaskonfiguration
 
-Lär dig mer om de bästa sätten att förbättra databasprestanda och arbeta effektivt med databasen när du distribuerar Adobe Commerce i molninfrastruktur.
+Lär dig mer om de effektivaste strategierna för att förbättra databasprestanda och arbeta effektivt med databasen när du distribuerar Adobe Commerce i molninfrastruktur.
 
 ## Berörda produkter
 
@@ -21,7 +21,7 @@ Adobe Commerce i molninfrastruktur
 
 ## Konvertera alla MyISAM-tabeller till InnoDB
 
-Adobe rekommenderar att du använder InnoDB-databasmotorn. I en standardinstallation av Adobe Commerce lagras alla tabeller i databasen med InnoDB-motorn. Vissa tredjepartsmoduler (tillägg) kan emellertid presentera tabeller i MyISAM-format. När du har installerat en modul från tredje part bör du kontrollera databasen för att identifiera tabeller i `myisam` formatera och konvertera dem till `innodb` format.
+Adobe rekommenderar att du använder InnoDB-databasmotorn. I en standardinstallation av Adobe Commerce lagras alla tabeller i databasen med InnoDB-motorn. Vissa tredjepartsmoduler (tillägg) kan emellertid presentera tabeller i MyISAM-format. När du har installerat en modul från tredje part bör du kontrollera databasen för att identifiera tabeller i `myisam` och konvertera dem till `innodb` format.
 
 ### Kontrollera om en modul innehåller MyISAM-tabeller
 
@@ -72,18 +72,18 @@ Utlösare används för att logga ändringar i granskningstabeller. Adobe rekomm
 - Utlösare tolkas som kod och MySQL förkompilerar dem inte. Som en del av frågans transaktionsutrymme lägger de till overheadset i en tolk och tolk för varje fråga som utförs med tabellen.
 - Utlösarna delar samma transaktionsutrymme som de ursprungliga frågorna, och även om dessa frågor konkurrerar om lås i tabellen konkurrerar utlösarna oberoende av lås i ett annat register.
 
-Mer information om alternativ till att använda anpassade utlösare finns i [Använd MySQL-utlösare effektivt](mysql-triggers-usage.md) i vår kunskapsbas.
+Mer information om alternativ till att använda anpassade utlösare finns i [Använd MySQL-utlösare effektivt](mysql-triggers-usage.md) i vår kunskapsbas för support.
 
 ## Uppgradera [!DNL ECE-Tools] till version 2002.0.21 eller senare {#ece-tools-version}
 
-Uppgradera ECE-Tools till version 2002.0.21 eller senare för att undvika eventuella problem med kroniska lås. Instruktioner finns i [Uppdatera `ece-tools` version](https://devdocs.magento.com/cloud/project/ece-tools-update.html) i vår dokumentation för utvecklare.
+För att undvika potentiella problem med kroniska lås uppgraderar du ECE-Tools till version 2002.0.21 eller senare. Instruktioner finns i [Uppdatera `ece-tools` version](https://devdocs.magento.com/cloud/project/ece-tools-update.html) i vår dokumentation för utvecklare.
 
 ## Växla indexeringsläge på ett säkert sätt
 
 <!--This best practice might belong in the Maintenance phase. Database lock prevention might be consolidated under a single heading-->
 
-Om du byter indexerare genereras [!DNL data definition language] (DDL)-satser för att skapa utlösare som kan orsaka databaslås. Du kan förhindra det här problemet genom att försätta webbplatsen i underhållsläge och inaktivera cron-jobb innan du ändrar konfigurationen.
-Instruktioner finns i [Konfigurera indexerare](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html#configure-indexers-1) i *Adobe Commerce Configuration Guide*.
+Om du växlar indexerare genereras [!DNL data definition language] (DDL)-satser för att skapa utlösare som kan orsaka databaslås. Du kan förhindra det här problemet genom att försätta webbplatsen i underhållsläge och inaktivera cron-jobb innan du ändrar konfigurationen.
+Instruktioner finns i [Konfigurera indexerare](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html#configure-indexers-1) i *Konfigurationshandbok för Adobe Commerce*.
 
 ## Kör inte DDL-satser i produktionen
 

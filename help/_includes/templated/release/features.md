@@ -85,7 +85,7 @@ https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#template
       <td>+</td>
     </tr>
     <tr>
-      <td>Direktköp</td>
+      <td>Omedelbart köp</td>
       <td></td>
       <td></td>
       <td>+</td>

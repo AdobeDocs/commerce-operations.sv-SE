@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Bästa praxis för uppgradering av checklista
 
-Använd checklistan under årliga och kvartalsvisa samtal med ert e-handelsteam. Många företag arbetar med årliga budgetar och färdplaner. Under dessa årliga diskussioner är det av största vikt att du talar om din plattforms hälsa, riktning och uppgraderingsstrategi för året, tillsammans med hur den passar in i företagets övergripande mål och nyckeltal. Under kvartalsvisa konversationer måste du se till att årsplanen som du har skapat fortfarande är i linje med din nuvarande situation eller pivot om inte. Målet med checklistan för Upgrade Plan är att hjälpa er att planera och schemalägga Adobe Commerce-uppgraderingar för att säkerställa en lyckad uppgraderingsprocess under året. Denna checklista är avsedd att användas av följande målgrupper för årlig planering och kvartalsvis granskning:
+Använd checklistan under årliga och kvartalsvisa samtal med ert e-handelsteam. Många företag arbetar med årliga budgetar och färdplaner. Under dessa årliga diskussioner är det av största vikt att du talar om din plattforms hälsa, riktning och uppgraderingsstrategi för året, tillsammans med hur den passar in i företagets övergripande mål och nyckeltal. Under kvartalsvisa konversationer måste du se till att årsplanen som du har skapat fortfarande är i linje med din nuvarande situation eller pivot om så inte är fallet. Målet med checklistan för Upgrade Plan är att hjälpa er att planera och schemalägga Adobe Commerce-uppgraderingar för att säkerställa en lyckad uppgraderingsprocess under året. Denna checklista är avsedd att användas av följande målgrupper för årlig planering och kvartalsvis granskning:
 
 - Director/IT-chef
 - eCommerce Manager
@@ -77,17 +77,17 @@ Använd checklistan under årliga och kvartalsvisa samtal med ert e-handelsteam.
 
 Underhållsperiod för ▢ om driftstopp förväntas.
 
-▢ granska och godkänna teststrategin, överväg att använda Adobe Commerce [testramverk](https://developer.adobe.com/commerce/testing/) eller ett program från tredje part.
+▢ Granska och godkänn testningsstrategin. Överväg att använda Adobe Commerce [testramverk](https://developer.adobe.com/commerce/testing/) eller ett program från tredje part för automatisering.
 
 ▢ Bekräfta att alla tillägg och anpassningar är kompatibla.
 
-▢ Granska och uppdatera spelboken efter lanseringen. ska användas om problem upptäcks under eller efter uppgraderingen.
+▢ Granska och uppdatera spelboken efter start. Den används om problem upptäcks under eller efter uppgraderingen.
 
 ## Bokför distribution
 
 ▢ Övervaka webbplatsen för att hitta problem - prestanda, orderhantering, analyser och annat.
 
-▢ Utför en Adobe Commerce [säkerhetsgenomsökning](https://account.magento.com/scanner/dashboard/) eller andra tredjepartsprogram som söker efter och granskar potentiella säkerhetsluckor.
+▢ Utför en Adobe Commerce [säkerhetsgenomsökning](https://account.magento.com/scanner/dashboard/) eller andra tredjepartsprogram som söker efter och granskar potentiella säkerhetsproblem.
 
 ▢ Utför en retroaktiv översikt med alla intressenter och dokumentera vad som gick bra, vad som inte gick bra och hur du skulle förbättra.
 

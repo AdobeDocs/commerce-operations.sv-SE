@@ -32,7 +32,7 @@ I Commerce definieras följande standardhälsokontroll:
     }
 ```
 
-Var femte sekund anropar den här hälsokontrollen `pub/health_check.php` skript. Det här skriptet kontrollerar tillgängligheten för servern, varje databas och Redis (om det är installerat). Skriptet måste returnera ett svar inom 2 sekunder. Om skriptet fastställer att någon av dessa resurser inte fungerar returneras en HTTP-felkod på 500. Om den här felkoden tas emot i sex av tio försök anses serverdelen vara felfri.
+Var 5:e sekund anropar den här hälsokontrollen `pub/health_check.php` skript. Det här skriptet kontrollerar tillgängligheten för servern, varje databas och Redis (om det är installerat). Skriptet måste returnera ett svar inom 2 sekunder. Om skriptet fastställer att någon av dessa resurser inte fungerar returneras en HTTP-felkod på 500. Om den här felkoden tas emot i sex av tio försök anses serverdelen vara felfri.
 
 The `health_check.php` skriptet finns i `pub` katalog. Om Commerce-rotkatalogen är `pub`och se sedan till att ändra banan i `url` parameter från `/pub/health_check.php` till `health_check.php`.
 
@@ -65,7 +65,7 @@ Om Commerce-serverdelen inte är responsiv, visar Varnish gammalt innehåll frå
 
 ## Saint-läge
 
-I läget Saint exkluderas ohälsosamma bakgrunder under en konfigurerbar tidsperiod. Därför kan ohälsosamma serverdelar inte generera trafik när Varnish används som belastningsutjämnare. Saint-läget kan användas i respitläge för att möjliggöra komplex hantering av ohälsosamma serverdelsservrar. Om till exempel en backend-server inte är felfri kan försök dirigeras till en annan server. Om alla andra servrar är nere kan du leverera inaktuella cachelagrade objekt. Värdar i helskärmsläget och utbrottsperioder definieras i `default.vcl` -fil.
+I läget Saint exkluderas ohälsosamma bakgrunder under en konfigurerbar tidsperiod. Därför kan ohälsosamma serverdelar inte generera trafik när Varnish används som belastningsutjämnare. Saint-läget kan användas i respitläge för att möjliggöra komplex hantering av ohälsosamma serverdelsservrar. Om till exempel en backend-server inte är felfri kan försök dirigeras till en annan server. Om alla andra servrar är nere kan du skicka inaktuella cachelagrade objekt. Värdar i helskärmsläget och utbrottsperioder definieras i `default.vcl` -fil.
 
 Saint-läge kan också användas när Commerce-instanser tas offline för att utföra underhålls- och uppgraderingsuppgifter utan att det påverkar tillgängligheten för Commerce-webbplatsen.
 
@@ -92,7 +92,7 @@ Saint-läget ingår inte i Varnish-paketet. Det är en separat version `vmod` so
 
 När du har kompilerat om kan du installera modulen för det smarta läget. I allmänhet gör du så här:
 
-1. Hämta källkoden från [Finska moduler](https://github.com/varnish/varnish-modules). Klona Git-versionen (överordnad version) eftersom 0.9.x-versionerna innehåller ett källkodsfel.
+1. Hämta källkoden från [Finska moduler](https://github.com/varnish/varnish-modules). Klona Git-versionen (huvudversion) eftersom 0.9.x-versionerna innehåller ett källkodsfel.
 1. Bygg källkoden med autoverktyg:
 
    ```bash
@@ -108,7 +108,7 @@ Se [Samling med slutna moduler](https://github.com/varnish/varnish-modules) om d
 
 ### Exempel på VCL-fil
 
-I följande kodexempel visas den kod som måste läggas till i VCL-filen för att helskärmsläget ska aktiveras. Placera `import` programsatser och `backend` definitioner högst upp i filen.
+I följande kodexempel visas den kod som måste läggas till i VCL-filen för att helskärmsläget ska aktiveras. Placera `import` programsatser och `backend` -definitioner överst i filen.
 
 ```cpp
 import saintmode;

@@ -14,8 +14,8 @@ ht-degree: 0%
 
 I det här avsnittet beskrivs hur du hittar var dina sessionsfiler lagras. Systemet använder följande logik för att lagra sessionsfiler:
 
-- Om du konfigurerade anslutna sessioner lagras sessionerna i RAM-minnet; se [Använd cachelagrat för sessionslagring](memcached.md).
-- Om du har konfigurerat Redis lagras sessionerna på Redis-servern; se [Använd Redis för sessionslagring](../cache/redis-session.md).
+- Om du konfigurerade cachelagrade sessioner lagras de i RAM-minnet. Se [Använd cachelagrat för sessionslagring](memcached.md).
+- Om du har konfigurerat Redis lagras sessionerna på Redis-servern. Se [Använd Redis för sessionslagring](../cache/redis-session.md).
 - Om du använder standardfilbaserad sessionslagring lagrar vi sessioner på följande platser i den ordning som visas:
 
    1. Katalog definierad i [`env.php`](#example-in-envphp)

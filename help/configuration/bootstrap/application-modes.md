@@ -42,12 +42,12 @@ Commerce körs i standardläge om inget annat läge anges.
 
 ## Utvecklarläge
 
-The _utvecklare_ Du bör använda läget för att utöka och anpassa Commerce-programmet. Filer i statisk vy cachelagras inte, utan skrivs till `pub/static` on demand.
+The _utvecklare_ Du bör använda läget för att utöka och anpassa Commerce-programmet. Filer i statisk vy cachelagras inte, utan skrivs till `pub/static` katalog on demand.
 
 I utvecklarläge:
 
 - Aktiverar [automatisk kodkompilering](../cli/code-compiler.md) och förbättrad felsökning
-- Visning av ej infångade undantag i webbläsaren
+- Ohanterade undantag visas i webbläsaren
 - Systeminloggning `var/report` är mycket detaljerad
 - Ett undantag genereras i felhanteraren i stället för att loggas
 - Ett undantag genereras när en händelseprenumerant inte kan anropas
@@ -69,7 +69,7 @@ I produktionsläge:
 
 The _underhåll_ Läget begränsar eller förhindrar åtkomst till en plats under förbättringar, uppdateringar och konfigurationsåtgärder. Som standard dirigeras besökarna om till ett standardvärde `Service Temporarily Unavailable` sida.
 
-Du kan skapa en [anpassad underhållssida](../../upgrade/troubleshooting/maintenance-mode-options.md), aktivera och inaktivera underhållsläge manuellt och konfigurera underhållsläge så att besökare från auktoriserade IP-adresser kan visa butiken normalt. Se [aktivera och inaktivera underhållsläge](../../installation/tutorials/maintenance-mode.md) i _Installationshandbok_.
+Du kan skapa [anpassad underhållssida](../../upgrade/troubleshooting/maintenance-mode-options.md), aktivera och inaktivera underhållsläge manuellt och konfigurera underhållsläge så att besökare från auktoriserade IP-adresser kan visa butiken normalt. Se [aktivera och inaktivera underhållsläge](../../installation/tutorials/maintenance-mode.md) i _Installationshandbok_.
 
 Om du använder Commerce på molninfrastruktur körs Commerce-programmet i underhållsläge under distributionsfasen. När distributionen har slutförts återgår Commerce-programmet till att köras i produktionsläge. Se [Distributionskopplingar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/best-practices.html#phase-5%3A-deployment-hooks) i _Guide för Commerce on Cloud Infrastructure_.
 

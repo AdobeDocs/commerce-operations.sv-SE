@@ -15,7 +15,7 @@ The [!DNL Site-Wide Analysis Tool’s] [!UICONTROL Exceptions] sidan visar fel/u
 
 Den information som visas på den här sidan innehåller [!UICONTROL Last Detected] (datum/tid i UTC), [!UICONTROL Exception Detail]och [!UICONTROL Count] (antal förekomster) att undantaget inträffade det datumet.
 
-## När ska användas
+## När ska du använda
 
 Använd [!UICONTROL Exceptions] om du vill se loggfilsfel/undantagsloggar för Adobe Commerce-projekt. De är användbara för felsökning av problem som rör Adobe Commerce bygg- och driftsättningshooks, molntjänster och Adobe Commerce-programmet.
 

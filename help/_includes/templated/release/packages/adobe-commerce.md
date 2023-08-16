@@ -5,7 +5,7 @@ source-wordcount: '2460'
 ht-degree: 0%
 
 ---
-# Adobe Commerce-paket
+# Adobe Commerce
 
 <!-- The 'packages' variable contains the 'packages' node of the '_data/codebase/commerce/composer_lock.json' file
  -->
@@ -372,7 +372,7 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/firebase/php-jwt.git">firebase/php-jwt</a>
     </td>
     <td>bibliotek</td>
-    <td>Ett enkelt bibliotek för kodning och avkodning av JSON Web Tokens (JWT) i PHP. Ska överensstämma med aktuell specifikation.</td>
+    <td>Ett enkelt bibliotek för kodning och avkodning av JSON Web Tokens (JWT) i PHP. Ska överensstämma med den aktuella specifikationen.</td>
   </tr>
   <tr>
     <td>
@@ -456,7 +456,7 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/laminas/laminas-filter.git">laminas/laminas-filter</a>
     </td>
     <td>bibliotek</td>
-    <td>Filtrera och normalisera data och filer</td>
+    <td>Filtrera och normalisera data och filer programmatiskt</td>
   </tr>
   <tr>
     <td>
@@ -561,7 +561,7 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/laminas/laminas-servicemanager.git">laminas/laminas-servicemanager</a>
     </td>
     <td>bibliotek</td>
-    <td>Behållare för fabriksstyrd beroendeinjicering</td>
+    <td>Behållare för fabriksstyrd beroendeinjektion</td>
   </tr>
   <tr>
     <td>
@@ -596,7 +596,7 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/laminas/laminas-uri.git">laminas/laminas-uri</a>
     </td>
     <td>bibliotek</td>
-    <td>En komponent som underlättar manipulering och validering av URI:er (Uniform Resource Identifiers)</td>
+    <td>En komponent som underlättar manipulering och validering av URI (Uniform Resource Identifiers)</td>
   </tr>
   <tr>
     <td>
@@ -866,7 +866,7 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/thephpleague/flysystem.git">gupp/flygsystem</a>
+      <a href="https://github.com/thephpleague/flysystem.git">guru/flygsystem</a>
     </td>
     <td>bibliotek</td>
     <td>Filarkiveringssammanfattning för PHP</td>
@@ -887,7 +887,7 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/Seldaek/monolog.git">monolog</a>
+      <a href="https://github.com/Seldaek/monolog.git">monolog/monolog</a>
     </td>
     <td>bibliotek</td>
     <td>Skickar loggarna till filer, socketar, inkorgar, databaser och olika webbtjänster</td>
@@ -953,7 +953,7 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/php-fig/cache.git">psr/cache</a>
     </td>
     <td>bibliotek</td>
-    <td>Gemensamt gränssnitt för cachelagring av bibliotek</td>
+    <td>Gemensamt gränssnitt för att cacha bibliotek</td>
   </tr>
   <tr>
     <td>
@@ -1090,7 +1090,7 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/css-selector.git">symbol/css-selector</a>
+      <a href="https://github.com/symfony/css-selector.git">symfony/css-selector</a>
     </td>
     <td>bibliotek</td>
     <td>Konverterar CSS-väljare till XPath-uttryck</td>
@@ -1132,7 +1132,7 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/filesystem.git">symfony/filesystem</a>
+      <a href="https://github.com/symfony/filesystem.git">symbol/filsystem</a>
     </td>
     <td>bibliotek</td>
     <td>Tillhandahåller grundläggande verktyg för filsystemet</td>
@@ -1160,7 +1160,7 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/intl.git">symfony/intl</a>
+      <a href="https://github.com/symfony/intl.git">symbol/intl</a>
     </td>
     <td>bibliotek</td>
     <td>Tillhandahåller ett PHP-ersättningslager för C intl-tillägget som innehåller ytterligare data från ICU-biblioteket</td>
@@ -1364,7 +1364,7 @@ wikimedia/less.php: ^3.2
   </tbody>
 </table>
 
-### Egen
+### Egendom
 
 <table>
   <thead>

@@ -2,7 +2,7 @@
 source-git-commit: 631735eceb3609edd743c682291f373f6b01b399
 workflow-type: tm+mt
 source-wordcount: '143'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 # MariaDB-konfigurationsinställningar
@@ -12,7 +12,7 @@ Omindexering av MariaDB 10.4 och 10.6 tar längre tid jämfört med tidigare ver
 * [`optimizer_switch='rowid_filter=off'`](https://mariadb.com/kb/en/optimizer-switch/)
 * [`optimizer_use_condition_selectivity = 1`](https://mariadb.com/products/skysql/docs/reference/es/system-variables/optimizer_use_condition_selectivity/)
 
-Om prestandaförsämringar inte har att göra med indexering efter uppgradering till MariaDB 10.6 bör du överväga att aktivera [`--query-cache-type`](https://mariadb.com/kb/en/server-system-variables/#query_cache_type) inställning. Till exempel: `--query-cache-type=ON`.
+Om prestandaförsämringar inte har att göra med indexering efter uppgradering till MariaDB 10.6 kan du aktivera [`--query-cache-type`](https://mariadb.com/kb/en/server-system-variables/#query_cache_type) inställning. Exempel, `--query-cache-type=ON`.
 
 Utöver dessa rekommendationer bör du rådfråga databasadministratören om hur du konfigurerar följande parametrar:
 

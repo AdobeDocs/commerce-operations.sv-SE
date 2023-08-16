@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Säkerhet och efterlevnad {#security-and-compliance}
 
-- [Översikt](overview.md)
+- [Ökning](overview.md)
 - [Skyddsprofil för innehåll](content-security-policy.md)
 - Sekretessregler {#privacy}
    - [CCPA](privacy/ccpa.md)

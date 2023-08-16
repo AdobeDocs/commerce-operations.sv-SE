@@ -20,6 +20,6 @@ Information om hur du aktiverar eller inaktiverar en modul finns i [Aktivera ell
 
 ## Avinstallera en modul
 
-Information om hur du avinstallerar en modul finns i [Avinstallera moduler](../../installation/tutorials/uninstall-modules.md).
+Om du vill avinstallera en modul läser du [Avinstallera moduler](../../installation/tutorials/uninstall-modules.md).
 
-Om du vill avinstallera ett tema använder du [`theme:uninstall`](../../installation/tutorials/themes.md) -kommando.
+Avinstallera ett tema med [`theme:uninstall`](../../installation/tutorials/themes.md) -kommando.

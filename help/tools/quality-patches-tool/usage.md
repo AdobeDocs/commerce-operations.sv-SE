@@ -5,7 +5,7 @@ exl-id: f9ad37e9-2d0f-4bc8-a98b-6d60b6f56d42
 feature: Configuration, Install
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '910'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Titta på detta [teknisk video](https://experienceleague.adobe.com/docs/commerce
 
 >[!INFO]
 >
->Om det inte redan är installerat måste du installera [[!DNL Git]](https://github.com/git-guides/install-git) eller [Lappa](https://man7.org/linux/man-pages/man1/patch.1.html) innan du installerar [!DNL Quality Patches Tool]. Lägg till `magento/quality-patches` Disposition-paket till `composer.json` fil:
+>Om det inte redan är installerat måste du installera [[!DNL Git]](https://github.com/git-guides/install-git) eller [Lappa](https://man7.org/linux/man-pages/man1/patch.1.html) före installation av [!DNL Quality Patches Tool]. Lägg till `magento/quality-patches` Disposition-paket till `composer.json` fil:
 
 ```bash
 composer require magento/quality-patches
@@ -45,7 +45,7 @@ Så här visar du en lista över enskilda korrigeringsfiler som är tillgänglig
 
 Utdata ser ut ungefär så här:
 
-| ID | Titel | Typ | Status | Detaljer |
+| ID | Titel | Typ | Status | Information |
 |--- |--- |--- |--- |--- |
 | MAGECLOUD-5069 | FPC inaktiveras under distributioner | Valfritt | Ej tillämpat | Komponenter som påverkas:<br> - magento/module-page-cache |
 | MCLOUD-5650 | Håll distributionskonfigurationen efter läsning från fil | Valfritt | Ej tillämpat | Komponenter som påverkas:<br> - magento/framework |
@@ -59,20 +59,20 @@ Utdata ser ut ungefär så här:
 
 Adobe Commerce 2.3.5
 
-Statusregistret innehåller:
+Statustabellen innehåller:
 
 - **Typ**:
-   - `Optional` — Alla patchar från [!DNL Quality Patches Tool] och [Commerce on Cloud Infrastructure Guide > Apply patches](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) för Adobe Commerce och Magento Open Source.
+   - `Optional` — Alla patchar från [!DNL Quality Patches Tool] och [Commerce on Cloud Infrastructure Guide > Apply patches](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) är valfritt för installationer i Adobe Commerce och Magento Open Source.
    - `Deprecated` — Adobe har ersatt det enskilda plåstret. Om du har använt korrigeringen rekommenderar vi att du återställer den. Återställningsåtgärden tar även bort korrigeringen från statustabellen.
 
 - **Status**:
-   - `Applied` — Patchen har applicerats.
-   - `Not applied` — Patchen har inte applicerats.
+   - `Applied` — Korrigeringen har applicerats.
+   - `Not applied` — Korrigeringen har inte installerats.
    - `N/A` — Det går inte att definiera status för korrigeringen på grund av konflikter.
 
-- **Detaljer**:
-   - `Affected components` — En lista över berörda moduler.
-   - `Required patches` — En lista över korrigeringsfiler som måste tillämpas för en angiven korrigering för att den ska fungera korrekt (beroenden).
+- **Information**:
+   - `Affected components` — En lista över de moduler som påverkas.
+   - `Required patches` — En lista över korrigeringsfiler som måste tillämpas för en angiven korrigeringsfil för att den ska fungera korrekt (beroenden).
    - `Recommended replacement` — Den korrigering som rekommenderas som ersättning för en borttagen patch.
 
 >[!INFO]
@@ -169,7 +169,7 @@ Så här återanvänder du patchar:
 
 1. Öppna listan med tidigare använda korrigeringar, som rekommenderas i [Tillämpa enskilda patchar](#apply-individual-patches).
 
-1. Använd patcharna:
+1. Tillämpa patcharna:
 
    ```bash
    ./vendor/bin/magento-patches apply MAGETWO-XXXX
@@ -177,7 +177,7 @@ Så här återanvänder du patchar:
 
    Det bästa sättet är att lägga på patchar en åt gången.
 
-1. Rensa cacheminnet:
+1. Rensa cachen:
 
    ```bash
    ./bin/magento cache:clean
@@ -185,7 +185,7 @@ Så här återanvänder du patchar:
 
    >[!INFO]
    >
-   >När du kör `status` kommer de korrigeringsfiler som ingick i den nya versionen inte längre att visas i tabellen med tillgängliga korrigeringsfiler.
+   >När du kör `status` de korrigeringar som ingick i den nya versionen inte längre visas i tabellen med tillgängliga korrigeringar.
 
 ## Loggning
 

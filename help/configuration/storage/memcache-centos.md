@@ -23,11 +23,11 @@ Eftersom PHP inte har inbyggt stöd för memcache måste du installera ett till�
 - `memcache` (_no d_) - ett äldre men populärt tillägg som inte underhålls regelbundet.
 The `memcache` tillägg för närvarande _inte_ arbeta med PHP 7. Se [PHP-dokumentation för memcache](https://www.php.net/manual/en/book.memcache.php).
 
-   Det exakta namnet är `php-pecl-memcache` för CentOS.
+  Det exakta namnet är `php-pecl-memcache` för CentOS.
 
 - `memcached` (_med`d`_) - ett nyare och underhållet tillägg som är kompatibelt med PHP 7. Se [PHP-dokumentation för cachelagrad](https://www.php.net/manual/en/book.memcached.php).
 
-   Det exakta namnet är `php-pecl-memcached` för CentOS.
+  Det exakta namnet är `php-pecl-memcached` för CentOS.
 
 ## Installera och konfigurera cachelagrade i CentOS
 
@@ -59,13 +59,13 @@ Om du vill installera cachelagrade filer i CentOS utför du följande åtgärder
 1. Ändra den cachelagrade konfigurationsinställningen för `CACHESIZE` och `OPTIONS`:
 
    1. Öppna `/etc/sysconfig/memcached` i en textredigerare.
-   1. Leta reda på värdet för `CACHESIZE` och ändra den till minst 1 GB. Till exempel:
+   1. Hitta värdet för `CACHESIZE` och ändra den till minst 1 GB. Exempel:
 
       ```config
       CACHESIZE="1GB"
       ```
 
-   1. Leta reda på värdet för `OPTIONS` och ändra det till `localhost` eller `127.0.0.1`
+   1. Hitta värdet för `OPTIONS` och ändra det till `localhost` eller `127.0.0.1`
 
 1. Spara ändringarna i `memcached` och avsluta textredigeraren.
 1. Omstarten är cachelagrad.
@@ -102,7 +102,7 @@ Så här verifierar du att cachelagrade data känns igen av webbservern:
 
 1. Gå till den sidan i webbläsaren.
 
-   Till exempel: `http://192.0.2.1/phpinfo.php`
+   Exempel: `http://192.0.2.1/phpinfo.php`
 
 1. Se till att minnet visas enligt följande:
 
@@ -163,7 +163,7 @@ print "got result from memcached\n";
 return 0;
 ```
 
-Plats `<memcached hostname or ip>` är antingen `localhost`, `127.0.0.1`, eller minnesvärdnamnet eller IP-adressen. The `<memcached port>` är avlyssningsport, som standard, `11211`.
+Plats `<memcached hostname or ip>` är antingen `localhost`, `127.0.0.1`, eller minnesvärdnamnet eller IP-adressen. The `<memcached port>` är avlyssningsporten; som standard `11211`.
 
 Kör skriptet från kommandoraden.
 
@@ -203,7 +203,7 @@ STAT items:3:outofmemory 0
 STAT items:3:tailrepairs 0
 ```
 
-Töm minnesarkivet och avsluta Telnet:
+Töm memcache-lagringen och avsluta Telnet:
 
 ```bash
 flush_all

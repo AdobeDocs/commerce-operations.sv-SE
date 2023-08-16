@@ -35,11 +35,11 @@ Det är så mycket som pågår inom e-handeln att det kan vara svårt att hålla
 
 ## B2B-alternativ
 
-De fyra viktigaste rapporterna och kontrollpanelerna som B2B-företag använder är:
+De fyra viktigaste rapporterna och kontrollpanelerna som B2B-företag använder är bland annat:
 
-- **Företagsprofil**—B2B-företag måste spåra sina kundföretagsprofiler för att förstå inköpshistorik, betalningsinformation och vilken kanal de använde för att köpa. Kontrollpanelen kan hjälpa till att identifiera potentiella risker och problem.
+- **Företagsprofil**—B2B-företag måste spåra sina kundföretagsprofiler för att förstå inköpshistorik, betalningsinformation och vilken kanal de använde för att köpa. Den här instrumentpanelen kan hjälpa till att identifiera potentiella risker och problem.
 
-- **Katalog**- En katalograpport och kontrollpanel hjälper B2B-företag att se resultatet för varje produkt i katalogen, kampanjerna och lagernivåerna, vilket hjälper dem att identifiera vilken typ av kampanj som fungerar bäst och vilka produkter som efterfrågas. Detta hjälper företag att inventera och få konkurrensfördelar.
+- **Katalog**- En katalograpport och kontrollpanel hjälper B2B-företag att se resultatet för varje produkt i katalogen, kampanjerna och lagernivåerna, vilket hjälper dem att identifiera vilken typ av kampanj som fungerar bäst och vilka produkter som efterfrågas. Detta hjälper företag att inventera och få en konkurrensfördel.
 
 - **Citat**- B2B-modellen bygger på offerter och priser. B2B-företag måste gå igenom en process där de analyserar en offert så att de antingen kan godkänna den eller försöka förhandla. En offertrapport och en kontrollpanel hjälper er att förbättra konverteringsgraden för offerter genom att spåra kundens framgångsgrad, konkurrensnivåer, resultat och totala kundlojalitet.
 

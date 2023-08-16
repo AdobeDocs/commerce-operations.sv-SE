@@ -73,9 +73,9 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Sök efter Recommendations Count | `catalog/search/search_recommendations_count` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Visa resultatantal för varje rekommendation | `catalog/search/search_recommendations_count_results_enabled` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Minimivillkor att matcha | `catalog/search/minimum_should_match` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Generera URL-omskrivningar för&quot;kategori/produkt&quot; | `catalog/seo/generate_category_product_rewrites` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
+| Generera URL-omskrivningar för kategori/produkt | `catalog/seo/generate_category_product_rewrites` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Vanliga sökvillkor | `catalog/seo/search_terms` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Produkt-URL-suffix | `catalog/seo/product_url_suffix` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
+| Product URL Suffix | `catalog/seo/product_url_suffix` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Kategori-URL-suffix | `catalog/seo/category_url_suffix` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Använd kategorisökväg för produkt-URL:er | `catalog/seo/product_use_categories` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Skapa permanent omdirigering för URL:er om URL-nyckeln har ändrats | `catalog/seo/save_rewrites_history` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -102,7 +102,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Använd JavaScript-kalender | `catalog/custom_options/use_calendar` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Datumfältordning | `catalog/custom_options/date_fields_order` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Tidsformat | `catalog/custom_options/time_format` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| År | `catalog/custom_options/year_range` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
+| Årsintervall | `catalog/custom_options/year_range` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Aktivera kataloghändelsefunktioner | `catalog/magento_catalogevent/enabled` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Aktivera widgeten Kataloghändelse på Storefront | `catalog/magento_catalogevent/lister_output` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Antal händelser som ska visas i widgeten för händelsereglage | `catalog/magento_catalogevent/lister_widget_limit` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
@@ -126,9 +126,9 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Namn | Konfigurationssökväg | Endast handel? |
 |--------------|--------------|--------------|
 | Minska lager när beställningen placeras | `cataloginventory/options/can_subtract` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Ange att objektstatus ska vara i lager när ordern annulleras | `cataloginventory/options/can_back_in_stock` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
+| Ange objektstatus till Stock när ordern annulleras | `cataloginventory/options/can_back_in_stock` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Visa ej lagrade produkter | `cataloginventory/options/show_out_of_stock` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Endast X vänster tröskelvärde | `cataloginventory/options/stock_threshold_qty` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
+| Endast vänster X-tröskelvärde | `cataloginventory/options/stock_threshold_qty` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Visa produkttillgänglighet i Stock på Storefront | `cataloginventory/options/display_product_stock_status` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Synkronisera med katalog | `cataloginventory/options/synchronize_with_catalog` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Hantera Stock | `cataloginventory/item_options/manage_stock` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -211,7 +211,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Aktiverad | `sendfriend/email/enabled` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Välj e-postmall | `sendfriend/email/template` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Tillåt för gäster | `sendfriend/email/allow_guest` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Max antal mottagare | `sendfriend/email/max_recipients` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
+| Maximalt antal mottagare | `sendfriend/email/max_recipients` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Max antal skickade produkter inom 1 timme | `sendfriend/email/max_per_hour` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Begränsa sändning med | `sendfriend/email/check_by` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 

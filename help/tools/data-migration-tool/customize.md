@@ -1,11 +1,11 @@
 ---
 title: Anpassa [!DNL Data Migration Tool]
-description: Lär dig anpassa [!DNL Data Migration Tool] för att överföra data som skapats genom tillägg mellan Magento 1 och Magento 2.
+description: Lär dig hur du anpassar [!DNL Data Migration Tool] för att överföra data som skapats genom tillägg mellan Magento 1 och Magento 2.
 exl-id: a5c1575f-9d77-416e-91fe-a82905ef2e1c
 topic: Commerce, Migration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '821'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ Förutom Kartsteget finns det andra steg i `config.xml` fil som migrerar data me
 - OrderGrid-steg
 - [EAV-steg](technical-specification.md#eav-step)
 
-Till skillnad från [Kartsteg](technical-specification.md#map-step)genomsöker de här stegen en fördefinierad lista med tabeller i stället för alla tabeller.
+Till skillnad från [Kartsteg](technical-specification.md#map-step)genomsöks en fördefinierad lista med tabeller i stället för alla tabeller.
 
 Skapa ett anpassat steg för större ändringar av dataformat och struktur.
 
@@ -122,7 +122,7 @@ I Magento 2, en ny tabell för taggar `greatblog_post_tags` infördes:
 | sort_order | SMALLINT |
 ```
 
-Magento 2 `greatblog_post` tabellen ser nu ut så här:
+MAGENTO 2 `greatblog_post` tabellen ser nu ut så här:
 
 ```text
 | Field     | Type     |
@@ -133,7 +133,7 @@ Magento 2 `greatblog_post` tabellen ser nu ut så här:
 | author_id | SMALLINT |
 ```
 
-Om du vill migrera alla data från den gamla tabellstrukturen till en ny kan du skapa ett anpassat steg i `config.xml` -fil. Till exempel:
+Om du vill migrera alla data från den gamla tabellstrukturen till en ny kan du skapa ett anpassat steg i `config.xml` -fil. Exempel:
 
 ```xml
 <steps mode="data">
@@ -153,7 +153,7 @@ Om du vill migrera alla data från den gamla tabellstrukturen till en ny kan du 
 </steps>
 ```
 
-Verktyget kör steg enligt deras position i `config.xml` fil, uppifrån och ned. I vårt exempel `GreatBlog Step` kör sist.
+Verktyget kör steg enligt deras position i `config.xml` fil; uppifrån och ned. I vårt exempel `GreatBlog Step` kör sist.
 
 Stegen kan innehålla fyra typer av klasser:
 
@@ -410,6 +410,6 @@ Efter den anpassade stegimplementeringen som finns i exemplen hämtar systemet d
 
 ## Otillåtna tilläggsmetoder
 
-Sedan [!DNL Data Migration Tool] och Magento 2 utvecklas hela tiden. Befintliga steg och hanterare kan ändras. Vi rekommenderar att du inte åsidosätter beteendet för steg som [Kartsteg](technical-specification.md#map-step), [URL-omskrivningssteg](technical-specification.md#url-rewrite-step)och hanterare genom att utöka deras klasser.
+Sedan [!DNL Data Migration Tool] och Magento 2 utvecklas hela tiden. Befintliga steg och hanterare kan komma att ändras. Vi rekommenderar att du inte åsidosätter beteendet för steg som [Kartsteg](technical-specification.md#map-step), [URL-omskrivningssteg](technical-specification.md#url-rewrite-step)och hanterare genom att utöka deras klasser.
 
 Vissa steg stöder inte mappning och kan inte ändras utan att koden ändras. Du kan antingen skriva ett extra steg som ändrar data i slutet av migreringen eller skapa en [GitHub-problem](https://github.com/magento/data-migration-tool/issues) och fråga efter en ny tilläggspunkt i det befintliga steget.

@@ -36,7 +36,7 @@ Följande avsnitt innehåller information om god praxis för planeringsfasen.
    - [Rapporteringskonfiguration](reporting-configuration.md)
 
 - **Databaskonfiguration**
-   - [Bästa praxis för databaskonfigurering för molndistributioner &#x200B;](database-on-cloud.md)
+   - [Bästa praxis för databaskonfigurering för &#x200B; i molnet](database-on-cloud.md)
    - [Konfiguration &#x200B; för MySQL-slavanslutning](configure-mysql-slave-connection-on-cloud.md)
    - [Användning av MySQL-utlösare](mysql-triggers-usage.md)
 
@@ -44,7 +44,7 @@ Följande avsnitt innehåller information om god praxis för planeringsfasen.
    - [Konfigurera snabbt](https://devdocs.magento.com/cloud/cdn/configure-fastly.html)
    - [New Relic - Konfigurera meddelandekanaler](https://devdocs.magento.com/cloud/project/new-relic.html#configure-notification-channels)
    - [Bästa tillvägagångssätt för Redis-&#x200B;](redis-service-configuration.md)
-   - [Bästa tillvägagångssätt för cachestorlek i Realpath](realpath-cache-size.md)
+   - [Bästa tillvägagångssätt för cachestorlek för Realpath](realpath-cache-size.md)
 
 ## **Arkitektur**
 
@@ -58,7 +58,7 @@ Följande avsnitt innehåller information om god praxis för planeringsfasen.
 I följande avsnitt beskrivs de effektivaste strategierna för prestandaoptimering när du konfigurerar din Adobe Commerce-katalog, inklusive rekommenderade maximivärden för antal kategorier, produkteffektiva SKU:er, produktvariationer, produktattribut och alternativ med mera.
 
 - [Kategorikonfiguration](category-limits.md)
-- [&#x200B;](product-sku-limits.md)
+- [&#x200B; för produktkonfiguration](product-sku-limits.md)
 - [Produktvariantkonfiguration](product-variations.md)
 - [Konfiguration av produktalternativ](product-options.md)
 - [&#x200B; för produktattribut](product-attributes-and-options.md)

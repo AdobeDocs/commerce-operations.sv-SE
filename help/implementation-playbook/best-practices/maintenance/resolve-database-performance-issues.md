@@ -23,7 +23,7 @@ Adobe Commerce i molninfrastruktur
 
 ## Identifiera och lösa frågor som körs länge
 
-Avgör om MySQL-frågor körs långsamt. Beroende på din Adobe Commerce-plan för molninfrastruktur och därmed även verktygets tillgänglighet kan du göra följande.
+Avgör om MySQL-frågor körs långsamt. Beroende på din Adobe Commerce-plan för molninfrastruktur och därmed på tillgängligheten för verktyg kan du göra följande.
 
 ### Analysera databasfrågor med MySQL
 
@@ -86,7 +86,7 @@ Handläggare som arbetar med Pro-arkitektur kan också köra kontrollen med Perc
 
 ### Ta bort dubblettindex
 
-Använd SQL [DROP INDEX-instruktion](https://dev.mysql.com/doc/refman/8.0/en/drop-index.html) om du vill ta bort dubblettindex.
+Använd SQL [DROP INDEX-sats](https://dev.mysql.com/doc/refman/8.0/en/drop-index.html) om du vill ta bort dubblettindex.
 
 ```SQL
 DROP INDEX

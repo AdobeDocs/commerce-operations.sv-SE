@@ -24,6 +24,6 @@ I allmänhet fungerar Commerce-programmet med alla serverdelscache som [Zend_Cac
 
 - [Redis](config-redis.md)
 - [Databas](https://developer.adobe.com/commerce/php/development/cache/partial/database-caching/)
-- Filsystem (standard): Ingen konfiguration krävs för att använda filsystemets cachelagring.
+- Filsystem (standard): Ingen konfiguration behövs för att använda filsystemets cachelagring.
 
 [Varnish](config-varnish.md) kräver inte att en cachebackend på låg nivå ställs in.

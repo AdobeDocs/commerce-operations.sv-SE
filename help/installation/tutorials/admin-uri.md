@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Visa eller ändra Admin URI
 
-Innan du kör det här kommandot måste du [Skapa eller uppdatera distributionskonfigurationen](deployment.md).
+Innan du kör kommandot måste du [Skapa eller uppdatera distributionskonfigurationen](deployment.md).
 
 ## Visa Admin-URI
 
@@ -41,4 +41,4 @@ Du kan även visa Admin URI i `<magento_root>/app/etc/env.php`. Ett utdrag följ
 
 ## Ändra Admin-URL
 
-Om du vill ändra Admin URI använder du [`magento setup:config:set`](deployment.md) -kommando.
+Använd [`magento setup:config:set`](deployment.md) -kommando.

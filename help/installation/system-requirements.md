@@ -58,7 +58,7 @@ Mer information om konfigurering av molnet finns i [PHP-inställningar](https://
 
 ### PHP OPcache
 
-Vi rekommenderar att du kontrollerar att [PHP OPcache](https://www.php.net/manual/en/intro.opcache.php) har aktiverats av prestandaskäl. OPcache är aktiverat i många PHP-distributioner. The `opcache` tillägg installeras som standard i Commerce on Cloud-infrastrukturen.
+Du bör verifiera att [PHP OPcache](https://www.php.net/manual/en/intro.opcache.php) har aktiverats av prestandaskäl. OPcache är aktiverat i många PHP-distributioner. The `opcache` tillägg installeras som standard i Commerce on Cloud-infrastrukturen.
 
 Kontrollera att PHP-cachen är installerad om du vill se en premesis. Mer information finns i [PHP-inställningar](prerequisites/php-settings.md). Du kan även få specifik vägledning om prestandainställningar i programvarurekommendationerna för [PHP-inställningar](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/software.html#php-settings) i _Bästa praxis för prestanda_ guide.
 
@@ -105,9 +105,9 @@ I det här avsnittet beskrivs stöd och kompatibilitet för alla andra typer av 
 Storefront och Admin:
 
 - Microsoft Edge (senaste och föregående större version)
-- Firefox (senaste och tidigare större version; valfritt operativsystem)
-- Chrome (senaste och tidigare större version) valfritt operativsystem)
-- Safari (senaste och tidigare större version); endast macOS)
+- Firefox (senaste och föregående större version, alla operativsystem)
+- Krom (senaste och föregående större version, alla operativsystem)
+- Safari (senaste och föregående större version; endast macOS)
 - Safari Mobile för iPad 2, iPad Mini, iPad med Retina-skärm (iOS 12 eller senare) för datorbutiker
 - Safari Mobile för iPhone 6 eller senare; iOS 12 eller senare, för mobilbutiker
 - Chrome for mobile (latest and previous major version [Android™ 4 eller senare] för mobilbutiker)
@@ -118,7 +118,7 @@ MTA (Mail Transfer Agent) eller SMTP-server. Commerce on Cloud-infrastrukturen a
 
 ### Minne
 
-Uppgradering av program och tillägg från Commerce Marketplace och andra källor kan kräva upp till 2 GB RAM. Om du använder ett system med mindre än 2 GB RAM skapar du en [växlingsfil](https://support.magento.com/hc/en-us/articles/360032980432); annars kan uppgraderingen misslyckas.
+Uppgradering av program och tillägg från Commerce Marketplace och andra källor kan kräva upp till 2 GB RAM-minne. Om du använder ett system med mindre än 2 GB RAM skapar du en [växlingsfil](https://support.magento.com/hc/en-us/articles/360032980432); annars kan uppgraderingen misslyckas.
 
 ### Operativsystem (Linux x86-64)
 
@@ -146,7 +146,7 @@ Information om Commerce on Cloud-infrastruktur finns på [Snabb konfiguration](h
 
 ### Xdebug
 
-För Adobe Commerce och Magento Open Source använder du [php_xdebug 2.5.x](https://xdebug.org/download) eller senare (endast utvecklingsmiljöer), kan ha en negativ effekt på prestandan).
+För Adobe Commerce och Magento Open Source använder du [php_xdebug 2.5.x](https://xdebug.org/download) eller senare (endast utvecklingsmiljöer; kan ha en negativ effekt på prestandan).
 
 Information om Adobe Commerce i molnet finns på [Konfigurera Xdebug](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/test/debug.html) i _Commerce on Cloud Infrastructure_ guide.
 

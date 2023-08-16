@@ -36,7 +36,7 @@ pub/static
 Undantag:
 
 - `.htaccess` filer tas inte bort
-- `pub/static` innehåller en fil som anger version av statiskt innehåll, den här filen har inte tagits bort
+- `pub/static` innehåller en fil som anger version av statiskt innehåll. Filen tas inte bort
 
 >[!INFO]
 >
@@ -72,11 +72,11 @@ bin/magento deploy:mode:set {mode} [-s|--skip-compilation]
 
 där:
 
-- **`{mode}`** krävs, kan vara antingen `developer` eller `production`
+- **`{mode}`** krävs; det kan antingen `developer` eller `production`
 
 - **`--skip-compilation`** är en valfri parameter som du kan använda för att hoppa över [kodkompilering](../cli/code-compiler.md) när du byter till produktionsläge.
 
-Exempel följer.
+Här följer några exempel.
 
 ### Ändra till produktionsläge
 
@@ -127,7 +127,7 @@ Enabled production mode.
 
 ### Växla till utvecklarläge
 
-När du byter från produktion till utvecklarläge bör du rensa genererade klasser och objekthanterarentiteter som proxies för att undvika oväntade fel. Sedan kan du ändra läge. Gör så här:
+När du byter från produktion till utvecklarläge bör du rensa genererade klasser och objekthanterarentiteter som proxies för att undvika oväntade fel. När du har gjort det kan du ändra läge. Gör så här:
 
 1. Om du byter från produktionsläge till utvecklarläge tar du bort innehållet i `generated/code` och `generated/metadata` kataloger:
 
@@ -163,4 +163,4 @@ Enabled default mode.
 
 [Kör CLI-kommandon var som helst](../cli/config-cli.md#config-install-cli-first).
 
-Om du inte har lagt till `<Commerce-install-directory>/bin` till ditt system `PATH`kan du förvänta dig ett fel när du kör kommandot själv.
+Om du inte har lagt till `<Commerce-install-directory>/bin` till ditt system `PATH`, kan du förvänta dig ett fel när du kör kommandot själv.

@@ -16,7 +16,7 @@ The [!DNL Site-Wide Analysis Tool] tillhandahåller prestandaövervakning, rappo
 
 >[!INFO]
 >
->Lär dig [aktivera](../site-wide-analysis-tool/access.md) den [!DNL Site-Wide Analysis Tool] och generera rapporter.
+>Läs [aktivera](../site-wide-analysis-tool/access.md) den [!DNL Site-Wide Analysis Tool] och generera rapporter.
 
 Om du har en lokal installation av Adobe Commerce installerar du en agent på din infrastruktur för att använda verktyget. Du behöver inte installera agenten på Adobe Commerce i molninfrastrukturprojekt.
 
@@ -46,7 +46,7 @@ Din lokala infrastruktur måste uppfylla följande krav innan du installerar age
 
 - Operativsystem
 
-   - [!DNL Linux x86-64] distributioner, som [!DNL Red Hat® Enterprise Linux (RHEL)], [!DNL CentOS], [!DNL Ubuntu], [!DNL Debian]och liknande
+   - [!DNL Linux x86-64] distributioner, som [!DNL Red Hat® Enterprise Linux (RHEL)], [!DNL CentOS], [!DNL Ubuntu], [!DNL Debian], och liknande
 
   >[!IMPORTANT]
   >
@@ -82,15 +82,15 @@ bin/magento module:status Magento_ServicesId
 
 Om du har installerat tillägget och konfigurerat det med en befintlig API-nyckel för en annan tjänst, **API-nyckeln MÅSTE genereras om** och uppdatera den i Adobe Commerce Admin för agenten.
 
-1. Lägg in webbsajten i [underhållsläge](../../installation/tutorials/maintenance-mode.md).
+1. Lägg in webbsidor i [underhållsläge](../../installation/tutorials/maintenance-mode.md).
 
 1. Logga in [account.magento.com](https://account.magento.com/customer/account/login?_ga=2.164207871.117144580.1649172612-1623400270.1640858671).
 
    >[!NOTE]
    >
-   > Om du har problem med att komma åt ditt konto kan du läsa [Det går inte att logga in på Adobe Commerce support eller molnkonto](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/unable-to-log-in-to-support-or-cloud-project.html) för felsökningshjälp.
+   > Om du har problem med att få åtkomst till ditt konto kan du läsa [Det går inte att logga in på Adobe Commerce support eller molnkonto](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/unable-to-log-in-to-support-or-cloud-project.html) för felsökningshjälp.
 
-1. Klicka **[!UICONTROL API Portal]**.
+1. Klicka på **[!UICONTROL API Portal]**.
 
 1. Klicka **[!UICONTROL Delete]** bredvid den befintliga API-nyckeln.
 
@@ -100,7 +100,7 @@ Om du har installerat tillägget och konfigurerat det med en befintlig API-nycke
 >
 > Om du genererar nya nycklar i API-portalen ska du omedelbart uppdatera API-nycklarna i [!DNL Admin configuration]. Om du genererar nya nycklar och inte uppdaterar nycklarna i [!DNL Admin]kommer SaaS-tilläggen inte längre att fungera och du kommer att förlora värdefulla data.
 
-Om tillägget inte är installerat installerar du det enligt följande:
+Om tillägget inte är installerat följer du instruktionerna nedan för att installera det:
 
 1. Lägg till tillägget i `composer.json` och installera det.
 
@@ -146,7 +146,7 @@ Vi har skapat en [gränssnittsskript](https://github.com/magento-swat/install-ag
 
    >[!TIP]
    >
-   >Vi rekommenderar att du installerar agenten utanför Adobe Commerce rotprojektkatalog.
+   >Vi rekommenderar att agenten installeras utanför Adobe Commerce rotprojektkatalog.
 
 1. Verifiera installationen.
 
@@ -173,13 +173,13 @@ Om du inte vill använda våra [gränssnittsskript](https://github.com/magento-s
 
    >[!TIP]
    >
-   >Vi rekommenderar att du installerar agenten utanför Adobe Commerce rotprojektkatalog.
+   >Vi rekommenderar att agenten installeras utanför Adobe Commerce rotprojektkatalog.
 
-1. Ladda ned den binära filen och packa upp den.
+1. Hämta den binära filen och packa upp den.
 
    >[!INFO]
    >
-   >Så här använder du [!DNL Site-Wide Analysis Tool]måste du först läsa och godkänna de användarvillkor som visas när du öppnar instrumentpanelen från Adobe Commerce Admin.
+   >Använd [!DNL Site-Wide Analysis Tool]måste du först läsa och godkänna de användarvillkor som visas när du öppnar instrumentpanelen från Adobe Commerce Admin.
 
    För **AMD64** arkitektur:
 
@@ -247,7 +247,7 @@ Om du inte vill använda våra [gränssnittsskript](https://github.com/magento-s
     loglevel: error # Determines what events are logged based on severity (usually error)
    ```
 
-1. Kontrollera installationen.
+1. Verifiera installationen.
 
    ```bash
    scheduler -v
@@ -397,7 +397,7 @@ FATA[2022-12-10 20:38:44] bad http status from https://updater.supportinsights.a
 
 Lös det här felet genom att försöka med följande steg:
 
-1. Gör en [skriptad installation](#scripted), spara utdata och granska utdata för fel.
+1. Gör en [skriptad installation](#scripted), spara utdata och granska utdata för att se om det finns fel.
 1. Granska den genererade `config.yaml` och verifiera att sökvägen till din Commerce-instans och PHP är korrekt.
 1. Kontrollera att användaren som kör schemaläggaren finns i [ägare av filsystem](../../installation/prerequisites/file-system/overview.md) Unix-gruppen eller är samma användare som filsystemets ägare.
 1. Se till att [Commerce Services Connector](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html) knapparna är korrekt installerade och försöker uppdatera dem för att ansluta tillägget till systemet.
@@ -407,7 +407,7 @@ Lös det här felet genom att försöka med följande steg:
 
 ### *SIGFAULT* Fel
 
-Om du ser en *SIGFAULT* när du kör binära filer, kör du förmodligen inte detta som filägare för Adobe Commerce- och agentfiler.
+Om du ser *SIGFAULT* när du kör binära filer, kör du förmodligen inte detta som filägare för Adobe Commerce- och agentfiler.
 Kontrollera också om alla filer i agentkatalogen som har samma användare som fileägaren som Adobe Commerce-filer har och binärfiler ska köras under den användaren.
 Du kan använda `chown` om du vill ändra filens ägare och växla till rätt användare.
 Kontrollera att din daemoniseringsmekanism (Cron eller System.d) kör processen under rätt användare.

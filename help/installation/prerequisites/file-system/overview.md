@@ -21,16 +21,17 @@ Det finns två typer av ägare av filsystem:
 
 - **Delad värdtjänst med en enskild användare**
 
-   Med delade värdtjänstleverantörer kan du logga in på programservern som en användare. Som enskild användare kan du logga in, överföra filer med FTP och köra webbservern. Du kan välja att ställa in en [`umask`](#restrict-access-with-a-umask) ytterligare begränsa tillgången, särskilt i produktionsmiljö.
+  Med delade värdtjänstleverantörer kan du logga in på programservern som en användare. Som enskild användare kan du logga in, överföra filer med FTP och köra webbservern. Du kan välja att ställa in en [`umask`](#restrict-access-with-a-umask) ytterligare begränsa tillgången, särskilt i produktionsmiljö.
 
 - **Privat hosting med två användare**
 
-   Privata värdtjänster är användbara om du hanterar en programserver. Varje användare har ett särskilt ansvar:
+  Privata värdtjänster är användbara om du hanterar en programserver. Varje användare har ett särskilt ansvar:
 
    - The _webbserveranvändare_ kör Admin och storefront.
 
    - The _kommandoradsanvändare_ kör cron-jobb och kommandoradsverktyg.
-   Båda användarna behöver samma behörigheter i filsystemet, så det är bäst att använda en [delad grupp](configure-permissions.md#set-ownership-and-permissions-for-two-users) och ange [`umask`](#restrict-access-with-a-umask).
+
+  Båda användarna behöver samma behörigheter i filsystemet, så det är bäst att använda en [delad grupp](configure-permissions.md#set-ownership-and-permissions-for-two-users) och ange [`umask`](#restrict-access-with-a-umask).
 
 ### Begränsa åtkomst med en mask
 
@@ -42,7 +43,7 @@ Om du vill öka säkerheten, särskilt i en produktionsmiljö i ett delat värds
 
 Adobe Commerce och Magento Open Source använder en trebitars standardmask: `002`. Subtrahera standardmasken från UNIX-standardvärdena 666 för filer och 777 för kataloger.
 
-Till exempel:
+Exempel:
 
 - **775 för kataloger**—Full kontroll av användaren, fullständig kontroll av gruppen och gör det möjligt för alla att gå igenom katalogen. Dessa behörigheter krävs vanligtvis av delade värdtjänstleverantörer.
 
@@ -50,7 +51,7 @@ Till exempel:
 
 Mer information om hur du skapar en `magento_umask` -fil, se [Ange en mask](../../next-steps/set-umask.md).
 
-## Tillstånd, ägarskap och programlägen
+## Behörigheter, ägarskap och programlägen
 
 Vi rekommenderar olika behörigheter och ägarskap när du använder olika programlägen för Adobe Commerce och Magento Open Source:
 

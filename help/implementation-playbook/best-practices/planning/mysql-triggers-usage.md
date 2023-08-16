@@ -1,6 +1,6 @@
 ---
 title: Användning av MySQL-utlösare
-description: Lär dig hur du använder MySQL-utlösare effektivt med Adobe Commerce.
+description: Lär dig använda MySQL-utlösare effektivt med Adobe Commerce.
 role: Developer
 feature: Best Practices
 exl-id: acac3e47-67c8-4eea-80e3-e26f2854391a

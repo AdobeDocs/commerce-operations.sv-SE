@@ -20,7 +20,7 @@ Den här aktiviteten kräver att du skapar en rotkategori (och ytterligare kateg
 
 >[!INFO]
 >
->Vi använder till exempel bara en fransk webbplats med webbplatskod `french` i det här avsnittet. Självstudiekurser steg för steg finns i [Självstudiekurs: Konfigurera flera webbplatser med Apache](ms-apache.md) och [Självstudiekurs: Konfigurera flera webbplatser med nginx](ms-nginx.md)
+>Vi använder till exempel bara en fransk webbplats med webbplatskod `french` i det här avsnittet. Självstudiekurser steg för steg finns i [Självstudiekurs: Konfigurera flera webbplatser med Apache](ms-apache.md) och [Självstudiekurs: Konfigurera flera webbplatser med ginx](ms-nginx.md)
 
 ## Steg 1: Skapa rotkategorier
 
@@ -52,7 +52,7 @@ Så här skapar du en webbplats:
 1. På _Lager_ sida, klicka **Skapa webbplats**.
 
    - **Namn**—Ange ett namn som identifierar webbplatsen.
-   - **Code**—Ange en unik kod; Om du till exempel har en fransk butik kan du ange `french`
+   - **Code**—Ange en unik kod. Om du till exempel har en fransk butik kan du ange `french`
    - **Sorteringsordning**—Ange en numerisk sorteringsordning (valfritt).
 
    I bilden nedan visas ett exempel.
@@ -69,7 +69,7 @@ Så här skapar du en butik:
 1. I _Administratör_ panel, klicka **Lager** > **Inställningar** > **Alla butiker**.
 1. På _Lager_ sida, klicka **Skapa butik**.
 
-   - **Webbplats**—Klicka på namnet på webbplatsen som du vill associera den här butiken med.
+   - **Webbplats**—Klicka på namnet på den webbplats som du vill associera den här butiken med.
    - **Namn**—Ange ett namn som identifierar butiken.
    - **Code**—Ange en unik kod som identifierar butiken.
    - **Rotkategori**—Klicka på namnet på rotkategorin för det här arkivet.
@@ -86,11 +86,11 @@ Så här skapar du en butik:
 Så här skapar du en butiksvy:
 
 1. I _Administratör_ panel, klicka **Lager** > **Inställningar** > **Alla butiker**.
-1. Klicka på **Skapa butiksvy**.
+1. På sidan Store klickar du på **Skapa butiksvy**.
 
    - **Butik**—Klicka på namnet på den butik som butiksvyn ska associeras med.
    - **Namn**—Ange ett namn som identifierar den här butiksvyn.
-   - **Code**—Ange ett unikt namn som identifierar den här butiksvyn.
+   - **Code**—Ange ett unikt namn för att identifiera butiksvyn.
    - **Status**—Select **Aktiverad**.
 
    I bilden nedan visas ett exempel.
@@ -111,8 +111,8 @@ Så här ändrar du webbplatsens bas-URL:
 
    ![Välj ett omfång](../../assets/configuration/multi-site-scope.png)
 
-1. Expandera i den högra rutan **Bas-URL:er**.
-1. I _Bas-URL:er_ sektion, klar **Använd systemvärde**.
+1. Expandera i den högra rutan **Bas-URL**.
+1. I _Bas-URL_ sektion, klar **Använd systemvärde**.
 1. Ange `http://french.magento.mg` URL i **Bas-URL** och **Bas länk-URL** fält.
 
 1. Upprepa föregående steg i dialogrutan _Bas-URL:er (säkra)_ -avsnitt.
@@ -141,17 +141,17 @@ Så här lägger du till butikskoden i bas-URL:en:
    ![Välj standardkonfigurationsomfång](../../assets/configuration/multi-site-default.png)
 
 1. Expandera i den högra rutan **URL-alternativ**.
-1. Rensa **Använd systemvärde** kryssruta bredvid _Lägg till butikskod i URL:er_.
+1. Rensa **Använd systemvärde** kryssruta intill _Lägg till butikskod i URL:er_.
 1. Från _Lägg till butikskod i URL:er_ lista, klicka på **Ja**.
 
-   ![Lägg till butikskoden i butiksbas-URL:en](../../assets/configuration/multi-site-add-store-url.png)
+   ![Lägg till butikskoden i butikens bas-URL](../../assets/configuration/multi-site-add-store-url.png)
 
 1. Klicka **Spara konfiguration**.
 1. Rensa cachen om du uppmanas till det. (**System** > **Cachehantering**).
 
 ## Steg 7: Ändra standardbas-URL för butiksvyn
 
-Du måste utföra det här steget sist eftersom du inte längre har tillgång till administratören; din åtkomst returneras när du har konfigurerat virtuella värdar enligt beskrivningen i de webbserverspecifika avsnitten.
+Du måste utföra det här steget sist eftersom du inte längre har tillgång till Admin. Åtkomsten returneras när du har konfigurerat virtuella värddatorer enligt beskrivningen i de webbserverspecifika avsnitten.
 
 Så här ändrar du bas-URL:en för butiksvyn:
 
@@ -161,8 +161,8 @@ Så här ändrar du bas-URL:en för butiksvyn:
 
    ![Välj standardkonfigurationsomfång](../../assets/configuration/multi-site-default.png)
 
-1. Expandera i den högra rutan **Bas-URL:er**.
-1. I _Bas-URL:er_ sektion, klar **Använd systemvärde**.
+1. Expandera i den högra rutan **Bas-URL**.
+1. I _Bas-URL_ sektion, klar **Använd systemvärde**.
 1. Ange `http://magento.mg` URL i **Bas-URL** och **Bas länk-URL** fält.
 
 1. Upprepa föregående steg i dialogrutan **Bas-URL:er (säkra)** -avsnitt.

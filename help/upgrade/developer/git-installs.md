@@ -49,7 +49,7 @@ Så här uppgraderar du om du är en bidragsgivare:
    bin/magento setup:upgrade
    ```
 
-1. Rensa cacheminnet:
+1. Rensa cachen:
 
    ```bash
    bin/magento cache:clean

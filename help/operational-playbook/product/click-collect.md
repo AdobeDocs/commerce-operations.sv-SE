@@ -24,7 +24,7 @@ Företagen bör följa de här tio tipsen för att skapa ett bra klick och samla
 - Stock-tillgänglighet
 - Butikens positionerare
 - Mobil
-- Lagringsalternativ
+- Butiksalternativ
 - Uppfyllandealternativ
 - Orderstatus
 - Ytterligare kostnad
@@ -52,13 +52,13 @@ Företag måste kunna visa lagernivåer i realtid för sina kunder när de välj
 
 ## Butikens positionerare
 
-Företagen måste se till att de visar all butiksinformation där kunderna kan samla in sina beställningar genom att klicka och samla in. Butiken ska innehålla information, t.ex. butiksadress, butikstidpunkt (inklusive allmänna helgdagar) och kontaktnummer.
+Företagen måste se till att de visar all butiksinformation där kunderna kan samla in sina beställningar genom att klicka och samla in. Butiken ska innehålla information, t.ex. butiksadress, lagringstidpunkt (inklusive allmänna helgdagar) och kontaktnummer.
 
 ## Mobil
 
 I och med mobilanvändarnas tillväxt bör företagen anpassa sin e-handelswebbplats så att den blir responsiv. Företag bör ge kunderna samma upplevelse på alla enheter.
 
-## Lagringsalternativ
+## Butiksalternativ
 
 Vissa butiker är kanske inte lätta att nå för vissa kunder. Det är en bra idé att ange andra platser där du kan klicka och samla in, t.ex. postkontoret eller bekvämlighetsbutiken.
 
@@ -78,4 +78,4 @@ Vissa varumärken debiterar en extra servicekostnad om beställningen är mindre
 
 Oavsett om verksamheten är B2B eller B2C måste den erbjuda den bästa kundtjänsten. Det är viktigt att tillhandahålla butiksinformation till kunder, till exempel var insamlingspunkten finns i butiken. Ange ett avsnitt i butiken där du kan klicka och samla in. Se till att kunderna inte behöver vänta så länge på att få tag i beställningen. Vissa varumärken erbjuder också klick och parkering, där användaren anger detaljerna för att klicka och samla in parkering och butikspersonalen tar med sig sin order till dem.
 
-Detta är bara några exempel på personalisering. Det finns oräkneliga fler funktioner som kan utforskas utifrån verksamhetens behov. Att hålla jämna steg med ständigt föränderliga marknadstrender kan vara svårt, men det bidrar till att förbättra den övergripande kundupplevelsen.
+Det här är bara några exempel på personalisering. Det finns oräkneliga fler funktioner som kan utforskas utifrån verksamhetens behov. Att hålla jämna steg med ständigt föränderliga marknadstrender kan vara svårt, men det bidrar till att förbättra den övergripande kundupplevelsen.

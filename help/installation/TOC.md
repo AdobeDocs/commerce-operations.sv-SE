@@ -12,12 +12,12 @@ ht-degree: 0%
 
 # Installationshandbok {#installation-guide}
 
-- [Översikt](overview.md)
+- [Ökning](overview.md)
 - [Systemkrav](system-requirements.md)
 - Förutsättningar {#prerequisites}
-   - [Översikt](prerequisites/overview.md)
+   - [Ökning](prerequisites/overview.md)
    - Filsystem {#file-system}
-      - [Översikt](prerequisites/file-system/overview.md)
+      - [Ökning](prerequisites/file-system/overview.md)
       - [Konfigurera behörigheter](prerequisites/file-system/configure-permissions.md)
    - Webbserver {#web-server}
       - [Nginx](prerequisites/web-server/nginx.md)
@@ -26,7 +26,7 @@ ht-degree: 0%
       - [MySQL](prerequisites/database/mysql.md)
       - [Fjärranslutningar](prerequisites/database/mysql-remote.md)
    - Sökmotor {#search-engine}
-      - [Översikt](prerequisites/search-engine/overview.md)
+      - [Ökning](prerequisites/search-engine/overview.md)
       - [AWS OpenSearch](prerequisites/search-engine/aws-opensearch.md)
       - [Konfigurera Nginx](prerequisites/search-engine/configure-nginx.md)
       - [Konfigurera Apache](prerequisites/search-engine/configure-apache.md)
@@ -43,11 +43,11 @@ ht-degree: 0%
    - [Konfigurera programmet](next-steps/configuration.md)
    - [Ange en mask (valfritt)](next-steps/set-umask.md)
    - Installera exempeldata (valfritt) {#sample-data}
-      - [Översikt](sample-data/overview.md)
+      - [Ökning](sample-data/overview.md)
       - [Hämta Composer-paket](sample-data/composer-packages.md)
       - [Klona Git-databaser](sample-data/git-repositories.md)
       - [Ta bort eller uppdatera moduler](sample-data/remove-or-update.md)
-- Tutorials {#tutorials}
+- Självstudiekurser {#tutorials}
    - [Säkerhetskopiera och återställa filsystemet, mediet och databasen](tutorials/backup.md)
    - [Kontrollera databasstatus](tutorials/database-status.md)
    - [Konfigurera beteende för meddelandekonsument](tutorials/message-consumers.md)

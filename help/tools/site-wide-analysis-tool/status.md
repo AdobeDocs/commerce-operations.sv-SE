@@ -17,6 +17,6 @@ Följande statusinformation visas på sidans översta nivå i [!DNL Site-Wide An
 
 **[!UICONTROL Status]**: Här visas status för din Adobe Commerce-webbplats. Det kan vara[!UICONTROL Live and Stable]&quot; eller &quot;[!UICONTROL Dev in Progress]&quot;. &quot;[!UICONTROL Live and Stable]&quot; innebär att webbplatsen är aktiv och körs. &quot;[!UICONTROL Dev in Progress]&quot; innebär att webbplatsen håller på att utvecklas.
 
-**[!UICONTROL Health Index Bar]**: Det mäter den totala webbplatshälsan från 0 till 100, där noll är värst och 100 är perfekt hälsa. Det beräknas utifrån den kvantitet och prioritetsviktskoefficient som används för aktiva rekommendationer.
+**[!UICONTROL Health Index Bar]**: Den mäter den totala webbplatshälsan från 0 till 100, där noll är värst och 100 är perfekt hälsa. Det beräknas utifrån den kvantitet och prioritetsviktskoefficient som används för aktiva rekommendationer.
 
 **[!UICONTROL Download Recommendations Report]**: Recommendations Report ger skräddarsydda rekommendationer för ditt projekt. Du kan hämta en PDF-rapport genom att klicka på det här avsnittet.

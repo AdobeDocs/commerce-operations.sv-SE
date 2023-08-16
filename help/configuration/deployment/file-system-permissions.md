@@ -20,9 +20,9 @@ De avsnitt som följer behandlar kraven för en eller två ägare av filsystem. 
 
 - **En användare**- Används vanligtvis av delade värdtjänstleverantörer, som gör att du bara kan komma åt en användare på servern. Den här användaren kan logga in, överföra filer med FTP och den här användaren kör även webbservern.
 
-- **Två användare**—Vi rekommenderar två användare om du kör en egen Commerce-server: en för att överföra filer och köra kommandoradsverktyg och en separat användare för webbserverprogrammet. När det är möjligt är detta att föredra eftersom det är säkrare.
+- **Två användare**- Vi rekommenderar två användare om du kör en egen Commerce-server: en som överför filer och kör kommandoradsverktyg samt en separat användare för webbserverprogrammet. När det är möjligt är detta att föredra eftersom det är säkrare.
 
-   I stället har du separata användare:
+  I stället har du separata användare:
 
    - Webbserveranvändaren som kör Admin och storefront.
 
@@ -32,7 +32,7 @@ De avsnitt som följer behandlar kraven för en eller två ägare av filsystem. 
 
 Om du vill använda enägarsinställningarna måste du logga in på din Commerce-server som samma användare som kör webbservern. Detta är typiskt för delade värdtjänster.
 
-Eftersom det är mindre säkert att ha en ägare av ett filsystem rekommenderar vi att du distribuerar Commerce i produktion på en privat server i stället för på delade värdtjänster, om det är möjligt.
+Eftersom det är mindre säkert att ha en ägare av ett filsystem rekommenderar vi att du distribuerar Commerce i produktion på en privat server i stället för på en delad värdtjänst, om det är möjligt.
 
 ### Konfigurera en ägare för standard- eller utvecklarläge
 
@@ -112,15 +112,15 @@ Om du använder en egen server (inklusive en värdleverantörs privata serverkon
 
 - The **webbserveranvändare**, som kör Admin och storefront.
 
-   Linux-system har vanligtvis inget gränssnitt för den här användaren. du inte kan logga in på Commerce-servern som, eller växla till, webbserveranvändaren.
+  Linux-system har vanligtvis inget gränssnitt för den här användaren. Du kan inte logga in på Commerce-servern som, eller växla till, webbserveranvändaren.
 
 - The **kommandoradsanvändare** som du loggar in på din Commerce-server som eller byter till.
 
-   Commerce använder den här användaren för att köra CLI-kommandon och cron.
+  Commerce använder den här användaren för att köra CLI-kommandon och cron.
 
-   >[!INFO]
-   >
-   >Kommandoradsanvändaren kallas även _ägare av filsystem_.
+  >[!INFO]
+  >
+  >Kommandoradsanvändaren kallas även _ägare av filsystem_.
 
 Eftersom de här användarna kräver åtkomst till samma filer rekommenderar vi att du skapar en [delad grupp](../../installation/prerequisites/file-system/configure-permissions.md#about-the-shared-group) som de båda tillhör. Följande procedurer förutsätter att du redan har gjort detta.
 
@@ -129,7 +129,7 @@ Se något av följande avsnitt:
 - Två ägare av filsystem i utvecklarläge eller standardläge
 - Två ägare av filsystem i produktionsläge
 
-### Konfigurera två ägare för standard- eller utvecklarläge
+### Ställ in två ägare för standard- eller utvecklarläge
 
 Filer i följande kataloger måste vara skrivbara av båda användarna i utvecklarläge och standardläge:
 

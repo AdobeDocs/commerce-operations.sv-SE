@@ -30,8 +30,8 @@ Följande uppgraderingsalternativ rekommenderas av Adobe Commerce för att håll
 
 ## Uppgradera från 2.4.0 till 2.4.3
 
-![Uppgraderingsväg från 2.4.0 till 2.4.3](../../assets/upgrade-guide/2.4.0-2.4.3.png)
+![Uppgradering från 2.4.0 till 2.4.3](../../assets/upgrade-guide/2.4.0-2.4.3.png)
 
 ## Uppgradera från 2.4.4 och 2.4.5
 
-![Uppgraderingsväg från 2.4.4 och 2.4.5](../../assets/upgrade-guide/2.4.4-and-2.4.5.png)
+![Uppgradering från 2.4.4 och 2.4.5](../../assets/upgrade-guide/2.4.4-and-2.4.5.png)

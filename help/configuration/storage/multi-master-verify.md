@@ -16,11 +16,11 @@ ht-degree: 0%
 
 {{deprecate-split-db}}
 
-Efter konfigurationen konfigureras de överordnad databaserna enligt följande:
+Efter konfigurationen konfigureras huvuddatabaserna enligt följande:
 
-- Main Commerce database: 369 tabeller
-- Databas för handelsoffert: 11 tabeller
-- Försäljningsdatabas: 55 tabeller
+- Main Commerce database: 369 tables
+- Commerce quote database: 11 tables
+- Handelsförsäljningsdatabas: 55 tabeller
 
 För att verifiera att de delade databaserna fungerar som de ska utför du följande åtgärder och kontrollerar att data har lagts till i databastabellerna med hjälp av ett databasverktyg som [phpmyadmin](../../installation/prerequisites/optional-software.md#phpmyadmin):
 

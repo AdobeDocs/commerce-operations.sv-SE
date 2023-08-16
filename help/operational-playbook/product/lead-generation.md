@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Leadgenerering
 
-Inom e-handeln är ledande alla som är intresserade av varumärket och dess produkter. vare sig det handlar om att klicka på webbplatsen, checka ut en annons i sociala medier eller utforska produkter. Att generera en ledande position inom e-handeln är en viktig del av verksamheten eftersom en ledande position idag kan vara en kund imorgon. Blygenerering är en lång process som tar tid och kräver tålamod.
+Inom e-handeln är ledande alla som visar intresse för varumärket och dess produkter, oavsett om det handlar om att klicka på webbplatsen, checka ut en annons på sociala medier eller utforska produkter. Att generera en ledande position inom e-handeln är en viktig del av verksamheten eftersom en ledande position i dag kan vara en kund i morgon. Blygenerering är en lång process som tar tid och kräver tålamod.
 
 I följande diagram visas ett enkelt arbetsflöde som återförsäljare kan använda för att generera leads:
 
@@ -23,9 +23,9 @@ De bästa sätten att skapa leads är bland annat följande:
 
 - **Unikt innehåll**—Återförsäljarna måste göra sin forskning och ta reda på vad kunderna gillar, vad de är intresserade av och vad de vill köpa. Innehållet måste få kunden att lägga märke till det, angripa dem och skapa ett band till dem. Innehåll är inte bara begränsat till videor och bilder, utan även sociala medier.
 
-- **Onlinecommunities**—Du kan kommunicera online, t.ex. en Instagram-sida eller en Facebook-community där man kan skicka granskningar, frågor och funderingar. Kundtjänstteamet kan aktivt engagera sig i sociala medier.
+- **Onlinecommunities**—Du kan kommunicera online, t.ex. en Instagram-sida eller en Facebook-community där man kan skicka granskningar, frågor och funderingar. Kundtjänstteamet kan aktivt vara engagerat i sociala medier.
 
-- **Påverkande**- Ni kan betala påverkare för att marknadsföra ert varumärke. Berörda personer har en fläktbas (en grupp följare) som lyssnar på dem, vilket kan vara till nytta för ert varumärke. Du kan antingen samarbeta officiellt eller skicka kostnadsfria produkter till påverkaren för att marknadsföra dem.
+- **Påverkande**- Ni kan betala påverkare för att marknadsföra ert varumärke. Berörda personer har en fläktbas (en grupp följare) som lyssnar på dem, vilket kan vara till nytta för ert varumärke. Du kan antingen samarbeta officiellt eller skicka kostnadsfria produkter till påverkaren för att få dem att marknadsföra.
 
 - **Sociala medier**- Det är viktigt för varumärken att ha sociala medier idag. Varumärken måste se till att de känner sig delaktiga genom att publicera regelbundet, publicera innehåll för olika kunder, se till att innehållet är korrekt och alltid publicera om kommentarerna till originalinlägg.
 

@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## Varför Headless?
 
-Till att börja med är äldre företagshandel dyr och svår att skala på grund av vattentäta skott. Äldre strukturer förstärks genom plattformsbegränsningar. och innovation blir en utmaning.
+Till att börja med är äldre företagshandel dyr och svår att skala på grund av vattentäta skott, äldre strukturer förstärks genom plattformsbegränsningar och innovation blir en utmaning.
 
 Kunderna förväntar sig att ett företag interagerar med dem och interagerar med dem i alla kanaler. Kundfokuserade organisationer vill bygga framtidskorrektur som kan anpassas efter förändrade kundförväntningar.
 

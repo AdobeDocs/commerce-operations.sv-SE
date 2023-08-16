@@ -17,13 +17,12 @@ För åtkomsträttigheter till Adobe Commerce- och Magento Open Source-paket må
 
 >[!TIP]
 >
->Om du stöter på [fel](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-commerce-cloud-repo-could-not-be-accessed-403-forbidden-or-404-not-found-error-when-deploying.html)kanske du inte har åtkomstbehörighet för paketet eller så har åtkomsträttigheterna gått ut på grund av en utestående faktura på ditt konto.
+>Om du träffar [fel](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-commerce-cloud-repo-could-not-be-accessed-403-forbidden-or-404-not-found-error-when-deploying.html)kanske du inte har åtkomstbehörighet för paketet eller så har åtkomsträttigheterna gått ut på grund av en utestående faktura på ditt konto.
 >
 >* Om du är primär kontaktperson för kontot kontrollerar du att det inte finns någon utestående faktura på kontot.
 >* Om nycklarna från den primära kontakten inte fungerar och det inte finns några utestående fakturor på kontot kontaktar du [Adobe Commerce Support](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för hjälp med MAGEID för den primära kontakten.
 
-
-Så här skapar du autentiseringsnycklar:
+Skapa autentiseringsnycklar:
 
 1. Logga in på [Commerce Marketplace](https://marketplace.magento.com). Om du inte har något konto klickar du på **Registrera**.
 1. Klicka på ditt kontonamn längst upp till höger på sidan och välj **Min profil**.
@@ -40,15 +39,15 @@ Så här skapar du autentiseringsnycklar:
 
 Du kan även inaktivera eller ta bort autentiseringsnycklar. Du kan till exempel inaktivera eller ta bort nycklar av säkerhetsskäl efter att någon har lämnat organisationen.
 
-* Så här inaktiverar du nycklar: Klicka **Inaktivera**. Du kan göra detta om du vill göra uppehåll i användningen av dina nycklar.
+* Så här inaktiverar du tangenter: Klicka **Inaktivera**. Du kan göra detta om du vill göra uppehåll i användningen av dina nycklar.
 * Så här aktiverar du en tidigare inaktiverad nyckel: Klicka **Aktivera**.
-* Så här tar du bort nycklar: Klicka **Ta bort**.
+* Så här tar du bort tangenter: Klicka **Ta bort**.
 
 ### Hantera SSH-åtkomsttoken
 
 Om du vill hämta Adobe Commerce-versioner med SSH måste du generera en åtkomsttoken för nedladdning. Så här skapar du en token:
 
-1. Logga in på [magento.com-konto](https://account.magento.com/customer/account/login).
+1. Logga in på [magento.com](https://account.magento.com/customer/account/login).
 1. Klicka **Mitt konto** överst på sidan.
 1. Klicka **Kontoinställningar** > **Åtkomsttoken hämtas**.
 
@@ -58,7 +57,7 @@ Om du vill hämta Adobe Commerce-versioner med SSH måste du generera en åtkoms
 
 Du måste använda ditt MAGEID plus din token för att hämta en release. Ditt MAGEID visas längst upp till vänster på din kontosida.
 
-Till exempel:
+Exempel:
 
 ```bash
 curl -k https://MAGEID:TOKEN@www.magentocommerce.com/products/downloads/info/help

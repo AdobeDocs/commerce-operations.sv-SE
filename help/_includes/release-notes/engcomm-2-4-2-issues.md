@@ -132,7 +132,7 @@ ht-degree: 13%
 | Oleh Usik | [#29929](https://github.com/magento/magento2/pull/29929) | [29940](https://github.com/magento/magento2/issues/29940) |
 | Hazel Joie Caquicla | [#29895](https://github.com/magento/magento2/pull/29895) |  |
 | ashokadewit | [#27446](https://github.com/magento/magento2/pull/27446) | [29603](https://github.com/magento/magento2/issues/29603) |
-| Pascal Brouwer | [#26527](https://github.com/magento/magento2/pull/26527) | [26526](https://github.com/magento/magento2/issues/26526) |
+| Pascal Brouwers | [#26527](https://github.com/magento/magento2/pull/26527) | [26526](https://github.com/magento/magento2/issues/26526) |
 | Sergii Invashchenko | [#30076](https://github.com/magento/magento2/pull/30076) |  |
 | Hazel Joie Caquicla | [#30044](https://github.com/magento/magento2/pull/30044) |  |
 | Viktor Kopin | [#29979](https://github.com/magento/magento2/pull/29979) | [1806](https://github.com/magento/magento2/issues/1806) |

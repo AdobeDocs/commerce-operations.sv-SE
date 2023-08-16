@@ -1,6 +1,6 @@
 ---
 title: Bästa praxis för varukorgen
-description: Lär dig hur du optimerar Adobe Commerce prestanda genom att begränsa antalet produkter i en kundvagn.
+description: Lär dig optimera Adobe Commerce prestanda genom att begränsa antalet produkter i en kundvagn.
 role: User
 feature: Best Practices, Shopping Cart
 exl-id: 7ea5acc2-f6b2-4244-8c07-c71fd54a18a0
@@ -23,7 +23,7 @@ För version 2.3.x - 2.4.2 är förväntad prestanda baserad på artikelgränsen
 
 - Upp till **100** produkter i en kundvagn - produkten fungerar och uppfyller prestationsmålen för svarstid.
 - Upp till **300** produkter i varukorgen - produkten fungerar, men svarstiden ökar mer än målen.
-- Ovanför **500** produkter i en kundvagn - korgen och kassaflödena fungerar inte
+- Över **500** produkter i en kundvagn - korgen och kassaflödena fungerar inte
 
 ## Berörda produkter och versioner
 

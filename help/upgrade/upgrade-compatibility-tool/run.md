@@ -29,7 +29,7 @@ chmod +x ./uct/bin/uct
 
 The [!DNL Upgrade Compatibility Tool] är ett verktyg som kontrollerar en Adobe Commerce-anpassad instans mot en viss version genom att analysera alla moduler som är installerade i den. Den returnerar en lista med allvarliga problem, fel och varningar som måste åtgärdas innan du uppgraderar till den senaste versionen av Adobe Commerce.
 
-Se det här [videosjälvstudiekurs](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/upgrade/upgrade-compatibility-tool-overview.html?lang=en) (06:02) om du vill veta mer om [!DNL Upgrade Compatibility Tool].
+Se det här [videosjälvstudie](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/upgrade/upgrade-compatibility-tool-overview.html?lang=en) (06:02) om du vill veta mer om [!DNL Upgrade Compatibility Tool].
 
 Tillgängliga kommandon för [!DNL Upgrade Compatibility Tool] i ett kommandoradsgränssnitt:
 
@@ -59,7 +59,7 @@ Tillgängliga alternativ för `upgrade:check` kommando:
 
 | **Kommando** | **Tillgängliga alternativ** |
 |----------------|-----------------|
-| `upgrade:check` | <ul><li>—help: Returnerar alla tillgängliga alternativ.</li><li>—current-version: Aktuell Adobe Commerce-version. Den här parametern är obligatorisk och måste alltid användas.</li><li>—min-issue-level: Du kan filtrera utgåvor efter miniminivån för utgåvor (standardvärdet är VARNING).</li><li>—ignore-current-version-compatibility-issues (eller -i): Om du inte vill inkludera allvarliga problem, fel och varningar från den aktuella versionen i rapporten.</li><li>—coming-version (or -c): Ange en specifik Adobe Commerce-version. Senaste tillgängliga kommer att användas om det utelämnas.</li></ul> |
+| `upgrade:check` | <ul><li>—help: Returnerar alla tillgängliga alternativ.</li><li>—current-version: Aktuell Adobe Commerce-version. Den här parametern är obligatorisk och måste alltid användas.</li><li>—min-issue-level: Du kan filtrera utgåvor efter den minsta utgåvnivån (standardvärdet är VARNING).</li><li>—ignore-current-version-compatibility-issues (eller -i): Om du inte vill ta med kritiska problem, fel och varningar från den aktuella versionen i rapporten.</li><li>—coming-version (eller -c): Ange en specifik Adobe Commerce-version som mål. Senaste tillgängliga kommer att användas om det utelämnas.</li></ul> |
 
 The [!DNL Upgrade Compatibility Tool] låter dig köra `upgrade:check` kommando med `--ignore-current-version-compatibility-issues` alternativ. Använd det här alternativet om du bara vill få nya utgåvor som introduceras med uppdateringen från den aktuella versionen till målversionen i din [!DNL Upgrade Compatibility Tool] rapport:
 
@@ -86,8 +86,8 @@ Plats `-c, --coming-version[=COMING-VERSION]` avser målversionen av Adobe Comme
 Det finns vissa begränsningar när du kör `--coming-version`:
 
 - Den här parametern refererar till taggar som identifierar en viss version av Adobe Commerce.
-- Det är ett krav att uttryckligen ange detta. om bara värdet inte fungerar.
-- Ange taggversionen utan citattecken (varken enkla eller dubbla): ~~&quot;2.4.1-develop&quot;~~.
+- Det är ett krav att uttryckligen ange detta, att bara värdet av det inte fungerar.
+- Ange taggversionen utan citattecken (varken enkla eller dubbla): ~~2.4.1-develop~~.
 - Du bör INTE tillhandahålla äldre versioner än den som du har installerat, eller äldre än 2.3, som för närvarande är den äldsta som stöds.
 
 ## Använd `dbschema:diff` kommando
@@ -100,8 +100,8 @@ bin/uct dbschema:diff <current-version> <target-version>
 
 Där argumenten är följande:
 
-- `<current-version>`: alla Adobe Commerce-versioner som kan jämföras.
-- `<target-version>`: också alla Adobe Commerce-versioner som kan jämföras.
+- `<current-version>`: alla Adobe Commerce-versioner för jämförelse.
+- `<target-version>`: även alla Adobe Commerce-versioner för jämförelse.
 
 Exempel på körning:
 
@@ -136,7 +136,7 @@ bin/uct core:code:changes <dir> <vanilla dir>
 Där argumenten är följande:
 
 - `<dir>`: Adobe Commerce installationskatalog.
-- `<vanilla dir>`: Installationskatalogen för Adobe Commerce vanilla.
+- `<vanilla dir>`: Adobe Commerce vaniljas installationskatalog.
 
 Tillgängliga alternativ för `core:code:changes` kommando:
 
@@ -152,9 +152,9 @@ Tillgängliga alternativ för `core:code:changes` kommando:
 
 A _vanilj_ installation är en ren installation av en angiven versionstagg eller gren för en specifik version.
 
-The `bin/uct core:code:changes` -kommandot kontrollerar om det finns en vanilj-instans i systemet. Om det här är första gången du använder en vanilj-installation uppmanas du av en interaktiv kommandoradsfråga att hämta vanilj-projektet från Adobe Commerce-databasen (`https://repo.magento.com/`).
+The `bin/uct core:code:changes` -kommandot kontrollerar om det finns en vanilj-instans i systemet. Om det här är första gången du använder en vanilj-installation uppmanas du av en interaktiv kommandoradsfråga att hämta vaniljprojektet från Adobe Commerce-databasen (`https://repo.magento.com/`).
 
-Du kan köra en [!DNL Upgrade Compatibility Tool] med `--vanilla-dir` om du vill ange installationskatalogen för Adobe Commerce vanilla.
+Du kan köra en [!DNL Upgrade Compatibility Tool] med kommandot `--vanilla-dir` om du vill ange installationskatalogen för Adobe Commerce vanilla.
 
 Se [Distribuera vanilj-instans](https://developer.adobe.com/commerce/contributor/guides/code-contributions/#deploy-vanilla-magento-open-source-instance) för mer information.
 
@@ -257,7 +257,7 @@ Detta returnerar specifika alternativ som kan köras för `upgrade:check` komman
 
 ## Följ Adobe Commerce metodtips
 
-- Undvik att ha två moduler med samma namn.
+- Undvik två moduler med samma namn.
 - Följ Adobe Commerce [kodstandarder](https://developer.adobe.com/commerce/php/coding-standards/).
 - Adobe Commerce 2.4 [Uppgraderingsguide](https://experienceleague.adobe.com/docs/commerce-operations/assets/adobe-commerce-2-4-upgrade-guide.pdf) bästa praxis.
 - Kör [!DNL Upgrade Compatibility Tool] från [[!DNL Site-Wide Analysis Tool]](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool.html) for [Adobe Commerce i molninfrastruktur](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html){target=_blank} projekt.

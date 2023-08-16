@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Distributionskommandot för statiska visningsfiler gör att du kan skriva statiska filer till Commerce-filsystemet när Commerce-programmet är inställt för [produktionsläge](../bootstrap/application-modes.md#production-mode).
 
-Termen _statisk vyfil_ avser följande:
+Termen _statisk vyfil_ hänvisar till följande:
 
 - &quot;Statisk&quot; betyder att den kan cachas för en plats (det vill säga att filen inte genereras dynamiskt). Exempel är bilder och CSS som genererats från LESS.
 - &quot;Visa&quot; avser presentationsskikt (från MVC).
@@ -24,10 +24,10 @@ Filerna i den statiska vyn finns i `<magento_root>/pub/static` och vissa cachela
 
 Distributionen av statiska visningsfiler påverkas av programlägena enligt följande:
 
-- [Standard](../bootstrap/application-modes.md#default-mode) och [utvecklare](../bootstrap/application-modes.md#developer-mode) lägen: Commerce genererar dem på begäran, men resten cachelagras i en fil för att få snabbare åtkomst.
-- [Produktion](../bootstrap/application-modes.md#production-mode) läge: Statiska filer _not_ genereras eller cachelagras.
+- [Standard](../bootstrap/application-modes.md#default-mode) och [utvecklare](../bootstrap/application-modes.md#developer-mode) lägen: Commerce genererar dem vid behov, men de övriga cachelagras i en fil för att ge snabbare åtkomst.
+- [Produktion](../bootstrap/application-modes.md#production-mode) läge: Statiska filer är _not_ genereras eller cachelagras.
 
-Du måste skriva statiska vyfiler till Commerce-filsystemet manuellt med det kommando som beskrivs i det här avsnittet; Därefter kan du begränsa behörigheter för att begränsa säkerhetsluckorna och för att förhindra oavsiktlig eller skadlig överskrivning av filer.
+Du måste skriva statiska vyfiler till Commerce-filsystemet manuellt med det kommando som beskrivs i det här avsnittet. Därefter kan du begränsa behörigheter för att begränsa dina säkerhetsluckor och förhindra oavsiktlig eller skadlig överskrivning av filer.
 
 >[!WARNING]
 >
@@ -36,7 +36,7 @@ Du måste skriva statiska vyfiler till Commerce-filsystemet manuellt med det kom
 **Distribuera statiska vyfiler**:
 
 1. Logga in på Commerce Server som, eller [växla till filsystemets ägare](../../installation/prerequisites/file-system/overview.md).
-1. Ta bort innehållet i `<magento_root>/pub/static`, förutom `.htaccess` -fil. Ta inte bort den här filen.
+1. Ta bort innehållet i `<magento_root>/pub/static`, förutom för `.htaccess` -fil. Ta inte bort filen.
 1. Köra distributionsverktyget för statiska vyfiler `<magento_root>/bin/magento setup:static-content:deploy`.
 
    >[!INFO]
@@ -54,11 +54,11 @@ I följande tabell förklaras det här kommandots parametrar och värden.
 | Alternativ | Beskrivning | Obligatoriskt? |
 | ------ | ----------- | --------- |
 | `<languages>` | Blankstegsavgränsad lista med [ISO-639](https://www.loc.gov/standards/iso639-2/php/code_list.php) språkkoder som statiska vyfiler ska skrivas ut för. (Standard är `en_US`.)<br>Hitta listan genom att köra: `bin/magento info:language:list` | Nej |
-| `--language (-l)` | Generera filer endast för de angivna språken. Standardinställningen, utan att något alternativ har angetts, är att generera filer för alla ISO-639-språkkoder. Du kan ange namnet på en språkkod i taget. Standardvärdet är **alla**.<br>Till exempel: `--language en_US --language es_ES` | Nej |
-| `--exclude-language` | Generera filer för de angivna språkkoderna. Standardinställningen, utan något alternativ angivet, är att ingenting ska uteslutas. Du kan ange namnet på en språkkod eller en kommaavgränsad lista med språkkoder. Standardvärdet är **ingen**. | Nej |
-| `--theme <theme>` | Teman där statiskt innehåll ska distribueras. Standardvärdet är **alla**.<br>Till exempel: `--theme Magento/blank --theme Magento/luma` | Nej |
-| `--exclude-theme <theme>` | Teman som ska uteslutas vid distribution av statiskt innehåll. Standardvärdet är **ingen**.<br>Till exempel: `--exclude-theme Magento/blank` | Nej |
-| `--area (-a)` | Generera filer endast för de angivna områdena. Standardinställningen, utan att något alternativ har angetts, är att generera filer för alla områden. Giltiga värden är `adminhtml` och `frontend`. Standardvärdet är **alla**.<br>Till exempel: `--area adminhtml` | Nej |
+| `--language (-l)` | Generera filer endast för de angivna språken. Standardinställningen, utan att något alternativ har angetts, är att generera filer för alla ISO-639-språkkoder. Du kan ange namnet på en språkkod i taget. Standardvärdet är **alla**.<br>Exempel: `--language en_US --language es_ES` | Nej |
+| `--exclude-language` | Generera filer för angivna språkkoder. Standardinställningen, utan något alternativ angivet, är att ingenting ska uteslutas. Du kan ange namnet på en språkkod eller en kommaavgränsad lista med språkkoder. Standardvärdet är **ingen**. | Nej |
+| `--theme <theme>` | Teman där statiskt innehåll ska distribueras. Standardvärdet är **alla**.<br>Exempel: `--theme Magento/blank --theme Magento/luma` | Nej |
+| `--exclude-theme <theme>` | Teman som ska uteslutas vid distribution av statiskt innehåll. Standardvärdet är **ingen**.<br>Exempel, `--exclude-theme Magento/blank` | Nej |
+| `--area (-a)` | Generera filer endast för de angivna områdena. Standardinställningen, utan att något alternativ har angetts, är att generera filer för alla områden. Giltiga värden är `adminhtml` och `frontend`. Standardvärdet är **alla**.<br>Exempel: `--area adminhtml` | Nej |
 | `--exclude-area` | Generera inga filer för de angivna områdena. Standardinställningen, utan något alternativ angivet, är att ingenting ska uteslutas. Standardvärdet är **ingen**. | Nej |
 | `--jobs (-j)` | Aktivera parallell bearbetning med angivet antal jobb. Standardvärdet är 0 (kör inte i parallella processer). Standardvärdet är **0**. | Nej |
 | `--symlink-locale` | Skapa länkar för filerna för de språkinställningarna som skickas för distribution, men som inte har några anpassningar. | Nej |
@@ -91,7 +91,7 @@ Följande kommando distribuerar statiskt innehåll för amerikansk engelska (`en
 bin/magento setup:static-content:deploy en_US --exclude-theme Magento/luma --no-html-minify
 ```
 
-Exempelutdata:
+Exempel:
 
 ```terminal
 Requested languages: en_US
@@ -130,7 +130,7 @@ Följande kommando genererar statiska vyfiler för alla språk, endast för klie
 bin/magento setup:static-content:deploy --area frontend --no-fonts --theme Magento/luma
 ```
 
-Exempelutdata:
+Exempel:
 
 ```terminal
 Requested languages: en_US
@@ -158,7 +158,7 @@ Gör så här:
 
 ## Felsöka distributionsverktyget för statiska vyfiler
 
-[Installera Commerce-programvaran först](../../installation/overview.md); Annars kan du inte köra distributionsverktyget för statiska vyfiler.
+[Installera Commerce-programvaran först](../../installation/overview.md)Annars kan du inte köra distributionsverktyget för statiska vyfiler.
 
 **Symptom**: Följande fel visas när du kör distributionsverktyget för statiska vyfiler:
 
@@ -172,7 +172,7 @@ Gör så här:
 
 1. Installera Commerce-programvaran med [kommandorad](../../installation/composer.md).
 1. Logga in på programservern som, eller [växla till](../../installation/prerequisites/file-system/overview.md), filsystemets ägare.
-1. Ta bort innehållet i `<app_root>/pub/static` katalog, förutom `.htaccess` -fil. Ta inte bort den här filen.
+1. Ta bort innehållet i `<app_root>/pub/static` katalog, förutom `.htaccess` -fil. Ta inte bort filen.
 1. Distribuera statiska vyfiler: `bin/magento setup:static-content:deploy`
 
 ## Tips för utvecklare som anpassar verktyget för statisk innehållsdistribution

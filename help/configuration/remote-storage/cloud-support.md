@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Konfigurera fjärrlagring för Commerce i molninfrastruktur
 
-Börja med `ece-tools` paket 2002.1.5 kan du använda en miljövariabel för att aktivera modulen Fjärrlagring; modulen Fjärrlagring har _begränsad_ stöd för Adobe Commerce i molninfrastruktur. Adobe kan inte felsöka nätverkskorttjänsten från tredje part helt.
+Börja med `ece-tools` package 2002.1.5, you can use an environment variable to enable the Remote Storage module; but, the Remote Storage module has _begränsad_ stöd för Adobe Commerce i molninfrastruktur. Adobe kan inte felsöka nätverkskorttjänsten från tredje part helt.
 
 ## Miljövariabel
 
@@ -73,9 +73,9 @@ Du kan också använda Project Web Interface för att lägga till variabeln i l�
 
 1. I _Project Web Interface_ väljer du miljö från vänster.
 
-1. Klicka på **Konfigurera miljö** ikon.
+1. Klicka på **Konfigurera miljö** -ikon.
 
-1. I _Konfigurera miljö_ visa klickar du på **Variabler** -fliken.
+1. I _Konfigurera miljö_ visa klickar du på **Variabel** -fliken.
 
 1. Klicka **Lägg till variabel**.
 
@@ -111,12 +111,12 @@ bin/magento remote-storage:sync
 
 Om du väljer att använda fjärrlagringslösningen med ett Adobe Commerce-projekt för molninfrastruktur använder du [Amazon S3](https://docs.fastly.com/en/guides/amazon-s3) i _Snabbt_ dokumentation som säkerställer att Snabb bildoptimering fungerar med AWS S3.
 
-Var redo med [Autentiseringsuppgifter snabbt](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/setup-fastly/fastly-configuration.html#get-fastly-credentials). I Pro-projekt kan du använda SSH för att ansluta till servern och hämta inloggningsuppgifterna snabbt från `/mnt/shared/fastly_tokens.txt` -fil. För mellanlagrings- och produktionsmiljöer finns unika autentiseringsuppgifter. Du måste hämta autentiseringsuppgifterna för varje miljö.
+Var redo med dina [Autentiseringsuppgifter snabbt](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/setup-fastly/fastly-configuration.html#get-fastly-credentials). I Pro-projekt kan du använda SSH för att ansluta till servern och hämta inloggningsuppgifterna snabbt från `/mnt/shared/fastly_tokens.txt` -fil. För mellanlagrings- och produktionsmiljöer finns unika autentiseringsuppgifter. Du måste hämta autentiseringsuppgifterna för varje miljö.
 
 Fortsätt konfigurera fjärrlagring för molnprojekt med följande uppgifter:
 
 1. Konfigurera en [Snabb integration med backend](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/Edge-Modules/EDGE-MODULE-OTHER-CMS-INTEGRATION.md).
 
-1. Skapa VCL-logik för [AWS S3-autentisering](https://docs.fastly.com/en/guides/amazon-s3#using-an-amazon-s3-private-bucket).
+1. Create VCL logic for [AWS S3-autentisering](https://docs.fastly.com/en/guides/amazon-s3#using-an-amazon-s3-private-bucket).
 
-1. Skapa VCL-logik för [backend-begäranden till AWS S3-bucket](https://developer.fastly.com/reference/vcl/variables/backend-connection/req-backend/).
+1. Create VCL logic for [backend-begäranden till AWS S3-bucket](https://developer.fastly.com/reference/vcl/variables/backend-connection/req-backend/).

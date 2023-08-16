@@ -1,11 +1,11 @@
 ---
 title: Policy för programvarans livscykel
-description: Läs om viktiga datum för när supporten för Adobe Commerce upphör.
+description: Lär dig om viktiga datum för när programvarusupporten för Adobe Commerce upphör.
 exl-id: 9ee4ecc8-d893-412a-a605-5a8606a1b9a9
 source-git-commit: c1f490d98dd74bd5f33f35c5ff7bedeeb0e6f7e4
 workflow-type: tm+mt
 source-wordcount: '326'
-ht-degree: 12%
+ht-degree: 16%
 
 ---
 

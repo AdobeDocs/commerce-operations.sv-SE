@@ -27,7 +27,7 @@ Som regel rekommenderar vi att du utför A/B-tester två gånger per år på st�
 
 ![Ikon för distributionstestning](../../assets/playbooks/deployment-testing.png)
 
-Målet med driftsättningstestning för att verifiera att alla byggen, ändringar, design och laster fungerar som förväntat på produktionsplatsen. Distributionstestning är viktigt eftersom det är den sista kontrollen innan webbplatsen startar och kunderna får se webbplatsen och funktionaliteten.
+Målet med driftsättningstestning för att verifiera att alla byggen, ändringar, design och laster fungerar som förväntat på produktionsplatsen. Distributionstestning är viktigt eftersom det är den sista kontrollen innan webbplatsen startar och kunderna får se webbplatsen och funktionerna.
 
 Du bör göra distributionstestning i en staging-miljö (icke-produktionsmiljö) innan du startar programmet och åtgärda eventuella buggar som kan hindra kunderna från att checka ut.
 

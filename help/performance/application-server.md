@@ -2,9 +2,10 @@
 title: Application Server för GraphQL API:er
 description: Följ dessa anvisningar för att aktivera API:er för Application Server for GraphQL i din Adobe Commerce-distribution.
 badgeCoreBeta: label="2.4.7-beta1" type="informative"
-source-git-commit: 28bfc54e0f15ba4f4f941acc7d1fb4825702cdf3
+exl-id: 346cc722-131e-4ed0-bc8c-23c3a1e58258
+source-git-commit: f085c0a77fe59ff3b2d76abbd6965b6bc8ee69db
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '533'
 ht-degree: 0%
 
 ---
@@ -62,7 +63,7 @@ bin/magento server:run
 
 Det här kommandot startar en HTTP-port på 9501. När Application Server startas blir port 9501 en HTTP-proxyserver för alla GraphQL-frågor.
 
-## Exempel: Installera Open Svole (OSX)
+## Exempel: Installera OpenSvole (OSX)
 
 Den här proceduren illustrerar hur du installerar tillägget Öppna i PHP 8.2 för OSX-baserade system. Det är ett av flera sätt att installera tillägget Öppna svullnad.
 
@@ -84,7 +85,7 @@ Kör `php -m | grep openswoole` för att bekräfta att tillägget har aktiverats
 
 ### Vanliga fel vid installation av Open Svole
 
-Alla fel som inträffar under installationen av OpenSvole inträffar vanligtvis under `pecl` installationsfas. Vanliga fel kan vara att de saknas `openssl.h` och `pcre2.h` filer. Kontrollera att de här två paketen är installerade på din lokala dator för att åtgärda felen.
+Alla fel som inträffar under installationen av OpenSvole inträffar vanligtvis under `pecl` installationsfas. Typiska fel kan vara att det saknas `openssl.h` och `pcre2.h` filer. Kontrollera att de här två paketen är installerade på din lokala dator för att åtgärda felen.
 
 * Kontrollera plats för `openssl` genom att köra:
 
@@ -131,4 +132,3 @@ pecl install openswoole-22.0.0
 #### Lös problem med pcre2.h
 
 Lös problem relaterade till `pcre2.h`, länkar samman `pcre2.h` sökväg till den installerade PHP-tilläggskatalogen. Din specifika installerade version av PHP och `pcr2.h` bestämmer vilken version av kommandot du ska använda.
-

@@ -12,13 +12,13 @@ ht-degree: 0%
 
 # Ange en mask (valfritt)
 
-Webbservergruppen måste ha skrivbehörighet till vissa kataloger i filsystemet. men du kanske vill ha bättre säkerhet, särskilt i produktionen. Vi ger dig flexibilitet att ytterligare begränsa dessa behörigheter med en [umask](https://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html).
+Webbservergruppen måste ha skrivbehörighet till vissa kataloger i filsystemet, men du kanske vill ha bättre säkerhet, särskilt i produktionen. Vi ger dig flexibilitet att ytterligare begränsa dessa behörigheter med en [umask](https://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html).
 
 Vår lösning är att göra det möjligt att skapa en fil med namnet `magento_umask` i programmets rotkatalog som begränsar behörigheterna för webbservergruppen och alla andra.
 
 >[!NOTE]
 >
->Vi rekommenderar att du endast ändrar mask för ett enanvändarsystem eller ett delat värdsystem. Om du har en privat programserver måste gruppen ha skrivåtkomst till filsystemet; kan du ta bort skrivåtkomst från gruppen.
+>Vi rekommenderar att du endast ändrar mask för ett enanvändar- eller delat värdsystem. Om du har en privat programserver måste gruppen ha skrivåtkomst till filsystemet. Tumpen tar bort skrivåtkomst från gruppen.
 
 Standardmask (utan `magento_umask` anges) är `002`, vilket betyder
 
@@ -28,8 +28,8 @@ Standardmask (utan `magento_umask` anges) är `002`, vilket betyder
 
 Ett vanligt förslag är att använda värdet `022` i `magento_umask` fil, vilket betyder:
 
-* 755 för kataloger: fullständig kontroll över användaren, så kan alla andra gå igenom katalogerna.
-* 644 för filer: skrivskyddade behörigheter för användaren och skrivskyddade för alla andra.
+* 755 för kataloger: fullständig kontroll för användaren, och alla andra kan gå igenom kataloger.
+* 644 för filer: läs- och skrivbehörighet för användaren och skrivskyddad för alla andra.
 
 Till `magento_umask`:
 

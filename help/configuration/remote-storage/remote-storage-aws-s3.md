@@ -1,6 +1,6 @@
 ---
 title: Konfigurera AWS S3-bucket för fjärrlagring
-description: Konfigurera ditt Commerce-projekt så att du kan använda lagringstjänsten AWS S3 för fjärrlagring.
+description: Konfigurera ditt Commerce-projekt så att du kan använda AWS S3-lagringstjänsten för fjärrlagring.
 feature: Configuration, Storage
 exl-id: e8aeade8-2ec4-4844-bd6c-ab9489d10436
 source-git-commit: af45ac46afffeef5cd613628b2a98864fd7da69b

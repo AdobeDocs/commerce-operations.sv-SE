@@ -1,5 +1,5 @@
 ---
-title: Cachetyper
+title: Cache-typer
 description: Associera cachegränser med cachetyper.
 feature: Configuration, Cache
 exl-id: 67d4ba06-b48b-4e1a-a7a8-9830490dfe3d
@@ -10,17 +10,17 @@ ht-degree: 0%
 
 ---
 
-# Cachetyper
+# Cache-typer
 
 I följande steg går du igenom associeringen av cachefiltret frontend med en cachetyp.
 
-## Steg 1: Definiera en cacheklientdel
+## Steg 1: Definiera en cacheförskjutning
 
 Commerce-programmet har en `default` cachefrontend som du kan använda för alla [cachetyp](../cli/manage-cache.md#clean-and-flush-cache-types). I det här avsnittet beskrivs hur du kan definiera en cachefiltr med ett annat namn, vilket är bättre om du tänker anpassa filtret.
 
 >[!INFO]
 >
->Så här använder du `default` cachetyp, du behöver inte ändra `env.php` över huvud taget, du ändrar Commerce&#39;s global `di.xml`. Se [Cachealternativ på låg nivå](cache-options.md).
+>Använd `default` cachetyp, du behöver inte ändra `env.php` över huvud taget: du ändrar Commerce globala `di.xml`. Se [Cachealternativ på låg nivå](cache-options.md).
 
 Du måste ange en anpassad cacheförgrund antingen `app/etc/env.php` eller Commerce&#39;s global `app/etc/di.xml`.
 
@@ -48,9 +48,9 @@ I följande exempel visas hur du definierar det i `env.php` som åsidosätter `d
 
 Plats `<unique frontend id>` är ett unikt namn som identifierar din front och `<cache options>` är alternativ som behandlas i de ämnen som är specifika för varje cachelagringstyp (databas, Redis och så vidare).
 
-## Steg 2: Konfigurera cacheminnet
+## Steg 2: Konfigurera cachen
 
-Du kan ange konfigurationsalternativ för klientcache och serverdelscache i `env.php` eller `di.xml`. Denna uppgift är valfri.
+Du kan ange konfigurationsalternativ för klientcache och serverdelscache i `env.php` eller `di.xml`. Den här uppgiften är valfri.
 
 `env.php` exempel:
 

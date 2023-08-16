@@ -1,11 +1,11 @@
 ---
-user-guide-title: Handböcker
-user-guide-description: Lär dig mer om hur du underhåller Adobe Commerce- eller Magento Open Source-program.
+user-guide-title: Användarhandböcker om operativa funktioner
+user-guide-description: Lär dig mer om de operativa aspekterna av att underhålla programmet Adobe Commerce eller Magento Open Source.
 feature: Configuration, Best Practices, Install, Integration, Security, Release Notes, Upgrade
 source-git-commit: e8b41f25cfd5b707d701016e65db43826a7f26d6
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '118'
+ht-degree: 14%
 
 ---
 

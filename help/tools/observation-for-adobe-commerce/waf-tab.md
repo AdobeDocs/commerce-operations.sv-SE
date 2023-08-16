@@ -5,14 +5,14 @@ exl-id: e36986d7-d903-4154-bb09-6962b99ae35f
 feature: Configuration, Observability
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '160'
 ht-degree: 0%
 
 ---
 
 # The [!DNL WAF] tab
 
-The **[!DNL WAF]** -fliken visar trafik som skickas och blockeras av [!DNL firewall].
+The **[!DNL WAF]** visas trafik som skickas och blockeras av [!DNL firewall].
 
 ## [!DNL WAF traffic summary]
 
@@ -22,7 +22,7 @@ The **[!DNL WAF traffic summary]** visas antalet trafik som passerat, loggat, bl
 
 ## [!DNL WAF Top 10 blocked IP Addresses]
 
-![De 10 blockerade IP-adresserna för WAF-toppen](../../assets/tools/observation-for-adobe-commerce/waf-2.png)
+![De tio blockerade IP-adresserna för WAF-toppen](../../assets/tools/observation-for-adobe-commerce/waf-2.png)
 
 The **[!DNL WAF Top 10 blocked IP Addresses]** bildrutan visar de 10 mest blockerade IP-adresserna av [!DNL firewall].
 

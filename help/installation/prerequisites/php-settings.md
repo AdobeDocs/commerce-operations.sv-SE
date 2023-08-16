@@ -66,7 +66,7 @@ Så här verifierar du installerade tillägg:
 >
 >Om du använder PHP 7.4.20 anger du `pcre.jit=0` i `php.ini` -fil. Det här kommer runt en PHP [bug](https://bugs.php.net/bug.php?id=81101) som förhindrar att CSS läses in.
 
-- Ange systemtidszon för PHP. I annat fall kanske fel som följande visas under installationen och tidsrelaterade åtgärder som cron inte fungerar:
+- Ställ in systemtidszonen för PHP, annars kanske fel som följande visas under installationen och tidsrelaterade åtgärder som kron inte fungerar:
 
 ```terminal
 PHP Warning:  date(): It is not safe to rely on the system's timezone settings. [more messages follow]
@@ -91,7 +91,7 @@ PHP Warning:  date(): It is not safe to rely on the system's timezone settings. 
 
 - Aktivera [`opcache.save_comments`](https://www.php.net/manual/en/opcache.configuration.php#ini.opcache.save-comments), vilket krävs för Adobe Commerce och Magento Open Source 2.1 och senare.
 
-  Vi rekommenderar att du aktiverar [PHP OPcache](https://www.php.net/manual/en/book.opcache.php) av prestandaskäl. OPcache är aktiverat i många PHP-distributioner.
+  Vi rekommenderar att du [PHP OPcache](https://www.php.net/manual/en/book.opcache.php) av prestandaskäl. OPcache är aktiverat i många PHP-distributioner.
 
   Adobe Commerce och Magento Open Source 2.1 och senare använder PHP-kodkommentarer för kodgenerering.
 
@@ -101,7 +101,7 @@ PHP Warning:  date(): It is not safe to rely on the system's timezone settings. 
 
 ## Sök efter PHP-konfigurationsfiler
 
-I det här avsnittet beskrivs hur du hittar de konfigurationsfiler som behövs för att uppdatera nödvändiga inställningar.
+I det här avsnittet beskrivs hur du hittar de konfigurationsfiler som behövs för att uppdatera de nödvändiga inställningarna.
 
 ### Sök `php.ini` konfigurationsfil
 
@@ -157,13 +157,13 @@ Så här anger du PHP-alternativ:
 
 1. Ändra värdet för `memory_limit` till ett av de värden som rekommenderas i början av det här avsnittet.
 
-   Till exempel:
+   Exempel:
 
    ```conf
    memory_limit=2G
    ```
 
-1. Lägg till eller uppdatera `realpath_cache` så att den matchar följande värden:
+1. Lägg till eller uppdatera `realpath_cache` som matchar följande värden:
 
    ```conf
    ;
@@ -179,7 +179,7 @@ Så här anger du PHP-alternativ:
 
 1. Spara ändringarna och avsluta textredigeraren.
 
-1. Öppna den andra `php.ini` (om de är olika) och gör samma ändringar.
+1. Öppna den andra `php.ini` (om de är olika) och gör samma ändringar i den.
 
 ## Ange alternativ för OPCache
 

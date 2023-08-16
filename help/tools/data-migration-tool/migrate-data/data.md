@@ -5,7 +5,7 @@ exl-id: f4ea8f6a-21f8-4db6-b598-c5efecec254f
 topic: Commerce, Migration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '328'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Se [första steget](overview.md#first-steps) för mer information.
 
 ## Kör datamigreringskommandot
 
-Kör:
+Kör följande för att börja migrera data:
 
 ```bash
 bin/magento migrate:data [-r|--reset] [-a|--auto] {<path to config.xml>}
@@ -33,7 +33,7 @@ Var:
 
 * `[-r|--reset]` är ett valfritt argument som startar migreringen från början. Du kan använda det här argumentet för att testa migrering.
 
-* `{<path to config.xml>}` är den absoluta filsystemsökvägen till `config.xml`; det här argumentet är obligatoriskt
+* `{<path to config.xml>}` är den absoluta filsystemsökvägen till `config.xml`; det här argumentet krävs
 
 I det här steget [!DNL Data Migration Tool] skapar ytterligare tabeller och utlösare för migreringstabellerna i Magento 1-databasen. De används i [inkrementell/delta](delta.md) migreringssteg. Ytterligare tabeller innehåller information om ändrade poster efter den slutliga migreringen. Databasutlösare används för att fylla i dessa extra tabeller, så om en ny åtgärd utförs för den aktuella tabellen (en post läggs till/ändras/tas bort), sparar databasutlösaren information om den här åtgärden i den extra tabellen. När vi kör en förändringsmigreringsprocess [!DNL Data Migration Tool] söker igenom tabellerna efter de obearbetade posterna och migrerar det nödvändiga innehållet till Magento 2-databasen.
 

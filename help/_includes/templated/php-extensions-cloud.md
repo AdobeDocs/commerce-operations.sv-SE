@@ -61,7 +61,7 @@ ht-degree: 0%
                 pdo_sqlite<br>
                 phar<br>
                 posix<br>
-                readline<br>
+                radmatning<br>
                 session<br>
                 sqlite3<br>
                 tokenizer<br>
@@ -88,7 +88,7 @@ ht-degree: 0%
                 raphf<br>
                 koda<br>
                 redis<br>
-                shmop-socketar<br>
+                korta socketar<br>
                 natrium<br>
                 ssh2<br>
                 väldig<br>

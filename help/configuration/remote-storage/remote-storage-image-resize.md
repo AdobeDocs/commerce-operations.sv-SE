@@ -6,7 +6,7 @@ exl-id: 51c2b9b3-0f5f-4868-9191-911d5df341ec
 source-git-commit: af45ac46afffeef5cd613628b2a98864fd7da69b
 workflow-type: tm+mt
 source-wordcount: '247'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -36,13 +36,13 @@ Om du vill ändra storlek på bilder på serversidan måste du konfigurera Adobe
 
 1. Välj `Image optimization based on query parameters` URL i **_URL-format för katalogmedia_** fält.
 
-1. Klicka **[!UICONTROL Save Config]**.
+1. Klicka på **[!UICONTROL Save Config]**.
 
 1. Fortsätt till [Nginx-konfiguration](#configure-nginx).
 
 ## Konfigurera Nginx
 
-Om du vill fortsätta att konfigurera storleksändring av bilder på serversidan måste du förbereda `nginx.conf` och ange `proxy_pass` värdet för det valda kortet.
+Om du vill fortsätta att konfigurera storleksändring av bilder på serversidan måste du förbereda `nginx.conf` och ange en `proxy_pass` värdet för det valda kortet.
 
 **Aktivera Nginx för att ändra storlek på bilder**:
 
@@ -52,7 +52,7 @@ Om du vill fortsätta att konfigurera storleksändring av bilder på serversidan
    load_module /etc/nginx/modules/ngx_http_image_filter_module.so;
    ```
 
-1. Skapa en `nginx.conf` fil baserad på den inkluderade mallen `nginx.conf.sample` -fil. Till exempel:
+1. Skapa en `nginx.conf` fil baserad på den inkluderade mallen `nginx.conf.sample` -fil. Exempel:
 
    ```conf
    location ~* \.(jpg|jpeg|png|gif|webp)$ {

@@ -13,7 +13,7 @@ ht-degree: 0%
 
 The [!DNL Site-Wide Analysis Tool’s] [!UICONTROL Recommendations] på sidan visas rekommendationer baserade på bästa praxis för att åtgärda problem som upptäcks på din webbplats. Rekommendationerna sorteras efter prioriterad PO till P4, där PO är kritiskt och P4 är lågt. Resultatet är beskrivning, rekommendation, webbplatsens påverkan, rotorsak, scenarier/förhandsförhållanden, förväntat resultat och verktyg som används.
 
-## När ska användas
+## När ska du använda
 
 Använd [!UICONTROL Recommendations] sida för att se och implementera rekommendationer för att förbättra din webbplats hälsa.
 

@@ -47,7 +47,7 @@ Använd följande strategier för att minska antalet produkter (SKU):
 - Skapa fler produktvarianter genom att använda anpassade alternativ istället för att skapa separata produkter.
 - Med tanke på att en effektiv SKU kan innehålla ett antal möjliga permutationer av priserna, eftersom priserna kan anges olika för varje butik eller kundgrupp.
 - Inaktivera eller ta bort oanvända systemkomponenter som moduler. (Se  [Avinstallera moduler](../../../installation/tutorials/uninstall-modules.md).)
-- Hantera produkter i ett externt plattformshanteringssystem (PMS).
+- Hantera produkter i ett externt plattformshanteringssystem.
 
 ## Ytterligare information
 
@@ -56,4 +56,4 @@ Använd följande strategier för att minska antalet produkter (SKU):
 - [Arbeta med delade kataloger](https://experienceleague.adobe.com/docs/commerce-admin/b2b/shared-catalogs/catalog-shared.html)
 - Molninfrastruktur: [Konfigurera flera webbplatser och butiker](https://devdocs.magento.com/cloud/project/project-multi-sites.html)
 - Lokalt: [Flera webbplatser eller butiker](../../../configuration/multi-sites/ms-overview.md)
-- [Adobe Commerce om molninfrastruktur: Bästa tillvägagångssätt för butikskonfiguration](https://devdocs.magento.com/cloud/configure/configure-best-practices.html)
+- [Adobe Commerce om molninfrastruktur: Bästa metoder för butikskonfiguration](https://devdocs.magento.com/cloud/configure/configure-best-practices.html)

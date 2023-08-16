@@ -16,14 +16,14 @@ Under hela e-handelsprojektet måste ni ha workshops för att följa utvecklinge
 - Sparka av
 - Identifiering
 - Design
-- Teknik
+- Teknisk
 - QA
 
 ## Sparka av
 
 Det är spännande att dra igång ett nytt projekt och samtidigt kan det vara ett otrevligt misstag. Det enda som kan rädda det från att bli ett skräckslag är god startplanering och presentation.
 
-Projektstart är det första steget och måste planeras och genomföras på rätt sätt. Vissa företag kräver inte detta eftersom de anser att det är standard, men det måste ändå göras effektivt. Detta utgör grunden för projektet.
+Projektstart är det första steget och måste planeras och genomföras på rätt sätt. Vissa företag kräver inte detta eftersom de anser att det är standard, men det måste ändå utföras effektivt. Detta utgör grunden för projektet.
 
 Det finns några faser av projektstart:
 
@@ -40,11 +40,11 @@ Det är viktigt att inkludera ett presentationsdäck, en föreslagen dagordning,
 
 ### Närvaro
 
-Det är viktigt att i stora drag beskriva deltagarna i projektet. Ett stort team med alla utvecklare och användare kommer bara att komplicera starten. Det är viktigt att ringa viktiga intressenter från kundsidan, som projektsponsorer, C-nivå och projektledare. Från projektteamets sida kan du inkludera projektledare, funktionsarkitekt, teknisk arkitekt och ledaren för engagemang.
+Det är viktigt att i stora drag beskriva deltagarna i projektet. Ett stort team som omfattar alla utvecklare och användare kommer bara att komplicera starten. Det är viktigt att ringa viktiga intressenter från kundsidan, som projektsponsorer, C-nivå och projektledare. Från projektteamets sida kan du inkludera projektledare, funktionsarkitekt, teknisk arkitekt och ledaren för engagemang.
 
 ### Ämnen som ska behandlas
 
-Vilka ämnen du ska ta upp i projektet beror på projektets storlek, krav och teknik. Vanliga ämnen:
+Vilka ämnen du ska ta upp i projektet beror på projektets storlek, krav och teknik. Vanliga ämnen är:
 
 - Projektbudget
 - Gruppintroduktion
@@ -84,7 +84,7 @@ Syftet med designworkshopen är att brainstorma hur kunden förväntar sig att d
 - Anteckna gilla-markeringar och ogilla-markeringar
 - Spåra tid
 
-## Teknik
+## Teknisk
 
 Syftet med ett tekniskt seminarium är att definiera detaljerna för de tekniska aspekterna av byggandet av en anläggning. Under denna workshop kommer kund- och projektteamsidan att gå igenom olika tekniska godkännanden som rör:
 

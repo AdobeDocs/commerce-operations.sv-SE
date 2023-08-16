@@ -18,9 +18,9 @@ Adobe Commerce och Magento Open Source använder [underhållsläge](../../config
 Programmet identifierar underhållsläge enligt följande:
 
 * If `var/.maintenance.flag` finns inte, underhållsläget är inaktiverat och programmet fungerar normalt.
-* Annars är underhållsläget aktiverat om inte `var/.maintenance.ip` finns.
+* I annat fall är underhållsläget aktiverat om inte `var/.maintenance.ip` finns.
 
-   `var/.maintenance.ip` kan innehålla en lista med IP-adresser. Om en startpunkt nås via HTTP och klientens IP-adress motsvarar en av posterna i listan, är underhållsläget inaktiverat.
+  `var/.maintenance.ip` kan innehålla en lista med IP-adresser. Om en startpunkt nås via HTTP och klientens IP-adress motsvarar en av posterna i listan, är underhållsläget inaktiverat.
 
 ## Installera programmet
 
@@ -65,7 +65,7 @@ bin/magento maintenance:enable --ip=192.0.2.10 --ip=192.0.2.11
 ```
 
 När du har placerat programmet i underhållsläge måste du stoppa alla konsumentprocesser i meddelandekön.
-Ett sätt att hitta dessa processer är att köra `ps -ef | grep queue:consumers:start` och sedan köra `kill <process_id>` för varje konsument. I en miljö med flera noder upprepar du den här uppgiften på varje nod.
+Ett sätt att hitta dessa processer är att köra `ps -ef | grep queue:consumers:start` och sedan köra `kill <process_id>` för varje kund. I en miljö med flera noder upprepar du den här uppgiften på varje nod.
 
 ## Underhåll listan över undantagna IP-adresser
 
@@ -98,9 +98,9 @@ if (isset($_GET['skin'])) {
 
 Detta kan också läggas till i en omskrivningsregel i `.htaccess` fil som lägger till en `skin` parametern till URL:en.
 
-### $_GET[&#39;skin&#39;] parameter
+### $_GET[skin] parameter
 
-Så här använder du `skin` parameter:
+Använd `skin` parameter:
 
 1. Kontrollera om `.maintenance.flag` finns.
 1. Observera värdadressen som refererar till `HTTP_HOST`eller andra variabler som ENV-variabler.
@@ -119,7 +119,7 @@ Så här använder du `skin` parameter:
    * `pub/errors/default/503.phtml` till `pub/errors/sub/503.phtml`
    * `pub/errors/default/css/styles.css` till `pub/errors/sub/styles.css`
 
-1. Redigera dessa filer för att tillhandahålla lokaliserat innehåll i `503.phtml` -fil och egen formatering i `styles.css` -fil.
+1. Redigera de här filerna för att tillhandahålla lokaliserat innehåll i `503.phtml` -fil och egen formatering i `styles.css` -fil.
 
    Se till att dina sökvägar pekar mot `errors` katalog. Katalognamnet måste matcha URL-parametern som anges i `RewriteRule`. I föregående exempel `sub` används, vilket anges som en parameter i `RewriteRule` (`skin=sub`)
 

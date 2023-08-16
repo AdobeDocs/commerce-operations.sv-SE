@@ -17,7 +17,7 @@ Dessa konfigurationsinställningar kan delas mellan utvecklings- och produktions
 
 Momsnummer och butiksnamn från **Lager** > Inställningar > **Konfiguration** > Allmänt > **Allmänt**
 
-Dessa konfigurationsinställningar är antingen systemspecifika eller känsliga, vilket anges:
+De här konfigurationsinställningarna är antingen systemspecifika eller känsliga, vilket anges:
 
 - Skicka e-post till (känslig) från **Lager** > Inställningar > **Konfiguration** > Allmänt > **Kontakter**
 - Standarddomän för e-post (systemspecifik) från **Lager** > Inställningar > **Konfiguration** > Kunder > **Kundkonfiguration** > **Skapa nya kontoalternativ**
@@ -55,7 +55,7 @@ Så här anger du standardinställningar för nationella inställningar och vikt
 
 1. Expandera i den högra rutan **Butiksinformation**.
 1. Rensa **Använd standard** kryssrutan bredvid **Momsnummer** fält.
-1. Ange en siffra i fältet (t.ex. `12345`).
+1. Ange en siffra i fältet (till exempel `12345`).
 1. I **Butiksnamn** fält, ange ett värde (som `My Store`).
 1. Klicka **Spara konfiguration**.
 1. Använd **Butiksvy** listan för att välja **Standardkonfiguration** som bilden nedan visar.
@@ -100,20 +100,20 @@ Om du vill ange känsliga och systemspecifika inställningar med hjälp av syste
 
 - Omfång för varje inställning
 
-   Om du följde instruktionerna i steg 1 är omfattningen för Skicka e-post till global (d.v.s. standardkonfigurationsomfånget) och omfattningen för standarddomänen för e-post är webbplats.
+  Om du följde instruktionerna i steg 1 är omfattningen för Skicka e-post till global (d.v.s. standardkonfigurationsomfånget) och omfattningen för standarddomänen för e-post är webbplats.
 
-   Du måste känna till webbplatsens kod för att kunna ställa in standardvärdet för e-postdomän. Se [Använd miljövariabler för att åsidosätta konfigurationsinställningar](../reference/override-config-settings.md#environment-variables) om du vill ha mer information om hur du hittar det.
+  Du måste känna till webbplatsens kod för att kunna ställa in standardvärdet för e-postdomän. Se [Använd miljövariabler för att åsidosätta konfigurationsinställningar](../reference/override-config-settings.md#environment-variables) om du vill ha mer information om hur du hittar det.
 
 - Konfigurationssökväg för varje inställning
 
-   Konfigurationssökvägarna som används i det här exemplet följer:
+  Konfigurationssökvägarna som används i det här exemplet följer:
 
-   | Inställningsnamn | Konfigurationssökväg |
-   |--------------|--------------|
-   | Skicka e-post till | `contact/email/recipient_email` |
-   | Standarddomän för e-post | `customer/create_account/email_domain` |
+  | Inställningsnamn | Konfigurationssökväg |
+  |--------------|--------------|
+  | Skicka e-post till | `contact/email/recipient_email` |
+  | Standarddomän för e-post | `customer/create_account/email_domain` |
 
-   Du hittar alla känsliga och systemspecifika konfigurationssökvägar i [Referens för känsliga och systemspecifika konfigurationssökvägar](../reference/config-reference-sens.md).
+  Du hittar alla känsliga och systemspecifika konfigurationssökvägar i [Referens för känsliga och systemspecifika konfigurationssökvägar](../reference/config-reference-sens.md).
 
 #### Konvertera konfigurationssökvägar till variabelnamn
 

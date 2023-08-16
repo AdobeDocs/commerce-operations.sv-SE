@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Detta är ett av ett antal ämnen som hjälper Adobe Commerce och Magento Open Source handlare och utvecklare att förbereda sig för att följa sekretessbestämmelser. Kontakta ditt juridiska ombud för att avgöra om och hur ditt företag ska uppfylla juridiska skyldigheter.
+>Detta är ett av ett antal ämnen som hjälper Adobe Commerce och Magento Open Source handlare och utvecklare att förbereda sig för att följa sekretessbestämmelser. Kontakta ditt juridiska ombud för att få reda på om och hur ditt företag ska uppfylla juridiska skyldigheter.
 
 Använd följande dataflödesdiagram och databastentitetsmappningar som referens när du utvecklar kompatibilitetsprogram för sekretessregler som:
 
@@ -69,7 +69,7 @@ Adobe Commerce och Magento Open Source kan konfigureras för att lagra följande
 >
 >I enlighet med gällande säkerhets- och integritetspraxis bör du vara medveten om eventuella juridiska risker och säkerhetsrisker som är förknippade med lagring av kunders fullständiga födelsedatum (månad, dag, år) tillsammans med andra personliga identifierare, t.ex. fullständigt namn, innan du samlar in eller behandlar sådana data.
 
-#### `customer_entity` och &#39;customer_entity&#39;-referenser
+#### `customer_entity` och customer_entity-referenser
 
 Följande kolumner i `customer_entity` tabellen innehåller kundinformation:
 

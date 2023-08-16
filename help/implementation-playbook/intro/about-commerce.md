@@ -25,7 +25,7 @@ Adobe Commerce funktioner utvecklas alltid med konsumenterna i åtanke när man 
 - Köp direkt
 - Merchandising
 
-## Sömlös shopping överallt
+## Sömlösa shoppingupplevelser överallt
 
 Handelstillväxten drivs vidare av kundernas behov. Utvidga er räckvidd och utöka er till nya kanaler, platser och sälj online till både företag och konsumenter på en och samma plattform. För ut e-handeln till era kunder var de vill, när de vill och hur de föredrar att handla.
 

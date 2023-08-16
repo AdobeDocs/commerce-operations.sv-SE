@@ -23,7 +23,7 @@ En översikt över kronjobb finns i [Konfigurera cron-jobb](../cli/configure-cro
 
 I det här avsnittet beskrivs hur du kan skapa en cron-grupp för en anpassad modul. Om du inte behöver göra det fortsätter du med nästa avsnitt.
 
-A _kreditgrupp_ är en logisk grupp som gör att du enkelt kan köra cron i mer än en process i taget. De flesta Commerce-moduler använder `default` kreditgrupp, vissa moduler använder `index` grupp.
+A _kreditgrupp_ är en logisk grupp som gör att du enkelt kan köra cron i mer än en process i taget. De flesta Commerce-moduler använder `default` cron group; vissa moduler använder `index` grupp.
 
 Om du implementerar kron för en anpassad modul kan du välja att använda `default` eller en annan grupp.
 
@@ -116,8 +116,8 @@ Var:
 | `schedule_generate_every` | Täthet (i minuter) som scheman skrivs till `cron_schedule` tabell. |
 | `schedule_ahead_for` | Tid (i minuter) i förväg som tidsplanerna skrivs till `cron_schedule` tabell. |
 | `schedule_lifetime` | Tidsfönster (i minuter) som ett kron-jobb måste starta eller så betraktas kron-jobbet som missat (&quot;för sent&quot; för att köras). |
-| `history_cleanup_every` | Tid (i minuter) som kronithistoriken sparas i databasen. |
-| `history_success_lifetime` | Tid (i minuter) som posten för slutförda kronijobb sparas i databasen. |
+| `history_cleanup_every` | Tid (i minuter) som seriehistoriken sparas i databasen. |
+| `history_success_lifetime` | Tid (i minuter) som posten för slutförda kronjobb sparas i databasen. |
 | `history_failure_lifetime` | Tid (i minuter) som posten för misslyckade kronijobb sparas i databasen. |
 | `use_separate_process` | Kör den här cron-gruppens jobb i en separat php-process |
 

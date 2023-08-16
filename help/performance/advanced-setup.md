@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Vid hantering av stora mängder data kan omindexering bli ett problem. The [!DNL Commerce] team valde de mest inlästa indexen och aktiverade batchindexeringen, vilket gör att du kan ange en del data som ska bearbetas för varje upprepning. På så sätt kan användaren justera batchstorlekar baserat på datatypen och datastorleken i databasen.
 
-Om du vill hantera den här inställningen redigerar du `batchRowsCount` -parametern i `di.xml` fil för motsvarande modul. Följande index stöder den här funktionen:
+Redigera `batchRowsCount` -parametern i `di.xml` fil för motsvarande modul. Följande index stöder den här funktionen:
 
 * Kategoriproduktindex (katalogmodul)
 * Prisindex (katalogmodul)
@@ -30,17 +30,17 @@ Om du till exempel kör en profil som liknar B2B Medium kan du åsidosätta konf
 
 >[!NOTE]
 >
->Vi har inte aktiverat gruppbearbetning för katalogregelindexeraren. Handlare med ett stort antal katalogregler måste justera sina [!DNL MySQL] för att optimera indexeringstiden. I det här fallet kan du redigera [!DNL MySQL] konfigurationsfilen och tilldelning av mer minne till konfigurationsvärdena TMP_TABLE_SIZE och MAX_HEAP_TABLE_SIZE (standardvärdet är 16M för båda) förbättrar prestanda för den här indexeraren, men resulterar i [!DNL MySQL] förbrukar mer RAM-minne.
+>Vi har inte aktiverat gruppbearbetning för katalogregelindexeraren. Handlare med ett stort antal katalogregler måste justera sina [!DNL MySQL] för att optimera indexeringstiden. I det här fallet kan du redigera [!DNL MySQL] konfigurationsfilen och tilldelning av mer minne till konfigurationsvärdena TMP_TABLE_SIZE och MAX_HEAP_TABLE_SIZE (standardvärdet är 16M för båda) förbättrar prestanda för den här indexeraren, men resulterar i [!DNL MySQL] förbrukar mer RAM.
 
 ### Begränsa kundgrupper och delade kataloger per webbplats
 
-Ett stort antal SKU:er, webbplatser, kundgrupper eller delade kataloger påverkar körtiden för indexerarna för produktpriser och katalogregler. Detta beror på att som standard tilldelas alla webbplatser till alla kundgrupper (delade kataloger).
+Ett stort antal SKU:er, webbplatser, kundgrupper eller delade kataloger påverkar körtiden för indexerarna för produktpris och katalogregel. Detta beror på att som standard tilldelas alla webbplatser till alla kundgrupper (delade kataloger).
 
 Om du vill minska indexeringstiden kan du [utelämna vissa webbplatser från kundgrupper (delade kataloger)](https://developer.adobe.com/commerce/php/development/components/indexing/optimization/#customer-group-limitations-by-websites).
 
 ## Konfigurera Redis
 
-Ibland räcker det inte med en Redis-instans för att hantera inkommande begäranden. Det finns flera lösningar som vi kan rekommendera för att ta itu med denna situation.
+Ibland räcker det inte med en Redis-instans för att hantera inkommande begäranden. Det finns flera lösningar som vi kan rekommendera för att ta itu med den här situationen.
 
 Första, [!DNL Commerce] gör att du kan konfigurera separata cachelager för varje cachetyp. På så sätt kan du installera så många separata Redis-instanser som antalet cachetyper som är registrerade i Magento. I realiteten kanske du vill att Redis-instanser ska användas för de mest använda cacheminnen, till exempel konfiguration, layout och block.
 
@@ -56,9 +56,9 @@ Magento Open Source och Adobe [!DNL Commerce] supportmeddelandeköer som impleme
 
 >[!WARNING]
 >
->Den delade databasfunktionen var [föråldrad](https://community.magento.com/t5/Magento-DevBlog/Deprecation-of-Split-Database-in-Magento-Commerce/ba-p/465187) i version 2.4.2 av Adobe Commerce. Se [Återgå från en delad databas till en enda databas](../configuration/storage/revert-split-database.md).
+>Den delade databasfunktionen var [inaktuell](https://community.magento.com/t5/Magento-DevBlog/Deprecation-of-Split-Database-in-Magento-Commerce/ba-p/465187) i version 2.4.2 av Adobe Commerce. Se [Återgå från en delad databas till en enda databas](../configuration/storage/revert-split-database.md).
 
-Med Adobe Commerce kan du konfigurera skalbar databaslagring som uppfyller behoven i ett växande företag. Du kan skapa tre separata överordnad databaser som hanterar specifika domäner:
+Med Adobe Commerce kan du konfigurera skalbar databaslagring så att den uppfyller behoven i ett växande företag. Du kan skapa tre separata huvuddatabaser som hanterar specifika domäner:
 
 * Huvuddatabas (katalog)
 * Utcheckningsdatabas
@@ -66,13 +66,13 @@ Med Adobe Commerce kan du konfigurera skalbar databaslagring som uppfyller behov
 
 Om du vill konfigurera ytterligare databaser måste du skapa en tom databas och köra något av följande kommandon:
 
-För Överordnad DB-utcheckning
+För Checkout Master DB
 
 ```bash
 bin/magento setup:db-schema:split-quote
 ```
 
-För OMS Överordnad DB
+För OMS Master DB
 
 ```bash
 bin/magento setup:db-schema:split-sales
@@ -82,7 +82,7 @@ Dessa kommandon migrerar specifika domäntabeller från huvuddatabasen till en d
 
 Genom att ha separata databaser för utcheckning och orderhantering kan du distribuera belastningen mellan databasservrarna. Du kan göra fler utcheckningar och bearbeta fler beställningar per sekund utan att det påverkar tillgängligheten för katalogen och andra åtgärder. Vi rekommenderar att du delar databaser för perioder av blixt eller aktiv försäljning, eller använder dem permanent för naturligt högbelastade projekt. Migrering av befintliga data mellan databaser ska utföras under överinseende av systemadministratören.  Dela inte databaser i produktionsläge.
 
-Förutom överordnad databaser [!DNL Commerce] gör att du kan konfigurera ett antal slavdatabaser (en för varje dataresurs som deklarerats i systemet). En slavdatabas fungerar som en fullständig replik av huvuddatabasen eller en av dina överordnad domändatabaser. Den utfärdas för läsåtgärder på en specifik resurs.
+Förutom masterdatabaser [!DNL Commerce] gör att du kan konfigurera ett antal slavdatabaser (en för varje dataresurs som deklarerats i systemet). En slavdatabas fungerar som en fullständig replik av huvuddatabasen eller en av domänens huvuddatabaser. Den utfärdas för läsåtgärder på en specifik resurs.
 
 Du kan lägga till en slavdatabas genom att köra följande kommando:
 
@@ -92,9 +92,9 @@ bin/magento setup:db-schema:add-slave
 
 Det här kommandot utför konfigurationsändringar men konfigurerar inte själva replikeringen. Detta bör göras manuellt.
 
-När du har delat upp din överordnad databas och ställt in slave-databaser, [!DNL Commerce] reglerar automatiskt anslutningar till en viss databas och fattar beslut baserat på typ av begäran (POST, PUT, GET osv.) och dataresurs. If [!DNL Commerce] eller dess tillägg utför skrivåtgärder på en GET-begäran, så växlar systemet automatiskt anslutningen från slav till överordnad databas. Det fungerar på samma sätt med överordnad databaser: så snart du arbetar med en utcheckningsrelaterad tabell dirigeras alla frågor om till en viss databas. Under tiden kommer alla katalogrelaterade frågor att gå till huvuddatabasen.
+När du har delat upp huvuddatabasen och ställt in slave-databaser, [!DNL Commerce] reglerar automatiskt anslutningar till en viss databas och fattar beslut baserat på typ av begäran (POST, PUT, GET osv.) och dataresurs. If [!DNL Commerce] eller dess tillägg utför skrivåtgärder på en GET-begäran, så växlar systemet automatiskt anslutningen från slav till huvuddatabas. Det fungerar på samma sätt med masterdatabaser: så snart du arbetar med en utcheckningsrelaterad tabell dirigeras alla frågor om till en viss databas. Under tiden kommer alla katalogrelaterade frågor att gå till huvuddatabasen.
 
-Mer information om konfiguration och fördelarna med flera överordnad/slavkonfigurationer finns i
+Mer information om konfiguration och fördelarna med flera masterkonfigurationer/slavkonfigurationer finns i
 [Lösningar för delad databasprestanda](../configuration/storage/multi-master.md).
 
 ## Hantera mediematerial

@@ -30,16 +30,16 @@ Varje betaversion av Adobe Commerce innehåller alla ändringar som skickats til
 
 ## Namngivningskonvention och schema
 
-Adobe kommer att släppa betatestningar två gånger per år. Det första betatestningspaketet frisätts vanligtvis tre månader efter det att en ny viktig depotplåsterrelease finns allmänt tillgänglig.
+Adobe kommer att släppa betatestningar två gånger per år. Det första betatestet frisätts vanligtvis tre månader efter det att en ny viktig depotplåsterrelease allmänt finns tillgänglig.
 
 Betaversionspaket har `-betaX` suffix. I betaversionspaketen för Adobe Commerce 2.4.7 används till exempel följande namnkonvention:
 
 - `2.4.7-beta1`
 - `2.4.7-beta2`
 
-Se [publiceringsschema](schedule.md) för listan över kommande allmänna betaversioner.
+Se [publiceringsschema](schedule.md) om du vill se en lista över kommande allmänna betaversioner.
 
-## Fördelar med att delta
+## Fördelar
 
 Ju tidigare du ser koden vi utvecklar desto snabbare kan du förbereda tekniken och handlarna för den kommande uppgraderingen.
 

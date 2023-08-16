@@ -2,14 +2,14 @@
 source-git-commit: 4c18f00e0b92e49924676274c4ed462a175a7e4b
 workflow-type: tm+mt
 source-wordcount: '146'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 # Verifiera att kommunikationen är säker
 
 I det här avsnittet beskrivs två sätt att verifiera att grundläggande HTTP-autentisering fungerar:
 
-* Använda en `curl` för att verifiera att du måste ange ett användarnamn och lösenord för att få klusterstatus
+* Använda `curl` för att verifiera att du måste ange ett användarnamn och lösenord för att få klusterstatus
 * Konfigurera grundläggande HTTP-autentisering i administratören
 
 ## Använd en `curl` kommando för att verifiera klusterstatus
@@ -49,7 +49,7 @@ Prova följande kommando:
 curl -i -u <username>:<password> http://<hostname, ip, or localhost>:<proxy port>/_cluster/health
 ```
 
-Till exempel:
+Exempel:
 
 ```bash
 curl -i -u magento_elasticsearch:mypassword http://localhost:8080/_cluster/health
@@ -68,7 +68,7 @@ Connection: keep-alive
 
 ## Konfigurera grundläggande HTTP-autentisering i administratören
 
-Utför samma uppgifter som beskrivs i [Sökmotorkonfiguration](../configuration/search/configure-search-engine.md) *utom* klicka **[!UICONTROL Yes]** från **[!UICONTROL Enable HTTP Auth]** och ange ditt användarnamn och lösenord i de angivna fälten.
+Utför samma uppgifter som beskrivs i [Sökmotorkonfiguration](../configuration/search/configure-search-engine.md) *utom* klicka **[!UICONTROL Yes]** från **[!UICONTROL Enable HTTP Auth]** och ange ditt användarnamn och lösenord i fälten.
 
 Klicka **[!UICONTROL Test Connection]** för att vara säker på att det fungerar och klicka sedan på **[!UICONTROL Save Config]**.
 

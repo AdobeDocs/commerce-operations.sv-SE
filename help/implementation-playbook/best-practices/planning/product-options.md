@@ -34,7 +34,7 @@ Använd följande strategier för att minska antalet produktalternativ för att 
 
 När du konfigurerar många produktalternativ ökar mängden data som hämtas för varje produkt vid alla läs- och skrivåtgärder, vilket resulterar i:
 
-- Ökad SQL-frågetrafik och tyngre `JOIN` åtgärder ökar databasens genomströmning.
+- Ökad SQL-frågetrafik och högre `JOIN` åtgärder ökar databasens genomströmning.
 - Ökad storlek för Adobe Commerce-index och fulltextsökningsindex.
 
 Ökningarna ovan kan påverka webbplatsens prestanda på följande sätt:

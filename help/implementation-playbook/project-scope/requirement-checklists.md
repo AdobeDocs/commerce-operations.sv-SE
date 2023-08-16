@@ -24,7 +24,7 @@ Följande frågor kan fungera som en utgångspunkt för att se vilken informatio
 
 - Vilken är din tidsram för att leverera den nya e-handelsplattformen?
 
-- Hur många av dina IT-projektledare ska tilldelas det här projektet?
+- Hur många av dina IT-projektledare kommer att tilldelas det här projektet?
 
 - Hur många av dina affärsanalytiker kommer att tilldelas det här projektet?
 
@@ -64,9 +64,9 @@ Följande frågor kan fungera som en utgångspunkt för att se vilken informatio
 
 ## Aktuell plattform
 
-- Hur fungerar den aktuella plattformen? Intern, värdtjänstleverantör, privata molnservrar eller värdbaserade molnservrar?
+- Hur fungerar den aktuella plattformen som värd: interna, värdtjänstleverantör, privata molnservrar eller värdbaserade molnservrar?
 
-- Vilka miljöer har den aktuella plattformen? utveckling, kvalitetssäkring, förproduktion, produktion?
+- Vilka miljöer har den nuvarande plattformen: utveckling, kvalitetssäkring, förproduktion, produktion?
 
 - Hur många webb- och databasservrar finns i utvecklingsmiljön?
 
@@ -82,7 +82,7 @@ Följande frågor kan fungera som en utgångspunkt för att se vilken informatio
 
 - Vilka problem har du med dina aktuella webbplatser?
 
-- Aktuell katalogstorlek (antal SKU:er)?
+- Aktuell katalogstorlek (antal SKU)?
 
 - Genomsnittligt antal besökare per dag?
 
@@ -96,7 +96,7 @@ Följande frågor kan fungera som en utgångspunkt för att se vilken informatio
 
 - Vilken Adobe Commerce-version ska du använda?
 
-- Hur kommer den framtida plattformen att hanteras? Intern, värdtjänstleverantör, privata molnservrar eller värdbaserade molnservrar?
+- Hur kommer den framtida plattformen att ligga: interna, värdtjänstleverantör, privata molnservrar eller värdbaserade molnservrar?
 
 - Vilka miljöer kommer den framtida plattformen att ha: utveckling, kvalitetssäkring, förproduktion, produktion?
 
@@ -138,7 +138,7 @@ Följande frågor kan fungera som en utgångspunkt för att se vilken informatio
 
 - Kommer du att behöva ett anpassat internationellt webbplatstema?
 
-- Är detta i första hand en B2C- eller B2B-webbplats? Finns det några B2B2B- eller B2B2C-element?
+- Är detta i första hand en B2C- eller B2B-sajt? Finns det några B2B2B- eller B2B2C-element?
 
 - Finns det en befintlig design som är anpassad eller kommer plattformen att utformas från grunden?
 
@@ -184,7 +184,7 @@ Finns det befintliga API:er som kan användas?
 
 - Hur ofta exporterade produktdata läses in?
 
-- Från vilket system beställs data till Adobe Commerce?
+- Från vilket system kommer data att beställas till Adobe Commerce?
 
 - Hur ofta importerade orderdata läses in?
 
@@ -248,7 +248,7 @@ Finns det befintliga API:er som kan användas?
 
 - Kommer nyhetsbrev att behövas?
 
-- Vill du tillåta en kund att visa tidigare order och välja artiklar som ska bytas ut?
+- Vill du tillåta en kund att visa tidigare order och välja artiklar som ska bytas?
 
 - Kan ni låta en kund initiera att en order annulleras från webbplatsen?
 
@@ -308,9 +308,9 @@ Finns det befintliga API:er som kan användas?
 
 - Kundvagn: Produkter i varukorgar, övergivna konstverk
 
-- Produkter: Bestandesförsäljare, beställda produkter, mest visade, låg lagerhållning, nedladdningar
+- Produkter: Bestsellers, beställda produkter, mest visade, låg lagerhållning, nedladdningar
 
-- Kunder: Nya konton, kunder efter ordersumma, kunder efter antal order, kundsegment, kundrecensioner
+- Kunder: nya konton, kunder efter ordersumma, kunder efter antal order, kundsegment, kundrecensioner
 
 - Recensioner
 

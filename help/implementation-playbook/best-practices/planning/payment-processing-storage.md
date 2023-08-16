@@ -13,11 +13,11 @@ ht-degree: 0%
 
 # Bästa metoder för betalningshantering och lagring
 
-En av de viktigaste principerna för att upprätthålla [PCI-kompatibilitet](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/payments/compliance-pci.html) har en strategi för att hantera och lagra kreditkortsbetalningar på rätt sätt.
+En av de viktigaste principerna för att upprätthålla [PCI-kompatibilitet](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/payments/compliance-pci.html) har en strategi för att hantera och lagra kreditkortsbetalningar korrekt.
 
-Att lagra kortinnehavardata i Adobe Commerce är **strikt förbjudet** och det kan vara ett brott mot dina skyldigheter som handlare enligt PCI-DSS (Payment Card Industry Data Security Standard). Mer information om vår modell för delat ansvar och riktlinjer för handlares skyldigheter finns i vår [guide för delat ansvar för Adobe Commerce](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-commerce-shared-responsibility-guide.pdf) på Adobe Trust Center.
+Att lagra kortinnehavardata i Adobe Commerce är **strikt förbjuden** och det kan vara ett brott mot dina skyldigheter som handlare enligt PCI-DSS (Payment Card Industry Data Security Standard). Mer information om vår modell för delat ansvar och riktlinjer för handlares skyldigheter finns i våra [guide för delat ansvar för Adobe Commerce](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-commerce-shared-responsibility-guide.pdf) på Adobe Trust Center.
 
-Vi rekommenderar att du följer de bästa metoderna nedan för att säkerställa att du hanterar betalningsinformation på din e-handelsplats. Mer information om de effektivaste strategierna för säkerhet finns i våra [guide om bästa praxis för säkerhet för Adobe Commerce](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-commerce-best-practices-guide.pdf) på Adobe Trust Center
+Vi rekommenderar att du följer de bästa metoderna nedan för att säkerställa att du hanterar betalningsinformation på din e-handelsplats. Mer information om de effektivaste strategierna för säkerhet finns i [guide om bästa praxis för säkerhet för Adobe Commerce](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-commerce-best-practices-guide.pdf) på Adobe Trust Center
 
 ## Berörda produkter och versioner
 

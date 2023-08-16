@@ -29,17 +29,17 @@ Tänk på följande termer:
 
 - **Webbplats**—är den översta behållaren för webbplatser, leveransmetoder, betalningsmetoder med mera. Om du vill skapa helt separata sajter som inte delar varukorg, leveransmetoder eller andra måste du skapa separata webbplatser.
 
-   Kundkonton på webbplatser kan delas mellan flera webbplatser i en enda Commerce-instans. En webbplats innehåller minst en butik. Katalogpriserna bör hanteras på webbplatsnivå.
+  Kundkonton på webbplatser kan delas mellan flera webbplatser i en enda Commerce-instans. En webbplats innehåller minst en butik. Katalogpriserna bör hanteras på webbplatsnivå.
 
 - **Butik**—finns på en webbplats. I sin tur innehåller en butik minst en *butiksvy*.
 
-   Flera butiker kan dela kundvagn, användarsessioner, betalningsgateways med mera, men de har separata katalogstrukturer och katalogpris.
+  Flera butiker kan dela kundvagn, användarsessioner, betalningsgateways med mera, men de har separata katalogstrukturer och katalogpris.
 
-   Katalogkvantitet (lager) kan inte hanteras på butiksnivå. Lager hanteras endast på webbplats- eller global nivå.
+  Katalogkvantitet (lager) kan inte hanteras på butiksnivå. Lager hanteras endast på webbplats- eller global nivå.
 
-   Vyerna i butiken förändrar hur sidorna presenteras och används vanligtvis för att visa en butik med olika layouter eller språk. Du kan hantera olika valutor per butiksvy.
+  Vyerna i butiken förändrar hur sidorna presenteras och används vanligtvis för att visa en butik med olika layouter eller språk. Du kan hantera olika valutor per butiksvy.
 
-   Varje webbplats och varje butiksvy måste ha en unik identifierare. Den här identifieraren krävs för att använda `MAGE_RUN_TYPE` och `MAGE_RUN_CODE` variabler enligt följande:
+  Varje webbplats och varje butiksvy måste ha en unik identifierare. Den här identifieraren krävs för att använda `MAGE_RUN_TYPE` och `MAGE_RUN_CODE` variabler enligt följande:
 
 - `MAGE_RUN_TYPE` kan vara antingen `store` eller `website`
 

@@ -1,5 +1,5 @@
 ---
-title: Referens för tjänstkonfigurationssökvägar
+title: Referens för konfigurationssökvägar för tjänster
 description: Visa en lista med tjänstens konfigurationsvärden.
 feature: Configuration, Services
 exl-id: 77818c54-21ae-4a66-81bf-468bd7d09cda
@@ -10,7 +10,7 @@ ht-degree: 0%
 
 ---
 
-# Referens för tjänstkonfigurationssökvägar
+# Referens för konfigurationssökvägar för tjänster
 
 I det här avsnittet visas variabelnamn och konfigurationssökvägar som är tillgängliga för alternativ i Admin under **Lager** > Inställningar > **Konfiguration** > **Tjänster**.
 

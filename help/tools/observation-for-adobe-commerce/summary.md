@@ -5,7 +5,7 @@ exl-id: b07ed898-a211-4353-a1d4-1b71d4898b93
 feature: Configuration, Observability
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '2653'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ The [!UICONTROL Summary] flik för [!DNL Observation for Adobe Commerce] är tä
 
 ### [Vad är en transaktion?](https://docs.newrelic.com/docs/apm/transactions/intro-transactions/transactions-new-relic-apm/#:%7E:text=transactions%20are%20reported.-,What%20is%20a%20transaction%3F,work%20in%20a%20software%20application.&amp;text=For%20APM%2C%20it%20will%20Ofta,when%20the%20response%20is%20sent)
 
-&quot;At [!DNL New Relic], definieras en transaktion som en logisk arbetsenhet i ett program. Det avser i synnerhet funktionsanrop och metodanrop som utgör den aktuella arbetsenheten. Det refererar ofta till en webbtransaktion, som representerar en aktivitet som inträffar när programmet tar emot en webbförfrågan när svaret skickas.&quot;
+&quot;At [!DNL New Relic], definieras en transaktion som en logisk arbetsenhet i ett program. Det avser i synnerhet funktionsanrop och metodanrop som utgör den aktuella arbetsenheten. Det avser ofta en webbtransaktion, som representerar en aktivitet som inträffar när programmet tar emot en webbförfrågan när svaret skickas.&quot;
 
 ### Typer av transaktioner:
 
@@ -40,7 +40,7 @@ The **[!UICONTROL 404 page errors]** ramlistor [URI](https://en.wikipedia.org/wi
 
 ![procent av lagringsfri bildruta](../../assets/tools/percent-of-storage-free.jpg)
 
-The **[!UICONTROL % of Storage Free]** bildrutan visar den genomsnittliga procentandelen fritt lagringsutrymme över alla noder i klustret. Om du till exempel har ett kluster med tre noder visas \&lt;mount point=&quot;&quot;>, \&lt;environment name=&quot;&quot;>. Den här bildrutan kan vara bedräglig om det finns en varians över tre noder. Ett exempel på en varians skulle vara om `/data/mysql` den kostnadsfria monteringspunkten var ett annat värde i det tre nodklustret. Det finns en ram under [!UICONTROL MySQL] som facetterar monteringspunkterna efter nodnamn för att mer exakt se vilka `/data/mysql` lagringsutrymme på varje nod är faktiskt fritt.
+The **[!UICONTROL % of Storage Free]** bildrutan visar den genomsnittliga procentandelen fritt lagringsutrymme över alla noder i klustret. Om du till exempel har ett kluster med tre noder visas \&lt;mount point=&quot;&quot;>, \&lt;environment name=&quot;&quot;>. Den här bildrutan kan vara bedräglig om det finns en varians över tre noder. Ett exempel på en avvikelse är om `/data/mysql` den kostnadsfria monteringspunkten var ett annat värde i det tre nodklustret. Det finns en ram under [!UICONTROL MySQL] som facetterar monteringspunkterna efter nodnamn för att mer exakt se vilka `/data/mysql` lagringsutrymme på varje nod är faktiskt fritt.
 
 ## [!UICONTROL % of system memory that is free frame]
 
@@ -70,7 +70,7 @@ The **[!UICONTROL Alerts during timeframe]** visar alla varningar, inklusive [!U
 
 ![CPU-användning](../../assets/tools/cpu-usage.jpg)
 
-Om **[!UICONTROL CPU Usage]** bildrutan är tom, det är en indikation på att infrastrukturtillämpningen av [!DNL New Relic] är inte aktiverat. Om din webbplats finns på Starter visas inte den här informationen. Öppna en [supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html) att ha [!DNL New Relic Infrastructure] aktiverat för din webbplats.
+Om **[!UICONTROL CPU Usage]** bildrutan är tom, det är en indikation på att infrastrukturtillämpningen av [!DNL New Relic] är inte aktiverat. Om din webbplats finns på Starter visas inte den här informationen. Öppna en [supportbiljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html) att ha [!DNL New Relic Infrastructure] aktiverat för din webbplats.
 
 ## [!UICONTROL Average Response Time]
 
@@ -92,7 +92,7 @@ The **[!UICONTROL Response Code]** frame är en bra indikation på webbtrafik oc
 
 ## [!UICONTROL Web Traffic volume compared with one week ago Magento Managed Alerts Information]
 
-![webbtrafik jämfört med för en vecka sedan](../../assets/tools/web-traffic-volume-compared.jpg)
+![webbtrafikvolym jämfört med för en vecka sedan](../../assets/tools/web-traffic-volume-compared.jpg)
 
 Den här bildrutan visar den jämförande webbtrafikvolymen för den senaste veckan och den aktuella veckan.
 
@@ -112,11 +112,11 @@ The **[!UICONTROL Deployment State]** bildrutan utnyttjar särskilda distributio
 
 * %Startar genereringskommando%) som start_gen
 * &#39;%git apply /app/vendor/magento/ece-tools/patches%&#39;) as &#39;apply_patches&#39;
-* &#39;%Set flag: .static_content_deploy%) som SCD
-* &#39;%OBS! Genereringskommandot slutfördes%) som gen_compl
-* &#39;%OBS! Distributionen slutfördes i %) som deploy_compl
-* &#39;%OBS! Startar postdistribution.%) som start_pdeploy
-* &#39;%OBS! Efterdistributionen är slutförd (%) som &#39;pdeploy&#39;
+* %Set-flagga: .static_content_deploy%) som SCD
+* &#39;%OBS: kommandot Generate slutfördes%&#39;) som &#39;gen_compl&#39;
+* %OBS: Distributionen slutfördes%) som deploy_compl
+* &#39;%OBS! Påbörjar efterdistribution.%) som start_pdeploy
+* &#39;%OBS! Efterdistributionen är klar%&#39;) som &#39;pdeploy&#39;
 * %deploy-complete%) som cl_deploy_compl
 
 ## [!UICONTROL IP Frequency]
@@ -135,7 +135,7 @@ The **[!UICONTROL IP Response – top 20 URLs in duration]** bildrutan visar URL
 
 ![api-anrop via IP](../../assets/tools/api-calls-by-ip.jpg)
 
-The **[!UICONTROL API Calls by IP]** frame hjälper till att identifiera tung trafik mot API:erna och IP-adresserna som gör förfrågningar från API:er.
+The **[!UICONTROL API Calls by IP]** frame hjälper till att identifiera tung trafik mot API:erna och IP-adresserna som gör förfrågningar från API-URL:erna.
 
 ## [!UICONTROL API Calls by IP, details by URL]
 
@@ -176,22 +176,22 @@ The **[!UICONTROL Nginx access by node]** bildrutan tittar på antalet från `ac
 **Lista över [!UICONTROL Galera] lägesändringar:**
 
 * &#39;%1047 WSREP har ännu inte förberett nod för programanvändning (%) som &#39;node_not_prep_for_use&#39;
-* %\[FEL\] WSREP: Det gick inte att läsa från: wsrep_sst_xtrabackup-v2%) som xtrabackup_read_fails
-* %\[FEL\] WSREP: Processen slutfördes med fel: wsrep_sst_xtrabackup-v2 %) som xtrabackup_compl_w_err
-* %\[FEL\] WSREP: rbr write fails%) as &#39;rbr_write_fails&#39;
+* %\[ERROR\] WSREP: Det gick inte att läsa från: wsrep_sst_xtrabackup-v2%) som xtrabackup_read_fails
+* %\[ERROR\] WSREP: Processen slutfördes med fel: wsrep_sst_xtrabackup-v2 %) som xtrabackup_compl_w_err
+* &#39;%\[ERROR\] WSREP: rbr write fails%&#39;) as &#39;rbr_write_fails&#39;
 * &#39;%self-leave%&#39;) som &#39;sgroups_node&#39;
 * &#39;%members = 3/3 (join/total)%&#39;) som &#39;3of3&#39;
 * &#39;%members = 2/3 (join/total)%&#39;) as &#39;2of3&#39;
 * &#39;%members = 2/2%&#39;) as &#39;2of2&#39; * &#39;%members = 1/2%&#39;) as &#39;1of2&#39; * &#39;%members = 1/3%&#39;) as &#39;1of3&#39;
 * %members = 1/1%) as &#39;1of1&#39;
 * &#39;%\[Obs\] /usr/sbin/mysqld (mysqld 10).%) som sql_launch
-* &#39;%kvorum: Ingen nod med fullständigt läge:%) som no_node_count
-* %WSREP: Medlem 0%) som &#39;mem_0&#39;
-* %WSREP: Medlem 1,0 %) som &#39;mem_1&#39;
-* %WSREP: Medlem 2 %) som &#39;mem2&#39;
-* %WSREP: Synkroniserad med grupp, klar för anslutningar (%) som klar
+* %Quorum: Ingen nod med fullständigt tillstånd:%) som no_node_count
+* %WSREP: Medlem 0%) som mem_0
+* %WSREP: Medlem 1.0%) som mem_1
+* &#39;%WSREP: Medlem 2%&#39;) som &#39;medm2&#39;
+* %WSREP: Synkroniserad med grupp, klar för anslutningar%) som klar
 * %/usr/sbin/mysqld, Version:%) som mysql_launch_mysql.slow
-* &#39;%\[Obs\] WSREP: Ny klustervy: globalt läge:%) som galera_Cluster_view_chng
+* %\[Obs\] WSREP: Ny klustervy: globalt tillstånd:%) som galera_Cluster_view_chng
 
 Dessa signaler kan tyda på problem med lagring, minne eller frågor om tillståndet ändras ofta.
 
@@ -201,51 +201,51 @@ Dessa signaler kan tyda på problem med lagring, minne eller frågor om tillstå
 
 **Lista över databasfel eller meddelanden som har identifierats:**
 
-* %Minnesstorleken som allokerats för den temporära tabellen är mer än 20 % av oskyldig_buffer_pool_size%) som temp_tbl_buff_pool
-* %\[FEL\] WSREP: rbr write fails%) as &#39;rbr_write_fails&#39;
+* %Minnesstorleken som allokerats för den temporära tabellen är mer än 20 % av oskuld_buffer_size%) som temp_tbl_buff_pool
+* &#39;%\[ERROR\] WSREP: rbr write fails%&#39;) as &#39;rbr_write_fails&#39;
 * %mysqld: Disken är full%) som disk_full
-* &#39;%Error number 28%&#39;) as &#39;err_28&#39;
+* %Error number 28%) as &#39;err_28&#39;
 * %rollback%) som rollback
 * &#39;%Foreign key constrafor table%&#39;) as &#39;foreign_key_constraint&#39;
-* &#39;%Error_code: 1114%) som &#39;sql_1114_full&#39;
-* %CRITICAL: SQLSTATE\[HY000\] \[2006\] MySQL-servern har försvunnit%) som sql_borta
-* &#39;%SQLSTATE\[HY000\] \[1040\] För många anslutningar%&#39;) som &#39;sql_1040&#39;
+* &#39;%Error_code: 1114%&#39;) as &#39;sql_1114_full&#39;
+* %CRITICAL: SQLSTATE\[HY000\] \[2006\] MySQL server har gått bort%) som sql_borta
+* %SQLSTATE\[HY000\] \[1040\] För många anslutningar%) som sql_1040
 * %CRITICAL: SQLSTATE\[HY000\] \[2002\]%) as &#39;sql_2002&#39;
 * &#39;%SQLSTATE\[08S01\]:%&#39;) som &#39;sql_1047&#39;
 * %\[Warning\] Avbröt anslutningen%) som &#39;aborted_conn&#39;
-* &#39;%SQLSTATE\[23000\]: Överträdelse av integritetsbegränsning:%) som sql_23000
-* &#39;%1205 Lock wait timeout%&#39;) as &#39;sql_1205&#39;
+* %SQLSTATE\[23000\]: Överträdelse av integritetsbegränsning:%) som sql_23000
+* %1205 Lås timeout%) som sql_1205
 * &#39;%SQLSTATE\[HY000\] \[1049\] Okänd databas%&#39;) som &#39;sql_1049&#39;
-* &#39;%SQLSTATE\[42S02\]: Bastabell eller vy hittades inte:%) som sql_42S02
-* &#39;%Allmänt fel: 1114%) som &#39;sql_1114&#39;
-* &#39;%SQLSTATE\[40001\]%&#39;) som &#39;sql_1213&#39;
+* &#39;%SQLSTATE\[42S02\]: Bastabellen eller vyn hittades inte:%) som &#39;sql_42S02&#39;
+* &#39;%Allmänt fel: 114%&#39;) som &#39;sql_1114&#39;
+* %SQLSTATE\[40001\]%) som sql_1213
 * &#39;%SQLSTATE\[42S22\]: Kolumnen hittades inte: 1054 Okänd kolumn%) som &#39;sq1_1054&#39;
-* &#39;%SQLSTATE\[42000\]: Syntaxfel eller åtkomstfel:%) som sql_42000
-* &#39;%SQLSTATE\[21000\]: Kardinalitetsöverträdelse:%) som sql_1241
-* &#39;%SQLSTATE\[22003\]:%&#39;) som &#39;sql_22003&#39;
+* %SQLSTATE\[42000\]: Syntaxfel eller åtkomstfel:%) som sql_42000
+* &#39;%SQLSTATE\[21000\]: Kardinalitetsöverträdelse:%&#39;) som &#39;sql_1241&#39;
+* &#39;%SQLSTATE\[2003\]:%&#39;) som &#39;sql_22003&#39;
 * &#39;%SQLSTATE\[HY000\] \[9000\] Klient med IP-adress%&#39;) som &#39;sql_9000&#39;
-* &#39;%SQLSTATE\[HY000\]: Allmänt fel: 2014%) som &#39;sql_2014&#39;
+* &#39;%SQLSTATE\[HY000\]: Allmänt fel: 2014%&#39;) som &#39;sql_2014&#39;
 * %1927 Anslutningen avbröts%) som sql_1927
-* &#39;%1062 \[\ERROR\] InnoDB:%&#39;) som &#39;sql_1062_e&#39;
-* &#39;%\[Obs\] WSREP: Tömmer minnesmappning till disk...%&#39;) som &#39;mem_map_flush&#39;
-* %Internal MariaDB-felkod: 1146%) som &#39;sql_1146&#39;
-* %Internal MariaDB-felkod: 1062%) som &#39;sql_1062&#39; * &#39;%1062 \[Warning\] InnoDB:%&#39;) som &#39;sql_1062_w&#39;
-* %Internal MariaDB-felkod: 1064%) som &#39;sql_1064&#39;
-* &#39;%InnoDB: Kontrollfel i filen %) som assertion_err
-* &#39;%mysqld_safe Antal processer som körs nu: 0%) som mysql_oom
+* %1062 \[\ERROR\] InnoDB:%) som sql_1062_e
+* %\[Obs\] WSREP: Tömmer minnesmappning till disk..%) som mem_map_flush
+* &#39;%Internal MariaDB error code: 1146%&#39;) as &#39;sql_1146&#39;
+* &#39;%Internal MariaDB error code: 1062%&#39;) as &#39;sql_1062&#39; * &#39;%1062 \[Warning\] InnoDB:%&#39;) as &#39;sql_1062_w&#39;
+* &#39;%Internal MariaDB error code: 1064%&#39;) as &#39;sql_1064&#39;
+* %InnoDB: Kontrollfel i filen %) som assertion_err
+* %mysqld_safe Antal processer som körs nu: 0%) som mysql_oom
 * &#39;%\[ERROR\] mysqld fick signal%&#39;) som &#39;mysql_sigterm&#39;
-* &#39;%1452 Cannot add%&#39;) as &#39;sql_1452&#39;
-* &#39;%ERROR 1698%&#39;) som &#39;sql_1698&#39;
-* &#39;%SQLSTATE\[HY000\]: Allmänt fel: 3%) som cnt_write_tmp
-* &#39;%Allmänt fel: 1 %) som sql_syntax
-* &#39;%42S22%&#39;) som &#39;sql_42S22&#39;
-* &#39;%InnoDB: Fel (dubblettnyckel)%&#39;) som &#39;oskuld_dup_key&#39;
+* %1452 Kan inte lägga till%) som sql_1452
+* %ERROR 1698%) som sql_1698
+* %SQLSTATE\[HY000\]: Allmänt fel: 3%) som cnt_write_tmp
+* %Allmänt fel: 1 %) som sql_syntax
+* %42S22%) som sql_42S22
+* &#39;%InnoDB: Error (Duplicate key)%&#39;) as &#39;oidentidb_dup_key&#39;
 
 ## [!UICONTROL Database traces]
 
 ![databaspårning](../../assets/tools/database-traces.jpg)
 
-The **[!UICONTROL Database traces]** läser data från [sql-spår](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/transaction-traces-database-queries-page/) enhet [!DNL New Relic] och returnerar spårningens sökväg.
+The **[!UICONTROL Database traces]** bildrutan tittar på data från [sql-spår](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/transaction-traces-database-queries-page/) enhet [!DNL New Relic] och returnerar spårningens sökväg.
 
 ## [!UICONTROL Database mysql-slow.log]
 
@@ -261,22 +261,22 @@ The **[!UICONTROL Database mysql-slow.log]** bildrutan innehåller ett antal pos
 
 **[!DNL Redis]fel och meddelanden:**
 
-* %SLAVE-synkronisering: Det finns inget utrymme kvar på enheten %) som space
+* %SLAVE-synkronisering: Det finns inget utrymme kvar på enheten%) som space
 * %Server startad, Redis version%) som serv_start
 * &#39;%Servern är nu klar att acceptera anslutningar%&#39;) som &#39;färdig&#39;
-* %Anslutningen med överordnad bröts.%&#39;) som &#39;mstr_loss&#39;
+* &#39;%Anslutningen till huvuddatorn bröts.%&#39;) som &#39;mstr_loss&#39;
 * &#39;%+nedåt sentinel%&#39;) som &#39;+sentinal&#39;
 * &#39;%-sdown sentinel%&#39;) som &#39;-sentinal&#39;
 * % nedåtgående slav %) som &#39;-slave&#39;, &#39;%+sdown slave%&#39;) som &#39;+slave&#39;
-* %-failover-abort-not-selected överordnad mymaster%) as -failover
-* %+failover-abort-not-selected överordnad mymaster%) as &#39;+failover&#39;
-* %Partiell omsynkronisering är inte möjlig (ingen cachelagrad överordnad)%) som part_sync_err
-* %ÖVERORDNAD avbröt replikering med ett fel: ERR Can%) as &#39;mstr_sync_err&#39;
-* &#39;%Överordnad stöder inte PSYNC eller är i feltillstånd (%) som &#39;mstr_psync_err&#39;
+* %-failover-abort-not-selected master mymaster%) as -failover
+* %+failover-abort-not-selected master mymaster%) as + failover
+* %Partiell omsynkronisering är inte möjlig (ingen cachelagrad master)%) som part_sync_err
+* %MASTER avbröt replikeringen med ett fel: ERR Can%) som mstr_sync_err
+* %Master stöder inte PSYNC eller är i feltillstånd (%1) som mstr_psync_err
 * %SLAVE-synkronisering: Slutfördes med success%) som slv_sync_suc
-* %ÖVERORDNAD avbröt replikering med ett fel: ERR Can%) as &#39;mstr_sync_err,coun&#39;
+* %MASTER avbröt replikering med ett fel: ERR Can%) som mstr_sync_err,coun
 * &#39;%OOM-kommandot tillåts inte när minne används%&#39;) som &#39; max_mem_err&#39;
-* &#39;%CredisException(kod: 0): läsfel vid anslutning%) som credis_read_error
+* &#39;%CredisException(code: 0): läsfel i anslutning%&#39;) som &#39;credis_read_error&#39;
 * %Uncaught RedisException:%) as &#39;redis_excp_err&#39;
 * &#39;%psync schemalagd att stängas av ASAP för att täcka över utdatabufferten%&#39;) som &#39;output_buf_err&#39;
 
@@ -284,7 +284,7 @@ The **[!UICONTROL Database mysql-slow.log]** bildrutan innehåller ett antal pos
 
 ![PHP-processlägen](../../assets/tools/php-process-states.jpg)
 
-Hur PHP-processer beter sig beror på [konfiguration](https://www.php.net/manual/en/install.fpm.configuration.php). Konfigurationen är komplex, med många variabler och alternativ. The **[!UICONTROL PHP process states]** bildruta hjälper dig att förstå när PHP-processer avslutas och startas om.
+Hur PHP-processer fungerar beror på [konfiguration](https://www.php.net/manual/en/install.fpm.configuration.php). Konfigurationen är komplex, med många variabler och alternativ. The **[!UICONTROL PHP process states]** bildruta hjälper dig att förstå när PHP-processer avslutas och startas om.
 
 ### [!UICONTROL PHP errors]
 
@@ -296,15 +296,15 @@ The **[!UICONTROL PHP errors]** antalet PHP-fel med arbetare under den valda tid
 
 * %worker_connections are not enough%) as &#39;worker&#39;
 * &#39;%PHP Allvarligt fel: Tillåten minnesstorlek!%&#39;) som &#39;mem_size&#39;
-* &#39;%11 (SIGSEGV)%&#39;) har avslutats som &#39;sig_11&#39;
-* &#39;%utgick på signal 7 (SIGBUS)%&#39;) som &#39;sig_7&#39;
+* %1 avslutades på signal 11 (SIGSEGV)%) som sig_11
+* %1 avslutades på signal 7 (SIGBUS)%) som sig 7
 * %ökning pm.start_servers%) som pmstart_serv
 * &#39;%max_children%&#39;) som &#39;max_children_cnt&#39;
-* &#39;%PHP Allvarligt fel: Tillåten minnesstorlek på %) som mem_exhst_coun
+* %PHP Allvarligt fel: Tillåten minnesstorlek på %) som mem_exhst_coun
 * &#39;%Det gick inte att allokera minne för pool%&#39;) som &#39;opc_mem_count&#39;
 * &#39;%Warning Interned string buffer overflow%&#39;) as &#39;opc_str_buf&#39;
 * %Illegal string offset%) as &#39;opc_sv_comments&#39;
-* &#39;%PHP Allvarligt fel: Ohanterat RedisException: läsfel vid anslutning%) som php_exc
+* %PHP Allvarligt fel: Ohanterat RedisException: läsfel vid anslutning%) som php_exc
 
 ## [!UICONTROL PHP processes]
 
@@ -326,9 +326,9 @@ The **[!UICONTROL Traffic vs Week Ago]** läser webbplatsens trafik (förfrågni
 
 ## [!UICONTROL Fastly Cache]
 
-![snabbt cacheminne](../../assets/tools/fastly-cache.jpg)
+![snabb cache](../../assets/tools/fastly-cache.jpg)
 
-The **[!UICONTROL Fastly Cache]** bildrutan visar en sammanställd vy över cachestatus för begäranden från [!DNL Fastly] loggar. Om du väljer FEL visas procentandelen fel i begäran. Detta ökar vanligtvis när ursprungsservern inte svarar tillräckligt snabbt på sidförfrågningar.
+The **[!UICONTROL Fastly Cache]** bildrutan visar en sammanställd vy över cachestatus för begäranden från [!DNL Fastly] loggar. Om du väljer FEL visas procentandelen fel i begäran. Detta ökar vanligtvis när den ursprungliga servern inte svarar tillräckligt snabbt på sidförfrågningar.
 
 ## [!UICONTROL Page Rendering]
 
@@ -348,7 +348,7 @@ The **[!UICONTROL Page loading detail]** frame beskriver sidans inläsningshänd
 
 ![transaktioner - avg, max, min](../../assets/tools/transactions-avg-max-min.jpg)
 
-Transaktionstiden är i sekunder. Beroende på transaktionen kan den påverka andra transaktioner om den är långvarig. De transaktioner som anges under namn och varaktighet gäller för den specifika tidsperioden. Om det finns en kortfattad problemtidsram ändrar du storlek på [!DNL Observation for Adobe Commerce] datum-/tidsväljare till den smala tidsramen.
+Transaktionstiden är i sekunder. Beroende på transaktionen kan den påverka andra transaktioner om den är långvarig. De transaktioner som anges under namn och varaktighet gäller för den specifika tidsperioden. Om det finns en kortfattad tidsram för ett problem ändrar du storlek på [!DNL Observation for Adobe Commerce] datum-/tidsväljare till den smala tidsramen.
 
 ## [!UICONTROL Admin Activities]
 
@@ -360,7 +360,7 @@ The **[!UICONTROL Admin Activities]** bildruta identifierar transaktioner med en
 
 ![Standardordertransaktioner](../../assets/tools/order-transactions-default.jpg)
 
-The **[!UICONTROL Order transactions (default?)]** ramutseenden för transaktioner `request.headers.host` från transaktioner där namnet = `WebTransaction/Action/checkout/onepage/success`. Om orderns URL är en annan kommer den här bildrutan inte att ha några data.
+The **[!UICONTROL Order transactions (default?)]** ramutseenden för transaktioner `request.headers.host` från transaktioner, där namnet = `WebTransaction/Action/checkout/onepage/success`. Om orderns URL är en annan kommer den här bildrutan inte att ha några data.
 
 ## [!UICONTROL Elasticsearch Index information]
 
@@ -368,9 +368,9 @@ The **[!UICONTROL Order transactions (default?)]** ramutseenden för transaktion
 
 **[Statusen Elasticsearch:](https://www.elastic.co/guide/en/elasticsearch/reference/current/cluster-health.html)**
 
-* Grön: Alla skuggor tilldelas.
-* Gul: Alla primära delningar tilldelas, men en eller flera replikdelningar är inte tilldelade. Om en nod i klustret misslyckas kan vissa data vara otillgängliga tills den noden har reparerats.
-* Röd: En eller flera primära kort har inte tilldelats, så vissa data är inte tillgängliga. Detta kan inträffa under klusterstart när primära kort har tilldelats.
+* Grön: Alla skuggningar tilldelas.
+* Gult: Alla primära kort tilldelas, men en eller flera replikeringskort är inte tilldelade. Om en nod i klustret misslyckas kan vissa data vara otillgängliga tills den noden har reparerats.
+* Röd: En eller flera primära kort är inte tilldelade, så vissa data är inte tillgängliga. Detta kan inträffa under klusterstart när primära kort har tilldelats.
 
 ## [!UICONTROL Elasticsearch Errors]
 
@@ -380,7 +380,7 @@ The **[!UICONTROL Order transactions (default?)]** ramutseenden för transaktion
 
 * &#39;%all shards failed%&#39; as &#39;all_shards_failed&#39;
 * &#39;%NoNodesAvailableException%&#39; som &#39;no_alive_nodes&#39;
-* &#39;%PHP Allvarligt fel: Ohanterat fel: Fel parametrar för Elasticsearch% som &#39;fel_param&#39;
+* &#39;%PHP Allvarligt fel: Ohanterat fel: Felaktiga parametrar för Elasticsearch%&#39; som &#39;fel_param&#39;
 * %Du kan åtgärda det här problemet genom att uppgradera tjänsten Elasticsearch i Magento Cloud-infrastrukturen till version % som ver_err
 * &#39;%klusterhälsostatus har ändrats från \[YELLOW\] till \[RED\] (orsak:%) som &#39;yel_red&#39;
 * &#39;%Inget utrymme återstår på enheten%&#39; som &#39;inget_utrymme&#39;
@@ -401,9 +401,9 @@ The **[!UICONTROL Cron view]** bildrutan söker i kronloggen efter en balans mel
 
 * %_stg% som stg_crons
 * %Could not obtain lock for cron job%&#39; as &#39;cron_lock&#39;
-* &#39;%Allmänt fel: 2006 MySQL-servern har gått bort% som mysql_has_away
-* %error% som error
-* &#39;%Allmänt fel: 1205 Tidsgränsen för låsuppehåll överskreds% som sql_1205_cron
+* &#39;%Allmänt fel: 2006 MySQL-servern har gått bort%&#39; som &#39;mysql_has_away&#39;
+* &#39;%error%&#39; som &#39;error&#39;
+* &#39;%Allmänt fel: 1205 Timeout för låsning överskreds%&#39; som sql_1205_cron
 
 ## [!UICONTROL cron_schedule table updates]
 

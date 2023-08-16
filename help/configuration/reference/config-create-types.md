@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Om du vill utöka en befintlig konfigurationstyp behöver du bara skapa en konfigurationsfil i modulen.
 
-Om du till exempel vill lägga till en händelseobservatör skapar du `app/code/{VendorName}/{ModuleName}/etc/events.xml` och deklarera en ny observatör.
+Om du till exempel vill lägga till en händelseobservatör skapar du `app/code/{VendorName}/{ModuleName}/etc/events.xml` och en ny observatör.
 
 Eftersom händelskonfigurationstypen finns i Commerce, inläsaren och `events.xsd` det finns redan ett valideringsschema som kan valideras.
 
@@ -33,7 +33,7 @@ Om du till exempel vill lägga till ett kort för en ny sökserver som gör att 
 
 - En inläsare
 - En XSD-schemafil
-- En konfigurationsfil med rätt namn. Till exempel: `search.xml`. Den här filen läses och valideras mot ditt schema.
+- En konfigurationsfil med rätt namn. Exempel, `search.xml`. Den här filen läses och valideras mot ditt schema.
 - Andra klasser som krävs för ditt arbete.
 
 >[!INFO]
@@ -76,9 +76,9 @@ Så här skapar du en konfigurationstyp:
    </config>
    ```
 
-   - Den första typnoden anger Reader filnamn, associerat `Converter` och `SchemaLocator` klasser.
+   - Den första typnoden anger Reader filnamn, associerat `Converter` och `SchemaLocator` -klasser.
    - Sedan `pdfConfigDataStorage` virtuell typnod kopplar klassen reader till en instans av [Magento\Framework\Config\Data](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Config/Data.php).
-   - Slutligen kopplar den sista typnoden den den virtuella typen för config data till [Magento\Sales\Model\Order\Pdf\Config](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Sales/Model/Order/Pdf/Config.php) -klass, som används för att faktiskt läsa värden i [pdf.xml](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Sales/etc/pdf.xml) filer.
+   - Slutligen kopplar den sista typnoden den den virtuella typen för config data till [Magento\Sales\Model\Order\Pdf\Config](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Sales/Model/Order/Pdf/Config.php) -klass, som används för att faktiskt läsa värden i [pdf.XML](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Sales/etc/pdf.xml) filer.
 
 1. Definiera en läsare genom att utöka [Magento\Framework\Config\Reader\Filesystem](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Config/Reader/Filesystem.php) och skriva om följande parametrar:
 
@@ -132,7 +132,7 @@ Nya konfigurationsfiler måste åtföljas av XSD-valideringsscheman. En XML-konf
 
 Om du måste använda två XSD-filer för en enda XML-fil, bör schemanamnen vara identifierbara och associerade med XML-filen.
 Om du har en `events.xml` och en första `events.xsd` -filen, XSD-filerna för den sammanfogade filen `events.xml` filen kan ha ett namn `events_merged.xsd`.
-För att XML-filen ska kunna valideras med en lämplig XSD-fil måste du lägga till URN (Uniform Resource Name) i XSD-filen i XML-filen. Till exempel:
+För att XML-filen ska kunna valideras med en lämplig XSD-fil måste du lägga till URN (Uniform Resource Name) i XSD-filen i XML-filen. Exempel:
 
 ```xml
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager:etc/config.xsd">

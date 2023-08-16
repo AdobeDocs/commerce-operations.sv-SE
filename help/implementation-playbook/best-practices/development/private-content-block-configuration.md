@@ -15,7 +15,7 @@ ht-degree: 0%
 
 När ett privat innehållsblock innehåller `_isScopePrivate` -variabel är blocket inte tillgängligt. Eftersom det privata blocket inte cachelagras måste Adobe Commerce hämta samma data för varje kundbegäran, vilket ökar serverbelastningen.
 
-I stället för att använda `_isScopePrivate` -variabel för privat innehåll skapar du ett block och en mall för att visa användaragnostiska data. Dessa data ersätts med användarspecifika data av Adobe Commerce UI-komponenten som hanterar data före återgivning mer effektivt. Instruktioner finns i [Privat innehåll](https://developer.adobe.com/commerce/php/development/cache/page/private-content/) i _[!DNL Commerce PHP Extensions Guide]_.
+I stället för att använda `_isScopePrivate` -variabel för privat innehåll, skapa ett -block och en -mall för att visa användaragnostiska data. Dessa data ersätts med användarspecifika data av Adobe Commerce UI-komponenten som hanterar data före återgivning mer effektivt. Instruktioner finns i [Privat innehåll](https://developer.adobe.com/commerce/php/development/cache/page/private-content/) i _[!DNL Commerce PHP Extensions Guide]_.
 
 ## Berörda produkter och versioner
 

@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Bästa praxis för konfiguration
 
-I Commerce finns många inställningar och verktyg som du kan använda för att förbättra svarstiden på sidorna samt för att ge högre dataflöde.
+I Commerce finns många inställningar och verktyg som du kan använda för att förbättra svarstiden på sidorna och ge högre dataflöde.
 
 ## Kronjobb
 
@@ -20,15 +20,15 @@ Alla asynkrona åtgärder i [!DNL Commerce] utförs med Linux `cron` -kommando. 
 
 ## Indexerare
 
-En indexerare kan köras i **[!UICONTROL Update on Save]** eller **[!UICONTROL Update on Schedule]** läge. The **[!UICONTROL Update on Save]** indexeras omedelbart när katalogen eller andra data ändras. I det här läget används låg intensitet för uppdaterings- och bläddringsåtgärder i din butik. Det kan leda till betydande förseningar och otillgänglighet av data vid höga belastningar. Vi rekommenderar att du använder **Uppdatera enligt schema** i produktionen eftersom information om datauppdateringar lagras och indexeras av delar i bakgrunden via ett specifikt kroniskt jobb. Du kan ändra läge för varje [!DNL Commerce] indexeraren separat på  **[!UICONTROL System]** > [!UICONTROL Tools] > **[!UICONTROL Index Management]** konfigurationssida.
+En indexerare kan köras i **[!UICONTROL Update on Save]** eller **[!UICONTROL Update on Schedule]** läge. The **[!UICONTROL Update on Save]** indexeras omedelbart när katalogen eller andra data ändras. I det här läget används låg intensitet för uppdaterings- och bläddringsåtgärder i din butik. Det kan leda till betydande förseningar och otillgänglighet av data vid höga belastningar. Vi rekommenderar att du **Uppdatera enligt schema** i produktionen eftersom information om datauppdateringar lagras och indexeras av delar i bakgrunden via ett specifikt kroniskt jobb. Du kan ändra läge för varje [!DNL Commerce] indexeraren separat på  **[!UICONTROL System]** > [!UICONTROL Tools] > **[!UICONTROL Index Management]** konfigurationssida.
 
 >[!TIP]
 >
 >Omindexering av MariaDB 10.4 och 10.6 tar längre tid jämfört med andra MariaDB eller [!DNL MySQL] versioner. Vi föreslår att du ändrar standardkonfigurationsinställningen för MariaDB, som beskrivs i [installationskrav](../installation/prerequisites/database/mysql.md).
 
-## Cacheminnen
+## Cacher
 
-Aktivera alla cacheminnen från **[!UICONTROL System]** > [!UICONTROL Tools] > **[!UICONTROL Cache Management]** sida. Vi rekommenderar att du använder [!DNL Varnish], eftersom det är en effektiv cachelösning för produktionssidor.
+Aktivera alla cacheminnen från **[!UICONTROL System]** > [!UICONTROL Tools] > **[!UICONTROL Cache Management]** sida. Vi rekommenderar starkt att du använder [!DNL Varnish], eftersom det är en effektiv cachelösning för produktionssidor.
 
 ## Asynkrona e-postmeddelanden
 
@@ -69,7 +69,7 @@ bin/magento queue:consumers:start saveConfigProcessor --max-messages=1
 
 ## Uppskjuten lageruppdatering
 
-I tider med intensiv försäljning [!DNL Commerce] kan skjuta upp lageruppdateringar relaterade till order. Detta minimerar antalet åtgärder och snabbar upp orderplaceringsprocessen. Det här alternativet är dock riskabelt och kan bara användas när restorder aktiveras i butiken, eftersom det här alternativet kan leda till negativa lagerkvantiteter. Det här alternativet kan ge avsevärda prestandaförbättringar i utcheckningsflöden för butiker som enkelt kan fylla i sitt lager på begäran. Om du vill aktivera fördröjda Stock-uppdateringar på din webbplats går du till **[!UICONTROL Stores]> [!UICONTROL Settings] > [!UICONTROL Configuration] > [!UICONTROL Catalog] > [!UICONTROL Inventory] > [!UICONTROL Product Stock Options] >[!UICONTROL Use Deferred Stock Update]**. Se [Hantera lager](https://docs.magento.com/user-guide/catalog/inventory.html) i _Adobe Commerce Användarhandbok_ för mer information.
+I tider med intensiv försäljning [!DNL Commerce] kan skjuta upp butiksuppdateringar relaterade till order. Detta minimerar antalet åtgärder och snabbar upp orderplaceringsprocessen. Det här alternativet är dock riskabelt och kan bara användas när restorder aktiveras i butiken, eftersom det här alternativet kan leda till negativa lagerkvantiteter. Det här alternativet kan ge avsevärda prestandaförbättringar i utcheckningsflöden för butiker som enkelt kan fylla i sitt lager på begäran. Om du vill aktivera fördröjda Stock-uppdateringar på din webbplats går du till **[!UICONTROL Stores]> [!UICONTROL Settings] > [!UICONTROL Configuration] > [!UICONTROL Catalog] > [!UICONTROL Inventory] > [!UICONTROL Product Stock Options] >[!UICONTROL Use Deferred Stock Update]**. Se [Hantera lager](https://docs.magento.com/user-guide/catalog/inventory.html) i _Adobe Commerce Användarhandbok_ för mer information.
 
 >[!INFO]
 >
@@ -136,13 +136,13 @@ För att förbättra prestanda för stora kataloger rekommenderar vi att du begr
 Den här systemkonfigurationsinställningen är inaktiverad som standard. Genom att aktivera det kan du begränsa antalet produkter i rutnätet till ett visst värde. **[!UICONTROL Records Limit]** är en anpassningsbar inställning som har standardvärdet `20000`.
 När **[!UICONTROL Limit Number of Products in Grid]** inställningen är aktiverad och antalet produkter i rutnätet är större än postgränsen, så returneras den begränsade mängden poster. När gränsen nås döljs de totala antalet poster som hittats, antalet valda poster och sidnumreringselementen från rutnätets rubrik.
 
-När det totala antalet produkter i rutnätet är begränsat påverkas inte massåtgärder i produktrutnätet. Det påverkar bara presentationsskiktet för produktrutnät. Det finns t.ex. ett begränsat antal `20000` produkter i rutnätet klickar användaren på **[!UICONTROL Select All]**, markerar **[!UICONTROL Update attributes]** massåtgärd och uppdaterar vissa attribut. Därför uppdateras alla produkter, inte den begränsade samlingen av `20000` poster.
+När det totala antalet produkter i rutnätet är begränsat påverkas inte massåtgärder i produktrutnätet. Det påverkar bara presentationsskiktet för produktrutnät. Det finns t.ex. ett begränsat antal `20000` produkter i rutnätet, klickar användaren på **[!UICONTROL Select All]**, markerar **[!UICONTROL Update attributes]** massåtgärd och uppdaterar vissa attribut. Därför uppdateras alla produkter, inte den begränsade samlingen av `20000` poster.
 
 Begränsningen för produktstödraster påverkar bara produktsamlingar som används av gränssnittskomponenter. Därför påverkas inte alla produktrutnät av den här begränsningen. Endast de som använder `Magento\Catalog\Ui\DataProvider\Product\ProductCollection`.
 Du kan endast begränsa produktstödrastersamlingar på följande sidor:
 
 * Katalogproduktrutnät
-* Lägg till relaterat/merförsäljning/korsförsäljning av produkter
+* Lägg till relaterat/merförsäljt/korsförsäljt produktrutnät
 * Lägg till produkter i programpaketet
 * Lägg till produkter i gruppprodukt
 * Admin - Skapa ordersida

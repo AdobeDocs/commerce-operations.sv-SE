@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Versionspolicy för Adobe Commerce
 
-Adobe Commerce och Magento Open Source använder [semantisk versionshantering](https://semver.org/) på den enskilda modulnivån (till exempel `magento/framework 101.1.1`), men inte för versionsnumret. Till exempel:
+Adobe Commerce och Magento Open Source använder [semantisk versionshantering](https://semver.org/) på den enskilda modulnivån (till exempel `magento/framework 101.1.1`), men inte för versionsnumret. Exempel:
 
 - **STÖRRE UTGÅVA**—2
 - **MINDRE frisläppning**—2.4

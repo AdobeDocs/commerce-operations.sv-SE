@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Bästa praxis för prestanda {#performance-best-practices}
 
-- [Översikt](overview.md)
+- [Ökning](overview.md)
 - [Maskinvarurekommendationer](hardware.md)
 - [Programvarurekommendationer](software.md)
 - [Referensarkitektur](reference-architecture.md)

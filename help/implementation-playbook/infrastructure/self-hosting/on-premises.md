@@ -11,7 +11,7 @@ ht-degree: 0%
 
 ---
 
-# Adobe Commerce lokala infrastruktur
+# Lokal infrastruktur hos Adobe Commerce
 
 Det finns många skäl att starta en ny Adobe Commerce-implementering eller flytta en befintlig lokal Adobe Commerce-implementering till molnet, men de vanligaste strategiska faktorerna är att minska kapitalutgifter, minska de löpande kostnaderna, förbättra skalbarheten och elasticiteten, förbättra time-to-market och uppnå förbättringar i säkerhet och regelefterlevnad.
 
@@ -39,7 +39,7 @@ Låt oss fördjupa oss i rollerna och funktionerna i varje aspekt av den infrast
 
 1. Amazon ElastiCache for Redis innehåller ett cachelagringslager för databasen.
 
-1. Använd Amazon Aurora eller AmazonRDS för att förenkla databasadministrationen (inklusive hög tillgänglighet och konfiguration på flera överordnad).
+1. Använd Amazon Aurora eller AmazonRDS för att förenkla databasadministrationen (inklusive hög tillgänglighet och multikörningskonfiguration).
 
 1. EFSMount Target underlättar mappningen av Amazon elastic File System (AmazonEFS) till instanser i Varnish och Adobe Commerce.
 

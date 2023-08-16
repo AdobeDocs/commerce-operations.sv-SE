@@ -34,7 +34,7 @@ Hybridmodellen gör att ni kan utnyttja kraften i Agile-metoden och hålla er ti
 
 - **Få rätt idé**- Detta är en fas före implementeringen för att säkerställa att kraven, utformningen och tekniklösningen är strategiska, dokumenterade och samarbetade mellan olika intressenter. Eftersläpningen när det gäller implementering är grumlig och byggd, utvecklingssprutor planeras och en sekventiell strategi för att bygga produkten färdigställs.
 
-- **Rätt idé**- Detta är implementeringsfasen för att skapa produkten iterativt, testa noggrant och frisläppa den på rätt sätt. Det första steget är att utveckla koden genom flera sprints. varje sprint innehåller utveckling och testning i sprint, följt av testning av systemintegration, prestanda- och säkerhetstestning, testning av användarnas acceptans och publiceringsaktiviteter.
+- **Rätt idé**- Detta är implementeringsfasen för att skapa produkten iterativt, testa noggrant och frisläppa den på rätt sätt. Det första steget är att utveckla koden med hjälp av flera sprintar. Varje sprint innehåller utveckling och testning i sprint, följt av testning av systemintegration, prestanda- och säkerhetstestning, testning av användarnas acceptans och publiceringsaktiviteter.
 
 Projektplanering är en kritisk aktivitet. Där får intressenter, team, sponsorer och projektledare tips om hur man övervakar, hanterar och kontrollerar projektfaser. Det hjälper också till att identifiera mål, undvika deadlines som saknas, prioritera viktiga uppgifter, minska riskerna och leverera önskade resultat.
 

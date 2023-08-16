@@ -18,9 +18,9 @@ Nu när du använder `default.vcl` som har skapats för dig i Commerce kan du ut
 
 Använd `curl` eller något annat verktyg för att visa HTTP-svarshuvuden när du besöker en Commerce-sida i en webbläsare.
 
-Kontrollera först att du använder [utvecklarläge](../cli/set-mode.md#change-to-developer-mode); I annat fall visas inte sidhuvudena.
+Kontrollera först att du använder [utvecklarläge](../cli/set-mode.md#change-to-developer-mode); annars visas inte sidhuvudena.
 
-Till exempel:
+Exempel:
 
 ```bash
 curl -I -v --location-trusted 'http://192.0.2.55/magento2'

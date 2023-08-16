@@ -20,7 +20,7 @@ ht-degree: 0%
    bin/magento maintenance:enable
    ```
 
-   Ytterligare alternativ, som möjligheten att ange en vitlista för IP-adresser, finns i [`magento maintenance:enable`](../installation/tutorials/maintenance-mode.md).
+   Ytterligare alternativ, till exempel möjligheten att ange en vitlista för IP-adresser, finns i [`magento maintenance:enable`](../installation/tutorials/maintenance-mode.md).
 
 1. Stoppa alla köarbetare som körs genom att ange `cron_run` till `false` in `app/etc/env.php` enligt följande:
 

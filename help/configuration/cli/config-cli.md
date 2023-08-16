@@ -35,7 +35,7 @@ I det här avsnittet diskuteras hur du konfigurerar Adobe Commerce och Magento O
 Innan du börjar använda CLI bör du kontrollera att:
 
 1. Ditt system uppfyller kraven i [Systemkrav](../../installation/system-requirements.md) i _Installationsguide_.
-1. Du har slutfört alla nödvändiga uppgifter som diskuterades i [Förutsättningar](../../installation/prerequisites/overview.md) i _Installationsguide_.
+1. Alla nödvändiga uppgifter som diskuterades i [Förutsättningar](../../installation/prerequisites/overview.md) i _Installationsguide_.
 1. När du har loggat in på Commerce-servern växlar du till en användare som har behörighet att skriva till Commerce-filsystemet. Se [växla till filsystemets ägare](../../installation/prerequisites/file-system/overview.md) i _Installationsguide_.
 
 ## Kör kommandon

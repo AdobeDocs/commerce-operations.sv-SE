@@ -5,14 +5,14 @@ exl-id: 07d303ab-f229-4b6a-b35a-b6d2a3be89b3
 feature: Best Practices, Shipping/Delivery
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '628'
 ht-degree: 0%
 
 ---
 
 # Leverans
 
-En hel del arbete läggs på att ge kunderna den bästa onlineupplevelsen. På den fysiska sidan får detaljhandlarna inte glömma vikten av att leverera. Leveransen kan inte bara överlämnas till någon tredje part. Ni måste göra forskning, planering och analys. Det här är den sista punkten i kundupplevelseresan, och det är därför ni bör lyckas med leveransen och leveransen.
+En hel del arbete går åt till att ge kunderna den bästa onlineupplevelsen. På den fysiska sidan får detaljhandlarna inte glömma vikten av att leverera. Leveransen kan inte bara överlämnas till någon tredje part. Ni måste göra forskning, planering och analys. Det här är den sista punkten i kundupplevelseresan, och det är därför ni bör lyckas med leveransen och leveransen.
 
 ![Leverans- och leveransdiagram](../../assets/playbooks/shipping-fulfillment.png)
 
@@ -40,9 +40,9 @@ Innan ett företag levererar sin produkt måste man bestämma sig för leveransm
 
 - **Schablonbelopp**- Ett av de populäraste leveransalternativen. Tricket här är att se till att handlarna inte överbelastar eller undertrycker kunderna. Detta fungerar också om detaljhandlarna har en standardprodukt men kan bli komplicerade om detaljhandlarna har en mängd olika produkter.
 
-- **Kostnadsfri frakt över ett visst belopp**—Återförsäljare kan erbjuda fri frakt när kunden köper mer än ett visst belopp. Återförsäljare måste beräkna det beloppet för att kunna tillhandahålla den här tjänsten.
+- **Kostnadsfri frakt**—Återförsäljare kan erbjuda fri frakt när kunden köper mer än ett visst belopp. Återförsäljare måste beräkna det beloppet för att kunna tillhandahålla den här tjänsten.
 
-Leverans och slutförande krävde samordning av teamet både internt och externt. En strategi för leverans och uppfyllande bör delas med hela organisationen så att de anpassas efter varandra. Om marknadsföringsteamet till exempel vill skicka ut en kampanj som inkluderar fri frakt, måste de anpassa den efter frakt- och leveransstrategin och teamet för att eliminera negativa kundupplevelser.
+Leverans och slutförande krävde samordning av teamet både internt och externt. En strategi för leverans och fullgörande bör delas med hela organisationen så att de anpassas efter varandra. Om marknadsföringsteamet till exempel vill skicka ut en kampanj som inkluderar fri frakt, måste de anpassa den efter frakt- och leveransstrategin och teamet för att eliminera negativa kundupplevelser.
 
 ## God praxis
 
@@ -62,6 +62,6 @@ I följande tabell beskrivs skillnaderna mellan B2B- och B2C-leverans och levera
 | Det tar längre tid att slutföra leverans och leverans på grund av kostnaderna och kvantiteten | Kan levereras samma dag och/eller fraktfritt |
 | Kräver en anslutning mellan företaget och klienten | Vanligtvis, tidsförhållanden för tagningar |
 | Vanligtvis långsiktiga relationer | Företaget tillhandahåller förmånskort för att behålla kunder |
-| Processen kan vara lång och komplex | Erbjudanden och kampanjer ger kunderna |
+| Processen kan vara lång och komplex | Kampanjer och kampanjerbjudanden ger kunderna |
 | Starka regler måste tillämpas | Grundregler kan tillämpas |
 | Returer kan ta tid | Returer kan vara snabba |

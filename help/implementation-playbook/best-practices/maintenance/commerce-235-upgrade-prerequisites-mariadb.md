@@ -32,7 +32,7 @@ Tänk på följande när du planerar och schemalägger konverteringen:
 
 - Konverterar från `COMPACT` till `DYNAMIC` tabeller kan ta flera timmar med en stor databas.
 
-- För att förhindra att data skadas ska du inte slutföra konverteringsarbetet på en aktiv webbplats.
+- För att förhindra att data skadas ska du inte slutföra konverteringsarbetet på en publicerad webbplats.
 
 - Slutför konverteringsarbetet under en begränsad trafikperiod på webbplatsen.
 
@@ -72,7 +72,7 @@ Du kan konvertera tabeller på en nod i klustret. Ändringarna replikeras automa
 
 Processen att konvertera lagringsformatet skiljer sig åt för Adobe Commerce Starter- och Adobe Commerce Pro-projekt.
 
-- För Starter-arkitekturen använder du MySQL `ALTER` för att konvertera formatet.
+- Använd MySQL för startarkitekturen `ALTER` för att konvertera formatet.
 - På Pro-arkitekturen använder du MySQL `CREATE` och `SELECT` kommandon för att skapa en databastabell med `InnoDB` lagra och kopiera data från den befintliga tabellen till den nya tabellen. Den här metoden ser till att ändringarna replikeras till alla noder i klustret.
 
 **Konvertera tabelllagringsformat för Adobe Commerce Pro-projekt**
@@ -128,7 +128,7 @@ Dagen före den schemalagda uppgraderingen till MariaDB version 10.3, 10.4 eller
    SELECT table_name, row_format FROM information_schema.tables WHERE table_schema=DATABASE() and row_format = 'Compact';
    ```
 
-1. Kontrollera om det finns tabeller som fortfarande använder `MyISAM` lagringsformat
+1. Sök efter tabeller som fortfarande använder `MyISAM` lagringsformat
 
    ```mysql
    SELECT table_name FROM INFORMATION_SCHEMA.TABLES WHERE engine = 'MyISAM';

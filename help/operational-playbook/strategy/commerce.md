@@ -11,13 +11,13 @@ ht-degree: 0%
 
 # Handelsstrategi
 
-Den digitala handeln är en snabbt växande kraft som utvecklas snabbt varje år. Även om detta kan vara spännande för individer, medför det också många utmaningar för organisationer som försöker navigera i det land som är e-handel.
+Den digitala handeln är en snabbt föränderlig kraft som utvecklas snabbt varje år. Även om detta kan vara spännande för individer, medför det också många utmaningar för organisationer som försöker navigera i det land som är e-handel.
 
-I takt med att e-handeln fortsätter att utvecklas inom både B2B och B2C ser företagen kraftiga förändringar i kundbeteenden och förväntningar. från det sätt de undersöker en produkt/tjänst, överväga och slutföra ett köp, eller visa lojalitet mot ett varumärke, till det sätt de förmedlar allt detta till sina konkurrenter. Kundbeteenden och förväntningar kan förändras omedelbart och företag kan kämpa för att anpassa sig till nya marknadstrender och skapa en digital strategi som är både realistisk och genomförbar.
+I takt med att e-handeln fortsätter att utvecklas inom både B2B och B2C ser företagen kraftiga förändringar i kundbeteenden och förväntningar. Från det sätt de undersöker en produkt/tjänst, överväger och slutför ett köp eller visar lojalitet mot ett varumärke, så som de kommunicerar allt detta med sina konkurrenter. Kundbeteenden och förväntningar kan förändras omedelbart och företag kan kämpa för att anpassa sig till nya marknadstrender och skapa en digital strategi som är både realistisk och genomförbar.
 
 Därför är genomförandet och planeringen av alla digitala strategier avgörande för alla framgångsrika e-handelsföretag.
 
-Den övergripande e-handelsstrategin för varje företag är unik och beror på mognad, teamstorlek och resurser. I följande avsnitt beskrivs strategier för hur du kan låsa upp dina kärnfunktioner för e-handel:
+Den övergripande e-handelsstrategin för varje företag är unik och beror på mognad, teamstorlek och resurser. I följande avsnitt beskrivs strategier för hur du kan låsa upp dina kärnfunktioner för e-handel, inklusive:
 
 - Medvetenhet
 - Övervägande
@@ -46,7 +46,7 @@ Den övergripande e-handelsstrategin för varje företag är unik och beror på 
 ## Inköp
 
 - Orderskapande
-- Kundvagn och utcheckning Marketplace
+- Kundvagn och utcheckning
 - Konvertering av offert till order
 - Prenumerationstjänster
 - Onlinebeställning och betala faktura online

@@ -20,7 +20,7 @@ ht-degree: 0%
 >
 >Stöd för OpenSearch lades till i 2.4.4. OpenSearch är en kompatibel gaffel för Elasticsearch. Se [Migrera Elasticsearch till OpenSearch](../../../upgrade/prepare/opensearch-migration.md) för mer information.
 
-I det här avsnittet beskrivs hur du konfigurerar Apache som *osäker* så att Adobe Commerce kan använda en sökmotor som körs på den här servern. I det här avsnittet behandlas inte konfiguration av grundläggande HTTP-autentisering. som diskuteras i [Säker kommunikation med Apache](#secure-communication-with-apache).
+I det här avsnittet beskrivs hur du konfigurerar Apache som *osäker* så att Adobe Commerce kan använda en sökmotor som körs på den här servern. I det här avsnittet beskrivs inte hur du konfigurerar HTTP Basic-autentisering. Det beskrivs i [Säker kommunikation med Apache](#secure-communication-with-apache).
 
 >[!NOTE]
 >
@@ -107,7 +107,7 @@ Kontrollera först om du har Apache `htpasswd` utility installeras enligt följa
    which htpasswd
    ```
 
-   Om en sökväg visas är den installerad; om kommandot inte returnerar några utdata, `htpasswd` är inte installerat.
+   Om en sökväg visas installeras den. Om kommandot inte returnerar några utdata visas `htpasswd` är inte installerat.
 
 1. Installera vid behov `htpasswd`:
 
@@ -134,7 +134,7 @@ Plats
 
   I det här exemplet använder vi webbserveranvändaren, men det är upp till dig att välja användare.
 
-   * Konfigurera Elasticsearch: användaren har ett namn `magento_elasticsearch` i det här exemplet
+   * Konfigurera Elasticsearch: användaren har ett namn `magento_elasticsearch` i detta exempel
 
 * `<password file name>` måste vara en dold fil (börjar med `.`) och bör återspegla användarens namn. Mer information finns i exemplen senare i det här avsnittet.
 
@@ -143,7 +143,7 @@ Följ instruktionerna på skärmen för att skapa ett lösenord för användaren
 #### Exempel
 
 **Exempel 1: cron**
-Du måste konfigurera autentisering för endast en användare för cron; i det här exemplet använder vi webbserveranvändaren. Om du vill skapa en lösenordsfil för webbserveranvändaren anger du följande kommandon:
+Du måste konfigurera autentisering för endast en användare för cron. I det här exemplet använder vi webbserveranvändaren. Om du vill skapa en lösenordsfil för webbserveranvändaren anger du följande kommandon:
 
 ```bash
 mkdir -p /usr/local/apache/password
@@ -154,7 +154,7 @@ htpasswd -c /usr/local/apache/password/.htpasswd apache
 ```
 
 **Exempel 2: Elasticsearch**
-Du måste konfigurera autentisering för två användare: en med tillgång till nginx och en med tillgång till Elasticsearch. Om du vill skapa lösenordsfiler för dessa användare anger du följande kommandon:
+Du måste konfigurera autentisering för två användare: en med åtkomst till nginx och en med åtkomst till Elasticsearch. Om du vill skapa lösenordsfiler för dessa användare anger du följande kommandon:
 
 ```bash
 mkdir -p /usr/local/apache/password

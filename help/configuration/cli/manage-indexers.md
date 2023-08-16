@@ -192,7 +192,7 @@ Catalog Search indexer has been invalidated.
 
 Använd det här kommandot för att ange följande indexeringsalternativ:
 
-- **Uppdatera när du sparar (`realtime`)**: Indexerade data uppdateras när en ändring görs i Admin. (Exempel: kategoriproduktindexet indexeras om efter att produkterna har lagts till i en kategori i Admin.) Detta är standardinställningen.
+- **Uppdatera när du sparar (`realtime`)**: Indexerade data uppdateras när en ändring görs i Admin. (Exempel: kategoriproduktindexet indexeras om efter att produkterna har lagts till i en kategori i Admin.) Det här är standardinställningen.
 - **Uppdatera enligt schema (`schedule`)**: Data indexeras enligt det schema som anges av ditt cron-jobb.
 
 [Läs mer om indexering](https://developer.adobe.com/commerce/php/development/components/indexing/).

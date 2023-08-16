@@ -1,11 +1,11 @@
 ---
 title: Ange värdet för bootstrap-parametrar
-description: Lär dig hur du ställer in bootstrap-parametrar för Commerce-programmet.
+description: Lär dig hur du ställer in startparametrar för Commerce-programmet.
 exl-id: 4e1e4e5e-e1bc-49a5-8a2a-2e6b91ca9175
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '594'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -24,7 +24,6 @@ I följande tabell beskrivs bootstrap-parametrarna som du kan ange:
 >
 >- Alla bootstrap-parametrar finns inte dokumenterade.
 >- Nu anger du programläge (utvecklare, standard, produktion) med [`magento deploy:mode:set {mode}`](../cli/set-mode.md) -kommando.
-
 
 ## Ange parametrar med en miljövariabel
 
@@ -69,11 +68,11 @@ Du kan ändra `.htaccess` på någon av följande platser, beroende på din star
 - `<magento_root>/.htaccess`
 - `<magento_root>/pub/.htaccess`
 
-**Så här anger du en variabel**:
+**Ange en variabel**:
 
 1. Öppna någon av de föregående filerna i en textredigerare och lägg till eller ta bort kommentaren till den önskade inställningen.
 
-   Du kan till exempel ange en [läge](application-modes.md)avkommentera följande:
+   Du kan till exempel ange en [läge](application-modes.md)avkommenterar du följande:
 
    ```conf
    #   SetEnv MAGE_PROFILER firebug
@@ -95,7 +94,7 @@ Webbservern Apache har stöd för att ställa in programläge med `mod_env` dire
 
 Apache `mod_env` -direktivet skiljer sig något åt i [Apache version 2.2] och [Apache version 2.4].
 
-De procedurer som följer visar hur du ställer in programläget i en virtuell Apache-värd. Detta är inte det enda sättet att använda `mod_env` direktiv, Mer information finns i dokumentationen för Apache.
+De procedurer som följer visar hur du ställer in programläget i en virtuell Apache-värd. Detta är inte det enda sättet att använda `mod_env` direktiv; se Apache-dokumentationen för mer information.
 
 >[!TIP]
 >
@@ -103,7 +102,7 @@ De procedurer som följer visar hur du ställer in programläget i en virtuell A
 
 **Ange en bootstrap-variabel för Apache i Ubuntu**:
 
-1. Som användare med `root` behörighet, öppna konfigurationsfilen för det virtuella värdsystemet i en textredigerare.
+1. Som användare med `root` behörigheter, öppna konfigurationsfilen för det virtuella värdsystemet i en textredigerare.
 
    Om din virtuella värd till exempel har ett namn `my.magento`,
 
@@ -116,7 +115,7 @@ De procedurer som följer visar hur du ställer in programläget i en virtuell A
    SetEnv "<variable name>" "<variable value>"
    ```
 
-   Till exempel:
+   Exempel:
 
    ```conf
    SetEnv "MAGE_PROFILER" "firebug"
@@ -129,7 +128,7 @@ De procedurer som följer visar hur du ställer in programläget i en virtuell A
    a2ensite <virtual host config file name>
    ```
 
-   Till exempel:
+   Exempel:
 
    ```bash
    a2ensite my.magento.conf
@@ -154,7 +153,7 @@ De procedurer som följer visar hur du ställer in programläget i en virtuell A
    SetEnv "<variable name>" "<variable value>"
    ```
 
-   Till exempel:
+   Exempel:
 
    ```conf
    SetEnv "MAGE_PROFILER" "firebug"

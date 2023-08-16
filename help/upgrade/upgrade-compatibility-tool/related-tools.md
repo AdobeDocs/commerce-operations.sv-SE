@@ -17,12 +17,12 @@ Det finns verktyg för [!DNL Upgrade Compatibility Tool], som kan användas för
 
 - **[!DNL Security scanner]**: Förser Adobe Commerce- och Magento Open Source-kunder med realtidsinsikter om butikens säkerhetsstatus genom att proaktivt identifiera skadlig kod och meddela dem om deras butik är komprometterad. Se [[!DNL Security scan] användarhandbok](https://docs.magento.com/user-guide/magento/security-scan.html) för mer information.
 
-- **[!DNL Site-Wide Analysis Tool]**: Ett proaktivt självbetjäningsverktyg och en central lagringsplats som innehåller detaljerade systeminsikter och rekommendationer för att säkerställa säkerheten och användbarheten för din Adobe Commerce-installation. Den ger prestandaövervakning, rapporter och råd i realtid dygnet runt alla dagar för att identifiera potentiella problem och ge bättre insyn i webbplatsens hälsa, säkerhet och programkonfigurationer. Se [[!DNL Site-Wide Analysis Tool] guide](../../tools/site-wide-analysis-tool/intro.md) för mer information.
+- **[!DNL Site-Wide Analysis Tool]**: Ett proaktivt självbetjäningsverktyg och en central lagringsplats som innehåller detaljerade systeminsikter och rekommendationer för att säkerställa säkerheten och användbarheten för din Adobe Commerce-installation. Den ger prestandaövervakning, rapporter och råd i realtid dygnet runt alla dagar för att identifiera potentiella problem och ge bättre insyn i webbplatsens hälsa, säkerhet och programkonfigurationer. Se [[!DNL Site-Wide Analysis Tool] stödlinje](../../tools/site-wide-analysis-tool/intro.md) för mer information.
 
-- **[!DNL AmpersandHQ]**: Söker efter filer som har ändrats som en del av uppgraderingen och försöker se om du har några åsidosättningar på platsen. På så sätt kan du fokusera på saker som har ändrats och som är specifika för din webbplats. Se [[!DNL AmpersandHQ] databasguide](https://github.com/AmpersandHQ) för mer information.
+- **[!DNL AmpersandHQ]**: Söker efter filer som har ändrats under uppgraderingen och försöker se om det finns några åsidosättningar på platsen. På så sätt kan du fokusera på saker som har ändrats och som är specifika för din webbplats. Se [[!DNL AmpersandHQ] databasguide](https://github.com/AmpersandHQ) för mer information.
 
-   >[!WARNING]
-   >
-   >[!DNL AmpersandHQ] är inte ett Adobe officiellt verktyg.
+  >[!WARNING]
+  >
+  >[!DNL AmpersandHQ] är inte ett Adobe officiellt verktyg.
 
 - **[!DNL Quality Patches Tool]**: Ett kommandoradsverktyg som ger högklassiga patchar för Adobe Commerce och Magento Open Source. Se [[!DNL Quality patches tool] användarhandbok](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"} för mer information.

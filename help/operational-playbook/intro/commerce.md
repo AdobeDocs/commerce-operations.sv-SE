@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Adobe Commerce är den ledande plattformen för innovation inom öppen handel. Varje år hanterar Adobe Commerce över 100 miljarder dollar i bruttoförsäljning. Adobe Commerce ger kunderna möjlighet att skapa unika och engagerande shoppingupplevelser, färdiga funktioner och obegränsade möjligheter att anpassa, en flexibel headless-arkitektur och sömlösa integreringar från tredje part.
 
-Det finns två versioner av [!DNL Commerce]:
+Det finns två versioner [!DNL Commerce]:
 
 _Magento Open Source_ är den kostnadsfria versionen, som tidigare kallades Magento Community. Du kan hämta, anpassa och köra plattformen på valfri server eller värdtjänstleverantör.
 

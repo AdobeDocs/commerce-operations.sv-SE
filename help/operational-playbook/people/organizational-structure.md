@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Organisationsstruktur
 
-För digitala implementeringsprojekt finns det vanligtvis en central teamstruktur som implementeras. Det finns enskilda team som har en ledargrupp som sedan rapporterar till den digitala chefen, e-handelsledaren eller produktägaren.
+För digitala implementeringsprojekt finns det vanligtvis en centraliserad teamstruktur som implementeras. Det finns enskilda team som har en ledargrupp som sedan rapporterar till den digitala chefen, e-handelsledaren eller produktägaren.
 
 I följande diagram visas ett exempel på hur organisationsstrukturen skulle se ut:
 

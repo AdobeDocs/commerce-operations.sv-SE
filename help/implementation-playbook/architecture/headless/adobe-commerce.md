@@ -42,11 +42,11 @@ För att göra PWA mer lättillgänglig och enklare att hantera för våra handl
 
 Adobe Experience Manager är en kraftfull kombination för ert innehåll och era digitala resurshanteringsbehov och hjälper handlarna att få ut personaliserade, innehållsledda upplevelser på marknaden snabbare genom att kombinera digital resurshantering med kraften i maskininlärning, Adobe Sensei-drivet innehåll och kundresehantering.
 
-Adobe Commerce plus Adobe Experience Manager är en kraftfull historia i och med att e-handelsmotorn gör det möjligt för företag att möjliggöra handel via kundgränssnitt som drivs av Adobe Experience Manager.
+Adobe Commerce plus Adobe Experience Manager är en kraftfull historia i och med att e-handelsmotorn gör det möjligt för företag att aktivera e-handel via kundgränssnitt som drivs av Adobe Experience Manager.
 
 ## Anpassade huvuden
 
-Det sista alternativet att diskutera här är möjligheten att bygga en anpassad front. Det här alternativet är till för företag som har befintlig expertis och interna utvecklare som är kunniga i en viss frontgrupp, som React. Om de inte har någon kunskap i Adobe Commerce traditionella frontutveckling kan de bestämma sig för att det är mer kostnadseffektivt att bygga en egen, anpassad kontaktledning.
+Det sista alternativet att diskutera här är möjligheten att bygga en anpassad front. Det här alternativet är till för företag som har befintlig expertis och interna utvecklare som är kunniga i en viss frontgrupp, som React. Om de inte har någon kunskap i Adobe Commerce traditionella frontutveckling kan de bestämma sig för att det är mer kostnadseffektivt att bygga en egen, anpassad taktpanna.
 
 Den här modellen kräver naturligtvis starka kunskaper och resurser för kund- eller systemintegration i frontend, och du får inte den inbyggda kompatibiliteten med exempelvis Page Builder som du får med PWA Studio. Varje gång en handlare bygger något helt anpassat kan de förlora time-to-market-fördelar.
 

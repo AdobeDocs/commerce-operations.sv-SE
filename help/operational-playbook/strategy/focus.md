@@ -1,6 +1,6 @@
 ---
 title: Fokus
-description: Använd grundläggande mätvärden så att ni kan fatta datadrivna beslut.
+description: Använd grundläggande mätvärden så att ni kan fatta databaserade beslut.
 exl-id: 5b946cce-25cd-4a69-b565-235acb16cad4
 source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
@@ -29,11 +29,11 @@ Följande lista innehåller de viktigaste e-handelsmåtten som alla företag bö
 
 I följande lista finns de viktigaste e-handelsvärdena som alla företag bör spåra för B2B:
 
-- Kundanskaffningskostnad (CAC)
+- Kundanskaffningskostnad
 - Konverteringar
 - Kundens kvarhållningsgrad
-- Trafikströmmar
-- Returnera kunder
+- Trafiktrattar
+- Returnerande kunder
 - Visade sidor
 - Kundåtgärder
 - Toppperioder

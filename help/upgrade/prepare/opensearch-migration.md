@@ -18,7 +18,7 @@ Från och med 2.4.4, 2.4.3-p2 och 2.3.7-p3 stöder Adobe Commerce och Magento Op
 
 ## Migreringssökväg
 
-Stegen för att migrera till OpenSearch är enkla och följer i stort sett stegen för konfiguration av Elasticsearch. I dessa steg antas att Adobe Commerce är det enda programmet som använder sökmotorn. Om flera program använder sökmotorn följer du den officiella migreringsguiden [Gå från Elasticsearch med öppen källkod till OpenSearch](https://opensearch.org/blog/technical-posts/2021/10/moving-from-opensource-elasticsearch-to-opensearch/).
+Stegen för att migrera till OpenSearch är enkla och följer i stort sett stegen för konfiguration av Elasticsearch. I dessa steg antas att Adobe Commerce är det enda programmet som använder sökmotorn. Om flera program använder sökmotorn följer du den officiella migreringshandboken [Gå från Elasticsearch med öppen källkod till OpenSearch](https://opensearch.org/blog/technical-posts/2021/10/moving-from-opensource-elasticsearch-to-opensearch/).
 
 1. Kontrollera att installationen uppfyller [krav för sökmotor](../../installation/prerequisites/search-engine/overview.md).
 

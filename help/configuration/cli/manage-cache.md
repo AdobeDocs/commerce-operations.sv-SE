@@ -1,5 +1,5 @@
 ---
-title: Hantera cacheminnet
+title: Hantera cachen
 description: Hantera cachetyper och visa cachestatus.
 exl-id: bbd76c00-727b-412e-a8e5-1e013a83a29a
 source-git-commit: 5c316ade0619603eafa7ece8a7cd8c1595dee713
@@ -9,18 +9,18 @@ ht-degree: 0%
 
 ---
 
-# Hantera cacheminnet
+# Hantera cachen
 
 {{file-system-owner}}
 
-## Cachetyper
+## Cache-typer
 
 Commerce 2 har följande cachetyper:
 
 | Eget namn för cachetyp | Namn på cachetypkod | Beskrivning |
 |--- |--- |--- |
 | Konfiguration | config | Commerce samlar in konfiguration från alla moduler, sammanfogar den och sparar det sammanfogade resultatet i cachen. Cachen innehåller även lagringsinställningar som lagras i filsystemet och databasen. Rensa eller tömma den här cachetypen efter att konfigurationsfilerna har ändrats. |
-| Layout | layout | Kompilerade sidlayouter (d.v.s. layoutkomponenter från alla komponenter). Rensa eller tömma den här cachetypen efter att du har ändrat layoutfiler. |
+| Layout | layout | Kompilerade sidlayouter (dvs. layoutkomponenter från alla komponenter). Rensa eller tömma den här cachetypen efter att du har ändrat layoutfiler. |
 | Blockera utdata för HTML | block_html | HTML sidfragment per block. Rengör eller tömma den här cachetypen efter att du har ändrat visningslagret. |
 | Samlingsdata | samlingar | Resultat av databasfrågor. Om det behövs rensar Commerce cachen automatiskt, men tredjepartsutvecklare kan placera alla data i valfritt segment i cachen. Rensa eller tömma den här cachetypen om den anpassade modulen använder logik som resulterar i cacheposter som inte kan rensas. |
 | DDL | db_ddl | Databasschema. Om det behövs rensar Commerce cachen automatiskt, men tredjepartsutvecklare kan placera alla data i valfritt segment i cachen. Rensa eller tömma den här cachetypen efter att du har gjort anpassade ändringar i databasschemat. (Med andra ord, uppdateringar som Commerce inte gör sig själv.) Ett sätt att uppdatera databasschemat automatiskt är att använda `magento setup:db-schema:upgrade` -kommando. |
@@ -67,7 +67,7 @@ Current status:
 
 ## Aktivera eller inaktivera cachetyper
 
-Med det här kommandot kan du aktivera eller inaktivera alla cachetyper eller endast de som du anger. Det är praktiskt att inaktivera cachetyper under utvecklingen eftersom du ser resultatet av ändringarna utan att behöva tömma cachen. Att inaktivera cachetyper påverkar dock prestandan negativt.
+Med det här kommandot kan du aktivera eller inaktivera alla cachetyper eller endast de som du anger. Att inaktivera cachetyper är användbart under utvecklingen eftersom du ser resultatet av dina ändringar utan att behöva tömma cachen. Inaktivering av cachetyper kan dock påverka prestandan negativt.
 
 >[!INFO]
 >
@@ -121,7 +121,7 @@ Exempelresultat:
 
 >[!NOTE]
 >
->Cacheminnet för flera sidor kan ogiltigförklaras samtidigt och automatiskt **_utan_** dessa enheter redigeras. Om en produkt i katalogen t.ex. är tilldelad en kategori, eller när någon [!UICONTROL related product rule] ändras.
+>Cacheminnet för flera sidor kan ogiltigförklaras samtidigt och automatiskt **_utan_** de här entiteterna redigeras. Om en produkt i katalogen t.ex. är tilldelad en kategori, eller när någon [!UICONTROL related product rule] ändras.
 
 Om du vill ta bort inaktuella objekt från cacheminnet kan du _ren_ eller _flush_ cachetyper:
 

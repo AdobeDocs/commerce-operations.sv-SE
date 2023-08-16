@@ -41,4 +41,4 @@ Plats `<path>` är sökvägen till din PhpStorm `misc.xml` -fil, som finns i fö
 
 >[!INFO]
 >
->Kör `dev:urn-catalog:generate` varje gång du lägger till, ändrar eller tar bort Commerce 2-moduler som innehåller `*.xsd` filer.
+>Om du vill att dina scheman och DTD:er ska vara aktuella kör du `dev:urn-catalog:generate` varje gång du lägger till, ändrar eller tar bort Commerce 2-moduler som innehåller `*.xsd` filer.

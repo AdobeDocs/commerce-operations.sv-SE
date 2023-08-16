@@ -5,7 +5,7 @@ exl-id: c0d56d1d-b15b-437f-be72-74282dbe85c1
 topic: Commerce, Migration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,7 @@ Se [Installera [!DNL Data Migration Tool]](install.md) för att lära dig mer om
 
    där `<version>` måste matcha versionen av kodbasen Magento 2.
 
-   För version 2.1.2 anger du till exempel:
+   För version 2.1.2 anger du:
 
    ```bash
    composer require magento/data-migration-tool:2.1.2

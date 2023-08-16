@@ -91,7 +91,7 @@ I det här exemplet visas en Composer-baserad installation med kommandoraden.
 
 1. Som [ägare av filsystem](../file-system/overview.md)loggar du in på programservern.
 
-1. Byt till webbserverns dokumentkatalog eller en katalog som du har konfigurerat som ett virtuellt värddokument. I det här exemplet använder vi Ubuntu-standarden `/var/www/html`.
+1. Byt till webbserverns dokumentkatalog eller en katalog som du har konfigurerat som ett virtuellt värddokument. I det här exemplet använder vi Ubuntu-standardinställningen `/var/www/html`.
 
    ```bash
    cd /var/www/html
@@ -117,7 +117,7 @@ I det här exemplet visas en Composer-baserad installation med kommandoraden.
    composer create-project --repository=https://repo.magento.com/ magento/project-enterprise-edition <install-directory-name>
    ```
 
-   Ange [autentiseringsnycklar](../authentication-keys.md). Dina _publik nyckel_ är ditt användarnamn, din _privat nyckel_ är ditt lösenord.
+   Ange [autentiseringsnycklar](../authentication-keys.md). Dina _publik nyckel_ är ditt användarnamn; din _privat nyckel_ är ditt lösenord.
 
 1. Ange läs- och skrivbehörighet för webbservergruppen innan du installerar programmet. Detta är nödvändigt för att kommandoraden ska kunna skriva filer till filsystemet.
 
@@ -141,7 +141,7 @@ I det här exemplet visas en Composer-baserad installation med kommandoraden.
    chmod u+x bin/magento
    ```
 
-1. Installera från [kommandorad](../../advanced.md). I det här exemplet antas att installationskatalogen har ett namn `magento2ee`, `db-host` finns på samma dator (`localhost`) och `db-name`, `db-user`och `db-password` är alla `magento`:
+1. Installera från [kommandorad](../../advanced.md). I det här exemplet antas att installationskatalogen har ett namn `magento2ee`, `db-host` finns på samma dator (`localhost`) och att `db-name`, `db-user`och `db-password` är alla `magento`:
 
    ```bash
    bin/magento setup:install \
@@ -177,11 +177,11 @@ I det här exemplet visas en Composer-baserad installation med kommandoraden.
 
 ### Konfigurera nginx
 
-Vi rekommenderar att du konfigurerar nginx med `nginx.conf.sample` konfigurationsfilen som finns i installationskatalogen och det nya virtuella värdsystemet.
+Vi rekommenderar att du konfigurerar index med `nginx.conf.sample` konfigurationsfilen som finns i installationskatalogen och det nya virtuella värdsystemet.
 
 Dessa instruktioner förutsätter att du använder Ubuntu-standardplatsen för det virtuella värdsystemet nginx (till exempel `/etc/nginx/sites-available`) och Ubuntu standarddocroot (till exempel `/var/www/html`) kan du dock ändra de här platserna så att de passar din miljö.
 
-1. Skapa en ny virtuell värd för din plats:
+1. Skapa ett nytt virtuellt värdsystem för din plats:
 
    ```bash
    vim /etc/nginx/sites-available/magento
@@ -370,7 +370,7 @@ I det här exemplet visas en Composer-baserad installation med kommandoraden.
 
 1. Som [ägare av filsystem](../file-system/overview.md)loggar du in på programservern.
 
-1. Byt till webbserverns dokumentkatalog eller en katalog som du har konfigurerat som ett virtuellt värddokument. I det här exemplet använder vi Ubuntu-standarden `/var/www/html`.
+1. Byt till webbserverns dokumentkatalog eller en katalog som du har konfigurerat som ett virtuellt värddokument. I det här exemplet använder vi Ubuntu-standardinställningen `/var/www/html`.
 
    ```bash
    cd /var/www/html
@@ -396,7 +396,7 @@ I det här exemplet visas en Composer-baserad installation med kommandoraden.
    composer create-project --repository=https://repo.magento.com/ magento/project-enterprise-edition <install-directory-name>
    ```
 
-   Ange [autentiseringsnycklar](../authentication-keys.md). Dina _publik nyckel_ är ditt användarnamn, din _privat nyckel_ är ditt lösenord.
+   Ange [autentiseringsnycklar](../authentication-keys.md). Dina _publik nyckel_ är ditt användarnamn; din _privat nyckel_ är ditt lösenord.
 
 1. Ange läs- och skrivbehörighet för webbservergruppen innan du installerar programmet. Detta är nödvändigt för att kommandoraden ska kunna skriva filer till filsystemet.
 
@@ -420,7 +420,7 @@ I det här exemplet visas en Composer-baserad installation med kommandoraden.
    chmod u+x bin/magento
    ```
 
-1. Installera från [kommandorad](../../advanced.md). I det här exemplet antas att installationskatalogen har ett namn `magento2ee`, `db-host` finns på samma dator (`localhost`) och `db-name`, `db-user`och `db-password` är alla `magento`:
+1. Installera från [kommandorad](../../advanced.md). I det här exemplet antas att installationskatalogen har ett namn `magento2ee`, `db-host` finns på samma dator (`localhost`) och att `db-name`, `db-user`och `db-password` är alla `magento`:
 
    ```bash
    bin/magento setup:install \
@@ -453,11 +453,11 @@ I det här exemplet visas en Composer-baserad installation med kommandoraden.
 
 ### Konfigurera nginx
 
-Vi rekommenderar att du konfigurerar nginx med `nginx.conf.sample` konfigurationsfilen som finns i installationskatalogen och det nya virtuella värdsystemet.
+Vi rekommenderar att du konfigurerar index med `nginx.conf.sample` konfigurationsfilen som finns i installationskatalogen och det nya virtuella värdsystemet.
 
 Dessa instruktioner förutsätter att du använder CentOS-standardplatsen för det virtuella värdsystemet (till exempel `/etc/nginx/conf.d`) och standarddokumentrot (till exempel `/usr/share/nginx/html`) kan du dock ändra de här platserna så att de passar din miljö.
 
-1. Skapa en ny virtuell värd för din plats:
+1. Skapa ett nytt virtuellt värdsystem för din plats:
 
    ```bash
    vim /etc/nginx/conf.d/magento.conf

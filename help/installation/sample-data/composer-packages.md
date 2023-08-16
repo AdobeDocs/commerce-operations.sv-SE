@@ -24,9 +24,9 @@ Du kan använda den här metoden för att hämta exempeldata för både Adobe Co
 
 >[!NOTE]
 >
->Om du stöter på fel, t.ex. `Could not find package...` eller `...no matching package found...`Kontrollera att det inte finns några stavfel i kommandot. Om du fortfarande råkar ut för fel kanske du inte har tillgång till rätt Composer-databaser, särskilt om du använder Adobe Commerce. Kontakt [Adobe Commerce Support](https://support.magento.com/hc/en-us) om du behöver hjälp.
+>Om du stöter på fel, till exempel `Could not find package...` eller `...no matching package found...`Kontrollera att det inte finns några stavfel i kommandot. Om du fortfarande råkar ut för fel kanske du inte har tillgång till rätt Composer-databaser, särskilt om du använder Adobe Commerce. Kontakt [Adobe Commerce Support](https://support.magento.com/hc/en-us) om du behöver hjälp.
 
-Du kan använda Composer för att installera exempeldata antingen före eller efter installationen av programmet; men det kan finnas [ytterligare uppgifter](remove-or-update.md).
+Du kan använda Composer för att installera exempeldata antingen före eller efter installationen av programmet, men det kan finnas [ytterligare uppgifter](remove-or-update.md).
 
 Om du är en bidragsgivare kan du läsa [Installera genom att klona databaser](git-repositories.md).
 
@@ -60,7 +60,7 @@ The 'https://repo.magento.com/packages.json' URL required authentication.
 You must be using the interactive console to authenticate
 ```
 
-Om felet visas byter du till programinstallationskatalogen och kör `composer update`som ber dig om [autentiseringsnycklar](../prerequisites/authentication-keys.md).
+Om felet visas byter du till programinstallationskatalogen och kör `composer update`, som ber dig att [autentiseringsnycklar](../prerequisites/authentication-keys.md).
 
 ## Slutför installationen av exempeldata
 

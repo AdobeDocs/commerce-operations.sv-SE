@@ -5,7 +5,7 @@ exl-id: dd4694e7-5437-440c-bb67-804ae36149de
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
 source-wordcount: '334'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -21,29 +21,29 @@ Innan du installerar Adobe Commerce eller Magento Open Source måste du göra f�
 >
 >Vi antar att du installerar Adobe Commerce eller Magento Open Source i en **utvecklingsmiljö** som du har rotanvändaråtkomst till datorn, **och** att maskinen inte behöver vara mycket säker. Om du konfigurerar en säkrare dator bör du kontakta en nätverksadministratör för att få mer hjälp.
 
-Vi rekommenderar starkt att du uppdaterar och uppgraderar ditt operativsystem. Dessa uppgraderingar kan ge säkerhets- och programfixar som kan förhindra framtida problem. Vet du inte vad det innebär? Kolla in vår [installationsöversikt](../overview.md).
+Vi rekommenderar starkt att du uppdaterar och uppgraderar ditt operativsystem. Dessa uppgraderingar kan ge säkerhets- och programfixar som kan förhindra framtida problem. Vet du inte vad det här betyder? Kolla in vår [installationsöversikt](../overview.md).
 
 Ange följande kommandon som en användare med `root` behörighet:
 
 * Ubuntu
 
-   ```bash
-   apt-get update
-   ```
+  ```bash
+  apt-get update
+  ```
 
-   ```bash
-   apt-get upgrade
-   ```
+  ```bash
+  apt-get upgrade
+  ```
 
 * CentOS
 
-   ```bash
-   yum -y update
-   ```
+  ```bash
+  yum -y update
+  ```
 
-   ```bash
-   yum -y upgrade
-   ```
+  ```bash
+  yum -y upgrade
+  ```
 
 ## Kravkontroll
 
@@ -66,7 +66,7 @@ Information om hur du installerar eller uppgraderar Apache finns i [Apache](web-
 
 ### PHP
 
-Se [systemkrav](../system-requirements.md) för de versioner av PHP som stöds och [PHP] för PHP-krav.
+Se [systemkrav](../system-requirements.md) för de versioner av PHP och [PHP] för PHP-krav.
 
 ### MySQL
 
@@ -74,13 +74,13 @@ Se [systemkrav](../system-requirements.md) för de versioner av PHP som stöds o
 mysql -u <database root user or database owner name> -p
 ```
 
-Till exempel:
+Exempel:
 
 ```bash
 mysql -u magento -p
 ```
 
-Kontrollera att du har rätt version av MySQL för den version av Adobe Commerce eller Magento Open Source som du installerar ([här för att se vilka versioner som stöds](../system-requirements.md). Följande resultat anger vilken version du kör.)
+Kontrollera att du har rätt version av MySQL för den version av Adobe Commerce eller Magento Open Source som du installerar ([här för versioner som stöds](../system-requirements.md). Följande resultat anger vilken version du kör.)
 
 ```terminal
 Welcome to the MySQL monitor.  Commands end with ; or \g.
@@ -114,7 +114,7 @@ Så här verifierar du installationen av Elasticsearch:
 curl -XGET '<elasticsearch-hostname>:<elasticsearch-port>'
 ```
 
-Till exempel:
+Exempel:
 
 ```bash
 curl -XGET 'localhost:9200'

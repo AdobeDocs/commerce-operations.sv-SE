@@ -39,7 +39,7 @@ Operativsystemskonfigurationer och optimeringar liknar varandra för [!DNL Comme
 net.ipv4.tcp_tw_reuse = 1
 ```
 
-Kernelparametern `net.core.somaxconn` styr det maximala antalet öppna socketar som väntar på anslutningar. Det här värdet kan ökas till 1024, men bör vara relaterat till serverns förmåga att hantera den här mängden. Om du vill aktivera den här kernel-parametern anger du följande värde i `/etc/sysctl.conf`:
+Kernelparametern `net.core.somaxconn` styr det maximala antalet öppna socketar som väntar på anslutningar. Det här värdet kan ökas till 1024, men det bör vara relaterat till serverns förmåga att hantera den här mängden. Om du vill aktivera den här kernel-parametern anger du följande värde i `/etc/sysctl.conf`:
 
 ```text
 net.core.somaxconn = 1024
@@ -67,7 +67,7 @@ Magento Open Source och Adobe Commerce:
 * ext-json
 * ext-libxml
 * ext-mbstring
-* ext-openssl
+* textobensl
 * ext-pcre
 * ext-pdo_mysql
 * ext-simplexml
@@ -95,7 +95,7 @@ Dessutom kräver Adobe Commerce:
 * ext-json
 * ext-libxml
 * ext-mbstring
-* ext-openssl
+* textobensl
 * ext-pcre
 * ext-pdo_mysql
 * ext-simplexml
@@ -110,7 +110,7 @@ Dessutom kräver Adobe Commerce:
 * lib-libxml
 * lib-openssl
 
-Om du lägger till fler tillägg tar det längre tid att läsa in biblioteket.
+Om du lägger till fler tillägg ökar bibliotekets laddningstid.
 
 >[!INFO]
 >
@@ -162,9 +162,9 @@ opcache.max_accelerated_files=60000
 
 #### APCU
 
-Vi rekommenderar att du aktiverar [PHP APCu-tillägg](https://getcomposer.org/doc/articles/autoloader-optimization.md#optimization-level-2-b-apcu-cache) och [konfigurera `composer` för att stödja](../performance/deployment-flow.md#preprocess-dependency-injection-instructions) optimera för maximala prestanda. Det här tillägget cachelagrar filplatser för öppnade filer, vilket ökar prestanda för [!DNL Commerce] serveranrop som sidor, Ajax-anrop och slutpunkter.
+Vi rekommenderar att [PHP APCu-tillägg](https://getcomposer.org/doc/articles/autoloader-optimization.md#optimization-level-2-b-apcu-cache) och [konfigurera `composer` för att stödja](../performance/deployment-flow.md#preprocess-dependency-injection-instructions) optimera för maximala prestanda. Det här tillägget cachelagrar filplatser för öppnade filer, vilket ökar prestanda för [!DNL Commerce] serveranrop som sidor, Ajax-anrop och slutpunkter.
 
-Redigera `apcu.ini` som ska innehålla följande:
+Redigera dina `apcu.ini` som ska innehålla följande:
 
 ```text
 extension=apcu.so
@@ -203,15 +203,15 @@ Det har gjorts många förbättringar av [!DNL MySQL] 5.7.9 Vi är säkra på at
 
 ## [!DNL Varnish]
 
-Magento rekommenderar starkt att du använder [!DNL Varnish] som helsidescacheserver för din butik. PageCache-modulen finns fortfarande i kodbasen, men den bör bara användas i utvecklingssyfte. Den ska inte användas tillsammans med, eller i stället för, [!DNL Varnish].
+Magento rekommenderar starkt att du använder [!DNL Varnish] som cacheserver för hela sidan för din butik. PageCache-modulen finns fortfarande i kodbasen, men den bör bara användas i utvecklingssyfte. Den ska inte användas tillsammans med, eller i stället för, [!DNL Varnish].
 
 Installera [!DNL Varnish] på en separat server framför webbnivån. Den ska acceptera alla inkommande begäranden och tillhandahålla cachelagrade sidkopior. Tillåt [!DNL Varnish] för att arbeta effektivt med skyddade sidor kan en SSL-termineringsproxy placeras framför [!DNL Varnish]. Nginx kan användas för detta ändamål.
 
 [!DNL Commerce] distribuerar en exempelkonfigurationsfil för [!DNL Varnish] (version 4 och 5) som innehåller alla rekommenderade prestandainställningar. Bland de viktigaste prestandaaspekterna finns följande:
 
-* **Hälsokontroll för backend** väljer [!DNL Commerce] för att avgöra om servern svarar i tid.
+* **Hälsokontroll för backend** avlyssnar [!DNL Commerce] för att avgöra om servern svarar i tid.
 * **Behagelläge** låter dig instruera [!DNL Varnish] för att behålla ett objekt i cacheminnet efter dess TTL-period (Time to Live) och leverera det inaktuella innehållet om [!DNL Commerce] är inte hälsosamt eller om nytt innehåll inte har hämtats än.
-* **Saint-läge** svarta listor ohälsosamma [!DNL Commerce] servrar för en konfigurerbar tidsperiod. På grund av detta kan ohälsosamma backend-objekt inte användas för trafik när de använder [!DNL Varnish] som belastningsutjämnare.
+* **Saint-läge** svarta listor ohälsosamma [!DNL Commerce] servrar för en konfigurerbar tidsperiod. På grund av detta kan ohälsosamma backend-objekt inte användas för trafik när [!DNL Varnish] som belastningsutjämnare.
 
 Se [Avancerat [!DNL Varnish] konfiguration](../configuration/cache/config-varnish-advanced.md) om du vill ha mer information om hur du implementerar dessa funktioner.
 
@@ -236,7 +236,7 @@ if (req.url ~ "^/(pub/)?(media|static)/.*\.(ico|html|css|js|jpg|jpeg|png|gif|tif
 ```
 
 I `vcl_backend_response` subrutin, leta efter `if` programsats som tar bort cookien för `GET` eller `HEAD` förfrågningar.
-Den uppdaterade `if` -block ska se ut så här:
+Den uppdaterade `if` -blocket ska se ut så här:
 
 ```javascript
 # validate if we need to cache it and prevent from setting cookie

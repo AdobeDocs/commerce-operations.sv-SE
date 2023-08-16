@@ -34,14 +34,14 @@ där
 | Kommandoradsparameter | Parameternamn | Betydelse | Standardvärde |
 |--- |--- |--- |--- |
 | session-save-redis-host | värd | Fullständigt kvalificerat värdnamn, IP-adress eller absolut sökväg om UNIX-socketar används. | localhost |
-| session-save-redis-port | port | Redis-serverlyssningsporten. | 6379 |
+| session-save-redis-port | port | Redis-serverns avlyssningsport. | 6379 |
 | session-save-redis-password | lösenord | Anger ett lösenord om Redis-servern kräver autentisering. | tom |
 | session-save-redis-timeout | timeout | Anslutningens timeout, i sekunder. | 2.5 |
 | session-save-redis-persistent-id | persistent_identifier | Unik sträng för att aktivera beständiga anslutningar (till exempel sess-db0).<br>[Kända fel med phpredis och php-fpm](https://github.com/phpredis/phpredis/issues/70). |
 | session-save-redis-db | databas | Unikt Redis-databasnummer som rekommenderas för att skydda mot dataförlust.<br><br>**Viktigt**: Om du använder Redis för mer än en typ av cachning måste databasnumren vara olika. Vi rekommenderar att du tilldelar standardvärdet för cachningsdatabasen till 0, sidcachningsdatabasnumret till 1 och sessionslagringsdatabasnumret till 2. | 0 |
-| session-save-redis-compression-threshold | compression_threshold | Ange 0 om du vill inaktivera komprimering (rekommenderas när `suhosin.session.encrypt = On`).<br>[Känt problem med strängar som är större än 64 kB](https://github.com/colinmollenhour/Cm_Cache_Backend_Redis/issues/18). | 2048 |
+| session-save-redis-compression-threshold | compression_threshold | Ange 0 om du vill inaktivera komprimering (rekommenderas när `suhosin.session.encrypt = On`).<br>[Känt problem med strängar över 64 kB](https://github.com/colinmollenhour/Cm_Cache_Backend_Redis/issues/18). | 2048 |
 | session-save-redis-compression-lib | compression_library | Alternativ: gzip, lzf, lz4 eller snappy. | gzip |
-| session-save-redis-log-level | log_level | Ange något av följande, i ordning från minst utförlig till mest utförlig:<ul><li>0 (kris: endast de allvarligaste felen)<li>1 (varning: omedelbar åtgärd krävs)<li>2 (kritiskt: programkomponent ej tillgänglig)<li>3 (fel: körningsfel, inte kritiska men måste övervakas)<li>4 (varning: ytterligare information, rekommenderas)<li>5 (meddelande: normalt men signifikant)<li>6 (info: informationsmeddelanden)<li>7 (debug: den mest informationen för utveckling eller testning)</ul> | 1 |
+| session-save-redis-log-level | log_level | Ange något av följande, i ordning från minst utförlig till mest utförlig:<ul><li>0 (kris: endast de allvarligaste felen)<li>1 (varning: omedelbar åtgärd krävs)<li>2 (kritiskt: programkomponenten är inte tillgänglig)<li>3 (fel: körningsfel, inte kritiska men måste övervakas)<li>4 (varning: ytterligare information rekommenderas)<li>5 (observera: normalt men signifikant tillstånd)<li>6 (info: informationsmeddelanden)<li>7 (debug: the most information for development or testing only)</ul> | 1 |
 | session-save-redis-max-concurrency | max_concurrency | Maximalt antal processer som kan vänta på ett lås i en session. För stora produktionskluster ska detta anges till minst 10 % av antalet PHP-processer. | 6 |
 | session-save-redis-break-after-front | break_after_front_tend | Antal sekunder att vänta innan du försöker bryta låset för frontend-sessionen (dvs. storefront). | 5 |
 | session-save-redis-break-after-adminhtml | break_after_adminhtml | Antal sekunder att vänta innan låset för en adminhtml-session (d.v.s. Admin) bryts. | 30 |
@@ -51,9 +51,9 @@ där
 | session-save-redis-disable-locking | disable_locking | Inaktivera sessionslåsning helt. | 0 (false) |
 | session-save-redis-min-life | min_livstid | Minsta sessionstid, i sekunder. | 60 |
 | session-save-redis-max-life | max_livstid | Maximal sessionstid, i sekunder. | 2592000 (720 timmar) |
-| session-save-redis-sentinel-överordnad | sentinel_överordnad | Redis Sentinel, överordnad namn | tom |
+| session-save-redis-sentinel-master | sentinel_master | Redis Sentinel master name | tom |
 | session-save-redis-sentinel-servers | sentinel_servers | Lista över Redis Sentinel-servrar, kommaavgränsade | tom |
-| session-save-redis-sentinel-verify-överordnad | sentinel_verify_överordnad | Bekräfta Redis Sentinels överordnad statusflagga | 0 (false) |
+| session-save-redis-sentinel-verify-master | sentinel_verify_master | Verifiera Redis Sentinels huvudstatusflagga | 0 (false) |
 | session-save-redis-sentinel-connect-retry | sentinel_connect_reentries | Anslutningsförsök för sändare | 5 |
 
 ## Exempel
@@ -98,7 +98,7 @@ Commerce lägger till rader som liknar följande: `<magento_root>app/etc/env.php
 
 >[!INFO]
 >
->TTL för sessionsposter använder värdet för cookie-livstid, som har konfigurerats i administratören. Om cookie-livstid är inställd på 0 (standardvärdet är 3600) upphör Redis-sessioner att gälla i det antal sekunder som anges i min_livstid (standardvärdet är 60). Skillnaden beror på skillnader i hur Redis och sessionscookies tolkar ett livstidsvärde på 0. Om du inte vill använda det beteendet ökar du värdet för min_livstid.
+>TTL för sessionsposter använder värdet för cookie-livstid, som har konfigurerats i administratören. Om cookie-livstiden är 0 (standardvärdet är 3600) upphör Redis-sessioner att gälla i det antal sekunder som anges i min_livstid (standardvärdet är 60). Skillnaden beror på skillnader i hur Redis och sessionscookies tolkar livstidsvärdet 0. Om du inte vill använda det beteendet ökar du värdet för min_livstid.
 
 ## Bekräfta Redis-anslutning
 

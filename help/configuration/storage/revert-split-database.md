@@ -14,11 +14,11 @@ ht-degree: 0%
 
 {{ee-only}}
 
-För Adobe Commerce-kunder som har implementerat [Dela databas](multi-master.md)beskrivs i följande avsnitt hur du återställer eller migrerar tillbaka till en enskild databas. Vi rekommenderar att Adobe Commerce handlare som för närvarande använder Split Database och planerar att uppgradera till 2.4.2 och senare granska dessa steg, samt våra [meddelande](https://community.magento.com/t5/Magento-DevBlog/Deprecation-of-Split-Database-in-Magento-Commerce/ba-p/465187) på den planerade borttagningen av den delade databasen.
+För Adobe Commerce-kunder som har implementerat [Dela databas](multi-master.md)beskrivs i följande avsnitt hur du återställer eller migrerar tillbaka till en enskild databas. Vi rekommenderar att Adobe Commerce handlare som för närvarande använder Split Database och planerar att uppgradera till 2.4.2 och senare granska dessa steg samt våra [meddelande](https://community.magento.com/t5/Magento-DevBlog/Deprecation-of-Split-Database-in-Magento-Commerce/ba-p/465187) på den planerade borttagningen av den delade databasen.
 
 När du återgår från en delad databas till en enda databas skapar du säkerhetskopior av `magento_quote` och `magento_sales` databaser innan de läses in i en `magento_main` databas.
 
-I det här exemplet loggar vi in på alla tre databaser som är installerade på samma värd (`magento2-mysql`) som&quot;rotanvändare&quot;. Du måste ersätta dessa värden med rätt värden för databaserna.
+I det här exemplet loggar vi in på alla tre databaser som är installerade på samma värd (`magento2-mysql`) som&quot;root&quot;-användare. Du måste ersätta dessa värden med rätt värden för databaserna.
 
 1. Skapa en säkerhetskopia av `magento_quote` databas:
 

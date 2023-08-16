@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Översikt över anpassad loggning
 
-Loggar ger synlighet i systemprocesserna. t.ex. felsökningsinformation som hjälper dig förstå när ett fel inträffade eller vad som ledde till felet.
+Loggar ger synlighet i systemprocesserna, t.ex. felsökningsinformation som hjälper dig att förstå när ett fel inträffade eller vad som ledde till felet.
 
 Det här avsnittet fokuserar på filbaserad loggning, men Commerce ger även flexibilitet att lagra loggar i databasen.
 
@@ -20,11 +20,11 @@ Adobe rekommenderar att centraliserad programloggning används av följande skä
 
 - Den gör att loggar kan lagras på en annan server än programservern och minskar I/O-diskåtgärder, vilket förenklar stödet för programservern.
 
-- Det gör databehandlingen effektivare med specialverktyg som [Logstash], [Logplex], eller [flytande]- utan påverkan på en produktionsserver.
+- Det gör databehandlingen effektivare med specialverktyg som [Logstash], [Logplex], eller [fluentd]- utan påverkan på en produktionsserver.
 
-   >[!INFO]
-   >
-   >Adobe rekommenderar eller stöder inte någon särskild loggningslösning.
+  >[!INFO]
+  >
+  >Adobe rekommenderar eller stöder inte någon särskild loggningslösning.
 
 ## PSR-3-kompatibilitet
 
@@ -34,7 +34,7 @@ Detta gör att implementeringen enkelt kan ersättas utan att du behöver oroa d
 
 ## Monolog
 
-Commerce 2 följer PSR-3-standarden. Som standard används [Monolog]. Monolog implementeras som en inställning för `Psr\Log\LoggerInterface` i Commerce-programmet [`di.xml`][di].
+Commerce 2 följer PSR-3-standarden. Som standard använder Commerce [Monolog]. Monolog implementeras som en inställning för `Psr\Log\LoggerInterface` i Commerce-programmet [`di.xml`][di].
 
 Monolog är en populär PHP-loggningslösning med ett stort antal hanterare som gör att du kan skapa avancerade loggningsstrategier. Här följer en sammanfattning av hur Monolog fungerar.
 
@@ -55,7 +55,7 @@ Andra kanaler kan ha en annan uppsättning hanterare och logik.
 <!-- link definitions -->
 
 [di]: https://github.com/magento/magento2/blob/2.4/app/etc/di.xml#L9
-[flytande]: https://www.fluentd.org/
+[fluentd]: https://www.fluentd.org/
 [laminas]: https://docs.laminas.dev/laminas-log/
 [Logplex]: https://devcenter.heroku.com/articles/logplex
 [Logstash]: https://www.elastic.co/products/logstash

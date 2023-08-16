@@ -1,6 +1,6 @@
 ---
 title: Självvärdande - översikt
-description: Lär dig mer om de bästa sätten att tänka på vid självvärdskap. Ämnena varierar från säkerhetselement till katastrofåterställning av många fler. Dessa ämnen är till för att hjälpa ett företag som har bestämt sig att ha en egen version av Adobe Commerce. De presenterade objekten är inte alla inkluderade, men de bör innehålla en rad koncept för att främja en säker, stabil och flexibel webbplats.
+description: Lär dig mer om de bästa sätten att tänka på när du är värd för dig själv. Ämnena varierar från säkerhetselement till katastrofåterställning av många fler. Dessa ämnen är till för att hjälpa ett företag som har bestämt sig att ha en egen version av Adobe Commerce. De presenterade objekten är inte alla inkluderade, men de bör innehålla ett bra utbud av koncept för att främja en säker, stabil och flexibel webbplats.
 landing-page-description: Lär dig några koncept och saker att tänka på när du är värd för Adobe Commerce på egen hand.
 short-description: Lär dig strategier och koncept för att vara värd för Adobe Commerce själv.
 kt: 11420
@@ -24,7 +24,7 @@ När du inte går med i Adobe Commerce på molninfrastruktur används termerna s
 
 När det gäller Adobe Commerce och Magento som har öppen källkod fungerar de flesta av de råd och tips som ges för båda versionerna. Även om det inte anges direkt är det förväntat att det är tillämpligt för båda. I det här avsnittet om alternativ för värdtjänster för Adobe Commerce beaktas båda versionerna. Slutligen är de flesta ämnen relevanta för [Adobe Commerce i molninfrastruktur](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/getting-started/cloud/1-overview.html){target="_blank"} väljs som värdleverantör.
 
-## Terminologisk nivå
+## Terminologisk nivå angiven
 
 Följande termer används ofta i olika Experience League-artiklar när du pratar med DevOps-teamet och arbetar med företagssupport:
 
@@ -36,7 +36,7 @@ Följande termer används ofta i olika Experience League-artiklar när du pratar
 
 * **Disaster Recovery** innehåller vissa begrepp och överväganden för den olyckliga händelsen med ett skadat eller utnyttjat projekt.
 
-* **Prestandapstips** ge några proffsiga tips och vägledning så att Adobe Commerce-programmet blir så bra som möjligt.
+* **Prestandapstips** ge några proffsiga tips och vägledning för hur du kan få Adobe Commerce att fungera så bra som möjligt.
 
 * **Felaktig aktör** är den term som används för en person eller ett team som försöker göra något illa eller obehörigt. Den är inte begränsad till e-handelsapplikationen utan omfattar även infrastrukturen eller någon komponent som är relaterad till webbplatsen.
 

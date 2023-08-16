@@ -15,10 +15,10 @@ ht-degree: 0%
 
 Med Commerce translations kan ni anpassa och lokalisera er butik för flera regioner och marknader genom att generera:
 
-- **Översättningsordlistor**, som är ett bekvämt sätt att anpassa eller översätta _några_ ord och fraser, t.ex. för en anpassad modul eller ett tema.
+- **Översättningsordlistor** som är ett praktiskt sätt att anpassa eller översätta _några_ ord och fraser, t.ex. för en anpassad modul eller ett tema.
 - **Språkpaket** som gör att du kan översätta _alla_ ord och fraser i handelsprogrammet.
 
-Se [Översikt över översättningar].
+Se [Översättningar - översikt].
 
 ## Generera en översättningsordlista
 
@@ -47,7 +47,7 @@ I följande tabell förklaras parametrar och värden:
 
 | Parameter | Värde | Obligatoriskt? |
 |--- |--- |--- |
-| `<path to directory to translate>` | Sökväg till en katalog med översättningsbar kod. PHP-, PHTML- eller XML-filer med fraser att översätta.<br><br>Verktyget börjar söka på den sökväg som du anger och söker i alla filer och underkataloger som det innehåller.<br><br>Använd inte den här parametern om du använder `-m --magento`. | Ja (ordlistor), nej (paket). |
+| `<path to directory to translate>` | Sökväg till en katalog som har översättningsbar kod, dvs. PHP-, PHTML- eller XML-filer som har fraser att översätta.<br><br>Verktyget börjar söka på den sökväg som du anger och söker i alla filer och underkataloger som det innehåller.<br><br>Använd inte den här parametern om du använder `-m --magento`. | Ja (ordlistor), nej (paket). |
 | `-m --magento` | Krävs för att skapa ett språkpaket från den här översättningsordlistan. Om det används söker igenom katalogerna som innehåller bin/magento. Med det här alternativet läggs teman eller moduler till på varje rad i ordlistan.<br><br>Ett exempel följer:<br><br>&quot;Inga objekt hittades&quot;,&quot;Inga objekt hittades&quot;, modul, Magento_önskelista | Nej |
 | `-o --output="<path>"` | Anger den absoluta filsystemsökvägen och filnamnet för den CSV-fil för översättningsordlista som ska skapas. Värdet som du anger är skiftlägeskänsligt. CSV-filens namn måste exakt matcha språknamnet, inklusive tecknens skiftläge.<br><br>Om du utelämnar den här parametern dirigeras utdata till stdout. | Nej |
 
@@ -61,9 +61,9 @@ Använd följande riktlinjer när du översätter ord och fraser:
 
 - Ändra bara innehållet i den andra kolumnen. Översätt fraserna från engelska (`US`) till önskat språk.
 - När du skapar ordlistor för språkområden ska du använda de vanliga Commerce-strängarna.
-- Var uppmärksam på platshållare när du översätter: `%1`, `%2`
+- Tänk på platshållarna när du översätter: `%1`, `%2`
 
-I Commerce används platshållarna för att infoga kontextvärden. de _not_ används för översättningar. Till exempel:
+I Commerce används platshållarna för att infoga kontextvärden. De är _not_ används för översättningar. Exempel:
 
 ```text
 Product '%1' has been added to shopping cart.
@@ -75,7 +75,7 @@ Fyller med ett värde:
 Product 'Multimeter-2000' has been added to shopping cart.
 ```
 
-Den resulterande frasen måste innehålla minst en av varje platshållare. Anta till exempel att det finns platshållare från `%1` till `%3` i den ursprungliga frasen. Översättningen kan ha så många av dessa platshållare i vilken ordning som helst, men det måste finnas minst en förekomst av `%1`, `%2`och `%3`. Översättningen får inte innehålla platshållarvärden som inte finns i det ursprungliga värdet (till exempel `%4`, `%5`och så vidare).
+Den resulterande frasen måste innehålla minst en platshållare. Anta till exempel att det finns platshållare från `%1` till `%3` i den ursprungliga frasen. Översättningen kan ha så många av dessa platshållare i vilken ordning som helst, men det måste finnas minst en förekomst av `%1`, `%2`och `%3`. Översättningen får inte innehålla platshållarvärden som inte finns i det ursprungliga värdet (till exempel `%4`, `%5`och så vidare).
 
 Ett exempel på översättning av en fras:
 
@@ -107,13 +107,13 @@ I följande tabell förklaras parametrarna och värdena för språkpaketkommando
 | Parameter | Värde | Obligatoriskt? |
 |--- |--- |--- |
 | `<source>` | Absolut filsystemsökväg och filnamn för en CSV-fil som innehåller den kombinerade översättningsordlistan och metainformation som krävs för att brytas ned till ett språkpaket.<br><br>Använd [`bin/magento i18n:collect-phrases`](#config-cli-subcommands-xlate-dict-dict) för att skapa CSV-filen och sedan skapa språkpaketet enligt beskrivningen i [Skapa kataloger och filer](#m2devgde-xlate-files). | Ja |
-| `<locale>` | [ISO 639-1] (språk) och [ISO 3166] identifierare för det språk som används som filnamn för alla CSV-filer som skapas. Exempel: `de_DE`, `pt_PT`, `pt_BR`. | Ja |
+| `<locale>` | [ISO 639-1] (språk) [ISO 3166] identifierare för det språk som används som filnamn för alla CSV-filer som skapas. Exempel: `de_DE`, `pt_PT`, `pt_BR`. | Ja |
 | `-m --mode` | Om det finns en målfil anger om det befintliga språkpaketet ska ersättas eller om det ska sammanfogas med det nya språkpaketet. Sammanfogning åsidosätter befintliga fraser och lägger till nya.<br><br>Värden: sammanfoga eller ersätta (standard). | Nej |
 | `-d --allow-duplicates` | Inkludera det här alternativet om du vill tillåta dubbletter i språkpaketet. Annars misslyckas kommandot med ett fel om samma fras påträffas i flera poster med olika översättningar. | Nej |
 
 ### Skapa kataloger och filer
 
-Språkpaketen finns i en katalog under `app/i18n/<VendorName>` i Commerce-filsystemet med följande innehåll:
+Språkpaketen finns i en katalog under `app/i18n/<VendorName>` i handelsfilsystemet med följande innehåll:
 
 - Nödvändiga licensfiler
 - `composer.json`
@@ -160,7 +160,7 @@ Var:
 - `vendor`—Modulens leverantörsnamn (obligatoriskt)
 - `package`—Språkpaketnamn (obligatoriskt)
 - `sort_order`—Prioritet för att överföra ett paket när det finns flera språkpaket tillgängliga för en butik
-- `use`—Språkinställning för överordnat språkpaket som ordlistor ska ärvas från
+- `use`- Språkinställning för överordnat språkpaket som ordlistor ska ärvas från
 
 Om det behövs kan du ange flera överordnade paket. De överordnade paketen tillämpas på den första listade, först använda basen.
 
@@ -247,7 +247,7 @@ Generera en CSV-fil på ungefär samma sätt som i föregående exempel, men i s
 
 1. Skapa en katalog för språkpaketet.
 
-   Till exempel: `/var/www/html/magento2/app/i18n/ExampleCorp/xx_yy`
+   Exempel: `/var/www/html/magento2/app/i18n/ExampleCorp/xx_yy`
 
 1. Lägg till följande i den katalogen:
 
@@ -315,7 +315,7 @@ Generera en CSV-fil på ungefär samma sätt som i föregående exempel, men i s
 
 <!-- link definitions -->
 
-[Översikt över översättningar]: https://developer.adobe.com/commerce/frontend-core/guide/translations/
+[Översättningar - översikt]: https://developer.adobe.com/commerce/frontend-core/guide/translations/
 [översättningsordlista]: https://developer.adobe.com/commerce/frontend-core/guide/translations/#translation-dictionaries
 [konfigurerar översättningarna]: https://docs.magento.com/user-guide/stores/store-language-add.html?Highlight=translation
 [Läs mer om språkpaket]: https://developer.adobe.com/commerce/frontend-core/guide/translations/#language-packages

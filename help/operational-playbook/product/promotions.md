@@ -5,7 +5,7 @@ exl-id: 3b1cf7ab-6a24-40eb-b504-c19e3a064231
 feature: Best Practices, Promotions/Events
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '199'
 ht-degree: 0%
 
 ---
@@ -30,8 +30,8 @@ Var och en av de sex leverantörerna är lika viktig, men för att marknadsföra
 Var och en av dessa kampanjnivåer har olika typer av kampanjer, bland annat:
 
 - Giveaways
-- försäljning
-- Kostnadsfria prover
+- flash sales
+- Kostnadsfria provexemplar
 - Köp X för totalt
 - Köp 1 och få 1 utan kostnad
 - Bonusprodukter

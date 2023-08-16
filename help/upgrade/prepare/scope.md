@@ -30,13 +30,13 @@ Alla anpassade moduler ska kontrolleras mot målversionen som du vill uppgradera
 
 ## [!DNL Upgrade Compatibility Tool]
 
-The [!DNL Upgrade Compatibility Tool] är ett kommandoradsverktyg som analyserar din instans för att se om det finns några uppgraderingsproblem. Den söker efter problem mellan den aktuella versionen som du har installerat och den version som du försöker uppgradera till.
+The [!DNL Upgrade Compatibility Tool] är ett kommandoradsverktyg som analyserar din instans för att se om det finns några uppgraderingsproblem. Den söker efter problem mellan den version du har installerat och den version du försöker uppgradera till.
 
 Om du använder det här verktyget minskar det arbete som krävs för att förstå omfattningen och effekten av en uppgradering. Det hjälper dig att undvika vanliga kodproblem när du uppgraderar och ger en tydlig vägledning om hur du löser identifierade problem. Det kan även hjälpa dig att prioritera de viktigaste problemen för att säkerställa en lyckad uppgradering, vilket sparar både tid och kostnader vid uppgradering.
 
-Se följande avsnitt för att komma igång med [!DNL Upgrade Compatibility Tool]. Se [!DNL Upgrade Compatibility Tool] [guide](../upgrade-compatibility-tool/overview.md) för mer teknisk information och avancerade användningsexempel.
+Se följande avsnitt för att komma igång med [!DNL Upgrade Compatibility Tool]. Se [!DNL Upgrade Compatibility Tool] [stödlinje](../upgrade-compatibility-tool/overview.md) för mer teknisk information och avancerade användningsexempel.
 
-### Hämta verktyget
+### Ladda ned verktyget
 
 Hämta verktyget med Composer. Det kräver PHP 7.3 eller senare, minst 2 GB RAM, Node.js (om du kontrollerar kompatibiliteten med GraphQL) och en Adobe Commerce-licens.
 
@@ -72,9 +72,9 @@ Fler alternativ att använda med det här kommandot är:
 
 - `--vanilla-dir`—Gör att du kan kontrollera om det finns några funktioner eller anpassningar som inte är standard i kärnkoden. Det är viktigt att dessa rensas upp i förväg. En vanilj-instans av din version hämtas automatiskt som referens.
 
-   >[!NOTE]
-   >
-   > Detta kan även göras med `core:code:changes` i verktyget).
+  >[!NOTE]
+  >
+  > Detta kan även göras med `core:code:changes` i verktyget).
 
 ### Analysera utdata
 
@@ -105,7 +105,7 @@ Följande utdata visar en exempelsammanfattningsrapport:
 
 Alla problem som verktyget identifierade visas i rapporten med specifika felkoder. Använd [felmeddelandereferens](../upgrade-compatibility-tool/error-messages.md) om du vill ha mer information om varje problem. Adobe ger också förslag på hur du kan åtgärda olika typer av problem så att du kan planera dina åtgärder.
 
-Använd rapporten för att beräkna hur mycket arbete det kommer att ta att uppdatera koden för uppgraderingen. Baserat på din erfarenhet kan du uppskatta hur stor uppgradering som krävs utifrån det totala antalet identifierade problem och problemens svårighetsgrad. Eftersom det här är ett kommandoradsverktyg kan du införliva detta i automatiska testnings- och kodkontrollsviter och använda JSON-utdata för att generera rapporter.
+Använd rapporten för att beräkna hur mycket arbete det kommer att ta att uppdatera koden för uppgraderingen. Baserat på din erfarenhet kan du uppskatta hur stor uppgradering som krävs baserat på det totala antalet identifierade problem och problemens svårighetsgrad. Eftersom det här är ett kommandoradsverktyg kan du införliva detta i automatiska testnings- och kodkontrollsviter och använda JSON-utdata för att generera rapporter.
 
 Vi rekommenderar att du sparar resultaten från varje uppgraderingsprojekt så att du kan jämföra framtida uppgraderingsresultat med tidigare resultat. Med fortsatt användning kommer du att börja utveckla en bra bild av hur stor insats det krävs för att uppgradera till nästa version, bara från den sammanfattande rapporten från verktyget.
 

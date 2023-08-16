@@ -32,6 +32,6 @@ Kritiska åtgärder leder till cachelagring av ogiltiga och omindexerade åtgär
 ## Ytterligare information
 
 - [Metodtips för cachelagring](https://docs.magento.com/user-guide/system/cache-management.html#best-practices-for-caching)
-- [Privat innehåll: Gör privat innehåll ogiltigt](https://developer.adobe.com/commerce/php/development/cache/page/private-content/#invalidate-private-content)
-- [Maskinvarurekommendationer: Cacheminnen](../../../performance/hardware.md#caches)
+- [Privat innehåll: Ovalidera privat innehåll](https://developer.adobe.com/commerce/php/development/cache/page/private-content/#invalidate-private-content)
+- [Maskinvarurekommendationer: Caches](../../../performance/hardware.md#caches)
 - [Avancerad konfiguration: Konfigurera Redis](../../../performance/advanced-setup.md#set-up-redis)

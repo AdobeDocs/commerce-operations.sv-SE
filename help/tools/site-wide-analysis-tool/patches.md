@@ -11,13 +11,13 @@ ht-degree: 0%
 
 # [!DNL Patches]
 
-The [!DNL Site-Wide Analysis Tool's] [!UICONTROL Patches] visas alla patchar som finns för din Adobe Commerce Store. Dessa korrigeringsfiler hjälper dig att lösa problem som du kan uppleva med Adobe Commerce. Se [Verktyget Kvalitetskorrigeringar har släppts: nytt verktyg för självbetjäning av högklassiga patchar](https://support.magento.com/hc/en-us/articles/360047139492) artikel i [!DNL support knowledge base].
+The [!DNL Site-Wide Analysis Tool's] [!UICONTROL Patches] visas alla patchar som finns för din Adobe Commerce Store. Dessa korrigeringsfiler hjälper dig att lösa problem som du kan uppleva med Adobe Commerce. Se [Quality Patches Tool released: new tool to self-service quality patches](https://support.magento.com/hc/en-us/articles/360047139492) artikel i [!DNL support knowledge base].
 
 >[!NOTE]
 >
 >Vissa av de rekommenderade korrigeringsfilerna är valfria och kräver att du undersöker om en specifik korrigeringsfil behöver appliceras.
 
-## När ska användas
+## När ska du använda
 
 Använd [!UICONTROL Patches] om du vill visa tillgängliga korrigeringsfiler för din Adobe Commerce-instans. På den här fliken visas alla korrigeringar, deras information och status.
 

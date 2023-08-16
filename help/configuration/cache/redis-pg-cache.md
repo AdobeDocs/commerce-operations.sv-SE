@@ -34,8 +34,8 @@ Med följande parametrar:
 | ------------------------------ | --------- | ------- | ------------- |
 | `cache-backend-redis-server` | server | Fullständigt kvalificerat värdnamn, IP-adress eller absolut sökväg till en UNIX-socket. Standardvärdet 127.0.0.1 anger att Redis är installerat på Commerce-servern. | `127.0.0.1` |
 | `cache-backend-redis-port` | port | Redis-serverlyssningsport | `6379` |
-| `cache-backend-redis-db` | databas | Krävs om du använder Redis för både standardcache och helsidescache. Du måste ange databasnumret för en av cacherna; det andra cacheminnet använder 0 som standard.<br><br>**Viktigt**: Om du använder Redis för mer än en typ av cachning måste databasnumren vara olika. Vi rekommenderar att du tilldelar standardvärdet för cachningsdatabasen till 0, sidcachningsdatabasnumret till 1 och sessionslagringsdatabasnumret till 2. | `0` |
-| `cache-backend-redis-password` | lösenord | När du konfigurerar ett Redis-lösenord aktiveras en av de inbyggda säkerhetsfunktionerna: den `auth` som kräver att klienterna autentiserar för att få åtkomst till databasen. Lösenordet konfigureras direkt i Redis konfigurationsfil: `/etc/redis/redis.conf` |  |
+| `cache-backend-redis-db` | databas | Krävs om du använder Redis för både standardcache och helsidescache. Du måste ange databasnumret för en av cacherna. I det andra cacheminnet används 0 som standard.<br><br>**Viktigt**: Om du använder Redis för mer än en typ av cachning måste databasnumren vara olika. Vi rekommenderar att du tilldelar standardvärdet för cachningsdatabasen till 0, sidcachningsdatabasnumret till 1 och sessionslagringsdatabasnumret till 2. | `0` |
+| `cache-backend-redis-password` | lösenord | När du konfigurerar ett Redis-lösenord aktiveras en av de inbyggda säkerhetsfunktionerna: `auth` som kräver att klienterna autentiserar för att få åtkomst till databasen. Lösenordet konfigureras direkt i Redis konfigurationsfil: `/etc/redis/redis.conf` | |
 
 ### Exempel, kommando
 
@@ -47,7 +47,7 @@ bin/magento setup:config:set --cache-backend=redis --cache-backend-redis-server=
 
 ## Konfigurera Redis-sidcache
 
-Om du vill konfigurera Redis-sidcachning i Commerce kör du `setup:config:set` med ytterligare parametrar.
+Om du vill konfigurera Redis-sidcache för Commerce kör du `setup:config:set` med ytterligare parametrar.
 
 ```bash
 bin/magento setup:config:set --page-cache=redis --page-cache-redis-<parameter>=<value>...
@@ -63,12 +63,12 @@ Med följande parametrar:
 | ------------------------------ | --------- | ------- | ------------- |
 | `page-cache-redis-server` | server | Fullständigt kvalificerat värdnamn, IP-adress eller absolut sökväg till en UNIX-socket. Standardvärdet 127.0.0.1 anger att Redis är installerat på Commerce-servern. | `127.0.0.1` |
 | `page-cache-redis-port` | port | Redis-serverlyssningsport | `6379` |
-| `page-cache-redis-db` | databas | Krävs om du använder Redis för både standardcache och helsidescache. Du måste ange databasnumret för en av cacherna; det andra cacheminnet använder 0 som standard.<br/>**Viktigt**: Om du använder Redis för mer än en typ av cachning måste databasnumren vara olika. Vi rekommenderar att du tilldelar standardvärdet för cachningsdatabasen till 0, sidcachningsdatabasnumret till 1 och sessionslagringsdatabasnumret till 2. | `0` |
-| `page-cache-redis-password` | lösenord | När du konfigurerar ett Redis-lösenord aktiveras en av de inbyggda säkerhetsfunktionerna: den `auth` som kräver att klienterna autentiserar för att få åtkomst till databasen. Konfigurera lösenordet i Redis-konfigurationsfilen: `/etc/redis/redis.conf` |  |
+| `page-cache-redis-db` | databas | Krävs om du använder Redis för både standardcache och helsidescache. Du måste ange databasnumret för en av cacherna. I det andra cacheminnet används 0 som standard.<br/>**Viktigt**: Om du använder Redis för mer än en typ av cachning måste databasnumren vara olika. Vi rekommenderar att du tilldelar standardvärdet för cachningsdatabasen till 0, sidcachningsdatabasnumret till 1 och sessionslagringsdatabasnumret till 2. | `0` |
+| `page-cache-redis-password` | lösenord | När du konfigurerar ett Redis-lösenord aktiveras en av de inbyggda säkerhetsfunktionerna: `auth` som kräver att klienterna autentiserar för att få åtkomst till databasen. Konfigurera lösenordet i Redis-konfigurationsfilen: `/etc/redis/redis.conf` | |
 
 ### Exempel, kommando
 
-I följande exempel aktiveras Redis-sidcache och värden ställs in på `127.0.0.1`och tilldelar databasnumret 1. Alla andra parametrar ställs in på standardvärdet.
+I följande exempel aktiveras Redis-sidcache och värden ställs in på `127.0.0.1`och tilldelar databasnumret till 1. Alla andra parametrar ställs in på standardvärdet.
 
 ```bash
 bin/magento setup:config:set --page-cache=redis --page-cache-redis-server=127.0.0.1 --page-cache-redis-db=1
@@ -120,23 +120,23 @@ Efter [konfigurera ett Redis-kluster i AWS](https://aws.amazon.com/getting-start
    - Öppna en SSH-anslutning till din EC2-instans
    - Installera Redis-klienten på EC2-instansen:
 
-      ```bash
-      sudo apt-get install redis
-      ```
+     ```bash
+     sudo apt-get install redis
+     ```
 
    - Lägg till en inkommande regel till EC2-säkerhetsgruppen: Typ `- Custom TCP, port - 6379, Source - 0.0.0.0/0`
-   - Lägg till en inkommande regel i säkerhetsgruppen för kluster i ElastiCache: Typ `- Custom TCP, port - 6379, Source - 0.0.0.0/0`
+   - Lägg till en regel för inkommande trafik i säkerhetsgruppen för kluster i ElastiCache: Typ `- Custom TCP, port - 6379, Source - 0.0.0.0/0`
    - Anslut till Redis CLI:
 
-      ```bash
-      redis-cli -h <ElastiCache Primary Endpoint host> -p <ElastiCache Primary Endpoint port>
-      ```
+     ```bash
+     redis-cli -h <ElastiCache Primary Endpoint host> -p <ElastiCache Primary Endpoint port>
+     ```
 
 ### Konfigurera Commerce för att använda klustret
 
 Handeln stöder flera typer av cachelagringskonfigurationer. Vanligtvis är cachelagringskonfigurationerna uppdelade mellan klientdel och serverdel. Cachelagring av frontend klassificeras som `default`, används för alla cachetyper. Du kan anpassa eller dela upp i cacheminnen på lägre nivå för att få bättre prestanda. En vanlig Redis-konfiguration separerar standardcachen och sidcachen till sin egen Redis-databas (RDB).
 
-Kör `setup` för att ange Redis-slutpunkter.
+Kör `setup` -kommandon för att ange Redis-slutpunkter.
 
 Så här konfigurerar du Commerce for Redis som standardcachelagring:
 
@@ -156,7 +156,7 @@ Så här konfigurerar du Commerce att använda Redis för sessionslagring:
 bin/magento setup:config:set --session-save=redis --session-save-redis-host=<ElastiCache Primary Endpoint host> --session-save-redis-port=<ElastiCache Primary Endpoint port> --session-save-redis-log-level=4 --session-save-redis-db=2
 ```
 
-### Verifiera anslutning
+### Verifiera anslutningen
 
 **Verifiera att Commerce pratar med ElastiCache**:
 
@@ -190,9 +190,9 @@ Från och med Commerce 2.3.5 rekommenderas att implementeringen av Redis-cachen 
 
 ## Förinläsningsfunktion för Redis
 
-Eftersom Commerce lagrar konfigurationsdata i Redis-cachen kan vi förinläsa data som återanvänds mellan sidorna. Om du vill hitta nycklar som måste vara förinlästa analyserar du data som överförs från Redis till Commerce. Vi föreslår att du läser in data i förväg på alla sidor, som `SYSTEM_DEFAULT`, `EAV_ENTITY_TYPES`, `DB_IS_UP_TO_DATE`.
+Eftersom Commerce lagrar konfigurationsdata i Redis-cachen kan vi förinläsa data som återanvänds mellan sidorna. Analysera data som överförs från Redis till Commerce för att hitta nycklar som måste vara förinlästa. Vi föreslår att data som läses in på varje sida läses in i förväg, som `SYSTEM_DEFAULT`, `EAV_ENTITY_TYPES`, `DB_IS_UP_TO_DATE`.
 
-Redis använder `pipeline` för sammansatta lastbegäranden. Nycklarna ska innehålla databasprefixet. om till exempel databasprefixet är `061_`ser förinläsningsnyckeln ut så här: `061_SYSTEM_DEFAULT`
+Redis använder `pipeline` för sammansatta lastbegäranden. Tangenter ska innehålla databasprefixet, till exempel om databasprefixet är `061_`ser förinläsningsnyckeln ut så här: `061_SYSTEM_DEFAULT`
 
 ```php
 'cache' => [

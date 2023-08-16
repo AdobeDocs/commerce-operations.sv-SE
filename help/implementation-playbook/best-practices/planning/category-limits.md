@@ -48,4 +48,4 @@ Om du har fler än det rekommenderade maximala antalet kategorier kan det påver
 - [Översikt över kategorier](https://experienceleague.adobe.com/docs/commerce-admin/catalog/categories/categories.html)
 - [Översikt över navigering](https://experienceleague.adobe.com/docs/commerce-admin/catalog/catalog/navigation/navigation.html)
 - [Produkttilldelningar](https://experienceleague.adobe.com/docs/commerce-admin/catalog/categories/products-in-category/categories-product-assignments.html)
-- [Adobe Commerce om molninfrastruktur: Bästa tillvägagångssätt för butikskonfiguration](https://devdocs.magento.com/cloud/configure/configure-best-practices.html)
+- [Adobe Commerce om molninfrastruktur: Bästa metoder för butikskonfiguration](https://devdocs.magento.com/cloud/configure/configure-best-practices.html)

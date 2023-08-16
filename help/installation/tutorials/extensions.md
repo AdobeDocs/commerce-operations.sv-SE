@@ -1,6 +1,6 @@
 ---
 title: Installera ett tillägg
-description: Följ de här stegen för att installera ett Adobe Commerce- eller Magento Open Source-tillägg.
+description: Så här installerar du ett Adobe Commerce- eller Magento Open Source-tillägg.
 exl-id: b564662a-2e5f-4fa9-bae1-ca7498478fa9
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Kod som utökar eller anpassar beteendet Adobe Commerce och Magento Open Source kallas ett tillägg. Du kan även paketera och distribuera tillägg på [Commerce Marketplace](https://marketplace.magento.com) eller ett annat tilläggsdistributionssystem.
 
-Tillägg:
+Tilläggen omfattar:
 
 - Moduler (utöka funktionerna för Adobe Commerce och Magento Open Source)
 - Teman (ändra utseende och känsla för din butik och administratör)
@@ -21,7 +21,7 @@ Tillägg:
 
 >[!TIP]
 >
->I det här avsnittet beskrivs hur du använder kommandoraden för att installera tillägg som du köper från Commerce Marketplace. Du kan använda samma procedur för att installera _alla_ Utökning. Allt du behöver är tilläggets dispositionsnamn och version. Öppna tilläggets `composer.json` och notera värdena för `"name"` och `"version"`.
+>I det här avsnittet beskrivs hur du använder kommandoraden för att installera tillägg som du köper från Commerce Marketplace. Du kan använda samma procedur för att installera _alla_ -tillägg. Allt du behöver är tilläggets disposition och version. Öppna tilläggets `composer.json` och notera värdena för `"name"` och `"version"`.
 
 Före installationen kanske du vill:
 
@@ -85,13 +85,13 @@ Lägg till tilläggets namn och version i din `composer.json` fil:
    composer require <component-name>:<version>
    ```
 
-   Till exempel:
+   Exempel:
 
    ```bash
    composer require j2t/module-payplug:2.0.2
    ```
 
-1. Ange [autentiseringsnycklar](../prerequisites/authentication-keys.md). Din offentliga nyckel är ditt användarnamn; din privata nyckel är ditt lösenord.
+1. Ange [autentiseringsnycklar](../prerequisites/authentication-keys.md). Din offentliga nyckel är ditt användarnamn. Din privata nyckel är ditt lösenord.
 
 1. Vänta tills Composer har uppdaterat dina projektberoenden och kontrollera att inga fel uppstår:
 
@@ -153,7 +153,7 @@ Vissa tillägg fungerar inte korrekt om du inte först rensar genererade statisk
    bin/magento setup:upgrade
    ```
 
-1. Kompilera om projektet: I produktionsläget kan du få ett meddelande till &quot;Kör kompileringskommandot Magento igen&quot;. Du uppmanas inte att köra kompileringskommandot i utvecklarläget.
+1. Kompilera om ditt projekt: I produktionsläget kan du få ett meddelande om att köra kompileringskommandot för Magento igen. Du uppmanas inte att köra kompileringskommandot i utvecklarläget.
 
    ```bash
    bin/magento setup:di:compile
@@ -165,13 +165,13 @@ Vissa tillägg fungerar inte korrekt om du inte först rensar genererade statisk
    bin/magento module:status J2t_Payplug
    ```
 
-   Du bör se utdata som bekräftar att tillägget inte längre är inaktiverat:
+   Du bör se utdata som verifierar att tillägget inte längre är inaktiverat:
 
    ```terminal
    Module is enabled
    ```
 
-1. Rensa cacheminnet:
+1. Rensa cachen:
 
    ```bash
    bin/magento cache:clean

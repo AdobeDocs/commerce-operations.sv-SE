@@ -15,7 +15,7 @@ Vi använder [Disposition](https://getcomposer.org/) för att hantera Adobe Comm
 
 - Återanvänd bibliotek från tredje part utan att paketera dem med källkod
 - Minska antalet tilläggskonflikter och kompatibilitetsproblem genom att använda en komponentbaserad arkitektur med robust beroendehantering
-- Anmäl dig till [PHP-Framework Interoperability Group (FIG)](https://www.php-fig.org/) standarder
+- Anta till [PHP-Framework Interoperability Group (FIG)](https://www.php-fig.org/) standarder
 - Paketera Magento Open Source med andra komponenter
 - Använda Adobe Commerce eller Magento Open Source i produktionsmiljö
 
@@ -89,9 +89,9 @@ Så här hämtar du metapaketet för Adobe Commerce eller Magento Open Source:
 
    Ange dina autentiseringsnycklar när du uppmanas att göra det. Offentliga och privata nycklar skapas och konfigureras i [Commerce Marketplace](https://marketplace.magento.com/customer/account/login/).
 
-   Om du stöter på fel, t.ex. `Could not find package...` eller `...no matching package found`kontrollerar du att det inte finns några stavfel i kommandot. Om du fortfarande råkar ut för fel kanske du inte har behörighet att ladda ned Adobe Commerce. Kontakt [Adobe Commerce Support](https://support.magento.com/hc/en-us) om du behöver hjälp.
+   Om du stöter på fel, till exempel `Could not find package...` eller `...no matching package found`kontrollerar du att det inte finns några stavfel i kommandot. Om du fortfarande råkar ut för fel kanske du inte har behörighet att ladda ned Adobe Commerce. Kontakt [Adobe Commerce Support](https://support.magento.com/hc/en-us) om du behöver hjälp.
 
-   Se [Felsökning](https://support.magento.com/hc/en-us/articles/360033818091) för hjälp med fler fel.
+   Se [Felsökning](https://support.magento.com/hc/en-us/articles/360033818091) om du vill ha hjälp med fler fel.
 
    >[!NOTE]
    >
@@ -139,7 +139,7 @@ chmod u+x bin/magento
 
 Du måste använda kommandoraden för att installera Adobe Commerce eller Magento Open Source.
 
-I det här exemplet antas att installationskatalogen har ett namn `magento2ee`, `db-host` finns på samma dator (`localhost`) och `db-name`, `db-user`och `db-password` är alla `magento`:
+I det här exemplet antas att installationskatalogen har ett namn `magento2ee`, `db-host` finns på samma dator (`localhost`) och att `db-name`, `db-user`och `db-password` är alla `magento`:
 
 ```bash
 bin/magento setup:install \
@@ -186,7 +186,7 @@ Om du vill ha hjälp för ett visst kommando anger du:
 bin/magento help <command>
 ```
 
-Till exempel:
+Exempel:
 
 ```bash
 bin/magento help setup:install
@@ -210,7 +210,7 @@ Följande tabell sammanfattar de tillgängliga kommandona. Kommandon visas endas
 | `magento setup:db-schema:upgrade` | Uppdaterar databasschemat. | Distributionskonfiguration |
 | `magento setup:db-data:upgrade` | Uppdaterar databasdata. | Distributionskonfiguration |
 | `magento setup:db:status` | Kontrollerar om databasen är uppdaterad med koden. | Distributionskonfiguration |
-| `magento admin:user:create` | Skapar en administratörsanvändare. | Du kan skapa användare för följande:<br><br>Distributionskonfiguration<br><br>Aktivera minst `Magento_User` och `Magento_Authorization` moduler<br><br>Databas (enklaste sättet är att använda `bin/magento setup:upgrade`) |
+| `magento admin:user:create` | Skapar en administratör. | Du kan skapa användare för följande:<br><br>Distributionskonfiguration<br><br>Aktivera minst `Magento_User` och `Magento_Authorization` moduler<br><br>Databas (enklaste sättet är att använda `bin/magento setup:upgrade`) |
 | `magento list` | Visar alla tillgängliga kommandon. | Ingen |
 | `magento help` | Tillhandahåller hjälp för det angivna kommandot. | Ingen |
 
@@ -221,9 +221,9 @@ Följande argument är gemensamma för alla kommandon. Dessa kommandon kan köra
 | Lång version | Kort version | Betydelse |
 |--- |--- |--- |
 | `--help` | `-h` | Få hjälp för alla kommandon. Till exempel: `./magento help setup:install` eller `./magento help setup:config:set`. |
-| `--quiet` | `-q` | Tyst läge; inga utdata. |
+| `--quiet` | `-q` | Tyst läge, inga utdata. |
 | `--no-interaction` | `-n` | Inga interaktiva frågor. |
-| `--verbose=1,2,3` | `-v, -vv, -vvv` | Detaljnivå. Till exempel: `--verbose=3` eller `-vvv` I visas felsökningsdetalj, vilket är den mest utförliga utdata. Standard är `--verbose=1` eller `-v`. |
+| `--verbose=1,2,3` | `-v, -vv, -vvv` | Detaljnivå. Till exempel: `--verbose=3` eller `-vvv` I visas felsökningsintensitet, som är den mest utförliga utdata. Standard är `--verbose=1` eller `-v`. |
 | `--version` | `-V` | Visa den här programversionen |
 | `--ansi` | n/a | Framtvinga ANSI-utdata |
 | `--no-ansi` | n/a | Inaktivera ANSI-utdata |

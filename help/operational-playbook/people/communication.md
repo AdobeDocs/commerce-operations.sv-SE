@@ -18,7 +18,7 @@ Kommunikation är avgörande för att ett e-handelsprojekt ska lyckas.
 Att skapa en stark kommunikationsprocess inom alla e-handelsteam handlar om att hantera alla resurser och processer så effektivt som möjligt och investera i de människor som är viktiga. En del av strategin som företag måste anta är att delegera uppgifter till rätt personer, eller programvara, i deras team. I allmänhet måste alla e-handelsföretag ta sig an tre huvudområden:
 
 - Produkt
-- Kundvärvning
+- Kundförvärv
 - Kundlagring
 
 De flesta roller faller under dessa tre områden.
@@ -33,13 +33,13 @@ Nedan anges några av processens e-handelsföretag som ska vidta operativa åtg�
 
 Det är allmänt känt att dålig kommunikation inom ett arbetsförhållande är skadlig för organisationer och team. Studier har visat att de ekonomiska förlusterna per år är i de miljontals som beror på otillräcklig kommunikation mellan anställda. Det är troligt att personalen tar sig an olika roller och ansvarsområden, vilket leder till att de dras åt många håll. Lyckligtvis finns det en mängd olika teknologier som hjälper människor att hålla sig öppna och kommunicera på ett tydligt sätt.
 
-Vi kommer att utforska några av dessa verktyg, som har visat sig vara mycket effektiva inom både stora och små organisationer.
+Vi kommer att utforska några av dessa verktyg, som har visat sig vara mycket slagkraftiga inom både stora och små organisationer.
 
 ### JIRA
 
 Programverktygen för projektledning och uppföljning av ärenden har funnits ett tag nu. Sådana verktyg förenklar kommunikationsprocessen mellan anställda och säkerställer projektets eller plattformens skalbarhet.
 
-JIRA har varit känt för att kryssa för alla rutor när det gäller informationsutbyte och grundläggande projektledning. Programmet ger team möjlighet att dela mer kunskap och information, vilket leder till en bättre förståelse för affärsmål, mål och uppgifter inom vilket team som helst. När det används väl kan det förbättra samarbetet och effektiviteten inom en organisation.
+JIRA har varit känt för att kryssa för alla rutor när det gäller informationsutbyte och grundläggande projektledning. Programmet ger team möjlighet att dela mer kunskap och information, vilket leder till en bättre förståelse för affärsmål, mål och uppgifter inom alla team. När det används väl kan det förbättra samarbetet och effektiviteten inom en organisation.
 
 I följande lista visas olika sätt att använda JIRA i olika organisationer:
 
@@ -63,7 +63,7 @@ I följande lista visas olika sätt att använda JIRA i olika organisationer:
 
 #### Exempel på JIRA-arbetsflöde
 
-Med JIRA kan team skapa och skriva detaljerade uppgifter, generera rapporter, anpassa arbetsflöden och tilldela jobb mellan individer relativt snabbt.
+Med JIRA kan teamen skapa och skriva detaljerade uppgifter, generera rapporter, anpassa arbetsflöden och tilldela jobb mellan individer relativt snabbt.
 
 Hanterare, marknadsförings- och utvecklingsteam, även intressenter på C-nivå, kan följa den dagliga, veckovisa, månadsvisa och årliga utvecklingen för varje given JIRA-uppgift eller -projekt. Det Atlassiska projektledningsverktyget finns i tre versioner, bland annat JIRA Align, JIRA Core och JIRA Software.
 
@@ -100,4 +100,4 @@ Här följer några tips om hur du kan förbättra kommunikationen:
 - Håll budskapen tydliga, använd enkelt språk och håll dig borta från jargon. Även om era team kanske förväntas känna till e-handelsterminologi kan jargon fortfarande hämma förståelsen.
 - Möt teamet där de känner sig bekväma, oavsett om det är via traditionella skrivna meddelanden eller videomeddelanden som skickas via e-post.
 - Använd JIRA och Confluence för projektledning, planering och dokumentation
-- Håll käften kort och slagkraftig för hela teamet
+- Håll käften kort och påverkar hela teamet

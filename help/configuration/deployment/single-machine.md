@@ -6,7 +6,7 @@ exl-id: ca73309c-7584-4506-99de-dd933651eeb6
 source-git-commit: dcc283b901917e3681863370516771763ae87462
 workflow-type: tm+mt
 source-wordcount: '186'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -16,7 +16,7 @@ Det här avsnittet innehåller anvisningar om hur du distribuerar uppdateringar 
 
 ## Antaganden
 
-- Du installerade Commerce med [Disposition](../../installation/composer.md).
+- Du har installerat Commerce med [Disposition](../../installation/composer.md).
 - Du installerar uppdateringar direkt på servern.
 
 >[!WARNING]
@@ -48,7 +48,7 @@ Det här avsnittet innehåller anvisningar om hur du distribuerar uppdateringar 
 
    **package**: Namnet på det paket som du vill uppdatera.
 
-   Till exempel:
+   Exempel:
 
    - `magento/product-community-edition`
    - `magento/product-enterprise-edition`
@@ -79,7 +79,7 @@ Det här avsnittet innehåller anvisningar om hur du distribuerar uppdateringar 
    bin/magento setup:static-content:deploy
    ```
 
-1. Rensa cacheminnet:
+1. Rensa cachen:
 
    ```bash
    bin/magento cache:clean

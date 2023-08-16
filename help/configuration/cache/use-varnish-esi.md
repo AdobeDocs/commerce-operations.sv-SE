@@ -1,12 +1,12 @@
 ---
 title: Varnish ESI block
 description: Lär dig mer om Edge Side Includes och hur du kan använda dem för att bädda in webbsidor.
-badge: label="Contributed by Konstantin G." type="Informative" url="https://github.com/goivvy" tooltip="Konstantin G."
+badge: label="Medverkad av Konstantin G." type="Informative" url="https://github.com/goivvy" tooltip="Konstantin G."
 feature: Configuration, Cache
 exl-id: 7dccafa5-df79-4690-be5c-ff774c66bb2a
 source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '130'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ I Commerce Framework skapas en ESI-tagg när följande villkor är uppfyllda:
    </referenceContainer>
 ```
 
-I exemplet ovan är `block` elementet lägger till innehåll från `esi.phtml` till en hemsida så uppdateras det automatiskt var 30:e sekund av Varannan.
+I exemplet ovan är `block` elementet lägger till innehåll från `esi.phtml` till en hemsida så uppdateras det automatiskt var 30:e sekund av Varannan mall.
 
 ## Begränsningar
 

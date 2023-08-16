@@ -5,7 +5,7 @@ exl-id: c5370c30-fed8-4f45-89c3-ef0d6ad41a89
 feature: Configuration, Observability
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
@@ -100,7 +100,7 @@ The **[!UICONTROL [!DNL RabbitMQ] Published Messages by Queue]** diagram visar h
 
 ## [!UICONTROL [!DNL RabbitMQ] Published Message Throughput by Queue]
 
-![[!DNL RabbitMQ] Publicerat meddelandeflöde efter kö](../../assets/tools/observation-for-adobe-commerce/rabbitmq-tab-9.jpeg)
+![[!DNL RabbitMQ] Publicerat meddelandegenomflöde efter kö](../../assets/tools/observation-for-adobe-commerce/rabbitmq-tab-9.jpeg)
 
 The **[!UICONTROL [!DNL RabbitMQ] Published Message Throughput by Queue]** diagram visar det genomsnittliga antalet publicerade meddelanden per sekund för varje [!DNL RabbitMQ] kön över den valda tidsramen.
 

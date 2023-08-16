@@ -6,13 +6,13 @@ exl-id: c81fcab2-1ee3-4ec7-a300-0a416db98614
 source-git-commit: 56a2461edea2799a9d569bd486f995b0fe5b5947
 workflow-type: tm+mt
 source-wordcount: '938'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 # Secure cron PHP
 
-Det här avsnittet handlar om att skydda `pub/cron.php` för att förhindra att den används i ett fientligt utnyttjande. Om du inte skyddar kron kan alla användare köra cron för att attackera ditt Commerce-program.
+Det här avsnittet handlar om hur du skyddar `pub/cron.php` för att förhindra att den används i ett fientligt utnyttjande. Om du inte skyddar kron kan alla användare köra cron för att attackera ditt Commerce-program.
 
 Kronijobbet kör flera schemalagda aktiviteter och är en viktig del av din Commerce-konfiguration. Schemalagda aktiviteter omfattar, men är inte begränsade till:
 
@@ -23,11 +23,11 @@ Kronijobbet kör flera schemalagda aktiviteter och är en viktig del av din Comm
 
 >[!INFO]
 >
->Se [Konfigurera och kör cron](../cli/configure-cron-jobs.md#run-cron-from-the-command-line) om du vill ha mer information om cron-grupper.
+>Se [Konfigurera och kör cron](../cli/configure-cron-jobs.md#run-cron-from-the-command-line) för mer information om cron-grupper.
 
 Du kan köra ett cron-jobb på följande sätt:
 
-- Använda [`magento cron:run`](../cli/configure-cron-jobs.md#run-cron-from-the-command-line) kommandot antingen från kommandoraden eller på en crontab
+- Använda [`magento cron:run`](../cli/configure-cron-jobs.md#run-cron-from-the-command-line) kommando antingen från kommandoraden eller på en crontab
 - Åtkomst `pub/cron.php?[group=<name>]` i en webbläsare
 
 >[!INFO]
@@ -181,7 +181,7 @@ Det enklaste sättet att verifiera att `pub/cron.php` är säkert att verifiera 
 
 1. Logga in i databasen som Commerce-databasanvändare eller som `root`.
 
-   Till exempel:
+   Exempel:
 
    ```bash
    mysql -u magento -p
@@ -193,13 +193,13 @@ Det enklaste sättet att verifiera att `pub/cron.php` är säkert att verifiera 
    use <database-name>;
    ```
 
-   Till exempel:
+   Exempel:
 
    ```shell
    use magento;
    ```
 
-1. Ta bort alla rader från `cron_schedule` databastabell:
+1. Ta bort alla rader från `cron_schedule` databastabell
 
    ```shell
    TRUNCATE TABLE cron_schedule;
@@ -211,7 +211,7 @@ Det enklaste sättet att verifiera att `pub/cron.php` är säkert att verifiera 
    http[s]://<Commerce hostname or ip>/cron.php?group=default
    ```
 
-   Till exempel:
+   Exempel:
 
    ```shell
    http://magento.example.com/cron.php?group=default
@@ -250,7 +250,7 @@ Det enklaste sättet att verifiera att `pub/cron.php` är säkert att verifiera 
 
 ## Köra cron från en webbläsare
 
-Du kan köra cron när som helst, t.ex. under utvecklingen, med en webbläsare.
+Du kan köra cron när som helst, till exempel under utvecklingen, med en webbläsare.
 
 >[!WARNING]
 >
@@ -266,7 +266,7 @@ Om du använder en Apache-webbserver måste du ta bort begränsningen från `.ht
    <magento_root>/.htaccess
    ```
 
-1. Ta bort eller kommentera följande:
+1. Ta bort eller kommentera ut följande:
 
    ```conf
    ## Deny access to cron.php
@@ -276,7 +276,7 @@ Om du använder en Apache-webbserver måste du ta bort begränsningen från `.ht
      </Files>
    ```
 
-   Till exempel:
+   Exempel:
 
    ```conf
    ## Deny access to cron.php
@@ -299,11 +299,11 @@ Var:
 - `<your hostname or IP>` är värdnamnet eller IP-adressen för din Commerce-installation.
 - `<Commerce root>` är webbserverns dokumentrelativa katalog som du installerade Commerce-programmet på.
 
-   Den exakta URL som du använder för att köra Commerce-programmet beror på hur du konfigurerade webbservern och det virtuella värdsystemet.
+  Den exakta URL som du använder för att köra Commerce-programmet beror på hur du konfigurerade webbservern och det virtuella värdsystemet.
 
 - `<group name>` är ett giltigt cron group-namn (valfritt)
 
-Till exempel:
+Exempel:
 
 ```http
 https://magento.example.com/magento2/pub/cron.php?group=index
@@ -311,4 +311,4 @@ https://magento.example.com/magento2/pub/cron.php?group=index
 
 >[!INFO]
 >
->Du måste köra cron två gånger: först med att identifiera uppgifter som ska köras och sedan köra själva uppgifterna igen. Se [Konfigurera och kör cron](../cli/configure-cron-jobs.md) om du vill ha mer information om cron-grupper.
+>Du måste köra cron två gånger: först med att identifiera uppgifter som ska köras och sedan igen för att köra själva uppgifterna. Se [Konfigurera och kör cron](../cli/configure-cron-jobs.md) för mer information om cron-grupper.

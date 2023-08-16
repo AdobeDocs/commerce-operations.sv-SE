@@ -58,6 +58,6 @@ Handlare och partners som vill ha större insyn i sina Adobe Commerce webbplatse
 
 ## [!DNL Site-Wide Analysis Tool] demo
 
-I den här videon får du veta mer om [!DNL Site-Wide Analysis Tool]:
+I den här videon får du lära dig mer om [!DNL Site-Wide Analysis Tool]:
 
 >[!VIDEO](https://video.tv.adobe.com/v/344001?quality=12)

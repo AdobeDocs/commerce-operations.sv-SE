@@ -16,7 +16,7 @@ Som vi har nämnt utnyttjar Adobe Commerce ett antal programlösningar för att 
 
 ![Bild som visar Adobe Commerce om molninfrastruktursteknik](../../../assets/playbooks/infrastructure-technology.svg)
 
-## Programvarulösningar
+## Lösningar för programvara
 
 - **Nginx**—Webbserver med PHP-FPM. Det finns en instans med flera arbetare.
 

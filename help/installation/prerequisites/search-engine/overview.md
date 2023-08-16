@@ -18,7 +18,7 @@ Från och med Adobe Commerce och Magento Open Source 2.4 måste alla installatio
 >
 >Stöd för OpenSearch lades till i 2.4.4. OpenSearch är en kompatibel gaffel för Elasticsearch. Alla instruktioner för att konfigurera Elasticsearch 7 gäller för OpenSearch. [Migrera från Elasticsearch till OpenSearch](../../../upgrade/prepare/opensearch-migration.md) ger vägledning om hur du går över till OpenSearch.
 
-## Versioner som stöds
+## Version som stöds
 
 Du måste installera och konfigurera antingen Elasticsearch eller OpenSearch innan du installerar Adobe Commerce 2.4.4 och senare.
 
@@ -41,9 +41,9 @@ I bilden ovan visas:
 
 * Commerce-programmet och sökmotorn är installerade på olika värdar.
 
-  Körning på separata värdar kräver att proxering fungerar. (Att klustera sökmotorn ligger utanför den här handbokens räckvidd, men du hittar mer information i [Elasticsearch klusterdokumentation](https://www.elastic.co/guide/en/elasticsearch/guide/current/distributed-cluster.html).)
+  Körning på separata värdar kräver att proxering fungerar. (Att klustera sökmotorn ligger utanför den här handbokens räckvidd, men du hittar mer information i [Dokumentation för Elasticsearch-klustring](https://www.elastic.co/guide/en/elasticsearch/guide/current/distributed-cluster.html).)
 
-* Varje värd har en egen webbserver. webbservrarna behöver inte vara desamma.
+* Varje värd har en egen webbserver. Webbservrarna behöver inte vara samma.
 
   Commerce-programmet kan till exempel köra Apache och sökmotorn kan köra nginx.
 

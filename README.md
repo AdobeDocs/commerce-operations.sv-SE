@@ -2,7 +2,7 @@
 source-git-commit: 8b82081057af7d134528988d3f9f7cf53f4d7525
 workflow-type: tm+mt
 source-wordcount: '475'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 # Adobe Commerce tekniska dokumentation
@@ -11,7 +11,7 @@ Vi välkomnar bidrag från både vår community och från Adobe anställda utanf
 
 ## Adobe uppförandekod med öppen källkod
 
-Detta projekt har antagit [Adobe uppförandekod med öppen källkod](code-of-conduct.md) eller [.NET Foundation - uppförandekod](https://dotnetfoundation.org/code-of-conduct). Mer information finns i [Bidrar](contributing.md) artikel.
+Detta projekt har antagit [Adobe Open Source Code of Conduct](code-of-conduct.md) eller [.NET Foundation Code of Conduct](https://dotnetfoundation.org/code-of-conduct). Mer information finns i artikeln [Contributing](contributing.md).
 
 ## Om dina bidrag till Adobe innehåll
 
@@ -45,12 +45,12 @@ Deltagare i communityn kan använda GitHub-gränssnittet för grundläggande red
 
 Se [Adobe Docs Contributor Guide](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html) för mer information.
 
-## Så här använder du kod för att formatera ditt ämne
+## Så här använder du kod för att formatera ämnet
 
 Alla artiklar i den här databasen använder smaksatt GitHub-kod. Om du inte är van vid att markera något läser du:
 
 * [Grunderna i markeringar](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
-* [Utskrivbart markeringsdatablad](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
+* [Utskrivbart markeringsblad](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
 
 ## Mallar
 

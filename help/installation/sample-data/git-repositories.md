@@ -22,9 +22,9 @@ Utvecklare kan använda den här metoden för att installera exempeldata *endast
 
 >[!WARNING]
 >
->Du kan använda exempeldata med `develop` gren (mer aktuell) eller en frisläppt gren (som `2.4` (stabilare). Vi rekommenderar att du använder en frisläppt gren eftersom den är stabilare. Om du bidrar med kod till databasen och behöver den senaste koden använder du `develop` förgrening. Oavsett vilken gren du väljer måste du [klona](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/) den motsvarande grenen i GitHub-databasen i Magento Open Source. Exempeldata för `develop` grenen kan användas *endast* med Magento Open Source `develop` förgrening.
+>Du kan använda exempeldata med `develop` gren (mer aktuell) eller en frisläppt gren (till exempel `2.4` (stabilare). Vi rekommenderar att du använder en frisläppt gren eftersom den är stabilare. Om du bidrar med kod till databasen och behöver den senaste koden använder du `develop` gren. Oavsett vilken gren du väljer måste du [klona](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/) den motsvarande grenen i GitHub-databasen i Magento Open Source. Exempeldata för `develop` grenen kan användas *endast* med Magento Open Source `develop` gren.
 
-## Klona exempeldatalagret
+## Klona exempeldatabasen
 
 I det här avsnittet beskrivs hur du installerar exempeldata genom att klona databasen med exempeldata. Du kan klona exempeldatabasen på något av följande sätt:
 
@@ -45,7 +45,7 @@ Så här klonar du GitHub-databasen med exempeldata med SSH-protokollet:
 
 1. Byt till webbserverns dokumentrotkatalog.
 
-   Vanligtvis är det för Ubuntu `/var/www` och för CentOS är det `/var/www/html`.
+   Vanligtvis är det för Ubuntu `/var/www` och för CentOS `/var/www/html`.
 
 1. Retur `git clone` och klistra in värdet som du fick tidigare.
 
@@ -69,7 +69,7 @@ Så här klonar du GitHub-databasen med exempeldata med SSH-protokollet:
 
 1. Se till att du checkar ut den gren i exempeldatalagret som motsvarar den gren du använde från huvuddelen `magento2` databas.
 
-   Till exempel:
+   Exempel:
 
    Om du använde `2.4-develop` grenen Sample Data i Magento Open Source GitHub-databasen ska `2.4-develop`.
 
@@ -110,7 +110,7 @@ Så här klonar du GitHub-databasen med exempeldata med HTTPS-protokollet:
 
 1. Byt till webbserverns dokumentrotkatalog.
 
-   Vanligtvis är det för Ubuntu `/var/www` och för CentOS är det `/var/www/html`.
+   Vanligtvis är det för Ubuntu `/var/www` och för CentOS `/var/www/html`.
 
 1. Retur `git clone` och klistra in värdet som du fick tidigare.
 
@@ -123,7 +123,7 @@ Så här klonar du GitHub-databasen med exempeldata med HTTPS-protokollet:
 1. Vänta tills databasen har klonats på servern.
 1. Se till att du checkar ut den gren i exempeldatalagret som motsvarar den gren du använde från huvuddelen `magento2` databas.
 
-   Till exempel:
+   Exempel:
 
    Om du använde `2.4-develop` grenen Sample Data i Magento Open Source GitHub-databasen ska `2.4-develop`.
 
@@ -140,7 +140,7 @@ Så här klonar du GitHub-databasen med exempeldata med HTTPS-protokollet:
    php -f <sample-data_clone_dir>/dev/tools/build-sample-data.php -- --ce-source="<path_to_your_magento_instance>"
    ```
 
-   Till exempel:
+   Exempel:
 
    ```bash
    php -f <sample-data_clone_dir>/dev/tools/build-sample-data.php -- --ce-source="/var/www/magento2"
@@ -153,8 +153,7 @@ Så här klonar du GitHub-databasen med exempeldata med HTTPS-protokollet:
 >
 >Om du installerar exempeldata *efter* Om du installerar Adobe Commerce eller Magento Open Source måste du också köra följande kommando för att uppdatera databasen och schemat:
 >
->
-```bash
+>```bash
 ><magento_root>/bin/magento setup:upgrade
 >```
 
@@ -162,7 +161,7 @@ Så här klonar du GitHub-databasen med exempeldata med HTTPS-protokollet:
 
 På grund av `php build-sample-data.php` skriptet skapar länkar mellan exempeldatalagret och din Magento Open Source-databas. Du måste ange filsystembehörigheter och ägarskap i exempeldatalagret. Om du inte gör det blir det fel att öppna butiken.
 
-Så här anger du behörigheter och ägarskap för filsystemet i exempeldatalagret:
+Så här anger du behörigheter och ägarskap för filsystemet i exempeldatabasen:
 
 1. Byt till din exempeldataklonkatalog.
 1. Ange ägarskap:

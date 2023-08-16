@@ -17,12 +17,12 @@ ht-degree: 0%
 
 - **Produktattribut**—
    - För Adobe Commerce version 2.3.x och 2.4.0 till 2.4.1-p1 får du inte konfigurera fler än 500 attribut
-   - För Adobe Commerce version 2.4.2 och senare konfigurerar du upp till 1 500 produktattribut
+   - Konfigurera upp till 1 500 produktattribut för Adobe Commerce version 2.4.2 och senare
 - **Produktattributsalternativ**-Konfigurera upp till 100 attributalternativ för varje attribut
 - **Produktattributuppsättningar**-Konfigurera högst 1 000 attributuppsättningar _
 >[!NOTE]
 >
->Produktattributen anger funktioner som gäller globalt för alla produkter. Produktattributsalternativen är anpassningar för att specificera funktioner som gäller specifika produkter.
+>Produktattributen anger funktioner som gäller globalt för alla produkter. Produktattributsalternativen är anpassningar för att specificera funktioner som gäller för specifika produkter.
 
 ## Berörda produkter och versioner
 
@@ -41,7 +41,7 @@ För bästa prestanda när du hanterar produkter från Admin och hämtar produkt
 - Ta bort produktegenskaper som inte används.
 - Lagra och hantera icke-handelsrelaterade attribut i externa produkthanteringssystem (PMS).
 
-## Minska antalet produktattributsalternativ
+## Minska antalet produktattribut
 
 För bästa prestanda när du hanterar produkter från Admin och hämtar produktdata i butiken:
 

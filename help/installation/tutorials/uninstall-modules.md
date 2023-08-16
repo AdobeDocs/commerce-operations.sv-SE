@@ -17,7 +17,7 @@ Du bör endast avinstallera en modul om du är säker på att du inte kommer att
 
 >[!NOTE]
 >
->Det här kommandot kontrollerar att endast beroenden som deklarerats i `composer.json` -fil. Om du avinstallerar en modul som är _not_ definieras i `composer.json` avinstallerar det här kommandot modulen utan att kontrollera om det finns beroenden. Det här kommandot gör _not_ Ta dock bort modulens kod från filsystemet. Du måste använda filsystemverktygen för att ta bort modulens kod (till exempel `rm -rf <path to module>`). Som ett alternativ kan du [disable](manage-modules.md) icke-dispositionsmoduler.
+>Det här kommandot kontrollerar att endast beroenden som har deklarerats i `composer.json` -fil. Om du avinstallerar en modul som _not_ definieras i `composer.json` avinstallerar det här kommandot modulen utan att kontrollera om det finns beroenden. Det här kommandot gör _not_ Ta dock bort modulens kod från filsystemet. Du måste använda filsystemverktygen för att ta bort modulens kod (till exempel `rm -rf <path to module>`). Som ett alternativ kan du [disable](manage-modules.md) moduler som inte är dispositionsmoduler.
 
 Kommandoanvändning:
 
@@ -48,17 +48,17 @@ Avinstallationskommandot för modulen utför följande åtgärder:
    | `--backup-media` | Säkerhetskopierar katalogen pub/media. | `var/backups/<timestamp>_filesystem_media.tgz` |
    | `--backup-db` | Säkerhetskopierar databasen. | `var/backups/<timestamp>_db.gz` |
 
-1. If `--remove-data` har angetts tar du bort databasschemat och data som definierats i modulens `Uninstall` klasser.
+1. If `--remove-data` har angetts tar du bort databasschemat och data som definierats i modulens `Uninstall` -klasser.
 
-   För varje angiven modul som ska avinstalleras anropas `uninstall` metoden i `Uninstall` klassen. Den här klassen måste ärva från [Magento\Framework\Setup\UninstallInterface](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Setup/UninstallInterface.php).
+   För varje angiven modul som ska avinstalleras anropas `uninstall` metoden i sin `Uninstall` klassen. Den här klassen måste ärva från [Magento\Framework\Setup\UninstallInterface](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Setup/UninstallInterface.php).
 
-1. Tar bort de angivna modulerna från `setup_module` databastabell.
-1. Tar bort de angivna modulerna från modullistan i [distributionskonfiguration](../../configuration/reference/deployment-files.md).
+1. Tar bort angivna moduler från `setup_module` databastabell.
+1. Tar bort angivna moduler från modullistan i [distributionskonfiguration](../../configuration/reference/deployment-files.md).
 1. Tar bort kod från kodbasen med `composer remove`.
 
    >[!NOTE]
    >
-   >Avinstallera en modul _alltid_ körningar `composer remove`. The `--remove-data` tar bort databasdata och schema som definieras av modulens `Uninstall` klassen.
+   >Avinstallera en modul _alltid_ körningar `composer remove`. The `--remove-data` alternativ tar bort databasdata och schema som definieras av modulens `Uninstall` klassen.
 
 1. Rensar cachen.
 1. Uppdateringsgenererade klasser.
@@ -116,7 +116,7 @@ Disabling maintenance mode
 
 >[!NOTE]
 >
->Fel visas om du försöker avinstallera en modul som är beroende av en annan modul. I så fall kan du inte avinstallera en modul; du måste avinstallera båda.
+>Fel visas om du försöker avinstallera en modul som är beroende av en annan modul. I så fall kan du inte avinstallera en modul. Du måste avinstallera båda.
 
 ## Återställ filsystemet, databasen eller mediefilerna
 
@@ -168,26 +168,26 @@ Om du till exempel vill återställa en säkerhetskopia av kod (det vill säga e
 
 * Visa en lista över säkerhetskopior:
 
-   ```bash
-   magento info:backups:list
-   ```
+  ```bash
+  magento info:backups:list
+  ```
 
 * Återställa en filsäkerhetskopia med namnet `1433876616_filesystem.tgz`:
 
-   ```bash
-   magento setup:rollback --code-file="1433876616_filesystem.tgz"
-   ```
+  ```bash
+  magento setup:rollback --code-file="1433876616_filesystem.tgz"
+  ```
 
-   Meddelanden som liknar följande:
+  Meddelanden som liknar följande:
 
-   ```terminal
-   Enabling maintenance mode
-   Code rollback is starting ...
-   Code rollback filename: 1433876616_filesystem.tgz
-   Code rollback file path: /var/www/html/magento2/var/backups/1433876616_filesystem.tgz
-   [SUCCESS]: Code rollback has completed successfully.
-   Disabling maintenance mode
-   ```
+  ```terminal
+  Enabling maintenance mode
+  Code rollback is starting ...
+  Code rollback filename: 1433876616_filesystem.tgz
+  Code rollback file path: /var/www/html/magento2/var/backups/1433876616_filesystem.tgz
+  [SUCCESS]: Code rollback has completed successfully.
+  Disabling maintenance mode
+  ```
 
 >[!NOTE]
 >

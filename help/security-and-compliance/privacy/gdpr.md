@@ -13,9 +13,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Detta är ett ämne i en rad ämnen som hjälper handlarna och utvecklarna i Adobe Commerce och Magento Open Source att förstå konsekvenserna av den allmänna dataskyddsförordningen (GDPR). Uppgifterna är endast avsedda som information och bör inte tolkas som juridisk rådgivning. Kontakta ditt juridiska ombud för att avgöra om och hur ditt företag ska uppfylla juridiska skyldigheter.
+>Detta är ett ämne i en rad ämnen som hjälper handlarna och utvecklarna i Adobe Commerce och Magento Open Source att förstå konsekvenserna av den allmänna dataskyddsförordningen (GDPR). Uppgifterna är endast avsedda som information och bör inte tolkas som juridisk rådgivning. Kontakta ditt juridiska ombud för att få reda på om och hur ditt företag ska uppfylla juridiska skyldigheter.
 
-Europeiska unionen (EU) antog [Allmän dataskyddsförordning](https://ec.europa.eu/info/law/law-topic/data-protection_en) (GDPR) för att ge medborgarna bättre kontroll över sina personuppgifter. GDPR gäller alla organisationer som är verksamma inom EU. Det gäller också organisationer utanför EU som erbjuder varor eller tjänster till kunder eller företag inom EU.
+EU antog [Allmän dataskyddsförordning](https://ec.europa.eu/info/law/law-topic/data-protection_en) (GDPR) för att ge medborgarna bättre kontroll över sina personuppgifter. GDPR gäller alla organisationer som är verksamma inom EU. Det gäller också organisationer utanför EU som erbjuder varor eller tjänster till kunder eller företag inom EU.
 
 Systemintegratörer kan använda dataflödesdiagram och databasinformation i personinformationsreferensen för att skapa skript för att lösa användningsområden som liknar de här:
 

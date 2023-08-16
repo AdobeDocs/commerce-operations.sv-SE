@@ -11,11 +11,11 @@ ht-degree: 0%
 
 # Konfigurationsguide
 
-The _Konfiguration_ handboken innehåller referensmaterial och begränsad vägledning för hantering av konfigurerbara funktioner och tjänster i Commerce-program. Tekniska användare som ansvarar för att konfigurera Commerce-programmet hittar vägledning inom följande områden:
+The _Konfiguration_ handboken innehåller referensmaterial och begränsad vägledning för hantering av konfigurerbara funktioner och tjänster i Commerce-applikationer. Tekniska användare som ansvarar för att konfigurera Commerce-programmet hittar vägledning inom följande områden:
 
 - [Installation](../configuration/bootstrap/initialization.md)
 - [Distributionsmetoder](../configuration/deployment/overview.md)
-- [Cachelagringsalternativ](../configuration/cache/caching-overview.md)
+- [Cachealternativ](../configuration/cache/caching-overview.md)
 - [Cron Job Management](../configuration/cron/custom-cron.md)
 - [Kommandoradsanvändning](../configuration/cli/config-cli.md)
 - [Logganpassning](../configuration/logs/custom-logging.md)

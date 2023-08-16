@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3410528/?quality=12&learn=on)
 
-När man driver företag som har flera webbplatser för flera varumärken på flera lokala marknader (med lokaliserade valutor, språk, medier, delade kataloger och unika kundvagnar) och som vill undvika onödiga kostnader för implementering av samma funktioner och integreringar är GRA (Global Reference Architecture) alltid ett bra alternativ.
+När man driver företag som har flera webbplatser för flera varumärken på flera lokala marknader (med lokaliserade valutor, språk, medier, delade kataloger och unika kundvagnar) och som vill undvika onödiga kostnader för implementering av samma funktioner och integreringar är GRA alltid ett bra alternativ.
 
 ![Tabell som förklarar kostnaderna för skillnader i arkitektur](../../assets/playbooks/divergent-architecture.svg)
 
@@ -29,7 +29,7 @@ GRA är:
 GRA är inte:
 
 - En&quot;funktion&quot;
-- Unikt för alla e-handelsplattformar
+- Unikt för alla handelsplattformar
 - Endast för globala affärssyften
 
 GRA-effekter:

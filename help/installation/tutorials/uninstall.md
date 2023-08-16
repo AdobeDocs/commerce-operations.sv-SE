@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Avinstallera eller installera om Adobe Commerce
 
-Innan du använder dessa kommandon måste du [installera programmet](../tutorials/install.md).
+Innan du använder kommandona måste du [installera programmet](../tutorials/install.md).
 
 ## Uppdatera programmet
 
@@ -43,7 +43,7 @@ Följande meddelande visas för att bekräfta att avinstallationen lyckades:
 [SUCCESS]: Magento uninstallation complete.
 ```
 
-## Spara genererade filer som ett alternativ
+## Behåll genererade filer som tillval
 
 Som standard `bin/magento setup:upgrade` rensar kompilerad kod och cachen. Vanligtvis använder du `bin/magento setup:upgrade` för att uppdatera komponenter och varje komponent kan kräva olika kompilerade klasser.
 

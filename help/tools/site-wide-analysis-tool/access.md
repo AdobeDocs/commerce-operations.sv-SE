@@ -1,6 +1,6 @@
 ---
 title: Åtkomst [!DNL Site-Wide Analysis Tool]
-description: Lär dig hur du använder [!DNL Site-Wide Analysis Tool]
+description: Lär dig hur du får tillgång till [!DNL Site-Wide Analysis Tool]
 exl-id: b691fb2c-8d66-4cf9-8612-bbcb4df5b95f
 source-git-commit: 5f9f81b930a3b23c0b334ccbea94d296338a0048
 workflow-type: tm+mt
@@ -38,14 +38,14 @@ Om du redan har en [!DNL Commerce] men du har inget [!DNL Adobe ID]kan du skapa 
 
 1. Godkänn villkoren.
 
-1. **<u>Anteckning</u>:** Ditt konto bör ha rätt till **[!DNL Support Permissions]** för att få tillgång till [!DNL Site-Wide Analysis Tool Dashboard].
+1. **<u>Anteckning</u>:** Ditt konto bör ha rätt till **[!DNL Support Permissions]** för att få åtkomst [!DNL Site-Wide Analysis Tool Dashboard].
 Mer information finns i [Dela en [!DNL Commerce] konto](https://experienceleague.adobe.com/docs/commerce-admin/start/commerce-account/commerce-account-share.html) i vår användarhandbok.
 
 ## Alternativ 2: Logga in på [!DNL Site-Wide Analysis Tool Dashboard] från din butik [!DNL Admin Panel]
 
 ### Steg 1: Verifiera behörigheter
 
-Verifiera att [!DNL Admin] användarkontot har behörighet att komma åt [!DNL Site-Wide Analysis Tool] genom [tilldelad användarroll](https://docs.magento.com/user-guide/system/permissions-user-roles.html).
+Verifiera att [!DNL Admin] användarkontot har behörighet att komma åt [!DNL Site-Wide Analysis Tool] genom sina [användarroll](https://docs.magento.com/user-guide/system/permissions-user-roles.html).
 
 >[!IMPORTANT]
 >
@@ -58,7 +58,7 @@ För den anpassade roll som behöver [!DNL Site-Wide Analysis Tool] åtkomst, g�
    ![Kontrollpanel för webbplatsövergripande analyser](../../assets/tools/swat-role-access.png)
    *[!DNL Site-Wide Analysis Tool]behörighet har valts för rollen*
 
-1. Klicka **[!UICONTROL Save Role]**.
+1. Klicka på **[!UICONTROL Save Role]**.
 
 1. Meddela alla användare som har tilldelats den rollen att logga ut från [!DNL Admin]och logga in igen.
 
@@ -71,9 +71,9 @@ För den anpassade roll som behöver [!DNL Site-Wide Analysis Tool] åtkomst, g�
 1. På *[!UICONTROL Admin]* sidebar, gå till **[!UICONTROL Reports]** > *[!UICONTROL System Insights]* > **[!UICONTROL Site-Wide Analysis Tool]**.
 
    ![Kontrollpanel för webbplatsövergripande analyser](../../assets/tools/ac-admin-panel-marked.jpg)
-   *[!DNL Site-Wide Analysis Tool]plats i [!DNL Admin Panel] i Adobe Commerce*
+   *[!DNL Site-Wide Analysis Tool]plats i [!DNL Admin Panel] i ADOBE COMMERCE*
 
-1. Läs *Användarvillkor* för [!DNL Site-Wide Analysis Tool] och klicka **[!UICONTROL Accept]** för att fortsätta.
+1. Läs *Användningsvillkor* för [!DNL Site-Wide Analysis Tool] och klicka **[!UICONTROL Accept]** för att fortsätta.
 
    Varje användare måste godkänna användningsvillkoren för sessionen. Det här steget upprepas för varje inloggad session.
 
@@ -89,7 +89,7 @@ För den anpassade roll som behöver [!DNL Site-Wide Analysis Tool] åtkomst, g�
 
 1. Markera kryssrutan för varje **[!UICONTROL Type]** och **[!UICONTROL Priority]** som du vill ta med i rapporten.
 
-1. Klicka **[!UICONTROL Generate Report]**.
+1. Klicka på **[!UICONTROL Generate Report]**.
 
    ![Kontrollpanel för webbplatsövergripande analyser](../../assets/tools/swat-report-settings.png)
    *Rapportinställningar*

@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Aktuell spelningsbok
 
-Målet med den här spelboken är att göra verksamheten redo för en framgångsrik e-handelsplats. Detta hjälper dig och din organisation att få ut maximalt av dina teknikinvesteringar. Även om vi har sett många webbplatser lyckas har andra misslyckats på grund av brist på interna investeringar i företagen för att säkerställa att de är redo att driva en e-handelsplats med framgång.
+Målet med den här spelboken är att göra verksamheten redo att köra en framgångsrik e-handelsplats. Detta hjälper dig och din organisation att få ut maximalt av dina teknikinvesteringar. Även om vi har sett många webbplatser lyckas har andra misslyckats på grund av brist på interna investeringar i företagen för att säkerställa att de är redo att driva en e-handelsplats med framgång.
 
 Vi har skapat denna spelbok för alla branscher och kunder (B2C och B2B) som kan användas som en del av deras dagliga e-handelsverksamhet och den framgångsrika hanteringen av deras e-handelsplattform.
 

@@ -38,7 +38,7 @@ Mer information finns i [`REDIS_BACKEND`](https://experienceleague.adobe.com/doc
 
 >[!NOTE]
 >
-> Kontrollera `ece-tools` version som installerats i din lokala miljö från kommandoraden med `composer show magento/ece-tools` -kommando. Vid behov [uppdatera till den senaste versionen](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/update-package.html).
+> Kontrollera `ece-tools` version som installerats i din lokala miljö från kommandoraden med `composer show magento/ece-tools` -kommando. Vid behov, [uppdatera till den senaste versionen](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/update-package.html).
 
 >[!WARNING]
 >

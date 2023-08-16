@@ -38,15 +38,15 @@ Checklistan före start krävs för att verifiera statusen före start, som inne
 
 De största skillnaderna mellan Adobe Commerce lokala implementeringar och molnimplementeringar är distributionsskript och verktyg samt konfigurationen för SSL, Mail och CDN. Processen är dock fortfarande densamma.
 
-För SSL-certifikat (TLS) tillhandahåller Adobe Commerce i molninfrastrukturen ett snabbcertifikat med jokertecken. Om du vill börja använda den måste du godkänna valideringen: lägg till posten Fast TXT i ett domännamn i DNS-inställningarna. Posten Fastly TXT finns i kalkylbladet för introduktion, annars måste du skicka in en supportanmälan för att få den. Ersätt den här texten med dina frågor/kommentarer här. Om du använder ditt eget SSL-certifikat (TLS) i stället för ett Fast-jokertecken skickar du en supportanmälan med ditt certifikat bifogat till konfigurationen.
+För SSL-certifikat (TLS) tillhandahåller Adobe Commerce i molninfrastrukturen ett snabbcertifikat med jokertecken. Om du vill börja använda den måste du godkänna valideringen: lägg till posten Fast TXT i ett domännamn i dina DNS-inställningar. Posten Fastly TXT finns i kalkylbladet för introduktion, annars måste du skicka in en supportanmälan för att få den. Ersätt den här texten med dina frågor/kommentarer här. Om du använder ditt eget SSL-certifikat (TLS) i stället för ett Fast-jokertecken skickar du en supportanmälan med ditt certifikat bifogat till konfigurationen.
 
-Adobe Commerce i molninfrastrukturen erbjuder SendGrid Mail-funktionalitet för dina transaktionsbaserade e-postmeddelanden. För Pro-planer måste du lägga till SendGrid-poster i dina DNS-inställningar. Poster i SendGrid finns i arbetsbladet, annars måste SI eller handlare skicka supportärenden för att få dem. Till att börja med behöver du inte göra några ändringar i din DNS; SendGrid är förkonfigurerat för dig.
+Adobe Commerce i molninfrastrukturen erbjuder SendGrid Mail-funktionalitet för dina transaktionsbaserade e-postmeddelanden. För Pro-planer måste du lägga till SendGrid-poster i dina DNS-inställningar. Poster i SendGrid finns i arbetsbladet, annars måste SI eller handlare skicka supportärenden för att få dem. Till att börja med behöver du inte göra några ändringar i din DNS. SendGrid är förkonfigurerat för dig.
 
 ## Fullständig checklista före start
 
 Den fullständiga checklistan före start visar alla större aktiviteter vars fullständighet är nödvändig för att övergå till startläge.
 
-- Uppdaterade riskreducerande planer
+- Uppdaterade planer för riskreducering live
 - Korrigera angivna domännamn
 - Utgående e-postmeddelanden har testats
 - SSL-certifikat har etablerats och konfigurerats

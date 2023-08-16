@@ -1,5 +1,5 @@
 ---
-title: Agile Scrum Method
+title: Agile Scrum-metod
 description: Se hur en kombination av Agile- och Scrum-metoder kan snabba upp ert e-handelsprojekt.
 exl-id: 2c46acad-bff9-4a9f-acfb-622ffbf97288
 source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776

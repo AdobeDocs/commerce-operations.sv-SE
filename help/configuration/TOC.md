@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Konfigurationshandbok {#configuration-guide}
 
-+ [Översikt](overview.md)
++ [Ökning](overview.md)
 + Allmänna inställningar {#setup}
    + [Programinitiering och bootstrap](bootstrap/initialization.md)
    + [Programlägen](bootstrap/application-modes.md)
@@ -34,7 +34,7 @@ ht-degree: 0%
       + [Använda miljövariabler](deployment/example-environment-variables.md)
 + Cache {#cache}
    + [Översikt över cachelagring](cache/caching-overview.md)
-   + [Cachetyper](cache/cache-types.md)
+   + [Cache-typer](cache/cache-types.md)
    + [Cachealternativ](cache/cache-options.md)
    + [L2-cache](cache/level-two-cache.md)
    + Redis {#redis}
@@ -56,7 +56,7 @@ ht-degree: 0%
    + [Kommandoradsverktyg](cli/config-cli.md)
    + [Gemensamma kommandon](cli/common-cli-commands.md)
    + [Aktivera loggning](cli/enable-logging.md)
-   + [Hantera cacheminnet](cli/manage-cache.md)
+   + [Hantera cachen](cli/manage-cache.md)
    + [Hantera index](cli/manage-indexers.md)
    + [Konfigurera cron-jobb](cli/configure-cron-jobs.md)
    + [Kompilera kod](cli/code-compiler.md)
@@ -113,15 +113,15 @@ ht-degree: 0%
 + Flera platser {#multi-sites}
    + [Flera webbplatser och vyer](multi-sites/ms-overview.md)
    + [Stegnings-ID för databasentitet](multi-sites/change-increment-id.md)
-   + [Konfigurera i administratören](multi-sites/ms-admin.md)
+   + [Konfigurera i Admin](multi-sites/ms-admin.md)
    + [Konfigurera med Nginx](multi-sites/ms-nginx.md)
    + [Konfigurera med Apache](multi-sites/ms-apache.md)
 + Sökmotor {#search}
    + [Översikt över sökmotorer](search/overview-search.md)
    + [Konfigurera sökmotor](search/configure-search-engine.md)
-   + [Filtrera med stoppord](search/search-stopwords.md)
+   + [Filter med stoppord](search/search-stopwords.md)
 + Säkerhet {#security}
-   + [Säkerhetsöversikt](security/overview.md)
+   + [Säkerhet - översikt](security/overview.md)
    + [Lösenordshashning](security/password-hashing.md)
    + [Cacheförgiftning](security/cache-poisoning.md)
    + [Secure cron PHP](security/secure-cron-php.md)

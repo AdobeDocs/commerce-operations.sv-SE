@@ -24,7 +24,7 @@ Du kan skicka in följande typer av förfrågningar:
 
 - Ideas för nytt innehåll
 - Uppdateringar av innehåll som redan är publicerat
-- Publicera nytt innehåll som tillhandahålls av intressenter eller community
+- Publicera nytt innehåll som tillhandahålls av intressenter eller communityn
 
 ## Vilken är den övergripande processen?
 
@@ -47,4 +47,4 @@ När en artikel har godkänts kan pull-begäran sammanfogas med produktionsgrene
 
 För att undvika dubbelarbete kommer förfrågningar som har skapats och prioriterats att synas i Jiras eftersläpning i COMDOX-projektet och [GitHub Issues Project](https://github.com/orgs/AdobeDocs/projects/6/views/1). Interna intressenter uppmuntras att delta i omröstningssystemet i Jira för att rösta om förfrågningar som de anser nödvändiga eller relevanta. Röstningen hjälper även projektteamet med bästa praxis att förstå vilken typ av innehåll som intressenter förväntar sig och vilket värde de har. Begäranden som väntar på att prioriteras och granskas visas i eftersläpningen tills de flyttas till de aktiva körningarna i Kanban-tavlan.
 
-Kanban-tavlan kan nås av interna användare för att visa (och/eller övervaka) vilket innehåll som bearbetas och förloppet. Endast aktiva förfrågningar visas på den här anslagstavlan.
+Kanban-tavlan kan nås av interna användare för att visa (och/eller övervaka) vilket innehåll som bearbetas och förloppet. Endast aktiva förfrågningar visas på den här styrelsen.

@@ -15,7 +15,7 @@ ht-degree: 0%
 Den här referensen innehåller 9 kommandon som är tillgängliga via `bin/uct` kommandoradsverktyg.
 Den inledande listan genereras automatiskt med `bin/uct list` på Adobe Commerce.
 
-Läs mer om verktyget i [Översikt](/help/upgrade/upgrade-compatibility-tool/overview.md).
+Läs mer om verktyget i [Ökning](/help/upgrade/upgrade-compatibility-tool/overview.md).
 
 >[!NOTE]
 >
@@ -70,7 +70,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -114,7 +114,7 @@ bin/uct completion [--debug] [--] [<shell>]
 
 ### `shell`
 
-Skaltypen (t.ex. &quot;bash&quot;) används värdet för &quot;$SHELL&quot; env var om det inte anges
+Gränssnittstypen (t.ex. &quot;bash&quot;), värdet för &quot;$SHELL&quot; env var, används om detta inte anges
 
 
 ### `--debug`
@@ -140,7 +140,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -219,7 +219,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -303,7 +303,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -367,7 +367,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -442,7 +442,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -513,7 +513,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -569,7 +569,7 @@ Slutpunkts-URL som pekar på det andra GraphQL-schemat.
 
 ### `--output`, `-o`
 
-Sökväg till filen där utdata ska exporteras (JSON-format)
+Sökväg till filen som ska exporteras (JSON-format)
 
 - Accepterar ett värde
 
@@ -589,7 +589,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -645,7 +645,7 @@ Aktuell Adobe Commerce-version, version av Adobe Commerce-installationen, använ
 
 ### `--coming-version`, `-c`
 
-Adobe Commerce-målversion, den senaste versionen av Adobe Commerce kommer att användas om den utelämnas. Tillgängliga Adobe Commerce-versioner: 2.3.0 \| 2.3.1 \| 2.3.2 \| 2.3.2-p2 \| 2.3.3 \| 2.3.3-p1 \| 2.3.4 \| 2.3.4-p1 \| 2.3.4-p2 \| 2.3.5 \| 2.3.5-p1 \| 2.3.5-p2 \| 2.3.6 \| 2.3.6-p1 \| 2.3.7 \| 2.3.7-p1 \| 2.3.7-p2 \| 2.3.7-p3 \| 2.3.7-p4 \| 2.4.0 \| 2.4.0-p1 \| 2.4.1 \| 2.4.1-p1\| \| 2.4.2 \| 2.4.2-p1 \| 2.4.2-p2 \| 2.4.3 \| 2.4.3-p1 \| 2.4.3-p2 \| 2.4.3-p3 \| 2.4.4 \| 2.4.4-p1 \| 2.4.5 \| 2.4.4-p2 \| 4.5-p1 \| 2.4.4-p3 \| 2.4.5-p2 \| 2.4.6
+Adobe Commerce-målversion, den senaste versionen av Adobe Commerce kommer att användas om den utelämnas. Tillgängliga Adobe Commerce-versioner: 2.3.0 \| 2.3.1 \| 2.3.2 \| 2.3.2-p2 \| 2.3.3 \| 2.3.3-p1 \| 2.3.4 \| 2.3.4-p1 \| 2.3.4-p2 \| 2.3.5 \| 2.3.5-p1 \| 5-p2 \| 2.3.6 \| 2.3.6-p1 \| 2.3.7 \| 2.3.7-p1 \| 2.3.7-p2 \| 2.3.7-p3 \| 2.3.7-p4 \| 2.4.0 \| 2.4.0-p1 \| 2.4.1 \| 2.4.1 p1 \| 2.4.2 \| 2.4.2-p1 \| 2.4.2-p2 \| 2.4.3 \| 2.4.3-p1 \| 2.4.3-p2 \| 2.4.3-p3 \| 2.4.4 \| 2.4.4-p1 \| 2.4.5 \| 2.4.4-p2 \| 2.4.5-p1 \| 2.4.4-p3 \| 2.4.5-p2 \| 2.4.6
 
 - Accepterar ett värde
 
@@ -697,7 +697,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde

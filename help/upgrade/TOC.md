@@ -34,7 +34,7 @@ ht-degree: 0%
    - [Så här fungerar patchar](patches/overview.md)
    - [Tillämpa patchar](patches/apply.md)
 - [!DNL Upgrade Compatibility Tool] {#upgrade-compatibility-tool}
-   - [Översikt](upgrade-compatibility-tool/overview.md)
+   - [Ökning](upgrade-compatibility-tool/overview.md)
    - [Systemkrav](upgrade-compatibility-tool/prerequisites.md)
    - Använd [!DNL Upgrade Compatibility Tool] {#use-upgrade-compatibility-tool}
       - [Kör verktyget i ett kommandoradsgränssnitt](upgrade-compatibility-tool/run.md)
@@ -51,7 +51,7 @@ ht-degree: 0%
    - [Aktuell sökmotor stöds inte](troubleshooting/search-engine-not-supported.md)
    - [Återställning efter moduluppdateringsfel](troubleshooting/roll-back-after-update-failure.md)
    - [Alternativ för underhållsläge vid uppgradering](troubleshooting/maintenance-mode-options.md)
-- Resurser {#resources}
+- Resurs {#resources}
    - [Rekommenderad läsning](resources/recommended-reading.md)
    - [Modernisera plattformen med Adobe Commerce](resources/recommended-upgrade-paths.md)
 - [Återgå till bruksanvisningar](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

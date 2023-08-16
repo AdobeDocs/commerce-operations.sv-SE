@@ -19,17 +19,17 @@ Följande åtgärder implementeras i för att köra Commerce-programmet [pub/ind
 - Skapa en instans av ett Commerce-program: [\Magento\Framework\AppInterface][app-face]
 - Kör handel
 
-## Bootstrap-körningslogik
+## Bootstrap run logic
 
 [Bootstrap-objektet][bootinitial] använder följande algoritm för att köra Commerce-programmet:
 
 1. Initierar felhanteraren.
 1. Skapar [objekthanterare][object] och grundläggande delade tjänster som används överallt och påverkas av miljön. Miljöparametrarna injiceras korrekt i dessa objekt.
-1. Kontrollerar att underhållsläget är _not_ aktiverad; annars avslutas.
-1. Kontrollerar att Commerce-programmet är installerat, annars avslutas.
+1. Kontrollerar att underhållsläget är _not_ aktiverad, annars avslutas den.
+1. Kontrollerar att Commerce-programmet är installerat, annars avslutas det.
 1. Startar Commerce-programmet.
 
-   Alla undantag som inte fångas upp när programmet startas skickas automatiskt tillbaka till Commerce i `catchException()` som du kan använda för att hantera undantaget. Den senare måste returnera antingen `true` eller `false`:
+   Alla undantag som inte fångas upp när programmet startas skickas automatiskt tillbaka till Commerce i `catchException()` metod som du kan använda för att hantera undantaget. Den senare måste returnera antingen `true` eller `false`:
 
    - If `true`: Ett undantag har hanterats i Commerce. Du behöver inte göra något annat.
    - If `false`: (eller något annat tomt resultat) Handeln behandlade inte undantaget. Bootstrap-objektet utför standardunderrutinen för undantagshantering.
@@ -101,7 +101,7 @@ När begäran omdirigeras till startpunkten, tolkar Commerce-programmet den beg�
 - I [utvecklare](application-modes.md#developer-mode) i , returneras filens innehåll så att det returnerade innehållet är uppdaterat varje gång resursen begärs.
 - I [standard](application-modes.md#default-mode) i publiceras den hämtade resursen så att den kan nås av den tidigare begärda URL:en.
 
-   Alla framtida förfrågningar om den statiska resursen behandlas av servern på samma sätt som statiska filer. dvs. utan att ta med startpunkten. Om det är nödvändigt att synkronisera publicerade filer med de ursprungliga filerna `pub/static` Katalogen bör tas bort. Därför publiceras filerna automatiskt på nytt vid nästa begäran.
+  Alla framtida förfrågningar om den statiska resursen behandlas av servern på samma sätt som statiska filer, dvs. utan att ta med startpunkten. Om det är nödvändigt att synkronisera publicerade filer med de ursprungliga filerna `pub/static` katalogen ska tas bort. På grund av detta publiceras filerna automatiskt på nytt vid nästa begäran.
 
 ### Startpunkt för medieresurs
 

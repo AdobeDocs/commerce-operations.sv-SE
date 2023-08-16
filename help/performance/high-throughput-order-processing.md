@@ -1,5 +1,5 @@
 ---
-title: Bearbetning av beställning med hög genomströmning
+title: Bearbetning av högflödesorder
 description: Optimera beställnings- och utcheckningsupplevelsen för Adobe Commerce eller Magento Open Source.
 feature: Best Practices, Orders
 exl-id: dc2d0399-0d7f-42d8-a6cf-ce126e0b052d
@@ -18,7 +18,7 @@ Du kan optimera orderplaceringen och utcheckningen genom att konfigurera följan
 - [Uppskjuten total beräkning](#deferred-total-calculation)—Uppskjuter beräkningar för ordersummor tills utcheckningen börjar.
 - [Lagerkontroll vid offertinläsning](#disable-inventory-check)- Välj att hoppa över lagervalidering av kundvagnsartiklar.
 
-Alla funktioner - AsyncOrder, Deferred Total Calculation och Inventory Check - fungerar oberoende av varandra. Du kan använda alla tre funktionerna samtidigt eller aktivera och inaktivera funktioner i valfri kombination.
+Alla funktioner - AsyncOrder, Deferred Total Calculation och Inventory Check - fungerar oberoende. Du kan använda alla tre funktionerna samtidigt eller aktivera och inaktivera funktioner i valfri kombination.
 
 ## Asynkron orderplacering
 
@@ -73,12 +73,12 @@ The `set` skriver följande till `app/etc/env.php` fil:
 
 ### AsyncOrder-kompatibilitet
 
-AsyncOrder har stöd för en begränsad uppsättning [!DNL Commerce] funktioner.
+AsyncOrder stöder en begränsad uppsättning [!DNL Commerce] funktioner.
 
 | Kategori | Funktion som stöds |
 |------------------|--------------------------------------------------------------------------|
-| Utcheckningstyper | OnePage-utcheckning<br>Standardutcheckning<br>B2B - överlåtbar offert |
-| Betalningsmetoder | Check-/penningorder<br>Kontant vid leverans<br>Braintree<br>PayPal PayFlow Pro |
+| Utcheckningstyper | OnePage Checkout<br>Standardutcheckning<br>B2B - överlåtbar offert |
+| Betalningsmetoder | Check-/penningbeställning<br>Kontant vid leverans<br>Braintree<br>PayPal PayFlow Pro |
 | Leveransmetoder | Alla leveransmetoder stöds. |
 
 Följande funktioner är **not** stöds av AsyncOrder, men fortsätter att fungera synkront:
@@ -154,7 +154,7 @@ The `set` skriver följande till `app/etc/env.php` fil:
    ]
 ```
 
-Se [UppskjutenTotalBeräkning] i _Referenshandbok för modul_.
+Se [UppskjutenSummaBeräkning] i _Referenshandbok för modul_.
 
 ### Fast produktskatt
 
@@ -189,4 +189,4 @@ stage:
 [inventory]: https://experienceleague.adobe.com/docs/commerce-admin/inventory/guide-overview.html
 [mrg]: https://developer.adobe.com/commerce/php/module-reference/
 [AsyncOrder]: https://developer.adobe.com/commerce/php/module-reference/module-async-order/
-[UppskjutenTotalBeräkning]: https://developer.adobe.com/commerce/php/module-reference/module-deferred-total-calculating/
+[UppskjutenSummaBeräkning]: https://developer.adobe.com/commerce/php/module-reference/module-deferred-total-calculating/

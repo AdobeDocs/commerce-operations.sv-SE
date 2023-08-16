@@ -63,10 +63,10 @@ Endast Adobe Commerce:
 
 Med det här kommandot kan du uppdatera exempeldata innan du uppdaterar Adobe Commerce eller Magento Open Source.
 
-Ange följande kommando för att förbereda exempeldata för uppdatering:
+Om du vill förbereda exempeldata för uppdatering anger du följande kommando:
 
 ```bash
 bin/magento sampledata:reset
 ```
 
-Efter det [uppdatera programmet](../tutorials/uninstall.md#update-the-application).
+Efter det har [uppdatera programmet](../tutorials/uninstall.md#update-the-application).

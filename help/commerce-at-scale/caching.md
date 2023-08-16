@@ -5,7 +5,7 @@ exl-id: 275eb21d-fa52-4b97-9453-8f8553128b53
 feature: Integration, Cache
 source-git-commit: 76ccc5aa8e5e3358dc52a88222fd0da7c4eb9ccb
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '349'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ För att kunna leverera en shoppingupplevelse under belastning krävs en välpla
 
 Det inledande steget i cachningsstrategin bör därför vara att tillsammans med berörda intressenter definiera en matris med godtagbara tidsangivelser för cachning för olika delar av webbplatsen, till exempel:
 
-| Cacheområde | Hur ofta ändras? | Inverkan om inaktuellt innehåll hanteras från cache | Godtagbar cachelagring av TTL (time-to-live)? |
+| Cacheområde | Hur ofta ändras? | Inverkan om inaktuellt innehåll hanteras från cache | Godtagbar cachelagring av TTL (time to live)? |
 |---------------------------------------------------------------|--------------------|-------------------------------------------|-----------------------------------------------------|
 | HTML sidor med webbplatsinnehåll, uppdaterade via CMS | Ovanligt | Låg | 1 dag |
 | Mallmedier/resurser för webbplatsinnehåll - logotyp, CSS-design, bilder | Ovanligt | Låg | 1 vecka |

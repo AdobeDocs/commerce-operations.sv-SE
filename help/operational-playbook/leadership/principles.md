@@ -13,24 +13,24 @@ ht-degree: 0%
 
 Vi rekommenderar att du följer vissa ledningsprinciper när du driver ett e-handelsprojekt.
 
-## Finansiering
+## Sponsorship
 
 ![Hand vikt hjärta](../../assets/playbooks/sponsorship.png)
-Genom att ha en effektiv medverkande sponsor kan projektet nå största möjliga framgång. För att bli verkligt effektiv bör den här interna medverkande sponsorn ha tillräckligt hög befattning och inflytande inom företaget för att kunna köpa in från andra intressenter i organisationen. De bör också ha ett stort självintresse för webbutikens framgång och en passion för digital omvandling och e-handel. Att tro på hur Adobe Commerce kommer att förändra verksamheten är också avgörande.
+Genom att ha en effektiv medverkande sponsor kan projektet nå största möjliga framgång. För att bli verkligt effektiv bör den här interna medverkande sponsorn ha tillräckligt hög befattning och inflytande inom företaget för att kunna köpa in från andra intressenter i organisationen. De bör också ha ett högt självintresse för webbutikens framgång och en passion för digital omvandling och e-handel. Att tro på hur Adobe Commerce kommer att förändra verksamheten är också avgörande.
 
-En effektiv medverkande sponsor bör garantera att e-handelsplattformens ledning, färdplan och kontinuerliga tillväxt ligger i linje med företagsstrategin. skydda den från motstridiga initiativ eller intern politik och bidra till att ta itu med eventuella begränsande faktorer som resursbrist, kunskapsbrist eller budgetbegränsningar.
+En effektiv medverkande sponsor bör garantera att e-handelsplattformen förvaltas, färdplan och stadigvarande tillväxt i linje med företagsstrategin, skydda den från motstridiga initiativ eller intern politik och bidra till att hantera eventuella begränsande faktorer, som resursbrist, kunskapsbrist eller budgetbegränsningar.
 
 ## Köp
 
 ![Biljettinställning utanför maskinen](../../assets/playbooks/buyin.png)
-Det är också viktigt att ni lyckas med ert hanteringsköp i ert ledarteam. Genom att ha flera förändringsagenter som driver tillväxten blir tillväxten enklare och snabbare. Ansvaret för en framgångsrik hantering av Adobe Commerce måste delas av hela ledargruppen. Det är då det verkställande sponsorns ansvar att vinna över det verkställande teamet genom att dela med sig av exempel som bevisar värdet av Adobe Commerce som helhet. Vanligtvis fokuserar detta på att leverera en bättre kundupplevelse och efterföljande fördelar för företaget.
+Det är också viktigt att ni lyckas med ert hanteringsköp i ert ledarteam. Genom att ha flera förändringsagenter för att öka tillväxten blir tillväxten enklare och snabbare. Ansvaret för en framgångsrik hantering av Adobe Commerce måste delas av hela ledningsteamet. Det är då det verkställande sponsorns ansvar att vinna över det verkställande teamet genom att dela med sig av exempel som bevisar värdet av Adobe Commerce som helhet. Vanligtvis fokuserar detta på att leverera en bättre kundupplevelse och efterföljande fördelar för företaget.
 
 När man hanterar e-handelsplatser eller implementerar digitala projekt som Adobe Commerce ansvarar ledarna för att övervaka olika avdelningar och team som äger olika delar av e-handelsinitiativen. Det är viktigt att se till att alla grupper delar en gemensam strategi för att uppnå gemensamma mål. Med en intern strategi för att få stöd från chefer kan man öka medvetenheten, anpassa team och få de resurser som behövs för en optimal implementering.
 
 ## Ansvarsskyldighet
 
 ![bilder som samlats runt en tabell](../../assets/playbooks/accountability.png)
-Projektledarskap är en handling där man leder ett team mot ett framgångsrikt slutförande av ett mål. Det kan ofta vara ett av de mest kritiska områdena att lyckas med att leverera ett e-handelsprojekt. Framgångsrik projektledarskap kräver kompetens inom både ledning och ledarskap för att säkra inköp från rätt personer, samtidigt som teamet leder i rätt riktning.
+Projektledarskap är en handling där man leder ett team mot ett framgångsrikt slutförande av ett mål. Det kan ofta vara ett av de mest kritiska områdena att lyckas med att leverera ett e-handelsprojekt. Framgångsrik projektledarskap kräver kompetens inom både ledning och ledarskap för att säkra inköp från rätt personer, samtidigt som teamet är ledande i rätt riktning.
 
 ## C-nivå
 
@@ -41,7 +41,7 @@ Mer specifikt kan det vara till hjälp att identifiera de specifika fördelar so
 
 I mindre organisationer tenderar cheferna på C-nivå att vara starkt involverade, eller åtminstone mycket nära, omvandlingsprojektet. När vi börjar titta på större handlare är det dock naturligt att det ledande företagets engagemang minskar allt eftersom företagets storlek ökar. Därför är det viktigt att hålla dessa intressenter engagerade och informerade under hela projektet för att säkerställa att inköp och support förblir intakta.
 
-## intressenter
+## Intressenter
 
 ![Två siffror](../../assets/playbooks/stakeholders.png)
 Det är intressenter som har intresse av projektets resultat. De är vanligtvis medlemmar i ert projektteam, projektledare, chefer, projektsponsorer och slutligen slutanvändarna. Det är viktigt att säkra inköp från alla relevanta intressenter för att säkerställa effektiv förändring. Om ni inte får stöd från viktiga intressenter som bidrar till det slutliga beslutet misslyckas projekten ofta.
@@ -61,7 +61,7 @@ Följande roller och ansvarsområden på hög nivå bygger på branschledande pr
 
 Ansvarig i slutändan för projektets resultat och ansvarig för att säkra utgiftsbehörighet och resurser för projektet.
 
-- Rörelseförkämpe och synlig förkämpe
+- Rörelseförkämpe och synlig seger
 - Legitimerar och ger trovärdighet åt de strategiska målen och målen
 - Är eskaleringspunkten för ändringar och frågor utanför de överenskomna toleranserna?
 - Hjälper till att engagera intressenter där det behövs

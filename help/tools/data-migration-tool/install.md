@@ -6,7 +6,7 @@ topic: Commerce, Migration
 feature: Configuration, Install
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '375'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 >Magento och [!DNL Data Migration Tool] måste matcha.
 
 
-Se till att du använder *samma frisläppta version* Magento 2 och [!DNL Data Migration Tool]. För Magento version 2.2.0 måste du till exempel också använda [!DNL Data Migration Tool] version 2.2.0.
+Se till att du använder *samma version* Magento 2 och [!DNL Data Migration Tool]. För Magento version 2.2.0 måste du till exempel också använda [!DNL Data Migration Tool] version 2.2.0.
 
 ## Kontrollera din version
 
@@ -70,7 +70,7 @@ Kontrollera att du har:
 
 ### Installera från `repo.magento.com`
 
-Så här installerar du [!DNL Data Migration Tool]måste du uppdatera `composer.json` i Magento rotinstallationskatalog där platsen för [!DNL Data Migration Tool] paket.
+Installera [!DNL Data Migration Tool]måste du uppdatera `composer.json` i Magento rotinstallationskatalog där platsen för [!DNL Data Migration Tool] paket.
 
 1. Logga in på programservern som, eller växla till [ägare av filsystem](../../installation/prerequisites/file-system/overview.md).
 1. Byt till programmets rotkatalog.
@@ -86,7 +86,7 @@ Så här installerar du [!DNL Data Migration Tool]måste du uppdatera `composer.
 
    Plats `<version>` måste matcha versionen av kodbasen Magento 2.
 
-   För version 2.2.0 anger du till exempel:
+   För version 2.2.0 anger du:
 
    ```bash
    composer config repositories.magento composer https://repo.magento.com
@@ -96,7 +96,7 @@ Så här installerar du [!DNL Data Migration Tool]måste du uppdatera `composer.
    composer require magento/data-migration-tool:2.2.0
    ```
 
-1. Ange [autentiseringsnycklar](../../installation/prerequisites/authentication-keys.md). Din offentliga nyckel är ditt användarnamn; din privata nyckel är ditt lösenord.
+1. Ange [autentiseringsnycklar](../../installation/prerequisites/authentication-keys.md). Din offentliga nyckel är ditt användarnamn. Din privata nyckel är ditt lösenord.
 
 ### Installera från GitHub
 
@@ -116,7 +116,7 @@ Om du har klonat GitHub-databasen följer du stegen nedan för att installera [!
 
    där `<version>` måste matcha versionen av kodbasen Magento 2.
 
-   För version 2.2.0 anger du till exempel:
+   För version 2.2.0 anger du:
 
    ```bash
    composer config repositories.data-migration-tool git https://github.com/magento/data-migration-tool
@@ -132,4 +132,4 @@ Om du har klonat GitHub-databasen följer du stegen nedan för att installera [!
 
 1. Öppna [`composer.json`](https://github.com/magento/data-migration-tool/blob/2.4/composer.json) i en textredigerare.
 
-1. The `version` i den filen är versionen av [!DNL Data Migration Tool].
+1. The `version` posten i den filen är versionen av [!DNL Data Migration Tool].

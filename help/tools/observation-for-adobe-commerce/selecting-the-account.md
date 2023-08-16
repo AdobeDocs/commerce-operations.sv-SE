@@ -1,20 +1,20 @@
 ---
-title: '''Börja använda: Välja konto och tidsram'
+title: 'Börja använda: Markera konto och tidsram'
 description: Lär dig hur du börjar använda [!DNL Observation for Adobe Commerce] nördlet genom att välja konto och tidsram.
 exl-id: f2364fa4-ef83-42f2-992f-e37ff1ac96a1
 feature: Configuration, Observability
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '169'
 ht-degree: 0%
 
 ---
 
 # Välj konto och tidsram:
 
-När du klickar på [!UICONTROL Observation for Adobe Commerce] -ikonen [!DNL Observation for Adobe Commerce] nördleten öppnas.
+Klicka på [!UICONTROL Observation for Adobe Commerce] -ikonen, [!DNL Observation for Adobe Commerce] nördleten öppnas.
 
-1. Klicka på **Välj ett konto** listruta. Om du inte ser **Välj ett konto** nedrullningsbar meny, du kanske inte har åtkomst. Klicka [här](https://adobe.sharepoint.com/sites/MG/it/IT%20Services%20Wiki/Requesting%20access%20to%20Magento%20Commerce%20New%20Relic.aspx) för att begära åtkomst.
+1. Klicka på **Välj ett konto** nedrullningsbar meny. Om du inte ser **Välj ett konto** nedrullningsbar meny, du kanske inte har åtkomst. Klicka [här](https://adobe.sharepoint.com/sites/MG/it/IT%20Services%20Wiki/Requesting%20access%20to%20Magento%20Commerce%20New%20Relic.aspx) för att begära åtkomst.
 
    ![Välj ett konto](../../assets/tools/observation-for-adobe-commerce/start-using-1.jpeg)
 

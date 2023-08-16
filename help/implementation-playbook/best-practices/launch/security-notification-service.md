@@ -17,7 +17,7 @@ Säkerhet är en av våra främsta prioriteringar och Adobe förstår att säker
 
 The [!DNL Adobe Security Notification Service] är en kostnadsfri e-postmeddelandetjänst som Adobe använder för att skicka information till kunder om säkerheten hos Adobe-produkter.
 
-Vem som helst kan prenumerera på tjänsten och du kan säga upp prenumerationen när som helst.
+Alla kan prenumerera på tjänsten och du kan säga upp prenumerationen när som helst.
 
 ## Berörda produkter och versioner
 

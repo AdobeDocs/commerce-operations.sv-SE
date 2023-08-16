@@ -18,7 +18,7 @@ Om du distribuerar Commerce på en enda dator och kan tolerera vissa driftavbrot
 
 ## Driftsättning av pipeline
 
-I Commerce version 2.2 införde Adobe _distribution av pipeline_ som ett nytt sätt att driftsätta i produktionen med minimala driftstopp. Den här distributionsprocessen sker på olika system och ger ett sätt att upprätthålla konsekventa konfigurationer för alla pipelinesystem för distribution. Det är en enkel men kraftfull modell som gör att du kan separera vanliga konfigurationsinställningar från systemspecifika inställningar (som värd och port) eller känsliga inställningar (som namn och lösenord).
+I Commerce version 2.2 introducerade Adobe _distribution av pipeline_ som ett nytt sätt att driftsätta i produktionen med minimala driftstopp. Den här distributionsprocessen sker på olika system och ger ett sätt att upprätthålla konsekventa konfigurationer för alla pipelinesystem för distribution. Det är en enkel men kraftfull modell som gör att du kan separera vanliga konfigurationsinställningar från systemspecifika inställningar (som värd och port) eller känsliga inställningar (som namn och lösenord).
 
 För att kunna använda pipeline-distribution antar Adobe att du:
 
@@ -36,11 +36,11 @@ När du distribuerar statiska resurser och kompilerar kod på en annan dator än
 
 Vi använder följande termer för att beskriva de system som används vid driftsättningen.
 
-- **Utvecklingssystem**- Dator där utvecklare arbetar med att anpassa kod. och installera tillägg, teman och språkpaket från Commerce Marketplace. Dessutom gör du alla konfigurationsändringar i utvecklingssystemet. Du kan ha många utvecklingssystem.
+- **Utvecklingssystem**- Dator där utvecklare arbetar med att anpassa kod och installera tillägg, teman och språkpaket från Commerce Marketplace. Dessutom gör du alla konfigurationsändringar i utvecklingssystemet. Du kan ha många utvecklingssystem.
 
 - **Bygg system**- Ett system där du distribuerar statiska resurser och kompilerar kod för produktionssystemet. Eftersom du bygger dessa resurser på ett system som inte är i produktion minimeras driftstoppen i produktionssystemet.
 
-   Ditt byggsystem behöver inte ha Commerce installerat på det. Den behöver bara Commerce-koden, men ingen databasanslutning krävs. Ditt byggsystem behöver inte heller vara en fysiskt separat server.
+  Ditt byggsystem behöver inte ha Commerce installerat på det. Den behöver bara Commerce-koden, men ingen databasanslutning krävs. Ditt byggsystem behöver inte heller vara en fysiskt separat server.
 
 - **Mellanlagringssystem**—_Valfritt_. Du kan också konfigurera ett mellanlagringssystem som ska användas för sluttestning av all integrerad kod, inklusive UAT (User Acceptance Testing). Konfigurera ett mellanlagringssystem på samma sätt som du konfigurerar ett produktionssystem. Förutom att staging inte är din livebutik och inte behandlar beställningar från kunder, är det identiskt med produktion.
 
@@ -56,21 +56,21 @@ Du kan också använda andra distributionsmetoder, som:
 
 ## Hantera konfigurationen
 
-Modellering efter [faktor 3 i 12-faktorsappdesignen](https://12factor.net/config)sparar nu Commerce konfigurationen för varje system i själva systemet. (Inställningar för utvecklingskonfiguration lagras i utvecklingssystemet, produktionsinställningar lagras i produktionssystemet.)
+Modellering efter [faktor 3 i 12-faktorsappdesignen](https://12factor.net/config)lagras konfigurationen för varje system i själva systemet. (Inställningar för utvecklingskonfiguration lagras i utvecklingssystemet, produktionsinställningar lagras i produktionssystemet.)
 
 Vi erbjuder ett sätt att synkronisera konfigurationen av dina system:
 
 - **Delad konfiguration**—Inställningar som varken är systemspecifika eller känsliga.
 
-   Delade inställningar är inställningar som du vill ska vara konsekventa i utvecklings- och produktionssystem. Ange den delade konfigurationen i Admin i din utveckling (eller Adobe Commerce i molninfrastrukturen) _integration_).
+  Delade inställningar är inställningar som du vill ska vara konsekventa i utvecklings- och produktionssystem. Ange den delade konfigurationen i Admin i din utveckling (eller Adobe Commerce i molninfrastrukturen) _integration_).
 
-   Den delade konfigurationsfilen, `app/etc/config.php`, bör ingå i källkontrollen så att den kan delas mellan utvecklings-, bygg- och produktionssystem.
+  Den delade konfigurationsfilen, `app/etc/config.php`, bör ingå i källkontrollen så att den kan delas mellan utvecklings-, bygg- och produktionssystem.
 
 - **Systemspecifik konfiguration**—Inställningar som varierar beroende på system, t.ex. sökmotorns värdnamn och portar.
 
 - **Känslig konfiguration**—Inställningar som ska _not_ ha källkontroll eftersom de visar personligt identifierbar information (PII) eller inställningar som API-nycklar eller lösenord.
 
-   Den systemspecifika konfigurationsfilen, `app/etc/env.php`, bör _not_ ingå i källkontrollen eller på annat sätt delas mellan system. Använd i stället [`magento config:set` och `magento:sensitive:set` kommandon](../cli/set-configuration-values.md) för att ange värden för de inställningarna i produktionssystemet.
+  Den systemspecifika konfigurationsfilen, `app/etc/env.php`, bör _not_ ingå i källkontrollen eller på annat sätt delas mellan system. Använd i stället [`magento config:set` och `magento:sensitive:set` kommandon](../cli/set-configuration-values.md) för att ange värden för de inställningarna i produktionssystemet.
 
 >[!INFO]
 >

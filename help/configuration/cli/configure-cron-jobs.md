@@ -47,10 +47,9 @@ I Commerce-programmet används kroniska uppgifter som kan köras med olika konfi
 >[!WARNING]
 >
 >- För att undvika problem under installation och uppgradering rekommenderar vi att du använder samma PHP-inställningar både på PHP-kommandoradskonfigurationen och på PHP-webbserverpluginens konfiguration. Mer information finns i [Nödvändiga PHP-inställningar](../../installation/prerequisites/php-settings.md).
->- I ett flernodssystem kan crontab endast köras på en nod. Detta gäller endast dig om du konfigurerar mer än en webbnod på grund av prestanda eller skalbarhet.
+>- I ett flernodssystem kan crontab endast köras på en nod. Detta gäller endast dig om du konfigurerar mer än en webbnod av orsaker som rör prestanda eller skalbarhet.
 
-
-### Skapa fliken Commerce crontab
+### Skapa fliken Commerce
 
 Från och med version 2.2 skapar Commerce en crontab åt dig. Vi lägger till fliken Commerce crontab till en konfigurerad crontab för ägaren av Commerce-filsystemet. Det innebär att om du redan har konfigurerat klientflikar för andra tillägg eller program lägger vi till fliken Commerce.
 
@@ -72,7 +71,6 @@ Använd `--force` om du vill skriva om en befintlig crontab.
 >
 >- `magento cron:install` skriver inte om en befintlig crontab inuti `#~ MAGENTO START` och `#~ MAGENTO END` kommentarer på din crontab.
 >- `magento cron:install --force` har ingen effekt på några cron-jobb utanför Commerce-kommentarerna.
-
 
 Om du vill visa fliken crontab anger du följande kommando som ägare av filsystemet:
 
@@ -110,7 +108,7 @@ Så här tar du bort fliken Commerce:
 
 >[!INFO]
 >
->Det här kommandot har ingen effekt på cron-jobb utanför `#~ MAGENTO START` och `#~ MAGENTO END` kommentarer på din crontab.
+>Det här kommandot påverkar inte cron-jobb utanför `#~ MAGENTO START` och `#~ MAGENTO END` kommentarer på din crontab.
 
 ## Kör cron från kommandoraden
 
@@ -134,11 +132,11 @@ Om du vill köra standardcron-jobbet anger du:
 bin/magento cron:run --group default
 ```
 
-Information om hur du ställer in anpassade cron-jobb och grupper finns i [Konfigurera anpassade cron-jobb och cron-grupper](../cron/custom-cron.md).
+Information om hur du ställer in anpassade cron-jobb och grupper finns i [Konfigurera anpassade cron-jobb och kundgrupper](../cron/custom-cron.md).
 
 >[!INFO]
 >
->Du måste köra cron två gånger: första gången som du identifierar uppgifter som ska köras och andra gången - för att köra själva uppgifterna. Den andra kron-körningen måste göras på eller efter `scheduled_at` tid för varje uppgift.
+>Du måste köra cron två gånger: första gången du upptäcker uppgifter som ska köras och andra gången - för att köra själva uppgifterna. Den andra kron-körningen måste göras på eller efter `scheduled_at` tid för varje uppgift.
 
 ## Loggning
 
@@ -148,7 +146,7 @@ Alla undantag från cron-jobb loggas av `\Magento\Cron\Observer\ProcessCronQueue
 
 Förutom att loggas in `cron.log`:
 
-- Misslyckade jobb med `ERROR` och `MISSED` status loggas på `<install_directory>/var/log/support_report.log`.
+- Misslyckade jobb med `ERROR` och `MISSED` statusvärden loggas på `<install_directory>/var/log/support_report.log`.
 
 - Jobb med en `ERROR` status loggas alltid som `CRITICAL` in `<install_directory>/var/log/exception.log`.
 

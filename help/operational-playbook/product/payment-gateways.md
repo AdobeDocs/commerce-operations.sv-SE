@@ -5,7 +5,7 @@ exl-id: eab50191-0744-41da-99ba-2e06ea61da27
 feature: Best Practices, Payments
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '554'
 ht-degree: 0%
 
 ---
@@ -29,13 +29,13 @@ En betalningstjänst är en tjänsteleverantör som ansluter och bearbetar betal
 - Hur bra fungerar betalningstjänsten?
 - Hur fungerar supportservicen för betalningsgatewayen efter köpet?
 - Vilken betalningstjänst passar mig bäst?
-- Erbjuder betalningstjänsten andra funktioner som att beräkna skatt, använda geolokalisering och beräkna serviceavgift?
+- Erbjuder betalningstjänsten andra funktioner, som att beräkna skatt, använda geolokalisering och beräkna serviceavgift?
 
 Det finns vissa begränsningar för betalningsgatewayar som du måste känna till, bland annat:
 
 - Alla typer av kort accepteras inte av betalningsgateways.
 - Vissa betalningsalternativ kanske inte är tillgängliga för internationella kunder.
-- Säkerhetsluckor i betalningsgatewayen. På grund av säkerhetsskäl är det ofta svårt att lägga onlineorder.
+- Säkerhetsluckor i betalningstjänsten. På grund av säkerhetsskäl är det ofta svårt att lägga onlineorder.
 
 När ett företag bestämmer sig för att integrera en betalningstjänst med sin plattform är det alltid bättre att se hur den ser ut i butiken, vilken typ av upplevelse den ger kunderna och om den är användarvänlig. Se även till att säkerheten för betalningen inte kan äventyras. En bra och säker fungerande betalningstjänst ger en bättre kundupplevelse.
 
@@ -47,7 +47,7 @@ B2C-kunder köper produkter eller tjänster för enskilt bruk. Kunderna betalar 
 
 B2B-kunder har olika beställningar och krav som måste behandlas och godkännas av säljaren eller en säljare måste involveras när en kund köper online med en anbudsförfrågan eller en inköpsorder.
 
-B2C-betalningar kan vara engångs och ger mindre värde. Kunderna lägger till produkter i sina varukorgar och checkar ut med hjälp av en säker betalning med kreditkort eller e-plånbok.
+B2C-betalningar kan vara engångs och ger mindre värde. Kunderna lägger till produkter i kundvagnen och checkar ut med hjälp av en säker betalning med kreditkort eller e-plånbok.
 
 På grund av B2B-transaktionernas höga inköpsvärde erbjuder B2B-företag fler betalningsalternativ utöver standardalternativen, som checkar, banköverföringar och inköpsorder.
 

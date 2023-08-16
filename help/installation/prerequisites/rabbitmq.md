@@ -15,7 +15,7 @@ Adobe Commerce använder [!DNL RabbitMQ] meddelandeansvarig med öppen källkod.
 
 Meddelandeköer är en asynkron kommunikationsmekanism där avsändaren och mottagaren av ett meddelande inte kontaktar varandra. De behöver inte heller kommunicera med meddelandekön samtidigt. När en avsändare placerar ett meddelande i en kö lagras det tills mottagaren tar emot det.
 
-Meddelandekösystemet måste upprättas innan du kan installera Adobe Commerce eller Magento Open Source. Den grundläggande sekvensen är:
+Meddelandekösystemet måste upprättas innan du kan installera Adobe Commerce eller Magento Open Source. Grundordningen är:
 
 1. Installera [!DNL RabbitMQ] och alla krav.
 1. Anslut [!DNL RabbitMQ] till Adobe Commerce eller Magento Open Source.
@@ -90,7 +90,7 @@ Var:
 
 ## Anslut [!DNL RabbitMQ]
 
-Om du redan har installerat Adobe Commerce eller Magento Open Source och vill ansluta det till [!DNL RabbitMQ], lägga till `queue` i `<install_directory>/app/etc/env.php` så att den liknar följande:
+Om du redan har Adobe Commerce eller Magento Open Source installerat och vill ansluta det till [!DNL RabbitMQ], lägga till en `queue` i `<install_directory>/app/etc/env.php` så att den liknar följande:
 
 ```php
 'queue' =>
@@ -116,7 +116,7 @@ När kommandot har körts eller uppdaterats `<install_directory>/app/etc/env.php
 
 ## Konfigurera SSL
 
-Om du vill konfigurera stöd för SSL redigerar du `ssl` och `ssl_options` parametrar i `<install_directory>/app/etc/env.php` så att de liknar följande:
+Om du vill konfigurera stöd för SSL redigerar du `ssl` och `ssl_options` parametrarna i `<install_directory>/app/etc/env.php` så att de liknar följande:
 
 ```php
 'queue' =>

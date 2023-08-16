@@ -5,7 +5,7 @@ exl-id: 52bfa6c7-0687-45de-8889-c529cea7d01a
 feature: Best Practices, Integration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '295'
 ht-degree: 0%
 
 ---
@@ -29,12 +29,12 @@ När man väljer en tredjepartsleverantör bör man använda en enkel och effekt
 - Kostnad kontra avkastning på investeringen
 - Tjänstens skalbarhet
 - Uppgraderingar och underhåll krävs
-- Tillförlitlighet för helpdesken
+- Tillförlitlighet för helpdesk
 
 ## Vanliga tredjepartsintegreringar för e-handelswebbplatser
 
 - Redovisningsprogramvara
-- ERP-system
+- ERP
 - Produktinformationshantering (PIM)
 - Ekonomi
 - Betalningsgateways

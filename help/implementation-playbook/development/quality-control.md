@@ -181,7 +181,7 @@ BrowserStack är en webb- och mobiltestningsplattform i molnet som gör att utve
 
 Postman är samarbetsplattformen för API-utveckling. Postman förenklar varje steg i skapandet av ett API och effektiviserar samarbetet så att ni kan skapa bättre API:er.
 
-SoapUI är ett testprogram för webbtjänster med öppen källkod för SOAP (Simple Object Access Protocol) och REST (Representational State Transfer). Dess funktion omfattar inspektion via webben. Anrop, utveckling, simulering och gungning. funktionstestning, belastnings- och kompatibilitetstestning.
+SoapUI är ett testprogram för webbtjänster med öppen källkod för SOAP (Simple Object Access Protocol) och REST (Representational State Transfer). Dess funktionalitet omfattar web service-inspektion, anrop, utveckling, simulering och gungning, funktionstestning, lastnings- och kompatibilitetstestning.
 
 ## Automatiseringstestning
 

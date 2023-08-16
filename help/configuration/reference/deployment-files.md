@@ -15,9 +15,9 @@ ht-degree: 0%
 Adobe Commerce innehåller konfigurationsfiler som gör att du enkelt kan anpassa en komponent och skapa konfigurationstyper för att utöka standardfunktionerna. Distributionsprocessen består av den delade och systemspecifika konfigurationen för din installation. Distributionskonfigurationen för Commerce är uppdelad mellan [`app/etc/config.php`](../reference/config-reference-configphp.md) och [`app/etc/env.php`](../reference/config-reference-envphp.md).
 
 - `app/etc/config.php` är _delad_ konfigurationsfil.
-Den här filen innehåller en lista över installerade moduler, teman och språkpaket. och delade konfigurationsinställningar.
+Den här filen innehåller en lista över installerade moduler, teman och språkpaket samt delade konfigurationsinställningar.
 
-   Checka in den här filen om du vill ha källkontroll och använda den i dina utvecklings-, staging- och produktionssystem.
+  Checka in den här filen om du vill ha källkontroll och använda den i dina utvecklings-, staging- och produktionssystem.
 
 - `app/etc/env.php` innehåller inställningar som är specifika för installationsmiljön.
 
@@ -76,6 +76,6 @@ return array (
 
 Värdet `1` eller `0` anger om en modul är aktiverad eller inaktiverad.
 
-Inaktiverade moduler känns inte igen av handelsprogrammet. med andra ord deltar de inte i sammanslagningskonfigurationen, i beroendeinjektioner, händelser, plugin-program och så vidare. Inaktiverade moduler ändrar inte butiken eller administratören och påverkar inte routningen.
+Inaktiverade moduler känns inte igen av Commerce-programmet, d.v.s. deltar inte i sammanslagningskonfigurationen, i beroendeinjektioner, händelser, plugin-program osv. Inaktiverade moduler ändrar inte butiken eller administratören och påverkar inte routningen.
 
 Den enda praktiska skillnaden mellan en inaktiverad modul och en modul som inte finns i kodbasen är att en inaktiverad modul hittas av den automatiska inläsaren och dess klasser och konstanter är tillgängliga för återanvändning i annan kod.

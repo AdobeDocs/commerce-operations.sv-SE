@@ -12,27 +12,27 @@ ht-degree: 0%
 # Exempel med CLI-kommandon
 
 I det här exemplet visas hur du ställer in delade, systemspecifika och känsliga värden i utvecklingssystemet och sedan distribuerar dessa värden till produktionssystemet.
-Detta görs genom att använda en kombination av delade konfigurationer, `config.php` och Commerce CLI-kommandot.
+Detta görs med en kombination av delade konfigurationer, `config.php` och Commerce CLI-kommandot.
 
 I det här exemplet används följande konfigurationsinställningar:
 
-- **momsregistreringsnummer** och **Butiksnamn** för de delade konfigurationsinställningarna.
+- **momsregistreringsnummer** och **Butiksnamn** för inställningarna för den delade konfigurationen.
 
-   Dessa finns under **Lager** > Inställningar > **Konfiguration** > Allmänt > **Allmänt**.
+  Dessa finns under **Lager** > Inställningar > **Konfiguration** > Allmänt > **Allmänt**.
 
 - **Skicka e-post till** för det känsliga konfigurationsvärdet.
 
-   Detta finns under **Lager** > Inställningar > **Konfiguration** > Allmänt > **Kontakter**.
+  Detta finns under **Lager** > Inställningar > **Konfiguration** > Allmänt > **Kontakter**.
 
 - **Standarddomän för e-post** för det systemspecifika konfigurationsvärdet.
 
-   Detta finns under **Lager** > Inställningar > **Konfiguration** > Kunder > **Kundkonfiguration** > **Skapa nya kontoalternativ**.
+  Detta finns under **Lager** > Inställningar > **Konfiguration** > Kunder > **Kundkonfiguration** > **Skapa nya kontoalternativ**.
 
 Du kan använda samma procedur som i det här exemplet för att konfigurera inställningar i följande referenser:
 
 - [Referens för känsliga och systemspecifika konfigurationssökvägar](../reference/config-reference-sens.md)
 - [Referens för sökvägar för betalningskonfiguration](../reference/config-reference-payment.md)
-- [Andra konfigurationssökvägar - referens](../reference/config-reference-general.md)
+- [Referens för andra konfigurationssökvägar](../reference/config-reference-general.md)
 - [Referens för konfigurationssökvägar för Commerce Enterprise B2B-tillägg](../reference/config-reference-b2b.md)
 
 ## Innan du börjar
@@ -61,7 +61,7 @@ Så här anger du standardinställningar för nationella inställningar och vikt
 
 1. Expandera i den högra rutan **Butiksinformation**.
 1. Rensa **Använd standard** kryssrutan bredvid **Momsnummer** och **Butiksnamn** fält.
-1. Ange en siffra i fältet (t.ex. `12345`).
+1. Ange en siffra i fältet (till exempel `12345`).
 1. I **Butiksnamn** fält, ange ett värde (som `My Store`).
 1. Klicka **Spara konfiguration**.
 1. Klicka på under Allmänt i den vänstra navigeringen **Kontakter**.
@@ -108,20 +108,20 @@ Om du vill ange känsliga och systemspecifika inställningar med hjälp av syste
 
 - Omfång för varje inställning
 
-   Om du följde instruktionerna i steg 1, kan du **Skicka e-post till** är webbplats och har **Standarddomän för e-post** är global (d.v.s. standardkonfigurationsomfånget).
+  Om du följde instruktionerna i steg 1, kan du **Skicka e-post till** är webbplats och har **Standarddomän för e-post** är global (d.v.s. standardkonfigurationsomfånget).
 
-   Du behöver webbplatskoden för att ange **Skicka e-post till** konfigurationsvärde.
+  Du behöver webbplatskoden för att ange **Skicka e-post till** konfigurationsvärde.
 
-   Mer information om hur du hittar det här värdet finns i: [Använd miljövariabler för att åsidosätta konfigurationsinställningar](../reference/override-config-settings.md#environment-variables).
+  Mer information om hur du hittar det här värdet finns i: [Använd miljövariabler för att åsidosätta konfigurationsinställningar](../reference/override-config-settings.md#environment-variables).
 
 - Konfigurationssökvägar för inställningarna som används i det här exemplet:
 
-   | Inställningsnamn | Konfigurationssökväg |
-   | -------------------- | -------------------------------------- |
-   | Skicka e-post till | `contact/email/recipient_email` |
-   | Standarddomän för e-post | `customer/create_account/email_domain` |
+  | Inställningsnamn | Konfigurationssökväg |
+  | -------------------- | -------------------------------------- |
+  | Skicka e-post till | `contact/email/recipient_email` |
+  | Standarddomän för e-post | `customer/create_account/email_domain` |
 
-   Information om alla känsliga och systemspecifika konfigurationssökvägar finns i: [Referens för känsliga och systemspecifika konfigurationssökvägar](../reference/config-reference-sens.md).
+  Information om alla känsliga och systemspecifika konfigurationssökvägar finns i: [Referens för känsliga och systemspecifika konfigurationssökvägar](../reference/config-reference-sens.md).
 
 ### Ange variabler med CLI-kommandon
 
@@ -136,7 +136,7 @@ Ange systemspecifik inställning **Standarddomän för e-post**, som finns i sta
 bin/magento config:set customer/create_account/email_domain <email domain>
 ```
 
-Du behöver inte använda omfånget i kommandot eftersom det är standardomfånget.
+Du behöver inte använda scopet i kommandot eftersom det är standardscopet.
 
 Ange värden för **Skicka e-post till** Du måste dock känna till omfångstypen (`website`) och omfångskoden, som troligtvis skiljer sig åt på alla platser.
 

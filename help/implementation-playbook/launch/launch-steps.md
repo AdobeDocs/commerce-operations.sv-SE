@@ -14,7 +14,7 @@ ht-degree: 0%
 
 När vi har testat och slutfört checklistan före start kan vi påbörja de sista stegen som ska startas vid övergången. De här stegen omfattar att komma in på en webbplats-startbiljetter (bli live), skära bort åtkomsten och slutligen testa din butik/dina butiker när de är live.
 
-Adobe Commerce supporttekniker arbetar tillsammans med dig genom processen och kontrollerar status samt hjälper dig att hantera eventuella frågor och problem som kan uppstå. Alla problem bör spåras med biljetter för att på bästa sätt fånga upp vad som hände och hur det löstes. När du börjar distribuera kontinuerliga upprepningar av uppdateringar till din startade butik kan liknande problem uppstå igen. Dessa biljetter kan hjälpa till att identifiera problemen och hjälpa till att justera era driftsättningsuppgifter.
+Adobe Commerce supporttekniker arbetar tillsammans med dig genom processen och kontrollerar status samt hjälper dig att åtgärda eventuella problem. Alla problem bör spåras med biljetter för att på bästa sätt fånga upp vad som hände och hur det löstes. När du börjar distribuera kontinuerliga upprepningar av uppdateringar till din startade butik kan liknande problem uppstå igen. Dessa biljetter kan hjälpa till att identifiera problemen och hjälpa till att justera era driftsättningsuppgifter.
 
 - Konfigurera programmet till bas-URL
    - Växla DNS till den nya platsen

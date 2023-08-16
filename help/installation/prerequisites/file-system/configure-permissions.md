@@ -83,9 +83,9 @@ Utför följande uppgifter i den ordning som visas:
 
 ### Om den delade gruppen
 
-Att göra det möjligt för webbservern att skriva filer och kataloger i filsystemet, men även att underhålla *ägarskap* av filsystemägaren måste båda användarna finnas i samma grupp. Detta är nödvändigt för att båda användarna ska kunna dela åtkomst till filer (inklusive filer som skapats med Admin eller andra webbaserade verktyg).
+Att göra det möjligt för webbservern att skriva filer och kataloger i filsystemet, men även att underhålla *ägandeskap* av filsystemägaren måste båda användarna finnas i samma grupp. Detta är nödvändigt för att båda användarna ska kunna dela åtkomst till filer (inklusive filer som skapats med Admin eller andra webbaserade verktyg).
 
-I det här avsnittet beskrivs hur du skapar en ägare av ett filsystem och placerar användaren i webbservergruppen. Du kan använda ett befintligt användarkonto om du vill; vi rekommenderar att användaren har ett starkt lösenord av säkerhetsskäl.
+I det här avsnittet beskrivs hur du skapar en ägare av ett filsystem och placerar användaren i webbservergruppen. Du kan använda ett befintligt användarkonto om du vill. Vi rekommenderar att användaren har ett starkt lösenord av säkerhetsskäl.
 
 >[!NOTE]
 >
@@ -101,7 +101,7 @@ Om du vill skapa en användare i CentOS eller Ubuntu anger du följande kommando
 adduser <username>
 ```
 
-Om du vill ge användaren ett lösenord anger du följande kommando som en användare med `root` behörighet:
+Om du vill ge användaren ett lösenord anger du följande kommando som användare med `root` behörighet:
 
 ```bash
 passwd <username>
@@ -133,15 +133,15 @@ Så här hittar du webbserverns användargrupp:
 
 * CentOS:
 
-   ```bash
-   grep -E -i '^user|^group' /etc/httpd/conf/httpd.conf
-   ```
+  ```bash
+  grep -E -i '^user|^group' /etc/httpd/conf/httpd.conf
+  ```
 
-   eller
+  eller
 
-   ```bash
-   grep -Ei '^user|^group' /etc/httpd/conf/httpd.conf
-   ```
+  ```bash
+  grep -Ei '^user|^group' /etc/httpd/conf/httpd.conf
+  ```
 
 Vanligtvis är både användar- och gruppnamnet `apache`.
 
@@ -172,7 +172,7 @@ Bekräfta att användaren är medlem i webbservergruppen genom att ange följand
 groups magento_user
 ```
 
-I följande exempelresultat visas användarens primära (`magento`) och sekundära (`apache`).
+I följande exempelresultat visas användarens primära (`magento`) och sekundära (`apache`) grupper.
 
 ```bash
 magento_user : magento_user apache
@@ -240,7 +240,7 @@ När du har utfört de andra uppgifterna i det här avsnittet, anger du något a
 * Ubuntu: `su <username>`
 * CentOS: `su - <username>`
 
-Till exempel:
+Exempel:
 
 ```bash
 su magento_user

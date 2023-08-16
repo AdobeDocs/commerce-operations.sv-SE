@@ -87,7 +87,7 @@ Sessionscachning är en bra kandidat att konfigurera för en separat instans av 
 
 Redis bör ha tillräckligt med minne för att rymma alla andra cacheminnen för optimala prestanda. Blockcachen är nyckelfaktorn när det gäller att fastställa mängden minne som ska konfigureras. Blockcachen ökar i förhållande till antalet sidor på en plats (antal SKU × antalet butiksvyer).
 
-### Cachelagring av sidor
+### Sidcachning
 
 Vi rekommenderar att du använder Varnish för helsidescache i din Adobe Commerce Store. The `PageCache` modulen finns fortfarande i kodbasen, men den bör endast användas i utvecklingssyfte.
 
@@ -123,18 +123,18 @@ Vi har ett separat avsnitt som handlar om vad [headless](../../architecture/head
 
 Adobe Commerce har alltid bättre prestanda när den senaste versionen körs. Även om det inte är möjligt att hålla Adobe Commerce uppdaterat efter att varje ny version släppts, rekommenderar vi ändå att [uppgradera](../../../upgrade/overview.md) när Adobe Commerce introducerar betydande prestandaoptimeringar.
 
-År 2020 lanserade Adobe t.ex. en optimering av Redis-lagret, som åtgärdade en hel del ineffektivitet, anslutningsproblem och onödig dataöverföring mellan Redis och Adobe Commerce. Den övergripande prestandan mellan 2.3 och 2.4 är natt och dag och vi har sett avsevärda förbättringar vad gäller kundvagn, utcheckning, samtidiga användare, bara på grund av Redis-optimeringen.
+År 2020 lanserade Adobe t.ex. en optimering av Redis-lagret, som åtgärdade många ineffektiva, anslutningsproblem och onödig dataöverföring mellan Redis och Adobe Commerce. Den övergripande prestandan mellan 2.3 och 2.4 är natt och dag och vi har sett avsevärda förbättringar vad gäller kundvagn, utcheckning, samtidiga användare, bara på grund av Redis-optimeringen.
 
 ### Optimera datamodell
 
 Många problem har sitt ursprung i data, bland annat dåliga datamodeller, data som inte är korrekt strukturerade och data som saknar ett index.
 
-Det ser bra ut om du testar några anslutningar, men ser bra ut i produktionen när den verkliga trafiken träffar och det är här som långsamhet kommer in. Det är mycket viktigt att systemintegratörer vet hur man utformar en datamodell (särskilt för produktattribut), undviker att lägga till onödiga attribut och behåller obligatoriska attribut som påverkar affärslogiken (t.ex. prissättning, tillgänglighet och sökning).
+Det ser bra ut om du testar några anslutningar, men ser bra ut i produktionen när den verkliga trafiken träffar och det är här som långsamhet kommer in i bilden. Det är mycket viktigt att systemintegratörer vet hur man utformar en datamodell (särskilt för produktattribut), undviker att lägga till onödiga attribut och behåller obligatoriska attribut som påverkar affärslogiken (t.ex. prissättning, tillgänglighet och sökning).
 
 För de attribut som inte påverkar affärslogiken men som måste finnas på butiken kan du kombinera dem till ett fåtal attribut (till exempel JSON-format).
 
 För att optimera plattformsprestanda behöver du inte lägga till det attributet i Adobe Commerce om det inte krävs någon affärslogik i butiken från data eller attribut som hämtats från en PIM eller en ERP.
 
-### Design för skalbarhet
+### Designa för skalbarhet
 
 Detta är viktigt för företag som kör kampanjer och ofta ställs inför höga tidpunkter. För att arkitektur och applikationsdesign ska vara enkel att skala kan detta öka resurserna under högtider och minska dem efter det.

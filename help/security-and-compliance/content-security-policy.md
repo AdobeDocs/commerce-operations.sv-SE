@@ -17,13 +17,13 @@ CSP tillhandahåller en standardiserad uppsättning direktiv som talar om för w
 
 ## Konfiguration
 
-För att undvika att störa webbplatsåtgärder kan CSP implementeras i faser. CSP har två grundläggande lägen: `report-only mode` och `restrict mode`. Utgåvan av Adobe Commerce 2.3.5 är den första fasen av vår implementering och gör CSP tillgängligt i `report-only mode` som standard. I en framtida release `restrict mode` är aktiverat som standard för ytterligare användbart skydd.
+För att undvika att störa webbplatsåtgärder kan CSP implementeras i faser. CSP har två grundläggande operationslägen: `report-only mode` och `restrict mode`. Utgåvan av Adobe Commerce 2.3.5 är den första fasen av vår implementering och gör CSP tillgängligt i `report-only mode` som standard. I en framtida release `restrict mode` är aktiverat som standard för ytterligare användbart skydd.
 
-**Läget Endast rapport**: Webbläsaren instrueras att rapportera policyöverträdelser, men inte att verkställa dem. Varje gång en begärd resurs bryter mot CSP loggar webbläsaren de resulterande felen till konsolen. Konsolloggen kan sedan användas för att undersöka orsaken till varje överträdelse.
+**Läget Endast rapport**: Webbläsaren instrueras att rapportera policyöverträdelser, men inte att framtvinga dem. Varje gång en begärd resurs bryter mot CSP loggar webbläsaren de resulterande felen till konsolen. Konsolloggen kan sedan användas för att undersöka orsaken till varje överträdelse.
 
 Det är viktigt att granska alla CSP-fel när de inträffar och förfina profilerna tills alla nödvändiga resurser vitlistas. Det är säkert att växla till `restrict mode` när inga fler fel inträffar. Annars kan en dåligt konfigurerad CSP göra att webbläsaren visar en tom sida med flera konsolfel. Med en korrekt konfigurerad CSP kan vitlistat innehåll levereras utan någon märkbar påverkan på prestandan.
 
-**Begränsa läge**: Webbläsaren instrueras att tillämpa alla innehållsprinciper och begränsa publiceringen till godkända resurser. Eftersom CSP är konfigurerat från servern, i stället för från administratören, behöver de flesta handlare hjälp av en systemintegratör eller utvecklare för att kunna konfigurera den korrekt. Se [Skyddsprofiler för innehåll](https://developer.adobe.com/commerce/php/development/security/content-security-policies/) i _Commerce PHP-tillägg_ utvecklarhandbok.
+**Begränsa läge**: Webbläsaren instrueras att tillämpa alla innehållsprinciper och begränsa publiceringen till godkända resurser. Eftersom CSP är konfigurerat från servern, i stället för från administratören, behöver de flesta handlare hjälp av en systemintegratör eller utvecklare för att kunna konfigurera den på rätt sätt. Se [Skyddsprofiler för innehåll](https://developer.adobe.com/commerce/php/development/security/content-security-policies/) i _Commerce PHP-tillägg_ utvecklarhandbok.
 
 ## Rapportering
 

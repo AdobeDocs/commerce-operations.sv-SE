@@ -17,7 +17,7 @@ Information om hur du skapar en meddelandekö på AWS finns i [Konfigurera Amazo
 
 ## Konfigurera handel för AWS MQ
 
-För att ansluta till AWS MQ-tjänsten konfigurerar du `queue.amqp` objekt i `env.php` -fil.
+För att ansluta till AWS MQ-tjänsten konfigurerar du `queue.amqp` -objektet i `env.php` -fil.
 AWS Message Queue kräver en SSL/TLS-anslutning.
 
 ```php
@@ -37,7 +37,7 @@ AWS Message Queue kräver en SSL/TLS-anslutning.
 
 Var:
 
-- `host`- URL:en för AMQP-slutpunkten; genom att klicka på mäklarens namn i AWS (ta bort&quot;https://&quot; och det efterföljande portnumret)
+- `host`—URL:en för AMQP-slutpunkten; kan nås genom att klicka på mäklarens namn i AWS (ta bort&quot;https://&quot; och det efterföljande portnumret)
 - `user`—Det användarnamn som angavs när AWS MQ-mäklaren skapades
 - `password`—Lösenordsvärdet som angavs när AWS MQ-mäklaren skapades
 
@@ -45,7 +45,7 @@ Var:
 >
 >Amazon MQ har bara stöd för TLS-anslutningar. Peer-verifiering stöds inte.
 
-Efter redigering av `env.php` kör du följande kommando för att slutföra installationen:
+När du har redigerat `env.php` kör du följande kommando för att slutföra installationen:
 
 ```bash
 bin/magento setup:upgrade
@@ -57,7 +57,7 @@ The `async.operations.all` som använder AMQP-anslutningen.
 
 Den här konsumenten skickar alla ämnesnamn som har prefixats med `async` via AWS MQ-anslutningen.
 
-I `InventoryCatalog` det finns:
+Till exempel i `InventoryCatalog` det finns:
 
 ```text
 async.V1.inventory.bulk-product-source-assign.POST
@@ -86,5 +86,5 @@ Så här testar du meddelanden som skickas från Commerce till [!DNL RabbitMQ]:
    bin/magento queue:consumers:start async.operations.all
    ```
 
-Du bör nu se meddelandet som står i kö bearbetas i [!DNL RabbitMQ] webbkonsol.
+Du bör nu se det köade meddelandet behandlas i [!DNL RabbitMQ] webbkonsol.
 Kontrollera att lagerkällor har ändrats i produkten i Admin.

@@ -33,7 +33,7 @@ I följande exempel visas `crontab` konfiguration för konsumenter:
 >
 >Hur ofta du kontrollerar meddelandeköer kan bero på din affärslogik och tillgängliga systemresurser. I allmänhet kanske du vill söka efter nya kunder och skicka välkomstmeddelanden oftare än med en mer resurskrävande process, som att uppdatera katalogen. Du bör definiera `cron` scheman efter företagets behov.
 >
->Den kan konfigureras i Admin Stores > Settings > Configuration > Advanced > System > Cron configuration options for group: konsumenter.
+>Den kan konfigureras i Admin Stores > Settings > Configuration > Advanced > System > Cron configuration options for group: customers.
 >
 >Se [Konfigurera och kör cron](../cli/configure-cron-jobs.md) för mer information om hur du använder `cron` med Commerce.
 
@@ -41,7 +41,7 @@ Du kan också använda en processhanterare som [Supervisor](https://supervisord.
 
 ## Konfiguration
 
-### Beteende som standard
+### Som standard
 
 - Kronjobb `consumers_runner` är aktiverat
 - Kronjobb `consumers_runner` kör alla definierade konsumenter
@@ -72,7 +72,7 @@ Redigera `/app/etc/env.php` fil för att konfigurera cron-jobbet `consumers_runn
 ```
 
 - `cron_run` - Ett booleskt värde som aktiverar eller inaktiverar `consumers_runner` cron-jobb (standard = `true`).
-- `max_messages` - Det maximala antalet meddelanden som varje konsument måste behandla innan de avbryter (standard = `10000`). Även om vi inte rekommenderar det kan du använda 0 för att hindra konsumenten från att säga upp sig. Se [`consumers_wait_for_messages`](../reference/config-reference-envphp.md#consumerswaitformessages) för att konfigurera hur konsumenter ska bearbeta meddelanden från meddelandekön.
+- `max_messages` - Det maximala antalet meddelanden som varje konsument måste behandla innan de avbryts (standard = `10000`). Även om vi inte rekommenderar det kan du använda 0 för att hindra konsumenten från att säga upp sig. Se [`consumers_wait_for_messages`](../reference/config-reference-envphp.md#consumerswaitformessages) för att konfigurera hur konsumenter ska bearbeta meddelanden från meddelandekön.
 - `consumers` - en array med strängar som anger vilka konsumenter som ska köras. En tom array körs *alla* konsumenter.
 - `multiple_processes` - en array med nyckelvärdepar som anger vilken konsument som ska köras i hur många processer. Stöds i Commerce 2.4.4 eller senare.
 

@@ -52,7 +52,7 @@ Marknadschefen för ett digitalt implementeringsprojekt måste också fokusera p
 
 En marknadschef bör ständigt kommunicera med chefen för Digital, e-handelsförvaltaren, kundtjänstgruppen och lagerteamet för att anpassa sina kampanjer och kampanjer. Om en Marketing Manager planerar och skickar ut en kampanj för en produkt som har ett lågt lager kan det finnas många problem för kunderna och öka kundtjänstteamets arbetsbörda. Det är viktigt att alla team är samordnade.
 
-Marknadsföringsansvariga måste också följa olika kundtjänstmetoder för att förbättra kundupplevelsen och kundlojaliteten, inklusive, men inte begränsat till:
+Marknadsföringsansvariga måste även beakta olika kundtjänstmetoder för att förbättra kundupplevelsen och kundlojaliteten, inklusive, men inte begränsat till:
 
 - Lojalitet
 - Belöningspunkter
@@ -92,7 +92,7 @@ IT-teamet innehåller även testare. Den huvudsakliga rollen för testare är at
 
 ## Lagerställegrupp
 
-Även om hela upplevelsen görs online finns det fortfarande en fysisk värld som innefattar hantering av lager, paketering av beställningar och leverans till kunder.
+Även om hela upplevelsen sker online finns det fortfarande en fysisk värld som innefattar hantering av lager, paketering av beställningar och leverans till kunder.
 
 ### Logistics Manager
 
@@ -102,7 +102,7 @@ Logistics Manager har som huvudansvar att se till att produkten levereras på r�
 
 ### Inventeringsansvarig
 
-Lagerhanteraren måste övervaka lagret i ett eller flera lager för att säkerställa att de produkter som kunderna beställer är de produkter som ska levereras. De ansvarar för att övervaka korrekt produktförpackning. Ingen verksamhet vill att kunderna ska få produkter i otillfredsställande skick. presentation är nyckeln.
+Lagerhanteraren måste övervaka lagret i ett eller flera lager för att säkerställa att de produkter som kunderna beställer är de produkter som ska levereras. De ansvarar för att övervaka korrekt produktförpackning. Ingen verksamhet vill att kunderna ska få produkter i otillfredsställande skick; presentation är nyckeln.
 
 ## Kundtjänstgrupp
 
@@ -124,13 +124,13 @@ Kundtjänstgruppen ansvarar även för följande:
 
 Kundtjänstteamet kan ge detaljerad information till andra teammedlemmar baserat på kundernas feedback, frågor och problem, som företaget kan använda för att förbättra och förbättra kundupplevelsen.
 
-## Innehållsteamet
+## Content Team
 
 Innehållsteamet sitter antingen inom marknadsföringsteamet, e-handelsteamet eller oberoende av varandra. Webbplatstrafiken räcker inte. Kunderna måste köpa produkterna till ert företag för att få avkastning på investeringen. Innehåll på hela webbplatsen är viktigt, men det viktigaste innehållet finns på kategorierna och produktsidorna. Det här är det innehåll som hjälper företag att tjäna pengar.
 
 Innehållsteamet ansvarar för följande:
 
-- **Ordna innehållet**—Element, URL:er, navigering och sidstruktur måste vara enkla och användarvänliga. Om sajten är för komplicerad går kunderna förlorade.
+- **Ordna innehållet**—Element, URL:er, navigering och sidstruktur måste vara enkla och användarvänliga. Om sajten är för komplicerad går kunderna vilse.
 
 - **Korrigera brutet innehåll**- Brutna bilder, sidor, saknade sidor, utcheckningsflöde och felmeddelanden gör att kunderna lämnar er webbplats och lämnar ett negativt intryck.
 

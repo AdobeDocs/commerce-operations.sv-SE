@@ -23,7 +23,7 @@ Du kan ha ett produktionssystem. Alla följande måste vara true:
    - `pub/static` katalog (och underkataloger)
 
 - Commerce 2.2 eller senare måste installeras och ställas in för [produktionsläge](../bootstrap/application-modes.md#production-mode)
-- Ägarskap och behörigheter för filsystemet anges enligt [Krav för dina utvecklings-, bygg- och produktionssystem](../deployment/prerequisites.md).
+- Ägarskap och behörigheter för filsystemet anges enligt beskrivningen i [Krav för dina utvecklings-, bygg- och produktionssystem](../deployment/prerequisites.md).
 
 ## Konfigurera en produktionsmaskin
 
@@ -92,7 +92,7 @@ Så här anger du känsliga värden:
 
    Ange ett värde för varje känslig inställning när du uppmanas till det eller tryck på Retur om du vill hoppa över ett värde och gå till nästa.
 
-1. Logga in på administratören för att verifiera att värdet har angetts.
+1. Logga in på Admin för att bekräfta att värdet har angetts.
 1. Leta reda på inställningen i Admin.
 
    Nyckelinställningen för YouTube API finns i **Lager** > Inställningar > **Konfiguration** > **Katalog** > **Katalog** > **Produktvideo**.

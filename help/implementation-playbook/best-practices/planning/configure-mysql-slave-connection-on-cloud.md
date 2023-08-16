@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Adobe Commerce kan läsa flera databaser asynkront. Om du förväntar dig en hög belastning för MySQL-databasen för en Commerce-plats som distribuerats på en molninfrastruktur, rekommenderar Adobe att du aktiverar MYSQL-slavanslutningen.
 
-När du aktiverar MYSQL-slavanslutningen använder Adobe Commerce en skrivskyddad anslutning till databasen för att ta emot skrivskyddad trafik på en icke-överordnad nod. Prestandan förbättras genom lastbalansering när bara en nod hanterar läs- och skrivtrafik.
+När du aktiverar MYSQL-slavanslutningen använder Adobe Commerce en skrivskyddad anslutning till databasen för att ta emot skrivskyddad trafik på en icke-huvudnod. Prestandan förbättras genom lastbalansering när bara en nod hanterar läs- och skrivtrafik.
 
 ## Berörda versioner
 

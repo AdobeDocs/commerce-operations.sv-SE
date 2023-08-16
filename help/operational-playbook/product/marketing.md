@@ -5,14 +5,14 @@ exl-id: a6b38975-ff85-4cc1-86e3-9792562369ab
 feature: Best Practices, Promotions/Events
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '492'
 ht-degree: 0%
 
 ---
 
 # E-postmarknadsföring
 
-E-postmarknadsföring (i enkla termer) skickar marknadsföringsmeddelanden till leads och befintliga kunder via e-post för att marknadsföra, attrahera och sälja produkter till kunder. Marknadsföringsteamen har full kontroll över att hämta kundinformation och skicka personaliserat innehåll via direktkampanjer via e-post. E-post fungerar som ett verktyg som hjälper er att bygga en relation mellan era kunder och ert varumärke.
+E-postmarknadsföring (i enkla termer) skickar marknadsföringsmeddelanden till leads och befintliga kunder via e-post för att marknadsföra, attrahera och sälja produkter till kunder. Marknadsföringsteamen har full kontroll över att hämta kundinformation och skicka personaliserat innehåll via direktkampanjer. E-post fungerar som ett verktyg som hjälper er att bygga en relation mellan era kunder och ert varumärke.
 
 Därför bör ni överväga e-postmarknadsföring:
 
@@ -28,7 +28,7 @@ Därför bör ni överväga e-postmarknadsföring:
 
 Att få det första intrycket att stanna är avgörande i e-handelsverksamheten. Om det första e-postmeddelandet du skickar till nya kunder är effektivt kommer det att ge kunderna ett bestående intryck i minnet. Försök att hålla designen enkel och originaltrogen. Vissa varumärken ger till exempel rabatter i e-postmeddelandet när kunden registrerar sig.
 
-![Exempel på välkomstmarknadsföring](../../assets/playbooks/marketing-email-welcome.png)
+![Exempel på e-post för välkomstmarknadsföring](../../assets/playbooks/marketing-email-welcome.png)
 
 ## Kuraterad e-post
 

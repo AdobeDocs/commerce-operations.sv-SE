@@ -16,7 +16,7 @@ Det nuvarande standardalternativet för distribution för de flesta företagskun
 
 - Stöd för 100 % i B2B och B2C
 - Tema för manuell referens (Luma) som snabbt kan driftsättas/anpassas
-- Expertis inom implementering av masters-SI-partner
+- Expertis inom implementering av masters-SI
 - Fullt kompatibel med e-handelsfunktioner som Page Builder eller Staging &amp; Preview
 - Bred kompatibilitet med tillägg i Adobe Commerce Marketplace
 

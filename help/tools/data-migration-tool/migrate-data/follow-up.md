@@ -5,7 +5,7 @@ exl-id: a55f357b-6c95-49d6-b2f1-c2e403a8c85f
 topic: Commerce, Migration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '301'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Alla grupppriser konverteras automatiskt till nivåpriser under migreringen.
 
 ### Ny numrering för försäljningsenheter
 
-Referensnummer för beställningar, fakturor, leveranser, kreditnotor och RMA-migrering. Efter migreringen gäller de nya nummertilldelningsreglerna för Magento 2. Numreringen för de nya försäljningsenheterna är annorlunda.
+Referensnummer för beställningar, fakturor, leveranser, kreditnotor och RMA-migrering i befintligt skick. Efter migreringen gäller de nya nummertilldelningsreglerna för Magento 2. Numreringen för de nya försäljningsenheterna är annorlunda.
 
 ## Steg
 

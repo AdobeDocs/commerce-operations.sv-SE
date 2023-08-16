@@ -23,7 +23,7 @@ Den här sidan innehåller nyligen gjorda ändringar som vi tror att du vill se.
   </thead>
   <tbody>
     <tr>
-      <td><p>Uppdaterat <a href="https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-service-configuration.html">Bästa praxis för konfiguration av Redis</a> med information om hur cacheminnet separeras från sessionen och om komprimering används.</p>
+      <td><p>Uppdaterat <a href="https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-service-configuration.html">Bästa praxis för konfiguration av Redis</a> med information om hur cachen separeras från sessionen och om komprimering används.</p>
 </td>
       <td>god praxis</td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/f9d46893a25569b9cb00b45ab285758b3b74b410">f9d468</a> (implementera)</td>

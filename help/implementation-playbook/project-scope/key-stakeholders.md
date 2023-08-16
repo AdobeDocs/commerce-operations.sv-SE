@@ -22,7 +22,7 @@ När beslut fattas om att investera i en handelsomvandling är ett av de viktiga
 
 ## Vem äger upplevelsen?
 
-Det här är den person eller det team i organisationen som bäst förstår kundens aktuella och framtida behov och behov och som i slutändan ansvarar för att leverera den upplevelse som passar dem och deras behov. Detta innefattar fokus på produktsortiment, lagersynlighet, kampanjer, kundklagomål och orderuppdateringar i realtid samt leveransspårning. Den här gruppen innehåller ofta titlar, till exempel:
+Det här är den person eller det team i organisationen som bäst förstår kundens aktuella och framtida behov och behov och som i slutändan ansvarar för att leverera den upplevelse som passar dem och deras behov. Detta inkluderar kontaktpunkter som produktsortiment, lagersynlighet, kampanjer, kundklagomål och orderuppdateringar i realtid samt leveransspårning. Den här gruppen innehåller ofta titlar, till exempel:
 
 - VP of Digital Strategy
 - VP of Ecommerce
@@ -32,7 +32,7 @@ Det här är den person eller det team i organisationen som bäst förstår kund
 
 ## Vem äger tekniken?
 
-De flesta e-handelsimplementationer kräver flera olika plattformar för att kunna kommunicera fram och tillbaka och vara helt integrerade, till exempel ett orderhanteringssystem, en kundtjänstplattform eller ett ERP-system. Back-office-system som förbereds för en handelsomformning styr ofta tidslinjen för implementering, så det är av största vikt att det finns kontakter från en organisations IT-team som arbetar från dag ett för att stödja initiativet. Den här gruppen innehåller ofta:
+De flesta e-handelsimplementationer kräver flera olika plattformar för att kunna kommunicera fram och tillbaka och vara helt integrerade, som ett orderhanteringssystem, en kundtjänstplattform eller ett ERP-system. Back-office-system som förbereds för en handelsomformning styr ofta tidslinjen för implementering, så det är av största vikt att det finns kontakter från en organisations IT-team som arbetar från dag ett för att stödja initiativet. Den här gruppen innehåller ofta:
 
 - IT Systems Manager, CTO och intern teknisk personal
 - ERP-tekniker (eller annan back-office-tekniker)

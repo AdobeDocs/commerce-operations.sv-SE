@@ -27,11 +27,11 @@ Det här biblioteket innehåller en uppsättning funktioner för att skapa förf
 
 JavaScript-biblioteket för sekretess finns på följande CDN-plats: `commerce.adobe.net/magentoprivacy.js`
 
-När du har filen måste du lägga till den i en anpassad modul eller ett tema som är installerat i Adobe Commerce- eller Magento Open Source-instansen. Följ instruktionerna som beskrivs i [Använd anpassad JavaScript](https://developer.adobe.com/commerce/frontend-core/javascript/custom/) ämne som ska utföra den här uppgiften.
+När du har filen måste du lägga till den i en anpassad modul eller ett tema som är installerat i Adobe Commerce- eller Magento Open Source-instansen. Följ instruktionerna i [Använd anpassad JavaScript](https://developer.adobe.com/commerce/frontend-core/javascript/custom/) ämne som ska utföra den här uppgiften.
 
 ### Initiering
 
-Importera och instansiera en ny `MagentoPrivacy` eller använder `window` -objekt för att komma åt JavaScript-funktioner för sekretess.
+Importera och instansiera en ny `MagentoPrivacy` -objektet eller använder `window` -objekt för att komma åt JavaScript-funktioner för sekretess.
 
 Exempel med `import`:
 

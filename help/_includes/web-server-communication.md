@@ -7,7 +7,7 @@ ht-degree: 0%
 ---
 # Säker webbserverkommunikation
 
-I det här avsnittet beskrivs ett exempel på hur du säkrar kommunikationen mellan webbservern och sökmotorn (Elasticsearch eller OpenSearch) med en kombination av TLS-kryptering (Transport Layer Security) och [Grundläggande HTTP-autentisering](https://datatracker.ietf.org/doc/html/rfc2617). Du kan även konfigurera andra typer av autentisering, vi tillhandahåller referenser för den informationen.
+I det här avsnittet beskrivs ett exempel på hur du säkrar kommunikationen mellan webbservern och sökmotorn (Elasticsearch eller OpenSearch) med en kombination av TLS-kryptering (Transport Layer Security) och [Grundläggande HTTP-autentisering](https://datatracker.ietf.org/doc/html/rfc2617). Du kan även konfigurera andra typer av autentisering. Vi tillhandahåller referenser för den informationen.
 
 (En äldre term, Secure Sockets Layer (SSL), används ofta som synonymer med TLS. I det här avsnittet hänvisar vi till *TLS*.)
 
@@ -21,13 +21,13 @@ Vi rekommenderar följande:
 
 * Din webbserver använder TLS.
 
-   TLS ligger utanför detta ämne. Vi rekommenderar dock starkt att du använder ett riktigt certifikat i produktionen och inte ett självsignerat certifikat.
+  TLS ligger utanför det här ämnesområdet, men vi rekommenderar starkt att du använder ett riktigt certifikat i produktionen och inte ett självsignerat certifikat.
 
 * Sökmotorn körs på samma värd som en webbserver. Det här avsnittet gäller inte för körning av sökmotorn och webbservern på olika värdar.
 
-   Fördelen med att lägga sökmotorn och webbservern på samma värd är att det inte går att fånga upp krypterad kommunikation. Sökmotorns webbserver behöver inte vara samma som Adobe Commerce eller Magento Open Source webbserver. Adobe Commerce kan till exempel köra Apache och Elasticsearch/OpenSearch kan köra nginx.
+  Fördelen med att lägga sökmotorn och webbservern på samma värd är att det inte går att fånga upp krypterad kommunikation. Sökmotorns webbserver behöver inte vara samma som Adobe Commerce- eller Magento Open Source-webbservern. Adobe Commerce kan till exempel köra Apache och Elasticsearch/OpenSearch kan köra nginx.
 
-   Om sökmotorn exponeras för den offentliga webben bör du konfigurera autentiseringen. Om sökmotorinstansen är skyddad i nätverket behöver du inte göra det. Samarbeta med din värdleverantör för att ta reda på vilka säkerhetsåtgärder du bör vidta för att skydda din instans.
+  Om sökmotorn exponeras för den offentliga webben bör du konfigurera autentiseringen. Om sökmotorinstansen är skyddad i nätverket behöver du inte göra det. Samarbeta med din värdleverantör för att ta reda på vilka säkerhetsåtgärder du bör vidta för att skydda din instans.
 
 ## Mer information om TLS
 

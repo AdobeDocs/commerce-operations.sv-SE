@@ -40,11 +40,11 @@ The [Site-Wide Analysis Tool](https://experienceleague.adobe.com/docs/commerce-o
 
 ## Aktivera och verifiera inställningar för administratörsåtgärdsloggning
 
-Du hittar detta när du har loggat in på Adobe Commerce-administratören och navigerat till Lager > Konfiguration > Avancerat > Admin > Loggning av administrationsåtgärder. Här finns en lista över händelser som övervakas och registreras. Det är användbart när man gör kriminaltekniska analyser på en utnyttjad plats, om misstanken är att de har fått tillgång till Commerce Admin. Denna loggning och rapport kan vara användbara för att se vilka händelser den dåliga skådespelaren har utfört. Om någon administratörsåtgärd för loggning är inaktiverad, vilket är ett tecken på att någon har inaktiverat dem för att täcka över loggningen när vissa åtgärder utförs.
+Du hittar detta när du har loggat in på Adobe Commerce-administratören och navigerat till Lager > Konfiguration > Avancerat > Admin > Loggning av administrationsåtgärder. Här finns en lista över händelser som övervakas och spelas in. Det är användbart när man gör kriminaltekniska analyser på en utnyttjad plats, om misstanken är att de har fått tillgång till Commerce Admin. Denna loggning och rapport kan vara användbara för att se vilka händelser den dåliga skådespelaren har utfört. Om någon administratörsåtgärd för loggning är inaktiverad, vilket är ett tecken på att någon har inaktiverat dem för att täcka över loggningen när vissa åtgärder utförs.
 
 ## Basserver för SSH-åtkomst
 
-Det här är svårare att förklara att de flesta ämnen i självstudiekursen om säkerhetsfrågor är svåra att förklara. Grundtanken med detta är att tillhandahålla en server som fungerar som mellanhand för SSH-åtkomst. På så sätt tillåter produktionsservrarna aldrig externa SSH-anslutningar. Du kan skapa den här bastionsservern och använda en lokal IP-mask för att säkerställa att endast angivna servrar tillåts att använda SSH i dem.
+Det här är svårare att förklara att de flesta ämnen i självstudiekursen om säkerhetsfrågor är svåra att förklara. Grundtanken med detta är att tillhandahålla en server som fungerar som mellanhand för SSH-åtkomst. På så sätt tillåter produktionsservrarna aldrig externa SSH-anslutningar. Du kan skapa den här bastionsservern och använda en lokal IP-mask för att se till att endast angivna servrar tillåts att använda SSH i dem.
 
 ## Granska ACL-roller och behörigheter
 
@@ -58,7 +58,7 @@ För att upptäcka oönskade eller obehöriga administratörsanvändare bör adm
 
 Begränsa åtkomst till produktionsdata. Dessa utsedda teammedlemmar bör ha möjlighet att dra ned på produktionsdatabaser och rensa dem från verkliga data. Om det är ett alternativ att ta bort data kan du korta av de tabeller som används, t.ex. order, citattecken och kunder. Ibland vill du dock ha en fullständig uppsättning data, men värdena kan anonymiseras. Detta gäller vanligtvis i en staging-miljö. Det är också användbart före uppgraderingar. Genom att ha den verkliga datavolymen, men anonymiserat, kan du testa och validera den tid det tar att köra en distribution för att uppgradera ordentligt. Om du har en begränsad uppsättning data kan du underskatta uppgraderingsprocessen och tidsåtgången.
 
-+++Slumpmässigt exempel på kundinformation Här är ett exempel på hur du kan byta ut kundens e-postadress mot en slumpmässig sträng och alla för- och efterhandsfält i vissa standardtabeller som Adobe Commerce lagrar data i. **Kom ihåg att kontrollera om alla tabeller innehåller känsliga data. Den här listan är inte alla inkluderade i de tabeller där kunddata kan lagras**
++++Slumpmässigt exempel på kundinformation Här är ett exempel på hur du kan byta ut kundens e-postadress mot en slumpmässig sträng och alla för- och efterhandsfält i vissa standardtabeller som lagras i Adobe Commerce. **Kom ihåg att kontrollera om alla tabeller innehåller känsliga data. Den här listan är inte alla inkluderade i de tabeller där kunddata kan lagras**
 
 ```SQL
 SET FOREIGN_KEY_CHECKS=0;
@@ -83,7 +83,7 @@ SET FOREIGN_KEY_CHECKS=1;
 +++
 
 
-+++Du kan även korta av tabeller i stället för att försöka anonymisera dem
++++Du kan även korta av tabeller i stället för att försöka anonymisera
 
 ```SQL
 SET FOREIGN_KEY_CHECKS=0;

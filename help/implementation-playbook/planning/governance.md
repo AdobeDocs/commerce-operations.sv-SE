@@ -1,5 +1,5 @@
 ---
-title: Projektledning
+title: Projektstyrning
 description: Använd våra rekommendationer för projektstyrning i er implementering av Adobe Commerce.
 exl-id: adf53a2a-1673-441a-84d3-4cdda47d6aa5
 feature: Best Practices
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Projektstyrning är en tillsynsfunktion som är anpassad till organisationens styrningsstruktur och omfattar projektets livscykel. Det ger projektledaren och teamet struktur, processer, beslutsmodeller och verktyg för att hantera och styra projektet, samtidigt som man ser till att projektet genomförs korrekt. Projektstyrning är en viktig faktor, särskilt för komplexa och strategiska projekt.
 
-I styrningsmodellen definieras, dokumenteras och kommuniceras anpassade och effektiva rutiner för att tillhandahålla en heltäckande metod för att styra projektet och ge periodisk synlighet på alla nivåer för att säkerställa framgång. Det innehåller en ram för beslutsfattande. Definiera roller, ansvar och ansvar för projektets genomförande. och styr effektiviteten. Styrningsstrukturen samlas i ledningsgruppen hela vägen till den verkställande ledningen, där man definierar aktiviteter, rapportering, eskalering och informationsflöde.
+I styrningsmodellen definieras, dokumenteras och kommuniceras anpassade och effektiva rutiner som ger en heltäckande metod för att styra projektet och som ger periodisk synlighet på alla nivåer för att säkerställa framgång. Det innehåller en ram för att fatta beslut, definierar roller, ansvar och ansvar för att genomföra projektet och styr effektiviteten. Styrningsstrukturen samlas i ledningsgruppen hela vägen till den verkställande ledningen, där man definierar aktiviteter, rapportering, eskalering och informationsflöde.
 
 ![Infografik om projektstyrning](../../assets/playbooks/project-governance.svg)
 
@@ -34,7 +34,7 @@ På olika nivåer undersöker teamen specifika käpp- och projektmått för att 
 
    - Koordinera och granska projektförloppet
 
-   - Beslutsfattande om viktiga påverkansfaktorer (om sådana finns)
+   - Beslutsfattande om viktiga faktorer (om sådana finns)
 
    - Drömttheten säkerställer att kundnöjdheten och farhågorna registreras och åtgärdas
 
@@ -87,7 +87,7 @@ Utmaningar eller förändringar inträffar under hela projektet. Att ge rätt pe
   <tr>
     <td>Defekt densitet</td>
     <td>%</td>
-    <td>Antal giltiga fel som påträffats VS Totalt antal testfall som körts</td>
+    <td>Antal giltiga fel som hittades VS Totalt antal testfall som körts</td>
   </tr>
   <tr>
     <td>Defekt läckage till SIT/UAT/produktion</td>

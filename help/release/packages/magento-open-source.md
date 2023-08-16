@@ -9,6 +9,6 @@ ht-degree: 0%
 
 ---
 
-# Adobe Commerce-paket
+# Adobe Commerce
 
 {{$include /help/_includes/templated/release/packages/open-source.md}}

@@ -33,12 +33,12 @@ Den här rapporten innehåller även en detaljerad sammanfattning av
 
 - *Aktuell version*: den version som är installerad.
 - *Målversion*: den version du vill uppgradera till.
-- *Körningstid*: hur lång tid det tog att sammanställa rapporten (mm:ss).
+- *Körningstid*: den tid det tog för analysen att bygga rapporten (mm:ss).
 - *Moduler som behöver uppdateras*: procentandelen moduler som innehåller kompatibilitetsproblem och som behöver uppdateras.
 - *Filer som behöver uppdateras*: procentandelen filer som innehåller kompatibilitetsproblem och som behöver uppdateras.
 - *Totalt antal kritiska fel*: antalet kritiska fel som påträffats.
 - *Totalt antal fel*: antalet fel som hittats.
-- *Totalt antal varningar*: antalet varningar som hittats.
+- *Totalt antal varningar*: antalet varningar som hittades.
 - *Maximal minnesanvändning*: den maximala mängden minne i [!DNL Upgrade Compatibility Tool] har nåtts under körningen.
 
 Se följande exempel på kommandoradsgränssnitt:
@@ -59,14 +59,14 @@ Se följande exempel på kommandoradsgränssnitt:
 
 ## JSON-fil
 
-Du kan hämta JSON-filens utdata medan du kör [!DNL Upgrade Compatibility Tool] i kommandoradsgränssnitt. The `JSON` filen innehåller exakt samma information som visas på [!DNL Upgrade Compatibility Tool] utdata:
+Du kan hämta JSON-utdata när du kör [!DNL Upgrade Compatibility Tool] i kommandoradsgränssnitt. The `JSON` filen innehåller exakt samma information som visas på [!DNL Upgrade Compatibility Tool] utdata:
 
 - En lista med identifierade problem.
 - En sammanfattning av analysen.
 
 För varje påträffat fel innehåller rapporten detaljerad information som problemets svårighetsgrad och beskrivning.
 
-Exportera detta `JSON` till en annan utdatamapp:
+Om du vill exportera `JSON` till en annan utdatamapp:
 
 ```bash
 bin/uct upgrade:check <dir> --json-output-path[=JSON-OUTPUT-PATH]
@@ -75,7 +75,7 @@ bin/uct upgrade:check <dir> --json-output-path[=JSON-OUTPUT-PATH]
 Där argumenten är följande:
 
 - `<dir>`: Adobe Commerce installationskatalog.
-- `[=JSON-OUTPUT-PATH]`: Sökvägskatalog som ska exporteras `JSON` utdatafil.
+- `[=JSON-OUTPUT-PATH]`: Sökvägskatalog att exportera `JSON` utdatafil.
 
 >[!NOTE]
 >
@@ -113,13 +113,13 @@ Med dessa diagram kan du identifiera de moduler som är mest komprometterade och
 
 ![HTML-rapport - diagram](../../assets/upgrade-guide/uct-html-diagrams.png)
 
-Diagrammen i HTML-rapporten uppdateras också i enlighet med detta, med det enda undantaget `Modules with relative sizes and issues`, som genereras med `min-issue-level` som ursprungligen var konfigurerad.
+Diagrammen i HTML-rapporten uppdateras också i enlighet med detta, med undantag för `Modules with relative sizes and issues`, som genereras med `min-issue-level` som ursprungligen var konfigurerad.
 
 Om du vill se olika resultat för `Modules with relative sizes and issues` måste du köra kommandot igen och ange ett annat värde för `--min-issue-level` alternativ.
 
 ![HTML-rapport - Bubbeldiagram](../../assets/upgrade-guide/uct-html-filtered-diagrams.png)
 
-Så här exporterar du den här HTML-rapporten till en annan utdatamapp:
+Så här exporterar du HTML-rapporten till en annan utdatamapp:
 
 ```bash
 bin/uct upgrade:check <dir> --html-output-path[=HTML-OUTPUT-PATH]
@@ -128,7 +128,7 @@ bin/uct upgrade:check <dir> --html-output-path[=HTML-OUTPUT-PATH]
 Där argumenten är följande:
 
 - `<dir>`: Adobe Commerce installationskatalog.
-- `[=HTML-OUTPUT-PATH]`: Sökvägskatalog som ska exporteras `.html` utdatafil.
+- `[=HTML-OUTPUT-PATH]`: Sökvägskatalog att exportera `.html` utdatafil.
 
 >[!NOTE]
 >

@@ -13,7 +13,7 @@ ht-degree: 0%
 
 E-handel är ett av de snabbast växande segmenten på marknaden och varumärkena skyndar på att bli online. För att varje e-handelsprojekt ska lyckas måste ni ha rätt balans mellan teamen. Att hantera e-handelsföretag behöver ett team med erfarenhet, strategi och funktionsövergripande kunskaper. Tillsammans med rätt e-handelsteam är det också viktigt att ha andra team inom organisationen som är lika involverade i hela projektprocessen. Det måste vara en samarbetsinsats om företaget ska uppnå det förutsedda målet och för att göra det måste företaget se till att avdelningarna inte arbetar isolerat.
 
-Förutom att konfigurera team bör man inte glömma alla medlemmar i introduktionsteamet. Medlemmar i introduktionsteamet måste göras på ett effektivt sätt eftersom det kan definiera hela teamets framgång.
+Förutom att konfigurera team bör man inte glömma alla medlemmar i introduktionsteamet. Medlemmarna i introduktionsteamet måste göras på ett effektivt sätt eftersom det kan definiera hela teamets framgång.
 
 Du kan strukturera team i ett blandat format, som:
 
@@ -45,7 +45,7 @@ Kundtjänst är vanligtvis ett av de mest förbisedda och undervärderade teamen
 
 En organisation hade till exempel kundtjänstteamet i samma rum som e-handelsteamet för första gången. E-handels- och marknadsföringsteamen kunde höra förstahandstagandet och förstå vad kunderna hade att säga, vilket var ovärderligt.
 
-Det är viktigt att kundtjänstteamet är engagerat och konsekvent ger feedback till e-handelsteamet. All feedback som kan påverka transaktioner eller öka kundvagnens beteende kan snabbt tas upp i färdplanen.
+Det är viktigt att kundtjänstteamet är engagerat och konsekvent ger feedback till e-handelsteamet. All feedback som kan påverka transaktioner eller leda till kundvagnsbeteenden kan snabbt tas upp i färdplanen.
 
 ## E-handel
 

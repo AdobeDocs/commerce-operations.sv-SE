@@ -37,7 +37,7 @@ Du kan köra installationsprogrammet flera gånger med olika alternativ för att
 
 >[!NOTE]
 >
->Installationsprogrammet skriver inte över databasen som standard om du installerar Commerce-programmet i samma databasinstans. Du kan använda det valfria `cleanup-database` parameter för att ändra det här beteendet.
+>Installationsprogrammet skriver inte över databasen som standard om du installerar Commerce-programmet i samma databasinstans. Du kan använda det valfria `cleanup-database` parameter för att ändra detta beteende.
 
 Se även [Uppdatera, installera om, avinstallera](uninstall.md).
 
@@ -67,13 +67,13 @@ Installationskommandot har följande format:
 magento setup:install --<option>=<value> ... --<option>=<value>
 ```
 
-I följande tabeller beskrivs namn och värden för installationsalternativ, till exempel installationskommandon. Se [Exempel på lokala värdinstallationer](#sample-localhost-installations).
+I följande tabeller beskrivs namnen på installationsalternativen och deras värden, t.ex. installationskommandon. Se [Exempel på lokala värdinstallationer](#sample-localhost-installations).
 
 >[!NOTE]
 >
 >Alla alternativ som innehåller blanksteg eller specialtecken måste omslutas med enkla eller dubbla citattecken.
 
-**Administratörsautentiseringsuppgifter:**
+**Administratörsreferenser:**
 
 Följande alternativ anger användarinformation och autentiseringsuppgifter för administratörsanvändaren.
 
@@ -85,31 +85,31 @@ I Adobe Commerce version 2.2.8 och senare kan du skapa administratörsanvändare
 | `--admin-lastname` | Administratörsanvändarens efternamn. | Ja |
 | `--admin-email` | Administratörsanvändarens e-postadress. | Ja |
 | `--admin-user` | Administratörsanvändarnamn. | Ja |
-| `--admin-password` | Administratörslösenord. Lösenordet måste innehålla minst 7 tecken och innehålla minst en bokstav och minst ett numeriskt tecken. Vi rekommenderar ett längre och mer komplext lösenord. Omsluter hela lösenordssträngen med enkla citattecken. Till exempel: `--admin-password='A0b9%t3g'` | Ja |
+| `--admin-password` | Administratörslösenord. Lösenordet måste innehålla minst 7 tecken och innehålla minst en bokstav och minst ett numeriskt tecken. Vi rekommenderar ett längre och mer komplext lösenord. Omsluter hela lösenordssträngen med enkla citattecken. Exempel: `--admin-password='A0b9%t3g'` | Ja |
 
 **Konfigurationsalternativ för plats och databas:**
 
 | Namn | Värde | Obligatoriskt? |
 |--- |--- |--- |
-| `--base-url` | Bas-URL som används för att komma åt din administratör och butiker i något av följande format:<br><br>`http[s]://<host or ip>/<your install dir>/`.<br><br>**Obs!** Schemat (http:// eller https://) och ett avslutande snedstreck krävs båda.<br><br>`<your install dir>` är den dokumentberoende sökvägen som programmet ska installeras i. Beroende på hur du konfigurerar webbservern och de virtuella värdarna kan sökvägen vara magento2 eller tom.<br><br>Om du vill komma åt programmet på localhost kan du använda antingen `http://127.0.0.1/<your install dir>/` eller `http://127.0.0.1/<your install dir>/`.<br><br>- `{{base_url}}` som representerar en bas-URL som definieras av en virtuell värdinställning eller av en virtualiseringsmiljö som Docker. Om du till exempel konfigurerar en virtuell värd med värdnamnet commerce.example.com kan du installera programmet med `--base-url={{base_url}}` och få åtkomst till administratören via en URL som `http://commerce.example.com/admin`. | Ja |
-| `--backend-frontname` | URI (Uniform Resource Identifier) för åtkomst till administratören. Du kan utelämna den här parametern så att programmet kan generera en slumpmässig URI åt dig med följande mönster: admin_jkhgdfq</code>.<br><br>Vi rekommenderar en slumpmässig URI av säkerhetsskäl. En slumpmässig URI är svårare för hackare eller skadlig programvara att utnyttja.<br><br>URI:n visas i slutet av installationen. Du kan när som helst visa den senare med `magento info:adminuri` -kommando.<br><br>Om du väljer att ange ett värde rekommenderar vi att du inte använder ett vanligt ord som admin, serverdel. Admin-URI kan innehålla alfanumeriska värden och understreck (`_`). | Nej |
+| `--base-url` | Bas-URL som används för att komma åt din administratör och butiker i något av följande format:<br><br>`http[s]://<host or ip>/<your install dir>/`.<br><br>**Obs!** Schemat (http:// eller https://) och ett avslutande snedstreck krävs båda.<br><br>`<your install dir>` är den dokumentberoende sökvägen som programmet ska installeras i. Beroende på hur du konfigurerar webbservern och de virtuella värdarna kan sökvägen vara magento2 eller tom.<br><br>Om du vill komma åt programmet på localhost kan du använda antingen `http://127.0.0.1/<your install dir>/` eller `http://127.0.0.1/<your install dir>/`.<br><br>- `{{base_url}}` som representerar en bas-URL som definieras av en virtuell värdinställning eller av en virtualiseringsmiljö som Docker. Om du till exempel konfigurerar en virtuell värd med värdnamnet commerce.example.com kan du installera programmet med `--base-url={{base_url}}` och få åtkomst till Admin via en URL som `http://commerce.example.com/admin`. | Ja |
+| `--backend-frontname` | URI (Uniform Resource Identifier) för åtkomst till administratören. Du kan utelämna den här parametern så att programmet kan generera en slumpmässig URI med följande mönster <code>admin_jkhgdfq</code>.<br><br>Vi rekommenderar en slumpmässig URI av säkerhetsskäl. En slumpmässig URI är svårare för hackare eller skadlig programvara att utnyttja.<br><br>URI:n visas i slutet av installationen. Du kan när som helst visa den senare med `magento info:adminuri` -kommando.<br><br>Om du väljer att ange ett värde rekommenderar vi att du inte använder ett vanligt ord som admin, serverdel. Admin-URI kan innehålla alfanumeriska värden och understreck (`_`). | Nej |
 | `--db-host` | Använd något av följande:<br><br>- Databasserverns kvalificerade värdnamn eller IP-adress.<br><br>- `localhost` (standard) eller `127.0.0.1` om databasservern finns på samma värd som webbservern.localhost betyder att MySQL-klientbiblioteket använder UNIX-socketar för att ansluta till databasen. `127.0.0.1` gör att klientbiblioteket använder TCP-protokollet. Mer information om socketar finns i [PHP-SUB_MYSQL-dokumentation](https://www.php.net/manual/en/ref.pdo-mysql.php).<br><br>**Obs!** Du kan också ange databasserverporten i värdnamnet som www.example.com:9000 | Ja |
 | `--db-name` | Namnet på den databasinstans där du vill installera databastabellerna.<br><br>Standard är `magento2`. | Ja |
 | `--db-user` | Användarnamn för databasinstansens ägare.<br><br>Standard är `root`. | Ja |
 | `--db-password` | Lösenord för databasinstansens ägare. | Ja |
-| `--db-prefix` | Använd bara om du installerar databastabellerna i en databasinstans som redan innehåller Adobe Commerce- eller Magento Open Source-tabeller.<br><br>I så fall använder du ett prefix för att identifiera tabellerna för den här installationen. Vissa kunder kör mer än en instans av Adobe Commerce och Magento Open Source på en server med alla tabeller i samma databas.<br><br>Prefixet får innehålla högst fem tecken. Den måste börja med en bokstav och kan bara innehålla bokstäver, siffror och understreck.<br><br>Med det här alternativet kan dessa kunder dela databasservern med mer än en installation. | Nej |
+| `--db-prefix` | Använd bara om du installerar databastabellerna i en databasinstans som redan innehåller Adobe Commerce- eller Magento Open Source-tabeller.<br><br>I så fall använder du ett prefix för att identifiera tabellerna för den här installationen. Vissa kunder har fler än en instans av Adobe Commerce och Magento Open Source som körs på en server med alla tabeller i samma databas.<br><br>Prefixet får innehålla högst fem tecken. Den måste börja med en bokstav och kan bara innehålla bokstäver, siffror och understreck.<br><br>Med det här alternativet kan dessa kunder dela databasservern med mer än en installation. | Nej |
 | `--db-ssl-key` | Sökväg till klientnyckeln. | Nej |
 | `--db-ssl-cert` | Sökväg till klientcertifikatet. | Nej |
 | `--db-ssl-ca` | Sökväg till servercertifikatet. | Nej |
 | `--language` | Språkkod som ska användas i Admin och storefront. (Om du inte redan har gjort det kan du visa listan med språkkoder genom att ange `magento info:language:list` från bin-katalogen.) | Nej |
 | `--currency` | Standardvaluta som ska användas i butiken. (Om du inte redan har gjort det kan du visa listan över valutor genom att ange `magento info:currency:list` från bin-katalogen.) | Nej |
 | `--timezone` | Standardtidszon att använda i Admin och storefront. (Om du inte redan har gjort det kan du visa listan över tidszoner genom att ange `magento info:timezone:list` från bin-katalogen.) | Nej |
-| `--use-rewrites` | `1` innebär att du använder webbserveromskrivningar för genererade länkar i butiken och Admin.<br><br>`0` inaktiverar användning av webbserveromskrivningar. Detta är standardinställningen. | Nej |
-| `--use-secure` | `1` används för att använda SSL (Secure Sockets Layer) i butiks-URL:er. Kontrollera att webbservern har stöd för SSL innan du väljer det här alternativet.<br><br>`0` inaktiverar användningen av SSL. I det här fallet antas alla andra säkra URL-alternativ också vara 0. Detta är standardinställningen. | Nej |
-| `--base-url-secure` | Säker bas-URL som används för att få åtkomst till din administratör och butiker i följande format: `http[s]://<host or ip>/<your install dir>/` | Nej |
-| `--use-secure-admin` | `1` innebär att du använder SSL för att komma åt administratören. Kontrollera att webbservern har stöd för SSL innan du väljer det här alternativet.<br><br>`0` betyder att du inte använder SSL med administratören. Detta är standardinställningen. | Nej |
-| `--admin-use-security-key` | 1 gör att programmet använder ett slumpmässigt genererat nyckelvärde för att få åtkomst till sidor i Admin och i formulär. Dessa nyckelvärden hjälper till att förhindra attacker med förfalskade korsskriptattacker mellan webbplatser. Detta är standardinställningen.<br><br>`0` inaktiverar användningen av nyckeln. | Nej |
-| `--session-save` | Använd något av följande:<br><br>- `db` för att lagra sessionsdata i databasen. Välj databaslagring om du har en klustrad databas; i annat fall kanske det inte finns någon större fördel jämfört med filbaserad lagring.<br><br>- `files` för att lagra sessionsdata i filsystemet. Filbaserad sessionslagring är lämplig om inte filsystemåtkomsten är långsam, du har en klustrad databas eller du vill lagra sessionsdata i Redis.<br><br>- `redis` för att lagra sessionsdata i Redis. Om du använder Redis som standard- eller sidcache-lagring måste Redis vara installerat. Mer information om hur du konfigurerar stöd för Redis finns i Använda Redis för sessionslagring. | Nej |
+| `--use-rewrites` | `1` innebär att du använder webbserveromskrivningar för genererade länkar i butiken och Admin.<br><br>`0` Inaktiverar användning av omskrivningar från webbservrar. Det här är standardinställningen. | Nej |
+| `--use-secure` | `1` används för att använda SSL (Secure Sockets Layer) i butiks-URL:er. Kontrollera att webbservern stöder SSL innan du väljer det här alternativet.<br><br>`0` inaktiverar användningen av SSL. I det här fallet antas alla andra säkra URL-alternativ också vara 0. Det här är standardinställningen. | Nej |
+| `--base-url-secure` | Säker bas-URL som används för att komma åt din administratör och butiker i följande format: `http[s]://<host or ip>/<your install dir>/` | Nej |
+| `--use-secure-admin` | `1` innebär att du använder SSL för att komma åt administratören. Kontrollera att webbservern stöder SSL innan du väljer det här alternativet.<br><br>`0` betyder att du inte använder SSL med administratören. Det här är standardinställningen. | Nej |
+| `--admin-use-security-key` | 1 gör att programmet använder ett slumpmässigt genererat nyckelvärde för att få åtkomst till sidor i Admin och i formulär. Dessa nyckelvärden hjälper till att förhindra attacker med förfalskade korsskriptattacker mellan webbplatser. Det här är standardinställningen.<br><br>`0` inaktiverar användningen av nyckeln. | Nej |
+| `--session-save` | Använd något av följande:<br><br>- `db` för att lagra sessionsdata i databasen. Välj databaslagring om du har en klustrad databas, annars kanske det inte finns någon större fördel jämfört med filbaserad lagring.<br><br>- `files` för att lagra sessionsdata i filsystemet. Filbaserad sessionslagring är lämplig om inte filsystemåtkomsten är långsam, du har en klustrad databas eller du vill lagra sessionsdata i Redis.<br><br>- `redis` för att lagra sessionsdata i Redis. Om du använder Redis som standard- eller sidcache-lagring måste Redis vara installerat. Mer information om hur du konfigurerar stöd för Redis finns i Använda Redis för sessionslagring. | Nej |
 | `--key` | Om du har ett, anger du en nyckel för att kryptera känsliga data i databasen. Om du inte har någon skapar programmet en åt dig. | Ja |
 | `--cleanup-database` | Om du vill släppa databastabeller innan du installerar programmet anger du den här parametern utan ett värde. Annars lämnas databasen intakt. | Nej |
 | `--db-init-statements` | Avancerad MySQL-konfigurationsparameter. Använder databasinitieringssatser som ska köras vid anslutning till MySQL-databasen. Läs en referens som liknar den här innan du anger några värden.<br><br>Standard är `SET NAMES utf8;`. | Nej |
@@ -141,7 +141,7 @@ I Adobe Commerce version 2.2.8 och senare kan du skapa administratörsanvändare
 | `--amqp-user` | Användarnamn för anslutning till [!DNL RabbitMQ]. Använd inte standardanvändaren `guest`. | Nej |
 | `--amqp-password` | Lösenordet för att ansluta till [!DNL RabbitMQ]. Använd inte standardlösenordet `guest`. | Nej |
 | `--amqp-virtualhost` | Det virtuella värdsystemet för anslutning till [!DNL RabbitMQ]. Standardvärdet är `/`. | Nej |
-| `--amqp-ssl` | Anger om anslutning ska ske till [!DNL RabbitMQ]. Standardvärdet är `false`. Se [!DNL RabbitMQ] om du vill ha information om hur du konfigurerar SSL för [!DNL RabbitMQ]. | Nej |
+| `--amqp-ssl` | Anger om anslutning ska ske till [!DNL RabbitMQ]. Standardvärdet är `false`. Se [!DNL RabbitMQ] för information om hur du konfigurerar SSL för [!DNL RabbitMQ]. | Nej |
 | `--consumers-wait-for-messages` | Ska konsumenterna vänta på ett meddelande från kön? 1 - Ja, 0 - Nej | Nej |
 
 **Alternativ för fjärrlagring:**
@@ -161,7 +161,7 @@ I Adobe Commerce version 2.2.8 och senare kan du skapa administratörsanvändare
 |--- |--- |--- |
 | `--lock-provider` | Lås leverantörens namn.<br><br>Tillgängliga låsleverantörer: `db`, `zookeeper`, `file`.<br><br>Standardlåsleverantör: `db` | Nej |
 | `--lock-db-prefix` | Det specifika db-prefixet för att undvika låskonflikter när du använder `db` låsleverantör.<br><br>Standardvärdet: `NULL` | Nej |
-| `--lock-zookeeper-host` | Värd och port för att ansluta till Zookeeper-klustret när du använder `zookeeper` låsleverantör.<br><br>Till exempel: `127.0.0.1:2181` | Ja, om du anger `--lock-provider=zookeeper` |
+| `--lock-zookeeper-host` | Värd och port för att ansluta till Zookeeper-klustret när du använder `zookeeper` låsleverantör.<br><br>Exempel: `127.0.0.1:2181` | Ja, om du anger `--lock-provider=zookeeper` |
 | `--lock-zookeeper-path` | Sökvägen där Zookeeper sparar lås.<br><br>Standardsökvägen är: `/magento/locks` | Nej |
 | `--lock-file-path` | Sökvägen där fillås sparas. | Ja, om du anger `--lock-provider=file` |
 
@@ -187,11 +187,11 @@ I följande exempel installeras programmet med följande alternativ:
 
 * Programmet installeras i `magento2` katalog relativt webbserverns dokumentrot på `localhost` och sökvägen till administratören är `admin`; därför
 
-   Din butiks-URL är `http://127.0.0.1`
+  Din butiks-URL är `http://127.0.0.1`
 
 * Databasservern finns på samma värd som webbservern.
 
-   Databasnamnet är `magento`och både användarnamn och lösenord `magento`
+  Databasnamnet är `magento`och både användarnamn och lösenord `magento`
 
 * Använder serveromskrivning
 
@@ -203,7 +203,7 @@ I följande exempel installeras programmet med följande alternativ:
 
 * Standardspråket är `en_US` (på eng)
 * Standardvalutan är amerikanska dollar
-* Standardtidszonen är U.S. Central (America/Chicago)
+* Standardtidszonen är USA Central (America/Chicago)
 * Elasticsearch 7 är installerat på `es-host.example.com` och ansluts till port 9200
 
 ```bash
@@ -257,11 +257,11 @@ I följande exempel installeras programmet med följande alternativ:
 
 * Magapplication är installerat i `magento2` katalog relativt webbserverns dokumentrot på `localhost` och sökvägen till administratören är `admin`; därför
 
-   Din butiks-URL är `http://127.0.0.1`
+  Din butiks-URL är `http://127.0.0.1`
 
 * Databasservern finns på samma värd som webbservern.
 
-   Databasnamnet är `magento`och både användarnamn och lösenord `magento`
+  Databasnamnet är `magento`och både användarnamn och lösenord `magento`
 
 * Administratören har följande egenskaper:
 
@@ -271,7 +271,7 @@ I följande exempel installeras programmet med följande alternativ:
 
 * Standardspråket är `en_US` (på eng)
 * Standardvalutan är amerikanska dollar
-* Standardtidszonen är U.S. Central (America/Chicago)
+* Standardtidszonen är USA Central (America/Chicago)
 * Installationsprogrammet rensar först databasen innan tabellerna och schemat installeras
 * Du använder en `ORD$` tilläggsprefix för försäljningsorder (eftersom det innehåller ett specialtecken) [`$`]måste värdet omges av citattecken)
 * Sessionsdata sparas i databasen

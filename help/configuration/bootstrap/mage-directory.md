@@ -22,33 +22,33 @@ Du kan ange `MAGE_DIRS` på något av följande sätt:
 - [Ange värdet för bootstrap-parametrar](../bootstrap/set-parameters.md)
 - Använd ett anpassat startpunktsskript som följande:
 
-   ```php
-   <?php
-   /**
-    * Copyright © Magento, Inc. All rights reserved.
-    * See COPYING.txt for license details.
-    */
-   
-   use Magento\Framework\App\Bootstrap;
-   use Magento\Framework\App\Filesystem\DirectoryList;
-   use Magento\Framework\App\Http;
-   
-   require __DIR__ . '/app/bootstrap.php';
-   $params = $_SERVER;
-   $params[Bootstrap::INIT_PARAM_FILESYSTEM_DIR_PATHS] = [
-        DirectoryList::PUB => [DirectoryList::URL_PATH => ''],
-        DirectoryList::MEDIA => [DirectoryList::PATH => '/mnt/nfs/media', DirectoryList::URL_PATH => ''],
-        DirectoryList::STATIC_VIEW => [DirectoryList::URL_PATH => 'static'],
-        DirectoryList::UPLOAD => [DirectoryList::URL_PATH => '/mnt/nfs/media/upload'],
-        DirectoryList::CACHE => [DirectoryList::PATH => '/mnt/nfs/cache'],
-   ];
-   $bootstrap = Bootstrap::create(BP, $params);
-   /** @var Http $app */
-   $app = $bootstrap->createApplication(Http::class);
-   $bootstrap->run($app);
-   ```
+  ```php
+  <?php
+  /**
+   * Copyright © Magento, Inc. All rights reserved.
+   * See COPYING.txt for license details.
+   */
+  
+  use Magento\Framework\App\Bootstrap;
+  use Magento\Framework\App\Filesystem\DirectoryList;
+  use Magento\Framework\App\Http;
+  
+  require __DIR__ . '/app/bootstrap.php';
+  $params = $_SERVER;
+  $params[Bootstrap::INIT_PARAM_FILESYSTEM_DIR_PATHS] = [
+       DirectoryList::PUB => [DirectoryList::URL_PATH => ''],
+       DirectoryList::MEDIA => [DirectoryList::PATH => '/mnt/nfs/media', DirectoryList::URL_PATH => ''],
+       DirectoryList::STATIC_VIEW => [DirectoryList::URL_PATH => 'static'],
+       DirectoryList::UPLOAD => [DirectoryList::URL_PATH => '/mnt/nfs/media/upload'],
+       DirectoryList::CACHE => [DirectoryList::PATH => '/mnt/nfs/cache'],
+  ];
+  $bootstrap = Bootstrap::create(BP, $params);
+  /** @var Http $app */
+  $app = $bootstrap->createApplication(Http::class);
+  $bootstrap->run($app);
+  ```
 
-I det föregående exemplet anges sökvägar för `[cache]` och `[media]` kataloger till `/mnt/nfs/cache` och `/mnt/nfs/media`, respektive.
+I det föregående exemplet anges sökvägar för `[cache]` och `[media]` kataloger till `/mnt/nfs/cache` och `/mnt/nfs/media`, respektive
 
 <!-- link definitions -->
 

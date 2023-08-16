@@ -11,12 +11,12 @@ ht-degree: 0%
 
 # Ändra öknings-ID
 
-I den här artikeln beskrivs hur du ändrar tilläggs-ID för en enhet i en Commerce-databas (DB) (order, faktura, kreditnota o.s.v.) i en viss Commerce-butik med hjälp av `ALTER TABLE` SQL-sats.
+I den här artikeln beskrivs hur du ändrar tilläggs-ID för en enhet i en Commerce-databas (DB) (order, faktura, kreditnota o.s.v.) i en viss Commerce Store med hjälp av `ALTER TABLE` SQL-sats.
 
 ## Berörda versioner
 
 - Adobe Commerce (lokalt): 2.x.x
-- Adobe Commerce om molninfrastruktur: 2.x.x
+- Adobe Commerce i molninfrastruktur: 2.x.x
 - MySQL: [alla versioner som stöds](../../installation/prerequisites/database/mysql.md)
 
 ## När behöver du ändra ID för ökning
@@ -30,7 +30,7 @@ Du kan behöva ändra ID:t för ökning för nya DB-entiteter i följande fall:
 >
 >Du kan också åtgärda problemet med betalningsgateway för PayPal genom att tillåta flera betalningar per faktura-ID i PayPals Inställningar för betalningsmottagning. Se [PayPal-gateway avvisade begäran - dubblettfakturautleverans] i _Knowledge Base_.
 
-## Nödvändiga steg
+## Krav på steg
 
 1. Sök efter butiker och enheter som det nya tilläggs-ID:t ska ändras för.
 1. Anslut till MySQL-databasen.
@@ -54,6 +54,7 @@ ALTER TABLE sequence_{entity_type}_{store_id} AUTO_INCREMENT = {new_increment_va
 ```
 
 >[!INFO]
+>
 Viktigt: Det nya ökningsvärdet måste vara större än det aktuella.
 
 När följande fråga har körts:
@@ -62,7 +63,7 @@ När följande fråga har körts:
 ALTER TABLE sequence_order_1 AUTO_INCREMENT = 2000;
 ```
 
-Nästa beställning som läggs i butiken med `ID=1` kommer att ha ID &#39;#100002000&#39;.
+Nästa beställning som läggs i butiken med `ID=1` har ID &#39;#100002000&#39;.
 
 ## Ytterligare rekommenderade steg i molnproduktionsmiljöer
 

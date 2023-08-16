@@ -15,13 +15,13 @@ Med Commerce-profilering kan ni
 
 - Aktivera en inbyggd profilerare.
 
-   Du kan använda en inbyggd profilerare med Commerce för att utföra uppgifter som att analysera prestanda. Profileringens karaktär beror på vilka analysverktyg du använder. Vi har stöd för flera format, bland annat HTML. När du aktiverar profileraren `var/profiler.flag` filen genererar som anger att profileraren är aktiverad och konfigurationer. När den är inaktiverad tas den här filen bort.
+  Du kan använda en inbyggd profilerare med Commerce för att utföra uppgifter som att analysera prestanda. Profileringens karaktär beror på vilka analysverktyg du använder. Vi har stöd för flera format, bland annat HTML. När du aktiverar profileraren `var/profiler.flag` filen genererar som anger att profileraren är aktiverad och konfigurationer. När den är inaktiverad tas den här filen bort.
 
 - Visa beroendediagram på en Commerce-sida.
 
-   A _beroendediagram_ är en lista över objektberoenden och alla deras beroenden, och alla beroenden för dessa beroenden, och så vidare.
+  A _beroendediagram_ är en lista över objektberoenden och alla deras beroenden, och alla beroenden för dessa beroenden, och så vidare.
 
-   Du bör vara särskilt intresserad av listan över _oanvända beroenden_, som är objekt som skapades eftersom de begärdes i en konstruktor, men som aldrig användes (det vill säga ingen av deras metoder anropades). Därför går processortid och minne som använts för att skapa dessa beroenden förlorade.
+  Du bör vara särskilt intresserad av listan över _oanvända beroenden_, som är objekt som skapades eftersom de begärdes i en konstruktor, men som aldrig användes (det vill säga ingen av deras metoder anropades). Därför går processortid och minne som använts för att skapa dessa beroenden förlorade.
 
 Commerce tillhandahåller basfunktionerna i [`Magento\Framework\Profiler`][profiler].
 
@@ -35,22 +35,22 @@ Du kan ange värdet för `MAGE_PROFILER` på något av de sätt som beskrivs i [
 
 - `1` för att aktivera en viss profilerares utdata.
 
-   Du kan använda något av följande värden för att aktivera en specifik profilerare:
+  Du kan använda något av följande värden för att aktivera en specifik profilerare:
 
    - `csvfile` som använder [`Magento\Framework\Profiler\Driver\Standard\Output\Csvfile`][csvfile]
    - Alla andra värden (utom `2`), inklusive ett tomt värde som använder [`Magento\Framework\Profiler\Driver\Standard\Output\Html`][html]
 
-- `2` för att aktivera beroendediagram.
+- `2` om du vill aktivera beroendediagram.
 
-   Beroendediagram visas vanligtvis längst ned på en sida. I följande bild visas en del av utdata:
+  Beroendediagram visas vanligtvis längst ned på en sida. I följande bild visas en del av utdata:
 
-   ![Beroendediagram](../../assets/configuration/depend-graphs.png)
+  ![Beroendediagram](../../assets/configuration/depend-graphs.png)
 
 ## CLI-kommandon
 
 Du kan aktivera eller inaktivera profileraren med CLI-kommandon:
 
-- `dev:profiler:enable <type>` aktiverar profileraren med `type` av `html` (standard) eller `csvfile`. När den är aktiverad, en flaggfil `var/profiler.flag` skapas.
+- `dev:profiler:enable <type>` aktiverar profileraren `type` av `html` (standard) eller `csvfile`. När det här alternativet är aktiverat, en flaggfil `var/profiler.flag` skapas.
 - `dev:profiler:disable` inaktiverar profileraren. När den är inaktiverad visas flaggfilen `var/profiler.flag` tas bort.
 
 Använd variabelalternativet om du vill aktivera beroendediagram.

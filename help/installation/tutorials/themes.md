@@ -22,12 +22,12 @@ Mer information om teman finns i [temastruktur](https://developer.adobe.com/comm
 
 I det här avsnittet beskrivs hur du avinstallerar ett eller flera teman, och du kan även ta med temats kod från filsystemet. Du kan skapa säkerhetskopior först så att du kan återställa data senare.
 
-Det här kommandot avinstallerar *endast* teman som anges i `composer.json`; Med andra ord, teman som tillhandahålls som Composer-paket. Om temat inte är ett Composer-paket måste du avinstallera det manuellt genom att:
+Det här kommandot avinstallerar *endast* teman som anges i `composer.json`, med andra ord, teman som tillhandahålls som Composer-paket. Om temat inte är ett Composer-paket måste du avinstallera det manuellt genom att:
 
 * Uppdaterar `parent` nodinformation i `theme.xml` för att ta bort referenser till temat.
 * Tar bort temakod från filsystemet.
 
-  [Mer information om temarv](https://developer.adobe.com/commerce/frontend-core/guide/themes/inheritance/).
+  [Mer information om arv av teman](https://developer.adobe.com/commerce/frontend-core/guide/themes/inheritance/).
 
 ## Avinstallera teman
 
@@ -45,13 +45,13 @@ Plats
 
 Kommandot utför följande uppgifter:
 
-1. Verifierar att de angivna temana-sökvägarna finns, om det inte är det avslutas kommandot.
-1. Verifierar att temat är ett Composer-paket, om det inte är det avslutas kommandot.
+1. Verifierar att de angivna temasökvägarna finns. Annars avslutas kommandot.
+1. Verifierar att temat är ett Composer-paket. Annars avslutas kommandot.
 1. Kontrollerar om det finns beroenden och avslutar kommandot om det finns några beroenden som inte uppfylls.
 
    Du kan undvika detta genom att antingen avinstallera alla teman samtidigt eller avinstallera dem beroende på tema först.
 
-1. Verifierar att temat inte används. om det används avslutas kommandot.
+1. Verifierar att temat inte används. Om det används avslutas kommandot.
 1. Verifierar att temat inte är basen för det virtuella temat. Om det är basen för ett virtuellt tema avslutas kommandot.
 1. Placerar butiken i underhållsläge.
 1. If `--backup-code` är specificerat, säkerhetskopiera kodbasen, förutom `pub/static`, `pub/media`och `var` kataloger.

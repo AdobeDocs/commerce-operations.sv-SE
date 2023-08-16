@@ -5,7 +5,7 @@ exl-id: 741310ca-28fb-4b08-95c7-e8d1fb952018
 feature: Configuration, Observability
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1903'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ På den här fliken finns information om hur du identifierar om och vad [!DNL bo
 
 ## Översikt över hög nivå [!DNL bots]:
 
-* A [!DNL bot] är ett program som kör återkommande automatiserade uppgifter. Med hjälp av artificiell intelligens och maskininlärningsutveckling kan man [!DNL bots] håller på att förändras. Det finns *bra* [!DNL bots] som hjälper webbplatser genom att crawla och lägga till dem i sökmotorer på Internet. Detta leder till att Internetanvändare vägleds till webbplatsen med sökmotorresultat. A *bra* [!DNL bot] tar vanligtvis hänsyn till gränser som placerats på [!DNL bot] av `robots.txt` fil eller inställningar i en sökmotorkonsol. Gränser kan begränsa åtkomsten till platsen eller delar av platsen.
+* A [!DNL bot] är ett program som kör återkommande automatiserade uppgifter. Med hjälp av artificiell intelligens och maskininlärningsutveckling kan man [!DNL bots] håller på att förändras. Det finns *bra* [!DNL bots] som hjälper webbplatser genom att crawla och lägga till dem i sökmotorer på Internet. Detta leder till att Internetanvändare vägleds till webbplatsen med sökmotorresultat. A *bra* [!DNL bot] tar vanligtvis hänsyn till gränser som placerats på [!DNL bot] av en `robots.txt` fil eller inställningar i en sökmotorkonsol. Gränser kan begränsa åtkomsten till platsen eller delar av platsen.
 * Skadlig [!DNL bots] ignorera `robots.txt` eller så kan de hitta något bra [!DNL bot] via fältet för användaragent för begäran av data för HTTP-begäran. Vissa saker som gör ont [!DNL bots] do:
    * Lägg till inläsning på en webbplats för att neka legitima användare åtkomst till webbplatsen.
    * Rita och återanvänd material utan tillstånd.
@@ -29,7 +29,7 @@ På den här fliken finns information om hur du identifierar om och vad [!DNL bo
       * Den visar [!DNL bots] som genererar fel. Vanligtvis om en [!DNL bot] lägger till inläsning som orsakar webbplatsproblem, som [!DNL bot] eller IP-adressen har den högsta felfrekvensen.
       * Det syns [!DNL bot] namn (begär fältvärden för användaragent) och IP-adresser att hantera via:
          * [!DNL Fastly] (hastighetsbegränsande eller [!DNL VCLs] som blockerar IP-adresser, intervall eller [!DNL bots] efter namnvärde).
-         * Tillägget är bra [!DNL bot] information till `robots.txt field` för att begränsa eller begränsa webbplatsens åtkomst.
+         * Tillföra bra [!DNL bot] information till `robots.txt field` för att begränsa eller begränsa webbplatsens åtkomst.
          * Hantera [!DNL Bing] eller [!DNL Google bots] genom sökmotorkonsolen.
 
 ## [!UICONTROL Experimental Potential Malicious Bots frame]
@@ -50,13 +50,13 @@ The **[!UICONTROL Rate of HTTP request per second (top 25) during requested time
 
 ![Total punkttrafik per robotnamn under den valda tidsperioden:](../../assets/tools/observation-for-adobe-commerce/total-bot-traffic-bot-name.png)
 
-The **[!UICONTROL Total Bot traffic by bot name during selected time period]** tabellen innehåller det aggregerade antalet icke cachelagrade begäranden där [!UICONTROL request_user_agent] fältet har en sträng med [!DNL bots] i värdet. Detta kan vara namngivet [!DNL bot] som [!UICONTROL request_user_agent] fältvärdet kan förfalskas. Värdet under [!UICONTROL Count] -kolumnen är den viktigaste.
+The **[!UICONTROL Total Bot traffic by bot name during selected time period]** tabellen innehåller det aggregerade antalet icke-cachelagrade begäranden där [!UICONTROL request_user_agent] fältet har en sträng med [!DNL bots] i värdet. Detta kan vara namngivet [!DNL bot] som [!UICONTROL request_user_agent] fältvärdet kan förfalskas. Värdet under [!UICONTROL Count] -kolumnen är den viktigaste.
 
 ## [!UICONTROL Total Bot Traffic by Bot name/IP address]
 
 ![Total starttrafik per punktnamn/IP-adress under den valda tidsperioden Hur man blockerar starttrafiken på snabbnivå ELLER hanterar robotar via robots.txt file God praxis för Adobe Commerce robots.txt](../../assets/tools/observation-for-adobe-commerce/best-practices-adobecommerce-robots.png)
 
-The **[!UICONTROL Total Bot Traffic by Bot name/IP address during selected time period How to block bot traffic on Fastly level OR manage bots through your robots.txt file Best practices for Adobe Commerce robots.txt]** tabellen visar samma data som föregående tabell, men lägger till IP-adresser som gör förfrågningar för den namngivna [!DNL bot]. Som skadlig [!DNL bots] god [!DNL bots]bör IP-adressen/IP-adresserna verifieras via webbplatser som identifierar IP-adresser som ger upphov till missbruk eller via *hora* tjänster eller [!DNL DNS lookups]. Till exempel: [!DNL Google] publicerar sina [[!DNL googlebot] IP-adresser](https://developers.google.com/search/apis/ipranges/googlebot.json) och [!DNL Microsoft] har ett verifieringsverktyg för [[!DNL Bingbots]](https://www.bing.com/webmasters/help/Verify-Bingbot-2195837f).
+The **[!UICONTROL Total Bot Traffic by Bot name/IP address during selected time period How to block bot traffic on Fastly level OR manage bots through your robots.txt file Best practices for Adobe Commerce robots.txt]** tabellen visar samma data som föregående tabell, men lägger till IP-adresser som gör förfrågningar för den namngivna [!DNL bot]. Som illasinnad [!DNL bots] god [!DNL bots]bör IP-adressen/IP-adresserna verifieras via webbplatser som identifierar IP-adresser som ger upphov till missbruk eller via *hora* tjänster eller [!DNL DNS lookups]. Till exempel: [!DNL Google] publicerar sina [[!DNL googlebot] IP-adresser](https://developers.google.com/search/apis/ipranges/googlebot.json) och [!DNL Microsoft] har ett verifieringsverktyg för [[!DNL Bingbots]](https://www.bing.com/webmasters/help/Verify-Bingbot-2195837f).
 
 ## [!UICONTROL Graph - Bots with HTTP status errors]
 
@@ -84,9 +84,9 @@ När IP-adresser genererar en hög frekvens av fel, fråga vad gör de? The **[!
 
 ![Visa 5XX-statusfördelning över IP-adresser (de 200 högsta adresserna) Så här blockerar du starttrafiken på snabbnivå ELLER hanterar robotar via robots.txt-filen God praxis för Adobe Commerce robots.txt ](../../assets/tools/observation-for-adobe-commerce/5xx-status.png)
 
-The **[!UICONTROL Show 5XX status distribution across IP addresses (top 200 addresses) How to block bot traffic on Fastly level OR manage bots through your robots.txt file Best practices for Adobe Commerce robots.txt]** är kraftfull. Den visar de IP-adresser som har 5XX http-statuskoder under den valda tidsperioden. Om en IP-adress gör stora mängder förfrågningar och platsen påverkas till den punkt där den inte kan hantera trafiken, har de IP-adresser som gör den högsta frekvensen av förfrågningar vanligtvis den högsta antalet fel. 5XX http-statuskoder indikerar vanligtvis en webbplats som har svårt att svara på förfrågningar.
+The **[!UICONTROL Show 5XX status distribution across IP addresses (top 200 addresses) How to block bot traffic on Fastly level OR manage bots through your robots.txt file Best practices for Adobe Commerce robots.txt]** bildrutan är kraftfull. Den visar de IP-adresser som har 5XX http-statuskoder under den valda tidsperioden. Om en IP-adress gör stora mängder förfrågningar och platsen påverkas till den punkt där den inte kan hantera trafiken, har de IP-adresser som gör den högsta frekvensen av förfrågningar vanligtvis den högsta antalet fel. 5XX http-statuskoder indikerar vanligtvis en webbplats som har svårt att svara på förfrågningar.
 
-Ju större fält, desto större är procentandelen fel som IP-adressen har i det totala antalet 5 gånger fel under den tidsperioden. Obs! en IP-adress kan ha flera segment i diagrammet om den har flera http-statuskoder (exempel 502- och 503 http-statusar).
+Ju större fält, desto större är procentandelen fel som IP-adressen har i det totala antalet 5 gånger fel under den tidsperioden. Obs! En IP-adress kan ha flera segment i diagrammet om den har flera http-statuskoder (till exempel 502- och 503 http-statusar).
 
 Normal fördelning anges till höger om fältet där IP-adresserna är lika breda eller där det finns några breda fält med mycket låga tal.
 
@@ -102,7 +102,7 @@ Detta **[!UICONTROL IP cache status (MISS, PASS, ERROR) and HTTP status during s
 
 ![Snabbt cachelagra sammanfattning för den valda tidsperioden](../../assets/tools/observation-for-adobe-commerce/fastly-cache-summary.png)
 
-Om du klickar på [!UICONTROL Error] i nedanstående diagram kan du jämföra de två sista diagrammen med varandra. Detta kan visa var inläsningen bidrar till webbplatsproblem.
+Klicka på [!UICONTROL Error] i nedanstående diagram kan du jämföra de två sista diagrammen med varandra. Detta kan visa var inläsningen bidrar till webbplatsproblem.
 
 ![Snabbt felkontroll](../../assets/tools/observation-for-adobe-commerce/compare-fastly.png)
 
@@ -114,9 +114,9 @@ The **[!UICONTROL Graph - IPs that do not identify as bots without error during 
 
 ## [!UICONTROL Graph - Suspicious Non-Bot traffic]
 
-![Misstänkt icke-punktstrafik under den valda tidsperioden](../../assets/tools/observation-for-adobe-commerce/suspicious-non-bot-traffic.png)
+![Misstänkt icke-punktstrafik under vald tidsperiod](../../assets/tools/observation-for-adobe-commerce/suspicious-non-bot-traffic.png)
 
-The **[!UICONTROL Graph - Suspicious Non-Bot traffic during selected time period]** Ett diagram söker efter användaragentvärdet för Go-http-client men kommer att utökas för att undersöka andra värden för användaragent för misstänkt begäran. Det här användaragentvärdet för begäran används av webbplatser för anslutning från tjänster och kan vara giltigt, men används även av illasinnade [!DNL bots].
+The **[!UICONTROL Graph - Suspicious Non-Bot traffic during selected time period]** Ett diagram söker efter användaragentvärdet för Go-http-client, men det kommer att utökas för att undersöka andra värden för användaragent för misstänkt begäran. Det här användaragentvärdet för begäran används av webbplatser för anslutning från tjänster och kan vara giltigt, men används även av skadliga webbplatser [!DNL bots].
 
 ## [!UICONTROL Graph - Bot traffic by Bot name]
 
@@ -132,9 +132,9 @@ The **[!UICONTROL Graph - Top 250 Bot Names and IP addresses during selected tim
 
 ## [!UICONTROL Blocked Bot name / IP addresses (in Fastly)]
 
-![Blockerat startnamn/IP-adresser (i snabb takt) under den valda tidsperioden. I det här diagrammet visas både trafik- och IP-adresser som returnerats som 403 Ej tillåten HTTP-statuskod](../../assets/tools/observation-for-adobe-commerce/blocked-bot-name-ip-addresses-403-code2.png)
+![Blockerat startnamn/IP-adresser (i fast form) under den valda tidsperioden. I det här diagrammet visas både trafik- och IP-adresser som returnerats som 403 Ej tillåten HTTP-statuskod](../../assets/tools/observation-for-adobe-commerce/blocked-bot-name-ip-addresses-403-code2.png)
 
-The **[!UICONTROL Blocked Bot name / IP addresses (in Fastly) during selected time period. This graph displays bot traffic and IPs that were returned a 403 Forbidden HTTP Status code]** bildrutan visar robotnamnet och IP-adresserna som är blockerade. I det här diagrammet ser du hur alla förfrågningar blockeras i [!DNL Fastly] framåt.
+The **[!UICONTROL Blocked Bot name / IP addresses (in Fastly) during selected time period. This graph displays bot traffic and IPs that were returned a 403 Forbidden HTTP Status code]** bildrutan visar robotnamnet och IP-adresserna som är blockerade. I det här diagrammet ser du hur alla förfrågningar blockeras i [!DNL Fastly] gå framåt.
 
 ## [!UICONTROL Blocked non-Bot name / IP addresses (in Fastly)]
 
@@ -158,7 +158,7 @@ The **[!UICONTROL IP with non-200 status errors – without 403 status]** bildru
 
 ![IP med 403 statuskoder:](../../assets/tools/observation-for-adobe-commerce/ip-403-status-code2.png)
 
-The **[!UICONTROL IP with 403 status codes]** bildrutan visar icke-cachelagrade begäranden utan [!UICONTROL cache_status=ERROR] som har en HTTP-status som är 403. Detta kan visa att ursprungsservern är källan till 403 (obehörig) i stället för ett block från [!DNL Fastly].
+The **[!UICONTROL IP with 403 status codes]** bildrutan visar icke-cachelagrade begäranden utan [!UICONTROL cache_status=ERROR] som har HTTP-status 403. Detta kan visa att ursprungsservern är källan till 403 (obehörig) i stället för ett block från [!DNL Fastly].
 
 ## [!UICONTROL Top 5 with non-200 status codes]
 

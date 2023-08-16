@@ -23,11 +23,11 @@ Eftersom PHP inte har inbyggt stöd för memcache måste du installera ett till�
 - `memcache` (_no d_) - ett äldre men populärt tillägg som inte underhålls regelbundet.
 The `memcache` tillägg för närvarande _inte_ arbeta med PHP 7. Se [PHP-dokumentation för memcache](https://www.php.net/manual/en/book.memcache.php).
 
-   Det exakta namnet är `php5-memcache` för Ubuntu.
+  Det exakta namnet är `php5-memcache` för Ubuntu.
 
 - `memcached` (_med`d`_) - ett nyare och underhållet tillägg som är kompatibelt med PHP 7. Se [PHP-dokumentation för cachelagrad](https://www.php.net/manual/en/book.memcached.php).
 
-   Det exakta namnet är `php5-memcached` för Ubuntu.
+  Det exakta namnet är `php5-memcached` för Ubuntu.
 
 ## Installera och konfigurera cachelagrade filer på Ubuntu
 
@@ -63,7 +63,7 @@ The `memcache` tillägg för närvarande _inte_ arbeta med PHP 7. Se [PHP-dokume
 
 1. Fortsätt med nästa avsnitt.
 
-## Verifiera anslutna arbeten innan du installerar Magento
+## Kontrollera att det finns anslutna arbeten innan du installerar Magento
 
 Adobe rekommenderar att du testar i cache-minnet för att kontrollera att det fungerar innan du installerar Commerce. Det tar bara några minuter och kan förenkla felsökningen senare.
 
@@ -79,7 +79,7 @@ Så här verifierar du att cachelagrade data känns igen av webbservern:
    phpinfo();
    ```
 
-1. Gå till den sidan i webbläsaren. Till exempel:
+1. Gå till den sidan i webbläsaren. Exempel:
 
    ```http
    http://192.0.2.1/phpinfo.php
@@ -116,9 +116,9 @@ if ($result) {
 }
 ```
 
-Plats `<memcached hostname or ip>` är antingen `localhost`, `127.0.0.1`, eller minnesvärdnamnet eller IP-adressen. The `<memcached port>` är avlyssningsport, som standard, `11211`.
+Plats `<memcached hostname or ip>` är antingen `localhost`, `127.0.0.1`, eller minnesvärdnamnet eller IP-adressen. The `<memcached port>` är avlyssningsporten; som standard `11211`.
 
-Gå till den sidan i en webbläsare. Till exempel
+Gå till den sidan i en webbläsare. Exempel
 
 ```http
 http://192.0.2.1/cache-test.php

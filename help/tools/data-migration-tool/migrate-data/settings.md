@@ -5,14 +5,14 @@ exl-id: 6fc8285a-9f26-48a5-9034-49a6a1b66b40
 topic: Commerce, Migration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '295'
 ht-degree: 0%
 
 ---
 
 # Inställningar för datamigrering
 
-The `Settings` Läget migrerar butiker, webbplatser och systemkonfigurationer som frakt, betalning och skatteinställningar. Enligt vår datamigrering [order](overview.md#migration-order)bör du migrera inställningarna först.
+The `Settings` Läget migrerar butiker, webbplatser och systemkonfigurationer som frakt, betalning och skatteinställningar. Enligt vår datamigrering [beställa](overview.md#migration-order)bör du migrera inställningarna först.
 
 Innan du börjar utför du följande steg:
 
@@ -41,7 +41,7 @@ Var:
 
 * `[-a|--auto]` är ett valfritt argument som förhindrar att migreringen stoppas när integritetskontrollfel påträffas.
 
-* `{<path to config.xml>}` är den absoluta filsystemsökvägen till migreringsverktygets [`config.xml`](../configure.md#configure-migration-in-vendor-folder) fil, det här argumentet är obligatoriskt.
+* `{<path to config.xml>}` är den absoluta sökvägen till migreringsverktygets [`config.xml`](../configure.md#configure-migration-in-vendor-folder) file; det här argumentet är obligatoriskt.
 
 >[!NOTE]
 >
@@ -56,7 +56,7 @@ Du kan ignorera, byta namn på eller ändra systemkonfigurationerna när du migr
 
 1. Logga in på programservern som eller växla till [ägare av filsystem](../../../installation/prerequisites/file-system/overview.md).
 
-1. Ändra till följande katalog:
+1. Byt till följande katalog:
 
    ```bash
    cd <your application 2 install dir>/vendor/magento/data-migration-tool/etc/<edition-to-edition>
@@ -78,7 +78,7 @@ Du kan ignorera, byta namn på eller ändra systemkonfigurationerna när du migr
 
 1. Gör ändringarna i `settings.xml`.
 
-1. Om du vill ange det nya namnet på inställningsfilen för mappning ändrar du `<settings_map_file>` -taggen i `path/to/config.xml` -fil.
+1. Om du vill ange det nya namnet på inställningsfilen för mappning ändrar du `<settings_map_file>` i `path/to/config.xml` -fil.
 
 Mer information finns i [Migreringsläge för inställningar](../technical-specification.md#settings-migration-mode) i verktygets [specifikation](../technical-specification.md).
 

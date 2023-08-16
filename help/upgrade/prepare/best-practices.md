@@ -16,7 +16,7 @@ I det här avsnittet beskrivs de åtgärder du bör vidta för att hantera kompl
 
 >[!TIP]
 >
->Rekommendationerna bygger på bästa praxis som stöds av belägg för dess effekt och effektivitet från partner, handlare, experter från Adobe och samhället.
+>Rekommendationerna bygger på bästa praxis som stöds av belägg för dess effekt och effektivitet från partner, handlare, experter från Adobe och communityn.
 
 ## Vad påverkar en uppgradering?
 
@@ -34,7 +34,7 @@ Hur stor uppgradering du ska göra beror på följande faktorer:
 
 Om du arbetar med ett projekt som redan är i produktion kan du förbättra kvaliteten på koden och anpassningarna och optimera för framtida uppgraderingar genom att uppgradera. Den tid du investerar idag sparar tid på lång sikt.
 
-Om du hanterar flera webbplatser för olika handlare är det bästa sättet att ha en basinstans med de huvudfunktioner och anpassningar du normalt använder. Använd den här grundinstansen som testwebbplats för att slutföra en uppgradering och sedan göra det på andra. Detta ger er flexibilitet att återanvända anpassade moduler för olika kunder och förenkla uppgraderingar mellan projekt.
+Om du hanterar flera webbplatser för olika handlare är det bästa sättet att ha en basinstans med de huvudfunktioner och anpassningar du normalt använder. Använd den här grundinstansen som testwebbplats för att slutföra en uppgradering och sedan göra det på andra. Detta ger er flexibilitet att återanvända anpassade moduler för olika kunder och förenkla uppgraderingar mellan olika projekt.
 
 Om ditt projekt är direktsänt föreslår vi att du kör en granskning för att fastställa dess kvalitet och förstår hur du kan förbättra det för att göra uppgraderingarna mer effektiva.
 
@@ -51,7 +51,7 @@ Börja använda Adobe Commerce Extensibility-plattformen om du inte redan har gj
 
 - **API-utbyggbarhet**. Använd [GraphQL](https://devdocs.magento.com/guides/v2.4/graphql/index.html) för att utöka webb-API-lagret genom att utveckla diagramdatamodellen och köra lambda-funktioner direkt från diagramlagret.
 
-- **Adobe I/O mellanvara och tjänster**. Koppla samman dina system med Adobe Commerce via Adobe Mittware och en uppsättning appanslutningar som bygger på [Adobe I/O](https://www.adobe.io/). Dessutom kan ni utöka era kärnplattformsfunktioner genom att skriva över standardbeteendet med er egen affärslogik som fungerar på Adobe I/O.
+- **Adobe I/O mellanvara och mellanvara**. Koppla samman dina system med Adobe Commerce via Adobe Mittware och en uppsättning appanslutningar som bygger på [Adobe I/O](https://www.adobe.io/). Dessutom kan ni utöka era kärnplattformsfunktioner genom att skriva över standardbeteendet med er egen affärslogik som fungerar på Adobe I/O.
 
 ### Planera uppgraderingar
 
@@ -81,7 +81,7 @@ Utvärdera det arbete som ska utföras för uppgradering:
 
 ### Testning efter uppgradering
 
-Testning är den fas av en uppgradering som kräver mest tid. Därför bör denna process vara så automatiserad som möjligt. Du kan dra nytta av att använda de viktigaste testverktygen. The [Programtestguide](https://developer.adobe.com/commerce/testing/guide/) innehåller information.
+Testning är den fas av en uppgradering som kräver mest tid. Därför bör denna process vara så automatiserad som möjligt. Du kan dra nytta av att använda testverktygen. The [Programtestguide](https://developer.adobe.com/commerce/testing/guide/) innehåller information.
 
 Använd en testmiljö för att testa och validera uppgraderingen innan du går över till produktion.
 

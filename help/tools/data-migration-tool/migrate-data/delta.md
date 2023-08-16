@@ -5,7 +5,7 @@ exl-id: c300c567-77d3-4c25-8b28-a7ae4ab0092e
 topic: Commerce, Migration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '350'
 ht-degree: 0%
 
 ---
@@ -44,11 +44,11 @@ Var:
 
 * `[-a|--auto]` är ett valfritt argument som förhindrar att migreringen stoppas när integritetskontrollfel påträffas.
 
-* `{<path to config.xml>}` är den absoluta filsystemsökvägen till `config.xml`; det här argumentet är obligatoriskt.
+* `{<path to config.xml>}` är den absoluta filsystemsökvägen till `config.xml`; det här argumentet krävs.
 
 >[!NOTE]
 >
->Inkrementell migration är en kontinuerlig process. startas om automatiskt var femte sekund. Använd CTRL-C för att avbryta migreringsprocessen.
+>Inkrementell migrering är en kontinuerlig process som startas om automatiskt var femte sekund. Använd CTRL-C för att avbryta migreringsprocessen.
 
 
 ## Migrera data som skapats av tillägg från tredje part

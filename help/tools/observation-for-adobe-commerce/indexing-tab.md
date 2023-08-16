@@ -5,7 +5,7 @@ exl-id: c7e123b7-2d0c-49d4-9f76-128939dc02a8
 feature: Configuration, Observability
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '176'
 ht-degree: 0%
 
 ---
@@ -63,6 +63,6 @@ The **[!UICONTROL catalogsearch index table(s)]** används för att undersöka i
 
 ## [!UICONTROL product index table(s)]
 
-![produktindexregister](../../assets/tools/observation-for-adobe-commerce/indexing-tab-4.jpg)
+![produktindextabell(er)](../../assets/tools/observation-for-adobe-commerce/indexing-tab-4.jpg)
 
-The **[!UICONTROL product index table(s)]** bildrutan tittar på produktindextabeller över en vald tidsram. Den här frågan undersöker varaktigheten för eventuella datalageråtgärder mot tabeller med `%product%` i tabellnamnet.
+The **[!UICONTROL product index table(s)]** läser produktindextabeller i en vald tidsram. Den här frågan undersöker varaktigheten för eventuella datalageråtgärder mot tabeller med `%product%` i tabellnamnet.

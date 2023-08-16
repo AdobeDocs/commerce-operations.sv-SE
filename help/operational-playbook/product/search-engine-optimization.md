@@ -5,7 +5,7 @@ exl-id: 7b1348b5-d379-48c1-9e9d-71a8d02b2ca4
 feature: Best Practices, Search
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
@@ -34,14 +34,14 @@ Se resultatet i orange i följande bild:
 
 SEO-strategin omfattar:
 
-- **Nyckelordssökning**—Nyckelord som används av kunder för sökning
+- **Sökord**—Nyckelord som används av kunder för sökning
 
-- **Platsarkitektur**—Nyckelorden behandlas
+- **Platsarkitektur**—Nyckelorden efterforskas
 
 - **SEO (teknisk)**—Säkerställer att SEO crawlar webbplatsen
 
 - **SEO på sida**—Metataggar och innehåll används för att attrahera kunder
 
-- **Analyser**—Verktyg, som Google Analytics, används för att spåra SEO
+- **Analyser**—Verktyg, t.ex. Google Analytics, används för att spåra SEO
 
 B2B SEO-kampanjer syftar till att öka varumärkeskännedomen och leda till ökad konverteringsgrad. B2C SEO-kampanjer syftar till att locka besökare att göra omedelbara inköp. SEO har olika användningsområden och effekter i B2B- jämfört med B2C-företag. SEO kan bidra till att öka trafiken på er webbplats, vilket i sin tur ökar försäljningen och avkastningen. Använd en enkel SEO-strategi för att få konkurrensfördelar.

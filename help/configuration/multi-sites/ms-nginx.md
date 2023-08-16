@@ -15,11 +15,11 @@ Vi antar att:
 
 - Du arbetar på en utvecklingsmaskin (bärbar dator, virtuell dator eller liknande).
 
-   Ytterligare uppgifter kan behövas för att driftsätta flera webbplatser i en hostingmiljö. kontakta din värdleverantör för mer information.
+  Ytterligare uppgifter kan behövas för att distribuera flera webbplatser i en värdmiljö. Kontakta din värdleverantör för mer information.
 
-   Ytterligare uppgifter krävs för att konfigurera Adobe Commerce i molninfrastrukturen. När du har slutfört de uppgifter som beskrivs i det här avsnittet, se [Konfigurera flera webbplatser eller butiker](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html) i _Guide för Commerce on Cloud Infrastructure_.
+  Ytterligare uppgifter krävs för att konfigurera Adobe Commerce i molninfrastrukturen. När du har slutfört de uppgifter som beskrivs i det här avsnittet, se [Konfigurera flera webbplatser eller butiker](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html) i _Guide för Commerce on Cloud Infrastructure_.
 
-- Du godkänner flera domäner i en virtuell värdfil eller använder en virtuell värd per webbplats; konfigurationsfilerna för det virtuella värdsystemet finns i `/etc/nginx/sites-available`.
+- Du godkänner flera domäner i en virtuell värdfil eller använder en virtuell värd per webbplats. Konfigurationsfilerna för den virtuella värden finns i `/etc/nginx/sites-available`.
 - Du använder `nginx.conf.sample` tillhandahålls av Commerce med endast de ändringar som diskuteras i den här självstudiekursen.
 - Commerce-programvaran är installerad i `/var/www/html/magento2`.
 - Du har två andra webbplatser än standardwebbplatsen:
@@ -42,8 +42,8 @@ Här följer en färdplan för hur du konfigurerar flera webbplatser med Nginx:
 
       - Använd `website` för att läsa in webbplatsen i butiken.
       - Använd `store` för att läsa in alla butiksvyer i butiken.
-   - `$MAGE_RUN_CODE` är den unika kod för webbplats- eller butiksvyn som motsvarar `$MAGE_RUN_TYPE`.
 
+   - `$MAGE_RUN_CODE` är den unika kod för webbplats- eller butiksvyn som motsvarar `$MAGE_RUN_TYPE`.
 
 1. Uppdatera bas-URL-konfigurationen för Commerce-administratören.
 
@@ -53,7 +53,7 @@ Se [Konfigurera flera webbplatser, butiker och butiksvyer i administratören](ms
 
 ## Steg 2: Skapa nya virtuella värdar
 
-I det här steget beskrivs hur du läser in webbplatser i butiken. Du kan antingen använda webbplatser eller butiksvyer; Om du använder butiksvyer måste du justera parametervärdena därefter. Du måste slutföra uppgifterna i det här avsnittet som en användare med `sudo` behörighet.
+I det här steget beskrivs hur du läser in webbplatser i butiken. Du kan använda antingen webbplatser eller butiksvyer. Om du använder butiksvyer måste du justera parametervärdena därefter. Du måste slutföra uppgifterna i det här avsnittet som en användare med `sudo` behörighet.
 
 Genom att bara använda en [nginx virtuell värdfil](#step-2-create-nginx-virtual-hosts)kan du göra din ursprungliga konfiguration enkel och ren. Genom att använda flera virtuella värdfiler kan du anpassa varje butik (och använda en anpassad plats för `french.mysite.mg` till exempel).
 
@@ -171,7 +171,7 @@ Mer information om mappningsdirektivet finns i [nginx-dokumentation om kardirekt
 
 >[!TIP]
 >
->Redigera inte `nginx.conf.sample` fil, det är en viktig handelsfil som kan uppdateras med varje ny version. I stället kopierar du `nginx.conf.sample` , ändra namn på filen och redigera sedan den kopierade filen.
+>Redigera inte `nginx.conf.sample` fil; det är en viktig Commerce-fil som kan uppdateras med varje ny release. I stället kopierar du `nginx.conf.sample` , ändra namn på filen och redigera sedan den kopierade filen.
 
 **Redigera PHP-startpunkten för huvudprogrammet**:
 
@@ -229,29 +229,29 @@ location ~ (index|get|static|report|404|503|health_check)\.php$ {
 }
 ```
 
-## Steg 4: Uppdatera bas-URL-konfigurationen
+## Steg 4: Uppdatera konfigurationen för bas-URL
 
 Du måste uppdatera bas-URL:en för `french` och `german` webbplatser i Commerce Admin.
 
-### Uppdatera bas-URL för franska webbplatser
+### Uppdatera bas-URL för fransk webbplats
 
-1. Logga in på Commerce Admin och gå till **Lager** > **Inställningar** > **Konfiguration** > **Allmänt** > **Webb**.
+1. Logga in på Commerce Admin och navigera till **Lager** > **Inställningar** > **Konfiguration** > **Allmänt** > **Webb**.
 1. Ändra _konfigurationsomfång_ till `french` webbplats.
-1. Expandera **Bas-URL:er** och uppdatera **Bas-URL** och **Bas länk-URL** värde till `http://french.magento24.com/`.
+1. Expandera **Bas-URL** och uppdatera **Bas-URL** och **Bas länk-URL** värde till `http://french.magento24.com/`.
 1. Expandera **Bas-URL:er (säkra)** och uppdatera **URL för säker bas** och **URL för säker baslänk** värde till `https://french.magento24.com/`.
 1. Klicka **Spara konfiguration** och spara konfigurationsändringarna.
 
 ### Uppdatera bas-URL för tysk webbplats
 
-1. Logga in på Commerce Admin och gå till **Lager** > **Inställningar** > **Konfiguration** > **Allmänt** > **Webb**.
+1. Logga in på Commerce Admin och navigera till **Lager** > **Inställningar** > **Konfiguration** > **Allmänt** > **Webb**.
 1. Ändra _konfigurationsomfång_ till `german` webbplats.
-1. Expandera **Bas-URL:er** och uppdatera **Bas-URL** och **Bas länk-URL** värde till `http://german.magento24.com/`.
+1. Expandera **Bas-URL** och uppdatera **Bas-URL** och **Bas länk-URL** värde till `http://german.magento24.com/`.
 1. Expandera **Bas-URL:er (säkra)** och uppdatera **URL för säker bas** och **URL för säker baslänk** värde till `https://german.magento24.com/`.
 1. Klicka **Spara konfiguration** och spara konfigurationsändringarna.
 
 ### Rensa cachen
 
-Kör följande kommando för att rensa `config` och `full_page` cacheminnen.
+Kör följande kommando för att rensa `config` och `full_page` cacher.
 
 ```bash
 bin/magento cache:clean config full_page
@@ -279,9 +279,8 @@ Om du inte har ställt in DNS för butikernas URL:er måste du lägga till en st
 
 >[!INFO]
 >
->- Ytterligare uppgifter kan behövas för att driftsätta flera webbplatser i en hostingmiljö. kontakta din värdleverantör för mer information.
->- Det krävs ytterligare uppgifter för att konfigurera Adobe Commerce för molninfrastruktur. se [Konfigurera flera olika Creative Cloud-webbplatser eller -butiker](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html) i _Guide för Commerce on Cloud Infrastructure_.
-
+>- Ytterligare uppgifter kan behövas för att distribuera flera webbplatser i en värdmiljö. Kontakta din värdleverantör för mer information.
+>- Ytterligare uppgifter krävs för att konfigurera Adobe Commerce för molninfrastruktur. Mer information finns [Konfigurera flera olika Creative Cloud-webbplatser eller -butiker](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html) i _Guide för Commerce on Cloud Infrastructure_.
 
 ### Felsökning
 

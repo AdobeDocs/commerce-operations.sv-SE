@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Konfigurera låsprovidern
 
-Innan du kör det här kommandot måste du göra följande *eller* du måste [installera programmet](../advanced.md):
+Innan du kör kommandot måste du göra följande *eller* du måste [installera programmet](../advanced.md):
 
 * [Skapa eller uppdatera distributionskonfigurationen](deployment.md)
 * [Skapa databasschemat](database.md)
@@ -40,6 +40,6 @@ bin/magento setup:config:set [--<parameter_name>=<value>, ...]
 |--- |--- |--- |
 | `--lock-provider` | Lås leverantörens namn: `db`, `zookeeper`, eller `file`.<br><br>Standardlåsleverantör: `db` | Nej |
 | `--lock-db-prefix` | Det specifika db-prefixet för att undvika låskonflikter när du använder `db` låsleverantör.<br><br>Standardvärdet: `NULL` | Nej |
-| `--lock-zookeeper-host` | Värd och port att ansluta till Zookeeper-klustret när du använder `zookeeper` låsleverantör.<br><br>Till exempel: `127.0.0.1:2181` | Ja, om du anger `--lock-provider=zookeeper` |
+| `--lock-zookeeper-host` | Värd och port att ansluta till Zookeeper-klustret när du använder `zookeeper` låsleverantör.<br><br>Exempel: `127.0.0.1:2181` | Ja, om du anger `--lock-provider=zookeeper` |
 | `--lock-zookeeper-path` | Sökvägen där Zookeeper sparar lås.<br><br>Standardsökvägen är: `/magento/locks` | Nej |
 | `--lock-file-path` | Sökvägen där fillås sparas. | Ja, om du anger `--lock-provider=file` |

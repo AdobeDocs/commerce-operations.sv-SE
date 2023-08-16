@@ -5,7 +5,7 @@ exl-id: 273be997-8085-4488-a455-f6005a85b406
 topic: Commerce, Migration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '789'
 ht-degree: 0%
 
 ---
@@ -112,11 +112,11 @@ Innan du migrerar några data måste du skapa en Magento 2-modul.
 
 Innan du migrerar några data måste du skapa en `config.xml` konfigurationsfilen från det angivna exemplet.
 
-Så här konfigurerar du [!DNL Data Migration Tool] för migrering:
+Konfigurera [!DNL Data Migration Tool] för migrering:
 
 1. Logga in på programservern som, eller växla till [ägare av filsystem](../../installation/prerequisites/file-system/overview.md).
 
-1. Ändra till följande katalog:
+1. Byt till följande katalog:
 
    ```bash
    <your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/<migration edition>/<ce or version>
@@ -177,7 +177,7 @@ Du kan också ansluta till en databas med TLS-protokollet (dvs. med offentliga/p
 * `ssl_cert`
 * `ssl_key`
 
-Till exempel:
+Exempel:
 
 ```xml
 <source>
@@ -208,7 +208,7 @@ Så här använder du mappningsfilerna:
 
 1. Uppdatera sökvägen till den nyligen kopierade filen i `<options>` nod på `config.xml`. Den uppdaterade sökvägen ska vara någon av följande:
 
-   1. Absolut filsökväg, e. g. `/var/www/html/app/code/Vendor/Migration/etc/opensource-to-opensource/1.9.4.1/map.xml`
+   1. Absolut filsökväg, t.ex. `/var/www/html/app/code/Vendor/Migration/etc/opensource-to-opensource/1.9.4.1/map.xml`
    1. sökväg till den relativa filen magento/data-migration-tool: `etc/opensource-to-opensource/1.9.4.1/map.xml`
    1. Magento rotberoende filsökväg: `app/code/Vendor/Migration/etc/opensource-to-opensource/1.9.4.1/map.xml`
 

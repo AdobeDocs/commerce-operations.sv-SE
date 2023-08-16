@@ -36,7 +36,7 @@ Använd följande kommandon:
 
 - `bin/magento config:set` anger alla icke-känsliga konfigurationsvärden med dess konfigurationssökväg
 - `bin/magento config:sensitive:set` anger alla känsliga konfigurationsvärden med dess konfigurationssökväg
-- `bin/magento config:show` visar sparade konfigurationsvärden, värden för krypterade inställningar visas som asterisker
+- `bin/magento config:show` visar sparade konfigurationsvärden; värden för krypterade inställningar visas som asterisker
 
 ## Förutsättningar
 
@@ -53,7 +53,7 @@ Se följande referenser:
 
 - [Referens för känsliga och systemspecifika konfigurationssökvägar](../reference/config-reference-sens.md)
 - [Referens för sökvägar för betalningskonfiguration](../reference/config-reference-payment.md)
-- [Andra konfigurationssökvägar - referens](../reference/config-reference-general.md)
+- [Referens för andra konfigurationssökvägar](../reference/config-reference-general.md)
 - [Referens för konfigurationssökvägar för Commerce Enterprise B2B-tillägg](../reference/config-reference-b2b.md)
 
 ### Hitta scopekoden
@@ -115,7 +115,7 @@ Omfångskoder för webbplatser och butiksvyer lagras i Commerce-databasen i `sto
 
 ## Ange värden
 
-**Ange systemspecifika konfigurationsvärden**:
+**Så här anger du systemspecifika konfigurationsvärden**:
 
 ```bash
 bin/magento config:set [--scope="..."] [--scope-code="..."] [-le | --lock-env] [-lc | --lock-config] path value
@@ -144,7 +144,7 @@ I följande tabell beskrivs `set` kommandoparametrar:
 >
 >Om du använder `--lock-env` eller `--lock-config` om du vill ange eller ändra ett värde måste du använda [`bin/magento app:config:import` kommando](../cli/import-configuration.md) om du vill importera inställningen innan du öppnar Admin eller Storefront.
 
-Om du anger en felaktig konfigurationssökväg returnerar det här kommandot ett fel
+Om du anger en felaktig konfigurationssökväg returnerar kommandot ett fel
 
 ```text
 The "wrong/config/path" does not exist
@@ -181,7 +181,7 @@ bin/magento config:set --scope=stores --scope-code=test web/unsecure/base_url ht
 
 ### Ange konfigurationsvärden som inte kan redigeras i administratören
 
-Om du använder `--lock-env`  enligt följande sparar kommandot konfigurationsvärdet i `<Commerce base dir>/app/etc/env.php` och inaktiverar fältet för redigering av det här värdet i Admin.
+Om du använder `--lock-env`  på följande sätt sparar kommandot konfigurationsvärdet i `<Commerce base dir>/app/etc/env.php` och inaktiverar fältet för redigering av det här värdet i Admin.
 
 ```bash
 bin/magento config:set --lock-env --scope=stores --scope-code=default web/unsecure/base_url http://example3.com

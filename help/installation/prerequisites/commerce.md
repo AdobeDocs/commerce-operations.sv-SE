@@ -32,13 +32,13 @@ Se följande tabell för att komma igång med att installera Adobe Commerce elle
         <td><p>Om du vill ha fullständig kontroll över alla installerade komponenter har åtkomst till programservern, mycket teknisk, kan paketera om Magento Open Source med andra komponenter.</p>
         </td>
         <td><ol><li>Skapar en disposition <em>projekt</em> som innehåller en lista med komponenter som ska användas.</li>
-            <li>Använder Composer för att uppdatera paketberoenden; använder <code>composer create-project</code> för att hämta Composer-metapaketet.</li>
+            <li>Använder Composer för att uppdatera paketberoenden, använder <code>composer create-project</code> för att hämta Composer-metapaketet.</li>
             <li>Installerar programmet med <a href="../advanced.md">kommandorad</a>.</li>
         <li>Uppgraderar programmet och tilläggen med  <a href="../../upgrade/implementation/perform-upgrade.md">kommandorad</a>.</li></ol></td>
         <td><p><a href="../composer.md">Hämta metapackage</a></p></td>
     </tr>
     <tr>
-        <td><p>Bidrar utvecklare</p></td>
+        <td><p>Medverkande utvecklare</p></td>
         <td><p>Bidrar till kodbasen Magento Open Source, filer buggar och anpassar programmet. Mycket tekniskt, har en egen utvecklingsserver, förstår Composer och GitHub.</p>
             <p>Du <em>inte</em> använda programmet i en produktionsmiljö.</p>
       <p>Du måste uppgradera med <a href="../../upgrade/developer/git-installs.md">Kommandona Composer och Git</a>.</p></td>

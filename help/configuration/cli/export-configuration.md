@@ -29,23 +29,23 @@ Som ett resultat av kommandokörningen uppdateras följande konfigurationsfiler:
 
 - `app/etc/config.php`
 
-   Det här är den delade konfigurationsfilen för alla dina Commerce-instanser.
+  Det här är den delade konfigurationsfilen för alla dina Commerce-instanser.
 Inkludera detta i källkontrollen så att det kan delas mellan utvecklings-, bygg- och produktionssystemen.
 
-   Se [config.php-referens](../reference/config-reference-configphp.md).
+  Se [config.php-referens](../reference/config-reference-configphp.md).
 
 - `app/etc/env.php`
 
-   Det här är den miljöspecifika konfigurationsfilen.
+  Det här är den miljöspecifika konfigurationsfilen.
 Den innehåller känsliga och systemspecifika inställningar för enskilda miljöer.
 
-   Gör _not_ inkludera den här filen i källkontrollen.
+  Gör _not_ inkludera den här filen i källkontrollen.
 
-   Se [env.php reference](../reference/config-reference-envphp.md).
+  Se [env.php reference](../reference/config-reference-envphp.md).
 
 ## Känsliga eller systemspecifika inställningar
 
-Ställa in känsliga inställningar skrivna till `env.php`, använder du [`bin/magento config:sensitive:set`](set-configuration-values.md#set-values) -kommando.
+Ställa in känsliga inställningar som skrivits till `env.php`, använder du [`bin/magento config:sensitive:set`](set-configuration-values.md#set-values) -kommando.
 
 Konfigurationsvärden anges antingen som känsliga eller systemspecifika genom referens [`Magento\Config\Model\Config\TypePool`](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Config/Model/Config/TypePool.php) i modulen [`di.xml`](https://developer.adobe.com/commerce/php/development/configuration/sensitive-environment-settings/#how-to-specify-values-as-sensitive-or-system-specific) -fil.
 

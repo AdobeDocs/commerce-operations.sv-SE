@@ -36,9 +36,9 @@ Innehåller en array med moduler och deras lägen. Om modulen är aktiverad är 
 
 Läs mer om [Moduler].
 
-## scope
+## omfattningar
 
-Innehåller en matris med konfigurationsvärden för omfång. Den har följande delnoder:
+Innehåller en array med scopets konfigurationsvärden. Den har följande delnoder:
 
 | Namn | Beskrivning |
 | ---------- | -----------------------------------|

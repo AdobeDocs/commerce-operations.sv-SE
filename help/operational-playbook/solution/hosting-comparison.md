@@ -5,7 +5,7 @@ exl-id: 8d1f0b85-2874-4a4b-9fae-1fb367a7f85e
 feature: Best Practices, Cloud, Paas
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '479'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ I följande tabell beskrivs fördelar och nackdelar med molnlösningar jämfört
         </tr>
         <tr>
             <td>Plattformsanpassning</td>
-            <td>Kan enkelt anpassa plattformen efter unika krav</td>
+            <td>Tillförlitligt för att anpassa plattformen efter unika krav</td>
             <td>Anpassningar kan leda till problem med tillförlitlighet och programvarusupport</td>
             <td>SaaS-plattformarna är relativt stabila. Uppdateringarna är iterativa och enkla att hantera</td>
             <td>SaaS minimerar möjligheten att ändra plattformen</td>

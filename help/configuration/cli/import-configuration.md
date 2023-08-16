@@ -20,7 +20,7 @@ När du har importerat webbplatser, butiker, vyer och teman kan du skapa produkt
 
 >[!INFO]
 >
->The `bin/magento app:config:import` kommandot bearbetar inte konfiguration som lagras i miljövariabler.
+>The `bin/magento app:config:import` -kommandot bearbetar inte konfiguration som lagras i miljövariabler.
 
 ## Importera, kommando
 
@@ -64,7 +64,7 @@ I följande avsnitt beskrivs i detalj vilka data vi importerar.
 
 ### Systemkonfiguration
 
-I Commerce används värden direkt i `system` arrayen i `config.php` eller `env.php` i stället för att importera dem till databasen, eftersom de kräver vissa för- och efterbearbetningsåtgärder.
+I Commerce används värden direkt i `system` i `config.php` eller `env.php` i stället för att importera dem till databasen, eftersom de kräver vissa för- och efterbearbetningsåtgärder.
 
 Värdet för konfigurationssökvägen `web/secure/base_url` måste valideras med backend-modeller.
 
@@ -94,17 +94,17 @@ De föregående konfigurationerna kan importeras i följande lägen:
 
 >[!INFO]
 >
->Vi importerar inte den rotkategori som är associerad med butiker. Du måste associera en rotkategori med en butik med hjälp av Commerce Admin.
+>Vi importerar inte den rotkategori som är associerad med butiker. Du måste associera en rotkategori med en butik med Commerce Admin.
 
 ### Temakonfiguration
 
-Temakonfigurationen innehåller alla teman som är registrerade i ert handelssystem; data kommer direkt från `theme` databastabell. (Temakonfigurationen finns i `themes` array in `config.php`.)
+Temakonfigurationen innehåller alla teman som är registrerade i ert Commerce-system. Informationen hämtas direkt från `theme` databastabell. (Temakonfigurationen finns i `themes` array in `config.php`.)
 
 #### Temadatas struktur
 
 Nyckeln till arrayen är fullständig temats sökväg: `area` + `theme path`
 
-Till exempel: `frontend/Magento/luma`.
+Exempel, `frontend/Magento/luma`.
 `frontend` är area och `Magento/luma` är temats sökväg.
 
 Värdet för arrayen är data om temat: kod, titel, sökväg, överordnat id
@@ -126,6 +126,5 @@ Fullständigt exempel:
 
 >[!INFO]
 >
->- _Registrering av tema_. Om ett temadata definieras i `config.php` men temats källkod inte finns i filsystemet, ignoreras temat (d.v.s. inte registrerat).
+>- _Temaregistrering_. Om ett temadata definieras i `config.php` men temats källkod inte finns i filsystemet, ignoreras temat (d.v.s. inte registrerat).
 >- _Ta bort teman_. Om ett tema inte finns i `config.php` men källkoden finns i filsystemet, tas inte temat bort.
-

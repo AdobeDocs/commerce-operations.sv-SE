@@ -5,7 +5,7 @@ exl-id: a14237f3-c5fe-4f5f-86eb-ed4c39507bff
 topic: Commerce, Migration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '900'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Om du vill migrera utan problem måste du planera och testa migreringen noggrant.
 
-## Innan du börjar: Överväg att uppgradera
+## Innan du startar: Överväg att uppgradera
 
 Migrering är ett perfekt tillfälle att göra allvarliga ändringar och förbereda er webbplats för nästa tillväxtnivå. Fundera på om din nya webbplats behöver utformas med mer maskinvara eller en mer avancerad topologi med bättre cachningsnivåer.
 
@@ -22,13 +22,13 @@ Migrering är ett perfekt tillfälle att göra allvarliga ändringar och förber
 
 * Vilka tillägg har du installerat?
 
-* Har du identifierat om du behöver alla dessa tillägg på den nya platsen? Det kan finnas gamla som du kan ta bort på ett säkert sätt.
+* Har du identifierat om du behöver alla dessa tillägg på den nya platsen? Det kan finnas gamla som du kan ta bort utan problem.
 
 * Har du fastställt om det finns Magento 2-versioner av dina tillägg? Besök [Commerce Marketplace] om du vill hitta de senaste versionerna eller kontakta din tilläggsleverantör.
 
 * Vilka databasresurser från tilläggen vill du migrera?
 
-## Steg 2: Bygg och förbered din butik för migrering
+## Steg 2: Skapa och förbered din butik för migrering
 
 * Konfigurera ett maskinvarusystem för Magento 2 med hjälp av topologi och design som åtminstone matchar ditt befintliga Magento 1-system
 
@@ -80,23 +80,23 @@ Gör så här för att testa migreringen:
 
 Ibland kanske du vill att din Magento 2-butik ska ha olika katalogstruktur, försäljningsregler och CMS-sidor efter migreringen.
 
-Det är viktigt att vara försiktig när du arbetar med manuella dataändringar. Fel skapar fel i det stegvisa datamigreringssteget som följer.
+Det är viktigt att iaktta försiktighet när du arbetar med manuella dataändringar. Fel skapar fel i det stegvisa datamigreringssteget som följer.
 
-En produkt som har tagits bort från Magento 2: den som har köpts i din Magento 1-butik och som inte längre finns i din Magento 2-butik. Om du överför data om ett sådant köp kan det orsaka ett fel när du kör [!DNL Data Migration Tool] i Delta-läge.
+Exempel: en produkt som har tagits bort från Magento 2: den som har köpts i din Magento 1-butik och som inte längre är tillgänglig i din Magento 2-butik. Om du överför data om ett sådant köp kan det orsaka ett fel när du kör [!DNL Data Migration Tool] i Delta-läge.
 
 ## Steg 6: Uppdatera inkrementella data
 
 När du har migrerat data måste du inkrementellt hämta datauppdateringar som har lagts till i Magento 1-butiken (t.ex. nya order, granskningar och ändringar i kundprofiler) och överföra dessa uppdateringar till Magento 2-butiken med Delta-läget.
 
-* Starta den stegvisa migreringen, uppdateringarna körs kontinuerligt. Du kan när som helst avbryta överföringen av uppdateringar genom att trycka på `Ctrl+C`.
+* Starta den stegvisa migreringen. Uppdateringarna körs kontinuerligt. Du kan när som helst avbryta överföringen av uppdateringar genom att trycka på `Ctrl+C`.
 
-* Testa Magento 2-sajten under tiden för att upptäcka eventuella problem så snart som möjligt. Om du råkar ut för problem trycker du på `Ctrl+C` om du vill stoppa den inkrementella migreringen och starta den igen när du har löst problemen.
+* Testa Magento 2-sajten under den här tiden för att upptäcka eventuella problem så snart som möjligt. Om du råkar ut för problem trycker du på `Ctrl+C` om du vill stoppa den inkrementella migreringen och starta den igen när du har löst problemen.
 
 >[!NOTE]
 >
 >Varningar vid volymkontroll kan visas om du testar din Magento 2-plats och kör migreringsprocessen samtidigt. Det inträffar eftersom du i Magento 2 skapar enheter som inte finns i Magento 1-instansen.
 
-## Steg 7: Go live
+## Steg 7: Publicera
 
 Nu när webbplatsen Magento 2 är uppdaterad med Magento 1 och fungerar normalt gör du följande för att gå till den nya webbplatsen:
 

@@ -23,7 +23,7 @@ Navigera till [!DNL Site-Wide Analysis Tool] kontrollpanel för ditt projekt och
 
 ![SWAT-widget - Initial](../../assets/upgrade-guide/uct-swat-initial.png)
 
-Klicka **[!UICONTROL Run Upgrade Scan]**. Sökningen kan ta lite tid beroende på projektets storlek. En rotationsruta anger att sökningen pågår.
+Klicka på **[!UICONTROL Run Upgrade Scan]**. Sökningen kan ta lite tid beroende på projektets storlek. En rotationsruta anger att sökningen pågår.
 
 ![SWAT-widget - Pågår](../../assets/upgrade-guide/uct-swat-progress.png)
 

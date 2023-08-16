@@ -1,5 +1,5 @@
 ---
-title: Maskinvara Recommendations
+title: Maskinvarubaserad Recommendations
 description: Granska en lista över rekommenderad maskinvara för optimala prestanda vid driftsättning av Adobe Commerce och Magento Open Source.
 feature: Best Practices, Install
 exl-id: ab548c4b-6f56-4409-a4ed-5c959939e04b
@@ -26,26 +26,26 @@ Om du förväntar dig att belastningen på en butik ska ändras kan du manuellt 
 
 ### PHP
 
-Magento har olika PHP-minneskrav beroende på hur systemet är driftsatt.  Om du konfigurerar en enda serverbutik rekommenderar vi att du konfigurerar PHP-minne för 2G.  Om du konfigurerar en webbplats med pipeline-distribution rekommenderar vi 2 GB på din byggserver och 1 GB på dina webnoder.
+Magento har olika PHP-minneskrav beroende på hur systemet är driftsatt.  Om du konfigurerar en enda serverbutik rekommenderar vi att du konfigurerar PHP-minne för 2G.  Om du konfigurerar en webbplats med pipeline-distribution rekommenderar vi 2 GB på din build-server och 1 GB på dina webnoder.
 
 Scenarier och förväntade PHP-minneskrav:
 
-* Webbnod som endast visar butikssidor: 256 MB
-* Webbnod som betjänar administratörssidor med en stor katalog: 1 GB
-* [!DNL Commerce] indexera en webbplats med en stor katalog: >256 MB (se [avancerad installation](../performance/advanced-setup.md) för att optimera prestanda.)
+* Webbnod endast för butikssidor: 256 MB
+* Webbnod som visar administrationssidor med en stor katalog: 1 GB
+* [!DNL Commerce] cron indexing a site with a large catalog: >256 MB (Se [avancerad installation](../performance/advanced-setup.md) för att optimera prestanda.)
 * [!DNL Commerce] kompilera och driftsätta statiska resurser: 756 MB
-* [!DNL Commerce] generering av prestanda för verktygspaketprofiler: >1 GB PHP RAM, >16 MB [!DNL MySQL] Inställningar för TMP_TABLE_SIZE &amp; MAX_HEAP_TABLE_SIZE
+* [!DNL Commerce] generering av prestandaverktygsprofiler: >1 GB PHP RAM, >16 MB [!DNL MySQL] Inställningar för TMP_TABLE_SIZE &amp; MAX_HEAP_TABLE_SIZE
 
 ### [!DNL MySQL]
 
 The [!DNL Commerce] databasen (och alla andra databaser) är beroende av hur mycket minne som finns tillgängligt för lagring av data och index. Effektiv användning [!DNL MySQL] dataindexering bör mängden tillgängligt minne vara minst hälften så stor som storleken på de data som lagras i databasen.
 
-### Cacheminnen
+### Cacher
 
 Om du distribuerar flera [!DNL Commerce] och använder Redis eller [!DNL Varnish] för dina cacheminnen, tänk på följande principer:
 
 * [!DNL Varnish] helsidescacheminnet är effektivt, rekommendera tillräckligt med minne allokerat till [!DNL Varnish] för dina mest populära sidor i minnet
-* Sessionscache är en bra kandidat att konfigurera för en separat instans av Redis.  Minneskonfigurationen för den här cachetypen bör ta hänsyn till webbplatsens strategi för att överge kundvagnen och hur länge en session förväntas finnas kvar i cachen
+* Sessionscachen är en bra kandidat att konfigurera för en separat instans av Redis.  Minneskonfigurationen för den här cachetypen bör ta hänsyn till webbplatsens strategi för att överge kundvagnen och hur länge en session förväntas finnas kvar i cachen
 * Redis bör ha tillräckligt med minne för att rymma alla andra cacheminnen för optimala prestanda.  Blockcachen är nyckelfaktorn när det gäller att fastställa mängden minne som ska konfigureras.  Blockcachen ökar i förhållande till antalet sidor på en plats (antal skus x antal butiksvyer)
 
 ## Nätverksbandbredd

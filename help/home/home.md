@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Adobe Commerce drifthandledningar
 
-Praktisk information om koncept, processer, verktyg och metodtips för att utveckla, driftsätta och underhålla Adobe Commerce-projekt.
+Få praktisk information om koncept, processer, verktyg och bästa metoder för att utveckla, driftsätta och underhålla Adobe Commerce-projekt.
 
 <table>
 <tr>

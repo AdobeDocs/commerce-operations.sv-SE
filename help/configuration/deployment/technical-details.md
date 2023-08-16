@@ -44,7 +44,7 @@ Ange den delade konfigurationen i Admin i din utveckling (eller Adobe Commerce i
 
 Den systemspecifika konfigurationen lagras i `app/etc/env.php`som bör _not_ vara i källkontrollen.
 
-Ange den systemspecifika konfigurationen i Admin i utvecklingssystemet (eller Adobe Commerce i molninfrastruktursintegreringen) och skriv konfigurationen till `env.php` med [`magento app:config:dump` kommando](../cli/export-configuration.md).
+Ange den systemspecifika konfigurationen i Admin i ditt utvecklingssystem (eller Adobe Commerce i molninfrastruktursintegrering) och skriv konfigurationen till `env.php` med [`magento app:config:dump` kommando](../cli/export-configuration.md).
 
 Det här kommandot skriver även känsliga inställningar till `env.php`.
 
@@ -59,7 +59,7 @@ Du kan hantera den känsliga konfigurationen på något av följande sätt:
 
 ### Konfigurationsinställningarna är låsta i administratören
 
-Alla konfigurationsinställningar i `config.php` eller `env.php` är låsta i administratören, det innebär att dessa inställningar inte kan ändras i Admin.
+Alla konfigurationsinställningar i `config.php` eller `env.php` är låsta i Admin, d.v.s. dessa inställningar kan inte ändras i Admin.
 Använd [`magento config:set` eller `magento config:set --lock`](../cli/export-configuration.md#config-cli-config-set) om du vill ändra inställningarna i `config.php` eller `env.php` filer.
 
 ## Commerce Admin
@@ -76,15 +76,15 @@ Admin visar följande beteende i produktionsläge:
    - Som tidigare nämnts finns alla konfigurationsinställningar i `config.php` eller `env.php` är låst och kan inte redigeras i Admin.
    - Du kan bara ändra administratörens språkområde till språk som används av distribuerade teman
 
-      I bilden nedan visas ett exempel på **Kontoinställning** > **Språk för gränssnitt** i Admin som endast visar två distribuerade språk:
+     I bilden nedan visas ett exempel på **Kontoinställning** > **Språk för gränssnitt** i Admin som endast visar två distribuerade språk:
 
-      ![Du kan bara ändra administratörens språkområde till distribuerade språkområden](../../assets/configuration/split-deploy-admin-locale.png)
+     ![Du kan bara ändra administratörens språkområde till distribuerade språkområden](../../assets/configuration/split-deploy-admin-locale.png)
 
 - Du kan inte ändra språkkonfigurationer för något omfång med Admin.
 
-   Vi rekommenderar att du gör dessa ändringar innan du går över till produktionsläget.
+  Vi rekommenderar att du gör dessa ändringar innan du går över till produktionsläget.
 
-   Du kan fortfarande konfigurera språkområdet med hjälp av systemvariabler eller `config:set` CLI-kommando med sökväg `general/locale/code`.
+  Du kan fortfarande konfigurera språkområdet med hjälp av systemvariabler eller `config:set` CLI-kommando med sökväg `general/locale/code`.
 
 ## Installera och ta bort cron
 
@@ -131,7 +131,7 @@ När du har kört kommandona för att rensa resurserna genererar Commerce arbets
 
 ### Bygg system
 
-Build-systemet kompilerar kod och genererar statiska vyfiler för teman som är registrerade i Commerce. Den behöver inte vara ansluten till handelsdatabasen. behöver bara Commerce-kodbasen.
+Build-systemet kompilerar kod och genererar statiska vyfiler för teman som är registrerade i Commerce. Den behöver ingen anslutning till Commerce-databasen, den behöver bara Commerce-kodbasen.
 
 På ditt byggsystem:
 
@@ -155,22 +155,22 @@ I produktionssystemet:
 1. Om du använder Adobe Commerce ska du stoppa köarbetarna.
 1. Använd `magento app:config:import` för att importera konfigurationsändringar i produktionssystemet.
 1. Om du har installerat komponenter som ändrat databasschemat kör du `magento setup:upgrade --keep-generated` för att uppdatera databasschemat och data och bevara genererade statiska filer.
-1. Om du vill ange systemspecifika inställningar använder du antingen `magento config:set` kommando eller miljövariabler.
-1. Om du vill ange känsliga inställningar använder du antingen `magento config:sensitive:set` kommando eller miljövariabler.
-1. Rent (kallas även _flush_) cacheminnet.
+1. Om du vill ange systemspecifika inställningar använder du antingen `magento config:set` -kommando eller miljövariabler.
+1. Om du vill ange känsliga inställningar använder du antingen `magento config:sensitive:set` -kommando eller miljövariabler.
+1. Rent (kallas även _flush_) cachen.
 1. Avsluta underhållsläge.
 
 ## Konfigurationshanteringskommandon
 
 Vi tillhandahåller följande kommandon som hjälper dig att hantera konfigurationen:
 
-- [`magento app:config:dump`](../cli/export-configuration.md) för att skriva administratörskonfigurationsinställningar till `config.php` och `env.php` (förutom för känsliga inställningar)
+- [`magento app:config:dump`](../cli/export-configuration.md) skriva administratörskonfigurationsinställningar till `config.php` och `env.php` (förutom för känsliga inställningar)
 - [`magento config:set`](../cli/set-configuration-values.md) för att ange värden för systemspecifika inställningar i produktionssystemet.
 
-   Använd det valfria `--lock` om du vill låsa alternativet i Admin (d.v.s. göra inställningen icke-redigerbar). Om en inställning redan är låst använder du `--lock` om du vill ändra inställningen.
+  Använd det valfria `--lock` om du vill låsa alternativet i Admin (d.v.s. göra inställningen icke-redigerbar). Om en inställning redan är låst använder du `--lock` om du vill ändra inställningen.
 
 - [`magento config:sensitive:set`](../cli/set-configuration-values.md) för att ange värden för känsliga inställningar i produktionssystemet.
-- [`magento app:config:import`](../cli/import-configuration.md) för att importera konfigurationsändringar från `config.php` och `env.php` till produktionssystemet.
+- [`magento app:config:import`](../cli/import-configuration.md) importera konfigurationsändringar från `config.php` och `env.php` till produktionssystemet.
 
 ## Exempel på konfigurationshantering
 
@@ -202,7 +202,7 @@ I det här avsnittet beskrivs hur du gör följande konfigurationsändringar:
 - Ändra standarddomänen för e-post (**Lager** > Inställningar > **Konfiguration** > Kunder > **Kundkonfiguration**)
 - Ange användarnamn och API-lösenord för PayPal-API (**Lager** > Inställningar > **Konfiguration** > Försäljning > **Betalningsmetoder** > **PayPal** > **Nödvändiga PayPal-inställningar**)
 
-När du har gjort ändringen i Admin ska du köra `bin/magento app:config:dump` i ditt utvecklingssystem. Nu skrivs inte alla ändringar `config.php`; Faktum är att det bara är webbplatsvyn, butiksvyn och butiksvyn som skrivs till den filen som följande utdrag visar.
+När du har gjort ändringen i Admin ska du köra `bin/magento app:config:dump` i ditt utvecklingssystem. Nu skrivs inte alla ändringar till `config.php`; faktiskt är det bara webbplatsvyn, butiksvyn och butiksvyn som skrivs till den filen som följande utdrag visar.
 
 ### config.php
 

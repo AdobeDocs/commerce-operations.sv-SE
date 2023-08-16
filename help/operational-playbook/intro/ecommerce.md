@@ -21,7 +21,7 @@ Här följer en snabb sammanfattning av de olika typerna av e-handelsföretag so
 
 Här är de olika affärsmodellerna för e-handel:
 
-- Business-to-Business (B2B)
+- Företag - företag (B2B)
 - Business-to-Consumer (B2C)
 - Konsument-till-kund (C2C)
 - Consumer-to-Business (C2B)
@@ -31,7 +31,7 @@ Här är de olika e-handelsintäktsmodellerna:
 - Dropshipping
 - Prenumeration
 - Privat märkning och tillverkning
-- Vit etikett
+- Vit märkning
 - Partihandel
 - Hyra och lån
 
@@ -41,13 +41,13 @@ Här är olika typer av e-handelswebbplatser:
 - Onlinebutiker (välj antal säljare)
 - Marketplace (flera säljare)
 
-## Fördelar och nackdelar
+## Fördelar och fördelar
 
-E-handel gör det möjligt för människor att öppna dörrarna till sina egna virtuella butiker. Säljandet online gör det enklare för små, specialiserade butiker och stora varumärkesbutiker att nå en bred publik. På samma sätt som traditionella företag har e-handeln dock för- och nackdelar.
+Med e-handel kan man öppna dörrarna till sina egna virtuella butiker. Säljandet online gör det enklare för små, specialiserade butiker och stora varumärkesbutiker att nå en bred publik. På samma sätt som traditionella företag har e-handeln dock för- och nackdelar.
 
 ### Fördelar
 
-- E-handelskostnaderna är låga jämfört med tegelstenar och murbruk
+- E-handelskostnaderna är låga jämfört med tegel och murbruk
 - Onlinebutikerna är öppna dygnet runt
 - Inköp sker direkt
 - Personalisering och anpassade användarupplevelser
@@ -73,6 +73,6 @@ Kundernas förväntningar ökar och det finns alltid nya tillväxttekniker som �
 
 ![Fördelarna med e-handelsteknik](../../assets/playbooks/commerce-tech.png)
 
-## Handelsbranscher
+## Handel
 
 ![Fördelarna med e-handelsteknik](../../assets/playbooks/commerce-industries.png)

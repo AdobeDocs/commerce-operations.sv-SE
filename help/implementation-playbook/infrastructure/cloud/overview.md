@@ -10,15 +10,15 @@ ht-degree: 0%
 
 ---
 
-# Översikt
+# Ökning
 
-Ett av de vanligaste värdalternativen för Adobe Commerce på AWS erbjuds av Adobe Commerce. Adobe Commerce i molninfrastruktur är en helhanterad automatiserad värdplattform för Adobe Commerce-program.
+Ett av de populäraste värdalternativen för Adobe Commerce på AWS erbjuds av Adobe Commerce. Adobe Commerce i molninfrastruktur är en helhanterad automatiserad värdplattform för Adobe Commerce-program.
 
 Adobe Commerce i molninfrastruktur är en lösning för att hantera plattforms-as-service (PaaS) som möjliggör snabb driftsättning av fullt anpassningsbara, säkra och skalbara webbutiker i kombination med en ledande infrastruktur för värdtjänster och hanterade tjänster. Det finns två planer med olika infrastrukturer. Adobe Commerce Starter passar bäst för mindre butiker med mindre komplexitet och mindre kataloger. Adobe Commerce Pro är skapat för större butiker med större komplexitet, större produktkataloger eller trafik som når ända fram. Adobe Commerce kommer att fastställa lämplig arkitektur med synpunkter från våra partners.
 
 Adobe Commerce är molnklart med en helt redundant hosting-infrastruktur i flera moln som ger optimerade prestanda, flexibilitet och elastisk skalbarhet. Du kan effektivt köra din handelsplattform på Fastly&#39;s content delivery network (CDN), och med New Relic för övervakning och hantering kan du få din butiksmiljö att fungera smidigt.
 
-Adobe Commerce erbjuder alla fördelar med modern cloud computing som vanligtvis förknippas med SaaS-lösningar: elastisk skalbarhet, hög återhämtningsförmåga och tillgänglighet, PCI-kompatibilitet och global tillgänglighet och automatiserad korrigering, samtidigt som den flexibilitet i programvaruanpassningen som våra handlare kräver bibehålls.
+Adobe Commerce erbjuder alla fördelar med modern molnbaserad datoranvändning som vanligtvis är kopplad till SaaS-lösningar: elastisk skalbarhet, hög återhämtningsförmåga och tillgänglighet, PCI-kompatibilitet samt global tillgänglighet och automatiserad korrigering, samtidigt som vi behåller flexibiliteten i den programvaruanpassning som våra handlare kräver.
 
 ![Bild som visar arkitektoniska element i Adobe Commerce på molninfrastruktur](../../../assets/playbooks/adobe-commerce-cloud-infrastructure.svg)
 
@@ -42,7 +42,7 @@ Låt oss också titta på programmet som gör Adobe Commerce förmåner till ver
 
 ![Bild som visar Adobe Commerce i molninfrastrukturens teknikstack](../../../assets/playbooks/cloud-tech-stack.svg)
 
-- Snabb CDN: När kunderna kommer in på er webbplats och i era butiker går förfrågningarna igenom snabbt för att läsa in cachelagrade sidor snabbare. Snabbt erbjuder WAF även DDoS-skyddstjänster.
+- Snabbt CDN: När kunderna kommer åt er webbplats och era butiker går förfrågningarna igenom snabbt för att läsa in cachelagrade sidor snabbare. Snabbt erbjuder WAF även DDoS-skyddstjänster.
 
 - New Relic ger dig en komplett bild av dina program och din operativmiljö. Ni kan kombinera viktiga mätvärden från mobil- och webbläsarapplikationer med stödtjänster, datalager och värdar så att ni kan optimera prestandan på ett enhetligt sätt och se till att alla initiativ blir framgångsrika.
 

@@ -5,7 +5,7 @@ exl-id: 821492dc-ee5b-4c4a-9479-680ee8c5756d
 topic: Commerce, Migration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '782'
 ht-degree: 0%
 
 ---
@@ -29,13 +29,13 @@ The [!DNL Data Migration Tool] delar upp migreringsprocessen i tre faser eller *
 
 1. **Inställningsläge**: migrerar systemkonfigurationen och webbplatsrelaterade inställningar.
 1. **Dataläge**: migrerar flera databasresurser samtidigt.
-1. **Deltaläge**: migrerar stegvisa ändringar (ändringar sedan den senaste körningen), t.ex. nya kunder och beställningar.
+1. **Deltaläge**: migrerar inkrementella ändringar (ändringar sedan den senaste körningen), till exempel nya kunder och beställningar.
 
 ![Migreringslägen](../../assets/data-migration/MigrationModes2.png)
 
 ## Steg
 
-The [!DNL Data Migration Tool] använder en lista med *steg* i varje läge för att migrera en viss typ av data. I inställningsläget används till exempel två steg för att migrera alla inställningsdata: Steget Lagrar och steget Inställningar. Information om specifika data som migreras i vart och ett av dessa steg (och för steg i de andra lägena) finns i [[!DNL Data Migration Tool] Teknisk specifikation](technical-specification.md).
+The [!DNL Data Migration Tool] använder en lista med *steg* i varje läge för att migrera en viss typ av data. I inställningsläget används till exempel två steg för att migrera alla inställningsdata: steget Lagrar och steget Inställningar. Information om specifika data som migreras i vart och ett av dessa steg (och för steg i de andra lägena) finns i [[!DNL Data Migration Tool] Teknisk specifikation](technical-specification.md).
 
 ![Migreringsöversikt](../../assets/data-migration/MigrationOverview2.png)
 
@@ -43,8 +43,8 @@ The [!DNL Data Migration Tool] använder en lista med *steg* i varje läge för 
 
 Inom varje steg finns tre *faser* som alltid körs i den här ordningen för att säkerställa att data migreras korrekt:
 
-1. **Integritetskontroll**: Jämför tabellfältets namn, typer och annan information för att verifiera kompatibiliteten mellan datastrukturen Magento 1 och 2.
-1. **Dataöverföring**: Överför datatabellen med tabell från Magento 1 och 2.
+1. **Integritetskontroll**: Jämför tabellfältsnamn, -typer och annan information för att verifiera kompatibiliteten mellan datastrukturerna Magento 1 och 2.
+1. **Dataöverföring**: Överför datatabellen per tabell från Magento 1 och 2.
 1. **Volymkontroll**: Jämför antalet poster mellan tabeller för att verifiera att överföringen lyckades.
 
 ![Migreringsfaser](../../assets/data-migration/MigrationSteps2.png)
@@ -73,7 +73,7 @@ Migrering från Magento 2 omfattar fyra komponenter: data, tillägg och anpassad
 
 ### Data
 
-Vi har utvecklat **Magento 2[!DNL Data Migration Tool]** så att ni effektivt kan flytta alla era produkter, kunder och beställningsdata, butikskonfigurationer, kampanjer med mera till Magento 2. Den här handboken innehåller information om verktyget och de bästa sätten att använda det för att migrera data.
+Vi har utvecklat **MAGENTO 2[!DNL Data Migration Tool]** så att ni effektivt kan flytta alla era produkter, kunder och beställningsdata, butikskonfigurationer, kampanjer med mera till Magento 2. Den här handboken innehåller information om verktyget och de bästa sätten att använda det för att migrera data.
 
 ### Tillägg och anpassad kod
 
@@ -88,4 +88,4 @@ Magento 2 använder nya metoder och tekniker som ger handlarna oöverträffade m
 ## Migreringsarbete
 
 Precis som en uppgradering mellan 1.x-versioner (till exempel från v1.12 till v1.14) beror migreringsnivån från Magento 1 till Magento 2 på hur du har skapat webbplatsen och hur stor den har anpassats.
-Vi förbättrar dock ständigt [!DNL Data Migration Tool] (se [Changelog](https://github.com/magento/data-migration-tool/blob/2.3/CHANGELOG.md) för mer information); så att migreringsarbetet hela tiden minskar.
+Vi förbättrar dock ständigt [!DNL Data Migration Tool] (se [Changelog](https://github.com/magento/data-migration-tool/blob/2.3/CHANGELOG.md) för mer information), så migreringsarbetet minskar kontinuerligt.

@@ -43,11 +43,11 @@ Om du använder webbservern Apache måste du aktivera serveromskrivningar för a
 
 Om du har flera webbnoder *inte* använder programmets standardfilcachning eftersom det inte finns någon synkronisering mellan webbnoder. Aktiviteten på en webbnod skrivs med andra ord endast till den webbnodens filsystem. Efterföljande aktivitet, om den utförs på en annan webbnod, kan resultera i att onödiga filer skrivs eller att fel kan uppstå.
 
-Använd i stället [Redis](../../configuration/cache/config-redis.md) för både standardcachen och sidcachen.
+Använd i stället [Redis](../../configuration/cache/config-redis.md) för både standardcache och sidcache.
 
 ## Serverinställningar
 
-I det här avsnittet beskrivs kortfattat inställningar som vi rekommenderar att du tar hänsyn till för servern som programmet körs på. Vissa av dessa inställningar är inte direkt relaterade till programmet. dessa ges endast som förslag.
+I det här avsnittet beskrivs kortfattat inställningar som vi rekommenderar att du tar hänsyn till för servern som programmet körs på. Vissa av dessa inställningar är inte direkt relaterade till programmet. De visas endast som förslag.
 
 ### Loggrotation
 
@@ -55,11 +55,11 @@ UNIX `logrotate` kan du administrera system som genererar ett stort antal loggfi
 
 Mer information finns i följande:
 
-* [Använda: Den ultimata självstudiekursen för att rotera logg med tio exempel](https://www.thegeekstuff.com/2010/07/logrotate-examples)
+* [HowTo: The ultimate log rotate command tutorial with ten example](https://www.thegeekstuff.com/2010/07/logrotate-examples)
 * [Stackutbyte](https://unix.stackexchange.com/questions/85662/how-to-properly-automatically-manually-rotate-log-files-for-production-rails-app)
 * [`logrotate` huvudsida](https://linuxconfig.org/logrotate-8-manual-page)
 
-### Ställ in iptables-regler för att göra det möjligt för olika tjänster att kommunicera
+### Ställ in iptables-regler för att möjliggöra för olika tjänster att kommunicera
 
 Oavsett om du har en server eller många måste du öppna portar i brandväggen för att kunna kommunicera med tjänster. Om du till exempel använder sökmotorn Solr med Adobe Commerce måste du aktivera den för att kommunicera med webbservern. Om du har flera webbnoder måste du aktivera dem för att kunna kommunicera med varandra.
 
@@ -70,7 +70,7 @@ Mer information:
 
 ### Förbättrade säkerhetsregler för Linux (SELinux)
 
-Vi har ingen rekommendation om du ska använda SELinux; Om du däremot använder den måste du konfigurera tjänster så att de kommunicerar med varandra på ungefär samma sätt som konfigurerar iptables.
+Vi har ingen rekommendation om du ska använda SELinux, men om du använder det måste du konfigurera tjänster så att de kommunicerar med varandra på ungefär samma sätt som att konfigurera iptables.
 
 Mer information:
 

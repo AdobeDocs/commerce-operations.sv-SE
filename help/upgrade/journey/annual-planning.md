@@ -18,7 +18,7 @@ Efter [publiceringsschema](https://devdocs.magento.com/release/), tilldela budge
 Under planeringen kanske du vill fråga dig själv:
 
 - Finns det några anpassningar eller tillägg som måste byggas för att uppfylla verksamhetens mål?
-- Kontrollerar jag att anpassningarna och tilläggen inte tillhandahålls direkt av Adobe och att de inte finns i en kommande version? Om de är det kanske jag kan spara både tid och pengar åt mitt företag.
+- Kontrollerar jag att anpassningarna och tilläggen inte tillhandahålls direkt av Adobe och att de inte kommer att släppas i en kommande version? Om de är det kanske jag kan spara både tid och pengar åt mitt företag.
 - Har jag någon tredjepartsintegrering som kan behöva underhållas under det kommande året?
 
 Om du vill vara säker på att teamet är på rätt spår kan du planera för en uppgraderingskontrollpunkt mitt under året för att granska dina planer, din budget, tidslinjen och teamets kapacitet.

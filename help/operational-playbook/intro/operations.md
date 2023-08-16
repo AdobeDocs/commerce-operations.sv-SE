@@ -1,6 +1,6 @@
 ---
 title: Handelsåtgärder
-description: Läs om vad som krävs för att ni ska lyckas med er affärsstrategi.
+description: Lär dig vad som krävs för att få en framgångsrik operativ strategi för e-handeln.
 exl-id: 21123987-0508-4d52-8af4-837b7a3ba1cb
 source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Handelsåtgärder
 
-Handelsåtgärder handlar om att centralisera backend-åtgärder så att de fungerar smartare, snabbare och mer effektivt. En framgångsrik operativ strategi kräver en stark IT-infrastruktur som stöder kompletta e-handelsoperationer. produktkatalog, lagerhantering, utcheckning och leverans. E-handelsåtgärderna bygger på flera saker, t.ex. en användarvänlig butik, olika produkter, god lagerhantering, kampanjer, enkel utcheckning samt praktiska betalnings- och leveransmetoder.
+Handelsåtgärder handlar om att centralisera backend-åtgärder så att de fungerar smartare, snabbare och mer effektivt. En framgångsrik operativ strategi kräver en stark IT-infrastruktur som stöder kompletta e-handelsoperationer, produktkataloger, lagerhantering, utcheckning och frakt. E-handelsåtgärderna bygger på flera saker, t.ex. en användarvänlig butik, olika produkter, god lagerhantering, kampanjer, enkel utcheckning samt praktiska betalnings- och leveransmetoder.
 
 ## Varför är strategin för e-handel viktig?
 
@@ -26,4 +26,4 @@ Exempel:
 - Upprättande av ett tydligt projektomfång där det omnämns vilka objekt som omfattas och inte omfattas, för att undvika krypning och fördröjning av projektets slutprodukter.
 - Övervaka interna och externa kostnader för att se till att projektet hålls i budget.
 
-En strategi för e-handel är viktig för att ge era kunder den bästa upplevelsen. Bättre e-handelsfunktioner innebär bättre fokus och snabbhet på att sälja produkter online.
+En strategi för e-handel är viktig för att ge era kunder den bästa upplevelsen. Bättre e-handelsfunktioner innebär bättre fokus och snabbhet när det gäller att sälja produkter online.

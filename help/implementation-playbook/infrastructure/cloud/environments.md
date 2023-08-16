@@ -20,7 +20,7 @@ Adobe Commerce i molninfrastruktur Pro-arkitekturen stöder miljöer som du kan 
 
 - **Produktion**—Tillhandahåller en enda miljögren som distribueras till dedikerade behållare för infrastruktur som en tjänst (IaaS).
 
-- **Global Överordnad**—Tillhandahåller en överordnad gren som distribueras till behållare för Platform-as-a-Service (PaaS).
+- **Global mallsida**—Tillhandahåller en huvudgren som distribuerats till behållare av typen Platform-as-a-Service (PaaS).
 
 ![Bild som visar relationen mellan Adobe Commerce molnmiljöer](../../../assets/playbooks/environment-diagram.svg)
 

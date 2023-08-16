@@ -10,13 +10,13 @@ ht-degree: 0%
 
 ---
 
-# Säkerhetsöversikt
+# Säkerhet - översikt
 
 I avsnittet Säkerhet finns inställningar för säkerhetsrelaterade funktioner, som hashning av lösenord, cacheförgiftning och skydd av `cron.php` -fil.
 
 ## Säkerhetsresurser
 
-Avsnitten i avsnittet Säkerhet i konfigurationsguiden är inte heltäckande för alla Commerce-funktioner. Det finns många viktiga säkerhetsrelaterade ämnen i andra handelshandböcker, som:
+Avsnitten i avsnittet Säkerhet i konfigurationshandboken är inte heltäckande för alla Commerce-funktioner. Det finns många viktiga säkerhetsrelaterade ämnen i andra handelshandböcker, som:
 
 - [Utvecklarhandbok för PHP](https://developer.adobe.com/commerce/php/development/security/) för information som Adobe Commerce- och Magento Open Source-utvecklare kan använda för att förbättra säkerheten för de komponenter som de bygger.
 - [Säkerhets- och efterlevnadshandbok](https://devdocs.magento.com/security/security-and-compliance.html) för information om säkerhet, integritet och regelefterlevnad, med länkar till tekniska resurser.

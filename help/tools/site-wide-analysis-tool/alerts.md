@@ -13,9 +13,9 @@ ht-degree: 0%
 
 The [!DNL Site-Wide Analysis Tool's] [!UICONTROL Alerts] visas Adobe Commerce Managed Alerts-korrigeringar för handlare. Adobe tillhandahåller [!DNL Managed Alerts] för att spåra prestandamått med hjälp av branschens bästa metoder. Referera till [Hanterade aviseringar för Adobe Commerce](https://support.magento.com/hc/en-us/articles/360045806832-Managed-alerts-for-Adobe-Commerce) artikel i [!DNL support knowledge base].
 
-## När ska användas
+## När ska du använda
 
-[!UICONTROL Managed Alerts] visar de senaste 20 [!DNL New Relic Alerts], deras status, incident-URL och länk till en [!DNL support knowledge base] artikel. Du kan använda den här fliken för att hålla dig uppdaterad med [!DNL Alerts].
+[!UICONTROL Managed Alerts] visar de senaste 20 [!DNL New Relic Alerts], deras status, incident-URL och länk till en [!DNL support knowledge base] artikel. På den här fliken kan du hålla dig uppdaterad med [!DNL Alerts].
 
 ## Fördelar
 

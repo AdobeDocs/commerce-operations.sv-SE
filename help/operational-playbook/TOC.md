@@ -4,7 +4,7 @@ user-guide-description: Lär dig hur ni gör ert företag redo för att driva en
 feature: Best Practices
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '143'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Operativ spelningsbok {#operational-playbook}
 
-- [Översikt](overview.md)
+- [Ökning](overview.md)
 - Handel {#intro}
    - [Adobe Commerce](intro/commerce.md)
    - [Vad är e-handel?](intro/ecommerce.md)
@@ -51,7 +51,7 @@ ht-degree: 0%
    - [Organisationsstruktur](people/organizational-structure.md)
    - [Kommunikation](people/communication.md)
    - [Roller och ansvarsområden](people/roles-responsibilities.md)
-   - [Resurser](people/resources.md)
+   - [Resurs](people/resources.md)
    - [Kultur](people/culture.md)
    - [Projektgrupper](people/project-teams.md)
 - Produkt {#product}

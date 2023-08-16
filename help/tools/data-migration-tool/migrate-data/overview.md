@@ -5,7 +5,7 @@ exl-id: b775ede1-9d1d-49d5-ad0f-763404b48278
 topic: Commerce, Migration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '303'
 ht-degree: 0%
 
 ---
@@ -73,7 +73,7 @@ Var:
 - `<mode>` kan vara: [`settings`](settings.md), [`data`](data.md), eller [`delta`](delta.md)
 - `[-r|--reset]` är ett valfritt argument som startar migreringen från början. Du kan använda det här argumentet för att testa migrering.
 - `[-a|--auto]` är ett valfritt argument som förhindrar att migreringen stoppas när integritetskontrollfel påträffas.
-- `{<path to config.xml>}` är den absoluta filsystemsökvägen till `config.xml`; det här argumentet är obligatoriskt.
+- `{<path to config.xml>}` är den absoluta filsystemsökvägen till `config.xml`; det här argumentet krävs.
 
 >[!NOTE]
 >

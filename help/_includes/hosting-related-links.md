@@ -12,7 +12,7 @@ ht-degree: 0%
 
 ## Självvärdande resurser
 
-* [Översikt](/help/implementation-playbook/infrastructure/self-hosting/overview.md)
+* [Ökning](/help/implementation-playbook/infrastructure/self-hosting/overview.md)
 * [Lokal infrastruktur](/help/implementation-playbook/infrastructure/self-hosting/on-premises.md)
 * [Säkerhetskoncept](/help/implementation-playbook/infrastructure/self-hosting/security-concepts.md)
 * [Övervaka telemetri och verktyg](/help/implementation-playbook/infrastructure/self-hosting/monitoring-tools.md)

@@ -16,7 +16,7 @@ I det här avsnittet diskuteras grunderna i hur du använder Varnish som acceler
 
 ## Finska renar
 
-Enligt [Varnish-dokumentation](https://www.varnish-cache.org/docs/trunk/users-guide/purging.html), &quot;A *rensa* är vad som händer när du plockar ut ett objekt från cachen och tar bort det tillsammans med dess varianter.&quot; En finsk tömning liknar ett cachelagrat kommando (eller klicka på **Rensa Magento-cache** i Admin).
+Enligt [Varnish-dokumentation](https://www.varnish-cache.org/docs/trunk/users-guide/purging.html), &quot;A *rensa* är vad som händer när du plockar ut ett objekt från cachen och tar bort det tillsammans med dess varianter.&quot; En finsk tömning liknar ett cachelagrat kommando (eller klickning **Rensa Magento-cache** i Admin).
 
 Faktum är att när du rensar, tömmer eller uppdaterar Commerce-cachen så töms även varnish.
 
@@ -24,21 +24,21 @@ När du har installerat och konfigurerat lack för att arbeta med Commerce kan f
 
 - Underhålla en webbplats.
 
-   Till exempel allt du gör i Admin i:
+  Till exempel allt du gör i Admin i:
 
    - **LAGRING** > **Inställningar** > **Konfiguration** > ALLMÄNT > **Allmänt**
    - **LAGRING** > **Inställningar** > **Konfiguration** > ALLMÄNT > **Valutainställningar**
    - **LAGRING** > **Inställningar** > **Konfiguration** > ALLMÄNT > **E-postadresser för butik**
 
-   När Commerce upptäcker en sådan ändring visas ett meddelande som talar om för dig att uppdatera cachen.
+  När Commerce upptäcker en sådan ändring visas ett meddelande som talar om för dig att uppdatera cachen.
 
 - Upprätthålla en butik (till exempel lägga till eller redigera kategorier, priser, produkter och kampanjpriser).
 
-   Finska töms automatiskt när du utför någon av dessa åtgärder.
+  Finska töms automatiskt när du utför någon av dessa åtgärder.
 
 - Underhåll källkod.
 
-   Du bör uppdatera cacheminnet och även ta bort allt i `generated/code` och `generated/metadata` kataloger. Mer information om hur du uppdaterar cacheminnet finns i nästa avsnitt.
+  Du bör uppdatera cacheminnet och även ta bort allt i `generated/code` och `generated/metadata` kataloger. Mer information om hur du uppdaterar cacheminnet finns i nästa avsnitt.
 
 ## Konfigurera Commerce för att rensa lack
 
@@ -48,7 +48,7 @@ Du kan använda den valfria parametern `--http-cache-hosts` -parameter för att 
 
 Parameterformatet måste vara `<hostname or ip>:<listen port>`där du kan utesluta `<listen port>` om det är port 80.
 
-Till exempel:
+Exempel:
 
 ```bash
 bin/magento setup:config:set --http-cache-hosts=192.0.2.100,192.0.2.155:6081

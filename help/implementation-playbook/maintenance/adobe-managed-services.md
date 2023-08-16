@@ -1,6 +1,6 @@
 ---
-title: Adobes hanterade tjänster
-description: Läs om hur Adobes hanterade tjänster kan hjälpa er att stödja och underhålla er implementering av Adobe Commerce.
+title: Adobe Managed Services
+description: Se hur Adobe Managed Services kan hjälpa er att stödja och underhålla er Adobe Commerce-implementering.
 exl-id: b600b0e3-c6fd-4b86-ad2a-a445e599f1bd
 feature: Services
 source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
@@ -11,21 +11,21 @@ ht-degree: 0%
 ---
 
 
-# Adobes hanterade tjänster
+# Adobe Managed Services
 
 Adobe Commerce är en plattform för att leverera e-handelsfunktioner som innehåller stabila färdiga funktioner, omfattande anpassningsmöjligheter och tredjepartsintegreringar.
 
-Adobes hanterade tjänster tillhandahåller värdbaserade och hanterade program och infrastrukturer för Adobe Commerce i molnbaserade infrastrukturplaner för Pro.
+Adobe Managed Services tillhandahåller värdbaserade och hanterade program och infrastrukturer för Adobe Commerce i molnbaserade infrastrukturplaner för Pro.
 
 ## Fördelar
 
-![Infografik som visar på fördelarna med Adobes hanterade tjänster](../../assets/playbooks/managed-services-benefits.png)
+![Infografik som visar på fördelarna med Adobe Managed Services](../../assets/playbooks/managed-services-benefits.png)
 
 ### Jämförelse av implementeringsalternativ
 
-Adobes hanterade tjänster ger viktiga fördelar jämfört med lokala och icke-hanterade molnimplementeringar, bland annat:
+Adobe Managed Services ger viktiga fördelar jämfört med lokala och icke-hanterade molnimplementeringar, bland annat:
 
-- **Förbättrade servicenivåmål (SLT)**- Snabbare svarstider än Adobe Commerce standardsupport.
+- **Förbättrade servicenivåmål**- Snabbare svarstider än Adobe Commerce standardsupport.
 - **Förbättrade servicenivåavtal (SLA)**- 99,9 % av de program som Adobe Commerce regelbundet använder i molninfrastruktur ligger steget före infrastrukturnivån på 99,99 %.
 - **Utsedd molnexpertis**—Managed Services förser kunderna med en utsedd Customer Success Engineer (CSE) som fungerar som expert på program- och molninfrastruktur. CSE samarbetar med kunder och deras partner för att ge dem bästa praxis och vägledning som snabbar upp time-to-market, inklusive:
    - Guide och support via introduktionsprocessen
@@ -37,11 +37,11 @@ Adobes hanterade tjänster ger viktiga fördelar jämfört med lokala och icke-h
 
 Se följande bild för en mer detaljerad jämförelse av fördelarna med Managed Services:
 
-![Infografik som visar en jämförelse mellan Adobes hanterade tjänster och andra implementeringsalternativ för Adobe Commerce](../../assets/playbooks/managed-services-compare.png)
+![Infografik som visar en jämförelse mellan Adobe Managed Services och andra implementeringsalternativ för Adobe Commerce](../../assets/playbooks/managed-services-compare.png)
 
 ## Roller och ansvarsområden
 
-Adobe tillhandahåller en uppsättning tjänster för tillhandahållande, utveckling, staging och produktion av Adobe Commerce i Managed Services-system. För att utvecklingen och driftsättningen av lösningen ska kunna fortsätta så effektivt som möjligt är det viktigt att kunden och partnern förstår och uppfyller sina roller enligt beskrivningen nedan:
+Adobe tillhandahåller en uppsättning tjänster för tillhandahållande, utveckling, staging och produktion av Adobe Commerce på Managed Services-system. För att utvecklingen och driftsättningen av lösningen ska kunna fortsätta så effektivt som möjligt är det viktigt att kunden och partnern förstår och uppfyller sina roller enligt beskrivningen nedan:
 
 <table>
     <thead>
@@ -374,9 +374,9 @@ Adobe säkerhetsstack för Managed Services bygger säkerhet på alla nivåer me
 
 Plattformspartners, som Amazon Web Services och Microsoft Azure, säkerställer maximal säkerhetstäckning vid användning av plattformsanpassningar, medan Adobe Managed Services-teamet tillhandahåller centrala säkerhetstjänster som regelefterlevnad, loggning, autentisering, skanning och övervakning samt serversäkerhet och säker programkonfiguration. Se [Adobe Commerce Security](https://business.adobe.com/products/magento/secure-ecommerce.html) för mer information.
 
-I följande diagram visas Adobe Managed Services-säkerhetstekniker:
+I följande diagram visas säkerhetsstacken Adobe Managed Services:
 
-![Bild som visar säkerhetsstacken för Adobe Managed Services](../../assets/playbooks/managed-services-security-stack.svg)
+![Bild som visar säkerhetsstacken Adobe Managed Services](../../assets/playbooks/managed-services-security-stack.svg)
 
 ## Uppgraderingshjälp
 
@@ -402,7 +402,7 @@ Adobe tillhandahåller en uppsättning tjänster för provisionering, utveckling
     <td>Skapa uppgraderingsprojektplan</td>
     <td>Ägare</td>
     <td>Medarbetare</td>
-    <td>Medarbetare<br />CSE tillhandahåller uppgraderingsmallar och exempel på uppgraderingsplan, ger råd och tips om de effektivaste strategierna.</td>
+    <td>Medarbetare<br />CSE tillhandahåller exempel på uppgraderingsmallar och uppgraderingsplaner; ger råd och tips om god praxis.</td>
   </tr>
   <tr>
     <td>Identifiera nödvändiga infrastrukturändringar</td>
@@ -421,10 +421,10 @@ Adobe tillhandahåller en uppsättning tjänster för provisionering, utveckling
     <td>Upgrade Infrastructure Services<br />[MariaDB, Redis, Open Search och Rabbit MQ] (Staging and Production)</td>
     <td></td>
     <td></td>
-    <td>Ägare<br />CSE koordinerar uppgraderingar av infrastrukturtjänster.<br />CSE planerar konferensmöte för uppgraderingar.<br />CSE underlättar datamigrering från produktion till mellanlagring.</td>
+    <td>Ägare<br />CSE koordinerar uppgraderingar av infrastrukturtjänster.<br />CSE planerar konferensmöte för uppgraderingar.<br />CSE hjälper till med datamigrering från produktion till mellanlagring.</td>
   </tr>
   <tr>
-    <td>Uppdatera bas och anpassningar för handelskoder, kodomkompilering och kodomfaktorisering</td>
+    <td>Uppdatera bas och anpassningar för Commerce-kod; kodomkompilering och kodomfaktorisering</td>
     <td>Medarbetare</td>
     <td>Ägare</td>
     <td></td>
@@ -452,7 +452,7 @@ Adobe tillhandahåller en uppsättning tjänster för provisionering, utveckling
     <td>Starta i produktion</td>
     <td>Medarbetare</td>
     <td>Ägare</td>
-    <td>Medarbetare<br />CSE planerar att starta konferensmöte.</td>
+    <td>Medarbetare<br />CSE schemalägger för konferensmöte.</td>
   </tr>
   <tr>
     <td>Efter start</td>

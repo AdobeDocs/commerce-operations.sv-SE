@@ -15,7 +15,7 @@ Så här uppdaterar eller uppgraderar du en modul eller ett tillägg:
 
 1. Hämta den uppdaterade filen från Marketplace eller någon annan tilläggsutvecklare. Notera modulens namn och version.
 
-1. Exportera innehållet till Adobe Commerce eller Magento Open Source rotinstallationskatalog.
+1. Exportera innehållet till Adobe Commerce eller Magento Open Source rotkatalog.
 
 1. Om det finns ett Composer-paket för modulen kör du något av följande.
 

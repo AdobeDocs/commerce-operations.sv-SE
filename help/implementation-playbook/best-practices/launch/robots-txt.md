@@ -1,5 +1,5 @@
 ---
-title: Bästa tillvägagångssätt för att konfigurera filerna "robots.txt" och "sitemap.xml"
+title: Bästa tillvägagångssätt vid konfigurering av filerna robots.txt och sitemap.xml
 description: Lär dig hur du skickar instruktioner om din Adobe Commerce webbplats till webbcrawler.
 role: Developer
 feature: Best Practices
@@ -72,7 +72,7 @@ Du kan konfigurera och köra flera butiker med en enda implementering av Adobe C
 
 Samma metodtips för att konfigurera `robots.txt` och `sitemap.xml` filer för [butiker för en webbplats](#single-site-storefronts) gäller för butiker med flera platser med två viktiga skillnader:
 
-- Se till att `robots.txt` och `sitemap.xml` filnamnen innehåller namnen på motsvarande platser. Till exempel:
+- Se till att `robots.txt` och `sitemap.xml` filnamnen innehåller namnen på motsvarande platser. Exempel:
    - `domaineone_robots.txt`
    - `domaintwo_robots.txt`
    - `domainone_sitemap.xml`

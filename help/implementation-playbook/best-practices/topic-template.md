@@ -43,7 +43,7 @@ Available features: https://git.corp.adobe.com/AdobeDocs/exl-config/blob/master/
 
 Adobe Commerce i molninfrastruktur med Adobe Commerce version 2.3.4 eller tidigare och MariaDB version 10.0 eller tidigare.
 
-&lt;!— Affärstyp: B2C och B2B - ange bara vid behov/)—>
+&lt;!— Affärstyp: B2C och B2B - ange endast vid behov/)—>
 
 ## Sidhuvud ...
 

@@ -30,7 +30,7 @@ Den enda skillnaden mellan det monolitiska och det headless-baserade tillvägag�
 
 ## Tredjepartssystem
 
-Vissa populära tjänster har redan bra tillägg för att stödja Adobe Commerce eller populära butikslösningar som PWA Studio, Adobe Experience Manager och Vue Storefront, som finns på deras utökade marknadsplats eller från andra tredjepartswebbplatser. Även om det inte finns någon befintlig utökning är det lika viktigt att implementera integreringen mellan Adobe Commerce och andra headless-butiker. Alla tredjepartstjänster har vanligtvis dokument som förklarar hur de kan integreras med dem. Dessa tjänster är bara några exempel. olika länder och marknader kan ha olika val.
+Vissa populära tjänster har redan bra tillägg för att stödja Adobe Commerce eller populära butikslösningar som PWA Studio, Adobe Experience Manager och Vue Storefront, som finns på deras utökade marknadsplats eller från andra tredjepartswebbplatser. Även om det inte finns någon befintlig utökning är det lika viktigt att implementera integreringen mellan Adobe Commerce och andra headless-butiker. Alla tredjepartstjänster har vanligtvis dokument som förklarar hur de kan integreras med dem. Dessa tjänster är bara några exempel. Olika länder och marknader kan ha olika val.
 
 ## Företagsintegreringar
 

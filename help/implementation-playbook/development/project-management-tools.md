@@ -51,7 +51,7 @@ GitHub liknar Bitbucket, som också används i vissa projekt.
 
 ## Kommunikation
 
-För olika kunder kan vi använda olika verktyg för kommunikation: e-post, Microsoft Teams och Slack är alla vanliga verktyg som vi har använt för projektrelaterad kommunikation.
+För olika kunder kan vi använda en mängd olika verktyg för kommunikation: e-post, Microsoft Teams och Slack är alla vanliga verktyg som vi har använt för projektrelaterad kommunikation.
 
 ## Möte
 

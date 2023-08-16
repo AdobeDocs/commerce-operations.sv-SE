@@ -1,6 +1,6 @@
 ---
 title: Managed Services
-description: Granska ansvarsområdena för Adobes hanterade tjänster, kunder och molntjänsteleverantörer för din Adobe Commerce när det gäller implementering av molninfrastruktur.
+description: Granska ansvarsområdena för Adobe Managed Services, kunder och molntjänsteleverantörer för din Adobe Commerce om implementering av molninfrastruktur.
 exl-id: b1442e31-06f4-4aa6-b24a-b6cda630d52f
 feature: Cloud, Services
 source-git-commit: 7c2e2bdabf47e1367ffb6761230d3d43f0f9d0cf
@@ -22,9 +22,9 @@ Adobe Commerce Pro-planer bygger på en säkerhetsmodell för delat ansvar. I de
 
 ![Diagram som visar Adobe Commerce modell för delat ansvar](../../../assets/playbooks/shared-responsibility.svg)
 
-### Adobes hanterade tjänster
+### Adobe Managed Services ansvarsområden
 
-Adobes hanterade tjänster ansvarar för säkerheten och tillgängligheten för Adobe Commerce Pro-molnmiljön, Adobe Commerce Pro-programkoden och interna handelssystem. Detta omfattar, men är inte begränsat till:
+Adobe Managed Services ansvarar för säkerheten och tillgängligheten för Adobe Commerce Pro-molnmiljön, Adobe Commerce Pro-programkoden och interna handelssystem. Detta omfattar, men är inte begränsat till:
 
 - Korrigering på servernivå
 - tillhandahålla Adobe Commerce Pro-planer
@@ -35,11 +35,11 @@ Adobes hanterade tjänster ansvarar för säkerheten och tillgängligheten för 
 - Support dygnet runt, alla dagar
 - Säkerställa att kundinfrastrukturen är tillgänglig i enlighet med serviceavtal
 
-Adobes hanterade tjänster hanterar även konfigurationer av serverns brandvägg (iptables) och brandväggskonfigurationer för perimetrar (säkerhetsgrupper). Adobe får också regelbundet släppa säkerhetsuppdateringar i kärnapplikationen. Det är kundens ansvar att tillämpa dessa korrigeringsfiler. Dessa områden omfattas alla av PCI-certifieringen av Adobe Commerce i molninfrastruktursystemet.
+Adobe Managed Services ansvarar också för att hantera serverns brandväggskonfigurationer (iptables) och perimeterns brandväggskonfigurationer (säkerhetsgrupper). Adobe får också regelbundet släppa säkerhetsuppdateringar i kärnapplikationen. Det är kundens ansvar att tillämpa dessa korrigeringsfiler. Dessa områden omfattas alla av PCI-certifieringen av Adobe Commerce i molninfrastruktursystemet.
 
 ### AWS ansvarsområden
 
-Adobes hanterade tjänster använder Amazon Web Services (AWS) för molnserverinfrastrukturen. AWS ansvarar för säkerheten i nätverket, inklusive routning, växling och perimeternätverkssäkerhet via brandväggssystem och system för intrångsdetektering (IDS). AWS ansvarar för fysisk säkerhet för de datacenter som hanterar Adobe Commerce molnmiljöer samt för miljösäkerhet för att säkerställa att ström-, kylnings- och mekanismkontroller finns på plats.
+Adobe Managed Services använder Amazon Web Services (AWS) för molnserverinfrastrukturen. AWS ansvarar för säkerheten i nätverket, inklusive routning, växling och perimeternätverkssäkerhet via brandväggssystem och system för intrångsdetektering (IDS). AWS ansvarar för fysisk säkerhet för de datacenter som hanterar Adobe Commerce molnmiljöer samt för miljösäkerhet för att säkerställa att ström-, kylnings- och mekanismkontroller finns på plats.
 
 Adobe Commerce Pro-planer använder:
 
@@ -48,7 +48,7 @@ Adobe Commerce Pro-planer använder:
 - Amazon Elastic Block Store (EBS)
 - Amazon Virtual Private Cloud (VPC)
 - Amazon Elastic Load Balancer (ELB)
-- Tjänster för spårning i Amazon Cloud.
+- Amazon Cloud Trail Services.
 
 Amazon har ett omfattande kompatibilitetsprogram som omfattar PCI DSS-, SOC 2- och ISO 27001-certifieringar.
 

@@ -19,17 +19,17 @@ ht-degree: 0%
 Att konfigurera databasreplikering ger följande fördelar:
 
 - Ger säkerhetskopiering av data
-- Aktiverar dataanalys utan att påverka den överordnad databasen
+- Aktiverar dataanalys utan att masterdatabasen påverkas
 - Skalbarhet
 
-MySQL-databaser replikeras asynkront, vilket innebär att slavar inte behöver anslutas permanent för att kunna ta emot uppdateringar från överordnad.
+MySQL-databaser replikeras asynkront, vilket innebär att slavar inte behöver anslutas permanent för att kunna ta emot uppdateringar från huvudservern.
 
 ## Konfigurera databasreplikering
 
 En fördjupad diskussion om databasreplikering ligger utanför den här handbokens räckvidd. Om du vill konfigurera den kan du läsa en resurs som:
 
 - [MySQL-dokumentation](https://dev.mysql.com/doc/refman/5.6/en/replication.html)
-- [Konfigurera Överordnad slavreplikering i MySQL (digitalocean)](https://www.digitalocean.com/community/tutorials/how-to-set-up-replication-in-mysql)
+- [Ställa in Master Slave-replikering i MySQL (digitalocean)](https://www.digitalocean.com/community/tutorials/how-to-set-up-replication-in-mysql)
 
 I Commerce finns exempel på MySQL-konfigurationer för dina slavdatabaser. En enkel konfiguration tillhandahålls med `ResourceConnections` class `README.md`.
 
@@ -122,7 +122,7 @@ Följande är mer avancerat och finns endast i din information:
 
 ## Prestandaförbättring
 
-Om du vill förbättra prestanda för överordnad-slave-replikering kan du filtrera vissa tabeller på slavinstanser. Vi rekommenderar att du filtrerar alla temporära tabeller med namnmönster `search\_tmp\_%` som används för katalogsökning.
+Om du vill förbättra prestanda för replikering av masterslav kan du filtrera vissa tabeller på slavinstanser. Vi rekommenderar att du filtrerar alla temporära tabeller med namnmönster `search\_tmp\_%` som används för katalogsökning.
 
 Lägg till följande rad i `my.cnf` på dina slavförekomster:
 

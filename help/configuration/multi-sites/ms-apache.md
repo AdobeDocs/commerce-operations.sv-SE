@@ -17,13 +17,13 @@ Om det behövs kopierar du den befintliga `index.php` startpunktsskript för web
 
 - Du arbetar på en utvecklingsmaskin (bärbar dator, virtuell dator osv.)
 
-   Ytterligare uppgifter kan behövas för att driftsätta flera webbplatser i en hostingmiljö. kontakta din värdleverantör för mer information.
+  Ytterligare uppgifter kan behövas för att distribuera flera webbplatser i en värdmiljö. Kontakta din värdleverantör för mer information.
 
-   Ytterligare uppgifter krävs för att konfigurera Adobe Commerce i molninfrastrukturen. När du har slutfört de uppgifter som beskrivs i det här avsnittet, se [Konfigurera flera webbplatser eller butiker](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html) i _Guide för Commerce on Cloud Infrastructure_.
+  Ytterligare uppgifter krävs för att konfigurera Adobe Commerce i molninfrastrukturen. När du har slutfört de uppgifter som beskrivs i det här avsnittet, se [Konfigurera flera webbplatser eller butiker](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html) i _Guide för Commerce on Cloud Infrastructure_.
 
-- Du använder en virtuell värd per webbplats; konfigurationsfilen för det virtuella värdsystemet är `/etc/httpd/httpd.conf`
+- Du använder en virtuell värd per webbplats. Konfigurationsfilen för den virtuella värden är `/etc/httpd/httpd.conf`
 
-   Olika versioner av Apache på olika operativsystem ställer in virtuella värdar på olika sätt. Läs [Apache-dokumentation](https://httpd.apache.org/docs/2.4/vhosts) eller en nätverksadministratör om du inte är säker på hur du konfigurerar en virtuell värd.
+  Olika versioner av Apache på olika operativsystem ställer in virtuella värdar på olika sätt. Läs [Apache-dokumentation](https://httpd.apache.org/docs/2.4/vhosts) eller en nätverksadministratör om du inte är säker på hur du konfigurerar en virtuell värd.
 
 - Commerce-programvaran är installerad i `/var/www/html/magento2`
 - Du har två andra webbplatser än standardwebbplatsen:
@@ -109,9 +109,8 @@ Om du inte har ställt in DNS för butikernas URL:er måste du lägga till en st
 
 >[!INFO]
 >
->- Ytterligare uppgifter kan behövas för att driftsätta flera webbplatser i en hostingmiljö. kontakta din värdleverantör för mer information.
->- Det krävs ytterligare uppgifter för att konfigurera Adobe Commerce för molninfrastruktur. se [Konfigurera flera olika Creative Cloud-webbplatser eller -butiker](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html) i _Guide för Commerce on Cloud Infrastructure_.
-
+>- Ytterligare uppgifter kan behövas för att distribuera flera webbplatser i en värdmiljö. Kontakta din värdleverantör för mer information.
+>- Ytterligare uppgifter krävs för att konfigurera Adobe Commerce för molninfrastruktur. Mer information finns [Konfigurera flera olika Creative Cloud-webbplatser eller -butiker](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html) i _Guide för Commerce on Cloud Infrastructure_.
 
 ### Felsökning
 

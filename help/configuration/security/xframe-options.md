@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Rubriken X-Frame-Options
 
-För att förhindra [Klickjacking](https://owasp.org/www-community/attacks/Clickjacking) explosioner, vi har lagt till ett alternativ för att använda [X-frame-options](https://datatracker.ietf.org/doc/html/rfc7034) HTTP-begärandehuvud i begäranden till butiken.
+För att förhindra [Klickjacking](https://owasp.org/www-community/attacks/Clickjacking) explosioner, vi har lagt till ett alternativ för att använda [X-frame-options](https://datatracker.ietf.org/doc/html/rfc7034) HTTP-begärandehuvud i begäranden till din butik.
 
 The `X-Frame-Options` I kan du ange om en webbläsare ska kunna återge en sida i en `<frame>`, `<iframe>`, eller `<object>` enligt följande:
 

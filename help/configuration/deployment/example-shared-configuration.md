@@ -20,7 +20,7 @@ De här inställningarna är tillgängliga i Admin i **Lager** > Inställningar 
 
 Du kan använda samma procedur för att konfigurera icke-känsliga, icke-systemspecifika inställningar i följande referenser:
 
-- [Andra konfigurationssökvägar - referens](../reference/config-reference-general.md)
+- [Referens för andra konfigurationssökvägar](../reference/config-reference-general.md)
 - [Referens för sökvägar för betalningskonfiguration](../reference/config-reference-payment.md)
 - [Referens för konfigurationssökvägar för Commerce Enterprise B2B-tillägg](../reference/config-reference-b2b.md)
 
@@ -88,4 +88,4 @@ Det sista steget i processen är att uppdatera produktionssystemet från källko
 
 >[!INFO]
 >
->Om du vill ändra en inställning som är låst i administratören använder du [`magento config:set --lock` kommando](../cli/set-configuration-values.md).
+>Använd knappen [`magento config:set --lock` kommando](../cli/set-configuration-values.md).

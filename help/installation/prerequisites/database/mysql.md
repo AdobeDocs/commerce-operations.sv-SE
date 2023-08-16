@@ -15,10 +15,10 @@ Se [Systemkrav](../../system-requirements.md) för de versioner av MySQL som st�
 
 Adobe _starkt_ rekommenderar att du följer följande standard när du konfigurerar databasen:
 
-* Adobe Commerce och Magento Open Source använder [MySQL-databasutlösare](https://dev.mysql.com/doc/refman/8.0/en/triggers.html) för att förbättra databasåtkomsten vid omindexering. Dessa skapas när indexeringsläget är inställt på [schema](../../../configuration/cli/manage-indexers.md#configure-indexers). Programmet stöder inte några anpassade utlösare i databasen eftersom anpassade utlösare kan orsaka inkompatibilitet med framtida versioner av Adobe Commerce och Magento Open Source.
+* Adobe Commerce och Magento Open Source använder [MySQL-databasutlösare](https://dev.mysql.com/doc/refman/8.0/en/triggers.html) för att förbättra databasåtkomsten vid omindexering. Dessa skapas när indexerarläget är inställt på [schema](../../../configuration/cli/manage-indexers.md#configure-indexers). Programmet stöder inte några anpassade utlösare i databasen eftersom anpassade utlösare kan orsaka inkompatibilitet med framtida versioner av Adobe Commerce och Magento Open Source.
 * Bekanta dig med [dessa potentiella MySQL-utlösarbegränsningar](https://dev.mysql.com/doc/mysql-reslimits-excerpt/8.0/en/stored-program-restrictions.html) innan du fortsätter.
 * Aktivera [`STRICT_ALL_TABLES`](https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html#sqlmode_strict_all_tables) SQL-läge för att förhindra att ogiltiga datavärden lagras, vilket kan orsaka oönskade databasinteraktioner.
-* Adobe Commerce och Magento Open Source _not_ har stöd för MySQL-satsbaserad replikering. Se till att du använder _endast_ [radbaserad replikering](https://dev.mysql.com/doc/refman/8.0/en/replication-formats.html).
+* Adobe Commerce och Magento Open Source _not_ stöder MySQL-satsbaserad replikering. Se till att du använder _endast_ [radbaserad replikering](https://dev.mysql.com/doc/refman/8.0/en/replication-formats.html).
 
 >[!WARNING]
 >
@@ -41,7 +41,7 @@ Om du tror att du kommer att importera ett stort antal produkter kan du öka vä
 >
 >Standardvärdet gäller för Adobe Commerce i molninfrastrukturen _och_ lokala projekt. Adobe Commerce i molninfrastruktur Pro-kunder måste öppna en supportbiljett för att öka `max_allowed_packet` värde. Adobe Commerce om molninfrastruktur Starter-kunder kan öka värdet genom att uppdatera konfigurationen i `/etc/mysql/mysql.cnf` -fil.
 
-Om du vill öka värdet öppnar du `/etc/mysql/mysql.cnf` i en textredigerare och leta reda på värdet för `max_allowed_packet`. Spara ändringarna i `mysql.cnf` stäng textredigeraren och starta om MySQL (`service mysql restart`).
+Öppna `/etc/mysql/mysql.cnf` i en textredigerare och leta reda på värdet för `max_allowed_packet`. Spara ändringarna i `mysql.cnf` stäng textredigeraren och starta om MySQL (`service mysql restart`).
 
 Om du vill verifiera det värde du anger anger du följande kommando på `mysql>` fråga:
 
@@ -58,7 +58,7 @@ I det här avsnittet beskrivs viktiga ändringar av MySQL 8 som utvecklare bör 
 
 ### Bredd för heltalstyper (utfyllnad) har tagits bort
 
-Specifikationen för visningsbredd för heltalsdatatyper (TINYINT, SMALLINT, MEDIUMINT, INT, BIGINT) har tagits bort i MySQL 8.0.17. Programsatser som innehåller datatypsdefinitioner i utdata visar inte längre visningsbredden för heltalstyper, med undantag för TINYINT(1). MySQL-kopplingar förutsätter att TINYINT(1)-kolumner har sitt ursprung som BOOLEAN-kolumner. Med det här undantaget kan de fortsätta att anta det.
+Specifikationen för visningsbredd för heltalsdatatyper (TINYINT, SMALLINT, MEDIUMINT, INT, BIGINT) har tagits bort i MySQL 8.0.17. Programsatser som innehåller datatypsdefinitioner i utdata visar inte längre visningsbredden för heltalstyper, förutom TINYINT(1). MySQL-kopplingar förutsätter att TINYINT(1)-kolumner har sitt ursprung som BOOLEAN-kolumner. Med det här undantaget kan de fortsätta att göra det antagandet.
 
 #### Exempel
 
@@ -67,15 +67,15 @@ Beskriv admin_user vid mysql 8.19
 | Fält | Typ | Null | Nyckel | Standard | Extra |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | user\_id | `int unsigned` | NEJ | PRI | `NULL` | `auto_increment` |
-| `firstname` | `varchar(32)` | JA |  | `NULL` |  |
-| `lastname` | `varchar(32`) | JA |  | `NULL` |  |
-| `email` | `varchar(128)` | JA |  | `NULL` |  |
-| `username` | `varchar(40)` | JA | UNI | `NULL` |  |
-| `password` | `varchar(255)` | NEJ |  | `NULL` |  |
-| `created` | `timestamp` | NEJ |  | `CURRENT_TIMESTAMP` | `DEFAULT_GENERATED` |
-| `modified` | `timestamp` | NEJ |  | `CURRENT_TIMESTAMP` | `DEFAULT_GENERATED` vid uppdatering `CURRENT_TIMESTAMP` |
-| `logdate` | `timestamp` | JA |  | `NULL` |  |
-| `lognum` | `smallint unsigned` | NEJ |  | `0` |  |
+| `firstname` | `varchar(32)` | JA | | `NULL` | |
+| `lastname` | `varchar(32`) | JA | | `NULL` | |
+| `email` | `varchar(128)` | JA | | `NULL` | |
+| `username` | `varchar(40)` | JA | UNI | `NULL` | |
+| `password` | `varchar(255)` | NEJ | | `NULL` | |
+| `created` | `timestamp` | NEJ | | `CURRENT_TIMESTAMP` | `DEFAULT_GENERATED` |
+| `modified` | `timestamp` | NEJ | | `CURRENT_TIMESTAMP` | `DEFAULT_GENERATED` vid uppdatering `CURRENT_TIMESTAMP` |
+| `logdate` | `timestamp` | JA | | `NULL` | |
+| `lognum` | `smallint unsigned` | NEJ | | `0` | |
 
 Förutom för _TINYINT(1)_, ska all heltalsutfyllnad (TINYINT > 1, SMALLINT, MEDIUMINT, INT, BIGINT) tas bort från `db_schema.xml` -fil.
 
@@ -94,7 +94,7 @@ Från och med MySQL 8.0.13 är den borttagna `ASC` eller `DESC` kvalificerare f�
 
 Vissa förändringar av Adobe Commerce och Magento Open Source har gjorts för att stödja MySQL 8.
 
-### Fråga och infoga beteende
+### Fråge- och infogningsbeteende
 
 Adobe Commerce och Magento Open Source inaktiverade det reguljära valideringsbeteendet genom att ställa in SET SQL_MODE=&#39; i `/lib/internal/Magento/Framework/DB/Adapter/Pdo/Mysql.php:424.`. Om valideringen är inaktiverad är det möjligt att MySQL trunkerar data. I MySQL har frågebeteendet ändrats: `Select * on my_table where IP='127.0.0.1'` returnerar inte längre resultat eftersom IP-adressen nu visas korrekt som en sträng i stället för som ett heltal.
 
@@ -117,7 +117,7 @@ Om du vill uppdatera MySQL korrekt från version 5.7 till version 8 måste du f�
 
 1. Uppdatera MySQL till version 8.
 1. Importera säkerhetskopierade data till MySQL.
-1. Rensa cacheminnet:
+1. Rensa cachen:
 
    ```bash
    bin/magento cache:clean
@@ -188,7 +188,7 @@ Så här konfigurerar du en MySQL-databasinstans:
    * [MySQL 5.7](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_explicit_defaults_for_timestamp)
    * [MariaDB](https://mariadb.com/kb/en/server-system-variables/#explicit_defaults_for_timestamp)
 
-   Om den här inställningen inte är aktiverad `bin/magento setup:db:status` rapporterar alltid att `Declarative Schema is not up to date`.
+   Om inställningen inte är aktiverad `bin/magento setup:db:status` rapporterar alltid att `Declarative Schema is not up to date`.
 
 >[!NOTE]
 >

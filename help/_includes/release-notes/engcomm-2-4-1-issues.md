@@ -108,7 +108,7 @@ ht-degree: 13%
 | Lukasz Bajsarowicz | [#28351](https://github.com/magento/magento2/pull/28351) | [28376](https://github.com/magento/magento2/issues/28376) |
 | Lukasz Bajsarowicz | [#27965](https://github.com/magento/magento2/pull/27965) | [27962](https://github.com/magento/magento2/issues/27962) |
 | Sathiska subramanska | [#27567](https://github.com/magento/magento2/pull/27567) | [27091](https://github.com/magento/magento2/issues/27091) |
-| quangdo-aligent | [#27429](https://github.com/magento/magento2/pull/27429) | [28306](https://github.com/magento/magento2/issues/28306) |
+| quangdojustera | [#27429](https://github.com/magento/magento2/pull/27429) | [28306](https://github.com/magento/magento2/issues/28306) |
 | Kate Kyzyma | [#28727](https://github.com/magento/magento2/pull/28727) |  |
 | Kate Kyzyma | [#28684](https://github.com/magento/magento2/pull/28684) |  |
 | Kate Kyzyma | [#28679](https://github.com/magento/magento2/pull/28679) |  |
@@ -274,7 +274,7 @@ ht-degree: 13%
 | Nazar Klovanych | [#29475](https://github.com/magento/magento2/pull/29475) |  |
 | Oleh Usik | [#29472](https://github.com/magento/magento2/pull/29472) | [29539](https://github.com/magento/magento2/issues/29539) |
 | Vadim Malesh | [#29455](https://github.com/magento/magento2/pull/29455) | [25211](https://github.com/magento/magento2/issues/25211) |
-| yolouesiska | [#29398](https://github.com/magento/magento2/pull/29398) | [1684](https://github.com/magento/magento2/issues/1684) |
+| yolouiesiska | [#29398](https://github.com/magento/magento2/pull/29398) | [1684](https://github.com/magento/magento2/issues/1684) |
 | Lukasz Bajsarowicz | [#29376](https://github.com/magento/magento2/pull/29376) | [29453](https://github.com/magento/magento2/issues/29453) |
 | iGerchak | [#29291](https://github.com/magento/magento2/pull/29291) | [29286](https://github.com/magento/magento2/issues/29286) |
 | Nikita Sarychev | [#29214](https://github.com/magento/magento2/pull/29214) | [29213](https://github.com/magento/magento2/issues/29213) |

@@ -1,5 +1,5 @@
 ---
-title: Konfigurera överordnad databaser manuellt
+title: Konfigurera huvuddatabaser manuellt
 description: Mer information om hur du konfigurerar lösningen för delad databas manuellt.
 recommendations: noCatalog
 exl-id: 2c357486-4a8a-4a36-9e13-b53c83f69456
@@ -10,7 +10,7 @@ ht-degree: 0%
 
 ---
 
-# Konfigurera överordnad databaser manuellt
+# Konfigurera huvuddatabaser manuellt
 
 {{ee-only}}
 
@@ -29,18 +29,18 @@ Manuell delning av databaser innefattar:
 
 >[!WARNING]
 >
->Om någon anpassad kod använder JOIN-koder med tabeller i försäljnings- och offertdatabaserna, _inte_ använda delade databaser. Om du är osäker kan du kontakta författarna till en anpassad kod eller tillägg för att kontrollera att deras kod inte använder JOIN-koder.
+>Om någon anpassad kod använder JOIN-koder med tabeller i försäljnings- och offertdatabaserna _inte_ använda delade databaser. Om du är osäker kan du kontakta författarna till en anpassad kod eller tillägg för att kontrollera att deras kod inte använder JOIN-koder.
 
 I det här avsnittet används följande namnkonventioner:
 
-- Huvuddatabasnamnet är `magento` och dess användarnamn och lösenord är båda `magento`
-- Namnet på offertdatabasen är `magento_quote` och dess användarnamn och lösenord är båda `magento_quote`
+- Huvuddatabasnamnet är `magento` och dess användarnamn och lösenord `magento`
+- Namnet på offertdatabasen är `magento_quote` och dess användarnamn och lösenord `magento_quote`
 
-   Offertdatabasen kallas även _utcheckning_ databas.
+  Offertdatabasen kallas även _utcheckning_ databas.
 
-- Försäljningsdatabasens namn är `magento_sales` och dess användarnamn och lösenord är båda `magento_sales`
+- Försäljningsdatabasens namn är `magento_sales` och dess användarnamn och lösenord `magento_sales`
 
-   Försäljningsdatabasen kallas också OMS-databasen.
+  Försäljningsdatabasen kallas också OMS-databasen.
 
 >[!INFO]
 >
@@ -61,7 +61,7 @@ Adobe rekommenderar starkt att du säkerhetskopierar din aktuella databas och di
 
 1. Fortsätt med nästa avsnitt.
 
-## Ställ in ytterligare överordnad databaser
+## Ställ in ytterligare huvuddatabaser
 
 I det här avsnittet beskrivs hur du skapar databasinstanser för försäljnings- och offerttabeller.
 
@@ -212,7 +212,7 @@ Kör föregående skript:
    source <path>/<script>.sql
    ```
 
-   Till exempel:
+   Exempel:
 
    ```shell
    source /root/sql-scripts/1_foreign-sales.sql
@@ -297,7 +297,7 @@ Plats
 
 - `<your sales DB name>` med namnet på din försäljningsdatabas.
 
-   I det här avsnittet är exempeldatabasens namn `magento_sales`.
+  I det här avsnittet är exempeldatabasens namn `magento_sales`.
 
 - `<root username>` med ditt MySQL-rotanvändarnamn
 - `<root user password>` med användarens lösenord
@@ -337,7 +337,7 @@ Kör skriptet på följande sätt:
 1. På `mysql >` kör du skriptet enligt följande:
    `source <path>/<script>.sql`
 
-   Till exempel:
+   Exempel:
 
    ```shell
    source /root/sql-scripts/2_foreign-key-quote.sql
@@ -463,7 +463,7 @@ Kör skriptet på följande sätt:
    source <path>/<script>.sql
    ```
 
-   Till exempel:
+   Exempel:
 
    ```shell
    source /root/sql-scripts/3_drop-tables.sql
@@ -488,7 +488,7 @@ Så här uppdaterar du distributionskonfigurationen:
 
 ### Uppdatera databasanslutningar
 
-Leta reda på blocket som börjar med `'default'` (under `'connection'`) och lägga till `'checkout'` och `'sales'` -avsnitt. Ersätt exempelvärden med värden som passar din plats.
+Hitta blocket som börjar med `'default'` (under `'connection'`) och lägga till `'checkout'` och `'sales'` -avsnitt. Ersätt exempelvärden med värden som passar din plats.
 
 ```php
  'default' =>
@@ -529,7 +529,7 @@ Leta reda på blocket som börjar med `'default'` (under `'connection'`) och lä
 
 ### Uppdatera resurser
 
-Leta reda på blocket som börjar med `'resource'` och lägga till `'checkout'` och `'sales'` enligt följande:
+Hitta blocket som börjar med `'resource'` och lägga till `'checkout'` och `'sales'` enligt följande:
 
 ```php
 'resource' =>
@@ -635,7 +635,7 @@ where for_name like '<your main DB name>/%'
 ;
 ```
 
-### Släpp försäljningsregister
+### Släpp försäljningstabeller
 
 Det här skriptet släpper säljtabeller från Commerce-databasen.
 

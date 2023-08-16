@@ -61,11 +61,11 @@ Följande avsnitt innehåller information om god praxis för utvecklingsfasen.
 
 - [Utvecklingsarbetsflöde för molninfrastruktur](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow.html)
 
-## Kod, sammanfoga, testa
+## Kod, sammanfogning, test
 
 - [Bästa tillvägagångssätt för byggen och driftsättningen](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/best-practices.html)
 - [Statisk innehållsdistribution - moln](static-content-deployment.md)
 - [Optimera CSS- och JS-filer](optimize-css-js-files.md)
 - [Optimera bilder för en mer responsiv webbplats](image-optimization.md)
 - [Felsökning av bästa praxis för Adobe Commerce i molninfrastruktur](troubleshooting.md)
-- [Ta reda på när och hur databastabeller ändras](modifying-core-and-third-party-tables.md)
+- [Lär dig när och hur du ändrar databastabeller](modifying-core-and-third-party-tables.md)

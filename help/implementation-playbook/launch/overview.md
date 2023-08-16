@@ -14,4 +14,4 @@ ht-degree: 0%
 
 Vid den här tidpunkten i er e-handelsresa har era team och organisationer ägnat flera månader åt att organisera, planera och bygga en lösning som passar ert varumärkes behov och som kommer att expandera ert företag. Nu när startpunkten äntligen är här betyder det inte att jobbet är klart.
 
-Från de sista kontrollpunkterna före lansering till de steg efter lanseringen som säkerställer att sajten fortsätter att behålla effektivitetsnivån från första dagen, har vi markerat alla taktiker och åtgärder som du bör vidta i fyra viktiga steg från testning till efter lansering. Spara checklistorna som en guide till smidig start och betalning till alla dessa månader av hårt arbete.
+Från de sista kontrollpunkterna före lansering till de steg efter lanseringen som säkerställer att sajten fortsätter att behålla effektivitetsnivån från första dagen, har vi markerat alla taktiker och åtgärder som du bör vidta i fyra viktiga steg från testning till efter lansering. Spara checklistorna eftersom de är din guide till en smidig start och betalning till alla dessa månader av hårt arbete.

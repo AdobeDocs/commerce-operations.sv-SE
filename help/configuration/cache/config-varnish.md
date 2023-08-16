@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Konfigurera lack
 
-[Finska cache] är en webbprogramsaccelerator med öppen källkod (kallas även _HTTP-accelerator_ eller _cachelagring av omvänd HTTP-proxy_). I Finish lagras (eller cachelagrar) filer eller fragment av filer i minnet, vilket gör att Varnish kan minska svarstiden och bandbreddsanvändningen för framtida, likvärdiga begäranden. Till skillnad från webbservrar som Apache och nginx har Varnish utformats för att endast användas med HTTP-protokollet.
+[Finska cache] är en webbprogramsaccelerator med öppen källkod (kallas även _HTTP-acceleration_ eller _cachelagring av omvänd HTTP-proxy_). I Finish lagras (eller cachelagrar) filer eller fragment av filer i minnet, vilket gör att Varnish kan minska svarstiden och bandbreddsanvändningen för framtida, likvärdiga begäranden. Till skillnad från webbservrar som Apache och nginx har Varnish utformats för att endast användas med HTTP-protokollet.
 
 Commerce 2.4.2 har testats med Varnish 6.4. Commerce 2.4.x är kompatibel med Varnish 6.x
 
@@ -52,9 +52,10 @@ Processen kan sammanfattas enligt följande:
    Om det inte finns något i din `<magento_root>/var/page_cache` har du konfigurerat engelska med Commerce!
 
 >[!NOTE]
+>
 - Förutom där det anges måste du ange alla kommandon som beskrivs i det här avsnittet som en användare med `root` behörighet.
+>
 - Det här avsnittet är skrivet för lack i CentOS och Apache 2.4. Om du konfigurerar lack i en annan miljö kan vissa kommandon vara annorlunda. Mer information finns i dokumentationen för Varnish.
-
 
 ## Kända fel
 
@@ -62,28 +63,28 @@ Vi känner till följande problem med Varnish:
 
 - [Varnish stöder inte SSL]
 
-   Alternativt kan du använda SSL-avslutning eller en SSL-avslutningsproxy.
+  Alternativt kan du använda SSL-avslutning eller en SSL-avslutningsproxy.
 
 - Om du tar bort innehållet i `<magento_root>/var/cache` måste du starta om Varnish.
 
 - Möjligt fel vid installation av Commerce:
 
-   ```terminal
-   Error 503 Service Unavailable
-   Service Unavailable
-   XID: 303394517
-   Varnish cache server
-   ```
+  ```terminal
+  Error 503 Service Unavailable
+  Service Unavailable
+  XID: 303394517
+  Varnish cache server
+  ```
 
-   Om det här felet uppstår kan du redigera `default.vcl` och lägga till en timeout i `backend` stanza enligt följande:
+  Om det här felet uppstår kan du redigera `default.vcl` och lägga till en timeout i `backend` stanza enligt följande:
 
-   ```conf
-   backend default {
-       .host = "127.0.0.1";
-       .port = "8080";
-       .first_byte_timeout = 600s;
-   }
-   ```
+  ```conf
+  backend default {
+      .host = "127.0.0.1";
+      .port = "8080";
+      .first_byte_timeout = 600s;
+  }
+  ```
 
 ## Översikt över cachning i lack
 
@@ -94,7 +95,8 @@ Cachelagring av lack fungerar tillsammans med Commerce med:
 - `default.vcl` konfiguration för lack som genererats med [Administratör](../cache/configure-varnish-commerce.md)
 
 >[!INFO]
-Det här avsnittet omfattar endast standardalternativen i föregående lista. Det finns många andra sätt att konfigurera cachelagring i komplexa scenarier (till exempel med hjälp av ett leveransnätverk). Dessa metoder ligger utanför den här handbokens räckvidd.
+>
+Det här avsnittet omfattar endast standardalternativen i den föregående listan. Det finns många andra sätt att konfigurera cachelagring i komplexa scenarier (till exempel med hjälp av ett leveransnätverk). Dessa metoder ligger utanför den här guidens räckvidd.
 
 På den första webbläsarbegäran levereras cachelagrade resurser till klientwebbläsaren från Varnish och cachelagras i webbläsaren.
 
@@ -117,6 +119,7 @@ I bilden nedan visas ett exempel med en webbläsarkontroll:
 I exemplet ovan visas en begäran för huvudsidan för butiken (`m2_ce_my`). CSS- och JavaScript-resurser cachelagras i klientwebbläsaren.
 
 >[!NOTE]
+>
 De flesta statiska resurser har en HTTP 200-statuskod (OK) som anger att resursen hämtades från servern.
 
 ### Andra webbläsarbegäran
@@ -139,7 +142,7 @@ Dessutom returneras statiska resurser med en HTTP-statuskod på 304 (inte ändra
 
 ![HTTP 304-svarskoden (inte ändrad) anger att den statiska resursen i det lokala cacheminnet är densamma som på servern](../../assets/configuration/varnish-304.png)
 
-304-statuskoden inträffar eftersom användaren ogiltigförklarade sin lokala cache och innehållet på servern inte ändrades. På grund av 304-statuskoden är den statiska resursen _innehåll_ inte överförs, bara HTTP-huvuden hämtas till webbläsaren.
+304-statuskoden inträffar eftersom användaren ogiltigförklarade sin lokala cache och innehållet på servern inte ändrades. På grund av 304-statuskoden är den statiska resursen _innehåll_ överförs inte. Endast HTTP-huvuden hämtas till webbläsaren.
 
 Om innehållet ändras på servern hämtar klienten den statiska resursen med en HTTP 200-statuskod (OK) och en ny ETag.
 

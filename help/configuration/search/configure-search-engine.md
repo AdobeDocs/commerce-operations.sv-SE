@@ -17,7 +17,7 @@ I det här avsnittet beskrivs de minimiinställningar som du måste välja för 
 >[!TIP]
 >
 >I version 2.4.4 och 2.4.3-p2 är alla fält märkta **Elasticsearch** gäller även OpenSearch.
->När stöd för Elasticsearch 8.x infördes i version 2.4.6 skapades nya etiketter för att skilja mellan Elasticsearch och OpenSearch-konfigurationer.
+>När stöd för Elasticsearch 8.x introducerades i version 2.4.6 skapades nya etiketter för att skilja mellan Elasticsearch och OpenSearch-konfigurationer.
 
 Mer information om hur du konfigurerar sökmotorn finns i [Användarhandbok](https://experienceleague.adobe.com/docs/commerce-admin/catalog/catalog/search/search-configuration.html).
 
@@ -30,20 +30,20 @@ Mer information om hur du konfigurerar sökmotorn finns i [Användarhandbok](htt
 Så här konfigurerar du systemet att använda Elasticsearch eller OpenSearch:
 
 1. Logga in på administratören som administratör.
-1. Klicka **[!UICONTROL Stores]** > [!UICONTROL Settings] > **[!UICONTROL Configuration]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog Search]**.
+1. Klicka på **[!UICONTROL Stores]** > [!UICONTROL Settings] > **[!UICONTROL Configuration]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog Search]**.
 1. Från **[!UICONTROL Search Engine]** väljer du motsvarande version av sökmotorn.
 
    I följande tabell visas de alternativ som krävs för att konfigurera och testa anslutningen med Commerce. Om du inte har ändrat serverinställningarna för sökmotorn bör standardinställningarna fungera. Gå till nästa steg.
 
    | Alternativ | Beskrivning |
    |--- |--- |
-   | **[!UICONTROL Server Hostname]** | Ange det fullständiga värdnamnet eller IP-adressen för datorn som kör Elasticsearch eller OpenSearch.<br>Adobe Commerce om molninfrastruktur: Få ut det här värdet av ditt integreringssystem. |
-   | **[!UICONTROL Server Port]** | Ange webbserverproxyporten. Standardvärdet är 9 200<br>Adobe Commerce om molninfrastruktur: Få ut det här värdet av ditt integreringssystem. |
+   | **[!UICONTROL Server Hostname]** | Ange det fullständiga värdnamnet eller IP-adressen för datorn som kör Elasticsearch eller OpenSearch.<br>Adobe Commerce i molninfrastruktur: få ut det här värdet av ditt integreringssystem. |
+   | **[!UICONTROL Server Port]** | Ange webbserverproxyporten. Standardvärdet är 9 200<br>Adobe Commerce i molninfrastruktur: få ut det här värdet av ditt integreringssystem. |
    | **[!UICONTROL Index Prefix]** | Ange indexprefixet för sökmotorn. Om du använder en enda instans för mer än en Commerce-installation (mellanlagrings- och produktionsmiljöer) måste du ange ett unikt prefix för varje installation. I annat fall kan du använda standardprefixet magento2. |
    | **[!UICONTROL Enable HTTP Auth]** | Klicka **[!UICONTROL Yes]** bara om du har aktiverat autentisering för sökmotorservern. Ange i så fall ett användarnamn och lösenord i de angivna fälten. |
    | **[!UICONTROL Server Timeout]** | Ange hur lång tid (i sekunder) som du vill vänta när du försöker upprätta en anslutning till Elasticsearch eller OpenSearch-servern. |
 
-1. Klicka **[!UICONTROL Test Connection]**.
+1. Klicka på **[!UICONTROL Test Connection]**.
 
    Exempelsvar:
 
@@ -67,17 +67,17 @@ Prova i så fall följande:
 - Verifiera värdet för **[!UICONTROL Server Hostname]** fält. Kontrollera att servern är tillgänglig. Du kan testa serverns IP-adress i stället.
 - Använd `netstat -an | grep <listen-port>` för att verifiera att porten som anges i **[!UICONTROL Server Port]** fältet används inte av en annan process.
 
-   Om du till exempel vill se om sökmotorn körs på standardporten använder du följande kommando:
+  Om du till exempel vill se om sökmotorn körs på standardporten använder du följande kommando:
 
-   ```bash
-   netstat -an | grep 9200
-   ```
+  ```bash
+  netstat -an | grep 9200
+  ```
 
-   Om den körs på port 9200 visas den på ungefär följande sätt:
+  Om den körs på port 9200 visas den på ungefär följande sätt:
 
-   ```terminal
-   `tcp        0      0 :::9200            :::-         LISTEN`
-   ```
+  ```terminal
+  `tcp        0      0 :::9200            :::-         LISTEN`
+  ```
 
 ## Indexera om katalogsökning och uppdatera helsidescachen
 
@@ -86,7 +86,7 @@ När du har ändrat sökmotorkonfigurationen måste du indexera om katalogens s�
 Så här uppdaterar du cachen med hjälp av administratören:
 
 1. Klicka på Admin **[!UICONTROL System]** > **[!UICONTROL Cache Management]**.
-1. Markera kryssrutan bredvid **[!UICONTROL Page Cache]**.
+1. Markera kryssrutan intill **[!UICONTROL Page Cache]**.
 1. Från **[!UICONTROL Actions]** i övre högra hörnet klickar du på **Uppdatera**.
 
    ![cachehantering](../../assets/configuration/refresh-cache.png)
@@ -114,4 +114,4 @@ Så här indexerar du om med kommandoraden:
 
    >[!INFO]
    >
-   >Till skillnad från cacheminnet uppdateras indexerare av ett cron-jobb. Se till att [cron är aktiverat](../cli/configure-cron-jobs.md) innan du börjar använda sökmotorn.
+   >Till skillnad från cacheminnet uppdateras indexerare av ett cron-jobb. Kontrollera att [cron är aktiverat](../cli/configure-cron-jobs.md) innan du börjar använda sökmotorn.

@@ -48,7 +48,7 @@ Adobe Commerce och Magento Open Source använder serveråterskrivningar och `.ht
 
    >[!TIP]
    >
-   >I Apache 2.4 är serverns standardplatskonfigurationsfil `/etc/apache2/sites-available/000-default.conf`.
+   >I Apache 2.4 är serverns standardkonfigurationsfil `/etc/apache2/sites-available/000-default.conf`.
 
    Du kan till exempel lägga till följande i slutet av `000-default.conf`:
 
@@ -72,7 +72,6 @@ Adobe Commerce och Magento Open Source använder serveråterskrivningar och `.ht
    >
    >- Om du har uppgraderat från en tidigare Apache-version ska du först leta efter `<Directory "/var/www/html">` eller `<Directory "/var/www">` in `000-default.conf`.
    >- Du måste ändra värdet för `AllowOverride` i direktivet för den katalog som du vill installera Adobe Commerce eller Magento Open Source. Om du till exempel vill installera i webbserverdokumentet redigerar du direktivet i `<Directory /var/www>`.
-
 
 >[!NOTE]
 >
@@ -117,7 +116,7 @@ I följande avsnitt beskrivs hur du installerar eller uppgraderar Apache:
 
 ### Installerar Apache på Ubuntu
 
-Så här installerar du standardversionen av Apache:
+Installera standardversionen av Apache:
 
 1. Installera Apache
 
@@ -125,7 +124,7 @@ Så här installerar du standardversionen av Apache:
    apt-get -y install apache2
    ```
 
-1. Kontrollera installationen.
+1. Verifiera installationen.
 
    ```bash
    apache2 -v
@@ -142,7 +141,7 @@ Så här installerar du standardversionen av Apache:
 
 ### Uppgraderar Apache på Ubuntu
 
-Så här uppgraderar du till Apache 2.4:
+Uppgradera till Apache 2.4:
 
 1. Lägg till `ppa:ondrej` databas med Apache 2.4:
 
@@ -168,7 +167,7 @@ Så här uppgraderar du till Apache 2.4:
    >
    >Om kommandot &quot;apt-get install&quot; misslyckas på grund av ofullständiga beroenden bör du kontakta en resurs som [https://askubuntu.com/](https://askubuntu.com/questions/140246/how-do-i-resolve-unmet-dependencies-after-adding-a-ppa).
 
-1. Kontrollera installationen.
+1. Verifiera installationen.
 
    ```bash
    apache2 -v
@@ -187,7 +186,7 @@ Så här uppgraderar du till Apache 2.4:
 
 Adobe Commerce och Magento Open Source kräver att Apache använder serveråterskrivningar. Du måste också ange vilken typ av direktiv som kan användas i `.htaccess`som programmet använder för att ange regler för omskrivning.
 
-Installation och konfigurering av Apache är en process i tre steg: installera programvaran, aktivera omskrivning och ange `.htaccess` direktiv.
+Installation och konfigurering av Apache är i stort sett en trestegsprocess: installera programmet, aktivera omskrivning och ange `.htaccess` direktiv.
 
 ### Installerar Apache
 
@@ -214,7 +213,7 @@ Installation och konfigurering av Apache är en process i tre steg: installera p
 
    >[!NOTE]
    >
-   >Även om Apache 2.4 tillhandahålls som standard med CentOS, se följande avsnitt för att konfigurera det.
+   >Även om Apache 2.4 finns som standard med CentOS, se följande avsnitt för att konfigurera det.
 
 ### Aktivera omskrivning och .htaccess för CentOS
 
@@ -232,7 +231,7 @@ Installation och konfigurering av Apache är en process i tre steg: installera p
 
 1. Ändra värdet för `AllowOverride` till `All`.
 
-   Till exempel:
+   Exempel:
 
    ```conf
    <Directory "/var/www/">
@@ -273,7 +272,7 @@ Installation och konfigurering av Apache är en process i tre steg: installera p
 
 1. Ändra värdet för `AllowOverride` till `All`.
 
-   Till exempel:
+   Exempel:
 
    ```conf
    <Directory "/var/www/html">
@@ -310,7 +309,7 @@ Om du stöter på 403 Otillåtna fel när du försöker få åtkomst till webbpl
 
 Om du vill att webbplatsbesökare ska kunna komma åt din webbplats använder du något av [Kräv direktiv](https://httpd.apache.org/docs/2.4/howto/access.html).
 
-Till exempel:
+Exempel:
 
 ```conf
 <Directory "/var/www/">

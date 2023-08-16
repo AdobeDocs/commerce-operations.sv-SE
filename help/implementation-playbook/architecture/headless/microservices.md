@@ -24,6 +24,6 @@ En mikrotjänstarkitektur är en term som används för att beskriva metoden att
 
 - **Autonom utveckling**—Kan utvecklas och driftsättas oberoende av varandra.
 
-Mikrotjänster har ingenting att göra med att hugga av huvudet på e-handelsstacken eller API:erna. När vi tänker på de e-handelstjänster i kärnkoden som finns på Adobe Commerce bakkontor handlar det om att isolera dessa tjänster från varandra. Så en mikrotjänstarkitektur bryter löst upp alla tjänster som prissättnings-, katalogtjänst- och inventeringstjänster och gör var och en isolerad från varandra.
+Mikrotjänster har ingenting att göra med att hugga av huvudet på e-handelsstacken eller API:erna. När vi tänker på de e-handelstjänster i kärnkoden som finns på Adobe Commerce bakkontor handlar det om att isolera dessa tjänster från varandra. Så en mikrotjänstarkitektur bryter löst upp alla tjänster som prissättnings-, katalogtjänst- och inventeringstjänster och gör var och en av dem isolerad från varandra.
 
 Mikrotjänster kan skalas oberoende och utvecklas självständigt. Microservices liknar en SaaS-utvecklingsprocess för flera innehavare. Många moderna SaaS-produkter med flera innehavare utvecklas med en strategi där flera tjänster används. Till och med Adobe SaaS-produkter, som orderhantering, det nya AI-drivna Recommendations-verktyget och andra SaaS-komponenter i Adobe Commerce håller på att utvecklas på ett sätt som bygger på mikrotjänster. För att vara mycket tydlig är Adobe Commerce 2.4.x inte en arkitektur för mikrotjänster utan en headless-arkitektur.

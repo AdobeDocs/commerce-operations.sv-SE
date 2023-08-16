@@ -1,25 +1,25 @@
 ---
-title: Konfigurera överordnad databaser automatiskt
+title: Konfigurera huvuddatabaser automatiskt
 description: Mer information om hur du konfigurerar den delade databaslösningen automatiskt.
 recommendations: noCatalog
 exl-id: a27ad097-de60-4cdd-81f9-eb1ae84587e4
 source-git-commit: af45ac46afffeef5cd613628b2a98864fd7da69b
 workflow-type: tm+mt
 source-wordcount: '355'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# Konfigurera överordnad databaser automatiskt
+# Konfigurera huvuddatabaser automatiskt
 
 {{ee-only}}
 
 {{deprecate-split-db}}
 
-I det här avsnittet beskrivs hur du kommer igång med den delade databaslösningen genom att:
+I det här avsnittet beskrivs hur du kommer igång med den delade databaslösningen:
 
-1. Installera Adobe Commerce med en enda överordnad databas (namngiven `magento`)
-1. Skapa ytterligare två överordnad databaser för utcheckning och OMS (namngivna `magento_quote` och `magento_sales`)
+1. Installera Adobe Commerce med en enda huvuddatabas (namngiven `magento`)
+1. Skapa ytterligare två huvuddatabaser för utcheckning och OMS (namngivna `magento_quote` och `magento_sales`)
 1. Konfigurera Adobe Commerce för att använda utchecknings- och säljdatabaser
 
 >[!INFO]
@@ -28,11 +28,11 @@ I det här avsnittet beskrivs hur du kommer igång med den delade databaslösnin
 
 ## Installera Adobe Commerce
 
-Du kan när som helst aktivera delade databaser efter att du har installerat Adobe Commerce. Med andra ord kan du lägga till delade databaser i ett Adobe Commerce-system som redan har utchecknings- och orderdata. Använd instruktionerna i Adobe Commerce README eller [installationsguide](../../installation/overview.md) för att installera Adobe Commerce-programmet med en enda överordnad databas.
+Du kan aktivera delade databaser när som helst efter att du har installerat Adobe Commerce. Med andra ord kan du lägga till delade databaser i ett Adobe Commerce-system som redan har utchecknings- och orderdata. Använd instruktionerna i Adobe Commerce README eller [installationsguide](../../installation/overview.md) för att installera Adobe Commerce-programmet med en enda masterdatabas.
 
-## Ställ in ytterligare överordnad databaser
+## Ställ in ytterligare huvuddatabaser
 
-Skapa utchecknings- och OMS-överordnad databaser enligt följande:
+Skapa utchecknings- och OMS-huvuddatabaser enligt följande:
 
 1. Logga in på databasservern som vilken användare som helst.
 1. Ange följande kommando för att komma till en MySQL-kommandotolk:
@@ -86,9 +86,9 @@ Skapa utchecknings- och OMS-överordnad databaser enligt följande:
 
    Om MySQL-övervakaren visas har du skapat databasen på rätt sätt. Om ett fel visas upprepar du de föregående kommandona.
 
-## Konfigurera Commerce för att använda de överordnad databaserna
+## Konfigurera Commerce att använda huvuddatabaserna
 
-När du har konfigurerat totalt tre överordnad databaser använder du kommandoraden för att konfigurera Commerce att använda dem. (Kommandot ställer in databasanslutningar och distribuerar tabeller mellan överordnad databaser.)
+När du har konfigurerat totalt tre huvuddatabaser använder du kommandoraden för att konfigurera Commerce att använda dem. (Kommandot ställer in databasanslutningar och distribuerar tabeller mellan huvuddatabaserna.)
 
 ### Första steget
 
@@ -102,7 +102,7 @@ Kommandosyntax:
 bin/magento setup:db-schema:split-quote --host="<checkout db host or ip>" --dbname="<name>" --username="<checkout db username>" --password="<password>"
 ```
 
-Till exempel:
+Exempel:
 
 ```bash
 bin/magento setup:db-schema:split-quote --host="localhost" --dbname="magento_quote" --username="magento_quote" --password="magento_quote"
@@ -122,7 +122,7 @@ Kommandosyntax:
 bin/magento setup:db-schema:split-sales --host="<checkout db host or ip>" --dbname="<name>" --username="<checkout db username>" --password="<password>"
 ```
 
-Till exempel:
+Exempel:
 
 ```bash
 bin/magento setup:db-schema:split-sales --host="localhost" --dbname="magento_sales" --username="magento_sales" --password="magento_sales"

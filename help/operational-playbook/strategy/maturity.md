@@ -25,7 +25,7 @@ I följande tabell sammanfattas de olika löptidsnivåerna:
 
 | Variabel | B2B |
 -----------|----------|
-| Kryp | Ingångsnivån för e-handelsmognad omfattar de enklaste uppgifterna som en enda marknadsförare kan utföra. Verksamheten utvecklas normalt utifrån grunderna för att ytterligare förbättra kundupplevelsen. |
+| Kryp | Ingångsnivån för e-handelns mognad omfattar de enklaste uppgifterna som en enda marknadsförare kan utföra. Verksamheten utvecklas normalt utifrån grunderna för att ytterligare förbättra kundupplevelsen. |
 | Walk | På den här nivån börjar man dra nytta av tidigare kunddata från olika källor, vilket kräver samarbete mellan olika avdelningar.  Organisationer på den här nivån kan utnyttja den fulla potentialen hos kampanjer som hanteras av människor och har en mogen uppsättning bästa metoder, processer och utvecklingsströmmar. |
 | Kör | Den högsta mognadsnivån möjliggör AI-baserade kampanjer i olika kanaler och använder prediktiv lagerhantering för att förhindra bortfall och produktinformationshanteringsverktyg för att berika produkterna. Det uppnås bäst av organisationer med en utvecklad datakultur, utvecklingskunskaper och processer internt och externt. |
 
@@ -67,7 +67,7 @@ Typ av marknadsföringsaktiviteter som finns:
 
 - Webblager för första sessionen
 - Personaliserade rekommendationer på webbplatsen
-- Övergiven kundvagnse-post
+- Övergiven kundvagn
 
 ### Data
 

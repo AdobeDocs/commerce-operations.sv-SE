@@ -28,32 +28,32 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 |--------------|--------------|--------------|--------------|
 | Standardland | `general/country/default` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 | Tillåt länder | `general/country/allow` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | ![Känslig](/help/assets/configuration/cloud-sens.png) |
-| Postnummer är valfritt för | `general/country/optional_zip_countries` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | ![Känslig](/help/assets/configuration/cloud-sens.png) |
+| Postnummer kan användas | `general/country/optional_zip_countries` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 | Europeiska unionens länder | `general/country/eu_countries` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 | Mest populära destinationer | `general/country/destinations` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Tillstånd krävs för | `general/region/state_required` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Tillåt val av stat om det är valfritt för land | `general/region/display_all` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |
-| Tidszon | `general/locale/timezone` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |
-| Språk | `general/locale/code` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |
-| Viktenhet | `general/locale/weight_unit` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |
-| Veckodag 1 | `general/locale/firstday` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |
-| Veckodagar | `general/locale/weekend` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |
-| Åtkomstbegränsning | `general/restriction/is_active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |  |
-| Begränsningsläge | `general/restriction/mode` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |  |
-| Startsida | `general/restriction/http_redirect` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |  |
-| Landningssida | `general/restriction/cms_page` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |  |
-| HTTP-svar | `general/restriction/http_status` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |  |
-| Butiksnamn | `general/store_information/name` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |
-| Telefonnummer till butik | `general/store_information/phone` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |
-| Öppettider för butik | `general/store_information/hours` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |
-| Land | `general/store_information/country_id` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |
-| Region/delstat | `general/store_information/region_id` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |
-| Postnummer | `general/store_information/postcode` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |
-| Ort | `general/store_information/city` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |
-| Gatuadress | `general/store_information/street_line1` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |
-| Gatuadress 2 | `general/store_information/street_line2` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |
-| Momsnummer | `general/store_information/merchant_vat_number` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |
-| Aktivera Single Store-läge | `general/single_store_mode/enabled` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |  |
+| Tillåt val av stat om det är valfritt för land | `general/region/display_all` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
+| Tidszon | `general/locale/timezone` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
+| Språk | `general/locale/code` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
+| Viktenhet | `general/locale/weight_unit` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
+| Veckodag 1 | `general/locale/firstday` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
+| Veckodagar | `general/locale/weekend` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
+| Åtkomstbegränsning | `general/restriction/is_active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) | |
+| Begränsningsläge | `general/restriction/mode` | ![Endast handel](/help/assets/configuration/cloud-ee.png) | |
+| Startsida | `general/restriction/http_redirect` | ![Endast handel](/help/assets/configuration/cloud-ee.png) | |
+| Landningssida | `general/restriction/cms_page` | ![Endast handel](/help/assets/configuration/cloud-ee.png) | |
+| HTTP-svar | `general/restriction/http_status` | ![Endast handel](/help/assets/configuration/cloud-ee.png) | |
+| Butiksnamn | `general/store_information/name` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
+| Telefonnummer till butik | `general/store_information/phone` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
+| Öppettider för butik | `general/store_information/hours` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
+| Land | `general/store_information/country_id` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
+| Region/stat | `general/store_information/region_id` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
+| Postnummer | `general/store_information/postcode` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
+| Ort | `general/store_information/city` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
+| Gatuadress | `general/store_information/street_line1` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
+| Gatuadress 2 | `general/store_information/street_line2` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
+| Momsnummer | `general/store_information/merchant_vat_number` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
+| Aktivera Single Store-läge | `general/single_store_mode/enabled` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
 
 {style="table-layout:auto"}
 
@@ -98,9 +98,9 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Basvaluta | `currency/options/base` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Standardvisningsvaluta | `currency/options/default` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Tillåtna valutor | `currency/options/allow` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Yahoo Finance Exchange | `TBD` |  |
-| Fixer.io | `TBD` |  |
-| Webservicx | `TBD` |  |
+| Yahoo Finance Exchange | `TBD` | |
+| Fixer.io | `TBD` | |
+| Webservicx | `TBD` | |
 | Timeout för anslutning i sekunder | `currency/yahoofinance/timeout` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Timeout för anslutning i sekunder | `currency/fixerio/timeout` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Timeout för anslutning i sekunder | `currency/webservicex/timeout` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -191,7 +191,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Maximalt antal inloggningsfel för att låsa konto | `admin/security/lockout_failures` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Utelåsningstid (minuter) | `admin/security/lockout_threshold` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Lösenordets livstid (dagar) | `admin/security/password_lifetime` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Lösenordsändring | `admin/security/password_is_forced` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
+| Ändra lösenord | `admin/security/password_is_forced` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Aktivera diagram | `admin/dashboard/enable_charts` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Aktivera CAPTCHA i administratören | `admin/captcha/enable` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Teckensnitt | `admin/captcha/font` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -217,27 +217,27 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Livstid för misslyckade meddelanden | `system/mysqlmq/failed_messages_lifetime` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Livstid för nya meddelanden | `system/mysqlmq/new_messages_lifetime` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Generera scheman var | `system/cron/index/schedule_generate_every` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Schemalägg i förväg för | `system/cron/index/schedule_ahead_for` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
+| Schemalägg i förväg | `system/cron/index/schedule_ahead_for` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Missat om det inte körs inom | `system/cron/index/schedule_lifetime` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Händelserensning var | `system/cron/index/history_cleanup_every` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Livstid för lyckad historik | `system/cron/index/history_success_lifetime` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Livstid för felhistorik | `system/cron/index/history_failure_lifetime` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Använd separat process | `system/cron/index/use_separate_process` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Generera scheman var | `system/cron/default/schedule_generate_every` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Schemalägg i förväg för | `system/cron/default/schedule_ahead_for` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
+| Schemalägg i förväg | `system/cron/default/schedule_ahead_for` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Missat om det inte körs inom | `system/cron/default/schedule_lifetime` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Händelserensning var | `system/cron/default/history_cleanup_every` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Livstid för lyckad historik | `system/cron/default/history_success_lifetime` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Livstid för felhistorik | `system/cron/default/history_failure_lifetime` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Generera scheman var | `system/cron/staging/schedule_generate_every` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Schemalägg i förväg för | `system/cron/staging/schedule_ahead_for` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Schemalägg i förväg | `system/cron/staging/schedule_ahead_for` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Missat om det inte körs inom | `system/cron/staging/schedule_lifetime` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Händelserensning var | `system/cron/staging/history_cleanup_every` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Livstid för lyckad historik | `system/cron/staging/history_success_lifetime` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Livstid för felhistorik | `system/cron/staging/history_failure_lifetime` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Använd separat process | `system/cron/staging/use_separate_process` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Generera scheman var | `system/cron/catalog/event/schedule_generate_every` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Schemalägg i förväg för | `system/cron/catalog/event/schedule_ahead_for` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Schemalägg i förväg | `system/cron/catalog/event/schedule_ahead_for` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Missat om det inte körs inom | `system/cron/catalog/event/schedule_lifetime` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Händelserensning var | `system/cron/catalog/event/history_cleanup_every` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
 | Livstid för lyckad historik | `system/cron/catalog/event/history_success_lifetime` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
@@ -258,8 +258,8 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Underhållsläge | `system/backup/maintenance` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Loggpostens livstid, dagar | `system/rotation/lifetime` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Loggarkiveringsfrekvens | `system/rotation/frequency` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Cachelagring av program | `system/full_page_cache/caching_application` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| TTL för offentligt innehåll | `system/full_page_cache/ttl` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
+| Cachelagring | `system/full_page_cache/caching_application` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
+| TTL för publikt innehåll | `system/full_page_cache/ttl` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Respitperiod | `system/full_page_cache/varnish/grace_period` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Exportera konfiguration | `system/full_page_cache/varnish/export_button_version4` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Dagar sparade i loggen | `system/bulk/lifetime` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -291,7 +291,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Aktiverat för Storefront | `dev/translate_inline/active` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Aktiverad för administratör | `dev/translate_inline/active_admin` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Sammanfoga JavaScript-filer | `dev/js/merge_files` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Aktivera JavaScript-paket | `dev/js/enable_js_bundling` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
+| Aktivera JavaScript-paketering | `dev/js/enable_js_bundling` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Minska JavaScript-filer | `dev/js/minify_files` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Översättningsstrategi | `dev/js/translate_strategy` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Logga JS-fel till sessionslagring | `dev/js/session_storage_logging` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |

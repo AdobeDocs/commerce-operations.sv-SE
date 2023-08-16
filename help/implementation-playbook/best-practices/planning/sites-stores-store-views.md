@@ -38,7 +38,7 @@ Om ditt projekt kräver många webbplatser, butiker eller butiksvyer kan du för
 
 Webbplatser och butiker är multipler för katalogdata, så om du har många webbplatser och butiker kan det påverka webbplatsens prestanda negativt på följande sätt:
 
-- Större indextabeller ökar den tid som krävs för att slutföra indexeringsåtgärder [Prisindex].
+- Större indextabeller ökar den tid som krävs för att slutföra indexeringen [Prisindex].
 - Ökad tid för hämtning av programkonfiguration försämrar svarstiden för butiker för icke-cachelagrade katalogsidor.
 - Avsevärt längre tid än vad som krävs för att slutföra Spara-åtgärder i Admin eftersom data sparas separat för varje webbplats.
 

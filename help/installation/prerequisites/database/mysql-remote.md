@@ -41,16 +41,16 @@ Innan du börjar måste du:
 
 * [Installera MySQL-server](mysql.md) på databasservern.
 * [Skapa en databasinstans](mysql.md#configuring-the-database-instance) på databasservern.
-* Installera MySQL-klienten på Adobe Commerce- eller Magento Open Source-webbnoden. Mer information finns i MySQL-dokumentationen.
+* Installera MySQL-klienten på din Adobe Commerce- eller Magento Open Source-webbnod. Mer information finns i MySQL-dokumentationen.
 
 ### Hög tillgänglighet
 
 Använd följande riktlinjer om du vill konfigurera fjärrdatabasanslutningar om webbservern eller databasservern är klustrad:
 
 * Du måste konfigurera en anslutning för varje webbservernod.
-* Vanligtvis konfigurerar du en databasanslutning till databasens belastningsutjämnare; Men databasklustring kan vara komplicerad och det är upp till dig att konfigurera den. Adobe ger inga specifika rekommendationer för databasklustring.
+* Vanligtvis konfigurerar du en databasanslutning till databasens belastningsutjämnare, men databasklustring kan vara komplicerad och det är upp till dig att konfigurera den. Adobe ger inga specifika rekommendationer för databasklustring.
 
-   Mer information finns i [MySQL-dokumentation](https://dev.mysql.com/doc/refman/5.6/en/mysql-cluster.html).
+  Mer information finns i [MySQL-dokumentation](https://dev.mysql.com/doc/refman/5.6/en/mysql-cluster.html).
 
 ### Löser anslutningsproblem
 
@@ -97,6 +97,7 @@ Så här skapar du en fjärranslutning:
    * CentOS: `service mysqld restart`
 
    * Ubuntu: `service mysql restart`
+
    >[!NOTE]
    >
    >Om MySQL inte kan startas söker du efter källan till problemet i syslog. Lös problemet med hjälp av [MySQL-dokumentation](https://dev.mysql.com/doc/refman/5.6/en/server-options.html#option_mysqld_bind-address) eller någon annan auktoritativ källa.
@@ -117,7 +118,7 @@ Så här beviljar du åtkomst till en databasanvändare:
    GRANT ALL ON <local database name>.* TO <remote web node username>@<remote web node server ip address> IDENTIFIED BY '<database user password>';
    ```
 
-   Till exempel:
+   Exempel:
 
    ```shell
    GRANT ALL ON magento_remote.* TO dbuser@192.0.2.50 IDENTIFIED BY 'dbuserpassword';

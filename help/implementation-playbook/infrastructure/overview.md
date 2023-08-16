@@ -10,7 +10,7 @@ ht-degree: 0%
 
 ---
 
-# Översikt
+# Ökning
 
 Hittills har vi gått igenom alla steg som krävs för att konfigurera e-handelsimplementeringen på Adobe Commerce för att lyckas. Nu tar vi ett steg längre in i själva plattformen och sätter fokus på de infrastrukturer och miljöer som driver Adobe Commerce och de programvarulösningar som gör den till en så stabil plattform.
 

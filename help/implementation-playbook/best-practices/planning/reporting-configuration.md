@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Bästa tillvägagångssätt för rapportkonfiguration
 
-Om ditt företag inte behöver funktioner för rapportering eller dynamiska kundsegment inaktiverar du [Rapportfunktioner](https://docs.magento.com/user-guide/configuration/general/reports.html) för att förbättra butikens prestanda.
+Om ditt företag inte behöver funktioner för rapportering eller dynamiska kundsegment inaktiverar du [Rapportfunktioner](https://docs.magento.com/user-guide/configuration/general/reports.html) för att förbättra butiksprestanda.
 
 ## Berörda produkter och versioner
 

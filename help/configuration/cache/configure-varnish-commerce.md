@@ -1,6 +1,6 @@
 ---
 title: Konfigurera lack för handel
-description: Lär dig att uppdatera och hantera din konfigurationsfil för lack för Commerce-programmet.
+description: Lär dig hur du uppdaterar och hanterar din konfigurationsfil för lack för Commerce-programmet.
 feature: Configuration, Cache, SCD
 exl-id: 6c007ff9-493f-4df2-b7b4-438b41fd7e37
 source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
@@ -22,8 +22,8 @@ Så här konfigurerar du Commerce att använda engelska:
 
    | Fält | Beskrivning |
    | ----- | ----------- |
-   | Åtkomstlista | Ange det fullständiga värdnamnet, IP-adressen eller [CIDR (Classless Inter-domain Routing)](https://www.digitalocean.com/community/tutorials/understanding-ip-addresses-subnets-and-cidr-notation-for-networking) IP-adressintervall för notationen som innehållet ska göras ogiltigt för. Se [Rensning av finans-cache](https://varnish-cache.org/docs/3.0/tutorial/purging.html). |
-   | Serverdelsvärd | Ange det fullständiga värdnamnet eller IP-adressen och avlyssningsporten för lack _serverdel_ eller _origin-server_; dvs. servern som tillhandahåller innehållet varnish accelererar. Vanligtvis är det här din webbserver. Se [Backend-servrar för lack-cache](https://www.varnish-cache.org/docs/trunk/users-guide/vcl-backends.html). |
+   | Åtkomstlista | Ange det fullständiga värdnamnet, IP-adressen eller [CIDR (Classless Inter-domain Routing)](https://www.digitalocean.com/community/tutorials/understanding-ip-addresses-subnets-and-cidr-notation-for-networking) IP-adressintervall för notationen som innehållet ska göras ogiltigt för. Se [Rensning av finans](https://varnish-cache.org/docs/3.0/tutorial/purging.html). |
+   | Serverdelsvärd | Ange det fullständiga värdnamnet eller IP-adressen och avlyssningsporten för lack _serverdel_ eller _origin-server_, d.v.s. servern som tillhandahåller innehållet varnish accelererar. Vanligtvis är det här din webbserver. Se [Backend-servrar för lack-cache](https://www.varnish-cache.org/docs/trunk/users-guide/vcl-backends.html). |
    | Backend-port | Ursprungsserverns lyssningsport. |
    | Respitperiod | Fristen avgör hur länge varnish skickar gammalt innehåll om backend-objektet inte svarar. Standardvärdet är 300 sekunder. |
 
@@ -63,7 +63,7 @@ Så här exporterar du en lack-konfigurationsfil från administratören:
 
 1. Adobe rekommenderar att du öppnar `default.vcl` och ändra värdet för `acl purge` till IP-adressen för den Varniska värden. (Du kan ange flera värdar på separata rader eller också kan du använda CIDR-notation.)
 
-   Till exempel:
+   Exempel:
 
    ```conf
     acl purge {

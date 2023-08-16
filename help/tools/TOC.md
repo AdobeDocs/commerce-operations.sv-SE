@@ -4,7 +4,7 @@ user-guide-description: Lär dig mer om de olika verktyg du kan använda med Ado
 feature: Configuration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '191'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # verktyg {#tools}
 
-- [Översikt](overview.md)
+- [Ökning](overview.md)
 - Site-Wide Analysis Tool {#site-wide-analysis-tool}
    - [Introduktion](site-wide-analysis-tool/intro.md)
    - [Installation](site-wide-analysis-tool/installation.md)
@@ -26,7 +26,7 @@ ht-degree: 0%
    - [Tillägg](site-wide-analysis-tool/extensions.md)
    - [Varningar](site-wide-analysis-tool/alerts.md)
    - [Patchar](site-wide-analysis-tool/patches.md)
-- Verktyget Korrigeringar {#quality-patches-tool}
+- Verktyget Kvalitetspatchar {#quality-patches-tool}
    - [[!DNL Quality Patches Tool]: Sök efter patchar](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
    - [Användning](quality-patches-tool/usage.md)
    - [Versionsinformation](quality-patches-tool/release-notes.md)
@@ -41,7 +41,7 @@ ht-degree: 0%
    - [Fliken MySQL](observation-for-adobe-commerce/mysql-tab.md)
    - [Fliken PHP](observation-for-adobe-commerce/php-tab.md)
    - [Fliken Bots](observation-for-adobe-commerce/bots.md)
-   - [Fliken Distribuera](observation-for-adobe-commerce/deploy-tab.md)
+   - [Fliken Distribution](observation-for-adobe-commerce/deploy-tab.md)
    - [Fliken Varningar](observation-for-adobe-commerce/alerts-tab.md)
    - [Fliken WAF](observation-for-adobe-commerce/waf-tab.md)
    - [CDN-fliken](observation-for-adobe-commerce/cdn-tab.md)
@@ -55,7 +55,7 @@ ht-degree: 0%
 - Datamigreringsverktyg {#data-migration}
    - [Så fungerar migrering](data-migration-tool/how-migration-works.md)
    - [God praxis](data-migration-tool/best-practices.md)
-   - [Versioner som stöds](data-migration-tool/supported-versions.md)
+   - [Version som stöds](data-migration-tool/supported-versions.md)
    - Grunderna {#basics}
       - [Skapa en plan](data-migration-tool/create-plan.md)
       - [Förutsättningar](data-migration-tool/prerequisites.md)
@@ -65,14 +65,14 @@ ht-degree: 0%
       - [Anpassa](data-migration-tool/customize.md)
       - [Teknisk specifikation](data-migration-tool/technical-specification.md)
    - Migrera data {#migrate-data}
-      - [Översikt](data-migration-tool/migrate-data/overview.md)
+      - [Ökning](data-migration-tool/migrate-data/overview.md)
       - [Inställningar](data-migration-tool/migrate-data/settings.md)
       - [Data](data-migration-tool/migrate-data/data.md)
       - [Ändringar](data-migration-tool/migrate-data/delta.md)
       - [Uppföljning](data-migration-tool/migrate-data/follow-up.md)
       - [Data som kräver manuell migrering](data-migration-tool/migrate-data/manual.md)
       - [Steg efter datamigrering](data-migration-tool/migrate-data/post-migration.md)
-   - Resurser {#resources}
+   - Resurs {#resources}
       - [Felsökning](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
       - [Changelog](https://github.com/magento/data-migration-tool/blob/2.4/CHANGELOG.md)
 - [Återgå till bruksanvisningar](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

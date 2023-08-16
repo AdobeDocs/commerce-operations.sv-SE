@@ -9,7 +9,7 @@ ht-degree: 0%
 
 ---
 
-# Funktioner i Adobe Commerce
+# Adobe Commerce-funktioner
 
 I följande tabell jämförs Adobe Commerce-funktioner efter delversion:
 

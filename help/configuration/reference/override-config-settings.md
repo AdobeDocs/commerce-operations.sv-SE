@@ -13,7 +13,7 @@ ht-degree: 0%
 
 I det här avsnittet beskrivs hur du härleder ett miljövariabelnamn med hjälp av en konfigurationssökväg. Du kan åsidosätta Adobe Commerce konfigurationsinställningar med hjälp av systemvariabler. Du kan till exempel åsidosätta värdet för en betalares live-URL i produktionssystemet.
 
-Du kan åsidosätta värdet för _alla_ konfigurationsinställning med hjälp av miljövariabler, Adobe rekommenderar dock att du använder den delade konfigurationsfilen för att behålla konsekventa inställningar. `config.php`och den systemspecifika konfigurationsfilen, `env.php`som beskrivs i [Allmän översikt över distribution](../deployment/overview.md).
+Du kan åsidosätta värdet för _alla_ konfigurationsinställningar med hjälp av miljövariabler, men Adobe rekommenderar att du använder den delade konfigurationsfilen för att behålla konsekventa inställningar, `config.php`och den systemspecifika konfigurationsfilen, `env.php`som beskrivs i [Allmän översikt över distribution](../deployment/overview.md).
 
 >[!TIP]
 >
@@ -37,7 +37,7 @@ Konfigurationssökvägar finns i:
 - [Referens för känsliga och systemspecifika konfigurationssökvägar](config-reference-sens.md)
 - [Referens för sökvägar för betalningskonfiguration](config-reference-payment.md)
 - [Referens för konfigurationssökvägar för tillägg i Commerce B2B](config-reference-b2b.md)
-- [Andra konfigurationssökvägar - referens](config-reference-general.md)
+- [Referens för andra konfigurationssökvägar](config-reference-general.md)
 
 ### Variabelnamn
 
@@ -47,23 +47,23 @@ Det allmänna formatet för systeminställningens variabelnamn följer:
 
 `<SCOPE>` kan antingen vara:
 
-- Global omfattning (d.v.s. den globala inställningen för _alla_ scope)
+- Global omfattning (d.v.s. den globala inställningen för _alla_ skop)
 
-   Globala omfångsvariabler har följande format:
+  Globala omfångsvariabler har följande format:
 
-   `CONFIG__DEFAULT__<SYSTEM__VARIABLE__NAME>`
+  `CONFIG__DEFAULT__<SYSTEM__VARIABLE__NAME>`
 
 - Ett specifikt omfång (d.v.s. inställningen påverkar bara en viss butiksvy eller webbplats)
 
-   Omfångsvariabler för butiksvyn har till exempel följande format:
+  Omfångsvariabler för butiksvyn har till exempel följande format:
 
-   `CONFIG__STORES__ <STORE_VIEW_CODE>__<SYSTEM__VARIABLE__NAME>`
+  `CONFIG__STORES__ <STORE_VIEW_CODE>__<SYSTEM__VARIABLE__NAME>`
 
-   Mer information om omfång finns i:
+  Mer information om omfång finns i:
 
-   - [Steg 1: Hitta värdet för webbplatsens eller butikens vyomfång](#step-1-find-the-website-or-store-view-scope-value)
+   - [Steg 1: Hitta omfångsvärdet för webbplatsen eller butiksvyn](#step-1-find-the-website-or-store-view-scope-value)
    - [Ämne i Commerce User Guide om omfattning](https://docs.magento.com/user-guide/configuration/scope.html)
-   - [Snabbreferens för omfång](https://docs.magento.com/user-guide/stores/store-scope-reference.html)
+   - [Snabbreferens för scope](https://docs.magento.com/user-guide/stores/store-scope-reference.html)
 
 `<SYSTEM__VARIABLE__NAME>` är konfigurationssökvägen med två understreck istället för `/`. Mer information finns i [Steg 2: Ange systemvariabler](#step-2-set-global-website-or-store-view-variables).
 
@@ -75,14 +75,14 @@ Det allmänna formatet för systeminställningens variabelnamn följer:
 
 Om en konfigurationssökväg innehåller ett understreck finns understreck kvar i variabeln.
 
-En fullständig lista med konfigurationssökvägar finns i:
+En fullständig lista över konfigurationssökvägar finns i:
 
 - [Referens för känsliga och systemspecifika konfigurationssökvägar](config-reference-sens.md)
 - [Referens för sökvägar för betalningskonfiguration](config-reference-payment.md)
 - [Referens för konfigurationssökvägar för Commerce Enterprise B2B-tillägg](config-reference-b2b.md)
-- [Andra konfigurationssökvägar - referens](config-reference-general.md)
+- [Referens för andra konfigurationssökvägar](config-reference-general.md)
 
-## Steg 1: Hitta värdet för webbplatsens eller butikens vyomfång
+## Steg 1: Hitta omfångsvärdet för webbplatsen eller butiksvyn
 
 I det här avsnittet beskrivs hur du kan hitta och ange systemkonfigurationsvärden per _omfång_ (butiksvy eller webbplats). Information om hur du anger globala omfångsvariabler finns i [Steg 2: Ange globala variabler, webbplatsvariabler eller butiksvyvariabler](#step-2-set-global-website-or-store-view-variables).
 
@@ -97,16 +97,16 @@ Så här läser du tabellen:
 
 - `Path in Admin` kolumn
 
-   Värden före kommatecken är sökvägar i Admin-navigeringen. Värden efter kommatecken är alternativ i den högra rutan.
+  Värden före kommatecken är sökvägar i Admin-navigeringen. Värden efter kommatecken är alternativ i den högra rutan.
 
 - `Variable name` -kolumnen är namnet på motsvarande miljövariabel.
 
-   Du kan ange systemvärden för dessa konfigurationsparametrar som systemvariabler om du vill.
+  Du kan ange systemvärden för dessa konfigurationsparametrar som systemvariabler om du vill.
 
    - Hela variabelnamnet är alltid ALL CAPS
    - Starta ett variabelnamn med `CONFIG__` (observera två understreck)
    - Du hittar `<STORE_VIEW_CODE>` eller `<WEBSITE_CODE>` del av ett variabelnamn i antingen Admin- eller Commerce-databasen, enligt vad som anges i följande avsnitt.
-   - Du kan hitta `<SYSTEM__VARIABLE__NAME>` enligt [Steg 2: Ange globala variabler, webbplatsvariabler eller butiksvyvariabler](#step-2-set-global-website-or-store-view-variables).
+   - Du kan hitta `<SYSTEM__VARIABLE__NAME>` som beskrivs i [Steg 2: Ange globala variabler, webbplatsvariabler eller butiksvyvariabler](#step-2-set-global-website-or-store-view-variables).
 
 ### Hitta en webbplats eller ett butiksvyomfång i administratören
 
@@ -210,7 +210,7 @@ I det här avsnittet visas hur du söker efter värden för vissa exempelvariabl
 
 Så här hittar du variabelnamnet för global minification i HTML:
 
-1. Bestäm omfånget.
+1. Bestäm omfattningen.
 
    Det är det globala omfånget, så variabelnamnet börjar med `CONFIG__DEFAULT__`
 
@@ -222,9 +222,9 @@ Så här hittar du variabelnamnet för global minification i HTML:
 
 Så här hittar du variabelnamnet för ursprungsland:
 
-1. Bestäm omfånget.
+1. Bestäm omfattningen.
 
-   Hitta omfånget i [databas](#find-a-website-or-store-view-scope-in-the-database) som beskrivs i steg 1: Hitta värdet för webbplatsens eller butikens visningsomfång. (Du kan också hitta värdet i Admin enligt [tabell i steg 2: Ange globala variabler, webbplatsvariabler eller butiksvyvariabler](#step-2-set-global-website-or-store-view-variables.
+   Sök efter omfånget i [databas](#find-a-website-or-store-view-scope-in-the-database) som beskrivs i steg 1: Hitta värdet för webbplatsvyn eller butiksvyn. (Du kan också hitta värdet i Admin enligt [tabell i steg 2: Ange globala variabler, webbplatsvariabler eller butiksvyvariabler](#step-2-set-global-website-or-store-view-variables.
 
    Omfånget kan till exempel vara `CONFIG__WEBSITES__DEFAULT`.
 
@@ -238,7 +238,7 @@ Ange konfigurationsvärden som variabler med PHP:s [`$_ENV`](https://php.net/man
 
 >[!TIP]
 >
->Ställa in variabelvärden i `index.php` eller `pub/index.php` fungerar inte alltid som förväntat eftersom olika programstartpunkter kan användas beroende på webbserverkonfigurationen. Genom att montera `$_ENV` direktiv i `app/bootstrap.php` -filen, oavsett vilken programstartpunkt det gäller, `$_ENV` Direktiv körs alltid sedan `app/bootstrap.php` filen läses in som en del av Commerce-arkitekturen.
+>Ange variabelvärden i `index.php` eller `pub/index.php` fungerar inte alltid som förväntat eftersom olika programstartpunkter kan användas beroende på webbserverkonfigurationen. Genom att montera `$_ENV` direktiv i `app/bootstrap.php` -filen, oavsett vilken programstartpunkt det gäller, `$_ENV` Direktiv körs alltid sedan `app/bootstrap.php` filen läses in som en del av handelsarkitekturen.
 
 Ett exempel på två inställningar `$_ENV` värden följer:
 
@@ -253,6 +253,6 @@ Ett steg-för-steg-exempel visas i [Ange konfigurationsvärden med hjälp av sys
 >
 >- Använd värden som du anger i dialogrutan `$_ENV` array, du måste ange `variables_order = "EGPCS"`(Miljö, Get, Post, Cookie och Server) i `php.ini` -fil. Mer information finns i [PHP-dokumentation](https://www.php.net/manual/en/ini.core.php).
 >
->- Om du försöker åsidosätta konfigurationsinställningarna med hjälp av [Project Web Interface](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html#configure-the-project)måste variabelnamnet föregås av `env:`. Till exempel:
+>- Om du försöker åsidosätta konfigurationsinställningarna med hjälp av [Project Web Interface](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html#configure-the-project)måste variabelnamnet föregås av `env:`. Exempel:
 >
 >![Exempel på miljövariabel](../../assets/configuration/cloud-console-envvariable.png)

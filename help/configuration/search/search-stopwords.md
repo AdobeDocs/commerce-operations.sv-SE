@@ -49,13 +49,13 @@ Standardlivstiden för stoppordsfilcachen är 15 minuter.
 
    - Administratör: **System** > Verktyg > **Cachehantering**. Välj **Konfiguration** och klicka på **Uppdatera**. Klicka **Skicka** för att slutföra åtgärden.
 
-   - Kommandorad: Som ägare av filsystemet anger du följande kommando:
+   - Kommandorad: Ange följande kommando som ägare av filsystemet:
 
-      ```bash
-      php <magento_root>/bin/magento cache:clean config
-      ```
+     ```bash
+     php <magento_root>/bin/magento cache:clean config
+     ```
 
-1. Kontrollera resultatet genom att söka efter termer i din butik.
+1. Kontrollera resultatet genom att söka efter termer i butiken.
 
 ### Skapa stoppord för en ny språkinställning
 
@@ -87,13 +87,13 @@ Standardlivstiden för stoppordsfilcachen är 15 minuter.
 
    - Administratör: **System** > Verktyg > **Cachehantering**. Välj **Konfiguration** och klicka på **Uppdatera**. Klicka **Skicka** för att slutföra åtgärden.
 
-   - Kommandorad: Som ägare av filsystemet anger du följande kommando:
+   - Kommandorad: Ange följande kommando som ägare av filsystemet:
 
-      ```bash
-      php <magento_root>/bin/magento magento cache:clean config
-      ```
+     ```bash
+     php <magento_root>/bin/magento magento cache:clean config
+     ```
 
-1. Kontrollera resultatet genom att söka efter termer i din butik.
+1. Kontrollera resultatet genom att söka efter termer i butiken.
 
 ## Ändra stoppordskatalogen
 
@@ -112,7 +112,7 @@ Platsen beror på hur du installerade Commerce-programmet. Om du klonade GitHub-
 
    Om du har ett arkiv eller metapaketet finns det på `vendor/magento/module-elasticsearch/etc/di.xml`
 
-1. Ändra värdet för `stopwordsDirectory` till den önskade katalogen:
+1. Ändra värdet för `stopwordsDirectory` till önskad katalog:
 
    ```xml
    <type name="Magento\Elasticsearch\SearchAdapter\Query\Preprocessor\Stopwords">

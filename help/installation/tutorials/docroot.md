@@ -168,7 +168,7 @@ Att växla mellan lägen är ett viktigt steg när du vill verifiera att serverk
 
 Gå till butiken i en webbläsare och kontrollera att allt fungerar.
 
-1. Öppna en webbläsare och ange serverns värdnamn eller IP-adress i adressfältet. Till exempel: `http://192.168.33.10`.
+1. Öppna en webbläsare och ange serverns värdnamn eller IP-adress i adressfältet. Exempel, `http://192.168.33.10`.
 
    I bilden nedan visas ett exempel på en butikssida. Om den visas på följande sätt har installationen lyckats!
 

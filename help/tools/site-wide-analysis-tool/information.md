@@ -17,7 +17,7 @@ The [!UICONTROL General Information] area visar säljarens webbplatsbasdata, kon
 
 Adobe Commerce visas [!UICONTROL Site Details], [!UICONTROL Products], [!UICONTROL Project] &amp; [!UICONTROL Integration links], [!UICONTROL Account]och [!UICONTROL Service and Components] -avsnitt.
 
-## När ska användas
+## När ska du använda
 
 Använd [!UICONTROL Information] om du vill se alla detaljer ovan i korthet.
 

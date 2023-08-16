@@ -74,7 +74,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -118,7 +118,7 @@ bin/magento completion [--debug] [--] [<shell>]
 
 ### `shell`
 
-Skaltypen (t.ex. &quot;bash&quot;) används värdet för &quot;$SHELL&quot; env var om det inte anges
+Gränssnittstypen (t.ex. &quot;bash&quot;), värdet för &quot;$SHELL&quot; env var, används om detta inte anges
 
 
 ### `--debug`
@@ -144,7 +144,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -223,7 +223,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -307,7 +307,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -364,7 +364,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -445,7 +445,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -480,7 +480,7 @@ Ställ inga interaktiva frågor
 
 ## `admin:adobe-ims:info`
 
-Information om konfigurationen av Adobe IMS-modulen
+Information om Adobe IMS-modulkonfiguration
 
 ```bash
 bin/magento admin:adobe-ims:info
@@ -502,7 +502,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -559,7 +559,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -652,7 +652,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -716,7 +716,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -782,7 +782,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -839,7 +839,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -896,7 +896,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -977,7 +977,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1049,7 +1049,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1121,7 +1121,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1193,7 +1193,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1265,7 +1265,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1328,7 +1328,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1399,7 +1399,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1456,7 +1456,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1520,7 +1520,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1609,7 +1609,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1713,7 +1713,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1790,7 +1790,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1861,7 +1861,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1918,7 +1918,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1987,7 +1987,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2044,7 +2044,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2115,7 +2115,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2172,7 +2172,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2236,7 +2236,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2293,7 +2293,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2350,7 +2350,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2407,7 +2407,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2470,7 +2470,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2505,7 +2505,7 @@ Ställ inga interaktiva frågor
 
 ## `dev:query-log:disable`
 
-Inaktivera DB-frågeloggning
+Inaktivera loggning av databasfrågor
 
 ```bash
 bin/magento dev:query-log:disable
@@ -2527,7 +2527,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2605,7 +2605,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2664,7 +2664,7 @@ Typ av källfiler: [mindre]
 
 ### `--locale`
 
-Språk: [en_US]
+Språk: [sv_SE]
 
 - Standard: `en_US`
 - Kräver ett värde
@@ -2699,7 +2699,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2756,7 +2756,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2813,7 +2813,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2870,7 +2870,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2914,14 +2914,14 @@ bin/magento dev:tests:run [-c|--arguments ARGUMENTS] [--] [<type>]
 
 ### `type`
 
-Typ av test som ska köras. Tillgängliga typer: all, unit, integration, integration-all, static, static-all, integrity, legacy, default
+Typ av test som ska köras. Tillgängliga typer: all, unit, integration, integration, all, static, static-all, integrity, legacy, default
 
 - Standard: `default`
 
 
 ### `--arguments`, `-c`
 
-Ytterligare argument för PHPUnit. Exempel: &quot;-c&#39;—filter=MyTest&#39;&quot; (inga blanksteg)
+Ytterligare argument för PHPUnit. Exempel: &quot;-c&quot;—filter=MyTest&quot; (inga blanksteg)
 
 - Standard: &quot;
 - Kräver ett värde
@@ -2942,7 +2942,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2986,7 +2986,7 @@ bin/magento dev:urn-catalog:generate [--ide IDE] [--] <path>
 
 ### `path`
 
-Sökväg till fil som katalogen ska skrivas ut från. För PhpStorm använder du .idea/misc.xml
+Sökväg till fil för att mata ut katalogen. För PhpStorm använder du .idea/misc.xml
 
 - Obligatoriskt
 
@@ -3013,7 +3013,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3057,7 +3057,7 @@ bin/magento dev:xml:convert [-o|--overwrite] [--] <xml-file> <processor>
 
 ### `xml-file`
 
-Sökväg till XML-fil som ska omformas
+Sökväg till XML-fil som ska omvandlas
 
 - Obligatoriskt
 
@@ -3090,7 +3090,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3156,7 +3156,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3222,7 +3222,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3279,7 +3279,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3336,7 +3336,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3410,7 +3410,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3467,7 +3467,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3538,7 +3538,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3595,7 +3595,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3659,7 +3659,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3716,7 +3716,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3807,7 +3807,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3842,7 +3842,7 @@ Ställ inga interaktiva frågor
 
 ## `events:sync-events-metadata`
 
-Synkronisera händelsemetadata för den här instansen
+Synkronisera händelsemetadata för instansen
 
 ```bash
 bin/magento events:sync-events-metadata [-d|--delete]
@@ -3871,7 +3871,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3935,7 +3935,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4011,7 +4011,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4095,7 +4095,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4169,7 +4169,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4226,7 +4226,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4292,7 +4292,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4358,7 +4358,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4426,7 +4426,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4497,7 +4497,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4563,7 +4563,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4629,7 +4629,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4695,7 +4695,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4752,7 +4752,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4809,7 +4809,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4866,7 +4866,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4930,7 +4930,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4994,7 +4994,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5058,7 +5058,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5115,7 +5115,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5172,7 +5172,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5245,7 +5245,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5330,7 +5330,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5397,7 +5397,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5483,7 +5483,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5553,7 +5553,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5623,7 +5623,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5686,7 +5686,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5743,7 +5743,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5800,7 +5800,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5857,7 +5857,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5950,7 +5950,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6043,7 +6043,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6087,7 +6087,7 @@ bin/magento module:status [--enabled] [--disabled] [--magento-init-params MAGENT
 
 ### `module-names`
 
-Namn på valfri modul
+Modulnamn (valfritt)
 
 - Standard: `[]`
 
@@ -6129,7 +6129,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6244,7 +6244,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6324,7 +6324,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6381,7 +6381,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6438,7 +6438,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6513,7 +6513,7 @@ Det här alternativet förhindrar att flera kopior av en kund körs samtidigt.
 
 ### `--multi-process`
 
-Antalet processer per konsument.
+Antalet processer per kund.
 
 - Accepterar ett värde
 
@@ -6539,7 +6539,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6596,7 +6596,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6660,7 +6660,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6724,7 +6724,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6781,7 +6781,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6838,7 +6838,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6895,7 +6895,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6965,7 +6965,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7022,7 +7022,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7092,7 +7092,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7176,7 +7176,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7517,7 +7517,7 @@ Redis-komprimeringsbibliotek. Värden: gzip (standard), lzf, lz4, snappy
 
 ### `--session-save-redis-log-level`
 
-Redis loggnivå. Värden: 0 (minst utförlig) till 7 (mest utförlig)
+Redis-loggnivå. Värden: 0 (minst utförlig) till 7 (mest utförlig)
 
 - Kräver ett värde
 
@@ -7577,7 +7577,7 @@ Maximal sessionstid för Redis, i sekunder
 
 ### `--session-save-redis-sentinel-master`
 
-Redis Sentinel överordnad
+Redis Sentinel master
 
 - Kräver ett värde
 
@@ -7589,7 +7589,7 @@ Redis Sentinel-servrar, kommaseparerade
 
 ### `--session-save-redis-sentinel-verify-master`
 
-Redis Sentinel bekräftar överordnad. Värden: false (standard), true
+Redis Sentinel, verifiera master. Värden: false (standard), true
 
 - Kräver ett värde
 
@@ -7637,7 +7637,7 @@ Ange 0 om du vill inaktivera komprimering (standard är 1, aktiverad)
 
 ### `--cache-backend-redis-compression-lib`
 
-Komprimeringslib som ska användas [snappy,lzf,l4z,zstd,gzip] (lämna tomt för att bestämma automatiskt)
+Komprimeringsbibliotek att använda [snappy,lzf,l4z,zstd,gzip] (lämna tomt för att bestämma automatiskt)
 
 - Kräver ett värde
 
@@ -7716,7 +7716,7 @@ Installationsspecifikt låsprefix för att undvika låskonflikter
 
 ### `--lock-zookeeper-host`
 
-Värd och port för anslutning till Zookeeper-klustret. Till exempel: 127.0.0.1:2181
+Värd och port för anslutning till Zookeeper-klustret. Exempel: 127.0.0.1:2181
 
 - Kräver ett värde
 
@@ -7760,7 +7760,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7823,7 +7823,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7907,7 +7907,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7971,7 +7971,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -8047,7 +8047,7 @@ Slavanslutningsnamn
 
 ### `--resource`
 
-Namn på slavresurs
+Slavresursnamn
 
 - Standard: `default`
 - Accepterar ett värde
@@ -8081,7 +8081,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -8142,7 +8142,7 @@ Användarnamn för utcheckning av databas
 
 ### `--password`
 
-Användarlösenord för kassan
+Checkout-användarlösenord för DB
 
 - Accepterar ett värde
 
@@ -8182,7 +8182,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -8283,7 +8283,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -8353,7 +8353,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -8416,7 +8416,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -8473,7 +8473,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -8814,7 +8814,7 @@ Redis-komprimeringsbibliotek. Värden: gzip (standard), lzf, lz4, snappy
 
 ### `--session-save-redis-log-level`
 
-Redis loggnivå. Värden: 0 (minst utförlig) till 7 (mest utförlig)
+Redis-loggnivå. Värden: 0 (minst utförlig) till 7 (mest utförlig)
 
 - Kräver ett värde
 
@@ -8874,7 +8874,7 @@ Maximal sessionstid för Redis, i sekunder
 
 ### `--session-save-redis-sentinel-master`
 
-Redis Sentinel överordnad
+Redis Sentinel master
 
 - Kräver ett värde
 
@@ -8886,7 +8886,7 @@ Redis Sentinel-servrar, kommaseparerade
 
 ### `--session-save-redis-sentinel-verify-master`
 
-Redis Sentinel bekräftar överordnad. Värden: false (standard), true
+Redis Sentinel, verifiera master. Värden: false (standard), true
 
 - Kräver ett värde
 
@@ -8934,7 +8934,7 @@ Ange 0 om du vill inaktivera komprimering (standard är 1, aktiverad)
 
 ### `--cache-backend-redis-compression-lib`
 
-Komprimeringslib som ska användas [snappy,lzf,l4z,zstd,gzip] (lämna tomt för att bestämma automatiskt)
+Komprimeringsbibliotek att använda [snappy,lzf,l4z,zstd,gzip] (lämna tomt för att bestämma automatiskt)
 
 - Kräver ett värde
 
@@ -9013,7 +9013,7 @@ Installationsspecifikt låsprefix för att undvika låskonflikter
 
 ### `--lock-zookeeper-host`
 
-Värd och port för anslutning till Zookeeper-klustret. Till exempel: 127.0.0.1:2181
+Värd och port för anslutning till Zookeeper-klustret. Exempel: 127.0.0.1:2181
 
 - Kräver ett värde
 
@@ -9085,7 +9085,7 @@ Kör administratörsgränssnitt med SSL. Inaktuell, använd config:set med sökv
 
 ### `--admin-use-security-key`
 
-Om en säkerhetsnyckel ska användas i Magento Admin-URL:er och -formulär. Inaktuell, använd config:set med sökvägsadministratör/säkerhet/use_form_key
+Anger om en säkerhetsnyckelfunktion ska användas i Magento Admin-URL:er och -formulär. Inaktuell, använd config:set med sökvägsadministratör/säkerhet/use_form_key
 
 - Kräver ett värde
 
@@ -9193,13 +9193,13 @@ OpenSearch-användarnamn. Gäller endast om HTTP-autentisering är aktiverat
 
 ### `--opensearch-password`
 
-Lösenord för OpenSearch. Gäller endast om HTTP-autentisering är aktiverat
+OpenSearch-lösenord. Gäller endast om HTTP-autentisering är aktiverat
 
 - Kräver ett värde
 
 ### `--opensearch-index-prefix`
 
-Indexprefix för OpenSearch.
+Index för OpenSearch.
 
 - Kräver ett värde
 
@@ -9269,7 +9269,7 @@ Säker installation av Magento med dumpar på destruktiva operationer, som bortt
 
 ### `--dry-run`
 
-Installationen av Magento körs i torrt läge
+Installationen av Magento kommer att köras i torrkörningsläge
 
 - Standard: `false`
 - Accepterar ett värde
@@ -9296,7 +9296,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9367,7 +9367,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9448,7 +9448,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9583,7 +9583,7 @@ Anpassad version av statiskt innehåll kan användas om distributionen körs på
 
 ### `--refresh-content-version-only`
 
-Om du bara uppdaterar versionen av statiskt innehåll kan du uppdatera statiskt innehåll i webbläsarens cacheminne och CDN-cacheminne.
+Om du bara uppdaterar versionen av statiskt innehåll kan du uppdatera statiskt innehåll i webbläsarens cache och CDN-cache.
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9674,7 +9674,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9765,7 +9765,7 @@ Kör administratörsgränssnitt med SSL. Inaktuell, använd config:set med sökv
 
 ### `--admin-use-security-key`
 
-Om en säkerhetsnyckel ska användas i Magento Admin-URL:er och -formulär. Inaktuell, använd config:set med sökvägsadministratör/säkerhet/use_form_key
+Anger om en säkerhetsnyckelfunktion ska användas i Magento Admin-URL:er och -formulär. Inaktuell, använd config:set med sökvägsadministratör/säkerhet/use_form_key
 
 - Kräver ett värde
 
@@ -9791,7 +9791,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9854,7 +9854,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9923,7 +9923,7 @@ Säker installation av Magento med dumpar på destruktiva operationer, som bortt
 
 ### `--dry-run`
 
-Installationen av Magento körs i torrt läge
+Installationen av Magento kommer att köras i torrkörningsläge
 
 - Standard: `false`
 - Accepterar ett värde
@@ -9950,7 +9950,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -10007,7 +10007,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -10064,7 +10064,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -10140,7 +10140,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -10175,7 +10175,7 @@ Ställ inga interaktiva frågor
 
 ## `support:backup:db`
 
-Skapa DB-säkerhetskopia
+Skapa DB-säkerhetskopiering
 
 ```bash
 bin/magento support:backup:db [--name [NAME]] [-o|--output [OUTPUT]] [-l|--logs] [-i|--ignore-sanitize]
@@ -10223,7 +10223,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -10287,7 +10287,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -10351,7 +10351,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -10432,7 +10432,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -10530,7 +10530,7 @@ Skriv inget meddelande
 
 ### `--verbose`, `-v|-vv|-vvv`
 
-Öka meddelandenas exakthet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
 
 - Standard: `false`
 - Accepterar inte ett värde

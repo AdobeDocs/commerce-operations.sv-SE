@@ -1,5 +1,5 @@
 ---
-title: Resurser
+title: Resurs
 description: Läs om interna, externa och hybrida resurser som kan hjälpa ert e-handelsteam.
 exl-id: 8c5067ed-6dbe-4306-b825-959606d1b254
 source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
@@ -9,7 +9,7 @@ ht-degree: 0%
 
 ---
 
-# Resurser
+# Resurs
 
 Digital implementering kräver interna (interna) och externa (externa) resurser eller både och. Ett företag måste analysera sitt interna team och deras funktioner när de beslutar om de vill genomföra hela projektet internt eller om de behöver stöd från en extern tredje part.
 
@@ -57,7 +57,7 @@ Externa team kan vara konsulter, betalningsgateways, SEO-/SEM-relaterade aktivit
 
 - Externa teammedlemmar är mer erfarna. Plattformsexperter känner till alla plattformsfunktioner och kan föreslå bästa praxis som företaget kan använda för att maximera användningen av plattformen.
 
-- Konsultföretag gör sina resurser uppdaterade vad gäller teknik och branschtrender. Konsulter har en flexibel arbetsstil och mycket att erbjuda. inte bara när det gäller kunskap och erfarenhet utan också kultur.
+- Konsultföretag gör sina resurser uppdaterade vad gäller teknik och branschtrender. Konsulter har en flexibel arbetsstil och mycket att erbjuda, inte bara i fråga om kunskap och erfarenhet utan även i fråga om kultur.
 
 - Tredje part kan ge medarbetare möjlighet att arbeta i ett projekt när resursbehoven förändras, vilket ger ett mer skalbart team.
 

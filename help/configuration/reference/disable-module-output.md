@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Som standard konfigureras alla moduler så att modulutdata kan skrivas till en vy. Om du stänger av utdata kan du inaktivera en modul som inte kan inaktiveras på grund av allvarliga beroenden.
 
-Till exempel `Customer` är beroende av `Review` så att `Review` modulen kan inte inaktiveras. Om du inte vill att kunderna ska kunna tillhandahålla granskningar kan du stänga av utdata från `Review` -modul.
+Till exempel `Customer` är beroende av `Review` så att `Review` kan inte inaktiveras. Om du inte vill att kunderna ska kunna tillhandahålla granskningar kan du stänga av utdata från `Review` -modul.
 
 >[!INFO]
 >
@@ -79,7 +79,7 @@ Se [Exportera konfigurationen](../cli/export-configuration.md).
 Det är enklare att inaktivera modulutdata i en enda instans av Commerce eftersom ändringarna inte behöver distribueras.
 
 1. Arkivera originalet `<Magento_install_dir>/app/etc/config.php` -fil.
-1. Lägg till `advanced` och `modules_disable_output` till `config.php` fil (om de inte finns):
+1. Lägg till `advanced` och `modules_disable_output` avsnitt till `config.php` fil (om de inte finns):
 
    ```php
    'system' =>

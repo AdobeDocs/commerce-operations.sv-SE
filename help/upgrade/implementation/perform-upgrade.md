@@ -20,7 +20,7 @@ Du kan uppgradera ditt Adobe Commerce- eller Magento Open Source-program från k
 >
 >Använd inte den här metoden för att uppgradera om du klonade GitHub-databasen. Istället kan du se [Uppgradera en Git-baserad installation](../developer/git-installs.md) för uppgraderingsinstruktioner.
 
-Följande instruktioner visar hur du uppgraderar med Composer. Adobe Commerce 2.4.2 har nu stöd för Composer 2. Om du försöker uppgradera från &lt;2.4.1 måste du först uppgradera till en version som är kompatibel med Composer 2 (t.ex. 2.4.2) med Composer 1 _före_ uppgradera till Composer 2 för >2.4.2-uppgraderingar. Dessutom måste du köra en [version som stöds](../../installation/system-requirements.md) PHP.
+Följande instruktioner visar hur du uppgraderar med Composer. Adobe Commerce 2.4.2 har nu stöd för Composer 2. Om du försöker uppgradera från &lt;2.4.1 måste du först uppgradera till en version som är kompatibel med Composer 2 (till exempel 2.4.2) med Composer 1 _före_ uppgradera till Composer 2 för >2.4.2-uppgraderingar. Dessutom måste du köra en [version som stöds](../../installation/system-requirements.md) PHP.
 
 >[!WARNING]
 >
@@ -88,15 +88,15 @@ Du måste fylla i [uppgraderingskrav](../prepare/prerequisites.md) för att för
 
    - _Adobe Commerce:_
 
-      ```bash
-      composer require magento/module-bundle-sample-data:100.4.* magento/module-widget-sample-data:100.4.* magento/module-theme-sample-data:100.4.* magento/module-catalog-sample-data:100.4.* magento/module-customer-sample-data:100.4.* magento/module-cms-sample-data:100.4.*  magento/module-catalog-rule-sample-data:100.4.* magento/module-sales-rule-sample-data:100.4.* magento/module-review-sample-data:100.4.* magento/module-tax-sample-data:100.4.* magento/module-sales-sample-data:100.4.* magento/module-grouped-product-sample-data:100.4.* magento/module-downloadable-sample-data:100.4.* magento/module-msrp-sample-data:100.4.* magento/module-configurable-sample-data:100.4.* magento/module-product-links-sample-data:100.4.* magento/module-wishlist-sample-data:100.4.* magento/module-swatches-sample-data:100.4.* magento/sample-data-media:100.4.* magento/module-offline-shipping-sample-data:100.4.* magento/module-gift-card-sample-data:100.4.* magento/module-customer-balance-sample-data:100.4.* magento/module-target-rule-sample-data:100.4.* magento/module-gift-registry-sample-data:100.4.* magento/module-multiple-wishlist-sample-data:100.4.* --no-update
-      ```
+     ```bash
+     composer require magento/module-bundle-sample-data:100.4.* magento/module-widget-sample-data:100.4.* magento/module-theme-sample-data:100.4.* magento/module-catalog-sample-data:100.4.* magento/module-customer-sample-data:100.4.* magento/module-cms-sample-data:100.4.*  magento/module-catalog-rule-sample-data:100.4.* magento/module-sales-rule-sample-data:100.4.* magento/module-review-sample-data:100.4.* magento/module-tax-sample-data:100.4.* magento/module-sales-sample-data:100.4.* magento/module-grouped-product-sample-data:100.4.* magento/module-downloadable-sample-data:100.4.* magento/module-msrp-sample-data:100.4.* magento/module-configurable-sample-data:100.4.* magento/module-product-links-sample-data:100.4.* magento/module-wishlist-sample-data:100.4.* magento/module-swatches-sample-data:100.4.* magento/sample-data-media:100.4.* magento/module-offline-shipping-sample-data:100.4.* magento/module-gift-card-sample-data:100.4.* magento/module-customer-balance-sample-data:100.4.* magento/module-target-rule-sample-data:100.4.* magento/module-gift-registry-sample-data:100.4.* magento/module-multiple-wishlist-sample-data:100.4.* --no-update
+     ```
 
    - _Magento Open Source:_
 
-      ```bash
-      composer require magento/module-bundle-sample-data:100.4.* magento/module-widget-sample-data:100.4.* magento/module-theme-sample-data:100.4.* magento/module-catalog-sample-data:100.4.* magento/module-customer-sample-data:100.4.* magento/module-cms-sample-data:100.4.*  magento/module-catalog-rule-sample-data:100.4.* magento/module-sales-rule-sample-data:100.4.* magento/module-review-sample-data:100.4.* magento/module-tax-sample-data:100.4.* magento/module-sales-sample-data:100.4.* magento/module-grouped-product-sample-data:100.4.* magento/module-downloadable-sample-data:100.4.* magento/module-msrp-sample-data:100.4.* magento/module-configurable-sample-data:100.4.* magento/module-product-links-sample-data:100.4.* magento/module-wishlist-sample-data:100.4.* magento/module-swatches-sample-data:100.4.* magento/sample-data-media:100.4.* magento/module-offline-shipping-sample-data:100.4.* --no-update
-      ```
+     ```bash
+     composer require magento/module-bundle-sample-data:100.4.* magento/module-widget-sample-data:100.4.* magento/module-theme-sample-data:100.4.* magento/module-catalog-sample-data:100.4.* magento/module-customer-sample-data:100.4.* magento/module-cms-sample-data:100.4.*  magento/module-catalog-rule-sample-data:100.4.* magento/module-sales-rule-sample-data:100.4.* magento/module-review-sample-data:100.4.* magento/module-tax-sample-data:100.4.* magento/module-sales-sample-data:100.4.* magento/module-grouped-product-sample-data:100.4.* magento/module-downloadable-sample-data:100.4.* magento/module-msrp-sample-data:100.4.* magento/module-configurable-sample-data:100.4.* magento/module-product-links-sample-data:100.4.* magento/module-wishlist-sample-data:100.4.* magento/module-swatches-sample-data:100.4.* magento/sample-data-media:100.4.* magento/module-offline-shipping-sample-data:100.4.* --no-update
+     ```
 
 1. Uppgradera instansen med följande `composer require-commerce` kommandosyntax:
 
@@ -106,9 +106,9 @@ Du måste fylla i [uppgraderingskrav](../prepare/prerequisites.md) för att för
 
    Kommandoalternativen är:
 
-   - `<product>` —(Obligatoriskt) Paketet som ska uppgraderas. För lokala installationer måste värdet vara antingen `product-community-edition` eller `product-enterprise-edition`.
+   - `<product>` —(Obligatoriskt) Paketet som ska uppgraderas. För lokala installationer måste detta värde vara antingen `product-community-edition` eller `product-enterprise-edition`.
 
-   - `<version>` —(Obligatoriskt) Den version av Adobe Commerce eller Magento Open Source som du uppgraderar till. Till exempel: `2.4.3`.
+   - `<version>` —(Obligatoriskt) Den version av Adobe Commerce eller Magento Open Source som du uppgraderar till. Exempel, `2.4.3`.
 
    - `--no-update` —(Obligatoriskt) Inaktiverar den automatiska uppdateringen av beroenden.
 
@@ -117,6 +117,7 @@ Du måste fylla i [uppgraderingskrav](../prepare/prerequisites.md) för att för
    - `--force-root-updates` —(Valfritt) Åsidosätter alla anpassade värden som står i konflikt med de förväntade Magento-värdena.
 
    - `--help` —(Valfritt) Anger användningsinformation om plugin-programmet.
+
    Om ingen `--interactive-root-conflicts` eller `--force-root-updates` Om du anger det behåller kommandot de befintliga värden som är i konflikt och ett varningsmeddelande visas. Mer information om plugin-programmet finns i [Plugin-användning VIKTIGT](https://github.com/magento/composer-root-update-plugin/blob/develop/src/Magento/ComposerRootUpdatePlugin/README.md).
 
 1. Uppdatera beroenden.
@@ -159,7 +160,7 @@ composer require-commerce magento/product-enterprise-edition 2.4.0 --no-update
 
 ### Exempel - Kvalitetskorrigering
 
-Patchar för kvalitet innehåller i första hand funktioner _och_ säkerhetskorrigeringar. De kan dock ibland innehålla nya bakåtkompatibla funktioner. Använd Composer för att hämta en kvalitetskorrigering. Om du till exempel vill ange metapaketet Magento Open Source 2.4.1:
+Patchar för kvalitet innehåller i första hand funktioner _och_ säkerhetskorrigeringar. De kan dock ibland innehålla nya bakåtkompatibla funktioner. Använd Composer för att hämta en kvalitetskorrigering. För att ange metapaketet Magento Open Source 2.4.1:
 
 ```bash
 composer require-commerce magento/product-community-edition 2.4.3 --no-update
@@ -239,7 +240,7 @@ composer require-commerce magento/product-enterprise-edition 2.4.3-p1 --no-updat
    bin/magento maintenance:disable
    ```
 
-1. _(Valfritt)_ Starta om Varnish.
+1. _(Valfritt)_ Starta om lack.
 
    Om du använder Varnish för sidcachelagring startar du om det:
 

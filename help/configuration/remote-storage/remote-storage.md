@@ -32,7 +32,7 @@ Du kan konfigurera fjärrlagring med `remote-storage` med [`setup` CLI, kommando
 --remote-storage-<parameter-name>="<parameter-value>"
 ```
 
-The `parameter-name` refererar till den specifika parametern för fjärrlagring. I följande tabell visas de parametrar som är tillgängliga för konfiguration av fjärrlagring:
+The `parameter-name` refererar till den specifika parametern för fjärrlagring. I följande tabell visas de parametrar som är tillgängliga för konfigurering av fjärrlagring:
 
 | Kommandoradsparameter | Parameternamn | Beskrivning | Standardvärde |
 |--- |--- |--- |--- |
@@ -55,15 +55,15 @@ Du kan installera fjärrlagring under en Adobe Commerce-installation eller lägg
 
 - Exempel: Installera Commerce med fjärrlagring
 
-   ```bash
-   bin/magento setup:install --remote-storage-driver="aws-s3" --remote-storage-bucket="myBucket" --remote-storage-region="us-east-1"
-   ```
+  ```bash
+  bin/magento setup:install --remote-storage-driver="aws-s3" --remote-storage-bucket="myBucket" --remote-storage-region="us-east-1"
+  ```
 
 - Exempel: Aktivera fjärrlagring i befintlig Commerce
 
-   ```bash
-   bin/magento setup:config:set --remote-storage-driver="aws-s3" --remote-storage-bucket="myBucket" --remote-storage-region="us-east-1"
-   ```
+  ```bash
+  bin/magento setup:config:set --remote-storage-driver="aws-s3" --remote-storage-bucket="myBucket" --remote-storage-region="us-east-1"
+  ```
 
 >[!TIP]
 >

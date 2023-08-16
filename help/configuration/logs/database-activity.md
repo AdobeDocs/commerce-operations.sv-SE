@@ -21,7 +21,7 @@ I följande exempel visas hur du loggar databasaktivitet med [`Magento\Framework
 >
 >Du kan använda Commerce CLI för att [aktivera och inaktivera databasloggning](../cli/enable-logging.md#database-logging).
 
-Ändra standardkonfigurationen för `\Magento\Framework\DB\Logger\LoggerProxy`, redigera `app/etc/di.xml`.
+Så här ändrar du standardkonfigurationen för `\Magento\Framework\DB\Logger\LoggerProxy`, redigera `app/etc/di.xml`.
 
 Ändra först standardvärdena för `loggerAlias` och `logCallStack` argument till:
 
@@ -36,7 +36,7 @@ I följande exempel visas hur du loggar databasaktivitet med [`Magento\Framework
 </type>
 ```
 
-Ange sedan filsökvägen för `Magento\Framework\DB\Logger\File`:
+Sedan anger du filsökvägen för `Magento\Framework\DB\Logger\File`:
 
 ```xml
 <type name="Magento\Framework\DB\Logger\File">
@@ -52,7 +52,7 @@ Slutligen kompilerar du koden med:
 bin/magento setup:di:compile
 ```
 
-Och rensa cacheminnet med:
+Och rensa cachen med:
 
 ```bash
 bin/magento cache:clean

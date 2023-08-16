@@ -1,6 +1,6 @@
 ---
 title: Optimera bilder för en mer responsiv webbplats
-description: Lär dig hur du optimerar bilder och använder Snabb bildoptimering för att optimera svarstiden på dina Adobe Commerce-sajter.
+description: Lär dig hur du optimerar bilder och använder snabb bildoptimering för att optimera svarstiden på dina Adobe Commerce-sajter.
 role: Developer, Admin
 feature: Best Practices
 exl-id: ada8b987-97ed-4232-9e1b-7e0a791a0807

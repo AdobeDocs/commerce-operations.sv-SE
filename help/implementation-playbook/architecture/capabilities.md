@@ -1,6 +1,6 @@
 ---
 title: Adobe Commerce Capabilities
-description: Se hur Adobe Commerce möjligheter skiljer oss från konkurrenterna.
+description: Läs om hur Adobe Commerce möjligheter skiljer oss från konkurrenterna.
 exl-id: 6d2196b4-56ee-4048-b5e5-930811e7e50b
 feature: Paas
 source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
@@ -10,13 +10,13 @@ ht-degree: 0%
 
 ---
 
-# Adobe Commerce-funktioner
+# Adobe Commerce
 
-Adobe Commerce är en av de tillförlitligaste och mest tillförlitliga e-handelsplattformarna på marknaden. Tillförlitligheten och tillförlitligheten har bevisats i tillväxten hos de företag som använder den. Enligt [Mottagande domstol](https://hostingtribunal.com/blog/magento-statistics/#gref), använder varumärken Adobe Commerce när deras e-handelsplattform växer tre gånger snabbare jämfört med varumärken på andra plattformar.
+Adobe Commerce är en av de mest tillförlitliga e-handelsplattformarna på marknaden. Tillförlitligheten och tillförlitligheten har bevisats i tillväxten hos de företag som använder den. Enligt [Mottagande domstol](https://hostingtribunal.com/blog/magento-statistics/#gref), använder varumärken Adobe Commerce när deras e-handelsplattform växer tre gånger snabbare jämfört med varumärken på andra plattformar.
 
 Adobe Commerce förmåga att hantera alla komplexiteter ert varumärke kan ställas inför har gjort det till ett populärt val eftersom företagen har förbättrat sin sofistikering. Oavsett om varumärken fokuserar på en enda webbplats i en region eller behöver koppla samman flera webbplatser eller butiker över hela världen så har Adobe Commerce en infrastruktur för att skapa en sömlös och uppkopplad upplevelse. Som partner utnyttjar vi sedan vår expertis för att anpassa sajten efter dina unika behov.
 
-Adobe har varit välkänt av kreativa produkter, men har också en betydande digital verksamhet som erbjuder innehållshantering, analys, kampanjsamordning, kontobaserad marknadsföring och, naturligtvis, handel.
+Adobe har varit välkänt av kreativa produkter, men har också en betydande digital verksamhet som erbjuder innehållshantering, analys, kampanjsamordning, kontobaserad marknadsföring, personalisering och, naturligtvis, handel.
 
 Men vad gör en upplevelse bra och skiljer sig från konkurrenterna?
 
@@ -33,6 +33,6 @@ Adobe Commerce är en komplett, marknadstestad e-handelsplattform som är byggd 
 
 Adobe Commerce består av en samling funktioner som är självständiga moduler.
 
-![Adobe Commerce - översikt](../../assets/playbooks/capabilities-map.svg)
+![Adobe Commerce-funktionskarta](../../assets/playbooks/capabilities-map.svg)
 
-![Adobe Commerce - översikt](../../assets/playbooks/capabilities-modules.svg)
+![Adobe Commerce-funktionskarta](../../assets/playbooks/capabilities-modules.svg)

@@ -1,11 +1,11 @@
 ---
 title: Rekommenderad läsning för uppgraderingar
-description: Läs vad som rekommenderas för att planera uppgraderingen av Adobe Commerce.
+description: Granska rekommenderad läsning för att planera din Adobe Commerce-uppgradering.
 exl-id: 24ca57c0-1a68-46c4-b2fa-4a114250d0e3
 source-git-commit: 83ee645269b4fb0b63bb11f6d2255ef7fa52bc4f
 workflow-type: tm+mt
 source-wordcount: '383'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -28,12 +28,12 @@ Lär dig mer om Adobe Commerce och Magento Open Source genom att använda resurs
           </ul>
         </td>
       <td><strong>verktyg</strong>
-        <p>Bläddra bland verktyg som gör det enklare att hitta och använda Adobe Commerce och Magento Open Source.</p>
+        <p>Bläddra bland verktyg som gör det enklare för dig att hitta och använda Adobe Commerce och Magento Open Source.</p>
           <ul>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-learn/tutorials/uct-phpstorm.html">Upgrade Compatibility Tool PhpStorm plugin</a> (video)</li>
             <li><a href="../upgrade-compatibility-tool/overview.md">Kompatibilitetsverktyg för uppgradering</a></li>
             <li><a href="https://magentocommeng.slack.com/archives/C019Y143U9F">#UpgradeCompatibilityTool Slack-kanal</a></li>
-            <li><a href="../../tools/quality-patches-tool/usage.md">Verktyget Korrigeringar</a></li>
+            <li><a href="../../tools/quality-patches-tool/usage.md">Verktyget Kvalitetspatchar</a></li>
           </ul>
       </td>
     </tr>

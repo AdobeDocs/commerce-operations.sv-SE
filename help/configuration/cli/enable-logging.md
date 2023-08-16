@@ -20,7 +20,7 @@ Som standard skriver Commerce till felsökningsloggen (`<install_directory>/var/
 
 >[!INFO]
 >
->Från och med Commerce 2.3.1 kan du inte längre använda `bin/magento config:set dev/debug/debug_logging` om du vill aktivera eller inaktivera felsökningsloggning för det aktuella läget.
+>I Commerce 2.3.1 kan du inte längre använda `bin/magento config:set dev/debug/debug_logging` om du vill aktivera eller inaktivera felsökningsloggning för det aktuella läget.
 
 ### Aktivera felsökningsloggning
 
@@ -83,10 +83,10 @@ Som standard skriver Commerce `cron` information till `<install-directory>/var/l
 ## Loggning av Syslog
 
 Som standard skriver Commerce _syslog_ loggar till operativsystemet `syslog` -fil.
-Från och med Commerce 2.3.1 måste du använda `magento` för att aktivera eller inaktivera syslog.
+I Commerce 2.3.1 måste du använda `magento` för att aktivera eller inaktivera syslog.
 Inställningen i Admin har tagits bort.
 
-### Aktivera loggning av syslog
+### Så här aktiverar du synkroniseringsloggning
 
 Loggar till `syslog` är inaktiverat som standard.
 

@@ -5,7 +5,7 @@ exl-id: f6385e12-5c3d-425f-939c-9dfd7ef6c4f5
 source-git-commit: c371ee59e4f1efcc947d0bbd189a892d8f32a5b7
 workflow-type: tm+mt
 source-wordcount: '430'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
@@ -48,7 +48,7 @@ Använd följande tabell för att hitta versionsinformation och viktig informati
         <p>Läs om de senaste förbättringarna av innovativa Commerce-tjänster som finns som tillägg för Adobe Commerce och Magento Open Source.</p>
           <ul>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-admin/customers/audience-activation.html">Audience Activation</a></li>
-            <li><a href="https://experienceleague.adobe.com/docs/commerce-channels/amazon/release-notes.html">Amazon Sales Channel</a></li>
+            <li><a href="https://experienceleague.adobe.com/docs/commerce-channels/amazon/release-notes.html">Amazon-Sales Channeler</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/release-notes.html">Katalogtjänst</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-channels/channel-manager/release-notes.html">Channel Manager (Walmart Marketplace sales)</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/release-notes.html">Experience Platform Connector</a></li>

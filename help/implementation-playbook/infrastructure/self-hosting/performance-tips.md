@@ -1,7 +1,7 @@
 ---
 title: Självvärdande tips för Adobe Commerce
 description: Lär dig mer om självbetjäningstips och idéer och de bästa metoderna att tänka på.
-landing-page-description: Lär dig några tips och saker att tänka på när du är värd för Adobe Commerce på egen hand.
+landing-page-description: Lär dig några tips och saker du bör tänka på när du är värd för Adobe Commerce.
 short-description: Lär dig strategier och tips om hur du själv kan vara värd för Adobe Commerce.
 kt: 11420
 doc-type: tutorial
@@ -28,15 +28,15 @@ I följande avsnitt beskrivs ämnen som du bör tänka på och råd om hur du ka
 
 ## Varnish
 
-Avvikelse är HTTP-omvänd proxy med cache. Hur komplicerat det än kan tyckas är resultatet snabba svar för att säkerställa att förfrågningarna returneras snabbare än om det var nödvändigt att hämta objektet från källan. Om du kör en Adobe Commerce-webbplats utan någon version av Varnish blir sidinläsningen långsammare och andra viktiga mätvärden. Det kan vara lite svårt att konfigurera och hantera sig själv, men vi har det här ämnet i Experience League [Konfigurera lack](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/varnish/config-varnish.html){target="_blank"} för att få en bättre förståelse för hur den används med Adobe Commerce. Ett alternativ är att använda en molnbaserad lösning. Även om det finns många att tänka på har Fastly valts som lösning för Adobe Commerce i molnet. Det är en version av Fastly, molnbaserad, som använder VCL:er och många fernissa.
+Avvikelse är en HTTP-omvänd proxy med cache. Hur komplicerat det än kan tyckas är resultatet snabba svar för att säkerställa att förfrågningarna returneras snabbare än om det var nödvändigt att hämta objektet från källan. Om du kör en Adobe Commerce-webbplats utan någon version av Varnish blir sidinläsningen långsammare och andra viktiga mätvärden. Det kan vara lite svårt att konfigurera och hantera sig själv, men vi har det här ämnet i Experience League [Konfigurera lack](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/varnish/config-varnish.html){target="_blank"} för att få en bättre förståelse för hur den används med Adobe Commerce. Ett alternativ är att använda en molnbaserad lösning. Även om det finns många att tänka på har Fastly valts som lösning för Adobe Commerce i molnet. Det är en version av Fastly, molnbaserad, som använder VCL:er och många fernissa.
 
-Det är svårt att hitta en lösning som bäst passar program, konfiguration, budget och tekniska funktioner. Om du använder ett molnbaserat alternativ försvinner alla hårda delar så långt hantering, konfiguration, servrar och andra infrastrukturkomponenter beaktas. Den har valts ut av Adobe Commerce i molnteamet som sin lösning på grund av dess prestanda, skalbarhet, genomströmning och många andra viktiga mätvärden.
+Det är svårt att hitta en lösning som bäst passar ditt program, din konfiguration, din budget och dina tekniska färdigheter. Om du använder ett molnbaserat alternativ försvinner alla hårda delar så långt hantering, konfiguration, servrar och andra infrastrukturkomponenter beaktas. Den har valts ut av Adobe Commerce i molnteamet som sin lösning på grund av dess prestanda, skalbarhet, genomströmning och många andra viktiga mätvärden.
 
 Genom att välja en bra lösning för ditt projekt när det gäller Varnish, skapar du dig själv för bästa prestanda för dina kunder och sparar affärsapplikationen så att den inte arbetar så hårt som den måste.
 
 ## CDN
 
-Tillsammans med Varnish som är en värdefull tillgång för ditt Adobe Commerce-projekt är nästa rad ett CDN. Tillsammans med din engelska kan ett CDN tillhandahålla cachelagrade instanser för din CSS, sidresurser som bilder för att minska bandbredden i ditt Adobe Commerce-program. Det kan cache-lagra GraphQL-svar och ytterligare utnyttja fördelarna med en headless Adobe Commerce-webbplats. Vissa CDN-nummer erbjuder bildoptimering, en brandvägg för webbprogram och andra funktioner.
+Tillsammans med Varnish som är en värdefull tillgång för ditt Adobe Commerce-projekt är nästa rad ett CDN. Tillsammans med din engelska kan ett CDN tillhandahålla cachelagrade instanser för din CSS, t.ex. bilder, för att minska bandbredden i ditt Adobe Commerce-program. Det kan cache-lagra GraphQL-svar och ytterligare utnyttja fördelarna med en headless Adobe Commerce-webbplats. Vissa CDN-nummer erbjuder bildoptimering, en brandvägg för webbprogram och andra funktioner.
 
 Adobe Commerce i molnet valde att använda Fastly för sitt Varnish-cacheminne men också som sitt CDN. Denna enda lösning innehåller en mängd funktioner som ger en enastående upplevelse för Adobe Commerce på molnkunder. Du kan läsa snabbtjänstöversikten i Experience League [Snabb översikt över tjänster](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/fastly.html){target="_blank"}
 
@@ -52,7 +52,7 @@ Innan du inaktiverar oanvända moduler bör du kontrollera att du inte har någr
 
 ## Kräv att Adobe Commerce- och PHP-kodningsstandarder följs för varje pull-begäran
 
-Adobe Commerce har en uppsättning [Kodstandarder](https://developer.adobe.com/commerce/php/coding-standards/){target="_blank"}. Dessa hjälper till att säkerställa att liknande mönster, format och förväntad design följs oavsett typ av programutveckling. När du bidrar till Adobe Commerce-kodbasen är detta ett krav. Om du väljer att följa den här metoden för anpassad utveckling skapar du emellertid en solid hörnsten för alla utvecklare, både nuvarande och framtida. När alla pull-begäranden måste skicka en kodstandard, blir det lättare att se och förvänta sig samma enhetliga utvecklingsmönster.
+Adobe Commerce har [Kodstandarder](https://developer.adobe.com/commerce/php/coding-standards/){target="_blank"}. Dessa hjälper till att säkerställa att liknande mönster, format och förväntad design följs oavsett typ av programutveckling. När du bidrar till Adobe Commerce-kodbasen är detta ett krav. Om du väljer att följa den här metoden för anpassad utveckling skapar du emellertid en solid hörnsten för alla utvecklare, både nuvarande och framtida. När alla pull-begäranden måste skicka en kodstandard, blir det lättare att se och förvänta sig samma enhetliga utvecklingsmönster.
 
 Som en del av Adobe Commerce kodningsstandarder används även PHP:s grundläggande kodningsstandarder. Det bör tydligt definieras i utvecklarhandböckerna vilka standarder du måste följa och eventuella avvikelser som är godtagbara. En reservdel bör dock utgå från den allmänna handboken på [PHP-FIG](https://www.php-fig.org){target="_blank"}.
 
@@ -66,6 +66,6 @@ Förutom att upptäcka prestandaförsämringar från ny kod kan du med hjälp av
 
 Dessa tester kan automatiseras och ingå i CI/CD-flödet. På grund av detta kan du också ha regler som tar resultaten och eventuellt blockerar sammanslagningen av funktioner om för mycket avvikelse från standarden inträffar. Antalet användningsfall för dessa data är obegränsat, men om du inte startar den här processen kommer du kanske aldrig att inse dess potential.
 
-Adobe Commerce har skrivit en bra text om detta ämne i Experience League [Tips för prestandatestning](https://experienceleague.adobe.com/docs/commerce-operations/deliver-commerce-at-scale/launch.html){target="_blank"} and in [Testing guidance](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/test/guidance.html){target="_blank"}.
+Adobe Commerce har skrivit en bra text om detta ämne i Experience League [Testtips för prestanda](https://experienceleague.adobe.com/docs/commerce-operations/deliver-commerce-at-scale/launch.html){target="_blank"} and in [Testing guidance](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/test/guidance.html){target="_blank"}.
 
 {{$include /help/_includes/hosting-related-links.md}}

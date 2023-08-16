@@ -19,7 +19,7 @@ Med det här kommandot kan du säkerhetskopiera:
 
 Säkerhetskopior lagras i `var/backups` och kan återställas när som helst med [`magento setup:rollback`](uninstall-modules.md#roll-back-the-file-system-database-or-media-files) -kommando.
 
-När du har säkerhetskopierat kan du [återställning](#rollback) senare.
+Efter säkerhetskopiering kan du [återställning](#rollback) senare.
 
 >[!TIP]
 >
@@ -58,7 +58,7 @@ Kommando:
 ulimit -s 65536
 ```
 
-Om det behövs kan du ändra värdet till ett större värde.
+Du kan ändra det till ett större värde om det behövs.
 
 >[!NOTE]
 >

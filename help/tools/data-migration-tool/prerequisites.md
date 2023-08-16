@@ -5,7 +5,7 @@ exl-id: 42dfa1ca-41ed-453d-a3e4-41ff36817ca3
 topic: Commerce, Migration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '249'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Kontrollera att följande krav är uppfyllda innan du startar migreringen.
 
-## Magento 2
+## Magento 2-systemet
 
 * Konfigurera ditt Magento 2-system så att det uppfyller [systemkrav](../../installation/system-requirements.md).
 
@@ -28,7 +28,7 @@ Starta inte seriejobb för Magento 2.
 
 ## Databas
 
-* Efter installation, säkerhetskopiering eller [dump](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html) din Magento 2-databas så snart som möjligt. Detta gör att du kan återställa det inledande databastillståndet om migreringen inte lyckas.
+* Efter installationen, säkerhetskopiera eller [dump](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html) din Magento 2-databas så snart som möjligt. Detta gör att du kan återställa det inledande databastillståndet om migreringen inte lyckas.
 
 * Verifiera om [!DNL Data Migration Tool] har nätverksåtkomst för att ansluta till databaserna Magento 1 och Magento 2.
 

@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Sammanfattning av prestandatecken
 
-Resultaten från prestandatesterna i Adobe Commerce 2.4.5 återspeglar prestandatestet i en Adobe Commerce-instans som distribuerats med följande infrastruktur och ytterligare komponenter.
+Resultat från prestandatestet i Adobe Commerce 2.4.5 återspeglar prestandatestet mätt på en Adobe Commerce-instans som distribuerats med följande infrastruktur och ytterligare komponenter.
 - [Pro cloud environment](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-architecture.html) med [skalad arkitektur](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/scaled-architecture.html)
 - [B2B för Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-admin/b2b/introduction.html)
 - [Adobe Commerce Inventory management](https://experienceleague.adobe.com/docs/commerce-admin/inventory/introduction.html)
@@ -52,7 +52,7 @@ Prestandamätningarna baseras på simulerade dagliga butiksaktiviteter för kund
 
      Om du använder cache-lagret effektivt ökas antalet sidvisningar per timme.
 
-- **GraphQL API**
+- **GRAPHQL API**
    - 250 samtidiga trådar
    - Ange 0 % CDN-cache-träfffrekvens
 

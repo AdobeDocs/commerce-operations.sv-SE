@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Cache för statiskt innehåll
 
-För att förbättra prestanda anger Commerce `Expires` rubriker för statiska resurser, som bilder, JavaScript och CSS-filer.
+För att förbättra prestandan anger Commerce `Expires` rubriker för statiska resurser, som bilder, JavaScript och CSS-filer.
 Ange `Expires` för en statisk resurs anger för webbläsaren att cachelagra resursen på den URL:en och skicka den cachelagrade versionen tills den går ut.
 Detta är en vanlig [bästa praxis](https://developer.yahoo.com/performance/rules.html#expires=) för cachelagring av statiska resurser.
 

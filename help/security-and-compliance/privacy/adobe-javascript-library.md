@@ -28,7 +28,7 @@ Hämta biblioteksfilen på något av följande sätt:
 - npm: `npm install @adobe/adobe-privacy`
 - GitHub: [https://github.com/Adobe-Marketing-Cloud/adobe-privacy](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
-När du har filen måste du lägga till den i en anpassad modul eller ett tema som är installerat i Adobe Commerce och Magento Open Source. Följ instruktionerna som beskrivs i [Använd anpassad JavaScript](https://developer.adobe.com/commerce/frontend-core/javascript/custom/) ämne som ska utföra den här uppgiften.
+När du har filen måste du lägga till den i en anpassad modul eller ett tema som är installerat i Adobe Commerce och Magento Open Source. Följ instruktionerna i [Använd anpassad JavaScript](https://developer.adobe.com/commerce/frontend-core/javascript/custom/) ämne som ska utföra den här uppgiften.
 
 ## Användning
 

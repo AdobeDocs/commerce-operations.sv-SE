@@ -5,7 +5,7 @@ exl-id: b567e4a4-534e-4151-b6f6-bf59b1bd4028
 feature: Configuration, Observability
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '374'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ The **[!UICONTROL Security]** på fliken förklaras säkerhetsproblem och deras 
 
 ## [!UICONTROL API calls by IP, details by URL]
 
-The **[!UICONTROL API calls by IP, details by URL]** bildrutan visar ett antal API-anrop per IP för en vald tidsram. Den här bildrutan visar IP-adressen och API-URL:en som den IP-adressen använde.
+The **[!UICONTROL API calls by IP, details by URL]** bildrutan visar ett antal API-anrop per IP för en vald tidsram. I den här bildrutan visas IP-adressen och API-URL:en som den IP-adressen användes till.
 
 ![API-anrop via IP](../../assets/tools/observation-for-adobe-commerce/calls-by-ip.jpg)
 

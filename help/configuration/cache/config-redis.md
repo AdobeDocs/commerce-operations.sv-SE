@@ -16,7 +16,7 @@ Redis-funktioner:
 
 - PHP-sessionslagring
 - Taggbaserad cacherensning utan `foreach` slingor
-- Spara på disk och överordnad-/slavreplikering
+- Spara på disk och replikera master/slave
 
 ## Installera Redis
 
@@ -33,7 +33,7 @@ Beroende på installationen kan du oftast hitta din Redis-konfiguration i någon
 
 För att optimera Redis-instansen efter dina behov får du bäst resultat genom att använda en dedikerad instans för varje session, Commerce Cache och FPC.
 
-För sessioner rekommenderar Adobe att du aktiverar beständighet för kopiering av Redis-data till disken med något av följande beständiga alternativ: regelbundna RDB-ögonblicksbilder (Redis Database Backup) eller AOF-beständiga loggar (Append Only File).
+För sessioner rekommenderar Adobe att du aktiverar beständighet för kopiering av Redis-data till disken med något av följande beständiga alternativ: vanliga ögonblicksbilder av Redis Database Backup (RDB) eller beständiga AOF-beständiga loggar (Append Only Database Backup).
 
 - **Säkerhetskopiering av Redis-databas** (RDB) ögonblicksbilder lagrar hela databasen i en dumpfil efter en viss tid, när ett minsta antal nycklar har ändrats sedan den senaste sparningen. Använd `save` -inställningen inuti `redis.conf` fil för att konfigurera den här inställningen.
 

@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Adobe Commerce Support-verktygen - även kallade [Datainsamling](https://docs.magento.com/user-guide/system/support-data-collector.html)—gör det möjligt för användare att samla in felsökningsinformation om ditt system som kan användas av vårt supportteam.
 
-Adobe Commerce använder dessa säkerhetskopior, även kallade _dumpar_, för att analysera problem som kräver åtkomst till din kod. Ett typiskt scenario följer:
+Adobe Commerce använder dessa säkerhetskopior, som också kallas _dumpar_, för att analysera problem som kräver åtkomst till din kod. Ett typiskt scenario följer:
 
 1. Du har problem med din Commerce Store och du kontaktar Adobe Commerce Support.
 1. Supporten avgör om de behöver se koden eller databasen för att återskapa problemet.
@@ -77,7 +77,7 @@ Var:
 - **`--name`** anger dumpfilens namn (valfritt). Om du utelämnar den här parametern är dumpfilen tids- och datumstämplad.
 - **`-o|--output=<path>` är den absoluta filsystemsökvägen för lagring av säkerhetskopian (krävs).
 - **`-l|--logs`** innehåller loggfiler (valfritt).
-- **`-i|--ignore-sanitize`** uppgifter bevaras, utelämna flaggan för att hash-koda känsliga data som lagras i databasen när du skapar säkerhetskopian (valfritt).
+- **`-i|--ignore-sanitize`** betyder att data bevaras. Utelämna flaggan för att hash-koda känsliga data som lagras i databasen när du skapar säkerhetskopian (valfritt).
 
 Känsliga data innehåller kundinformation från följande databastabeller:
 
@@ -108,7 +108,7 @@ Kör följande kommandon i den ordning som visas för att visa sökvägarna till
 
 1. Ändra till installationskatalogen för Commerce.
 
-   Till exempel: `cd /var/www/magento2`
+   Exempel: `cd /var/www/magento2`
 
    >[!INFO]
    >
@@ -131,4 +131,4 @@ Ett exempel följer:
    mysql => /usr/bin/mysql
 ```
 
-För att lösa problem med att köra verktygen kontrollerar du att programmen är installerade och finns i webbserveranvändarens `$PATH` systemvariabel.
+För att lösa problem med att köra verktygen kontrollerar du att programmen är installerade och finns i webbserveranvändarens `$PATH` miljövariabel.

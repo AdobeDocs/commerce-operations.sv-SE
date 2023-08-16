@@ -5,14 +5,14 @@ exl-id: 00171c41-ccea-4ebe-8958-becb9aa09973
 topic: Commerce, Migration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '74'
 ht-degree: 0%
 
 ---
 
 # Steg efter datamigrering
 
-Utför följande uppgifter när du är klar med migreringen och har testat din nya Magento 2-plats noggrant:
+Utför följande uppgifter när du är klar med migreringen och har testat din nya Magento 2-plats grundligt:
 
 * Placera Magento 1 i underhållsläge och stoppa alla administratörsaktiviteter permanent
 

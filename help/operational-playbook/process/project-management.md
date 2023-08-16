@@ -15,9 +15,9 @@ Projektledning är tillämpning av kunskap, färdigheter, verktyg och tekniker f
 
 I följande diagram beskrivs de fem faserna i projektledningen och projektledningens livscykel:
 
-![Livscykeldiagram för projektledning](../../assets/playbooks/project-management-lifecycle.png)
+![Livscykeldiagram för projekthantering](../../assets/playbooks/project-management-lifecycle.png)
 
-Projektledningens livscykel ger en vältajmad och kontrollerad leveransprocess som ger fördelar för projektintressenter. Det första steget i att leverera ett framgångsrikt e-handelsprojekt är projektledning. Rätt metod och metod krävs för att teamet ska kunna leverera projektet effektivt.
+Projektledningens livscykel ger en vältajmad och kontrollerad leveransprocess som gynnar projektintressenter. Det första steget i att leverera ett framgångsrikt e-handelsprojekt är projektledning. Rätt metod och metod krävs för att teamet ska kunna leverera projektet effektivt.
 
 
 Vissa team väljer Scrum-projektledningsmetod för sina e-handelsprojekt. Scrum-funktionerna nedan underlättar och hanterar projektet:
@@ -52,9 +52,9 @@ En grundläggande plan för hantering av e-handelsprojekt omfattar:
 
 Exempel på metodtips som företag kan hänvisa till för projekthantering är:
 
-- Ange tydliga, exakta och spårbara mål
+- Ställa in tydliga, exakta och spårbara mål
 - Övervakningstid för uppgifter och resurser för att undvika slöseri
-- Välja rätt e-handelsverktyg som teamet behöver, som e-handelsplattform och kommunikationsverktyg
+- Välja rätt e-handelsverktyg som krävs av teamet, t.ex. e-handelsplattform och kommunikationsverktyg
 - Testning och iterering ska ske kontinuerligt
 - Spårningsbudget
 - Behåll krypning av omfång

@@ -59,7 +59,7 @@ I det här avsnittet beskrivs hur du skapar en anpassad underhållssida och hur 
 Exemplet i det här avsnittet visar hur du ändrar följande filer, som är ett sätt att konfigurera underhållssidan:
 
 - Apache 2.4: `/etc/apache2/sites-available/000-default.conf`
-- Apache 2.2: `/etc/apache2/sites-available/default` (Ubuntu) `/etc/httpd/conf/httpd.conf` (CentOS)
+- Apache 2.2: `/etc/apache2/sites-available/default` Ubuntu `/etc/httpd/conf/httpd.conf` (CentOS)
 
 Så här omdirigerar du trafik till en anpassad underhållssida:
 
@@ -105,7 +105,7 @@ I det här avsnittet beskrivs hur du skapar en anpassad underhållssida och hur 
 Så här omdirigerar du trafik till en anpassad underhållssida:
 
 1. Använd ett textredigeringsprogram för att öppna konfigurationsfilen nginx som innehåller serverblocket.
-1. Lägg till följande i serverblocket (`server` endast visas för tydlighet, lägg inte till ett andra serverblock).
+1. Lägg till följande i serverblocket (`server` visas endast för tydlighet (lägg inte till ett andra serverblock).
 
    Följande tillåtslista IP-adressen 192.0.2.110 och 192.0.2.115 för på ett system där Magento är installerat i `/var/www/html/magento2`:
 

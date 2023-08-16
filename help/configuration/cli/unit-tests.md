@@ -19,13 +19,13 @@ Det här kommandot kör en uppsättning tester som definierats i kodbasen i Comm
 
 Innan du kör det här kommandot gör du följande _måste_ vara true:
 
-- The `Magento_Developer` -modulen måste aktiveras. Du kan aktivera den på följande sätt:
+- The `Magento_Developer` -modulen måste vara aktiverad. Du kan aktivera den på följande sätt:
 
-   ```bash
-   bin/magento module:enable [--force] Magento_Developer
-   ```
+  ```bash
+  bin/magento module:enable [--force] Magento_Developer
+  ```
 
-   Använd `--force` endast om det är nödvändigt.
+  Använd `--force` endast om det är nödvändigt.
 
 - Systemet måste vara konfigurerat för att köra de önskade testerna.
 

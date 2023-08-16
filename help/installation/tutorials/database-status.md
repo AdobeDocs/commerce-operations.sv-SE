@@ -11,11 +11,11 @@ ht-degree: 2%
 
 # Kontrollera databasstatus
 
-Innan du kör det här kommandot måste du [Skapa eller uppdatera distributionskonfigurationen](deployment.md).
+Innan du kör kommandot måste du [Skapa eller uppdatera distributionskonfigurationen](deployment.md).
 
 ## Kommandoanvändning
 
-För att kontrollera databasens status.
+Kontrollera databasens status.
 
 ```bash
 bin/magento setup:db:status

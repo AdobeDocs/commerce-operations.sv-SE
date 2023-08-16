@@ -28,20 +28,20 @@ The [[!UICONTROL Security Scan Tool]](https://experienceleague.adobe.com/docs/co
 
 * **[!UICONTROL Extensions]**: Visar de tillägg som är installerade på din Adobe Commerce-instans. [Adobe Commerce Marketplace](https://marketplace.magento.com/extensions.html) Information tillhandahålls, om sådan finns, för de tillägg som anges där.
 
-* **[!UICONTROL Alerts]**: Visar de senaste [!DNL New Relic Managed Alerts] för Adobe Commerce. Läs mer om [Hanterade aviseringar för Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html) och hur [Få tillgång till New Relic tjänster](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/access-new-relic-services.html) i Adobe Commerce Support Knowledge Base.
+* **[!UICONTROL Alerts]**: Visar den senaste [!DNL New Relic Managed Alerts] för Adobe Commerce. Läs mer om [Hanterade aviseringar för Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html) och hur [Få tillgång till New Relic tjänster](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/access-new-relic-services.html) i Adobe Commerce Support Knowledge Base.
 
 * **[!UICONTROL Non-recommended software in use]**: Visar den programvara som inte rekommenderas och som används av din Adobe Commerce-instans, baserat på din Adobe Commerce-version. Programvaran som inte rekommenderas listas i [!UICONTROL Name], [!UICONTROL Installed Version]och [!UICONTROL Recommended Version].
 
-* **[!UICONTROL Recommended Patches]**: Visar en kort lista över rekommenderade korrigeringsfiler baserat på båda korrigeringsfilerna som du har installerat och din Adobe Commerce-version. En fullständig lista över rekommenderade korrigeringar finns på **[!UICONTROL Patches]** -fliken, som också finns i [!DNL Site-Wide Analysis Tool]. Patcharna finns i [[!DNL Quality Patches Tool]: Sök efter patchar](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}. Alla korrigeringsfiler i listan är kompatibla med din aktuella Adobe Commerce-instans.
-Om det inte finns några rekommenderade korrigeringar att visa för din Adobe Commerce-instans är detta [!DNL widget] kommer att visas, **[!UICONTROL No Recommended Patches]**.
+* **[!UICONTROL Recommended Patches]**: Visar en kort lista över rekommenderade korrigeringsfiler baserat på båda korrigeringsfilerna som du har installerat och din Adobe Commerce-version. En fullständig lista över rekommenderade korrigeringsfiler finns på **[!UICONTROL Patches]** -fliken, som också finns i [!DNL Site-Wide Analysis Tool]. Patcharna finns i [[!DNL Quality Patches Tool]: Sök efter patchar](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}. Alla korrigeringsfiler i listan är kompatibla med din aktuella Adobe Commerce-instans.
+Om det inte finns några rekommenderade korrigeringar att visa för din Adobe Commerce-instans är detta [!DNL widget] kommer att visas **[!UICONTROL No Recommended Patches]**.
 
-## När ska användas
+## När ska du använda
 
 The **[!UICONTROL Dashboard]** finns i kommandocentralen på [!DNL Site-Wide Analysis Tool] så att du inte bara kan se helhetsbilden av webbplatsens hälsa som helhet, utan även se och få tillgång till specifika verktyg, rekommendationer och rapporter för Adobe Commerce webbplats via varje [!DNL widget].
 
 ## Fördelar
 
-* The [!DNL widgets] for [!UICONTROL Security Center], [!UICONTROL Recommendations], [!UICONTROL Extensions]och [!UICONTROL Security Scan] alla använder lättlästa färgkodade interaktiva cirkeldiagram med diagramteckenförklaringar på sidan och räkningssummor i mitten för att ange hur många [!UICONTROL Recommendations], [!UICONTROL Extensions]och [!UICONTROL Security Scan Tool] objekt som varje funktion har. [!UICONTROL Recommendations] och [!UICONTROL Security Scan Tool] diagram avgränsas av allvarlighetsgrad. [!UICONTROL Extensions] är uppdelade i fyra klassificeringar: aktuell version, gammal version, inaktiverad och okänd.
+* The [!DNL widgets] for [!UICONTROL Security Center], [!UICONTROL Recommendations], [!UICONTROL Extensions]och [!UICONTROL Security Scan] alla använder lättlästa färgkodade interaktiva cirkeldiagram med diagramteckenförklaringar på sidan och räkningssummor i mitten för att ange hur många [!UICONTROL Recommendations], [!UICONTROL Extensions]och [!UICONTROL Security Scan Tool] objekt som varje funktion har. [!UICONTROL Recommendations] och [!UICONTROL Security Scan Tool] diagram avgränsas av allvarlighetsgrad. [!UICONTROL Extensions] är indelade i fyra klassificeringar: aktuell version, gammal version, inaktiverad och okänd.
 
 * [!DNL New Relic Alerts] visas med den senaste varningen överst, inklusive en kort beskrivning och hur länge sedan varningen inträffade.
 
@@ -49,7 +49,7 @@ The **[!UICONTROL Dashboard]** finns i kommandocentralen på [!DNL Site-Wide Ana
 
 * The [!UICONTROL Security Scan Tool] har en **[!UICONTROL View Report]** i [!DNL widget] fönstret som tar dig till [!UICONTROL Recommendations] sida.
 
-* The [!DNL Upgrade Compatibility Tool] har en **[!UICONTROL Run Upgrade Scan]** i [!DNL widget] -fönstret.
+* The [!DNL Upgrade Compatibility Tool] har en **[!UICONTROL Run Upgrade Scan]** knappen i [!DNL widget] -fönstret.
 
 ## Bästa tillvägagångssätt för att använda [!UICONTROL Dashboard]
 

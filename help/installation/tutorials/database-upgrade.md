@@ -23,7 +23,7 @@ När du utför en åtgärd som gör att databasschemat eller data ändras, måst
 
 >[!NOTE]
 >
->A *komponent* kan vara en modul, ett tema eller ett språkpaket, det spelar ingen roll om komponenten kommer från Commerce Marketplace eller inte.
+>A *komponent* kan vara en modul, ett tema eller ett språkpaket. Det spelar ingen roll om komponenten kommer från Commerce Marketplace eller inte.
 
 1. Starta uppgraderingen:
 
@@ -33,7 +33,7 @@ När du utför en åtgärd som gör att databasschemat eller data ändras, måst
 
    Plats `--keep-generated` är ett valfritt argument som inte uppdateras [statiska vyfiler](../../configuration/cli/static-view-file-deployment.md). Det här valfria argumentet används *endast* under begränsade omständigheter av erfarna systemintegratörer. Det ska användas *endast* in [produktionsläge](../../configuration/bootstrap/application-modes.md#production-mode). Det borde *not* används i [utvecklarläge](../../configuration/bootstrap/application-modes.md#developer-mode).
 
-1. Rensa cacheminnet:
+1. Rensa cachen:
 
    ```bash
    bin/magento cache:clean

@@ -44,10 +44,10 @@ Minimikraven för att använda [!DNL Upgrade Compatibility Tool] i ett kommandor
 
 | **Krav** | **Begränsningar** |
 |----------------|-----------------|
-| PHP-version | >= 7.3 |
+| PHP version | >= 7.3 |
 | Disposition | inga kända krav. |
 | Node.js | Node.js-versioner `^12.22.0`, `^14.17.0`, eller `>=16.0.0` (se [Installera Node.js](https://nodejs.dev/en/learn/how-to-install-nodejs/)) |
-| Minnesbegränsningar | Minst 2 GB RAM-minne. |
+| Minnesbegränsningar | Minst 2 GB RAM. |
 
 [!DNL Upgrade Compatibility Tool] kräver [PCNTL](https://www.php.net/manual/en/book.pcntl.php) och andra PHP-tillägg för körningen. Kontrollera önskade PHP-tillägg med `composer check-platform-reqs` kommando:
 
@@ -74,7 +74,7 @@ ext-zip       1.15.6    success
 php           7.4.30    success
 ```
 
-Adobe Commerce stöds bara på Linux-operativsystem. Du kan köra [!DNL Upgrade Compatibility Tool] i ett Linux-operativsystem. Du behöver inte köra [!DNL Upgrade Compatibility Tool] där din Adobe Commerce-instans finns.
+Adobe Commerce stöds bara på Linux-operativsystem. Du kan köra [!DNL Upgrade Compatibility Tool] i Linux OS. Du behöver inte köra [!DNL Upgrade Compatibility Tool] där din Adobe Commerce-instans finns.
 
 Det är nödvändigt för [!DNL Upgrade Compatibility Tool] för att få tillgång till källkoden för Adobe Commerce-instansen. Du kan t.ex. installera det på en server och peka det vid din Adobe Commerce-installation på en annan server.
 

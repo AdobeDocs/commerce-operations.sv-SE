@@ -1,18 +1,18 @@
 ---
 title: Generera data för prestandatestning
-description: Lär dig hur du genererar en stor mängd data som kan användas för prestandatestning.
+description: Lär dig hur du genererar en stor mängd data som ska användas för prestandatestning.
 feature: Configuration, Orders
 exl-id: 2f54701d-88c4-464a-b4dc-56db14d54160
 source-git-commit: 403a5937561d82b02fd126c95af3f70b0ded0747
 workflow-type: tm+mt
 source-wordcount: '749'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
 # Prestandatestningsdata
 
-Så här använder du [Performance Toolkit](https://github.com/magento/magento2/blob/2.4/setup/performance-toolkit) eller något annat verktyg för prestandatestning måste du generera en stor mängd data, till exempel butiker, kategorier och produkter.
+Använd [Performance Toolkit](https://github.com/magento/magento2/blob/2.4/setup/performance-toolkit) eller något annat verktyg för prestandatestning måste du generera en stor mängd data, till exempel butiker, kategorier och produkter.
 
 {{file-system-owner}}
 
@@ -20,9 +20,9 @@ Så här använder du [Performance Toolkit](https://github.com/magento/magento2/
 
 Du kan justera mängden data som du skapar med _profiler_ (liten, medelstor, stor och extra stor). Profilerna finns i `<magento_root>/setup/performance-toolkit/profiles/<ce|ee>` katalog.
 
-Till exempel: `/var/www/html/magento2/setup/performance-toolkit/profiles/ce`
+Exempel: `/var/www/html/magento2/setup/performance-toolkit/profiles/ce`
 
-Följande bild visar hur en produkt visas i butiken med _liten_ profil:
+Följande bild visar hur en produkt visas i butiken med hjälp av _liten_ profil:
 
 ![Exempelarkiv med genererade data](../../assets/configuration/generate-data.png)
 
@@ -62,7 +62,7 @@ bin/magento setup:perf:generate-fixtures <path-to-profile>
 
 Plats `<path-to-profile>` anger den absoluta filsystemsökvägen till och namnet på en profil.
 
-Till exempel:
+Exempel:
 
 ```bash
 bin/magento setup:perf:generate-fixtures /var/www/html/magento2/setup/performance-toolkit/profiles/ce/small.xml
@@ -99,7 +99,7 @@ Generating simple products...  done in <time>
 
 ## Prestandakorrigeringar
 
-### Administratörsanvändare
+### Administratörer
 
 Skapar administratörsanvändare. XML-profilnod:
 
@@ -163,7 +163,7 @@ Skapar katalogprisregler. XML-profilnod:
 
 ### Kategorier
 
-Genererar kategorier. If `assign_entities_to_all_websites` är inställd på `0`alla kategorier är jämnt fördelade per rotkategori, I annat fall tilldelas alla kategorier till en rotkategori.
+Genererar kategorier. If `assign_entities_to_all_websites` är inställd på `0`, är alla kategorier jämnt fördelade per rotkategori, annars tilldelas alla kategorier till en rotkategori.
 
 XML-profilnod:
 
@@ -201,102 +201,102 @@ Följande XML-nodformat stöds:
 
 - Distribution per Default och fördefinierade attributuppsättningar:
 
-   ```xml
-   <!-- Number of configurable products -->
-   <configurable_products>{int}</configurable_products>
-   ```
+  ```xml
+  <!-- Number of configurable products -->
+  <configurable_products>{int}</configurable_products>
+  ```
 
 - Generera produkter baserat på en befintlig attributuppsättning:
 
-   ```xml
-   <configurable_products>
-   
-       <config>
-               <!-- Existing attribute set name -->
-               <attributeSet>{string}</attributeSet>
-   
-               <!-- Configurable sku pattern with %s -->
-               <sku>{string}</sku>
-   
-               <!-- Number of configurable products -->
-               <products>{int}</products>
-   
-               <!-- Category Name. Optional. By default category name from Categories fixture will be used -->
-               <category>[{string}]</category>
-   
-               <!-- Type of Swatch attribute e.g. color|image -->
-               <swatches>{string}</swatches>
-       </config>
-   
-   <!-- ... more entries ... -->
-   </configurable_products>
-   ```
+  ```xml
+  <configurable_products>
+  
+      <config>
+              <!-- Existing attribute set name -->
+              <attributeSet>{string}</attributeSet>
+  
+              <!-- Configurable sku pattern with %s -->
+              <sku>{string}</sku>
+  
+              <!-- Number of configurable products -->
+              <products>{int}</products>
+  
+              <!-- Category Name. Optional. By default category name from Categories fixture will be used -->
+              <category>[{string}]</category>
+  
+              <!-- Type of Swatch attribute e.g. color|image -->
+              <swatches>{string}</swatches>
+      </config>
+  
+  <!-- ... more entries ... -->
+  </configurable_products>
+  ```
 
 - Generera produkter baserat på en dynamiskt skapad attributuppsättning med ett angivet antal attribut och alternativ:
 
-   ```xml
-   <configurable_products>
-   
-       <config>
-           <!-- Number of attributes in configurable product -->
-           <attributes>{int}</attributes>
-   
-           <!-- Number of options per attribute -->
-           <options>{int}</options>
-   
-           <!-- Configurable sku pattern with %s -->
-           <sku>{string}</sku>
-   
-           <!-- Number of configurable products -->
-           <products>{int}</products>
-   
-           <!-- Category Name. Optional. By default category name from Categories fixture will be used -->
-           <category>[{string}]</category>
-   
-           <!-- Type of Swatch attribute e.g. color|image -->
-           <swatches>{string}</swatches>
-       </config>
-   
-       <!-- ... more entries ... -->
-   </configurable_products>
-   ```
+  ```xml
+  <configurable_products>
+  
+      <config>
+          <!-- Number of attributes in configurable product -->
+          <attributes>{int}</attributes>
+  
+          <!-- Number of options per attribute -->
+          <options>{int}</options>
+  
+          <!-- Configurable sku pattern with %s -->
+          <sku>{string}</sku>
+  
+          <!-- Number of configurable products -->
+          <products>{int}</products>
+  
+          <!-- Category Name. Optional. By default category name from Categories fixture will be used -->
+          <category>[{string}]</category>
+  
+          <!-- Type of Swatch attribute e.g. color|image -->
+          <swatches>{string}</swatches>
+      </config>
+  
+      <!-- ... more entries ... -->
+  </configurable_products>
+  ```
 
 - Generera produkter baserat på en dynamiskt skapad attributuppsättning med en angiven konfiguration för varje attribut:
 
-   ```xml
-   <configurable_products>
-   
-       <config>
-           <attributes>
-               <!-- Configuration for a first attribute -->
-               <attribute>
-                   <!-- Amount of options per attribute -->
-                   <options>{int}</options>
-   
-                   <!-- Type of Swatch attribute -->
-                   <swatches>{string}</swatches>
-               </attribute>
-   
-               <!-- Configuration for a second attribute -->
-               <attribute>
-                   <!-- Amount of options per attribute -->
-                   <options>{int}</options>
-               </attribute>
-           </attributes>
-   
-           <!-- Configurable sku pattern with %s -->
-           <sku>{string}</sku>
-   
-           <!-- Number of configurable products -->
-           <products>{int}</products>
-   
-           <!-- Category Name. Optional. By default, the category name from Categories fixture will be used -->
-           <category>[{string}]</category>
-       </config>
-   
-       <!-- ... more entries ... -->
-   </configurable_products>
-   ```
+  ```xml
+  <configurable_products>
+  
+      <config>
+          <attributes>
+              <!-- Configuration for a first attribute -->
+              <attribute>
+                  <!-- Amount of options per attribute -->
+                  <options>{int}</options>
+  
+                  <!-- Type of Swatch attribute -->
+                  <swatches>{string}</swatches>
+              </attribute>
+  
+              <!-- Configuration for a second attribute -->
+              <attribute>
+                  <!-- Amount of options per attribute -->
+                  <options>{int}</options>
+              </attribute>
+          </attributes>
+  
+          <!-- Configurable sku pattern with %s -->
+          <sku>{string}</sku>
+  
+          <!-- Number of configurable products -->
+          <products>{int}</products>
+  
+          <!-- Category Name. Optional. By default, the category name from Categories fixture will be used -->
+          <category>[{string}]</category>
+      </config>
+  
+      <!-- ... more entries ... -->
+  </configurable_products>
+  ```
 
 ### Kunder
 
@@ -380,7 +380,7 @@ XML-profilnod:
 
 ### Enkla produkter
 
-Genererar enkla produkter. Produkterna fördelas per standard och fördefinierade attributuppsättningar. Om extra attributuppsättningar anges i profilen som: `<product_attribute_sets>{int}</product_attribute_sets>`, fördelas produkterna också per ytterligare attributuppsättningar.
+Genererar enkla produkter. Produkterna distribueras per standard och fördefinierade attributuppsättningar. Om extra attributuppsättningar anges som: `<product_attribute_sets>{int}</product_attribute_sets>`, fördelas produkterna också per ytterligare attributuppsättningar.
 
 Produkterna är jämnt fördelade per kategori och webbplats. If `assign_entities_to_all_websites` är inställd på `1`, tilldelas produkter till alla webbplatser.
 
@@ -434,7 +434,7 @@ Genererar momssatser. XML-profilnod:
 
 ## Ytterligare konfigurationsinformation:
 
-- `<Commerce root dir>/setup/performance-toolkit/config/attributeSets.xml`—Standardattributuppsättningar
+- `<Commerce root dir>/setup/performance-toolkit/config/attributeSets.xml`—Standardattributset
 
 - `<Commerce root dir>/setup/performance-toolkit/config/customerConfig.xml`—Kundkonfiguration
 

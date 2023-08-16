@@ -62,7 +62,7 @@ Kundtjänst för B2C:
 | Variabel | B2B | B2C |
 |----------|-----|-----|
 | Målgrupp | Företag | Enskilda konsumenter |
-| Intressenter som deltar i beslutsfattandet | Säljare, chefer | Enskilda slutkunder |
+| Berörda intressenter i beslutsfattande | Säljare, chefer | Enskilda slutkunder |
 | Inköpsvolym | Massorder | Liten volym |
 | Pris | Dynamiska prisändringar per kund, produktkvantitet och/eller betalningstidslinjer | Enhetliga priser |
 | Kundtjänst | support dygnet runt under hela köpprocessen | Support dygnet runt, alla dagar, före och efter köpet. Krävs vanligtvis ibland |

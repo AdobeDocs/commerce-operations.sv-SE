@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Implementera spelningsbok {#implementation-playbook}
 
-- [Översikt](overview.md)
+- [Ökning](overview.md)
 - Handel {#intro}
    - [Om Adobe Commerce](intro/about-commerce.md)
    - [Principer för plattformsutveckling](intro/platform-development.md)
@@ -23,7 +23,7 @@ ht-degree: 0%
    - [Leveranser](project-scope/deliverables.md)
    - [Kontrollistor för krav](project-scope/requirement-checklists.md)
 - Utveckling {#development}
-   - [Plattformsverktyg](development/platform-tools.md)
+   - [plattformsverktyg](development/platform-tools.md)
    - [Projekthanteringsverktyg](development/project-management-tools.md)
    - [Metod för projektgenomförande](development/delivery.md)
    - [Kvalitetskontroll](development/quality-control.md)
@@ -45,16 +45,16 @@ ht-degree: 0%
       - [Kopplad butiksarkitektur](architecture/headless/legacy-storefront.md)
       - [Headless-arkitektur](architecture/headless/adobe-commerce.md)
 - Infrastruktur och driftsättning {#infrastructure}
-   - [Översikt](infrastructure/overview.md)
+   - [Ökning](infrastructure/overview.md)
    - Självvärdande {#self-hosting}
-      - [Översikt](infrastructure/self-hosting/overview.md)
+      - [Ökning](infrastructure/self-hosting/overview.md)
       - [Lokal infrastruktur](infrastructure/self-hosting/on-premises.md)
       - [Säkerhetskoncept](infrastructure/self-hosting/security-concepts.md)
       - [Övervaka telemetri och verktyg](infrastructure/self-hosting/monitoring-tools.md)
       - [idéer om katastrofåterställning](infrastructure/self-hosting/disaster-recovery-ideas.md)
       - [Prestandapstips](infrastructure/self-hosting/performance-tips.md)
    - Molninfrastruktur {#cloud}
-      - [Översikt](infrastructure/cloud/overview.md)
+      - [Ökning](infrastructure/cloud/overview.md)
       - [Regioner](infrastructure/cloud/regions.md)
       - [Technologies](infrastructure/cloud/technology.md)
       - [Miljö](infrastructure/cloud/environments.md)
@@ -65,17 +65,17 @@ ht-degree: 0%
       - [Benchmarks](infrastructure/performance/benchmarks.md)
       - [Recommendations](infrastructure/performance/recommendations.md)
 - Starta beredskap {#launch}
-   - [Översikt](launch/overview.md)
+   - [Ökning](launch/overview.md)
    - [Steg före start](launch/pre-launch-steps.md)
    - [Starta steg](launch/launch-steps.md)
    - [Steg efter start](launch/post-launch-steps.md)
 - Underhåll och support {#maintenance}
-   - [Översikt](maintenance/overview.md)
-   - [Adobes hanterade tjänster](maintenance/adobe-managed-services.md)
+   - [Ökning](maintenance/overview.md)
+   - [Adobe Managed Services](maintenance/adobe-managed-services.md)
 - God praxis {#best-practices}
-   - [Översikt](best-practices/phases.md)
+   - [Ökning](best-practices/phases.md)
    - Planering {#planning}
-      - [Översikt](best-practices/planning/overview.md)
+      - [Ökning](best-practices/planning/overview.md)
       - [Konfiguration av platser, butiker och butiksvy](best-practices/planning/sites-stores-store-views.md)
       - [Rapporteringskonfiguration](best-practices/planning/reporting-configuration.md)
       - [Databaskonfiguration för &#x200B; i molnet](best-practices/planning/database-on-cloud.md)
@@ -96,7 +96,7 @@ ht-degree: 0%
       - [Eskaleringar av partners](best-practices/planning/partner-escalation.md)
       - [Betalningslagringsbearbetning](best-practices/planning/payment-processing-storage.md)
    - Utveckling {#development}
-      - [Översikt](best-practices/development/overview.md)
+      - [Ökning](best-practices/development/overview.md)
       - [Bildoptimering](best-practices/development/image-optimization.md)
       - [Felsökning](best-practices/development/troubleshooting.md)
       - [Optimera CSS- och JS-filer](best-practices/development/optimize-css-js-files.md)
@@ -104,12 +104,12 @@ ht-degree: 0%
       - [Statisk innehållsdistribution](best-practices/development/static-content-deployment.md)
       - [Ändra databastabeller](best-practices/development/modifying-core-and-third-party-tables.md)
    - Starta {#launch}
-      - [Översikt](best-practices/launch/overview.md)
+      - [Ökning](best-practices/launch/overview.md)
       - [Adobe Security Notification Service](best-practices/launch/security-notification-service.md)
       - [Konfigurera filen robots.txt](best-practices/launch/robots-txt.md)
       - [Förebygga och hantera säkerhetsincidenter](best-practices/launch/prevent-respond-security-incident.md)
    - Underhåll {#maintenance}
-      - [Översikt](best-practices/maintenance/overview.md)
+      - [Ökning](best-practices/maintenance/overview.md)
       - [Prestanda för granskningsfronder](best-practices/maintenance/frontend-performance.md)
       - [Indexerarkonfiguration](best-practices/maintenance/indexer-configuration.md)
       - [Beställningsbehandling](best-practices/maintenance/order-processing-configuration.md)

@@ -32,7 +32,7 @@ Ett datamappningsdokument omfattar kategorier, produkter, rekommendationer, pris
 
 ## Flödesdiagram
 
-Visar användarflöden för kritiska och/eller unika processer, särskilt när de anpassas utifrån Adobe Commerce standardbeteende.
+Visar användarflödena för kritiska och/eller unika processer, särskilt när de anpassas utifrån Adobe Commerce standardbeteende.
 
 ## Omfång och leverantörer
 

@@ -33,7 +33,7 @@ En av orsakerna till att du valt Adobe Commerce är:
 
 Fördelen med att vara en mycket utbyggbar och anpassningsbar produkt kan dock ge upphov till potentiella uppgraderingsproblem när anpassningar inte är kodade enligt bästa praxis, vilket leder till högre uppgraderingskostnader än förväntat.
 
-_Så.. varför uppgradera över huvud taget?_
+_Så.. varför uppgradera alls?_
 
 Uppgraderingen ger er möjlighet att hålla er à jour med den snabba och ständigt föränderliga e-handelsindustrin och gör att plattformen kan vara kompatibel med de senaste Adobe Commerce-funktionerna som hjälper er att maximera försäljningen och konverteringarna. Att inkludera uppgraderingar i dina vanliga underhållsplaner är avgörande för att säkerställa att din butik förblir säker, PCI-kompatibel och fungerar med maximal effektivitet.
 
@@ -60,9 +60,9 @@ Några av de allmänna faktorer som påverkar graden av arbete med att uppgrader
 
 | Teknisk komplexitet | Planering och strategi |
 |-----------------------------------------------------------|--------------------------------------------------------------|
-| Omfattningen av anpassningar | Klarhet i krav, beslut om våglängd och krypande omfång |
+| Omfattningen av anpassningar | Klarhet i krav, beslut om våglängd och krypningsgrad |
 | Antal tillägg | Din uppgraderingsfrekvens |
 | Antal integreringar med tredje part (OMS, ERP) | Din teststrategi |
-| Kodning enligt bästa praxis |  |
+| Kodning enligt bästa praxis |                                                              |
 
 Den fortsatta tillväxten inom den digitala e-handeln har ökat trycket på företagen att utvecklas snabbare, oftare och på ett oförutsägbart sätt. Underlåtenhet att hålla jämna steg med och förutse kundernas köpbeteende har lett till lika konkurrensvillkor för även de största, mest etablerade varumärkena. Ni måste kunna leverera robusta, personaliserade upplevelser över alla kontaktytor, utan avbrott i prestanda och drifttid. Ni måste kunna förnya er snabbare, utan begränsningar, för att ligga steget före globala konkurrenter. Genom att uppgradera kan ni framtidssäkra er om er verksamhet och anpassa er till nya dynamiska kundbehov.

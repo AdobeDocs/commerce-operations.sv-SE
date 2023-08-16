@@ -1,11 +1,11 @@
 ---
 title: Frigör schema
-description: Lär dig när Adobe planerar att lansera nya funktioner för Adobe Commerce.
+description: Få reda på när Adobe planerar att tillkännage lanseringen av betydande nya funktioner i Adobe Commerce.
 exl-id: ae1e09cd-966f-44a3-9e4d-b90bb838429d
 source-git-commit: 12b4f619673414f18d9697450e867681c6cb3194
 workflow-type: tm+mt
 source-wordcount: '752'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -63,7 +63,7 @@ I följande tabell visas datumen för schemalagda releaser (datum kan ändras):
   </tr>
   <tr>
     <td>19 mars 2024</td>
-    <td>--</td>
+    <td>—</td>
     <td><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="release-notes/commerce/overview.md">Betakorrigering</a>: 2.4.7-beta3</td>
   </tr>
   <tr>

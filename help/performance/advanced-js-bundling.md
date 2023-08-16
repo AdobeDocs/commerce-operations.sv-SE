@@ -22,7 +22,7 @@ I ett modulärt program kan antalet serverförfrågningar nå ut till hundratals
 
 ## Sammanfogning och paketering
 
-Ut ur lådan, [!DNL Commerce] innehåller två sätt att minska antalet serverförfrågningar: sammanfogning och paketering. De här inställningarna är inaktiverade som standard. Du kan aktivera dem i administratörsgränssnittet i **[!UICONTROL Stores]** > **Inställningar** > **[!UICONTROL Configuration]** > **[!UICONTROL Advanced]** > **[!UICONTROL Developer]** > **[!UICONTROL [!DNL JavaScript] Settings]** eller från kommandoraden.
+Ut ur lådan, [!DNL Commerce] ger två sätt att minska antalet serverförfrågningar: sammanfogning och paketering. De här inställningarna är inaktiverade som standard. Du kan aktivera dem i administratörsgränssnittet i **[!UICONTROL Stores]** > **Inställningar** > **[!UICONTROL Configuration]** > **[!UICONTROL Advanced]** > **[!UICONTROL Developer]** > **[!UICONTROL [!DNL JavaScript] Settings]** eller från kommandoraden.
 
 ![Paket](../assets/performance/images/bundlingImage.png)
 
@@ -34,7 +34,7 @@ Så här aktiverar du det inbyggda paketet från kommandoraden:
 php -f bin/magento config:set dev/js/enable_js_bundling 1
 ```
 
-Detta är ett modernt [!DNL Commerce] mekanism som kombinerar alla resurser som finns i systemet och distribuerar dem till paket av samma storlek (bundle_0.js, bundle_1.js ... bundle_x.js):
+Det här är ett modernt [!DNL Commerce] mekanism som kombinerar alla resurser som finns i systemet och distribuerar dem till paket av samma storlek (bundle_0.js, bundle_1.js ... bundle_x.js):
 
 ![[!DNL Commerce] paketering](../assets/performance/images/magentoBundling.png)
 
@@ -50,13 +50,13 @@ Så här aktiverar du inbyggd sammanslagning från kommandoraden:
 php -f bin/magento config:set dev/js/merge_files 1
 ```
 
-Det här kommandot sammanfogar alla synkrona [!DNL JavaScript] till en enda fil. Det är inte praktiskt att aktivera sammanfogning utan att aktivera paketering eftersom [!DNL Commerce] använder RequireJS. Om du inte aktiverar paketering, [!DNL Commerce] Sammanfogar bara RequireJS och dess konfiguration. När du aktiverar både paketering och sammanslagning, [!DNL Commerce] skapar en [!DNL JavaScript] fil:
+Det här kommandot sammanfogar alla synkrona [!DNL JavaScript] till en enda fil. Det är inte praktiskt att aktivera sammanfogning utan att aktivera paketering eftersom [!DNL Commerce] använder RequireJS. Om du inte aktiverar paketering, [!DNL Commerce] Sammanfogar bara RequireJS och dess konfiguration. När du aktiverar både paketering och sammanslagning, [!DNL Commerce] skapar en enda [!DNL JavaScript] fil:
 
 ![Verklig sammanslagning](../assets/performance/images/magentoMergingDevWorld.png)
 
 ## Återgivningstider i verkligheten
 
-De tidigare paketerade och sammanfogade laddningstiderna ser bra ut i en utvecklingsmiljö. Men i verkligheten kan mycket sakta ned renderingen: långsamma anslutningar, höga anslutningströsklar, begränsade nätverk. Dessutom återges inte mobilenheter lika snabbt som stationära datorer.
+De tidigare paketerade och sammanfogade laddningstiderna ser bra ut i en utvecklingsmiljö. Men i verkligheten kan många saker göra återgivningen långsammare: långsamma anslutningar, höga anslutningströsklar, begränsade nätverk. Dessutom återges inte mobilenheter lika snabbt som stationära datorer.
 
 Vi rekommenderar att du testar och förbereder din distribution av butiken för den verkliga världen med Chrome’s inbyggda begränsningsprofil&quot;Långsam 3G&quot;. Med Slow 3G återspeglar våra tidigare paketerade utdatatider nu många användares anslutningsrealiteter:
 
@@ -68,7 +68,7 @@ Detsamma gäller när du sammanfogar paketen i en enda fil. Användarna kan fort
 
 ![Verklig sammanslagning](../assets/performance/images/magentoMergingRealWorld.png)
 
-Med en mer avancerad metod för [!DNL JavaScript] genom att paketera kan vi förbättra dessa laddningstider.
+Med ett mer avancerat tillvägagångssätt för [!DNL JavaScript] genom att paketera kan vi förbättra dessa laddningstider.
 
 ## Avancerad paketering
 
@@ -78,7 +78,7 @@ Ett sätt att uppnå detta är att definiera era paket efter sidtyp. Du kan kate
 
 Du kan till exempel få ett paket med de beroenden som är gemensamma för alla sidor, ett paket med endast CMS, ett paket med endast katalog, ett annat paket med enbart sökning och ett paket med utcheckningssidor.
 
-Du kan också skapa paket utifrån syfte: för vanliga funktioner, produktrelaterade funktioner, leveransfunktioner, utcheckningsfunktioner, skatter och formulärvalideringar. Det är upp till dig och butikens struktur att definiera era paket. Ni kanske märker att vissa paketeringsstrategier kommer att fungera bättre än andra.
+Du kan också skapa paket utifrån syfte: för gemensamma funktioner, produktrelaterade funktioner, leveransfunktioner, utcheckningsfunktioner, skatter och formulärvalideringar. Det är upp till dig och butikens struktur att definiera era paket. Ni kanske märker att vissa paketeringsstrategier kommer att fungera bättre än andra.
 
 En ren [!DNL Commerce] installation ger tillräckligt bra prestanda genom att dela upp paket per sidtyp, men vissa anpassningar kan kräva djupare analyser och annan resursfördelning.
 
@@ -129,13 +129,13 @@ Lägg till följande RequireJS-byggkonfigurationsnoder, `deps`, `shim`, `paths`o
 })
 ```
 
-#### 3\. Sammanställa kravjs-config.js-instansvärden
+#### 3\. Aggregera kravjs-config.js-instansvärden
 
-I det här steget måste du sammanställa alla de olika `deps`, `shim`, `paths`och `map` konfigurationsnoder från butikens `requirejs-config.js` till motsvarande noder i `build.js` -fil. Om du vill göra det kan du öppna **[!UICONTROL Network]** i panelen Utvecklarverktyg i webbläsaren och navigera till en sida i din butik, till exempel hemsidan. På fliken Nätverk visas butikens instans av `requirejs-config.js` filen nära överkanten, markerad här:
+I det här steget måste du sammanställa alla de olika `deps`, `shim`, `paths`och `map` konfigurationsnoder från butikens `requirejs-config.js` till motsvarande noder i `build.js` -fil. Om du vill göra det kan du öppna **[!UICONTROL Network]** i panelen Utvecklarverktyg i webbläsaren och navigera till en sida i din butik, t.ex. hemsidan. På fliken Nätverk visas butikens instans av `requirejs-config.js` filen nära överkanten, markerad här:
 
 ![RequireJS-konfiguration](../assets/performance/images/RequireJSConfig.png)
 
-I den här filen finns flera poster för varje konfigurationsnod (`deps`, `shim`, `paths`, `map`). Du måste samla dessa värden för flera noder i build.js-filens enda konfigurationsnod. Exempel: `requirejs-config.js` instansen har poster för 15 separata `map` -noder måste du sammanfoga posterna för alla 15 noder till en enda `map` i din `build.js` -fil. Detsamma gäller för `deps`, `shim`och `paths` noder. Utan ett skript som automatiserar den här processen kan det ta tid.
+I den här filen finns flera poster för varje konfigurationsnod (`deps`, `shim`, `paths`, `map`). Du måste samla dessa värden för flera noder i build.js-filens enda konfigurationsnod. Om din butik `requirejs-config.js` instansen har poster för 15 separata `map` -noder måste du sammanfoga posterna för alla 15 noder till en enda `map` i din `build.js` -fil. Detsamma gäller för `deps`, `shim`och `paths` noder. Utan ett skript som automatiserar den här processen kan det ta tid.
 
 Du måste ändra banan `mage/requirejs/text` till `requirejs/text` in `paths` konfigurationsnod enligt följande:
 
@@ -169,14 +169,14 @@ I slutet av `build.js` fil, lägga till modulerna[] -matrisen som platshållare 
 
 #### 5\. Hämta RequireJS-beroenden
 
-Du kan hämta alla [!DNL RequireJS] modulberoenden från butikens sidtyper genom att använda:
+Du kan hämta alla [!DNL RequireJS] modulberoenden från butikens sidtyper med:
 
 1. [!DNL PhantomJS] från kommandoraden (förutsatt att du har [!DNL PhantomJS] installerade).
 1. RequireJS-kommandot i webbläsarens konsol.
 
 #### Används [!DNL PhantomJS]:
 
-I [!DNL Commerce] rotkatalog, skapa en ny fil med namnet `deps.js` och kopiera i koden nedan. Den här koden använder [!DNL [!DNL PhantomJS]] för att öppna en sida och vänta på att webbläsaren ska läsa in alla sidresurser. Sedan tar det fram alla [!DNL RequireJS] beroenden för en viss sida.
+I [!DNL Commerce] rotkatalog, skapa en ny fil med namnet `deps.js` och kopiera i koden nedan. Den här koden använder [!DNL [!DNL PhantomJS]] för att öppna en sida och vänta på att webbläsaren ska läsa in alla sidresurser. Sedan skapas alla [!DNL RequireJS] beroenden för en viss sida.
 
 ```javascript
 "use strict";
@@ -220,7 +220,7 @@ phantomjs deps.js http://m2.loc/checkout/cart/?SID=m2tjdt7ipvep9g0h8pmsgie975 > 
 ..............
 ```
 
-#### Så här använder du webbläsarkonsolen:
+#### Använda webbläsarkonsolen:
 
 Om du inte vill använda [!DNL PhantomJS]kan du köra följande kommando från webbläsarens konsol när du visar varje sidtyp i butiken:
 
@@ -275,12 +275,12 @@ Det här kommandot sammanfogar och sorterar beroenden som finns i `bundle/*.txt`
 ...
 ```
 
-Det här resultatet visar att `buildTools` är ett beroende i endast en av filerna bundle/*.txt. The `jquery/jquery.metadata` beroendet finns i två (2) filer och `es6-collections` finns i tre (3) filer.
+Det här resultatet visar att `buildTools` är bara beroende av en av källfilerna/*.txt. The `jquery/jquery.metadata` beroendet finns i två (2) filer och `es6-collections` finns i tre (3) filer.
 
 Våra utdata visar endast tre sidtyper (hemsida, kategori och produkt), som talar om för oss:
 
 - Tre beroenden är unika för endast en sidtyp (visas med talet 1).
-- Tre ytterligare beroenden inträffar för två sidtyper (visas med talet 2).
+- Tre ytterligare beroenden inträffar för två sidtyper (visas med siffran 2).
 - De tre sista beroendena är gemensamma för alla tre av våra sidtyper (visas med siffran 3).
 
 Detta visar att vi sannolikt kan förbättra butikens sidladdningshastighet genom att dela upp våra beroenden i olika paket, när vi vet vilka sidtyper som behöver vilka beroenden.
@@ -343,7 +343,7 @@ Det här är tillräckligt med information för att skapa en paketkonfiguration.
 
 - `include`— en array med resurser (strängar) som inkluderas som sidans beroenden. RequireJS spårar alla beroenden och inkluderar dem i paketet om de inte utesluts.
 
-- `exclude`— en array med paket eller resurser som ska uteslutas från paketet.
+- `exclude`— en array med paket eller resurser som ska exkluderas från paketet.
 
 ```javascript
 {
@@ -397,7 +397,7 @@ Det här kommandot genererar statiska butiksdistributioner för varje tema och s
 
 Om du vill generera paket för alla butiksteman och språkområden upprepar du stegen nedan för varje butikstema och språkområde.
 
-#### 2. Flytta innehållet i den statiska lagringsplatsen till en tillfällig katalog
+#### 2. Flytta det statiska innehållet till en tillfällig katalog
 
 Först måste du flytta det statiska innehållet från målkatalogen till en tillfällig katalog eftersom RequireJS ersätter allt innehåll i målkatalogen.
 
@@ -405,7 +405,7 @@ Först måste du flytta det statiska innehållet från målkatalogen till en til
 mv pub/static/frontend/Magento/{theme}/{locale} pub/static/frontend/Magento/{theme}/{locale}_tmp
 ```
 
-Till exempel:
+Exempel:
 
 ```bash
 mv pub/static/frontend/Magento/luma/en_US pub/static/frontend/Magento/luma/en_US_tmp
@@ -438,7 +438,7 @@ drwxr-xr-x 70 root root    4096 Mar 28 11:24 ../
 -rw-r--r--  1 root root   74233 Mar 28 11:24 shipping.js
 ```
 
-#### 4. Konfigurera RequireJS för att använda paket
+#### 4. Konfigurera RequireJS att använda paket.
 
 Om du vill få RequireJS att använda dina paket lägger du till en `onModuleBundleComplete` återanrop efter `modules` noden i `build.js` fil:
 
@@ -474,7 +474,7 @@ require.config({});
 }
 ```
 
-#### 5. Kör kommandot igen
+#### 5. Kör kommandot för distribution igen
 
 Kör följande kommando för att distribuera:
 

@@ -54,7 +54,7 @@ Så här ändrar du systemkonfigurationen för engelska:
 
 ### Ändra standard-VCL
 
-I det här avsnittet beskrivs hur du tillhandahåller minimal konfiguration så att Varnish returnerar HTTP-svarshuvuden. Detta gör att du kan verifiera att lack fungerar innan du konfigurerar [!DNL Commerce] för att använda lack.
+I det här avsnittet beskrivs hur du tillhandahåller minimal konfiguration så att Varnish returnerar HTTP-svarshuvuden. Detta gör att du kan verifiera att lack fungerar innan du konfigurerar [!DNL Commerce] program som ska använda varnish.
 
 Så här konfigurerar du engelska minimalt:
 
@@ -65,7 +65,7 @@ Så här konfigurerar du engelska minimalt:
    ```
 
 1. Öppna `/etc/varnish/default.vcl` i en textredigerare.
-1. Leta reda på följande stanza:
+1. Gå till följande stanza:
 
    ```conf
    backend default {
@@ -74,9 +74,9 @@ Så här konfigurerar du engelska minimalt:
    }
    ```
 
-1. Ersätt värdet för `.host` med det fullständiga värdnamnet eller IP-adressen och avlyssningsporten för varnish _serverdel_ eller _origin-server_; dvs. servern som tillhandahåller innehållet varnish kommer att accelerera.
+1. Ersätt värdet för `.host` med det fullständiga värdnamnet eller IP-adressen och avlyssningsporten för varnish _serverdel_ eller _origin-server_, d.v.s. servern som tillhandahåller innehållet varnish kommer att accelerera.
 
-   Vanligtvis är det här din webbserver. Se [Serverlösningar](https://varnish-cache.org/docs/trunk/users-guide/vcl-backends.html) i _Varnish - guide_.
+   Vanligtvis är det här din webbserver. Se [Backend-servrar](https://varnish-cache.org/docs/trunk/users-guide/vcl-backends.html) i _Varnish - guide_.
 
 1. Ersätt värdet för `.port` med webbserverns lyssningsport (8080 i det här exemplet).
 
@@ -137,7 +137,7 @@ Om Varnish inte kan starta som en tjänst startar du den från kommandoraden enl
 
 1. Starta den underordnade processen för lack:
 
-   Ange `start`
+   När du uppmanas till det anger du `start`
 
    Följande meddelanden visas för att bekräfta att starten lyckades:
 
@@ -244,7 +244,7 @@ I följande exempel används `curl`. Du kan ange det här kommandot från alla d
 curl -I -v --location-trusted '<your Commerce base URL>'
 ```
 
-Till exempel:
+Exempel:
 
 ```bash
 curl -I -v --location-trusted 'http://192.0.2.55/magento2'

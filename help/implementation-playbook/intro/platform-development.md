@@ -31,8 +31,8 @@ Precis som alla andra stora IT-projekt bygger Adobe Commerce på kodningsstandar
 
 Adobe Commerce i molninfrastruktur är en hanterad, automatiserad värdplattform för Adobe Commerce. Adobe Commerce i molninfrastruktur har en mängd andra funktioner som skiljer den från lokala Adobe Commerce- och Magento Open Source-implementeringar:
 
-![Adobe Commerce-komponentinfografik](../../assets/playbooks/commerce-cloud.svg)
+![Komponentinfografik från Adobe Commerce](../../assets/playbooks/commerce-cloud.svg)
 
-Adobe Commerce i molninfrastruktur erbjuder en förprovisionerad infrastruktur som omfattar PHP, MySQL, Redis, [!DNL RabbitMQ]och Elasticsearch-teknik, Ett Git-baserat arbetsflöde med automatiska bygg- och driftsättningsåtgärder för effektiv snabb utveckling och kontinuerlig driftsättning varje gång kodändringar görs i en plattformsmiljö som en tjänst-miljö (PaaS). mycket anpassningsbara filer och verktyg för miljökonfiguration, och AWS hosting som erbjuder en skalbar och säker miljö för onlineförsäljning och detaljhandel.
+Adobe Commerce i molninfrastruktur erbjuder en förprovisionerad infrastruktur som omfattar PHP, MySQL, Redis, [!DNL RabbitMQ], och Elasticsearch-teknik, ett Git-baserat arbetsflöde med automatiska bygg- och driftsättningsåtgärder för snabb utveckling och kontinuerlig driftsättning varje gång kodändringar implementeras i en Platform as a Service-miljö (PaaS), mycket anpassningsbara filer och verktyg för miljökonfiguration samt AWS hosting som erbjuder en skalbar och säker miljö för onlineförsäljning och detaljhandel.
 
-![Adobe Commerce-komponentinfografik](../../assets/playbooks/cloud-tech-stack.svg)
+![Komponentinfografik från Adobe Commerce](../../assets/playbooks/cloud-tech-stack.svg)

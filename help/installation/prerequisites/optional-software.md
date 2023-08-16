@@ -11,9 +11,9 @@ ht-degree: 0%
 
 # Valfri programvara
 
-Vi rekommenderar att du installerar NTP för att säkerställa att de kroniska uppgifterna utförs korrekt. (Serverdatum kan t.ex. vara tidigare eller framtida.)
+Vi rekommenderar starkt att du installerar NTP för att säkerställa att de kroniska uppgifterna utförs korrekt. (Serverdatum kan t.ex. vara tidigare eller framtida.)
 
-De andra valfria verktygen som beskrivs i det här avsnittet kan hjälpa dig med installationen. De behöver dock inte installera eller använda Adobe Commerce eller Magento Open Source.
+De andra valfria verktygen som beskrivs i det här avsnittet kan hjälpa dig med installationen, men de behövs inte för att installera eller använda Adobe Commerce eller Magento Open Source.
 
 ## Installera och konfigurera NTP (Network Time Protocol)
 
@@ -41,7 +41,7 @@ Så här installerar och konfigurerar du NTP:
    yum search ntp
    ```
 
-1. Välj ett paket som ska installeras. Till exempel: `ntp.x86_64`.
+1. Välj ett paket som ska installeras. Exempel, `ntp.x86_64`.
 
 1. Installera paketet.
 
@@ -59,7 +59,7 @@ Så här installerar och konfigurerar du NTP:
 
 ### Använd NTP-poolservrar
 
-Det är upp till dig att välja poolservrar. Om du använder NTP-poolservrar rekommenderar ntp.org att du använder [poolservrar](https://www.ntppool.org/en/) som ligger nära serverns tidszon enligt vad som beskrivs på [Projektsida för NTP-pool](https://www.ntppool.org/en/use.html). Om du har en privat NTP-server som är tillgänglig för alla värdar i din distribution kan du använda den servern i stället.
+Det är upp till dig att välja poolservrar. Om du använder NTP-poolservrar bör du ntp.org [poolservrar](https://www.ntppool.org/en/) som ligger nära serverns tidszon enligt vad som beskrivs på [Projektsida för NTP-pool](https://www.ntppool.org/en/use.html). Om du har en privat NTP-server som är tillgänglig för alla värdar i din distribution kan du använda den servern i stället.
 
 1. Öppna `/etc/ntp.conf` i en textredigerare.
 
@@ -115,7 +115,7 @@ phpinfo();
 
 Mer information finns i [manuell phpinfo-sida](https://www.php.net/manual/en/function.phpinfo.php).
 
-Om du vill visa resultatet anger du följande URL i webbläsarens plats eller adressfält:
+Om du vill visa resultatet anger du följande URL-adress i webbläsarens plats- eller adressfält:
 
 ```http
 http://<web server host or IP>/phpinfo.php
@@ -126,9 +126,9 @@ Om ett 404-fel (Hittades inte) visas kontrollerar du följande:
 * Starta webbservern om det behövs.
 * Kontrollera att brandväggen tillåter trafik på port 80.
 
-   [Hjälp för Ubuntu](https://help.ubuntu.com/community/UFW)
+  [Hjälp för Ubuntu](https://help.ubuntu.com/community/UFW)
 
-   [Hjälp för CentOS](https://wiki.centos.org/HowTos/Network/IPTables)
+  [Hjälp för CentOS](https://wiki.centos.org/HowTos/Network/IPTables)
 
 ## phpMyAdmin
 

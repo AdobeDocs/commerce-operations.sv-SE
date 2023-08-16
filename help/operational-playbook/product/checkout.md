@@ -5,14 +5,14 @@ exl-id: 692236fd-b909-4061-8038-0db19e0ed72b
 feature: Best Practices, Checkout
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '680'
 ht-degree: 0%
 
 ---
 
 # Utcheckningsflöden och -process
 
-Utcheckning är en viktig del av onlineshoppingen. Det är här som de reella pengarna görs. Återförsäljarna tenderar att fokusera mer på webbplatsens utseende och känsla och ser över kassaflödet, men båda delarna är lika viktiga.
+Utcheckning är en viktig del av onlineshoppingen. Det är här som de reella pengarna görs. Återförsäljarna tenderar att fokusera mer på webbplatsens utseende och känsla och ser över utcheckningsflödet, men båda delarna är lika viktiga.
 
 Utcheckningsflödet är som slutresultatet, där kunderna blir kunder som gör transaktioner. Men även en liten skillnad i kassan kan ha en stor negativ inverkan på konverteringsgraden och avkastningen, vilket innebär att en förbättring av konverteringsgraden till och med kan bidra till att öka avkastningen avsevärt. Att förbättra utcheckningsflöden och -processer börjar redan före utcheckningssidan.
 
@@ -20,7 +20,7 @@ Utcheckningsflödet är som slutresultatet, där kunderna blir kunder som gör t
 
 ## Produktsidor
 
-Försök att behålla all information innan sidan viks, t.ex. produktinformation, priser, produktbilder, recensioner och omdömen. Alla faktorer som kunden behöver för att fatta ett beslut om att köpa produkten.
+Försök att behålla all information innan sidan viks, som produktinformation, priser, produktbilder, recensioner och omdömen. Alla faktorer som kunden behöver för att fatta ett beslut om att köpa produkten.
 
 Lägg till avsnitt som&quot;Du kanske gillar&quot;, som visar produkter som är relaterade till den produkt som en kund tittar på just nu. Detta är en strategi som används för att göra kundköpet mer.
 
@@ -50,7 +50,7 @@ Kunder som handlar online är alltid intresserade av säkerheten. Om du vill fö
 
 - Kreativitetsackrediteringar som Norton, säkert, MacAfee och Google Trusted Store
 - SSL-certifikat
-- Betalningsmetodlogotyper
+- Logotyper för betalningsmetoder
 - Omdömen och recensioner
 - Profiler
 - Villkor

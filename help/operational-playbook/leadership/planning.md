@@ -15,7 +15,7 @@ Organisationsplanering är processen att definiera ett företags syfte, sätta u
 
 Organisationsplaneringen hjälper ett företag att hitta strategier för bättre prestanda. Förutom detta kan planering av organisationen: &#x200B;
 
-- Effektivare &#x200B;
+- Öka effektiviteten i en &#x200B;
 - Identifiera verkliga kundbehov &#x200B;
 - Optimera &#x200B;
 - Bättre &#x200B; för beslutsfattande

@@ -22,11 +22,11 @@ Migrerar från [!DNL Magento 1] och andra e-handelsplattformar, eller arbeta med
 
 Det främsta skälet till att undvika att ändra huvudtabeller är att Adobe Commerce innehåller underliggande logik som innehåller råa SQL-frågor. Ändringar i tabellstrukturen kan orsaka oväntade biverkningar som är svåra att felsöka. Ändringen kan också påverka DDL-åtgärder (Data Definition Language) som kan ge oväntade och oförutsägbara effekter på prestandan.
 
-Ett annat skäl till att undvika att ändra databastabellens struktur är att dina ändringar kan orsaka problem om huvudutvecklingsteamet eller tredjepartsutvecklare ändrar strukturen i sina databastabeller. Det finns till exempel några viktiga databastabeller som har en kolumn som kallas `additional_data`. Det här har alltid varit en `text` kolumntyp. Av prestandaskäl kan dock huvudteamet ändra kolumnen till `longtext`. Den här kolumntypen är ett alias för JSON. Genom att konvertera till den här kolumntypen läggs prestandavinster och sökbarhet till i den kolumnen, som inte finns som en `text` typ. Du kan läsa mer om det här avsnittet i [JSON-datatyp](https://mariadb.com/kb/en/json-data-type/){target="_blank"}.
+Ett annat skäl till att undvika att ändra databastabellens struktur är att dina ändringar kan orsaka problem om huvudutvecklingsteamet eller tredjepartsutvecklare ändrar strukturen i sina databastabeller. Det finns till exempel några viktiga databastabeller som har en kolumn som kallas `additional_data`. Det här har alltid varit en `text` kolumntyp. Av prestandaskäl kan dock huvudteamet ändra kolumnen till `longtext`. Den här kolumntypen är ett alias för JSON. Genom att konvertera till den här kolumntypen läggs resultatvinster och sökbarhet till i den kolumnen, som inte finns som en `text` typ. Du kan läsa mer om det här avsnittet i [JSON-datatyp](https://mariadb.com/kb/en/json-data-type/){target="_blank"}.
 
 ## Ha koll på när data ska sparas eller tas bort
 
-Adobe rekommenderar att du först avgör om du behöver spara dessa data eller inte. Om du flyttar data från ett äldre system sparar alla data som du kan ta bort både tid och arbete under migreringen. (Det finns sätt att arkivera data om de behöver nås senare.) För att programmet och prestandan ska bli en bra fördel kan det vara bra att bestrida en begäran om att spara extra data. Målet är att säkerställa att sparandet av data är ett krav för att uppfylla ett affärsbehov som inte kan uppfyllas på ett annat sätt.
+Adobe rekommenderar att du först avgör om du behöver spara dessa data eller inte. Om du flyttar data från ett äldre system sparar alla data som du kan ta bort både tid och arbete under migreringen. (Det finns olika sätt att arkivera data om de behöver användas senare.) För att programmet och prestandan ska bli en bra fördel kan det vara bra att bestrida en begäran om att spara extra data. Målet är att säkerställa att sparandet av data är ett krav för att uppfylla ett affärsbehov som inte kan uppfyllas på ett annat sätt.
 
 ### Äldre data
 
@@ -34,7 +34,7 @@ Om projektet innehåller äldre data, t.ex. gamla order eller kundposter, bör d
 
 Detta kräver att databasen migreras till en server, antingen med ett webbgränssnitt för att läsa data, eller kanske utbildning i användningen av MySQL Workbench eller liknande verktyg. Genom att dessa data utelämnas från den nya databasen går migreringen snabbare eftersom utvecklingsteamet kan fokusera på den nya webbplatsen i stället för att felsöka datamigreringsproblem.
 
-Ett annat relaterat alternativ för att göra data externa för e-handel, men som gör det möjligt att använda dem i realtid, är att utnyttja andra verktyg, som GraphQL-nät. Det här alternativet kombinerar olika datakällor och returnerar dem som ett svar.
+Ett annat relaterat alternativ för att göra data externa för e-handel, men som gör det möjligt att använda dem i realtid, är att utnyttja andra verktyg, som GraphQL-nät. Det här alternativet kombinerar olika datakällor och returnerar dem som ett enda svar.
 
 Du kan till exempel `stitch` tillsammans gamla order från en extern databas, kanske den gamla Magento 1-anläggningen som är avvecklad. Visa dem sedan som en del av kundens orderhistorik med GraphQL-nät. Dessa gamla order kan kombineras med beställningarna från din nuvarande [!DNL Adobe Commerce] miljö.
 
@@ -45,7 +45,7 @@ Mer information om hur du använder API-nät med GraphQL finns i [Vad är API Me
 Om du fastställer att äldre data kräver migrering eller att nya data måste sparas i [!DNL Adobe Commerce], Adobe rekommenderar att du använder [tilläggsattribut](https://developer.adobe.com/commerce/php/development/components/add-attributes/){target="_blank"}. Att använda tilläggsattribut för att spara ytterligare data ger följande fördelar:
 
 - Du kan styra vilka data som ska bevaras och databasstrukturen, vilket säkerställer att data sparas med rätt kolumntyp och korrekta index.
-- De flesta enheter i [!DNL Adobe Commerce] och [!DNL Magento Open Source] har stöd för användning av tilläggsattribut.
+- De flesta entiteter i [!DNL Adobe Commerce] och [!DNL Magento Open Source] har stöd för användning av tilläggsattribut.
 - Tilläggsattribut är en lagringsalgoritmisk mekanism som ger flexibilitet att spara data på den optimala platsen för ditt projekt.
 
 Två exempel på lagringsplatser är databastabeller och [!DNL Redis]. Det viktigaste att tänka på när du väljer en plats är om platsen medför extra komplexitet eller påverkar prestandan.
@@ -71,11 +71,11 @@ Adobe rekommenderar att du följer de här stegen när du lägger till en kolumn
 
 1. Skapa en modul med ett namn i namnutrymmet som representerar det du uppdaterar.
 
-   Till exempel: `app/code/YourCompany/Customer`
+   Exempel: `app/code/YourCompany/Customer`
 
 1. Skapa lämpliga filer för att aktivera modulen (se [Skapa en modul](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/create-module.html){target="_blank"}.
 
-1. Skapa en fil med namnet `db_schema.xml` i `etc` och gör lämpliga ändringar.
+1. Skapa en fil med namnet `db_schema.xml` i `etc` och gör de ändringar som behövs.
 
    Generera en `db_schema_whitelist.json` -fil. Se [Deklarationsschema](https://developer.adobe.com/commerce/php/development/components/declarative-schema/configuration/){target="_blank"} för mer information.
 
@@ -109,7 +109,7 @@ Vissa bastabeller har `additional_data` kolumn som innehåller JSON-kodade data.
 
    - Dessa fält måste vara tydligt deklarerade i koden så att utvecklaren enkelt kan hitta dem.
 
-   - Andra problem som kan uppstå och som kan vara mycket svåra att diagnostisera. Exempel: med vissa inbyggda PHP-funktioner om du inte använder [!DNL Adobe Commerce] wrapper-metoder som tillhandahålls av huvudprogrammet kan slutresultatet av omformade data skilja sig från det förväntade formatet. Använd alltid wrapper-funktionerna för att säkerställa att data som sparas eller hämtas är konsekventa och förutsägbara.
+   - Andra problem som kan uppstå och som kan vara mycket svåra att diagnostisera. Med vissa inbyggda PHP-funktioner om du inte använder [!DNL Adobe Commerce] wrapper-metoder som tillhandahålls av huvudprogrammet kan slutresultatet av omformade data skilja sig från det förväntade formatet. Använd alltid wrapper-funktionerna för att säkerställa att data som sparas eller hämtas är konsekventa och förutsägbara.
 
 Här är exempel på tabeller som har kolumnen och strukturen för `additional_data` kolumn.
 

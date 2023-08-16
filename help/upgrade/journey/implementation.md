@@ -15,7 +15,7 @@ Uppgraderingsimplementeringen består av fem faser:
 
 - Uppgraderingsanalys
 - Utveckling och kvalitetssäkring
-- Testning av användargodkännande (UAT) och förberedelse för att starta
+- UAT (User accept testing) och förberedelse för att starta
 - Starta
 - Efter start
 
@@ -36,27 +36,27 @@ Här följer några punkter som du kanske vill ta med i en grundlig analys:
 - Uppgraderar tjänster som stöder målversion. Använd följande tabellmall för att mappa ut vilka tjänster du måste uppgradera. Använd [systemkrav](../../installation/system-requirements.md) för att avgöra vad som ska läggas till i _Uppgradera till_ kolumn.
 
 
-   | Tjänst | Aktuell version | Uppgradera till | Anteckningar |
-   |-----------------|-----------------|------------|----------------------------------------------------------|
-   | PHP | 7.4 | 8.1 |  |
-   | Redis | 6.0 | 6.2 |  |
-   | [!DNL RabbitMQ] | 3.8 | 3.9 | Används inte just nu, men vi bör överväga att använda den |
-   | MariaDB (molnet) | 10.4 | 10.6 |  |
-   | MySQL | 8.0 | -/-/ |  |
-   | Disposition | 1.9.2 | 2.2 |  |
-   | Elasticsearch | 7.10 | 7.17 |  |
+  | Tjänst | Aktuell version | Uppgradera till | Anteckningar |
+  |-----------------|-----------------|------------|----------------------------------------------------------|
+  | PHP | 7.4 | 8.1 |                                                          |
+  | Redis | 6.0 | 6.2 |                                                          |
+  | [!DNL RabbitMQ] | 3.8 | 3.9 | Används inte just nu, men vi bör överväga att använda den |
+  | MariaDB (molnet) | 10.4 | 10.6 |                                                          |
+  | MySQL | 8.0 | -/-/ |                                                          |
+  | Disposition | 1.9.2 | 2.2 |                                                          |
+  | Elasticsearch | 7.10 | 7.17 |                                                          |
 
 - **Tillägg och tredjepartsmoduler**- Använd den här tabellmallen för att få en förståelse för status för tillägg och anpassningar, så att du kan fatta strategiska beslut och definiera åtgärder. Detta är en möjlighet att ersätta tillägg som kan vara inbyggda i Adobe Commerce eller Magento Open Source för att minimera komplexiteten i ditt projekt. Använd `bin/magento module:status` om du vill visa en lista med moduler och tillägg.
 
-   | # | Tillägg/<br>modulnamn | Kompositpaket | Leverantör | Aktuell version | Funktionalitet | Kompatibel med den senaste<br>Handelsversion? | Problem | Inbyggt i Commerce? | Åtgärd | Anteckningar |
-   |---|-----------------------------|------------------------------------|-------------|-------------------|-----------------------|---------------------------------------------|--------------------------------------------------|---------------------|-------------------------|-------|
-   | 1 | Tilläggsnamn och länk | extension/<br>extensionx-magento-2 | Leverantörsnamn | Version installerad | Affärskrav | Ja/Nej | Lista identifierade problem som uppstår med det här tillägget | Ja/Nej | Behåll/Ersätt/<br>Ta bort |  |
+  | # | Tillägg/<br>modulnamn | Kompositpaket | Leverantör | Aktuell version | Funktionalitet | Kompatibel med den senaste<br>Handelsversion? | Problem | Inbyggt i Commerce? | Åtgärd | Anteckningar |
+  |---|-----------------------------|------------------------------------|-------------|-------------------|-----------------------|---------------------------------------------|--------------------------------------------------|---------------------|-------------------------|-------|
+  | 1 | Tilläggsnamn och länk | extension/<br>extensionx-magento-2 | Leverantörsnamn | Version installerad | Affärskrav | Ja/Nej | Lista identifierade problem som uppstår med det här tillägget | Ja/Nej | Behåll/Ersätt/<br>Ta bort |       |
 
 - **Anpassade moduler**- På samma sätt som modultabellen från tredje part kan du med den här mallen spåra och förstå status och vilka åtgärder som krävs för uppgradering av anpassade moduler.
 
-   | # | Modulnamn | Funktionalitet | Obligatoriskt? | Inbyggt i Commerce? | Åtgärd | Anteckningar |
-   |---|--------------|-----------------------|-----------|---------------------|---------------------|-------|
-   | 1 | Modulnamn | Affärskrav | Ja/Nej | Ja/Nej | Behåll/Ersätt/Ta bort |  |
+  | # | Modulnamn | Funktionalitet | Obligatoriskt? | Inbyggt i Commerce? | Åtgärd | Anteckningar |
+  |---|--------------|-----------------------|-----------|---------------------|---------------------|-------|
+  | 1 | Modulnamn | Affärskrav | Ja/Nej | Ja/Nej | Behåll/Ersätt/Ta bort |       |
 
 - **Composer-paket och beroenden i Composer.json som kräver en uppdatering.**
 
@@ -70,7 +70,7 @@ Testning är den fas av en uppgradering som kräver mest tid. Därför bör denn
 
 UAT är ett av de sista stegen i uppgraderingen som kräver granskning och validering av webbplatsen. Du måste också bestämma när du ska distribuera och om du behöver en underhållssida. Planera kundprocesser och tredjepartsmeddelanden.
 
-I takt med att driftsättningsdatumet närmar sig är det viktigt med kommunikation. Om fler människor känner till förändringen i horisonten, hur den påverkar dem och hur de måste ta itu med den, är det troligare att ni får en framgångsrik start. Var inte rädd för att överkommunicera varje steg på vägen - det ökar sannolikheten för att alla inblandade kommer att glöda recensioner när du väl är klar!
+I takt med att driftsättningsdatumet närmar sig är det viktigt att kunna kommunicera. Om fler människor känner till förändringen i horisonten, hur den påverkar dem och hur de måste ta itu med den, är det troligare att ni får en framgångsrik start. Var inte rädd för att överkommunicera varje steg på vägen - det ökar sannolikheten för att alla inblandade kommer att glöda recensioner när du väl är klar!
 
 ## Starta
 

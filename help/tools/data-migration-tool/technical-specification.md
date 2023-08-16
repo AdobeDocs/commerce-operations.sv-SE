@@ -5,7 +5,7 @@ exl-id: fec3ac3a-dd67-4533-a29f-db917f54d606
 topic: Commerce, Migration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '2079'
 ht-degree: 0%
 
 ---
@@ -162,7 +162,7 @@ Konfigurationsfilen har följande struktur:
 
 * options - list of parameters. Innehåller både obligatoriska (map_file, settings_map_file, bulk_size) och valfria (custom_option, resource_adapter_class_name, prefix_source, prefix_dest, log_file) parametrar
 
-Ändra prefixalternativet om Magento installerades med prefix i databastabeller. Den kan ställas in för databaserna Magento 1 och Magento 2. Använd konfigurationsalternativen &quot;source_prefix&quot; och &quot;dest_prefix&quot; i enlighet med detta.
+Ändra prefixalternativet om Magento installerades med prefix i databastabeller. Den kan ställas in för databaserna Magento 1 och Magento 2. Använd konfigurationsalternativen &quot;source_prefix&quot; och &quot;dest_prefix&quot; i enlighet därmed.
 
 Konfigurationsdata är tillgängliga med `\Migration\Config` klassen.
 
@@ -181,7 +181,7 @@ Konfigurationsdata är tillgängliga med `\Migration\Config` klassen.
 | Dokument | Fält | Obligatoriskt? |
 |---|---|---|
 | `name` | Databasnamn för Magento 1-servern. | ja |
-| `host` | Magento 1-serverns värdadress. | ja |
+| `host` | Magento 1-serverns värdadress (IP). | ja |
 | `port` | Portnummer för Magento 1-servern. | no |
 | `user` | Användarnamn för databasservern Magento 1. | ja |
 | `password` | Lösenord för Magento 1-databasservern. | ja |
@@ -210,7 +210,7 @@ Du kan också ansluta till en databas med TLS-protokollet (dvs. med offentliga/p
 * `ssl_cert`
 * `ssl_key`
 
-Till exempel:
+Exempel:
 
 ```xml
 <source>
@@ -275,7 +275,7 @@ $this->progress->advance();
 $this->progress->finish();
 ```
 
-## Steg
+## Steg i steg
 
 ### Integritetskontroll
 
@@ -283,7 +283,7 @@ Varje steg måste kontrollera att strukturen för datakällan (Magento 1 som sta
 
 ### Dataöverföring
 
-Om integritetskontrollen skickas körs data. Om fel uppstår går återställningen tillbaka till det tidigare läget Magento 2. Om en stegklass implementerar `RollbackInterface` -gränssnittet körs återställningsmetoden när ett fel uppstår.
+Om integritetskontrollen skickas körs data. Om fel uppstår går återställningen tillbaka till det tidigare läget för Magento 2. Om en stegklass implementerar `RollbackInterface` -gränssnittet körs återställningsmetoden när ett fel uppstår.
 
 ### Volymkontroll
 
@@ -333,7 +333,7 @@ All butikskonfiguration sparar data i tabellen core_config_data i databasen. fil
 </settings>
 ```
 
-Under noden `<key>` det finns regler som fungerar med kolumnen &#39;path&#39; i `core_config_data` tabell. `<ignore>` regler förhindrar att verktyget överför vissa inställningar. Jokertecken kan användas i den här noden. Alla andra inställningar som inte finns i listan `<ignore>` noden migreras. Om sökvägen till en inställning ändras i Magento 2 bör den läggas till i `//key/rename` nod, där den gamla sökvägen anges `//key/rename/path` nod och ny sökväg anges i `//key/rename/to` nod.
+Under noden `<key>` det finns regler som fungerar med kolumnen &#39;path&#39; i `core_config_data` tabell. `<ignore>` regler förhindrar att verktyget överför vissa inställningar. Jokertecken kan användas i den här noden. Alla andra inställningar som inte finns i listan `<ignore>` noden migreras. Om sökvägen till en inställning ändras i Magento 2 bör den läggas till i `//key/rename` nod, där den gamla sökvägen anges i `//key/rename/path` nod och ny sökväg anges i `//key/rename/to` nod.
 
 Under noden `<value>`, finns det regler som fungerar med kolumnen &#39;value&#39; i `core_config_data` tabell. Dessa regler syftar till att omforma inställningsvärden av hanterare (klasser som implementerar `Migration\Handler\HandlerInterface`) och anpassa den för Magento 2.
 
@@ -343,7 +343,7 @@ I det här läget migreras merparten av data. Före datamigrering körs integrit
 
 #### Kartsteg
 
-Kartsteget används för att överföra större delen av data från Magento 1 till Magento 2. Det här steget läser instruktioner från filen map.xml (finns i `etc/` katalog). I filen beskrivs skillnaderna mellan datastrukturerna för källan (Magento 1) och målet (Magento 2). Om Magento 1 innehåller tabeller eller fält som tillhör ett tillägg som inte finns i Magento 2, kan dessa enheter placeras här för att ignorera dem via Mappa steg. Annars visas ett felmeddelande.
+Kartsteget används för att överföra större delen av data från Magento 1 till Magento 2. Det här steget läser instruktioner från filen map.xml (finns i `etc/` ). I filen beskrivs skillnaderna mellan datastrukturerna för källan (Magento 1) och målet (Magento 2). Om Magento 1 innehåller tabeller eller fält som tillhör ett tillägg som inte finns i Magento 2, kan dessa enheter placeras här för att ignorera dem via Mappa steg. Annars visas ett felmeddelande.
 
 Kartfilen har nästa format:
 
@@ -411,7 +411,7 @@ Alternativ:
 
 * *byt namn* - beskriver namnrelationer mellan dokument med olika namn. Om måldokumentnamnet inte är detsamma som källdokumentet kan du använda alternativet Byt namn för att ange ett källdokumentnamn som liknar måltabellens namn
 
-* *move* - anger att regeln ska flytta det angivna fältet från källdokumentet till måldokumentet. OBS! måldokumentets namn ska vara detsamma som källdokumentets namn. Om käll- och måldokumentnamnen är olika - du måste använda alternativet Byt namn för dokument som innehåller flyttade fält
+* *move* - anger att regeln ska flytta det angivna fältet från källdokumentet till måldokumentet. Obs! Måldokumentets namn måste vara detsamma som källdokumentets namn. Om käll- och måldokumentnamnen är olika - du måste använda alternativet Byt namn för dokument som innehåller flyttade fält
 
 * *omforma* - är ett alternativ som gör att användaren kan migrera fält enligt det beteende som beskrivs i hanterare
 
@@ -435,7 +435,7 @@ Om du vill ignorera dokument med liknande delar (`document_name_1`, `document_na
 
 #### Omskrivningssteg för URL
 
-Det här steget är komplext eftersom det finns många olika algoritmer som utvecklats i Magento 1 som inte är kompatibla med Magento 2. För olika versioner av Magento 1 kan det finnas olika algoritmer. I mappen Step/UrlRewrite finns det därför klasser som utvecklats för vissa versioner av Magento och Migration\Step\UrlRewrite\Version191to2000 is one of them. Den kan överföra data från Magento 1.9.1 till Magento 2.
+Det här steget är komplext eftersom det finns många olika algoritmer som utvecklats i Magento 1 som inte är kompatibla med Magento 2. För olika versioner av Magento 1 kan det finnas olika algoritmer. I mappen Step/UrlRewrite finns det därför klasser som utvecklats för vissa versioner av Magento och Migration\Step\UrlRewrite\Version191to2000 är en av dem. Den kan överföra data från Magento 1.9.1 till Magento 2.
 
 #### EAV-steg
 
@@ -494,7 +494,7 @@ Det finns en möjlighet att anpassa var logginformation ska skrivas. Du kan gör
 
 * ConsoleHandler: skriver meddelanden till konsolen
 
-* FileHandler: skriver meddelanden till loggfilen som har angetts i config-alternativet &quot;log_file&quot;
+* FileHandler: skriver meddelanden till loggfilen som har angetts i konfigurationsalternativet &quot;log_file&quot;
 
 Det går även att implementera ytterligare hanterare. Det finns en uppsättning hanterare i ramverket Magento. Exempel på hur du lägger till hanterare i loggaren:
 
@@ -523,7 +523,7 @@ Logaritmnivån kan anges separat för varje hanterare genom att anropa `setLevel
 
 Du kan formatera loggmeddelanden med monologgformateraren. För att formateringsfunktionen ska fungera måste du ange logghanteraren med `setFormatter()` -metod. För närvarande har vi en formateringsklass (`MessageFormatter`) som anger ett visst format (beror på hur mycket meddelandet ska hanteras) under meddelandehanteringen (via `format()` -metoden som körs från hanteraren).
 
-Bearbetning i detaljerat läge utförs i `process()` metoden `Migration\Logger\Manager` klassen. Metoden anropas när programmet startas.
+Bearbetning i detaljerat läge utförs i `process()` metod för `Migration\Logger\Manager` klassen. Metoden anropas när programmet startas.
 
 ## Automatiska tester
 
@@ -533,7 +533,7 @@ Det finns tre typer av tester i [!DNL Data Migration Tool]:
 * Enhet
 * Integrering
 
-De finns i verktygets `tests/` katalog, som är samma som testtypen (enhetstester finns i `tests/unit` katalog). Om du vill starta testet bör du ha phpunit installerat. Ändra den aktuella katalogen till testkatalogen och starta phpunit. Till exempel:
+De finns i verktygets `tests/` katalog, som är samma som testtypen (enhetstester finns i `tests/unit` ). Om du vill starta testet bör du ha phpunit installerat. Ändra den aktuella katalogen till testkatalogen och starta phpunit. Exempel:
 
 ```bash
 [10:32 AM]-[vagrant@debian-70rc1-x64-vbox4210]-[/var/www/magento2/vendor/magento/data-migration-tool]-[git master]

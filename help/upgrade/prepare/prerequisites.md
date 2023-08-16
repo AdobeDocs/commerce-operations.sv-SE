@@ -37,7 +37,7 @@ Se till att du har uppdaterat alla systemkrav och beroenden i din miljö. Se PHP
 
 ## Kontrollera att en sökmotor som stöds är installerad
 
-Adobe Commerce kräver att Elasticsearch eller OpenSearch är installerade för att programmet ska kunna användas.
+Adobe Commerce kräver att Elasticsearch eller OpenSearch är installerat för att du ska kunna använda programmet.
 
 **Om du uppgraderar från 2.3.x till 2.4** måste du kontrollera om du använder MySQL, Elasticsearch eller ett tillägg från tredje part som katalogsökmotor i din 2.3.x-instans. Resultatet avgör vad du måste göra _före_ uppgradering till 2.4.
 
@@ -45,9 +45,9 @@ Adobe Commerce kräver att Elasticsearch eller OpenSearch är installerade för 
 
 Du kan använda kommandoraden eller Admin för att bestämma katalogsökmotorn:
 
-* Ange `bin/magento config:show catalog/search/engine` -kommando. Kommandot returnerar värdet `mysql`, `elasticsearch` (vilket anger att Elasticsearch 2 är konfigurerad), `elasticsearch5`, `elasticsearch6`, `elasticsearch7`, eller ett anpassat värde, som anger att du har installerat en sökmotor från tredje part. För tidigare versioner än 2.4.6 använder du `elasticsearch7` för Elasticsearch 7- eller OpenSearch-motorn. För version 2.4.6 och senare använder du `opensearch` för OpenSearch-motorn.
+* Ange `bin/magento config:show catalog/search/engine` -kommando. Kommandot returnerar värdet `mysql`, `elasticsearch` (vilket anger att Elasticsearch 2 är konfigurerad), `elasticsearch5`, `elasticsearch6`, `elasticsearch7`, eller ett anpassat värde, som anger att du har installerat en sökmotor från tredje part. För tidigare versioner än 2.4.6 använder du `elasticsearch7` för Elasticsearch 7- eller OpenSearch-motorn. Använd `opensearch` för OpenSearch-motorn.
 
-* Kontrollera värdet för **[!UICONTROL Stores]** > [!UICONTROL Settings] > **[!UICONTROL Configuration]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog Search]** > **[!UICONTROL Search Engine]** fält.
+* Gå till Admin och kontrollera värdet för **[!UICONTROL Stores]** > [!UICONTROL Settings] > **[!UICONTROL Configuration]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog Search]** > **[!UICONTROL Search Engine]** fält.
 
 I följande avsnitt beskrivs vilka åtgärder du måste vidta innan du uppgraderar till 2.4.0.
 
@@ -57,7 +57,7 @@ Från och med 2.4 är MySQL inte längre en katalogsökmotor som stöds. Du mås
 
 * [Installera och konfigurera Elasticsearch](../../configuration/search/overview-search.md)
 * [Installerar Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)
-* Konfigurera [nginx](../../installation/prerequisites/search-engine/configure-nginx.md) eller [Apache](../../installation/prerequisites/search-engine/configure-apache.md) för att arbeta med din sökmotor
+* Konfigurera [nginx](../../installation/prerequisites/search-engine/configure-nginx.md) eller [Apache](../../installation/prerequisites/search-engine/configure-apache.md) för att arbeta med sökmotorn
 * [Konfigurera Commerce att använda Elasticsearch](../../configuration/search/configure-search-engine.md) och indexera om
 
 Vissa katalogsökmotorer från tredje part körs ovanpå Adobe Commerce sökmotor. Kontakta leverantören för att avgöra om du måste uppdatera tillägget.
@@ -92,7 +92,7 @@ OpenSearch kräver JDK 1.8 eller senare. Se [Installera Java Software Developmen
 
 #### Uppgradera Elasticsearch
 
-Stöd för Elasticsearch 8.x introducerades i Adobe Commerce 2.4.6. Följande instruktioner visar ett exempel på hur du uppgraderar Elasticsearch från 7.x till 8.x:
+Stöd för Elasticsearch 8.x infördes i Adobe Commerce 2.4.6. Följande instruktioner visar ett exempel på hur du uppgraderar Elasticsearch från 7.x till 8.x:
 
 1. Uppgradera servern Elasticsearch 7.x till 8.x och kontrollera att den är igång. Se [Elasticsearch dokumentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html).
 
@@ -106,7 +106,7 @@ Stöd för Elasticsearch 8.x introducerades i Adobe Commerce 2.4.6. Följande in
 
    >[!INFO]
    >
-   >Adobe Commerce 2.4.6 tillåter inte att Elasticsearch 8.x stöds `indices.id_field_data` som standard och använder `_id` i `docvalue_fields` -egenskap.
+   >Adobe Commerce 2.4.6 tillåter inte att Elasticsearch 8.x stöds `indices.id_field_data` som standard och använder `_id` fältet i `docvalue_fields` -egenskap.
 
 1. Uppdatera dina Composer-beroenden i Adobe Commerce-projektets rotkatalog för att ta bort `Magento_Elasticsearch7` och installera `Magento_Elasticsearch8` -modul.
 
@@ -178,7 +178,7 @@ Du måste konvertera formatet för alla databastabeller från `COMPACT` till `DY
 
 Genom att ange gränsen för antalet öppna filer (ulimit) kan du undvika fel vid flera rekursiva anrop av långa frågesträngar eller problem med att använda `bin/magento setup:rollback` -kommando. Det här kommandot är annorlunda för olika UNIX-skal. Mer information om `ulimit` -kommando.
 
-Adobe rekommenderar att du anger öppna filer [ulimit](https://ss64.com/bash/ulimit.html) till ett värde av `65536` eller mer, men du kan använda ett större värde om det behövs. Du kan ange gränsen på kommandoraden eller göra den till en permanent inställning för användarens skal.
+Adobe rekommenderar att du ställer in öppna filer [ulimit](https://ss64.com/bash/ulimit.html) till ett värde av `65536` eller mer, men du kan använda ett större värde om det behövs. Du kan ange gränsen på kommandoraden eller göra den till en permanent inställning för användarens skal.
 
 Så här anger du gränsen från kommandoraden:
 
@@ -231,7 +231,7 @@ Ett annat symtom på att kron inte körs är följande fel i Admin:
 
 ![](../../assets/upgrade-guide/cron-not-running.png)
 
-Klicka på **Systemmeddelanden** högst upp i fönstret enligt följande:
+Om du vill se felet klickar du på **Systemmeddelanden** högst upp i fönstret enligt följande:
 
 ![](../../assets/upgrade-guide/system-messages.png)
 
@@ -266,7 +266,7 @@ Så här anger du miljövariabeln:
 
    >[!NOTE]
    >
-   > `DATA_CONVERTER_BATCH_SIZE` kräver minne, Undvik att ange ett stort värde (ungefär 1 GB) utan att först testa det.
+   > `DATA_CONVERTER_BATCH_SIZE` kräver minne. Undvik att ange ett stort värde (ungefär 1 GB) utan att först testa det.
 
 1. När uppgraderingen är klar kan du ta bort variabeln:
 
@@ -276,7 +276,7 @@ Så här anger du miljövariabeln:
 
 ## Verifiera behörigheter i filsystemet
 
-Av säkerhetsskäl kräver Adobe Commerce vissa behörigheter i filsystemet. Behörigheterna skiljer sig från _[ägarskap](../../upgrade/prepare/prerequisites.md#verify-file-system-permissions)_. Ägarskapet avgör vem som kan utföra åtgärder i filsystemet. behörigheter bestämmer vad användaren kan göra.
+Av säkerhetsskäl kräver Adobe Commerce vissa behörigheter i filsystemet. Behörigheterna skiljer sig från _[ägandeskap](../../upgrade/prepare/prerequisites.md#verify-file-system-permissions)_. Ägarskapet avgör vem som kan utföra åtgärder i filsystemet. Behörigheterna avgör vad användaren kan göra.
 
 Kataloger i filsystemet måste vara skrivbara av [filsystemets ägare](../../installation/prerequisites/file-system/overview.md) grupp.
 
@@ -288,7 +288,7 @@ Ange till exempel följande kommando om programmet är installerat i `/var/www/h
 ls -l /var/www/html/magento2
 ```
 
-Exempelutdata:
+Exempel:
 
 ```console
 total 1028
@@ -351,7 +351,7 @@ The [`magento/composer-root-update-plugin`](https://github.com/magento/composer-
 
 Plugin-programmet automatiserar delvis den manuella uppgraderingen genom att identifiera och hjälpa dig att lösa beroendekonflikter i stället för att kräva att du identifierar och åtgärdar dem manuellt.
 
-Så här installerar du plugin-programmet:
+Installera plugin-programmet:
 
 1. Lägg till paketet i `composer.json` -fil.
 

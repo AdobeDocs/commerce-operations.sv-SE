@@ -62,7 +62,7 @@ Så här skapar du en anpassad patch:
 1. Skapa en `patches/composer` i ditt lokala projekt.
 1. Identifiera GitHub-implementeringen eller pull-begäran som ska användas för korrigeringen. I det här exemplet används [`2d31571`](https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede) implementering, länkad till GitHub-utgåva [#6474](https://github.com/magento/magento2/issues/6474).
 1. Lägg till `.patch` eller `.diff` tillägg till implementerings-URL:en. Använd `.diff` för en mindre filstorlek. Till exempel: [https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede.diff](https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede.diff)
-1. Spara sidan som en fil i `patches/composer` katalog. Till exempel: `github-issue-6474.diff`.
+1. Spara sidan som en fil i `patches/composer` katalog. Exempel, `github-issue-6474.diff`.
 1. Redigera filen och ta bort `app/code/<VENDOR>/<PACKAGE>` från alla sökvägar så att de är relativa till `vendor/<VENDOR>/<PACKAGE>` katalog.
 
    >[!NOTE]

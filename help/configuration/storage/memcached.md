@@ -18,7 +18,7 @@ Memcache-lagrade tillhandahåller en stor hashtabell som kan distribueras på fl
 
 I Commerce används cachelagrade data för sessionslagring, men inte för sidcachelagring. Vi rekommenderar cachning av sidor [Redis](../cache/redis-pg-cache.md) eller [Varnish](../cache/config-varnish.md).
 
-**Så här konfigurerar du Commerce att använda cachelagrade**:
+**Konfigurera Commerce att använda cachelagrade**:
 
 1. Öppna `<your install dir>/app/etc/env.php` i en textredigerare.
 1. Gå till följande:
@@ -40,7 +40,7 @@ I Commerce används cachelagrade data för sessionslagring, men inte för sidcac
    ),
    ```
 
-   i cache-minnet har valfria startparametrar som ligger utanför den här guidens omfång. Mer information om dem finns i [memcache](https://www.php.net/manual/en/memcached.sessions.php) dokumentation, källkod och ändringshundar.
+   i cache-minnet har valfria startparametrar som ligger utanför den här handbokens räckvidd. Mer information om dem finns i [memcache](https://www.php.net/manual/en/memcached.sessions.php) dokumentation, källkod och ändringshundar.
 
 1. Fortsätt med nästa avsnitt.
 

@@ -36,7 +36,7 @@ The `env.php` filen innehåller följande avsnitt:
 
 ## serverdel
 
-Konfigurera **frontName** för Commerce Admin url med `backend` nod i env.php.
+Konfigurera **frontName** för Commerce Admin url med `backend` i env.php.
 
 ```conf
 'backend' => [
@@ -98,7 +98,7 @@ Alla konfigurationer av cachetyper är tillgängliga från den här noden.
 ]
 ```
 
-Läs mer om olika [Cachetyper](../cli/manage-cache.md).
+Läs mer om olika [Cache-typer](../cli/manage-cache.md).
 
 ## containers_wait_for_messages
 
@@ -114,11 +114,11 @@ Följande alternativ är tillgängliga:
 
 - `1`—Konsumenterna fortsätter att bearbeta meddelanden från meddelandekön tills de når `max_messages` det värde som anges i `env.php` innan TCP-anslutningen stängs och konsumentprocessen avslutas. Om kön töms innan användaren når `max_messages` värdet, väntar konsumenten på fler meddelanden.
 
-   Vi rekommenderar den här inställningen för stora handlare eftersom ett konstant meddelandeflöde förväntas och förseningar i bearbetningen är oönskade.
+  Vi rekommenderar den här inställningen för stora handlare eftersom ett konstant meddelandeflöde förväntas och förseningar i bearbetningen är oönskade.
 
 - `0`—Konsumenterna bearbetar tillgängliga meddelanden i kön, stänger TCP-anslutningen och avslutar. Konsumenterna väntar inte på att ytterligare meddelanden ska skickas till kön, även om antalet bearbetade meddelanden är mindre än `max_messages` det värde som anges i `env.php` -fil. Detta kan hjälpa till att förhindra problem med kronijobb som orsakas av långa förseningar i meddelandeköhanteringen.
 
-   Vi rekommenderar den här inställningen för mindre handlare som inte förväntar sig ett konstant meddelandeflöde och som föredrar att spara datorresurser i utbyte mot mindre förseningar när det inte finns några meddelanden på några dagar.
+  Vi rekommenderar den här inställningen för mindre handlare som inte förväntar sig ett konstant meddelandeflöde och som föredrar att spara datorresurser i utbyte mot mindre förseningar när det inte finns några meddelanden på några dagar.
 
 ## cron
 
@@ -185,7 +185,7 @@ Om `queue/default_connection` är `amqp` in `env.php` men en `db` anslutningen a
 
 ## kataloger
 
-Valfria katalogmappningsalternativ som måste anges när webbservern är konfigurerad för att hantera Commerce-appen från `/pub` katalog för [förbättrad säkerhet](../../installation/tutorials/docroot.md).
+Valfria katalogmappningsalternativ som måste anges när webbservern är konfigurerad för att hantera Commerce-appen från `/pub` katalog [förbättrad säkerhet](../../installation/tutorials/docroot.md).
 
 ```conf
 'directories' => [

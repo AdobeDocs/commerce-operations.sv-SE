@@ -41,7 +41,7 @@ Steg för att konfigurera OpenSearch beskrivs i [Avancerad installation](../../a
 
 Testa OpenSearch-slutpunkten direkt om du vill testa att den nya konfigurationen fungerar:
 
-1. Skapa en produkt i administratören (till exempel: sku=&quot;testproduct1&quot;).
+1. Skapa en produkt i Admin (till exempel: sku=&quot;testproduct1&quot;).
 1. Indexera om via administratören.
 1. Fråga OpenSearch-slutpunkten (finns i AWS UI):
 

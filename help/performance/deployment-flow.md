@@ -26,7 +26,7 @@ composer install --no-dev
 
 ## Instruktioner för förprocessberoende injektion
 
-Magento:
+När du förbearbetar och kompilerar instruktioner för beroendeinjicering (DI), Magento:
 
 * Läser och bearbetar alla aktuella konfigurationer
 * Analyserar beroenden mellan klasser
@@ -53,7 +53,7 @@ Så här uppdaterar du den automatiska inläsaren:
 composer dump-autoload -o --apcu
 ```
 
-Om du tänker uppdatera den automatiska inläsaren måste du köra följande kommandon i ordning:
+Om du planerar att uppdatera den automatiska inläsaren måste du köra följande kommandon i ordning:
 
 ```bash
 composer install --no-dev
@@ -81,7 +81,7 @@ Distribuera statiskt innehåll orsakar [!DNL Commerce] för att utföra följand
 * Analysera temaflöde
 * Lagra allt bearbetat och materialiserat innehåll i en viss mapp för ytterligare användning
 
-Om ditt statiska innehåll inte distribueras, [!DNL Commerce] utför alla listade åtgärder på direkten, vilket leder till en avsevärd ökning av svarstiden.
+Om statiskt innehåll inte distribueras, [!DNL Commerce] utför alla listade åtgärder på direkten, vilket leder till en avsevärd ökning av svarstiden.
 
 Du kan använda en mängd alternativ för att anpassa distributionsåtgärder baserat på butikens storlek och leveransbehov. Den vanligaste är den kompakta distributionsstrategin. Se [Distributionsstrategier för statiska filer](../configuration/cli/static-view-file-strategy.md)
 
@@ -116,5 +116,5 @@ Kommandot körs i bakgrunden och du kan inte ange ytterligare alternativ för va
 Dessa steg rekommenderas, men är inte obligatoriska. Du kan utföra dem direkt innan du startar butiken i produktionsläge. Listan innehåller:
 
 * Indexera om data för att undvika att det finns inkonsekventa data i indexen.
-* Töm cacheminnet för att vara säker på att inga gamla eller felaktiga data finns kvar i cacheminnet.
+* Töm cacheminnet så att inga gamla eller felaktiga data finns kvar i cacheminnet.
 * Öka cacheminnet, som i förväg anropar de populäraste eller mest kritiska lagringssidorna, så att cacheminnet för dem genereras och lagras. Den här åtgärden kan utföras med alla Internet-crawler eller manuellt om du har en liten butik.

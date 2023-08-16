@@ -2,11 +2,11 @@
 title: Konfigurera databasprofileraren
 description: Se ett exempel på hur du konfigurerar utdata för databasprofileraren.
 feature: Configuration, Storage
-badge: label="Contributed by Atish Goswami" type="Informative" url="https://github.com/atishgoswami" tooltip="Atish Goswami"
+badge: label="Bidragen av Atish Goswami" type="Informative" url="https://github.com/atishgoswami" tooltip="Brittiska Goswami"
 exl-id: 87780db5-6e50-4ebb-9591-0cf22ab39af5
 source-git-commit: af45ac46afffeef5cd613628b2a98864fd7da69b
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '193'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Ett exempel följer:
 
 ## Steg 2: Konfigurera utdata
 
-Konfigurera utdata i Commerce-programmets startfil; det här kan vara `<magento_root>/pub/index.php` eller så finns den i en virtuell värdkonfiguration för webbservern.
+Konfigurera utdata i Commerce-programmets startfil. Detta kan vara `<magento_root>/pub/index.php` eller så finns den i en virtuell värdkonfiguration för webbservern.
 
 I följande exempel visas resultatet i en tabell med tre kolumner:
 
@@ -87,7 +87,7 @@ foreach ($profiler->getQueryProfiles() as $query) {
 echo "</table>";
 ```
 
-## Steg 3: Visa resultaten
+## Steg 3: Visa resultatet
 
 Gå till valfri sida i din butik eller Admin för att se resultatet. Ett exempel följer:
 

@@ -35,7 +35,7 @@ I följande diagram visas möjliga arbetsflöden när du kör [!DNL Upgrade Comp
 
 ## [!DNL Upgrade Compatibility Tool] demo
 
-I den här videon får du veta mer om [!DNL Upgrade Compatibility Tool]:
+I den här videon får du lära dig mer om [!DNL Upgrade Compatibility Tool]:
 
 >[!VIDEO](https://video.tv.adobe.com/v/341245?quality=12)
 
@@ -43,17 +43,17 @@ I den här videon får du veta mer om [!DNL Upgrade Compatibility Tool]:
 
 Om du behöver information eller har frågor som inte ingår i den här handboken använder du följande resurser:
 
-Ansluta till [!DNL Upgrade Compatibility Tool] team, kontakta oss på Engineering Slack channel [#upgrade-compatibility-tool](https://magentocommeng.slack.com/archives/C019Y143U9F). Vi vill gärna få synpunkter, problem och förslag som hjälper oss att förbättra verktyget.
+För att ansluta till [!DNL Upgrade Compatibility Tool] team, kontakta oss på Engineering Slack channel [#upgrade-compatibility-tool](https://magentocommeng.slack.com/archives/C019Y143U9F). Vi vill gärna få synpunkter, problem och förslag som hjälper oss att förbättra verktyget.
 
 The [!DNL Upgrade Compatibility Tool] använder regler som definierats i [Kodstandarder](https://developer.adobe.com/commerce/php/coding-standards/) för att säkerställa att ditt projekt följer Adobe Commerce bästa praxis och för att hjälpa dig att förbättra och utöka [!DNL Upgrade Compatibility Tool].
 
 Se [Contribute](https://developer.adobe.com/commerce/php/coding-standards/contributing/) för mer information om bidragande kodningsstandarder.
 
-## Resurser
+## Resurs
 
 Se följande resurser som hjälper dig att förstå Adobe Commerce uppgraderingar:
 
 - The [uppgraderingsguide](../overview.md) ger en översikt över den typiska uppgraderingsresan för Adobe Commerce eller Magento Open Source och de bästa sätten att följa under den resan.
-- The [kommande versioner](https://devdocs.magento.com/release/) sidan innehåller datum för schemalagda och kommande versioner.
+- The [kommande releaser](https://devdocs.magento.com/release/) sidan innehåller datum för schemalagda och kommande versioner.
 - The [communityresurser](https://developer.adobe.com/commerce/contributor/community/) ska du placera för att starta diskussioner eller hitta mer information.
 - Kontrollera [relaterade verktyg](../upgrade-compatibility-tool/related-tools.md) sida där du hittar användbara verktyg under den normala uppgraderingsresan.

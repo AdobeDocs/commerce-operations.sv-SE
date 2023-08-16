@@ -5,7 +5,7 @@ exl-id: a787be0f-5dd8-4acc-adbf-5cedd96b08d6
 feature: Configuration, Observability
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '362'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Använda [!DNL Observation for Adobe Commerce]kan du analysera komplexa problem 
 
 Handlare och partners som vill optimera sina prestanda på Adobe Commerce webbplats och diagnostisera problem. [!DNL Observation for Adobe Commerce] kan användas för att:
 
-* Jämför information med en gemensam tidslinje innan sajten hade ett problem, så att du kan se vad som orsakar försämrade prestanda.
+* Jämför information mot en gemensam tidslinje innan sajten hade ett problem, så att du kan se vad som orsakar försämrade prestanda.
 
 * Ta reda på vad du ska leta efter och var du ska leta efter bland miljontals loggmeddelanden vid avbrott.
 
@@ -36,6 +36,6 @@ Handlare och partners som vill optimera sina prestanda på Adobe Commerce webbpl
 
 ## [!DNL Observation for Adobe Commerce] demo
 
-Titta på den här videon om du vill veta mer om [!DNL Observation for Adobe Commerce]:
+I den här videon får du veta mer om [!DNL Observation for Adobe Commerce]:
 
 >[!VIDEO](https://video.tv.adobe.com/v/344444?quality=12)

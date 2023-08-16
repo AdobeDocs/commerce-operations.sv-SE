@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe har ingen rekommendation om SELinux. om du vill kan du använda den för förbättrad säkerhet. Om du använder SELinux måste du konfigurera det korrekt, annars kan Adobe Commerce och Magento Open Source fungera oförutsägbart. Om du väljer att använda SELinux bör du kontakta en resurs som [CentOS wiki](https://wiki.centos.org/HowTos/SELinux) för att skapa regler som möjliggör kommunikation.
+>Adobe har ingen rekommendation om SELinux; du kan använda det för ökad säkerhet om du vill. Om du använder SELinux måste du konfigurera det korrekt, annars kan Adobe Commerce och Magento Open Source fungera oförutsägbart. Om du väljer att använda SELinux bör du kontakta en resurs som [CentOS wiki](https://wiki.centos.org/HowTos/SELinux) för att skapa regler som möjliggör kommunikation.
 
 ## Förslag om installation med Apache
 
@@ -42,14 +42,14 @@ chcon -R --type httpd_sys_rw_content_t <magento_root>/pub/static
 chcon -R --type httpd_sys_rw_content_t <magento_root>/generated
 ```
 
-De föregående kommandona fungerar bara med webbservern Apache. På grund av olika konfigurationer och säkerhetskrav garanterar vi inte att dessa kommandon fungerar i alla situationer. Mer information finns i:
+Föregående kommandon fungerar bara med webbservern Apache. På grund av olika konfigurationer och säkerhetskrav garanterar vi inte att dessa kommandon fungerar i alla situationer. Mer information finns i:
 
 * [huvudsida](https://linux.die.net/man/8/httpd_selinux)
 * [Server-Lab](https://www.serverlab.ca/tutorials/linux/web-servers-linux/configuring-selinux-policies-for-apache-web-servers/)
 
 ## Aktivera kommunikation mellan servrar
 
-Om Apache och databasservern finns på samma värd använder du följande kommando om du tänker använda integreringar som använder `curl` (ex. PayPal och USPS).
+Om Apache och databasservern finns på samma värd använder du följande kommando om du tänker använda integreringar som använder `curl` (ex. Paypal och USPS).
 Så här aktiverar du Apache för att initiera en anslutning till en annan värd med SELinux aktiverat:
 
 1. Använd följande kommando för att avgöra om SELinux är aktiverat:
@@ -65,7 +65,7 @@ Så här aktiverar du Apache för att initiera en anslutning till en annan värd
 
 ## Öppnar portar i brandväggen
 
-Beroende på dina säkerhetskrav kan det vara nödvändigt att öppna port 80 och andra portar i brandväggen. På grund av den känsliga nätverkssäkerheten rekommenderar Adobe starkt att du rådfrågar IT-avdelningen innan du fortsätter. Nedan följer några förslag på referenser:
+Beroende på dina säkerhetskrav kan du behöva öppna port 80 och andra portar i brandväggen. På grund av den känsliga nätverkssäkerheten rekommenderar Adobe starkt att du rådfrågar IT-avdelningen innan du fortsätter. Nedan följer några förslag på referenser:
 
 * Ubuntu: [Dokumentationssida för Ubuntu](https://help.ubuntu.com/community/IptablesHowTo)
 * CentOS: [CentOS How-to](https://wiki.centos.org/HowTos/Network/IPTables).

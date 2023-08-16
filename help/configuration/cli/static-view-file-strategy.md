@@ -14,8 +14,8 @@ ht-degree: 0%
 
 När du distribuerar statiska vyfiler kan du välja en av de tre tillgängliga strategierna. Vart och ett av dem ger optimala distributionsresultat för olika användningsområden:
 
-- [Standard](#standard-strategy): den normala distributionsprocessen.
-- [Snabb](#quick-strategy) (_standard_): minimerar den tid som krävs för distribution när filer för mer än en språkinställning distribueras.
+- [Standard](#standard-strategy): den vanliga distributionsprocessen.
+- [Snabb](#quick-strategy) (_standard_): minimerar tiden som krävs för distribution när filer för fler än en språkinställning distribueras.
 - [Kompakt](#compact-strategy): minimerar utrymmet som tas av de publicerade vyfilerna.
 
 I följande avsnitt beskrivs implementeringsdetaljer och funktioner för varje strategi.
@@ -52,7 +52,7 @@ Filerna distribueras till dessa underkataloger enligt följande mönster.
 
 | Mönster | Beskrivning |
 | ------- | ----------- |
-| `<area>/<theme>/<locale>` | Filer som är specifika för ett visst område, tema och språkområde |
+| `<area>/<theme>/<locale>` | Filer som är specifika för ett visst område, tema och språk |
 | `<area>/<theme>/default` | Filer som liknar alla språkområden i ett visst tema i ett visst område. |
 | `<area>/Magento/base/<locale>` | Filer som är specifika för ett visst område och en viss språkinställning, men liknande för alla teman. |
 | `<area>/Magento/base/default` | Filer som är specifika för ett visst område, men liknande för alla teman och språkområden. |
@@ -68,7 +68,7 @@ Den distributionsmetod som används i den kompakta strategin innebär att filer 
 
 The `map.php` filen används av [`Magento\Framework\View\Asset\Repository`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/View/Asset/Repository.php) för att skapa korrekta URL:er.
 
-The `requirejs-map.js` används av `baseUrlResolver` plugin-program för RequireJS.
+The `requirejs-map.js` används av `baseUrlResolver` plugin för RequireJS.
 
 Exempel på `map.php`:
 
