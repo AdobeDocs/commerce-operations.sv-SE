@@ -2,9 +2,9 @@
 user-guide-title: Implementera spelningsbok
 user-guide-description: Läs om strategier för att planera och implementera en framgångsrik Adobe Commerce-webbplats.
 mini-toc-levels: 3
-source-git-commit: 5aa1669e556e5b7bf5ed3777db0f026ccfff5e70
+source-git-commit: 0b704489c7467fbdae769f5c8763129ed67dfe41
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '272'
 ht-degree: 0%
 
 ---
@@ -112,10 +112,11 @@ ht-degree: 0%
       - [Ökning](best-practices/maintenance/overview.md)
       - [Prestanda för granskningsfronder](best-practices/maintenance/frontend-performance.md)
       - [Indexerarkonfiguration](best-practices/maintenance/indexer-configuration.md)
+      - [Lappa i stor skala](best-practices/maintenance/patching-at-scale.md)
       - [Beställningsbehandling](best-practices/maintenance/order-processing-configuration.md)
+      - [Åtgärda problem med databasprestanda](best-practices/maintenance/resolve-database-performance-issues.md)
       - [Schemalägga administratörsuppdateringar på produktionsplatser](best-practices/maintenance/scheduling-admin-updates-in-production.md)
       - [Uppdatera tjänster](best-practices/maintenance/update-services.md)
       - [Checklista för uppgradering](best-practices/maintenance/upgrade-checklist.md)
-      - [Åtgärda problem med databasprestanda](best-practices/maintenance/resolve-database-performance-issues.md)
       - [Krav för uppgradering av MariaDB](best-practices/maintenance/commerce-235-upgrade-prerequisites-mariadb.md)
 - [Återgå till bruksanvisningar](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

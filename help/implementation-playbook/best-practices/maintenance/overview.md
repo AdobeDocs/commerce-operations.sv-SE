@@ -3,9 +3,9 @@ title: Implementeringsunderhållsfas
 description: Lär dig mer om de effektivaste strategierna för implementering i underhållsfasen av Adobe Commerce-projekt.
 exl-id: bd052412-a41c-4dbd-9aba-ba2fcac31f2d
 feature: Best Practices
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: d0cb3b81ee50ebd7cbf65a4dddbf5c58acf04f0d
 workflow-type: tm+mt
-source-wordcount: '277'
+source-wordcount: '280'
 ht-degree: 0%
 
 ---
@@ -73,5 +73,6 @@ Följande avsnitt innehåller information om bästa praxis för underhållsfasen
 
 ### Uppgraderingar
 
+- [Lappa i stor skala](patching-at-scale.md)
 - [Uppdatera tjänster och komponenter till den senaste &#x200B;](update-services.md)
 - [Upgrade checklist for Adobe Commerce &#x200B;](upgrade-checklist.md)

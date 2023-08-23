@@ -2,9 +2,9 @@
 title: Tillämpa korrigeringar
 description: Lär dig mer om metoderna för att använda korrigeringsfiler i ett Adobe Commerce- eller Magento Open Source-projekt.
 exl-id: 1d5d81ad-0115-4575-adfd-dde7c2826d85
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 454f586737292341b3e6dd9a57cc92b3472c4b31
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '340'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,11 @@ Du kan använda patchar på något av följande sätt:
 - [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
 - [Kommandorad](../patches/apply.md#command-line)
 - [Disposition](../patches/apply.md#composer)
+
+
+>[!TIP]
+>
+>Se [bästa praxis](../../implementation-playbook/best-practices/maintenance/patching-at-scale.md) för information om centraliserad patchning för Adobe Commerce på företagsnivå.
 
 ## Disposition
 
