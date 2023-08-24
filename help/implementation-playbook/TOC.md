@@ -2,9 +2,9 @@
 user-guide-title: Implementera spelningsbok
 user-guide-description: Läs om strategier för att planera och implementera en framgångsrik Adobe Commerce-webbplats.
 mini-toc-levels: 3
-source-git-commit: 0b704489c7467fbdae769f5c8763129ed67dfe41
+source-git-commit: 3e0187b7eeb6475ea9c20bc1da11c496b57853d1
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '254'
 ht-degree: 0%
 
 ---
@@ -76,22 +76,14 @@ ht-degree: 0%
    - [Ökning](best-practices/phases.md)
    - Planering {#planning}
       - [Ökning](best-practices/planning/overview.md)
+      - [Kataloghantering](best-practices/planning/catalog-management.md)
       - [Konfiguration av platser, butiker och butiksvy](best-practices/planning/sites-stores-store-views.md)
       - [Rapporteringskonfiguration](best-practices/planning/reporting-configuration.md)
       - [Databaskonfiguration för &#x200B; i molnet](best-practices/planning/database-on-cloud.md)
-      - [Konfiguration &#x200B; för MySQL-slavanslutning](best-practices/planning/configure-mysql-slave-connection-on-cloud.md)
-      - [Användning av MySQL-utlösare](best-practices/planning/mysql-triggers-usage.md)
+      - [MySQL-konfiguration](best-practices/planning/mysql-configuration.md)
       - [Redis-tjänstkonfiguration](best-practices/planning/redis-service-configuration.md)
       - [OPcache-minnesstorlek](best-practices/planning/opcache-memory-size.md)
       - [Cachestorlek för Realpath](best-practices/planning/realpath-cache-size.md)
-      - [Kategorier](best-practices/planning/category-limits.md)
-      - [Produkt](best-practices/planning/product-sku-limits.md)
-      - [Produktvariationer](best-practices/planning/product-variations.md)
-      - [Produktalternativ](best-practices/planning/product-options.md)
-      - [Produktattribut](best-practices/planning/product-attributes-and-options.md)
-      - [Sidnumrering av produktlista](best-practices/planning/product-listing-pagination.md)
-      - [Produktvagnsgräns](best-practices/planning/product-cart.md)
-      - [Erbjudanden](best-practices/planning/product-cart-promotions.md)
       - [Tillägg](best-practices/planning/extensions.md)
       - [Eskaleringar av partners](best-practices/planning/partner-escalation.md)
       - [Betalningslagringsbearbetning](best-practices/planning/payment-processing-storage.md)

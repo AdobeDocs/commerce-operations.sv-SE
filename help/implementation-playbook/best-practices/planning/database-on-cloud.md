@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar databas- och programinställningar fö
 role: Developer, Admin
 feature: Best Practices
 exl-id: ca377dc8-c8bd-4f77-a24b-22a298e2bba4
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: 3e0187b7eeb6475ea9c20bc1da11c496b57853d1
 workflow-type: tm+mt
-source-wordcount: '687'
+source-wordcount: '680'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ Utlösare används för att logga ändringar i granskningstabeller. Adobe rekomm
 - Utlösare tolkas som kod och MySQL förkompilerar dem inte. Som en del av frågans transaktionsutrymme lägger de till overheadset i en tolk och tolk för varje fråga som utförs med tabellen.
 - Utlösarna delar samma transaktionsutrymme som de ursprungliga frågorna, och även om dessa frågor konkurrerar om lås i tabellen konkurrerar utlösarna oberoende av lås i ett annat register.
 
-Mer information om alternativ till att använda anpassade utlösare finns i [Använd MySQL-utlösare effektivt](mysql-triggers-usage.md) i vår kunskapsbas för support.
+Mer information om alternativ till att använda anpassade utlösare finns i [MySQL-utlösare](mysql-configuration.md#triggers).
 
 ## Uppgradera [!DNL ECE-Tools] till version 2002.0.21 eller senare {#ece-tools-version}
 

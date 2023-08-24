@@ -4,9 +4,9 @@ description: Lär dig mer om de effektivaste strategierna för implementering i 
 role: Developer, Admin, User
 feature: Best Practices
 exl-id: 6baeac79-8dc3-45b4-bb25-8f2add8b3443
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: 3e0187b7eeb6475ea9c20bc1da11c496b57853d1
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
@@ -37,8 +37,7 @@ Följande avsnitt innehåller information om god praxis för planeringsfasen.
 
 - **Databaskonfiguration**
    - [Bästa praxis för databaskonfigurering för &#x200B; i molnet](database-on-cloud.md)
-   - [Konfiguration &#x200B; för MySQL-slavanslutning](configure-mysql-slave-connection-on-cloud.md)
-   - [Användning av MySQL-utlösare](mysql-triggers-usage.md)
+   - [&#x200B; för MySQL-konfiguration](mysql-configuration.md)
 
 - **Tjänstkonfiguration**
    - [Konfigurera snabbt](https://devdocs.magento.com/cloud/cdn/configure-fastly.html)
@@ -57,17 +56,17 @@ Följande avsnitt innehåller information om god praxis för planeringsfasen.
 
 I följande avsnitt beskrivs de effektivaste strategierna för prestandaoptimering när du konfigurerar din Adobe Commerce-katalog, inklusive rekommenderade maximivärden för antal kategorier, produkteffektiva SKU:er, produktvariationer, produktattribut och alternativ med mera.
 
-- [Kategorikonfiguration](category-limits.md)
-- [&#x200B; för produktkonfiguration](product-sku-limits.md)
-- [Produktvariantkonfiguration](product-variations.md)
-- [Konfiguration av produktalternativ](product-options.md)
-- [&#x200B; för produktattribut](product-attributes-and-options.md)
-- [Sidnumreringskonfiguration för produktlistor](product-listing-pagination.md)
+- [Kategorikonfiguration](catalog-management.md#category-limits)
+- [&#x200B; för produktkonfiguration](catalog-management.md#product-sku-limits)
+- [Produktvariantkonfiguration](catalog-management.md#product-variations)
+- [Konfiguration av produktalternativ](catalog-management.md#product-options)
+- [&#x200B; för produktattribut](catalog-management.md#product-attributes)
+- [Sidnumreringskonfiguration för produktlistor](catalog-management.md#product-listing-pagination)
 
 ## **Försäljning och marknadsföring**
 
-- [Bästa tillvägagångssätt för produktvagnsgräns](product-cart.md)
-- [Bästa tillvägagångssätt för att konfigurera kampanjer](product-cart-promotions.md)
+- [Bästa tillvägagångssätt för produktvagnsgräns](catalog-management.md#cart-limits)
+- [Bästa tillvägagångssätt för att konfigurera kampanjer](catalog-management.md#promotions)
 
 ## **Projektomfång**
 
