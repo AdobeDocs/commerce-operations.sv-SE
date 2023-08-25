@@ -2,9 +2,9 @@
 user-guide-title: Implementera spelningsbok
 user-guide-description: Läs om strategier för att planera och implementera en framgångsrik Adobe Commerce-webbplats.
 mini-toc-levels: 3
-source-git-commit: 7ab0342e3897e2804f5a43876197308c69ac1bb7
+source-git-commit: 42d027a3aedb8d395097d872a97998e76e547966
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '253'
 ht-degree: 0%
 
 ---
@@ -102,6 +102,7 @@ ht-degree: 0%
    - Underhåll {#maintenance}
       - [Ökning](best-practices/maintenance/overview.md)
       - [Prestanda för granskningsfronder](best-practices/maintenance/frontend-performance.md)
+      - [Optimera backend-prestanda](best-practices/maintenance/backend-performance.md)
       - [Indexerarkonfiguration](best-practices/maintenance/indexer-configuration.md)
       - [Lappa i stor skala](best-practices/maintenance/patching-at-scale.md)
       - [Beställningsbehandling](best-practices/maintenance/order-processing-configuration.md)
