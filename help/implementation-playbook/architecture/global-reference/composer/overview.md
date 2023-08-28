@@ -1,0 +1,104 @@
+---
+title: Utveckling av disposition
+description: Lär dig hur du utvecklar Composer-moduler på plats i katalogen "vendor/".
+feature: Best Practices
+role: Developer
+source-git-commit: b4213c40fdf903fd962a15fc99b143f31aedbcde
+workflow-type: tm+mt
+source-wordcount: '273'
+ht-degree: 0%
+
+---
+
+
+# Utveckling av disposition
+
+I det här avsnittet beskrivs det rekommenderade sättet att utveckla Composer-moduler på plats (som Git-databaser i `vendor/` och lägga till dessa moduler i ditt Git-huvudprojekt.
+
+>[!NOTE]
+>
+>Dessa riktlinjer gäller i första hand [global referensarkitektur (GRA)](../overview.md) projekt.
+
+## Förbereda en utvecklingsgren
+
+1. Skapa eller checka ut utvecklingsgrenen i din huvudGit-databas.
+1. Kräv utvecklingsversioner för varje modul som du underhåller.
+
+   I det här exemplet representerar varje gren i din Git-huvuddatabas en Composer-paketversion. Den rekommenderade namnkonventionen för Composer-versioner i detta scenario är `dev-` följt av filialnamnet. Exempel:
+
+   - `dev-develop`
+   - `dev-qa`
+
+   ```bash
+   composer require client/module-example:dev-develop
+   ```
+
+1. Om ett annat Composer-paket kräver en specifik version av en modul (till exempel `client/module-example 1.0.12`), installera det med ett alias:
+
+   ```bash
+   composer require 'client/module-example:dev-develop as 1.0.12'
+   ```
+
+   För `qa` förgrening, ersätta `dev-develop` med `dev-qa`.
+
+## Konvertera paket till Git-databaser
+
+Som standard innehåller paket inte `.git/` katalog. Composer kan checka ut paket från Git i stället för att använda de färdigbyggda Composer-paketen. Fördelen med detta är att du enkelt kan ändra paketen under utvecklingen.
+
+1. Ta bort modulen från `vendor/` katalog.
+
+   ```bash
+   rm -rf vendor/client/module-example
+   ```
+
+1. Installera om modulen med [angiven Git-källa](#prepare-a-development-branch).
+
+   ```bash
+   composer install --prefer-source
+   ```
+
+1. Kontrollera att Composer-paketet nu är en Git-databas:
+
+   ```bash
+   cd vendor/client/module-example
+   git remote -v
+   ```
+
+1. Så här gruppkonverterar du flera moduler till Git-databaser (till exempel&quot;klientmoduler&quot;):
+
+   ```bash
+   rm -rf vendor/client
+   composer install --prefer-source
+   ```
+
+## Påbörja utveckling
+
+1. Skapa eller checka ut en funktion/arbetsgren. I följande exempel visas en gren med samma namn som en Jira-biljett.
+
+   ```bash
+   cd vendor/client/module-example
+   git checkout master
+   git checkout -b JIRA-1200
+   ```
+
+1. När du har ändrat grenar i en modul kan du se ändringarna genom att tömma Adobe Commerce-cachen och statiskt innehåll.
+
+   ```bash
+   bin/magento cache:flush
+   bin/magento module:enable --all --clear-static-content
+   ```
+
+## Uppdatera huvudprojektet med din utveckling
+
+Uppdatera din Git-databas genom att ändra `composer.lock` -fil. Aktivera modulen om den är ny.
+
+```bash
+# to update your packages and all dependencies of the package
+composer update --with-all-dependencies client/module-example
+# to update just your package
+composer update client/module-example
+ 
+bin/magento module:enable Client_ModuleExample
+git add composer.lock app/etc/config.php
+git commit
+```

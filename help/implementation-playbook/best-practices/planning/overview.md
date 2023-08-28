@@ -4,7 +4,7 @@ description: Lär dig mer om de effektivaste strategierna för implementering i 
 role: Developer, Admin, User
 feature: Best Practices
 exl-id: 6baeac79-8dc3-45b4-bb25-8f2add8b3443
-source-git-commit: 3e0187b7eeb6475ea9c20bc1da11c496b57853d1
+source-git-commit: 9cda88a4aeb4cc58d8ec9c4417e3107885a6cdb8
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 0%
@@ -50,7 +50,7 @@ Följande avsnitt innehåller information om god praxis för planeringsfasen.
 <!--Asset not yet integrated
 - [GRA Architecture examples](https://wiki.corp.adobe.com/x/kD4ykw)
 -->
-- [Understanding Global Reference Architecture](../../../implementation-playbook/architecture/global-reference.md)
+- [Understanding Global Reference Architecture](../../../implementation-playbook/architecture/global-reference/overview.md)
 
 ## **Katalogdesign**
 
