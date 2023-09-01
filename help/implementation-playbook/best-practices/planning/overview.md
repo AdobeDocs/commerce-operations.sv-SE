@@ -4,9 +4,9 @@ description: Lär dig mer om de effektivaste strategierna för implementering i 
 role: Developer, Admin, User
 feature: Best Practices
 exl-id: 6baeac79-8dc3-45b4-bb25-8f2add8b3443
-source-git-commit: 9cda88a4aeb4cc58d8ec9c4417e3107885a6cdb8
+source-git-commit: 48ed42e69c5786a10de3426d581e35030412c001
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '458'
 ht-degree: 0%
 
 ---
@@ -15,64 +15,118 @@ ht-degree: 0%
 
 Planeringsfasen omfattar följande verksamheter:
 
-- Insamling av krav
 - Arkitektur
 - Katalogdesign
-- Projektomfång
-- Kontoetablering
-- Användaråtkomst
 - Extension purchasing
+- Projektomfång
+- Insamling av krav
+- Försäljning och marknadsföring
 
 Följande avsnitt innehåller information om god praxis för planeringsfasen.
 
 ## Insamling av krav
 
-- **Programkonfiguration**
-   - [Bästa tillvägagångssätt för att konfigurera webbplatser, butiker och butiksvyer (molninfrastruktur)](sites-stores-store-views.md)
-   - [Hur man förhindrar - och åtgärdar - de fem vanligaste konfigurationsproblemen för Adobe Commerce webbplatser](https://business.adobe.com/blog/how-to/usual-suspects-five-configuration-fixes-maximize-your-peak-sales)
-   - [Metodtips för cachelagring](https://docs.magento.com/user-guide/system/cache-management.html#best-practices-for-caching)
-   - [Cachelagring av hela sidor](https://developer.adobe.com/commerce/php/development/cache/page/public-content/)
-   - [OPcache-minnesstorlek](opcache-memory-size.md)
-   - [Rapporteringskonfiguration](reporting-configuration.md)
+<table>
+<thead>
+  <tr>
+    <th>Bästa praxis</th>
+    <th>Beskrivning</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td colspan="2"><em>Programkonfiguration</em></td>
+  </tr>
+  <tr>
+    <td><a href="sites-stores-store-views.md">Konfigurera platser, butiker och butiksvyer</a></td>
+    <td>Konfigurera webbplatser, butiker och butiksvyer för att maximera webbplatsens prestanda.</td>
+  </tr>
+  <tr>
+    <td><a href="https://business.adobe.com/blog/how-to/usual-suspects-five-configuration-fixes-maximize-your-peak-sales">Vanliga konfigurationsproblem</a></td>
+    <td>Åtgärda och förhindra de fem vanligaste konfigurationsproblemen för Adobe Commerce webbplatser.</td>
+  </tr>
+  <tr>
+    <td><a href="https://experienceleague.adobe.com/docs/commerce-admin/systems/tools/cache-management.html">Cachning</a></td>
+    <td>Använd verktygen för cachehantering för att förbättra platsens prestanda.</td>
+  </tr>
+  <tr>
+    <td><a href="https://developer.adobe.com/commerce/php/development/cache/page/public-content/">Cachelagring</a></td>
+    <td>Lär dig hur du arbetar med publika data när du implementerar cachning i Adobe Commerce- eller Magento Open Source-tillägg.</td>
+  </tr>
+  <tr>
+    <td><a href="opcache-memory-size.md">OPcache-minnesstorlek</a></td>
+    <td>Undvik prestandaförsämring med specifika inställningar för OPcache-minnesförbrukning.</td>
+  </tr>
+  <tr>
+    <td><a href="reporting-configuration.md">Konfigurera rapportering</a></td>
+    <td>Optimera webbplatsens prestanda genom att ta bort rapportmodulen om du inte använder den.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><em>Databaskonfiguration</em></td>
+  </tr>
+  <tr>
+    <td><a href="database-on-cloud.md">Konfigurera databasen för molndistributioner</a></td>
+    <td>Konfigurera databas- och programinställningar för att förbättra prestandan när du distribuerar Adobe Commerce i molninfrastrukturprojekt.</td>
+  </tr>
+  <tr>
+    <td><a href="mysql-configuration.md">Konfigurera MySQL</a></td>
+    <td>Lär dig hur MySQL-utlösare och slavanslutningar påverkar webbplatsens prestanda och hur du använder dem effektivt.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><em>Tjänstkonfiguration</em></td>
+  </tr>
+  <tr>
+    <td><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/setup-fastly/fastly-configuration.html">Konfigurera snabbt</a></td>
+    <td>Konfigurera snabbtjänster för ditt Adobe Commerce i molninfrastrukturprojekt.</td>
+  </tr>
+  <tr>
+    <td><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic.html">Konfigurera meddelandekanaler för New Relic</a></td>
+    <td>Få tillgång till din New Relic-kontrollpanel och analysera data från din Adobe Commerce i molninfrastrukturprojekt.</td>
+  </tr>
+  <tr>
+    <td><a href="redis-service-configuration.md">Konfigurera Redis</a></td>
+    <td>Förbättra cacheprestanda genom att använda den utökade Redis-cacheimplementeringen för Adobe Commerce.</td>
+  </tr>
+  <tr>
+    <td><a href="realpath-cache-size.md">Cachestorlek för Realpath</a></td>
+    <td>Optimera prestanda genom att uppdatera cachekonfigurationen för PHP-lässökvägen så att den använder de rekommenderade inställningarna.</td>
+  </tr>
+</tbody>
+</table>
 
-- **Databaskonfiguration**
-   - [Bästa praxis för databaskonfigurering för &#x200B; i molnet](database-on-cloud.md)
-   - [&#x200B; för MySQL-konfiguration](mysql-configuration.md)
+## Arkitektur
 
-- **Tjänstkonfiguration**
-   - [Konfigurera snabbt](https://devdocs.magento.com/cloud/cdn/configure-fastly.html)
-   - [New Relic - Konfigurera meddelandekanaler](https://devdocs.magento.com/cloud/project/new-relic.html#configure-notification-channels)
-   - [Bästa tillvägagångssätt för Redis-&#x200B;](redis-service-configuration.md)
-   - [Bästa tillvägagångssätt för cachestorlek för Realpath](realpath-cache-size.md)
+| Bästa praxis | Beskrivning |
+|----------------------------------------------------------------------------------------|----------------------------------------------------------|
+| [Global referensarkitektur (GRA)](../../architecture/global-reference/examples.md) | Förstå vanliga metoder för att organisera en GRA-kodbas. |
 
-## **Arkitektur**
+## Katalogdesign
 
-<!--Asset not yet integrated
-- [GRA Architecture examples](https://wiki.corp.adobe.com/x/kD4ykw)
--->
-- [Understanding Global Reference Architecture](../../../implementation-playbook/architecture/global-reference/overview.md)
+| Bästa praxis | Beskrivning |
+|---------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
+| [Kategorikonfiguration](catalog-management.md#category-limits) | Konfigurera produktkategorier för optimala prestanda. |
+| [&#x200B; för produktkonfiguration](catalog-management.md#product-sku-limits) | Konfigurera SKU:er för optimala prestanda. |
+| [Produktvariantkonfiguration](catalog-management.md#product-variations) | Konfigurera produktvariationer för optimala prestanda. |
+| [Konfiguration av produktalternativ](catalog-management.md#product-options) | Konfigurera produktalternativ för optimala prestanda. |
+| [&#x200B; för produktattribut](catalog-management.md#product-attributes) | Konfigurera produktattribut för optimala prestanda. |
+| [Sidnumreringskonfiguration för produktlistor](catalog-management.md#product-listing-pagination) | Konfigurera sidnumrering i produktlistor för optimala prestanda. |
 
-## **Katalogdesign**
+## Tillägg
 
-I följande avsnitt beskrivs de effektivaste strategierna för prestandaoptimering när du konfigurerar din Adobe Commerce-katalog, inklusive rekommenderade maximivärden för antal kategorier, produkteffektiva SKU:er, produktvariationer, produktattribut och alternativ med mera.
+| Bästa praxis | Beskrivning |
+|-----------------------------------------------------------------|----------------------------------------------------------------------------------------|
+| [Använda tillägg från tredje part i Adobe Commerce](extensions.md) | Lär dig hur du undviker prestandaproblem som orsakas av Adobe Commerce-tillägg från tredje part. |
 
-- [Kategorikonfiguration](catalog-management.md#category-limits)
-- [&#x200B; för produktkonfiguration](catalog-management.md#product-sku-limits)
-- [Produktvariantkonfiguration](catalog-management.md#product-variations)
-- [Konfiguration av produktalternativ](catalog-management.md#product-options)
-- [&#x200B; för produktattribut](catalog-management.md#product-attributes)
-- [Sidnumreringskonfiguration för produktlistor](catalog-management.md#product-listing-pagination)
+## Projektomfång
 
-## **Försäljning och marknadsföring**
+| Bästa praxis | Beskrivning |
+|--------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| [Eskaleringar av partners](partner-escalation.md) | Förbered dig för att eskalera ett partnerproblem med ett Adobe-kontoteam eller lär dig hur du undviker eskalering. |
+| [Betalningslagringsbearbetning](payment-processing-storage.md) | Bearbeta och lagra betalningsinformation på ett säkert sätt. |
 
-- [Bästa tillvägagångssätt för produktvagnsgräns](catalog-management.md#cart-limits)
-- [Bästa tillvägagångssätt för att konfigurera kampanjer](catalog-management.md#promotions)
+## Försäljning och marknadsföring
 
-## **Projektomfång**
-
-- [Eskaleringar av partners](partner-escalation.md)
-- [Betalningslagringsbearbetning](payment-processing-storage.md)
-
-## **Köptillägg**
-
-- [Bästa tillvägagångssätt för att använda tillägg från tredje part i Adobe Commerce](extensions.md)
+| Bästa praxis | Beskrivning |
+|------------------------------------------------------------|--------------------------------------------------------------|
+| [Gränser för produktvarukorgar](catalog-management.md#cart-limits) | Hantera kundvagnsbegränsningar för optimala prestanda. |
+| [Konfigurera kampanjer](catalog-management.md#promotions) | Konfigurera försäljning och kampanjer för artiklar i en kundvagn. |

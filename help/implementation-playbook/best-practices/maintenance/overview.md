@@ -3,9 +3,9 @@ title: Implementeringsunderhållsfas
 description: Lär dig mer om de effektivaste strategierna för implementering i underhållsfasen av Adobe Commerce-projekt.
 exl-id: bd052412-a41c-4dbd-9aba-ba2fcac31f2d
 feature: Best Practices
-source-git-commit: d0cb3b81ee50ebd7cbf65a4dddbf5c58acf04f0d
+source-git-commit: aad06c1c2def87a319426860b47b8e5ff5e96780
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '446'
 ht-degree: 0%
 
 ---
@@ -14,65 +14,71 @@ ht-degree: 0%
 
 Underhållsfasen omfattar följande verksamheter:
 
-- Platsövervakning
+- Felkorrigering
 - Kataloghantering
-- Indexering
 - Konfiguration
 - Förbättrade funktioner
-- Felkorrigering
-- Hanterade tjänster
+- Indexering
+- Managed Services
+- Platsövervakning
 - Uppgraderingar
 
 Följande avsnitt innehåller information om bästa praxis för underhållsfasen.
 
-## Platsövervakning
+## Felkorrigeringar
 
-- [Prestanda för granskningsfronder](frontend-performance.md)
-- [Klar, Ställ in, Underhåll](https://business.adobe.com/blog/basics/ready-set-maintain)
-- [Använd SWAT-verktyget för att säkerställa säkerheten och användbarheten för Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-operations/tools/site-wide-analysis-tool/intro.html?lang=en#integrations-with-other-adobe-commerce-support-tools) - KTAG
-- [Använd New Relic- och hälsomeddelanden för att övervaka prestanda, diskutrymme och loggar för Adobe Commerce webbplatser som distribueras i molninfrastrukturen](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/performance.html)
-
-## Databashantering
-
-- [Åtgärda problem med databasprestanda &#x200B;](resolve-database-performance-issues.md)
-- [Adobe Commerce 2.3.5 - uppgraderingskrav för MariaDB &#x200B;](commerce-235-upgrade-prerequisites-mariadb.md)
+| Bästa praxis | Beskrivning |
+|-----------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
+| [[!DNL Quality Patches Tool] användning](../../../tools/quality-patches-tool/usage.md) | Använd, ångra och visa allmän information om alla Adobe Commerce-patchar. |
 
 ## Kataloghantering
 
-<!-- Asset not yet integrated
-- [Catalog Image Resizing](https://wiki.corp.adobe.com/x/oj4ykw) (wiki)
--->
-- [Hantering av produktkataloger](https://www.gotostage.com/channel/fca90f7960be436f9b849215d9e06026/recording/2eea2782fc874047a020391000519f8b/watch?source=CHANNEL)
-
-## Indexering
-
-<!-- Asset not yet integrated
-- [Reindexing - the safe way](https://wiki.corp.adobe.com/x/oj4ykw)(wiki)
--->
-- [Indexera om](https://developer.adobe.com/commerce/php/development/components/indexing/#how-to-reindex)
-- [Bästa praxis för konfiguration av &#x200B;](indexer-configuration.md)
-- [Bästa praxis för konfiguration av orderbearbetning](order-processing-configuration.md)
-<!-- Asset not yet integrated from CTAG deck:
-- Plan upsizing for planned traffic increases during promotions or holidays -->
+| Bästa praxis | Beskrivning |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| [Hantering av produktkataloger](https://www.gotostage.com/channel/fca90f7960be436f9b849215d9e06026/recording/2eea2782fc874047a020391000519f8b/watch?source=CHANNEL) | Commerce &amp; Coffee-inspelning som beskriver strategier för att hantera produktkataloger. |
 
 ## Konfiguration
 
-- [Schemalägga administratörsuppdateringar på produktionsplatser](scheduling-admin-updates-in-production.md)
+| Bästa praxis | Beskrivning |
+|-------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [Schemalägga administratörsuppdateringar på produktionsplatser](scheduling-admin-updates-in-production.md) | Hantera viktiga Adobe Commerce-uppdateringar för att förhindra långsamma prestanda och driftavbrott. |
 
-<!-- Asset not yet integrated from CTAG deck: Planning for peak season and promotional periods (upsizing)-->
+## Databashantering
 
-## Felkorrigeringar
-
-- [Användning av verktyget Korrigeringar](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html)
+| Bästa praxis | Beskrivning |
+|----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| [Åtgärda problem med databasprestanda &#x200B;](resolve-database-performance-issues.md) | Åtgärda databasproblem som försämrar prestandan på Adobe Commerce webbplatser som körs i molninfrastrukturen. |
+| [Adobe Commerce 2.3.5 - uppgraderingskrav för MariaDB &#x200B;](commerce-235-upgrade-prerequisites-mariadb.md) | Förbered din MariaDB-databas för en uppgradering. |
 
 ## Förbättrade funktioner
 
-- [Personalisering](https://www.gotostage.com/channel/fca90f7960be436f9b849215d9e06026/recording/e218545a77de490fb5102eca07d0580a/watch?source=CHANNEL)
-- [E-handelstrender](https://www.gotostage.com/channel/fca90f7960be436f9b849215d9e06026/recording/9a772468d7b64409a3d5dff4d67e656d/watch?source=CHANNEL)
-- [AI-automatisering](https://www.gotostage.com/channel/fca90f7960be436f9b849215d9e06026/recording/27ae23699c2847be981a23ca098e548f/watch?source=CHANNEL)
+| Bästa praxis | Beskrivning |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
+| [Personalisering](https://www.gotostage.com/channel/fca90f7960be436f9b849215d9e06026/recording/e218545a77de490fb5102eca07d0580a/watch?source=CHANNEL) | Commerce &amp; Coffee-inspelning som beskriver personaliseringsstrategier. |
+| [E-handelstrender](https://www.gotostage.com/channel/fca90f7960be436f9b849215d9e06026/recording/9a772468d7b64409a3d5dff4d67e656d/watch?source=CHANNEL) | Inspelning i Commerce &amp; Coffee som beskriver e-handelstrender. |
+| [AI-automatisering](https://www.gotostage.com/channel/fca90f7960be436f9b849215d9e06026/recording/27ae23699c2847be981a23ca098e548f/watch?source=CHANNEL) | Commerce &amp; Coffee-inspelning som beskriver personaliseringsmöjligheterna med artificiell intelligens och automatisering. |
+
+## Indexering
+
+| Bästa praxis | Beskrivning |
+|------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
+| [Indexera om](https://developer.adobe.com/commerce/php/development/components/indexing/#how-to-reindex) | Använd cron-jobb eller CLI-verktyget för att köra omindexering. |
+| [Konfigurera &#x200B;](indexer-configuration.md) | Optimera webbplatsens prestanda genom att följa vedertagna standarder för indexerarkonfiguration. |
+| [Beställningsbehandling](order-processing-configuration.md) | Förbättra utcheckningen och beställningsprocessernas prestanda. |
+
+## Platsövervakning
+
+| Bästa praxis | Beskrivning |
+|-------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| [Prestanda för granskningsfronder](frontend-performance.md) | Identifiera och åtgärda problem som negativt påverkar webbplatsens prestanda genom att använda verktyg för webbprestanda. |
+| [Klar, Ställ in, Underhåll](https://business.adobe.com/blog/basics/ready-set-maintain) | Tips för att underhålla dina Adobe Commerce-sajter för att maximera affärsvärdet och drifttiden. |
+| [Använd [!DNL Site-Wide Analysis Tool]](../../../tools/site-wide-analysis-tool/intro.md#integrations-with-other-adobe-commerce-support-tools) | Se viktiga insikter om Adobe Commerce webbplats på ett och samma ställe. |
+| [Övervakningsprestanda, diskutrymme och loggar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/performance.html) | Använd New Relic för att övervaka viktiga prestandainsikter om Adobe Commerce på molninfrastruktursajten. |
 
 ### Uppgraderingar
 
-- [Lappa i stor skala](patching-at-scale.md)
-- [Uppdatera tjänster och komponenter till den senaste &#x200B;](update-services.md)
-- [Upgrade checklist for Adobe Commerce &#x200B;](upgrade-checklist.md)
+| Bästa praxis | Beskrivning |
+|-------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
+| [Lappa i stor skala](patching-at-scale.md) | Se hur centraliserad patchning för Adobe Commerce kan hjälpa er att hantera företagsprojekt. |
+| [Uppdatera tjänster och komponenter till den senaste &#x200B;](update-services.md) | håller din Adobe Commerce i molninfrastruktur uppdaterad. |
+| [Upgrade checklist for Adobe Commerce &#x200B;](upgrade-checklist.md) | Skapa och använd en checklista för uppgradering för att planera din Adobe Commerce uppgraderingsstrategi. |
