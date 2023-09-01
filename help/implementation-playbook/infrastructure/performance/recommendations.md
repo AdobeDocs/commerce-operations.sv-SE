@@ -1,19 +1,24 @@
 ---
-title: Prestandaoptimering - Recommendations
+title: Prestandaoptimeringsrekommendationer
 description: Optimera Adobe Commerce-implementeringens prestanda genom att följa dessa rekommendationer.
 exl-id: c5d62e23-be43-4eea-afdb-bb1b156848f9
 feature: Cloud
 topic: Performance
-source-git-commit: 7c2e2bdabf47e1367ffb6761230d3d43f0f9d0cf
+source-git-commit: 31c71af854a59381c7793f26ed9b121cd9bcac83
 workflow-type: tm+mt
-source-wordcount: '1290'
+source-wordcount: '1279'
 ht-degree: 0%
 
 ---
 
+
 # Granskning av prestandaoptimering
 
-Även om prestandaoptimering kan komma från många olika aspekter, finns det vissa allmänna rekommendationer som bör beaktas för de flesta scenarier. Detta inkluderar konfigurationsoptimering för infrastrukturelement, Adobe Commerce serverdelskonfiguration och arkitekturskalbarhetsplanering.
+Även om prestandaoptimering kan komma från många olika aspekter, finns det vissa allmänna rekommendationer som bör beaktas för de flesta scenarier. Allmänna rekommendationer är konfigurationsoptimering för infrastrukturelement, Adobe Commerce serverdelskonfiguration och arkitekturskalbarhetsplanering.
+
+>[!TIP]
+>
+>Se [_Guide till bästa praxis för prestanda_](../../../performance/overview.md) för mer information om prestandaoptimering.
 
 ## Infrastruktur
 
@@ -35,7 +40,7 @@ Platsen för datacentret påverkar webblatensen för användare i klientgruppen.
 
 Tillräcklig bandbredd är ett av de viktigaste kraven för datautbyte mellan webbnoder, databaser, cachnings-/sessionsservrar och andra tjänster.
 
-Eftersom Adobe Commerce effektivt utnyttjar cachelagring för höga prestanda kan ditt system aktivt utbyta data med cachningsservrar som Redis. Om Redis finns på en fjärrserver måste du tillhandahålla en tillräcklig nätverkskanal mellan webbnoderna och cachningsservern för att förhindra flaskhalsar vid läs-/skrivåtgärder.
+Eftersom Adobe Commerce effektivt använder cachelagring för höga prestanda kan ditt system aktivt utbyta data med cachningsservrar som Redis. Om Redis är installerat på en fjärrserver måste du tillhandahålla en tillräcklig nätverkskanal mellan webbnoderna och cachningsservern för att förhindra flaskhalsar vid läs-/skrivåtgärder.
 
 ### Operativsystem (OS)
 
@@ -55,7 +60,7 @@ Optimering av de här inställningarna beror på prestandatestresultaten för ol
 
 - **ByteCode**- För att få ut så mycket som möjligt av Adobe Commerce på PHP 7 måste du aktivera `opcache` och konfigurera den.
 
-- **APCU**- Vi rekommenderar att du aktiverar PHP APCu-tillägget och konfigurerar Composer för att optimera för maximala prestanda. Det här tillägget cachelagrar filplatser för öppnade filer, vilket ökar prestanda för Adobe Commerce-serveranrop, inklusive sidor, Ajax-anrop och slutpunkter.
+- **APCU**—Adobe rekommenderar att PHP APCu-tillägget aktiveras och att Composer konfigureras för optimering för maximala prestanda. Det här tillägget cachelagrar filplatser för öppnade filer, vilket ökar prestanda för Adobe Commerce-serveranrop, inklusive sidor, Ajax-anrop och slutpunkter.
 
 - **Realpath_cacheConfiguration**—Optimering `realpath_cache` gör att PHP-processer kan cachelagra sökvägar till filer i stället för att leta upp dem varje gång en sida läses in.
 
@@ -71,9 +76,9 @@ Endast en liten omkonfiguration behövs för att använda nginx som webbserver. 
 
 ### Databas
 
-Det här dokumentet innehåller inga detaljerade MySQL-justeringsanvisningar eftersom varje butik och miljö är olika, men vi kan göra några allmänna rekommendationer.
+Det här dokumentet innehåller inga detaljerade MySQL-justeringsanvisningar eftersom varje butik och miljö är olika, men Adobe kan göra allmänna rekommendationer.
 
-Adobe Commerce-databasen (och alla andra databaser) är beroende av hur mycket minne som finns tillgängligt för lagring av data och index. För att utnyttja MySQL-dataindexeringen effektivt bör mängden tillgängligt minne vara minst hälften så stor som storleken på de data som lagras i databasen.
+Adobe Commerce-databasen (och alla andra databaser) är beroende av hur mycket minne som finns tillgängligt för att lagra data och index. För att effektivt kunna använda MySQL-dataindexering bör mängden tillgängligt minne vara minst hälften så stor som storleken på de data som lagras i databasen.
 
 Optimera `innodb_buffer_pool_instances` för att undvika problem med flera trådar som försöker få åtkomst till samma instans. Värdet för `max_connections` parametern ska korrelera med det totala antalet PHP-trådar som konfigurerats i programservern. Använd följande formel för att beräkna det bästa värdet för `innodb-thread-concurrency`:
 
@@ -85,15 +90,15 @@ innodb-thread-concurrency = 2 * (NumCPUs+NumDisks)
 
 Sessionscachning är en bra kandidat att konfigurera för en separat instans av Redis. Minneskonfigurationen för den här cachetypen bör ta hänsyn till webbplatsens strategi för att överge kundvagnen och hur länge en session förväntas finnas kvar i cachen.
 
-Redis bör ha tillräckligt med minne för att rymma alla andra cacheminnen för optimala prestanda. Blockcachen är nyckelfaktorn när det gäller att fastställa mängden minne som ska konfigureras. Blockcachen ökar i förhållande till antalet sidor på en plats (antal SKU × antalet butiksvyer).
+Redis bör ha tillräckligt med minne för att rymma alla andra cacheminnen för optimala prestanda. Blockcache är den viktigaste faktorn när det gäller att avgöra hur mycket minne som ska konfigureras. Blockcachen ökar i förhållande till antalet sidor på en plats (antal SKU × antal butiksvyer).
 
 ### Sidcachning
 
-Vi rekommenderar att du använder Varnish för helsidescache i din Adobe Commerce Store. The `PageCache` modulen finns fortfarande i kodbasen, men den bör endast användas i utvecklingssyfte.
+Adobe rekommenderar starkt att du använder lack för helsidescache i din Adobe Commerce-butik. The `PageCache` modulen finns fortfarande i kodbasen, men den bör endast användas i utvecklingssyfte.
 
 Installera lack på en separat server framför webbskiktet. Den ska acceptera alla inkommande begäranden och tillhandahålla cachelagrade sidkopior. För att Varnish ska kunna arbeta effektivt med skyddade sidor kan en SSL-termineringsproxy placeras framför Varnish. Nginx kan användas för detta ändamål.
 
-Även om det är effektivt att ogiltigförklara helsidescacheminnet för lack rekommenderar vi att du tilldelar tillräckligt med minne till Varnish för de mest populära sidorna i minnet.
+Även om det är effektivt att ogiltigförklara helsidescacheminnet för lack rekommenderar Adobe att man tilldelar tillräckligt med minne till Varnish för att lagra de mest populära sidorna i minnet.
 
 ### Meddelandeköer
 
@@ -105,7 +110,7 @@ Prestandatestning före varje produktionsrelease rekommenderas alltid för att f
 
 >[!NOTE]
 >
-> Adobe Commerce i molninfrastruktur tillämpar redan alla ovanstående optimeringar av infrastruktur och arkitektur, förutom DNS-sökningen eftersom den ligger utanför omfånget.
+> Adobe Commerce i molninfrastruktur tillämpar redan ovanstående optimeringar av infrastruktur och arkitektur, förutom DNS-sökningen eftersom den ligger utanför omfånget.
 
 ### Sök {#search-heading}
 
@@ -113,28 +118,28 @@ Elasticsearch (eller OpenSearch) krävs från och med Adobe Commerce version 2.4
 
 ## Operativmodeller
 
-Förutom de tidigare nämnda rekommendationerna om optimering av infrastruktur finns det också strategier för att förbättra prestandan för specifika affärslägen och skalor. Det här dokumentet innehåller inga detaljerade justeringsinstruktioner för alla eftersom varje scenario är olika, men vi kan tillhandahålla några alternativ på hög nivå för din referens.
+Förutom de tidigare nämnda rekommendationerna om optimering av infrastruktur finns det också strategier för att förbättra prestandan för specifika affärslägen och skalor. Det här dokumentet innehåller inga detaljerade justeringsanvisningar för alla, eftersom varje scenario är olika, men Adobe kan tillhandahålla ett fåtal alternativ på hög nivå för din referens.
 
 ### Headless-arkitektur
 
-Vi har ett separat avsnitt som handlar om vad [headless](../../architecture/headless/adobe-commerce.md) är och andra alternativ. Sammanfattningsvis separerar den butikslagret från själva plattformen. Det är fortfarande samma serverdel, men Adobe Commerce hanterar inte längre förfrågningar direkt och stöder istället bara anpassade butiker via GraphQL API.
+Det finns ett separat avsnitt som är dedikerat till [headless](../../architecture/headless/adobe-commerce.md). Sammanfattningsvis separerar den butikslagret från själva plattformen. Det är fortfarande samma serverdel, men Adobe Commerce hanterar inte längre förfrågningar direkt och stöder istället bara anpassade butiker via GraphQL API.
 
 ### Håll Adobe Commerce uppdaterat
 
-Adobe Commerce har alltid bättre prestanda när den senaste versionen körs. Även om det inte är möjligt att hålla Adobe Commerce uppdaterat efter att varje ny version släppts, rekommenderar vi ändå att [uppgradera](../../../upgrade/overview.md) när Adobe Commerce introducerar betydande prestandaoptimeringar.
+Adobe Commerce har alltid bättre prestanda när den senaste versionen körs. Även om det inte är möjligt att hålla Adobe Commerce uppdaterat efter att varje ny version släppts rekommenderar vi fortfarande att [uppgradera](../../../upgrade/overview.md) när Adobe Commerce introducerar betydande prestandaoptimeringar.
 
-År 2020 lanserade Adobe t.ex. en optimering av Redis-lagret, som åtgärdade många ineffektiva, anslutningsproblem och onödig dataöverföring mellan Redis och Adobe Commerce. Den övergripande prestandan mellan 2.3 och 2.4 är natt och dag och vi har sett avsevärda förbättringar vad gäller kundvagn, utcheckning, samtidiga användare, bara på grund av Redis-optimeringen.
+År 2020 släppte Adobe t.ex. en optimering av Redis-lagret, som åtgärdade många ineffektivitet, anslutningsproblem och onödig dataöverföring mellan Redis och Adobe Commerce. Den övergripande prestandan mellan 2.3 och 2.4 är natt och dag och ger avsevärda förbättringar i kundvagn, kassan, samtidiga användare, bara på grund av Redis-optimeringen.
 
 ### Optimera datamodell
 
 Många problem har sitt ursprung i data, bland annat dåliga datamodeller, data som inte är korrekt strukturerade och data som saknar ett index.
 
-Det ser bra ut om du testar några anslutningar, men ser bra ut i produktionen när den verkliga trafiken träffar och det är här som långsamhet kommer in i bilden. Det är mycket viktigt att systemintegratörer vet hur man utformar en datamodell (särskilt för produktattribut), undviker att lägga till onödiga attribut och behåller obligatoriska attribut som påverkar affärslogiken (t.ex. prissättning, tillgänglighet och sökning).
+Det ser bra ut om du testar några anslutningar, men efter att du distribuerat till produktionen kan du upptäcka allvarliga prestandaförsämringar. Det är viktigt att systemintegratörer vet hur man utformar en datamodell (särskilt för produktattribut), undviker att lägga till onödiga attribut och behåller obligatoriska attribut som påverkar affärslogiken (t.ex. prissättning, tillgänglighet och sökning).
 
-För de attribut som inte påverkar affärslogiken men som måste finnas på butiken kan du kombinera dem till ett fåtal attribut (till exempel JSON-format).
+För de attribut som inte påverkar affärslogiken, men som måste finnas på butiken, kan du kombinera dem till ett fåtal attribut (till exempel JSON-format).
 
 För att optimera plattformsprestanda behöver du inte lägga till det attributet i Adobe Commerce om det inte krävs någon affärslogik i butiken från data eller attribut som hämtats från en PIM eller en ERP.
 
 ### Designa för skalbarhet
 
-Detta är viktigt för företag som kör kampanjer och ofta ställs inför höga tidpunkter. För att arkitektur och applikationsdesign ska vara enkel att skala kan detta öka resurserna under högtider och minska dem efter det.
+Skalbarhet är viktigt för företag som kör kampanjer och ofta står inför trafiktoppar. En skalbar arkitektur och applikationsdesign kan öka resurserna under högtider och minska dem efter detta.
