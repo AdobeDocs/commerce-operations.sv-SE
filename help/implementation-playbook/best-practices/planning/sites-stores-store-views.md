@@ -4,20 +4,16 @@ description: Lär dig de bästa sätten att konfigurera webbplatser, butiker och
 role: Admin
 feature: Best Practices
 exl-id: 3ea0c6c5-15a9-4e77-b4d0-ce15721c7167
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: a81e88a4293880ae90cd531ce60c5a2b177188f2
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
 
 # Bästa tillvägagångssätt för att konfigurera webbplatser, butiker och butiksvy
 
-För bästa webbplatsprestanda kan du konfigurera högst 50 webbplatser, 50 butiker och 50 butiksvyer för Adobe Commerce i molninfrastrukturprojekt.
-
->[!NOTE]
->
->För Adobe Commerce i molninfrastruktur gäller de bästa metoderna specifikt för produktionsmiljön (och eventuellt för Stage i Pro-arkitekturen, med förbehåll för resursbegränsningar) som skulle ha mer resurser än för integrering och utveckling. För integrerings- (Pro och Starter) och mellanlagringsmiljöer (Starter) kan du minska antalet butiksvyer till mindre än 5 eller 10 (med reservation för teknisk granskning).
+För Adobe Commerce i molninfrastruktur gäller de bästa metoderna specifikt för produktionsmiljön (och eventuellt för Stage i Pro-arkitekturen, med förbehåll för resursbegränsningar) som skulle ha mer resurser än för integrering och utveckling.
 
 ## Berörda produkter och versioner
 

@@ -3,9 +3,9 @@ title: Bästa praxis för kataloghantering
 description: Läs mer om rekommendationer för hur du konfigurerar kundvagnsgränser och produktattribut, listar sidnumrering, alternativ, kampanjer och varianter.
 role: Developer
 feature: Best Practices, Catalog Management
-source-git-commit: 3e0187b7eeb6475ea9c20bc1da11c496b57853d1
+source-git-commit: a81e88a4293880ae90cd531ce60c5a2b177188f2
 workflow-type: tm+mt
-source-wordcount: '1876'
+source-wordcount: '1420'
 ht-degree: 0%
 
 ---
@@ -25,16 +25,7 @@ De bästa metoderna för kataloghantering som beskrivs här omfattar en rad olik
 
 ## Biljettbegränsningar
 
-Använd följande riktlinjer för att hantera kundvagnsbegränsningar för Adobe Commerce och Magento Open Source för bästa prestanda:
-
-- I version 2.3.x - 2.4.2 tillåts maximalt 100 produkter i en kundvagn.
-- I version 2.4.3 och senare ökade kundvagnens maximala storlek till 750.
-
-För version 2.3.x - 2.4.2 är förväntad prestanda baserad på artikelgränsen för kundvagn:
-
-- Upp till **100** produkter i en kundvagn - produkten fungerar och uppfyller prestationsmålen för svarstid.
-- Upp till **300** produkter i varukorgen - produkten fungerar, men svarstiden ökar mer än målen.
-- Över **500** produkter i en kundvagn - korgen och kassaflödena fungerar inte
+Använd följande riktlinjer för att hantera kundvagnsbegränsningar för Adobe Commerce och Magento Open Source för bästa prestanda.
 
 ### Berörda produkter och versioner
 
@@ -50,20 +41,9 @@ Använd följande strategier för att hantera antalet kundvagnsartiklar
 - Dela upp order i flera mindre order med ett mindre antal rader genom att använda [!UICONTROL Add Item by SKU] -funktion.
 - Lägg bara till den anpassade logik och kundvagnsanpassning som krävs för att läsa in en lista med objekt.
 
-### Potentiell inverkan på prestanda
-
-Om du har fler än det rekommenderade maximala antalet produkter i vagnen kan det påverka webbplatsens prestanda på följande sätt:
-
-- Ökad svarstid för datahämtningsåtgärder, validering av varukorgsartiklar, kontroll av prisregler samt moms- och totalberäkningar.
-- Ökad svarstid för minicart-rendering, inklusive rendering av kundvagnen, kassaflöde och exekvering.
-- Ökad inläsningstid för alla webbplatssidor där miniatyrbilden finns.
-
 ## Kategoribegränsningar
 
-För bästa prestanda bör du inte konfigurera fler än det högsta rekommenderade antalet kategorier för Adobe Commerce-webbplatser.
-
-- Konfigurera högst 6 000 kategorier för Adobe Commerce version 2.4.2 och senare
-- För Adobe Commerce version 2.3.x och 2.4.0 till 2.4.1-p1, konfigurera maximalt 3 000 kategorier
+Ett stort antal kategorier kan påverka prestandan.
 
 ### Berörda produkter och versioner
 
@@ -80,25 +60,9 @@ Använd följande strategier för att minska antalet kategorier:
 - Ta bort inaktiva kategorier
 - Optimera katalogdjup i navigeringen
 
-### Potentiell inverkan på prestanda
-
-Om du har fler än det rekommenderade maximala antalet kategorier kan det påverka webbplatsens prestanda på följande sätt:
-
-- En påtaglig ökning av svarstiden för icke-cachelagrade katalogsidor
-- Lång körning och tidsgränser vid hantering av kategorier från administratören
-- Ökad storlek på motsvarande databastabeller
-- Större indextabeller ökar den tid som krävs för att slutföra indexeringen för `[category/product relation index\]`
-- Ökad bearbetningstid för att slutföra åtgärder för att bygga kategorier, hämta menyer och hantera kategoriregler
-
 ## Produktattribut
 
-- För bästa prestanda bör du inte konfigurera fler än det högsta rekommenderade antalet produktattribut eller produktattributsalternativ.
-
-- **Produktattribut**—
-   - För Adobe Commerce version 2.3.x och 2.4.0 till 2.4.1-p1 får du inte konfigurera fler än 500 attribut
-   - Konfigurera upp till 1 500 produktattribut för Adobe Commerce version 2.4.2 och senare
-- **Produktattributsalternativ**-Konfigurera upp till 100 attributalternativ för varje attribut
-- **Produktattributuppsättningar**-Konfigurera högst 1 000 attributuppsättningar
+Om du konfigurerar för många produktattribut eller produktattributsalternativ kan prestandan påverkas.
 
 >[!NOTE]
 >
@@ -170,7 +134,7 @@ Konfigurera många **attributalternativ** kan påverka webbplatsens prestanda p�
 
 ## Produktalternativ
 
-För bästa prestanda bör du konfigurera maximalt 100 produktalternativ per produkt.
+Om du konfigurerar för många produktalternativ per produkt kan prestandan påverkas.
 
 ### Berörda produkter och versioner
 
@@ -181,7 +145,7 @@ För bästa prestanda bör du konfigurera maximalt 100 produktalternativ per pro
 
 ### Minska antalet alternativ
 
-Använd följande strategier för att minska antalet produktalternativ för att få bästa prestanda för webbplatsen:
+Använd följande strategier för att minska antalet produktalternativ per produkt:
 
 - Konfigurera komplexa produkter och anpassade alternativ som en källa till produktvariationer.
 - I stället för att skapa globala produktmallar och alternativbehållare som gäller för alla produkter kan du använda attributuppsättningar för att skapa specifika produktmallar med riktade attribut och alternativ.
@@ -202,9 +166,7 @@ När du konfigurerar många produktalternativ ökar mängden data som hämtas f�
 
 ## Sidnumrering av produktlista
 
-Bästa prestanda får du om du visar högst 48 produkter per sida.
-
-Du kan konfigurera Adobe Commerce så att kunderna kan se alla kategoriprodukter på en enda sida. Om antalet kategoriprodukter överstiger 48 produkter uppdaterar du katalogkonfigurationen för storefront-sidnumreringskontroller.
+För många produkter per sida kan påverka prestanda.
 
 ### Berörda produkter och versioner
 
@@ -215,24 +177,13 @@ Du kan konfigurera Adobe Commerce så att kunderna kan se alla kategoriprodukter
 
 ### Uppdatera produktlistekonfigurationen
 
-Om du har fler än 48 produkter i en kategori kan du uppdatera katalogkonfigurationen för storefront för att inaktivera alternativet att **Tillåt alla produkter per sida**.
+Om du har för många produkter i en kategori kan du uppdatera konfigurationen för storefront-katalogen för att inaktivera alternativet att **Tillåt alla produkter per sida**.
 
 När du har inaktiverat det här alternativet använder Adobe Commerce sidnumreringskontrollerna för att hantera antalet produkter som visas i butikskomponenter. Instruktioner finns i [Konfigurera sidnumreringskontroller](https://experienceleague.adobe.com/docs/commerce-admin/catalog/catalog/navigation/navigation-product-listings.html#configure-the-pagination-controls).
 
 ## Produkt-SKU-gränser
 
-För att maximera prestandan rekommenderas ett maximum för effektiv produktlagringsenhet (SKU) på 242 miljoner. Denna gällande produkt-SKU-maxgräns beräknas som:
-
-```text
-Effective SKU = N[SKUs] x N[Stores] x N[Customer groups]
-```
-
-Var:
-
-- N står som antalet objekt i den kategorin
-- Kundgrupper inkluderar delade kataloger eftersom de skapar ytterligare en kundgrupp.
-
-Om du har fler än det maximala antalet aktiva SKU:er tar det längre tid att hämta produktdata och slutföra åtgärder eller indexeringar på administratörspanelen.
+Om du konfigurerar för många produkt-SKU:er kan det påverka prestanda genom att produktinhämtningen blir långsammare och tiden det tar att slutföra administratörsåtgärder eller indexeringar ökar.
 
 ### Berörda produkter och versioner
 
@@ -246,7 +197,7 @@ Om du har fler än det maximala antalet aktiva SKU:er tar det längre tid att h�
 Använd följande strategier för att minska antalet produkter (SKU):
 
 - Minimera multiplikatorer—
-   - Konsolidering av webbplatser minskar multiplikatorn. Om ni har 50 000 SKU:er, tio webbplatser och tio kundgrupper är antalet SKU:er 5 miljoner. Genom att ta bort fem kundgrupper minskas antalet effektiva SKU:er till 2,5 miljoner.
+   - Konsolidering av webbplatser minskar multiplikatorn.
    - Använd alternativa produktfunktioner för anpassade priser för att ersätta delade kataloger och kundgruppmultiplikatorer.
    - Både kundgrupper och delade kataloger fungerar som multiplikatorer för antalet aktiva SKU:er i en butik.
 - Strukturera om katalogen—
@@ -259,7 +210,7 @@ Använd följande strategier för att minska antalet produkter (SKU):
 
 ## Produktvariationer
 
-För bästa prestanda bör du konfigurera maximalt 50 varianter per produkt.
+Om du konfigurerar för många variationer per produkt kan prestandan påverkas.
 
 ### Berörda produkter och versioner
 
@@ -287,13 +238,12 @@ Om du överskrider det rekommenderade antalet produktvariationer kan det påverk
 
 ## Erbjudanden
 
-För bästa prestanda bör du följa de här bästa metoderna för att konfigurera försäljning och kampanjer för artiklar i en kundvagn:
+Följ dessa metodtips för att konfigurera försäljning och kampanjer för artiklar i en kundvagn:
 
-- **Försäljningsregler (kundprisregler)**-Konfigurera inte fler än 1000 kundvagnsregler för alla webbplatser
+- **Försäljningsregler (kundprisregler)**
    - Hantera och ta bort oanvända regler.
    - Lägg till strikta regelvillkor (som attribut- eller kategorifilter) för den mest effektiva matchningen.
-- **Kuponger**—
-   - Kontrollera att det totala antalet kuponger i databasen är mindre än 250 000.
+- **Kuponger**
    - Ta bort oanvända och utgångna kuponger.
    - Generera endast det antal kuponger som behövs för att uppfylla kampanjkraven.
 
@@ -312,4 +262,4 @@ Om du har fler än det rekommenderade maximala antalet kundvagnsregler eller kup
 - Ökad tid för inläsning och rendering av minikortet.
 - Den tid det tog att återge kundvagnssidan ökade.
 - Ökad tid för att återge **Summor** -block på utcheckningssidan.
-- Att tillämpa kuponger kan ta mer än 2 sekunder.
+
