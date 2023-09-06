@@ -2,9 +2,9 @@
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: da0c85a9f1b0ac0a3176ca5f6ef5904834e8d37e
+source-git-commit: 19d41495f95ae707be1db8446ac77eb5ead6375e
 workflow-type: tm+mt
-source-wordcount: '13965'
+source-wordcount: '14327'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,25 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som skapats av gemenskapen för Magento Open Source, se [versionsinformation](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.37 {#v1-1-37}
+
+* **ACSD-52613** (för Adobe Commerce och Magento Open Source >=2.4.6 &lt;2.4.7) - Korrigerar problemet där cacher och index uppdateras även när inga uppdateringar görs till `Inventory_source` objekt efter REST API.
+* **ACSD-51884** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.7) - Korrigerar problemet där sökvägen till produktbildens cacheminne blir felaktig efter att kommandot resize körts.
+* **ACSD-53628** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.7) - Korrigerar problemet där CSV-försäljningsorderrapporten innehåller felaktiga specialtecken.
+* **ACSD-53148** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.7) - Korrigerar problemet där två parallella begäranden i GraphQL om att lägga till samma konfigurerbara produkt i vagnen resulterade i två separata artiklar i vagnen med samma produkt-SKU.
+* **ACSD-52606** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.7) - Korrigerar problemet där felmeddelandet *Din beställning är inte klar för hämtning* visas när användaren klickar **[!UICONTROL Notify Order is Ready for Pickup]**.
+* **ACSD-51574** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.7) - Korrigerar problemet där bilden inte uppdateras på kantlinjen efter att den har ersatts med en annan bild med samma namn.
+* **ACSD-53728** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.7) - Korrigerar problemet där produktindexeraren tar längre tid att slutföra.
+* **ACSD-53979** (för Adobe Commerce och Magento Open Source >=2.4.6 &lt;2.4.7) - Korrigerar JS-problemet som inträffar på hemsidan om välkomstmeddelandet innehåller ett enkelt citattecken.
+* **ACSD-52085** (för Adobe Commerce och Magento Open Source >=2.4.5 &lt;2.4.7) - Korrigerar problemet där en konfigurerbar produkt med ett specialpris inte syns i produktens karusell.
+* **ACSD-53795** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.7) - Korrigerar problemet med ogiltig datatyp i `indexer_update_all_views` cron-jobb.
+* **ACSD-52143** (för Adobe Commerce och Magento Open Source >=2.4.6 &lt;2.4.7) - Korrigerar problemet där anpassade alternativ tas bort efter produktimporten.
+* **ACSD-53750** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.7) - Korrigerar *Avbruten pipe eller stängd anslutning* fel vid flertrådig `catalog_product_price` indexera om.
+* **ACSD-49843** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.0 || >=2.4.1 &lt;2.4.7) - Korrigerar problemet där länken vid nedladdning av produkter inte är tillgänglig efter att den beställda artikeln automatiskt fakturerats med onlinebetalningsmetoden med **[!UICONTROL Payment Action]** = **[!UICONTROL Sale]** inställning aktiverad.
+* **ACSD-47054** (för Adobe Commerce >=2.4.2 &lt;2.4.6) - Korrigerar problemet där omindexeringen av förhandsvisningen kör omindexering för alla butiker, vilket orsakar långsamhet.
+* Lagt till nya versioner för ACSD-46541, ACSD-47079.
+* ACSD-49970-v3 ersatt med ACSD-54095.
 
 ## v1.1.36 {#v1-1-36}
 
