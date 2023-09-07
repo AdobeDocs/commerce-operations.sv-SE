@@ -4,9 +4,9 @@ description: Läs om hur du optimerar backend-prestanda för Adobe Commerce-webb
 badge: label="Medverkad av objektkälla" type="Informative" url="https://objectsource.co.uk/" tooltip="objektkälla"
 role: Admin, User, Developer
 feature: Best Practices
-source-git-commit: 2416357d8cacb5627fd24f92b16c2d9839f91082
+source-git-commit: 1ba9325feaa47d767ec7991919fd5ecd53ae6226
 workflow-type: tm+mt
-source-wordcount: '1074'
+source-wordcount: '1075'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Läs mer om hur du testar Adobe Commerce-projekt:
 
 ### Identifiera och åtgärda prestandaproblem
 
-Åtgärda prestandaproblem genom att använda olika verktyg som New Relic och Observation for Adobe Commerce för att upptäcka flaskhalsar och optimera Commerce-sajter effektivt. [New Relic](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic.html) ingår i Adobe Commerce om molninfrastruktur, och [Observation för Adobe Commerce](/help/tools/observation-for-adobe-commerce/intro.md) ingår för både molnbaserade och lokala distributioner.
+Åtgärda prestandaproblem genom att använda olika verktyg som New Relic och Observation for Adobe Commerce för att upptäcka flaskhalsar och optimera Commerce-sajter effektivt. [New Relic](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/new-relic-service.html) ingår i Adobe Commerce om molninfrastruktur, och [Observation för Adobe Commerce](/help/tools/observation-for-adobe-commerce/intro.md) ingår för både molnbaserade och lokala distributioner.
 
 Använd de här verktygen för att analysera webbplatsens prestanda och identifiera prestandaproblem i samband med:
 
