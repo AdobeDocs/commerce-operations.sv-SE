@@ -4,9 +4,9 @@ description: Lär dig hur systemets XML-fil hanterar Commerce-programmets konfig
 feature: Configuration, System
 badge: label="Bidragen av David Lambauer" type="Informative" url="https://github.com/DavidLambauer" tooltip="David Lambauer"
 exl-id: a6c5de6c-e8da-4eca-bbfb-592904b2c53f
-source-git-commit: 16e9396f19693436dfc7bdac78d84624a78f0c21
+source-git-commit: 37c23d7a410cdb664710880d3d89cb72efa164e9
 workflow-type: tm+mt
-source-wordcount: '2680'
+source-wordcount: '2669'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,6 @@ A `<tab>`-Tag kan ha följande attribut:
 |-------------|------------------------------------------------------------------------------------------------------------------------------------------|----------|----------|
 | `id` | Definierar den identifierare som används för att referera till avsnittet. | `typeId` | obligatoriskt |
 | `translate` | Definierar det fält som ska vara översättningsbart. Ange `label` för att göra etiketten översättningsbar. | `string` | valfri |
-| `type` | Definierar indatatypen för det återgivna HTML-elementet. Standardvärdet är `text`. | `string` | valfri |
 | `sortOrder` | Definierar sorteringsordningen för avsnittet. Ett högt antal flyttar avsnittet längst ned på sidan och ett lågt antal flyttar avsnittet uppåt. | `float` | valfri |
 | `class` | Lägger till en definierad CSS-klass i det återgivna flikelementet HTML. | `string` | valfri |
 
