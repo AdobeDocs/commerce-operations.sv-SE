@@ -3,9 +3,9 @@ title: Steg efter start
 description: Använd checklistan efter lanseringen för att säkerställa en smidig implementering av Adobe Commerce webbplats.
 exl-id: 0c3162d9-6475-4b34-9278-e5aea39bd0f9
 feature: Deploy
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: ce41158f900fad27e3e7b8157f5c64ac988bbabf
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '165'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ När webbplatsen är publicerad ska dessa aktiviteter utföras så snart som mö
 - Tagga klustret som live och skapa en supportbiljett för att aktivera High SLA-övervakning
 - CSE (Customer Success Engineer) och TAM (Technical Account Manager) utför följande uppgifter så fort en övergång är klar:
    - Tagga klustret som High SLA för Adobe Commerce-klienten och skapa en supportbiljett för att aktivera det
-   - Aktivera brittisk kontroll för domännamn
+   - Aktivera **internal** Djurkontroller för domännamn (offentlig åtkomst till kungadömet är inte tillgänglig)
    - Granska övervakningsstatus och se till att alla objekt är gröna
    - Håll intressenter informerade om garantitiden och parametrar via e-post på en live-dag
 
