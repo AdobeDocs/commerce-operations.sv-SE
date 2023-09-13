@@ -2,9 +2,9 @@
 title: Hämta dina autentiseringsnycklar
 description: Följ de här stegen för att hämta inloggningsuppgifter för att komma åt Adobe Commerce- och Magento Open Source Composer-paket på repo.magento.com.
 exl-id: 7ec2a410-d81f-476a-bf6a-f3c61982a734
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 3d9b7c5352f91308dd315a7195ee2cb1c4b191ee
 workflow-type: tm+mt
-source-wordcount: '512'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,8 @@ För åtkomsträttigheter till Adobe Commerce- och Magento Open Source-paket må
 
 Skapa autentiseringsnycklar:
 
-1. Logga in på [Commerce Marketplace](https://marketplace.magento.com). Om du inte har något konto klickar du på **Registrera**.
+1. Logga in på [Commerce Marketplace](https://commercemarketplace.adobe.com/). Om du inte har något konto klickar du på **Registrera**.
+
 1. Klicka på ditt kontonamn längst upp till höger på sidan och välj **Min profil**.
 
 1. Klicka **Åtkomsttangenter** på Marketplace-fliken.
@@ -45,7 +46,7 @@ Du kan även inaktivera eller ta bort autentiseringsnycklar. Du kan till exempel
 
 ### Hantera SSH-åtkomsttoken
 
-Om du vill hämta Adobe Commerce-versioner med SSH måste du generera en åtkomsttoken för nedladdning. Så här skapar du en token:
+Om du vill hämta Adobe Commerce- och Magento Open Source-versioner med SSH måste du generera en åtkomsttoken för nedladdning. Så här skapar du en token:
 
 1. Logga in på [magento.com](https://account.magento.com/customer/account/login).
 1. Klicka **Mitt konto** överst på sidan.

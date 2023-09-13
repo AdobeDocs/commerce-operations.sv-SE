@@ -2,16 +2,18 @@
 title: Snabbstart av lokal installation
 description: Följ de här stegen för att installera Adobe Commerce eller Magento Open Source på en infrastruktur som du äger.
 exl-id: a93476e8-2b30-461a-91df-e73eb1a14d3c
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 3d9b7c5352f91308dd315a7195ee2cb1c4b191ee
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '975'
 ht-degree: 0%
 
 ---
 
 # Snabbstart av lokal installation
 
-Vi använder [Disposition](https://getcomposer.org/) för att hantera Adobe Commerce- och Magento Open Source-komponenter och deras beroenden. Att använda Composer för att hämta metapaketet Adobe Commerce och Magento Open Source ger följande fördelar:
+Instruktionerna på den här sidan beskriver hur du installerar Adobe Commerce och Magento Open Source på [värdbaserad](../implementation-playbook/infrastructure/self-hosting/overview.md) infrastruktur. Vägledning om hur du uppgraderar en befintlig installation finns i [_Uppgraderingshandbok_](../upgrade/overview.md).
+
+Adobe använder [Disposition](https://getcomposer.org/) för att hantera Adobe Commerce- och Magento Open Source-komponenter och deras beroenden. Att använda Composer för att hämta metapaketet Adobe Commerce och Magento Open Source ger följande fördelar:
 
 - Återanvänd bibliotek från tredje part utan att paketera dem med källkod
 - Minska antalet tilläggskonflikter och kompatibilitetsproblem genom att använda en komponentbaserad arkitektur med robust beroendehantering
@@ -33,7 +35,7 @@ Innan du fortsätter måste du göra följande:
 
 ## Logga in som ägare av filsystemet
 
-Läs mer om ägarskap, behörigheter och filsystemets ägare i vår [Översikt över ägarskap och behörigheter](prerequisites/file-system/overview.md).
+Läs mer om ägarskap, behörigheter och filsystemets ägare i [Översikt över ägarskap och behörigheter](prerequisites/file-system/overview.md).
 
 Så här byter du till filsystemets ägare:
 
@@ -53,7 +55,7 @@ Så här byter du till filsystemets ägare:
 
 1. Om du vill köra CLI-kommandon från valfri katalog lägger du till `<app_root>/bin` till ditt system `PATH`.
 
-   Eftersom skal har olika syntax bör du använda en referens som [unix.stackexchange.com](https://unix.stackexchange.com/questions/117467/how-to-permanently-set-environmental-variables).
+   Eftersom skal har olika syntaxer bör du använda en referens som [unix.stackexchange.com](https://unix.stackexchange.com/questions/117467/how-to-permanently-set-environmental-variables).
 
    Exempel på basgränssnitt för CentOS:
 
@@ -73,7 +75,7 @@ Så här hämtar du metapaketet för Adobe Commerce eller Magento Open Source:
 
 1. Logga in på programservern som, eller växla till [ägare av filsystem](prerequisites/file-system/overview.md).
 1. Byt till webbserverns dokumentkatalog eller en katalog som du har konfigurerat som ett virtuellt värddokument.
-1. Skapa Composer-projekt med metapaketet Adobe Commerce eller Magento Open Source.
+1. Skapa ett Composer-projekt med metapaketet Adobe Commerce eller Magento Open Source.
 
    **Magento Open Source**
 
@@ -87,40 +89,36 @@ Så här hämtar du metapaketet för Adobe Commerce eller Magento Open Source:
    composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition <install-directory-name>
    ```
 
-   Ange dina autentiseringsnycklar när du uppmanas att göra det. Offentliga och privata nycklar skapas och konfigureras i [Commerce Marketplace](https://marketplace.magento.com/customer/account/login/).
+   Ange dina autentiseringsnycklar när du uppmanas att göra det. Offentliga och privata nycklar skapas och konfigureras i [Commerce Marketplace](https://commercemarketplace.adobe.com/customer/account/login/).
 
    Om du stöter på fel, till exempel `Could not find package...` eller `...no matching package found`kontrollerar du att det inte finns några stavfel i kommandot. Om du fortfarande råkar ut för fel kanske du inte har behörighet att ladda ned Adobe Commerce. Kontakt [Adobe Commerce Support](https://support.magento.com/hc/en-us) om du behöver hjälp.
 
    Se [Felsökning](https://support.magento.com/hc/en-us/articles/360033818091) om du vill ha hjälp med fler fel.
 
-   >[!NOTE]
-   >
-   >Adobe Commerce-kunder har tillgång till patchar två veckor före det allmänna tillgänglighetsdatumet (GA). Förhandsversionspaket är bara tillgängliga via Composer. Du kan inte komma åt förhandsversioner på Developer Portal eller GitHub förrän GA. Om du inte hittar dessa paket i Composer kontaktar du Adobe Commerce Support.
-
 ### Exempel - Mindre version
 
-Mindre releaser innehåller nya funktioner, kvalitetskorrigeringar och säkerhetskorrigeringar. Använd Composer för att ange en mindre release. Om du till exempel vill ange metapaketet för Adobe Commerce 2.4.5:
+Mindre releaser innehåller nya funktioner, kvalitetskorrigeringar och säkerhetskorrigeringar. Använd Composer för att ange en mindre release. Om du till exempel vill ange metapaketet för Adobe Commerce 2.4.6:
 
 ```bash
-composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.4.5 <install-directory-name>
+composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.4.6 <install-directory-name>
 ```
 
 ### Exempel - Kvalitetskorrigering
 
-Patchar för kvalitet innehåller i första hand funktioner _och_ säkerhetskorrigeringar. De kan dock ibland även innehålla nya bakåtkompatibla funktioner. Använd Composer för att hämta en kvalitetskorrigering. Om du till exempel vill ange metapaketet för Adobe Commerce 2.4.5:
+Patchar för kvalitet innehåller i första hand funktioner _och_ säkerhetskorrigeringar. De kan dock ibland även innehålla nya bakåtkompatibla funktioner. Använd Composer för att hämta en kvalitetskorrigering. Om du till exempel vill ange metapaketet för Adobe Commerce 2.4.6:
 
 ```bash
-composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.4.5 <install-directory-name>
+composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.4.6 <install-directory-name>
 ```
 
 ### Exempel - Säkerhetsuppdatering
 
 Säkerhetsuppdateringar innehåller endast säkerhetskorrigeringar. De är utformade för att göra uppgraderingsprocessen snabbare och enklare.
 
-Säkerhetsuppdateringar använder namnkonventionen för Composer `2.4.5-px`. Använd Composer för att ange en korrigering. Om du till exempel vill hämta metapaketet Adobe Commerce 2.4.5-p1:
+Säkerhetsuppdateringar använder namnkonventionen för Composer `2.4.6-px`. Använd Composer för att ange en korrigering. Om du till exempel vill hämta metapaketet Adobe Commerce 2.4.6-p1:
 
 ```bash
-composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.4.5-p1 <install-directory-name>
+composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.4.6-p1 <install-directory-name>
 ```
 
 ## Ange filbehörigheter
@@ -166,7 +164,7 @@ bin/magento setup:install \
 
 >[!TIP]
 >
->Du kan anpassa Admin URI med `--backend-frontname` alternativ. Vi rekommenderar dock att du utelämnar det här alternativet och låter installationskommandot automatiskt generera en slumpmässig URI. En slumpmässig URI är svårare för hackare eller skadlig programvara att utnyttja. URI:n visas i konsolen när installationen är klar.
+>Du kan anpassa Admin URI med `--backend-frontname` alternativ. Adobe rekommenderar dock att du utelämnar det här alternativet och låter installationskommandot automatiskt generera en slumpmässig URI. En slumpmässig URI är svårare för hackare eller skadlig programvara att utnyttja. URI:n visas i konsolen när installationen är klar.
 
 >[!TIP]
 >
@@ -230,4 +228,4 @@ Följande argument är gemensamma för alla kommandon. Dessa kommandon kan köra
 
 >[!NOTE]
 >
->Grattis! Du har slutfört snabbinstallationen. Behöver du mer avancerad hjälp? Kolla in vår [Avancerad installation](advanced.md) guide.
+>Grattis! Du har slutfört snabbinstallationen. Behöver du mer avancerad hjälp? Kolla in [Avancerad installation](advanced.md) guide.

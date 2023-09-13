@@ -3,12 +3,13 @@ title: PHP-inställningar
 description: Följ de här stegen för att installera nödvändiga PHP-tillägg och konfigurera PHP-inställningar för lokala installationer av Adobe Commerce och Magento Open Source.
 feature: Install, Configuration
 exl-id: 84064442-7053-42ab-a8a6-9b313e5efc78
-source-git-commit: ce405a6bb548b177427e4c02640ce13149c48aff
+source-git-commit: aacc4332cecec0cb9b0f5c23d60b7abd1c63feea
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '790'
 ht-degree: 0%
 
 ---
+
 
 # PHP-inställningar
 
@@ -16,11 +17,11 @@ I det här avsnittet beskrivs hur du ställer in obligatoriska PHP-alternativ.
 
 >[!NOTE]
 >
->Se [systemkrav](../system-requirements.md) för de versioner av PHP som stöds.
+>För den senaste versionen av Adobe Commerce och Magento Open Source krävs minst PHP 8.1. Se [systemkrav](../system-requirements.md) för alla PHP-versioner som stöds.
 
 ## Kontrollera att PHP är installerat
 
-De flesta versioner av Linux har PHP installerat som standard. Det här avsnittet förutsätter att du redan har installerat PHP. Kontrollera om PHP redan är installerat genom att skriva:
+PHP installeras som standard på de flesta Linux-distributioner. Det här avsnittet förutsätter att du redan har installerat PHP. Kontrollera om PHP är installerat genom att skriva följande på kommandoraden:
 
 ```bash
 php -v
@@ -29,19 +30,17 @@ php -v
 Om PHP är installerat visas ett meddelande som liknar följande:
 
 ```terminal
-PHP 7.4.0 (cli) (built: Aug 14 2019 16:42:46) ( NTS )
-Copyright (c) 1997-2018 The PHP Group
-Zend Engine v3.1.0, Copyright (c) 1998-2018 Zend Technologies with Zend OPcache v7.1.6, Copyright (c) 1999-2018, by Zend Technologies
+PHP 8.1.2-1ubuntu2.14 (cli) (built: Aug 18 2023 11:41:11) (NTS)
+Copyright (c) The PHP Group
+Zend Engine v4.1.2, Copyright (c) Zend Technologies
+    with Zend OPcache v8.1.2-1ubuntu2.14, Copyright (c), by Zend Technologies
 ```
 
-Adobe Commerce och Magento Open Source 2.4 är kompatibla med PHP 7.3, men vi testar och rekommenderar att du använder PHP 7.4.
-
-Om PHP inte är installerat, eller om en versionsuppgradering behövs, installerar du den enligt instruktionerna för din speciella Linux-smak.
-I CentOS [ytterligare steg kan behövas](https://wiki.centos.org/HowTos/php7).
+Om PHP inte är installerat (eller kräver en uppgradering) installerar du det genom att följa instruktionerna för din Linux-distribution.
 
 ## Verifiera installerade tillägg
 
-Adobe Commerce och Magento Open Source kräver att en uppsättning tillägg installeras.
+Adobe Commerce och Magento Open Source kräver vissa PHP-tillägg. I följande listor anges vilka tillägg som krävs för varje utgåva av Commerce. Listorna genereras automatiskt från en distribution som kör den senaste versionen av varje utgåva.
 
 {{$include /help/_includes/templated/php-extensions.md}}
 
@@ -54,11 +53,7 @@ Så här verifierar du installerade tillägg:
    ```
 
 1. Kontrollera att alla nödvändiga tillägg är installerade.
-1. Lägg till saknade moduler med samma arbetsflöde som används för att installera PHP. Om du till exempel använder `yum` PHP 7.4-modulerna kan läggas till med:
-
-   ```bash
-    yum -y install php74u-pdo php74u-mysqlnd php74u-opcache php74u-xml php74u-gd php74u-devel php74u-mysql php74u-intl php74u-mbstring php74u-bcmath php74u-json php74u-iconv php74u-soap
-   ```
+1. Lägg till saknade moduler med samma arbetsflöde som används för att installera PHP.
 
 ## Kontrollera PHP-inställningar
 
@@ -74,7 +69,7 @@ PHP Warning:  date(): It is not safe to rely on the system's timezone settings. 
 
 - Ange PHP-minnesgränsen.
 
-  Våra detaljerade rekommendationer är:
+  Adobe rekommenderar följande:
 
    - Kompilera kod eller distribuera statiska resurser, `1G`
    - Felsökning, `2G`
@@ -87,17 +82,17 @@ PHP Warning:  date(): It is not safe to rely on the system's timezone settings. 
   realpath_cache_ttl=7200
   ```
 
-  Med de här inställningarna kan PHP-processer cachelagra sökvägar till filer i stället för att leta upp dem varje gång en sida läses in. Se [Prestandajustering](https://www.php.net/manual/en/ini.core.php) i PHP-dokumentationen.
+  Med de här inställningarna kan PHP-processer cachelagra sökvägar till filer i stället för att leta upp dem vid sidinläsning. Se [Prestandajustering](https://www.php.net/manual/en/ini.core.php) i PHP-dokumentationen.
 
 - Aktivera [`opcache.save_comments`](https://www.php.net/manual/en/opcache.configuration.php#ini.opcache.save-comments), vilket krävs för Adobe Commerce och Magento Open Source 2.1 och senare.
 
-  Vi rekommenderar att du [PHP OPcache](https://www.php.net/manual/en/book.opcache.php) av prestandaskäl. OPcache är aktiverat i många PHP-distributioner.
+  Adobe rekommenderar att du aktiverar [PHP OPcache](https://www.php.net/manual/en/book.opcache.php) av prestandaskäl. OPcache är aktiverat i många PHP-distributioner.
 
   Adobe Commerce och Magento Open Source 2.1 och senare använder PHP-kodkommentarer för kodgenerering.
 
 >[!NOTE]
 >
->För att undvika problem under installation och uppgradering rekommenderar vi att du använder samma PHP-inställningar både i PHP-kommandoradskonfigurationen och i PHP-webbserverns plugin-konfiguration. Mer information finns i nästa avsnitt.
+>För att undvika problem under installation och uppgradering rekommenderar Adobe starkt att du använder samma PHP-inställningar för både PHP-kommandoradskonfigurationen och PHP-webbserverns plugin-konfiguration. Mer information finns i nästa avsnitt.
 
 ## Sök efter PHP-konfigurationsfiler
 
@@ -117,7 +112,7 @@ php --ini | grep "Loaded Configuration File"
 
 >[!NOTE]
 >
->Om du bara har en `php.ini` gör du ändringarna i filen. Om du har två `php.ini` filer, göra ändringar i *alla* filer. Om du inte gör det kan prestandan bli oförutsägbar.
+>Om du bara har en `php.ini` ändrar du den filen. Om du har två `php.ini` filer, ändra *båda* filer. Om du inte gör det kan prestandan bli oförutsägbar.
 
 ### Sök efter inställningar för OPcache-konfiguration
 
@@ -137,7 +132,7 @@ Använd följande riktlinjer för att hitta den:
   sudo find / -name 'opcache.ini'
   ```
 
-- nginx-webbserver med PHP-FPM: `/etc/php/7.2/fpm/php.ini`
+- nginx-webbserver med PHP-FPM: `/etc/php/8.1/fpm/php.ini`
 
 Om du har fler än en `opcache.ini`, ändra alla.
 
@@ -189,7 +184,7 @@ Till `opcache.ini` alternativ:
 
    - `opcache.ini` (CentOS)
    - `php.ini` (Ubuntu)
-   - `/etc/php/7.2/fpm/php.ini` (nginx-webbserver (CentOS eller Ubuntu))
+   - `/etc/php/8.1/fpm/php.ini` (nginx-webbserver (CentOS eller Ubuntu))
 
 1. Sök `opcache.save_comments` och avkommentera vid behov.
 1. Se till att dess värde är inställt på `1`.
@@ -204,7 +199,7 @@ Till `opcache.ini` alternativ:
 
 Se följande Adobe Commerce supportartiklar för hjälp med felsökning av PHP-problem:
 
-- [PHP-versionsfel eller 404-fel vid åtkomst till Adobe Commerce i webbläsaren](https://support.magento.com/hc/en-us/articles/360033117152-PHP-version-error-or-404-error-when-accessing-Magento-in-browser)
+- [PHP-versionsfel eller 404-fel vid åtkomst till Adobe Commerce i en webbläsare](https://support.magento.com/hc/en-us/articles/360033117152-PHP-version-error-or-404-error-when-accessing-Magento-in-browser)
 - [Fel i PHP-inställningar](https://support.magento.com/hc/en-us/articles/360034599631-PHP-settings-errors)
 - [PHP-krypteringstillägget har inte installerats korrekt](https://support.magento.com/hc/en-us/articles/360034280132-PHP-mcrypt-extension-not-installed-properly-)
 - [Problem med beredskapskontroll av PHP-version](https://support.magento.com/hc/en-us/articles/360033546411)
