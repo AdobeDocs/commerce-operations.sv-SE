@@ -4,9 +4,9 @@ description: Lär dig hur systemets XML-fil hanterar Commerce-programmets konfig
 feature: Configuration, System
 badge: label="Bidragen av David Lambauer" type="Informative" url="https://github.com/DavidLambauer" tooltip="David Lambauer"
 exl-id: a6c5de6c-e8da-4eca-bbfb-592904b2c53f
-source-git-commit: 37c23d7a410cdb664710880d3d89cb72efa164e9
+source-git-commit: e231a27d70e29b01c872b0655168e31f590d4876
 workflow-type: tm+mt
-source-wordcount: '2669'
+source-wordcount: '2663'
 ht-degree: 0%
 
 ---
@@ -296,7 +296,6 @@ A `<field>`-Tag kan ha följande underordnade taggar:
 | `more_url` | Kan inte utökas. Se nedan. | `typeUrl` |
 | `demo_url` | Kan inte utökas. Se nedan. | `typeUrl` |
 | `hide_in_single_store_mode` | Anger om gruppen ska vara synlig i läget för en enskild butik. `1` döljer gruppen, `0` visar gruppen. | `int` |
-| `source_service` | Tjänsten används för att fylla i valda alternativ. | `complexType` |
 | `options` | Används inte. Kan vara föråldrat. | `complexType` |
 | `depends` | Kan användas för att deklarera beroenden till andra fält. Används endast för att visa specifika fält/grupper när ett givet fält har värdet `1`. Den här noden förväntar sig en `section/group/field`-string. | `complexType` |
 | `attribute` | Anpassade attribut kan användas av klientmodeller. Används vanligen för att göra en viss kantmodell mer dynamisk. | `complexType` |
