@@ -2,9 +2,9 @@
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: 19d41495f95ae707be1db8446ac77eb5ead6375e
+source-git-commit: 7e6e8f1ed15d88fc79e9a3ad5a4505b612564f71
 workflow-type: tm+mt
-source-wordcount: '14327'
+source-wordcount: '14539'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,17 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som skapats av gemenskapen för Magento Open Source, se [versionsinformation](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.38 {#v1-1-38}
+
+* **ACSD-53098** (för Adobe Commerce och Magento Open Source >=2.4.3 &lt;2.4.4) - Korrigerar problemet där produkter som tilldelats till en delad katalog inte visas i butiken när ett partiellt index körs.
+* **ACSD-54018** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.6) - Korrigerar prestandaproblemen med [!UICONTROL Product List] widget som använder ett icke-globalt attribut i widgetvillkoret.
+* **ACSD-5411** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.6) - Korrigerar problemet där produktminiatyrbilder inte visas på butiken när vattenstämpelbildens proportioner inte matchar produktbilden.
+* **ACSD-47669** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.6) - Korrigeringar *Överträdelse av integritetsbegränsning: 1452 Det går inte att lägga till eller uppdatera en underordnad rad: en sekundärnyckelbegränsning misslyckas* fel vid import av produkter från CSV.
+* **ACSD-53347** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.7) - Korrigerar problemet där prisindexeraren tar för lång tid att utföra.
+* **ACSD-52287** (för Adobe Commerce >=2.3.7 &lt;2.4.7) - Korrigerar problemet med felaktig ordningsstatus i det arkiverade orderrutnätet när asynkron rutnätsindexering är aktiverat.
+* **ACSD-52929** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.7) - Korrigerar problemet med redundanta begäranden om att indexera om standardkällobjekt när lagerindexeraren har konfigurerats i asynkront läge.
+* **ACSD-53824** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.7) - Korrigerar problemet där `UpdateMultiselectAttributesBackendTypes` korrigering av flyttningsdata överskrider storleksgränsen för databastransaktion under `setup:upgrade`.
 
 ## v1.1.37 {#v1-1-37}
 
