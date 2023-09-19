@@ -3,7 +3,7 @@ title: Säkerhet för molninfrastruktur
 description: Läs om hur Adobe skyddar Adobe Commerce i molninfrastrukturen.
 exl-id: cd5d1106-c8db-4b70-b1c7-12378d7d77a7
 feature: Cloud, Security
-source-git-commit: afe70569796c056cd0ecab82898f0dec016e7a3f
+source-git-commit: 8d8cd0d33c1a3a95186948e670df6d9865b9a871
 workflow-type: tm+mt
 source-wordcount: '1739'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Kunder kan använda SSH-tunnlar för att skydda kommunikationen med programmet. 
 
 ## Kryptering
 
-Amazon Elastic Block Store (EBS) används för lagring. Alla EBS-volymer krypteras med AES-265-algoritmen, vilket innebär att data krypteras i vila. Systemet krypterar också data som överförs mellan CDN och ursprungsservern samt mellan ursprungsservrarna. Kundlösenord lagras som hashar. Känsliga autentiseringsuppgifter, inklusive autentiseringsuppgifter för betalningsgateway, krypteras med SHA-256-algoritmen.
+Amazon Elastic Block Store (EBS) används för lagring. Alla EBS-volymer krypteras med AES-256-algoritmen, vilket innebär att data krypteras i vila. Systemet krypterar också data som överförs mellan CDN och ursprungsservern samt mellan ursprungsservrarna. Kundlösenord lagras som hashar. Känsliga autentiseringsuppgifter, inklusive autentiseringsuppgifter för betalningsgateway, krypteras med SHA-256-algoritmen.
 
 Adobe Commerce-programmet stöder inte kryptering på kolumn- eller radnivå eller kryptering när data inte finns tillgängliga eller inte är på väg mellan servrar. Kunden kan hantera krypteringsnycklar inifrån programmet. Tangenter som används av systemet lagras i AWS Key Management System och måste hanteras av Managed Services för att kunna tillhandahålla delar av tjänsten.
 
