@@ -4,53 +4,121 @@ description: Lär dig hur du förbättrar cachelagringsprestanda med den utökad
 role: Developer, Admin
 feature: Best Practices, Cache
 exl-id: 8b3c9167-d2fa-4894-af45-6924eb983487
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: 156e6412b9f94b74bad040b698f466808b0360e3
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '589'
 ht-degree: 0%
 
 ---
 
 # Bästa tillvägagångssätt för Redis-tjänstkonfiguration
 
-- Använd den utökade Redis-cacheimplementeringen, som innehåller följande optimeringar för att minimera antalet Redis-frågor som utförs på varje begäran från Adobe Commerce:
-   - Minskar storleken på nätverksdataöverföringar mellan Redis och Adobe Commerce
-   - Minskar Redis förbrukning av processorcykler genom att förbättra adapterns förmåga att automatiskt avgöra vad som behöver läsas in
-   - Minskar tävlingsvillkoren för Redis-skrivåtgärder
+- Konfigurera Redis L2-cache
+- Aktivera Redis-slavanslutning
+- Förinläsningsnycklar
+- Aktivera inaktuell cache
 - Separera Redis-cachen från Redis-sessionen
-- Komprimera Redis-cachen och använd `gzip` förbättra prestanda
+- Komprimera Redis-cachen och använd `gzip` för högre komprimering
 
-## Utökad Redis-cacheimplementering
+## Konfigurera Redis L2-cache
 
-Uppdatera konfigurationen så att den utökade Redis-cacheimplementeringen används `\Magento\Framework\Cache\Backend\Redis`.
-
-### Konfigurera molndistributioner
-
-Konfigurera förbättrad Redis-cache genom att ställa in `REDIS_BACKEND` distributionsvariabeln i `.magento.env.yaml` konfigurationsfil.
+Konfigurera Redis L2-cachen genom att ställa in `REDIS_BACKEND` distributionsvariabeln i `.magento.env.yaml` konfigurationsfil.
 
 ```yaml
 stage:
   deploy:
-    REDIS_BACKEND: '\Magento\Framework\Cache\Backend\Redis'
+    REDIS_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
 ```
 
-Mer information finns i [`REDIS_BACKEND`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_backend) variabelbeskrivning i _Handbok för Commerce on Cloud Infrastructure_.
+Om du vill se miljökonfigurationen för molninfrastrukturen kan du gå till [`REDIS_BACKEND`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_backend) i _Handbok för Commerce on Cloud Infrastructure_.
+
+För lokala installationer, se [Konfigurera Redis-sidcache](../../../configuration/cache/redis-pg-cache.md#configure-redis-page-caching) i _Konfigurationshandbok_.
 
 >[!NOTE]
 >
-> Kontrollera `ece-tools` version som installerats i din lokala miljö från kommandoraden med `composer show magento/ece-tools` -kommando. Vid behov, [uppdatera till den senaste versionen](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/update-package.html).
+>Kontrollera att du använder den senaste versionen av `ece-tools` paket. Om inte, [uppgradera till den senaste versionen](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/update-package.html). Du kan kontrollera vilken version som är installerad i den lokala miljön med `composer show magento/ece-tools` CLI-kommando.
+
+## Aktivera Redis-slavanslutning
+
+Aktivera en Redis-slavanslutning i `.magento.env.yaml` konfigurationsfilen så att bara en nod kan hantera läs- och skrivtrafik medan de andra noderna hanterar den skrivskyddade trafiken.
+
+```yaml
+stage:
+  deploy:
+    REDIS_USE_SLAVE_CONNECTION: true
+```
+
+Se [REDIS_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_use_slave_connection) i _Handbok för Commerce on Cloud Infrastructure_.
+
+Konfigurera den nya Redis-cacheimplementeringen med `bin/magento:setup` kommandon. Se [Använd Redis för standardcache](../../../configuration/cache/redis-pg-cache.md#configure-redis-page-caching) i _Konfigurationshandbok_.
 
 >[!WARNING]
 >
->Gör _not_ konfigurera en Redis-slavanslutning för molninfrastrukturprojekt med en [skalad arkitektur](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/scaled-architecture.html). Detta orsakar Redis-anslutningsfel. Se [Redis konfigurationsguide](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_use_slave_connection) i _Commerce on Cloud Infrastructure_ guide.
+>Gör _not_ konfigurera en Redis-slavanslutning för molninfrastrukturprojekt med en [skalad/delad arkitektur](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/scaled-architecture.html). Detta orsakar Redis-anslutningsfel. Se [Riktlinjer för konfiguration av Redis](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_use_slave_connection) i _Commerce on Cloud Infrastructure_ guide.
 
-### Konfigurera lokala distributioner
+## Förinläsningsnycklar
 
-För Adobe Commerce lokala distributioner konfigurerar du den nya Redis-cacheimplementeringen med `bin/magento:setup` kommandon. Instruktioner finns i [Använd Redis för standardcache](../../../configuration/cache/redis-pg-cache.md#configure-redis-page-caching).
+Om du vill återanvända data mellan sidor anger du nycklarna för förinläsning i `.magento.env.yaml` konfigurationsfil.
 
-## Separata cache- och sessionsinstanser
+```yaml
+stage:
+  deploy:
+    REDIS_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
+    CACHE_CONFIGURATION:
+      _merge: true
+      frontend:
+        default:
+          id_prefix: '061_'                       # Prefix for keys to be preloaded
+          backend_options:
+            preload_keys:                         # List the keys to be preloaded
+              - '061_EAV_ENTITY_TYPES:hash'
+              - '061_GLOBAL_PLUGIN_LIST:hash'
+              - '061_DB_IS_UP_TO_DATE:hash'
+              - '061_SYSTEM_DEFAULT:hash'
+```
 
-Genom att separera Redis-cachen från Redis-sessionen kan du hantera cachen och sessioner oberoende av varandra för att förhindra att cacheproblem påverkar sessionerna.
+För lokala installationer, se [Förinläsningsfunktion för Redis](../../../configuration/cache/redis-pg-cache.md#redis-preload-feature) i _Konfigurationshandbok_.
+
+## Aktivera inaktuell cache
+
+Minska väntetiderna för lås och förbättra prestanda - särskilt när du hanterar många block- och cachenycklar - genom att använda ett föråldrat cacheminne när du genererar ett nytt cacheminne parallellt. Aktivera inaktuell cache och definiera cachetyper i `.magento.env.yaml` konfigurationsfil:
+
+```yaml
+stage:
+  deploy:
+    REDIS_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
+    CACHE_CONFIGURATION:
+      _merge: true
+      default:
+        backend_options:
+          use_stale_cache: false
+      stale_cache_enabled:
+        backend_options:
+          use_stale_cache: true
+      type:
+        default:
+          frontend: "default"
+        layout:
+          frontend: "stale_cache_enabled"
+        block_html:
+          frontend: "stale_cache_enabled"
+        reflection:
+          frontend: "stale_cache_enabled"
+        config_integration:
+          frontend: "stale_cache_enabled"
+        config_integration_api:
+          frontend: "stale_cache_enabled"
+        full_page:
+          frontend: "stale_cache_enabled"
+        translate:
+          frontend: "stale_cache_enabled"
+```
+
+Information om hur du konfigurerar lokala installationer finns i [Alternativ för inaktuell cache](../../../configuration/cache/level-two-cache.md#stale-cache-options) i _Konfigurationshandbok_.
+
+## Separat Redis-cache och sessionsinstanser
+
+Genom att separera Redis-cachen från Redis-sessionen kan du hantera cachen och sessioner oberoende av varandra. Det förhindrar att cacheproblem påverkar sessionerna, vilket kan påverka intäkterna. Varje Redis-instans körs i sin egen kärna, vilket förbättrar prestandan.
 
 1. Uppdatera `.magento/services.yaml` konfigurationsfil.
 
@@ -85,7 +153,7 @@ Genom att separera Redis-cachen från Redis-sessionen kan du hantera cachen och 
        rabbitmq: "rabbitmq:rabbitmq"
    ```
 
-1. Skicka ett [Adobe Commerce Support](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) om du vill ändra Redis tjänstkonfiguration i Pro Production- och Staging-miljöer. Inkludera den uppdaterade `.magento/services.yaml` och `.magento.app.yaml` konfigurationsfiler.
+1. Skicka ett [Adobe Commerce Support](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att begära etablering av en ny Redis-instans som är dedikerad till sessioner i produktions- och mellanlagringsmiljöer. Inkludera den uppdaterade `.magento/services.yaml` och `.magento.app.yaml` konfigurationsfiler. Detta orsakar inga driftavbrott, men en distribution krävs för att aktivera den nya tjänsten.
 
 1. Kontrollera att den nya instansen körs och notera portnumret.
 
@@ -134,7 +202,7 @@ W:   - Installing colinmollenhour/php-redis-session-abstract (v1.4.5): Extractin
 
 ## Cachekomprimering
 
-Använd cachekomprimering, men tänk på att det finns en kompromiss mellan prestanda på klientsidan. Om du har en ledig processor aktiverar du den. Se [Använd Redis för sessionslagring](../../../configuration/cache/redis-session.md).
+Om du använder mer än 6 GB Redis `maxmemory`kan du använda cachekomprimering för att minska det utrymme som tangenterna förbrukar. Tänk på att det finns en kompromiss med prestanda på klientsidan. Om du har en ledig processor aktiverar du den. Se [Använd Redis för sessionslagring](../../../configuration/cache/redis-session.md) i _Konfigurationshandbok_.
 
 ```yaml
 stage:
