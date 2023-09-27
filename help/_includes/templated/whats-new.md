@@ -1,7 +1,7 @@
 ---
-source-git-commit: 366180602621742c40184192633863c5ce9a8e9f
+source-git-commit: 578b3a7813151406d6e12e5ebed4761f5edb6b49
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '679'
 ht-degree: 0%
 
 ---
@@ -10,6 +10,26 @@ ht-degree: 0%
 ## Nyheter
 
 Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
+
+### 14 september 2023
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Källa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Publicerad <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html">versionsinformation</a> för QPT-paketversionen (1.1.38 Quality Patches Tool).</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/1d1fac956ceb8f869b60accfe0180c593d659ec1">1d1fac</a> (implementera)</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 11 september 2023
 
