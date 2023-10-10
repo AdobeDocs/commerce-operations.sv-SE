@@ -2,7 +2,7 @@
 title: Konsumenter i meddelandekön
 description: Läs om användare av meddelandekön i Adobe Commerce och Magento Open Source, inklusive funktioner och systemkonfigurationsinställningar som är kopplade till dem.
 exl-id: 7fd7ab3f-581f-493c-956c-731f111d1b14
-source-git-commit: 1d7f5f58f8c21013c2ab0d68ab93a125ba0f3764
+source-git-commit: 11ccc59230a7a0d1768c043c39df43c7df031efd
 workflow-type: tm+mt
 source-wordcount: '1014'
 ht-degree: 0%
@@ -65,7 +65,7 @@ I följande tabell visas alla meddelandeköanvändare, vad de gör och vilka kon
 | Skickar e-postmeddelanden om inköpsorder. Krävs när [**[!UICONTROL Purchase Order]**](https://experienceleague.adobe.com/docs/commerce-admin/b2b/purchase-orders/purchase-order-flow.html) alternativet är aktiverat i inställningarna för Admin-systemkonfigurationen. |                |                         |                     |
 | `purchaseorder.validation` |                | + |                     |
 | Validerar inköpsorder mot relevant [regler för godkännande](https://docs.magento.com/user-guide/customers/account-dashboard-approval-rules.html). Krävs när [**[!UICONTROL Purchase Order]**](https://experienceleague.adobe.com/docs/commerce-admin/b2b/purchase-orders/purchase-order-flow.html) alternativet är aktiverat i inställningarna för Admin-systemkonfigurationen. |                |                         |                     |
-| `saveConfigProcessor` [!BADGE 2.4.7-beta1]{type=Informative url="/help/release/release-notes/commerce/2-4-7.md" tooltip="Finns endast i 2.4.7-beta1"} | + |                         | + |
+| `saveConfigProcessor` [!BADGE 2.4.7-beta]{type=Informative url="/help/release/release-notes/commerce/2-4-7.md" tooltip="Finns endast i 2.4.7 beta"} | + |                         | + |
 | Sparar ändringar i lagringskonfigurationen asynkront genom att placera sparade jobb i en meddelandekö, vilket kan förbättra prestanda för distributioner som innehåller ett stort antal konfigurationer på butiksnivå. Krävs för att använda [`AsyncConfig`](../../performance/configuration.md#asynchronous-configuration-save) -modul. |                |                         |                     |
 | `sales.rule.update.coupon.usage` | + | + | + |
 | Förhindrar [problem](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/coupon-code-used-more-than-once-adobe-commerce.html) där engångskuponger kan användas flera gånger. |                |                         |                     |

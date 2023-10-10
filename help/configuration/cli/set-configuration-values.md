@@ -2,9 +2,9 @@
 title: Ange konfigurationsvärden
 description: Lär dig hur du anger konfigurationsvärden och ändrar värden som är låsta i Admin.
 exl-id: 1dc2412d-50b3-41fb-ab22-3eccbb086302
-source-git-commit: 78a7e99ecaba6a6f7982123f5bd67efc740ec2ef
+source-git-commit: 473ab09f83a4cfc1809adff854d52a11ad49d3af
 workflow-type: tm+mt
-source-wordcount: '982'
+source-wordcount: '1038'
 ht-degree: 0%
 
 ---
@@ -289,3 +289,8 @@ Resultat:
 ```terminal
 web/unsecure/base_url - http://example-for-store.com/
 ```
+
+>[!INFO]
+>
+>Omfångskoden kan endast innehålla bokstäver (a-z eller A-Z), siffror (0-9) och understreck (_). Dessutom måste det första tecknet vara en bokstav. Om versaler eller kameravärden används när du skapar en webbplats- eller butiksvy är matchningen inte skiftlägeskänslig för att ge plats för åsidosättning av konfigurationsinställningar via systemvariabler. Se [Använd miljövariabler för att åsidosätta konfigurationsinställningar](../reference/override-config-settings.md#environment-variables).
+

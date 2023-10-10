@@ -1,7 +1,7 @@
 ---
-source-git-commit: 64c453adabb092075854b2c20bf7da73c4a5146e
+source-git-commit: d720b64f315d1e4b6fb7868d911eb3af089e3fa4
 workflow-type: tm+mt
-source-wordcount: '19899'
+source-wordcount: '20131'
 ht-degree: 0%
 
 ---
@@ -11,9 +11,9 @@ ht-degree: 0%
 
 <!-- The template to render with above values -->
 
-**Version**: 2.4.7-beta1
+**Version**: 2.4.7-beta2
 
-Referensen innehåller 132 kommandon som är tillgängliga via `bin/magento` kommandoradsverktyg.
+Referensen innehåller 134 kommandon som är tillgängliga via `bin/magento` kommandoradsverktyg.
 Den inledande listan genereras automatiskt med `bin/magento list` på Adobe Commerce.
 Använd [&quot;Lägg till CLI-kommandon&quot;](https://developer.adobe.com/commerce/php/development/cli-commands/) för att lägga till ett eget CLI-kommando.
 
@@ -3756,6 +3756,120 @@ Ställ inga interaktiva frågor
 - Accepterar inte ett värde
 
 
+## `events:provider:info`
+
+Returnerar information om den konfigurerade händelseprovidern
+
+```bash
+bin/magento events:provider:info
+```
+
+### `--help`, `-h`
+
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--quiet`, `-q`
+
+Skriv inget meddelande
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--verbose`, `-v|-vv|-vvv`
+
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--version`, `-V`
+
+Visa den här programversionen
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--ansi`
+
+Tvinga (eller inaktivera) ANSI-utdata
+
+- Accepterar inte ett värde
+
+### `--no-ansi`
+
+Ignorera alternativet &quot;—ansi&quot;
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--no-interaction`, `-n`
+
+Ställ inga interaktiva frågor
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+
+## `events:registrations:list`
+
+Visar händelseregistreringar i ditt App Builder-projekt
+
+```bash
+bin/magento events:registrations:list
+```
+
+### `--help`, `-h`
+
+Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--quiet`, `-q`
+
+Skriv inget meddelande
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--verbose`, `-v|-vv|-vvv`
+
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--version`, `-V`
+
+Visa den här programversionen
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--ansi`
+
+Tvinga (eller inaktivera) ANSI-utdata
+
+- Accepterar inte ett värde
+
+### `--no-ansi`
+
+Ignorera alternativet &quot;—ansi&quot;
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+### `--no-interaction`, `-n`
+
+Ställ inga interaktiva frågor
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+
 ## `events:subscribe`
 
 Prenumererar på evenemanget
@@ -7221,7 +7335,7 @@ Ställ inga interaktiva frågor
 Kör programserver
 
 ```bash
-bin/magento server:run [-p|--port [PORT]] [-b|--background [BACKGROUND]] [-a|--area [AREA]] [-mip|--magento-init-params [MAGENTO-INIT-PARAMS]]
+bin/magento server:run [-p|--port [PORT]] [-b|--background [BACKGROUND]] [-a|--area [AREA]] [-mip|--magento-init-params [MAGENTO-INIT-PARAMS]] [-mwt|--maxWaitTime [MAXWAITTIME]]
 ```
 
 ### `--port`, `-p`
@@ -7250,6 +7364,13 @@ programserverområde
 magento bootstrap init params
 
 - Standard: &quot;
+- Accepterar ett värde
+
+### `--maxWaitTime`, `-mwt`
+
+Hur länge du väntar på arbetare efter omladdning (t.ex. konfigurationsändring) innan de dör
+
+- Standard: `3600`
 - Accepterar ett värde
 
 ### `--help`, `-h`
@@ -9417,7 +9538,7 @@ Administratörens efternamn
 
 ### `--search-engine`
 
-Sökmotor. Värden: elasticsearch5, elasticsearch7, elasticsearch8, opensearch
+Sökmotor. Värden: elasticsearch7, elasticsearch8, opensearch
 
 - Kräver ett värde
 

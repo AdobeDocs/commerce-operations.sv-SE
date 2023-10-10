@@ -3,9 +3,9 @@ title: Konfigurera lack för handel
 description: Lär dig hur du uppdaterar och hanterar din konfigurationsfil för lack för Commerce-programmet.
 feature: Configuration, Cache, SCD
 exl-id: 6c007ff9-493f-4df2-b7b4-438b41fd7e37
-source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
+source-git-commit: 11ccc59230a7a0d1768c043c39df43c7df031efd
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '421'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,8 @@ Så här konfigurerar du Commerce att använda engelska:
    | Åtkomstlista | Ange det fullständiga värdnamnet, IP-adressen eller [CIDR (Classless Inter-domain Routing)](https://www.digitalocean.com/community/tutorials/understanding-ip-addresses-subnets-and-cidr-notation-for-networking) IP-adressintervall för notationen som innehållet ska göras ogiltigt för. Se [Rensning av finans](https://varnish-cache.org/docs/3.0/tutorial/purging.html). |
    | Serverdelsvärd | Ange det fullständiga värdnamnet eller IP-adressen och avlyssningsporten för lack _serverdel_ eller _origin-server_, d.v.s. servern som tillhandahåller innehållet varnish accelererar. Vanligtvis är det här din webbserver. Se [Backend-servrar för lack-cache](https://www.varnish-cache.org/docs/trunk/users-guide/vcl-backends.html). |
    | Backend-port | Ursprungsserverns lyssningsport. |
-   | Respitperiod | Fristen avgör hur länge varnish skickar gammalt innehåll om backend-objektet inte svarar. Standardvärdet är 300 sekunder. |
+   | Respitperiod | Avgör hur länge varnish visar inaktuellt innehåll om serverdelen inte är responsiv. Standardvärdet är 300 sekunder. |
+   | Hanterar parameterstorlek  [!BADGE 2.4.7-beta]{type=Informative url="/help/release/release-notes/commerce/2-4-7.md" tooltip="Finns endast i 2.4.7 beta"} | Anger maximalt antal [layouthandtag](https://developer.adobe.com/commerce/frontend-core/guide/layouts/#layout-handles) för att bearbeta [`{BASE-URL}/page_cache/block/esi`](use-varnish-esi.md) HTTP-slutpunkt för helsidescache. Genom att begränsa storleken kan du förbättra säkerheten och prestandan. Standardvärdet är 100. |
 
 1. Klicka **Spara konfiguration**.
 
