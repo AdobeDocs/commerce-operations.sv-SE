@@ -2,10 +2,10 @@
 title: Produkttillgänglighet
 description: Läs mer om vilka Adobe Commerce-funktioner som stöds och kontrollera om de är kompatibla med vissa Adobe Commerce-utgåvor.
 exl-id: 7e8e8ac2-a0b9-4023-a813-c0f1293e54c2
-source-git-commit: 3592b81b260eee7d3889f3f9cf702d8f13aacae3
+source-git-commit: 307ff1e80afa9bd8d6b7aab39fa476a535bce890
 workflow-type: tm+mt
-source-wordcount: '553'
-ht-degree: 15%
+source-wordcount: '537'
+ht-degree: 13%
 
 ---
 
@@ -28,12 +28,12 @@ De här Adobe Commerce-tilläggen är fristående från Adobe Commerce centrala 
 
 Följande tabell visar versionsstödet för varje tillägg i förhållande till Adobe Commerce-versionen.
 
-| **Adobe Commerce** | 2.4.7-beta2 | 2.4.7-beta1 | 2.4.6 | 2.4.5 | 2.4.4 | 2.4.3 |                                                                                                                                                                                                                                          |
-|---------------------------------------|-------------|-------------|--------|--------|--------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| _Adobe I/O Events for Adobe Commerce_ | 1.3.0 | 1.3.0 | 1.3.0 | 1.3.0 | 1.3.0 | - | [Disposition](https://developer.adobe.com/commerce/extensibility/events/installation/) <br/>[Versionsinformation](https://developer.adobe.com/commerce/extensibility/events/release-notes/) |
-| _B2B_ | 1.4.2 | 1.4.0+ | 1.3.5+ | 1.3.4 | 1.3.3 | 1.3.2 | [Disposition](https://experienceleague.adobe.com/docs/commerce-admin/b2b/install.html) <br/> [Versionsinformation](https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes.html) |
-| _Experience Platform Connector_ | 3.0.0-beta1 | 3.0.0-beta1 | 1.0.0+ | 1.0.0+ | 1.0.0+ | 1.0.0+ | [Marketplace](https://commercemarketplace.adobe.com/magento-experience-platform-connector.html)<br/>[Versionsinformation](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/release-notes.html) |
-| _Page Builder_ | - | - | 1.7.3 | 1.7.2 | 1.7.1 | - | [Användarhandbok](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/guide-overview.html)<br/> [Versionsinformation](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/release-notes.html) |
+| **Adobe Commerce** | 2.4.7-beta2 | 2.4.6 | 2.4.5 | 2.4.4 |                                                                                                                                                                                                                                          |
+|---------------------------------------|-------------|--------|--------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| _Adobe I/O Events for Adobe Commerce_ | 1.3.0 | 1.3.0 | 1.3.0 | 1.3.0 | [Disposition](https://developer.adobe.com/commerce/extensibility/events/installation/) <br/>[Versionsinformation](https://developer.adobe.com/commerce/extensibility/events/release-notes/) |
+| _B2B_ | 1.4.2 | 1.3.5+ | 1.3.4 | 1.3.3 | [Disposition](https://experienceleague.adobe.com/docs/commerce-admin/b2b/install.html) <br/> [Versionsinformation](https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes.html) |
+| _Experience Platform Connector_ | 3.0.0-beta1 | 1.0.0+ | 1.0.0+ | 1.0.0+ | [Marketplace](https://commercemarketplace.adobe.com/magento-experience-platform-connector.html)<br/>[Versionsinformation](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/release-notes.html) |
+| _Page Builder_ | - | 1.7.3 | 1.7.2 | 1.7.1 | [Användarhandbok](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/guide-overview.html)<br/> [Versionsinformation](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/release-notes.html) |
 
 ## Commerce Services
 
@@ -47,13 +47,13 @@ Handlarna bör använda den senaste versionen av en tjänst för att säkerstäl
 
 Följande tabell visar versionsstödet för varje tjänst i förhållande till Adobe Commerce-versionen.
 
-| **Adobe Commerce-versioner** | 2.4.7-beta2 | 2.4.7-beta1 | 2.4.6 | 2.4.5 | 2.4.4 | 2.4.3 |                                                                                                                                                                                                                                                |
-|----------------------------------------|-------------|-------------|--------|-----------------|-----------------|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| _Amazon Sales Channel_ | - | - | 4.4.0+ | 4.3.0+ | 4.3.0+ | 4.3.0+ | [Marketplace](https://commercemarketplace.adobe.com/magento-module-amazon.html)<br/> [Versionsinformation](https://experienceleague.adobe.com/docs/commerce-channels/amazon/release-notes.html) |
-| _Katalogtjänst för Adobe Commerce_ | 1.11 | 1.11 | 1.11 | 1.11 | 1.11 | - | [Ökning](https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/guide-overview.html)<br/> [Versionsinformation](https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/release-notes.html) |
-| _Kanalhanteraren_ | - | - | 2.0.0 | 1.0.0+ | 1.0.0+ | 1.0.0+ | [Marketplace](https://commercemarketplace.adobe.com/magento-channel-manager.html)<br/> [Versionsinformation](https://experienceleague.adobe.com/docs/commerce-channels/channel-manager/release-notes.html) |
-| _Live Search_ | 3.0.2 | 3.0.2 | 3.0.2 | 3.0.2 | 3.0.2 | - | [Marketplace](https://commercemarketplace.adobe.com/magento-live-search.html)<br/>[Versionsinformation](https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/release-notes.html) |
-| _Betalningstjänster_ | 2.2.0 | 2.2.0 | 2.2.0 | 2.2.0 (PHP 8.1) | 2.2.0 (PHP 8.1) | - | [Marketplace](https://commercemarketplace.adobe.com/magento-payment-services.html)<br/> [Versionsinformation](https://commercemarketplace.adobe.com/magento-payment-services.html) |
-| _Recommendations_ | 5.0 | 5.0 | 5.0 | 5.0 | 5.0 | - | [Marketplace](https://commercemarketplace.adobe.com/magento-product-recommendations.html)<br/> [Versionsinformation](https://experienceleague.adobe.com/docs/commerce-merchant-services/product-recommendations/release-notes.html) |
-| _Snabbutcheckning_ | - | - | 1.0.0+ | 1.2.0+ | 1.0.0+ | 1.2.0+ | [Marketplace](https://commercemarketplace.adobe.com/magento-quick-checkout.html)<br/> [Versionsinformation](https://experienceleague.adobe.com/docs/commerce-merchant-services/product-recommendations/release-notes.html) |
-| _Lagra uppfyllelse för Adobe Commerce_ | - | - | 1.5.0 | 1.2.0+ | 1.2.0+ | 1.2.0+ | [Marketplace](https://commercemarketplace.adobe.com/store-fulfillment-magento-walmart.html)<br/> [Versionsinformation](https://experienceleague.adobe.com/docs/commerce-merchant-services/store-fulfillment/release-notes.html) |
+| **Adobe Commerce-versioner** | 2.4.7-beta2 | 2.4.6 | 2.4.5 | 2.4.4 |                                                                                                                                                                                                                                                |
+|----------------------------------------|-------------|--------|-----------------|-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| _Amazon Sales Channel_ | - | 4.4.0+ | 4.3.0+ | 4.3.0+ | [Marketplace](https://commercemarketplace.adobe.com/magento-module-amazon.html)<br/> [Versionsinformation](https://experienceleague.adobe.com/docs/commerce-channels/amazon/release-notes.html) |
+| _Katalogtjänst för Adobe Commerce_ | 1.11 | 1.11 | 1.11 | 1.11 | [Ökning](https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/guide-overview.html)<br/> [Versionsinformation](https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/release-notes.html) |
+| _Kanalhanteraren_ | 2.1.0 | 2.0.0 | 1.0.0+ | 1.0.0+ | [Marketplace](https://commercemarketplace.adobe.com/magento-channel-manager.html)<br/> [Versionsinformation](https://experienceleague.adobe.com/docs/commerce-channels/channel-manager/release-notes.html) |
+| _Live Search_ | 3.0.2 | 3.0.2 | 3.0.2 | 3.0.2 | [Marketplace](https://commercemarketplace.adobe.com/magento-live-search.html)<br/>[Versionsinformation](https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/release-notes.html) |
+| _Betalningstjänster_ | 2.2.0 | 2.2.0 | 2.2.0 (PHP 8.1) | 2.2.0 (PHP 8.1) | [Marketplace](https://commercemarketplace.adobe.com/magento-payment-services.html)<br/> [Versionsinformation](https://commercemarketplace.adobe.com/magento-payment-services.html) |
+| _Recommendations_ | 5.0 | 5.0 | 5.0 | 5.0 | [Marketplace](https://commercemarketplace.adobe.com/magento-product-recommendations.html)<br/> [Versionsinformation](https://experienceleague.adobe.com/docs/commerce-merchant-services/product-recommendations/release-notes.html) |
+| _Snabbutcheckning_ | - | 1.0.0+ | 1.2.0+ | 1.0.0+ | [Marketplace](https://commercemarketplace.adobe.com/magento-quick-checkout.html)<br/> [Versionsinformation](https://experienceleague.adobe.com/docs/commerce-merchant-services/product-recommendations/release-notes.html) |
+| _Lagra uppfyllelse för Adobe Commerce_ | - | 1.5.0 | 1.2.0+ | 1.2.0+ | [Marketplace](https://commercemarketplace.adobe.com/store-fulfillment-magento-walmart.html)<br/> [Versionsinformation](https://experienceleague.adobe.com/docs/commerce-merchant-services/store-fulfillment/release-notes.html) |

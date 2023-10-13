@@ -2,10 +2,10 @@
 title: Frigör schema
 description: Få reda på när Adobe planerar att tillkännage lanseringen av betydande nya funktioner i Adobe Commerce.
 exl-id: ae1e09cd-966f-44a3-9e4d-b90bb838429d
-source-git-commit: 12b4f619673414f18d9697450e867681c6cb3194
+source-git-commit: 7edf6d5a8dfe58a86f27e97816e4d850bc21babc
 workflow-type: tm+mt
-source-wordcount: '752'
-ht-degree: 1%
+source-wordcount: '623'
+ht-degree: 2%
 
 ---
 
@@ -17,10 +17,7 @@ Adobe [patchar](versioning-policy.md#patch-release) för varje versionsrad som s
 
 >[!NOTE]
 >
->Från och med 2024 har Adobe inte längre tillgång till förhandsversioner av patchar. För version 2.4.7 och senare kan Adobe Commerce-kunder använda [betaversioner](beta.md) för att få tillgång till pregenerell tillgänglighetskod för testnings- och utvecklingsändamål. Åtkomst före lansering planeras fortfarande för följande versioner från 2023:
->
-> - 8 augusti 2023 är tillgång till förhandsversionen 25 juli 2023
-> - 10 oktober 2023 års åtkomst före utgivningen är 26 september 2023
+>Från och med 2024 har Adobe inte längre tillgång till förhandsversioner av patchar. För version 2.4.7 och senare kan Adobe Commerce-kunder använda [betaversioner](beta.md) för att få tillgång till pregenerell tillgänglighetskod för testnings- och utvecklingsändamål.
 
 I följande tabell visas datumen för schemalagda releaser (datum kan ändras):
 
@@ -46,16 +43,6 @@ I följande tabell visas datumen för schemalagda releaser (datum kan ändras):
    </tr>
 </tfoot>
 <tbody>
-  <tr>
-    <td>8 augusti 2023</td>
-    <td><img alt="Funktionsikon för B2B" src="../assets/icons/enterprise.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes.html">B2B</a><br><img alt="Ikon för utökningsfunktion" src="../assets/icons/brackets.svg"></img> <a href="https://developer.adobe.com/commerce/extensibility/">Utbyggbarhet</a><br><img alt="Ikon för infrastrukturfunktion" src="../assets/icons/servers.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite.html">Infrastruktur</a><br><img alt="Ikon för tjänstefunktion" src="../assets/icons/feature.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/release-information/release-notes-all.html">Tjänster</a></td>
-    <td><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="release-notes/security/overview.md">Säkerhetsuppdateringar</a>: 2.4.6-p2, 2.4.5-p4, 2.4.4-p5</td>
-  </tr>
-  <tr>
-    <td>10 oktober 2023</td>
-    <td><img alt="Funktionsikon för B2B" src="../assets/icons/enterprise.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes.html">B2B</a><br><img alt="Ikon för utökningsfunktion" src="../assets/icons/brackets.svg"></img> <a href="https://developer.adobe.com/commerce/extensibility/">Utbyggbarhet</a><br><img alt="Ikon för infrastrukturfunktion" src="../assets/icons/servers.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite.html">Infrastruktur</a><br><img alt="Ikon för tjänstefunktion" src="../assets/icons/feature.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/release-information/release-notes-all.html">Tjänster</a></td>
-    <td><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="release-notes/commerce/overview.md">Betakorrigering</a>: 2.4.7-beta2<br> <img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="release-notes/security/overview.md">Säkerhetsuppdateringar</a>: 2.4.6-p3, 2.4.5-p5, 2.4.4-p6</td>
-  </tr>
   <tr>
     <td>13 februari 2024</td>
     <td><img alt="Funktionsikon för B2B" src="../assets/icons/enterprise.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes.html">B2B</a><br><img alt="Ikon för utökningsfunktion" src="../assets/icons/brackets.svg"></img> <a href="https://developer.adobe.com/commerce/extensibility/">Utbyggbarhet</a><br><img alt="Ikon för infrastrukturfunktion" src="../assets/icons/servers.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite.html">Infrastruktur</a><br><img alt="Ikon för tjänstefunktion" src="../assets/icons/feature.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/release-information/release-notes-all.html">Tjänster</a></td>
