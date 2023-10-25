@@ -2,9 +2,9 @@
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: 67d4f2dd6b3aedae51c9b81268f2ced12369becc
+source-git-commit: 6e82738ab9b3ea106b7987fac2f6f4a026ddc4f0
 workflow-type: tm+mt
-source-wordcount: '14811'
+source-wordcount: '15145'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,24 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som skapats av gemenskapen för Magento Open Source, se [versionsinformation](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.40 {#v1-1-40}
+
+* **ACSD-54680** (för Adobe Commerce >=2.4.0 &lt;2.4.6) - Korrigerar problemet där det inte går att bearbeta en B2B-offert som skickats in för en produkt med flera tilldelade källor.
+* **ACSD-54040** (för Adobe Commerce >=2.4.4-p5 &lt;2.4.5 || >=2.4.5-p4 &lt;2.4.6) - Korrigerar problemet där *[!UICONTROL Created]* fältet är tomt i ordningsinformation när B2B-moduler är aktiverade.
+* **ACSD-54319** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.6) - Korrigerar problemet där produktpriset är noll i *[!UICONTROL Product in Cart]* rapport.
+* **ACSD-53378** (för Adobe Commerce och Magento Open Source >=2.4.5 &lt;2.4.7) - Förbättrar utcheckningsidans laddningstid för kunder som har stora adressböcker.
+* **ACSD-52657** (för Adobe Commerce och Magento Open Source >=2.4.5 &lt;2.4.7) - Korrigerar problemet där minicart inte uppdateras på den sekundära butiksgranskningen, som använder en underdomän.
+* **ACSD-53414** (för Adobe Commerce >=2.4.6 &lt;2.4.7) - Korrigerar problemet där en begränsad administratörsanvändare kan se CMS-sidor utanför sitt behörighetsområde.
+* **ACSD-54472** (för Adobe Commerce >=2.4.6 &lt;2.4.7) - Korrigerar problemet där kunder i ett avvisat företag fortfarande kan autentisera och kunder i ett blockerat och avvisat företag fortfarande kan göra beställningar. Korrigeringen lägger till ytterligare validering för GraphQL-slutpunkter.
+* **ACSD-52801** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.7) - Lägger till alternativet att göra en partiell matchning när du söker efter produkter i GraphQL.
+* **ACSD-55004** (för Adobe Commerce och Magento Open Source >=2.4.6 &lt;2.4.7) - Korrigerar problemet där valideraren kraschar när en importfil som är större än det värde som konfigurerats i överförs `php.ini`.
+* **ACSD-54989** (för Adobe Commerce >=2.4.4-p5 &lt;2.4.5 || >=2.4.5-p4 &lt;2.4.6 || >=2.4.6-p2 &lt;2.4.7) - Korrigerar problemet där en företagsadministratör inte kan göra en beställning när *[!UICONTROL Enable Purchase Orders]* är inställd på *[!UICONTROL Yes]* och *[!UICONTROL Purchase Order]* är inställd på *[!UICONTROL No]*.
+* **ACSD-54007** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.7) - Korrigerar felet *&quot;Odefinierad matrisnyckel &quot;_scope&quot;* vid import av kunddata.
+* **ACSD-55031** (för Adobe Commerce och Magento Open Source >=2.4.5 &lt;2.4.6) - Korrigerar *Typen&quot;mixad&quot; kan inte vara null* fel vid kompilering.
+* **ACSD-54961** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.7) - Korrigerar problemet där en begränsad administratörsanvändare inte kan massuppdatera *Produktgranskning* status.
+* **ACSD-55256** (för Adobe Commerce och Magento Open Source >=2.4.6 &lt;2.4.7) - Korrigerar problemet där endast den första bilden visas korrekt i bildreglaget.
+* Uppdaterade patchar: ACSD-52041, ACSD-54106
 
 ## v1.1.39 {#v1-1-39}
 
