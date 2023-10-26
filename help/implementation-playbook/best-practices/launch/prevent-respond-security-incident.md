@@ -4,16 +4,16 @@ description: Lär dig mer om de bästa sätten att undvika och hantera säkerhet
 role: Admin, Developer, Leader, User
 feature: Best Practices
 exl-id: 77275d37-4f1d-462d-ba11-29432791da6a
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: 19ff1fee74e3c5ece13da49648252b32e549eafd
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1060'
 ht-degree: 0%
 
 ---
 
 # Bästa metoder för att förebygga och hantera säkerhetstillbud
 
-Adobe Commerce säkerhetsverksamhet [Delat ansvar](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-commerce-shared-responsibility-guide.pdf) modell. Det är viktigt att förstå vad Adobe och era tekniska team ansvarar för. Nedan sammanfattas [Bästa praxis för säkerhet](https://www.adobe.com/content/dam/cc/en/security/pdfs/Adobe-Magento-Commerce-Best-Practices-Guide.pdf) för att säkerställa att ditt projekt har de bästa säkerhetskontrollerna och hur du bäst hanterar en säkerhetsincident.
+Adobe Commerce säkerhetsverksamhet [Delat ansvar](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-commerce-shared-responsibilities-guide.pdf) modell. Det är viktigt att förstå vad Adobe och era tekniska team ansvarar för. I följande artikel sammanfattas de effektivaste säkerhetsstrategierna för att säkerställa att ditt projekt har de bästa säkerhetskontrollerna och att du kan planera den bästa lösningen på säkerhetsincidenter.
 
 ## Berörda produkter och versioner
 
@@ -43,14 +43,14 @@ Adobe rekommenderar att du använder en unik, anpassad Admin-URL i stället för
 - Konfigurera och kör [Adobe Commerce Security Scan Tool](https://docs.magento.com/user-guide/magento/security-scan.html).
 Med den förbättrade säkerhetssökningen kan du övervaka var och en av dina Adobe Commerce-sajter, inklusive PWA, för att upptäcka kända säkerhetsrisker och skadlig kod samt få korrigeringsuppdateringar och säkerhetsmeddelanden.
 - [Granska och uppdatera administratörsanvändaråtkomst](https://docs.magento.com/user-guide/system/permissions-users-all.html) och [säkerhetsinställningar](https://docs.magento.com/user-guide/stores/security-admin.html).
-   - Vi rekommenderar att du tar bort gamla, oanvända eller misstänkta konton och roterar lösenord för alla administratörsanvändare.
-   - Granska och uppdatera avancerade säkerhetsinställningar&lt; för ditt projekt. Med säkerhetskonfigurationen för Admin kan du lägga till en hemlig nyckel till URL:er, kräva att lösenord är skiftlägeskänsliga och begränsa längden på Admin-sessioner, inklusive lösenordens livstid och antalet inloggningsförsök som kan göras innan Admin-användarkontot låses. För ökad säkerhet kan du konfigurera längden på tangentbordsinaktivitet innan den aktuella sessionen förfaller och kräva att användarnamnet och lösenordet är skiftlägeskänsliga.
+   - Ta bort gamla, oanvända eller misstänkta konton och rotera lösenord för alla administratörsanvändare.
+   - Granska och uppdatera avancerade säkerhetsinställningar&lt; för ditt projekt. Med säkerhetskonfigurationen för Admin kan du lägga till en hemlig nyckel till URL:er, kräva att lösenord är skiftlägeskänsliga och begränsa längden på Admin-sessioner, inklusive lösenordens livstid och antalet inloggningsförsök som tillåts innan Admin-användarkontot låses. För ökad säkerhet kan du konfigurera längden på tangentbordsinaktivitet innan den aktuella sessionen förfaller och kräva att användarnamnet och lösenordet är skiftlägeskänsliga.
 - Granska Adobe Commerce på [användare av molnprojekt](https://devdocs.magento.com/cloud/project/user-admin.html).
-Vi rekommenderar att du tar bort gamla, oanvända eller misstänkta konton och begär att användarna ska ändra sina lösenord.
+Ta bort gamla, oanvända eller misstänkta konton och begär att användarna ska ändra sina lösenord.
 - Granskning [SSH-nycklar](https://devdocs.magento.com/cloud/before/before-workspace-ssh.html) för Adobe Commerce om molninfrastruktur.
-Vi rekommenderar att du granskar, tar bort och roterar SSH-nycklar.
+Granska, ta bort och rotera SSH-nycklar.
 - Implementera ACL (Access Control List) för Admin.
-Du kan använda en ACL-lista med fast kant i kombination med en anpassad [VCL-kodfragment](https://devdocs.magento.com/cloud/cdn/fastly-vcl-allowlist.html#vcl) för att filtrera inkommande begäranden och tillåta åtkomst via IP-adress till administratören.
+Du kan filtrera inkommande förfrågningar och konfigurera administratörsåtkomst via IP-adress genom att implementera en lista för Fast Edge ACL i kombination med en anpassad [VCL-kodfragment](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html).
 
 ## Analysera en incident
 

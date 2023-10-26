@@ -4,9 +4,9 @@ description: Lär dig hur du på ett säkert sätt hanterar och lagrar betalning
 role: Developer
 feature: Best Practices
 exl-id: 635f38d3-0199-4d96-ba75-9edd0cb94b5c
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: 1887d7b285008fc98579955274bbc4affb766d0c
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '522'
 ht-degree: 0%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 0%
 
 En av de viktigaste principerna för att upprätthålla [PCI-kompatibilitet](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/payments/compliance-pci.html) har en strategi för att hantera och lagra kreditkortsbetalningar korrekt.
 
-Att lagra kortinnehavardata i Adobe Commerce är **strikt förbjuden** och det kan vara ett brott mot dina skyldigheter som handlare enligt PCI-DSS (Payment Card Industry Data Security Standard). Mer information om vår modell för delat ansvar och riktlinjer för handlares skyldigheter finns i våra [guide för delat ansvar för Adobe Commerce](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-commerce-shared-responsibility-guide.pdf) på Adobe Trust Center.
+Att lagra kortinnehavardata i Adobe Commerce är **strikt förbjuden** och det kan vara ett brott mot dina skyldigheter som handlare enligt PCI-DSS (Payment Card Industry Data Security Standard). Mer information om modellen för delat ansvar och riktlinjer för skyldigheter för handlare finns i [Adobe Commerce Shared Responsibility Model Guide](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-commerce-shared-responsibilities-guide.pdf) på Adobe Trust Center.
 
-Vi rekommenderar att du följer de bästa metoderna nedan för att säkerställa att du hanterar betalningsinformation på din e-handelsplats. Mer information om de effektivaste strategierna för säkerhet finns i [guide om bästa praxis för säkerhet för Adobe Commerce](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-commerce-best-practices-guide.pdf) på Adobe Trust Center
+Följ de bästa metoderna nedan för att se till att du hanterar betalningsinformation på din e-handelsplats. Mer information om de effektivaste strategierna för säkerhet finns i [guide om bästa praxis för säkerhet för Adobe Commerce](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-commerce-best-practices-guide.pdf) på Adobe Trust Center
 
 ## Berörda produkter och versioner
 
@@ -32,7 +32,7 @@ Om det behövs lagring av kortinnehavardata ska kortinnehavardata lagras utanfö
 
 Skyddet för kryptografiska nycklar är avgörande för dataskyddsstrategier. Det är viktigt att ha kunniga och pålitliga förvarare som övervakar nycklarna.
 
-Slutligen måste ett primärt kontonummer (PAN) vara oläsbart under lagring (t.ex. maskerat såsom XXX). Detta inkluderar flyttbara lagringsmedier och säkerhetskopieringsmedia som flash-enheter, USB och externa hårddiskar samt granskningsloggar.
+Slutligen måste ett primärt kontonummer (PAN) vara oläsbart under lagring, t.ex. maskerat med `XXX`. Detta inkluderar flyttbara lagringsmedier och säkerhetskopieringsmedia som flash-enheter, USB och externa hårddiskar samt granskningsloggar.
 
 ## Kryptera överföring av kortinnehavardata
 
@@ -49,7 +49,7 @@ Skydda data under överföring är avgörande för att skydda betalningsinformat
 * Begränsa åtkomsten till kortinnehavarens data
 * Tillgång till känslig information bör begränsas på behovsanpassad grund och endast ges till den auktoriserade personal som har ett affärsbehov
 
-Den rekommenderade metoden för att hantera kortinnehavardata är att inte lagra det primära kontonumret (PAN) utan att tokenisera kortet med en viss betalbehandlare och lagra token, korttyp och krypterat förfallodatum. Du kan använda denna token som inloggningsuppgifter för framtida bruk eftersom den är unik endast för varje handlare. Eftersom variabeln är unik och det uppstår ett säkerhetsproblem, blir variabeln ogiltig vilket förhindrar bedräglig aktivitet
+Den rekommenderade metoden för att hantera kortinnehavardata är att tokenisera data i stället för att lagra dem. Tokenisera kortet med en viss betaltjänstleverantör och lagra token, korttyp och krypterat förfallodatum. Du kan använda denna token som inloggningsuppgifter för framtida bruk eftersom den är unik endast för varje handlare. Eftersom variabeln är unik, om det finns ett säkerhetsproblem, är variabeln ogiltig vilket hjälper till att förhindra bedräglig aktivitet.
 
 ## Ytterligare information
 
