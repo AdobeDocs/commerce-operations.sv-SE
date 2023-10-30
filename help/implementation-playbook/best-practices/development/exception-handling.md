@@ -3,13 +3,13 @@ title: Bästa praxis för undantagshantering
 description: Lär dig de rekommenderade metoderna för att logga undantag när du utvecklar Adobe Commerce-projekt.
 feature: Best Practices
 role: Developer
-source-git-commit: 94d37b6a95cae93f465daf8eb96363a198833e27
+exl-id: e7ad685b-3eaf-485b-8ab1-702f2e7ab89e
+source-git-commit: 4bf8dd5c5320cc9a34cfaa552ec5e91d517d3617
 workflow-type: tm+mt
 source-wordcount: '571'
 ht-degree: 0%
 
 ---
-
 
 # Bästa praxis för undantagshantering
 
@@ -88,7 +88,7 @@ I följande exempel visas felaktig undantagshantering.
 
 ### ![felaktig](../../../assets/no.svg) Logga in före loggning
 
-Logik före loggning kan leda till ett annat undantag eller ett allvarligt fel, som förhindrar att undantaget loggas och bör ersättas med [korrekt exempel](#correct-logging-always-comes-first).
+Logik före loggning kan leda till ett annat undantag eller ett allvarligt fel, som förhindrar att undantaget loggas och bör ersättas med [korrekt exempel](#logging-always-comes-first).
 
 ```php
 try {
@@ -101,7 +101,7 @@ try {
 
 ### ![felaktig](../../../assets/no.svg) Tom `catch`
 
-Tom `catch` -block kan vara ett tecken på oavsiktlig ljudavstängning och bör ersättas med [korrekt exempel](#correct-mute-signals).
+Tom `catch` -block kan vara ett tecken på oavsiktlig ljudavstängning och bör ersättas med [korrekt exempel](#mute-signals).
 
 ```php
 try {
@@ -137,11 +137,11 @@ try {
 
 Den här metoden infogar radbrytningar i meddelandet, som inte är kompatibelt med PSR-3. Undantaget, inklusive stackspårning, måste vara en del av meddelandekontexten för att säkerställa att den sparas korrekt med meddelandet i New Relic eller annan PSR-3-monologgkompatibel logglagring.
 
-Åtgärda problemet genom att ersätta koden enligt de korrekta exemplen i [Skriv till undantagsloggen](#correct-write-to-the-exception-log) eller [Nedgraderingsundantag](#correct-downgrade-exceptions).
+Åtgärda problemet genom att ersätta koden enligt de korrekta exemplen i [Skriv till undantagsloggen](#write-to-the-exception-log) eller [Nedgraderingsundantag](#downgrade-exceptions).
 
 ### ![felaktig](../../../assets/no.svg) Nedgradera undantag utan sammanhang
 
-Undantaget nedgraderas till ett fel, vilket innebär att ett objekt inte kan skickas, utan bara en sträng, vilket innebär att `getMessage()`. Detta gör att spårningen försvinner och bör ersättas med de korrekta exemplen som visas i [Skriv till undantagsloggen](#correct-write-to-the-exception-log) eller [Nedgraderingsundantag](#correct-downgrade-exceptions).
+Undantaget nedgraderas till ett fel, vilket innebär att ett objekt inte kan skickas, utan bara en sträng, vilket innebär att `getMessage()`. Detta gör att spårningen försvinner och bör ersättas med de korrekta exemplen som visas i [Skriv till undantagsloggen](#write-to-the-exception-log) eller [Nedgraderingsundantag](#downgrade-exceptions).
 
 ```php
 try {
@@ -153,7 +153,7 @@ try {
 
 ### ![felaktig](../../../assets/no.svg) Logga endast meddelandet i undantagsloggen
 
-I stället för att skicka objektet `$e`, endast `$e->getMessage()` har skickats. Detta gör att spårningen försvinner och bör ersättas med de korrekta exemplen som visas [Skriv till undantagsloggen](#correct-write-to-the-exception-log) eller [Nedgraderingsundantag](#correct-downgrade-exceptions).
+I stället för att skicka objektet `$e`, endast `$e->getMessage()` har skickats. Detta gör att spårningen försvinner och bör ersättas med de korrekta exemplen som visas [Skriv till undantagsloggen](#write-to-the-exception-log) eller [Nedgraderingsundantag](#downgrade-exceptions).
 
 ```php
 try {
@@ -165,7 +165,7 @@ try {
 
 ### ![felaktig](../../../assets/no.svg) Saknas `// phpcs:ignore Magento2.CodeAnalysis.EmptyBlock.DetectedCatch`
 
-Utelämnar `phpcs:ignore` Detta utlöser en varning i PHPCS och bör inte skicka din CI. Detta bör ersättas med rätt exempel som visas i [Stäng av signaler](#correct-mute-signals).
+Utelämnar `phpcs:ignore` Detta utlöser en varning i PHPCS och bör inte skicka din CI. Detta bör ersättas med rätt exempel som visas i [Stäng av signaler](#mute-signals).
 
 ```php
 try {
