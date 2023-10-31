@@ -1,19 +1,20 @@
 ---
-title: Bästa tillvägagångssätt vid konfigurering av filerna robots.txt och sitemap.xml
-description: Lär dig hur du skickar instruktioner om din Adobe Commerce webbplats till webbcrawler.
+title: Bästa tillvägagångssätt för att konfigurera webbcrawler
+description: Lär dig hur du skickar instruktioner om din Adobe Commerce-webbplats till webbcrawler med hjälp av filerna robots.txt och sitemap.xml.
 role: Developer
 feature: Best Practices
 exl-id: f3a81bab-a47a-46ad-b334-920df98c87ab
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: e1e7ad76b1df8e920ab7f9740fd4be8dc7335954
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '599'
 ht-degree: 0%
 
 ---
 
-# Bästa tillvägagångssätt för konfigurering `robots.txt` och `sitemap.xml` filer
 
-I den här artikeln beskrivs de bästa sätten att använda `robots.txt` och `sitemap.xml` filer i Adobe Commerce, inklusive konfiguration och säkerhet. Dessa filer instruerar webrobotar (vanligtvis sökrobotar) att crawla sidor på en webbplats. Om du konfigurerar dessa filer kan webbplatsens prestanda förbättras och sökmotoroptimeringen förbättras.
+# Bästa tillvägagångssätt för att konfigurera webbcrawler
+
+I den här artikeln beskrivs de bästa sätten att använda `robots.txt` och `sitemap.xml` filer i Adobe Commerce, inklusive konfiguration och säkerhet. De här filerna instruerar webbcrawlningar (oftast robotar för sökmotorer) hur du crawlar sidor på en webbplats. Om du konfigurerar dessa filer kan webbplatsens prestanda förbättras och sökmotoroptimeringen förbättras.
 
 >[!NOTE]
 >

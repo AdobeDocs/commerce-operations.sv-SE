@@ -3,9 +3,9 @@ title: Startfas för implementering
 description: Lär dig implementera de bästa metoderna för lanseringsfasen av Adobe Commerce-projekt.
 exl-id: 2e85346c-2063-49c9-9b8d-1b5fdd3f1cef
 feature: Best Practices
-source-git-commit: 48ed42e69c5786a10de3426d581e35030412c001
+source-git-commit: e1e7ad76b1df8e920ab7f9740fd4be8dc7335954
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '168'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Följande avsnitt innehåller information om de bästa metoderna för startfasen
 | [Adobe Security Notification Service &#x200B;](https://www.adobe.com/subscription/adbeSecurityNotifications.html) | Prenumerera på säkerhetsmeddelanden i Adobe. |
 | [Förebygga och hantera säkerhetsincidenter](prevent-respond-security-incident.md) | Undvik och svara på säkerhetsincidenter för Adobe Commerce i molninfrastrukturprojekt. |
 | [Google reCAPTCHA](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/captcha/security-google-recaptcha.html) | Konfigurera Google reCAPTCHA för administratörsåtkomst och olika butiksåtgärder som initierats av registrerade kunder. |
-| [Konfigurera `robots.txt&#x200B;` fil](robots-txt.md) | Skicka instruktioner om din Adobe Commerce-webbplats till webbcrawler. |
+| [Konfigurera webbcrawler](robots-txt.md) | Skicka instruktioner om din Adobe Commerce-webbplats till webbcrawler med `robots.txt` och `sitemap.xml` filer. |
 | [Verifiera säkerhetskonfiguration](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/launch/checklist.html) | Granska checklisteobjekt innan du lanserar en Adobe Commerce-webbplats för molninfrastruktur. |
 
 ## Prestandaövervakning

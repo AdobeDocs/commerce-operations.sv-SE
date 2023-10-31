@@ -2,9 +2,9 @@
 user-guide-title: Implementera spelningsbok
 user-guide-description: Läs om strategier för att planera och implementera en framgångsrik Adobe Commerce-webbplats.
 mini-toc-levels: 3
-source-git-commit: c737a8e902c960c933e54e2521107475bb1e5a22
+source-git-commit: e1e7ad76b1df8e920ab7f9740fd4be8dc7335954
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---
@@ -108,7 +108,7 @@ ht-degree: 0%
       - [Ändra databastabeller](best-practices/development/modifying-core-and-third-party-tables.md)
    - Starta {#launch}
       - [Ökning](best-practices/launch/overview.md)
-      - [Konfigurera filen robots.txt](best-practices/launch/robots-txt.md)
+      - [Konfigurera webbcrawler](best-practices/launch/robots-txt.md)
       - [Förebygga och hantera säkerhetsincidenter](best-practices/launch/prevent-respond-security-incident.md)
    - Underhåll {#maintenance}
       - [Ökning](best-practices/maintenance/overview.md)
