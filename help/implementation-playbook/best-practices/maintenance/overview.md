@@ -3,9 +3,9 @@ title: Implementeringsunderhållsfas
 description: Lär dig mer om de effektivaste strategierna för implementering i underhållsfasen av Adobe Commerce-projekt.
 exl-id: bd052412-a41c-4dbd-9aba-ba2fcac31f2d
 feature: Best Practices
-source-git-commit: aad06c1c2def87a319426860b47b8e5ff5e96780
+source-git-commit: 00036391366625ab256a4dc682d1ecbe9e46fa23
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '468'
 ht-degree: 0%
 
 ---
@@ -40,20 +40,20 @@ Följande avsnitt innehåller information om bästa praxis för underhållsfasen
 ## Konfiguration
 
 | Bästa praxis | Beskrivning |
-|-------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
+|-------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
 | [Schemalägga administratörsuppdateringar på produktionsplatser](scheduling-admin-updates-in-production.md) | Hantera viktiga Adobe Commerce-uppdateringar för att förhindra långsamma prestanda och driftavbrott. |
 
 ## Databashantering
 
 | Bästa praxis | Beskrivning |
-|----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+|--------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
 | [Åtgärda problem med databasprestanda &#x200B;](resolve-database-performance-issues.md) | Åtgärda databasproblem som försämrar prestandan på Adobe Commerce webbplatser som körs i molninfrastrukturen. |
 | [Adobe Commerce 2.3.5 - uppgraderingskrav för MariaDB &#x200B;](commerce-235-upgrade-prerequisites-mariadb.md) | Förbered din MariaDB-databas för en uppgradering. |
 
 ## Förbättrade funktioner
 
 | Bästa praxis | Beskrivning |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
+|---------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|
 | [Personalisering](https://www.gotostage.com/channel/fca90f7960be436f9b849215d9e06026/recording/e218545a77de490fb5102eca07d0580a/watch?source=CHANNEL) | Commerce &amp; Coffee-inspelning som beskriver personaliseringsstrategier. |
 | [E-handelstrender](https://www.gotostage.com/channel/fca90f7960be436f9b849215d9e06026/recording/9a772468d7b64409a3d5dff4d67e656d/watch?source=CHANNEL) | Inspelning i Commerce &amp; Coffee som beskriver e-handelstrender. |
 | [AI-automatisering](https://www.gotostage.com/channel/fca90f7960be436f9b849215d9e06026/recording/27ae23699c2847be981a23ca098e548f/watch?source=CHANNEL) | Commerce &amp; Coffee-inspelning som beskriver personaliseringsmöjligheterna med artificiell intelligens och automatisering. |
@@ -66,7 +66,7 @@ Följande avsnitt innehåller information om bästa praxis för underhållsfasen
 | [Konfigurera &#x200B;](indexer-configuration.md) | Optimera webbplatsens prestanda genom att följa vedertagna standarder för indexerarkonfiguration. |
 | [Beställningsbehandling](order-processing-configuration.md) | Förbättra utcheckningen och beställningsprocessernas prestanda. |
 
-## Platsövervakning
+## Platsövervakning och -säkerhet
 
 | Bästa praxis | Beskrivning |
 |-------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
@@ -74,11 +74,12 @@ Följande avsnitt innehåller information om bästa praxis för underhållsfasen
 | [Klar, Ställ in, Underhåll](https://business.adobe.com/blog/basics/ready-set-maintain) | Tips för att underhålla dina Adobe Commerce-sajter för att maximera affärsvärdet och drifttiden. |
 | [Använd [!DNL Site-Wide Analysis Tool]](../../../tools/site-wide-analysis-tool/intro.md#integrations-with-other-adobe-commerce-support-tools) | Se viktiga insikter om Adobe Commerce webbplats på ett och samma ställe. |
 | [Övervakningsprestanda, diskutrymme och loggar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/performance.html) | Använd New Relic för att övervaka viktiga prestandainsikter om Adobe Commerce på molninfrastruktursajten. |
+| [Svara på säkerhetsincidenter](respond-to-security-incident.md) | Använd New Relic för att övervaka viktiga prestandainsikter om Adobe Commerce på molninfrastruktursajten. |
 
 ### Uppgraderingar
 
 | Bästa praxis | Beskrivning |
-|-------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
+|-----------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
 | [Lappa i stor skala](patching-at-scale.md) | Se hur centraliserad patchning för Adobe Commerce kan hjälpa er att hantera företagsprojekt. |
 | [Uppdatera tjänster och komponenter till den senaste &#x200B;](update-services.md) | håller din Adobe Commerce i molninfrastruktur uppdaterad. |
 | [Upgrade checklist for Adobe Commerce &#x200B;](upgrade-checklist.md) | Skapa och använd en checklista för uppgradering för att planera din Adobe Commerce uppgraderingsstrategi. |

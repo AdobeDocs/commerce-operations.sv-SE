@@ -1,20 +1,20 @@
 ---
-title: Rubriken X-Frame-Options
-description: Använd X-Frame-Options för att styra sidåtergivningen.
+title: Förhindra clickjacking-attacker
+description: Förhindra clickjacking-explosioner genom att använda rubriken "X-Frame-Options" för att styra sidåtergivningen.
 feature: Configuration, Security
 exl-id: 83cf5fd2-3eb8-4bd9-99e2-1c701dcd1382
-source-git-commit: 56a2461edea2799a9d569bd486f995b0fe5b5947
+source-git-commit: 6cc04211fedddab68087bcf2f3603ae0403862b9
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '226'
 ht-degree: 0%
 
 ---
 
-# Rubriken X-Frame-Options
+# Förhindra clickjacking-attacker
 
-För att förhindra [Klickjacking](https://owasp.org/www-community/attacks/Clickjacking) explosioner, vi har lagt till ett alternativ för att använda [X-frame-options](https://datatracker.ietf.org/doc/html/rfc7034) HTTP-begärandehuvud i begäranden till din butik.
+Förhindra [Klickjacking](https://owasp.org/www-community/attacks/Clickjacking) genom att inkludera [X-frame-options](https://datatracker.ietf.org/doc/html/rfc7034) HTTP-begärandehuvud i begäranden till din butik.
 
-The `X-Frame-Options` I kan du ange om en webbläsare ska kunna återge en sida i en `<frame>`, `<iframe>`, eller `<object>` enligt följande:
+The `X-Frame-Options` Med kan du ange om en webbläsare får återge en sida i en `<frame>`, `<iframe>`, eller `<object>` enligt följande:
 
 - `DENY`: Det går inte att visa sidan i en ram.
 - `SAMEORIGIN`: (standard) Sidan kan bara visas i en ram med samma ursprung som själva sidan.
