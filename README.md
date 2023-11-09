@@ -1,8 +1,8 @@
 ---
-source-git-commit: 8b82081057af7d134528988d3f9f7cf53f4d7525
+source-git-commit: 2727ddb18995ac2163276a0aa8573161add48971
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 5%
+source-wordcount: '760'
+ht-degree: 3%
 
 ---
 # Adobe Commerce tekniska dokumentation
@@ -54,25 +54,75 @@ Alla artiklar i den här databasen använder smaksatt GitHub-kod. Om du inte är
 
 ## Mallar
 
-The `_jekyll` -katalogen innehåller mallämnen och obligatoriska resurser.
-Mallarna som använder mallspråket Flytande finns i `_jekyll/templated` som HTML-filer.
-The `_jekyll/_data` -katalogen innehåller filer med de data som används för att återge mallarna.
+För vissa ämnen använder vi datafiler och mallar för att generera publicerat innehåll. Användningsexempel för den här metoden är:
 
-Så här återger du alla mallar:
+* Publicera stora mängder programmatiskt genererat innehåll
+* En enda källa till sanning för kunder i flera system som kräver maskinläsbara filformat, som YAML, för integrering (t.ex. Site-Wide Analysis Tool)
+
+Exempel på mallat innehåll är, men är inte begränsade till, följande:
+
+* [Referens för CLI-verktyg](https://experienceleague.adobe.com/docs/commerce-operations/reference/commerce-on-premises.html)
+* [Produkttillgänglighetstabeller](https://experienceleague.adobe.com/docs/commerce-operations/release/product-availability.html)
+* [Systemkravstabeller](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)
+
+### Generera mallat innehåll
+
+I allmänhet behöver de flesta skribenter bara lägga till en releaseversion till tabellerna med produkttillgänglighet och systemkrav. Underhåll för allt annat mallat innehåll automatiseras eller hanteras av en dedikerad teammedlem. Dessa instruktioner är avsedda för&quot;de flesta&quot; skribenter.
+
+>**OBS!**
+>
+>* För att generera mallinnehåll måste du arbeta på kommandoraden i en terminal.
+>* Du måste ha installerat Ruby för att köra återgivningsskriptet. Se [_jekyll/.ruby-version](_jekyll/.ruby-version) för den version som krävs.
+
+Här nedan finns en beskrivning av filstrukturen för mallat innehåll:
+
+* `_jekyll`—Innehåller teman och obligatoriska resurser
+* `_jekyll/_data`—Innehåller de maskinläsbara filformat som används för att återge mallar
+* `_jekyll/templated`—Innehåller HTML-baserade mallfiler som använder mallspråket Flytande
+* `help/_includes/templated`—Innehåller genererade utdata för mallinnehåll i `.md` filformat så att det kan publiceras i Experience League-ämnen; återgivningsskriptet skriver automatiskt genererade utdata i den här katalogen åt dig
+
+Så här uppdaterar du mallinnehåll:
+
+1. Öppna en datafil i textredigeraren `/jekyll/_data` katalog. Exempel:
+
+   * [Produkttillgänglighetstabeller](https://experienceleague.adobe.com/docs/commerce-operations/release/product-availability.html): `/jekyll/_data/product-availability.yml`
+   * [Systemkravstabeller](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html): `/jekyll/_data/system-requirements.yml`
+
+1. Använd den befintliga YAML-strukturen för att skapa poster.
+
+   Om du till exempel vill lägga till en version av Adobe Commerce i produkttillgänglighetstabellerna lägger du till följande i varje post i `extensions` och `services` avsnitt i `/jekyll/_data/product-availability.yml` fil (ändra versionsnummer efter behov):
+
+   ```
+   support:
+      - core: 1.2.3
+        version: 4.5.6
+   ```
 
 1. Navigera till `_jekyll` katalog.
 
-   cd_jekyll
+   ```
+   cd _jekyll
+   ```
 
-1. Kör återgivningsskriptet.
+1. Generera mallinnehåll och skriv utdata till `help/_includes/templated` katalog.
 
-```
-_scripts/render
-```
+   ```
+   rake render
+   ```
 
-> **OBS!** Du måste köra skriptet från `_jekyll` katalog.
-> **OBS!** Du måste ha installerat Ruby för att köra skriptet.
+   >**OBS!** Du måste köra skriptet från `_jekyll` katalog. Om detta är första gången du kör skriptet måste du installera Ruby-beroenden först med `bundle install` -kommando.
 
-Skriptet kör återgivning och skriver återgivna mallar till `help/_includes/templated` katalog.
+1. Verifiera att `help/_includes/templated` filer ändrades.
+
+   ```
+   git status
+   ```
+
+   Utdata bör se ut ungefär så här:
+
+   ```
+   modified:   _data/product-availability.yml
+   modified:   ../help/_includes/templated/product-availability-extensions.md
+   ```
 
 Läs Jekyll-dokumentationen för mer information om [Datafiler](https://jekyllrb.com/docs/datafiles), [Flytande filter](https://jekyllrb.com/docs/liquid/filters/)och andra funktioner.
