@@ -2,9 +2,9 @@
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: 6e82738ab9b3ea106b7987fac2f6f4a026ddc4f0
+source-git-commit: b1c258b33898ec07a0d0d805843bea1b3e9de478
 workflow-type: tm+mt
-source-wordcount: '15145'
+source-wordcount: '15346'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,18 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som skapats av gemenskapen för Magento Open Source, se [versionsinformation](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.41 {#v1-1-41}
+
+* **ACSD-54376** (för Adobe Commerce >=2.4.2 &lt;2.4.7) - Korrigerar problemet som uppstår i kundvagnen när en produkt tas bort från den delade katalogen efter att den redan har lagts till i kundvagnen.
+* **ACSD-53722** (för Adobe Commerce >=2.4.4 &lt;2.4.7) - Korrigerar problemet där priset för de paketerade produktalternativen ändras till $0 när schemalagda uppdateringar för olika omfång aktiveras.
+* **ACSD-53643** (för Adobe Commerce >=2.4.3 &lt;2.4.7) - Korrigerar problemet där ordern har ett felaktigt totalt värde när en inköpsorder med inaktiverade produkter eller produkter som inte finns i lager placeras. Det åtgärdas genom att dölja *[!UICONTROL Place Order]* för sådana inköpsorder.
+* **ACSD-54067** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.7) - Korrigerar problemet där en produktvideo inte spelas upp på en mobil enhet.
+* **ACSD-55414** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.6) - Förbättrar prestanda när MariaDB försöker konvertera EAV-entitet_id från sträng till heltal.
+* **ACSD-51819** (för Adobe Commerce >=2.4.4 &lt;2.4.4-p4) - Korrigerar problemet där flera order kan placeras med samma offert-ID.
+* **ACSD-53118** (för Adobe Commerce >=2.4.0 &lt;2.4.7) - Korrigerar problemet där *[!UICONTROL Cart Price Rule]* används med kupongkod medan produkten har ett tomt attribut.
+* **ACSD-54324** (för Adobe Commerce >=2.4.5 &lt;2.4.7) - Korrigerar problemet där begäran GraphQL Requisition_lists inte tar hänsyn till sidnumreringsinställningar och returnerar alla resultat.
+* Uppdaterade patchar: MDVA-42855-v2
 
 ## v1.1.40 {#v1-1-40}
 
