@@ -4,7 +4,7 @@ description: Lär dig hur du sammanfogar och minimerar CSS- och JavaScript-filer
 role: Developer
 feature: Best Practices
 exl-id: ff0bc407-b563-418b-9d6a-7c1dc8f235df
-source-git-commit: 409bd4795704b9daec7773459e5a1f9f42ef5128
+source-git-commit: 2662ced484fb42bf2d32609e4e82364c1e47c8f0
 workflow-type: tm+mt
 source-wordcount: '407'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Den tid det tar att läsa in CSS- och JavaScript-filer (JS) kan minskas genom at
 >
 >Adobe Commerce i molninfrastruktur körs alltid i produktionsläget och det går inte att ställa in det på något annat sätt. Därför måste du använda kommandoradsmetoden för att aktivera sammanfogning, miniatyr och paketering.
 
-Sammanfoga inte eller paketera filer om HTTP2 används i distributionen. HTTP2 hämtar statiska filer asynkront. Webbläsare måste hämta en hel sammanfogad fil innan filinnehållet kan bearbetas.
+Sammanfoga inte eller paketera filer om HTTP/2 används i distributionen. HTTP/2 hämtar statiska filer asynkront. Webbläsare måste hämta en hel sammanfogad fil innan filinnehållet kan bearbetas.
 
 ### Använda Admin
 

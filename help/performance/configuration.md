@@ -3,7 +3,7 @@ title: Bästa praxis för konfiguration
 description: Optimera svarstiden för driftsättningen av Adobe Commerce eller Magento Open Source med hjälp av dessa metodtips.
 feature: Best Practices, Configuration
 exl-id: 4cb0f5e7-49d5-4343-a8c7-b8e351170f91
-source-git-commit: 11ccc59230a7a0d1768c043c39df43c7df031efd
+source-git-commit: 3c53efdaedea075e288d262e247bc9c42b5a2432
 workflow-type: tm+mt
 source-wordcount: '1448'
 ht-degree: 0%
@@ -106,7 +106,7 @@ När du aktiverar **[!UICONTROL Enable [!DNL JavaScript] Bundling]** kan du till
 ### Pakettips
 
 * Vi rekommenderar att du använder verktyg från tredje part för miniatyr- och paketering (som [r.js](https://requirejs.org/)). [!DNL Commerce] Inbyggda mekanismer är inte optimala och levereras som reservalternativ.
-* Att aktivera HTTP2-protokollet kan vara ett bra alternativ till att använda JS-paketering. Protokollet ger i stort sett samma fördelar.
+* Att aktivera HTTP/2-protokollet kan vara ett bra alternativ till att använda JS-paketering. Protokollet ger i stort sett samma fördelar.
 * Vi rekommenderar inte att du använder föråldrade inställningar som att sammanfoga JS- och CSS-filer, eftersom de bara är utformade för synkront inläst JS i sidans HEAD-avsnitt. Om du använder den här tekniken kan paketeringen och requireJS-logiken fungera felaktigt.
 
 ## Validering av kundsegment
