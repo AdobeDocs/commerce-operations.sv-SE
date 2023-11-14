@@ -4,9 +4,9 @@ description: Lär dig hur du använder anpassade verktyg för att komma åt och 
 hide: true
 hidefromtoc: true
 exl-id: 5080e03b-0a83-405c-a232-b93311e284a3
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 40d850add2ef8c51e9192758135768306b163780
 workflow-type: tm+mt
-source-wordcount: '341'
+source-wordcount: '338'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 <!-- TODO: Remove hide metadata when the library has been integrated with Commerce. -->
 
-The [Adobe Privacy JavaScript Library](https://developer.adobe.com/apis/experienceplatform/gdpr/services/allservices.html) är en uppsättning verktyg som hjälper dig att skapa en process för att komma åt och ta bort privata data.
+The [Adobe Privacy JavaScript Library](https://experienceleague.adobe.com/docs/experience-platform/privacy/js-library.html) är en uppsättning verktyg som hjälper dig att skapa en process för att komma åt och ta bort privata data.
 
 Adobe Commerce och Magento Open Source dataspårningstjänster kan lagra privat information som är tillämplig på sekretessregler som [Allmänna dataskyddsförordningen (GDPR)](gdpr.md) och [California Consumer Privacy Act (CCPA)](ccpa.md).
 
@@ -43,7 +43,7 @@ JS-biblioteket för Adobe Privacy innehåller olika funktioner för att hantera 
 `retrieveThenRemoveIdentities()`
 : Den här funktionen liknar `removeIdentities()` på så sätt att den hämtar en array med identiteter och tar bort dem från webbläsaren.
 
-Mer information och exempel på hur du använder dessa funktioner finns i [officiell biblioteksdokumentation](https://developer.adobe.com/apis/experienceplatform/gdpr/services/allservices.html).
+Mer information och exempel på hur du använder dessa funktioner finns i [officiell biblioteksdokumentation](https://experienceleague.adobe.com/docs/experience-platform/privacy/js-library.html).
 
 ### Initiering
 
@@ -54,4 +54,4 @@ var adobePrivacy = new AdobePrivacy({});
 ```
 
 Konstruktorn accepterar ett konfigurationsobjekt med parametrar under instansieringen.
-Se [officiell biblioteksdokumentation](https://developer.adobe.com/apis/experienceplatform/gdpr/services/allservices.html) för en lista över dessa konfigurationsparametrar.
+Se [officiell biblioteksdokumentation](https://experienceleague.adobe.com/docs/experience-platform/privacy/js-library.html) för en lista över dessa konfigurationsparametrar.
