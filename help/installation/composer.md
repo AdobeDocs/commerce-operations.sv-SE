@@ -2,9 +2,9 @@
 title: Snabbstart av lokal installation
 description: Följ de här stegen för att installera Adobe Commerce eller Magento Open Source på en infrastruktur som du äger.
 exl-id: a93476e8-2b30-461a-91df-e73eb1a14d3c
-source-git-commit: 3d9b7c5352f91308dd315a7195ee2cb1c4b191ee
+source-git-commit: 3c6527e5936438d6f1f52b32082cc7dde5f87f22
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '993'
 ht-degree: 0%
 
 ---
@@ -90,6 +90,10 @@ Så här hämtar du metapaketet för Adobe Commerce eller Magento Open Source:
    ```
 
    Ange dina autentiseringsnycklar när du uppmanas att göra det. Offentliga och privata nycklar skapas och konfigureras i [Commerce Marketplace](https://commercemarketplace.adobe.com/customer/account/login/).
+
+   >[!NOTE]
+   >
+   > När du använder en disposition `auth.json` fil- eller miljövariabel uppmanas du inte att ange dina autentiseringsnycklar.
 
    Om du stöter på fel, till exempel `Could not find package...` eller `...no matching package found`kontrollerar du att det inte finns några stavfel i kommandot. Om du fortfarande råkar ut för fel kanske du inte har behörighet att ladda ned Adobe Commerce. Kontakt [Adobe Commerce Support](https://support.magento.com/hc/en-us) om du behöver hjälp.
 
