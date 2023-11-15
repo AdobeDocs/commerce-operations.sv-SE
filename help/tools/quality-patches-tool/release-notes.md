@@ -2,9 +2,9 @@
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: b1c258b33898ec07a0d0d805843bea1b3e9de478
+source-git-commit: 704c3e2934c74ee4b06499bbfc4cb68b0a007a1e
 workflow-type: tm+mt
-source-wordcount: '15346'
+source-wordcount: '15669'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,23 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som skapats av gemenskapen för Magento Open Source, se [versionsinformation](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.42 {#v1-1-42}
+
+* **ACSD-53658** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.7) - Korrigerar problemet där *[!UICONTROL Recently Viewed]* produktdata uppdateras inte korrekt i butiksvyn.
+* **ACSD-54626** (för Adobe Commerce >=2.4.6 &lt;2.4.7) - Korrigerar problemet där du inte kan skapa en ny inköpsorderregel (`createPurchaseOrderApprovalRule`) med `NUMBER_OF_SKUS` attribut via [!DNL GraphQL].
+* **ACSD-53845** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.7) - Korrigerar [!DNL MySQL] timeout för anslutning när `consumer max_messages` = 0.
+* **ACSD-54890** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.7) - Korrigerar problemet där `aggregate_sales_report_bestsellers_data` orsaker [!DNL MySQL] fel på grund av `/tmp` diskutrymmet är slut.
+* **ACSD-55112** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.7) - Korrigerar problemet där *[!UICONTROL Submit review]* kan klickas flera gånger utan [!DNL Google reCAPTCHA v3] validering.
+* **ACSD-54264** (för Adobe Commerce >=2.4.4-p5 &lt;2.4.5 || >=2.4.5-p4 &lt;2.4.6 || >=2.4.6-p2 &lt;2.4.7) - Korrigerar felet där felmeddelandet *&quot;Du kan inte uppdatera det begärda attributet. Rad-ID: store_id&quot;* visas när en kund försöker checka ut med en överlåtbar offert från en annan butiksvy.
+* **ACSD-54418** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.7) - Korrigerar problemet där ett fast rabattbelopp felaktigt tillämpas på varje underordnad produkt i det dynamiskt prissatta paketet.
+* **ACSD-55238** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.7) - korrigeringar som sparar den tomma produkten *[!UICONTROL Meta Description]*.
+* **ACSD-54966** (för Adobe Commerce och Magento Open Source >=2.4.5 &lt;2.4.7) - Korrigerar problemet där en kupongkod med begränsad användning per kund inte kan återanvändas om föregående order misslyckas.
+* **ACSD-54060** (för Adobe Commerce och Magento Open Source >=2.4.3 &lt;2.4.7) - Korrigerar problemet där en begränsad administratör inte kan spara en produkt om den är underordnad en annan produkt som tilldelats ett annat omfång.
+* **ACSD-48910** (för Adobe Commerce och Magento Open Source >=2.4.5 &lt;2.4.6) - Korrigerade problemet där en paketprodukt som tilldelats flera källor går ut ur lagret efter att en order har fakturerats och skickats, även om den fortfarande har en kvantitet som inte är noll.
+* **ACSD-55381** (för Adobe Commerce >=2.4.2 &lt;2.4.7) - Korrigerar ett internt serverfel vid fråga `configurable_product_option_uid` och `configurable_product_option_value_uid` fält från en [!DNL B2B] *[!UICONTROL Requisition list]* via [!DNL GraphQL].
+* **ACSD-55628** (för Adobe Commerce >=2.4.4-p2 &lt; 2.4.5 || >=2.4.5-p1 &lt; 2.4.6) - Korrigerar överföringen av en fil till företagsregistreringsformuläret och ersätter en fil för ett kundattribut i butiken.
+* Uppdaterade patchar: ACSD-51240, ACSD-51890, ACSD-53098
 
 ## v1.1.41 {#v1-1-41}
 
