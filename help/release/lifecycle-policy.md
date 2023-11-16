@@ -2,22 +2,25 @@
 title: Policy för programvarans livscykel
 description: Lär dig om viktiga datum för när programvarusupporten för Adobe Commerce upphör.
 exl-id: 9ee4ecc8-d893-412a-a605-5a8606a1b9a9
-source-git-commit: e8222bd06b917e21513ede99d46617107dd2d847
+source-git-commit: bb90d7903eafe01b42d8c056db771769f9e4e752
 workflow-type: tm+mt
-source-wordcount: '326'
-ht-degree: 16%
+source-wordcount: '383'
+ht-degree: 12%
 
 ---
+
 
 # Adobe Commerce livscykelpolicy
 
 För Adobe Commerce 2.4.4 och senare versioner:
 
-- För att effektivisera vår livscykelpolicy och stödja Adobe Commerce-kunders verksamhetskritiska behov utökar vi vårt supportfönster till tre år från General Availability (GA)-datumet för Adobe Commerce 2.4.4 och senare. Adobe tillhandahåller kvalitetskorrigeringar till version 2.4.4 och senare för en treårig supportperiod. Kunderna kan få tillgång till kvalitetskorrigeringar genom att kontakta [Adobe Commerce Support](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html) eller genom självbetjäningen [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) om de fortfarande har rätt till kvalitetssupport. Se tabellen nedan för mer information om supportdatum för Adobe Commerce releaserader.
+- För att effektivisera Adobe Commerce livscykelpolicy och stödja kundernas verksamhetskritiska behov har Adobe utökat supportfönstret till tre år från datumet General Availability (GA) för Adobe Commerce 2.4.4 och senare. Adobe tillhandahåller kvalitetskorrigeringar till version 2.4.4 och senare för en treårig supportperiod. Kunderna kan få tillgång till kvalitetskorrigeringar genom att kontakta [Adobe Commerce Support](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html) eller genom självbetjäningen [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) om de fortfarande har rätt till kvalitetssupport. Se tabellen nedan för mer information om supportdatum för Adobe Commerce releaserader.
 
 - Adobe tillhandahåller säkerhetskorrigeringar via en säkerhetsuppdatering för den treåriga supportperioden.
 
 - För allvarliga säkerhetsproblem, som noll-dagars säkerhetsluckor, tillhandahåller Adobe [snabbkorrigeringar](https://support.magento.com/hc/en-us/sections/360003869892-Known-issues-patches-attached-) för alla kunder som har en version som stöds, även om de inte har den senaste patchen eller säkerhetsuppdateringen. Det är viktigt att komma ihåg att en programfix inte är en&quot;catch-all&quot; och inte åtgärdar alla säkerhetsproblem som skulle ha åtgärdats genom en uppgradering till den senaste versionen.
+
+- Adobe tillhandahåller inte säkerhets- och kvalitetskorrigeringar för tredjepartstjänster och programvaruberoenden, som PHP. Det är ditt ansvar att upprätthålla säkerheten och kompatibiliteten (till exempel PCI, ISO, SOC) för tredjepartsprogramvaruberoenden. Adobe rekommenderar att du så snart som möjligt uppdaterar dina miljöer så att du kan använda den senaste versionen av PHP som stöds av Adobe Commerce. Använd inte en version av PHP som inte längre stöds.
 
 ## Programvarusupport upphör
 
@@ -51,7 +54,6 @@ För Adobe Commerce 2.4.4 och senare versioner:
 <tbody>
   <tr>
     <td>Handel</td>
-    <td>PHP</td>
     <td>Q1</td>
     <td>Q2</td>
     <td>Q3</td>
@@ -79,40 +81,24 @@ För Adobe Commerce 2.4.4 och senare versioner:
   </tr>
   <tr>
     <td>2.4.4</td>
-    <td>8.1</td>
     <td></td>
     <td colspan="13" style="background-color:#67ac68;"></td>
     <td colspan="10"></td>
   </tr>
   <tr>
     <td>2.4.5</td>
-    <td>8.1</td>
     <td colspan="2"></td>
     <td colspan="13" style="background-color:#67ac68;"></td>
     <td colspan="9"></td>
   </tr>
   <tr>
-    <td rowspan="2">2.4.6</td>
-    <td>8.1</td>
+    <td>2.4.6</td>
     <td colspan="4"></td>
     <td colspan="13" style="background-color:#67ac68;"></td>
     <td colspan="8"></td>
   </tr>
   <tr>
-    <td>8.2</td>
-    <td colspan="4"></td>
-    <td colspan="13" style="background-color:#67ac68;"></td>
-    <td colspan="8"></td>
-  </tr>
-  <tr>
-    <td rowspan="2">2.4.7</td>
-    <td>8.2</td>
-    <td colspan="9"></td>
-    <td colspan="13" style="background-color:#67ac68;"></td>
-    <td colspan="2"></td>
-  </tr>
-  <tr>
-    <td>8.3</td>
+    <td>2.4.7</td>
     <td colspan="9"></td>
     <td colspan="13" style="background-color:#67ac68;"></td>
     <td colspan="2"></td>
@@ -126,7 +112,7 @@ För Adobe Commerce 2.4.4 och senare versioner:
  <tbody>
   <tr>
    <td style="background-color:#67ac68;">Stöds</td>
-   <td>Säkerhets- och kvalitetspatchar för Adobe Commerce och PHP.</td>
+   <td>Säkerhets- och kvalitetspatchar för Adobe Commerce</td>
   </tr>
   <!-- <tr>
    <td style="background-color:#cd3c3c;">End of software support</td>
