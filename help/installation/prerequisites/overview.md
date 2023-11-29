@@ -2,9 +2,9 @@
 title: Lokala installationskrav
 description: Läs mer om vilka programvaruberoenden som krävs för lokala installationer av Adobe Commerce och Magento Open Source.
 exl-id: dd4694e7-5437-440c-bb67-804ae36149de
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 9fe0a27346554bca3cb635b2e7ecf175adcec54a
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '335'
 ht-degree: 1%
 
 ---
@@ -66,9 +66,11 @@ Information om hur du installerar eller uppgraderar Apache finns i [Apache](web-
 
 ### PHP
 
-Se [systemkrav](../system-requirements.md) för de versioner av PHP och [PHP] för PHP-krav.
+Se [systemkrav](../system-requirements.md) för de versioner av PHP och [PHP](../system-requirements.md#php-settings) för PHP-krav.
 
 ### MySQL
+
+Kontrollera att du har en kompatibel version av MySQL för den version av Adobe Commerce eller Magento Open Source som du installerar. Se [Systemkrav](../system-requirements.md) för de versioner som stöds.
 
 ```bash
 mysql -u <database root user or database owner name> -p
@@ -80,7 +82,7 @@ Exempel:
 mysql -u magento -p
 ```
 
-Kontrollera att du har rätt version av MySQL för den version av Adobe Commerce eller Magento Open Source som du installerar ([här för versioner som stöds](../system-requirements.md). Följande resultat anger vilken version du kör.)
+Följande resultat anger vilken version du kör.
 
 ```terminal
 Welcome to the MySQL monitor.  Commands end with ; or \g.
