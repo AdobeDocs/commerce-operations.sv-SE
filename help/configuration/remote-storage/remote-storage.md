@@ -3,9 +3,9 @@ title: Konfigurera fjärrlagring
 description: Lär dig hur du konfigurerar modulen Fjärrlagring för det lokala handelsprogrammet.
 feature: Configuration, Storage
 exl-id: 0428f889-46b0-44c9-8bd9-98c1be797011
-source-git-commit: af45ac46afffeef5cd613628b2a98864fd7da69b
+source-git-commit: 2a45fe77d5a6fac089ae2c55d0ad047064dd07b0
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '526'
 ht-degree: 0%
 
 ---
@@ -91,7 +91,7 @@ När du har aktiverat fjärrlagring för ett specifikt kort kan du använda CLI 
 
 >[!INFO]
 >
->Synkroniseringskommandot migrerar bara filer i `pub/media` katalog, _not_ import-/exportfilerna i `var` katalog. Se [Schemalagd import/export][import-export] i _Handbok för Commerce 2.4_.
+>Synkroniseringskommandot migrerar bara filer i `pub/media` katalog, _not_ import-/exportfilerna i `var` katalog. Se [Schemalagd import/export](https://experienceleague.adobe.com/docs/commerce-admin/systems/data-transfer/data-scheduled-import-export.html) i _Handbok för Commerce 2.4_.
 
 <!-- link definitions -->
 

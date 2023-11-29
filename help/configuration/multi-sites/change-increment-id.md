@@ -2,9 +2,9 @@
 title: Ändra öknings-ID
 description: Ändra ID för ökning för en Commerce-databasenhet.
 exl-id: 039fc34c-d9cf-42f4-af5d-16a26a3e8171
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 2a45fe77d5a6fac089ae2c55d0ad047064dd07b0
 workflow-type: tm+mt
-source-wordcount: '384'
+source-wordcount: '380'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Du kan behöva ändra ID:t för ökning för nya DB-entiteter i följande fall:
 
 >[!INFO]
 >
->Du kan också åtgärda problemet med betalningsgateway för PayPal genom att tillåta flera betalningar per faktura-ID i PayPals Inställningar för betalningsmottagning. Se [PayPal-gateway avvisade begäran - dubblettfakturautleverans] i _Knowledge Base_.
+>Du kan också åtgärda problemet med betalningsgateway för PayPal genom att tillåta flera betalningar per faktura-ID i PayPals Inställningar för betalningsmottagning. Se [PayPal-gateway avvisade begäran - dubblettfakturautleverans](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/payments/paypal-gateway-rejected-request-duplicate-invoice-issue.html) i _Knowledge Base_.
 
 ## Krav på steg
 
@@ -55,7 +55,7 @@ ALTER TABLE sequence_{entity_type}_{store_id} AUTO_INCREMENT = {new_increment_va
 
 >[!INFO]
 >
-Viktigt: Det nya ökningsvärdet måste vara större än det aktuella.
+>Viktigt: Det nya ökningsvärdet måste vara större än det aktuella.
 
 När följande fråga har körts:
 
@@ -74,6 +74,6 @@ Innan du kör `ALTER TABLE` fråga om en produktionsmiljö i Adobe Commerce om m
 
 <!-- Link Definitions -->
 
-[PayPal-gateway avvisade begäran - dubblettfakturautleverans]: https://support.magento.com/hc/en-us/articles/115002457473
+[PayPal gateway rejected request - duplicate invoice issue]: https://support.magento.com/hc/en-us/articles/115002457473
 [Skapa en DB-säkerhetskopia]: https://support.magento.com/hc/en-us/articles/360003254334
 [alla versioner som stöds]
