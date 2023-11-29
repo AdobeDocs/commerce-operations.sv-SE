@@ -2,9 +2,9 @@
 title: Hantera cachen
 description: Hantera cachetyper och visa cachestatus.
 exl-id: bbd76c00-727b-412e-a8e5-1e013a83a29a
-source-git-commit: 9476a8ee2ce49e635e17fbb25c74656ba30bf930
+source-git-commit: 604e2a1461e2cbbcc498dfed6018ba640efe8cde
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '941'
 ht-degree: 0%
 
 ---
@@ -34,6 +34,7 @@ Commerce 2 har följande cachetyper:
 | Konfiguration av webbtjänster | config_webservice | Cachelagra webb-API-strukturen. |
 | Kundmeddelande | customer_notification | Tillfälliga meddelanden som visas i användargränssnittet. |
 | Administratörsgränssnitt, SDK-cache | admin_ui_sdk | Hantera administratörsanpassningar som lagts till med [Adobe Commerce Admin UI SDK](https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/). |
+| Webhooks-svarscache | webhooks_response | Cachelagrar svar på [webkrok-förfrågningar](https://developer.adobe.com/commerce/extensibility/webhooks/). |
 
 ## Visa cachestatus
 
