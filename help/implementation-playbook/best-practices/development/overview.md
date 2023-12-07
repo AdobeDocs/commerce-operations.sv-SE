@@ -4,9 +4,9 @@ description: Lär dig mer om de effektivaste strategierna för implementering i 
 exl-id: 499c16df-0e4d-4950-8169-96356bdff1a7
 feature: Best Practices
 role: Developer
-source-git-commit: 291c3f5ea3c58678c502d34c2baee71519a5c6dc
+source-git-commit: ce386611834c4199e34b5d95ce76254957821f46
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '349'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ Följande avsnitt innehåller information om bästa praxis för utvecklingsfasen
 ## Filoptimering
 
 | Bästa praxis | Beskrivning |
-|-----------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
+|-----------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | [Ändra storlek på katalogbild](catalog-image-resizing.md) | Tillhandahåller vägledning om storleksändring av bilder innan en butik går till produktion för att säkerställa optimala prestanda |
 | [CSS och JS](optimize-css-js-files.md) | Sammanfoga och minimera CSS- och JavaScript-filer (JS) från Admin eller kommandoraden |
 | [Bilder](image-optimization.md) | Optimera bilder och använd snabbt för att optimera svarstiden |
@@ -62,10 +62,11 @@ Följande avsnitt innehåller information om bästa praxis för utvecklingsfasen
 ## PHP-utveckling
 
 | Bästa praxis | Beskrivning |
-|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+|-----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Undantagshantering](exception-handling.md) | Beskriver rekommenderade metoder för att logga undantag |
 | [Tillägg](https://developer.adobe.com/commerce/php/best-practices/){target="_blank"} | Beskriver utvecklingsmönster för att säkerställa kompatibilitet mellan ditt tillägg, framtida versioner av Adobe Commerce och andra anpassade tillägg |
 | [Privata innehållsblock](private-content-block-configuration.md) | Konfigurera privata innehållsblock för att optimera prestanda för butiker |
+| [Ändra PHP-kod från kärnan och tredje part](modifying-core-and-third-party-code.md) | Ändra funktionaliteten, resultatet eller indata för kod som du inte har skapat eller inte har direkt kontroll över |
 
 ## Plattform och tjänster
 
