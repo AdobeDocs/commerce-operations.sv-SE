@@ -1,7 +1,7 @@
 ---
-source-git-commit: 20add0a748e8df38dff48a779c63e1177d2a022d
+source-git-commit: 8b9e4de2799532e4654fce63d856c2d301025f09
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '273'
 ht-degree: 0%
 
 ---
@@ -58,3 +58,7 @@ ht-degree: 0%
 >[!NOTE]
 >
 >Även om koden för förbättringar och felkorrigeringar som beskrivs i den här versionsinformationen medföljer Adobe Commerce, kommer flera av dessa projekt (till exempel B2B, Page Builder och Progressive Web Application (PWA) Studio) också att släppas oberoende av varandra. Felkorrigeringar för dessa projekt beskrivs i den separata, projektspecifika versionsinformation som finns i dokumentationen för varje projekt. Se [produktversionsöversikt](/help/release/release-notes/overview.md).
+
+## PHP-processkontroll {#php-process-control}
+
+Innan du kan köra indexerare i parallellt läge måste du aktivera stöd för processkontroll (`pcntl`) i PHP Se [Installation](https://www.php.net/manual/en/pcntl.installation.php) i PHP-dokumentationen.

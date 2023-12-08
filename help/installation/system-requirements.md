@@ -2,9 +2,9 @@
 title: Systemkrav
 description: Använd den här referensen för att identifiera nödvändiga programvaruberoenden som har testats med Adobe Commerce och Magento Open Source.
 exl-id: 008c9edc-7d72-403c-847f-0e3b77bbb197
-source-git-commit: ad715d1581442fa447e394d88d496ec52519a1c3
+source-git-commit: 8b9e4de2799532e4654fce63d856c2d301025f09
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '788'
 ht-degree: 0%
 
 ---
@@ -63,6 +63,10 @@ Du bör verifiera att [PHP OPcache](https://www.php.net/manual/en/intro.opcache.
 Kontrollera att PHP-cachen är installerad om du vill se en premesis. Mer information finns i [PHP-inställningar](prerequisites/php-settings.md). Du kan även få specifik vägledning om prestandainställningar i programvarurekommendationerna för [PHP-inställningar](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/software.html#php-settings) i _Bästa praxis för prestanda_ guide.
 
 Om du måste installera OPcache separat, se [PHP OPcache-dokumentation](https://www.php.net/manual/en/opcache.setup.php).
+
+### PHP-processkontroll
+
+{{php-process-control}}
 
 ### PHPUnit
 

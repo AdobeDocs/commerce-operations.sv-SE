@@ -3,9 +3,9 @@ title: PHP-inställningar
 description: Följ de här stegen för att installera nödvändiga PHP-tillägg och konfigurera PHP-inställningar för lokala installationer av Adobe Commerce och Magento Open Source.
 feature: Install, Configuration
 exl-id: 84064442-7053-42ab-a8a6-9b313e5efc78
-source-git-commit: 9fe0a27346554bca3cb635b2e7ecf175adcec54a
+source-git-commit: 87e3109518fc06c655a3fc9446e2ecd648775da1
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '771'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,10 @@ I det här avsnittet beskrivs hur du ställer in obligatoriska PHP-alternativ.
 >För den senaste versionen av Adobe Commerce och Magento Open Source krävs minst PHP 8.1. Se [systemkrav](../system-requirements.md) för alla PHP-versioner som stöds.
 
 Mer information om konfigurering av molnet finns i [PHP-inställningar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/php-settings.html) i _Commerce on Cloud Infrastructure_ guide.
+
+## PHP-processkontroll
+
+{{php-process-control}}
 
 ## Kontrollera att PHP är installerat
 

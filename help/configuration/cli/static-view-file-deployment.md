@@ -2,9 +2,9 @@
 title: Distribuera statiska vyfiler
 description: Lär dig skriva statiska filer i Commerce-filsystemet i produktionsläge.
 exl-id: 51954738-b999-4982-954b-70f7a70c5a17
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 0a72bc492dfec0a9014a518282a97ab21e59f96d
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1124'
 ht-degree: 0%
 
 ---
@@ -54,13 +54,13 @@ I följande tabell förklaras det här kommandots parametrar och värden.
 | Alternativ | Beskrivning | Obligatoriskt? |
 | ------ | ----------- | --------- |
 | `<languages>` | Blankstegsavgränsad lista med [ISO-639](https://www.loc.gov/standards/iso639-2/php/code_list.php) språkkoder som statiska vyfiler ska skrivas ut för. (Standard är `en_US`.)<br>Hitta listan genom att köra: `bin/magento info:language:list` | Nej |
-| `--language (-l)` | Generera filer endast för de angivna språken. Standardinställningen, utan att något alternativ har angetts, är att generera filer för alla ISO-639-språkkoder. Du kan ange namnet på en språkkod i taget. Standardvärdet är **alla**.<br>Exempel: `--language en_US --language es_ES` | Nej |
+| `--language (-l)` | Generera filer endast för de angivna språken. Standardinställningen, utan att något alternativ har angetts, är att generera filer för alla ISO-639-språkkoder. Du kan ange namnet på en språkkod i taget. Standardvärdet är **alla**.<br>Till exempel: `--language en_US --language es_ES` | Nej |
 | `--exclude-language` | Generera filer för angivna språkkoder. Standardinställningen, utan något alternativ angivet, är att ingenting ska uteslutas. Du kan ange namnet på en språkkod eller en kommaavgränsad lista med språkkoder. Standardvärdet är **ingen**. | Nej |
-| `--theme <theme>` | Teman där statiskt innehåll ska distribueras. Standardvärdet är **alla**.<br>Exempel: `--theme Magento/blank --theme Magento/luma` | Nej |
-| `--exclude-theme <theme>` | Teman som ska uteslutas vid distribution av statiskt innehåll. Standardvärdet är **ingen**.<br>Exempel, `--exclude-theme Magento/blank` | Nej |
-| `--area (-a)` | Generera filer endast för de angivna områdena. Standardinställningen, utan att något alternativ har angetts, är att generera filer för alla områden. Giltiga värden är `adminhtml` och `frontend`. Standardvärdet är **alla**.<br>Exempel: `--area adminhtml` | Nej |
+| `--theme <theme>` | Teman där statiskt innehåll ska distribueras. Standardvärdet är **alla**.<br>Till exempel: `--theme Magento/blank --theme Magento/luma` | Nej |
+| `--exclude-theme <theme>` | Teman som ska uteslutas vid distribution av statiskt innehåll. Standardvärdet är **ingen**.<br>Till exempel: `--exclude-theme Magento/blank` | Nej |
+| `--area (-a)` | Generera filer endast för de angivna områdena. Standardinställningen, utan att något alternativ har angetts, är att generera filer för alla områden. Giltiga värden är `adminhtml` och `frontend`. Standardvärdet är **alla**.<br>Till exempel: `--area adminhtml` | Nej |
 | `--exclude-area` | Generera inga filer för de angivna områdena. Standardinställningen, utan något alternativ angivet, är att ingenting ska uteslutas. Standardvärdet är **ingen**. | Nej |
-| `--jobs (-j)` | Aktivera parallell bearbetning med angivet antal jobb. Standardvärdet är 0 (kör inte i parallella processer). Standardvärdet är **0**. | Nej |
+| `--jobs (-j)` | Aktivera [parallell bearbetning](manage-indexers.md#reindexing-in-parallel-mode) med angivet antal jobb. Standardvärdet är 0 (kör inte i parallella processer). Standardvärdet är **0**. | Nej |
 | `--symlink-locale` | Skapa länkar för filerna för de språkinställningarna som skickas för distribution, men som inte har några anpassningar. | Nej |
 | `--content-version=CONTENT-VERSION` | Anpassad version av statiskt innehåll kan användas om distributionen körs på flera noder för att säkerställa att den statiska innehållsversionen är identisk och att cachelagring fungerar som den ska. | Nej |
 | `--no-javascript` | Distribuera inte JavaScript-filer | Nej |
