@@ -2,9 +2,9 @@
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: 704c3e2934c74ee4b06499bbfc4cb68b0a007a1e
+source-git-commit: 3364434c37935285214451a7d242ae38815f3453
 workflow-type: tm+mt
-source-wordcount: '15669'
+source-wordcount: '19210'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,24 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som skapats av gemenskapen för Magento Open Source, se [versionsinformation](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.43 {#v1-1-43}
+
+* **ACSD-54972** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.7) - Korrigerar problemet där URL:en för den kanoniska kategorin inte uppdateras efter att kategorins URL har ändrats.
+* **ACSD-53636** (för Adobe Commerce och Magento Open Source >=2.4.3 &lt;2.4.5) - Korrigerar problemet där normalpriset inte visas på produktlistsidor för konfigurerbara produkter som har underordnade produkter med specialpriser.
+* **ACSD-54885** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.7) - Korrigerar problemet med utcheckning av flera adresser när administratörsanvändaren använder *Logga in som kund* funktionalitet.
+* **ACSD-55610** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.7) - Korrigerar problemet där en delvis annullerad order har ett felaktigt rabattbelopp.
+* **ACSD-55334** (för Adobe Commerce och Magento Open Source >=2.4.3 &lt;2.4.7) - Korrigerar översättningar för etiketter via översättningsordlistor i GraphQL-svar.
+* **ACSD-54739** (för Adobe Commerce >=2.4.5 &lt;2.4.7) - Korrigerar problemet där produktStock-statusvillkoret inte tillämpas för relaterade produktregler.
+* **ACSD-53925** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.7) - Korrigerar problemet där administratören inte kan spara CMS-blocket med produktkarusellen när `catalog_product_price` dimensions-mode är inställt på *webbplats*.
+* **ACSD-52714** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.7) - Korrigerar problemet där datumfiltret inte fungerar i administratörsrutnätet när datumformatet är inställt på *Y-m-d*.
+* **ACSD-55055** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.7) - Förbättrar prestanda för inläsning av produktattribut i kundvagnsregler i kundvagnen.
+* **ACSD-53790** (för Adobe Commerce >=2.4.6 &lt;2.4.7) - Korrigerar problemet där flera RMA:er för en enskild produkt kan skapas via REST API.
+* **ACSD-56090** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.5) - Korrigerar problemet där GraphQL-begäran svarar med alla butiksdata i stället för de specifikt begärda lagringsdata.
+* **ACSD-54983** (för Adobe Commerce >=2.4.2 &lt;2.4.7) - Korrigerar problemet där det inte går att hämta företagets användar-UID med GraphQL-begäran när användarstatusen är inställd på *[!UICONTROL Inactive]*.
+* **ACSD-53309** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.7) - Korrigerar problemet där moms inte tillämpas fullt ut i *[!UICONTROL Regular Price]* etikett när det anpassningsbara alternativet är valt.
+* **ACSD-55305** (för Adobe Commerce >=2.4.4 &lt;2.4.7) - Korrigerar problemet där *[!UICONTROL Edit Company User]* popup på **[!UICONTROL myAccount]** > **[!UICONTROL Company Structure]** sidan fryser med en inläsare på skärmen.
+* Uppdaterade patchar: ACSD-49013
 
 ## v1.1.42 {#v1-1-42}
 
