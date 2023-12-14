@@ -2,9 +2,9 @@
 title: Hantera indexerare
 description: Se exempel på hur du visar och hanterar Commerce-indexerare.
 exl-id: d2cd1399-231e-4c42-aa0c-c2ed5d7557a0
-source-git-commit: 8b9e4de2799532e4654fce63d856c2d301025f09
+source-git-commit: 41082413e24733dde34542a2c9cb3cabbfdd4a35
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '690'
 ht-degree: 0%
 
 ---
@@ -225,11 +225,17 @@ Product Price:                                     Update on Save
 Catalog Search:                                    Update on Save
 ```
 
-### Konfigurera indexerare
+### Ange indexeringsläge
+
+>[!IMPORTANT]
+>
+>Var noga med att ställa in [!DNL Customer Grid] med `realtime` i stället för `schedule`. The [!DNL Customer Grid] kan bara indexeras om med [!UICONTROL Update on Save] alternativ. Indexet stöder inte `Update by Schedule` alternativ. Använd följande kommandorad för att ställa in indexeraren så att den uppdateras när den sparas: `php bin/magento indexer:set-mode realtime customer_grid`
+>
+>Se [Bästa tillvägagångssätt för indexerarkonfiguration](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/indexer-configuration.html) i _Implementera spelningsbok_.
 
 >[!INFO]
 >
->Innan du byter indexeringsläge rekommenderar vi att du skickar webbplatsen till [underhåll](../../installation/tutorials/maintenance-mode.md) läge och [inaktivera cron-jobb](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/crons-property.html#disable-cron-jobs). Detta säkerställer att du inte drabbas av databaslås.
+>Innan du byter indexeringsläge ska du ställa in webbplatsen på [underhåll](../../installation/tutorials/maintenance-mode.md) läge och [inaktivera cron-jobb](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/crons-property.html#disable-cron-jobs). Detta säkerställer att du inte drabbas av databaslås.
 
 Så här anger du indexerarkonfigurationen:
 
