@@ -2,13 +2,13 @@
 title: Skydda din Commerce-webbplats och infrastruktur
 description: Upprätthåll säkerheten genom att implementera säkerhetspraxis när du konfigurerar, konfigurerar och uppdaterar Adobe Commerce-installationer.
 feature: Best Practices
-source-git-commit: cea5868ee37317ae9adfd8b580cd38c33c19761e
+exl-id: 50d8a464-6496-4e9a-b642-0c6d0eb51ba0
+source-git-commit: cbfd19efd9f489fefa16d93cbd8116eefb57a900
 workflow-type: tm+mt
-source-wordcount: '2151'
+source-wordcount: '2008'
 ht-degree: 0%
 
 ---
-
 
 # Skydda din Commerce-webbplats och infrastruktur
 
@@ -148,14 +148,15 @@ Adobe har dock kommit fram till att de flesta webbplatsklipp inte beror på en i
 I de vanligaste attackerna injiceras skadlig kod i en kunds absoluta sidhuvud eller absoluta sidfot. Där samlar koden in formulärdata som kunden anger i butiken, inklusive inloggningsuppgifter och utcheckningsdata för formulär. Sedan skickas dessa data till en annan plats för skadliga syften i stället för till Commerce-serverdelen. Dessutom kan skadlig kod utgöra ett hot mot administratören när det gäller att köra kod som ersätter det ursprungliga betalningsformuläret med ett falskt formulär som åsidosätter eventuella skydd som anges av betalningsleverantören.
 
 Kreditkortskannrar på klientsidan är en typ av skadlig kod som bäddar in kod i handlarens webbplatsinnehåll som kan köras i en användares webbläsare, vilket visas i följande bild.
-När vissa åtgärder har utförts, t.ex. en användare som skickar ett formulär eller ändrar ett fältvärde, serialiseras data och skickas till slutpunkter från tredje part. Dessa slutpunkter är vanligtvis andra komprometterade webbplatser som fungerar som ett relä för att skicka data till den slutliga destinationen.
 
 ![Dataflöde för skadliga programattacker mot e-handelswebbplatser](../../../assets/playbooks/malware-data-flow.svg)
 
 När vissa åtgärder har utförts, t.ex. en användare som skickar ett formulär eller ändrar ett fältvärde, serialiseras data och skickas till slutpunkter från tredje part. Dessa slutpunkter är vanligtvis andra komprometterade webbplatser som fungerar som ett relä för att skicka data till den slutliga destinationen.
 
 
-Om Commerce-webbplatsen har attackerats följer du Adobe Commerce bästa praxis för [svara på en säkerhetsincident](../maintenance/respond-to-security-incident.md).
+>[!TIP]
+>
+>Om en Commerce-webbplats påverkas av en skadlig kod-attack följer du Adobe Commerce praxis för [svara på en säkerhetsincident](../maintenance/respond-to-security-incident.md).
 
 ### Lär känna de vanligaste attackerna
 
