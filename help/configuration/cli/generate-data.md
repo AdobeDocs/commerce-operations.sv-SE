@@ -3,10 +3,10 @@ title: Generera data för prestandatestning
 description: Lär dig hur du genererar en stor mängd data som ska användas för prestandatestning.
 feature: Configuration, Orders
 exl-id: 2f54701d-88c4-464a-b4dc-56db14d54160
-source-git-commit: 403a5937561d82b02fd126c95af3f70b0ded0747
+source-git-commit: a2dc85232aa10761a6729fe66f5548f644cb5bd4
 workflow-type: tm+mt
-source-wordcount: '749'
-ht-degree: 9%
+source-wordcount: '788'
+ht-degree: 8%
 
 ---
 
@@ -33,24 +33,26 @@ Följande tabell innehåller information om datageneratorprofilerna: small, medi
 | `websites` | 1 | 3 | 25 | 5 | 5 |
 | `store_groups` | 1 | 3 | 25 | 5 | 5 |
 | `store_views` | 1 | 3 | 50 | 5 | 5 |
-| `simple_products` | 800 | 24,000 | 4,000 | 300,000 | 600,000 |
+| `simple_products` | 800 | 24 000 | 4 000 | 300 000 | 600 000 |
 | `configurable_products` | 16 med 24 alternativ | 640 med 24 alternativ | 800 med 24 alternativ och 79 med 200 alternativ | 8 000 med 24 alternativ | 16 000 med 24 alternativ |
 | `product_images` | 100 bilder/3 bilder per produkt | 1 000 bilder/3 bilder per produkt | 1 000 bilder/3 bilder per produkt | 2 000 bilder/3 bilder per produkt | 2 000 bilder/3 bilder per produkt |
-| `categories` | 30 | 300 | 100 | 3,000 | 6,000 |
+| `categories` | 30 | 300 | 100 | 3 000 | 6 000 |
 | `categories_nesting_level` | 3 | 3 | 3 | 5 | 5 |
 | `catalog_price_rules` | 20 | 20 | 20 | 20 | 20 |
 | `catalog_target_rules` | 5 | 5 | 5 | 5 | 5 |
 | `cart_price_rules` | 20 | 20 | 20 | 20 | 20 |
 | `cart_price_rules_floor` | 2 | 2 | 2 | 2 | 2 |
-| `customers` | 200 | 2,000 | 2,000 | 5,000 | 10,000 |
-| `tax rates` | 130 | 40,000 | 40,000 | 40,000 | 40,000 |
-| `orders` | 80 | 50,000 | 50,000 | 100,000 | 150,000 |
+| `customers` | 200 | 2 000 | 2 000 | 5 000 | 10 000 |
+| `tax rates` | 130 | 40 000 | 40 000 | 40 000 | 40 000 |
+| `orders` | 80 | 50 000 | 50 000 | 100 000 | 150 000 |
 
 ### Kör datageneratorn
 
 >[!WARNING]
 >
 >Innan du kör datageneratorn ska du inaktivera alla cron-jobb som körs på servern. Genom att inaktivera cron-jobb förhindrar du att datageneratorn utför åtgärder som hamnar i konflikt med aktiva cron-jobb och undviker onödiga fel.
+>
+>Om du tänker implementera händelser med [!DNL Adobe I/O Events for Adobe Commerce] när du testar prestanda, kör kommandot innan du prenumererar [händelser](https://developer.adobe.com/commerce/extensibility/events/). Prenumerationshändelser kan orsaka fel.
 
 Kör kommandot enligt beskrivningen i det här avsnittet. När kommandot har körts måste du [indexera om alla indexerare](../cli/manage-indexers.md).
 
