@@ -2,9 +2,9 @@
 title: Frigör schema
 description: Få reda på när Adobe planerar att tillkännage lanseringen av betydande nya funktioner i Adobe Commerce.
 exl-id: ae1e09cd-966f-44a3-9e4d-b90bb838429d
-source-git-commit: 7edf6d5a8dfe58a86f27e97816e4d850bc21babc
+source-git-commit: 7771c4f225f7f6f9729c432ad1bcb1dcd8b2dc40
 workflow-type: tm+mt
-source-wordcount: '623'
+source-wordcount: '505'
 ht-degree: 2%
 
 ---
@@ -45,7 +45,7 @@ I följande tabell visas datumen för schemalagda releaser (datum kan ändras):
 <tbody>
   <tr>
     <td>13 februari 2024</td>
-    <td><img alt="Funktionsikon för B2B" src="../assets/icons/enterprise.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes.html">B2B</a><br><img alt="Ikon för utökningsfunktion" src="../assets/icons/brackets.svg"></img> <a href="https://developer.adobe.com/commerce/extensibility/">Utbyggbarhet</a><br><img alt="Ikon för infrastrukturfunktion" src="../assets/icons/servers.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite.html">Infrastruktur</a><br><img alt="Ikon för tjänstefunktion" src="../assets/icons/feature.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/release-information/release-notes-all.html">Tjänster</a></td>
+    <td><img alt="Ikon för utökningsfunktion" src="../assets/icons/brackets.svg"></img> <a href="https://developer.adobe.com/commerce/extensibility/">Utbyggbarhet</a><br><img alt="Ikon för infrastrukturfunktion" src="../assets/icons/servers.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite.html">Infrastruktur</a><br><img alt="Ikon för tjänstefunktion" src="../assets/icons/feature.svg"></img> <a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/release-information/release-notes-all.html">Tjänster</a></td>
     <td><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="release-notes/security/overview.md">Säkerhetsuppdateringar</a>: 2.4.6-p4, 2.4.5-p6, 2.4.4-p7</td>
   </tr>
   <tr>
