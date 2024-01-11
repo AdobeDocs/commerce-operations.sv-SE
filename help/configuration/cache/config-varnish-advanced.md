@@ -3,9 +3,9 @@ title: Avancerad lack-konfiguration
 description: Konfigurera avancerade lack-funktioner, inklusive hälsokontroll, respitläge och helskärmsläge.
 feature: Configuration, Cache
 exl-id: 178bd675-6ed0-40cc-9455-08a11b32c054
-source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
+source-git-commit: ec3ab7e3c6c3835e73653b0d4f74aadc861016d3
 workflow-type: tm+mt
-source-wordcount: '892'
+source-wordcount: '871'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 På engelska finns flera funktioner som förhindrar kunder från att drabbas av långa förseningar och timeout när Commerce-servern inte fungerar som den ska. Dessa funktioner kan konfigureras i `default.vcl` -fil. I det här avsnittet beskrivs de tillägg som finns i den VCL-fil (Varnish Configuration Language) som du hämtar från administratören.
 
-Se [Referenshandbok för lack](https://varnish-cache.org/docs/6.3/reference/index.html) om du vill ha mer information om hur du använder Konfigurationsspråk för engelska.
+Se [Referenshandbok för lack](https://varnish-cache.org/docs/index.html) om du vill ha mer information om hur du använder Konfigurationsspråk för engelska.
 
 ## Hälsokontroll
 
@@ -36,7 +36,7 @@ Var 5:e sekund anropar den här hälsokontrollen `pub/health_check.php` skript. 
 
 The `health_check.php` skriptet finns i `pub` katalog. Om Commerce-rotkatalogen är `pub`och se sedan till att ändra banan i `url` parameter från `/pub/health_check.php` till `health_check.php`.
 
-Mer information finns i [Djurhälsokontroller](https://varnish-cache.org/docs/6.3/users-guide/vcl-backends.html?highlight=health%20check#health-checks) dokumentation.
+Mer information finns i [Djurhälsokontroller](https://varnish-cache.org/docs/7.4/users-guide/vcl-backends.html#health-checks) dokumentation.
 
 ## Behagelläge
 
@@ -85,10 +85,7 @@ bin/magento cache:flush
 
 ### Installation
 
-Saint-läget ingår inte i Varnish-paketet. Det är en separat version `vmod` som måste hämtas och installeras. Därför bör du kompilera om Varnish från källan enligt följande artiklar:
-
-- [Installerar lack 6.4](https://varnish-cache.org/docs/6.4/installation/install.html)
-- [Installerar lack 6.0](https://varnish-cache.org/docs/6.0/installation/install.html) (LTS)
+Saint-läget ingår inte i Varnish-paketet. Det är en separat version `vmod` som måste hämtas och installeras. Därför måste du kompilera om Varnish från källan enligt beskrivningen i [installationsanvisningar](https://varnish-cache.org/docs/index.html) för din version av Varnish.
 
 När du har kompilerat om kan du installera modulen för det smarta läget. I allmänhet gör du så här:
 

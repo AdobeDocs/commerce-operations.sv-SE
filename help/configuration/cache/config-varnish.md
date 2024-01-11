@@ -3,9 +3,9 @@ title: Konfigurera och använda engelska
 description: Förstå hur lack lagrar filer och förbättrar HTTP-trafiken.
 feature: Configuration, Cache
 exl-id: 57614878-e349-43bb-b22b-1aa321907be1
-source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
+source-git-commit: ec3ab7e3c6c3835e73653b0d4f74aadc861016d3
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1049'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 [Finska cache] är en webbprogramsaccelerator med öppen källkod (kallas även _HTTP-acceleration_ eller _cachelagring av omvänd HTTP-proxy_). I Finish lagras (eller cachelagrar) filer eller fragment av filer i minnet, vilket gör att Varnish kan minska svarstiden och bandbreddsanvändningen för framtida, likvärdiga begäranden. Till skillnad från webbservrar som Apache och nginx har Varnish utformats för att endast användas med HTTP-protokollet.
 
-Commerce 2.4.2 har testats med Varnish 6.4. Commerce 2.4.x är kompatibel med Varnish 6.x
+[Systemkrav](../../installation/system-requirements.md) listar de versioner av engelska som stöds.
 
 >[!WARNING]
 >
->Vi _starkt rekommendera_ du använder varnish i produktionen. Den inbyggda helsidescachningen - för filsystemet eller [databas]—är mycket långsammare än varnish, och varnish är utformat för att accelerera HTTP-trafiken.
+>Vi _starkt rekommendera_ du använder varnish i produktionen. Den inbyggda helsidescachningen - för filsystemet eller [databas](https://developer.adobe.com/commerce/php/development/cache/partial/database-caching/)—är mycket långsammare än varnish, och varnish är utformat för att accelerera HTTP-trafiken.
 
 Mer information om lack finns i:
 
@@ -53,9 +53,9 @@ Processen kan sammanfattas enligt följande:
 
 >[!NOTE]
 >
-- Förutom där det anges måste du ange alla kommandon som beskrivs i det här avsnittet som en användare med `root` behörighet.
+>- Förutom där det anges måste du ange alla kommandon som beskrivs i det här avsnittet som en användare med `root` behörighet.
 >
-- Det här avsnittet är skrivet för lack i CentOS och Apache 2.4. Om du konfigurerar lack i en annan miljö kan vissa kommandon vara annorlunda. Mer information finns i dokumentationen för Varnish.
+>- Det här avsnittet är skrivet för lack i CentOS och Apache 2.4. Om du konfigurerar lack i en annan miljö kan vissa kommandon vara annorlunda. Mer information finns i dokumentationen för Varnish.
 
 ## Kända fel
 
@@ -96,7 +96,7 @@ Cachelagring av lack fungerar tillsammans med Commerce med:
 
 >[!INFO]
 >
-Det här avsnittet omfattar endast standardalternativen i den föregående listan. Det finns många andra sätt att konfigurera cachelagring i komplexa scenarier (till exempel med hjälp av ett leveransnätverk). Dessa metoder ligger utanför den här guidens räckvidd.
+>Det här avsnittet omfattar endast standardalternativen i den föregående listan. Det finns många andra sätt att konfigurera cachelagring i komplexa scenarier (till exempel med hjälp av ett leveransnätverk). Dessa metoder ligger utanför den här guidens räckvidd.
 
 På den första webbläsarbegäran levereras cachelagrade resurser till klientwebbläsaren från Varnish och cachelagras i webbläsaren.
 
@@ -120,7 +120,7 @@ I exemplet ovan visas en begäran för huvudsidan för butiken (`m2_ce_my`). CSS
 
 >[!NOTE]
 >
-De flesta statiska resurser har en HTTP 200-statuskod (OK) som anger att resursen hämtades från servern.
+>De flesta statiska resurser har en HTTP 200-statuskod (OK) som anger att resursen hämtades från servern.
 
 ### Andra webbläsarbegäran
 
@@ -148,7 +148,6 @@ Om innehållet ändras på servern hämtar klienten den statiska resursen med en
 
 <!-- Link Definitions -->
 
-[databas]: https://developer.adobe.com/commerce/php/development/cache/partial/database-caching/
 [The Big Varnish Picture]: https://www.varnish-cache.org/docs/trunk/users-guide/intro.html
 [Finska cache]: https://varnish-cache.org
 [Alternativ för avslutning av lack]: https://www.varnish-cache.org/docs/trunk/reference/varnishd.html#ref-varnishd-options
