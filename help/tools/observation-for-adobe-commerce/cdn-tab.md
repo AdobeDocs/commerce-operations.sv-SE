@@ -3,9 +3,9 @@ title: The [!UICONTROL CDN] tab
 description: Läs mer om [!UICONTROL CDN] flik för [!DNL Observation for Adobe Commerce].
 exl-id: db22bbca-2033-4e9a-8799-b47d84bdd720
 feature: Configuration, Observability
-source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
+source-git-commit: e753528a1d74eda0a1393e2cc455f33f529db739
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '739'
 ht-degree: 0%
 
 ---
@@ -63,6 +63,8 @@ I den här bildrutan visas längden i sekunder för cachelagrade begäranden, vi
 ## [!UICONTROL Fastly Cache Average Response for selected time period in seconds, faceted by POP]
 
 ![Snabbt cachelagra genomsnittssvar för den valda tidsperioden i sekunder som hanteras av POP](../../assets/tools/observation-for-adobe-commerce/cdn-tab-10.png)
+
+*POP* i det här sammanhanget avser en POP (Point of Presence) som är konfigurerad att fungera som en pool för cachelagring. Se [Närvaropunkter](https://developer.fastly.com/learning/concepts/pop/).
 
 ## [!UICONTROL Total Bandwidth (All POPs) during the selected timeframe, compared with 1 week ago (% increase/decrease)]
 
