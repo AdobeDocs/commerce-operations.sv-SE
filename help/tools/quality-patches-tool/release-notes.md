@@ -2,9 +2,9 @@
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: 3364434c37935285214451a7d242ae38815f3453
+source-git-commit: 9d75675aed671b995f7bdda43abc5a06f2c03ee8
 workflow-type: tm+mt
-source-wordcount: '19210'
+source-wordcount: '19551'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,20 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som skapats av gemenskapen för Magento Open Source, se [versionsinformation](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.44 {#v1-1-44}
+
+* **ACSD-56790** (för Adobe Commerce och Magento Open Source >=2.4.6 &lt;2.4.7) - Korrigerar problemet där en användare omdirigeras till Admin Dashboard när kategoriprodukter sorteras med **Flytta från Stock till botten** och `Invalid security or form key. Please refresh the page` visas högst upp på skärmen.
+* **ACSD-56280** (för Adobe Commerce >=2.4.4 &lt;2.4.7) - Korrigerar problemet där beställning av artiklar från ett presentregister leder till ett undantag.
+* **ACSD-56246** (för Adobe Commerce och Magento Open Source >=2.4.6 &lt;2.4.7) - Korrigerar problemet där data tas bort från det anpassade flervalsattributet när en schemalagd uppdatering för en produkt blir aktiv.
+* **ACSD-56193** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.4) - Korrigerar problemet där cacheminnet för lack/Fastly inte uppdateras när ett schemalagt block används i kategoribeskrivningen med Page Builder.
+* **ACSD-56158** (för Adobe Commerce och Magento Open Source >=2.4.5 &lt;2.4.7) - Korrigerar problemet där kundvagnsfrågan returnerar det totala momsvärdet för varje momsregel.
+* **ACSD-56023** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.7) - Korrigerar problemet där widgetinnehåll inte uppdateras på CMS-sidan när cache är aktiverat.
+* **ACSD-55427** (för Adobe Commerce >=2.4.5 &lt;2.4.7) - Korrigerar problemet där administratörsanvändaren inte kan ta bort en tilldelning från en delad katalog från produktsidan i Admin.
+* **ACSD-55352** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.7) - Korrigerar problemet där orderstatusen ändras till Stängt och alternativen för kreditnota försvinner från ordersidan när du har skapat en partiell kreditnota med kundbelöningspunkter.
+* **ACSD-55231** (för Adobe Commerce >=2.4.2 &lt;2.4.7) - Korrigerar problemet där du inte kan lägga till produkter i en kundvagn med snabbbeställningsfunktionen.
+* **ACSD-54283** (för Adobe Commerce >=2.4.3 &lt;2.4.4) - Korrigerar problemet där produkter/kategorier som inte har tilldelats den delade katalogen för standardkatalogen (allmän grupp) fortfarande ingår i XML-webbplatskartan.
+* Uppdaterade patchar: ACSD-52041, ACSD-54040, ACSD-51819
 
 ## v1.1.43 {#v1-1-43}
 
@@ -46,14 +60,14 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 * **ACSD-53845** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.7) - Korrigerar [!DNL MySQL] timeout för anslutning när `consumer max_messages` = 0.
 * **ACSD-54890** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.7) - Korrigerar problemet där `aggregate_sales_report_bestsellers_data` orsaker [!DNL MySQL] fel på grund av `/tmp` diskutrymmet är slut.
 * **ACSD-55112** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.7) - Korrigerar problemet där *[!UICONTROL Submit review]* kan klickas flera gånger utan [!DNL Google reCAPTCHA v3] validering.
-* **ACSD-54264** (för Adobe Commerce >=2.4.4-p5 &lt;2.4.5 || >=2.4.5-p4 &lt;2.4.6 || >=2.4.6-p2 &lt;2.4.7) - Korrigerar felet där felmeddelandet *&quot;Du kan inte uppdatera det begärda attributet. Rad-ID: store_id&quot;* visas när en kund försöker checka ut med en överlåtbar offert från en annan butiksvy.
+* **ACSD-54264** (för Adobe Commerce >=2.4.4-p5 &lt;2.4.5 || >=2.4.5-p4 &lt;2.4.6 || >=2.4.6-p2 &lt;2.4.7) - Korrigerar problemet där felmeddelandet *&quot;Du kan inte uppdatera det begärda attributet. Rad-ID: store_id&quot;* visas när en kund försöker checka ut med en överlåtbar offert från en annan butiksvy.
 * **ACSD-54418** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.7) - Korrigerar problemet där ett fast rabattbelopp felaktigt tillämpas på varje underordnad produkt i det dynamiskt prissatta paketet.
 * **ACSD-55238** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.7) - korrigeringar som sparar den tomma produkten *[!UICONTROL Meta Description]*.
 * **ACSD-54966** (för Adobe Commerce och Magento Open Source >=2.4.5 &lt;2.4.7) - Korrigerar problemet där en kupongkod med begränsad användning per kund inte kan återanvändas om föregående order misslyckas.
 * **ACSD-54060** (för Adobe Commerce och Magento Open Source >=2.4.3 &lt;2.4.7) - Korrigerar problemet där en begränsad administratör inte kan spara en produkt om den är underordnad en annan produkt som tilldelats ett annat omfång.
 * **ACSD-48910** (för Adobe Commerce och Magento Open Source >=2.4.5 &lt;2.4.6) - Korrigerade problemet där en paketprodukt som tilldelats flera källor går ut ur lagret efter att en order har fakturerats och skickats, även om den fortfarande har en kvantitet som inte är noll.
 * **ACSD-55381** (för Adobe Commerce >=2.4.2 &lt;2.4.7) - Korrigerar ett internt serverfel vid fråga `configurable_product_option_uid` och `configurable_product_option_value_uid` fält från en [!DNL B2B] *[!UICONTROL Requisition list]* via [!DNL GraphQL].
-* **ACSD-55628** (för Adobe Commerce >=2.4.4-p2 &lt; 2.4.5 || >=2.4.5-p1 &lt; 2.4.6) - Korrigerar överföringen av en fil till företagsregistreringsformuläret och ersätter en fil för ett kundattribut i butiken.
+* **ACSD-55628** (för Adobe Commerce >=2.4.4-p2 &lt; 2.4.5 || >=2.4.5-p1 &lt; 2.4.6) - Korrigerar överföring av en fil i företagsregistreringsformuläret och ersättning av en fil för ett kundattribut i butiken.
 * Uppdaterade patchar: ACSD-51240, ACSD-51890, ACSD-53098
 
 ## v1.1.41 {#v1-1-41}
@@ -126,7 +140,7 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 * **ACSD-53795** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.7) - Korrigerar problemet med ogiltig datatyp i `indexer_update_all_views` cron-jobb.
 * **ACSD-52143** (för Adobe Commerce och Magento Open Source >=2.4.6 &lt;2.4.7) - Korrigerar problemet där anpassade alternativ tas bort efter produktimporten.
 * **ACSD-53750** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.7) - Korrigerar *Avbruten pipe eller stängd anslutning* fel vid flertrådig `catalog_product_price` indexera om.
-* **ACSD-49843** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.0 || >=2.4.1 &lt;2.4.7) - Korrigerar problemet där länken vid nedladdning av produkter inte är tillgänglig efter att den beställda artikeln automatiskt fakturerats med onlinebetalningsmetoden med **[!UICONTROL Payment Action]** = **[!UICONTROL Sale]** inställning aktiverad.
+* **ACSD-49843** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.0 || >=2.4.1 &lt;2.4.7) - Korrigerar problemet där länken för nedladdning av produkter inte är tillgänglig efter att den beställda artikeln automatiskt fakturerats med onlinebetalningsmetoden med **[!UICONTROL Payment Action]** = **[!UICONTROL Sale]** inställning aktiverad.
 * **ACSD-47054** (för Adobe Commerce >=2.4.2 &lt;2.4.6) - Korrigerar problemet där omindexeringen av förhandsvisningen kör omindexering för alla butiker, vilket orsakar långsamhet.
 * Lagt till nya versioner för ACSD-46541, ACSD-47079.
 * ACSD-49970-v3 ersatt med ACSD-54095.
@@ -300,9 +314,9 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 * **ACSD-48362** (för Adobe Commerce >=2.4.1 &lt;2.4.7) - Korrigerar problemet där standardleveransadressen används i stället för en ny när en order läggs med en överlåtbar offert.
 * **ACSD-48059** (för Adobe Commerce >=2.3.7 &lt;2.4.7) - Korrigerar problemet där handlare inte kan spara &quot;[!UICONTROL Match product by rule]&quot; i kategorin.
 * **ACSD-48216** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.3.8 || >=2.4.0 &lt;2.4.7) - Korrigerar problemet där [!UICONTROL AUTO_INCREMENT] i [!UICONTROL inventory_source_item] tabellökningar på [!UICONTROL UPDATE] operation.
-* **ACSD-47908** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.3.8 || >=2.4.0 &lt;2.4.7) - Korrigerar felet &quot;Ett värde som är mindre än eller lika med 0 förväntas&quot; när källan och kvantiteten väljs i leveranssteget vid utcheckning.
+* **ACSD-47908** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.3.8 || >=2.4.0 &lt;2.4.7) - Korrigerar felet &quot;Ett värde som är mindre än eller lika med 0 förväntas&quot; när källan och kvantiteten väljs i leveranssteget vid utcheckningen.
 * **ACSD-49497** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.6) - Korrigerar problemet där en order ligger kvar i bearbetningstillståndet efter leveransen och en partiell återbetalning tillämpas.
-* **ACSD-48694** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.3.8 || >=2.4.1 &lt;2.4.7) - Korrigerar problemet där felet&quot;Ogiltig begärd statusändring&quot; förhindrar att en kund beställer.
+* **ACSD-48694** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.3.8 || >=2.4.1 &lt;2.4.7) - Korrigerar problemet där felet&quot;Ogiltig tillståndsändring begärd&quot; förhindrar att en kund gör en beställning.
 * **ACSD-49013** (för Adobe Commerce och Magento Open Source >=2.4.3 &lt;2.4.7) - Korrigerar problemet där e-postbekräftelse inte översätts till webbplatsens språkområde när kunder skapas med hjälp av bulk-API.
 * **ACSD-48164** (för Adobe Commerce och Magento Open Source >=2.3.7 &lt;2.4.7) - Korrigerar problemet där en begränsad administratör inte kan spara ett webbplatsnivåvärde.
 * **ACSD-48404** (för Adobe Commerce och Magento Open Source >=2.4.0 &lt;2.4.4) - Korrigerar problemet där &quot;Kom ihåg kategorisidnumrering = Ja&quot; orsakar ett fel när webbläsarens knapp trycks ned.
