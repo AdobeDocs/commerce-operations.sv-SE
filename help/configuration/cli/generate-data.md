@@ -3,18 +3,14 @@ title: Generera data för prestandatestning
 description: Lär dig hur du genererar en stor mängd data som ska användas för prestandatestning.
 feature: Configuration, Orders
 exl-id: 2f54701d-88c4-464a-b4dc-56db14d54160
-source-git-commit: a2dc85232aa10761a6729fe66f5548f644cb5bd4
+source-git-commit: d4a6d5cd181c7c4426914bbe481f4d5d1e828b5e
 workflow-type: tm+mt
-source-wordcount: '788'
-ht-degree: 8%
+source-wordcount: '762'
+ht-degree: 9%
 
 ---
 
 # Prestandatestningsdata
-
-Använd [Performance Toolkit](https://github.com/magento/magento2/blob/2.4/setup/performance-toolkit) eller något annat verktyg för prestandatestning måste du generera en stor mängd data, till exempel butiker, kategorier och produkter.
-
-{{file-system-owner}}
 
 ## Profiler
 
@@ -47,6 +43,8 @@ Följande tabell innehåller information om datageneratorprofilerna: small, medi
 | `orders` | 80 | 50 000 | 50 000 | 100 000 | 150 000 |
 
 ### Kör datageneratorn
+
+{{file-system-owner}}
 
 >[!WARNING]
 >
