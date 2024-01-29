@@ -2,9 +2,9 @@
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: 9d75675aed671b995f7bdda43abc5a06f2c03ee8
+source-git-commit: 6f0a3434d4730b4d2bcf0aecdacfae58025824cd
 workflow-type: tm+mt
-source-wordcount: '19551'
+source-wordcount: '19799'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,17 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som skapats av gemenskapen för Magento Open Source, se [versionsinformation](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.45 {#v1-1-45}
+
+* **ACSD-56886** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.7) - Korrigerar problemet där en konfigurerbar produkt inte finns i lager när en av två underordnade produkter inaktiveras av en schemalagd uppdatering.
+* **ACSD-56616** (för Adobe Commerce och Magento Open Source >=2.4.5 &lt;2.4.6) - Korrigerar problemet där paketerade produkter visas som i lager när deras enkla produkter inte finns i lager.
+* **ACSD-56515** (för Adobe Commerce >=2.4.2 &lt;2.4.7) - Korrigerar problemet där en administratör med behörighet på webbplatsnivå inte kan lägga till eller redigera ett dynamiskt block.
+* **ACSD-56447** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.7) - Korrigerar problemet där tillägg av samma produkt till vagnen via parallella REST webb-API-begäranden resulterar i två separata objekt i vagnen.
+* **ACSD-56415** (för Adobe Commerce och Magento Open Source >=2.4.5 &lt;2.4.7) - Korrigerar problemet där prestanda för partiell prisindexering försämras på grund av ett `DELETE` fråga när databasen har många partiella prisdata att indexera.
+* **ACSD-54965** (för Adobe Commerce >=2.4.5 &lt;2.4.6) - Korrigerar problemet där Visual Merchandising-rutnätet inte visar korrekt lager när en produkt endast tilldelas till ett anpassat lager.
+* **ACSD-52824** (för Adobe Commerce >=2.4.5 &lt;2.4.7) - Korrigerar problemet där knapparna PayPal Express, Google Pay och Apple Pay visas för företagskunder när sådana betalningsmetoder är inaktiverade i företagsinställningarna.
+* Uppdaterade patchar: ACSD-56193
 
 ## v1.1.44 {#v1-1-44}
 
