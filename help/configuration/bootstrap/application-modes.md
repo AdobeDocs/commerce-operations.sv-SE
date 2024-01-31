@@ -2,9 +2,9 @@
 title: Programlägen
 description: Commerce-programmet kan fungera i olika lägen beroende på dina behov. Visa en detaljerad lista över tillgängliga programlägen.
 exl-id: a2a71f43-682f-4fa4-940a-1f6a4d441c41
-source-git-commit: 982c478f73bdd1301210db5a89fb09edf69a6c42
+source-git-commit: 5003e8dcbb3736201ea19ebe30d5e56775096157
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '703'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Se [Ange åtgärdsläge](../cli/set-mode.md) om du vill lära dig hur du ändrar
 
 ## Molnsupport
 
-Du behöver inte hantera programlägena för ett molninfrastrukturprojekt. På grund av det skrivskyddade filsystemet kan du inte ändra lägen i fjärrmolnmiljöer. Försök inte att ändra lägen genom att ändra `app/etc/env.php` filen eftersom `ece-tools` paketet skriver över filen baserat på flera konfigurationskällor.
+På grund av det skrivskyddade filsystemet kan du inte ändra lägen i fjärrmolnmiljöer. Försök inte att ändra lägen genom att ändra `app/etc/env.php` filen eftersom `ece-tools` paketet skriver över filen baserat på flera konfigurationskällor.
 
 Adobe Commerce i molninfrastrukturen kör automatiskt programmet i _underhåll_ under en distribution, vilket gör att webbplatsen är offline tills distributionen är klar. Annars stannar programmet kvar i _produktion_ läge. Se [Distributionsprocess](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/process.html#deploy-phase) i _Guide för Commerce on Cloud Infrastructure_.
 
