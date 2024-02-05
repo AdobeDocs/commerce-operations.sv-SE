@@ -1,7 +1,7 @@
 ---
-source-git-commit: 903a5b52dd96423b7ac29997082b2feccdd3e10a
+source-git-commit: 5e25ba7151b16706f60c3fb8ffc5dbc6f31f29a6
 workflow-type: tm+mt
-source-wordcount: '84'
+source-wordcount: '105'
 ht-degree: 0%
 
 ---
@@ -10,6 +10,66 @@ ht-degree: 0%
 ## Nyheter
 
 Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
+
+### 29 januari 2024
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Källa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Publicerad <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html">versionsinformation</a> för QPT-paketversionen (1.1.45 Quality Patches Tool).</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/ada0b7f8aaa727aebf86dca8b569eb71d41e5ded">ada0b7</a> (implementera)</td>
+    </tr>
+  </tbody>
+</table>
+
+### 19 januari 2024
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Källa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Publicerad <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html">versionsinformation</a> för 1.1.44 Quality Patches Tool (QPT)-paketversionen.</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/6fdce049c64ff7e93bf4de497d7e61ad36b0064b">6fdce0</a> (implementera)</td>
+    </tr>
+  </tbody>
+</table>
+
+### 11 januari 2024
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Källa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Tillagd <a href="https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/next-steps/sample-data/overview.html">klargörande</a> att exempeldata inte bör användas för databastestning.</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/b75884de62f0f4a9000f422a4b68870c5b30d803">b75884</a> (implementera)</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 3 januari 2024
 
@@ -27,46 +87,6 @@ Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
 </td>
       <td>större uppdatering</td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/21da4c22744dbb3b27b0dbe184b946788748a52e">21da4c</a> (implementera)</td>
-    </tr>
-  </tbody>
-</table><!-- date_group --><!-- month_group -->
-
-### 11 december 2023
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Källa</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Publicerad <a href="https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html">versionsinformation</a> för 1.1.43 Quality Patches Tool (QPT)-paketversionen.</p>
-</td>
-      <td>större uppdatering</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/90447e9b8c00c4901d0d62c9de36f21df55385dc">90447e</a> (implementera)</td>
-    </tr>
-  </tbody>
-</table>
-
-### 7 december 2023
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Källa</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Lagt till ett nytt avsnitt om bästa praxis <a href="https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/development/modifying-core-and-third-party-code.html">ändra PHP-kod från kärnan och tredje part</a>.</p>
-</td>
-      <td>new-topic</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/21c0b6faab093bf9db860ce2f4d56072c4cc6e49">21c0b6</a> (implementera)</td>
     </tr>
   </tbody>
 </table><!-- date_group --><!-- month_group --><!-- year_group -->

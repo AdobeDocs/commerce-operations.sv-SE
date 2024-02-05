@@ -1,7 +1,7 @@
 ---
-source-git-commit: 903a5b52dd96423b7ac29997082b2feccdd3e10a
+source-git-commit: 5e25ba7151b16706f60c3fb8ffc5dbc6f31f29a6
 workflow-type: tm+mt
-source-wordcount: '82'
+source-wordcount: '60'
 ht-degree: 0%
 
 ---
@@ -27,26 +27,6 @@ Den här sidan innehåller nyligen gjorda ändringar som vi tror att du vill se.
 </td>
       <td>god praxis</td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/21da4c22744dbb3b27b0dbe184b946788748a52e">21da4c</a> (implementera)</td>
-    </tr>
-  </tbody>
-</table><!-- date_group --><!-- month_group -->
-
-### 7 december 2023
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Källa</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Lagt till ett nytt avsnitt om bästa praxis <a href="https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/development/modifying-core-and-third-party-code.html">ändra PHP-kod från kärnan och tredje part</a>.</p>
-</td>
-      <td>god praxis</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/21c0b6faab093bf9db860ce2f4d56072c4cc6e49">21c0b6</a> (implementera)</td>
     </tr>
   </tbody>
 </table><!-- date_group --><!-- month_group --><!-- year_group -->
