@@ -1,11 +1,11 @@
 ---
 title: Frigör schema
-description: Få reda på när Adobe planerar att tillkännage lanseringen av betydande nya funktioner i Adobe Commerce.
+description: Läs när Adobe planerar att lansera nya funktioner för Adobe Commerce.
 exl-id: ae1e09cd-966f-44a3-9e4d-b90bb838429d
-source-git-commit: 7771c4f225f7f6f9729c432ad1bcb1dcd8b2dc40
+source-git-commit: cbcc688fb5b356b99d103259e85117bda82f36b9
 workflow-type: tm+mt
-source-wordcount: '505'
-ht-degree: 2%
+source-wordcount: '504'
+ht-degree: 0%
 
 ---
 
