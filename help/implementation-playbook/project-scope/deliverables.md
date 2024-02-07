@@ -3,20 +3,20 @@ title: Leveranser
 description: Läs mer om de olika produkter som är kopplade till en Adobe Commerce-implementering.
 exl-id: 6f5e603b-bbe5-411d-ad72-696cb4eae246
 feature: Best Practices
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: 903c8bfc7c341c46d98026f0a02fbefba22c8f5d
 workflow-type: tm+mt
-source-wordcount: '266'
+source-wordcount: '265'
 ht-degree: 0%
 
 ---
 
 # Leveranser
 
-Identifieringsprocessen identifierar specifika Adobe Commerce-implementeringsprodukter. Läs mer i följande avsnitt.
+Identifieringsprocessen identifierar specifika Adobe Commerce-implementeringsprodukter. Mer information finns i följande avsnitt.
 
 ## Affärskrav
 
-Det här dokumentet innehåller godkännanden av affärskrav för funktionella specifikationer och användbarheten för kundupplevelsen. Den används för att driva användarupplevelsen, den visuella designen och detaljerade testplaner.
+Ett dokument med affärskrav innehåller godkännanden av funktionella specifikationer och användbarheten för kundupplevelsen. Den används för att driva användarupplevelsen, den visuella designen och detaljerade testplaner.
 
 ## Systemdiagram
 
@@ -24,7 +24,7 @@ Ett systemdiagram bör visa data (t.ex. order, produkter, integreringar med tred
 
 ## Tekniska specifikationer
 
-I det här dokumentet definieras den tekniska implementeringsmetoden och tillämpliga detaljer om alla tredjepartsintegreringar och system som behöver ändras. Detta kan inkludera API:er som för närvarande inte finns och som behöver utvecklas.
+Tekniska specifikationer definierar implementeringsmetoden och tillämpliga detaljer om alla tredjepartsintegreringar och system som måste ändras. Detta kan inkludera API:er som inte finns och som måste utvecklas.
 
 ## Datamappning
 
@@ -36,7 +36,7 @@ Visar användarflödena för kritiska och/eller unika processer, särskilt när 
 
 ## Omfång och leverantörer
 
-Det här är en fullständig lista över namngivna tredjepartsleverantörer som ska integreras i Adobe Commerce-lösningen.
+Ett omfångs- och leverantörsdokument ska innehålla en omfattande lista över namngivna tredjepartsleverantörer som ska integreras i Adobe Commerce-lösningen.
 
 ## Produktdata
 
