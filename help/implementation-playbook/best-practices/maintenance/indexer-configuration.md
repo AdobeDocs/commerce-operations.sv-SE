@@ -4,9 +4,9 @@ description: Underhåll och optimera webbplatsens prestanda genom att följa ved
 role: Admin, User
 feature: Best Practices
 exl-id: b35806f9-4bc6-407e-bedd-5ce3f09c1b9f
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: af66d47279245f8ee105030bbb33d77b1b35c3e5
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '298'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Adobe Commerce har två typer av indexeringslägen: [!UICONTROL Update on Save] 
 
 - **[!UICONTROL Update on Save]** Läget uppdaterar index omedelbart när katalogen eller andra data ändras. Om en Admin-användare till exempel lägger till nya produkter i en kategori omindexeras kategoriproduktindexet omedelbart när uppdateringen sparas.
 
-- **[!UICONTROL Update on Schedule]** I lagras information om datauppdateringar, och omindexeringsåtgärder och indexuppdateringar hanteras av ett cron-jobb som körs i bakgrunden med schemalagda intervall.
+- **[!UICONTROL Update on Schedule]** I lagras information om datauppdateringar, och omindexeringsåtgärder och indexuppdateringar hanteras av ett cron-jobb som körs i bakgrunden med schemalagda intervall. Kronijobbet utför inte alltid en indexering varje gång det körs. Den indexeras bara om det finns nya poster i indexerarens ändringsloggar (det finns t.ex. en eftersläpning i indexerarna).
 
 Att ha en stor butik med flera administratörer som arbetar i bakgrunden eller har många import- och exportfunktioner utlöser ofta indexuppdateringar. Om platsindexkonfigurationen är inställd på [!UICONTROL Update on Save] ofta återkommande omindexering försämrar databasens prestanda, vilket saktar ned webbplatsens prestanda och orsakar långa förseningar i omindexeringsprocessen, särskilt för stora butiker.
 
