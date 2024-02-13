@@ -1,8 +1,8 @@
 ---
-source-git-commit: ac8be2ccb192765ab4633e9fce8684547a9363ac
+source-git-commit: 9f80bf4de9112cc986708266565c96515e85554c
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 11%
+source-wordcount: '499'
+ht-degree: 0%
 
 ---
 # Släppta versioner
@@ -48,6 +48,12 @@ Stöd för version 2.4.6 upphör den 14 mars 2026.
   <tbody>
     <tr>
         <td>
+          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-6-p4.html">2.4.6-p4</a>
+        </td>
+        <td>13 februari 2024</td>
+    </tr>
+    <tr>
+        <td>
           <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-6-p3.html">2.4.6-p3</a>
         </td>
         <td>10 oktober 2023</td>
@@ -85,6 +91,12 @@ Stöd för version 2.4.5 upphör den 9 augusti 2025.
     </tr>
   </thead>
   <tbody>
+    <tr>
+        <td>
+          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-5-p6.html">2.4.5-p6</a>
+        </td>
+        <td>13 februari 2024</td>
+    </tr>
     <tr>
         <td>
           <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-5-p5.html">2.4.5-p5</a>
@@ -136,6 +148,12 @@ Stöd för version 2.4.4 upphör den 12 april 2025.
     </tr>
   </thead>
   <tbody>
+    <tr>
+        <td>
+          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-4-p7.html">2.4.4-p7</a>
+        </td>
+        <td>13 februari 2024</td>
+    </tr>
     <tr>
         <td>
           <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-4-p6.html">2.4.4-p6</a>
@@ -262,7 +280,7 @@ Stöd för versionslinjen 2.4.0-2.4.3 upphörde den 28 november 2022.
   </tbody>
 </table>
 
-## 2.3
+## 2,3
 
 Stöd för version 2.3 upphörde 8 september 2022.
 
@@ -385,7 +403,7 @@ Stöd för version 2.3 upphörde 8 september 2022.
   </tbody>
 </table>
 
-## 2.2
+## 2,2
 
 Stöd för version 2.2 upphörde den 1 december 2019.
 
@@ -472,7 +490,7 @@ Stöd för version 2.2 upphörde den 1 december 2019.
   </tbody>
 </table>
 
-## 2.1
+## 2,1
 
 Stöd för version 2.1 upphörde den 30 juni 2019.
 
@@ -601,7 +619,7 @@ Stöd för version 2.1 upphörde den 30 juni 2019.
   </tbody>
 </table>
 
-## 2.0
+## 2,0
 
 Stöd för version 2.0 upphörde den 31 mars 2018.
 
