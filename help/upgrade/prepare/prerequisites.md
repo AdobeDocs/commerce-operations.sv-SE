@@ -2,9 +2,9 @@
 title: Förutsättningar
 description: Förbered ditt Adobe Commerce-projekt för en uppgradering genom att slutföra dessa nödvändiga steg.
 exl-id: f7775900-1d10-4547-8af0-3d1283d9b89e
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: fb449f0ee7d503d0c7ba60bf6bfbe3f528060606
 workflow-type: tm+mt
-source-wordcount: '1639'
+source-wordcount: '1604'
 ht-degree: 0%
 
 ---
@@ -172,7 +172,7 @@ Vi rekommenderar att du kontaktar din sökmotorleverantör för att avgöra om d
 
 ## Konvertera databastabellformat
 
-Du måste konvertera formatet för alla databastabeller från `COMPACT` till `DYNAMIC`. Du måste också konvertera lagringsmotortypen från `MyISAM` till `InnoDB`. Se [bästa praxis](../../implementation-playbook/best-practices/maintenance/commerce-235-upgrade-prerequisites-mariadb.md).
+Du måste konvertera formatet för alla databastabeller från `COMPACT` till `DYNAMIC`. Du måste också konvertera lagringsmotortypen från `MyISAM` till `InnoDB`. Se [bästa praxis](../../implementation-playbook/best-practices/maintenance/mariadb-upgrade.md).
 
 ## Ange gräns för öppna filer
 

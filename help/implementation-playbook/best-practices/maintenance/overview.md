@@ -3,9 +3,9 @@ title: Implementeringsunderhållsfas
 description: Lär dig mer om de effektivaste strategierna för implementering i underhållsfasen av Adobe Commerce-projekt.
 exl-id: bd052412-a41c-4dbd-9aba-ba2fcac31f2d
 feature: Best Practices
-source-git-commit: 00036391366625ab256a4dc682d1ecbe9e46fa23
+source-git-commit: fb449f0ee7d503d0c7ba60bf6bfbe3f528060606
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '371'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ Följande avsnitt innehåller information om bästa praxis för underhållsfasen
 | Bästa praxis | Beskrivning |
 |--------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
 | [Åtgärda problem med databasprestanda &#x200B;](resolve-database-performance-issues.md) | Åtgärda databasproblem som försämrar prestandan på Adobe Commerce webbplatser som körs i molninfrastrukturen. |
-| [Adobe Commerce 2.3.5 - uppgraderingskrav för MariaDB &#x200B;](commerce-235-upgrade-prerequisites-mariadb.md) | Förbered din MariaDB-databas för en uppgradering. |
+| [Adobe Commerce uppgraderingskrav för MariaDB &#x200B;](mariadb-upgrade.md) | Förbered din MariaDB-databas för en uppgradering. |
 
 ## Förbättrade funktioner
 
