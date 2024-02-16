@@ -2,9 +2,9 @@
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: 6f0a3434d4730b4d2bcf0aecdacfae58025824cd
+source-git-commit: 26bde6684b3f38ed16ede6ec9c63cc90fa849fd9
 workflow-type: tm+mt
-source-wordcount: '19799'
+source-wordcount: '19990'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,16 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som skapats av gemenskapen för Magento Open Source, se [versionsinformation](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.46 {#v1-1-46}
+
+* **ACSD-46767** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.6) - Korrigerar problemet där kategorisidan cachar blir ogiltig när lagerkvantiteten ändras, även om produkten fortfarande finns i lager.
+* **ACSD-54656** (för Adobe Commerce >=2.4.5 &lt;2.4.6) - Korrigerar problemet där den osynliga Recaptcha misslyckas under utcheckningen, vilket förhindrar att en beställning placeras.
+* **ACSD-55100** (för Adobe Commerce >=2.4.6 &lt;2.4.7) - Korrigerar problemet där GraphQL inte returnerar mer än 10 kB produkter i sökresultaten.
+* **ACSD-56621** (för Adobe Commerce >=2.4.2 &lt;2.4.7) - Korrigerar problemet där det uppdaterade förnamnet och efternamnet inte visas i huvudavsnittet för hälsningar för företagsadministratörsanvändaren.
+* **ACSD-56842** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.7) - Korrigerar problemet där de fördröjda proxyfabrikerna och de fördröjda proxyfabrikerna saknas efter körning `setup:di:compile`.
+* **ACSD-57003** (för Adobe Commerce och Magento Open Source >=2.4.6 &lt;2.4.7) - Korrigerar det problem där orderstatusen ändras till *[!UICONTROL Complete]* i stället för att ändras till *[!UICONTROL Processing]* när en order delvis återbetalas och delvis skickas.
+* Uppdaterade patchar: ACSD-50260-v2, ACSD-54966
 
 ## v1.1.45 {#v1-1-45}
 
