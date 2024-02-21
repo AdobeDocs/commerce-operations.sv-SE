@@ -3,9 +3,9 @@ title: Leverans
 description: Bestäm leveransmetoder och kostnader innan du slutför e-handelsprojektet.
 exl-id: 07d303ab-f229-4b6a-b35a-b6d2a3be89b3
 feature: Best Practices, Shipping/Delivery
-source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
+source-git-commit: 766bd4e4e6a31157836770270cc3ba310f142161
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '622'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ I följande tabell beskrivs skillnaderna mellan B2B- och B2C-leverans och levera
 | B2B | B2C |
 |----------------------------------------------------------------------------------------------|------------------------------------------------------|
 | Det tar längre tid att slutföra leverans och leverans på grund av kostnaderna och kvantiteten | Kan levereras samma dag och/eller fraktfritt |
-| Kräver en anslutning mellan företaget och klienten | Vanligtvis, tidsförhållanden för tagningar |
+| Kräver en anslutning mellan företaget och klienten | Vanligtvis kortfristiga relationer |
 | Vanligtvis långsiktiga relationer | Företaget tillhandahåller förmånskort för att behålla kunder |
 | Processen kan vara lång och komplex | Kampanjer och kampanjerbjudanden ger kunderna |
 | Starka regler måste tillämpas | Grundregler kan tillämpas |
