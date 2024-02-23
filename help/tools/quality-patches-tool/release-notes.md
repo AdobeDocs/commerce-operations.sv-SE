@@ -2,9 +2,9 @@
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: 26bde6684b3f38ed16ede6ec9c63cc90fa849fd9
+source-git-commit: c39eb5c9328657083aea07a385531e7ad0df6e14
 workflow-type: tm+mt
-source-wordcount: '19990'
+source-wordcount: '20136'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,14 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som skapats av gemenskapen för Magento Open Source, se [versionsinformation](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.47 {#v1-1-47}
+
+* **ACSD-55241** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.7) - Korrigerar problemet där *[!UICONTROL Used]* och *[!UICONTROL Times Used]* attribut visar felaktiga värden för genererade kuponger när de används vid utcheckning med flera adresser.
+* **ACSD-56760** (för Adobe Commerce >=2.4.6 &lt;2.4.7) - Korrigerar problemet där en administratörsanvändare som är begränsad till en viss webbplats inte kan sortera eller lägga till nya produkter i en kategori om webbutiken har en egen rotkategori.
+* **ACSD-56858** (för Adobe Commerce >=2.4.2 &lt;2.4.7) - Korrigerar problemet där B2B-företagsrollbehörigheter visas felaktigt för en företagsadministratör med begränsat antal användare.
+* **ACSD-57074** (för Adobe Commerce och Magento Open Source >=2.4.6 &lt;2.4.7) - Korrigerar problemet där *Ja/Nej* anpassat attribut med `attrbute_code` börja med `price_` fungerar inte korrekt med indexering, och produkter med sådana attribut är inte tillgängliga i början.
+* Uppdaterade patchar: ACSD-53378, ACSD-51819
 
 ## v1.1.46 {#v1-1-46}
 
