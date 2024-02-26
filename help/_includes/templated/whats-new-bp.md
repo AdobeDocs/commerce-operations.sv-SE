@@ -1,7 +1,7 @@
 ---
-source-git-commit: 5e25ba7151b16706f60c3fb8ffc5dbc6f31f29a6
+source-git-commit: 0d6e2d58074b921466e5f4995a0c8e97a63e2d83
 workflow-type: tm+mt
-source-wordcount: '60'
+source-wordcount: '80'
 ht-degree: 0%
 
 ---
@@ -10,6 +10,26 @@ ht-degree: 0%
 ## Nyheter i god praxis för implementering
 
 Den här sidan innehåller nyligen gjorda ändringar som vi tror att du vill se. Vi utelämnar alla mindre uppdateringar, som kopieringsredigering, från den här listan.
+
+### 14 februari 2024
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Källa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Lagt till metodtips för <a href="https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/mariadb-upgrade.html">uppgraderar MariaDB</a> till 10.5.1 och senare.</p>
+</td>
+      <td>god praxis</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/7199e74f82cef6dd682f5e240ee2b6fc56da18c8">7199e7</a> (implementera)</td>
+    </tr>
+  </tbody>
+</table><!-- date_group -->
 
 ### 3 januari 2024
 
