@@ -2,9 +2,9 @@
 title: Aktivera eller inaktivera moduler
 description: Följ de här stegen för att hantera Adobe Commerce- eller Magento Open Source-moduler.
 exl-id: 7155950a-a66a-4254-a71c-1a9aeab47606
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 6e87d68df97adf47b5a61e8b6683ac11f600806c
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '584'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,10 @@ Plats
 * `--enabled` visar alla aktiverade moduler.
 * `--disabled` visar alla inaktiverade moduler.
 * `<module-list>` är en blankstegsavgränsad lista med moduler som kontrollerar statusen. Om ett modulnamn innehåller specialtecken omger du namnet med enkla eller dubbla citattecken.
+
+>[!NOTE]
+>
+>Du kan inte aktivera eller inaktivera moduler direkt i molnprojekt. Du måste köra dessa kommandon lokalt och sedan skicka ändringarna till `app/etc/config.php` för en miljö. Se [Projektarbetsflöde för Pro: Arbetsflöde för distribution](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow.html#deployment-workflow).
 
 ## Aktivera modul, inaktivera
 
