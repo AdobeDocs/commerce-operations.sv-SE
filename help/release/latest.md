@@ -4,7 +4,7 @@ description: Läs om de senaste sammanställningsbara utvecklingsverktygen och A
 level: Intermediate, Experienced
 role: Admin, User, Developer
 mini-toc-levels: 1
-source-git-commit: b0cfe0ae73a2d65f205bfe874e080d56f195601b
+source-git-commit: a4738e58d8c17c17426765d6f975a2af0ce11c80
 workflow-type: tm+mt
 source-wordcount: '3076'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 ---
 
 
-# Adobe Commerce produktinformation från februari
+# Produktinformation från Adobe Commerce februari
 
 Adobe Commerce har samarbetat nära med kunderna för att utveckla nya upplevelsestyrda e-handelsfunktioner som gör det möjligt för dem att snabbare och öka försäljningen. Kunder som Hanesbrands drar redan nytta av snabbare webbplatser, högre konverteringsgrader och bättre kampanjer med dessa nya funktioner. Och Nestle Purina förenklar sammansättningsbar utveckling med vår enhetliga utvecklarupplevelse. Läs mer om de nya funktionerna och hur du kommer igång i den här produktannonsöversikten för februari.
 
