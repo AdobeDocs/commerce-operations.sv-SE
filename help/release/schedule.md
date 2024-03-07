@@ -2,7 +2,7 @@
 title: Frigör schema
 description: Läs mer om när Adobe planerar att tillkännage lanseringen av nya funktioner i Adobe Commerce.
 exl-id: ae1e09cd-966f-44a3-9e4d-b90bb838429d
-source-git-commit: cbcc688fb5b356b99d103259e85117bda82f36b9
+source-git-commit: c9e7a8926c7003d34a62d2defb62c09d58919ddd
 workflow-type: tm+mt
 source-wordcount: '504'
 ht-degree: 2%
@@ -31,7 +31,7 @@ I följande tabell visas datumen för schemalagda releaser (datum kan ändras):
 </thead>
 <tfoot>
    <tr>
-      <td colspan="3"><strong>Förklaring</strong>:
+      <td colspan="3"><strong>Förklaring:</strong>
          <ul>
             <li><strong><img alt="Funktionsikon för B2B" src="../assets/icons/enterprise.svg"></img> B2B</strong>—Nya funktioner, förbättringar och felkorrigeringar för B2B-tillägget för Adobe Commerce.</li>
             <li><strong><img alt="Ikon för utökningsfunktion" src="../assets/icons/brackets.svg"></img> Utbyggbarhet</strong>- Nya verktyg och tjänster för utbyggbarhet som inte längre är i processen och som levereras oberoende av korrigeringsversioner. Exempel: Admin UI SDK, Adobe I/O Events for Commerce och API Mesh.</li>

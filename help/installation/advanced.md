@@ -2,9 +2,9 @@
 title: Avancerad lokal installation
 description: Lär dig mer om avancerade installationsscenarier för Adobe Commerce och Magento Open Source om infrastruktur som du äger.
 exl-id: e16e750a-e068-4a63-8ad9-62043e2a8231
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: c9e7a8926c7003d34a62d2defb62c09d58919ddd
 workflow-type: tm+mt
-source-wordcount: '2406'
+source-wordcount: '2383'
 ht-degree: 0%
 
 ---
@@ -91,9 +91,9 @@ Du kan köra följande kommandon för att hitta värden för vissa obligatoriska
 
 | Installationsargument | Kommando |
 | ------------------ | ------------------------------- |
-| Språk | bin/magento info:language:list |
-| Valuta | bin/magento info:currency:list |
-| Tidszon | bin/magento info:timezone:list |
+| Språk | `bin/magento info:language:list` |
+| Valuta | `bin/magento info:currency:list` |
+| Tidszon | `bin/magento info:timezone:list` |
 
 >[!NOTE]
 >
@@ -195,7 +195,7 @@ Följande tabeller innehåller många men inte alla tillgängliga installationsp
 |--- |--- |--- |
 | `--lock-provider` | Lås leverantörens namn.<br><br>Tillgängliga låsleverantörer: `db`, `zookeeper`, `file`.<br><br>Standardlåsleverantör: `db` | Nej |
 | `--lock-db-prefix` | Det specifika db-prefixet för att undvika låskonflikter när du använder `db` låsleverantör.<br><br>Standardvärdet: `NULL` | Nej |
-| `--lock-zookeeper-host` | Värd och port för att ansluta till Zookeeper-klustret när du använder `zookeeper` låsleverantör.<br><br>Exempel: `127.0.0.1:2181` | Ja, om du anger `--lock-provider=zookeeper` |
+| `--lock-zookeeper-host` | Värd och port för att ansluta till Zookeeper-klustret när du använder `zookeeper` låsleverantör.<br><br>Till exempel: `127.0.0.1:2181` | Ja, om du anger `--lock-provider=zookeeper` |
 | `--lock-zookeeper-path` | Sökvägen där Zookeeper sparar lås.<br><br>Standardsökvägen är: `/magento/locks` | Nej |
 | `--lock-file-path` | Sökvägen där fillås sparas. | Ja, om du anger `--lock-provider=file` |
 

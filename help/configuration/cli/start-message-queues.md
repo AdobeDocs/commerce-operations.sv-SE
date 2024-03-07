@@ -2,9 +2,9 @@
 title: Starta användare i meddelandekön
 description: Lär dig hur du startar en användare i en meddelandekö.
 exl-id: fd6edb24-8ebe-4b67-8a03-6cc759b60fa8
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: c9e7a8926c7003d34a62d2defb62c09d58919ddd
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '179'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ När alla tillgängliga meddelanden har förbrukats avslutas kommandot. Du kan k
 bin/magento queue:consumers:start <consumer_name> &
 ```
 
-Se [kö:consumers:start](https://devdocs.magento.com/guides/v2.4/reference/cli/magento-commerce.html#queueconsumersstart) i Commerce-delen av _Referens för kommandoradsverktyg_ om du vill ha information om kommandoalternativ, parametrar och värden.
+Se [`queue:consumers:start`](https://devdocs.magento.com/guides/v2.4/reference/cli/magento-commerce.html#queueconsumersstart) i Commerce-delen av _Referens för kommandoradsverktyg_ om du vill ha information om kommandoalternativ, parametrar och värden.
 
 >[!INFO]
 >
