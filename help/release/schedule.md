@@ -2,7 +2,7 @@
 title: Frigör schema
 description: Läs mer om när Adobe planerar att tillkännage lanseringen av nya funktioner i Adobe Commerce.
 exl-id: ae1e09cd-966f-44a3-9e4d-b90bb838429d
-source-git-commit: a7aa02cd47deaf7aebdfcf0b3e969cce990a962a
+source-git-commit: 5d4204b842151c0dac0091ab286ba769e421cdf4
 workflow-type: tm+mt
 source-wordcount: '504'
 ht-degree: 2%
@@ -49,7 +49,7 @@ I följande tabell visas datumen för schemalagda releaser (datum kan ändras):
     <td><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="release-notes/security/overview.md">Säkerhetsuppdateringar</a>: 2.4.6-p4, 2.4.5-p6, 2.4.4-p7</td>
   </tr>
   <tr>
-    <td>19 mars 2024</td>
+    <td>12 mars 2024</td>
     <td>—</td>
     <td><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="release-notes/commerce/overview.md">Betakorrigering</a>: 2.4.7-beta3</td>
   </tr>
