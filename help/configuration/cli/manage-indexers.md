@@ -2,9 +2,9 @@
 title: Hantera indexerare
 description: Se exempel på hur du visar och hanterar Commerce-indexerare.
 exl-id: d2cd1399-231e-4c42-aa0c-c2ed5d7557a0
-source-git-commit: 41082413e24733dde34542a2c9cb3cabbfdd4a35
+source-git-commit: a8f845813971eb32053cc5b2e390883abf3a104e
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '955'
 ht-degree: 0%
 
 ---
@@ -263,3 +263,51 @@ Index mode for Indexer Product Categories was changed from 'Update on Save' to '
 ```
 
 De indexerarrelaterade databasutlösarna läggs till när indexeringsläget är inställt på `schedule` och tas bort när indexerarläget är inställt på `realtime`. Om utlösarna saknas i databasen när indexerarna är inställda på `schedule`, ändra indexerare till `realtime` och sedan ändra tillbaka dem till `schedule`. Detta återställer utlösarna.
+
+### Ange indexeringsstatus [!BADGE 2.4.7-beta]{type=Informative url="/help/release/release-notes/commerce/2-4-7.md" tooltip="Finns endast i 2.4.7 beta"}
+
+Med det här kommandot kan administratörer ändra driftstatus för en eller flera indexerare och optimera systemprestanda vid omfattande åtgärder som import, uppdatering eller underhåll av data.
+
+Kommandosyntax:
+
+```bash
+bin/magento indexer:set-status {invalid|suspended|valid} [indexer]
+```
+
+Var:
+
+- `invalid`—Märker upp indexerare som inaktuella och uppmanar till omindexering vid nästa kron-körning om de inte pausas.
+- `suspended`—Avbryter tillfälligt automatiskt kroniskt utlösta uppdateringar för indexerare. Den här statusen gäller för både realtids- och schemalägen, vilket säkerställer att automatiska uppdateringar pausas under intensiva operationer.
+- `valid`—Anger att indexeringsdata är aktuella och att ingen omindexering behöver göras.
+- `indexer`—Är en blankstegsavgränsad lista med indexerare. Uteslut `indexer` om du vill konfigurera alla indexerare på samma sätt.
+
+Om du till exempel vill göra uppehåll i vissa indexerare anger du:
+
+```bash
+bin/magento indexer:set-status suspended catalog_category_product catalog_product_category
+```
+
+Exempelresultat:
+
+```terminal
+Index status for Indexer 'Category Products' was changed from 'valid' to 'suspended'.
+Index status for Indexer 'Product Categories' was changed from 'valid' to 'suspended'.
+```
+
+#### Hantera status för pausad indexerare
+
+När en indexerare är inställd på `suspended` och påverkar främst automatisk omindexering och materialiserade vyuppdateringar. Här är en kort översikt:
+
+**Omindexering hoppades över**: Automatisk omindexering ignoreras `suspended` indexerare och alla indexerare som delar samma `shared_index`. Detta garanterar att systemresurserna bevaras genom att inte omindexera data som hör till avbrutna processer.
+
+**Uppdateringar av materialiserad vy hoppades över**: Liknar omindexering, uppdateringar av materialiserade vyer relaterade till `suspended` indexerare eller deras delade index pausas också. Den här åtgärden minskar systembelastningen ytterligare under uppehållsperioder.
+
+>[!INFO]
+>
+>The `indexer:reindex` kommandot indexerar om alla indexerare, inklusive de som markerats som `suspended`, vilket gör det användbart för manuella uppdateringar när automatiska uppdateringar har pausats.
+
+>[!IMPORTANT]
+>
+>Ändra en indexerares status till `valid` från `suspended` eller `invalid` kräver försiktighet. Den här åtgärden kan leda till prestandaförsämring om det finns samlade oindexerade data.
+>
+>Det är viktigt att se till att alla data indexeras korrekt innan du manuellt uppdaterar statusen till `valid` för att upprätthålla systemprestanda och dataintegritet.

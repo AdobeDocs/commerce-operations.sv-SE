@@ -2,7 +2,7 @@
 title: Hantera cachen
 description: Hantera cachetyper och visa cachestatus.
 exl-id: bbd76c00-727b-412e-a8e5-1e013a83a29a
-source-git-commit: 604e2a1461e2cbbcc498dfed6018ba640efe8cde
+source-git-commit: 6e0e7f209b265e5b924e0092fec020e0cefc165d
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -15,10 +15,10 @@ ht-degree: 0%
 
 ## Cache-typer
 
-Commerce 2 har följande cachetyper:
+Handel har följande cachetyper:
 
 | Eget namn för cachetyp | Namn på cachetypkod | Beskrivning |
-|--- |--- |--- |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Konfiguration | config | Commerce samlar in konfiguration från alla moduler, sammanfogar den och sparar det sammanfogade resultatet i cachen. Cachen innehåller även lagringsinställningar som lagras i filsystemet och databasen. Rensa eller tömma den här cachetypen efter att konfigurationsfilerna har ändrats. |
 | Layout | layout | Kompilerade sidlayouter (dvs. layoutkomponenter från alla komponenter). Rensa eller tömma den här cachetypen efter att du har ändrat layoutfiler. |
 | Blockera utdata för HTML | block_html | HTML sidfragment per block. Rengör eller tömma den här cachetypen efter att du har ändrat visningslagret. |
@@ -31,10 +31,9 @@ Commerce 2 har följande cachetyper:
 | Översättningar | translate | När översättningar från alla moduler har sammanfogats rensas sammanslagningscachen. |
 | Integrationskonfiguration | config_integration | Kompilerade integreringar. Rensa eller tömma det här cacheminnet när du har ändrat eller lagt till integreringar. |
 | API-konfiguration för integrering | config_integration_api | Kompilerade API:er för integrering av butikens integreringar. |
+| GraphQL Query Resolver Results [!BADGE 2.4.7-beta]{type=Informative url=&quot;/help/release/release-notes/commerce/2-4-7.md&quot; tooltip=&quot;Finns endast i 2.4.7-beta&quot;} | graphql_query_resolver_result | Caches the results from GraphQL query resolvers for customer, CMS page, CMS block, and product media gallery entities. Låt cachen vara aktiverad för att förbättra GraphQL prestanda. |
 | Konfiguration av webbtjänster | config_webservice | Cachelagra webb-API-strukturen. |
 | Kundmeddelande | customer_notification | Tillfälliga meddelanden som visas i användargränssnittet. |
-| Administratörsgränssnitt, SDK-cache | admin_ui_sdk | Hantera administratörsanpassningar som lagts till med [Adobe Commerce Admin UI SDK](https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/). |
-| Webhooks-svarscache | webhooks_response | Cachelagrar svar på [webkrok-förfrågningar](https://developer.adobe.com/commerce/extensibility/webhooks/). |
 
 ## Visa cachestatus
 
@@ -63,6 +62,7 @@ Current status:
             config_integration: 1
         config_integration_api: 1
                    target_rule: 1
+ graphql_query_resolver_result: 1
              config_webservice: 1
                      translate: 1
 ```
@@ -171,6 +171,7 @@ Exempelresultat:
    config_integration
    config_integration_api
    full_page
+   graphql_query_resolver_results
    config_webservice
    translate
 ```
