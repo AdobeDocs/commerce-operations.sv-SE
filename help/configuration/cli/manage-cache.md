@@ -31,7 +31,7 @@ Handel har följande cachetyper:
 | Översättningar | translate | När översättningar från alla moduler har sammanfogats rensas sammanslagningscachen. |
 | Integrationskonfiguration | config_integration | Kompilerade integreringar. Rensa eller tömma det här cacheminnet när du har ändrat eller lagt till integreringar. |
 | API-konfiguration för integrering | config_integration_api | Kompilerade API:er för integrering av butikens integreringar. |
-| GraphQL Query Resolver Results [!BADGE 2.4.7-beta]{type=Informative url=&quot;/help/release/release-notes/commerce/2-4-7.md&quot; tooltip=&quot;Finns endast i 2.4.7-beta&quot;} | graphql_query_resolver_result | Caches the results from GraphQL query resolvers for customer, CMS page, CMS block, and product media gallery entities. Låt cachen vara aktiverad för att förbättra GraphQL prestanda. |
+| GraphQL Query Resolver Results [!BADGE 2.4.7-beta]{type=Informative url="/help/release/release-notes/commerce/2-4-7.md" tooltip="Finns endast i 2.4.7-beta"} | graphql_query_resolver_result | Caches the results from GraphQL query resolvers for customer, CMS page, CMS block, and product media gallery entities. Låt cachen vara aktiverad för att förbättra GraphQL prestanda. |
 | Konfiguration av webbtjänster | config_webservice | Cachelagra webb-API-strukturen. |
 | Kundmeddelande | customer_notification | Tillfälliga meddelanden som visas i användargränssnittet. |
 
