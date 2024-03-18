@@ -3,9 +3,9 @@ title: Application Server för GraphQL API:er
 description: Följ dessa anvisningar för att aktivera API:er för Application Server for GraphQL i din Adobe Commerce-distribution.
 badgeCoreBeta: label="2.4.7-beta" type="informative"
 exl-id: 9b223d92-0040-4196-893b-2cf52245ec33
-source-git-commit: 1fdb29c1a6666aeeef7e546bc7d57a83a40b7542
+source-git-commit: 9d5795400880a65947b1b90c8806b9dcb14aba23
 workflow-type: tm+mt
-source-wordcount: '1844'
+source-wordcount: '1897'
 ht-degree: 0%
 
 ---
@@ -88,7 +88,7 @@ Utför följande uppgifter innan du distribuerar Application Server på Cloud St
 1. Se till att alla anpassningar och tillägg i Commerce är kompatibla med Application Server.
 1. Bekräfta att `CRYPT_KEY` Miljövariabeln ställs in för din instans. Du kan kontrollera statusen för den här variabeln på Cloud Project Portal (gränssnittet för introduktion).
 1. Klona ditt Commerce Cloud-projekt.
-1. Byt namn på application-server/.magento/.magento.app.yaml.sample till application-server/.magento/.magento.app.yaml och justera inställningarna i .magento.app.yaml om det behövs.
+1. Byt namn `application-server/.magento/.magento.app.yaml.sample` till `application-server/.magento/.magento.app.yaml` och justera inställningarna i .magento.app.yaml om det behövs.
 1. Avkommentera följande flödes konfiguration i `project_root/.magento/routes.yaml` fil att omdirigera `/graphql` till Application Server.
 
    ```yaml
@@ -108,6 +108,11 @@ Utför följande uppgifter innan du distribuerar Application Server på Cloud St
    ```bash
    git commit -m "AppServer Enabled"
    ```
+
+>[!NOTE]
+>
+> Kontrollera att alla anpassade inställningar som du har i roten `.magento.app.yaml` filen migreras korrekt till `application-server/.magento/.magento.app.yaml` -fil. När `application-server/.magento/.magento.app.yaml` filen läggs till i ditt projekt bör du underhålla den utöver roten `.magento.app.yaml` -fil.
+> Om du till exempel behöver [konfigurera kaninitmq](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/service/rabbitmq) eller [hantera webbegenskaper](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/app/properties/web-property) du bör lägga till samma konfiguration i `application-server/.magento/.magento.app.yaml` också.
 
 ### Distribuera Application Server på molnstartaren
 
