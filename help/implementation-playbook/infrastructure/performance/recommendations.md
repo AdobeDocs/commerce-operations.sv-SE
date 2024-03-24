@@ -4,9 +4,9 @@ description: Optimera Adobe Commerce-implementeringens prestanda genom att följ
 exl-id: c5d62e23-be43-4eea-afdb-bb1b156848f9
 feature: Cloud
 topic: Performance
-source-git-commit: 31c71af854a59381c7793f26ed9b121cd9bcac83
+source-git-commit: 8b09d734d8ac4490cd88af5673acd0a41b6cdf66
 workflow-type: tm+mt
-source-wordcount: '1279'
+source-wordcount: '1282'
 ht-degree: 0%
 
 ---
@@ -122,7 +122,7 @@ Förutom de tidigare nämnda rekommendationerna om optimering av infrastruktur f
 
 ### Headless-arkitektur
 
-Det finns ett separat avsnitt som är dedikerat till [headless](../../architecture/headless/adobe-commerce.md). Sammanfattningsvis separerar den butikslagret från själva plattformen. Det är fortfarande samma serverdel, men Adobe Commerce hanterar inte längre förfrågningar direkt och stöder istället bara anpassade butiker via GraphQL API.
+Det finns ett separat avsnitt som är dedikerat till [headless](../../architecture/enterprise-blueprint.md#headless-storefront). Sammanfattningsvis separerar den butikslagret från själva plattformen. Det är fortfarande samma serverdel, men Adobe Commerce hanterar inte längre förfrågningar direkt och stöder istället bara anpassade butiker via GraphQL API.
 
 ### Håll Adobe Commerce uppdaterat
 

@@ -2,9 +2,9 @@
 user-guide-title: Implementera spelningsbok
 user-guide-description: Läs om strategier för att planera och implementera en framgångsrik Adobe Commerce-webbplats.
 mini-toc-levels: 3
-source-git-commit: fb449f0ee7d503d0c7ba60bf6bfbe3f528060606
+source-git-commit: 36a2a86cbafab1e4913573b1c8431524ba43dc6a
 workflow-type: tm+mt
-source-wordcount: '277'
+source-wordcount: '257'
 ht-degree: 0%
 
 ---
@@ -32,10 +32,7 @@ ht-degree: 0%
    - [Ansvar och ägarskap](planning/ownership.md)
    - [Projektstyrning](planning/governance.md)
 - Arkitektur och integreringar {#architecture}
-   - [Funktioner](architecture/capabilities.md)
-   - [Integreringsstrategi](architecture/integration-strategy.md)
-   - [Utbyggbarhetsstrategi](architecture/extensibility-strategy.md)
-   - [Integreringsalternativ](architecture/integration-options.md)
+   - [Företagsreferens](architecture/enterprise-blueprint.md)
    - Global referensarkitektur {#global-reference-architecture}
       - [Ökning](architecture/global-reference/overview.md)
       - [Exempel](architecture/global-reference/examples.md)
@@ -43,13 +40,6 @@ ht-degree: 0%
          - [Ökning](architecture/global-reference/composer/overview.md)
          - [Projektstruktur](architecture/global-reference/composer/project-structure.md)
          - [Tips och råd](architecture/global-reference/composer/tips-and-tricks.md)
-   - Headless commerce {#headless}
-      - [Fördelar](architecture/headless/benefits.md)
-      - [Resa till headless](architecture/headless/journey-to-headless.md)
-      - [Mikrotjänster](architecture/headless/microservices.md)
-      - [Framtagning utan huvud](architecture/headless/evolution.md)
-      - [Kopplad butiksarkitektur](architecture/headless/legacy-storefront.md)
-      - [Headless-arkitektur](architecture/headless/adobe-commerce.md)
 - Infrastruktur och driftsättning {#infrastructure}
    - [Ökning](infrastructure/overview.md)
    - Självvärdande {#self-hosting}
