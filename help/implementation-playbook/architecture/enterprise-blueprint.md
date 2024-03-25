@@ -2,13 +2,13 @@
 title: Referensarkitektur för företag
 description: Lär dig hur du implementerar Adobe Commerce med hjälp av Adobe senaste teknik för sammanställbar e-handel.
 feature: App Builder, Cloud, GraphQL, Integration, Paas, Saas
-source-git-commit: 96afb0ccf5ea872cb42320babfd04ba51fa7dbf6
+exl-id: d066ab43-20e2-4e0b-8348-0c52d6a7ac8a
+source-git-commit: 8eab688ed98eb1b9fcf4fc25f90fe2bbf99c02d6
 workflow-type: tm+mt
 source-wordcount: '799'
 ht-degree: 0%
 
 ---
-
 
 # Adobe Commerce referensarkitektur
 
@@ -78,3 +78,4 @@ Adobe erbjuder en mängd intelligenta, sammanställningsbara tjänster för att 
 Headless commerce is API-first commerce. Adobe Commerce är helt headless med en frikopplad arkitektur som ger alla e-handelstjänster och data via ett GraphQL API-lager. Med den här arkitekturen kan teamen utveckla sina gränser oberoende av huvudapplikationen, vilket gör det enkelt att snabbt skapa och testa nya kontaktytor med ny teknik.
 
 Adobe har en modern, headless storefront-teknik som innehåller samma fördelar och funktioner som [Edge Delivery Services](https://www.aem.live/home) med dokumentbaserad framtagning, en arkitektur som sätter prestanda först och färdiga inbyggda experiment. Programmet utnyttjar Adobe Commerce skalbarhet och prestanda [butikstjänster](#storefront-services) och flexibiliteten och bekvämligheten i [komponenter för insticksprogram](https://experienceleague.adobe.com/developer/commerce/storefront/) för att leverera e-handelsfunktioner.
+
