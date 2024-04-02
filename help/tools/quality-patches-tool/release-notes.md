@@ -2,9 +2,9 @@
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: c39eb5c9328657083aea07a385531e7ad0df6e14
+source-git-commit: f21891b1be51896efba83d36048c20119ea1edbf
 workflow-type: tm+mt
-source-wordcount: '20136'
+source-wordcount: '20493'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,20 @@ The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) le
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som skapats av gemenskapen för Magento Open Source, se [versionsinformation](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.48 {#v1-1-48}
+
+* **ACSD-55566** (för Adobe Commerce och Magento Open Source >=2.4.3 &lt;2.4.7) - Korrigerar problemet där `mergeCart` mutation misslyckas med en *Internt serverfel*&quot; i [!DNL GraphQL] när du sammanfogar käll- och destinationskorgar som har samma paket.
+* **ACSD-56546** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.7) - Korrigerar problemet där konfigurerbara produkter och paketprodukter visas som **Slut på lager** på butiken när **visning utanför produktkonfiguration** är *Handikappade*.
+* **ACSD-56635** (för Adobe Commerce >=2.4.6 &lt;2.4.7) - Korrigerar problemet där den importerade kunden dupliceras med samma e-postadress när en import används med **kontodelning** ange till *Global*.
+* **ACSD-56741** (för Adobe Commerce och Magento Open Source >=2.4.6 &lt;2.4.7) - Korrigerar felmeddelandet &quot;*Försöker få åtkomst till matrisförskjutning på värdet av typen null*&quot; som visas under `setup:upgrade` när databasen innehåller en anpassad [!DNL MySQL] utlösaren är inte relaterad till indexeringsmekanismen och [!DNL MView].
+* **ACSD-57315** (för Adobe Commerce och Magento Open Source >=2.4.2 &lt;2.4.7) - Korrigerar problemet när en ny transaktion skapas i [!DNL PayPal Payflow Pro] varje gång [!UICONTROL Fetch] knappen klickas på **[!UICONTROL View transaction]** i Admin.
+* **ACSD-57337** (för Adobe Commerce >=2.4.4 &lt;2.4.6) - Korrigerar problemet där en administratörsanvändare med åtkomstbegränsningar för specifika webbplatser kan se företag från alla webbplatser på **[!UICONTROL Companies]** rutnät.
+* **ACSD-57394** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.7) - Korrigerar problemet med felaktig produktsortering efter flera sorteringsfält i [!DNL GraphQL].
+* **ACSD-57565** (för Adobe Commerce och Magento Open Source >=2.4.6 &lt;2.4.7) - Korrigerar problemet där **[!UICONTROL Order]** Instrumentpanelen visar felaktig orderinformation tills tidsperioden uppdateras. På kontrollpanelen visas nu korrekt orderstatistik vid den första inläsningen.
+* **ACSD-57854** (för Adobe Commerce och Magento Open Source >=2.4.5 &lt;2.4.7) - Korrigerar problemet när produkten [!DNL GraphQL] begäranden returnerade inaktiverade kategorier i kategoriaggregeringar.
+* **ACSD-58008** (för Adobe Commerce >=2.4.5 &lt;2.4.7) - Korrigerar felet där en schemalagd uppdatering tog bort den tidigare versionen av ett mellanlagrat objekt om inget slutdatum angavs.
+* Uppdaterade patchar: MDVA-39305-V2, ACSD-48627, ACSD-54965
 
 ## v1.1.47 {#v1-1-47}
 
