@@ -1,7 +1,7 @@
 ---
-source-git-commit: 489cafa5fc2bc736ac873d1dd3008463c00b638a
+source-git-commit: febd2aa57434ec9b959a4aff6179ae00fe0ccba8
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '181'
 ht-degree: 0%
 
 ---
@@ -10,6 +10,26 @@ ht-degree: 0%
 ## Nyheter
 
 Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
+
+### 24 mars 2024
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Källa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Tillagda <a href="https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/architecture/enterprise-blueprint.html">arkitekturutkast</a> för företagsimplementeringar av Commerce.</p>
+</td>
+      <td>new-topic</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/d33294d02b4431d4aa473aa5d0ab42e297cfed14">d33294</a> (implementera)</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 12 mars 2024
 
@@ -22,6 +42,12 @@ Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td><p>Uppdaterade följande avsnitt för 2.4.7-beta3-versionen:<br />- <a href="https://experienceleague.adobe.com/docs/commerce-operations/reference/commerce-on-premises-beta.html">Adobe Commerce CLI (lokal, betaversion)</a><br />- <a href="https://experienceleague.adobe.com/docs/commerce-operations/reference/magento-open-source-beta.html">Magento Open Source CLI (betaversion)</a><br />- <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/packages/adobe-commerce-beta.html">Adobe Commerce-paket (beta)</a><br />- <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/packages/magento-open-source-beta.html">Magento Open Source-paket (beta)</a></p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/28029603b0a23eb161480363b5106142beda4180">280296</a> (implementera)</td>
+    </tr>
     <tr>
       <td><p>Inställningsinstruktionerna för <a href="https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/performance-best-practices/application-server.html">Application Server för GraphQL API:er</a> -funktion.</p>
 </td>
