@@ -1,7 +1,7 @@
 ---
-source-git-commit: febd2aa57434ec9b959a4aff6179ae00fe0ccba8
+source-git-commit: 018c61a4ea921b4a69cc854fde355606defe1215
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
@@ -10,6 +10,78 @@ ht-degree: 0%
 ## Nyheter
 
 Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
+
+### 9 april 2024
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Källa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Uppdaterat <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/versions.html">Släppta versioner</a>.</p>
+</td>
+      <td>teknisk</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/efd2fc4285a5cdc7ee20ead299ee16e54f9bcb83">efd2fc</a> (implementera)</td>
+    </tr>
+    <tr>
+      <td><ul>
+  <li>Uppdatera ämnen om versionspaket för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/packages/adobe-commerce">Adobe Commerce</a> och <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/packages/magento-open-source">Magento OpenSource</a>.<br />- Lägg till ett ämne för versionspaket för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/packages/adobe-commerce-b2b">B2B för handel</a>.</li>
+</ul>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/aad4b904ba95142d1d848f934c9d3702cc37ec16">aad4b9</a> (implementera)</td>
+    </tr>
+    <tr>
+      <td><p>Uppdaterade <em>bin/magento</em> CLI-referensdokumentation för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/reference/commerce-on-premises">Adobe Commerce</a> och <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/reference/magento-open-source">Magento OpenSource</a>.</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/b81dc87a261f128cdb572a30ff5538dae2087c49">b81dc8</a> (implementera)</td>
+    </tr>
+    <tr>
+      <td><p>Publicerad 2.4.7 GA <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/2-4-7">versionsinformation</a>.</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/35b7caafbef5ced52ef6e4907e0634dfb2a61e4f">35b7ca</a> (implementera)</td>
+    </tr>
+    <tr>
+      <td><p>Lägger till versionsinformation för Adobe Commerce säkerhetsutgåvor från april 2024 (2.4.6-p5, 2.4.5-p7, 2.4.4-p8). Se <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/overview.html">Versionsinformation för Adobe Commerce och Magento Open Source</a></p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/7acab1d8d3f7b11cc1387b5558521f282ba0873f">7acab1</a> (implementera)</td>
+    </tr>
+    <tr>
+      <td><ul>
+  <li>Uppdatera ämnen om versionspaket för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/packages/adobe-commerce">Adobe Commerce</a> och <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/packages/magento-open-source">Magento OpenSource</a>.<br />- Lägg till ett ämne för versionspaket för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/packages/adobe-commerce-b2b">B2B för handel</a>.</li>
+</ul>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/aad4b904ba95142d1d848f934c9d3702cc37ec16">aad4b9</a> (implementera)</td>
+    </tr>
+    <tr>
+      <td><p>Uppdaterade <em>bin/magento</em> CLI-referensdokumentation för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/reference/commerce-on-premises">Adobe Commerce</a> och <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/reference/magento-open-source">Magento OpenSource</a>.</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/b81dc87a261f128cdb572a30ff5538dae2087c49">b81dc8</a> (implementera)</td>
+    </tr>
+    <tr>
+      <td><p>Publicerad 2.4.7 GA <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/2-4-7">versionsinformation</a>.</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/35b7caafbef5ced52ef6e4907e0634dfb2a61e4f">35b7ca</a> (implementera)</td>
+    </tr>
+    <tr>
+      <td><p>Lägger till versionsinformation för Adobe Commerce säkerhetsutgåvor från april 2024 (2.4.6-p5, 2.4.5-p7, 2.4.4-p8). Se <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/overview.html">Versionsinformation för Adobe Commerce och Magento Open Source</a></p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/7acab1d8d3f7b11cc1387b5558521f282ba0873f">7acab1</a> (implementera)</td>
+    </tr>
+  </tbody>
+</table><!-- date_group -->
 
 ### 24 mars 2024
 
@@ -71,52 +143,6 @@ Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
 </td>
       <td>större uppdatering</td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/acacc285f8b977b33bb27af76c971bc4015a2b45">acacc2</a> (implementera)</td>
-    </tr>
-  </tbody>
-</table><!-- date_group -->
-
-### 14 februari 2024
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Källa</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Lagt till metodtips för <a href="https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/mariadb-upgrade.html">uppgraderar MariaDB</a> till 10.5.1 och senare.</p>
-</td>
-      <td>större uppdatering</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/7199e74f82cef6dd682f5e240ee2b6fc56da18c8">7199e7</a> (implementera)</td>
-    </tr>
-  </tbody>
-</table>
-
-### 13 februari 2024
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Källa</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Lagt till säkerhetspatchar från februari 2024 i <a href="https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html">systemkrav</a>.</p>
-</td>
-      <td>större uppdatering</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/068eed591b461ba6c91b0e3d517dc712215c6b33">068eed</a> (implementera)</td>
-    </tr>
-    <tr>
-      <td><p>Tillagd <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/overview.html">versionsinformation</a> för säkerhetsuppdateringar från februari 2024 (2.4.4-p7, 2.4.5-p6 och 2.4.6-p4).</p>
-</td>
-      <td>större uppdatering</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/8e5644951114daa5d0841b7fdd32ce37b9803118">8e5644</a> (implementera)</td>
     </tr>
   </tbody>
 </table><!-- date_group --><!-- month_group --><!-- year_group -->
