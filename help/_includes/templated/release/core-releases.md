@@ -1,7 +1,7 @@
 ---
-source-git-commit: cbe55af59fae795cab106923af47bb0b4962caba
+source-git-commit: 7964dc6670c2fbe6bc2412b74bc948e520695c9d
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
@@ -21,21 +21,9 @@ Stöd för version 2.4.7 upphör 9 april 2027.
   <tbody>
     <tr>
         <td>
-          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/adobe-commerce/2-4-7.html">2.4.7-beta3</a>
+          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/adobe-commerce/2-4-7.html">2.4.7</a>
         </td>
-        <td>12 mars 2024</td>
-    </tr>
-    <tr>
-        <td>
-          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/adobe-commerce/2-4-7.html">2.4.7-beta2</a>
-        </td>
-        <td>10 oktober 2023</td>
-    </tr>
-    <tr>
-        <td>
-          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/adobe-commerce/2-4-7.html">2.4.7-beta1</a>
-        </td>
-        <td>13 juni 2023</td>
+        <td>9 april 2024</td>
     </tr><!-- patch_releases -->
   </tbody>
 </table>
@@ -52,6 +40,12 @@ Stöd för version 2.4.6 upphör den 14 mars 2026.
     </tr>
   </thead>
   <tbody>
+    <tr>
+        <td>
+          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-6-p5.html">2.4.6-p5</a>
+        </td>
+        <td>9 april 2024</td>
+    </tr>
     <tr>
         <td>
           <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-6-p4.html">2.4.6-p4</a>
@@ -97,6 +91,12 @@ Stöd för version 2.4.5 upphör den 9 augusti 2025.
     </tr>
   </thead>
   <tbody>
+    <tr>
+        <td>
+          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-5-p7.html">2.4.5-p7</a>
+        </td>
+        <td>9 april 2024</td>
+    </tr>
     <tr>
         <td>
           <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-5-p6.html">2.4.5-p6</a>
@@ -154,6 +154,12 @@ Stöd för version 2.4.4 upphör den 24 april 2025.
     </tr>
   </thead>
   <tbody>
+    <tr>
+        <td>
+          <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-4-p8.html">2.4.4-p8</a>
+        </td>
+        <td>9 april 2024</td>
+    </tr>
     <tr>
         <td>
           <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/security-patches/2-4-4-p7.html">2.4.4-p7</a>
