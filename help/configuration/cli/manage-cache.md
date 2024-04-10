@@ -1,10 +1,10 @@
 ---
 title: Hantera cachen
-description: Hantera cachetyper och visa cachestatus.
+description: Hantera cachetyper och visa cachestatus från kommandoraden med Commerce CLI
 exl-id: bbd76c00-727b-412e-a8e5-1e013a83a29a
-source-git-commit: 6e0e7f209b265e5b924e0092fec020e0cefc165d
+source-git-commit: 1070291396144f866cadd5e42ebca3e77a484a9b
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
@@ -15,29 +15,17 @@ ht-degree: 0%
 
 ## Cache-typer
 
-Handel har följande cachetyper:
+Du kan använda Adobe Commerce cachehanteringssystem för att förbättra prestanda för din plats. I det här avsnittet beskrivs hur systemadministratörer och utvecklare med åtkomst till Commerce-programservern kan hantera cacheminnen från kommandoraden.
 
-| Eget namn för cachetyp | Namn på cachetypkod | Beskrivning |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Konfiguration | config | Commerce samlar in konfiguration från alla moduler, sammanfogar den och sparar det sammanfogade resultatet i cachen. Cachen innehåller även lagringsinställningar som lagras i filsystemet och databasen. Rensa eller tömma den här cachetypen efter att konfigurationsfilerna har ändrats. |
-| Layout | layout | Kompilerade sidlayouter (dvs. layoutkomponenter från alla komponenter). Rensa eller tömma den här cachetypen efter att du har ändrat layoutfiler. |
-| Blockera utdata för HTML | block_html | HTML sidfragment per block. Rengör eller tömma den här cachetypen efter att du har ändrat visningslagret. |
-| Samlingsdata | samlingar | Resultat av databasfrågor. Om det behövs rensar Commerce cachen automatiskt, men tredjepartsutvecklare kan placera alla data i valfritt segment i cachen. Rensa eller tömma den här cachetypen om den anpassade modulen använder logik som resulterar i cacheposter som inte kan rensas. |
-| DDL | db_ddl | Databasschema. Om det behövs rensar Commerce cachen automatiskt, men tredjepartsutvecklare kan placera alla data i valfritt segment i cachen. Rensa eller tömma den här cachetypen efter att du har gjort anpassade ändringar i databasschemat. (Med andra ord, uppdateringar som Commerce inte gör sig själv.) Ett sätt att uppdatera databasschemat automatiskt är att använda `magento setup:db-schema:upgrade` -kommando. |
-| Kompilerad konfiguration | compiled_config | Kompileringskonfiguration |
-| Entity attribute value (EAV) | eav | Metadata relaterade till EAV-attribut (t.ex. butiksetiketter, länkar till relaterad PHP-kod, attributåtergivning, sökinställningar osv.). Vanligtvis behöver du inte rensa eller tömma den här cachetypen. |
-| Sidcache | full_page | Skapade HTML-sidor. Om det behövs rensar Commerce cachen automatiskt, men tredjepartsutvecklare kan placera alla data i valfritt segment i cachen. Rensa eller tömma den här cachetypen efter att du har ändrat kodnivån som påverkar utdata från HTML. Vi rekommenderar att du låter cacheminnet vara aktiverat eftersom cachelagring i HTML förbättrar prestandan avsevärt. |
-| Reflektion | reflektion | Tar bort ett beroende mellan Webapi-modulen och kundmodulen. |
-| Översättningar | translate | När översättningar från alla moduler har sammanfogats rensas sammanslagningscachen. |
-| Integrationskonfiguration | config_integration | Kompilerade integreringar. Rensa eller tömma det här cacheminnet när du har ändrat eller lagt till integreringar. |
-| API-konfiguration för integrering | config_integration_api | Kompilerade API:er för integrering av butikens integreringar. |
-| GraphQL Query Resolver Results [!BADGE 2.4.7-beta]{type=Informative url="/help/release/release-notes/commerce/2-4-7.md" tooltip="Finns endast i 2.4.7-beta"} | graphql_query_resolver_result | Caches the results from GraphQL query resolvers for customer, CMS page, CMS block, and product media gallery entities. Låt cachen vara aktiverad för att förbättra GraphQL prestanda. |
-| Konfiguration av webbtjänster | config_webservice | Cachelagra webb-API-strukturen. |
-| Kundmeddelande | customer_notification | Tillfälliga meddelanden som visas i användargränssnittet. |
+>[!NOTE]
+>
+>
+>Administratörer för företagswebbplatser kan hantera cacheminnet från administratören med hjälp av verktyget Cachehanteringssystem. Se [Cachehantering](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management) i _Handbok för adminsystem_.
+
 
 ## Visa cachestatus
 
-Om du vill visa cachestatus anger du
+Visa status för cachen med hjälp av kommandoraden på Commerce-programservern `cache:status` Kommandot Commerce CLI.
 
 ```bash
    bin/magento cache:status
@@ -56,16 +44,23 @@ Current status:
                     reflection: 1
                         db_ddl: 1
                compiled_config: 1
+             webhooks_response: 1
                            eav: 1
          customer_notification: 1
-                     full_page: 1
+ graphql_query_resolver_result: 1
             config_integration: 1
         config_integration_api: 1
+                  admin_ui_sdk: 1
+                     full_page: 1
                    target_rule: 1
- graphql_query_resolver_result: 1
              config_webservice: 1
                      translate: 1
 ```
+
+>[!TIP]
+>
+>En detaljerad beskrivning av de standardcachetyper som stöds av Adobe Commerce finns i [Cacher](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management#caches) i _Handbok för adminsystem_.
+
 
 ## Aktivera eller inaktivera cachetyper
 

@@ -3,9 +3,9 @@ keywords: Adobe Commerce;home;populära topics
 title: Startsida
 description: Bläddra bland index över systemadministration och produktdokumentation för Adobe Commerce.
 exl-id: 45ec4948-338f-4276-8a70-d0db720322d9
-source-git-commit: 2b1fa24471cda7cc01ef5fdafeedbec0315d68c7
+source-git-commit: c8093c4575eccc1d012da0e1502eb618c9b048e5
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Få praktisk information om koncept, processer, verktyg och bästa metoder för 
 <table>
 <tr>
   <td valign="top">
-    <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/versions.html">
+    <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/latest.html">
       <img alt="Versionsinformation" src="../assets/icons/promote.svg" width="40" height="40"/>
     </a>
     <div>

@@ -2,10 +2,10 @@
 user-guide-title: Användarhandböcker om operativa funktioner
 user-guide-description: Lär dig mer om de operativa aspekterna av att underhålla programmet Adobe Commerce eller Magento Open Source.
 feature: Configuration, Best Practices, Install, Integration, Security, Release Notes, Upgrade
-source-git-commit: e8b41f25cfd5b707d701016e65db43826a7f26d6
+source-git-commit: c8093c4575eccc1d012da0e1502eb618c9b048e5
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 14%
+source-wordcount: '57'
+ht-degree: 29%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 14%
 # Adobe Commerce drifthandledningar {#operational-guides}
 
 - [Startsida](home.md)
-- [Versionsinformation](https://experienceleague.adobe.com/docs/commerce-operations/release/versions.html)
+- [Versionsinformation](https://experienceleague.adobe.com/docs/commerce-operations/release/latest.html)
 - [Installation](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/overview.html)
 - [Konfiguration](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/overview.html)
 - [Datamigrering](https://experienceleague.adobe.com/docs/commerce-operations/tools/data-migration/how-migration-works.html)

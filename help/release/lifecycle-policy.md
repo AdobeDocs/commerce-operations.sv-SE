@@ -2,10 +2,10 @@
 title: Policy för programvarans livscykel
 description: Lär dig om viktiga datum för när programvarusupporten för Adobe Commerce upphör.
 exl-id: 9ee4ecc8-d893-412a-a605-5a8606a1b9a9
-source-git-commit: bb90d7903eafe01b42d8c056db771769f9e4e752
+source-git-commit: 01e926e3cf36f27f5292a0b9ce7a6209d4960cc2
 workflow-type: tm+mt
-source-wordcount: '383'
-ht-degree: 12%
+source-wordcount: '363'
+ht-degree: 5%
 
 ---
 
@@ -20,7 +20,7 @@ För Adobe Commerce 2.4.4 och senare versioner:
 
 - För allvarliga säkerhetsproblem, som noll-dagars säkerhetsluckor, tillhandahåller Adobe [snabbkorrigeringar](https://support.magento.com/hc/en-us/sections/360003869892-Known-issues-patches-attached-) för alla kunder som har en version som stöds, även om de inte har den senaste patchen eller säkerhetsuppdateringen. Det är viktigt att komma ihåg att en programfix inte är en&quot;catch-all&quot; och inte åtgärdar alla säkerhetsproblem som skulle ha åtgärdats genom en uppgradering till den senaste versionen.
 
-- Adobe tillhandahåller inte säkerhets- och kvalitetskorrigeringar för tredjepartstjänster och programvaruberoenden, som PHP. Det är ditt ansvar att upprätthålla säkerheten och kompatibiliteten (till exempel PCI, ISO, SOC) för tredjepartsprogramvaruberoenden. Adobe rekommenderar att du så snart som möjligt uppdaterar dina miljöer så att du kan använda den senaste versionen av PHP som stöds av Adobe Commerce. Använd inte en version av PHP som inte längre stöds.
+- Adobe erbjuder inga säkerhets- och kvalitetskorrigeringar för tredjepartstjänster och programvaruberoenden (som PHP och MySQL) som kan ta slut när kunderna är under den treåriga supportperioden för Adobe Commerce. Se [systemkrav](../installation/system-requirements.md) för en fullständig lista över testade och stödda tredjepartstekniker.
 
 ## Programvarusupport upphör
 
@@ -28,8 +28,8 @@ För Adobe Commerce 2.4.4 och senare versioner:
 |----------------------|----------------------|-------------------------------------|-----------------------|
 | Adobe Commerce 2.4.7 | 9 april 2024 | 9 april 2027 | 8.2 och 8.3 |
 | Adobe Commerce 2.4.6 | 14 mars 2023 | 14 mars 2026 | 8.1 och 8.2 |
-| Adobe Commerce 2.4.5 | 9 augusti 2022 | 9 augusti 2025 | 8.1 |
-| Adobe Commerce 2.4.4 | 12 april 2022 | 24 april 2025 | 8.1 |
+| Adobe Commerce 2.4.5 | 9 augusti 2022 | 9 augusti 2025 | 8,1 |
+| Adobe Commerce 2.4.4 | 12 april 2022 | 24 april 2025 | 8,1 |
 
 {style="table-layout:auto"}
 

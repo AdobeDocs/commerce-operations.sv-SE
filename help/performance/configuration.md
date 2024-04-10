@@ -3,9 +3,9 @@ title: Bästa praxis för konfiguration
 description: Optimera svarstiden för driftsättningen av Adobe Commerce eller Magento Open Source med hjälp av dessa metodtips.
 feature: Best Practices, Configuration
 exl-id: 4cb0f5e7-49d5-4343-a8c7-b8e351170f91
-source-git-commit: 5a49aff28f1a7c87cd6135ca19b4436da41cbb1b
+source-git-commit: 602a1ef82fcb8d30ff027db0fe0aacb981c7e08e
 workflow-type: tm+mt
-source-wordcount: '1437'
+source-wordcount: '1425'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Det kan finnas tillfällen då intensiv försäljning sker samtidigt som [!DNL C
 >
 >The **[!UICONTROL Developer]** och alternativ är bara tillgängliga i [Utvecklarläge](../configuration/cli/set-mode.md). [Adobe Commerce i molninfrastruktur](https://devdocs.magento.com/cloud/requirements/cloud-requirements.html#cloud-req-test) stöder inte `Developer` läge.
 
-## Spara asynkron konfiguration [!BADGE 2.4.7-beta]{type=Informative url="/help/release/release-notes/commerce/2-4-7.md" tooltip="Finns endast i 2.4.7 beta"}
+## Spara asynkron konfiguration
 
 För projekt med ett stort antal butikskonfigurationer kan det ta oordinerad tid att spara en butikskonfiguration eller resultera i en timeout. The _Async Config_ i aktiveras asynkrona konfigurationssparningar genom att ett cron-jobb körs som använder en konsument för att bearbeta sparandet i en meddelandekö. AsyncConfig är **inaktiverad** som standard.
 

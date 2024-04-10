@@ -3,9 +3,9 @@ user-guide-title: Bästa praxis för prestanda
 user-guide-description: Optimera prestandan för er Adobe Commerce- eller Magento Open Source-driftsättning med våra rekommendationer.
 feature: Best Practices
 topic: Administration, Commerce, Development, Performance
-source-git-commit: cb843dbb3759d9ce5e94317ae977cfe8acfa4432
+source-git-commit: 51a86a24561e2c21b895dd59b3d784313b52d186
 workflow-type: tm+mt
-source-wordcount: '56'
+source-wordcount: '54'
 ht-degree: 0%
 
 ---
@@ -24,5 +24,5 @@ ht-degree: 0%
 - Avancerade begrepp {#concepts}
    - [Avancerad konfiguration](advanced-setup.md)
    - [Avancerat [!DNL JavaScript] paketering](advanced-js-bundling.md)
-   - [Application Server för GraphQL API:er](application-server.md)
+   - [GraphQL Application Server](application-server.md)
 - [Återgå till bruksanvisningar](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

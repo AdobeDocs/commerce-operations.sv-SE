@@ -2,9 +2,9 @@
 title: Hantera indexerare
 description: Se exempel på hur du visar och hanterar Commerce-indexerare.
 exl-id: d2cd1399-231e-4c42-aa0c-c2ed5d7557a0
-source-git-commit: a8f845813971eb32053cc5b2e390883abf3a104e
+source-git-commit: 602a1ef82fcb8d30ff027db0fe0aacb981c7e08e
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '943'
 ht-degree: 0%
 
 ---
@@ -264,7 +264,7 @@ Index mode for Indexer Product Categories was changed from 'Update on Save' to '
 
 De indexerarrelaterade databasutlösarna läggs till när indexeringsläget är inställt på `schedule` och tas bort när indexerarläget är inställt på `realtime`. Om utlösarna saknas i databasen när indexerarna är inställda på `schedule`, ändra indexerare till `realtime` och sedan ändra tillbaka dem till `schedule`. Detta återställer utlösarna.
 
-### Ange indexeringsstatus [!BADGE 2.4.7-beta]{type=Informative url="/help/release/release-notes/commerce/2-4-7.md" tooltip="Finns endast i 2.4.7 beta"}
+### Ange indexeringsstatus
 
 Med det här kommandot kan administratörer ändra driftstatus för en eller flera indexerare och optimera systemprestanda vid omfattande åtgärder som import, uppdatering eller underhåll av data.
 

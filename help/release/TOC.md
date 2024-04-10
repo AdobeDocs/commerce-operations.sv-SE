@@ -3,9 +3,9 @@ user-guide-title: Versionsinformation
 user-guide-description: Få tillgång till all versionsinformation för Adobe Commerce patchar och tjänster på ett och samma ställe.
 feature: Release Notes
 recommendations: noDisplay, noCatalog
-source-git-commit: e298c88ab0bc00216fd7d4eadfc94908779713f5
+source-git-commit: d0304f4060080f70c079fb571210cd015407f1cf
 workflow-type: tm+mt
-source-wordcount: '122'
+source-wordcount: '124'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
    - [Bakåtkompatibla ändringar](backward-incompatible-changes.md)
    - Adobe Commerce {#adobe-commerce}
       - [Ökning](release-notes/commerce/overview.md)
-      - [2.4.7-beta](release-notes/commerce/2-4-7.md)
+      - [2.4.7](release-notes/commerce/2-4-7.md)
       - [2.4.6](release-notes/commerce/2-4-6.md)
       - [2.4.5](release-notes/commerce/2-4-5.md)
       - [2.4.4](release-notes/commerce/2-4-4.md)
@@ -29,7 +29,7 @@ ht-degree: 0%
       - [2.4.0](release-notes/commerce/2-4-0.md)
    - Magento Open Source {#magento-open-source}
       - [Ökning](release-notes/open-source/overview.md)
-      - [2.4.7-beta](release-notes/open-source/2-4-7.md)
+      - [2.4.7](release-notes/open-source/2-4-7.md)
       - [2.4.6](release-notes/open-source/2-4-6.md)
       - [2.4.5](release-notes/open-source/2-4-5.md)
       - [2.4.4](release-notes/open-source/2-4-4.md)
@@ -39,16 +39,19 @@ ht-degree: 0%
       - [2.4.0](release-notes/open-source/2-4-0.md)
    - Säkerhetsuppdateringar {#security-patches}
       - [Ökning](release-notes/security/overview.md)
+      - [2.4.6-p5](release-notes/security/2-4-6-p5.md)
       - [2.4.6-p4](release-notes/security/2-4-6-p4.md)
       - [2.4.6-p3](release-notes/security/2-4-6-p3.md)
       - [2.4.6-p2](release-notes/security/2-4-6-p2.md)
       - [2.4.6-p1](release-notes/security/2-4-6-p1.md)
+      - [2.4.5-p7](release-notes/security/2-4-5-p7.md)
       - [2.4.5-p6](release-notes/security/2-4-5-p6.md)
       - [2.4.5-p5](release-notes/security/2-4-5-p5.md)
       - [2.4.5-p4](release-notes/security/2-4-5-p4.md)
       - [2.4.5-p3](release-notes/security/2-4-5-p3.md)
       - [2.4.5-p2](release-notes/security/2-4-5-p2.md)
       - [2.4.5-p1](release-notes/security/2-4-5-p1.md)
+      - [2.4.4-p8](release-notes/security/2-4-4-p8.md)
       - [2.4.4-p7](release-notes/security/2-4-4-p7.md)
       - [2.4.4-p6](release-notes/security/2-4-4-p6.md)
       - [2.4.4-p5](release-notes/security/2-4-4-p5.md)
@@ -70,7 +73,6 @@ ht-degree: 0%
    - [Frigör schema](schedule.md)
 - Paket {#packages}
    - [Adobe Commerce](packages/adobe-commerce.md)
-   - [Adobe Commerce (beta)](packages/adobe-commerce-beta.md)
+   - [B2B för Adobe Commerce](packages/adobe-commerce-b2b.md)
    - [Magento Open Source](packages/magento-open-source.md)
-   - [Magento Open Source (beta)](packages/magento-open-source-beta.md)
 - [Återgå till bruksanvisningar](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

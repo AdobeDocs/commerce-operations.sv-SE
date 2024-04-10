@@ -2,9 +2,9 @@
 title: Systemkrav
 description: Använd den här referensen för att identifiera nödvändiga programvaruberoenden som har testats med Adobe Commerce och Magento Open Source.
 exl-id: 008c9edc-7d72-403c-847f-0e3b77bbb197
-source-git-commit: 56052a5777b8719d5a9257d0c48e5640a6812a5f
+source-git-commit: 4087d5f5de0bc11ce120d61a539800a3533893f0
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '760'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,7 @@ Om du måste installera OPcache separat, se [PHP OPcache-dokumentation](https://
 
 ### PHPUnit
 
-PHPUnit (som kommandoradsverktyg) 9.0.0
+PHPUnit v9 (som kommandoradsverktyg).
 
 ### PHP-tillägg
 

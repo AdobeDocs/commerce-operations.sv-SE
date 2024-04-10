@@ -1,55 +1,59 @@
 ---
-title: Application Server för GraphQL API:er
-description: Följ dessa anvisningar för att aktivera API:er för Application Server for GraphQL i din Adobe Commerce-distribution.
-badgeCoreBeta: label="2.4.7-beta" type="informative"
+title: GraphQL Application Server
+description: Följ dessa anvisningar för att aktivera GraphQL Application Server i din Adobe Commerce-distribution.
 exl-id: 9b223d92-0040-4196-893b-2cf52245ec33
-source-git-commit: 9d5795400880a65947b1b90c8806b9dcb14aba23
+source-git-commit: a1e548c1b1bffd634e0d5b1df0a77ef65c5997f8
 workflow-type: tm+mt
-source-wordcount: '1897'
+source-wordcount: '1880'
 ht-degree: 0%
 
 ---
 
-# Application Server för GraphQL API:er
 
-API:erna för Commerce Application Server för GraphQL gör det möjligt för Adobe Commerce att upprätthålla status bland API-begäranden för Commerce GraphQL. Programservern, som bygger på svullningstillägget, fungerar som en process med arbetstrådar som hanterar bearbetningen av begäranden. Genom att bevara ett startläge för ett program bland GraphQL API-begäranden förbättrar Application Server hanteringen av begäranden och produktens övergripande prestanda. API-förfrågningar blir betydligt effektivare.
+# GraphQL Application Server
 
-Application Server stöds endast på Adobe Commerce i molninfrastrukturerna Starter och Pro. Det är inte tillgängligt för projekt i Magento Open Source. Adobe har inte stöd för lokal distribution av Application Server.
+Med Commerce GraphQL Application Server kan Adobe Commerce upprätthålla status bland API-begäranden i Commerce GraphQL. GraphQL Application Server, som bygger på svullningstillägget, fungerar som en process med arbetstrådar som hanterar bearbetningen av begäranden. Genom att bevara ett startläge för ett program bland GraphQL API-begäranden förbättrar GraphQL Application Server hanteringen av begäranden och produktens övergripande prestanda. API-förfrågningar blir betydligt effektivare.
 
-## Programserverarkitektur - översikt
+GraphQL Application Server finns endast för Adobe Commerce. Det finns inte för Magento Open Source. Du måste [skicka in en Adobe Commerce-support](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide) biljett för att aktivera GraphQL Application Server i Pro-projekt.
 
-Application Server underhåller status mellan Commerce GraphQL API-begäranden och eliminerar behovet av startspärr. Genom att dela applikationsstatus mellan processer blir GraphQL-förfrågningar betydligt effektivare, vilket minskar svarstiderna med upp till 30 %.
+>[!NOTE]
+>
+>GraphQL Application Server är för närvarande inte kompatibel med [[!DNL Amazon Simple Storage Service (AWS S3)]](https://aws.amazon.com/s3/). Adobe Commerce på molnbaserade infrastrukturkunder använder [!DNL AWS S3] for [fjärrlagring](../configuration/remote-storage/cloud-support.md) kan inte använda GraphQL Application Server förrän Adobe släpper en snabbkorrigering senare under 2024.
+
+## Arkitektur
+
+GraphQL Application Server upprätthåller status mellan Commerce GraphQL API-begäranden och eliminerar behovet av startspärr. Genom att dela applikationsstatus mellan processer blir GraphQL-förfrågningar betydligt effektivare, vilket minskar svarstiderna med upp till 30 %.
 
 PHP-exekveringsmodellen&quot;share-no&quot; utgör en utmaning när det gäller latenstid eftersom varje begäran kräver att ramverket startas. Denna startprocess innehåller tidskrävande uppgifter som att läsa konfigurationen, konfigurera startprocessen och skapa tjänstklassobjekt.
 
 Det verkar som om logiken för hantering av förfrågningar övergår till en händelselösning på programnivå som åtgärdar utmaningen att effektivisera behandlingen av förfrågningar på företagsnivå. På så sätt elimineras behovet av att starta vid körningen av begäran.
 
-## Fördelar med att använda Application Server
+## Fördelar
 
-Med Application Server kan Adobe Commerce hantera tillstånd mellan efterföljande Commerce GraphQL API-begäranden. Genom att dela programtillstånd mellan begäranden blir API-förfrågningens effektivitet effektivare genom att minimera belastningen på processerna och optimera hanteringen av förfrågningar. Därför kan svarstiden för GraphQL-begäranden minskas till 30 %.
+Med GraphQL Application Server kan Adobe Commerce hantera status mellan efterföljande Commerce GraphQL API-begäranden. Genom att dela programtillstånd mellan begäranden blir API-förfrågningens effektivitet effektivare genom att minimera belastningen på processerna och optimera hanteringen av förfrågningar. Därför kan svarstiden för GraphQL-begäranden minskas till 30 %.
 
 ## Systemkrav
 
-Följande krävs för att köra programservern:
+För att köra GraphQL Application Server krävs följande:
 
 * PHP 8.2 eller senare
 * Svepande PHP-tillägg v5+ har installerats
 * Tillräckligt RAM och processor baserat på förväntad belastning
 
-## Aktivera programserver
+## Aktivera och distribuera i molninfrastruktur
 
-The `ApplicationServer` modul (`Magento/ApplicationServer/`) aktiverar Application Server för GraphQL API:er. Programservern stöds lokalt och i molnet.
+The `ApplicationServer` modul (`Magento/ApplicationServer/`) aktiveras GraphQL Application Server.
 
-## Aktivera Application Server i Cloud Pro
+### Aktivera Pro-projekt
 
-Utför följande uppgifter innan du distribuerar Application Server i Cloud Pro:
+Utför följande steg innan du distribuerar GraphQL Application Server i Pro-projekt:
 
-1. Bekräfta att Adobe Commerce är installerat på Commerce Cloud med molnmallsversion 2.4.7 eller senare.
-1. Se till att alla anpassningar och tillägg för din Commerce [kompatibel](https://developer.adobe.com/commerce/php/development/components/app-server/) med Application Server.
+1. Distribuera Adobe Commerce i molninfrastrukturen med hjälp av molnmallen från [2.4.7-appservergren](https://github.com/magento/magento-cloud/tree/2.4.7-appserver).
+1. Se till att alla anpassningar och tillägg för din Commerce [kompatibel](https://developer.adobe.com/commerce/php/development/components/app-server/) med GraphQL Application Server.
 1. Klona ditt Commerce Cloud-projekt.
 1. Justera inställningarna i filen application-server/nginx.conf.sample om det behövs.
 1. Kommentera det aktiva webbavsnittet i `project_root/.magento.app.yaml` helt och hållet.
-1. Avkommentera följande konfiguration av avsnittet &#39;web&#39; i `project_root/.magento.app.yaml` fil som innehåller kommandot Application Server start.
+1. Avkommentera följande konfiguration av avsnittet &#39;web&#39; i `project_root/.magento.app.yaml` fil som innehåller GraphQL Application Server `start` -kommando.
 
    ```yaml
    web:
@@ -72,24 +76,24 @@ Utför följande uppgifter innan du distribuerar Application Server i Cloud Pro:
    git commit -m "AppServer Enabled"
    ```
 
-### Distribuera Application Server i molnet Pro
+### Distribuera Pro-projekt
 
-När du har utfört de nödvändiga åtgärderna distribuerar du Application Server med det här kommandot:
+När du är klar med aktiveringsstegen skickar du ändringar till Git-databasen för att distribuera GraphQL Application Server:
 
 ```bash
 git push
 ```
 
-### Innan du påbörjar en Cloud Starter-distribution
+### Aktivera startprojekt
 
-Utför följande uppgifter innan du distribuerar Application Server på Cloud Starter:
+Utför följande steg innan du distribuerar GraphQL Application Server i Starter-projekt:
 
-1. Bekräfta att Adobe Commerce är installerat på Commerce Cloud med molnmallsversion 2.4.7 eller senare.
-1. Se till att alla anpassningar och tillägg i Commerce är kompatibla med Application Server.
+1. Distribuera Adobe Commerce i molninfrastrukturen med hjälp av molnmallen från [2.4.7-appservergren](https://github.com/magento/magento-cloud/tree/2.4.7-appserver).
+1. Se till att alla anpassningar och tillägg i Commerce är kompatibla med GraphQL Application Server.
 1. Bekräfta att `CRYPT_KEY` Miljövariabeln ställs in för din instans. Du kan kontrollera statusen för den här variabeln på Cloud Project Portal (gränssnittet för introduktion).
 1. Klona ditt Commerce Cloud-projekt.
 1. Byt namn `application-server/.magento/.magento.app.yaml.sample` till `application-server/.magento/.magento.app.yaml` och justera inställningarna i .magento.app.yaml om det behövs.
-1. Avkommentera följande flödes konfiguration i `project_root/.magento/routes.yaml` fil att omdirigera `/graphql` till Application Server.
+1. Avkommentera följande flödes konfiguration i `project_root/.magento/routes.yaml` fil att omdirigera `/graphql` till GraphQL Application Server.
 
    ```yaml
    "http://{all}/graphql":
@@ -97,13 +101,13 @@ Utför följande uppgifter innan du distribuerar Application Server på Cloud St
        upstream: "application-server:http"
    ```
 
-1. Lägg till uppdaterade filer i Git-indexet med följande kommando:
+1. Lägg till uppdaterade filer i Git-indexet:
 
    ```bash
    git add -f .magento/routes.yaml application-server/.magento/*
    ```
 
-1. Genomför ändringarna med det här kommandot:
+1. Genomför ändringarna:
 
    ```bash
    git commit -m "AppServer Enabled"
@@ -111,18 +115,17 @@ Utför följande uppgifter innan du distribuerar Application Server på Cloud St
 
 >[!NOTE]
 >
-> Kontrollera att alla anpassade inställningar som du har i roten `.magento.app.yaml` filen migreras korrekt till `application-server/.magento/.magento.app.yaml` -fil. När `application-server/.magento/.magento.app.yaml` filen läggs till i ditt projekt bör du underhålla den utöver roten `.magento.app.yaml` -fil.
-> Om du till exempel behöver [konfigurera kaninitmq](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/service/rabbitmq) eller [hantera webbegenskaper](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/app/properties/web-property) du bör lägga till samma konfiguration i `application-server/.magento/.magento.app.yaml` också.
+>Se till att alla anpassade inställningar i roten `.magento.app.yaml` filen migreras korrekt till `application-server/.magento/.magento.app.yaml` -fil. Efter `application-server/.magento/.magento.app.yaml` filen läggs till i ditt projekt bör du underhålla den utöver roten `.magento.app.yaml` -fil. Om du till exempel behöver [konfigurera kaninitmq](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/service/rabbitmq) eller [hantera webbegenskaper](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/app/properties/web-property) du bör lägga till samma konfiguration i `application-server/.magento/.magento.app.yaml` också.
 
-### Distribuera Application Server på molnstartaren
+### Distribuera startprojekt
 
-När du är klar med [krav](#before-you-begin-a-cloud-starter-deployment), distribuera Application Server med det här kommandot:
+När aktiveringen är klar [steg](#before-you-begin-a-cloud-starter-deployment), skickar ändringar till Git-databasen för att distribuera GraphQL Application Server:
 
 ```bash
 git push
 ```
 
-### Verifiera programserveraktivering på molnstart
+### Verifiera aktivering i molnprojekt
 
 1. Utför en GraphQL-fråga eller mutation mot instansen för att bekräfta att `graphql` slutpunkten är tillgänglig. Exempel:
 
@@ -144,7 +147,7 @@ git push
 
 1. Använd SSH för att komma åt din molninstans. The `project_root/var/log/application-server.log` ska innehålla en ny loggpost för varje GraphQL-begäran.
 
-1. Du kan också kontrollera om Application Server körs genom att köra följande kommando:
+1. Du kan också kontrollera om GraphQL Application Server körs genom att köra följande kommando:
 
    ```bash
    ps aux|grep php
@@ -152,24 +155,22 @@ git push
 
    Du borde se en `bin/magento server:run` med flera trådar.
 
-Om dessa verifieringssteg lyckas körs programservern `/graphql` förfrågningar.
+Om dessa verifieringssteg lyckas körs GraphQL Application Server `/graphql` förfrågningar.
 
+## Aktivera lokala projekt
 
-## Aktivera programserver för lokala distributioner
+The `ApplicationServer` modul (`Magento/ApplicationServer/`) aktiveras GraphQL Application Server för GraphQL API:er.
 
-The `ApplicationServer` modul (`Magento/ApplicationServer/`) aktiverar Application Server för GraphQL API:er.
+Om du kör GraphQL Application Server lokalt måste du installera SVULLE-tillägget och göra en mindre ändring i Nginx-konfigurationsfilen för distributionen.
 
-För att köra Application Server lokalt krävs installation av SVYLLNING-tillägget och en mindre ändring av NGINX-konfigurationsfilen för distributionen.
+### Förutsättningar
 
-### Innan du påbörjar en lokal distribution
-
-Utför dessa två uppgifter innan du aktiverar `ApplicationServer` modul:
+Utför följande steg innan du aktiverar `ApplicationServer` modul:
 
 * Konfigurera Nginx
-
 * Installera och konfigurera tillägget SVULLA v5+
 
-### Konfigurera Nginx
+#### Konfigurera Nginx
 
 Din specifika Commerce-distribution avgör hur du konfigurerar Nginx. Vanligtvis heter konfigurationsfilen Nginx som standard `nginx.conf` och placeras i någon av följande kataloger: `/usr/local/nginx/conf`, `/etc/nginx`, eller `/usr/local/etc/nginx`. Se [Nybörjarhandbok](https://nginx.org/en/docs/beginners_guide.html) om du vill ha mer information om hur du konfigurerar Nginx.
 
@@ -184,27 +185,11 @@ location /graphql {
 }
 ```
 
-### Installera och konfigurera SVG
+#### Installera och konfigurera SVG
 
-Installera svullningstillägget (v5.0 eller senare) om du vill köra programservern lokalt. Det finns flera sätt att installera det här tillägget.
+Om du vill köra GraphQL Application Server lokalt installerar du svullningstillägget (v5.0 eller senare). Det finns flera sätt att installera det här tillägget.
 
-## Kör programserver
-
-Starta programservern:
-
-```bash
-bin/magento server:run
-```
-
-Det här kommandot startar en HTTP-port på 9501. När Application Server startas blir port 9501 en HTTP-proxyserver för alla GraphQL-frågor.
-
-## Exempel: Installera svullnad (OSX)
-
-Den här proceduren visar hur du installerar svullnadstillägget på PHP 8.2 för OSX-baserade system. Det är ett av flera sätt att installera tillägget för svullnad.
-
-### Installera svullnad
-
-Ange:
+I proceduren nedan beskrivs hur du installerar svullningstillägget för PHP 8.2 på OSX-baserade system. Det är ett av flera sätt att installera tillägget för svullnad.
 
 ```bash
 pecl install swoole
@@ -212,11 +197,15 @@ pecl install swoole
 
 Under installationen visas uppmaningar om att aktivera stöd för `openssl`, `mysqlnd`, `sockets`, `http2`och `postgres`. Retur `yes` för alla alternativ utom `postgres`.
 
-### Bekräfta installation av svullnad
+### Verifiera installation med svullnad
 
-Kör `php -m | grep swoole` för att bekräfta att tillägget har aktiverats.
+Bekräfta att tillägget har aktiverats:
 
-### Vanliga fel vid installation av svullnad
+```bash
+php -m | grep swoole
+```
+
+### Vanliga fel vid installation med svepfunktion
 
 Eventuella fel som uppstår under svullnad uppstår vanligtvis under `pecl` installationsfas. Typiska fel kan vara att det saknas `openssl.h` och `pcre2.h` filer. Kontrollera att de här två paketen är installerade på din lokala dator för att åtgärda felen.
 
@@ -266,24 +255,32 @@ pecl install swoole
 
 Lös problem relaterade till `pcre2.h`, länkar samman `pcre2.h` sökväg till den installerade PHP-tilläggskatalogen. Din specifika installerade version av PHP och `pcr2.h` bestämmer vilken version av kommandot du ska använda.
 
-### Bekräfta att programservern körs
+### Kör GraphQL Application Server
 
-Kör följande kommando för att bekräfta att programservern körs i din distribution:
+Starta GraphQL Application Server:
+
+```bash
+bin/magento server:run
+```
+
+Det här kommandot startar en HTTP-port på 9501. När GraphQL Application Server startas blir port 9501 en HTTP-proxyserver för alla GraphQL-frågor.
+
+Så här bekräftar du att GraphQL Application Server körs i din distribution:
 
 ```bash
 ps aux | grep php
 ```
 
-Ytterligare sätt att bekräfta att Application Server körs är:
+Ytterligare sätt att bekräfta att GraphQL Application Server körs är:
 
 * Kontrollera `/var/log/application-server.log` för poster som är relaterade till bearbetade GraphQL-begäranden.
-* Försök ansluta till HTTP-porten som programservern körs på. Till exempel: `curl -g 'http://localhost:9501/graph`.
+* Försök ansluta till HTTP-porten som GraphQL Application Server körs på. Till exempel: `curl -g 'http://localhost:9501/graph`.
 
-### Bekräfta att GraphQL-begäranden behandlas av programservern
+### Bekräfta att GraphQL-begäranden behandlas
 
-Application Server lägger till `X-Backend` svarshuvud med värdet `graphql_server` på varje begäran som behandlas. Om du vill kontrollera om en begäran har hanterats av Application Server, söker du efter den här svarshuvudet.
+GraphQL Application Server lägger till `X-Backend` svarshuvud med värdet `graphql_server` på varje begäran som behandlas. Om du vill kontrollera om en begäran har hanterats av GraphQL Application Server ska du leta efter den här svarshuvudet.
 
-### Bekräfta kompatibilitet för tillägg och anpassning med Application Server
+### Bekräfta kompatibilitet för tillägg och anpassning
 
 Tilläggsutvecklare och handlare bör först kontrollera att deras kod för tillägg och anpassning följer de tekniska riktlinjer som beskrivs i [Tekniska riktlinjer](https://developer.adobe.com/commerce/php/coding-standards/technical-guidelines/).
 
@@ -292,11 +289,11 @@ Tänk på följande när du utvärderar koden:
 * Tjänstklasser (d.v.s. klasser som tillhandahåller beteende men inte data, t.ex. `EventManager`) ska inte ha ett ändringsbart tillstånd.
 * Undvik temporal koppling.
 
-## Inaktivera programserver
+## Inaktivera GraphQL Application Server
 
-Hur du inaktiverar Application Server varierar beroende på om servern körs lokalt eller i molnet.
+Hur du inaktiverar GraphQL Application Server varierar beroende på om servern körs lokalt eller i molnet.
 
-### Inaktivera programserver på molnstart
+### Inaktivera GraphQL Application Server (molnet)
 
 1. Ta bort alla nya filer och andra kodändringar som ingår i `AppServer Enabled` implementera under dina förberedelser för driftsättningen.
 
@@ -312,25 +309,25 @@ Hur du inaktiverar Application Server varierar beroende på om servern körs lok
    git push
    ```
 
-### Inaktivera programserver
+### Inaktivera GraphQL Application Server (lokalt)
 
-1. Kommentera `/graphql` avsnitt i `nginx.conf` som du lade till när du aktiverade Application Server.
+1. Kommentera `/graphql` avsnitt i `nginx.conf` som du lade till när du aktiverade GraphQL Application Server.
 1. Starta om nästa.
 
-Den här metoden för att inaktivera Application Server kan vara användbar för att snabbt testa eller jämföra prestanda.
+Den här metoden för att inaktivera GraphQL Application Server kan vara användbar för att snabbt testa eller jämföra prestanda.
 
-### Bekräfta att programservern är inaktiverad
+### Bekräfta att GraphQL Application Server är inaktiverad
 
-Bekräfta att GraphQL-begäranden behandlas av `php-fpm` I stället för Application Server anger du följande kommando: `ps aux | grep php`.
+Bekräfta att GraphQL-begäranden behandlas av `php-fpm` i stället för GraphQL Application Server anger du följande kommando: `ps aux | grep php`.
 
-När programservern har inaktiverats:
+När GraphQL Application Server har inaktiverats:
 
 * `bin/magento server:run` är inaktiv.
 * `var/log/application-server.log` innehåller inga poster efter GraphQL begäran.
 
-## Integration- och funktionstester för PHP Application Server
+## Integrerings- och funktionstester för GraphQL Application Server
 
-Extension-utvecklare kan köra två integrationstester för att verifiera att tillägg är kompatibla med Application Server: `GraphQlStateTest` och `ResetAfterRequestTest`.
+Extension-utvecklare kan köra två integrationstester för att verifiera att tillägg är kompatibla med GraphQL Application Server: `GraphQlStateTest` och `ResetAfterRequestTest`.
 
 ### GraphQlStateTest
 
@@ -362,4 +359,4 @@ Kör `GraphQlStateTest` genom att köra `vendor/bin/phpunit -c $(pwd)/dev/tests/
 
 ### Funktionstestning
 
-Tilläggsutvecklare bör köra WebAPI-funktionstester för GraphQL samt anpassade automatiska eller manuella funktionstester för GraphQL när programservern distribueras. Dessa funktionstester hjälper utvecklare att identifiera potentiella fel eller kompatibilitetsproblem.
+Tilläggsutvecklare bör köra WebAPI-funktionstester för GraphQL samt anpassade automatiska eller manuella funktionstester för GraphQL när de distribuerar GraphQL Application Server. Dessa funktionstester hjälper utvecklare att identifiera potentiella fel eller kompatibilitetsproblem.

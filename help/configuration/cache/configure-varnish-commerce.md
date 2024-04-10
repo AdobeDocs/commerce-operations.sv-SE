@@ -3,9 +3,9 @@ title: Konfigurera lack för handel
 description: Lär dig hur du uppdaterar och hanterar din konfigurationsfil för lack för Commerce-programmet.
 feature: Configuration, Cache, SCD
 exl-id: 6c007ff9-493f-4df2-b7b4-438b41fd7e37
-source-git-commit: 11ccc59230a7a0d1768c043c39df43c7df031efd
+source-git-commit: 602a1ef82fcb8d30ff027db0fe0aacb981c7e08e
 workflow-type: tm+mt
-source-wordcount: '421'
+source-wordcount: '396'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Så här konfigurerar du Commerce att använda engelska:
    | Serverdelsvärd | Ange det fullständiga värdnamnet eller IP-adressen och avlyssningsporten för lack _serverdel_ eller _origin-server_, d.v.s. servern som tillhandahåller innehållet varnish accelererar. Vanligtvis är det här din webbserver. Se [Backend-servrar för lack-cache](https://www.varnish-cache.org/docs/trunk/users-guide/vcl-backends.html). |
    | Backend-port | Ursprungsserverns lyssningsport. |
    | Respitperiod | Avgör hur länge varnish visar inaktuellt innehåll om serverdelen inte är responsiv. Standardvärdet är 300 sekunder. |
-   | Hanterar parameterstorlek  [!BADGE 2.4.7-beta]{type=Informative url="/help/release/release-notes/commerce/2-4-7.md" tooltip="Finns endast i 2.4.7 beta"} | Anger maximalt antal [layouthandtag](https://developer.adobe.com/commerce/frontend-core/guide/layouts/#layout-handles) för att bearbeta [`{BASE-URL}/page_cache/block/esi`](use-varnish-esi.md) HTTP-slutpunkt för helsidescache. Genom att begränsa storleken kan du förbättra säkerheten och prestandan. Standardvärdet är 100. |
+   | Hanterar parameterstorlek | Anger maximalt antal [layouthandtag](https://developer.adobe.com/commerce/frontend-core/guide/layouts/#layout-handles) för att bearbeta [`{BASE-URL}/page_cache/block/esi`](use-varnish-esi.md) HTTP-slutpunkt för helsidescache. Genom att begränsa storleken kan du förbättra säkerheten och prestandan. Standardvärdet är 100. |
 
 1. Klicka **Spara konfiguration**.
 
