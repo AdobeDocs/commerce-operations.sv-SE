@@ -1,10 +1,10 @@
 ---
 title: Apache
-description: Följ de här stegen för att installera och konfigurera Apache-webbservern för lokala installationer av Adobe Commerce och Magento Open Source.
+description: Följ de här stegen för att installera och konfigurera Apache-webbservern för lokala installationer av Adobe Commerce.
 exl-id: a9a394c9-389f-42ef-9029-dd22c979cfb8
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '844'
+source-wordcount: '763'
 ht-degree: 0%
 
 ---
@@ -28,11 +28,11 @@ Adobe Commerce stöder Apache 2.4.x.
 
 I det här avsnittet beskrivs hur du aktiverar Apache 2.4-omskrivningar och anger en inställning för [distribuerad konfigurationsfil, `.htaccess`](https://httpd.apache.org/docs/current/howto/htaccess.html).
 
-Adobe Commerce och Magento Open Source använder serveråterskrivningar och `.htaccess` för att ge katalognivåinstruktioner för Apache. Följande instruktioner finns även i alla andra avsnitt i det här avsnittet.
+Adobe Commerce använder serveråterskrivningar och `.htaccess` för att ge katalognivåinstruktioner för Apache. Följande instruktioner finns även i alla andra avsnitt i det här avsnittet.
 
 Använd det här avsnittet för att aktivera Apache 2.4-omskrivningar och ange en inställning för [distribuerad konfigurationsfil, `.htaccess`](https://httpd.apache.org/docs/current/howto/htaccess.html)
 
-Adobe Commerce och Magento Open Source använder serveråterskrivningar och `.htaccess` för att ge katalognivåinstruktioner för Apache.
+Adobe Commerce använder serveråterskrivningar och `.htaccess` för att ge katalognivåinstruktioner för Apache.
 
 >[!NOTE]
 >
@@ -79,7 +79,7 @@ Adobe Commerce och Magento Open Source använder serveråterskrivningar och `.ht
 
 ## Nödvändiga moduler för Apache
 
-Adobe Commerce och Magento Open Source kräver att följande Apache-moduler är installerade:
+Adobe Commerce kräver att följande Apache-moduler är installerade:
 
 - [mod_deflate.c](https://httpd.apache.org/docs/2.4/mod/mod_deflate.html)
 - [mod_expirres.c](https://httpd.apache.org/docs/2.4/mod/mod_expires.html)
@@ -184,7 +184,7 @@ Uppgradera till Apache 2.4:
 
 ## Installerar Apache på CentOS
 
-Adobe Commerce och Magento Open Source kräver att Apache använder serveråterskrivningar. Du måste också ange vilken typ av direktiv som kan användas i `.htaccess`som programmet använder för att ange regler för omskrivning.
+Adobe Commerce kräver omskrivning av Apache-servern. Du måste också ange vilken typ av direktiv som kan användas i `.htaccess`som programmet använder för att ange regler för omskrivning.
 
 Installation och konfigurering av Apache är i stort sett en trestegsprocess: installera programmet, aktivera omskrivning och ange `.htaccess` direktiv.
 

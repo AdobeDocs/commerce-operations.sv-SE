@@ -1,18 +1,18 @@
 ---
 title: Sökmotorkonfiguration
-description: Konfigurera en sökmotor för lokala distributioner av Adobe Commerce och Magento Open Source.
+description: Konfigurera en sökmotor för lokal distribution av Adobe Commerce.
 feature: Configuration, Search
 exl-id: 61fbe0c2-bdd5-4f57-a518-23e180401804
-source-git-commit: 789b7d9dc400b1f669de0067a59e2036c2977a19
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '643'
 ht-degree: 0%
 
 ---
 
 # Sökmotorkonfiguration
 
-I det här avsnittet beskrivs de minimiinställningar som du måste välja för att testa Elasticsearch eller OpenSearch med lokala distributioner av Adobe Commerce och Magento Open Source.
+I det här avsnittet beskrivs de minimiinställningar som du måste välja för att testa Elasticsearch eller OpenSearch med lokala distributioner av Adobe Commerce.
 
 >[!TIP]
 >
@@ -30,7 +30,7 @@ Mer information om hur du konfigurerar sökmotorn finns i [Användarhandbok](htt
 Så här konfigurerar du systemet att använda Elasticsearch eller OpenSearch:
 
 1. Logga in på administratören som administratör.
-1. Klicka på **[!UICONTROL Stores]** > [!UICONTROL Settings] > **[!UICONTROL Configuration]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog Search]**.
+1. Klicka **[!UICONTROL Stores]** > [!UICONTROL Settings] > **[!UICONTROL Configuration]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog]** > **[!UICONTROL Catalog Search]**.
 1. Från **[!UICONTROL Search Engine]** väljer du motsvarande version av sökmotorn.
 
    I följande tabell visas de alternativ som krävs för att konfigurera och testa anslutningen med Commerce. Om du inte har ändrat serverinställningarna för sökmotorn bör standardinställningarna fungera. Gå till nästa steg.
@@ -63,7 +63,7 @@ Prova i så fall följande:
 - Kontrollera att sökmotorservern körs.
 - Om servern finns på en annan värd än Commerce loggar du in på Commerce-servern och pingar sökmotorvärden. Lös problem med nätverksanslutningen och testa anslutningen igen.
 - Undersök kommandofönstret där du startade Elasticsearch eller OpenSearch för stackspår och undantag. Du måste lösa dem innan du fortsätter. Kontrollera särskilt att du har startat sökmotorn som en användare med `root` behörighet.
-- Se till att [UNIX-brandväggen och SELinux](../../installation/prerequisites/search-engine/overview.md#firewall-and-selinux) är båda inaktiverade eller konfigurerade regler som gör att din sökmotor och Commerce kan kommunicera med varandra.
+- Se till att [UNIX-brandväggen och SELinux](../../installation/prerequisites/search-engine/overview.md#firewall-and-selinux) är båda inaktiverade eller skapar regler som gör att sökmotorn och Commerce kan kommunicera med varandra.
 - Verifiera värdet för **[!UICONTROL Server Hostname]** fält. Kontrollera att servern är tillgänglig. Du kan testa serverns IP-adress i stället.
 - Använd `netstat -an | grep <listen-port>` för att verifiera att porten som anges i **[!UICONTROL Server Port]** fältet används inte av en annan process.
 

@@ -3,13 +3,13 @@ title: Bästa praxis för kataloghantering
 description: Läs mer om rekommendationer för hur du konfigurerar kundvagnsgränser och produktattribut, listar sidnumrering, alternativ, kampanjer och varianter.
 role: Developer
 feature: Best Practices, Catalog Management
-source-git-commit: a81e88a4293880ae90cd531ce60c5a2b177188f2
+exl-id: 9a672017-9122-4841-a67b-a183224b67dc
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '1420'
+source-wordcount: '1403'
 ht-degree: 0%
 
 ---
-
 
 # Bästa praxis för kataloghantering
 
@@ -25,7 +25,7 @@ De bästa metoderna för kataloghantering som beskrivs här omfattar en rad olik
 
 ## Biljettbegränsningar
 
-Använd följande riktlinjer för att hantera kundvagnsbegränsningar för Adobe Commerce och Magento Open Source för bästa prestanda.
+För bästa prestanda bör du använda följande riktlinjer för att hantera kundvagnsbegränsningar för Adobe Commerce.
 
 ### Berörda produkter och versioner
 
@@ -262,4 +262,3 @@ Om du har fler än det rekommenderade maximala antalet kundvagnsregler eller kup
 - Ökad tid för inläsning och rendering av minikortet.
 - Den tid det tog att återge kundvagnssidan ökade.
 - Ökad tid för att återge **Summor** -block på utcheckningssidan.
-

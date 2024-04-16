@@ -1,10 +1,10 @@
 ---
 title: Filägarskap och behörigheter
-description: Läs om hur viktigt det är med filsystemsbehörigheter när du arbetar med lokala installationer av Adobe Commerce och Magento Open Source.
+description: Läs om hur viktigt det är med filsystemsbehörigheter när du arbetar med lokala installationer av Adobe Commerce.
 exl-id: a84784bf-afd6-4dba-9745-3fefc0ecafcb
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '449'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Om du vill öka säkerheten, särskilt i en produktionsmiljö i ett delat värds
 >
 >Filsystemsäkerhet är komplicerad och viktig. Vi rekommenderar att du rådfrågar en erfaren systemadministratör eller nätverksadministratör innan du bestämmer vilken behörighetsnivå som ska anges. Vi tillhandahåller en mekanism som du kan använda, men det är ditt ansvar att skapa en behörighetsstrategi.
 
-Adobe Commerce och Magento Open Source använder en trebitars standardmask: `002`. Subtrahera standardmasken från UNIX-standardvärdena 666 för filer och 777 för kataloger.
+Adobe Commerce använder en trebitars standardmask: `002`. Subtrahera standardmasken från UNIX-standardvärdena 666 för filer och 777 för kataloger.
 
 Exempel:
 
@@ -53,7 +53,7 @@ Mer information om hur du skapar en `magento_umask` -fil, se [Ange en mask](../.
 
 ## Behörigheter, ägarskap och programlägen
 
-Vi rekommenderar olika behörigheter och ägarskap när du använder olika programlägen för Adobe Commerce och Magento Open Source:
+Vi rekommenderar olika behörigheter och ägandeskap när du använder olika Adobe Commerce-programlägen:
 
 - Standard
 - Utvecklare

@@ -3,9 +3,9 @@ title: Konfigurera sökstoppord
 description: Lär dig hur du hanterar stoppord för Adobe Commerce med CSV-filer.
 feature: Configuration, Search
 exl-id: 75320868-9939-4a6e-8dbb-73ca68c9f0ee
-source-git-commit: 789b7d9dc400b1f669de0067a59e2036c2977a19
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Mer information om hur Elasticsearch och OpenSearch använder stoppord finns i f
 
 ## Konfigurera stoppord
 
-Stoppord finns i `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords` katalog. Adobe Commerce och Magento Open Source levereras med en CSV-fil som innehåller stoppord för standardspråkinställningarna och ytterligare en fil, `stopwords.csv`, som har stoppord för alla språk som inte representeras av en annan CSV-fil.
+Stoppord finns i `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords` katalog. Adobe Commerce levereras med en CSV-fil som innehåller stoppord för standardspråkområdet och en extra fil, `stopwords.csv`, som har stoppord för alla språk som inte representeras av en annan CSV-fil.
 
 Standardlivstiden för stoppordsfilcachen är 15 minuter.
 
@@ -102,7 +102,7 @@ I det här avsnittet beskrivs hur du kan ändra standardkatalogen för stoppord 
 - `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords`
 - `<magento_root>/app/code/Magento/Elasticsearch/etc/stopwords/`
 
-Platsen beror på hur du installerade Commerce-programmet. Om du klonade GitHub-databasen Magento 2 ligger sökvägen under `app/code`. Om du har installerat ett komprimerat arkiv eller ett metapaket är sökvägen under `vendor`.
+Platsen beror på hur du har installerat Commerce. Om du klonade GitHub-databasen Magento 2 ligger sökvägen under `app/code`. Om du har installerat ett komprimerat arkiv eller ett metapaket är sökvägen under `vendor`.
 
 **Ändra katalogen**:
 

@@ -2,22 +2,22 @@
 title: Rekommenderad läsning för uppgraderingar
 description: Granska rekommenderad läsning för att planera din Adobe Commerce-uppgradering.
 exl-id: 24ca57c0-1a68-46c4-b2fa-4a114250d0e3
-source-git-commit: 83ee645269b4fb0b63bb11f6d2255ef7fa52bc4f
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '383'
-ht-degree: 2%
+source-wordcount: '264'
+ht-degree: 3%
 
 ---
 
 # Rekommenderad läsning för uppgraderingsplanering
 
-Lär dig mer om Adobe Commerce och Magento Open Source genom att använda resurserna på den här sidan.
+Läs mer om Adobe Commerce uppgraderingar här.
 
 <table>
   <tbody>
     <tr>
       <td><strong>Versionsinformation och meddelanden</strong>
-        <p>Läs om den senaste utvecklingen i Adobe Commerce och Magento Open Source, inklusive produktstrategi, säkerhet, felkorrigeringar och kända problem.</p>
+        <p>Läs om den senaste utvecklingen inom Adobe Commerce, inklusive produktstrategi, säkerhet, felkorrigeringar och kända problem.</p>
           <ul>
             <li><a href="https://blog.adobe.com/">Adobe blogg</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/overview.html">Adobe Help Center</a></li>
@@ -28,7 +28,7 @@ Lär dig mer om Adobe Commerce och Magento Open Source genom att använda resurs
           </ul>
         </td>
       <td><strong>verktyg</strong>
-        <p>Bläddra bland verktyg som gör det enklare för dig att hitta och använda Adobe Commerce och Magento Open Source.</p>
+        <p>Bläddra bland verktyg som gör det enklare för dig att hitta och använda Adobe Commerce.</p>
           <ul>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-learn/tutorials/uct-phpstorm.html">Upgrade Compatibility Tool PhpStorm plugin</a> (video)</li>
             <li><a href="../upgrade-compatibility-tool/overview.md">Kompatibilitetsverktyg för uppgradering</a></li>
@@ -39,7 +39,7 @@ Lär dig mer om Adobe Commerce och Magento Open Source genom att använda resurs
     </tr>
     <tr>
       <td><strong>Kalendrar och policy</strong>
-        <p>Läs mer om Adobe Commerce och Magento Open Source.</p>
+        <p>Läs mer om Adobe Commerce releaser och profiler.</p>
           <ul>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/adobe-commerce-eos-policy-faq.html">Vanliga frågor om Adobe Commerce-programvarans slut</a></li>
             <li><a href="https://marketplacesupport.magento.com/hc/en-us/articles/4413722432653">Commerce Marketplace policy</a></li>
@@ -50,7 +50,7 @@ Lär dig mer om Adobe Commerce och Magento Open Source genom att använda resurs
           </ul>
         </td>
       <td><strong>Funktioner och oberoende tjänster</strong>
-        <p>Upptäck innovativa Commerce-tjänster som är tillgängliga som tillägg för Adobe Commerce och Magento Open Source och var du kan få dem.</p>
+        <p>Upptäck innovativa Commerce-tjänster som finns som Adobe Commerce-tillägg och var du kan få dem.</p>
           <ul>
             <li><a href="https://marketplace.magento.com/">Commerce Marketplace</a></li>
             <li><a href="https://marketplace.magento.com/magento-live-search.html">Live Search</a></li>

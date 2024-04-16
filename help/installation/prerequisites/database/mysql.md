@@ -1,10 +1,10 @@
 ---
 title: MySQL-riktlinjer
-description: Följ de här stegen för att installera och konfigurera MySQL och MariaDB för lokala installationer av Adobe Commerce och Magento Open Source.
+description: Följ de här stegen för att installera och konfigurera MySQL och MariaDB för lokala installationer av Adobe Commerce.
 exl-id: dc5771a8-4066-445c-b1cd-9d5f449ec9e9
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 35664c30e438305036d3cfdd1dd1924966f6ced6
 workflow-type: tm+mt
-source-wordcount: '1142'
+source-wordcount: '1053'
 ht-degree: 0%
 
 ---
@@ -15,10 +15,10 @@ Se [Systemkrav](../../system-requirements.md) för de versioner av MySQL som st�
 
 Adobe _starkt_ rekommenderar att du följer följande standard när du konfigurerar databasen:
 
-* Adobe Commerce och Magento Open Source använder [MySQL-databasutlösare](https://dev.mysql.com/doc/refman/8.0/en/triggers.html) för att förbättra databasåtkomsten vid omindexering. Dessa skapas när indexerarläget är inställt på [schema](../../../configuration/cli/manage-indexers.md#configure-indexers). Programmet stöder inte några anpassade utlösare i databasen eftersom anpassade utlösare kan orsaka inkompatibilitet med framtida versioner av Adobe Commerce och Magento Open Source.
+* Adobe Commerce använder [MySQL-databasutlösare](https://dev.mysql.com/doc/refman/8.0/en/triggers.html) för att förbättra databasåtkomsten vid omindexering. Dessa skapas när indexerarläget är inställt på [schema](../../../configuration/cli/manage-indexers.md#configure-indexers). Programmet stöder inte några anpassade utlösare i databasen eftersom anpassade utlösare kan orsaka inkompatibilitet med framtida Adobe Commerce-versioner.
 * Bekanta dig med [dessa potentiella MySQL-utlösarbegränsningar](https://dev.mysql.com/doc/mysql-reslimits-excerpt/8.0/en/stored-program-restrictions.html) innan du fortsätter.
 * Aktivera [`STRICT_ALL_TABLES`](https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html#sqlmode_strict_all_tables) SQL-läge för att förhindra att ogiltiga datavärden lagras, vilket kan orsaka oönskade databasinteraktioner.
-* Adobe Commerce och Magento Open Source _not_ stöder MySQL-satsbaserad replikering. Se till att du använder _endast_ [radbaserad replikering](https://dev.mysql.com/doc/refman/8.0/en/replication-formats.html).
+* Adobe Commerce gör _not_ stöder MySQL-satsbaserad replikering. Se till att du använder _endast_ [radbaserad replikering](https://dev.mysql.com/doc/refman/8.0/en/replication-formats.html).
 
 >[!WARNING]
 >
@@ -30,7 +30,7 @@ Adobe _starkt_ rekommenderar att du följer följande standard när du konfigure
 
 ## Installerar MySQL på Ubuntu
 
-Adobe Commerce och Magento Open Source 2.4 kräver en ren installation av MySQL 8.0. Följ länkarna nedan för instruktioner om hur du installerar MySQL på datorn.
+Adobe Commerce 2.4 kräver en ren installation av MySQL 8.0. Följ länkarna nedan för instruktioner om hur du installerar MySQL på datorn.
 
 * [Ubuntu](https://ubuntu.com/server/docs/databases-mysql)
 * [CentOS](https://dev.mysql.com/doc/refman/8.0/en/linux-installation-yum-repo.html)
@@ -53,7 +53,7 @@ Sedan [Konfigurera databasinstansen](#configuring-the-database-instance).
 
 ## MySQL 8-ändringar
 
-För Adobe Commerce och Magento Open Source 2.4 har vi lagt till stöd för MySQL 8.
+För Adobe Commerce 2.4 har vi lagt till stöd för MySQL 8.
 I det här avsnittet beskrivs viktiga ändringar av MySQL 8 som utvecklare bör känna till.
 
 ### Bredd för heltalstyper (utfyllnad) har tagits bort
@@ -92,11 +92,11 @@ Från och med MySQL 8.0.13 är den borttagna `ASC` eller `DESC` kvalificerare f�
 
 ## Commerce och MySQL 8
 
-Vissa förändringar av Adobe Commerce och Magento Open Source har gjorts för att stödja MySQL 8.
+Vissa förändringar i Adobe Commerce har gjorts för att stödja MySQL 8.
 
 ### Fråge- och infogningsbeteende
 
-Adobe Commerce och Magento Open Source inaktiverade det reguljära valideringsbeteendet genom att ställa in SET SQL_MODE=&#39; i `/lib/internal/Magento/Framework/DB/Adapter/Pdo/Mysql.php:424.`. Om valideringen är inaktiverad är det möjligt att MySQL trunkerar data. I MySQL har frågebeteendet ändrats: `Select * on my_table where IP='127.0.0.1'` returnerar inte längre resultat eftersom IP-adressen nu visas korrekt som en sträng i stället för som ett heltal.
+Adobe Commerce inaktiverade det reguljära valideringsbeteendet genom att ställa in SET SQL_MODE=&#39;&#39; i `/lib/internal/Magento/Framework/DB/Adapter/Pdo/Mysql.php:424.`. Om valideringen är inaktiverad är det möjligt att MySQL trunkerar data. I MySQL har frågebeteendet ändrats: `Select * on my_table where IP='127.0.0.1'` returnerar inte längre resultat eftersom IP-adressen nu visas korrekt som en sträng i stället för som ett heltal.
 
 ## Uppgraderar från MySQL 5.7 till MySQL 8
 

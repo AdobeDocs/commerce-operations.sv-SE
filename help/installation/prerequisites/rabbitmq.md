@@ -1,10 +1,10 @@
 ---
 title: Message Broker
-description: Följ de här stegen för att installera och konfigurera nödvändig programvara för meddelandehantering (till exempel [!DNL RabbitMQ]) för lokalinstallationer av Adobe Commerce och Magento Open Source.
+description: Följ de här stegen för att installera och konfigurera nödvändig programvara för meddelandehantering (till exempel [!DNL RabbitMQ]) för lokala installationer av Adobe Commerce.
 exl-id: ae6200d6-540f-46b3-92ba-7df7f6bb6fae
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '560'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Se [[!DNL RabbitMQ]/Erlang version matrix](https://www.rabbitmq.com/which-erlang
 
 The [!DNL RabbitMQ] -servern ingår i CentOS, men versionen är ofta gammal. [!DNL RabbitMQ] rekommenderar att paketet installeras från deras webbplats.
 
-Se [!DNL RabbitMQ] installationssidan för att hämta den senaste versionen som stöds. Stöd för Adobe Commerce och Magento Open Source 2.3 och 2.4 [!DNL RabbitMQ] 3.8.x
+Se [!DNL RabbitMQ] installationssidan för att hämta den senaste versionen som stöds. Stöd för Adobe Commerce 2.3 och 2.4 [!DNL RabbitMQ] 3.8.x
 
 Se [Installera på RPM-baserade Linux](https://www.rabbitmq.com/install-rpm.html) för mer information.
 

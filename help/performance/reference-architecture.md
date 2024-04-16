@@ -1,17 +1,17 @@
 ---
 title: Referensarkitektur
-description: Granska diagram över den rekommenderade referensarkitekturen för Adobe Commerce och Magento Open Source.
+description: Granska diagram över den rekommenderade referensarkitekturen för Adobe Commerce-distributioner.
 exl-id: 85a6d3d6-f47f-4806-97bd-fa7a73605f4c
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '414'
 ht-degree: 0%
 
 ---
 
 # Referensarkitektur
 
-I det här avsnittet beskrivs en allmän rekommenderad konfiguration för Adobe Commerce- och Magento Open Source-instanser med vanliga servrar som lagras fysiskt i ett datacenter (inte virtualiserat) där resurser inte delas med andra användare. Din värdleverantör, särskilt om den specialiserar sig på Commerce High Performance Hosting, kan rekommendera en annan konfiguration som är lika eller mer effektiv för dina behov.
+I det här avsnittet beskrivs en allmän rekommenderad konfiguration för Adobe Commerce-instanser med vanliga servrar som är fysiskt värdbaserade i ett datacenter (inte virtualiserade) där resurser inte delas med andra användare. Din värdleverantör, särskilt om den är specialiserad på Commerce högpresterande värdtjänster, kan rekommendera en annan konfiguration som är lika eller mer effektiv för dina behov.
 
 Information om Adobe Commerce i molninfrastrukturmiljöer finns på [Startarkitektur](https://devdocs.magento.com/cloud/architecture/starter-architecture.html).
 
@@ -25,9 +25,9 @@ Färgen på varje element i diagrammet anger om elementet är en del av Magento 
 * Grå element är valfria för Magento Open Source
 * Blå element är valfria för Adobe Commerce
 
-![Diagram över referensarkitektur för handel](../assets/performance/images/ref-architecture-2.3.png)
+![Commerce referensarkitektur](../assets/performance/images/ref-architecture-2.3.png)
 
-I följande avsnitt ges rekommendationer och överväganden för varje avsnitt i referensarkitekturdiagrammet för Commerce.
+I följande avsnitt ges rekommendationer och överväganden för varje avsnitt i Commerce referensarkitekturdiagram.
 
 ### [!DNL Varnish]
 

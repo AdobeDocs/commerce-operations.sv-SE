@@ -1,10 +1,10 @@
 ---
 title: Kommandoradsverktyg
-description: Använd kommandoradsverktyget i Commerce för att köra installations- och konfigureringsuppgifter.
+description: Använd Commerce kommandoradsverktyg för att köra installations- och konfigureringsuppgifter.
 exl-id: 44470ce1-a5a2-4c12-962e-e42d11a6bd15
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '295'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Ytterligare fördelar:
 - CLI är utbyggbart så att tredjepartsutvecklare kan&quot;ansluta&quot; till det. Detta innebär också att man slipper inlärningskurva.
 - Kommandon för inaktiverade moduler visas inte.
 
-I det här avsnittet diskuteras hur du konfigurerar Adobe Commerce och Magento Open Source med hjälp av CLI. Mer information om hur du installerar Commerce finns i [Installationsflöde](../../installation/overview.md) i _Installationsguide_.
+I det här avsnittet diskuteras hur du konfigurerar Adobe Commerce-programmet med CLI. Information om hur du installerar Commerce finns i [Installationsflöde](../../installation/overview.md) i _Installationsguide_.
 
 ## Förutsättningar
 
@@ -36,7 +36,7 @@ Innan du börjar använda CLI bör du kontrollera att:
 
 1. Ditt system uppfyller kraven i [Systemkrav](../../installation/system-requirements.md) i _Installationsguide_.
 1. Alla nödvändiga uppgifter som diskuterades i [Förutsättningar](../../installation/prerequisites/overview.md) i _Installationsguide_.
-1. När du har loggat in på Commerce-servern växlar du till en användare som har behörighet att skriva till Commerce-filsystemet. Se [växla till filsystemets ägare](../../installation/prerequisites/file-system/overview.md) i _Installationsguide_.
+1. När du har loggat in på Commerce-servern växlar du till en användare som har behörighet att skriva till Commerce filsystem. Se [växla till filsystemets ägare](../../installation/prerequisites/file-system/overview.md) i _Installationsguide_.
 
 ## Kör kommandon
 

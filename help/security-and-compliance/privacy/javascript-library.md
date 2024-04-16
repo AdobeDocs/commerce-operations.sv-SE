@@ -1,10 +1,10 @@
 ---
 title: Sekretessbibliotek för JavaScript
-description: Lär dig hur du använder anpassade verktyg för att komma åt och ta bort kundpersonuppgifter som samlats in av Adobe Commerce och Magento Open Source.
+description: Lär dig hur du använder anpassade verktyg för att komma åt och ta bort kundpersonuppgifter som samlats in av Adobe Commerce.
 exl-id: bcfea656-2cf0-48ae-9049-d91679166d05
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---
@@ -13,15 +13,15 @@ ht-degree: 0%
 
 # Sekretessbibliotek för JavaScript
 
-JavaScript-biblioteket för skydd av privatlivet är en uppsättning verktyg för att skapa en process för åtkomst till och borttagning av privata data som samlats in av Adobe Commerce och Magento Open Source.
+JavaScript-biblioteket för sekretess är en uppsättning verktyg som hjälper dig att skapa en process för åtkomst till och borttagning av privata data som samlats in av Adobe Commerce.
 
-Tjänster för spårning av Commerce-data kan lagra privat information som är tillämplig på sekretessregler, t.ex. [Allmänna dataskyddsförordningen (GDPR)](gdpr.md) och [California Consumer Privacy Act (CCPA)](ccpa.md).
+Commerce dataspårningstjänster kan lagra privat information som är tillämplig på sekretessregler som [Allmänna dataskyddsförordningen (GDPR)](gdpr.md) och [California Consumer Privacy Act (CCPA)](ccpa.md).
 
-Det här biblioteket innehåller en uppsättning funktioner för att skapa förfrågningar om sekretessdata och samla in deras svar. Använd det här biblioteket för att hämta och ta bort data som lagras i webbläsaren av Adobe Commerce och Magento Open Source dataspårningstjänster.
+Det här biblioteket innehåller en uppsättning funktioner för att skapa förfrågningar om sekretessdata och samla in deras svar. Använd det här biblioteket för att hämta och ta bort data som lagras i webbläsaren av Adobe Commerce dataspårningstjänst.
 
 >[!NOTE]
 >
->If [Begränsningsläge för cookie](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-cookie-law.html) är aktiverat samlar inte Commerce in beteendedata förrän kunden godkänner det. If [!UICONTROL **Begränsningsläge för cookie**] är inaktiverat samlar Commerce in beteendedata som standard.
+>If [Begränsningsläge för cookie](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-cookie-law.html) är aktiverat samlar Commerce inte in beteendedata förrän kunden godkänner det. If [!UICONTROL **Begränsningsläge för cookie**] är inaktiverat samlar Commerce in beteendedata som standard.
 
 ## Installation
 

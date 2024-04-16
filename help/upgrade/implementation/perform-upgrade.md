@@ -2,9 +2,9 @@
 title: Uppgradera
 description: Följ de här stegen för att uppgradera lokala distributioner av Adobe Commerce.
 exl-id: 9183f1d2-a8dd-4232-bdee-7c431e0133df
-source-git-commit: 0cee0ab36274758b583c04dbee8251ce3b78e559
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '738'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Följande instruktioner visar hur du uppgraderar med Composer-pakethanteraren. A
 
 >[!WARNING]
 >
->Förfarandet för uppgradering av Adobe Commerce och Magento Open Source har ändrats. Du måste installera en ny version av `magento/composer-root-update-plugin` paket (se [krav](../prepare/prerequisites.md)). Dessutom har kommandona för uppgradering ändrats från `composer require magento/<package_name>` till `composer require-commerce magento/<package_name>`.
+>Förfarandet för uppgradering av Adobe Commerce har ändrats. Du måste installera en ny version av `magento/composer-root-update-plugin` paket (se [krav](../prepare/prerequisites.md)). Dessutom har kommandona för uppgradering ändrats från `composer require magento/<package_name>` till `composer require-commerce magento/<package_name>`.
 
 ## Innan du börjar
 

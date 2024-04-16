@@ -2,16 +2,16 @@
 title: Versionspolicy
 description: Läs mer om de olika typerna av Adobe Commerce-utgåvor, inklusive smärre utgåvor, korrigeringsfiler, säkerhetskorrigeringar, funktioner, snabbkorrigeringar, enskilda korrigeringsfiler och anpassade korrigeringsfiler.
 exl-id: 61a83de6-6a7b-4a88-8fff-1638b4fe472a
-source-git-commit: 9a74f87e0da5a7f11cd0930c8265556d80e3d1de
+source-git-commit: f7db6b65d74c605976a3a338c98eebda2dc46a43
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '799'
 ht-degree: 0%
 
 ---
 
 # Versionspolicy för Adobe Commerce
 
-Adobe Commerce och Magento Open Source använder [semantisk versionshantering](https://semver.org/) på den enskilda modulnivån (till exempel `magento/framework 101.1.1`), men inte för versionsnumret. Exempel:
+Adobe Commerce använder [semantisk versionshantering](https://semver.org/) på den enskilda modulnivån (till exempel `magento/framework 101.1.1`), men inte för versionsnumret. Exempel:
 
 - **STÖRRE UTGÅVA**—2
 - **MINDRE frisläppning**—2.4

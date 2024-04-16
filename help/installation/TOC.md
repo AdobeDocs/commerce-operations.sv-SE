@@ -1,10 +1,10 @@
 ---
 user-guide-title: Installationshandbok
-user-guide-description: Lär dig hur du installerar Adobe Commerce och Magento Open Source för lokala distributioner.
+user-guide-description: Lär dig hur du installerar Adobe Commerce för lokala distributioner.
 feature: Install
-source-git-commit: 68c4cfc29735d2ea296f579ed0a0ff52db3fdd9f
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '178'
+source-wordcount: '169'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 0%
       - [Hämta Composer-paket](sample-data/composer-packages.md)
       - [Klona Git-databaser](sample-data/git-repositories.md)
       - [Ta bort eller uppdatera moduler](sample-data/remove-or-update.md)
-- Självstudiekurser {#tutorials}
+- Tutorials {#tutorials}
    - [Säkerhetskopiera och återställa filsystemet, mediet och databasen](tutorials/backup.md)
    - [Kontrollera databasstatus](tutorials/database-status.md)
    - [Konfigurera beteende för meddelandekonsument](tutorials/message-consumers.md)

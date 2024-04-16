@@ -1,10 +1,10 @@
 ---
 title: Konfigurera en MySQL-fjärrdatabasanslutning
-description: Följ de här stegen för att konfigurera en fjärrdatabasanslutning för lokala installationer av Adobe Commerce och Magento Open Source.
+description: Följ de här stegen för att konfigurera en fjärrdatabasanslutning för lokala installationer av Adobe Commerce.
 exl-id: 5fe304bd-ff38-4066-a1fd-8937575e4de4
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '716'
 ht-degree: 0%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 Ibland kanske du vill lagra databasen på en separat server i stället för att köra databasservern och webbservern på samma dator.
 
-Adobe har tillhandahållit ett sätt att ansluta till en MySQL-server på en annan dator. Från och med Adobe Commerce och Magento Open Source 2.4.3 kan du även konfigurera programmet så att det använder en Amazon Web Services (AWS) Aurora-databas utan kodändringar.
+Adobe har tillhandahållit ett sätt att ansluta till en MySQL-server på en annan dator. Från och med Adobe Commerce 2.4.3 kan du även konfigurera programmet så att det använder en Amazon Web Services (AWS) Aurora-databas utan kodändringar.
 
 Aurora är en högpresterande, helt kompatibel MySQL-server som finns på AWS.
 
 ## Ansluta till en AWS Aurora-databas
 
-Att använda Aurora som databas är lika enkelt som att ange databasen i den vanliga konfigurationskonfigurationen för Adobe Commerce och Magento Open Source med hjälp av standarddatabaskopplingen.
+Att använda Aurora som databas är lika enkelt som att ange databasen i den vanliga Adobe Commerce-konfigurationen med hjälp av standarddatabaskopplingen.
 
 Vid körning `bin/magento setup:install`använder du Aurora-informationen i `db-` fält:
 

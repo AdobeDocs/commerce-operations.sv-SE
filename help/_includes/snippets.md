@@ -1,13 +1,13 @@
 ---
-source-git-commit: 8b9e4de2799532e4654fce63d856c2d301025f09
+source-git-commit: f7db6b65d74c605976a3a338c98eebda2dc46a43
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '269'
 ht-degree: 0%
 
 ---
 # Fragment
 
-## Endast handel {#commerce-only}
+## Endast Commerce {#commerce-only}
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Commerce och Magento Open Source kan innehålla ändringar som är inkompatibla bakåt (BIC). Om du vill granska ändringar som är inkompatibla bakåt kan du läsa [BIC-referens](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/reference/). Viktiga bakåtkompatibla problem beskrivs i [BIC i korthet](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/highlights/). Inte alla releaser innehåller viktiga BIC:er.
+>Adobe Commerce-versioner kan innehålla ändringar som är inkompatibla bakåt (BIC). Om du vill granska ändringar som är inkompatibla bakåt kan du läsa [BIC-referens](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/reference/). Viktiga bakåtkompatibla problem beskrivs i [BIC i korthet](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/highlights/). Inte alla releaser innehåller viktiga BIC:er.
 
 ## CVE-meddelande {#cve-notice}
 

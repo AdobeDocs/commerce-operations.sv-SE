@@ -2,18 +2,18 @@
 title: Snabbstart av lokal installation
 description: Följ de här stegen för att installera Adobe Commerce eller Magento Open Source på en infrastruktur som du äger.
 exl-id: a93476e8-2b30-461a-91df-e73eb1a14d3c
-source-git-commit: 3c6527e5936438d6f1f52b32082cc7dde5f87f22
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '958'
 ht-degree: 0%
 
 ---
 
 # Snabbstart av lokal installation
 
-Instruktionerna på den här sidan beskriver hur du installerar Adobe Commerce och Magento Open Source på [värdbaserad](../implementation-playbook/infrastructure/self-hosting/overview.md) infrastruktur. Vägledning om hur du uppgraderar en befintlig installation finns i [_Uppgraderingshandbok_](../upgrade/overview.md).
+Instruktionerna på den här sidan beskriver hur du installerar Adobe Commerce på [värdbaserad](../implementation-playbook/infrastructure/self-hosting/overview.md) infrastruktur. Vägledning om hur du uppgraderar en befintlig installation finns i [_Uppgraderingshandbok_](../upgrade/overview.md).
 
-Adobe använder [Disposition](https://getcomposer.org/) för att hantera Adobe Commerce- och Magento Open Source-komponenter och deras beroenden. Att använda Composer för att hämta metapaketet Adobe Commerce och Magento Open Source ger följande fördelar:
+Adobe använder [Disposition](https://getcomposer.org/) för att hantera Adobe Commerce-komponenter och deras beroenden. Att använda Composer för att hämta Adobe Commerce-metapaketet ger följande fördelar:
 
 - Återanvänd bibliotek från tredje part utan att paketera dem med källkod
 - Minska antalet tilläggskonflikter och kompatibilitetsproblem genom att använda en komponentbaserad arkitektur med robust beroendehantering
@@ -31,7 +31,7 @@ Innan du fortsätter måste du göra följande:
 
 - Slutför alla [nödvändiga uppgifter](system-requirements.md).
 - [Installera disposition](https://getcomposer.org/download/).
-- Hämta [autentiseringsnycklar](prerequisites/authentication-keys.md) till Adobe Commerce och Magento Open Source Composer.
+- Hämta [autentiseringsnycklar](prerequisites/authentication-keys.md) till Adobe Commerce Composer-databasen.
 
 ## Logga in som ägare av filsystemet
 

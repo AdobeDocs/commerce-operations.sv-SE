@@ -1,18 +1,18 @@
 ---
 title: Bästa praxis
-description: Använd de bästa metoderna som rekommenderas av Adobe för att hantera uppgraderingsprocessen för Adobe Commerce- och Magento Open Source-projekt.
+description: Använd de bästa metoderna som rekommenderas av Adobe för att hantera uppgraderingsprocessen för dina Adobe Commerce-projekt.
 feature: Upgrade, Best Practices
 exl-id: 53c505a3-8b99-4fc3-b1b4-f2f75208a51b
-source-git-commit: 012cba58b336b032b1c911539008c1fb961c2e07
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '1089'
+source-wordcount: '1055'
 ht-degree: 0%
 
 ---
 
 # Bästa tillvägagångssätt för uppgradering
 
-I det här avsnittet beskrivs de åtgärder du bör vidta för att hantera komplexiteten med att uppgradera Adobe Commerce- och Magento Open Source-projekt. Teamet bör fundera på uppgraderingar från det ögonblick projektutvecklingen börjar och fortsätter i varje release. Genom att följa dessa standarder blir uppgraderingsprocessen mycket enklare, snabbare och billigare.
+I det här avsnittet beskrivs de åtgärder du bör vidta för att hantera komplexiteten hos uppgraderingar av Adobe Commerce-projekt. Teamet bör fundera på uppgraderingar från det ögonblick projektutvecklingen börjar och fortsätter i varje release. Genom att följa dessa standarder blir uppgraderingsprocessen mycket enklare, snabbare och billigare.
 
 >[!TIP]
 >

@@ -1,10 +1,10 @@
 ---
 title: Översikt över meddelandeköer
-description: Läs om meddelandeköramverket och hur det fungerar med Adobe Commerce och Magento Open Source.
+description: Läs om meddelandeköramverket och hur det fungerar med Adobe Commerce.
 exl-id: 21e7bc3e-6265-4399-9d47-d3b9f03dfef6
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '297'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Följande diagram visar Message Queue Framework:
 
 - En utgivare är en komponent som skickar meddelanden till ett utbyte. Det vet vilket utbyte som ska publiceras och formatet på de meddelanden som skickas.
 
-- Ett utbyte tar emot meddelanden från utgivare och skickar dem till köer. Fast [!DNL RabbitMQ] stöder flera typer av utbyten. Endast ämnesutbyten används i Commerce. Ett ämne innehåller en routningsnyckel, som innehåller textsträngar avgränsade med punkter. Formatet för ett ämnesnamn är `string1.string2`: till exempel `customer.created` eller `customer.sent.email`.
+- Ett utbyte tar emot meddelanden från utgivare och skickar dem till köer. Fast [!DNL RabbitMQ] har stöd för flera typer av utbyte, Commerce använder endast ämnesutbyten. Ett ämne innehåller en routningsnyckel, som innehåller textsträngar avgränsade med punkter. Formatet för ett ämnesnamn är `string1.string2`: till exempel `customer.created` eller `customer.sent.email`.
 
   Med förmedlaren kan du använda jokertecken när du anger regler för vidarebefordrande meddelanden. Du kan använda en asterisk (`*`) att ersätta _en_ en sträng eller ett nummertecken (`#`) om du vill ersätta 0 eller fler strängar. Till exempel: `customer.*` skulle filtrera på `customer.create` och `customer.delete`, men inte `customer.sent.email`. Men `customer.#` skulle filtrera på `customer.create`,  `customer.delete`och `customer.sent.email`.
 

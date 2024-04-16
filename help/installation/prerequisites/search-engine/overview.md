@@ -1,18 +1,18 @@
 ---
 title: Krav för sökmotor
-description: Följ de här stegen för att installera och konfigurera de sökmotorprogram som stöds för lokala installationer av Adobe Commerce och Magento Open Source.
+description: Följ de här stegen för att installera och konfigurera sökmotorprogram som stöds för lokala installationer av Adobe Commerce.
 feature: Install, Search
 exl-id: 44ea638a-7200-4269-be1b-b0851de2c4f4
-source-git-commit: ce405a6bb548b177427e4c02640ce13149c48aff
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '786'
+source-wordcount: '723'
 ht-degree: 0%
 
 ---
 
 # Krav för sökmotor
 
-Från och med Adobe Commerce och Magento Open Source 2.4 måste alla installationer vara konfigurerade att använda [Elasticsearch](https://www.elastic.co) eller [OpenSearch](https://opensearch.org/) som katalogsökningslösning.
+Från och med Adobe Commerce 2.4 måste alla installationer vara konfigurerade att använda [Elasticsearch](https://www.elastic.co) eller [OpenSearch](https://opensearch.org/) som katalogsökningslösning.
 
 >[!NOTE]
 >
@@ -39,13 +39,13 @@ Följande uppgifter förutsätter att du har konfigurerat systemet enligt följa
 
 I bilden ovan visas:
 
-* Commerce-programmet och sökmotorn är installerade på olika värdar.
+* Commerce-programmet och sökmotorn installeras på olika värdar.
 
   Körning på separata värdar kräver att proxering fungerar. (Att klustera sökmotorn ligger utanför den här handbokens räckvidd, men du hittar mer information i [Dokumentation för Elasticsearch-klustring](https://www.elastic.co/guide/en/elasticsearch/guide/current/distributed-cluster.html).)
 
 * Varje värd har en egen webbserver. Webbservrarna behöver inte vara samma.
 
-  Commerce-programmet kan till exempel köra Apache och sökmotorn kan köra nginx.
+  Commerce kan till exempel köra Apache och sökmotorn kan köra nginx.
 
 * Båda webbservrarna använder TLS (Transport Layer Security).
 
@@ -53,7 +53,7 @@ I bilden ovan visas:
 
 Sökbegäranden behandlas på följande sätt:
 
-1. En sökbegäran från en användare tas emot av Commerce-webbservern, som vidarebefordrar den till sökmotorservern.
+1. En sökbegäran från en användare tas emot av Commerce webbserver som vidarebefordrar den till sökmotorservern.
 
    Du konfigurerar sökmotorn så att den ansluter till proxyns värd och port. Vi rekommenderar webbserverns SSL-port (som standard 443).
 

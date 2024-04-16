@@ -2,9 +2,9 @@
 title: Aktivera eller inaktivera moduler
 description: Följ de här stegen för att hantera Adobe Commerce- eller Magento Open Source-moduler.
 exl-id: 7155950a-a66a-4254-a71c-1a9aeab47606
-source-git-commit: 6e87d68df97adf47b5a61e8b6683ac11f600806c
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '576'
 ht-degree: 0%
 
 ---
@@ -78,7 +78,7 @@ bin/magento cache:clean
 
 ## Aktivera och inaktivera moduler
 
-Med Adobe Commerce och Magento Open Source kan du aktivera eller inaktivera tillgängliga moduler, dvs. alla moduler som tillhandahålls av Adobe eller alla tredjepartsmoduler som är tillgängliga.
+Med Adobe Commerce kan du aktivera eller inaktivera tillgängliga moduler, dvs. alla moduler som tillhandahålls av Adobe eller alla tredjepartsmoduler som är tillgängliga.
 
 Vissa moduler är beroende av andra moduler. I så fall kanske du inte kan aktivera eller inaktivera en modul eftersom den är beroende av andra moduler.
 
@@ -92,7 +92,7 @@ Exempel:
 
 * Modul A står i konflikt med modul B. Du kan inaktivera modul A och modul B, eller så kan du inaktivera båda modulerna men du *inte* aktivera modul A och modul B samtidigt.
 
-* Beroenden deklareras i `require` i Adobe Commerce och Magento Open Source `composer.json` fil för varje modul. Konflikter deklareras i `conflict` fält i moduler `composer.json` filer. Vi använder den informationen för att skapa ett beroendediagram: `A->B` innebär att modul A är beroende av modul B.
+* Beroenden deklareras i `require` i ADOBE COMMERCE `composer.json` fil för varje modul. Konflikter deklareras i `conflict` fält i moduler `composer.json` filer. Vi använder den informationen för att skapa ett beroendediagram: `A->B` innebär att modul A är beroende av modul B.
 
 * A *beroendekedja* är banan från en modul till en annan. Om modul A till exempel är beroende av modul B och modul B är beroende av modul C, är beroendekedjan `A->B->C`.
 

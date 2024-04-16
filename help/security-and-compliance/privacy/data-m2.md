@@ -1,10 +1,10 @@
 ---
 title: Kundens personuppgifter (version 2.x)
-description: Läs mer om dataflödesdiagram och databastypsmappningar för kundinformation i Adobe Commerce och Magento Open Source 2.x.
+description: Läs mer om dataflödesdiagram och databastypsmappningar för kundinformation i Adobe Commerce 2.x.
 exl-id: f08f4f93-a7b6-4c43-bc07-f159822dc528
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '837'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Detta är ett av ett antal ämnen som hjälper Adobe Commerce och Magento Open Source handlare och utvecklare att förbereda sig för att följa sekretessbestämmelser. Kontakta ditt juridiska ombud för att få reda på om och hur ditt företag ska uppfylla juridiska skyldigheter.
+>Detta är ett av ett antal ämnen som hjälper Adobe Commerce handlare och utvecklare att förbereda sig för att följa sekretessbestämmelser. Kontakta ditt juridiska ombud för att få reda på om och hur ditt företag ska uppfylla juridiska skyldigheter.
 
 Använd följande dataflödesdiagram och databastentitetsmappningar som referens när du utvecklar kompatibilitetsprogram för sekretessregler som:
 
@@ -32,7 +32,7 @@ Användaren kan ange kund-, adress- och betalningsinformation när han eller hon
 
 ### Åtkomstpunkter för klientdata
 
-Adobe Commerce och Magento Open Source läser in kundinformation när kunden loggar in och visar flera olika sidor, eller checkar ut.
+Adobe Commerce läser in kundinformation när kunden loggar in och visar flera olika sidor, eller checkar ut.
 
 ![Åtkomstpunkter för klientdata](../../assets/security-compliance/frontend-data-access-points.svg)
 
@@ -44,17 +44,17 @@ En handlare kan ange kundinformation, adressdata och betalningsdata när han ell
 
 ### Åtkomstpunkter för backend-data
 
-Adobe Commerce och Magento Open Source läser in kundinformation när en handlare tittar på flera olika typer av rutnät, klickar på ett rutnät för att se detaljerad information och utför olika andra uppgifter.
+Adobe Commerce läser in kundinformation när en handlare tittar på flera olika typer av rutnät, klickar på ett rutnät för att visa detaljerad information och utför olika andra uppgifter.
 
 ![Åtkomstpunkter för backend-data](../../assets/security-compliance/backend-data-access-points.svg)
 
 ## Databasenheter
 
-Adobe Commerce och Magento Open Source lagrar i första hand kundspecifik information i kund-, adress-, order-, offert- och betalningstabeller. Andra tabeller innehåller referenser till kund-ID:t.
+Adobe Commerce lagrar i första hand kundspecifik information i kund-, adress-, order-, offert- och betalningstabeller. Andra tabeller innehåller referenser till kund-ID:t.
 
 ### Kunddata
 
-Adobe Commerce och Magento Open Source kan konfigureras för att lagra följande kundattribut:
+Adobe Commerce kan konfigureras för att lagra följande kundattribut:
 
 - Födelsedatum
 - E-post
@@ -119,7 +119,7 @@ Följande kolumner i `customer_grid_flat` tabellen innehåller kundinformation:
 
 ### Adressdata
 
-Adobe Commerce och Magento Open Source har följande kundattribut:
+Adobe Commerce lagrar följande kundattribut:
 
 - Ort
 - Företag
@@ -295,7 +295,7 @@ The `sales_order_payment` tabellen innehåller kreditkortsinformation och annan 
 
 ### Inbjudningsdata
 
-Adobe Commerce och Magento Open Source kan konfigureras så att kunderna kan skicka inbjudningar till privat försäljning och evenemang.
+Adobe Commerce kan konfigureras så att kunderna kan skicka inbjudningar till privat försäljning och evenemang.
 
 #### `magento_invitation` table
 

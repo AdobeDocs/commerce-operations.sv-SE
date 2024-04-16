@@ -2,9 +2,9 @@
 title: Aktivera eller inaktivera underhållsläge
 description: Följ de här stegen för att anpassa vad kunderna ser när driftsättningen av Adobe Commerce eller Magento Open Source är nere för underhåll.
 exl-id: 5d9f1493-e771-47b4-b906-3771026cf07a
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '551'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Följande guide hänvisar till en standardsida för underhållsläge. Om du behöver använda en anpassad underhållssida finns mer information i [Skapa den anpassade underhållssidan](../../upgrade/troubleshooting/maintenance-mode-options.md) ämne.
 
-Adobe Commerce och Magento Open Source använder [underhållsläge](../../configuration/bootstrap/application-modes.md#maintenance-mode) för att inaktivera startspärr. Det är praktiskt att inaktivera startfunktionen när du underhåller, uppgraderar eller konfigurerar om platsen.
+Adobe Commerce använder [underhållsläge](../../configuration/bootstrap/application-modes.md#maintenance-mode) för att inaktivera startspärr. Det är praktiskt att inaktivera startfunktionen när du underhåller, uppgraderar eller konfigurerar om platsen.
 
 Programmet identifierar underhållsläge enligt följande:
 

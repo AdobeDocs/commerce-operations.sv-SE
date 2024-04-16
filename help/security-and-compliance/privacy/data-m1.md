@@ -2,9 +2,9 @@
 title: Kundens personuppgifter (version 1.x)
 description: Läs mer om dataflöde och databastypsmappningar för kundinformation i Magento 1.x.
 exl-id: 8b01418d-8ca1-48fc-9577-a324ed3109d1
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '715'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Detta är ett av ett antal ämnen som hjälper Adobe Commerce och Magento Open Source handlare och utvecklare att förbereda sig för att följa sekretessbestämmelser. Kontakta ditt juridiska ombud för att få reda på om och hur ditt företag ska uppfylla juridiska skyldigheter.
+>Detta är ett av ett antal ämnen som hjälper Adobe Commerce handlare och utvecklare att förbereda sig för att följa sekretessbestämmelser. Kontakta ditt juridiska ombud för att få reda på om och hur ditt företag ska uppfylla juridiska skyldigheter.
 
 Använd följande dataflödesdiagram och databastentitetsmappningar som referens när du utvecklar kompatibilitetsprogram för sekretessregler som:
 
@@ -44,7 +44,7 @@ En handlare kan ange kund-, adress- och betalningsinformation från administrat�
 
 ### Åtkomstpunkter för backend-data
 
-Commerce läser in kundinformation när en handlare tittar på flera typer av rutnät, klickar på ett rutnät för att visa detaljerad information och utför olika andra uppgifter.
+Commerce läser in kundinformation när en handlare tittar på flera olika typer av rutnät, klickar på ett rutnät för att visa detaljerad information och utför olika andra uppgifter.
 
 ![Åtkomstpunkter för backend-data](../../assets/security-compliance/backend-data-access-points.svg)
 

@@ -1,11 +1,11 @@
 ---
 title: Konfigurera programmet
-description: Lär dig mer om den konfiguration efter installation som krävs för Adobe Commerce och Magento Open Source lokala distributioner.
+description: Lär dig mer om den konfiguration efter installation som krävs för Adobe Commerce lokala distributioner.
 feature: Install, Configuration
 exl-id: b1808664-10ec-4147-8251-a99f8b58f4be
-source-git-commit: 40d850add2ef8c51e9192758135768306b163780
+source-git-commit: 35664c30e438305036d3cfdd1dd1924966f6ced6
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Nu när du har installerat Adobe Commerce eller Magento Open Source måste du ko
 
 UNIX-uppgiftsschemaläggaren, cron, är viktig för programmets dagliga åtgärder. Det schemalägger saker som omindexering, nyhetsbrev, e-post och webbplatskartor. A *crontab* är en cron-konfiguration.
 
-Du måste installera tjänsterna Adobe Commerce och Magento Open Source i *crontab* eller vissa kärnfunktioner (och vissa tillägg från tredje part) fungerar inte korrekt.
+Du måste installera Adobe Commerce-tjänster i *crontab* eller vissa kärnfunktioner (och vissa tillägg från tredje part) fungerar inte korrekt.
 
 Mer information om cron, inklusive hur du tar bort en crontab och kör cron från kommandoraden, finns i [Konfigurera och kör cron](../../configuration/cli/configure-cron-jobs.md).
 
@@ -79,7 +79,7 @@ Mer information:
 
 ### Konfigurera en e-postserver
 
-Adobe Commerce och Magento Open Source kräver en e-postserver. Vi rekommenderar inte en viss server, men du kan försöka med något av följande:
+Adobe Commerce kräver en e-postserver. Vi rekommenderar inte en viss server, men du kan försöka med något av följande:
 
 * Postfix för CentOS ([Digital Ocean, genomgång](https://www.digitalocean.com/community/tutorials/how-to-install-postfix-on-centos-6), [CentOS-dokumentation](https://www.centos.org))
 * Postfix för Ubuntu ([Digital Ocean, genomgång](https://www.digitalocean.com/community/tutorials/how-to-install-and-setup-postfix-on-ubuntu-14-04), [Ubuntu-dokumentation](https://help.ubuntu.com/community/MailServer))
@@ -92,7 +92,7 @@ Elasticsearch eller OpenSearch krävs för alla installationer från och med 2.4
 
 ### Konfigurera en meddelandekö
 
-Sedan version 2.3.0 innehåller Adobe Commerce och Magento Open Source funktioner för meddelandekö. I tidigare versioner är den endast tillgänglig för Adobe Commerce.
+Sedan version 2.3.0 har Adobe Commerce tagit med funktioner för meddelandekö. I tidigare versioner är den endast tillgänglig för Adobe Commerce.
 
 * [[!DNL RabbitMQ]](../../configuration/queues/message-queue-framework.md)
 

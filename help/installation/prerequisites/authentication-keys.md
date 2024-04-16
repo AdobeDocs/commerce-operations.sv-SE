@@ -1,19 +1,19 @@
 ---
 title: Hämta dina autentiseringsnycklar
-description: Följ de här stegen för att hämta inloggningsuppgifter för att komma åt Adobe Commerce- och Magento Open Source Composer-paket på repo.magento.com.
+description: Följ de här stegen för att hämta inloggningsuppgifter för att komma åt Adobe Commerce Composer-paket på repo.magento.com.
 exl-id: 7ec2a410-d81f-476a-bf6a-f3c61982a734
-source-git-commit: 3d9b7c5352f91308dd315a7195ee2cb1c4b191ee
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '473'
 ht-degree: 0%
 
 ---
 
 # Hämta dina autentiseringsnycklar
 
-The `repo.magento.com` är den plats där Adobe Commerce-, Magento Open Source- och tredjepartspaket för disposition lagras och kräver autentisering. Använd ditt Commerce Marketplace-konto för att skapa ett par med 32 tecken *autentiseringsnycklar* för att komma åt databasen.
+The `repo.magento.com` är den plats där Adobe Commerce-paket och Composer-paket från tredje part lagras och kräver autentisering. Använd ditt Commerce Marketplace-konto för att skapa ett par med 32 tecken *autentiseringsnycklar* för att komma åt databasen.
 
-För åtkomsträttigheter till Adobe Commerce- och Magento Open Source-paket måste du använda nycklar som är kopplade till ett MAGEID som har beviljats åtkomst till dessa paket. MAGEID är vanligtvis den primära kontakten på Adobe Commerce-kontot och är kanske inte alltid projektägare till Adobe Commerce i molninfrastrukturprojekt.
+För åtkomsträttigheter till Adobe Commerce-paket måste du använda nycklar som är kopplade till ett MAGEID som har beviljats åtkomst till dessa paket. MAGEID är vanligtvis den primära kontakten på Adobe Commerce-kontot och är kanske inte alltid projektägare till Adobe Commerce i molninfrastrukturprojekt.
 
 >[!TIP]
 >
@@ -46,7 +46,7 @@ Du kan även inaktivera eller ta bort autentiseringsnycklar. Du kan till exempel
 
 ### Hantera SSH-åtkomsttoken
 
-Om du vill hämta Adobe Commerce- och Magento Open Source-versioner med SSH måste du generera en åtkomsttoken för nedladdning. Så här skapar du en token:
+Om du vill hämta Adobe Commerce-versioner med SSH måste du generera en åtkomsttoken för nedladdning. Så här skapar du en token:
 
 1. Logga in på [magento.com](https://account.magento.com/customer/account/login).
 1. Klicka **Mitt konto** överst på sidan.

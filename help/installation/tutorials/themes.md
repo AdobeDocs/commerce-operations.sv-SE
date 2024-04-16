@@ -3,9 +3,9 @@ title: Avinstallera teman
 description: Följ de här stegen för att avinstallera ett Adobe Commerce- eller Magento Open Source-tema.
 feature: Install, Themes
 exl-id: 73150e8c-2d83-4479-b96b-75f41fd9c842
-source-git-commit: ce405a6bb548b177427e4c02640ce13149c48aff
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '453'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Innan du använder det här kommandot måste du känna till den relativa sökvägen till temat. Teman finns i en underkatalog till `<magento_root>/app/design/<area name>`. Du måste ange sökvägen till temat som börjar med området, vilket antingen är `frontend` (för storefront-teman) eller `adminhtml` (för administratörsteman).
 
-Sökvägen till Luma-temat som finns i Adobe Commerce och Magento Open Source är `frontend/Magento/luma`.
+Sökvägen till Luma-temat som ingår i Adobe Commerce är `frontend/Magento/luma`.
 
 Mer information om teman finns i [temastruktur](https://developer.adobe.com/commerce/frontend-core/guide/themes/structure/).
 
@@ -39,7 +39,7 @@ bin/magento theme:uninstall [--backup-code] [-c|--clear-static-content] {theme p
 
 Plats
 
-* `{theme path}` är den relativa sökvägen till temat, med början från områdesnamnet. Sökvägen till det tomma temat som medföljer Adobe Commerce och Magento Open Source är `frontend/Magento/blank`.
+* `{theme path}` är den relativa sökvägen till temat, med början från områdesnamnet. Sökvägen till det tomma temat som medföljer Adobe Commerce är `frontend/Magento/blank`.
 * `--backup-code` säkerhetskopierar kodbasen enligt beskrivningen i de följande styckena.
 * `--clear-static-content` rensningar som genererats [statiska vyfiler](../../configuration/cli/static-view-file-deployment.md), vilket är nödvändigt för att statiska vyfiler ska visas korrekt.
 

@@ -1,21 +1,21 @@
 ---
 title: Systemkrav
-description: Använd den här referensen för att identifiera nödvändiga programvaruberoenden som har testats med Adobe Commerce och Magento Open Source.
+description: Använd den här referensen för att identifiera nödvändiga programvaruberoenden som har testats med Adobe Commerce-utgåvor.
 exl-id: 008c9edc-7d72-403c-847f-0e3b77bbb197
-source-git-commit: 4087d5f5de0bc11ce120d61a539800a3533893f0
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '732'
 ht-degree: 0%
 
 ---
 
 # Systemkrav
 
-Nedan sammanfattas programvaruberoenden och tjänster som testats för Adobe Commerce och Magento Open Source.
+Nedan sammanfattas programvaruberoenden och tjänster som testats för Adobe Commerce.
 
 Det finns vissa skillnader i beroendena för Commerce på molninfrastrukturen. Tjänstversion och kompatibilitetsstöd för Adobe Commerce i molninfrastruktur bestäms av tjänster som testas och distribueras i molnmiljöer, och skiljer sig ibland från versioner som stöds av Adobe Commerce lokala distributioner. Elasticsearch 7.17 stöds till exempel för Commerce 2.4.4 för anläggningsdistributioner, men OpenSearch 1.2 stöds för Commerce 2.4.4 i molninfrastruktur.
 
-I följande tabeller visas versioner av tredjepartsprogramvaruberoenden som Adobe har testat med specifika utgåvor av Adobe Commerce och Magento Open Source.
+I följande tabeller visas versioner av tredjepartsprogramvaruberoenden som Adobe har testat med specifika Adobe Commerce-utgåvor.
 
 Adobe stöder endast den kombination av systemkrav som beskrivs i följande tabeller. 2.4.5 har till exempel testats fullt ut med MariaDB 10.4. Adobe rekommenderar att du uppgraderar till MariaDB 10.4 innan du uppgraderar till 2.4.5.
 
@@ -52,7 +52,7 @@ Se [Konfigurera tjänster](https://experienceleague.adobe.com/docs/commerce-clou
 
 ## PHP-inställningar
 
-Det finns särskilda PHP-konfigurationsinställningar, till exempel `memory_limit` inställning, vilket kan hjälpa dig att undvika vanliga problem när du använder Adobe Commerce och Magento Open Source. Se [Nödvändiga PHP-inställningar](prerequisites/php-settings.md).
+Det finns särskilda PHP-konfigurationsinställningar, till exempel `memory_limit` inställning, vilket kan hjälpa dig att undvika vanliga problem när du använder Adobe Commerce. Se [Nödvändiga PHP-inställningar](prerequisites/php-settings.md).
 
 Mer information om konfigurering av molnet finns i [PHP-inställningar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/php-settings.html) i _Commerce on Cloud Infrastructure_ guide.
 
@@ -102,7 +102,7 @@ I det här avsnittet beskrivs stöd och kompatibilitet för alla andra typer av 
 
 >[!NOTE]
 >
->Följande krav gäller den senaste 2.4.x-korrigeringsversionen av Adobe Commerce och Magento Open Source. I tillämpliga fall ges vägledning om infrastruktur i Commerce on Cloud.
+>Följande krav gäller den senaste 2.4.x-korrigeringsversionen av Adobe Commerce. I tillämpliga fall ges vägledning om infrastruktur i Commerce on Cloud.
 
 ### Webbläsare
 
@@ -127,7 +127,7 @@ Uppgradering av program och tillägg från Commerce Marketplace och andra källo
 
 Linux-distributioner, till exempel RedHat Enterprise Linux (RHEL), CentOS, Ubuntu, Debian och liknande. Microsoft Windows och macOS stöds inte.
 
-Adobe Commerce och Magento Open Source kräver följande systemverktyg för vissa åtgärder:
+Adobe Commerce kräver följande systemverktyg för vissa åtgärder:
 
 - [[!DNL bash]](https://www.gnu.org/software/bash/)
 - [[!DNL gzip]](https://www.gzip.org/)
@@ -149,7 +149,7 @@ Information om Commerce on Cloud-infrastruktur finns på [Snabb konfiguration](h
 
 ### Xdebug
 
-För Adobe Commerce och Magento Open Source använder du [php_xdebug 2.5.x](https://xdebug.org/download) eller senare (endast utvecklingsmiljöer; kan ha en negativ effekt på prestandan).
+För Adobe Commerce använder du [php_xdebug 2.5.x](https://xdebug.org/download) eller senare (endast utvecklingsmiljöer; kan ha en negativ effekt på prestandan).
 
 Information om Adobe Commerce i molnet finns på [Konfigurera Xdebug](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/test/debug.html) i _Commerce on Cloud Infrastructure_ guide.
 

@@ -2,9 +2,9 @@
 title: Allmänna dataskyddsförordningen (GDPR)
 description: Läs om den allmänna dataskyddsförordningen (GDPR), som är en lagstiftning som reglerar dataskydd och sekretess för alla enskilda personer i EU och EES.
 exl-id: 30e60601-f4f7-419e-b2dd-8c82c8a2ed33
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Detta är ett ämne i en rad ämnen som hjälper handlarna och utvecklarna i Adobe Commerce och Magento Open Source att förstå konsekvenserna av den allmänna dataskyddsförordningen (GDPR). Uppgifterna är endast avsedda som information och bör inte tolkas som juridisk rådgivning. Kontakta ditt juridiska ombud för att få reda på om och hur ditt företag ska uppfylla juridiska skyldigheter.
+>Detta är ett av ett antal ämnen som hjälper Adobe Commerce handlare och utvecklare att förstå konsekvenserna av den allmänna dataskyddsförordningen (GDPR). Uppgifterna är endast avsedda som information och bör inte tolkas som juridisk rådgivning. Kontakta ditt juridiska ombud för att få reda på om och hur ditt företag ska uppfylla juridiska skyldigheter.
 
 EU antog [Allmän dataskyddsförordning](https://ec.europa.eu/info/law/law-topic/data-protection_en) (GDPR) för att ge medborgarna bättre kontroll över sina personuppgifter. GDPR gäller alla organisationer som är verksamma inom EU. Det gäller också organisationer utanför EU som erbjuder varor eller tjänster till kunder eller företag inom EU.
 
@@ -29,7 +29,7 @@ Teknisk information finns i dataflödesdiagrammen och mappningarna av databasent
 - [Kundens personuppgifter (version 2.x)](data-m2.md)
 - [Kundens personuppgifter - referens (version) 1.x](data-m1.md)
 
-Mer information om hur Adobe Commerce och Magento Open Source hjälper handlare att uppfylla GDPR finns i:
+Mer information om hur Adobe Commerce hjälper handlare att följa GDPR finns i:
 
 - [GDPR-efterlevnad](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-gdpr.html)
 - [Adobe Commerce är redo för GDPR](https://business.adobe.com/privacy/general-data-protection-regulation.html)

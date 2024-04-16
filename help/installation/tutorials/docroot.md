@@ -3,16 +3,16 @@ title: Förbättra säkerheten genom att ändra dokumentroten
 description: Förhindra obehörig webbläsarbaserad åtkomst till Adobe Commerce eller Magento Open Source lokala filsystem.
 feature: Install, Security
 exl-id: aabe148d-00c8-4011-a629-aa5abfa6c682
-source-git-commit: 32dd5005422b98923ce1bdf6c3fb3f55c2ec15bd
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '585'
 ht-degree: 0%
 
 ---
 
 # Förbättra säkerheten genom att ändra dokumentroten
 
-I en standardinstallation med en Apache-webbserver installeras Adobe Commerce och Magento Open Source i standardwebbroten: `/var/www/html/magento2`.
+I en standardinstallation med en Apache-webbserver installeras Adobe Commerce i standardwebbroten: `/var/www/html/magento2`.
 
 The `magento2/` katalogen innehåller följande:
 
@@ -168,7 +168,7 @@ Att växla mellan lägen är ett viktigt steg när du vill verifiera att serverk
 
 Gå till butiken i en webbläsare och kontrollera att allt fungerar.
 
-1. Öppna en webbläsare och ange serverns värdnamn eller IP-adress i adressfältet. Exempel, `http://192.168.33.10`.
+1. Öppna en webbläsare och ange serverns värdnamn eller IP-adress i adressfältet. Till exempel: `http://192.168.33.10`.
 
    I bilden nedan visas ett exempel på en butikssida. Om den visas på följande sätt har installationen lyckats!
 

@@ -3,19 +3,18 @@ title: Användning
 description: Lär dig använda [!DNL Quality Patches Tool].
 exl-id: f9ad37e9-2d0f-4bc8-a98b-6d60b6f56d42
 feature: Configuration, Install
-source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '869'
 ht-degree: 0%
 
 ---
 
 # Användning
 
-The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) levererar individuella plåster som utvecklats av Adobe och Magento Open Source-communityn. Med den kan du tillämpa, återställa och visa allmän information om alla enskilda korrigeringsfiler som är tillgängliga för den installerade versionen av Adobe Commerce eller Magento Open Source. Du kan använda korrigeringsfiler i Adobe Commerce- och Magento Open Source-projekt oavsett vem som har utvecklat korrigeringsfilen. Du kan till exempel använda en korrigering som utvecklats av communityn på Adobe Commerce-projekt.
+The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) levererar individuella plåster som utvecklats av Adobe och Magento Open Source-communityn. Med den kan du tillämpa, återställa och visa allmän information om alla enskilda korrigeringsfiler som är tillgängliga för den installerade versionen av Adobe Commerce eller Magento Open Source. Du kan använda korrigeringsfiler i Adobe Commerce-projekt oavsett vem som har utvecklat korrigeringsfilen. Du kan till exempel använda en korrigering som utvecklats av communityn på Adobe Commerce-projekt.
 
-
-Titta på detta [teknisk video](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/tools/quality-patch-tool.html?lang=en) och lär dig hur du använder verktyget för kvalitetskorrigeringar för Adobe Commerce och Magento Open Source.
+Titta på detta [teknisk video](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/tools/quality-patch-tool.html?lang=en) och lär dig hur du använder verktyget för kvalitetskorrigeringar för Adobe Commerce.
 
 >[!INFO]
 >
@@ -62,7 +61,7 @@ Adobe Commerce 2.3.5
 Statustabellen innehåller:
 
 - **Typ**:
-   - `Optional` — Alla patchar från [!DNL Quality Patches Tool] och [Commerce on Cloud Infrastructure Guide > Apply patches](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) är valfritt för installationer i Adobe Commerce och Magento Open Source.
+   - `Optional` — Alla patchar från [!DNL Quality Patches Tool] och [Commerce on Cloud Infrastructure Guide > Apply patches](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) är valfritt för Adobe Commerce-installationer.
    - `Deprecated` — Adobe har ersatt det enskilda plåstret. Om du har använt korrigeringen rekommenderar vi att du återställer den. Återställningsåtgärden tar även bort korrigeringen från statustabellen.
 
 - **Status**:

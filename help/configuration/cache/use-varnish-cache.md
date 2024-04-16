@@ -3,16 +3,16 @@ title: Cachelagring med lack
 description: Lär dig hur cacherensning fungerar med lack och hur du använder det som en accelerator för webb-cachning för Adobe Commerce-programmet.
 feature: Configuration, Cache
 exl-id: 866da415-c428-4092-a045-c3079493cdc4
-source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '367'
 ht-degree: 0%
 
 ---
 
 # Cachelagring med lack
 
-I det här avsnittet diskuteras grunderna i hur du använder Varnish som accelerator för webbcachelagring för Adobe Commerce och Magento Open Source.
+I det här avsnittet diskuteras grunderna i hur du använder Varnish som accelerator för webbcachelagring för Adobe Commerce.
 
 ## Finska renar
 
@@ -30,7 +30,7 @@ När du har installerat och konfigurerat lack för att arbeta med Commerce kan f
    - **LAGRING** > **Inställningar** > **Konfiguration** > ALLMÄNT > **Valutainställningar**
    - **LAGRING** > **Inställningar** > **Konfiguration** > ALLMÄNT > **E-postadresser för butik**
 
-  När Commerce upptäcker en sådan ändring visas ett meddelande som talar om för dig att uppdatera cachen.
+  När Commerce upptäcker en sådan ändring visas ett meddelande om att du behöver uppdatera cachen.
 
 - Upprätthålla en butik (till exempel lägga till eller redigera kategorier, priser, produkter och kampanjpriser).
 
@@ -40,7 +40,7 @@ När du har installerat och konfigurerat lack för att arbeta med Commerce kan f
 
   Du bör uppdatera cacheminnet och även ta bort allt i `generated/code` och `generated/metadata` kataloger. Mer information om hur du uppdaterar cacheminnet finns i nästa avsnitt.
 
-## Konfigurera Commerce för att rensa lack
+## Konfigurera Commerce att rensa bort lack
 
 Commerce tömmer varnish-värdar efter att du har konfigurerat varnish-värdar med [`magento setup:config:set`](https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html#setupconfigset) -kommando.
 
@@ -54,7 +54,7 @@ Exempel:
 bin/magento setup:config:set --http-cache-hosts=192.0.2.100,192.0.2.155:6081
 ```
 
-Du kan sedan rensa varnish-värdar när du uppdaterar Commerce Cache (kallas även för *rengöring* cacheminnet) i Admin eller via kommandoraden.
+Du kan sedan rensa varnish-värdar när du uppdaterar Commerce-cachen (kallas även för *rengöring* cacheminnet) i Admin eller via kommandoraden.
 
 Om du vill uppdatera cachen med hjälp av administratören klickar du på **[!UICONTROL SYSTEM]** > Verktyg > **Cachehantering** och sedan klicka **Rensa Magento-cache** överst på sidan. (Du kan också uppdatera enskilda cachetyper.)
 

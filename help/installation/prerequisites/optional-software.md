@@ -1,10 +1,10 @@
 ---
 title: Valfri programvara
-description: Läs mer om valfri programvara som du kan installera för att få support på lokala installationer av Adobe Commerce och Magento Open Source.
+description: Läs mer om valfri programvara som du kan installera för att få support på lokala installationer av Adobe Commerce.
 exl-id: 533ff52b-3301-4624-b691-3dfddde6ce0b
-source-git-commit: 40d850add2ef8c51e9192758135768306b163780
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '605'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Så här installerar och konfigurerar du NTP:
    yum search ntp
    ```
 
-1. Välj ett paket som ska installeras. Exempel, `ntp.x86_64`.
+1. Välj ett paket som ska installeras. Till exempel: `ntp.x86_64`.
 
 1. Installera paketet.
 

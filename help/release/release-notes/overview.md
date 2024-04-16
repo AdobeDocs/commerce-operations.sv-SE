@@ -1,15 +1,16 @@
 ---
-title: Versionsinformation om Adobe Commerce och Magento Open Source
-description: Lär dig var du hittar information om specifika versioner av Adobe Commerce och Magento Open Source.
+title: Versionsinformation för Adobe Commerce
+description: Lär dig var du hittar information om specifika Adobe Commerce-utgåvor.
 exl-id: f6385e12-5c3d-425f-939c-9dfd7ef6c4f5
-source-git-commit: c371ee59e4f1efcc947d0bbd189a892d8f32a5b7
+source-git-commit: 35664c30e438305036d3cfdd1dd1924966f6ced6
 workflow-type: tm+mt
-source-wordcount: '430'
-ht-degree: 4%
+source-wordcount: '271'
+ht-degree: 0%
 
 ---
 
-# Versionsinformation för Adobe Commerce och Magento Open Source
+
+# Versionsinformation om Adobe Commerce
 
 Använd följande tabell för att hitta versionsinformation och viktig information om specifika releaser av alla Adobe Commerce-produkter, -tjänster och -verktyg.
 
@@ -20,16 +21,14 @@ Använd följande tabell för att hitta versionsinformation och viktig informati
 <table>
   <tbody>
     <tr>
-      <td><strong>Adobe Commerce och Magento Open Source</strong>
-        <p>Läs om de senaste förbättringarna i Adobe Commerce och Magento Open Source, inklusive förbättringar, säkerhet, felkorrigeringar och kända fel.</p>
+      <td><strong>Adobe Commerce</strong>
+        <p>Läs om de senaste förbättringarna i Adobe Commerce, inklusive förbättringar, säkerhet, felkorrigeringar och kända fel.</p>
           <ul>
             <li><a href="https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/">Bakåtkompatibla ändringar</a></li>
             <li><a href="commerce/overview.md">Adobe Commerce</a></li>
-            <li><a href="open-source/overview.md">Magento Open Source</a></li>
             <li><a href="security/overview.md">Säkerhetsuppdateringar</a></li>
             <li><a href="https://helpx.adobe.com/security/products/magento.html">Adobe säkerhetsbulletin</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes.html">B2B för Adobe Commerce</a></li>
-            <li><a href="https://experienceleague.adobe.com/docs/commerce-admin/inventory/release-notes.html">Inventory management</a></li>
           </ul>
         </td>
       <td><strong>Adobe Commerce i molninfrastruktur</strong>
@@ -45,7 +44,7 @@ Använd följande tabell för att hitta versionsinformation och viktig informati
     </tr>
     <tr>
       <td><strong>Tjänster för Adobe Commerce</strong>
-        <p>Läs om de senaste förbättringarna av innovativa Commerce-tjänster som finns som tillägg för Adobe Commerce och Magento Open Source.</p>
+        <p>Läs om de senaste förbättringarna av innovativa marknadsföringstjänster från Commerce.</p>
           <ul>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-admin/customers/audience-activation.html">Audience Activation</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-channels/amazon/release-notes.html">Amazon-Sales Channeler</a></li>
@@ -61,7 +60,7 @@ Använd följande tabell för att hitta versionsinformation och viktig informati
           </ul>
         </td>
       <td><strong>verktyg</strong>
-        <p>Läs om de senaste förbättringarna av verktyg som gör det enklare för dig att hitta och använda Adobe Commerce och Magento Open Source.</p>
+        <p>Läs om de senaste förbättringarna av verktyg som gör det enklare att hitta och använda Adobe Commerce.</p>
           <ul>
             <li><a href="https://developer.adobe.com/graphql-mesh-gateway/">API Mesh för Adobe APP Builder Developer</a></li>
             <li><a href="https://developer.adobe.com/commerce/events/get-started/release-notes/">Adobe I/O Events for Adobe Commerce</a></li>
@@ -76,6 +75,7 @@ Använd följande tabell för att hitta versionsinformation och viktig informati
        <td><strong>Storefront Experience</strong>
         <p>Läs om de senaste förbättringarna av butikstekniken som ni kan använda för att skapa unika upplevelser för era kunder.</p>
           <ul>
+            <li><a href="https://experienceleague.adobe.com/developer/commerce/storefront/">Adobe Commerce Storefront</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-admin/page-builder/release-notes.html">Page Builder</a></li>
             <li><a href="https://github.com/magento/pwa-studio/releases/latest">PWA Studio</a></li>
           </ul>

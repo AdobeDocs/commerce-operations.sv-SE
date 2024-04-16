@@ -2,9 +2,9 @@
 title: Installera Adobe Commerce
 description: Följ de här stegen för att installera Adobe Commerce eller Magento Open Source på en infrastruktur som du äger.
 exl-id: 25f3c56e-0654-4f8b-a69d-f4152f68aca3
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '2106'
+source-wordcount: '2102'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Du kan köra installationsprogrammet flera gånger med olika alternativ för att
 
 >[!NOTE]
 >
->Installationsprogrammet skriver inte över databasen som standard om du installerar Commerce-programmet i samma databasinstans. Du kan använda det valfria `cleanup-database` parameter för att ändra detta beteende.
+>Som standard skriver installationsprogrammet inte över databasen om du installerar Commerce-programmet i samma databasinstans. Du kan använda det valfria `cleanup-database` parameter för att ändra detta beteende.
 
 Se även [Uppdatera, installera om, avinstallera](uninstall.md).
 
@@ -97,7 +97,7 @@ I Adobe Commerce version 2.2.8 och senare kan du skapa administratörsanvändare
 | `--db-name` | Namnet på den databasinstans där du vill installera databastabellerna.<br><br>Standard är `magento2`. | Ja |
 | `--db-user` | Användarnamn för databasinstansens ägare.<br><br>Standard är `root`. | Ja |
 | `--db-password` | Lösenord för databasinstansens ägare. | Ja |
-| `--db-prefix` | Använd bara om du installerar databastabellerna i en databasinstans som redan innehåller Adobe Commerce- eller Magento Open Source-tabeller.<br><br>I så fall använder du ett prefix för att identifiera tabellerna för den här installationen. Vissa kunder har fler än en instans av Adobe Commerce och Magento Open Source som körs på en server med alla tabeller i samma databas.<br><br>Prefixet får innehålla högst fem tecken. Den måste börja med en bokstav och kan bara innehålla bokstäver, siffror och understreck.<br><br>Med det här alternativet kan dessa kunder dela databasservern med mer än en installation. | Nej |
+| `--db-prefix` | Använd bara om du installerar databastabellerna i en databasinstans som redan innehåller Adobe Commerce- eller Magento Open Source-tabeller.<br><br>I så fall använder du ett prefix för att identifiera tabellerna för den här installationen. Vissa kunder har fler än en Adobe Commerce-instans som körs på en server med alla tabeller i samma databas.<br><br>Prefixet får innehålla högst fem tecken. Den måste börja med en bokstav och kan bara innehålla bokstäver, siffror och understreck.<br><br>Med det här alternativet kan dessa kunder dela databasservern med mer än en installation. | Nej |
 | `--db-ssl-key` | Sökväg till klientnyckeln. | Nej |
 | `--db-ssl-cert` | Sökväg till klientcertifikatet. | Nej |
 | `--db-ssl-ca` | Sökväg till servercertifikatet. | Nej |
@@ -161,7 +161,7 @@ I Adobe Commerce version 2.2.8 och senare kan du skapa administratörsanvändare
 |--- |--- |--- |
 | `--lock-provider` | Lås leverantörens namn.<br><br>Tillgängliga låsleverantörer: `db`, `zookeeper`, `file`.<br><br>Standardlåsleverantör: `db` | Nej |
 | `--lock-db-prefix` | Det specifika db-prefixet för att undvika låskonflikter när du använder `db` låsleverantör.<br><br>Standardvärdet: `NULL` | Nej |
-| `--lock-zookeeper-host` | Värd och port för att ansluta till Zookeeper-klustret när du använder `zookeeper` låsleverantör.<br><br>Exempel: `127.0.0.1:2181` | Ja, om du anger `--lock-provider=zookeeper` |
+| `--lock-zookeeper-host` | Värd och port för att ansluta till Zookeeper-klustret när du använder `zookeeper` låsleverantör.<br><br>Till exempel: `127.0.0.1:2181` | Ja, om du anger `--lock-provider=zookeeper` |
 | `--lock-zookeeper-path` | Sökvägen där Zookeeper sparar lås.<br><br>Standardsökvägen är: `/magento/locks` | Nej |
 | `--lock-file-path` | Sökvägen där fillås sparas. | Ja, om du anger `--lock-provider=file` |
 

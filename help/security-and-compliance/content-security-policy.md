@@ -2,16 +2,16 @@
 title: Översikt över skyddsprofilen för innehåll
 description: Lär dig hur du förbättrar säkerhetspositionen i din Adobe Commerce- eller Magento Open Source-butik med hjälp av en skyddsprofil för innehåll.
 exl-id: 81070a09-5f8f-48b1-b542-1443dbd43f5f
-source-git-commit: 8bb692518536f5e7403ed308328e6532c020a230
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '501'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
 
 # Översikt över skyddsprofilen för innehåll
 
-En Content Security Policy (CSP) kan tillhandahålla ytterligare lager av skydd för Adobe Commerce- och Magento Open Source-installationer genom att hjälpa till att upptäcka och minska XSS-attacker (Cross-Site Scripting) och relaterade datainjektionsangrepp. Denna vanliga attackvektor fungerar genom att man injicerar skadligt innehåll som felaktigt hävdas ha sitt ursprung på webbplatsen. När det skadliga innehållet har lästs in och körts kan det initiera obehörig överföring av data.
+En Content Security Policy (CSP) kan tillhandahålla ytterligare lager av skydd för Adobe Commerce-installationer genom att hjälpa till att upptäcka och minska attacker som rör XSS (Cross-Site Scripting) och relaterade datainmatningsattacker. Denna vanliga attackvektor fungerar genom att man injicerar skadligt innehåll som felaktigt hävdas ha sitt ursprung på webbplatsen. När det skadliga innehållet har lästs in och körts kan det initiera obehörig överföring av data.
 
 CSP tillhandahåller en standardiserad uppsättning direktiv som talar om för webbläsaren vilka innehållsresurser som kan betraktas som tillförlitliga och vilka som ska blockeras. Med hjälp av noggrant definierade principer kan CSP begränsa webbläsarinnehåll så att endast godkända resurser kan visas.
 

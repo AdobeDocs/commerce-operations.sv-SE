@@ -2,20 +2,20 @@
 title: Installera ett tillägg
 description: Så här installerar du ett Adobe Commerce- eller Magento Open Source-tillägg.
 exl-id: b564662a-2e5f-4fa9-bae1-ca7498478fa9
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '635'
 ht-degree: 0%
 
 ---
 
 # Installera ett tillägg
 
-Kod som utökar eller anpassar beteendet Adobe Commerce och Magento Open Source kallas ett tillägg. Du kan även paketera och distribuera tillägg på [Commerce Marketplace](https://marketplace.magento.com) eller ett annat tilläggsdistributionssystem.
+Kod som utökar eller anpassar Adobe Commerce-beteendet kallas ett tillägg. Du kan även paketera och distribuera tillägg på [Commerce Marketplace](https://marketplace.magento.com) eller ett annat tilläggsdistributionssystem.
 
 Tilläggen omfattar:
 
-- Moduler (utöka funktionerna för Adobe Commerce och Magento Open Source)
+- Moduler (utöka Adobe Commerce funktioner)
 - Teman (ändra utseende och känsla för din butik och administratör)
 - Språkpaket (lokalisera butiken och administratören)
 

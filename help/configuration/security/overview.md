@@ -1,11 +1,11 @@
 ---
 title: Översikt över säkerhet
-description: Läs en kort översikt över säkerhetsinställningarna för Adobe Commerce och Magento Open Source.
+description: Läs en kort översikt över säkerhetsinställningarna för Adobe Commerce.
 feature: Configuration, Security
 exl-id: e596d03f-8428-4ad7-a563-8b7f371ed5b4
-source-git-commit: 56a2461edea2799a9d569bd486f995b0fe5b5947
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '154'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,9 @@ I avsnittet Säkerhet finns inställningar för säkerhetsrelaterade funktioner,
 
 ## Säkerhetsresurser
 
-Avsnitten i avsnittet Säkerhet i konfigurationshandboken är inte heltäckande för alla Commerce-funktioner. Det finns många viktiga säkerhetsrelaterade ämnen i andra handelshandböcker, som:
+Avsnitten i avsnittet Säkerhet i konfigurationshandboken är inte heltäckande för alla Commerce-funktioner. Det finns många viktiga säkerhetsrelaterade ämnen i andra Commerce-handböcker, som:
 
-- [Utvecklarhandbok för PHP](https://developer.adobe.com/commerce/php/development/security/) för information som Adobe Commerce- och Magento Open Source-utvecklare kan använda för att förbättra säkerheten för de komponenter som de bygger.
+- [Utvecklarhandbok för PHP](https://developer.adobe.com/commerce/php/development/security/) för information som Adobe Commerce-utvecklare kan använda för att förbättra säkerheten för de komponenter som de bygger.
 - [Säkerhets- och efterlevnadshandbok](https://devdocs.magento.com/security/security-and-compliance.html) för information om säkerhet, integritet och regelefterlevnad, med länkar till tekniska resurser.
 
 Flera säkerhetsrelaterade ämnen som fanns med i konfigurationshandboken samtidigt finns nu i följande handböcker:

@@ -2,9 +2,9 @@
 title: Förstå uppgraderingsomfång
 description: Lär dig mer om bakåtkompatibla ändringar i en release som kan påverka anpassade moduler eller tillägg från tredje part från Adobe Commerce eller Magento Open Source.
 exl-id: dab2a14f-dbf0-422e-afb4-642e2220ec7a
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '901'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Granska [versionsinformation](https://devdocs.magento.com/guides/v2.4/release-no
 
 ## Bakåtkompatibla ändringar
 
-Adobe Commerce och Magento Open Source kan innehålla ändringar som är inkompatibla bakåt. Läs igenom vår bakåtkompatibla ändringsdokumentation och se följande:
+Adobe Commerce-versioner kan innehålla ändringar som är inkompatibla bakåt. Läs igenom vår bakåtkompatibla ändringsdokumentation och se följande:
 
 - **[Viktiga ändringsmarkeringar](https://devdocs.magento.com/guides/v2.4/release-notes/backward-incompatible-changes/index.html)**—Ändringar som har stor inverkan och som kräver detaljerade förklaringar och specialinstruktioner för att säkerställa att tredjepartsmoduler fortsätter att fungera.
 - **[Mindre ändringsreferens](https://devdocs.magento.com/guides/v2.4/release-notes/backward-incompatible-changes/reference.html)**—Referensdokumentation som genererats från kodbasen som beskriver mindre ändringar av klasser, API-medlemskap, databas, beroendeinjicering, gränssnitt, layouter, system och XSD.

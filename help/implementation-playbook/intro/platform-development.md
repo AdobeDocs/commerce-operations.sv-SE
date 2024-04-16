@@ -3,9 +3,9 @@ title: Principer för plattformsutveckling
 description: Förstå grundläggande principer för plattformsutveckling när du arbetar med Adobe Commerce.
 exl-id: 3d822a8c-0e81-4a80-a820-46cf2702e0bf
 feature: Cloud
-source-git-commit: 3c1a49c2dc3dc0d3d47e16c724d4099b6a456c77
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
@@ -30,4 +30,4 @@ Precis som alla andra stora IT-projekt bygger Adobe Commerce på kodningsstandar
 
 ## Adobe Commerce i molninfrastruktur
 
-Adobe Commerce i molninfrastruktur är en hanterad, automatiserad värdplattform för Adobe Commerce. Adobe Commerce i molninfrastruktur har olika funktioner som skiljer den från lokala Adobe Commerce- och Magento Open Source-implementeringar. Se [Molnguide](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/overview.html).
+Adobe Commerce i molninfrastruktur är en hanterad, automatiserad värdplattform för Adobe Commerce. Adobe Commerce i molninfrastruktur har olika funktioner som skiljer den från lokala Adobe Commerce-implementeringar. Se [Molnguide](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/overview.html).

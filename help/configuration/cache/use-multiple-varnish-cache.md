@@ -3,16 +3,16 @@ title: Cachelagring med flera varianter
 description: Lär dig hur cache-rensning fungerar med flera varianter.
 feature: Configuration, Cache
 exl-id: 289a4e54-9e73-454c-bfb9-e78e405af56c
-source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '176'
 ht-degree: 1%
 
 ---
 
 # Cachelagra flera varianter
 
-Adobe Commerce och Magento Open Source har stöd för flera Varnish-instanser.
+Adobe Commerce har stöd för flera varnish-instanser direkt.
 
 I det här avsnittet beskrivs grunderna för hur du konfigurerar flera Varnish-instanser med Commerce.
 
@@ -30,7 +30,7 @@ Exempel:
 bin/magento setup:config:set --http-cache-hosts=192.0.2.100,192.0.2.155:8080
 ```
 
-Du kan sedan rensa alla varniska värdar när du uppdaterar Commerce Cache (kallas även för _rengöring_ cacheminnet) i Admin eller via kommandoraden.
+Du kan sedan rensa alla varnish-värdar när du uppdaterar Commerce-cachen (kallas även för _rengöring_ cacheminnet) i Admin eller via kommandoraden.
 
 Om du vill uppdatera cachen med hjälp av administratören klickar du på **SYSTEM** > Verktyg > **Cachehantering** och sedan klicka **Rensa Magento-cache** överst på sidan. (Du kan också uppdatera enskilda cachetyper.)
 

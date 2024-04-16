@@ -3,9 +3,9 @@ title: Installera lack
 description: Se råd om hur du installerar Varnish.
 feature: Configuration, Cache
 exl-id: e1881a85-3965-42d9-a46f-c2f5f20fbacc
-source-git-commit: ec3ab7e3c6c3835e73653b0d4f74aadc861016d3
+source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
-source-wordcount: '162'
+source-wordcount: '158'
 ht-degree: 0%
 
 ---
@@ -32,4 +32,4 @@ Installation av programvara för lack ligger utanför den här handbokens räckv
 varnishd -V
 ```
 
-Se till att [Adobe Commerce och Magento Open Source stöder](../../installation/system-requirements.md) den installerade versionen av Varnish innan du fortsätter. Om du kör en version som inte stöds måste du uppgradera till en version som stöds. Mer information finns i installationsdokumentationen för Varnish.
+Se till att [Adobe Commerce stöder](../../installation/system-requirements.md) den installerade versionen av Varnish innan du fortsätter. Om du kör en version som inte stöds måste du uppgradera till en version som stöds. Mer information finns i installationsdokumentationen för Varnish.
