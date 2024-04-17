@@ -3,9 +3,9 @@ title: The [!UICONTROL Summary] tab
 description: Läs mer om [!UICONTROL Summary] flik för [!DNL Observation for Adobe Commerce].
 exl-id: b07ed898-a211-4353-a1d4-1b71d4898b93
 feature: Configuration, Observability
-source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
+source-git-commit: 790089c178570ee69f33cc04b17800db5563741e
 workflow-type: tm+mt
-source-wordcount: '2653'
+source-wordcount: '2462'
 ht-degree: 0%
 
 ---
@@ -257,7 +257,7 @@ The **[!UICONTROL Database mysql-slow.log]** bildrutan innehåller ett antal pos
 
 ![återkallar synkronisering från logg](../../assets/tools/redis-synchronization-from-log.jpg)
 
-[[!DNL Redis]](https://redis.io/docs/about/) är ett databasarkiv med öppen källkod (BSD-licensierad) i minnet som används som databas, cache och meddelandehanterare. Den kan utföra databas- och sessionscachning om den är konfigurerad. The **[!UICONTROL Redis synchronization from Log]** fokuserar bildrutan på [[!DNL Redis] synkronisering](https://redis.io/docs/manual/replication/). Ju större desto [!DNL Redis] datauppsättningen, desto större sannolikhet kommer det att uppstå problem med synkroniseringen (fler data att synkronisera).
+[[!DNL Redis]](https://redis.io/docs/about/) är ett databasarkiv med öppen källkod (BSD-licensierad) i minnet som används som databas, cache och meddelandehanterare. Den kan utföra databas- och sessionscachning om den är konfigurerad. The **[!UICONTROL Redis synchronization from Log]** fokuserar bildrutan på [[!DNL Redis] synkronisering](https://redis.io/docs/latest/operate/oss_and_stack/management/replication/). Ju större desto [!DNL Redis] datauppsättningen, desto större sannolikhet kommer det att uppstå problem med synkroniseringen (fler data att synkronisera).
 
 **[!DNL Redis]fel och meddelanden:**
 

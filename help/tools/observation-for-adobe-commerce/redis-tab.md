@@ -3,9 +3,9 @@ title: The [!UICONTROL Redis] tab
 description: Läs mer om [!UICONTROL Redis] flik för [!DNL Observation for Adobe Commerce].
 exl-id: 9c52350d-45a7-4afe-9dd7-c3968bd84d71
 feature: Configuration, Observability
-source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
+source-git-commit: 06f015139683f319f11317f8d7f0029cbd2548e3
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ The **[!UICONTROL Redis used memory]** bildrutan visar nodanvändningen för min
 
 ![Gör om ändringar sedan den senaste databasen sparades](../../assets/tools/observation-for-adobe-commerce/redis-tab-8.jpg)
 
-[!DNL Redis] är ett minnesarkiv och sparar informationen i lagringsutrymmet. The **[!UICONTROL Redis changes since last db save]** bildrutan anger antalet minnesändringar som har gjorts sedan den senaste databasen sparades i lagringen. Se [Redis persistence](https://redis.io/docs/manual/persistence/) för mer information om [!DNL Redis's] beständighet.
+[!DNL Redis] är ett minnesarkiv och sparar informationen i lagringsutrymmet. The **[!UICONTROL Redis changes since last db save]** bildrutan anger antalet minnesändringar som har gjorts sedan den senaste databasen sparades i lagringen. Se [Redis persistence](https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/) för mer information om [!DNL Redis's] beständighet.
 
 ## [!UICONTROL Redis synchronization from Log]
 
