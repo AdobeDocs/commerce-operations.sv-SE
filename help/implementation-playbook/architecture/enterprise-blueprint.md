@@ -3,7 +3,7 @@ title: Referensarkitektur för företag
 description: Lär dig hur du implementerar Adobe Commerce med hjälp av Adobe senaste teknik för sammanställbar e-handel.
 feature: App Builder, Cloud, GraphQL, Integration, Paas, Saas
 exl-id: d066ab43-20e2-4e0b-8348-0c52d6a7ac8a
-source-git-commit: 8eab688ed98eb1b9fcf4fc25f90fe2bbf99c02d6
+source-git-commit: c2f6b7125f1a611e94f807999787fee48a0e5ece
 workflow-type: tm+mt
 source-wordcount: '799'
 ht-degree: 0%
@@ -14,15 +14,15 @@ ht-degree: 0%
 
 Adobe Commerce är den upplevelsestyrda plattformen som unikt förenar teknisk flexibilitet med användarvänlighet, och som helt och hållet används för att skapa exceptionella upplevelser som ger affärsresultat.
 
-Handeln har utvecklats för att uppfylla företagets krav på prestanda, skalbarhet och säkerhet. Att implementera en modern implementeringsstrategi som använder de senaste kompositbara e-handelslösningarna från Adobe är avgörande för företagets framgång. Den här sidan beskriver den moderna implementeringsmetoden för Commerce i detalj.
+Commerce har utvecklats för att uppfylla företagets krav på prestanda, skalbarhet och säkerhet. Att implementera en modern implementeringsstrategi som använder de senaste kompositbara e-handelslösningarna från Adobe är avgörande för företagets framgång. På den här sidan beskrivs den moderna metoden för Commerce-implementering i detalj.
 
 Följande arkitekturdiagram visar dataflödet mellan Adobe Commerce och alla Adobe Experience Cloud lösningar.
 
-![Arkitektur som visar hur Adobe Commerce går samman med lösningar från Experience Cloud](../../assets/playbooks/commerce-architecture-v2.svg){zoomable=&quot;yes&quot;}
+![Arkitektur som visar hur Adobe Commerce går samman med lösningar från Experience Cloud](../../assets/playbooks/commerce-architecture-v3.svg){zoomable=&quot;yes&quot;}
 
 >[!NOTE]
 >
->De högnivådataflöden som visas i diagrammet är konsekventa för de flesta företagsimplementationer. Den viktigaste komponenten som kan göra implementeringar unika är hur du skapar katalogen (särskilt för B2B). Mappa katalogarkitekturen noggrant till [Webb-API:er för Commerce](https://developer.adobe.com/commerce/webapi/get-started/).
+>De högnivådataflöden som visas i diagrammet är konsekventa för de flesta företagsimplementationer. Den viktigaste komponenten som kan göra implementeringar unika är hur du skapar katalogen (särskilt för B2B). Mappa katalogarkitekturen noggrant till [Commerce webb-API:er](https://developer.adobe.com/commerce/webapi/get-started/).
 
 ## Molngrund
 
@@ -50,7 +50,7 @@ Adobe Commerce kan integreras med alla lösningar från Experience Cloud för at
 
 ## Integrering med tredjepartssystem
 
-Adobe förser utvecklarna med omfattande tilläggspunkter och verktyg för att bygga applikationer som utökar affärsmöjligheterna och integrerar handeln med tredjepartssystem (som CRM, ERPS och PIMS). Med dessa verktyg minskar du den totala ägandekostnaden för plattformen på följande sätt:
+Adobe förser utvecklarna med omfattande tilläggspunkter och verktyg för att bygga applikationer som utökar Commerce kärnfunktioner och integrerar Commerce med tredjepartssystem (som CRM, ERPS och PIMS). Med dessa verktyg minskar du den totala ägandekostnaden för plattformen på följande sätt:
 
 - **Skalbarhet**—Applikationerna kan skalas separat från de centrala programmen, vilket ger ökad effektivitet och förenklar uppgraderingar.
 - **Isolering**-En isolerad miljö innebär att utvecklare kan uppgradera eller ändra sina tillägg efter eget gottfinnande utan att förlita sig på en kärnrelease.
@@ -59,7 +59,7 @@ Adobe förser utvecklarna med omfattande tilläggspunkter och verktyg för att b
 Adobe tillhandahåller följande utvecklingsverktyg för att bygga integreringar och anpassningar:
 
 - [**API-nät för Adobe Developer App Builder**](https://developer.adobe.com/graphql-mesh-gateway/)—Koordinera och kombinera flera API:er, GraphQL, REST och andra källor till en enda frågningsbar slutpunkt i GraphQL.
-- [**App Builder**](https://developer.adobe.com/app-builder/docs/overview/)- Bygg och driftsätt säkra och skalbara webbapplikationer som utökar Commerce-funktionaliteten och integreras med tredjepartslösningar.
+- [**App Builder**](https://developer.adobe.com/app-builder/docs/overview/)- Bygg och driftsätt säkra och skalbara webbapplikationer som utökar Commerce funktionalitet och integreras med tredjepartslösningar.
 - [**Händelser**](https://developer.adobe.com/commerce/extensibility/events/)- Använd anpassade händelseutlösare för att interagera med andra utökningsbara utvecklingsverktyg.
 - [**Webhooks**](https://developer.adobe.com/commerce/extensibility/webhooks/)- Använd webhooks för att automatiskt starta interaktion mellan Commerce och tredjepartssystem.
 - [**Administratörsgränssnitt SDK**](https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/)—Anpassa och förbättra Commerce Admin med nya sidor och funktioner för era handlare.
