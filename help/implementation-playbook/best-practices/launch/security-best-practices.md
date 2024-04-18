@@ -3,9 +3,9 @@ title: Säkra din Commerce webbplats och infrastruktur
 description: Upprätthåll säkerheten genom att implementera säkerhetspraxis när du konfigurerar, konfigurerar och uppdaterar Adobe Commerce-installationer.
 feature: Best Practices
 exl-id: 50d8a464-6496-4e9a-b642-0c6d0eb51ba0
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: a00b7b66beb6499f7fb19fda2dfd450799f73728
 workflow-type: tm+mt
-source-wordcount: '2004'
+source-wordcount: '2006'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Att skapa och underhålla en säker miljö för Adobe Commerce-projekt som körs
 
 >[!NOTE]
 >
->Mer information om roller och ansvarsområden för att skydda och underhålla Adobe Commerce-projekt för molninfrastruktur finns i [Guide för delat ansvar](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-commerce-shared-responsibilities-guide.pdf) i Adobe Trust Center.
+>Mer information om roller och ansvarsområden för att skydda och underhålla Adobe Commerce-projekt i molninfrastruktur finns i [Delad ansvarsmodell](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/shared-responsibility#security-responsibilities-chart)) i _Adobe Commerce Security and Compliance Guide_.
 
 [Alla versioner som stöds](../../../release/versions.md) av:
 
