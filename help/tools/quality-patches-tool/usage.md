@@ -3,22 +3,22 @@ title: Användning
 description: Lär dig använda [!DNL Quality Patches Tool].
 exl-id: f9ad37e9-2d0f-4bc8-a98b-6d60b6f56d42
 feature: Configuration, Install
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '845'
 ht-degree: 0%
 
 ---
 
 # Användning
 
-The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) levererar individuella plåster som utvecklats av Adobe och Magento Open Source-communityn. Med den kan du tillämpa, återställa och visa allmän information om alla enskilda korrigeringsfiler som är tillgängliga för den installerade versionen av Adobe Commerce eller Magento Open Source. Du kan använda korrigeringsfiler i Adobe Commerce-projekt oavsett vem som har utvecklat korrigeringsfilen. Du kan till exempel använda en korrigering som utvecklats av communityn på Adobe Commerce-projekt.
+The [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) levererar individuella plåster som utvecklats av Adobe och Magento Open Source-communityn. Med den kan du tillämpa, återställa och visa allmän information om alla enskilda korrigeringsfiler som är tillgängliga för den installerade versionen av Adobe Commerce. Du kan använda korrigeringsfiler i Adobe Commerce-projekt oavsett vem som har utvecklat korrigeringsfilen. Du kan till exempel använda en korrigering som utvecklats av communityn på Adobe Commerce-projekt.
 
 Titta på detta [teknisk video](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/tools/quality-patch-tool.html?lang=en) och lär dig hur du använder verktyget för kvalitetskorrigeringar för Adobe Commerce.
 
 >[!INFO]
 >
->Se [Tillämpa enskilda patchar](#apply-individual-patches) för instruktioner om hur du använder korrigeringsfiler i dina Adobe Commerce- eller Magento Open Source-projekt. Se [[!DNL Quality Patches Tool]: Sök efter patchar](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) för att se en fullständig lista över de släppta plåstren.
+>Se [Tillämpa enskilda patchar](#apply-individual-patches) för instruktioner om hur du använder korrigeringsfiler i dina Adobe Commerce-projekt. Se [[!DNL Quality Patches Tool]: Sök efter patchar](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) för att se en fullständig lista över de släppta plåstren.
 
 >[!WARNING]
 >
@@ -36,7 +36,7 @@ composer require magento/quality-patches
 
 ## Visa enskilda patchar
 
-Så här visar du en lista över enskilda korrigeringsfiler som är tillgängliga för din version av Adobe Commerce eller Magento Open Source:
+Så här visar du en lista över de enskilda korrigeringsfilerna som är tillgängliga för din version av Adobe Commerce:
 
 ```bash
 ./vendor/bin/magento-patches status
@@ -76,7 +76,7 @@ Statustabellen innehåller:
 
 >[!INFO]
 >
->När du har uppgraderat till en ny version av Adobe Commerce eller Magento Open Source måste du tillämpa korrigeringarna igen om de inte ingår i den nya versionen. Se [Tillämpa patchar igen efter en uppgradering](#re-apply-patches-after-an-upgrade).
+>När du har uppgraderat till en ny version av Adobe Commerce måste du tillämpa korrigeringarna igen om de inte ingår i den nya versionen. Se [Tillämpa patchar igen efter en uppgradering](#re-apply-patches-after-an-upgrade).
 
 ## Tillämpa enskilda patchar {#apply-individual-patches}
 
@@ -104,7 +104,7 @@ Du måste rensa cacheminnet när du har tillämpat korrigeringar för att se än
 
 >[!INFO]
 >
->Överväg att ha en lista över tillämpade korrigeringsfiler på en separat plats. Du kan behöva installera om vissa av dem efter att du uppgraderat till en ny version av Adobe Commerce eller Magento Open Source. Se [Tillämpa patchar igen efter en uppgradering](#re-apply-patches-after-an-upgrade).
+>Överväg att ha en lista över tillämpade korrigeringsfiler på en separat plats. Du kan behöva installera om vissa av dem efter att du uppgraderat till en ny version av Adobe Commerce. Se [Tillämpa patchar igen efter en uppgradering](#re-apply-patches-after-an-upgrade).
 
 ## Återställ enskilda korrigeringsfiler
 
@@ -156,7 +156,7 @@ Visa tillagda korrigeringar:
 
 ## Tillämpa patchar igen efter en uppgradering {#re-apply-patches-after-an-upgrade}
 
-När du uppgraderar till en ny version av Adobe Commerce eller Magento Open Source måste du installera om patchar om de inte ingår i den nya versionen.
+När du uppgraderar till en ny version av Adobe Commerce måste du tillämpa korrigeringarna igen om de inte ingår i den nya versionen.
 
 Så här återanvänder du patchar:
 

@@ -2,16 +2,16 @@
 title: Lokala installationskrav
 description: Läs mer om vilka programvaruberoenden som krävs för lokala installationer av Adobe Commerce.
 exl-id: dd4694e7-5437-440c-bb67-804ae36149de
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '316'
 ht-degree: 1%
 
 ---
 
 # Lokala installationskrav
 
-Innan du installerar Adobe Commerce eller Magento Open Source måste du göra följande:
+Innan du installerar Adobe Commerce måste du göra följande:
 
 * Konfigurera en eller flera värdar som uppfyller [systemkrav](../system-requirements.md).
 * Om du konfigurerar mer än en webbnod med belastningsutjämning konfigurerar och testar du den delen av systemet _före_ du installerar programmet.
@@ -19,7 +19,7 @@ Innan du installerar Adobe Commerce eller Magento Open Source måste du göra f�
 
 >[!NOTE]
 >
->Vi antar att du installerar Adobe Commerce eller Magento Open Source i en **utvecklingsmiljö** som du har rotanvändaråtkomst till datorn, **och** att maskinen inte behöver vara mycket säker. Om du konfigurerar en säkrare dator bör du kontakta en nätverksadministratör för att få mer hjälp.
+>Vi antar att du installerar Adobe Commerce i en **utvecklingsmiljö** som du har rotanvändaråtkomst till datorn, **och** att maskinen inte behöver vara mycket säker. Om du konfigurerar en säkrare dator bör du kontakta en nätverksadministratör för att få mer hjälp.
 
 Vi rekommenderar starkt att du uppdaterar och uppgraderar ditt operativsystem. Dessa uppgraderingar kan ge säkerhets- och programfixar som kan förhindra framtida problem. Vet du inte vad det här betyder? Kolla in vår [installationsöversikt](../overview.md).
 
@@ -70,7 +70,7 @@ Se [systemkrav](../system-requirements.md) för de versioner av PHP och [PHP](..
 
 ### MySQL
 
-Kontrollera att du har en kompatibel version av MySQL för den version av Adobe Commerce eller Magento Open Source som du installerar. Se [Systemkrav](../system-requirements.md) för de versioner som stöds.
+Kontrollera att du har en kompatibel version av MySQL för den version av Adobe Commerce som du installerar. Se [Systemkrav](../system-requirements.md) för de versioner som stöds.
 
 ```bash
 mysql -u <database root user or database owner name> -p

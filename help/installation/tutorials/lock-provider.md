@@ -1,10 +1,10 @@
 ---
 title: Konfigurera låsprovidern
-description: Följ de här stegen för att förhindra att duplicerade cron-jobb och cron-grupper körs på din Adobe Commerce- eller Magento Open Source-distribution.
+description: Följ de här stegen för att förhindra att duplicerade cron-jobb och cron-grupper körs på din Adobe Commerce-distribution.
 exl-id: c54e05b7-38fd-4731-bc77-a873b44d0ae8
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '224'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Innan du kör kommandot måste du göra följande *eller* du måste [installera 
 
 ## Konfigurera låset
 
-Konfigurera en låsleverantör för att förhindra att dubblettcron-jobb och cron-grupper startas. (Kräver Adobe Commerce eller Magento Open Source 2.2.x, 2.2.5 och senare samt 2.3.3 och senare.)
+Konfigurera en låsleverantör för att förhindra att dubblettcron-jobb och cron-grupper startas. (Kräver Adobe Commerce 2.2.x, 2.2.5 och senare samt 2.3.3 och senare.)
 
 Adobe Commerce använder databasen för att spara lås som standard. Om du har flera noder på dina servrar rekommenderar vi att du använder Zookeeper som låsleverantör.
 

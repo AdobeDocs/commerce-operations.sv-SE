@@ -1,10 +1,10 @@
 ---
 title: Ökning
-description: Följ dessa metodtips för att optimera prestanda för Adobe Commerce- och Magento Open Source-driftsättningar.
+description: Följ dessa metodtips för att optimera prestandan vid driftsättningen av Adobe Commerce.
 exl-id: 5381a477-bacd-4e74-a150-7f98abc2f744
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '98'
+source-wordcount: '86'
 ht-degree: 0%
 
 ---
@@ -15,5 +15,5 @@ The _Bästa praxis för prestanda_ innehåller rekommendationer och instruktione
 
 ## Antaganden
 
-* Du har installerat Adobe Commerce eller Magento Open Source med [Disposition](../installation/composer.md).
-* Du använder den här installationen för att köra en liveproduktionsinstans av Adobe Commerce eller Magento Open Source.
+* Du har installerat Adobe Commerce med [Disposition](../installation/composer.md).
+* Du använder den här installationen för att köra en liveproduktionsinstans av Adobe Commerce.

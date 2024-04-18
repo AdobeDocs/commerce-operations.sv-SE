@@ -1,10 +1,10 @@
 ---
 title: Konfigurera meddelandeanvändare
-description: Följ de här stegen för att konfigurera beteendet för användare av Adobe Commerce- eller Magento Open Source-meddelandekön.
+description: Följ de här stegen för att konfigurera beteendet för användare av Adobe Commerce meddelandekö.
 exl-id: df292301-f4bd-49df-a241-7467c35bf1d8
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '69'
+source-wordcount: '65'
 ht-degree: 0%
 
 ---

@@ -2,9 +2,9 @@
 title: Översikt över [!DNL Upgrade Compatibility Tool]
 description: Läs mer om [!DNL Upgrade Compatibility Tool] och hur det kan hjälpa dig med ditt Adobe Commerce-projekt.
 exl-id: 9493406a-1690-462b-b119-1b685b026c0b
-source-git-commit: ad7f05eaa5f144b5a8616307d65be635a0c499eb
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '354'
+source-wordcount: '329'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 {{commerce-only}}
 
-Handboken är avsedd för administratörer och programvaruutvecklare i Adobe Commerce. Den innehåller detaljerad information om installationen av [!DNL Upgrade Compatibility Tool], samt konfiguration och hantering. Det förutsätter en grundläggande förståelse för kärnhandelns konfiguration och funktioner.
+Handboken är avsedd för administratörer och programvaruutvecklare i Adobe Commerce. Den innehåller detaljerad information om installationen av [!DNL Upgrade Compatibility Tool], samt konfiguration och hantering. Det förutsätter en grundläggande förståelse för Commerce grundläggande konfiguration och funktioner.
 
 ## Översikt över [!DNL Upgrade Compatibility Tool]
 
@@ -53,7 +53,7 @@ Se [Contribute](https://developer.adobe.com/commerce/php/coding-standards/contri
 
 Se följande resurser som hjälper dig att förstå Adobe Commerce uppgraderingar:
 
-- The [uppgraderingsguide](../overview.md) ger en översikt över den typiska uppgraderingsresan för Adobe Commerce eller Magento Open Source och de bästa sätten att följa under den resan.
+- The [uppgraderingsguide](../overview.md) ger en översikt över den typiska Adobe Commerce-uppgraderingsresan och de bästa metoderna att följa under den resan.
 - The [kommande releaser](https://devdocs.magento.com/release/) sidan innehåller datum för schemalagda och kommande versioner.
 - The [communityresurser](https://developer.adobe.com/commerce/contributor/community/) ska du placera för att starta diskussioner eller hitta mer information.
 - Kontrollera [relaterade verktyg](../upgrade-compatibility-tool/related-tools.md) sida där du hittar användbara verktyg under den normala uppgraderingsresan.

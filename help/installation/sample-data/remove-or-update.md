@@ -2,9 +2,9 @@
 title: Ta bort eller uppdatera exempeldatamoduler
 description: Följ de här stegen för att hantera Adobe Commerce exempeldatamoduler.
 exl-id: d23f999f-18bf-449b-be23-bdf392dda539
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '115'
+source-wordcount: '107'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 I det här avsnittet beskrivs hur du:
 
-* [Ta bort exempeldatamoduler](#remove-sample-data-modules) från en Adobe Commerce- eller Magento Open Source-installation `composer.json`. Det här alternativet gör det *not* ta bort exempeldata från databasen.
+* [Ta bort exempeldatamoduler](#remove-sample-data-modules) från en Adobe Commerce-installation `composer.json`. Det här alternativet gör det *not* ta bort exempeldata från databasen.
 
 * [Förbered uppdatering av exempeldata](#prepare-to-update-sample-data) (till exempel innan du uppdaterar programmet Magento).
 
@@ -51,7 +51,7 @@ En fullständig lista över exempeldatamoduler följer:
 
 ## Förbered uppdatering av exempeldata
 
-Med det här kommandot kan du uppdatera exempeldata innan du uppdaterar Adobe Commerce eller Magento Open Source.
+Med det här kommandot kan du uppdatera exempeldata innan du uppdaterar Adobe Commerce.
 
 Om du vill förbereda exempeldata för uppdatering anger du följande kommando:
 

@@ -3,16 +3,16 @@ title: Hämta exempeldatapaket för disposition
 description: Följ de här stegen för att installera exempeldata för Adobe Commerce med Composer PHP Package Manager.
 feature: Install, Deploy
 exl-id: 735591af-a152-4476-9fa6-e31c4bab3ba8
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '286'
 ht-degree: 0%
 
 ---
 
 # Hämta exempeldatapaket för disposition
 
-I det här avsnittet beskrivs hur du installerar exempeldata om du har Adobe Commerce eller Magento Open Source på något av följande sätt:
+I det här avsnittet beskrivs hur du installerar exempeldata om du har Adobe Commerce på något av följande sätt:
 
 * Hämtade ett komprimerat arkiv från `https://magento.com/tech-resources/download`.
 

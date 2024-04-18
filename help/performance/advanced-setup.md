@@ -2,9 +2,9 @@
 title: Avancerade inställningar
 description: Granska vedertagna rutiner och rekommendationer för stora företagssystem som utformats för att bearbeta stora datavolymer.
 exl-id: eb9ca9fa-b099-4e77-ab33-16cd0f382ffe
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: '1173'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ Du kan också använda ett Redis-kluster som utför parallella läs-/skrivåtgä
 
 ## Konfigurera [!DNL RabbitMQ]
 
-Magento Open Source och Adobe [!DNL Commerce] supportmeddelandeköer som implementeras via [!DNL RabbitMQ]. [!DNL Commerce] använder den här tjänsten för att köra flera asynkrona åtgärder, inklusive katalogåtgärder B2B och asynkrona Stock-uppdateringar. Alla gränssnitt för att lägga till fler jobb till jobbservern distribueras med produkten och är tillgängliga för anpassad asynkron logikimplementering i omfattningen av tredjepartstillägg. Precis som med andra integreringar [!DNL Commerce] innehåller en exempelkonfigurationsfil för [!DNL RabbitMQ] som innehåller alla rekommenderade inställningar och är helt redo för produktionsanvändning.
+Adobe Commerce stöder meddelandeköer som implementeras via [!DNL RabbitMQ]. [!DNL Commerce] använder den här tjänsten för att köra flera asynkrona åtgärder, inklusive katalogåtgärder B2B och asynkrona Stock-uppdateringar. Alla gränssnitt för att lägga till fler jobb till jobbservern distribueras med produkten och är tillgängliga för anpassad asynkron logikimplementering i omfattningen av tredjepartstillägg. Precis som med andra integreringar [!DNL Commerce] innehåller en exempelkonfigurationsfil för [!DNL RabbitMQ] som innehåller alla rekommenderade inställningar och är helt redo för produktionsanvändning.
 
 ## Dela databasen
 

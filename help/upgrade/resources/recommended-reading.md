@@ -2,9 +2,9 @@
 title: Rekommenderad läsning för uppgraderingar
 description: Granska rekommenderad läsning för att planera din Adobe Commerce-uppgradering.
 exl-id: 24ca57c0-1a68-46c4-b2fa-4a114250d0e3
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '260'
 ht-degree: 3%
 
 ---
@@ -61,7 +61,7 @@ Läs mer om Adobe Commerce uppgraderingar här.
     </tr>
     <tr>
       <td><strong>Uppgraderingsresurser</strong>
-        <p>Skydda butiken och arbeta effektivt. Förbered dig för uppgraderingen av Adobe Commerce eller Magento Open Source genom att läsa Adobe omfattande teknisk dokumentation.</p>
+        <p>Skydda butiken och arbeta effektivt. Förbered dig för uppgraderingen av Adobe Commerce genom att läsa Adobe utförliga tekniska dokumentation.</p>
           <ul>
             <li><a href="recommended-upgrade-paths.md">Rekommenderade uppgraderingsalternativ</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-learn/tutorials/upgrade-workshop.html?lang=en">2.4 Technical Upgrade Workshop - inspelning</a></li>

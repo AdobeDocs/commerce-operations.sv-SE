@@ -2,9 +2,9 @@
 title: Nginx
 description: Följ de här stegen för att installera och konfigurera Nginx-webbservern för lokala installationer av Adobe Commerce.
 exl-id: 041ddb9d-868e-4021-9388-1c9ea11bfd8f
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1110'
 ht-degree: 0%
 
 ---
@@ -97,13 +97,13 @@ I det här exemplet visas en Composer-baserad installation med kommandoraden.
    cd /var/www/html
    ```
 
-1. Installera Composer globalt. Composer krävs för att uppdatera beroenden innan Adobe Commerce eller Magento Open Source installeras:
+1. Installera Composer globalt. Composer krävs för att uppdatera beroenden innan Adobe Commerce installeras:
 
    ```bash
    curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/bin --filename=composer
    ```
 
-1. Skapa ett Composer-projekt med metapaketet Magento Open Source eller Adobe Commerce.
+1. Skapa ett Composer-projekt med Adobe Commerce metapaket.
 
    **Magento Open Source**
 
@@ -207,7 +207,7 @@ Dessa instruktioner förutsätter att du använder Ubuntu-standardplatsen för d
    >
    >The `include` -direktivet måste peka på exempelkonfigurationsfilen nginx i installationskatalogen.
 
-1. Ersätt `www.magento-dev.com` med ditt domännamn. Detta måste matcha den bas-URL som du angav när du installerade Adobe Commerce eller Magento Open Source.
+1. Ersätt `www.magento-dev.com` med ditt domännamn. Detta måste matcha den bas-URL som du angav när du installerade Adobe Commerce.
 
 1. Spara och avsluta redigeraren.
 
@@ -283,7 +283,7 @@ Adobe Commerce kräver flera [PHP](../php-settings.md) tillägg för att fungera
 
    >[!NOTE]
    >
-   >Vi rekommenderar att du anger minnesgränsen till 2 G när du testar Adobe Commerce eller Magento Open Source. Se [Nödvändiga PHP-inställningar](../php-settings.md) för mer information.
+   >Vi rekommenderar att du anger minnesgränsen till 2 G när du testar Adobe Commerce. Se [Nödvändiga PHP-inställningar](../php-settings.md) för mer information.
 
 1. Avkommentera sessionssökvägskatalogen och ange sökvägen:
 
@@ -376,13 +376,13 @@ I det här exemplet visas en Composer-baserad installation med kommandoraden.
    cd /var/www/html
    ```
 
-1. Installera Composer globalt. Composer krävs för att uppdatera beroenden innan Adobe Commerce eller Magento Open Source installeras:
+1. Installera Composer globalt. Composer krävs för att uppdatera beroenden innan Adobe Commerce installeras:
 
    ```bash
    curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/bin --filename=composer
    ```
 
-1. Skapa ett Composer-projekt med metapaketet Magento Open Source eller Adobe Commerce.
+1. Skapa ett Composer-projekt med Adobe Commerce metapaket.
 
    **Magento Open Source**
 

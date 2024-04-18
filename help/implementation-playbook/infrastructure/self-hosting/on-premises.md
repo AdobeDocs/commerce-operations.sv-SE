@@ -4,9 +4,9 @@ description: Läs om Adobe Commerce lokala infrastruktur och molntjänster från
 last-substantial-update: 2023-04-13T00:00:00Z
 exl-id: de1467be-acec-4a0d-8229-e7e87614bc55
 feature: Install
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '620'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Låt oss fördjupa oss i rollerna och funktionerna i varje aspekt av den infrast
 
 1. Den andra belastningsutjämnande programmet Elastic Load Balancing fördelar trafik från Varnish Cache över AWS Auto Scaling-gruppen av Adobe Commerce-instanser i flera tillgänglighetszoner.
 
-1. Installera den senaste versionen av Magento Open Source eller Adobe Commerce på Amazon EC2-instanser. Installationen består av Adobe Commerce-programmet, Nginx-webbservern och PHP. Bygg Amazon Machine Image (AMI) för att starta nya instanser i en grupp för autoskalning.
+1. Installera den senaste versionen av Adobe Commerce på Amazon EC2-instanser. Installationen består av Adobe Commerce-programmet, Nginx-webbservern och PHP. Bygg Amazon Machine Image (AMI) för att starta nya instanser i en grupp för autoskalning.
 
 1. Amazon Elasticsearch Service är en hanterad Elasticsearch-tjänst för katalogsökning i Adobe Commerce.
 
@@ -55,6 +55,6 @@ Prisvärda erbjudanden för migrering av Adobe Commerce till AWS förbättras yt
 
 Adobe Commerce-installation på AWS kan ersätta specifika programberoenden med fullt hanterade alternativ som finns i molnet. I stället för att ha en relationsdatabas direkt på EC2-instanser kan databasen för många program enkelt ersättas med Amazon Relational Database Service (AmazonRDS). Fördelen med denna strategi är att driftansvaret för de olika komponenterna kan överföras till AWS utan att man behöver göra några större förändringar i kärnapplikationen.
 
-Det finns flera distributionsalternativ för att köra Adobe Commerce (både Magento Open Source- och Adobe Commerce-versioner) på AWS. Det lämpligaste valet beror på era krav på kostnad, storlek, tillgänglighet och flexibilitet, liksom på organisationens kunskaper inom AWS och Adobe Commerce.
+Det finns flera distributionsalternativ för att köra Adobe Commerce på AWS. Det lämpligaste valet beror på era krav på kostnad, storlek, tillgänglighet och flexibilitet, liksom på organisationens kunskaper inom AWS och Adobe Commerce.
 
 {{$include /help/_includes/hosting-related-links.md}}

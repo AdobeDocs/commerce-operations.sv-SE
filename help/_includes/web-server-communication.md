@@ -1,7 +1,7 @@
 ---
-source-git-commit: 475dbc056ac3e6a00c8f794259bb0fbf04143687
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '318'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Vi rekommenderar följande:
 
 * Sökmotorn körs på samma värd som en webbserver. Det här avsnittet gäller inte för körning av sökmotorn och webbservern på olika värdar.
 
-  Fördelen med att lägga sökmotorn och webbservern på samma värd är att det inte går att fånga upp krypterad kommunikation. Sökmotorns webbserver behöver inte vara samma som Adobe Commerce- eller Magento Open Source-webbservern. Adobe Commerce kan till exempel köra Apache och Elasticsearch/OpenSearch kan köra nginx.
+  Fördelen med att lägga sökmotorn och webbservern på samma värd är att det inte går att fånga upp krypterad kommunikation. Sökmotorns webbserver behöver inte vara samma som Adobe Commerce webbserver. Adobe Commerce kan till exempel köra Apache och Elasticsearch/OpenSearch kan köra nginx.
 
   Om sökmotorn exponeras för den offentliga webben bör du konfigurera autentiseringen. Om sökmotorinstansen är skyddad i nätverket behöver du inte göra det. Samarbeta med din värdleverantör för att ta reda på vilka säkerhetsåtgärder du bör vidta för att skydda din instans.
 

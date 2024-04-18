@@ -2,9 +2,9 @@
 title: Klona exempeldata i Git-databaser
 description: Följ de här stegen för att installera exempeldata för Adobe Commerce genom att klona Git-databaser.
 exl-id: 748eee30-2821-457d-9c1c-62ede8bc0510
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '733'
 ht-degree: 0%
 
 ---
@@ -151,7 +151,7 @@ Så här klonar du GitHub-databasen med exempeldata med HTTPS-protokollet:
 
 >[!WARNING]
 >
->Om du installerar exempeldata *efter* Om du installerar Adobe Commerce eller Magento Open Source måste du också köra följande kommando för att uppdatera databasen och schemat:
+>Om du installerar exempeldata *efter* När du installerar Adobe Commerce måste du också köra följande kommando för att uppdatera databasen och schemat:
 >
 >```bash
 ><magento_root>/bin/magento setup:upgrade

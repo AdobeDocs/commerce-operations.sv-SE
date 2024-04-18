@@ -2,9 +2,9 @@
 title: MySQL-riktlinjer
 description: Följ de här stegen för att installera och konfigurera MySQL och MariaDB för lokala installationer av Adobe Commerce.
 exl-id: dc5771a8-4066-445c-b1cd-9d5f449ec9e9
-source-git-commit: 35664c30e438305036d3cfdd1dd1924966f6ced6
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '1053'
+source-wordcount: '1037'
 ht-degree: 0%
 
 ---
@@ -102,7 +102,7 @@ Adobe Commerce inaktiverade det reguljära valideringsbeteendet genom att ställ
 
 Om du vill uppdatera MySQL korrekt från version 5.7 till version 8 måste du följa dessa steg för att:
 
-1. Uppgradera Adobe Commerce eller Magento Open Source till 2.4.0. Testa allt och kontrollera att systemet fungerar som det ska.
+1. Uppgradera Adobe Commerce till 2.4.0. Testa allt och kontrollera att systemet fungerar som det ska.
 1. Aktivera underhållsläge:
 
    ```bash
@@ -131,7 +131,7 @@ Om du vill uppdatera MySQL korrekt från version 5.7 till version 8 måste du f�
 
 ## Konfigurera databasinstansen
 
-I det här avsnittet beskrivs hur du skapar en databasinstans för Adobe Commerce eller Magento Open Source. Även om en ny databasinstans rekommenderas kan du installera Adobe Commerce eller Magento Open Source med en befintlig databasinstans.
+I det här avsnittet beskrivs hur du skapar en databasinstans för Adobe Commerce. Även om en ny databasinstans rekommenderas kan du installera Adobe Commerce med en befintlig databasinstans.
 
 Så här konfigurerar du en MySQL-databasinstans:
 
@@ -177,7 +177,7 @@ Så här konfigurerar du en MySQL-databasinstans:
 
    * Indexerare kräver högre `tmp_table_size` och `max_heap_table_size` värden (till exempel 64 M). Om du konfigurerar `batch_size` -parametern kan du justera det värdet tillsammans med tabellstorleksinställningarna för att förbättra indexeringsprestanda. Se [Optimeringsguide](../../../performance/configuration.md) för mer information.
 
-   * Kontrollera att alla indextabeller för MySQL och Adobe Commerce eller Magento Open Source kan sparas i minnet (till exempel konfigurera `innodb_buffer_pool_size`).
+   * Kontrollera att alla indextabeller för MySQL och Adobe Commerce kan sparas i minnet (till exempel konfigurera `innodb_buffer_pool_size`).
 
    * Omindexering av MariaDB 10.4 tar längre tid jämfört med andra versioner av MariaDB eller MySQL. Se [Bästa praxis för konfiguration](../../../performance/configuration.md#indexers).
 

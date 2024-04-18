@@ -2,9 +2,9 @@
 title: Så här fungerar korrigeringar
 description: Lär dig mer om de olika typerna av patchar för Adobe Commerce och hur de fungerar.
 exl-id: d7072ed4-7d51-41fe-881a-aae3b2000b55
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '533'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Använd [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/c
 
 ## Egna patchar
 
-Ibland tar det ett tag för Adobe Engineering Team att inkludera en felkorrigering som gjorts på GitHub i en Adobe Commerce- eller Magento Open Source Composer-version. Under tiden kan du skapa en patch från GitHub och använda [`cweagans/composer-patches`](https://github.com/cweagans/composer-patches/) plugin-program för att använda det i din Composer-baserade installation.
+Ibland tar det ett tag för Adobe Engineering Team att inkludera en felkorrigering som gjorts på GitHub i en Adobe Commerce Composer-version. Under tiden kan du skapa en patch från GitHub och använda [`cweagans/composer-patches`](https://github.com/cweagans/composer-patches/) plugin-program för att använda det i din Composer-baserade installation.
 
 Använd [kommandorad](apply.md#command-line) eller [Disposition](apply.md#composer) om du vill använda anpassade korrigeringsfiler.
 

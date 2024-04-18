@@ -1,10 +1,10 @@
 ---
 title: Snabbstart av lokal installation
-description: Följ de här stegen för att installera Adobe Commerce eller Magento Open Source på en infrastruktur som du äger.
+description: Följ de här stegen för att installera Adobe Commerce på en infrastruktur som du äger.
 exl-id: a93476e8-2b30-461a-91df-e73eb1a14d3c
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '933'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Adobe använder [Disposition](https://getcomposer.org/) för att hantera Adobe C
 - Minska antalet tilläggskonflikter och kompatibilitetsproblem genom att använda en komponentbaserad arkitektur med robust beroendehantering
 - Anta till [PHP-Framework Interoperability Group (FIG)](https://www.php-fig.org/) standarder
 - Paketera Magento Open Source med andra komponenter
-- Använda Adobe Commerce eller Magento Open Source i produktionsmiljö
+- Använda Adobe Commerce i produktionsmiljö
 
 >[!NOTE]
 >
@@ -71,11 +71,11 @@ Så här byter du till filsystemets ägare:
 
 ## Hämta metapackage
 
-Så här hämtar du metapaketet för Adobe Commerce eller Magento Open Source:
+Så här hämtar du Adobe Commerce metapaket:
 
 1. Logga in på programservern som, eller växla till [ägare av filsystem](prerequisites/file-system/overview.md).
 1. Byt till webbserverns dokumentkatalog eller en katalog som du har konfigurerat som ett virtuellt värddokument.
-1. Skapa ett Composer-projekt med metapaketet Adobe Commerce eller Magento Open Source.
+1. Skapa ett Composer-projekt med ett Commerce-metapaket.
 
    **Magento Open Source**
 
@@ -127,7 +127,7 @@ composer create-project --repository-url=https://repo.magento.com/ magento/proje
 
 ## Ange filbehörigheter
 
-Du måste ange läs- och skrivbehörighet för webbservergruppen innan du installerar Adobe Commerce eller Magento Open Source. Detta är nödvändigt för att kommandoraden ska kunna skriva filer till filsystemet.
+Du måste ange läs- och skrivbehörighet för webbservergruppen innan du installerar Adobe Commerce. Detta är nödvändigt för att kommandoraden ska kunna skriva filer till filsystemet.
 
 ```terminal
 cd /var/www/html/<magento install directory>
@@ -139,7 +139,7 @@ chmod u+x bin/magento
 
 ## Installera programmet
 
-Du måste använda kommandoraden för att installera Adobe Commerce eller Magento Open Source.
+Du måste använda kommandoraden för att installera Adobe Commerce.
 
 I det här exemplet antas att installationskatalogen har ett namn `magento2ee`, `db-host` finns på samma dator (`localhost`) och att `db-name`, `db-user`och `db-password` är alla `magento`:
 

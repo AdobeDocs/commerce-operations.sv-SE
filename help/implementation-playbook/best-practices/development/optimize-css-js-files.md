@@ -4,16 +4,16 @@ description: Lär dig hur du sammanfogar och minimerar CSS- och JavaScript-filer
 role: Developer
 feature: Best Practices
 exl-id: ff0bc407-b563-418b-9d6a-7c1dc8f235df
-source-git-commit: 2662ced484fb42bf2d32609e4e82364c1e47c8f0
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '395'
 ht-degree: 0%
 
 ---
 
 # Optimera resursfiler
 
-För en mer responsiv Commerce-webbplats optimerar du CSS- och JavaScript-resursfiler (JS) och eliminerar resurser som blockerar renderingar.
+För en mer responsiv Commerce-webbplats optimerar du CSS- och JavaScript-resursfiler (JS) och eliminerar resurser för renderingsblockering.
 
 - **Optimera CSS- och JS-filer**- Minska tiden som krävs för att läsa in CSS- och JavaScript-filer (JS) genom att konfigurera Adobe Commerce för att sammanfoga, minimera och paketera separata filer i en enda fil.
 - **Eliminera resurser som blockerar återgivningen**- Överväg att leverera viktiga JS- och CSS-funktioner som infogas och skjuta upp alla icke-kritiska JS/CSS-format. Mer information finns i [Eliminera resurser som blockerar återgivningen](https://web.dev/render-blocking-resources/).
@@ -24,7 +24,6 @@ För en mer responsiv Commerce-webbplats optimerar du CSS- och JavaScript-resurs
 
 - Adobe Commerce i molninfrastruktur
 - Adobe Commerce lokalt
-- Magento Open Source
 
 ## Sammanfoga eller miniatyrbilder för CSS-filer
 

@@ -2,9 +2,9 @@
 title: Systemkrav
 description: Använd den här referensen för att identifiera nödvändiga programvaruberoenden som har testats med Adobe Commerce-utgåvor.
 exl-id: 008c9edc-7d72-403c-847f-0e3b77bbb197
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '728'
 ht-degree: 0%
 
 ---
@@ -155,4 +155,4 @@ Information om Adobe Commerce i molnet finns på [Konfigurera Xdebug](https://ex
 
 >[!NOTE]
 >
->Det finns ett känt problem med `xdebug` som kan påverka installationer av Adobe Commerce eller Magento Open Source eller få tillgång till butiken eller administratören efter installationen. Se [Känt fel som påverkar `xdebug` installation](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/known-issues-that-affect-installation.html) i _Knowledge Base för Commerce Support_.
+>Det finns ett känt problem med `xdebug` som kan påverka Adobe Commerce-installationer eller åtkomst till butiken eller administratören efter installationen. Se [Känt fel som påverkar `xdebug` installation](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/known-issues-that-affect-installation.html) i _Knowledge Base för Commerce Support_.

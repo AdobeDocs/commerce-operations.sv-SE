@@ -2,9 +2,9 @@
 title: Implementering av uppgradering
 description: Läs om de olika faserna i uppgraderingsimplementeringen för Adobe Commerce-projekt.
 exl-id: d64855a7-73ee-463f-a314-6a8d4ebe4726
-source-git-commit: 1ba9325feaa47d767ec7991919fd5ecd53ae6226
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '812'
 ht-degree: 1%
 
 ---
@@ -38,17 +38,17 @@ Här följer några punkter som du kanske vill ta med i en grundlig analys:
 
   | Tjänst | Aktuell version | Uppgradera till | Anteckningar |
   |-----------------|-----------------|------------|----------------------------------------------------------|
-  | PHP | 7.4 | 8.1 |                                                          |
-  | Redis | 6.0 | 6.2 |                                                          |
-  | [!DNL RabbitMQ] | 3.8 | 3.9 | Används inte just nu, men vi bör överväga att använda den |
-  | MariaDB (molnet) | 10.4 | 10.6 |                                                          |
-  | MySQL | 8.0 | -/-/ |                                                          |
-  | Disposition | 1.9.2 | 2.2 |                                                          |
-  | Elasticsearch | 7.10 | 7.17 |                                                          |
+  | PHP | 7,4 | 8,1 |                                                          |
+  | Redis | 6,0 | 6,2 |                                                          |
+  | [!DNL RabbitMQ] | 3,8 | 3,9 | Används inte just nu, men vi bör överväga att använda den |
+  | MariaDB (molnet) | 10,4 | 10,6 |                                                          |
+  | MySQL | 8,0 | -/-/ |                                                          |
+  | Disposition | 1.9.2 | 2,2 |                                                          |
+  | Elasticsearch | 7,10 | 7,17 |                                                          |
 
-- **Tillägg och tredjepartsmoduler**- Använd den här tabellmallen för att få en förståelse för status för tillägg och anpassningar, så att du kan fatta strategiska beslut och definiera åtgärder. Detta är en möjlighet att ersätta tillägg som kan vara inbyggda i Adobe Commerce eller Magento Open Source för att minimera komplexiteten i ditt projekt. Använd `bin/magento module:status` om du vill visa en lista med moduler och tillägg.
+- **Tillägg och tredjepartsmoduler**- Använd den här tabellmallen för att få en förståelse för status för tillägg och anpassningar, så att du kan fatta strategiska beslut och definiera åtgärder. Detta är en möjlighet att ersätta tillägg som kan vara inbyggda i Adobe Commerce för att minimera komplexiteten i ditt projekt. Använd `bin/magento module:status` om du vill visa en lista med moduler och tillägg.
 
-  | # | Tillägg/<br>modulnamn | Kompositpaket | Leverantör | Aktuell version | Funktionalitet | Kompatibel med den senaste<br>Handelsversion? | Problem | Inbyggt i Commerce? | Åtgärd | Anteckningar |
+  | # | Tillägg/<br>modulnamn | Kompositpaket | Leverantör | Aktuell version | Funktionalitet | Kompatibel med den senaste<br>Commerce-version? | Problem | Inbyggt i Commerce? | Åtgärd | Anteckningar |
   |---|-----------------------------|------------------------------------|-------------|-------------------|-----------------------|---------------------------------------------|--------------------------------------------------|---------------------|-------------------------|-------|
   | 1 | Tilläggsnamn och länk | extension/<br>extensionx-magento-2 | Leverantörsnamn | Version installerad | Affärskrav | Ja/Nej | Lista identifierade problem som uppstår med det här tillägget | Ja/Nej | Behåll/Ersätt/<br>Ta bort |       |
 

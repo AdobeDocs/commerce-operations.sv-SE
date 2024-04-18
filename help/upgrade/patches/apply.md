@@ -1,10 +1,10 @@
 ---
 title: Tillämpa korrigeringar
-description: Lär dig mer om metoderna för att använda korrigeringsfiler i ett Adobe Commerce- eller Magento Open Source-projekt.
+description: Lär dig mer om metoderna för att använda korrigeringsfiler i ett Adobe Commerce-projekt.
 exl-id: 1d5d81ad-0115-4575-adfd-dde7c2826d85
-source-git-commit: 454f586737292341b3e6dd9a57cc92b3472c4b31
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '329'
 ht-degree: 0%
 
 ---

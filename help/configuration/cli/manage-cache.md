@@ -2,9 +2,9 @@
 title: Hantera cachen
 description: Hantera cachetyper och visa cachestatus från kommandoraden med Commerce CLI
 exl-id: bbd76c00-727b-412e-a8e5-1e013a83a29a
-source-git-commit: 1070291396144f866cadd5e42ebca3e77a484a9b
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '612'
 ht-degree: 0%
 
 ---
@@ -128,7 +128,7 @@ Om du vill ta bort inaktuella objekt från cacheminnet kan du _ren_ eller _flush
 
   >[!TIP]
   >
-  >Rensa alltid cacheminnet efter att du uppgraderat versioner av Magento Open Source eller Adobe Commerce, uppgraderat från Magento Open Source till Adobe Commerce eller installerat B2B för Adobe Commerce eller någon modul.
+  >Rensa alltid cacheminnet när du har uppgraderat versioner av Adobe Commerce, uppgraderat från Magento Open Source till Adobe Commerce eller installerat B2B för Adobe Commerce eller någon modul.
 
 - När du tömmer en cachetyp rensas cachelagringen, vilket kan påverka andra processer som använder samma lagring.
 

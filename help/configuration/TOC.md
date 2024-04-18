@@ -1,10 +1,10 @@
 ---
 user-guide-title: Konfigurationshandbok
-user-guide-description: Konfigurera funktioner och tjänster i Adobe Commerce eller Magento Open Source.
+user-guide-description: Konfigurera Adobe Commerce programfunktioner och -tjänster.
 feature: Configuration
-source-git-commit: b61a2726e1a26229515d28332bbd88ba3d416a98
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '354'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,7 @@ ht-degree: 0%
    + [Kör enhetstester](cli/unit-tests.md)
    + [Konvertera layoutfiler](cli/convert-layout-files.md)
    + [Generera data för prestandatestning](cli/generate-data.md)
-   + [Kör supportverktyg (endast Commerce)](cli/run-support-utilities.md)
+   + [Kör supportprogram (endast Commerce)](cli/run-support-utilities.md)
 + Konfigurationsfiler {#files}
    + [Konfigurationsfiler för distribution](reference/deployment-files.md)
    + [Konfigurationstyper](reference/config-create-types.md)

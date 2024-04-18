@@ -1,11 +1,11 @@
 ---
 title: Visa eller ändra Admin URI
-description: Följ de här stegen för att visa och ändra URI:n för ditt Adobe Commerce- eller Magento Open Source Admin-program.
+description: Följ de här stegen för att visa och ändra URI:n för ditt Adobe Commerce Admin-program.
 feature: Install, Configuration
 exl-id: 768f9ab4-7123-4460-9df8-a6c98ae55d95
-source-git-commit: ce405a6bb548b177427e4c02640ce13149c48aff
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '103'
+source-wordcount: '91'
 ht-degree: 0%
 
 ---

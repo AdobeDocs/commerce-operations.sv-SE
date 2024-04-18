@@ -2,9 +2,9 @@
 title: Sekretessbibliotek för JavaScript
 description: Lär dig hur du använder anpassade verktyg för att komma åt och ta bort kundpersonuppgifter som samlats in av Adobe Commerce.
 exl-id: bcfea656-2cf0-48ae-9049-d91679166d05
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '270'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Det här biblioteket innehåller en uppsättning funktioner för att skapa förf
 
 JavaScript-biblioteket för sekretess finns på följande CDN-plats: `commerce.adobe.net/magentoprivacy.js`
 
-När du har filen måste du lägga till den i en anpassad modul eller ett tema som är installerat i Adobe Commerce- eller Magento Open Source-instansen. Följ instruktionerna i [Använd anpassad JavaScript](https://developer.adobe.com/commerce/frontend-core/javascript/custom/) ämne som ska utföra den här uppgiften.
+När du har filen måste du lägga till den i en anpassad modul eller ett anpassat tema som är installerat i din Adobe Commerce-instans. Följ instruktionerna i [Använd anpassad JavaScript](https://developer.adobe.com/commerce/frontend-core/javascript/custom/) ämne som ska utföra den här uppgiften.
 
 ### Initiering
 

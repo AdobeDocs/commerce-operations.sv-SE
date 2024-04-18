@@ -3,16 +3,16 @@ title: Konfigurera programmet
 description: Lär dig mer om den konfiguration efter installation som krävs för Adobe Commerce lokala distributioner.
 feature: Install, Configuration
 exl-id: b1808664-10ec-4147-8251-a99f8b58f4be
-source-git-commit: 35664c30e438305036d3cfdd1dd1924966f6ced6
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '667'
 ht-degree: 0%
 
 ---
 
 # Konfigurera programmet
 
-Nu när du har installerat Adobe Commerce eller Magento Open Source måste du konfigurera det. I det här avsnittet finns några rekommenderade konfigurationsinställningar.
+Nu när du har installerat Adobe Commerce måste du konfigurera det. I det här avsnittet finns några rekommenderade konfigurationsinställningar.
 
 ## Konfigurera cron
 

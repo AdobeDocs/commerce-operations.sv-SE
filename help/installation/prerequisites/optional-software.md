@@ -2,9 +2,9 @@
 title: Valfri programvara
 description: Läs mer om valfri programvara som du kan installera för att få support på lokala installationer av Adobe Commerce.
 exl-id: 533ff52b-3301-4624-b691-3dfddde6ce0b
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '605'
+source-wordcount: '597'
 ht-degree: 0%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 Vi rekommenderar starkt att du installerar NTP för att säkerställa att de kroniska uppgifterna utförs korrekt. (Serverdatum kan t.ex. vara tidigare eller framtida.)
 
-De andra valfria verktygen som beskrivs i det här avsnittet kan hjälpa dig med installationen, men de behövs inte för att installera eller använda Adobe Commerce eller Magento Open Source.
+De andra valfria verktygen som beskrivs i det här avsnittet kan hjälpa dig med installationen, men de behövs inte för att installera eller använda Adobe Commerce.
 
 ## Installera och konfigurera NTP (Network Time Protocol)
 
 [NTP](https://www.ntp.org/) gör att servrar kan synkronisera sina systemklockor med [globalt tillgängliga poolservrar](https://www.ntppool.org/en/). Vi rekommenderar att du använder NTP-servrar som du litar på, oavsett om det är dedikerade maskinvarulösningar i ditt interna nätverk eller externa, offentliga servrar.
 
-Om du distribuerar Adobe Commerce eller Magento Open Source på flera värdar är NTP ett enkelt sätt att garantera att alla klockor är synkroniserade, oavsett i vilken tidszon servrarna befinner sig. Dessutom beror uppgifter som är relaterade till kron (som indexering och transaktionsmeddelanden) på att serverns klocka är korrekt.
+Om du distribuerar Adobe Commerce på flera värdar är NTP ett enkelt sätt att säkerställa att alla deras klockor är synkroniserade, oavsett i vilken tidszon servrarna befinner sig. Dessutom beror uppgifter som är relaterade till kron (som indexering och transaktionsmeddelanden) på att serverns klocka är korrekt.
 
 ### Installera och konfigurera NTP på Ubuntu
 

@@ -2,9 +2,9 @@
 title: Avancerad lokal installation
 description: Lär dig mer om avancerade installationsscenarier för Adobe Commerce för infrastruktur som du äger.
 exl-id: e16e750a-e068-4a63-8ad9-62043e2a8231
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '2375'
+source-wordcount: '2314'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Andra fördelar:
 * CLI är utbyggbart så att tredjepartsutvecklare kan&quot;ansluta&quot; till det. Detta innebär också att man slipper inlärningskurva.
 * Kommandon för inaktiverade moduler visas inte.
 
-I det här avsnittet diskuteras hur du installerar Adobe Commerce eller Magento Open Source med hjälp av CLI. Mer information om konfiguration finns i [Konfigurationshandbok](../configuration/overview.md).
+I det här avsnittet diskuteras hur du installerar Adobe Commerce-programmet med CLI. Mer information om konfiguration finns i [Konfigurationshandbok](../configuration/overview.md).
 
 Installationsprogrammet kan köras flera gånger om det behövs så att du kan:
 
@@ -47,7 +47,7 @@ Installationsprogrammet kan köras flera gånger om det behövs så att du kan:
   När du har konfigurerat webbservern för SSL (Secure Sockets Layer) kan du köra installationsprogrammet och ange SSL-alternativ.
 
 * Åtgärda fel i tidigare installationer
-* Installera Adobe Commerce eller Magento Open Source i en annan databasinstans
+* Installera Adobe Commerce i en annan databasinstans
 
 ## Innan du startar installationen
 
@@ -65,7 +65,7 @@ Utför följande steg innan du börjar:
 
 >[!NOTE]
 >
->Du måste installera Adobe Commerce eller Magento Open Source från `bin` underkatalog.
+>Du måste installera Adobe Commerce från `bin` underkatalog.
 
 Du kan köra installationsprogrammet flera gånger med olika alternativ för att slutföra installationsåtgärder som följande:
 
@@ -73,7 +73,7 @@ Du kan köra installationsprogrammet flera gånger med olika alternativ för att
 
 * Åtgärda fel i tidigare installationer.
 
-* Installera Adobe Commerce eller Magento Open Source i en annan databasinstans.
+* Installera Adobe Commerce i en annan databasinstans.
 
 >[!NOTE]
 >
@@ -133,13 +133,13 @@ Följande tabeller innehåller många men inte alla tillgängliga installationsp
 
 | Namn | Värde | Obligatoriskt? |
 |--- |--- |--- |
-| `--base-url` | Bas-URL som används för att komma åt din administratör och butiker i något av följande format:<br><br>`http[s]://<host or ip>/<your install dir>/`.<br><br>**Obs!** Schemat (http:// eller https://) och ett avslutande snedstreck krävs båda.<br><br>`<your install dir>` är den dokumentrelativa sökvägen där Adobe Commerce eller Magento Open Source ska installeras. Beroende på hur du konfigurerar webbservern och de virtuella värdarna kan sökvägen vara magento2 eller tom.<br><br>Om du vill få åtkomst till Adobe Commerce eller Magento Open Source på en lokal värd kan du använda antingen `http://127.0.0.1/<your install dir>/` eller `http://127.0.0.1/<your install dir>/`.<br><br>- `{{base_url}}` som representerar en bas-URL som definieras av en virtuell värdinställning eller av en virtualiseringsmiljö som Docker. Om du till exempel konfigurerar en virtuell värd med värdnamnet `magento.example.com`kan du installera programmet med `--base-url={{base_url}}` och få åtkomst till Admin via en URL som `http://magento.example.com/admin`. | Ja |
+| `--base-url` | Bas-URL som används för att komma åt din administratör och butiker i något av följande format:<br><br>`http[s]://<host or ip>/<your install dir>/`.<br><br>**Obs!** Schemat (http:// eller https://) och ett avslutande snedstreck krävs båda.<br><br>`<your install dir>` är den dokumentrelativa sökvägen där Adobe Commerce-programmet ska installeras. Beroende på hur du konfigurerar webbservern och de virtuella värdarna kan sökvägen vara magento2 eller tom.<br><br>För att få tillgång till Adobe Commerce eller MagenAdobe Commerce använder du antingen `http://127.0.0.1/<your install dir>/` eller `http://127.0.0.1/<your install dir>/`.<br><br>- `{{base_url}}` som representerar en bas-URL som definieras av en virtuell värdinställning eller av en virtualiseringsmiljö som Docker. Om du till exempel konfigurerar en virtuell värd med värdnamnet `magento.example.com`kan du installera programmet med `--base-url={{base_url}}` och få åtkomst till Admin via en URL som `http://magento.example.com/admin`. | Ja |
 | `--backend-frontname` | URI (Uniform Resource Identifier) för åtkomst till administratören. Du kan utelämna den här parametern så att programmet kan generera en slumpmässig URI med följande mönster <code>admin_jkhgdfq</code>.<br><br>Vi rekommenderar en slumpmässig URI av säkerhetsskäl. En slumpmässig URI är svårare för hackare eller skadlig programvara att utnyttja.<br><br>URI:n visas i slutet av installationen. Du kan när som helst visa den senare med `bin/magento info:adminuri` -kommando.<br><br>Om du väljer att ange ett värde rekommenderar vi att du inte använder ett vanligt ord som admin, serverdel. Admin-URI kan innehålla alfanumeriska värden och understreck (`_`). | Nej |
 | `--db-host` | Använd något av följande:<br><br>- Databasserverns kvalificerade värdnamn eller IP-adress.<br><br>- `localhost` (standard) eller `127.0.0.1` om databasservern finns på samma värd som webbservern.localhost betyder att MySQL-klientbiblioteket använder UNIX-socketar för att ansluta till databasen. `127.0.0.1` gör att klientbiblioteket använder TCP-protokollet. Mer information om socketar finns i [PHP-SUB_MYSQL-dokumentation](https://www.php.net/manual/en/ref.pdo-mysql.php).<br><br>**Obs!** Du kan också ange databasserverporten i värdnamnet som www.example.com:9000 | Ja |
 | `--db-name` | Namnet på den databasinstans där du vill installera databastabellerna.<br><br>Standard är `magento2`. | Ja |
 | `--db-user` | Användarnamn för databasinstansens ägare.<br><br>Standard är `root`. | Ja |
 | `--db-password` | Lösenord för databasinstansens ägare. | Ja |
-| `--db-prefix` | Använd bara om du installerar databastabellerna i en databasinstans som redan innehåller Adobe Commerce- eller Magento Open Source-tabeller.<br><br>I så fall använder du ett prefix för att identifiera tabellerna för den här installationen. Vissa kunder har fler än en Adobe Commerce- eller Magento Open Source-instans som körs på en server med alla tabeller i samma databas.<br><br>Prefixet får innehålla högst fem tecken. Den måste börja med en bokstav och kan bara innehålla bokstäver, siffror och understreck.<br><br>Med det här alternativet kan dessa kunder dela databasservern med mer än en Adobe Commerce- eller Magento Open Source-installation. | Nej |
+| `--db-prefix` | Använd bara om du installerar databastabellerna i en databasinstans som redan innehåller Adobe Commerce-tabeller.<br><br>I så fall använder du ett prefix för att identifiera tabellerna för den här installationen. Vissa kunder har mer än en Adobe Commerce- eller MagenAdobe Commerver-server med alla tabeller i samma databas.<br><br>Prefixet får innehålla högst fem tecken. Den måste börja med en bokstav och kan bara innehålla bokstäver, siffror och understreck.<br><br>Med det här alternativet kan dessa kunder dela databasservern med mer än en Adobe Commerce-installation |
 | `--db-ssl-key` | Sökväg till klientnyckeln. | Nej |
 | `--db-ssl-cert` | Sökväg till klientcertifikatet. | Nej |
 | `--db-ssl-ca` | Sökväg till servercertifikatet. | Nej |
@@ -153,7 +153,7 @@ Följande tabeller innehåller många men inte alla tillgängliga installationsp
 | `--admin-use-security-key` | 1 gör att programmet använder ett slumpmässigt genererat nyckelvärde för att få åtkomst till sidor i Admin och i formulär. Dessa nyckelvärden hjälper till att förhindra attacker med förfalskade korsskriptattacker mellan webbplatser. Det här är standardinställningen.<br><br>`0` inaktiverar användningen av nyckeln. | Nej |
 | `--session-save` | Använd något av följande:<br><br>- `db` för att lagra sessionsdata i databasen. Välj databaslagring om du har en klustrad databas, annars kanske det inte finns någon större fördel jämfört med filbaserad lagring.<br><br>- `files` för att lagra sessionsdata i filsystemet. Filbaserad sessionslagring är lämplig om inte filsystemåtkomsten är långsam, du har en klustrad databas eller du vill lagra sessionsdata i Redis.<br><br>- `redis` för att lagra sessionsdata i Redis. Om du använder Redis som standard- eller sidcache-lagring måste Redis vara installerat. Mer information om hur du konfigurerar stöd för Redis finns i Använda Redis för sessionslagring. | Nej |
 | `--key` | Om du har ett, anger du en nyckel för att kryptera känsliga data i databasen. Om du inte har någon skapar programmet en åt dig. | Ja |
-| `--cleanup-database` | Om du vill släppa databastabeller innan du installerar Adobe Commerce eller Magento Open Source anger du den här parametern utan ett värde. Annars lämnas databasen intakt. | Nej |
+| `--cleanup-database` | Om du vill släppa databastabeller innan du installerar Adobe Commerce anger du den här parametern utan ett värde. Annars lämnas databasen intakt. | Nej |
 | `--db-init-statements` | Avancerad MySQL-konfigurationsparameter. Använder databasinitieringssatser som ska köras vid anslutning till MySQL-databasen. Läs en referens som liknar den här innan du anger några värden.<br><br>Standard är `SET NAMES utf8;`. | Nej |
 | `--sales-order-increment-prefix` | Ange ett strängvärde som ska användas som prefix för försäljningsorder. Vanligtvis används detta för att garantera unika ordernummer för betalningsprocessorer. | Nej |
 
@@ -205,7 +205,7 @@ Följande tabeller innehåller många men inte alla tillgängliga installationsp
 
 >[!NOTE]
 >
->Information om hur du aktiverar eller inaktiverar moduler efter installation av Adobe Commerce eller Magento Open Source finns i [Aktivera och inaktivera moduler](tutorials/manage-modules.md).
+>Information om hur du aktiverar eller inaktiverar moduler efter installation av Adobe Commerce finns i [Aktivera och inaktivera moduler](tutorials/manage-modules.md).
 
 **Känsliga data:**
 
@@ -217,7 +217,7 @@ I följande exempel visas kommandon för att installera Adobe Commerce lokalt me
 
 #### Exempel 1 - Grundinstallation med administratörsanvändarkonto
 
-I följande exempel installeras Adobe Commerce eller Magento Open Source med följande alternativ:
+I följande exempel installeras Adobe Commerce med följande alternativ:
 
 * Programmet installeras i `magento2` katalog relativt webbserverns dokumentrot på `localhost` och sökvägen till administratören är `admin`; därför
 
@@ -262,7 +262,7 @@ For security, remove write permissions from these directories: '/var/www/html/ma
 
 #### Exempel 2 - Grundinstallation utan administratörsanvändarkonto
 
-Du kan installera Adobe Commerce eller Magento Open Source utan att skapa administratörsanvändaren enligt följande exempel.
+Du kan installera Adobe Commerce utan att skapa administratörsanvändaren, vilket visas i följande exempel.
 
 ```bash
 magento setup:install --base-url=http://127.0.0.1/magento2/ \
@@ -287,7 +287,7 @@ Efter installationen kan du skapa en administratörsanvändare med `admin:user:c
 
 #### Exempel 3 - Installera med ytterligare alternativ
 
-I följande exempel installeras Adobe Commerce eller Magento Open Source med följande alternativ:
+I följande exempel installeras Adobe Commerce med följande alternativ:
 
 * Programmet installeras i `magento2` katalog relativt webbserverns dokumentrot på `localhost` och sökvägen till administratören är `admin`; därför
 

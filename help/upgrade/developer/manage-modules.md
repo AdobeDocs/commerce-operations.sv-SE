@@ -3,16 +3,16 @@ title: Hantera moduler och tillägg (utvecklare)
 description: Hantera Adobe Commerce-moduler och tillägg med kommandoradsgränssnittet och Composer-pakethanteraren.
 feature: Upgrade, Extensions
 exl-id: 447eb317-83e1-4900-83a5-9ac1a008e752
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 2%
+source-wordcount: '131'
+ht-degree: 3%
 
 ---
 
 # Hantera moduler och tillägg
 
-Bidra utvecklare att uppgradera moduler och tillägg genom att ange versioner i Adobe Commerce eller Magento Open Source `composer.json` -fil. Om du inte är en bidragsgivare kan du se [Uppgradera](../implementation/perform-upgrade.md).
+Uppgradera moduler och tillägg för utvecklare genom att ange deras versioner i Adobe Commerce `composer.json` -fil. Om du inte är en bidragsgivare kan du se [Uppgradera](../implementation/perform-upgrade.md).
 
 Du kan antingen lägga till en `require` till `composer.json` eller så kan du använda `composer require` enligt följande:
 

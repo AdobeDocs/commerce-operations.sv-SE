@@ -1,17 +1,17 @@
 ---
 title: Uppgradera en Git-baserad installation
-description: Uppgradera en Adobe Commerce- eller Magento Open Source-installation som du klonat från en Git-databas.
+description: Uppgradera en Adobe Commerce-installation som du klonat från en Git-databas.
 exl-id: a8c42857-7221-4b21-8377-4bfb6308c418
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '122'
+source-wordcount: '110'
 ht-degree: 0%
 
 ---
 
 # Uppgradera en Git-baserad installation
 
-I det här avsnittet beskrivs hur en utvecklare som bidrar till att uppdatera Adobe Commerce eller Magento Open Source utan att installera om det. Om du inte är en bidragsgivare kan du se [Uppgradera](../implementation/perform-upgrade.md).
+I det här avsnittet beskrivs hur en utvecklare som bidrar till att uppdatera Adobe Commerce utan att installera om det. Om du inte är en bidragsgivare kan du se [Uppgradera](../implementation/perform-upgrade.md).
 
 Så här uppgraderar du om du är en bidragsgivare:
 

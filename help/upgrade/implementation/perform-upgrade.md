@@ -2,9 +2,9 @@
 title: Uppgradera
 description: Följ de här stegen för att uppgradera lokala distributioner av Adobe Commerce.
 exl-id: 9183f1d2-a8dd-4232-bdee-7c431e0133df
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '730'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Uppgradera
 
-Du kan uppgradera _lokal_ distributioner av Adobe Commerce eller Magento Open Source från kommandoraden om du har installerat programmet av:
+Du kan uppgradera _lokal_ distributioner av Adobe Commerce-programmet från kommandoraden om du har installerat programmet av:
 
 - Hämta Composer-metapaketet med `composer create-project` -kommando.
 - Installerar det komprimerade arkivet.
@@ -110,7 +110,7 @@ Du måste fylla i [uppgraderingskrav](../prepare/prerequisites.md) för att för
 
    - `<product>` —(Obligatoriskt) Paketet som ska uppgraderas. För lokala installationer måste detta värde vara antingen `product-community-edition` eller `product-enterprise-edition`.
 
-   - `<version>` —(Obligatoriskt) Den version av Adobe Commerce eller Magento Open Source som du uppgraderar till. Till exempel: `2.4.3`.
+   - `<version>` —(Obligatoriskt) Den version av Adobe Commerce som du uppgraderar till. Till exempel: `2.4.3`.
 
    - `--no-update` —(Obligatoriskt) Inaktiverar den automatiska uppdateringen av beroenden.
 

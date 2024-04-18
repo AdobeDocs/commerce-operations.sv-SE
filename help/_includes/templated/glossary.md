@@ -1,7 +1,7 @@
 ---
-source-git-commit: 405c1d7073e5936aefc7fb3c6eb1d5dd4d69a066
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '6574'
+source-wordcount: '6363'
 ht-degree: 0%
 
 ---
@@ -128,7 +128,7 @@ _Termattribut:_
 _noun_
 
 En egenskap eller egenskap hos en produkt som beskriver någon aspekt av produkten.
-Adobe Commerce- eller Magento Open Source-användare kan skapa anpassade attribut som läggs till i standardattributuppsättningen eller en anpassad attributuppsättning.
+Adobe Commerce-användare kan skapa anpassade attribut som läggs till i standardattributuppsättningen eller en anpassad attributuppsättning.
 Skapa dessa attribut med Admin eller via programmering.
 Exempel: färg, storlek, vikt, pris, ålder, kön och så vidare.
 
@@ -392,7 +392,7 @@ _noun_
 För handlare representerar katalogen deras produktlager.
 I Adobe Commerce-arkitekturen består katalogen av kategorier, produkter och produktattribut.
 
-Varje Commerce Store har bara en produktkatalog, som delas av alla butiksvyer.
+Varje Commerce-butik har bara en produktkatalog, som delas av alla butiksvyer.
 I en installation i flera butiker kan varje butik ha en separat katalog eller dela katalogen.
 Den aktuella lagringskatalogen bestäms av standardrotkategorin, som är synlig för användaren i den översta navigeringen (huvudmenyn) i butiken.
 (Termen &quot;rotkategori&quot; kan vara förvirrande eftersom &quot;rotkategorin&quot; egentligen inte är en kategori alls, utan en behållare för menyn, som består av kategorier och underkategorier.)
@@ -686,7 +686,7 @@ _Termattribut:_
 
 _noun_
 
-En uppsättning skript och verktyg som är utformade för att hantera och distribuera Commerce-programmet. Det här paketet förenklar många Adobe Commerce-processer för molninfrastruktur, bland annat distribution till en Docker-miljö, hantering av kroner, verifiering av projektkonfiguration och användning av Adobe-korrigeringsfiler.
+En uppsättning skript och verktyg som är utformade för att hantera och driftsätta Commerce-programmet. Det här paketet förenklar många Adobe Commerce-processer för molninfrastruktur, bland annat distribution till en Docker-miljö, hantering av kroner, verifiering av projektkonfiguration och användning av Adobe-korrigeringsfiler.
 
 Läs mer: [hjälpmedelspaket](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/package-overview.html)
 
@@ -781,7 +781,7 @@ I ett klient-server-program finns serverdelen och klientdelen.
 klientkomponenten är ett gränssnitt som gör att användare kan ändra eller interagera med den underliggande backend-koden.
 Serverdelskoden körs på en server.
 En användare kan inte komma åt backend-kod direkt.
-En användare interagerar med butiken, som i sin tur använder kod som körs på Commerce-servern.
+Användaren interagerar med butiken, som i sin tur använder kod som körs på Commerce-servern.
 
 Obs! Tidigare har storefront kallats &quot;front-tend&quot; och Admin har kallats &quot;back end&quot;. Den här användningen stöds inte längre.
 
@@ -913,7 +913,7 @@ _Termattribut:_
 
 _noun_
 
-När en Commerce-sida byggs är en layout en serie block som är sammansatta i en hierarki och som representerar sidans struktur.
+När du skapar en Commerce-sida är en layout en serie block som är sammansatta i en hierarki och som representerar sidans struktur.
 
 Sidlayoutfiler fokuserar på den högsta nivån i sidstrukturen (sidhuvud, sidfot, huvudinnehållsområde, vänster sidospalt osv.).
 Layoutfiler sätter sedan ihop innehåll (block) till olika områden på sidan.
@@ -1085,7 +1085,7 @@ _Termattribut:_
 
 _noun_
 
-Page Builder är ett tillägg till Commerce som används för att skapa innehållsrika sidor genom att dra och släppa färdiga kontroller för att definiera anpassade layouter.
+Page Builder är ett Commerce-tillägg för att skapa innehållsrika sidor genom att dra och släppa färdiga kontroller för att definiera anpassade layouter.
 Dessa kontroller kallas även&quot;innehållstyper&quot;.
 Merchants kan designa layouter och sidor utan kodningsupplevelse.
 Utvecklare kan utöka Page Builder med stöd för tillägg.
@@ -1313,7 +1313,7 @@ _Termattribut:_
 
 _noun_
 
-Commerce-scopenivån för&quot;butik&quot; är den andra nivån i webbplatsens hierarki, som är följande: webbplats > butik > butiksvy.
+Commerce omfångsnivå för&quot;store&quot; är den andra nivån i webbplatshierarkin, som ser ut så här: webbplats > butik > butiksvy.
 Du kan ordna arkiv i ett eller flera lager. Varje butik har en egen rotkategori och delar alla kataloger och kunddata.
 
 Varje butik kan ha flera butiksvyer, som vanligtvis används för att visa butiken på olika språk och språk.
@@ -1327,7 +1327,7 @@ _Termattribut:_
 
 _noun_
 
-Commerce-scopenivån i&quot;butiksvyn&quot; avser den tredje nivån i hierarkin med webbplatser, butiker och butiksvyer.
+Commerce omfångsnivå i&quot;butiksvy&quot; avser den tredje nivån i hierarkin med webbplatser, butiker och butiksvyer.
 I butiksvyer visas butiken vanligtvis på ett annat språk och språk.
 Om du vill ändra butiksvyer använder du butiksväljaren i sidhuvudet.
 
@@ -1340,7 +1340,7 @@ _Termattribut:_
 
 _noun_
 
-Den webbutik som kunderna upplever när de besöker er Commerce-webbplats.
+Den webbutik kunderna upplever när de besöker er Commerce webbplats.
 
 _Termattribut:_
 
@@ -1380,7 +1380,7 @@ Innehåller grafik- och utseendeinformation.
 Anpassar butikens utseende och känsla.
 Adobe Commerce kan skicka teman i (Composer)-paket.
 Men du kan placera teman under app/design, som inte levereras i ett paket.
-Paket är den enhet som används för att hämta för Composer, och - via Commerce Marketplace - Commerce-användare kan hämta CE eller EE som en serie paket, där paket innehåller moduler, teman eller språkpaket.
+Paket är den enhet som används för att ladda ned Composer, och - via Commerce Marketplace - Commerce-användare kan ladda ned CE eller EE som en serie paket, där paket innehåller moduler, teman eller språkpaket.
 
 _Termattribut:_
 
@@ -1437,8 +1437,8 @@ _Termattribut:_
 
 _noun_
 
-Leverantörstillverkad kod som utökar eller anpassar handelsbeteendet och fungerar som ett tillägg från en annan leverantör betraktas som ett VBE (Leverantörspaket).
-VBE-programmen har testats grundligt och ingår i alla versioner av Magento Open Source och Adobe Commerce som stöds.
+Leverantörstillverkad kod som utökar eller anpassar Commerce beteende och fungerar som ett tillägg från tredje part betraktas som ett VBE (Leverantör Bundled Extension).
+VBE-programmen testas grundligt och ingår i alla versioner av Adobe Commerce som stöds.
 Ett VBE kan innehålla moduler, teman och språkpaket.
 
 Läs mer i [Ämne för tillägg som paketerats av leverantör](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/modules/upgrade.html).

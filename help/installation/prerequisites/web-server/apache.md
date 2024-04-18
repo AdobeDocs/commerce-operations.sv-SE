@@ -2,9 +2,9 @@
 title: Apache
 description: Följ de här stegen för att installera och konfigurera Apache-webbservern för lokala installationer av Adobe Commerce.
 exl-id: a9a394c9-389f-42ef-9029-dd22c979cfb8
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '759'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ Adobe Commerce använder serveråterskrivningar och `.htaccess` för att ge kata
    >[!NOTE]
    >
    >- Om du har uppgraderat från en tidigare Apache-version ska du först leta efter `<Directory "/var/www/html">` eller `<Directory "/var/www">` in `000-default.conf`.
-   >- Du måste ändra värdet för `AllowOverride` i direktivet för den katalog som du vill installera Adobe Commerce eller Magento Open Source. Om du till exempel vill installera i webbserverdokumentet redigerar du direktivet i `<Directory /var/www>`.
+   >- Du måste ändra värdet för `AllowOverride` i direktivet för den katalog som du vill installera Adobe Commerce-programmet i. Om du till exempel vill installera i webbserverdokumentet redigerar du direktivet i `<Directory /var/www>`.
 
 >[!NOTE]
 >

@@ -1,10 +1,10 @@
 ---
 title: Installera Adobe Commerce
-description: Följ de här stegen för att installera Adobe Commerce eller Magento Open Source på en infrastruktur som du äger.
+description: Följ de här stegen för att installera Adobe Commerce på en infrastruktur som du äger.
 exl-id: 25f3c56e-0654-4f8b-a69d-f4152f68aca3
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '2102'
+source-wordcount: '2094'
 ht-degree: 0%
 
 ---
@@ -97,7 +97,7 @@ I Adobe Commerce version 2.2.8 och senare kan du skapa administratörsanvändare
 | `--db-name` | Namnet på den databasinstans där du vill installera databastabellerna.<br><br>Standard är `magento2`. | Ja |
 | `--db-user` | Användarnamn för databasinstansens ägare.<br><br>Standard är `root`. | Ja |
 | `--db-password` | Lösenord för databasinstansens ägare. | Ja |
-| `--db-prefix` | Använd bara om du installerar databastabellerna i en databasinstans som redan innehåller Adobe Commerce- eller Magento Open Source-tabeller.<br><br>I så fall använder du ett prefix för att identifiera tabellerna för den här installationen. Vissa kunder har fler än en Adobe Commerce-instans som körs på en server med alla tabeller i samma databas.<br><br>Prefixet får innehålla högst fem tecken. Den måste börja med en bokstav och kan bara innehålla bokstäver, siffror och understreck.<br><br>Med det här alternativet kan dessa kunder dela databasservern med mer än en installation. | Nej |
+| `--db-prefix` | Använd bara om du installerar databastabellerna i en databasinstans som redan innehåller Adobe Commerce-tabeller.<br><br>I så fall använder du ett prefix för att identifiera tabellerna för den här installationen. Vissa kunder har fler än en Adobe Commerce-instans som körs på en server med alla tabeller i samma databas.<br><br>Prefixet får innehålla högst fem tecken. Den måste börja med en bokstav och kan bara innehålla bokstäver, siffror och understreck.<br><br>Med det här alternativet kan dessa kunder dela databasservern med mer än en installation. | Nej |
 | `--db-ssl-key` | Sökväg till klientnyckeln. | Nej |
 | `--db-ssl-cert` | Sökväg till klientcertifikatet. | Nej |
 | `--db-ssl-ca` | Sökväg till servercertifikatet. | Nej |

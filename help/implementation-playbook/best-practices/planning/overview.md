@@ -4,9 +4,9 @@ description: Lär dig mer om de effektivaste strategierna för implementering i 
 role: Developer, Admin, User
 feature: Best Practices
 exl-id: 6baeac79-8dc3-45b4-bb25-8f2add8b3443
-source-git-commit: 40d850add2ef8c51e9192758135768306b163780
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '424'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Följande avsnitt innehåller information om god praxis för planeringsfasen.
   </tr>
   <tr>
     <td><a href="https://developer.adobe.com/commerce/php/development/cache/page/public-content/">Cachelagring</a></td>
-    <td>Lär dig hur du arbetar med publika data när du implementerar cachning i Adobe Commerce- eller Magento Open Source-tillägg.</td>
+    <td>Lär dig hur du arbetar med publika data när du implementerar cachning i ditt Adobe Commerce-tillägg.</td>
   </tr>
   <tr>
     <td><a href="opcache-memory-size.md">OPcache-minnesstorlek</a></td>

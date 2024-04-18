@@ -5,9 +5,9 @@ role: Developer, Architect
 feature: Best Practices
 last-substantial-update: 2022-11-15T00:00:00Z
 exl-id: 9e7adaaa-b165-4293-aa98-5dc4b8c23022
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '1438'
+source-wordcount: '1405'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ Mer information om hur du använder API-nät med GraphQL finns i [Vad är API Me
 Om du fastställer att äldre data kräver migrering eller att nya data måste sparas i [!DNL Adobe Commerce], Adobe rekommenderar att du använder [tilläggsattribut](https://developer.adobe.com/commerce/php/development/components/add-attributes/){target="_blank"}. Att använda tilläggsattribut för att spara ytterligare data ger följande fördelar:
 
 - Du kan styra vilka data som ska bevaras och databasstrukturen, vilket säkerställer att data sparas med rätt kolumntyp och korrekta index.
-- De flesta entiteter i [!DNL Adobe Commerce] och [!DNL Magento Open Source] har stöd för användning av tilläggsattribut.
+- De flesta entiteter i [!DNL Adobe Commerce] har stöd för användning av tilläggsattribut.
 - Tilläggsattribut är en lagringsalgoritmisk mekanism som ger flexibilitet att spara data på den optimala platsen för ditt projekt.
 
 Två exempel på lagringsplatser är databastabeller och [!DNL Redis]. Det viktigaste att tänka på när du väljer en plats är om platsen medför extra komplexitet eller påverkar prestandan.
@@ -71,7 +71,7 @@ Adobe rekommenderar att du följer de här stegen när du lägger till en kolumn
 
 1. Skapa en modul med ett namn i namnutrymmet som representerar det du uppdaterar.
 
-   Exempel: `app/code/YourCompany/Customer`
+   Till exempel: `app/code/YourCompany/Customer`
 
 1. Skapa lämpliga filer för att aktivera modulen (se [Skapa en modul](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/create-module.html){target="_blank"}.
 

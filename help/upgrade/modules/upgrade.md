@@ -2,9 +2,9 @@
 title: Uppgraderingsmoduler och tillägg
 description: Använd kommandoradsgränssnittet och Composer för att uppgradera Adobe Commerce-moduler och tillägg.
 exl-id: 017d75df-fd21-4fb4-abc9-80a35fc47d0f
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '173'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Så här uppdaterar eller uppgraderar du en modul eller ett tillägg:
 
 1. Hämta den uppdaterade filen från Marketplace eller någon annan tilläggsutvecklare. Notera modulens namn och version.
 
-1. Exportera innehållet till Adobe Commerce eller Magento Open Source rotkatalog.
+1. Exportera innehållet till Adobe Commerce rotinstallationskatalog.
 
 1. Om det finns ett Composer-paket för modulen kör du något av följande.
 

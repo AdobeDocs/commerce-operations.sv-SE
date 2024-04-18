@@ -1,10 +1,10 @@
 ---
 title: Skapa databasschemat
-description: Följ de här stegen för att skapa en databas för din Adobe Commerce eller Magento Open Source.
+description: Följ de här stegen för att skapa en databas för ditt Adobe Commerce-projekt.
 exl-id: 860c9918-44c4-4ef1-88a5-12614566307c
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '52'
+source-wordcount: '49'
 ht-degree: 0%
 
 ---

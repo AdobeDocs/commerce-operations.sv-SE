@@ -4,9 +4,9 @@ description: Lär dig hur du installerar [!DNL Data Migration Tool] att överfö
 exl-id: 5f57067b-3ce8-4b51-b9ae-f60ae089c4ba
 topic: Commerce, Migration
 feature: Configuration, Install
-source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '365'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ git branch
 
 Om du är i `develop` gren, du måste ändra till [frisläppt gren](https://developer.adobe.com/commerce/contributor/guides/install/change-version/) innan du fortsätter.
 
-Om du inte har installerat Adobe Commerce eller Magento Open Source än [installera nu](../../installation/prerequisites/commerce.md).
+Om du inte har installerat Adobe Commerce ännu [installera nu](../../installation/prerequisites/commerce.md).
 Om du klonar GitHub-databasen kontrollerar du att du har checkat ut en versionstagg enligt beskrivningen i [(Contributor) Klona GitHub-databasen](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/).
 
 ## Hitta släppta versioner av [!DNL Data Migration Tool]

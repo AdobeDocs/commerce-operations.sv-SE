@@ -2,9 +2,9 @@
 title: Konfigurera en MySQL-fjärrdatabasanslutning
 description: Följ de här stegen för att konfigurera en fjärrdatabasanslutning för lokala installationer av Adobe Commerce.
 exl-id: 5fe304bd-ff38-4066-a1fd-8937575e4de4
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '700'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Innan du börjar måste du:
 
 * [Installera MySQL-server](mysql.md) på databasservern.
 * [Skapa en databasinstans](mysql.md#configuring-the-database-instance) på databasservern.
-* Installera MySQL-klienten på din Adobe Commerce- eller Magento Open Source-webbnod. Mer information finns i MySQL-dokumentationen.
+* Installera MySQL-klienten på Adobe Commerce webbnod. Mer information finns i MySQL-dokumentationen.
 
 ### Hög tillgänglighet
 
@@ -136,7 +136,7 @@ På webbnodvärden anger du följande kommando för att verifiera att anslutning
 mysql -u <local database username> -h <database server ip address> -p
 ```
 
-Om MySQL-skärmen visas enligt följande är databasen klar för Adobe Commerce eller Magento Open Source:
+Om MySQL-skärmen visas enligt följande är databasen klar för Adobe Commerce:
 
 ```terminal
 Welcome to the MySQL monitor.  Commands end with ; or \g.
@@ -151,9 +151,9 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
 Om webbservern är klustrad anger du kommandot på varje webbservervärd.
 
-## Installera Adobe Commerce eller Magento Open Source
+## Installera Adobe Commerce
 
-När du installerar Adobe Commerce eller Magento Open Source måste du ange följande:
+När du installerar Adobe Commerce måste du ange följande:
 
 * Bas-URL (kallas även *butiksadress*) anger värdnamnet eller IP-adressen för *webbnod*
 * Databasvärden är *fjärrdatabasserver* IP-adress (eller belastningsutjämnare om databasservern är klustrad)

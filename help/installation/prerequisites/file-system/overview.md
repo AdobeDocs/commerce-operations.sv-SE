@@ -2,16 +2,16 @@
 title: Filägarskap och behörigheter
 description: Läs om hur viktigt det är med filsystemsbehörigheter när du arbetar med lokala installationer av Adobe Commerce.
 exl-id: a84784bf-afd6-4dba-9745-3fefc0ecafcb
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '441'
 ht-degree: 0%
 
 ---
 
 # Filägarskap och behörigheter
 
-Det är viktigt att ha en säker installation av Adobe Commerce eller Magento Open Source i en utvecklingsmiljö för att förhindra problem som rör obehöriga personer eller processer som har åtkomst till - och kan skada - systemet. Använd följande riktlinjer för ägarskap och behörighet för filsystem för att skydda installationen.
+Det är viktigt att du har en säker Adobe Commerce-installation i en utvecklingsmiljö så att du kan förhindra att obehöriga får åtkomst till - och eventuellt skada - systemet. Använd följande riktlinjer för ägarskap och behörighet för filsystem för att skydda installationen.
 
 ## Ägare till filsystem
 
@@ -65,4 +65,4 @@ Vi diskuterar ytterligare rekommendationer om behörigheter i [Åtkomstbehörigh
 
 >[!TIP]
 >
->Innan du installerar Adobe Commerce eller Magento Open Source bör du granska [Konfigurera filägarskap och behörigheter](configure-permissions.md).
+>Innan du installerar Adobe Commerce bör du granska [Konfigurera filägarskap och behörigheter](configure-permissions.md).

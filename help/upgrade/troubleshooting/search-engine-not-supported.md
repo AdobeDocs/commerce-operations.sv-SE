@@ -1,24 +1,24 @@
 ---
 title: Aktuell sökmotor stöds inte
-description: Felsök uppgraderingen av Adobe Commerce eller Magento Open Source efter att ha upptäckt ett fel om en sökmotor som inte stöds.
+description: Felsök Adobe Commerce-uppgraderingen efter att ha upptäckt ett fel om en sökmotor som inte stöds.
 feature: Upgrade, Search
 exl-id: 11479d23-53a5-4086-9f9a-c3420ccad073
-source-git-commit: 012cba58b336b032b1c911539008c1fb961c2e07
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '400'
 ht-degree: 0%
 
 ---
 
 # Aktuell sökmotor stöds inte
 
-Följande felmeddelande anger att den version av Adobe Commerce eller Magento Open Source som du uppgraderar från är konfigurerad att använda en katalogsökmotor som inte stöds i den version som du uppgraderar till:
+Följande felmeddelande anger att den Adobe Commerce-version du uppgraderar från är konfigurerad att använda en katalogsökmotor som inte stöds i den version du uppgraderar till:
 
 ```terminal
 Your current search engine, <Engine Name>, is not supported. You must install a supported search engine before upgrading. See the System Upgrade Guide for more information.
 ```
 
-Detta fel innebär att ett av följande villkor gäller för äldre versioner av Adobe Commerce eller Magento Open Source:
+Detta fel innebär att ett av följande villkor gäller för äldre versioner av Adobe Commerce:
 
 - Sökmotorn är inställd på MySQL.
 - Sökmotorn är inställd på en version av Elasticsearch som inte längre stöds.
@@ -43,7 +43,7 @@ Felet inträffar om det returnerade värdet är `mysql`, `elasticsearch`, eller 
 >composer require-commerce magento/product-community-edition=<version>
 >```
 >
->Plats `<version>` är den version av Magento som du körde **före** uppgraderingen. Exempel, `2.3.5`.
+>Plats `<version>` är den version av Magento som du körde **före** uppgraderingen. Till exempel: `2.3.5`.
 
 Följ riktlinjerna som beskrivs i följande avsnitt för att återställa efter ett inkonsekvent tillstånd.
 
@@ -62,7 +62,7 @@ När du har konfigurerat sökmotorn och indexerat om är du redo att uppgradera 
 
 Elasticsearch 6 och tidigare stöds inte längre.
 
-Värdet för `elasticsearch` visar att din äldre version av Adobe Commerce eller Magento Open Source är konfigurerad att använda Elasticsearch 2.x. Den här versionen av Elasticsearch stöds inte längre.
+Värdet för `elasticsearch` visar att din äldre version av Adobe Commerce är konfigurerad att använda Elasticsearch 2.x. Den här versionen av Elasticsearch stöds inte längre.
 
 Du måste utföra följande åtgärder innan du uppgraderar till 2.4:
 

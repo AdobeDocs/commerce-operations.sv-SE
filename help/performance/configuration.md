@@ -1,11 +1,11 @@
 ---
 title: Bästa praxis för konfiguration
-description: Optimera svarstiden för driftsättningen av Adobe Commerce eller Magento Open Source med hjälp av dessa metodtips.
+description: Optimera svarstiden för er Adobe Commerce-driftsättning med hjälp av dessa metodtips.
 feature: Best Practices, Configuration
 exl-id: 4cb0f5e7-49d5-4343-a8c7-b8e351170f91
-source-git-commit: 602a1ef82fcb8d30ff027db0fe0aacb981c7e08e
+source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
-source-wordcount: '1425'
+source-wordcount: '1417'
 ht-degree: 0%
 
 ---
@@ -32,11 +32,11 @@ Aktivera alla cacheminnen från **[!UICONTROL System]** > [!UICONTROL Tools] > *
 
 ## Asynkrona e-postmeddelanden
 
-Om du aktiverar inställningen&quot;Asynkrona e-postmeddelanden&quot; flyttas processer som hanterar utcheckning och beställer e-postmeddelanden till bakgrunden. Om du vill aktivera den här funktionen går du till **[!UICONTROL Stores]> [!UICONTROL Settings] > [!UICONTROL Configuration] > [!UICONTROL Sales] > [!UICONTROL Sales Emails] > [!UICONTROL General Settings] >[!UICONTROL Asynchronous Sending]**. Se [Försäljningsmejl](https://docs.magento.com/user-guide/configuration/sales/sales-emails.html) i _Användarhandbok för Magento Open Source_ för mer information.
+Om du aktiverar inställningen&quot;Asynkrona e-postmeddelanden&quot; flyttas processer som hanterar utcheckning och beställer e-postmeddelanden till bakgrunden. Om du vill aktivera den här funktionen går du till **[!UICONTROL Stores]> [!UICONTROL Settings] > [!UICONTROL Configuration] > [!UICONTROL Sales] > [!UICONTROL Sales Emails] > [!UICONTROL General Settings] >[!UICONTROL Asynchronous Sending]**. Se [Försäljningsmejl](https://docs.magento.com/user-guide/configuration/sales/sales-emails.html) i _Administratörsanvändarhandbok_ för mer information.
 
 ## Asynkron bearbetning av orderdata
 
-Det kan finnas tillfällen då intensiv försäljning sker samtidigt som [!DNL Commerce] utför intensiv orderbehandling. Du kan konfigurera [!DNL Commerce] för att särskilja dessa två trafikmönster på databasnivå för att undvika konflikter mellan läs- och skrivåtgärder i motsvarande tabeller. Du kan lagra och indexera orderdata asynkront. Beställningar läggs i tillfällig lagring och flyttas gruppvis till orderhanteringsrutnätet utan några kollisioner. Du kan aktivera det här alternativet från **[!UICONTROL Stores]> [!UICONTROL Settings] > [!UICONTROL Configuration] > [!UICONTROL Advanced] > [!UICONTROL Developer] > [!UICONTROL Grid Settings] >[!UICONTROL Asynchronous indexing]**. Se [Schemalagda uppdateringar av stödraster](https://docs.magento.com/user-guide/sales/order-grid-updates-schedule.html) i _Användarhandbok för Magento Open Source_ för mer information.
+Det kan finnas tillfällen då intensiv försäljning sker samtidigt som [!DNL Commerce] utför intensiv orderbehandling. Du kan konfigurera [!DNL Commerce] för att särskilja dessa två trafikmönster på databasnivå för att undvika konflikter mellan läs- och skrivåtgärder i motsvarande tabeller. Du kan lagra och indexera orderdata asynkront. Beställningar läggs i tillfällig lagring och flyttas gruppvis till orderhanteringsrutnätet utan några kollisioner. Du kan aktivera det här alternativet från **[!UICONTROL Stores]> [!UICONTROL Settings] > [!UICONTROL Configuration] > [!UICONTROL Advanced] > [!UICONTROL Developer] > [!UICONTROL Grid Settings] >[!UICONTROL Asynchronous indexing]**. Se [Schemalagda uppdateringar av stödraster](https://docs.magento.com/user-guide/sales/order-grid-updates-schedule.html) i _Administratörsanvändarhandbok_ för mer information.
 
 >[!WARNING]
 >
