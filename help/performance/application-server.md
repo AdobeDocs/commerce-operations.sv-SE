@@ -2,9 +2,9 @@
 title: GraphQL Application Server
 description: Följ dessa anvisningar för att aktivera GraphQL Application Server i din Adobe Commerce-distribution.
 exl-id: 9b223d92-0040-4196-893b-2cf52245ec33
-source-git-commit: a1e548c1b1bffd634e0d5b1df0a77ef65c5997f8
+source-git-commit: b89ed5ddb4c6361de22d4a4439ffcfcc3ec8d474
 workflow-type: tm+mt
-source-wordcount: '1880'
+source-wordcount: '2267'
 ht-degree: 0%
 
 ---
@@ -360,3 +360,40 @@ Kör `GraphQlStateTest` genom att köra `vendor/bin/phpunit -c $(pwd)/dev/tests/
 ### Funktionstestning
 
 Tilläggsutvecklare bör köra WebAPI-funktionstester för GraphQL samt anpassade automatiska eller manuella funktionstester för GraphQL när de distribuerar GraphQL Application Server. Dessa funktionstester hjälper utvecklare att identifiera potentiella fel eller kompatibilitetsproblem.
+
+#### Läge för tillståndsövervakare
+
+När du kör funktionstester (eller manuell testning) kan programservern köras med `--state-monitor mode` aktiveras för att hjälpa till att hitta klasser där tillstånd oavsiktligt återanvänds. Starta programservern normalt, förutom att lägga till `--state-monitor` parameter.
+
+```
+bin/magento server:run --state-monitor
+```
+
+När varje begäran har bearbetats läggs en ny fil till i `tmp` katalog, till exempel: `var/tmp/StateMonitor-thread-output-50-6nmxiK`. När du är klar med testningen kan dessa filer sammanfogas med `bin/magento server:state-monitor:aggregate-output` som skapar två sammanfogade filer, en i `XML` och en tum `JSON`.
+
+Exempel:
+
+```
+/var/workspace/var/tmp/StateMonitor-json-2024-04-10T18:50:39Z-hW0ucN.json
+/var/workspace/var/tmp/StateMonitor-junit-2024-04-10T18:50:39Z-oreUco.xml
+```
+
+Dessa filer kan inspekteras med alla verktyg du använder för att visa XML eller JSON, som visar de ändrade egenskaperna för serviceobjekt som GraphQlStateTest gör. The `--state-monitor` I läget används samma hopplista och filterlista som GraphQlStateTest.
+
+>[!NOTE]
+>
+>Använd inte `--state-monitor` produktionsläge. Den är endast avsedd för utveckling och testning. Det skapar många utdatafiler och kommer att köras långsammare än normalt.
+
+>[!NOTE]
+>
+>`--state-monitor` är inte kompatibelt med PHP-versioner `8.3.0` - `8.3.4` på grund av ett fel i PHP-skräpinsamlaren. Om du använder PHP 8.3 måste du uppgradera till `8.3.5` eller nyare för att använda den här funktionen.
+
+## Kända fel
+
+### Förfrågningar går förlorade om arbetstråd avslutas.
+
+Om det uppstår ett problem med en arbetstråd som gör att arbetstråden avslutas, kommer alla HTTP-begäranden som redan står i kö till samma arbetstråd att få en TCP-socketanslutningsåterställning. Med en omvänd proxy, till exempel NGINX, framför servern visas felen som `502` fel. Medarbetare kan dö av krascher, slut på minneshantering eller PHP-fel i tillägg från tredje part. Standardbeteendet för SVYLLENS HTTP-server orsakar det här problemet. Som standard startas HTTP-servern i `SWOOLE_BASE` läge. I det här läget tilldelas de HTTP-begäranden som kommer in till arbetstrådar i en kö, även om arbetstråden fortfarande bearbetar en tidigare begäran. Om du ändrar detta till `SWOOLE_PROCESS` , underhålls anslutningarna av huvudprocessen och använder betydligt mer kommunikation mellan processer. Nersidan till `SWOOLE_PROCESS` är att det inte stöder PHP ZTS. Läs [Svullnad - dokumentation](https://wiki.swoole.com/en/#/learn?id=swoole_process) för mer information.
+
+### Programservern kan använda tidigare attributkonfigurationer under vissa förhållanden.
+
+The `CatalogGraphQl\Model\Config\AttributeReader` in `2.4.7` innehåller ett sällsynt fel som kan göra att en GraphQL-begäran får ett svar med hjälp av det tidigare tillståndet för attributkonfigurationen. En fix för det här levererades i `2.4-develop`, men inte i tid för `2.4.7` release.
