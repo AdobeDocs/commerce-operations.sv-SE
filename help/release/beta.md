@@ -2,9 +2,9 @@
 title: Betaversioner
 description: Läs mer om betaversioner av Adobe Commerce och hur du deltar.
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
-source-git-commit: 07e616b26784a6e2e8994efc5816a5005619b5bb
+source-git-commit: 1dd4b44c6aa685795e16dccebfaf073dcc0062f2
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '690'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 Adobe Commerce betaprogram är ett sätt för handlare att få tillgång till betaversionsfunktioner och -kod, ge feedback och vägleda Adobe Commerce framtid. Det finns två typer av betaprogram:
 
 - Betaversion: Ett offentligt betaprogram är tillgängligt för alla Adobe Commerce kunder och partners
-- Private Bata: Ett privat betaprogram kan kräva ett godkännande baserat på kvalificeringskriterier för att kunna delta
+- Privat betaversion: Ett privat betaprogram kan kräva ett godkännande baserat på kvalificeringskriterier för att kunna delta
 
 >[!IMPORTANT]
 >
@@ -70,7 +70,7 @@ Varje betaversion av Adobe Commerce Foundation innehåller alla ändringar som l
 
 #### Namngivningskonvention och schema
 
-Adobe kommer att släppa betatestningar två gånger per år. Det första betatestet frisätts vanligtvis tre månader efter det att en ny viktig depotplåsterrelease allmänt finns tillgänglig.
+Adobe släpper normalt betatestningar två gånger per år.
 
 Betaversionspaket har `-betaX` suffix. I betaversionspaketen för Adobe Commerce 2.4.7 används till exempel följande namnkonvention:
 
