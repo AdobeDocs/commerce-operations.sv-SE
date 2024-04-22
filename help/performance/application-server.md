@@ -2,9 +2,9 @@
 title: GraphQL Application Server
 description: Följ dessa anvisningar för att aktivera GraphQL Application Server i din Adobe Commerce-distribution.
 exl-id: 9b223d92-0040-4196-893b-2cf52245ec33
-source-git-commit: b89ed5ddb4c6361de22d4a4439ffcfcc3ec8d474
+source-git-commit: 81320626a83e26a55f9ec14ce8cb706753b44269
 workflow-type: tm+mt
-source-wordcount: '2267'
+source-wordcount: '2293'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,11 @@ The `ApplicationServer` modul (`Magento/ApplicationServer/`) aktiveras GraphQL A
 
 ### Aktivera Pro-projekt
 
-Utför följande steg innan du distribuerar GraphQL Application Server i Pro-projekt:
+>[!NOTE]
+>
+>Programservern är en anmälningsfunktion för Cloud Pro-instanser. Om du vill aktivera det skickar du en supportförfrågan.
+
+När Application Server-funktionen har aktiverats i ditt Pro-projekt utför du följande steg innan du distribuerar GraphQL Application Server:
 
 1. Distribuera Adobe Commerce i molninfrastrukturen med hjälp av molnmallen från [2.4.7-appservergren](https://github.com/magento/magento-cloud/tree/2.4.7-appserver).
 1. Se till att alla anpassningar och tillägg för din Commerce [kompatibel](https://developer.adobe.com/commerce/php/development/components/app-server/) med GraphQL Application Server.
