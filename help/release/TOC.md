@@ -3,7 +3,7 @@ user-guide-title: Versionsinformation
 user-guide-description: Få tillgång till all versionsinformation för Adobe Commerce patchar och tjänster på ett och samma ställe.
 feature: Release Notes
 recommendations: noDisplay, noCatalog
-source-git-commit: d0304f4060080f70c079fb571210cd015407f1cf
+source-git-commit: 5b294d586b58689a576f411b33d95e4dfa76076e
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 0%
@@ -63,14 +63,14 @@ ht-degree: 0%
       - [2.4.3-p2](release-notes/security/2-4-3-p2.md)
       - [2.4.3-p1](release-notes/security/2-4-3-p1.md)
       - [2.4.2-p2](release-notes/security/2-4-2-p2.md)
-- [Släppta versioner](versions.md)
-- [Funktioner efter version](features.md)
 - [Produkttillgänglighet](product-availability.md)
 - [Betaversioner](beta.md)
 - Planering och policy {#planning}
    - [Livscykelprincip](lifecycle-policy.md)
    - [Versionspolicy](versioning-policy.md)
    - [Frigör schema](schedule.md)
+- [Funktioner efter version](features.md)
+- [Släppta versioner](versions.md)
 - Paket {#packages}
    - [Adobe Commerce](packages/adobe-commerce.md)
    - [B2B för Adobe Commerce](packages/adobe-commerce-b2b.md)
