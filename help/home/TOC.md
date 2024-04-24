@@ -1,11 +1,11 @@
 ---
 user-guide-title: Användarhandböcker om operativa funktioner
-user-guide-description: Lär dig mer om de operativa aspekterna av underhåll av Adobe Commerce-program.
+user-guide-description: Lär dig mer om de operativa aspekterna av att underhålla programmet Adobe Commerce.
 feature: Configuration, Best Practices, Install, Integration, Security, Release Notes, Upgrade
 source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
 workflow-type: tm+mt
 source-wordcount: '53'
-ht-degree: 3%
+ht-degree: 24%
 
 ---
 
