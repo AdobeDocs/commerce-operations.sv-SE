@@ -2,9 +2,9 @@
 title: Hämta dina autentiseringsnycklar
 description: Följ de här stegen för att hämta inloggningsuppgifter för att komma åt Adobe Commerce Composer-paket på repo.magento.com.
 exl-id: 7ec2a410-d81f-476a-bf6a-f3c61982a734
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: fc63ca58cd2ff7c5ec597751980a39bfbe68aa5f
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '470'
 ht-degree: 0%
 
 ---
@@ -17,10 +17,10 @@ För åtkomsträttigheter till Adobe Commerce-paket måste du använda nycklar s
 
 >[!TIP]
 >
->Om du träffar [fel](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-commerce-cloud-repo-could-not-be-accessed-403-forbidden-or-404-not-found-error-when-deploying.html)kanske du inte har åtkomstbehörighet för paketet eller så har åtkomsträttigheterna gått ut på grund av en utestående faktura på ditt konto.
+>Om du träffar [fel](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-commerce-cloud-repo-could-not-be-accessed-403-forbidden-or-404-not-found-error-when-deploying.html)kan det bero på att du inte har åtkomstbehörighet för paketet eller att åtkomstbehörigheten har upphört att gälla på grund av en utestående faktura på ditt konto.
 >
 >* Om du är primär kontaktperson för kontot kontrollerar du att det inte finns någon utestående faktura på kontot.
->* Om nycklarna från den primära kontakten inte fungerar och det inte finns några utestående fakturor på kontot kontaktar du [Adobe Commerce Support](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för hjälp med MAGEID för den primära kontakten.
+>* Om nycklarna som tillhandahålls av den primära kontakten inte fungerar och det inte finns några utestående fakturor på kontot bör den primära kontakten kontakta [Adobe Commerce Support](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) om du behöver hjälp.
 
 Skapa autentiseringsnycklar:
 
