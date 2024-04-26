@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
+source-git-commit: 9527ce1983340c6438c33b1d07acf4b4b699ccc8
 workflow-type: tm+mt
-source-wordcount: '191'
+source-wordcount: '182'
 ht-degree: 0%
 
 ---
@@ -30,6 +30,10 @@ ht-degree: 0%
    - [[!DNL Quality Patches Tool]: Sök efter patchar](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
    - [Användning](quality-patches-tool/usage.md)
    - [Versionsinformation](quality-patches-tool/release-notes.md)
+- Referens för kommandoradsverktyg {#cli-reference}
+   - [Adobe Commerce (lokalt)](reference/commerce-on-premises.md)
+   - [Magento Open Source](reference/magento-open-source.md)
+   - [Kompatibilitetsverktyg för uppgradering](reference/uct.md)
 - Observation för Adobe Commerce {#observation-for-adobe-commerce}
    - [Introduktion](observation-for-adobe-commerce/intro.md)
    - [Åtkomst](observation-for-adobe-commerce/access.md)
