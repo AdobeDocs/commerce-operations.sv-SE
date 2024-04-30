@@ -1,7 +1,7 @@
 ---
-source-git-commit: 755ea50a75924cc16f690ff888367abd305565e9
+source-git-commit: 19d19ef385cf4aaee3a255930af8e6d3b81de23a
 workflow-type: tm+mt
-source-wordcount: '21455'
+source-wordcount: '21169'
 ht-degree: 0%
 
 ---
@@ -27,11 +27,12 @@ Använd [&quot;Lägg till CLI-kommandon&quot;](https://developer.adobe.com/comme
 
 ## `_complete`
 
-Internt kommando för att ge förslag på komplettering av skalet
-
 ```bash
 bin/magento _complete [-s|--shell SHELL] [-i|--input INPUT] [-c|--current CURRENT] [-a|--api-version API-VERSION] [-S|--symfony SYMFONY]
 ```
+
+Internt kommando för att ge förslag på komplettering av skalet
+
 
 ### `--shell`, `-s`
 
@@ -66,7 +67,7 @@ inaktuell
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -115,10 +116,40 @@ Ställ inga interaktiva frågor
 
 ## `completion`
 
-Dumpa skriptet för gränssnittets slutförande
-
 ```bash
 bin/magento completion [--debug] [--] [<shell>]
+```
+
+Dumpa skriptet för gränssnittets slutförande
+
+
+```
+The completion command dumps the shell completion script required
+to use shell autocompletion (currently, bash, fish, zsh completion are supported).
+
+Static installation
+-------------------
+
+Dump the script to a global completion file and restart your shell:
+
+    bin/magento completion  | sudo tee /etc/bash_completion.d/magento
+
+Or dump the script to a local file and source it:
+
+    bin/magento completion  > completion.sh
+
+    # source the file whenever you use the project
+    source completion.sh
+
+    # or add this line at the end of your "~/.bashrc" file:
+    source /path/to/completion.sh
+
+Dynamic installation
+--------------------
+
+Add this to the end of your shell configuration file (e.g. "~/.bashrc"):
+
+    eval "$(/var/www/html/magento2/bin/magento completion )"
 ```
 
 
@@ -136,7 +167,7 @@ Avsluta felsökningsloggen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -185,10 +216,23 @@ Ställ inga interaktiva frågor
 
 ## `help`
 
-Visa hjälp för ett kommando
-
 ```bash
 bin/magento help [--format FORMAT] [--raw] [--] [<command_name>]
+```
+
+Visa hjälp för ett kommando
+
+
+```
+The help command displays help for a given command:
+
+  bin/magento help list
+
+You can also output the help in other formats by using the --format option:
+
+  bin/magento help --format=xml list
+
+To display the list of available commands, please use the list command.
 ```
 
 
@@ -215,7 +259,7 @@ Hjälp för att skriva ut råformat
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -264,10 +308,29 @@ Ställ inga interaktiva frågor
 
 ## `list`
 
-Listkommandon
-
 ```bash
 bin/magento list [--raw] [--format FORMAT] [--short] [--] [<namespace>]
+```
+
+Listkommandon
+
+
+```
+The list command lists all commands:
+
+  bin/magento list
+
+You can also display the commands for a specific namespace:
+
+  bin/magento list test
+
+You can also output the information in other formats by using the --format option:
+
+  bin/magento list --format=xml
+
+It's also possible to get raw list of commands (useful for embedding command runner):
+
+  bin/magento list --raw
 ```
 
 
@@ -299,7 +362,7 @@ Så här beskriver du inte kommandots argument
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -348,15 +411,16 @@ Ställ inga interaktiva frågor
 
 ## `admin:adobe-ims:disable`
 
-Inaktivera Adobe IMS-modul
-
 ```bash
 bin/magento admin:adobe-ims:disable
 ```
 
+Inaktivera Adobe IMS-modul
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -405,11 +469,12 @@ Ställ inga interaktiva frågor
 
 ## `admin:adobe-ims:enable`
 
-Aktivera Adobe IMS-modulen.
-
 ```bash
 bin/magento admin:adobe-ims:enable [-o|--organization-id [ORGANIZATION-ID]] [-c|--client-id [CLIENT-ID]] [-s|--client-secret [CLIENT-SECRET]] [-t|--2fa [2FA]]
 ```
+
+Aktivera Adobe IMS-modulen.
+
 
 ### `--organization-id`, `-o`
 
@@ -437,7 +502,7 @@ Kontrollera om 2FA är aktiverat för Organisation i Adobe Admin Console. Krävs
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -486,15 +551,16 @@ Ställ inga interaktiva frågor
 
 ## `admin:adobe-ims:info`
 
-Information om Adobe IMS-modulkonfiguration
-
 ```bash
 bin/magento admin:adobe-ims:info
 ```
 
+Information om Adobe IMS-modulkonfiguration
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -543,15 +609,16 @@ Ställ inga interaktiva frågor
 
 ## `admin:adobe-ims:status`
 
-Status för Adobe IMS-modul
-
 ```bash
 bin/magento admin:adobe-ims:status
 ```
 
+Status för Adobe IMS-modul
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -600,11 +667,12 @@ Ställ inga interaktiva frågor
 
 ## `admin:user:create`
 
-Skapar en administratör
-
 ```bash
 bin/magento admin:user:create [--admin-user ADMIN-USER] [--admin-password ADMIN-PASSWORD] [--admin-email ADMIN-EMAIL] [--admin-firstname ADMIN-FIRSTNAME] [--admin-lastname ADMIN-LASTNAME] [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+Skapar en administratör
+
 
 ### `--admin-user`
 
@@ -644,7 +712,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -693,10 +761,17 @@ Ställ inga interaktiva frågor
 
 ## `admin:user:unlock`
 
-Lås upp administratörskonto
-
 ```bash
 bin/magento admin:user:unlock <username>
+```
+
+Lås upp administratörskonto
+
+
+```
+This command unlocks an admin account by its username.
+To unlock:
+      bin/magento admin:user:unlock username
 ```
 
 
@@ -708,7 +783,7 @@ Administratörens användarnamn som ska låsas upp
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -757,11 +832,12 @@ Ställ inga interaktiva frågor
 
 ## `app:config:dump`
 
-Skapa programdump
-
 ```bash
 bin/magento app:config:dump [<config-types>...]
 ```
+
+Skapa programdump
+
 
 
 ### `config-types`
@@ -774,7 +850,7 @@ Blankstegsavgränsad lista med konfigurationstyper eller utelämna att dumpa all
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -823,15 +899,16 @@ Ställ inga interaktiva frågor
 
 ## `app:config:import`
 
-Importera data från delade konfigurationsfiler till lämplig datalagring
-
 ```bash
 bin/magento app:config:import
 ```
 
+Importera data från delade konfigurationsfiler till lämplig datalagring
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -880,15 +957,16 @@ Ställ inga interaktiva frågor
 
 ## `app:config:status`
 
-Kontrollerar om konfigurationsspridning kräver uppdatering
-
 ```bash
 bin/magento app:config:status
 ```
 
+Kontrollerar om konfigurationsspridning kräver uppdatering
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -937,11 +1015,12 @@ Ställ inga interaktiva frågor
 
 ## `braintree:migrate`
 
-Migrera lagrade kort från en Magento 1-databas
-
 ```bash
 bin/magento braintree:migrate [--host HOST] [--dbname DBNAME] [--username USERNAME] [--password PASSWORD]
 ```
+
+Migrera lagrade kort från en Magento 1-databas
+
 
 ### `--host`
 
@@ -969,7 +1048,7 @@ Lösenord
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1018,11 +1097,12 @@ Ställ inga interaktiva frågor
 
 ## `cache:clean`
 
-Rensar cachetyper
-
 ```bash
 bin/magento cache:clean [--bootstrap BOOTSTRAP] [--] [<types>...]
 ```
+
+Rensar cachetyper
+
 
 
 ### `types`
@@ -1041,7 +1121,7 @@ lägga till eller åsidosätta parametrar för bootstrap
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1090,11 +1170,12 @@ Ställ inga interaktiva frågor
 
 ## `cache:disable`
 
-Inaktiverar cachetyp(er)
-
 ```bash
 bin/magento cache:disable [--bootstrap BOOTSTRAP] [--] [<types>...]
 ```
+
+Inaktiverar cachetyp(er)
+
 
 
 ### `types`
@@ -1113,7 +1194,7 @@ lägga till eller åsidosätta parametrar för bootstrap
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1162,11 +1243,12 @@ Ställ inga interaktiva frågor
 
 ## `cache:enable`
 
-Aktiverar cachetyp(er)
-
 ```bash
 bin/magento cache:enable [--bootstrap BOOTSTRAP] [--] [<types>...]
 ```
+
+Aktiverar cachetyp(er)
+
 
 
 ### `types`
@@ -1185,7 +1267,7 @@ lägga till eller åsidosätta parametrar för bootstrap
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1234,11 +1316,12 @@ Ställ inga interaktiva frågor
 
 ## `cache:flush`
 
-Tömmer cache-lagring som används av cachetyper
-
 ```bash
 bin/magento cache:flush [--bootstrap BOOTSTRAP] [--] [<types>...]
 ```
+
+Tömmer cache-lagring som används av cachetyper
+
 
 
 ### `types`
@@ -1257,7 +1340,7 @@ lägga till eller åsidosätta parametrar för bootstrap
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1306,11 +1389,12 @@ Ställ inga interaktiva frågor
 
 ## `cache:status`
 
-Kontrollerar cachestatus
-
 ```bash
 bin/magento cache:status [--bootstrap BOOTSTRAP]
 ```
+
+Kontrollerar cachestatus
+
 
 ### `--bootstrap`
 
@@ -1320,7 +1404,7 @@ lägga till eller åsidosätta parametrar för bootstrap
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1369,11 +1453,12 @@ Ställ inga interaktiva frågor
 
 ## `catalog:images:resize`
 
-Skapar storleksändrade produktbilder
-
 ```bash
 bin/magento catalog:images:resize [-a|--async] [--skip_hidden_images]
 ```
+
+Skapar storleksändrade produktbilder
+
 
 ### `--async`, `-a`
 
@@ -1391,7 +1476,7 @@ Bearbeta inte bilder som markerats som dolda från produktsidan
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1440,15 +1525,16 @@ Ställ inga interaktiva frågor
 
 ## `catalog:product:attributes:cleanup`
 
-Tar bort oanvända produktattribut.
-
 ```bash
 bin/magento catalog:product:attributes:cleanup
 ```
 
+Tar bort oanvända produktattribut.
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1497,11 +1583,12 @@ Ställ inga interaktiva frågor
 
 ## `cms:wysiwyg:restrict`
 
-Ange om innehållsvalidering från HTML ska framtvingas eller om en varning ska visas i stället
-
 ```bash
 bin/magento cms:wysiwyg:restrict <restrict>
 ```
+
+Ange om innehållsvalidering från HTML ska framtvingas eller om en varning ska visas i stället
+
 
 
 ### `restrict`
@@ -1512,7 +1599,7 @@ y\n
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1561,11 +1648,12 @@ Ställ inga interaktiva frågor
 
 ## `config:sensitive:set`
 
-Ange känsliga konfigurationsvärden
-
 ```bash
 bin/magento config:sensitive:set [-i|--interactive] [--scope [SCOPE]] [--scope-code [SCOPE-CODE]] [--] [<path> [<value>]]
 ```
+
+Ange känsliga konfigurationsvärden
+
 
 
 ### `path`
@@ -1601,7 +1689,7 @@ Omfångskod för konfiguration, tom sträng som standard
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1650,11 +1738,12 @@ Ställ inga interaktiva frågor
 
 ## `config:set`
 
-Ändra systemkonfiguration
-
 ```bash
 bin/magento config:set [--scope SCOPE] [--scope-code SCOPE-CODE] [-e|--lock-env] [-c|--lock-config] [-l|--lock] [--] <path> <value>
 ```
+
+Ändra systemkonfiguration
+
 
 
 ### `path`
@@ -1705,7 +1794,7 @@ Inaktuellt använder du alternativet —lock-env i stället.
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1754,11 +1843,12 @@ Ställ inga interaktiva frågor
 
 ## `config:show`
 
-Visar konfigurationsvärde för angiven sökväg. Om ingen sökväg anges visas alla sparade värden
-
 ```bash
 bin/magento config:show [--scope [SCOPE]] [--scope-code [SCOPE-CODE]] [--] [<path>]
 ```
+
+Visar konfigurationsvärde för angiven sökväg. Om ingen sökväg anges visas alla sparade värden
+
 
 
 ### `path`
@@ -1782,7 +1872,7 @@ Omfångskod (krävs endast om omfånget inte är det `default`)
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1831,11 +1921,12 @@ Ställ inga interaktiva frågor
 
 ## `cron:install`
 
-Skapar och installerar crontab för aktuell användare
-
 ```bash
 bin/magento cron:install [-f|--force] [-d|--non-optional]
 ```
+
+Skapar och installerar crontab för aktuell användare
+
 
 ### `--force`, `-f`
 
@@ -1853,7 +1944,7 @@ Installera endast icke-valfria (standard) uppgifter
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1902,15 +1993,16 @@ Ställ inga interaktiva frågor
 
 ## `cron:remove`
 
-Tar bort uppgifter från crontab
-
 ```bash
 bin/magento cron:remove
 ```
 
+Tar bort uppgifter från crontab
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1959,11 +2051,12 @@ Ställ inga interaktiva frågor
 
 ## `cron:run`
 
-Kör jobb enligt schema
-
 ```bash
 bin/magento cron:run [--group GROUP] [--exclude-group [EXCLUDE-GROUP]] [--bootstrap BOOTSTRAP]
 ```
+
+Kör jobb enligt schema
+
 
 ### `--group`
 
@@ -1986,7 +2079,7 @@ Lägga till eller åsidosätta parametrar för bootstrap
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2035,15 +2128,16 @@ Ställ inga interaktiva frågor
 
 ## `customer:hash:upgrade`
 
-Uppgradera kundens hash enligt den senaste algoritmen
-
 ```bash
 bin/magento customer:hash:upgrade
 ```
 
+Uppgradera kundens hash enligt den senaste algoritmen
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2092,11 +2186,12 @@ Ställ inga interaktiva frågor
 
 ## `deploy:mode:set`
 
-Ange programläge.
-
 ```bash
 bin/magento deploy:mode:set [-s|--skip-compilation] [--] <mode>
 ```
+
+Ange programläge.
+
 
 
 ### `mode`
@@ -2114,7 +2209,7 @@ Hoppar över rensning och omgenerering av statiskt innehåll (genererad kod, fö
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2163,15 +2258,16 @@ Ställ inga interaktiva frågor
 
 ## `deploy:mode:show`
 
-Visar det aktuella programläget.
-
 ```bash
 bin/magento deploy:mode:show
 ```
 
+Visar det aktuella programläget.
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2220,11 +2316,12 @@ Ställ inga interaktiva frågor
 
 ## `dev:di:info`
 
-Anger information om konfigurationen för beroendeinmatning för kommandot.
-
 ```bash
 bin/magento dev:di:info <class>
 ```
+
+Anger information om konfigurationen för beroendeinmatning för kommandot.
+
 
 
 ### `class`
@@ -2235,7 +2332,7 @@ Klassnamn
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2284,15 +2381,16 @@ Ställ inga interaktiva frågor
 
 ## `dev:email:newsletter-compatibility-check`
 
-Skannar nyhetsbrevmallar för potentiella kompatibilitetsproblem med variabel användning
-
 ```bash
 bin/magento dev:email:newsletter-compatibility-check
 ```
 
+Skannar nyhetsbrevmallar för potentiella kompatibilitetsproblem med variabel användning
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2341,15 +2439,16 @@ Ställ inga interaktiva frågor
 
 ## `dev:email:override-compatibility-check`
 
-Söker igenom e-postmallåsidosättningar för eventuella kompatibilitetsproblem med variabel användning
-
 ```bash
 bin/magento dev:email:override-compatibility-check
 ```
 
+Söker igenom e-postmallåsidosättningar för eventuella kompatibilitetsproblem med variabel användning
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2398,15 +2497,16 @@ Ställ inga interaktiva frågor
 
 ## `dev:profiler:disable`
 
-Inaktivera profileraren.
-
 ```bash
 bin/magento dev:profiler:disable
 ```
 
+Inaktivera profileraren.
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2455,11 +2555,12 @@ Ställ inga interaktiva frågor
 
 ## `dev:profiler:enable`
 
-Aktivera profileraren.
-
 ```bash
 bin/magento dev:profiler:enable [<type>]
 ```
+
+Aktivera profileraren.
+
 
 
 ### `type`
@@ -2469,7 +2570,7 @@ Profilerartyp
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2518,15 +2619,16 @@ Ställ inga interaktiva frågor
 
 ## `dev:query-log:disable`
 
-Inaktivera loggning av databasfrågor
-
 ```bash
 bin/magento dev:query-log:disable
 ```
 
+Inaktivera loggning av databasfrågor
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2575,11 +2677,12 @@ Ställ inga interaktiva frågor
 
 ## `dev:query-log:enable`
 
-Aktivera loggning av databasfrågor
-
 ```bash
 bin/magento dev:query-log:enable [--include-all-queries [INCLUDE-ALL-QUERIES]] [--query-time-threshold [QUERY-TIME-THRESHOLD]] [--include-call-stack [INCLUDE-CALL-STACK]]
 ```
+
+Aktivera loggning av databasfrågor
+
 
 ### `--include-all-queries`
 
@@ -2604,7 +2707,7 @@ Inkludera anropsstacken. [true\|false]
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2653,11 +2756,12 @@ Ställ inga interaktiva frågor
 
 ## `dev:source-theme:deploy`
 
-Samlar in och publicerar källfiler för temat.
-
 ```bash
 bin/magento dev:source-theme:deploy [--type TYPE] [--locale LOCALE] [--area AREA] [--theme THEME] [--] [<file>...]
 ```
+
+Samlar in och publicerar källfiler för temat.
+
 
 
 ### `file`
@@ -2698,7 +2802,7 @@ Tema: [Leverantör/tema]
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2747,15 +2851,16 @@ Ställ inga interaktiva frågor
 
 ## `dev:template-hints:disable`
 
-Inaktivera malltips för frontend. En cachetömning kan behövas.
-
 ```bash
 bin/magento dev:template-hints:disable
 ```
 
+Inaktivera malltips för frontend. En cachetömning kan behövas.
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2804,15 +2909,16 @@ Ställ inga interaktiva frågor
 
 ## `dev:template-hints:enable`
 
-Aktivera malltips för frontend. En cachetömning kan behövas.
-
 ```bash
 bin/magento dev:template-hints:enable
 ```
 
+Aktivera malltips för frontend. En cachetömning kan behövas.
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2861,15 +2967,16 @@ Ställ inga interaktiva frågor
 
 ## `dev:template-hints:status`
 
-Visa status för malltips för förgreningstips.
-
 ```bash
 bin/magento dev:template-hints:status
 ```
 
+Visa status för malltips för förgreningstips.
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2918,11 +3025,12 @@ Ställ inga interaktiva frågor
 
 ## `dev:tests:run`
 
-Kör tester
-
 ```bash
 bin/magento dev:tests:run [-c|--arguments ARGUMENTS] [--] [<type>]
 ```
+
+Kör tester
+
 
 
 ### `type`
@@ -2941,7 +3049,7 @@ Ytterligare argument för PHPUnit. Exempel: &quot;-c&quot;—filter=MyTest&quot;
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2990,11 +3098,12 @@ Ställ inga interaktiva frågor
 
 ## `dev:urn-catalog:generate`
 
-Skapar katalogen med URN:er till *.xsd-mappningar så att XML markeras.
-
 ```bash
 bin/magento dev:urn-catalog:generate [--ide IDE] [--] <path>
 ```
+
+Skapar katalogen med URN:er till *.xsd-mappningar så att XML markeras.
+
 
 
 ### `path`
@@ -3012,7 +3121,7 @@ Formatet som katalogen ska skapas i. Stöds: [oväder, vscode]
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3061,11 +3170,12 @@ Ställ inga interaktiva frågor
 
 ## `dev:xml:convert`
 
-Konverterar XML-fil med XSL-formatmallar
-
 ```bash
 bin/magento dev:xml:convert [-o|--overwrite] [--] <xml-file> <processor>
 ```
+
+Konverterar XML-fil med XSL-formatmallar
+
 
 
 ### `xml-file`
@@ -3089,7 +3199,7 @@ Skriv över XML-fil
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3138,11 +3248,12 @@ Ställ inga interaktiva frågor
 
 ## `downloadable:domains:add`
 
-Lägg till domäner i vitlistan över nedladdningsbara domäner
-
 ```bash
 bin/magento downloadable:domains:add [<domains>...]
 ```
+
+Lägg till domäner i vitlistan över nedladdningsbara domäner
+
 
 
 ### `domains`
@@ -3155,7 +3266,7 @@ Domännamn
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3204,11 +3315,12 @@ Ställ inga interaktiva frågor
 
 ## `downloadable:domains:remove`
 
-Ta bort domäner från vitlistan över nedladdningsbara domäner
-
 ```bash
 bin/magento downloadable:domains:remove [<domains>...]
 ```
+
+Ta bort domäner från vitlistan över nedladdningsbara domäner
+
 
 
 ### `domains`
@@ -3221,7 +3333,7 @@ Domännamn
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3270,15 +3382,16 @@ Ställ inga interaktiva frågor
 
 ## `downloadable:domains:show`
 
-Visa lista över nedladdningsbara domäner
-
 ```bash
 bin/magento downloadable:domains:show
 ```
 
+Visa lista över nedladdningsbara domäner
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3327,15 +3440,16 @@ Ställ inga interaktiva frågor
 
 ## `encryption:payment-data:update`
 
-Återkrypterar krypterade kreditkortsdata med det senaste krypteringschiffret.
-
 ```bash
 bin/magento encryption:payment-data:update
 ```
 
+Återkrypterar krypterade kreditkortsdata med det senaste krypteringschiffret.
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3384,16 +3498,12 @@ Ställ inga interaktiva frågor
 
 ## `events:create-event-provider`
 
+```bash
+bin/magento events:create-event-provider [--label [LABEL]] [--description [DESCRIPTION]]events:provider:create 
+```
+
 Skapa en anpassad händelseprovider i Adobe I/O Events för den här instansen. Om du inte anger alternativ för etikett och beskrivning måste de definieras i systemets app/etc/event-types.json.
 
-```bash
-bin/magento events:create-event-provider [--label [LABEL]] [--description [DESCRIPTION]]
-```
-
-
-```bash
-bin/magento events:provider:create 
-```
 
 ### `--label`
 
@@ -3409,7 +3519,7 @@ En beskrivning av din leverantör.
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3458,15 +3568,16 @@ Ställ inga interaktiva frågor
 
 ## `events:generate:module`
 
-Generera modul baserat på plugin-programlista
-
 ```bash
 bin/magento events:generate:module
 ```
 
+Generera modul baserat på plugin-programlista
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3515,11 +3626,12 @@ Ställ inga interaktiva frågor
 
 ## `events:info`
 
-Returnerar nyttolasten för den angivna händelsen.
-
 ```bash
 bin/magento events:info [--depth [DEPTH]] [--] <event-code>
 ```
+
+Returnerar nyttolasten för den angivna händelsen.
+
 
 
 ### `event-code`
@@ -3537,7 +3649,7 @@ Antalet nivåer i händelsens nyttolast som ska returneras
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3586,15 +3698,16 @@ Ställ inga interaktiva frågor
 
 ## `events:list`
 
-Visar en lista över prenumererade händelser
-
 ```bash
 bin/magento events:list
 ```
 
+Visar en lista över prenumererade händelser
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3643,11 +3756,12 @@ Ställ inga interaktiva frågor
 
 ## `events:list:all`
 
-Returnerar en lista med prenumererbara händelser som definieras i den angivna modulen
-
 ```bash
 bin/magento events:list:all <module_name>
 ```
+
+Returnerar en lista med prenumererbara händelser som definieras i den angivna modulen
+
 
 
 ### `module_name`
@@ -3658,7 +3772,7 @@ Modulnamn
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3707,15 +3821,16 @@ Ställ inga interaktiva frågor
 
 ## `events:metadata:populate`
 
-Skapar metadata i Adobe I/O från konfigurationslistan (XML och programkonfigurationer)
-
 ```bash
 bin/magento events:metadata:populate
 ```
 
+Skapar metadata i Adobe I/O från konfigurationslistan (XML och programkonfigurationer)
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3764,15 +3879,16 @@ Ställ inga interaktiva frågor
 
 ## `events:provider:info`
 
-Returnerar information om den konfigurerade händelseprovidern
-
 ```bash
 bin/magento events:provider:info
 ```
 
+Returnerar information om den konfigurerade händelseprovidern
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3821,15 +3937,16 @@ Ställ inga interaktiva frågor
 
 ## `events:registrations:list`
 
-Visar händelseregistreringar i ditt App Builder-projekt
-
 ```bash
 bin/magento events:registrations:list
 ```
 
+Visar händelseregistreringar i ditt App Builder-projekt
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3878,11 +3995,12 @@ Ställ inga interaktiva frågor
 
 ## `events:subscribe`
 
-Prenumererar på evenemanget
-
 ```bash
 bin/magento events:subscribe [-f|--force] [--fields FIELDS] [--parent PARENT] [--rules RULES] [-p|--priority] [-d|--destination DESTINATION] [--] <event-code>
 ```
+
+Prenumererar på evenemanget
+
 
 
 ### `event-code`
@@ -3934,7 +4052,7 @@ Målet för den här händelsen. Ange det här alternativet för händelser som 
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3983,11 +4101,12 @@ Ställ inga interaktiva frågor
 
 ## `events:sync-events-metadata`
 
-Synkronisera händelsemetadata för instansen
-
 ```bash
 bin/magento events:sync-events-metadata [-d|--delete]
 ```
+
+Synkronisera händelsemetadata för instansen
+
 
 ### `--delete`, `-d`
 
@@ -3998,7 +4117,7 @@ Ta bort metadata för händelser som inte längre behövs
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4047,11 +4166,12 @@ Ställ inga interaktiva frågor
 
 ## `events:unsubscribe`
 
-Tar bort prenumerationen på den angivna händelsen
-
 ```bash
 bin/magento events:unsubscribe <event-code>
 ```
+
+Tar bort prenumerationen på den angivna händelsen
+
 
 
 ### `event-code`
@@ -4062,7 +4182,7 @@ Händelsekod att avbryta prenumerationen på
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4111,11 +4231,12 @@ Ställ inga interaktiva frågor
 
 ## `i18n:collect-phrases`
 
-Upptäcker fraser i kodbasen
-
 ```bash
 bin/magento i18n:collect-phrases [-o|--output OUTPUT] [-m|--magento] [--] [<directory>]
 ```
+
+Upptäcker fraser i kodbasen
+
 
 
 ### `directory`
@@ -4138,7 +4259,7 @@ Använd parametern —magento för att tolka den aktuella Magento-kodbasen. Utel
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4187,11 +4308,12 @@ Ställ inga interaktiva frågor
 
 ## `i18n:pack`
 
-Sparar språkpaket
-
 ```bash
 bin/magento i18n:pack [-m|--mode MODE] [-d|--allow-duplicates] [--] <source> <locale>
 ```
+
+Sparar språkpaket
+
 
 
 ### `source`
@@ -4222,7 +4344,7 @@ Använd parametern —allow-duplicates för att tillåta att dubbletter av trans
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4271,11 +4393,12 @@ Ställ inga interaktiva frågor
 
 ## `i18n:uninstall`
 
-Avinstallerar språkpaket
-
 ```bash
 bin/magento i18n:uninstall [-b|--backup-code] [--] <package>...
 ```
+
+Avinstallerar språkpaket
+
 
 
 ### `package`
@@ -4296,7 +4419,7 @@ Säkerhetskopiera kod och konfigurationsfiler (förutom temporära filer)
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4345,15 +4468,16 @@ Ställ inga interaktiva frågor
 
 ## `indexer:info`
 
-Visar tillåtna indexerare
-
 ```bash
 bin/magento indexer:info
 ```
 
+Visar tillåtna indexerare
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4402,11 +4526,12 @@ Ställ inga interaktiva frågor
 
 ## `indexer:reindex`
 
-Indexerar om data
-
 ```bash
 bin/magento indexer:reindex [<index>...]
 ```
+
+Indexerar om data
+
 
 
 ### `index`
@@ -4419,7 +4544,7 @@ Blankstegsavgränsad lista med indextyper eller utelämna detta för alla index.
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4468,11 +4593,12 @@ Ställ inga interaktiva frågor
 
 ## `indexer:reset`
 
-Återställer indexerarstatus till ogiltig
-
 ```bash
 bin/magento indexer:reset [<index>...]
 ```
+
+Återställer indexerarstatus till ogiltig
+
 
 
 ### `index`
@@ -4485,7 +4611,7 @@ Blankstegsavgränsad lista med indextyper eller utelämna detta för alla index.
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4534,11 +4660,12 @@ Ställ inga interaktiva frågor
 
 ## `indexer:set-dimensions-mode`
 
-Ange indexeringsläge för Dimensioner
-
 ```bash
 bin/magento indexer:set-dimensions-mode [<indexer> [<mode>]]
 ```
+
+Ange indexeringsläge för Dimensioner
+
 
 
 ### `indexer`
@@ -4553,7 +4680,7 @@ Dimensionslägena katalog_product_price none,webbplats,kundgrupp,webbplats_och_k
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4602,11 +4729,12 @@ Ställ inga interaktiva frågor
 
 ## `indexer:set-mode`
 
-Anger typ av indexläge
-
 ```bash
 bin/magento indexer:set-mode [<mode> [<index>...]]
 ```
+
+Anger typ av indexläge
+
 
 
 ### `mode`
@@ -4624,7 +4752,7 @@ Blankstegsavgränsad lista med indextyper eller utelämna detta för alla index.
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4673,11 +4801,12 @@ Ställ inga interaktiva frågor
 
 ## `indexer:set-status`
 
-Anger angiven indexerarstatus
-
 ```bash
 bin/magento indexer:set-status <status> [<index>...]
 ```
+
+Anger angiven indexerarstatus
+
 
 
 ### `status`
@@ -4696,7 +4825,7 @@ Blankstegsavgränsad lista med indextyper eller utelämna detta för alla index.
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4745,11 +4874,12 @@ Ställ inga interaktiva frågor
 
 ## `indexer:show-dimensions-mode`
 
-Visar indexerarens Dimension
-
 ```bash
 bin/magento indexer:show-dimensions-mode [<indexer>...]
 ```
+
+Visar indexerarens Dimension
+
 
 
 ### `indexer`
@@ -4762,7 +4892,7 @@ Blankstegsavgränsad lista med indextyper eller utelämna den för alla index (c
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4811,11 +4941,12 @@ Ställ inga interaktiva frågor
 
 ## `indexer:show-mode`
 
-Visar indexläge
-
 ```bash
 bin/magento indexer:show-mode [<index>...]
 ```
+
+Visar indexläge
+
 
 
 ### `index`
@@ -4828,7 +4959,7 @@ Blankstegsavgränsad lista med indextyper eller utelämna detta för alla index.
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4877,11 +5008,12 @@ Ställ inga interaktiva frågor
 
 ## `indexer:status`
 
-Visar indexerarens status
-
 ```bash
 bin/magento indexer:status [<index>...]
 ```
+
+Visar indexerarens status
+
 
 
 ### `index`
@@ -4894,7 +5026,7 @@ Blankstegsavgränsad lista med indextyper eller utelämna detta för alla index.
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4943,15 +5075,16 @@ Ställ inga interaktiva frågor
 
 ## `info:adminuri`
 
-Visar Magento Admin URI
-
 ```bash
 bin/magento info:adminuri
 ```
 
+Visar Magento Admin URI
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5000,15 +5133,16 @@ Ställ inga interaktiva frågor
 
 ## `info:backups:list`
 
-Skriver ut lista över tillgängliga säkerhetskopior
-
 ```bash
 bin/magento info:backups:list
 ```
 
+Skriver ut lista över tillgängliga säkerhetskopior
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5057,15 +5191,16 @@ Ställ inga interaktiva frågor
 
 ## `info:currency:list`
 
-Visar listan över tillgängliga valutor
-
 ```bash
 bin/magento info:currency:list
 ```
 
+Visar listan över tillgängliga valutor
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5114,11 +5249,12 @@ Ställ inga interaktiva frågor
 
 ## `info:dependencies:show-framework`
 
-Visar antalet beroenden till Magento-ramverket
-
 ```bash
 bin/magento info:dependencies:show-framework [-o|--output OUTPUT]
 ```
+
+Visar antalet beroenden till Magento-ramverket
+
 
 ### `--output`, `-o`
 
@@ -5129,7 +5265,7 @@ Rapportfilnamn
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5178,11 +5314,12 @@ Ställ inga interaktiva frågor
 
 ## `info:dependencies:show-modules`
 
-Visar antalet beroenden mellan moduler
-
 ```bash
 bin/magento info:dependencies:show-modules [-o|--output OUTPUT]
 ```
+
+Visar antalet beroenden mellan moduler
+
 
 ### `--output`, `-o`
 
@@ -5193,7 +5330,7 @@ Rapportfilnamn
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5242,11 +5379,12 @@ Ställ inga interaktiva frågor
 
 ## `info:dependencies:show-modules-circular`
 
-Visar antalet cirkulära beroenden mellan moduler
-
 ```bash
 bin/magento info:dependencies:show-modules-circular [-o|--output OUTPUT]
 ```
+
+Visar antalet cirkulära beroenden mellan moduler
+
 
 ### `--output`, `-o`
 
@@ -5257,7 +5395,7 @@ Rapportfilnamn
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5306,15 +5444,16 @@ Ställ inga interaktiva frågor
 
 ## `info:language:list`
 
-Visar en lista över tillgängliga språkområden
-
 ```bash
 bin/magento info:language:list
 ```
 
+Visar en lista över tillgängliga språkområden
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5363,15 +5502,16 @@ Ställ inga interaktiva frågor
 
 ## `info:timezone:list`
 
-Visar listan över tillgängliga tidszoner
-
 ```bash
 bin/magento info:timezone:list
 ```
 
+Visar listan över tillgängliga tidszoner
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5420,16 +5560,17 @@ Ställ inga interaktiva frågor
 
 ## `inventory:reservation:create-compensations`
 
-Skapa reservationer med angivna kompensationsargument
-
 ```bash
 bin/magento inventory:reservation:create-compensations [-r|--raw] [--] [<compensations>...]
 ```
 
+Skapa reservationer med angivna kompensationsargument
+
+
 
 ### `compensations`
 
-Lista över ersättningsargument i formatet &quot;\&lt;order_increment_id>:\&lt;sku>:\&lt;quantity>:\&lt;stock-id>&quot;
+Lista med kompensationsargument i formatet &quot;::::&quot;
 
 - Standard: `[]`
 
@@ -5444,7 +5585,7 @@ Råutdata
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5493,11 +5634,12 @@ Ställ inga interaktiva frågor
 
 ## `inventory:reservation:list-inconsistencies`
 
-Visa alla order och produkter med inkonsekvenser i försäljningsbar kvantitet
-
 ```bash
 bin/magento inventory:reservation:list-inconsistencies [-c|--complete-orders] [-i|--incomplete-orders] [-b|--bunch-size [BUNCH-SIZE]] [-r|--raw]
 ```
+
+Visa alla order och produkter med inkonsekvenser i försäljningsbar kvantitet
+
 
 ### `--complete-orders`, `-c`
 
@@ -5529,7 +5671,7 @@ Råutdata
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5578,11 +5720,12 @@ Ställ inga interaktiva frågor
 
 ## `inventory-geonames:import`
 
-Hämta och importera geonamn för källvalsalgoritm
-
 ```bash
 bin/magento inventory-geonames:import <countries>...
 ```
+
+Hämta och importera geonamn för källvalsalgoritm
+
 
 
 ### `countries`
@@ -5596,7 +5739,7 @@ Lista över landskoder som ska importeras
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5645,11 +5788,12 @@ Ställ inga interaktiva frågor
 
 ## `maintenance:allow-ips`
 
-Anger undantagna IP-adresser i underhållsläge
-
 ```bash
 bin/magento maintenance:allow-ips [--none] [--add] [--magento-init-params MAGENTO-INIT-PARAMS] [--] [<ip>...]
 ```
+
+Anger undantagna IP-adresser i underhållsläge
+
 
 
 ### `ip`
@@ -5682,7 +5826,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5731,11 +5875,12 @@ Ställ inga interaktiva frågor
 
 ## `maintenance:disable`
 
-Inaktiverar underhållsläge
-
 ```bash
 bin/magento maintenance:disable [--ip IP] [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+Inaktiverar underhållsläge
+
 
 ### `--ip`
 
@@ -5752,7 +5897,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5801,11 +5946,12 @@ Ställ inga interaktiva frågor
 
 ## `maintenance:enable`
 
-Aktiverar underhållsläge
-
 ```bash
 bin/magento maintenance:enable [--ip IP] [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+Aktiverar underhållsläge
+
 
 ### `--ip`
 
@@ -5822,7 +5968,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5871,11 +6017,12 @@ Ställ inga interaktiva frågor
 
 ## `maintenance:status`
 
-Visar status för underhållsläge
-
 ```bash
 bin/magento maintenance:status [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+Visar status för underhållsläge
+
 
 ### `--magento-init-params`
 
@@ -5885,7 +6032,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5934,15 +6081,16 @@ Ställ inga interaktiva frågor
 
 ## `media-content:sync`
 
-Synkronisera innehåll med resurser
-
 ```bash
 bin/magento media-content:sync
 ```
 
+Synkronisera innehåll med resurser
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5991,15 +6139,16 @@ Ställ inga interaktiva frågor
 
 ## `media-gallery:sync`
 
-Synkronisera medielagring och medieresurser i databasen
-
 ```bash
 bin/magento media-gallery:sync
 ```
 
+Synkronisera medielagring och medieresurser i databasen
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6048,15 +6197,16 @@ Ställ inga interaktiva frågor
 
 ## `module:config:status`
 
-Kontrollerar modulkonfigurationen i filen app/etc/config.php och rapporterar om den är uppdaterad eller inte
-
 ```bash
 bin/magento module:config:status
 ```
 
+Kontrollerar modulkonfigurationen i filen app/etc/config.php och rapporterar om den är uppdaterad eller inte
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6105,11 +6255,12 @@ Ställ inga interaktiva frågor
 
 ## `module:disable`
 
-Inaktiverar angivna moduler
-
 ```bash
 bin/magento module:disable [-f|--force] [--all] [-c|--clear-static-content] [--magento-init-params MAGENTO-INIT-PARAMS] [--] [<module>...]
 ```
+
+Inaktiverar angivna moduler
+
 
 
 ### `module`
@@ -6149,7 +6300,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6198,11 +6349,12 @@ Ställ inga interaktiva frågor
 
 ## `module:enable`
 
-Aktiverar angivna moduler
-
 ```bash
 bin/magento module:enable [-f|--force] [--all] [-c|--clear-static-content] [--magento-init-params MAGENTO-INIT-PARAMS] [--] [<module>...]
 ```
+
+Aktiverar angivna moduler
+
 
 
 ### `module`
@@ -6242,7 +6394,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6291,11 +6443,12 @@ Ställ inga interaktiva frågor
 
 ## `module:status`
 
-Visar status för moduler
-
 ```bash
 bin/magento module:status [--enabled] [--disabled] [--magento-init-params MAGENTO-INIT-PARAMS] [--] [<module-names>...]
 ```
+
+Visar status för moduler
+
 
 
 ### `module-names`
@@ -6328,7 +6481,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6377,11 +6530,12 @@ Ställ inga interaktiva frågor
 
 ## `module:uninstall`
 
-Avinstallerar moduler som installerats av disposition
-
 ```bash
 bin/magento module:uninstall [-r|--remove-data] [--backup-code] [--backup-media] [--backup-db] [--non-composer] [-c|--clear-static-content] [--magento-init-params MAGENTO-INIT-PARAMS] [--] <module>...
 ```
+
+Avinstallerar moduler som installerats av disposition
+
 
 
 ### `module`
@@ -6443,7 +6597,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6492,11 +6646,12 @@ Ställ inga interaktiva frågor
 
 ## `newrelic:create:deploy-marker`
 
-Kontrollera om det finns poster i distributionskön och skapa en lämplig distributionsmarkör.
-
 ```bash
 bin/magento newrelic:create:deploy-marker <message> <change_log> [<user> [<revision>]]
 ```
+
+Kontrollera om det finns poster i distributionskön och skapa en lämplig distributionsmarkör.
+
 
 
 ### `message`
@@ -6523,7 +6678,7 @@ Revision
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6572,15 +6727,20 @@ Ställ inga interaktiva frågor
 
 ## `queue:consumers:list`
 
-Lista över MessageQueue-användare
-
 ```bash
 bin/magento queue:consumers:list
 ```
 
+Lista över MessageQueue-användare
+
+
+```
+This command shows list of MessageQueue consumers.
+```
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6629,15 +6789,20 @@ Ställ inga interaktiva frågor
 
 ## `queue:consumers:restart`
 
-Starta om MessageQueue-användare
-
 ```bash
 bin/magento queue:consumers:restart
 ```
 
+Starta om MessageQueue-användare
+
+
+```
+Command put poison pill for MessageQueue consumers and force to restart them after next status check.
+```
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6686,10 +6851,43 @@ Ställ inga interaktiva frågor
 
 ## `queue:consumers:start`
 
-Starta MessageQueue-konsument
-
 ```bash
 bin/magento queue:consumers:start [--max-messages MAX-MESSAGES] [--batch-size BATCH-SIZE] [--area-code AREA-CODE] [--single-thread] [--multi-process [MULTI-PROCESS]] [--pid-file-path PID-FILE-PATH] [--] <consumer>
+```
+
+Starta MessageQueue-konsument
+
+
+```
+This command starts MessageQueue consumer by its name.
+
+To start consumer which will process all queued messages and terminate execution:
+
+    bin/magento queue:consumers:start someConsumer
+
+To specify the number of messages which should be processed by consumer before its termination:
+
+    bin/magento queue:consumers:start someConsumer --max-messages=50
+
+To specify the number of messages per batch for the batch consumer:
+
+    bin/magento queue:consumers:start someConsumer --batch-size=500
+
+To specify the preferred area:
+
+    bin/magento queue:consumers:start someConsumer --area-code='adminhtml'
+
+To do not run multiple copies of one consumer simultaneously:
+
+    bin/magento queue:consumers:start someConsumer --single-thread
+
+To save PID enter path (This option is deprecated, use --single-thread instead):
+
+    bin/magento queue:consumers:start someConsumer --pid-file-path='/var/someConsumer.pid'
+
+To define the number of processes per consumer:
+
+    bin/magento queue:consumers:start someConsumer --multi-process=4
 ```
 
 
@@ -6738,7 +6936,7 @@ Filsökvägen för att spara PID (det här alternativet är föråldrat, använd
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6787,15 +6985,16 @@ Ställ inga interaktiva frågor
 
 ## `remote-storage:sync`
 
-Synkronisera mediefiler med fjärrlagring.
-
 ```bash
 bin/magento remote-storage:sync
 ```
 
+Synkronisera mediefiler med fjärrlagring.
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6844,11 +7043,12 @@ Ställ inga interaktiva frågor
 
 ## `saas:resync`
 
-Synkroniserar om feed-data till SaaS-tjänsten.
-
 ```bash
 bin/magento saas:resync [--feed FEED] [--no-reindex] [--cleanup-feed] [--dry-run] [--thread-count THREAD-COUNT] [--batch-size BATCH-SIZE] [--continue-resync]
 ```
+
+Synkroniserar om feed-data till SaaS-tjänsten.
+
 
 ### `--feed`
 
@@ -6898,7 +7098,7 @@ Fortsätt omsynkronisera från den senast lagrade positionen (det här alternati
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -6947,11 +7147,12 @@ Ställ inga interaktiva frågor
 
 ## `sampledata:deploy`
 
-Distribuera exempeldatamoduler för dispositionsbaserade Magento-installationer
-
 ```bash
 bin/magento sampledata:deploy [--no-update]
 ```
+
+Distribuera exempeldatamoduler för dispositionsbaserade Magento-installationer
+
 
 ### `--no-update`
 
@@ -6962,7 +7163,7 @@ Uppdatera Composer.json utan att köra Composer-uppdatering
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7011,11 +7212,12 @@ Ställ inga interaktiva frågor
 
 ## `sampledata:remove`
 
-Ta bort alla exempeldatapaket från Composer.json
-
 ```bash
 bin/magento sampledata:remove [--no-update]
 ```
+
+Ta bort alla exempeldatapaket från Composer.json
+
 
 ### `--no-update`
 
@@ -7026,7 +7228,7 @@ Uppdatera Composer.json utan att köra Composer-uppdatering
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7075,15 +7277,16 @@ Ställ inga interaktiva frågor
 
 ## `sampledata:reset`
 
-Återställ alla exempeldatamoduler för ominstallation
-
 ```bash
 bin/magento sampledata:reset
 ```
 
+Återställ alla exempeldatamoduler för ominstallation
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7132,15 +7335,16 @@ Ställ inga interaktiva frågor
 
 ## `security:recaptcha:disable-for-user-forgot-password`
 
-Inaktivera reCAPTCHA för administratörsanvändaren har glömt lösenordsformuläret
-
 ```bash
 bin/magento security:recaptcha:disable-for-user-forgot-password
 ```
 
+Inaktivera reCAPTCHA för administratörsanvändaren har glömt lösenordsformuläret
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7189,15 +7393,16 @@ Ställ inga interaktiva frågor
 
 ## `security:recaptcha:disable-for-user-login`
 
-Inaktivera reCAPTCHA för inloggningsformulär för administratörer
-
 ```bash
 bin/magento security:recaptcha:disable-for-user-login
 ```
 
+Inaktivera reCAPTCHA för inloggningsformulär för administratörer
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7246,11 +7451,12 @@ Ställ inga interaktiva frågor
 
 ## `security:tfa:google:set-secret`
 
-Ange hemligheten som används för generering av engångslösenord i Google.
-
 ```bash
 bin/magento security:tfa:google:set-secret <user> <secret>
 ```
+
+Ange hemligheten som används för generering av engångslösenord i Google.
+
 
 
 ### `user`
@@ -7267,7 +7473,7 @@ Hemlighet
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7316,15 +7522,16 @@ Ställ inga interaktiva frågor
 
 ## `security:tfa:providers`
 
-Visa alla tillgängliga leverantörer
-
 ```bash
 bin/magento security:tfa:providers
 ```
 
+Visa alla tillgängliga leverantörer
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7373,11 +7580,12 @@ Ställ inga interaktiva frågor
 
 ## `security:tfa:reset`
 
-Återställ konfigurationen för en användare
-
 ```bash
 bin/magento security:tfa:reset <user> <provider>
 ```
+
+Återställ konfigurationen för en användare
+
 
 
 ### `user`
@@ -7394,7 +7602,7 @@ Providerkod
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7443,11 +7651,12 @@ Ställ inga interaktiva frågor
 
 ## `server:run`
 
-Kör programserver
-
 ```bash
 bin/magento server:run [-p|--port [PORT]] [-b|--background [BACKGROUND]] [-wn|--workerNum [WORKERNUM]] [-dm|--dispatchMode [DISPATCHMODE]] [-mr|--maxRequests [MAXREQUESTS]] [-a|--area [AREA]] [-mip|--magento-init-params [MAGENTO-INIT-PARAMS]] [-mwt|--maxWaitTime [MAXWAITTIME]] [--state-monitor]
 ```
+
+Kör programserver
+
 
 ### `--port`, `-p`
 
@@ -7514,7 +7723,7 @@ Aktivera tillståndsövervakning. Använd endast detta för felsökning av tills
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7563,15 +7772,16 @@ Ställ inga interaktiva frågor
 
 ## `server:state-monitor:aggregate-output`
 
-Sammanställa utdata från tillståndsövervakaren för ApplicationServer
-
 ```bash
 bin/magento server:state-monitor:aggregate-output
 ```
 
+Sammanställa utdata från tillståndsövervakaren för ApplicationServer
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7620,11 +7830,12 @@ Ställ inga interaktiva frågor
 
 ## `setup:backup`
 
-Säkerhetskopierar Magento programkodbas, media och databas
-
 ```bash
 bin/magento setup:backup [--code] [--media] [--db] [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+Säkerhetskopierar Magento programkodbas, media och databas
+
 
 ### `--code`
 
@@ -7655,7 +7866,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7704,11 +7915,12 @@ Ställ inga interaktiva frågor
 
 ## `setup:config:set`
 
-Skapar eller ändrar distributionskonfigurationen
-
 ```bash
 bin/magento setup:config:set [--enable-debug-logging ENABLE-DEBUG-LOGGING] [--enable-syslog-logging ENABLE-SYSLOG-LOGGING] [--backend-frontname BACKEND-FRONTNAME] [--remote-storage-driver REMOTE-STORAGE-DRIVER] [--remote-storage-prefix REMOTE-STORAGE-PREFIX] [--remote-storage-endpoint REMOTE-STORAGE-ENDPOINT] [--remote-storage-bucket REMOTE-STORAGE-BUCKET] [--remote-storage-region REMOTE-STORAGE-REGION] [--remote-storage-key REMOTE-STORAGE-KEY] [--remote-storage-secret REMOTE-STORAGE-SECRET] [--remote-storage-path-style REMOTE-STORAGE-PATH-STYLE] [--id_salt ID_SALT] [--config-async CONFIG-ASYNC] [--checkout-async CHECKOUT-ASYNC] [--amqp-host AMQP-HOST] [--amqp-port AMQP-PORT] [--amqp-user AMQP-USER] [--amqp-password AMQP-PASSWORD] [--amqp-virtualhost AMQP-VIRTUALHOST] [--amqp-ssl AMQP-SSL] [--amqp-ssl-options AMQP-SSL-OPTIONS] [--consumers-wait-for-messages CONSUMERS-WAIT-FOR-MESSAGES] [--queue-default-connection QUEUE-DEFAULT-CONNECTION] [--deferred-total-calculating DEFERRED-TOTAL-CALCULATING] [--key KEY] [--db-host DB-HOST] [--db-name DB-NAME] [--db-user DB-USER] [--db-engine DB-ENGINE] [--db-password DB-PASSWORD] [--db-prefix DB-PREFIX] [--db-model DB-MODEL] [--db-init-statements DB-INIT-STATEMENTS] [-s|--skip-db-validation] [--http-cache-hosts HTTP-CACHE-HOSTS] [--db-ssl-key DB-SSL-KEY] [--db-ssl-cert DB-SSL-CERT] [--db-ssl-ca DB-SSL-CA] [--db-ssl-verify] [--session-save SESSION-SAVE] [--session-save-redis-host SESSION-SAVE-REDIS-HOST] [--session-save-redis-port SESSION-SAVE-REDIS-PORT] [--session-save-redis-password SESSION-SAVE-REDIS-PASSWORD] [--session-save-redis-timeout SESSION-SAVE-REDIS-TIMEOUT] [--session-save-redis-persistent-id SESSION-SAVE-REDIS-PERSISTENT-ID] [--session-save-redis-db SESSION-SAVE-REDIS-DB] [--session-save-redis-compression-threshold SESSION-SAVE-REDIS-COMPRESSION-THRESHOLD] [--session-save-redis-compression-lib SESSION-SAVE-REDIS-COMPRESSION-LIB] [--session-save-redis-log-level SESSION-SAVE-REDIS-LOG-LEVEL] [--session-save-redis-max-concurrency SESSION-SAVE-REDIS-MAX-CONCURRENCY] [--session-save-redis-break-after-frontend SESSION-SAVE-REDIS-BREAK-AFTER-FRONTEND] [--session-save-redis-break-after-adminhtml SESSION-SAVE-REDIS-BREAK-AFTER-ADMINHTML] [--session-save-redis-first-lifetime SESSION-SAVE-REDIS-FIRST-LIFETIME] [--session-save-redis-bot-first-lifetime SESSION-SAVE-REDIS-BOT-FIRST-LIFETIME] [--session-save-redis-bot-lifetime SESSION-SAVE-REDIS-BOT-LIFETIME] [--session-save-redis-disable-locking SESSION-SAVE-REDIS-DISABLE-LOCKING] [--session-save-redis-min-lifetime SESSION-SAVE-REDIS-MIN-LIFETIME] [--session-save-redis-max-lifetime SESSION-SAVE-REDIS-MAX-LIFETIME] [--session-save-redis-sentinel-master SESSION-SAVE-REDIS-SENTINEL-MASTER] [--session-save-redis-sentinel-servers SESSION-SAVE-REDIS-SENTINEL-SERVERS] [--session-save-redis-sentinel-verify-master SESSION-SAVE-REDIS-SENTINEL-VERIFY-MASTER] [--session-save-redis-sentinel-connect-retries SESSION-SAVE-REDIS-SENTINEL-CONNECT-RETRIES] [--cache-backend CACHE-BACKEND] [--cache-backend-redis-server CACHE-BACKEND-REDIS-SERVER] [--cache-backend-redis-db CACHE-BACKEND-REDIS-DB] [--cache-backend-redis-port CACHE-BACKEND-REDIS-PORT] [--cache-backend-redis-password CACHE-BACKEND-REDIS-PASSWORD] [--cache-backend-redis-compress-data CACHE-BACKEND-REDIS-COMPRESS-DATA] [--cache-backend-redis-compression-lib CACHE-BACKEND-REDIS-COMPRESSION-LIB] [--cache-backend-redis-use-lua CACHE-BACKEND-REDIS-USE-LUA] [--cache-id-prefix CACHE-ID-PREFIX] [--allow-parallel-generation] [--page-cache PAGE-CACHE] [--page-cache-redis-server PAGE-CACHE-REDIS-SERVER] [--page-cache-redis-db PAGE-CACHE-REDIS-DB] [--page-cache-redis-port PAGE-CACHE-REDIS-PORT] [--page-cache-redis-password PAGE-CACHE-REDIS-PASSWORD] [--page-cache-redis-compress-data PAGE-CACHE-REDIS-COMPRESS-DATA] [--page-cache-redis-compression-lib PAGE-CACHE-REDIS-COMPRESSION-LIB] [--page-cache-id-prefix PAGE-CACHE-ID-PREFIX] [--lock-provider LOCK-PROVIDER] [--lock-db-prefix LOCK-DB-PREFIX] [--lock-zookeeper-host LOCK-ZOOKEEPER-HOST] [--lock-zookeeper-path LOCK-ZOOKEEPER-PATH] [--lock-file-path LOCK-FILE-PATH] [--document-root-is-pub DOCUMENT-ROOT-IS-PUB] [--backpressure-logger BACKPRESSURE-LOGGER] [--backpressure-logger-redis-server BACKPRESSURE-LOGGER-REDIS-SERVER] [--backpressure-logger-redis-port BACKPRESSURE-LOGGER-REDIS-PORT] [--backpressure-logger-redis-timeout BACKPRESSURE-LOGGER-REDIS-TIMEOUT] [--backpressure-logger-redis-persistent BACKPRESSURE-LOGGER-REDIS-PERSISTENT] [--backpressure-logger-redis-db BACKPRESSURE-LOGGER-REDIS-DB] [--backpressure-logger-redis-password BACKPRESSURE-LOGGER-REDIS-PASSWORD] [--backpressure-logger-redis-user BACKPRESSURE-LOGGER-REDIS-USER] [--backpressure-logger-id-prefix BACKPRESSURE-LOGGER-ID-PREFIX] [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+Skapar eller ändrar distributionskonfigurationen
+
 
 ### `--enable-debug-logging`
 
@@ -8305,7 +8517,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -8354,11 +8566,12 @@ Ställ inga interaktiva frågor
 
 ## `setup:db-data:upgrade`
 
-Installerar och uppgraderar data i databasen
-
 ```bash
 bin/magento setup:db-data:upgrade [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+Installerar och uppgraderar data i databasen
+
 
 ### `--magento-init-params`
 
@@ -8368,7 +8581,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -8417,11 +8630,12 @@ Ställ inga interaktiva frågor
 
 ## `setup:db-declaration:generate-patch`
 
-Generera en patch och placera den i en specifik mapp.
-
 ```bash
 bin/magento setup:db-declaration:generate-patch [--revertable [REVERTABLE]] [--type [TYPE]] [--] <module> <patch>
 ```
+
+Generera en patch och placera den i en specifik mapp.
+
 
 
 ### `module`
@@ -8452,7 +8666,7 @@ Ta reda på vilken typ av korrigering som ska skapas. Tillgängliga värden: `da
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -8501,11 +8715,12 @@ Ställ inga interaktiva frågor
 
 ## `setup:db-declaration:generate-whitelist`
 
-Generera vitlista över tabeller och kolumner som kan redigeras av deklarationsinstallationsprogrammet
-
 ```bash
 bin/magento setup:db-declaration:generate-whitelist [--module-name [MODULE-NAME]]
 ```
+
+Generera vitlista över tabeller och kolumner som kan redigeras av deklarationsinstallationsprogrammet
+
 
 ### `--module-name`
 
@@ -8516,7 +8731,7 @@ Namn på modulen där vitlistan ska genereras
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -8565,11 +8780,12 @@ Ställ inga interaktiva frågor
 
 ## `setup:db-schema:add-slave`
 
-Flytta tabeller relaterade till utcheckningsofferter till en separat databasserver
-
 ```bash
 bin/magento setup:db-schema:add-slave [--host HOST] [--dbname DBNAME] [--username USERNAME] [--password [PASSWORD]] [--connection [CONNECTION]] [--resource [RESOURCE]] [--maxAllowedLag [MAXALLOWEDLAG]] [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+Flytta tabeller relaterade till utcheckningsofferter till en separat databasserver
+
 
 ### `--host`
 
@@ -8626,7 +8842,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -8675,11 +8891,12 @@ Ställ inga interaktiva frågor
 
 ## `setup:db-schema:split-quote`
 
-Flytta tabeller relaterade till utcheckningsofferter till en separat databasserver. Borttagen sedan 2.4.2 och kommer att tas bort
-
 ```bash
 bin/magento setup:db-schema:split-quote [--host HOST] [--dbname DBNAME] [--username USERNAME] [--password [PASSWORD]] [--connection [CONNECTION]] [--resource [RESOURCE]] [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+Flytta tabeller relaterade till utcheckningsofferter till en separat databasserver. Borttagen sedan 2.4.2 och kommer att tas bort
+
 
 ### `--host`
 
@@ -8727,7 +8944,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -8776,11 +8993,12 @@ Ställ inga interaktiva frågor
 
 ## `setup:db-schema:split-sales`
 
-Flytta försäljningsrelaterade register till en separat databasserver. Borttagen sedan 2.4.2 och kommer att tas bort
-
 ```bash
 bin/magento setup:db-schema:split-sales [--host HOST] [--dbname DBNAME] [--username USERNAME] [--password [PASSWORD]] [--connection [CONNECTION]] [--resource [RESOURCE]] [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+Flytta försäljningsrelaterade register till en separat databasserver. Borttagen sedan 2.4.2 och kommer att tas bort
+
 
 ### `--host`
 
@@ -8828,7 +9046,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -8877,11 +9095,12 @@ Ställ inga interaktiva frågor
 
 ## `setup:db-schema:upgrade`
 
-Installerar och uppgraderar databasschemat
-
 ```bash
 bin/magento setup:db-schema:upgrade [--convert-old-scripts [CONVERT-OLD-SCRIPTS]] [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+Installerar och uppgraderar databasschemat
+
 
 ### `--convert-old-scripts`
 
@@ -8898,7 +9117,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -8947,11 +9166,12 @@ Ställ inga interaktiva frågor
 
 ## `setup:db:status`
 
-Kontrollerar om databasschemat eller data kräver uppgradering
-
 ```bash
 bin/magento setup:db:status [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+Kontrollerar om databasschemat eller data kräver uppgradering
+
 
 ### `--magento-init-params`
 
@@ -8961,7 +9181,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9010,15 +9230,16 @@ Ställ inga interaktiva frågor
 
 ## `setup:di:compile`
 
-Genererar DI-konfiguration och alla saknade klasser som kan genereras automatiskt
-
 ```bash
 bin/magento setup:di:compile
 ```
 
+Genererar DI-konfiguration och alla saknade klasser som kan genereras automatiskt
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9067,11 +9288,12 @@ Ställ inga interaktiva frågor
 
 ## `setup:install`
 
-Installerar programmet Magento
-
 ```bash
 bin/magento setup:install [--enable-debug-logging ENABLE-DEBUG-LOGGING] [--enable-syslog-logging ENABLE-SYSLOG-LOGGING] [--backend-frontname BACKEND-FRONTNAME] [--remote-storage-driver REMOTE-STORAGE-DRIVER] [--remote-storage-prefix REMOTE-STORAGE-PREFIX] [--remote-storage-endpoint REMOTE-STORAGE-ENDPOINT] [--remote-storage-bucket REMOTE-STORAGE-BUCKET] [--remote-storage-region REMOTE-STORAGE-REGION] [--remote-storage-key REMOTE-STORAGE-KEY] [--remote-storage-secret REMOTE-STORAGE-SECRET] [--remote-storage-path-style REMOTE-STORAGE-PATH-STYLE] [--id_salt ID_SALT] [--config-async CONFIG-ASYNC] [--checkout-async CHECKOUT-ASYNC] [--amqp-host AMQP-HOST] [--amqp-port AMQP-PORT] [--amqp-user AMQP-USER] [--amqp-password AMQP-PASSWORD] [--amqp-virtualhost AMQP-VIRTUALHOST] [--amqp-ssl AMQP-SSL] [--amqp-ssl-options AMQP-SSL-OPTIONS] [--consumers-wait-for-messages CONSUMERS-WAIT-FOR-MESSAGES] [--queue-default-connection QUEUE-DEFAULT-CONNECTION] [--deferred-total-calculating DEFERRED-TOTAL-CALCULATING] [--key KEY] [--db-host DB-HOST] [--db-name DB-NAME] [--db-user DB-USER] [--db-engine DB-ENGINE] [--db-password DB-PASSWORD] [--db-prefix DB-PREFIX] [--db-model DB-MODEL] [--db-init-statements DB-INIT-STATEMENTS] [-s|--skip-db-validation] [--http-cache-hosts HTTP-CACHE-HOSTS] [--db-ssl-key DB-SSL-KEY] [--db-ssl-cert DB-SSL-CERT] [--db-ssl-ca DB-SSL-CA] [--db-ssl-verify] [--session-save SESSION-SAVE] [--session-save-redis-host SESSION-SAVE-REDIS-HOST] [--session-save-redis-port SESSION-SAVE-REDIS-PORT] [--session-save-redis-password SESSION-SAVE-REDIS-PASSWORD] [--session-save-redis-timeout SESSION-SAVE-REDIS-TIMEOUT] [--session-save-redis-persistent-id SESSION-SAVE-REDIS-PERSISTENT-ID] [--session-save-redis-db SESSION-SAVE-REDIS-DB] [--session-save-redis-compression-threshold SESSION-SAVE-REDIS-COMPRESSION-THRESHOLD] [--session-save-redis-compression-lib SESSION-SAVE-REDIS-COMPRESSION-LIB] [--session-save-redis-log-level SESSION-SAVE-REDIS-LOG-LEVEL] [--session-save-redis-max-concurrency SESSION-SAVE-REDIS-MAX-CONCURRENCY] [--session-save-redis-break-after-frontend SESSION-SAVE-REDIS-BREAK-AFTER-FRONTEND] [--session-save-redis-break-after-adminhtml SESSION-SAVE-REDIS-BREAK-AFTER-ADMINHTML] [--session-save-redis-first-lifetime SESSION-SAVE-REDIS-FIRST-LIFETIME] [--session-save-redis-bot-first-lifetime SESSION-SAVE-REDIS-BOT-FIRST-LIFETIME] [--session-save-redis-bot-lifetime SESSION-SAVE-REDIS-BOT-LIFETIME] [--session-save-redis-disable-locking SESSION-SAVE-REDIS-DISABLE-LOCKING] [--session-save-redis-min-lifetime SESSION-SAVE-REDIS-MIN-LIFETIME] [--session-save-redis-max-lifetime SESSION-SAVE-REDIS-MAX-LIFETIME] [--session-save-redis-sentinel-master SESSION-SAVE-REDIS-SENTINEL-MASTER] [--session-save-redis-sentinel-servers SESSION-SAVE-REDIS-SENTINEL-SERVERS] [--session-save-redis-sentinel-verify-master SESSION-SAVE-REDIS-SENTINEL-VERIFY-MASTER] [--session-save-redis-sentinel-connect-retries SESSION-SAVE-REDIS-SENTINEL-CONNECT-RETRIES] [--cache-backend CACHE-BACKEND] [--cache-backend-redis-server CACHE-BACKEND-REDIS-SERVER] [--cache-backend-redis-db CACHE-BACKEND-REDIS-DB] [--cache-backend-redis-port CACHE-BACKEND-REDIS-PORT] [--cache-backend-redis-password CACHE-BACKEND-REDIS-PASSWORD] [--cache-backend-redis-compress-data CACHE-BACKEND-REDIS-COMPRESS-DATA] [--cache-backend-redis-compression-lib CACHE-BACKEND-REDIS-COMPRESSION-LIB] [--cache-backend-redis-use-lua CACHE-BACKEND-REDIS-USE-LUA] [--cache-id-prefix CACHE-ID-PREFIX] [--allow-parallel-generation] [--page-cache PAGE-CACHE] [--page-cache-redis-server PAGE-CACHE-REDIS-SERVER] [--page-cache-redis-db PAGE-CACHE-REDIS-DB] [--page-cache-redis-port PAGE-CACHE-REDIS-PORT] [--page-cache-redis-password PAGE-CACHE-REDIS-PASSWORD] [--page-cache-redis-compress-data PAGE-CACHE-REDIS-COMPRESS-DATA] [--page-cache-redis-compression-lib PAGE-CACHE-REDIS-COMPRESSION-LIB] [--page-cache-id-prefix PAGE-CACHE-ID-PREFIX] [--lock-provider LOCK-PROVIDER] [--lock-db-prefix LOCK-DB-PREFIX] [--lock-zookeeper-host LOCK-ZOOKEEPER-HOST] [--lock-zookeeper-path LOCK-ZOOKEEPER-PATH] [--lock-file-path LOCK-FILE-PATH] [--document-root-is-pub DOCUMENT-ROOT-IS-PUB] [--backpressure-logger BACKPRESSURE-LOGGER] [--backpressure-logger-redis-server BACKPRESSURE-LOGGER-REDIS-SERVER] [--backpressure-logger-redis-port BACKPRESSURE-LOGGER-REDIS-PORT] [--backpressure-logger-redis-timeout BACKPRESSURE-LOGGER-REDIS-TIMEOUT] [--backpressure-logger-redis-persistent BACKPRESSURE-LOGGER-REDIS-PERSISTENT] [--backpressure-logger-redis-db BACKPRESSURE-LOGGER-REDIS-DB] [--backpressure-logger-redis-password BACKPRESSURE-LOGGER-REDIS-PASSWORD] [--backpressure-logger-redis-user BACKPRESSURE-LOGGER-REDIS-USER] [--backpressure-logger-id-prefix BACKPRESSURE-LOGGER-ID-PREFIX] [--base-url BASE-URL] [--language LANGUAGE] [--timezone TIMEZONE] [--currency CURRENCY] [--use-rewrites USE-REWRITES] [--use-secure USE-SECURE] [--base-url-secure BASE-URL-SECURE] [--use-secure-admin USE-SECURE-ADMIN] [--admin-use-security-key ADMIN-USE-SECURITY-KEY] [--admin-user [ADMIN-USER]] [--admin-password [ADMIN-PASSWORD]] [--admin-email [ADMIN-EMAIL]] [--admin-firstname [ADMIN-FIRSTNAME]] [--admin-lastname [ADMIN-LASTNAME]] [--search-engine SEARCH-ENGINE] [--elasticsearch-host ELASTICSEARCH-HOST] [--elasticsearch-port ELASTICSEARCH-PORT] [--elasticsearch-enable-auth ELASTICSEARCH-ENABLE-AUTH] [--elasticsearch-username ELASTICSEARCH-USERNAME] [--elasticsearch-password ELASTICSEARCH-PASSWORD] [--elasticsearch-index-prefix ELASTICSEARCH-INDEX-PREFIX] [--elasticsearch-timeout ELASTICSEARCH-TIMEOUT] [--opensearch-host OPENSEARCH-HOST] [--opensearch-port OPENSEARCH-PORT] [--opensearch-enable-auth OPENSEARCH-ENABLE-AUTH] [--opensearch-username OPENSEARCH-USERNAME] [--opensearch-password OPENSEARCH-PASSWORD] [--opensearch-index-prefix OPENSEARCH-INDEX-PREFIX] [--opensearch-timeout OPENSEARCH-TIMEOUT] [--cleanup-database] [--sales-order-increment-prefix SALES-ORDER-INCREMENT-PREFIX] [--use-sample-data] [--enable-modules [ENABLE-MODULES]] [--disable-modules [DISABLE-MODULES]] [--convert-old-scripts [CONVERT-OLD-SCRIPTS]] [-i|--interactive] [--safe-mode [SAFE-MODE]] [--data-restore [DATA-RESTORE]] [--dry-run [DRY-RUN]] [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+Installerar programmet Magento
+
 
 ### `--enable-debug-logging`
 
@@ -9907,7 +10129,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -9956,11 +10178,12 @@ Ställ inga interaktiva frågor
 
 ## `setup:performance:generate-fixtures`
 
-Skapar korrigeringar
-
 ```bash
 bin/magento setup:performance:generate-fixtures [-s|--skip-reindex] [--] <profile>
 ```
+
+Skapar korrigeringar
+
 
 
 ### `profile`
@@ -9978,7 +10201,7 @@ Hoppa över omindexering
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -10027,11 +10250,12 @@ Ställ inga interaktiva frågor
 
 ## `setup:rollback`
 
-Återställer Magento-programkodbas, media och databas
-
 ```bash
 bin/magento setup:rollback [-c|--code-file CODE-FILE] [-m|--media-file MEDIA-FILE] [-d|--db-file DB-FILE] [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+Återställer Magento-programkodbas, media och databas
+
 
 ### `--code-file`, `-c`
 
@@ -10059,7 +10283,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -10108,11 +10332,12 @@ Ställ inga interaktiva frågor
 
 ## `setup:static-content:deploy`
 
-Distribuerar statiska vyfiler
-
 ```bash
 bin/magento setup:static-content:deploy [-f|--force] [-s|--strategy [STRATEGY]] [-a|--area [AREA]] [--exclude-area [EXCLUDE-AREA]] [-t|--theme [THEME]] [--exclude-theme [EXCLUDE-THEME]] [-l|--language [LANGUAGE]] [--exclude-language [EXCLUDE-LANGUAGE]] [-j|--jobs [JOBS]] [--max-execution-time [MAX-EXECUTION-TIME]] [--symlink-locale] [--content-version CONTENT-VERSION] [--refresh-content-version-only] [--no-javascript] [--no-js-bundle] [--no-css] [--no-less] [--no-images] [--no-fonts] [--no-html] [--no-misc] [--no-html-minify] [--no-parent] [--] [<languages>...]
 ```
+
+Distribuerar statiska vyfiler
+
 
 
 ### `languages`
@@ -10285,7 +10510,7 @@ Kompilera inte överordnade teman. Stöds endast i snabba och standardiserade st
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -10334,11 +10559,12 @@ Ställ inga interaktiva frågor
 
 ## `setup:store-config:set`
 
-Installerar butikskonfigurationen. Borttagen sedan 2.2.0. Använd config:set i stället
-
 ```bash
 bin/magento setup:store-config:set [--base-url BASE-URL] [--language LANGUAGE] [--timezone TIMEZONE] [--currency CURRENCY] [--use-rewrites USE-REWRITES] [--use-secure USE-SECURE] [--base-url-secure BASE-URL-SECURE] [--use-secure-admin USE-SECURE-ADMIN] [--admin-use-security-key ADMIN-USE-SECURITY-KEY] [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+Installerar butikskonfigurationen. Borttagen sedan 2.2.0. Använd config:set i stället
+
 
 ### `--base-url`
 
@@ -10402,7 +10628,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -10451,11 +10677,12 @@ Ställ inga interaktiva frågor
 
 ## `setup:uninstall`
 
-Avinstallerar programmet Magento
-
 ```bash
 bin/magento setup:uninstall [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+Avinstallerar programmet Magento
+
 
 ### `--magento-init-params`
 
@@ -10465,7 +10692,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -10514,11 +10741,12 @@ Ställ inga interaktiva frågor
 
 ## `setup:upgrade`
 
-Uppgraderar Magento-programmet, DB-data och schema
-
 ```bash
 bin/magento setup:upgrade [--keep-generated] [--convert-old-scripts [CONVERT-OLD-SCRIPTS]] [--safe-mode [SAFE-MODE]] [--data-restore [DATA-RESTORE]] [--dry-run [DRY-RUN]] [--magento-init-params MAGENTO-INIT-PARAMS]
 ```
+
+Uppgraderar Magento-programmet, DB-data och schema
+
 
 ### `--keep-generated`
 
@@ -10561,7 +10789,7 @@ Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -10610,15 +10838,16 @@ Ställ inga interaktiva frågor
 
 ## `store:list`
 
-Visar listan över butiker
-
 ```bash
 bin/magento store:list
 ```
 
+Visar listan över butiker
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -10667,15 +10896,16 @@ Ställ inga interaktiva frågor
 
 ## `store:website:list`
 
-Visar listan över webbplatser
-
 ```bash
 bin/magento store:website:list
 ```
 
+Visar listan över webbplatser
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -10724,11 +10954,12 @@ Ställ inga interaktiva frågor
 
 ## `support:backup:code`
 
-Skapa säkerhetskopia av kod
-
 ```bash
 bin/magento support:backup:code [--name [NAME]] [-o|--output [OUTPUT]] [-l|--logs]
 ```
+
+Skapa säkerhetskopia av kod
+
 
 ### `--name`
 
@@ -10751,7 +10982,7 @@ Inkludera loggar
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -10800,11 +11031,12 @@ Ställ inga interaktiva frågor
 
 ## `support:backup:db`
 
-Skapa DB-säkerhetskopiering
-
 ```bash
 bin/magento support:backup:db [--name [NAME]] [-o|--output [OUTPUT]] [-l|--logs] [-i|--ignore-sanitize]
 ```
+
+Skapa DB-säkerhetskopiering
+
 
 ### `--name`
 
@@ -10834,7 +11066,7 @@ Ignorera sanering
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -10883,11 +11115,12 @@ Ställ inga interaktiva frågor
 
 ## `support:utility:check`
 
-Kontrollera nödvändiga verktyg för säkerhetskopiering
-
 ```bash
 bin/magento support:utility:check [--hide-paths]
 ```
+
+Kontrollera nödvändiga verktyg för säkerhetskopiering
+
 
 ### `--hide-paths`
 
@@ -10898,7 +11131,7 @@ Kontrollera bara nödvändiga konsolverktyg
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -10947,11 +11180,12 @@ Ställ inga interaktiva frågor
 
 ## `support:utility:paths`
 
-Skapa verktygssökvägslista
-
 ```bash
 bin/magento support:utility:paths [-f|--force]
 ```
+
+Skapa verktygssökvägslista
+
 
 ### `--force`, `-f`
 
@@ -10962,7 +11196,7 @@ Tvinga
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -11011,11 +11245,12 @@ Ställ inga interaktiva frågor
 
 ## `theme:uninstall`
 
-Avinstallerar tema
-
 ```bash
 bin/magento theme:uninstall [--backup-code] [-c|--clear-static-content] [--] <theme>...
 ```
+
+Avinstallerar tema
+
 
 
 ### `theme`
@@ -11043,7 +11278,7 @@ Rensa genererade statiska vyfiler.
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -11092,11 +11327,12 @@ Ställ inga interaktiva frågor
 
 ## `varnish:vcl:generate`
 
-Skapar lack VCL och lägger det på kommandoraden
-
 ```bash
 bin/magento varnish:vcl:generate [--access-list ACCESS-LIST] [--backend-host BACKEND-HOST] [--backend-port BACKEND-PORT] [--export-version EXPORT-VERSION] [--grace-period GRACE-PERIOD] [--input-file INPUT-FILE] [--output-file OUTPUT-FILE]
 ```
+
+Skapar lack VCL och lägger det på kommandoraden
+
 
 ### `--access-list`
 
@@ -11147,7 +11383,7 @@ Sökväg till filen som ska skrivas vcl
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -11196,11 +11432,12 @@ Ställ inga interaktiva frågor
 
 ## `webhooks:dev:run`
 
-Kör en registrerad webkrok i utvecklingssyfte.
-
 ```bash
 bin/magento webhooks:dev:run <name> <payload>
 ```
+
+Kör en registrerad webkrok i utvecklingssyfte.
+
 
 
 ### `name`
@@ -11217,7 +11454,7 @@ Webkroknyttolasten i JSON-format
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -11266,15 +11503,16 @@ Ställ inga interaktiva frågor
 
 ## `webhooks:generate:module`
 
-Generera plugin-program baserat på webkroks registreringar
-
 ```bash
 bin/magento webhooks:generate:module
 ```
 
+Generera plugin-program baserat på webkroks registreringar
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -11323,11 +11561,12 @@ Ställ inga interaktiva frågor
 
 ## `webhooks:info`
 
-Returnerar nyttolasten för den angivna webkroken.
-
 ```bash
 bin/magento webhooks:info [--depth [DEPTH]] [--] <webhook-name> [<webhook-type>]
 ```
+
+Returnerar nyttolasten för den angivna webkroken.
+
 
 
 ### `webhook-name`
@@ -11352,7 +11591,7 @@ Antalet nivåer i webkroks nyttolast som ska returneras
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -11401,15 +11640,16 @@ Ställ inga interaktiva frågor
 
 ## `webhooks:list`
 
-Visar en lista över webbhookar som prenumererar
-
 ```bash
 bin/magento webhooks:list
 ```
 
+Visar en lista över webbhookar som prenumererar
+
+
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -11458,11 +11698,12 @@ Ställ inga interaktiva frågor
 
 ## `webhooks:list:all`
 
-Returnerar en lista över webbhovsmetodnamn som stöds för den angivna modulen
-
 ```bash
 bin/magento webhooks:list:all <module_name>
 ```
+
+Returnerar en lista över webbhovsmetodnamn som stöds för den angivna modulen
+
 
 
 ### `module_name`
@@ -11473,7 +11714,7 @@ Modulnamn
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde

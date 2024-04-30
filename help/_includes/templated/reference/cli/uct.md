@@ -1,7 +1,7 @@
 ---
-source-git-commit: 68ea73d407dd3e6daf880a66de8ef4b7bbef2360
+source-git-commit: 19d19ef385cf4aaee3a255930af8e6d3b81de23a
 workflow-type: tm+mt
-source-wordcount: '1656'
+source-wordcount: '1638'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,12 @@ Läs mer om verktyget i [Ökning](/help/upgrade/upgrade-compatibility-tool/overv
 
 ## `_complete`
 
-Internt kommando för att ge förslag på komplettering av skalet
-
 ```bash
 bin/uct _complete [-s|--shell SHELL] [-i|--input INPUT] [-c|--current CURRENT] [-S|--symfony SYMFONY]
 ```
+
+Internt kommando för att ge förslag på komplettering av skalet
+
 
 ### `--shell`, `-s`
 
@@ -56,7 +57,7 @@ Versionen av det slutförda skriptet
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -105,10 +106,40 @@ Ställ inga interaktiva frågor
 
 ## `completion`
 
-Dumpa skriptet för gränssnittets slutförande
-
 ```bash
 bin/uct completion [--debug] [--] [<shell>]
+```
+
+Dumpa skriptet för gränssnittets slutförande
+
+
+```
+The completion command dumps the shell completion script required
+to use shell autocompletion (currently only bash completion is supported).
+
+Static installation
+-------------------
+
+Dump the script to a global completion file and restart your shell:
+
+    uct/bin/uct completion bash | sudo tee /etc/bash_completion.d/uct
+
+Or dump the script to a local file and source it:
+
+    uct/bin/uct completion bash > completion.sh
+
+    # source the file whenever you use the project
+    source completion.sh
+
+    # or add this line at the end of your "~/.bashrc" file:
+    source /path/to/completion.sh
+
+Dynamic installation
+--------------------
+
+Add this to the end of your shell configuration file (e.g. "~/.bashrc"):
+
+    eval "$(/var/jenkins/workspace/gendocs-uct-cli/uct/bin/uct completion bash)"
 ```
 
 
@@ -126,7 +157,7 @@ Avsluta felsökningsloggen
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -175,10 +206,23 @@ Ställ inga interaktiva frågor
 
 ## `help`
 
-Visa hjälp för ett kommando
-
 ```bash
 bin/uct help [--format FORMAT] [--raw] [--] [<command_name>]
+```
+
+Visa hjälp för ett kommando
+
+
+```
+The help command displays help for a given command:
+
+  uct/bin/uct help list
+
+You can also output the help in other formats by using the --format option:
+
+  uct/bin/uct help --format=xml list
+
+To display the list of available commands, please use the list command.
 ```
 
 
@@ -205,7 +249,7 @@ Hjälp för att skriva ut råformat
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -254,10 +298,29 @@ Ställ inga interaktiva frågor
 
 ## `list`
 
-Listkommandon
-
 ```bash
 bin/uct list [--raw] [--format FORMAT] [--short] [--] [<namespace>]
+```
+
+Listkommandon
+
+
+```
+The list command lists all commands:
+
+  uct/bin/uct list
+
+You can also display the commands for a specific namespace:
+
+  uct/bin/uct list test
+
+You can also output the information in other formats by using the --format option:
+
+  uct/bin/uct list --format=xml
+
+It's also possible to get raw list of commands (useful for embedding command runner):
+
+  uct/bin/uct list --raw
 ```
 
 
@@ -289,7 +352,7 @@ Så här beskriver du inte kommandots argument
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -338,11 +401,12 @@ Ställ inga interaktiva frågor
 
 ## `refactor`
 
-Åtgärdar problem som kan korrigeras automatiskt. Koden i sökvägen uppdateras.
-
 ```bash
 bin/uct refactor <path>
 ```
+
+Åtgärdar problem som kan korrigeras automatiskt. Koden i sökvägen uppdateras.
+
 
 
 ### `path`
@@ -353,7 +417,7 @@ Sökväg för att lösa problem i.
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -402,11 +466,12 @@ Ställ inga interaktiva frågor
 
 ## `core:code:changes`
 
-Kompatibilitetsverktyget för uppgradering är ett kommandoradsverktyg som kontrollerar en Adobe Commerce-instans mot en viss version genom att analysera alla andra moduler än Adobe Commerce som är installerade i den. Returnerar en lista med fel och varningar som du måste åtgärda innan du uppgraderar till en ny version av Adobe Commerce-koden.
-
 ```bash
 bin/uct core:code:changes [-o|--output [OUTPUT]] [--] <dir> [<vanilla-dir>]
 ```
+
+Kompatibilitetsverktyget för uppgradering är ett kommandoradsverktyg som kontrollerar en Adobe Commerce-instans mot en viss version genom att analysera alla andra moduler än Adobe Commerce som är installerade i den. Returnerar en lista med fel och varningar som du måste åtgärda innan du uppgraderar till en ny version av Adobe Commerce-koden.
+
 
 
 ### `dir`
@@ -428,7 +493,7 @@ Sökväg till filen som ska exporteras (Json-format)
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -477,11 +542,12 @@ Ställ inga interaktiva frågor
 
 ## `dbschema:diff`
 
-Tillåt att lista skillnader i Adobe Commerce DB-scheman mellan två valda versioner. Tillgängliga versioner: 2.3.0 | 2.3.1 | 2.3.2 | 2.3.2-p2 | 2.3.3 | 2.3.3-p1 | 2.3.4 | 2.3.4-p1 | 2.3.4-p2 | 2.3.5 | 2.3.5-p1 | 2.3.5-p2 | 2.3.6 | 2.3.6-p1 | 2.3.7 | 2.3.7-p1 | 2.3.7-p2 | 2.3.7-p3 | 2.3.7-p4 | 2.4.0 | 2.4.0-p1 | 2.4.1 | 2.4.1-p1 | 2.4.2 | 2.4.2-p1 | 2.4.2-p2 | 2.4.3 | 2.4.3-p1 | 2.4.3-p2 | 2.4.3-p3 | 2.4.4 | 2.4.4-p1 | 2.4.5 | 2.4.4-p2 | 2.4.5-p1 | 2.4.4-p3 | 2.4.4-p4 | 2.4.4-p5 | 2.4.5-p2 | 2.4.5-p3 | 2.4.5-p4 | 2.4.6 | 2.4.6-p1 | 2.4.6-p2 | 2.4.7-beta1 | 2.4.4-p6 | 2.4.5-p5 | 2.4.6-p3 | 2.4.7-beta2 | 2.4.4-p7 | 2.4.5-p6 | 2.4.6-p4 | 2.4.7-beta3 | 2.4.7 | 2.4.6-p5 | 2.4.5-p7 | 2.4.4-p8
-
 ```bash
 bin/uct dbschema:diff <current-version> <target-version>
 ```
+
+Tillåt att lista skillnader i Adobe Commerce DB-scheman mellan två valda versioner. Tillgängliga versioner: 2.3.0 | 2.3.1 | 2.3.2 | 2.3.2-p2 | 2.3.3 | 2.3.3-p1 | 2.3.4 | 2.3.4-p1 | 2.3.4-p2 | 2.3.5 | 2.3.5-p1 | 2.3.5-p2 | 2.3.6 | 2.3.6-p1 | 2.3.7 | 2.3.7-p1 | 2.3.7-p2 | 2.3.7-p3 | 2.3.7-p4 | 2.4.0 | 2.4.0-p1 | 2.4.1 | 2.4.1-p1 | 2.4.2 | 2.4.2-p1 | 2.4.2-p2 | 2.4.3 | 2.4.3-p1 | 2.4.3-p2 | 2.4.3-p3 | 2.4.4 | 2.4.4-p1 | 2.4.5 | 2.4.4-p2 | 2.4.5-p1 | 2.4.4-p3 | 2.4.4-p4 | 2.4.4-p5 | 2.4.5-p2 | 2.4.5-p3 | 2.4.5-p4 | 2.4.6 | 2.4.6-p1 | 2.4.6-p2 | 2.4.7-beta1 | 2.4.4-p6 | 2.4.5-p5 | 2.4.6-p3 | 2.4.7-beta2 | 2.4.4-p7 | 2.4.5-p6 | 2.4.6-p4 | 2.4.7-beta3 | 2.4.7 | 2.4.6-p5 | 2.4.5-p7 | 2.4.4-p8
+
 
 
 ### `current-version`
@@ -498,7 +564,7 @@ målversion (t.ex. 2.4.5).
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -547,11 +613,12 @@ Ställ inga interaktiva frågor
 
 ## `graphql:compare`
 
-Verifiering av schemakompatibilitet med GraphQL
-
 ```bash
 bin/uct graphql:compare [-o|--output [OUTPUT]] [--] <schema1> <schema2>
 ```
+
+Verifiering av schemakompatibilitet med GraphQL
+
 
 
 ### `schema1`
@@ -574,7 +641,7 @@ Sökväg till filen som ska exporteras (JSON-format)
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -623,11 +690,12 @@ Ställ inga interaktiva frågor
 
 ## `upgrade:check`
 
-Kompatibilitetsverktyget för uppgradering är ett kommandoradsverktyg som kontrollerar en Adobe Commerce-anpassad instans mot en viss version genom att analysera alla moduler som är installerade i den. Returnerar en lista med fel och varningar som måste åtgärdas innan du uppgraderar till den senaste versionen av Adobe Commerce.
-
 ```bash
 bin/uct upgrade:check [-a|--current-version [CURRENT-VERSION]] [-c|--coming-version [COMING-VERSION]] [--json-output-path [JSON-OUTPUT-PATH]] [--html-output-path [HTML-OUTPUT-PATH]] [--min-issue-level [MIN-ISSUE-LEVEL]] [-i|--ignore-current-version-compatibility-issues] [--context CONTEXT] [--] <dir>
 ```
+
+Kompatibilitetsverktyget för uppgradering är ett kommandoradsverktyg som kontrollerar en Adobe Commerce-anpassad instans mot en viss version genom att analysera alla moduler som är installerade i den. Returnerar en lista med fel och varningar som måste åtgärdas innan du uppgraderar till den senaste versionen av Adobe Commerce.
+
 
 
 ### `dir`
@@ -682,7 +750,7 @@ Körningskontext. Det här alternativet är avsett för integrering och påverka
 
 ### `--help`, `-h`
 
-Visa hjälp för det angivna kommandot. Om inget kommando anges visas hjälpen för \&lt;info>list\&lt;/info> kommando
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
 
 - Standard: `false`
 - Accepterar inte ett värde
