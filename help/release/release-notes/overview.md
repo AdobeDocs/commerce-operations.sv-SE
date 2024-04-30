@@ -2,9 +2,9 @@
 title: Versionsinformation för Adobe Commerce
 description: Läs om var du hittar information om specifika versioner av Adobe Commerce.
 exl-id: f6385e12-5c3d-425f-939c-9dfd7ef6c4f5
-source-git-commit: 35664c30e438305036d3cfdd1dd1924966f6ced6
+source-git-commit: 466256a0dfd915fe0f0c02d377ce724cd311463c
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '291'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,8 @@ Använd följande tabell för att hitta versionsinformation och viktig informati
 
 >[!TIP]
 >
->Mer information om uppgraderingar finns i [rekommenderad läsning](../../upgrade/resources/recommended-reading.md).
+>- Om du inte har använt Adobe Commerce tidigare kan du läsa [företagsarkitektur](../../implementation-playbook/architecture/enterprise-blueprint.md) och [om Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-admin/start/about) ämnen som ska orienteras.
+>- Mer information om uppgraderingar finns i [rekommenderad läsning](../../upgrade/resources/recommended-reading.md).
 
 <table>
   <tbody>

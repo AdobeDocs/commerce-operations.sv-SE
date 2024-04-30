@@ -2,7 +2,7 @@
 title: Handböcker - startsida
 description: Bläddra bland index över systemadministration och produktdokumentation för Adobe Commerce.
 exl-id: 45ec4948-338f-4276-8a70-d0db720322d9
-source-git-commit: 0e3d5c0f7c0636bb690eea8643afdace074f0ffd
+source-git-commit: a33d12a055db0cb4a4c8f64992d6ebf77842cbe7
 workflow-type: tm+mt
 source-wordcount: '198'
 ht-degree: 0%
@@ -19,11 +19,11 @@ Använd den här följande uppsättningen guider för att lära dig mer om syste
 <table>
 <tr>
   <td valign="top">
-    <a href="../release/latest.md">
+    <a href="../release/release-notes/overview.md">
       <img alt="Versionsinformation" src="../assets/icons/promote.svg" width="40"/>
     </a>
     <div>
-      <a href="../release/latest.md"><strong>Versionsinformation</strong></a>
+      <a href="../release/release-notes/overview.md"><strong>Versionsinformation</strong></a>
       <p>Läs igenom all versionsinformation om Adobe Commerce patchar och tjänster.</p>
     </div>
   </td>
