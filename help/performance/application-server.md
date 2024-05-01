@@ -2,9 +2,9 @@
 title: GraphQL Application Server
 description: Följ dessa anvisningar för att aktivera GraphQL Application Server i din Adobe Commerce-distribution.
 exl-id: 9b223d92-0040-4196-893b-2cf52245ec33
-source-git-commit: 81320626a83e26a55f9ec14ce8cb706753b44269
+source-git-commit: 9ffcbaa9a16315fe9c7d8ac4c4351ebe3fb27612
 workflow-type: tm+mt
-source-wordcount: '2293'
+source-wordcount: '2079'
 ht-degree: 0%
 
 ---
@@ -391,13 +391,3 @@ Dessa filer kan inspekteras med alla verktyg du använder för att visa XML elle
 >[!NOTE]
 >
 >`--state-monitor` är inte kompatibelt med PHP-versioner `8.3.0` - `8.3.4` på grund av ett fel i PHP-skräpinsamlaren. Om du använder PHP 8.3 måste du uppgradera till `8.3.5` eller nyare för att använda den här funktionen.
-
-## Kända fel
-
-### Förfrågningar går förlorade om arbetstråd avslutas.
-
-Om det uppstår ett problem med en arbetstråd som gör att arbetstråden avslutas, kommer alla HTTP-begäranden som redan står i kö till samma arbetstråd att få en TCP-socketanslutningsåterställning. Med en omvänd proxy, till exempel NGINX, framför servern visas felen som `502` fel. Medarbetare kan dö av krascher, slut på minneshantering eller PHP-fel i tillägg från tredje part. Standardbeteendet för SVYLLENS HTTP-server orsakar det här problemet. Som standard startas HTTP-servern i `SWOOLE_BASE` läge. I det här läget tilldelas de HTTP-begäranden som kommer in till arbetstrådar i en kö, även om arbetstråden fortfarande bearbetar en tidigare begäran. Om du ändrar detta till `SWOOLE_PROCESS` , underhålls anslutningarna av huvudprocessen och använder betydligt mer kommunikation mellan processer. Nersidan till `SWOOLE_PROCESS` är att det inte stöder PHP ZTS. Läs [Svullnad - dokumentation](https://wiki.swoole.com/en/#/learn?id=swoole_process) för mer information.
-
-### Programservern kan använda tidigare attributkonfigurationer under vissa förhållanden.
-
-The `CatalogGraphQl\Model\Config\AttributeReader` in `2.4.7` innehåller ett sällsynt fel som kan göra att en GraphQL-begäran får ett svar med hjälp av det tidigare tillståndet för attributkonfigurationen. En fix för det här levererades i `2.4-develop`, men inte i tid för `2.4.7` release.
