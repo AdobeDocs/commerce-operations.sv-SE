@@ -1,7 +1,7 @@
 ---
-source-git-commit: 88cdf47409f45f9ba6de75701ab877c5e4604f13
+source-git-commit: ccc1c6451556ac721d331adebf02db8226e75699
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '303'
 ht-degree: 0%
 
 ---
@@ -10,6 +10,72 @@ ht-degree: 0%
 ## Nyheter
 
 Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
+
+### 29 april 2024
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Källa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Uppdaterade <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/reference/uct">UCT CLI-referens</a>.</p>
+</td>
+      <td>teknisk</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/ae9b29601953f25ca28f253f557d547b200616a0">ae9b29</a> (implementera)</td>
+    </tr>
+  </tbody>
+</table>
+
+### 26 april 2024
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Källa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Omorganiserat <em>Handböcker</em> hemsida (den här sidan) och flyttade <em><a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises">Referens för kommandoradsverktyg</a></em> till <em><a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/overview">verktyg</a></em> guide.</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/839b4e26a7c5d662093c7c1eec3fd5883ed7706a">839b4e</a> (implementera)</td>
+    </tr>
+    <tr>
+      <td><p>Lagt till en ny <a href="https://experienceleague.adobe.com/docs/commerce-operations/events/summit/2024.html">sammanfattningssida</a> för Adobe Summit.</p>
+</td>
+      <td>new-topic</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/1c2c75da7cda0e3c38ea904c98932472b618a3e5">1c2c75</a> (implementera)</td>
+    </tr>
+  </tbody>
+</table>
+
+### 15 april 2024
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Källa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Uppdaterade <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/beta">beta</a> för att inkludera information om alla tillgängliga betaversioner för Adobe Commerce.</p>
+</td>
+      <td>större uppdatering</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/a362cad66d38a89bacda656d1520047e22262179">a362ca</a> (implementera)</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 9 april 2024
 
