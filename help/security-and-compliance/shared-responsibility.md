@@ -2,9 +2,9 @@
 title: Delat ansvar, säkerhet och operativ modell
 description: Läs mer om säkerhetsansvar för alla parter som deltar i ditt Adobe Commerce i molninfrastrukturprojekt.
 exl-id: f3cc1685-e469-4e30-b18e-55ce10dd69ce
-source-git-commit: 75eafe97a69668e43818f1c01639956e9b677a69
+source-git-commit: e188dad17ccb7d6ae10ed1457e86cc4551deaa75
 workflow-type: tm+mt
-source-wordcount: '2804'
+source-wordcount: '2805'
 ht-degree: 0%
 
 ---
@@ -900,6 +900,6 @@ Handlarna ansvarar för att synkronisera data mellan produktions- och stagingmil
 | Tillgänglighet för processorresurser, datacenter, diskutrymme | R |   |
 | Tillgång till och genomförande av överkapacitet eller nöduppgradering | R |   |
 | Begär överkapacitet |     | R |
-| Övervaka vCPU-användning mot begränsningar | R |   |
+| Övervaka vCPU-användning mot begränsningarna | R |   |
 
 {style="table-layout:auto"}
