@@ -2,9 +2,9 @@
 title: Versionsinformation för Adobe Commerce
 description: Läs om var du hittar information om specifika versioner av Adobe Commerce.
 exl-id: f6385e12-5c3d-425f-939c-9dfd7ef6c4f5
-source-git-commit: 466256a0dfd915fe0f0c02d377ce724cd311463c
+source-git-commit: 7edf0d26be64b4583d0a4d6ce313d25077662637
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '288'
 ht-degree: 3%
 
 ---
@@ -55,7 +55,6 @@ Använd följande tabell för att hitta versionsinformation och viktig informati
             <li><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/release-notes.html">Live Search</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/release-notes.html">Betalningstjänster</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/product-recommendations/release-notes.html">Recommendations</a></li>
-            <li><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/quick-checkout/release-notes.html?lang=en">Snabbutcheckning</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html">Services Connector</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/store-fulfillment/release-notes.html?lang=en">Lagra uppfyllelse</a></li>
           </ul>
