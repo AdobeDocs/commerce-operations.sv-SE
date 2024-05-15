@@ -4,9 +4,9 @@ description: Lär dig mer om de effektivaste strategierna för implementering i 
 exl-id: 499c16df-0e4d-4950-8169-96356bdff1a7
 feature: Best Practices
 role: Developer
-source-git-commit: ce386611834c4199e34b5d95ce76254957821f46
+source-git-commit: cca301a72b972d843b878fae28901a47c8fc0489
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '336'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,15 @@ Följande avsnitt innehåller information om bästa praxis för utvecklingsfasen
 | [Kodgranskning](code-review.md) | Rekommenderad valideringsprocess för att säkerställa att den implementerade funktionen uppfyller kraven |
 | [Disposition jämfört med Git](code-management.md) | Bestäm hur anpassad kod ska distribueras med hänsyn till versionshantering, komplexitet i kod och beroendehantering |
 | [Förgreningsstrategi](git-branching.md) | Hantera källkod i Git-databaser |
-| [GRA-exempel](../../architecture/global-reference/examples.md) | Förstå vanliga metoder för att ordna [global referensarkitektur](../../architecture/global-reference/overview.md) kodbas |
+
+## Plattform och tjänster
+
+| Bästa praxis | Beskrivning |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
+| [Bygger och driftsätter](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/best-practices.html){target="_blank"} | Beskriver de bästa sätten att skapa och distribuera Adobe Commerce-faser i molninfrastrukturprojekt |
+| Felsökning | Systematisk och effektiv felsökning av Adobe Commerce-ramverket |
+| [Statisk innehållsdistribution](static-content-deployment.md) | Undvik problem med statiskt innehåll som inte visas i butiken |
+| [Felsökning](troubleshooting.md) | Felsöka vanliga problem med Adobe Commerce-implementering |
 
 ## Databas
 
@@ -67,12 +75,3 @@ Följande avsnitt innehåller information om bästa praxis för utvecklingsfasen
 | [Tillägg](https://developer.adobe.com/commerce/php/best-practices/){target="_blank"} | Beskriver utvecklingsmönster för att säkerställa kompatibilitet mellan ditt tillägg, framtida versioner av Adobe Commerce och andra anpassade tillägg |
 | [Privata innehållsblock](private-content-block-configuration.md) | Konfigurera privata innehållsblock för att optimera prestanda för butiker |
 | [Ändra PHP-kod från kärnan och tredje part](modifying-core-and-third-party-code.md) | Ändra funktionaliteten, resultatet eller indata för kod som du inte har skapat eller inte har direkt kontroll över |
-
-## Plattform och tjänster
-
-| Bästa praxis | Beskrivning |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| [Bygger och driftsätter](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/best-practices.html){target="_blank"} | Beskriver de bästa sätten att skapa och distribuera Adobe Commerce-faser i molninfrastrukturprojekt |
-| Felsökning | Systematisk och effektiv felsökning av Adobe Commerce-ramverket |
-| [Statisk innehållsdistribution](static-content-deployment.md) | Undvik problem med statiskt innehåll som inte visas i butiken |
-| [Felsökning](troubleshooting.md) | Felsöka vanliga problem med Adobe Commerce-implementering |

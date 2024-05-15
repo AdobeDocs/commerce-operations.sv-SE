@@ -1,11 +1,11 @@
 ---
 user-guide-title: Bästa praxis för prestanda
-user-guide-description: Optimera prestandan för er Adobe Commerce-driftsättning med våra rekommendationer.
+user-guide-description: Optimera prestandan för er Adobe Commerce-driftsättning med dessa rekommendationer.
 feature: Best Practices
 topic: Administration, Commerce, Development, Performance
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: cca301a72b972d843b878fae28901a47c8fc0489
 workflow-type: tm+mt
-source-wordcount: '50'
+source-wordcount: '46'
 ht-degree: 0%
 
 ---
@@ -17,10 +17,10 @@ ht-degree: 0%
 - [Maskinvarurekommendationer](hardware.md)
 - [Programvarurekommendationer](software.md)
 - [Referensarkitektur](reference-architecture.md)
-- [Rekommendationer för utvecklingsmiljö](development-environment.md)
-- [Bästa praxis för konfiguration](configuration.md)
+- [Utvecklingsmiljö](development-environment.md)
+- [Utcheckningsprocess](high-throughput-order-processing.md)
+- [Konfiguration](configuration.md)
 - [Distributionsflöde](deployment-flow.md)
-- [Bearbetning av stora mängder order](high-throughput-order-processing.md)
 - Avancerade begrepp {#concepts}
    - [Avancerad konfiguration](advanced-setup.md)
    - [Avancerat [!DNL JavaScript] paketering](advanced-js-bundling.md)
