@@ -1,9 +1,10 @@
 ---
 title: Versionsinformation för säkerhetsuppdatering
 description: Läs versionsinformationen om Adobe Commerce säkerhetspatchar.
-source-git-commit: f5ab11a43bb90fa96c20cea8d8c85eb2a4c98826
+exl-id: a3d78211-41ff-4df2-ad29-21465c096027
+source-git-commit: 1eaf2329c16e6dbe3e93cb7fff3a6920b4b8379d
 workflow-type: tm+mt
-source-wordcount: '33'
+source-wordcount: '47'
 ht-degree: 0%
 
 ---
@@ -11,8 +12,9 @@ ht-degree: 0%
 
 # Versionsinformation för säkerhetsuppdatering
 
-Läs mer om de senaste säkerhetsförbättringarna i Adobe Commerce-produkten och kodbasen Magento Open Source.
+Adobe Commerce Security Patch Release Notes innehåller information om de senaste säkerhetsförbättringarna i Adobe Commerce produktkodbas för de versioner av Adobe Commerce som stöds.
 
-{{other-release-info}}
+## Om säkerhetsuppdateringar
 
-{{bics}}
+{{$include /help/_includes/security-patch-release-overview.md}}
+
