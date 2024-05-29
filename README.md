@@ -1,7 +1,7 @@
 ---
-source-git-commit: 580a15c908fc8ac4ef5d62582dfdd87d75dde994
+source-git-commit: 7dd6322370b976d8edea51fd94099e6dc4c082b7
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '719'
 ht-degree: 3%
 
 ---
@@ -112,6 +112,12 @@ Så här uppdaterar du mallinnehåll:
 
    >**OBS!** Du måste köra skriptet från `_jekyll` katalog. Om detta är första gången du kör skriptet måste du installera Ruby-beroenden först med `bundle install` -kommando.
 
+1. Navigera tillbaka till `root` katalog.
+
+   ```
+   cd ..
+   ```
+
 1. Verifiera att `help/_includes/templated` filer ändrades.
 
    ```
@@ -122,7 +128,15 @@ Så här uppdaterar du mallinnehåll:
 
    ```
    modified:   _data/product-availability.yml
-   modified:   ../help/_includes/templated/product-availability-extensions.md
+   modified:   help/_includes/templated/product-availability-extensions.md
+   ```
+
+1. Gör ändringar.
+
+   ```
+   git add
+   git commit -m "_descriptive message of the intended commit_"
+   git push
    ```
 
 Läs Jekyll-dokumentationen för mer information om [Datafiler](https://jekyllrb.com/docs/datafiles), [Flytande filter](https://jekyllrb.com/docs/liquid/filters/)och andra funktioner.
