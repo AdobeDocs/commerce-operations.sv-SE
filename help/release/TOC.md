@@ -3,9 +3,9 @@ user-guide-title: Versionsinformation
 user-guide-description: Få tillgång till all versionsinformation för Adobe Commerce patchar och tjänster på ett och samma ställe.
 feature: Release Notes
 recommendations: noDisplay, noCatalog
-source-git-commit: e1c5b5e5c1a8800aa5aa2657060f61c16743cbda
+source-git-commit: 5ad3f01421b7724d1bc81cadfe7ce4528d8ba969
 workflow-type: tm+mt
-source-wordcount: '108'
+source-wordcount: '104'
 ht-degree: 0%
 
 ---
@@ -53,6 +53,5 @@ ht-degree: 0%
 - [Släppta versioner](versions.md)
 - Paket {#packages}
    - [Adobe Commerce](packages/adobe-commerce.md)
-   - [B2B för Adobe Commerce](packages/adobe-commerce-b2b.md)
    - [Magento Open Source](packages/magento-open-source.md)
 - [Återgå till bruksanvisningar](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
