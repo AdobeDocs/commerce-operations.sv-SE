@@ -2,9 +2,9 @@
 title: Betaversioner
 description: Läs mer om betaversioner av Adobe Commerce och hur du deltar.
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
-source-git-commit: 1dd4b44c6aa685795e16dccebfaf073dcc0062f2
+source-git-commit: d761bd089fbd2046e993d4652e9e0e2b3c4d2777
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '596'
 ht-degree: 0%
 
 ---
@@ -47,15 +47,6 @@ Bättre datadelning mellan Adobe Commerce och Adobe Experience Platform för eff
 - Stöd för flera datauppsättningar och datastreams
 
 Om du vill delta i betaversionen skickar du en e-postförfrågan till [DataConnection@adobe.com](mailto:DataConnection@adobe.com).
-
-### Backoffice Integration Starter Kit (privat betaversion)
-
-The backoffice [startpaket för integrering](https://developer-stage.adobe.com/commerce/extensibility/app-development/starter-kit/) ger utvecklare en accelerator för att bygga händelsestyrda integreringar med system som ERP, CRM och OMS. Med startpaketet kan du minska utvecklingskostnaderna med upp till 50 %. Starter Kit följer också Adobe Commerce bästa praxis som minskar underhållskostnaderna avsevärt. Några av nyheterna i startpaketet:
-- Datasynkronisering för vanliga objekt som produkt, order, kund, lager och leverans
-- Arkitekturritningar som följer vedertagna standarder
-- Inledande skript snabbar upp utvecklingen
-
-Om du vill delta i betaversionen fyller du i [anmälningsformulär](https://forms.office.com/r/YbYArqE3DT).
 
 ### Adobe Commerce Foundation (offentlig betaversion)
 
