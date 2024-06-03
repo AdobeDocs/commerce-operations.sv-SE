@@ -2,7 +2,7 @@
 title: Frigör schema
 description: Läs mer om när Adobe planerar att tillkännage lanseringen av nya funktioner i Adobe Commerce.
 exl-id: ae1e09cd-966f-44a3-9e4d-b90bb838429d
-source-git-commit: 1eac85dd1cf90f6cb064dc68a4622a6343c84b4d
+source-git-commit: e9ef167f5425407f6b1850f0dd913d5d3e2bd628
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 2%
@@ -33,7 +33,7 @@ I följande tabell visas datumen för schemalagda releaser (datum kan ändras):
    <tr>
       <td colspan="3"><strong>Förklaring</strong>
          <ul>
-           <li><strong><img alt="Funktionsikon för B2B" src="../assets/icons/enterprise.svg"></img> B2B</strong>—Nya funktioner, förbättringar och felkorrigeringar för B2B-tillägget för Adobe Commerce. Mer information om B2B-tilläggets releaser finns i [B2B Release Notes](https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes.html).</li>
+           <li><strong><img alt="Funktionsikon för B2B" src="../assets/icons/enterprise.svg"></img> B2B</strong>—Nya funktioner, förbättringar och felkorrigeringar för B2B-tillägget för Adobe Commerce. Mer information om B2B-tilläggets releaser finns i <a href="https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes.html">Versionsinformation för B2B</a>.</li>
             <li><strong><img alt="Ikon för utökningsfunktion" src="../assets/icons/brackets.svg"></img> Utbyggbarhet</strong>- Nya verktyg och tjänster för utbyggbarhet som inte längre är i processen och som levereras oberoende av korrigeringsversioner. Exempel: Admin UI SDK, Adobe I/O Events för Commerce och API Mesh.</li>
             <li><strong><img alt="Ikon för infrastrukturfunktion" src="../assets/icons/servers.svg"></img> Infrastruktur</strong>—Nya funktioner och förbättringar i Adobe Commerce i molninfrastrukturen och i Creative Suite for Commerce-paketen, som är utformade för att driftsätta och hantera Adobe Commerce-installationer och uppgraderingar på molnplattformen.</li>
             <li><strong><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> Patchar</strong>- Uppdateringar av Adobe Commerce PHP-programmets kärnprogram som omfattar korrigeringar av säkerhet, regelefterlevnad, prestanda och högprioriterade kvaliteter.</li>
