@@ -2,9 +2,9 @@
 title: '[!DNL Site-Wide Analysis Tool]'
 description: Läs mer om [!DNL Site-Wide Analysis] Verktyg, dess användningsområden, installationsprocessen och hur du får åtkomst
 exl-id: 32774040-d322-43d6-9c26-c340a0ab58a9
-source-git-commit: 7b6413c4fdc26b73dda74bcf7cd3a3acdd587abc
+source-git-commit: 5f39a2d8440225b3a2e463894e2bd866196fbac2
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '503'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,10 @@ Den innehåller också ett historiskt diagram som visar hur webbplatsens hälsa 
 
 - **Information** - Tillhandahåller kontaktinformation och en sammanfattning av aktuella biljetter med detaljerad information om varje installerad Adobe Commerce-produkt.
 
-- **Recommendations** - Visar rekommendationer baserade på bästa praxis för att åtgärda problem som upptäcks på din plats.
+- **Recommendations** - Visar rekommendationer baserade på bästa praxis för att åtgärda problem som upptäcks på din plats:
+   - För ändringar som kräver en infrastrukturuppdatering skickar du en supportförfrågan.
+   - Gör ändringarna själv för ändringar som kräver en programuppdatering.
+   - För ändringar som kräver manuell åtgärd, till exempel [koddistribution](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow.html#deployment-workflow)ber du systemadministratören eller utvecklarna om hjälp.
 
 - **Undantag** - Visar en lista över fel som genererats av programmet och som orsakas av onormala förhållanden utan felhanterare.
 
