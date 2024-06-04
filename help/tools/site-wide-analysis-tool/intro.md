@@ -2,9 +2,9 @@
 title: '[!DNL Site-Wide Analysis Tool]'
 description: Läs mer om [!DNL Site-Wide Analysis] Verktyg, dess användningsområden, installationsprocessen och hur du får åtkomst
 exl-id: 32774040-d322-43d6-9c26-c340a0ab58a9
-source-git-commit: 516dff47cd616ea0c4d341e431c7098165d2c872
+source-git-commit: 7b6413c4fdc26b73dda74bcf7cd3a3acdd587abc
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '461'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,8 @@ Den här guiden ger en helhetsöversikt över [!DNL Site-Wide Analysis Tool]. De
 ## Vad är [!DNL Site-Wide Analysis Tool]?
 
 The [!DNL Site-Wide Analysis Tool] är ett proaktivt självbetjäningsverktyg och en central lagringsplats som innehåller detaljerade systeminsikter och rekommendationer för att säkerställa säkerheten och användbarheten för din Adobe Commerce-installation. Den ger prestandaövervakning, rapporter och råd i realtid dygnet runt alla dagar för att identifiera potentiella problem och bättre synlighet för webbplatsens hälsa, säkerhet och programkonfigurationer. Det minskar upplösningstiden och förbättrar webbplatsens stabilitet och prestanda.
+
+![Kontrollpanel för analysverktyg för hela webbplatsen](../../assets/tools/swat-dashboard.png){zoomable="yes"}
 
 Se det här [introduktionsvideo](https://www.youtube.com/watch?v=KW2R8ki_RG4) om du vill veta mer.
 

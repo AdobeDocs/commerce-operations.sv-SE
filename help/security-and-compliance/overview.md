@@ -2,9 +2,9 @@
 title: Säkerhet och efterlevnad
 description: Läs mer om säkerhet, integritet och branschens efterlevnadsresurser för ditt Adobe Commerce-projekt.
 exl-id: 8c8cb369-33da-4c4c-bcab-a95d5ec97cc1
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: f5bcf5c875234875a61664214e50806cc6ba2119
 workflow-type: tm+mt
-source-wordcount: '158'
+source-wordcount: '182'
 ht-degree: 0%
 
 ---
@@ -15,8 +15,9 @@ Det här avsnittet innehåller information om säkerhet, sekretess och regelefte
 
 ## Säkerhet
 
-- [Adobe produktsäkerhet](https://helpx.adobe.com/security.html): De senaste patcharna, säkerhetsuppdateringarna och metodtips för Adobe Commerce.
-- [Adobe Trust Center](https://www.adobe.com/trust.html): Den senaste tillgängliga informationen om driftshälsa, säkerhet, sekretess och efterlevnad för molntjänster i Adobe.
+- [Adobe produktsäkerhet](https://helpx.adobe.com/security.html): Läs mer om de senaste patcharna, säkerhetsuppdateringarna och de bästa metoderna för Adobe Commerce.
+- [Adobe Trust Center](https://www.adobe.com/trust.html): Få tillgång till den senaste tillgängliga informationen om driftshälsa, säkerhet, sekretess och efterlevnad för alla molntjänster i Adobe.
+- [Site-Wide Analysis Tool](../tools/site-wide-analysis-tool/dashboard.md): Få smidiga säkerhetsinsikter om din Adobe Commerce-webbplats, inklusive säkerhetsgenomsökning, slutservice och säkerhetsrekommendationer.
 
 ## Regelefterlevnad
 

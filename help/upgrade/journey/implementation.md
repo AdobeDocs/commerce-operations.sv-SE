@@ -2,9 +2,9 @@
 title: Implementering av uppgradering
 description: Läs om de olika faserna i uppgraderingsimplementeringen för Adobe Commerce-projekt.
 exl-id: d64855a7-73ee-463f-a314-6a8d4ebe4726
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: a81d2c0b6526c2c8c8c5c4652c83595667985543
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '826'
 ht-degree: 1%
 
 ---
@@ -32,6 +32,10 @@ Här följer några punkter som du kanske vill ta med i en grundlig analys:
    - Aktuell installerad version
    - Uppgradera målversion
    - Antal och information om kritiska fel som påträffats
+
+  >[!TIP]
+  >
+  >All denna information (och mer) finns i Site-Wide Analysis Tool [kontrollpanel](../../tools/site-wide-analysis-tool/dashboard.md).
 
 - Uppgraderar tjänster som stöder målversion. Använd följande tabellmall för att mappa ut vilka tjänster du måste uppgradera. Använd [systemkrav](../../installation/system-requirements.md) för att avgöra vad som ska läggas till i _Uppgradera till_ kolumn.
 
