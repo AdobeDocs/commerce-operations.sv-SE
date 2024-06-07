@@ -2,7 +2,7 @@
 title: Rekommenderad läsning för uppgraderingar
 description: Granska rekommenderad läsning för att planera din Adobe Commerce-uppgradering.
 exl-id: 24ca57c0-1a68-46c4-b2fa-4a114250d0e3
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 9542084e6ed1a4ebbbb33373d9c7bc9b463b9d5d
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 3%
@@ -42,7 +42,7 @@ Läs mer om Adobe Commerce uppgraderingar här.
         <p>Läs mer om Adobe Commerce releaser och profiler.</p>
           <ul>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/adobe-commerce-eos-policy-faq.html">Vanliga frågor om Adobe Commerce-programvarans slut</a></li>
-            <li><a href="https://marketplacesupport.magento.com/hc/en-us/articles/4413722432653">Commerce Marketplace policy</a></li>
+            <li><a href="https://developer.adobe.com/commerce/marketplace/guides/sellers/compatibility/requirements/">Commerce Marketplace policy</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/adobe-commerce-release-strategy-lifecycle-policy.html">Frågor och svar om nya Adobe Commerce Release Strategy, Updated Lifecycle Policy och Extended Support</a></li>
             <li><a href="https://www.adobe.com/content/dam/cc/en/legal/terms/enterprise/pdfs/Adobe-Commerce-Software-Lifecycle-Policy.pdf">Livscykelprincip</a></li>
             <li><a href="../../release/schedule.md">Frigör schema</a></li>
