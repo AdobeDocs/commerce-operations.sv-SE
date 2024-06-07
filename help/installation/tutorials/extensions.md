@@ -1,17 +1,18 @@
 ---
-title: Installera ett tillägg
-description: Så här installerar du ett Adobe Commerce-tillägg.
+title: Hantera tillägg från tredje part
+description: Följ de här stegen för att installera, aktivera, uppgradera och avinstallera ett Adobe Commerce-tillägg.
 exl-id: b564662a-2e5f-4fa9-bae1-ca7498478fa9
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 6da0e70acc77d2171d6336ab632e6a9a8dd16c67
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '785'
 ht-degree: 0%
 
 ---
 
-# Installera ett tillägg
 
-Kod som utökar eller anpassar Adobe Commerce-beteendet kallas ett tillägg. Du kan även paketera och distribuera tillägg på [Commerce Marketplace](https://marketplace.magento.com) eller ett annat tilläggsdistributionssystem.
+# Hantera tillägg från tredje part
+
+Kod som utökar eller anpassar Adobe Commerce-beteendet kallas ett tillägg. Du kan även paketera och distribuera tillägg på [Commerce Marketplace](https://commercemarketplace.adobe.com/) eller ett annat tilläggsdistributionssystem.
 
 Tilläggen omfattar:
 
@@ -21,7 +22,9 @@ Tilläggen omfattar:
 
 >[!TIP]
 >
->I det här avsnittet beskrivs hur du använder kommandoraden för att installera tillägg som du köper från Commerce Marketplace. Du kan använda samma procedur för att installera _alla_ -tillägg. Allt du behöver är tilläggets disposition och version. Öppna tilläggets `composer.json` och notera värdena för `"name"` och `"version"`.
+>I det här avsnittet beskrivs hur du använder kommandoradsgränssnittet för att hantera tillägg från tredje part som du köper från Commerce Marketplace. Du kan använda samma procedur för att installera _alla_ -tillägg. Allt du behöver är tilläggets disposition och version. Öppna tilläggets `composer.json` och notera värdena för `"name"` och `"version"`.
+
+## Installera
 
 Före installationen kanske du vill:
 
@@ -51,13 +54,13 @@ Om du vill installera ett tillägg måste du:
 1. Kontrollera att tillägget har installerats korrekt.
 1. Aktivera och konfigurera tillägget.
 
-## Hämta namnet och versionen för tilläggsdispositionen
+### Hämta tilläggsinformation
 
-Om du redan känner till namnet och versionen på tilläggets disposition hoppar du över det här steget och fortsätter med [Uppdatera dina `composer.json` fil](#update-your-composer-file).
+Om du redan känner till namnet och versionen på tilläggets disposition hoppar du över det här steget och fortsätter med [Uppdatera dina `composer.json` fil](#update-composer-dependencies).
 
 Så här hämtar du tilläggets dispositionsnamn och version från Commerce Marketplace:
 
-1. Logga in på [Commerce Marketplace](https://marketplace.magento.com) med det användarnamn och lösenord som du använde för att köpa tillägget.
+1. Logga in på [Commerce Marketplace](https://commercemarketplace.adobe.com/) med det användarnamn och lösenord som du använde för att köpa tillägget.
 
 1. Klicka på i det övre högra hörnet **Ditt namn** > **Min profil**.
 
@@ -75,7 +78,7 @@ Så här hämtar du tilläggets dispositionsnamn och version från Commerce Mark
 >
 >Du kan också hitta Composer-namnet och versionen av _alla_ tillägg (vare sig du har köpt det på Commerce Marketplace eller någon annanstans) i tilläggets `composer.json` -fil.
 
-## Uppdatera din Composer-fil
+### Uppdatera Composer-beroenden
 
 Lägg till tilläggets namn och version i din `composer.json` fil:
 
@@ -103,7 +106,7 @@ Lägg till tilläggets namn och version i din `composer.json` fil:
    Generating autoload files
    ```
 
-## Verifiera tillägget
+### Verifiera installation
 
 Kör följande kommando för att kontrollera att tillägget är korrekt installerat:
 
@@ -125,7 +128,7 @@ bin/magento module:status
 
 Och sök efter tillägget under&quot;Lista över inaktiverade moduler&quot;.
 
-## Aktivera tillägget
+### Aktivera
 
 Vissa tillägg fungerar inte korrekt om du inte först rensar genererade statiska vyfiler. Använd `--clear-static-content` om du vill rensa statiska visningsfiler när du aktiverar ett tillägg.
 
@@ -183,7 +186,7 @@ Vissa tillägg fungerar inte korrekt om du inte först rensar genererade statisk
 >
 >Om fel uppstår när du läser in butiken i en webbläsare använder du följande kommando för att rensa cachen: `bin/magento cache:flush`.
 
-## Uppgradera ett tillägg
+## Uppgradera
 
 Så här uppdaterar eller uppgraderar du en modul eller ett tillägg:
 
@@ -218,3 +221,39 @@ Så här uppdaterar eller uppgraderar du en modul eller ett tillägg:
    ```bash
    bin/magento cache:clean
    ```
+
+## Avinstallera
+
+Du bör kontakta tilläggsleverantören för instruktioner om hur du tar bort ett tillägg från tredje part. Instruktionerna ska innehålla följande information:
+
+- Återställa ändringar i databastabellen
+- Återställa databasdataändringar
+- Vilka filer som ska tas bort eller återställas
+
+>[!CAUTION]
+>
+>Utför avinstallationssteg i en icke-produktionsmiljö _först_ och grundligt testa innan du driftsätter i produktionsmiljön.
+
+Följande instruktioner innehåller allmän information om hur du avinstallerar tillägg från tredje part:
+
+1. Ta bort tillägget från Adobe Commerce projektarkiv.
+
+   - För Composer-baserade tillägg tar du bort tillägget från Adobe Commerce `composer.json` -fil.
+
+     ```bash
+     composer remove <package-name>
+     ```
+
+   - För icke-dispositionsbaserade tillägg tar du bort de fysiska filerna från Adobe Commerce projektdatabas.
+
+     ```bash
+     rm -rf app/code/<vendor-name>/<module-name>
+     ```
+
+1. Om `config.php` filen finns under källkontroll i Adobe Commerce projektdatabas. Ta bort tillägget från `config.php` -fil.
+
+1. Testa den lokala databasen för att säkerställa att leverantörens instruktioner fungerar som förväntat.
+
+1. Kontrollera att tillägget är korrekt inaktiverat och att webbplatsen fungerar som förväntat i staging-miljön.
+
+1. Driftsätt ändringarna i produktionsmiljön.
