@@ -1,5 +1,5 @@
 ---
-source-git-commit: 7dd6322370b976d8edea51fd94099e6dc4c082b7
+source-git-commit: 0709cd6510adce0f513894fdecb2de5ac88d0e87
 workflow-type: tm+mt
 source-wordcount: '719'
 ht-degree: 3%
@@ -7,7 +7,7 @@ ht-degree: 3%
 ---
 # Adobe Commerce tekniska dokumentation
 
-Vi välkomnar bidrag från både vår community och från Adobe anställda utanför dokumentationsteamen.
+Vi välkomnar bidrag från såväl communityn som från Adobe anställda utanför dokumentationsteamen.
 
 ## Adobe uppförandekod med öppen källkod
 
@@ -67,7 +67,7 @@ Exempel på mallat innehåll är, men är inte begränsade till, följande:
 
 ### Generera mallat innehåll
 
-I allmänhet behöver de flesta skribenter bara lägga till en releaseversion till tabellerna med produkttillgänglighet och systemkrav. Underhåll för allt annat mallat innehåll automatiseras eller hanteras av en dedikerad teammedlem. Dessa instruktioner är avsedda för&quot;de flesta&quot; skribenter.
+I allmänhet behöver de flesta skribenter bara lägga till en releaseversion till tabellerna med produkttillgänglighet och systemkrav. Underhåll för allt annat mallat innehåll automatiseras eller hanteras av en dedikerad teammedlem. De här instruktionerna är avsedda för de flesta skribenter.
 
 >**OBS!**
 >

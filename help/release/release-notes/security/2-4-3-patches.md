@@ -2,23 +2,23 @@
 title: Versionsinformation om säkerhetsuppdateringar för Adobe Commerce 2.4.3
 description: Läs mer om säkerhetsfelkorrigeringar, säkerhetsförbättringar och andra säkerhetsrelaterade uppdateringar som ingår i säkerhetsuppdateringarna för Adobe Commerce version 2.4.3.
 exl-id: 72d343cd-83d7-48ce-976a-e26ba1b8db27
-source-git-commit: 1eaf2329c16e6dbe3e93cb7fff3a6920b4b8379d
+source-git-commit: d532402e2d65a1f34558fc3c283d4291be5b006b
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '931'
 ht-degree: 0%
 
 ---
 
-# Adobe Commerce 2.4.3 Security Patch Release Notes
+
+# Versionsinformation om säkerhetsuppdateringar för Adobe Commerce 2.4.3
 
 {{$include /help/_includes/security-patch-release-notes-intro.md}}
 
 ## Adobe Commerce 2.4.3-p3
 
-Säkerhetsutgåvan av Adobe Commerce 2.4.3-p3 innehåller säkerhetsfixar för säkerhetsluckor som upptäcktes i den tidigare versionen (Adobe Commerce 2.4.3 och Magento Open Source 2.4.3). Den här versionen innehåller även säkerhetsförbättringar som förbättrar efterlevnaden av de senaste säkerhetsstandarderna.
+Säkerhetsutgåvan av Adobe Commerce 2.4.3-p3 innehåller säkerhetsfixar för säkerhetsluckor som har identifierats i tidigare versioner av 2.4.3. Den här versionen innehåller även säkerhetsförbättringar som förbättrar efterlevnaden av de senaste säkerhetsstandarderna.
 
 Den senaste informationen om säkerhetsfelkorrigeringarna finns på [Adobe säkerhetsbulletin APSB22-38](https://helpx.adobe.com/security/products/magento/apsb22-38.html).
-
 
 ### Använd `AC-3022.patch` fortsätta erbjuda DHL som fraktfirma
 
@@ -39,7 +39,6 @@ Den senaste informationen om säkerhetsfelkorrigeringarna finns på [Adobe säke
 ### Använd `AC-3022.patch` fortsätta erbjuda DHL som fraktfirma
 
 DHL har introducerat schemaversion 6.2 och kommer inom kort att föråldra schemaversion 6.0. Adobe Commerce 2.4.4 och tidigare versioner som stöder DHL-integration stöder endast version 6.0. Handlare som distribuerar dessa versioner bör tillämpa `AC-3022.patch` så snart det går att fortsätta erbjuda DHL som fraktfirma. Se [Använd en patch för att fortsätta erbjuda DHL som fraktfirma](https://support.magento.com/hc/en-us/articles/7707818131597-Apply-a-patch-to-continue-offering-DHL-as-shipping-carrier) Kunskapsbasartikeln innehåller information om hur du hämtar och installerar korrigeringen.
-
 
 ### Viktiga säkerhetsfunktioner
 
@@ -65,7 +64,6 @@ Säkerhetsutgåvan av Adobe Commerce 2.4.3-p1 innehåller säkerhetsfelkorrigeri
 
 Den senaste informationen om säkerhetsfelkorrigeringarna finns på [Adobe säkerhetsbulletin APSB21-86](https://helpx.adobe.com/security/products/magento/apsb21-86.html). Korrigeringsversionen innehåller även felkorrigeringar för [Braintree](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/payments/braintree.html), [Klarna](https://marketplace.magento.com/klarna-m2-klarna.html)och [Hörn](https://marketplace.magento.com/vertexinc-vertex-tax-module.html) leverantörsutvecklade tillägg.
 
-
 ### Använd `AC-3022.patch` fortsätta erbjuda DHL som fraktfirma
 
 DHL har introducerat schemaversion 6.2 och kommer inom kort att föråldra schemaversion 6.0. Adobe Commerce 2.4.4 och tidigare versioner som stöder DHL-integration stöder endast version 6.0. Handlare som distribuerar dessa versioner bör tillämpa `AC-3022.patch` så snart det går att fortsätta erbjuda DHL som fraktfirma. Se [Använd en patch för att fortsätta erbjuda DHL som fraktfirma](https://support.magento.com/hc/en-us/articles/7707818131597-Apply-a-patch-to-continue-offering-DHL-as-shipping-carrier) Kunskapsbasartikeln innehåller information om hur du hämtar och installerar korrigeringen.
@@ -87,4 +85,3 @@ Den här versionen innehåller följande snabbkorrigering och alla snabbkorriger
 **Säkerhetsluckor vid senaste penetrationstest** har korrigerats i den här versionen. <!-- MC-42431-->
 
 Källuttrycket stöds inte `unsafe-inline` har tagits bort från skyddsprofilen för innehåll `frame-ancestors` -direktivet. [GitHub-33101](https://github.com/magento/magento2/issues/33101)<!-- MC-42632-->
-

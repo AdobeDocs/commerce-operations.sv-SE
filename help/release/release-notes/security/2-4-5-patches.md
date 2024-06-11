@@ -2,9 +2,9 @@
 title: Adobe Commerce 2.4.5 Security Patch Release Notes
 description: Läs mer om säkerhetsfelkorrigeringar, säkerhetsförbättringar och andra säkerhetsrelaterade uppdateringar som ingår i säkerhetsuppdateringarna för Adobe Commerce version 2.4.5.
 exl-id: 1b5f6d84-877a-45ea-8ff5-db83e3d360dd
-source-git-commit: e1c5b5e5c1a8800aa5aa2657060f61c16743cbda
+source-git-commit: 7705e750a466ab134ae2616a40a32880ee0c45de
 workflow-type: tm+mt
-source-wordcount: '1001'
+source-wordcount: '1092'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,16 @@ ht-degree: 0%
 # Versionsinformation om säkerhetsuppdateringar för Adobe Commerce 2.4.5
 
 {{$include /help/_includes/security-patch-release-notes-intro.md}}
+
+## Adobe Commerce 2.4.5-p8
+
+Säkerhetsutgåvan av Adobe Commerce 2.4.5-p7 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som har identifierats i tidigare versioner av 2.4.5.
+
+Den senaste informationen om säkerhetsfelkorrigeringarna finns på [Adobe säkerhetsbulletin APSB24-40](https://helpx.adobe.com/security/products/magento/apsb24-40.html).
+
+### Plattformsuppgraderingar
+
+* **Stöd för MariaDB 10.5**. Den här korrigeringsversionen är kompatibel med MariaDB version 10.5. Adobe Commerce är fortfarande kompatibelt med MariaDB version 10.4, men Adobe rekommenderar att du använder Adobe Commerce 2.4.5-p8 och alla kommande 2.4.5-säkerhetsuppdateringar endast med MariaDB version 10.5 eftersom MariaDB 10.4-underhållet upphör den 18 juni 2024. <!--AC-11530-->
 
 ## Adobe Commerce 2.4.5-p7
 
@@ -107,5 +117,3 @@ Säkerhetsutgåvan av Adobe Commerce 2.4.5-p1 innehåller säkerhetsfelkorrigeri
 Den senaste informationen om säkerhetsfelkorrigeringarna finns på [Adobe säkerhetsbulletin APSB22-48](https://helpx.adobe.com/security/products/magento/apsb22-48.html).
 
 En av säkerhetsfelkorrigeringarna var att skapa en ny konfigurationsinställning. The **Kräv e-postbekräftelse om e-post har ändrats** Med konfigurationsinställningen kan administratörer kräva e-postbekräftelse när en Admin-användare ändrar sin e-postadress. <!-- AC-6292-->
-
-

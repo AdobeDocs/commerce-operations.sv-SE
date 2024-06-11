@@ -1,11 +1,11 @@
 ---
-source-git-commit: 1eaf2329c16e6dbe3e93cb7fff3a6920b4b8379d
+source-git-commit: d532402e2d65a1f34558fc3c283d4291be5b006b
 workflow-type: tm+mt
 source-wordcount: '184'
 ht-degree: 0%
 
 ---
-# Om Adobe Commerce Security patch
+# Om Adobe Commerce säkerhetsuppdateringar
 
 **Felkorrigering för säkerhet**: En programvarukodsändring som åtgärdar ett identifierat säkerhetsproblem och ger förväntat resultat i ett påverkat produktområde. Dessa korrigeringar är vanligtvis bakåtkompatibla.
 
