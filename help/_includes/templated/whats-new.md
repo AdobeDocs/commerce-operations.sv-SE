@@ -1,7 +1,7 @@
 ---
-source-git-commit: ccc1c6451556ac721d331adebf02db8226e75699
+source-git-commit: 050fa7a35bb5f6f87d364e4c381062ca12baecc7
 workflow-type: tm+mt
-source-wordcount: '303'
+source-wordcount: '80'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
 
-### 29 april 2024
+### 11 juni 2024
 
 <table style="table-layout:auto;">
   <thead>
@@ -23,15 +23,15 @@ Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
   </thead>
   <tbody>
     <tr>
-      <td><p>Uppdaterade <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/reference/uct">UCT CLI-referens</a>.</p>
+      <td><p>Uppdaterade <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/uct">UCT CLI-referens</a>.</p>
 </td>
       <td>teknisk</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/ae9b29601953f25ca28f253f557d547b200616a0">ae9b29</a> (implementera)</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/1fbddf4ea05511c1aefe0cd0d8e8b2ebde7e00dd">1fbddf</a> (implementera)</td>
     </tr>
   </tbody>
 </table>
 
-### 26 april 2024
+### 7 juni 2024
 
 <table style="table-layout:auto;">
   <thead>
@@ -43,85 +43,21 @@ Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
   </thead>
   <tbody>
     <tr>
-      <td><p>Omorganiserat <em>Handböcker</em> hemsida (den här sidan) och flyttade <em><a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises">Referens för kommandoradsverktyg</a></em> till <em><a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/overview">verktyg</a></em> guide.</p>
+      <td><p>Tillagd <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/beta">betainformation</a> för Experience Manager Assets Integration for Commerce (private beta).</p>
 </td>
       <td>större uppdatering</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/839b4e26a7c5d662093c7c1eec3fd5883ed7706a">839b4e</a> (implementera)</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/d51937e25049f636a3b69f072a3fe4ba135766c2">d51937</a> (implementera)</td>
     </tr>
     <tr>
-      <td><p>Lagt till en ny <a href="https://experienceleague.adobe.com/docs/commerce-operations/events/summit/2024.html">sammanfattningssida</a> för Adobe Summit.</p>
-</td>
-      <td>new-topic</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/1c2c75da7cda0e3c38ea904c98932472b618a3e5">1c2c75</a> (implementera)</td>
-    </tr>
-  </tbody>
-</table>
-
-### 15 april 2024
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Källa</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Uppdaterade <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/beta">beta</a> för att inkludera information om alla tillgängliga betaversioner för Adobe Commerce.</p>
+      <td><p>Lagt till instruktioner för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/tutorials/extensions">avinstallerar</a> tillägg från tredje part.</p>
 </td>
       <td>större uppdatering</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/a362cad66d38a89bacda656d1520047e22262179">a362ca</a> (implementera)</td>
-    </tr>
-  </tbody>
-</table>
-
-### 9 april 2024
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Källa</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Uppdaterat <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/versions.html">Släppta versioner</a>.</p>
-</td>
-      <td>teknisk</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/efd2fc4285a5cdc7ee20ead299ee16e54f9bcb83">efd2fc</a> (implementera)</td>
-    </tr>
-    <tr>
-      <td><p>Uppdaterade ämnen om versionspaket för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/packages/adobe-commerce">Adobe Commerce</a> och <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/packages/magento-open-source">Magento Open Source</a>.<br /> Ett ämne för versionspaket har lagts till för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/packages/adobe-commerce-b2b">B2B för handel</a>.</p>
-</td>
-      <td>större uppdatering</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/aad4b904ba95142d1d848f934c9d3702cc37ec16">aad4b9</a> (implementera)</td>
-    </tr>
-    <tr>
-      <td><p>Uppdaterade <em>bin/magento</em> CLI-referensdokumentation för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/reference/commerce-on-premises">Adobe Commerce</a> och <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/reference/magento-open-source">Magento Open Source</a>.</p>
-</td>
-      <td>större uppdatering</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/b81dc87a261f128cdb572a30ff5538dae2087c49">b81dc8</a> (implementera)</td>
-    </tr>
-    <tr>
-      <td><p>Publicerad 2.4.7 GA <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/2-4-7">versionsinformation</a>.</p>
-</td>
-      <td>större uppdatering</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/35b7caafbef5ced52ef6e4907e0634dfb2a61e4f">35b7ca</a> (implementera)</td>
-    </tr>
-    <tr>
-      <td><p>Lägger till versionsinformation för Adobe Commerce säkerhetsutgåvor från april 2024 (2.4.6-p5, 2.4.5-p7, 2.4.4-p8). Se <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/overview.html">Versionsinformation för Adobe Commerce och Magento Open Source</a></p>
-</td>
-      <td>större uppdatering</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/7acab1d8d3f7b11cc1387b5558521f282ba0873f">7acab1</a> (implementera)</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/a623002b366ae07eaabe9711946d7f8ceb3b9132">a62300</a> (implementera)</td>
     </tr>
   </tbody>
 </table><!-- date_group -->
 
-### 24 mars 2024
+### 21 maj 2024
 
 <table style="table-layout:auto;">
   <thead>
@@ -133,54 +69,10 @@ Läs om ny dokumentation och viktiga uppdateringar av befintlig dokumentation.
   </thead>
   <tbody>
     <tr>
-      <td><p>Tillagda <a href="https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/architecture/enterprise-blueprint.html">arkitekturutkast</a> för företagsimplementeringar av Commerce.</p>
-</td>
-      <td>new-topic</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/d33294d02b4431d4aa473aa5d0ab42e297cfed14">d33294</a> (implementera)</td>
-    </tr>
-  </tbody>
-</table>
-
-### 12 mars 2024
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Källa</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Uppdaterade följande avsnitt för 2.4.7-beta3-versionen:<br />- <a href="https://experienceleague.adobe.com/docs/commerce-operations/reference/commerce-on-premises-beta.html">Adobe Commerce CLI (lokal, betaversion)</a><br />- <a href="https://experienceleague.adobe.com/docs/commerce-operations/reference/magento-open-source-beta.html">Magento Open Source CLI (betaversion)</a><br />- <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/packages/adobe-commerce-beta.html">Adobe Commerce-paket (beta)</a><br />- <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/packages/magento-open-source-beta.html">Magento Open Source-paket (beta)</a></p>
+      <td><p>Tydligt stöd för tredjepartsberoenden i <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/lifecycle-policy">livscykelpolicy för programvara</a>.</p>
 </td>
       <td>större uppdatering</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/28029603b0a23eb161480363b5106142beda4180">280296</a> (implementera)</td>
-    </tr>
-    <tr>
-      <td><p>Inställningsinstruktionerna för <a href="https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/performance-best-practices/application-server.html">Application Server för GraphQL API:er</a> -funktion.</p>
-</td>
-      <td>större uppdatering</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/a4f907a793b4384cb7c162c032a153fafbbc6ff3">a4f907</a> (implementera)</td>
-    </tr>
-    <tr>
-      <td><p>Publicerad versionsinformation för <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/adobe-commerce/2-4-7.html">Adobe Commerce 2.4.7-beta3</a>.</p>
-</td>
-      <td>större uppdatering</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/d5bd6e1e9af78b24c687554261a50d4dce9483d6">d5bd6e</a> (implementera)</td>
-    </tr>
-    <tr>
-      <td><p>2.4.7-beta3 har lagts till i <a href="https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html">systemkrav</a>.</p>
-</td>
-      <td>större uppdatering</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/4c622c47862c61fc9e6587ff95b3ac45142c2318">4c622c</a> (implementera)</td>
-    </tr>
-    <tr>
-      <td><p>Lagt till information om det nya <a href="https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html"><code class="language-plaintext highlighter-rouge">indexer:set-status</code></a> CLI-kommando.</p>
-</td>
-      <td>större uppdatering</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/acacc285f8b977b33bb27af76c971bc4015a2b45">acacc2</a> (implementera)</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/5459488d4b512447aff810dca8d3b32a074d5c1e">545948</a> (implementera)</td>
     </tr>
   </tbody>
 </table><!-- date_group --><!-- month_group --><!-- year_group -->
