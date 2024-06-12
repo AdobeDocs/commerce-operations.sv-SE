@@ -2,9 +2,9 @@
 title: GraphQL Application Server
 description: Följ dessa anvisningar för att aktivera GraphQL Application Server i din Adobe Commerce-distribution.
 exl-id: 9b223d92-0040-4196-893b-2cf52245ec33
-source-git-commit: 70d86569bef5c656fff3a8c6b4af142c81c81f10
+source-git-commit: c2f48db87f40498a84b2bf41569bb46202565701
 workflow-type: tm+mt
-source-wordcount: '2079'
+source-wordcount: '2088'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # GraphQL Application Server
 
-Med Commerce GraphQL Application Server kan Adobe Commerce upprätthålla status bland API-begäranden i Commerce GraphQL. GraphQL Application Server, som bygger på svullningstillägget, fungerar som en process med arbetstrådar som hanterar bearbetningen av begäranden. Genom att bevara ett startläge för ett program bland GraphQL API-begäranden förbättrar GraphQL Application Server hanteringen av begäranden och produktens övergripande prestanda. API-förfrågningar blir betydligt effektivare.
+Med Commerce GraphQL Application Server kan Adobe Commerce upprätthålla status bland Commerce GraphQL API-begäranden. GraphQL Application Server, som bygger på svullningstillägget, fungerar som en process med arbetstrådar som hanterar bearbetningen av begäranden. Genom att bevara ett startläge för ett program bland GraphQL API-begäranden förbättrar GraphQL Application Server hanteringen av begäranden och produktens övergripande prestanda. API-förfrågningar blir betydligt effektivare.
 
 GraphQL Application Server finns endast för Adobe Commerce. Det finns inte för Magento Open Source. Du måste [skicka in en Adobe Commerce-support](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide) biljett för att aktivera GraphQL Application Server i Pro-projekt.
 
@@ -22,7 +22,7 @@ GraphQL Application Server finns endast för Adobe Commerce. Det finns inte för
 
 ## Arkitektur
 
-GraphQL Application Server upprätthåller status mellan Commerce GraphQL API-begäranden och eliminerar behovet av startspärr. Genom att dela applikationsstatus mellan processer blir GraphQL-förfrågningar betydligt effektivare, vilket minskar svarstiderna med upp till 30 %.
+GraphQL Application Server upprätthåller status mellan Commerce GraphQL API-begäranden och eliminerar behovet av att starta. Genom att dela applikationsstatus mellan processer blir GraphQL-förfrågningar betydligt effektivare, vilket minskar svarstiderna med upp till 30 %.
 
 PHP-exekveringsmodellen&quot;share-no&quot; utgör en utmaning när det gäller latenstid eftersom varje begäran kräver att ramverket startas. Denna startprocess innehåller tidskrävande uppgifter som att läsa konfigurationen, konfigurera startprocessen och skapa tjänstklassobjekt.
 
@@ -30,7 +30,7 @@ Det verkar som om logiken för hantering av förfrågningar övergår till en h�
 
 ## Fördelar
 
-Med GraphQL Application Server kan Adobe Commerce hantera status mellan efterföljande Commerce GraphQL API-begäranden. Genom att dela programtillstånd mellan begäranden blir API-förfrågningens effektivitet effektivare genom att minimera belastningen på processerna och optimera hanteringen av förfrågningar. Därför kan svarstiden för GraphQL-begäranden minskas till 30 %.
+Med GraphQL Application Server kan Adobe Commerce hantera tillstånd mellan efterföljande Commerce GraphQL API-begäranden. Genom att dela programtillstånd mellan begäranden blir API-förfrågningens effektivitet effektivare genom att minimera belastningen på processerna och optimera hanteringen av förfrågningar. Därför kan svarstiden för GraphQL-begäranden minskas till 30 %.
 
 ## Systemkrav
 
@@ -53,7 +53,7 @@ The `ApplicationServer` modul (`Magento/ApplicationServer/`) aktiveras GraphQL A
 När Application Server-funktionen har aktiverats i ditt Pro-projekt utför du följande steg innan du distribuerar GraphQL Application Server:
 
 1. Distribuera Adobe Commerce i molninfrastrukturen med hjälp av molnmallen från [2.4.7-appservergren](https://github.com/magento/magento-cloud/tree/2.4.7-appserver).
-1. Se till att alla anpassningar och tillägg för din Commerce [kompatibel](https://developer.adobe.com/commerce/php/development/components/app-server/) med GraphQL Application Server.
+1. Se till att alla anpassningar och tillägg för Commerce [kompatibel](https://developer.adobe.com/commerce/php/development/components/app-server/) med GraphQL Application Server.
 1. Klona ditt Commerce Cloud-projekt.
 1. Justera inställningarna i filen application-server/nginx.conf.sample om det behövs.
 1. Kommentera det aktiva webbavsnittet i `project_root/.magento.app.yaml` helt och hållet.
@@ -66,6 +66,12 @@ När Application Server-funktionen har aktiverats i ditt Pro-projekt utför du f
            protocol: http
        commands:
            start: ./application-server/start.sh > var/log/application-server-status.log 2>&1
+   ```
+
+1. Se till att `/application-server/start.sh` är körbar genom att köra följande kommando:
+
+   ```bash
+   chmod +x application-server/start.sh
    ```
 
 1. Lägg till uppdaterade filer i Git-indexet med det här kommandot:
@@ -93,7 +99,7 @@ git push
 Utför följande steg innan du distribuerar GraphQL Application Server i Starter-projekt:
 
 1. Distribuera Adobe Commerce i molninfrastrukturen med hjälp av molnmallen från [2.4.7-appservergren](https://github.com/magento/magento-cloud/tree/2.4.7-appserver).
-1. Se till att alla anpassningar och tillägg i Commerce är kompatibla med GraphQL Application Server.
+1. Kontrollera att alla Commerce-anpassningar och tillägg är kompatibla med GraphQL Application Server.
 1. Bekräfta att `CRYPT_KEY` Miljövariabeln ställs in för din instans. Du kan kontrollera statusen för den här variabeln på Cloud Project Portal (gränssnittet för introduktion).
 1. Klona ditt Commerce Cloud-projekt.
 1. Byt namn `application-server/.magento/.magento.app.yaml.sample` till `application-server/.magento/.magento.app.yaml` och justera inställningarna i .magento.app.yaml om det behövs.
