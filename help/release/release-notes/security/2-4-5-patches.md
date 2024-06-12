@@ -2,9 +2,9 @@
 title: Adobe Commerce 2.4.5 Security Patch Release Notes
 description: Läs mer om säkerhetsfelkorrigeringar, säkerhetsförbättringar och andra säkerhetsrelaterade uppdateringar som ingår i säkerhetsuppdateringarna för Adobe Commerce version 2.4.5.
 exl-id: 1b5f6d84-877a-45ea-8ff5-db83e3d360dd
-source-git-commit: 7705e750a466ab134ae2616a40a32880ee0c45de
+source-git-commit: 59a5306c8329ddc3ca2a2e086f5ebe81b49eab3a
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1095'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,10 @@ Den senaste informationen om säkerhetsfelkorrigeringarna finns på [Adobe säke
 ### Plattformsuppgraderingar
 
 * **Stöd för MariaDB 10.5**. Den här korrigeringsversionen är kompatibel med MariaDB version 10.5. Adobe Commerce är fortfarande kompatibelt med MariaDB version 10.4, men Adobe rekommenderar att du använder Adobe Commerce 2.4.5-p8 och alla kommande 2.4.5-säkerhetsuppdateringar endast med MariaDB version 10.5 eftersom MariaDB 10.4-underhållet upphör den 18 juni 2024. <!--AC-11530-->
+
+### Ytterligare säkerhetsförbättringar
+
+{{$include /help/_includes/release-notes/2-4-7-security.md}}
 
 ## Adobe Commerce 2.4.5-p7
 
