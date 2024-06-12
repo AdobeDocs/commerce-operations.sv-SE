@@ -1,7 +1,7 @@
 ---
-source-git-commit: 19d19ef385cf4aaee3a255930af8e6d3b81de23a
+source-git-commit: 1f8fda87e0d39fdcf2372f72373a0b2ea486d25a
 workflow-type: tm+mt
-source-wordcount: '21169'
+source-wordcount: '21185'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 <!-- The template to render with above values -->
 
-**Version**: 2.4.7
+**Version**: 2.4.7-p1
 
 Referensen innehåller 141 kommandon som är tillgängliga via `bin/magento` kommandoradsverktyg.
 Den inledande listan genereras automatiskt med `bin/magento list` på Adobe Commerce.
@@ -3996,7 +3996,7 @@ Ställ inga interaktiva frågor
 ## `events:subscribe`
 
 ```bash
-bin/magento events:subscribe [-f|--force] [--fields FIELDS] [--parent PARENT] [--rules RULES] [-p|--priority] [-d|--destination DESTINATION] [--] <event-code>
+bin/magento events:subscribe [-f|--force] [--fields FIELDS] [--parent PARENT] [--rules RULES] [-p|--priority] [-d|--destination DESTINATION] [--hipaaAuditRequired] [--] <event-code>
 ```
 
 Prenumererar på evenemanget
@@ -4049,6 +4049,13 @@ Målet för den här händelsen. Ange det här alternativet för händelser som 
 
 - Standard: `default`
 - Kräver ett värde
+
+### `--hipaaAuditRequired`
+
+Anger att händelsen innehåller data som är föremål för HIPAA-granskning.
+
+- Standard: `false`
+- Accepterar inte ett värde
 
 ### `--help`, `-h`
 
