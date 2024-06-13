@@ -1,9 +1,9 @@
 ---
 title: Adobe Commerce 2.4.7 Security Patch Release Notes
 description: Läs mer om säkerhetsfelkorrigeringar, säkerhetsförbättringar och andra säkerhetsrelaterade uppdateringar som ingår i säkerhetsuppdateringarna för Adobe Commerce version 2.4.7.
-source-git-commit: 59a5306c8329ddc3ca2a2e086f5ebe81b49eab3a
+source-git-commit: 4ed23e2a8319ff97f8206f752cf1cbe2e73ea5c5
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
@@ -22,10 +22,6 @@ Den senaste informationen om säkerhetsfelkorrigeringarna finns på [Adobe säke
 ### Säkerhetsmarkering
 
 Den här versionen innehåller en uppdatering av [engångslösenordsinställningar](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/2fa/security-two-factor-authentication#google) för att Google Authenticator ska kunna lösa ett fel som uppstod i [bakåtkompatibel ändring](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/highlights/#new-system-configuration-validation-for-two-factor-authentication-otp_window-value) i 2.4.7. Beskrivningen av **[!UICONTROL OTP Window]** fältet ger nu en korrekt förklaring av inställningen och standardvärdet har ändrats från `1` till `29`.
-
-### Ytterligare säkerhetsförbättringar
-
-{{$include /help/_includes/release-notes/2-4-7-security.md}}
 
 ### Programfixar som ingår i den här versionen
 
