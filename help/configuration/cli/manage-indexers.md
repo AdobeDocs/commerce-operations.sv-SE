@@ -2,9 +2,9 @@
 title: Hantera indexerare
 description: Se exempel på hur du visar och hanterar Commerce-indexerare.
 exl-id: d2cd1399-231e-4c42-aa0c-c2ed5d7557a0
-source-git-commit: 602a1ef82fcb8d30ff027db0fe0aacb981c7e08e
+source-git-commit: 5e1684d4d910f2ea52e12eeccdc291a54372f8d6
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '951'
 ht-degree: 0%
 
 ---
@@ -266,7 +266,7 @@ De indexerarrelaterade databasutlösarna läggs till när indexeringsläget är 
 
 ### Ange indexeringsstatus
 
-Med det här kommandot kan administratörer ändra driftstatus för en eller flera indexerare och optimera systemprestanda vid omfattande åtgärder som import, uppdatering eller underhåll av data.
+The `bin/magento indexer:set-status` kommandot introducerades i Adobe Commerce 2.4.7. Det gör att administratörer kan ändra driftstatusen för en eller flera indexerare och optimera systemprestanda vid omfattande åtgärder som import, uppdatering eller underhåll av data.
 
 Kommandosyntax:
 
