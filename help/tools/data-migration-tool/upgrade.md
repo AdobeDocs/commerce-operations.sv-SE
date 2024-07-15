@@ -1,36 +1,36 @@
 ---
-title: Uppgradera [!DNL Data Migration Tool]
-description: Så här uppgraderar du [!DNL Data Migration Tool] att överföra data mellan Magento 1 och Magento 2.
+title: Uppgradera  [!DNL Data Migration Tool]
+description: Lär dig hur du uppgraderar  [!DNL Data Migration Tool]  för att överföra data mellan Magento 1 och Magento 2.
 exl-id: c0d56d1d-b15b-437f-be72-74282dbe85c1
 topic: Commerce, Migration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '238'
 ht-degree: 0%
 
 ---
 
 # Uppgradera [!DNL Data Migration Tool]
 
-För att säkerställa att versionerna av din nuvarande installation av Magento 2 och [!DNL Data Migration Tool] matchar exakt, du kan behöva uppgradera verktyget.
+Om du vill vara säker på att versionerna av din nuvarande Magento 2-installation och [!DNL Data Migration Tool] matchar exakt måste du kanske uppgradera verktyget.
 
 ## Förutsättningar
 
-Innan du uppgraderar [!DNL Data Migration Tool]måste du:
+Innan du uppgraderar [!DNL Data Migration Tool] måste du:
 
 * Uppgradera Magento för att få den senaste versionen
 
-* Säkerhetskopiera `vendor/magento/data-migration-tool` katalog
+* Säkerhetskopiera katalogen `vendor/magento/data-migration-tool`
 
-* Se till att [!DNL Data Migration Tool] versionen matchar programversionen för Magento
+* Kontrollera att versionen [!DNL Data Migration Tool] matchar programversionen för Magento
 
 ### Uppgradera Magento
 
-Om du inte redan har gjort det, [uppgradera Magento](../../upgrade/overview.md).
+Om du inte redan har gjort det [uppgraderar du Magento](../../upgrade/overview.md).
 
-### Säkerhetskopiera `vendor/magento/data-migration-tool` katalog
+### Säkerhetskopiera katalogen `vendor/magento/data-migration-tool`
 
-Innan du uppgraderar [!DNL Data Migration Tool], säkerhetskopiera minst `vendor/magento/data-migration-tool` katalog. Under uppgraderingen kan den tas bort och ersättas av den uppdaterade koden.
+Innan du uppgraderar [!DNL Data Migration Tool] bör du säkerhetskopiera åtminstone katalogen `vendor/magento/data-migration-tool`. Under uppgraderingen kan den tas bort och ersättas av den uppdaterade koden.
 
 Du kan också säkerhetskopiera hela kodbasen och databasen i Magento med följande kommando:
 
@@ -40,24 +40,24 @@ php <magento_root>/bin/magento setup:backup --code --db
 
 >[!WARNING]
 >
->The `vendor/magento/data-migration-tool` -katalogen innehåller din egen kod. Om du inte säkerhetskopierar den kan du förlora dina anpassningar under uppgraderingen.
+>Katalogen `vendor/magento/data-migration-tool` innehåller din anpassade kod. Om du inte säkerhetskopierar den kan du förlora dina anpassningar under uppgraderingen.
 
 
 ### Se till att versionerna matchar
 
-Versionerna av [!DNL Data Migration Tool] och Magento måste matcha exakt. Magento 2.1.2 kräver till exempel version 2.1.2 av [!DNL Data Migration Tool].
+Versionerna för [!DNL Data Migration Tool] och programvaran för Magento måste matcha exakt. Magento 2.1.2 kräver till exempel version 2.1.2 av [!DNL Data Migration Tool].
 
-Se [Installera [!DNL Data Migration Tool]](install.md) för att lära dig mer om:
+Läs avsnittet [Installera [!DNL Data Migration Tool]](install.md) om du vill veta mer om:
 
-* [Kontrollera](install.md#check-your-version) din Magento 2-version
+* [Kontrollera](install.md#check-your-version) din version av Magento 2
 
 * [Sök](install.md#find-released-versions-of-data-migration-tool) släppta versioner av [!DNL Data Migration Tool]
 
-* [Kontrollera](install.md#check-version-of-installed-data-migration-tool) den [!DNL Data Migration Tool] version
+* [Kontrollera](install.md#check-version-of-installed-data-migration-tool) versionen [!DNL Data Migration Tool]
 
 ## Uppgradera [!DNL Data Migration Tool]
 
-1. Logga in på programservern som eller växla till [filsystemets ägare](../../installation/prerequisites/file-system/overview.md).
+1. Logga in på programservern som, eller växla till, [ägaren av filsystemet](../../installation/prerequisites/file-system/overview.md).
 1. Byt till programmets rotkatalog.
 1. Ange följande kommando:
 

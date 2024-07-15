@@ -27,5 +27,5 @@ Du kan installera valfria exempeldata på något av följande sätt:
 
 | Installationsmetod | Beskrivning | Nödvändig kompetensnivå |
 |--- |--- |--- |
-| Använda Composer | [Kör `magento sampledata:deploy` för att ändra programmets rot `composer.json`](composer-packages.md) för att aktivera exempeldatamoduler. | Kräver kunskap om och åtkomst till filsystemet i Commerce. |
-| Klona databaser | [Klona GitHub-databasen](git-repositories.md) och exempeldatalagret, och sedan länka samman dem. | Endast för medverkande utvecklare. Alla andra bör använda någon av de föregående metoderna. |
+| Använda Composer | [Kör `magento sampledata:deploy` om du vill ändra programmets rot `composer.json`](composer-packages.md) för att aktivera exempeldatamoduler. | Kräver kunskap om och åtkomst till filsystemet i Commerce. |
+| Klona databaser | [Klona GitHub-databasen](git-repositories.md) och exempeldatalagret och länka dem sedan tillsammans. | Endast för medverkande utvecklare. Alla andra bör använda någon av de föregående metoderna. |

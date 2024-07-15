@@ -5,7 +5,7 @@ recommendations: noCatalog
 exl-id: 0e41dca0-5a23-4d12-96fe-241c511ae366
 source-git-commit: af45ac46afffeef5cd613628b2a98864fd7da69b
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '166'
 ht-degree: 0%
 
 ---
@@ -29,9 +29,9 @@ MySQL-databaser replikeras asynkront, vilket innebär att slavar inte behöver a
 En fördjupad diskussion om databasreplikering ligger utanför den här handbokens räckvidd. Om du vill konfigurera den kan du läsa en resurs som:
 
 - [MySQL-dokumentation](https://dev.mysql.com/doc/refman/5.6/en/replication.html)
-- [Ställa in Master Slave-replikering i MySQL (digitalocean)](https://www.digitalocean.com/community/tutorials/how-to-set-up-replication-in-mysql)
+- [Så här konfigurerar du Master Slave-replikering i MySQL (digitalocean)](https://www.digitalocean.com/community/tutorials/how-to-set-up-replication-in-mysql)
 
-I Commerce finns exempel på MySQL-konfigurationer för dina slavdatabaser. En enkel konfiguration tillhandahålls med `ResourceConnections` class `README.md`.
+Commerce tillhandahåller exempelkonfigurationer för MySQL för dina slavdatabaser. En enkel konfiguration tillhandahålls med klassen `ResourceConnections` `README.md`.
 
 Följande är mer avancerat och finns endast i din information:
 
@@ -122,9 +122,9 @@ Följande är mer avancerat och finns endast i din information:
 
 ## Prestandaförbättring
 
-Om du vill förbättra prestanda för replikering av masterslav kan du filtrera vissa tabeller på slavinstanser. Vi rekommenderar att du filtrerar alla temporära tabeller med namnmönster `search\_tmp\_%` som används för katalogsökning.
+Om du vill förbättra prestanda för replikering av masterslav kan du filtrera vissa tabeller på slavinstanser. Vi rekommenderar att du filtrerar alla temporära tabeller med namnmönstret `search\_tmp\_%` som används för katalogsökning.
 
-Lägg till följande rad i `my.cnf` på dina slavförekomster:
+Om du vill göra det lägger du till följande rad i din `my.cnf`-fil på dina slavförekomster:
 
 ```conf
 replicate-wild-ignore-table=%.search\_tmp\_%

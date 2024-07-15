@@ -87,8 +87,8 @@ När du startar ett e-handelsprojekt bör du tänka på C-nivån och verksamhete
 
 Det finns andra team som antingen ingår i ett befintligt team eller är fristående, inklusive:
 
-- **Innehållsteamet**- De måste vara i linje med alla team för att kunna skapa effektivt innehåll. Innehåll på webbplatsen kräver regelbundna uppdateringar. Innehållsteamet ansvarar för att skapa innehåll på produktsidan, kategorisidor, bloggar och sidfötter, som lockar webbplatstrafiken och ökar konverteringsgraden.
+- **Innehållsteamet** - De måste vara i linje med alla team för att kunna skapa effektivt innehåll. Innehåll på webbplatsen kräver regelbundna uppdateringar. Innehållsteamet ansvarar för att skapa innehåll på produktsidan, kategorisidor, bloggar och sidfötter, som lockar webbplatstrafiken och ökar konverteringsgraden.
 
-- **Datateam**—E-handelsplatser genererar mycket data som ni kan samla in och analysera, inklusive kundinformation, utgiftsvanor, populära produkter och den tid som webbplatsen har mest trafik. Datateamet bearbetar all den här informationen för att få insikt i hur webbplatsen fungerar och var webbplatsen behöver förbättras. Datateamet kan rekommendera vilka trender som kommer och var verksamheten behöver fokusera.
+- **Datateam** - E-handelswebbplatser genererar mycket data som du kan samla in och analysera, inklusive kundinformation, utgiftsvanor, populära produkter och den tid som webbplatsen har mest trafik. Datateamet bearbetar all den här informationen för att få insikt i hur webbplatsen fungerar och var webbplatsen behöver förbättras. Datateamet kan rekommendera vilka trender som kommer och var verksamheten behöver fokusera.
 
-- **Finans och redovisning**- Vissa företag har ett litet finans- och redovisningsteam, som kan vara antingen interna eller externa. De fokuserar på budgetering, prognoser och hantering av den ekonomiska aspekten av att skapa och driva en e-handelsplats.
+- **Ekonomi- och redovisningsteamet** - Vissa företag har ett litet finans- och redovisningsteam, som kan vara antingen internt eller externt. De fokuserar på budgetering, prognoser och hantering av den ekonomiska aspekten av att skapa och driva en e-handelsplats.

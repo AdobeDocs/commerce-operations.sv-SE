@@ -1,5 +1,5 @@
 ---
-title: Handelsmål
+title: Commerce-mål
 description: Ange kortsiktiga och långsiktiga mål som hjälper ert team att anpassa sig till strategiska mål och öka effektiviteten i organisationen.
 exl-id: 749f6a9a-c06f-4f51-a19c-9e4181e002f7
 source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776

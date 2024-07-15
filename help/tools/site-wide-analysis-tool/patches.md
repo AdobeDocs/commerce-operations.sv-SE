@@ -1,17 +1,17 @@
 ---
 title: '[!DNL Patches]'
-description: Läs mer om [!UICONTROL Patches] i [!DNL Site-Wide Analysis Tool], när det ska användas och dess fördelar.
+description: Lär dig mer om fliken [!UICONTROL Patches] i  [!DNL Site-Wide Analysis Tool], när den ska användas och dess fördelar.
 exl-id: 40bc9b38-2a70-40ec-8278-231c78193248
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '121'
+source-wordcount: '117'
 ht-degree: 0%
 
 ---
 
 # [!DNL Patches]
 
-The [!DNL Site-Wide Analysis Tool's] [!UICONTROL Patches] visas alla patchar som finns för din Adobe Commerce Store. Dessa korrigeringsfiler hjälper dig att lösa problem som du kan uppleva med Adobe Commerce. Se [Quality Patches Tool released: new tool to self-service quality patches](https://support.magento.com/hc/en-us/articles/360047139492) artikel i [!DNL support knowledge base].
+På sidan [!DNL Site-Wide Analysis Tool's] [!UICONTROL Patches] visas alla korrigeringsfiler som är tillgängliga för din Adobe Commerce Store. Dessa korrigeringsfiler hjälper dig att lösa problem som du kan uppleva med Adobe Commerce. Se artikeln [Quality Patches Tool som släppts: nytt verktyg för självbetjäning av kvalitetspatchar](https://support.magento.com/hc/en-us/articles/360047139492) i [!DNL support knowledge base].
 
 >[!NOTE]
 >
@@ -19,10 +19,10 @@ The [!DNL Site-Wide Analysis Tool's] [!UICONTROL Patches] visas alla patchar som
 
 ## När ska du använda
 
-Använd [!UICONTROL Patches] om du vill visa tillgängliga korrigeringsfiler för din Adobe Commerce-instans. På den här fliken visas alla korrigeringar, deras information och status.
+Använd fliken [!UICONTROL Patches] för att visa tillgängliga korrigeringar för din Adobe Commerce-instans. På den här fliken visas alla korrigeringar, deras information och status.
 
 ## Fördelar
 
 * Få all relevant information om patchar på ett och samma ställe.
 
-* Åtgärda problem med de patchar som finns i [!UICONTROL Patches] -fliken.
+* Åtgärda problem med hjälp av de korrigeringsfiler som är tillgängliga på fliken [!UICONTROL Patches].

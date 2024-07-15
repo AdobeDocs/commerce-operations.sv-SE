@@ -1,11 +1,11 @@
 ---
 title: Använd cachelagrat för sessionslagring
-description: Lär dig hur du använder cachelagrade data för Commerce-sessionslagring.
+description: Lär dig hur du använder cachelagrade filer för Commerce sessionslagring.
 feature: Configuration, Cache, Storage
 exl-id: 24077929-e732-4579-8d7d-717a4902fc64
 source-git-commit: af45ac46afffeef5cd613628b2a98864fd7da69b
 workflow-type: tm+mt
-source-wordcount: '285'
+source-wordcount: '281'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 Minnescache är ett allmänt, distribuerat minnescachningssystem. Den används ofta för att snabba upp dynamiska databasdrivna webbplatser genom att data och objekt cachelagras i RAM för att minska det antal gånger som en extern datakälla (som en databas eller API) måste läsas.
 
-Memcache-lagrade tillhandahåller en stor hashtabell som kan distribueras på flera datorer. När tabellen är full gör efterföljande infogningar att äldre data rensas i LRU-ordning (minimum recently used). Storleken på den här hashtabellen är ofta mycket stor. (Källa: [memcached.org](https://www.memcached.org/))
+Memcache-lagrade tillhandahåller en stor hashtabell som kan distribueras på flera datorer. När tabellen är full gör efterföljande infogningar att äldre data rensas i LRU-ordning (minimum recently used). Storleken på den här hashtabellen är ofta mycket stor. (Source: [memcached.org](https://www.memcached.org/))
 
-I Commerce används cachelagrade data för sessionslagring, men inte för sidcachelagring. Vi rekommenderar cachning av sidor [Redis](../cache/redis-pg-cache.md) eller [Varnish](../cache/config-varnish.md).
+Commerce använder cachelagrade data för sessionslagring, men inte för sidcache. För sidcache rekommenderar vi [Redis](../cache/redis-pg-cache.md) eller [Varnish](../cache/config-varnish.md).
 
-**Konfigurera Commerce att använda cachelagrade**:
+**Så här konfigurerar du Commerce att använda cachelagrat**:
 
 1. Öppna `<your install dir>/app/etc/env.php` i en textredigerare.
 1. Gå till följande:
@@ -40,13 +40,13 @@ I Commerce används cachelagrade data för sessionslagring, men inte för sidcac
    ),
    ```
 
-   i cache-minnet har valfria startparametrar som ligger utanför den här handbokens räckvidd. Mer information om dem finns i [memcache](https://www.php.net/manual/en/memcached.sessions.php) dokumentation, källkod och ändringshundar.
+   i cache-minnet har valfria startparametrar som ligger utanför den här handbokens räckvidd. Du hittar mer information om dem i [den cachelagrade](https://www.php.net/manual/en/memcached.sessions.php)-dokumentationen, källkoden och de ändrade loggarna.
 
 1. Fortsätt med nästa avsnitt.
 
-**Verifiera cachelagrade arbeten med Commerce**:
+**Så här verifierar du cachelagrade arbeten med Commerce**:
 
-1. Ta bort innehållet i följande kataloger under din Commerce-installationskatalog:
+1. Ta bort innehållet i följande kataloger under Commerce installationskatalog:
 
    ```bash
    rm -rf var/cache/* var/page_cache/* var/session/*
@@ -58,7 +58,7 @@ I Commerce används cachelagrade data för sessionslagring, men inte för sidcac
 
    Om inga fel visas, grattis! fungerar! Du kan också titta på den cachelagrade lagringen enligt beskrivningen i nästa steg.
 
-   Om fel visas (till exempel HTTP 500 (Internt serverfel)) aktiverar du utvecklarläget och diagnostiserar problemet. Kontrollera att den anslutna cachen körs, är korrekt konfigurerad och att `env.php` har inga syntaxfel.
+   Om fel visas (till exempel HTTP 500 (Internt serverfel)) aktiverar du utvecklarläget och diagnostiserar problemet. Kontrollera att den cachelagrade filen körs, är korrekt konfigurerad och att `env.php` inte har några syntaxfel.
 
 1. (Valfritt.) Använd Telnet för att titta på det inspelade lagringsutrymmet.
 

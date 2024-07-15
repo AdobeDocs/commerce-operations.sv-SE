@@ -5,29 +5,29 @@ feature: Configuration, Cache
 exl-id: 0504c6fd-188e-46eb-be8e-968238571f4e
 source-git-commit: ba3c656566af47f16f58f476d7bc9f4781bb0234
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '423'
 ht-degree: 0%
 
 ---
 
 # L2-cachekonfiguration
 
-Cachelagring ger en minskning av nätverkstrafiken mellan fjärrcachelagringen och Commerce-programmet. En standard Commerce-instans överför cirka 300 kb per begäran, och trafiken kan snabbt öka till över cirka 1 000 förfrågningar i vissa situationer.
+Cachelagring ger en minskning av nätverkstrafiken mellan lagringsutrymmet i fjärrcachen och Commerce-programmet. En standardinstans i Commerce överför cirka 300 kb per begäran, och trafiken kan snabbt öka till över cirka 1 000 förfrågningar i vissa situationer.
 
 Om du vill minska nätverksbandbredden till Redis sparar du cachedata lokalt på varje webbnod och använder fjärrcachen i två syften:
 
 - Kontrollera cachedataversionen och se till att den senaste cachen lagras lokalt
 - Överför den senaste cachen från fjärrdatorn till den lokala datorn
 
-Commerce lagrar den hashade dataversionen i Redis, med suffixet &#39;:hash&#39; som tillägg till den vanliga nyckeln. Om det finns ett föråldrat lokalt cacheminne överförs data till den lokala datorn med ett cacheminne.
+Commerce lagrar den hash-kodade dataversionen i Redis, med suffixet &#39;:hash&#39; efter den vanliga nyckeln. Om det finns ett föråldrat lokalt cacheminne överförs data till den lokala datorn med ett cacheminne.
 
 >[!INFO]
 >
->För Adobe Commerce i molninfrastruktur kan du använda [driftsättningsvariabler](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_backend) för L2-cachekonfiguration.
+>För Adobe Commerce i molninfrastruktur kan du använda [distribuera variabler](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_backend) för L2-cachekonfiguration.
 
 ## Konfigurationsexempel
 
-Använd följande exempel för att ändra eller ersätta det befintliga cacheavsnittet i `app/etc/env.php` -fil.
+Använd följande exempel för att ändra eller ersätta det befintliga cacheavsnittet i filen `app/etc/env.php`.
 
 ```php
 'cache' => [
@@ -62,7 +62,7 @@ Använd följande exempel för att ändra eller ersätta det befintliga cacheavs
 
 Var:
 
-- `backend` är implementeringen av L2-cache.
+- `backend` är L2-cacheimplementeringen.
 - `backend_options` är L2-cachekonfigurationen.
    - `remote_backend` är fjärrexplementeringen av cachen: Redis eller MySQL.
    - `remote_backend_options` är fjärrcachekonfigurationen.
@@ -70,19 +70,19 @@ Var:
    - `local_backend_options` är den lokala cachekonfigurationen.
    - `cache_dir` är ett filcachespecifikt alternativ för den katalog där det lokala cacheminnet lagras.
 
-Adobe rekommenderar att du använder Redis för fjärrcachelagring (`\Magento\Framework\Cache\Backend\Redis`) och `Cm_Cache_Backend_File` för lokal cachelagring av data i delat minne, med: `'local_backend_options' => ['cache_dir' => '/dev/shm/']`
+Adobe rekommenderar att Redis används för fjärrcachelagring (`\Magento\Framework\Cache\Backend\Redis`) och `Cm_Cache_Backend_File` för lokal cachelagring av data i delat minne, med: `'local_backend_options' => ['cache_dir' => '/dev/shm/']`
 
-Adobe rekommenderar att du använder [`cache preload`](redis-pg-cache.md#redis-preload-feature) eftersom det drastiskt minskar trycket på Redis. Glöm inte att lägga till suffixet &#39;:hash&#39; för förinläsningsnycklar.
+Adobe rekommenderar att du använder funktionen [`cache preload`](redis-pg-cache.md#redis-preload-feature) eftersom den drastiskt minskar trycket på Redis. Glöm inte att lägga till suffixet &#39;:hash&#39; för förinläsningsnycklar.
 
 ## Alternativ för inaktuell cache
 
-Börja med [!DNL Commerce] 2.4, `use_stale_cache` kan förbättra prestandan i vissa specifika fall.
+Från och med [!DNL Commerce] 2.4 kan alternativet `use_stale_cache` förbättra prestandan i vissa specifika fall.
 
-I allmänhet accepteras en kompromiss med låsväntetider från prestandasidan, men ju fler block eller cacheminne handlaren har desto mer tid går det att vänta på lås. I vissa scenarier kan du vänta **antal tangenter** \* **timeout för sökning** hur lång tid processen ska pågå. I vissa sällsynta fall kan handlaren ha hundratals nycklar i `Block/Config` cacheminne, så även liten timeout för låsning kan kosta sekunder.
+I allmänhet accepteras en kompromiss med låsväntetider från prestandasidan, men ju fler block eller cacheminne handlaren har desto mer tid går det att vänta på lås. I vissa scenarier kan du vänta i **antal tangenter** \* **timeout** så länge som processen pågår. I vissa sällsynta fall kan handlaren ha hundratals nycklar i cachen `Block/Config`, så även en liten timeout för låsningen kan kosta sekunder.
 
-Inaktuell cache fungerar bara med L2-cache. Med ett inaktuellt cacheminne kan du skicka ett inaktuellt cacheminne, medan ett nytt genereras i en parallell process. Om du vill aktivera inaktuell cache lägger du till `'use_stale_cache' => true` till högsta konfigurationen av L2-cachen.
+Inaktuell cache fungerar bara med L2-cache. Med ett inaktuellt cacheminne kan du skicka ett inaktuellt cacheminne, medan ett nytt genereras i en parallell process. Om du vill aktivera inaktuell cache lägger du till `'use_stale_cache' => true` i den översta konfigurationen för L2-cachen.
 
-Adobe rekommenderar att du aktiverar `use_stale_cache` endast för cachetyper som drar störst nytta av det, inklusive:
+Adobe rekommenderar att du bara aktiverar alternativet `use_stale_cache` för de cachetyper som drar störst nytta av det, bland annat:
 
 - `block_html`
 - `config_integration_api`
@@ -92,7 +92,7 @@ Adobe rekommenderar att du aktiverar `use_stale_cache` endast för cachetyper so
 - `reflection`
 - `translate`
 
-Adobe rekommenderar inte att du aktiverar `use_stale_cache` för `default` cachetyp.
+Adobe rekommenderar inte att du aktiverar alternativet `use_stale_cache` för cachetypen `default`.
 
 I följande kod visas en exempelkonfiguration:
 

@@ -19,19 +19,19 @@ Med en enda instans av Adobe Commerce kan du starta flera webbplatser eller lagr
 - Produkter
 - Valutor
 
-Denna flexibla lösning gör att en Commerce-kodbas och administratör kan administrera och visa olika butiker. Du konfigurerar webbplatser, butiker och butiksvyer i Admin. Använd vissa variabler i virtuella värdar för att starta Commerce-programmet med dessa webbplatser eller butiksvyer.
+Med denna flexibla lösning kan en Commerce-kodbas och administratör administrera och visa olika butiker. Du konfigurerar webbplatser, butiker och butiksvyer i Admin. Använd vissa variabler i virtuella värdar för att starta Commerce-programmet med dessa webbplatser eller butiksvyer.
 
 Ett vanligt användningsområde är att konfigurera butiker med olika alternativ i olika domäner. Du kan till exempel ha en uppsättning kategorier och produkter på en domän och en annan uppsättning kategorier och produkter på en separat domän på ett annat språk.
 
-Du konfigurerar webbplatser, butiker och butiksvyer i Commerce Admin. Använd `MAGE_RUN_TYPE` och `MAGE_RUN_CODE` variabler i virtuella värdar för att starta Commerce-programmet med dessa webbplatser eller butiksvyer.
+Du konfigurerar webbplatser, butiker och butiksvyer i Commerce Admin. Använd variablerna `MAGE_RUN_TYPE` och `MAGE_RUN_CODE` i virtuella värdar för att starta Commerce-programmet med dessa webbplatser eller butiksvyer.
 
 Tänk på följande termer:
 
-- **Webbplats**—är den översta behållaren för webbplatser, leveransmetoder, betalningsmetoder med mera. Om du vill skapa helt separata sajter som inte delar varukorg, leveransmetoder eller andra måste du skapa separata webbplatser.
+- **Webbplatsen** - är den översta behållaren för webbplatser, leveransmetoder, betalningsmetoder med mera. Om du vill skapa helt separata sajter som inte delar varukorg, leveransmetoder eller andra måste du skapa separata webbplatser.
 
-  Kundkonton på webbplatser kan delas mellan flera webbplatser i en enda Commerce-instans. En webbplats innehåller minst en butik. Katalogpriserna bör hanteras på webbplatsnivå.
+  Kundkonton på webbplatser kan delas mellan flera webbplatser i en och samma Commerce-instans. En webbplats innehåller minst en butik. Katalogpriserna bör hanteras på webbplatsnivå.
 
-- **Butik**—finns på en webbplats. I sin tur innehåller en butik minst en *butiksvy*.
+- **Store** - finns på en webbplats. En butik innehåller i sin tur minst en *butiksvy*.
 
   Flera butiker kan dela kundvagn, användarsessioner, betalningsgateways med mera, men de har separata katalogstrukturer och katalogpris.
 
@@ -39,17 +39,17 @@ Tänk på följande termer:
 
   Vyerna i butiken förändrar hur sidorna presenteras och används vanligtvis för att visa en butik med olika layouter eller språk. Du kan hantera olika valutor per butiksvy.
 
-  Varje webbplats och varje butiksvy måste ha en unik identifierare. Den här identifieraren krävs för att använda `MAGE_RUN_TYPE` och `MAGE_RUN_CODE` variabler enligt följande:
+  Varje webbplats och varje butiksvy måste ha en unik identifierare. Den här identifieraren krävs för att använda variablerna `MAGE_RUN_TYPE` och `MAGE_RUN_CODE` enligt följande:
 
 - `MAGE_RUN_TYPE` kan vara antingen `store` eller `website`
 
    - Använd `website` för att läsa in en webbplats i din butik.
-   - Använd `store` för att läsa in alla butiksvyer i butiken.
+   - Använd `store` för att läsa in alla butiksvyer i din butik.
 
-- `MAGE_RUN_CODE` är den unika kod för webbplats- eller butiksvyn som motsvarar `MAGE_RUN_TYPE`
+- `MAGE_RUN_CODE` är den unika webbplatsens eller butiksvyns kod som motsvarar `MAGE_RUN_TYPE`
 
 Här följer en sammanfattning av de uppgifter du måste utföra:
 
 1. [Konfigurera webbplatser, butiker och butiksvyer i administratören.](ms-admin.md)
-1. Skapa en virtuell värd för att läsa in många webbplatser eller en virtuell värd per Commerce-webbplats eller butiksvy för att tillåta specifika direktiv för varje butik.
+1. Skapa en virtuell värd för att läsa in många webbplatser eller en virtuell värd per Commerce webbplats eller butiksvy för att tillåta specifika direktiv för varje butik.
 1. Skicka värdena för `MAGE_RUN_TYPE` och `MAGE_RUN_CODE` till webbservern.

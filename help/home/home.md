@@ -52,7 +52,7 @@ Använd den här följande uppsättningen guider för att lära dig mer om syste
       <img alt="Implementering" src="../assets/icons/play.svg" width="40"/>
     </a>
     <div>
-      <a href="../implementation-playbook/overview.md"><strong>Implementera spelningsbok</strong></a>
+      <a href="../implementation-playbook/overview.md"><strong>Implementeringspellbook</strong></a>
       <p>Läs om strategier för att planera och implementera en framgångsrik Adobe Commerce-webbplats.</p>
     </div>
   </td>
@@ -61,7 +61,7 @@ Använd den här följande uppsättningen guider för att lära dig mer om syste
        <img alt="Operationer" src="../assets/icons/refresh.svg" width="40"/>
     </a>
     <div>
-      <a href="../operational-playbook/overview.md"><strong>Operativ spelningsbok</strong></a>
+      <a href="../operational-playbook/overview.md"><strong>Driftspelningsbok</strong></a>
       <p>Lär dig hur ni gör ert företag redo för att driva en framgångsrik e-handelsplats.</p>
     </div>
   </td>
@@ -70,7 +70,7 @@ Använd den här följande uppsättningen guider för att lära dig mer om syste
        <img alt="Enterprise" src="../assets/icons/enterprise.svg" width="40"/>
     </a>
     <div>
-      <a href="../commerce-at-scale/overview.md"><strong>Handel i skala</strong></a>
+      <a href="../commerce-at-scale/overview.md"><strong>Commerce vid skalförändring</strong></a>
       <p>Lär dig leverera upplevelser i stor skala med Adobe Commerce och Adobe Experience Manager.</p>
     </div>
   </td>
@@ -113,7 +113,7 @@ Använd den här följande uppsättningen guider för att lära dig mer om syste
        <img alt="verktyg" src="../assets/icons/wrench.svg" width="40"/>
     </a>
     <div>
-      <a href="../tools/overview.md"><strong>verktyg</strong></a>
+      <a href="../tools/overview.md"><strong>Verktyg</strong></a>
       <p>Lär dig mer om verktyg som du kan använda med Adobe Commerce.</p>
     </div>
   </td>

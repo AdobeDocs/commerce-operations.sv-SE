@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Exempel på global referensarkitektur
 
-I det här avsnittet beskrivs vanliga sätt att ordna [global referensarkitektur (GRA)](overview.md) kodbas. Även om [separata paket](#option-1-separate-packages) Alternativet är att föredra, men vissa situationer kräver något av de andra alternativen som beskrivs nedan.
+I det här avsnittet beskrivs vanliga sätt att organisera en [global referensarkitektur (GRA)](overview.md)-kodbas. Även om alternativet [separata paket](#option-1-separate-packages) är att föredra, krävs ett av de andra alternativen som beskrivs nedan för vissa situationer.
 
 ## Definitioner
 
@@ -23,11 +23,11 @@ I det här avsnittet beskrivs vanliga sätt att ordna [global referensarkitektur
 
 ## Alternativ 1: Separata paket
 
-Se [Struktur för Composer-projekt](composer/project-structure.md) bästa sättet att konfigurera den här metoden.
+Mer information om hur du konfigurerar den här metoden finns i [Projektstruktur för disposition](composer/project-structure.md).
 
-![Bild som illustrerar det separata paketalternativet för global referensarkitektur](../../../assets/playbooks/gra-separate-packages.png)
+![Diagram som illustrerar det separata paketalternativet för global referensarkitektur](../../../assets/playbooks/gra-separate-packages.png)
 
-Det mest flexibla sättet att hantera GRA Composer-paket är genom metapaket. Metapaket innehåller en `composer.json` endast file, som definierar andra paketberoenden. Skapa metapaket med [Privata Packagist](https://packagist.com/) databaser.
+Det mest flexibla sättet att hantera GRA Composer-paket är genom metapaket. Metapaket innehåller endast en `composer.json`-fil, som definierar andra paketberoenden. Skapa metapaket med [privata Packagist](https://packagist.com/)-databaser.
 
 ### Huvudprojekt `composer.json`
 
@@ -82,7 +82,7 @@ Det mest flexibla sättet att hantera GRA Composer-paket är genom metapaket. Me
 }
 ```
 
-Varje modul, språkpaket, tema och bibliotek har en egen Git-databas. Varje Git-databas synkroniseras automatiskt med den privata paketeringsdatabasen och genererar ett paket där så länge det finns en `composer.json` -filen i Git-databasens rot.
+Varje modul, språkpaket, tema och bibliotek har en egen Git-databas. Varje Git-databas synkroniseras automatiskt med den privata paketeringsdatabasen och genererar ett paket där så länge det finns en `composer.json`-fil i Git-databasens rot.
 
 ## Alternativ 2: Paket i grupp
 
@@ -109,7 +109,7 @@ Filstrukturen i leverantörskatalogen ska se ut som i följande exempel. Titta d
             └── composer.json
 ```
 
-The `composer.json` filen ska se ut så här:
+Filen `composer.json` ska se ut så här:
 
 ```json
 {
@@ -140,14 +140,14 @@ Den här arkitekturen använder fyra Git-databaser för att lagra kod:
 
 - `core`: Innehåller kärninstallationen för Adobe Commerce. Används för att uppgradera Adobe Commerce-versioner.
 - `GRA`: Innehåller GRA-kod. Alla GRA-moduler, språkpaket, vita etikettteman och bibliotek.
-- `brand/region`: Varje varumärke eller region har sin egen databas med endast varumärkes- eller regionspecifik kod.
-- `release`: Alla ovanstående sammanfogas i denna Git-databas. Endast sammanslagningsimplementeringar tillåts här.
+- `brand/region`: Varje varumärke eller region har en egen databas med endast varumärkes- eller regionspecifik kod.
+- `release`: Alla ovanstående sammanfogas i den här Git-databasen. Endast sammanslagningsimplementeringar tillåts här.
 
-![Bild som illustrerar det delade Git-alternativet för global referensarkitektur](../../../assets/playbooks/gra-split-git.png)
+![Diagram som illustrerar det delade Git-alternativet för global referensarkitektur](../../../assets/playbooks/gra-split-git.png)
 
 Så här konfigurerar du det här alternativet:
 
-1. Skapa de fyra databastyperna i Git. Skapa `core` och `GRA` -databaser endast en gång. Skapa en `brand/region` och en `release` databas för varje varumärke.
+1. Skapa de fyra databastyperna i Git. Skapa `core`- och `GRA`-databaserna endast en gång. Skapa en `brand/region`- och en `release`-databas för varje varumärke.
 
    Föreslagna databasnamn:
 
@@ -156,7 +156,7 @@ Så här konfigurerar du det här alternativet:
    - `m2-region-x`/`m2-brand-x` (till exempel `m2-emea`/`m2-adobe`)
    - `m2-release-region-x`/`m2-release-brand-x` (till exempel `m2-release-emea`/`m2-release-adobe`)
 
-1. Skapa en `release/` och kör följande för att skapa en delad Git-historik för alla rapporter.
+1. Skapa en `release/`-katalog och kör följande för att skapa en delad Git-historik för alla rapporter.
 
    ```bash
    git init
@@ -173,7 +173,7 @@ Så här konfigurerar du det här alternativet:
    git push region-x master
    ```
 
-1. Klona varje databas, utom `core`i en annan katalog på datorn.
+1. Klona varje databas, förutom `core`, i en annan katalog på datorn.
 
    ```bash
    git clone git@github.com:example-client/m2-release-brand-x.git
@@ -181,7 +181,7 @@ Så här konfigurerar du det här alternativet:
    git clone git@github.com:example-client/m2-gra.git
    ```
 
-1. [Installera Adobe Commerce med Composer](../../../installation/composer.md). Ta bort `.gitignore` fil, lägga till `core` fjärr, lägg till och implementera koden och push.
+1. [Installera Adobe Commerce med Composer](../../../installation/composer.md). Ta bort filen `.gitignore`, lägg till fjärrkontrollen `core`, lägg till och implementera koden och tryck på.
 
    ```bash
    composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition m2-core
@@ -196,18 +196,18 @@ Så här konfigurerar du det här alternativet:
    git push
    ```
 
-1. I `GRA` -databas skapar du följande kataloger:
+1. Skapa följande kataloger i databasen `GRA`:
 
    - `app/code/`
    - `app/design/`
    - `app/i18n/`
    - `lib/`
 
-1. Lägg till kod. Ta bort `.gitignore` , lägga till och implementera koden, lägga till fjärrkontrollen och push.
+1. Lägg till kod. Ta bort filen `.gitignore`, lägg till och implementera koden, lägg till fjärrfilen och tryck på.
 
-1. I `brand/region` databas. Gör samma sak som i `GRA` -databasen och kom ihåg att filerna måste vara unika. Du kan inte inkludera samma fil i både den här databasen och `GRA` databas.
+1. I databasen `brand/region`. Gör samma sak som i `GRA`-databasen och tänk på att filerna måste vara unika. Du kan inte inkludera samma fil i både den här databasen och `GRA`-databasen.
 
-1. I `release` -databasen använder du sammanfogningen.
+1. Använd sammanfogningen i databasen `release`.
 
    ```bash
    git clone git@github.com:example-client/m2-release-brand-x.git
@@ -220,9 +220,9 @@ Så här konfigurerar du det här alternativet:
    git push
    ```
 
-1. Ta bort `.gitkeep` -fil.
+1. Ta bort filen `.gitkeep`.
 
-1. Distribuera `release` till produktions-, test-, QA- och utvecklingsservrarna. Uppgraderar `core`, `GRA`och `brand` är lika enkelt att köra följande kommandon:
+1. Distribuera `release`-databasen till produktions-, test-, QA- och utvecklingsservrarna. Det är lika enkelt att uppgradera `core`-, `GRA`- och `brand`-kod som att köra följande kommandon:
 
    ```bash
    git fetch --all
@@ -255,16 +255,16 @@ Mer information om den här automatiseringen finns i följande resurser:
 
 ## Blanda inte strategier
 
-Det är inte tillrådligt att använda en kombinerad metod med Composer för GRA-paket och `app/` katalog för varumärkes- eller regionspaket.
+Det är inte tillrådligt att använda en kombinerad metod med Composer för GRA-paket och katalogen `app/` för varumärkes- eller regionpaket.
 
-Du får inte bara alla _fördelar_ men även _nackdelar_ av båda metoderna. Du bör välja det ena eller det andra (Git eller Composer) för att arbeta optimalt.
+Du får inte bara alla _fördelar_ utan även alla _nackdelar_ för båda metoderna. Du bör välja det ena eller det andra (Git eller Composer) för att arbeta optimalt.
 
 ## Lösningar att undvika
 
 - **Konventioner för modulnamngivning för att beteckna GRA eller varumärke**
 
-  Namngivningsmoduler för att beteckna GRA eller varumärke leder till bristande flexibilitet. Använd i stället Composer-metapaket för att avgöra vilken grupp en modul tillhör. Paketera till exempel för kund-VF `vf/meta-gra` innehåller referenser till alla GRA-paket och kan installeras med `composer require vf/meta-gra` -kommando. Paket `vf/meta-kipling` innehåller referenser till alla Kipling-specifika paket och till `vf/meta-gra` paket. Modulerna är namngivna `vf/module-sales` och `vf/module-sap` till exempel. Den här namnkonventionen gör att du kan flytta paket mellan varumärket och GRA-status, med låg påverkan.
+  Namngivningsmoduler för att beteckna GRA eller varumärke leder till bristande flexibilitet. Använd i stället Composer-metapaket för att avgöra vilken grupp en modul tillhör. Paketet `vf/meta-gra` innehåller till exempel referenser till alla GRA-paket för kund-VF och kan installeras med kommandot `composer require vf/meta-gra`. Paketet `vf/meta-kipling` innehåller referenser till alla Kipling-specifika paket och till paketet `vf/meta-gra`. Modulerna har till exempel namnen `vf/module-sales` och `vf/module-sap`. Den här namnkonventionen gör att du kan flytta paket mellan varumärket och GRA-status, med låg påverkan.
 
-- **Adobe Commerce kärnuppgraderingar per instans**
+- **Adobe Commerce Core Upgrades per instance**
 
   Schemalägg Adobe Commerce-uppgraderingar, inklusive korrigeringsuppgraderingar, för olika varumärken eller regioner som ska exekveras så nära ihop som möjligt. Stöd för flera Adobe Commerce-versioner för delade moduler leder till att moduler måste kopplas ihop på grund av kompatibilitetsbegränsningar och mer än fördubblar underhållsarbetet. Förhindra detta genom att se till att alla instanser körs på samma Adobe Commerce-version innan du fortsätter med den regelbundna utvecklingen.

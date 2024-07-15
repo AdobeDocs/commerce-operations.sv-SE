@@ -11,25 +11,25 @@ ht-degree: 0%
 
 # Avinstallera eller installera om Adobe Commerce
 
-Innan du använder kommandona måste du [installera programmet](../tutorials/install.md).
+Innan du använder dessa kommandon måste du [installera programmet](../tutorials/install.md).
 
 ## Uppdatera programmet
 
 Så här uppdaterar du programmet:
 
-* Om du har installerat programmet från ett arkiv eller om du använde &#39;Composer-create-project&#39; läser du [Uppgraderingshandbok](../../upgrade/overview.md).
-* Om du är en bidragsgivare (dvs. du använde `git clone`), se [Uppdatera programmet](../../upgrade/developer/git-installs.md).
+* Om du installerade programmet från ett arkiv eller om du använde &#39;Composer-create-project&#39; läser du [uppgraderingshandboken](../../upgrade/overview.md).
+* Om du är en medverkande utvecklare (det vill säga om du använde `git clone`) kan du läsa [Uppdatera programmet](../../upgrade/developer/git-installs.md).
 
 ## Installera om programmet
 
 Hur du installerar om programmet från kommandoraden beror på din roll:
 
-* Om du har installerat programmet från ett arkiv eller om du använde &#39;Composer-create-project&#39; läser du [Uppdatera installationsberoenden](https://developer.adobe.com/commerce/contributor/guides/install/update-dependencies/).
-* Om du är en bidragsgivare (d.v.s. har du börjat använda `git clone`), se [Uppdatera installationsberoenden](https://developer.adobe.com/commerce/contributor/guides/install/update-dependencies/).
+* Om du installerade programmet från ett arkiv eller om du använde &#39;Composer-create-project&#39; läser du [Uppdatera installationsberoenden](https://developer.adobe.com/commerce/contributor/guides/install/update-dependencies/).
+* Om du är en utvecklare som bidrar (det vill säga du började använda `git clone`) kan du läsa [Uppdatera installationsberoenden](https://developer.adobe.com/commerce/contributor/guides/install/update-dependencies/).
 
 ## Avinstallera programmet
 
-Om programmet avinstalleras, tas databasen bort och återställs, distributionskonfigurationen tas bort och katalogerna rensas under `var`.
+Om du avinstallerar programmet tas databasen bort och återställs, distributionskonfigurationen tas bort och katalogerna under `var` rensas.
 
 Ange följande kommando för att avinstallera programmet:
 
@@ -45,9 +45,9 @@ Följande meddelande visas för att bekräfta att avinstallationen lyckades:
 
 ## Behåll genererade filer som tillval
 
-Som standard `bin/magento setup:upgrade` rensar kompilerad kod och cachen. Vanligtvis använder du `bin/magento setup:upgrade` för att uppdatera komponenter och varje komponent kan kräva olika kompilerade klasser.
+Som standard rensar `bin/magento setup:upgrade` kompilerad kod och cachen. Vanligtvis använder du `bin/magento setup:upgrade` för att uppdatera komponenter, och varje komponent kan kräva olika kompilerade klasser.
 
-I vissa situationer (särskilt vid distribution till produktion) kanske du vill undvika att rensa kompilerad kod eftersom det kan ta en stund. (Cachen är fortfarande rensad.) Uppdatera databasschemat och data *utan* rensa kompilerad kod, ange:
+I vissa situationer (särskilt vid distribution till produktion) kanske du vill undvika att rensa kompilerad kod eftersom det kan ta en stund. (Cachen är fortfarande rensad.) Om du vill uppdatera databasschemat och data *utan att* radera kompilerad kod anger du:
 
 ```bash
 bin/magento setup:upgrade --keep-generated
@@ -55,7 +55,7 @@ bin/magento setup:upgrade --keep-generated
 
 >[!WARNING]
 >
->Valfritt `--keep-generated` bör under vissa omständigheter användas av erfarna systemintegratörer *endast*. Det här alternativet bör *aldrig* användas i en utvecklingsmiljö. Felaktig användning av den här valfria parametern kan orsaka fel under kodkörningen.
+>Det valfria alternativet `--keep-generated` bör under vissa omständigheter användas av erfarna systemintegratörer *only*. Det här alternativet bör *aldrig* användas i en utvecklingsmiljö. Felaktig användning av den här valfria parametern kan orsaka fel under kodkörningen.
 
 ## Installera programmet
 

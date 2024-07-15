@@ -4,7 +4,7 @@ description: Beskrivning av e-handel
 exl-id: b418d36b-7dc6-49c7-95a8-03a55c69cb6f
 source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ Med e-handel kan man öppna dörrarna till sina egna virtuella butiker. Säljand
 - E-handelskostnaderna är låga jämfört med tegel och murbruk
 - Onlinebutikerna är öppna dygnet runt
 - Inköp sker direkt
-- Personalisering och anpassade användarupplevelser
+- Personalization och anpassade användarupplevelser
 - Kunden kan nå ut globalt
 
 ### Nackdelar
@@ -71,8 +71,8 @@ Här är några vanliga utmaningar för e-handeln som företag stöter på:
 
 Kundernas förväntningar ökar och det finns alltid nya tillväxttekniker som ökar konverteringsgraden. Den här spelboken kommer att innehålla en beskrivning och en mer detaljerad beskrivning av hur man kan ta itu med några av dessa kundutmaningar och lyckas köra en e-handelsplats till sin fulla potential.
 
-![Fördelarna med e-handelsteknik](../../assets/playbooks/commerce-tech.png)
+![Värdet av e-handelsteknik](../../assets/playbooks/commerce-tech.png)
 
-## Handel
+## Commerce
 
-![Fördelarna med e-handelsteknik](../../assets/playbooks/commerce-industries.png)
+![Värdet av e-handelsteknik](../../assets/playbooks/commerce-industries.png)

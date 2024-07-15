@@ -17,7 +17,7 @@ Uppgraderingsimplementeringen består av fem faser:
 - Utveckling och kvalitetssäkring
 - UAT (User accept testing) och förberedelse för att starta
 - Starta
-- Efter start
+- Post-lansering
 
 ## Uppgraderingsanalys
 
@@ -25,9 +25,9 @@ Analys är enligt andra ord den viktigaste delen i uppgraderingsprocessen. En v�
 
 Här följer några punkter som du kanske vill ta med i en grundlig analys:
 
-- **Omfattning av målrelease**—Dokumentation på [Experience League](../../release/release-notes/overview.md) och information från webbinarier om partnerreleaser innehåller all information du behöver veta om måluppgraderingen.
+- **Omfattningen av målversionen** - Dokumentation om [Experience League](../../release/release-notes/overview.md) och information från partnerreleasemedelswebbinarier innehåller all information du behöver veta om måluppgraderingen.
 
-- **[!DNL Upgrade Compatibility Tool]resultat**- Med det här verktyget kan du uppgradera snabbare och enklare genom att jämföra den aktuella koden med målversionens kod och ta fram en rapport över alla problem som behöver åtgärdas. Se [[!DNL Upgrade Compatibility Tool]](../upgrade-compatibility-tool/overview.md). Bland huvuduppgifterna i rapporten finns:
+- **[!DNL Upgrade Compatibility Tool]resultat** - Det här verktyget gör en uppgradering snabbare och enklare genom att jämföra den aktuella koden med målversionens kod och skapa en rapport över alla problem som behöver åtgärdas. Se [[!DNL Upgrade Compatibility Tool]](../upgrade-compatibility-tool/overview.md). Bland huvuduppgifterna i rapporten finns:
 
    - Aktuell installerad version
    - Uppgradera målversion
@@ -35,9 +35,9 @@ Här följer några punkter som du kanske vill ta med i en grundlig analys:
 
   >[!TIP]
   >
-  >All denna information (och mer) finns i Site-Wide Analysis Tool [kontrollpanel](../../tools/site-wide-analysis-tool/dashboard.md).
+  >All den här informationen (och mer) är tillgänglig i Site-Wide Analysis Tool [dashboard](../../tools/site-wide-analysis-tool/dashboard.md).
 
-- Uppgraderar tjänster som stöder målversion. Använd följande tabellmall för att mappa ut vilka tjänster du måste uppgradera. Använd [systemkrav](../../installation/system-requirements.md) för att avgöra vad som ska läggas till i _Uppgradera till_ kolumn.
+- Uppgraderar tjänster som stöder målversion. Använd följande tabellmall för att mappa ut vilka tjänster du måste uppgradera. Använd [systemkraven](../../installation/system-requirements.md) för att avgöra vad som ska läggas till i kolumnen _Uppgradera till_.
 
 
   | Tjänst | Aktuell version | Uppgradera till | Anteckningar |
@@ -50,25 +50,25 @@ Här följer några punkter som du kanske vill ta med i en grundlig analys:
   | Disposition | 1.9.2 | 2,2 |                                                          |
   | Elasticsearch | 7,10 | 7,17 |                                                          |
 
-- **Tillägg och tredjepartsmoduler**- Använd den här tabellmallen för att få en förståelse för status för tillägg och anpassningar, så att du kan fatta strategiska beslut och definiera åtgärder. Detta är en möjlighet att ersätta tillägg som kan vara inbyggda i Adobe Commerce för att minimera komplexiteten i ditt projekt. Använd `bin/magento module:status` om du vill visa en lista med moduler och tillägg.
+- **Tillägg och tredjepartsmoduler** - Använd den här tabellmallen för att få en förståelse för statusen för dina tillägg och anpassningar, så att du kan fatta strategiska beslut och definiera åtgärder. Detta är en möjlighet att ersätta tillägg som kan vara inbyggda i Adobe Commerce för att minimera komplexiteten i ditt projekt. Använd kommandot `bin/magento module:status` om du vill visa en lista med moduler och tillägg.
 
-  | # | Tillägg/<br>modulnamn | Kompositpaket | Leverantör | Aktuell version | Funktionalitet | Kompatibel med den senaste<br>Commerce-version? | Problem | Inbyggt i Commerce? | Åtgärd | Anteckningar |
+  | # | Modulnamn för tillägg/<br> | Kompositpaket | Leverantör | Aktuell version | Funktionalitet | Kompatibel med den senaste<br>Commerce-versionen? | Problem | Inbyggt i Commerce? | Åtgärd | Anteckningar |
   |---|-----------------------------|------------------------------------|-------------|-------------------|-----------------------|---------------------------------------------|--------------------------------------------------|---------------------|-------------------------|-------|
   | 1 | Tilläggsnamn och länk | extension/<br>extensionx-magento-2 | Leverantörsnamn | Version installerad | Affärskrav | Ja/Nej | Lista identifierade problem som uppstår med det här tillägget | Ja/Nej | Behåll/Ersätt/<br>Ta bort |       |
 
-- **Anpassade moduler**- På samma sätt som modultabellen från tredje part kan du med den här mallen spåra och förstå status och vilka åtgärder som krävs för uppgradering av anpassade moduler.
+- **Anpassade moduler** - På samma sätt som modultabellen från tredje part hjälper den här mallen dig att spåra och förstå status och vilka åtgärder som krävs för att uppgradera anpassade moduler.
 
   | # | Modulnamn | Funktionalitet | Obligatoriskt? | Inbyggt i Commerce? | Åtgärd | Anteckningar |
   |---|--------------|-----------------------|-----------|---------------------|---------------------|-------|
   | 1 | Modulnamn | Affärskrav | Ja/Nej | Ja/Nej | Behåll/Ersätt/Ta bort |       |
 
-- **Composer-paket och beroenden i Composer.json som kräver en uppdatering.**
+- **Kompositpaket och beroenden i Composer.json som kräver en uppdatering.**
 
-Dessutom kan partners delta i [Adobe Commerce betaversioner](../../release/beta.md) och använda förhandsversioner för att få tidig åtkomst till koden för en kommande release. Genom att få tillgång till koden i ett tidigt skede kan utvecklarna förbereda sig för att slutföra uppgraderingen till datumet General Availability (GA). Betakoden släpps vanligtvis fem veckor före GA-datumet och förhandsversioner släpps två veckor i förväg.
+Dessutom kan partners delta i [betaversioner av Adobe Commerce](../../release/beta.md) och använda förhandsversioner för att få tidig åtkomst till koden för en kommande release. Genom att få tillgång till koden i ett tidigt skede kan utvecklarna förbereda sig för att slutföra uppgraderingen till datumet General Availability (GA). Beta-koden släpps vanligtvis fem veckor före GA-datumet och förhandsversioner släpps två veckor i förväg.
 
 ## Utveckling och kvalitetssäkring
 
-Testning är den fas av en uppgradering som kräver mest tid. Därför bör denna process vara så automatiserad som möjligt. The _[Programtestguide](https://developer.adobe.com/commerce/testing/guide/)_ innehåller information om hur du konfigurerar och använder plattforms- och systemtestverktyg för snabbare kvalitetskontroll. Använd en testmiljö för att testa och validera uppgraderingen innan du går över till produktion.
+Testning är den fas av en uppgradering som kräver mest tid. Därför bör denna process vara så automatiserad som möjligt. _[Programtestningsguiden](https://developer.adobe.com/commerce/testing/guide/)_ innehåller information om hur du konfigurerar och använder plattforms- och systemtestningsverktyg för snabbare kvalitetskontroll. Använd en testmiljö för att testa och validera uppgraderingen innan du går över till produktion.
 
 ## UAT och förberedelse för att starta
 
@@ -78,14 +78,14 @@ I takt med att driftsättningsdatumet närmar sig är det viktigt att kunna komm
 
 ## Starta
 
-Slutför uppgraderingen genom att distribuera till produktion och uppdatera tillägg. Kontrollera att du testar kritiska banflöden med simulerade order. Kolla in de här [bästa praxis](../prepare/best-practices.md) om du vill få tips om hur du startar med minimala problem.
+Slutför uppgraderingen genom att distribuera till produktion och uppdatera tillägg. Kontrollera att du testar kritiska banflöden med simulerade order. Läs de här [bästa metoderna](../prepare/best-practices.md) om du vill ha tips om hur du startar med minimala problem.
 
 Följ er kommunikationsplan och se till att alla intressenter är medvetna om uppgraderingen och är fullt utbildade för att stödja den.
 
 Till sist kan du diskutera med teamet för att ta reda på vad de lärt sig och fallgropar. Med det här perspektivet kan du förbättra processen nästa gång.
 
-## Efter start
+## Post-Launch
 
 När webbplatsen har startats bör du kontrollera dina analysdata, Google Search Console och andra resurser så att du kan vara säker på att inga oväntade problem uppstår och att allt fungerar som förväntat.
 
-Det är alltid en bra idé att hålla ett öga på prestanda med väldesignade övervakningsverktyg. Det finns många verktyg och verktyg för att övervaka webbplatsens prestanda, så se till att du väljer ett som passar bra ihop med din organisation. Vi rekommenderar att Adobe Commerce-kunder som använder vårt molninfrastrukturhanteringssystem drar nytta av tjänster som [New Relic](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/new-relic-service.html) för att övervaka webbplatsens prestanda.
+Det är alltid en bra idé att hålla ett öga på prestanda med väldesignade övervakningsverktyg. Det finns många verktyg och verktyg för att övervaka webbplatsens prestanda, så se till att du väljer ett som passar bra ihop med din organisation. Vi rekommenderar att Adobe Commerce-kunder som använder vårt molninfrastrukturhanteringssystem utnyttjar tjänster som [New Relic](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/new-relic-service.html) för att övervaka webbplatsens prestanda.

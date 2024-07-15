@@ -11,9 +11,9 @@ ht-degree: 0%
 
 # Bästa praxis
 
-The _Bästa praxis för prestanda_ innehåller rekommendationer och instruktioner för hur du optimerar prestandan för produktionsdistributionen. Tekniska användare som ansvarar för att underhålla butiker i produktionsläge bör använda de bästa metoderna som beskrivs i den här handboken för att säkerställa att butikerna alltid är så effektiva som möjligt.
+Guiden _Bästa praxis för prestanda_ innehåller rekommendationer och instruktioner för hur du optimerar prestandan för produktionsdistributionen. Tekniska användare som ansvarar för att underhålla butiker i produktionsläge bör använda de bästa metoderna som beskrivs i den här handboken för att säkerställa att butikerna alltid är så effektiva som möjligt.
 
 ## Antaganden
 
-* Du har installerat Adobe Commerce med [Disposition](../installation/composer.md).
+* Du installerade Adobe Commerce med [Composer](../installation/composer.md).
 * Du använder den här installationen för att köra en liveproduktionsinstans av Adobe Commerce.

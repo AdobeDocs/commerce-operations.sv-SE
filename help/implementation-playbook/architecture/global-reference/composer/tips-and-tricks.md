@@ -19,11 +19,11 @@ Det kan uppstå problem när du utvecklar Adobe Commerce-moduler med Composer. D
 
 >[!NOTE]
 >
->Dessa riktlinjer gäller i första hand [global referensarkitektur (GRA)](../overview.md) projekt.
+>Dessa riktlinjer gäller främst för [GRA ](../overview.md)-projekt (Global Reference Architecture).
 
 ## Snabba upp disposition
 
-Installera [https://github.com/hirak/prestissimo](https://github.com/hirak/prestissimo) för att snabba upp Composer med asynkrona pakethämtningar.
+Installera [https://github.com/hirak/prestissimo](https://github.com/hirak/prestissimo) om du vill snabba upp Composer med asynkrona pakethämtningar.
 
 ```bash
 composer global require hirak/prestissimo
@@ -45,7 +45,7 @@ Composer kan ibland hamna i ett dödläge med paketversioner. Du kan se meddelan
    composer clearcache
    ```
 
-1. Ta bort `composer.lock` för alla paket.
+1. Ta bort filen `composer.lock` för alla paket.
 
    ```bash
    rm -rf vendor/* composer.lock
@@ -59,7 +59,7 @@ Composer kan ibland hamna i ett dödläge med paketversioner. Du kan se meddelan
 
 >[!TIP]
 >
->Dessa steg uppdaterar alla paket till den senaste tillgängliga versionen. Återställ `composer.lock` från Git för att ångra uppgraderingarna.
+>Dessa steg uppdaterar alla paket till den senaste tillgängliga versionen. Återställ filen `composer.lock` från Git om du vill ångra uppgraderingarna.
 
 ## Sök efter möjliga uppdateringar i klientpaket
 
@@ -69,7 +69,7 @@ Composer kan ibland hamna i ett dödläge med paketversioner. Du kan se meddelan
    composer outdated
    ```
 
-1. Filtrera med jokertecken och/eller `--minor-only` möjlighet att hoppa över bakåtkompatibla uppgraderingar:
+1. Filtrera med jokertecken och/eller alternativet `--minor-only` om du vill hoppa över bakåtkompatibla uppgraderingar:
 
    ```bash
    composer outdated 'magento/*'
@@ -84,7 +84,7 @@ Visa information om alla installerade paket på en Git-gren.
 composer info
 ```
 
-Kör `composer install` efter växling av Git-grenar och innan Git körs `composer info`. I annat fall visar Composer information om den föregående grenen som du checkat ut.
+Kör `composer install` efter Git-växling och innan du kör `composer info`. I annat fall visar Composer information om den föregående grenen som du checkat ut.
 
 >[!TIP]
 >
@@ -123,11 +123,11 @@ composer why-not client/module-example
 
 ## Använd en privat Composer-databas som värd
 
-Om du behöver en privat Composer-databas använder du [Privata Packagist](https://packagist.com/) eller [JFrog Artifactory](https://jfrog.com/integration/php-composer-repository/). Använd inte [Satis](https://github.com/composer/satis).
+Om du behöver en privat Composer-databas använder du [Privat Packagist](https://packagist.com/) eller [JFrog Artifactory](https://jfrog.com/integration/php-composer-repository/). Använd inte [Satis](https://github.com/composer/satis).
 
-- **Privata Packagist** är säkert, kostar runt 600 USD per år med tre administratörsanvändare och är värd för tjänsten.
+- **Privat Packagist** är säker, kostar cirka 600 USD per år med tre administratörsanvändare och är värd för den.
 
-- **JFrog Artifactory** från 1 176 USD per år. Det används inte lika ofta som Packagist, men har stöd för fler språk än PHP.
+- **JFrog Artifactory** kostar 1 176 USD per år. Det används inte lika ofta som Packagist, men har stöd för fler språk än PHP.
 
 - **Satis** har ingen inbyggd säkerhet, ingen automatisering och kräver ytterligare värdtjänster. Det är bara gratis om din tid också är gratis.
 
@@ -135,12 +135,12 @@ Om du behöver en privat Composer-databas använder du [Privata Packagist](https
 
 Använd [Semantisk version 2.0.0](https://semver.org/spec/v2.0.0.html) enligt beskrivningen i Adobe Commerce [versionshanteringsschema](https://developer.adobe.com/commerce/php/development/versioning/). Uppfinna inte hjulet på nytt.
 
-För Adobe Commerce-modulberoenden följer du [modulversionsberoenden](https://developer.adobe.com/commerce/php/development/versioning/dependencies/) dokumentation.
+Om du vill se Adobe Commerce-modulberoenden följer du dokumentationen för [modulens versionsberoenden](https://developer.adobe.com/commerce/php/development/versioning/dependencies/).
 
-Använd inte versionsdefinitionen i `composer.json` -fil. Använd i stället Git-taggar för versioner. Se [Dispositionsversioner och -begränsningar](https://getcomposer.org/doc/articles/versions.md#versions-and-constraints).
+Använd inte versionsdefinitionen i filen `composer.json`. Använd i stället Git-taggar för versioner. Se [Dispositionsversioner och -begränsningar](https://getcomposer.org/doc/articles/versions.md#versions-and-constraints).
 
 ## Var moduler som kommer in i en arkivfil och inte via Composer ska placeras
 
-Skapa en Git-databas för moduler i ett arkiv och lagra dem själv. Alla Adobe Commerce-moduler har en `composer.json` -fil. När du har lagrat den i Git och synkroniserat den med en privat paketerare kan du installera den med Composer.
+Skapa en Git-databas för moduler i ett arkiv och lagra dem själv. Alla Adobe Commerce-moduler har en `composer.json`-fil. När du har lagrat den i Git och synkroniserat den med en privat paketerare kan du installera den med Composer.
 
 När du får en ny version av paketet överför du koden till Git, taggar den och installerar den nya versionen med Composer.

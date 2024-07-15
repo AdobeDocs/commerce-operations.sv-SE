@@ -14,19 +14,19 @@ ht-degree: 5%
 
 För Adobe Commerce 2.4.4 och senare versioner:
 
-- För att effektivisera Adobe Commerce livscykelpolicy och stödja kundernas verksamhetskritiska behov har Adobe utökat supportfönstret till tre år från datumet General Availability (GA) för Adobe Commerce 2.4.4 och senare. Adobe tillhandahåller kvalitetskorrigeringar till version 2.4.4 och senare för en treårig supportperiod. Kunderna kan få tillgång till kvalitetskorrigeringar genom att kontakta [Adobe Commerce Support](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html) eller genom självbetjäningen [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) om de fortfarande har rätt till kvalitetssupport. Se tabellen nedan för mer information om supportdatum för Adobe Commerce releaserader.
+- För att effektivisera Adobe Commerce livscykelpolicy och stödja kundernas verksamhetskritiska behov har Adobe utökat supportfönstret till tre år från datumet General Availability (GA) för Adobe Commerce 2.4.4 och senare. Adobe tillhandahåller kvalitetskorrigeringar till version 2.4.4 och senare för en treårig supportperiod. Kunder kan få åtkomst till kvalitetskorrigeringar genom att kontakta [Adobe Commerce Support](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html) eller via självbetjäningen [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) om deras version fortfarande är berättigad till kvalitetssupport. Se tabellen nedan för mer information om supportdatum för Adobe Commerce releaserader.
 
 - Adobe tillhandahåller säkerhetskorrigeringar via en säkerhetsuppdatering för den treåriga supportperioden.
 
-- För allvarliga säkerhetsproblem, som noll-dagars säkerhetsluckor, tillhandahåller Adobe [snabbkorrigeringar](https://support.magento.com/hc/en-us/sections/360003869892-Known-issues-patches-attached-) för alla kunder som har en version som stöds, även om de inte har den senaste patchen eller säkerhetsuppdateringen. Det är viktigt att komma ihåg att en programfix inte är en&quot;catch-all&quot; och inte åtgärdar alla säkerhetsproblem som skulle ha åtgärdats genom en uppgradering till den senaste versionen.
+- För allvarliga säkerhetsproblem, som noll-dagars säkerhetsluckor, tillhandahåller Adobe [snabbkorrigeringar](https://support.magento.com/hc/en-us/sections/360003869892-Known-issues-patches-attached-) för alla kunder i en version som stöds, även om de inte har den senaste korrigerings- eller säkerhetsuppdateringen. Det är viktigt att komma ihåg att en programfix inte är en&quot;catch-all&quot; och inte åtgärdar alla säkerhetsproblem som skulle ha åtgärdats genom en uppgradering till den senaste versionen.
 
-- Adobe erbjuder inga säkerhets- och kvalitetskorrigeringar för tredjepartstjänster och programvaruberoenden (som PHP och MySQL) som kan ta slut när kunderna är under den treåriga supportperioden för Adobe Commerce. Se [systemkrav](../installation/system-requirements.md) för en fullständig lista över testade och stödda tredjepartstekniker.
+- Adobe erbjuder inga säkerhets- och kvalitetskorrigeringar för tredjepartstjänster och programvaruberoenden (som PHP och MySQL) som kan ta slut när kunderna är under den treåriga supportperioden för Adobe Commerce. Se [systemkraven](../installation/system-requirements.md) för en fullständig lista över testade och stödda tredjepartstekniker.
 
 - Adobe är kompatibelt med tredjepartstjänster och programvaruberoenden medan Adobe Commerce under den treåriga supportperioden omfattas av säkerhetsuppdateringar, men endast när det är möjligt att göra detta utan att införa bakåtkompatibla ändringar.
 
 ## Programvarusupport upphör
 
-| Frigör | Allmän tillgänglighet | Programvarusupport upphör<sup>1</sup> | Beroende PHP-version | Beroende MariaDB-version |
+| Frigör | Allmän tillgänglighet | Programvarusupporten upphör<sup>1</sup> | Beroende PHP-version | Beroende MariaDB-version |
 |----------------------|----------------------|-------------------------------------|-----------------------|------------------------------|
 | Adobe Commerce 2.4.7 | 9 april 2024 | 9 april 2027 | 8.2 och 8.3 | 10,6 |
 | Adobe Commerce 2.4.6 | 14 mars 2023 | 14 mars 2026 | 8.1 och 8.2 | 10,6 |
@@ -37,10 +37,10 @@ För Adobe Commerce 2.4.4 och senare versioner:
 
 >[!NOTE]
 >
->- <sup>1</sup> Programvarusupporten upphör med både kvalitetskorrigeringar och säkerhetskorrigeringar.
->- <sup>2</sup> Börja med säkerhetspatchen 2.4.5-p8.
->- <sup>3</sup> Börja med säkerhetspatchen 2.4.4-p9.
->- Se [Software Lifecycle Policy](https://www.adobe.com/content/dam/cc/en/legal/terms/enterprise/pdfs/Adobe-Commerce-Software-Lifecycle-Policy.pdf).
+>- <sup>1</sup> Stödet för programvarans slut omfattar både slut på kvalitetskorrigeringar och slut på säkerhetskorrigeringar.
+>- <sup>2</sup> Börjar med säkerhetspatchen 2.4.5-p8.
+>- <sup>3</sup> Börjar med säkerhetspatchen 2.4.4-p9.
+>- Se [Princip för programvarans livscykel](https://www.adobe.com/content/dam/cc/en/legal/terms/enterprise/pdfs/Adobe-Commerce-Software-Lifecycle-Policy.pdf).
 
 <table style="table-layout:auto">
 <thead>
@@ -56,7 +56,7 @@ För Adobe Commerce 2.4.4 och senare versioner:
 </thead>
 <tbody>
   <tr>
-    <td>Handel</td>
+    <td>Commerce</td>
     <td>Q1</td>
     <td>Q2</td>
     <td>Q3</td>

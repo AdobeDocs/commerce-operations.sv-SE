@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Uppgradera databasschemat och data
 
-Innan du använder kommandot måste du [installera programmet](../advanced.md).
+Innan du använder det här kommandot måste du [installera programmet](../advanced.md).
 
 ## Uppgradera databasschemat och data
 
@@ -23,7 +23,7 @@ När du utför en åtgärd som gör att databasschemat eller data ändras, måst
 
 >[!NOTE]
 >
->A *komponent* kan vara en modul, ett tema eller ett språkpaket. Det spelar ingen roll om komponenten kommer från Commerce Marketplace eller inte.
+>En *komponent* kan vara en modul, ett tema eller ett språkpaket. Det spelar ingen roll om komponenten kommer från Commerce Marketplace eller inte.
 
 1. Starta uppgraderingen:
 
@@ -31,7 +31,7 @@ När du utför en åtgärd som gör att databasschemat eller data ändras, måst
    bin/magento setup:upgrade [--keep-generated]
    ```
 
-   Plats `--keep-generated` är ett valfritt argument som inte uppdateras [statiska vyfiler](../../configuration/cli/static-view-file-deployment.md). Det här valfria argumentet används *endast* under begränsade omständigheter av erfarna systemintegratörer. Det ska användas *endast* in [produktionsläge](../../configuration/bootstrap/application-modes.md#production-mode). Det borde *not* används i [utvecklarläge](../../configuration/bootstrap/application-modes.md#developer-mode).
+   Där `--keep-generated` är ett valfritt argument som inte uppdaterar [statiska vyfiler](../../configuration/cli/static-view-file-deployment.md). Det här valfria argumentet får användas *endast* under begränsade omständigheter av erfarna systemintegratörer. Den ska användas *endast* i [produktionsläget](../../configuration/bootstrap/application-modes.md#production-mode). Det ska *inte* användas i [utvecklarläge](../../configuration/bootstrap/application-modes.md#developer-mode).
 
 1. Rensa cachen:
 

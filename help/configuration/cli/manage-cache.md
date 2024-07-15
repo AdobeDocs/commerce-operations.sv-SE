@@ -15,17 +15,17 @@ ht-degree: 0%
 
 ## Cache-typer
 
-Du kan använda Adobe Commerce cachehanteringssystem för att förbättra prestanda för din plats. I det här avsnittet beskrivs hur systemadministratörer och utvecklare med åtkomst till Commerce-programservern kan hantera cacheminnen från kommandoraden.
+Du kan använda Adobe Commerce cachehanteringssystem för att förbättra prestanda för din plats. I det här avsnittet beskrivs hur systemadministratörer och utvecklare med åtkomst till Commerce programserver kan hantera cacheminnen från kommandoraden.
 
 >[!NOTE]
 >
 >
->Administratörer för företagswebbplatser kan hantera cacheminnet från administratören med hjälp av verktyget Cachehanteringssystem. Se [Cachehantering](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management) i _Handbok för adminsystem_.
+>Administratörer för företagswebbplatser kan hantera cacheminnet från administratören med hjälp av verktyget Cachehanteringssystem. Se [Cachehantering](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management) i _handboken för administratörssystem_.
 
 
 ## Visa cachestatus
 
-Visa status för cachen med hjälp av kommandoraden på Commerce-programservern `cache:status` Kommandot Commerce CLI.
+På kommandoraden för Commerce-programservern kan du visa status för cachen med hjälp av Commerce CLI-kommandot `cache:status`.
 
 ```bash
    bin/magento cache:status
@@ -59,7 +59,7 @@ Current status:
 
 >[!TIP]
 >
->En detaljerad beskrivning av de standardcachetyper som stöds av Adobe Commerce finns i [Cacher](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management#caches) i _Handbok för adminsystem_.
+>En detaljerad beskrivning av de standardcachetyper som stöds av Adobe Commerce finns i [Caches](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management#caches) i _Admin Systems Guide_.
 
 
 ## Aktivera eller inaktivera cachetyper
@@ -68,9 +68,9 @@ Med det här kommandot kan du aktivera eller inaktivera alla cachetyper eller en
 
 >[!INFO]
 >
->Från och med version 2.2 kan du bara aktivera eller inaktivera cachetyper med kommandoraden när du kör Commerce i produktionsläge. Om du kör Commerce i utvecklarläge kan du aktivera eller inaktivera cachetyper med kommandoraden eller manuellt. Innan du gör det måste du göra `<magento_root>/app/etc/env.php` skrivbar av [ägare av filsystem](../../installation/prerequisites/file-system/overview.md).
+>Från och med version 2.2 kan du bara aktivera eller inaktivera cachetyper med kommandoraden när du kör Commerce i produktionsläge. Om du kör Commerce i utvecklarläge kan du aktivera eller inaktivera cachetyper med kommandoraden eller manuellt. Innan du gör det måste du manuellt göra `<magento_root>/app/etc/env.php` skrivbar av [filsystemets ägare](../../installation/prerequisites/file-system/overview.md).
 
-Du kan rengöra (kallas även _flush_ eller _uppdatera_) cachetyper med antingen kommandoraden eller administratören.
+Du kan rensa (kallas även _flush_ eller _refresh_) cachetyper med kommandoraden eller Admin.
 
 Kommandoalternativ:
 
@@ -82,7 +82,7 @@ bin/magento cache:enable [type] ... [type]
 bin/magento cache:disable [type] ... [type]
 ```
 
-Om utelämnande `[type]` aktiverar eller inaktiverar alla cachetyper samtidigt. The `type` är en blankstegsavgränsad lista med cachetyper.
+Om `[type]` utelämnas aktiveras eller inaktiveras alla cachetyper samtidigt. Alternativet `type` är en blankstegsavgränsad lista med cachetyper.
 
 <!-- `--bootstrap=` is a URL-encoded associative array of Commerce [application bootstrap parameters](../bootstrap/set-parameters.md#bootstrap-parameters) and values. -->
 
@@ -112,17 +112,17 @@ Exempelresultat:
 
 >[!INFO]
 >
->Från och med version 2.3.4 cachelagrar Commerce alla EAV-attribut i systemet när de hämtas. Cachelagring av EAV-attribut på det här sättet förbättrar prestandan eftersom det minskar mängden insert/select-begäranden till databasen. Men även cachens nätverksstorlek ökar. Utvecklare kan cachelagra anpassade EAV-attribut genom att köra `bin/magento config:set dev/caching/cache_user_defined_attributes 1` -kommando. Detta kan även göras från administratören när du [Utvecklarläge](../bootstrap/application-modes.md) efter inställning **Lager** > Inställningar **Konfiguration** > **Avancerat** > **Utvecklare** > **Inställningar för cachelagring** > **Cachelagra användardefinierade attribut** till **Ja**.
+>Från och med version 2.3.4 sparar Commerce alla EAV-attribut i systemet när de hämtas. Cachelagring av EAV-attribut på det här sättet förbättrar prestandan eftersom det minskar mängden insert/select-begäranden till databasen. Men även cachens nätverksstorlek ökar. Utvecklare kan cachelagra anpassade EAV-attribut genom att köra kommandot `bin/magento config:set dev/caching/cache_user_defined_attributes 1`. Detta kan även göras från administratören i [utvecklarläget](../bootstrap/application-modes.md) genom att ställa in **Lager** > Inställningar **Konfiguration** > **Avancerat** > **Utvecklare** > **Cachelagringsinställningar** > **Cachelagra användardefinierade attribut** på **Ja**.
 
 ## Rensa och tömma cachetyper
 
 >[!NOTE]
 >
->Cacheminnet för flera sidor kan ogiltigförklaras samtidigt och automatiskt **_utan_** de här entiteterna redigeras. Om en produkt i katalogen t.ex. är tilldelad en kategori, eller när någon [!UICONTROL related product rule] ändras.
+>Cacheminnet för flera sidor kan ogiltigförklaras samtidigt och automatiskt **_utan_** redigering av dessa entiteter. Till exempel när en produkt i katalogen har tilldelats en kategori eller när någon [!UICONTROL related product rule] har ändrats.
 
-Om du vill ta bort inaktuella objekt från cacheminnet kan du _ren_ eller _flush_ cachetyper:
+Om du vill rensa inaktuella objekt från cacheminnet kan du _rensa_ eller _tömma_ cachetyper:
 
-- Om du rensar en cachetyp tas endast alla objekt bort från de aktiverade Commerce-cachetyperna. Det här alternativet påverkar alltså inte andra processer eller program eftersom det bara rensar den cache som används i Commerce.
+- Om du rensar en cachetyp tas endast alla objekt bort från de aktiverade cachetyperna i Commerce. Det här alternativet påverkar alltså inte andra processer eller program eftersom det bara rensar den cache som används i Commerce.
 
   Inaktiverade cachetyper rensas inte.
 
@@ -144,7 +144,7 @@ Kommandoanvändning:
    bin/magento cache:flush [type] ... [type]
 ```
 
-Plats `[type]` är en blankstegsavgränsad lista med cachetyper. Utelämnar `[type]` rensar eller tömmer alla cachetyper samtidigt. Om du till exempel vill tömma alla cachetyper anger du
+Där `[type]` är en blankstegsavgränsad lista med cachetyper. Om `[type]` utelämnas rensas eller rensas alla cachetyper samtidigt. Om du till exempel vill tömma alla cachetyper anger du
 
 ```bash
    bin/magento cache:flush
@@ -173,4 +173,4 @@ Exempelresultat:
 
 >[!TIP]
 >
->Du kan även rensa och tömma cachetyper i Admin. Gå till **System** > **verktyg** > **Cachehantering**. **Lagring av tömningscache** motsvarar `bin/magento cache:flush`. **Rensa Magento-cache** motsvarar `bin/magento cache:clean`.
+>Du kan även rensa och tömma cachetyper i Admin. Gå till **System** > **Verktyg** > **Cachehantering**. **Lagring av rensningscache** motsvarar `bin/magento cache:flush`. **Töm Magento-cache** motsvarar `bin/magento cache:clean`.

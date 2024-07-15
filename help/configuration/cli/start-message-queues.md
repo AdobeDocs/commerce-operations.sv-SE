@@ -13,7 +13,7 @@ ht-degree: 0%
 
 {{file-system-owner}}
 
-Du måste starta en [meddelandekökonsument](../queues/consumers.md) för att aktivera asynkrona åtgärder som Inventory management massåtgärder och REST bulk- och asynkrona slutpunkter. Om du vill aktivera B2B-funktioner måste du starta flera konsumenter. Tredjepartsmoduler kan också kräva att du startar en anpassad konsument.
+Du måste starta en [meddelandekökonsument](../queues/consumers.md) om du vill aktivera asynkrona åtgärder som t.ex. Inventory management massåtgärder och REST bulk och asynkrona slutpunkter. Om du vill aktivera B2B-funktioner måste du starta flera konsumenter. Tredjepartsmoduler kan också kräva att du startar en anpassad konsument.
 
 Så här visar du en lista över alla konsumenter:
 
@@ -27,14 +27,14 @@ Så här startar du användare i meddelandekön:
 bin/magento queue:consumers:start [--max-messages=<value>] [--batch-size=<value>] [--single-thread] [--area-code=<value>] [--multi-process=<value>] <consumer_name>
 ```
 
-När alla tillgängliga meddelanden har förbrukats avslutas kommandot. Du kan köra kommandot igen manuellt eller med ett cron-jobb. Du kan också köra flera instanser av `magento queue:consumers:start` för att bearbeta stora meddelandeköer. Du kan till exempel lägga till `&` till kommandot för att köra det i bakgrunden, återgå till en uppmaning och fortsätta köra kommandon:
+När alla tillgängliga meddelanden har förbrukats avslutas kommandot. Du kan köra kommandot igen manuellt eller med ett cron-jobb. Du kan också köra flera instanser av kommandot `magento queue:consumers:start` för att bearbeta stora meddelandeköer. Du kan till exempel lägga till `&` i kommandot för att köra det i bakgrunden, återgå till en fråga och fortsätta köra kommandon:
 
 ```bash
 bin/magento queue:consumers:start <consumer_name> &
 ```
 
-Se [`queue:consumers:start`](../../tools/reference/commerce-on-premises.md#queueconsumersstart) i Commerce-delen av _Referens för kommandoradsverktyg_ om du vill ha information om kommandoalternativ, parametrar och värden.
+Mer information om kommandoalternativ, parametrar och värden finns i [`queue:consumers:start`](../../tools/reference/commerce-on-premises.md#queueconsumersstart) i avsnittet Commerce i _Referens för kommandoradsverktyg_ .
 
 >[!INFO]
 >
->The `--multi-process` finns i `queue:consumers:start` men för att köra användare med parallella processer konfigurerar du [`multiple_processes`](../queues/manage-message-queues.md#configuration) alternativ i `/app/etc/env.php`. Annars, om `queue:consumers:start` anropas med `--multi-process` fungerar det bara på en tråd.
+>Alternativet `--multi-process` finns i kommandot `queue:consumers:start`, men om du vill köra användare med parallella processer konfigurerar du alternativet [`multiple_processes`](../queues/manage-message-queues.md#configuration) i `/app/etc/env.php`. Om `queue:consumers:start` anropas med alternativet `--multi-process` fungerar det annars bara på en tråd.

@@ -14,7 +14,8 @@ ht-degree: 0%
 
 # Lokal hosting
 
-Molnbaserade värdlösningar är mycket populära och har en viktig roll i många organisationer, men lokal infrastruktur är fortfarande ett lämpligt alternativ för vissa organisationer och handlare.
+Molnbaserade värdlösningar är extremt populära och fungerar verkligen som
+En viktig roll för många organisationer är dock fortfarande lokal infrastruktur ett lämpligt alternativ för vissa organisationer och handlare.
 
 Du måste ta hänsyn till flera faktorer innan du väljer lokal hosting, bland annat avsevärda kostnader, en lättillgänglig pool av kompetent/kostnadseffektiv IT-expertis och det faktum att lokala applikationer ofta kan skräddarsys och anpassas efter organisationens behov.
 

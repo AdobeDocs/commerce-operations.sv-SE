@@ -16,9 +16,9 @@ Nu när du har installerat Adobe Commerce måste du konfigurera det. I det här 
 
 ## Konfigurera cron
 
-UNIX-uppgiftsschemaläggaren, cron, är viktig för programmets dagliga åtgärder. Det schemalägger saker som omindexering, nyhetsbrev, e-post och webbplatskartor. A *crontab* är en cron-konfiguration.
+UNIX-uppgiftsschemaläggaren, cron, är viktig för programmets dagliga åtgärder. Det schemalägger saker som omindexering, nyhetsbrev, e-post och webbplatskartor. En *crontab* är en cron-konfiguration.
 
-Du måste installera Adobe Commerce-tjänster i *crontab* eller vissa kärnfunktioner (och vissa tillägg från tredje part) fungerar inte korrekt.
+Du måste installera Adobe Commerce-tjänster på *crontab*, annars fungerar inte vissa kärnfunktioner (och vissa tillägg från tredje part) korrekt.
 
 Mer information om cron, inklusive hur du tar bort en crontab och kör cron från kommandoraden, finns i [Konfigurera och kör cron](../../configuration/cli/configure-cron-jobs.md).
 
@@ -27,11 +27,11 @@ Mer information om cron, inklusive hur du tar bort en crontab och kör cron frå
 Efter installationen rekommenderar vi följande:
 
 * Se till att filägarskap och behörigheter är korrekt inställda
-* Vi rekommenderar [ändra standardadministratörs-URI](../tutorials/admin-uri.md) från `admin` till något annat
-* Se till att [`X-Frame-Option` HTTP-huvud](../../configuration/security/xframe-options.md) är korrekt inställd.
+* Vi rekommenderar starkt att [ändrar standardadministratörs-URI](../tutorials/admin-uri.md) från `admin` till något annat
+* Kontrollera att [`X-Frame-Option` HTTP-huvudet ](../../configuration/security/xframe-options.md) är korrekt inställt.
 * Vidta försiktighetsåtgärder mot serveröverskridande skriptning (XSS) genom att [skydda dina mallar](https://developer.adobe.com/commerce/php/development/security/cross-site-scripting/)
 
-Om du installerat av [klona GitHub-databasen](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)ska du se till att du bara inkluderar de filer och mappar som behövs för produktionsmiljön när du distribuerar programmet. Filer och mappar som inte behövs kan medföra säkerhetsrisker.
+Om du har installerat genom att [klona GitHub-databasen](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/) kontrollerar du att du bara inkluderar de filer och mappar som krävs för produktionsmiljön när du distribuerar programmet. Filer och mappar som inte behövs kan medföra säkerhetsrisker.
 
 ## Aktivera omskrivning av Apache-servern
 
@@ -41,9 +41,9 @@ Om du använder webbservern Apache måste du aktivera serveromskrivningar för a
 
 ## Cachelagring i en miljö med flera webnoder
 
-Om du har flera webbnoder *inte* använder programmets standardfilcachning eftersom det inte finns någon synkronisering mellan webbnoder. Aktiviteten på en webbnod skrivs med andra ord endast till den webbnodens filsystem. Efterföljande aktivitet, om den utförs på en annan webbnod, kan resultera i att onödiga filer skrivs eller att fel kan uppstå.
+Om du har flera webbnoder kan du *inte* använda programmets standardfilcachning eftersom det inte finns någon synkronisering mellan webbnoder. Aktiviteten på en webbnod skrivs med andra ord endast till den webbnodens filsystem. Efterföljande aktivitet, om den utförs på en annan webbnod, kan resultera i att onödiga filer skrivs eller att fel kan uppstå.
 
-Använd i stället [Redis](../../configuration/cache/config-redis.md) för både standardcache och sidcache.
+Använd i stället [Redis](../../configuration/cache/config-redis.md) som både standardcache och sidcache.
 
 ## Serverinställningar
 
@@ -51,13 +51,13 @@ I det här avsnittet beskrivs kortfattat inställningar som vi rekommenderar att
 
 ### Loggrotation
 
-UNIX `logrotate` kan du administrera system som genererar ett stort antal loggfiler. Det möjliggör automatisk rotation, komprimering, borttagning och utskick av loggfiler. Varje loggfil kan hanteras varje dag, varje vecka, varje månad eller när loggfilen överskrider en angiven storlek.
+Med UNIX-verktyget `logrotate` kan du administrera system som genererar ett stort antal loggfiler. Det möjliggör automatisk rotation, komprimering, borttagning och utskick av loggfiler. Varje loggfil kan hanteras varje dag, varje vecka, varje månad eller när loggfilen överskrider en angiven storlek.
 
 Mer information finns i följande:
 
-* [HowTo: The ultimate log rotate command tutorial with ten example](https://www.thegeekstuff.com/2010/07/logrotate-examples)
+* [HowTo: The ultimate log rotate command tutorial with ten ten examples](https://www.thegeekstuff.com/2010/07/logrotate-examples)
 * [Stackutbyte](https://unix.stackexchange.com/questions/85662/how-to-properly-automatically-manually-rotate-log-files-for-production-rails-app)
-* [`logrotate` huvudsida](https://linuxconfig.org/logrotate-8-manual-page)
+* [`logrotate` huvudsida ](https://linuxconfig.org/logrotate-8-manual-page)
 
 ### Ställ in iptables-regler för att möjliggöra för olika tjänster att kommunicera
 
@@ -65,7 +65,7 @@ Oavsett om du har en server eller många måste du öppna portar i brandväggen 
 
 Mer information:
 
-* Ubuntu: [Dokumentationssida för Ubuntu](https://help.ubuntu.com/community/IptablesHowTo).
+* Ubuntu: [Ubuntu-dokumentationssida](https://help.ubuntu.com/community/IptablesHowTo).
 * CentOS: [CentOS How-to](https://wiki.centos.org/HowTos%282f%29Network%282f%29IPTables.html).
 
 ### Förbättrade säkerhetsregler för Linux (SELinux)
@@ -81,8 +81,8 @@ Mer information:
 
 Adobe Commerce kräver en e-postserver. Vi rekommenderar inte en viss server, men du kan försöka med något av följande:
 
-* Postfix för CentOS ([Digital Ocean, genomgång](https://www.digitalocean.com/community/tutorials/how-to-install-postfix-on-centos-6), [CentOS-dokumentation](https://www.centos.org))
-* Postfix för Ubuntu ([Digital Ocean, genomgång](https://www.digitalocean.com/community/tutorials/how-to-install-and-setup-postfix-on-ubuntu-14-04), [Ubuntu-dokumentation](https://help.ubuntu.com/community/MailServer))
+* Postfix för CentOS ([Självstudiekurs om digitala oceaner](https://www.digitalocean.com/community/tutorials/how-to-install-postfix-on-centos-6), [CentOS-dokumentation](https://www.centos.org))
+* Postfix för Ubuntu ([Självstudiekurs om digitala oceaner](https://www.digitalocean.com/community/tutorials/how-to-install-and-setup-postfix-on-ubuntu-14-04), [Ubuntu-dokumentation](https://help.ubuntu.com/community/MailServer))
 
 ### Förfina sökmotorn för bättre prestanda:
 

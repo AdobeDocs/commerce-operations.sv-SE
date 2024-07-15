@@ -45,8 +45,8 @@ ht-degree: 0%
       - [2.4.3](release-notes/security/2-4-3-patches.md)
       - [2.4.2](release-notes/security/2-4-2-patches.md)
 - [Produkttillgänglighet](product-availability.md)
-- [Betaversioner](beta.md)
-- Planering och policy {#planning}
+- [Beta-versioner](beta.md)
+- Planering och principer {#planning}
    - [Livscykelprincip](lifecycle-policy.md)
    - [Versionspolicy](versioning-policy.md)
    - [Frigör schema](schedule.md)
@@ -55,4 +55,4 @@ ht-degree: 0%
 - Paket {#packages}
    - [Adobe Commerce](packages/adobe-commerce.md)
    - [Magento Open Source](packages/magento-open-source.md)
-- [Återgå till bruksanvisningar](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
+- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

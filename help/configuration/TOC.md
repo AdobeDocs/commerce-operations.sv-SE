@@ -13,7 +13,7 @@ ht-degree: 0%
 # Konfigurationshandbok {#configuration-guide}
 
 + [Ökning](overview.md)
-+ Allmänna inställningar {#setup}
++ Allmän konfiguration {#setup}
    + [Programinitiering och bootstrap](bootstrap/initialization.md)
    + [Programlägen](bootstrap/application-modes.md)
    + [Bootstrap-parametrar](bootstrap/set-parameters.md)
@@ -41,7 +41,7 @@ ht-degree: 0%
       + [Konfigurera Redis](cache/config-redis.md)
       + [Använd Redis för standardcache](cache/redis-pg-cache.md)
       + [Använd Redis för sessionslagring](cache/redis-session.md)
-   + Varnish {#varnish}
+   + Avvikelse {#varnish}
       + [Finska - översikt](cache/config-varnish.md)
       + [Installera lack](cache/config-varnish-install.md)
    + [Webbserver](cache/config-varnish-server.md)
@@ -96,7 +96,7 @@ ht-degree: 0%
    + [Tjänster](reference/config-reference-services.md)
    + [Känsliga och systemspecifika inställningar](reference/config-reference-sens.md)
    + [Åsidosätt konfigurationsinställningar](reference/override-config-settings.md)
-+ Kronjobb {#crons}
++ Kronijobb {#crons}
    + [Kronjobb och grupper](cron/custom-cron.md)
    + [Anpassa crons-referens](cron/custom-cron-reference.md)
    + [Konfigurera ett anpassat cron-jobb](cron/custom-cron-tutorial.md)
@@ -146,4 +146,4 @@ ht-degree: 0%
       + [Verifiera delad databas](storage/multi-master-verify.md)
       + [Databasreplikering](storage/multi-master-replication.md)
       + [Återgå till en databas](storage/revert-split-database.md)
-+ [Återgå till bruksanvisningar](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
++ [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

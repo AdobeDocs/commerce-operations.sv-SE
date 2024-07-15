@@ -13,11 +13,11 @@ ht-degree: 0%
 
 I det här avsnittet beskrivs en allmän rekommenderad konfiguration för Adobe Commerce-instanser med vanliga servrar som är fysiskt värdbaserade i ett datacenter (inte virtualiserade) där resurser inte delas med andra användare. Din värdleverantör, särskilt om den är specialiserad på Commerce högpresterande värdtjänster, kan rekommendera en annan konfiguration som är lika eller mer effektiv för dina behov.
 
-Information om Adobe Commerce i molninfrastrukturmiljöer finns på [Startarkitektur](https://devdocs.magento.com/cloud/architecture/starter-architecture.html).
+Information om Adobe Commerce i molninfrastrukturmiljöer finns i [Startarkitektur](https://devdocs.magento.com/cloud/architecture/starter-architecture.html).
 
-## [!DNL Commerce] Referensarkitektur
+## [!DNL Commerce] referensarkitekturdiagram
 
-The [!DNL Commerce] Diagram över referensarkitektur representerar den bästa metoden för att skapa en skalbar [!DNL Commerce] webbplats.
+Referensarkitekturdiagrammet [!DNL Commerce] representerar den bästa metoden för att konfigurera en skalbar [!DNL Commerce]-plats.
 
 Färgen på varje element i diagrammet anger om elementet är en del av Magento Open Source eller Adobe Commerce och om det behövs.
 
@@ -25,15 +25,15 @@ Färgen på varje element i diagrammet anger om elementet är en del av Magento 
 * Grå element är valfria för Magento Open Source
 * Blå element är valfria för Adobe Commerce
 
-![Commerce referensarkitektur](../assets/performance/images/ref-architecture-2.3.png)
+![Commerce referensarkitekturdiagram](../assets/performance/images/ref-architecture-2.3.png)
 
 I följande avsnitt ges rekommendationer och överväganden för varje avsnitt i Commerce referensarkitekturdiagram.
 
 ### [!DNL Varnish]
 
-* A [!DNL Varnish] kluster kan skalas till trafik på en plats
+* Ett [!DNL Varnish]-kluster kan skalas till trafik på en plats
 * Justera instansstorleken baserat på antalet cachesidor som behövs
-* Använd en [!DNL Varnish] Använd mallen för att tömma en begäran (högst) per webbskikt
+* På en webbplats med hög trafik använder du en [!DNL Varnish]-mallsida för att säkerställa att en begäran (högst) rensas på cachen per webbnivå
 
 ### Webb
 
@@ -62,14 +62,14 @@ I följande avsnitt ges rekommendationer och överväganden för varje avsnitt i
 * Överväg att använda GFS eller GlusterFS för pub/media-lagring
 * Du kan också använda DB-lagring för platser med låg trafik
 
-### Rekommenderas [!DNL Varnish] referensarkitektur
+### Rekommenderad referensarkitektur för [!DNL Varnish]
 
-Magento stöder flera helsidescachningsmotorer (File, Memcache, Redis, [!DNL Varnish]) direkt i paketet, tillsammans med utökad täckning via tillägg. [!DNL Varnish] är den rekommenderade motorn för helsidescache.  [!DNL Commerce] stöder många olika [!DNL Varnish] konfigurationer.
+Magento har stöd för flera cachelagringsmotorer för helsidesdata (Arkiv, Memcache, Redis, [!DNL Varnish]) som finns i paketet, tillsammans med utökad täckning via tillägg. [!DNL Varnish] är den rekommenderade helsidescachemotorn.  [!DNL Commerce] stöder många olika [!DNL Varnish]-konfigurationer.
 
-För webbplatser som inte kräver hög tillgänglighet rekommenderar vi att du använder en [!DNL Varnish] konfiguration med Nginx SSL-avslutning.
+För webbplatser som inte kräver hög tillgänglighet rekommenderar vi att du använder en enkel [!DNL Varnish]-konfiguration med Nginx SSL-avslutning.
 
-![Enkel [!DNL Varnish] Konfiguration med SSL-avslut](../assets/performance/images/single-varnish-with-ssl-termination.png)
+![Enkel [!DNL Varnish] konfiguration med SSL-avslutning](../assets/performance/images/single-varnish-with-ssl-termination.png)
 
-För webbplatser som kräver hög tillgänglighet rekommenderar vi att du använder en [!DNL Varnish] konfiguration med en SSL som avslutar belastningsutjämnaren.
+För platser som kräver hög tillgänglighet rekommenderar vi att du använder en [!DNL Varnish]-konfiguration på två nivåer med en SSL som avslutar belastningsutjämnaren.
 
-![Hög tillgänglighet i två nivåer [!DNL Varnish] konfiguration med SSL som avslutar belastningsutjämnaren](../assets/performance/images/ha-2-tier-varnish-with-ssl-term-load-balancer.png)
+![Konfiguration med hög tillgänglighet på två nivåer [!DNL Varnish] med SSL som avslutar belastningsutjämnaren](../assets/performance/images/ha-2-tier-varnish-with-ssl-term-load-balancer.png)

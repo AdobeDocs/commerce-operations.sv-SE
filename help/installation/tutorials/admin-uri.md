@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Visa eller ändra Admin URI
 
-Innan du kör kommandot måste du [Skapa eller uppdatera distributionskonfigurationen](deployment.md).
+Innan du kör det här kommandot måste du [skapa eller uppdatera distributionskonfigurationen](deployment.md).
 
 ## Visa Admin-URI
 
@@ -30,7 +30,7 @@ Ett exempelresultat följer:
 Admin Panel URI: /admin_1wgrah
 ```
 
-Du kan även visa Admin URI i `<magento_root>/app/etc/env.php`. Ett utdrag följer:
+Du kan även visa Admin-URI i `<magento_root>/app/etc/env.php`. Ett utdrag följer:
 
 ```php?start_inline=1
   'backend' =>
@@ -41,4 +41,4 @@ Du kan även visa Admin URI i `<magento_root>/app/etc/env.php`. Ett utdrag följ
 
 ## Ändra Admin-URL
 
-Använd [`magento setup:config:set`](deployment.md) -kommando.
+Använd kommandot [`magento setup:config:set`](deployment.md) om du vill ändra Admin URI.

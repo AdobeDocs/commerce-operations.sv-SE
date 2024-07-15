@@ -18,6 +18,6 @@ Detta beror ofta på oklarheter i projektroller och ansvarsområden. Tydliga rol
 
 ## Hur samarbetar vi tillsammans?
 
-En tabell med ansvar, redovisning, konsulter och information (RACI), som vi nämnde i [projektomfång](../project-scope/deliverables.md) är ett användbart verktyg som definierar och dokumenterar ägarskap och ansvar i varje steg i projektet. Inom matrisen mappas varje uppgift, milstolpe och beslut i projektet ut till specifika roller eller individer. Det hjälper projektledningen att effektivisera processerna genom att säkerställa att alla teammedlemmar och intressenter förstår sina specifika roller. Detta bör definieras i projektplaneringsfasen och godkännas av varje berörd part.
+En RACI-matris (Responsible, Accountable, Consulted och Informed) - som vi nämnde i avsnittet [projektomfång](../project-scope/deliverables.md) - är ett användbart verktyg som definierar och dokumentägarskap och ansvar i varje steg i projektet. Inom matrisen mappas varje uppgift, milstolpe och beslut i projektet ut till specifika roller eller individer. Det hjälper projektledningen att effektivisera processerna genom att säkerställa att alla teammedlemmar och intressenter förstår sina specifika roller. Detta bör definieras i projektplaneringsfasen och godkännas av varje berörd part.
 
 ![Tabell som beskriver RACI-ramverket](../../assets/playbooks/raci.svg)

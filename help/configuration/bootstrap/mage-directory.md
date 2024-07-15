@@ -4,18 +4,18 @@ description: Använd variabeln MAGE_DIRS för att ange en array med absoluta sö
 exl-id: ee8e1a3a-f1d4-412c-8767-16447113f0cd
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '129'
+source-wordcount: '116'
 ht-degree: 0%
 
 ---
 
 # Sökvägar till baskatalog
 
-The `MAGE_DIRS` miljövariabeln gör att du kan ange anpassade baskatalogsökvägar och fragment av bas-URL:er som används av Commerce-programmet för att skapa absoluta sökvägar till olika filer eller för att generera URL:er.
+Miljövariabeln `MAGE_DIRS` gör att du kan ange anpassade baskatalogsökvägar och fragment av bas-URL:er som används av Commerce-programmet för att skapa absoluta sökvägar till olika filer eller för att generera URL:er.
 
 ## Ange MAGE_DIRS
 
-Ange en associativ array där nycklarna är konstanter från [\\Magento\\App\\Filesystem\\DirectoryList][directory-list] och -värden är absoluta sökvägar för kataloger respektive deras URL-sökvägar.
+Ange en associativ array där nycklarna är konstanter från [\\Magento\\App\\Filesystem\\DirectoryList][directory-list] och värdena är absoluta sökvägar för kataloger eller deras URL-sökvägar.
 
 Du kan ange `MAGE_DIRS` på något av följande sätt:
 
@@ -48,7 +48,7 @@ Du kan ange `MAGE_DIRS` på något av följande sätt:
   $bootstrap->run($app);
   ```
 
-I det föregående exemplet anges sökvägar för `[cache]` och `[media]` kataloger till `/mnt/nfs/cache` och `/mnt/nfs/media`, respektive
+I det föregående exemplet ställs sökvägarna för katalogerna `[cache]` och `[media]` in på `/mnt/nfs/cache` respektive `/mnt/nfs/media`.
 
 <!-- link definitions -->
 

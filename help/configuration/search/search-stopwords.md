@@ -12,33 +12,33 @@ ht-degree: 0%
 
 # Konfigurera sökstoppord
 
-I allmänhet _stoppord_ är vanliga ord som sökmotorer filtrerar bort efter att ha bearbetat text. När diskutrymmet och minnet ursprungligen var extremt begränsat innebar varje kilobyte som sparades en avsevärd prestandaförbättring. Därför har sökmotorer fått prestandavinster genom att ignorera vissa ord och hålla indexet litet.
+Vanligtvis är _stoppord_ vanliga ord som sökmotorer filtrerar ut efter att ha bearbetat text. När diskutrymmet och minnet ursprungligen var extremt begränsat innebar varje kilobyte som sparades en avsevärd prestandaförbättring. Därför har sökmotorer fått prestandavinster genom att ignorera vissa ord och hålla indexet litet.
 
 Trots att vi har mer lagringsutrymme idag är prestanda fortfarande viktigt. Elasticsearch och OpenSearch använder, precis som andra sökmotorer, fortfarande stoppord för att förbättra prestandan.
 
-Du måste hantera dina stoppord med CSV-filer som finns i `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords` katalogen eller `<magento_root>/app/code/Magento/Elasticsearch/etc/stopwords/` -katalogen, beroende på hur du har installerat Commerce-programmet.
+Du måste hantera dina stoppord med hjälp av CSV-filer som finns i katalogen `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords` eller `<magento_root>/app/code/Magento/Elasticsearch/etc/stopwords/`, beroende på hur du har installerat Commerce.
 
 Mer information om hur Elasticsearch och OpenSearch använder stoppord finns i följande resurser:
 
-- [Stoppord: Prestanda jämfört med precision](https://www.elastic.co/guide/en/elasticsearch/guide/current/stopwords.html)
-- [Pros and Cons of Stopwords](https://www.elastic.co/guide/en/elasticsearch/guide/current/pros-cons-stopwords.html)
-- [Använda stoppord](https://www.elastic.co/guide/en/elasticsearch/guide/current/using-stopwords.html)
+- [Stoppord: Prestanda jämfört med Precision](https://www.elastic.co/guide/en/elasticsearch/guide/current/stopwords.html)
+- [För- och nackdelar med stoppord](https://www.elastic.co/guide/en/elasticsearch/guide/current/pros-cons-stopwords.html)
+- [Använder stoppord](https://www.elastic.co/guide/en/elasticsearch/guide/current/using-stopwords.html)
 - [Stoppord och prestanda](https://www.elastic.co/guide/en/elasticsearch/guide/current/stopwords-performance.html)
 
 ## Konfigurera stoppord
 
-Stoppord finns i `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords` katalog. Adobe Commerce levereras med en CSV-fil som innehåller stoppord för standardspråkområdet och en extra fil, `stopwords.csv`, som har stoppord för alla språk som inte representeras av en annan CSV-fil.
+Stoppord finns i katalogen `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords`. Adobe Commerce levereras med en CSV-fil som innehåller stoppord för standardspråkinställningarna och ytterligare en fil, `stopwords.csv`, som har stoppord för alla språkinställningar som inte representeras av en annan CSV-fil.
 
 Standardlivstiden för stoppordsfilcachen är 15 minuter.
 
 ### Redigera stoppord för en befintlig språkinställning
 
-**Redigera stoppord**:
+**Så här redigerar du stoppord**:
 
-1. Logga in på din Commerce-server eller växla till [ägare av filsystem](../../installation/prerequisites/file-system/overview.md).
-1. Använda en textredigerare för att öppna en stoppordsfil i `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords` katalog.
+1. Logga in på din Commerce-server eller växla till [filsystemsägaren](../../installation/prerequisites/file-system/overview.md).
+1. Använd en textredigerare för att öppna en stoppordsfil i katalogen `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords`.
 
-   CSV-filer använder namnkonventionen `stopwords_<locale_code>.csv`. Exempel: den tyska stoppordsfilen heter `stopwords_de_DE.csv`.
+   CSV-filer använder namnkonventionen `stopwords_<locale_code>.csv`. Exempel: Den tyska stoppordsfilen heter `stopwords_de_DE.csv`.
 
 1. Lägg till ord, ta bort ord eller ändra ord i filen.
 
@@ -47,7 +47,7 @@ Standardlivstiden för stoppordsfilcachen är 15 minuter.
 1. Spara ändringarna och avsluta textredigeraren.
 1. Rensa konfigurationscachen.
 
-   - Administratör: **System** > Verktyg > **Cachehantering**. Välj **Konfiguration** och klicka på **Uppdatera**. Klicka **Skicka** för att slutföra åtgärden.
+   - Admin: **System** > Verktyg > **Cachehantering**. Markera kryssrutan **Konfiguration** och klicka på **Uppdatera** i listan ovan. Klicka på **Skicka** för att slutföra åtgärden.
 
    - Kommandorad: Ange följande kommando som ägare av filsystemet:
 
@@ -59,17 +59,17 @@ Standardlivstiden för stoppordsfilcachen är 15 minuter.
 
 ### Skapa stoppord för en ny språkinställning
 
-**Lägga till stoppord för en språkinställning**:
+**Så här lägger du till stoppord för en språkinställning**:
 
-1. Logga in på din Commerce-server eller växla till [ägare av filsystem](../../installation/prerequisites/file-system/overview.md).
+1. Logga in på din Commerce-server eller växla till [filsystemsägaren](../../installation/prerequisites/file-system/overview.md).
 
-1. Använda en textredigerare för att skapa en stoppordsfil med namnet `stopwords_<locale_code>.csv` i `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords` katalog.
+1. Använd en textredigerare för att skapa en stoppordsfil med namnet `stopwords_<locale_code>.csv` i katalogen `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords`.
 
-   Om du till exempel vill skapa stoppord för den italienska språkinställningen ger du filen ett namn `stopwords_it_IT.csv`.
+   Om du till exempel vill skapa stoppord för den italienska språkinställningen ger du filen `stopwords_it_IT.csv` ett namn.
 
 1. Kontrollera att varje stoppord finns på en separat rad i stoppordsfilen.
 1. Spara ändringarna och avsluta textredigeraren.
-1. Öppna i samma katalog `esconfig.xml` i en textredigerare.
+1. Öppna `esconfig.xml` i en textredigerare i samma katalog.
 1. Lägg till en rad i `esconfig.xml` enligt följande:
 
    ```xml
@@ -85,7 +85,7 @@ Standardlivstiden för stoppordsfilcachen är 15 minuter.
 1. Spara ändringarna i `esconfig.xml` och avsluta textredigeraren.
 1. Rensa konfigurationscachen.
 
-   - Administratör: **System** > Verktyg > **Cachehantering**. Välj **Konfiguration** och klicka på **Uppdatera**. Klicka **Skicka** för att slutföra åtgärden.
+   - Admin: **System** > Verktyg > **Cachehantering**. Markera kryssrutan **Konfiguration** och klicka på **Uppdatera** i listan ovan. Klicka på **Skicka** för att slutföra åtgärden.
 
    - Kommandorad: Ange följande kommando som ägare av filsystemet:
 
@@ -102,11 +102,11 @@ I det här avsnittet beskrivs hur du kan ändra standardkatalogen för stoppord 
 - `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords`
 - `<magento_root>/app/code/Magento/Elasticsearch/etc/stopwords/`
 
-Platsen beror på hur du har installerat Commerce. Om du klonade GitHub-databasen Magento 2 ligger sökvägen under `app/code`. Om du har installerat ett komprimerat arkiv eller ett metapaket är sökvägen under `vendor`.
+Platsen beror på hur du har installerat Commerce. Om du klonade GitHub-databasen Magento 2 är sökvägen under `app/code`. Om du installerade ett komprimerat arkiv eller ett metapaket är sökvägen under `vendor`.
 
-**Ändra katalogen**:
+**Så här ändrar du katalogen**:
 
-1. Öppna Elasticsearch som ägare av filsystemet `di.xml` i en textredigerare.
+1. Som ägare av filsystemet öppnar du Elasticsearch `di.xml` i en textredigerare.
 
    Om du klonade databasen finns den på `app/code/Magento/Elasticsearch/etc/di.xml`
 
@@ -127,7 +127,7 @@ Platsen beror på hur du har installerat Commerce. Om du klonade GitHub-database
 ## Ändra katalogen från modulen
 
 1. [Skapa en modul](https://developer.adobe.com/commerce/php/development/build/component-file-structure/)
-1. I modulen `etc/di.xml` lägg till instruktioner:
+1. Lägg till instruktioner i modulen `etc/di.xml`:
 
    ```xml
    <type name="Magento\Elasticsearch\SearchAdapter\Query\Preprocessor\Stopwords">
@@ -138,6 +138,6 @@ Platsen beror på hur du har installerat Commerce. Om du klonade GitHub-database
    </type>
    ```
 
-1. Skapa katalogen i modulen `etc/stopwords`, med motsvarande CSV-fil.
+1. Skapa katalogen `etc/stopwords` i modulen med motsvarande CSV-fil.
 
 1. Spara ändringarna i `di.xml` och avsluta textredigeraren.

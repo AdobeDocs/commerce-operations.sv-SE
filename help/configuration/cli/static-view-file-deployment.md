@@ -1,6 +1,6 @@
 ---
 title: Distribuera statiska vyfiler
-description: Lär dig skriva statiska filer i Commerce-filsystemet i produktionsläge.
+description: Lär dig skriva statiska filer i Commerce filsystem i produktionsläge.
 exl-id: 51954738-b999-4982-954b-70f7a70c5a17
 source-git-commit: 0a72bc492dfec0a9014a518282a97ab21e59f96d
 workflow-type: tm+mt
@@ -13,35 +13,35 @@ ht-degree: 0%
 
 {{file-system-owner}}
 
-Distributionskommandot för statiska visningsfiler gör att du kan skriva statiska filer till Commerce-filsystemet när Commerce-programmet är inställt för [produktionsläge](../bootstrap/application-modes.md#production-mode).
+Med distributionskommandot för statiska visningsfiler kan du skriva statiska filer till filsystemet i Commerce när Commerce-programmet är inställt för [produktionsläge](../bootstrap/application-modes.md#production-mode).
 
-Termen _statisk vyfil_ hänvisar till följande:
+Termen _statisk vyfil_ refererar till följande:
 
 - &quot;Statisk&quot; betyder att den kan cachas för en plats (det vill säga att filen inte genereras dynamiskt). Exempel är bilder och CSS som genererats från LESS.
 - &quot;Visa&quot; avser presentationsskikt (från MVC).
 
-Filerna i den statiska vyn finns i `<magento_root>/pub/static` och vissa cachelagras i `<magento_root>/var/view_preprocessed` även katalogen.
+Statiska vyfiler finns i katalogen `<magento_root>/pub/static` och vissa cachelagras även i katalogen `<magento_root>/var/view_preprocessed`.
 
 Distributionen av statiska visningsfiler påverkas av programlägena enligt följande:
 
-- [Standard](../bootstrap/application-modes.md#default-mode) och [utvecklare](../bootstrap/application-modes.md#developer-mode) lägen: Commerce genererar dem vid behov, men de övriga cachelagras i en fil för att ge snabbare åtkomst.
-- [Produktion](../bootstrap/application-modes.md#production-mode) läge: Statiska filer är _not_ genereras eller cachelagras.
+- Lägen [Standard](../bootstrap/application-modes.md#default-mode) och [utvecklare](../bootstrap/application-modes.md#developer-mode): Commerce genererar dem vid behov, men resten cachas i en fil för att få snabb åtkomst.
+- [Produktion](../bootstrap/application-modes.md#production-mode): Statiska filer genereras eller cachelagras _inte_.
 
-Du måste skriva statiska vyfiler till Commerce-filsystemet manuellt med det kommando som beskrivs i det här avsnittet. Därefter kan du begränsa behörigheter för att begränsa dina säkerhetsluckor och förhindra oavsiktlig eller skadlig överskrivning av filer.
+Du måste skriva statiska vyfiler till filsystemet i Commerce manuellt med det kommando som beskrivs i det här avsnittet. Därefter kan du begränsa behörigheter för att begränsa dina säkerhetsluckor och förhindra oavsiktlig eller skadlig överskrivning av filer.
 
 >[!WARNING]
 >
->_Endast i utvecklarläget_: När du installerar eller aktiverar en ny modul kan ny JavaScript, CSS, layouter och så vidare läsas in. För att undvika problem med statiska filer måste du rensa de gamla filerna så att du ser till att du får alla ändringar för den nya modulen. Du kan rensa genererade statiska vyfiler på flera sätt. Se [Rensa cacheämne för statiska filer för detaljer](https://developer.adobe.com/commerce/frontend-core/guide/caching/#clean-static-files-cache) för mer information.
+>_Endast i utvecklarläget_: När du installerar eller aktiverar en ny modul kan den läsa in nya JavaScript, CSS, layouter och så vidare. För att undvika problem med statiska filer måste du rensa de gamla filerna så att du ser till att du får alla ändringar för den nya modulen. Du kan rensa genererade statiska vyfiler på flera sätt. Mer information finns i [Rensa cache-avsnittet för statiska filer](https://developer.adobe.com/commerce/frontend-core/guide/caching/#clean-static-files-cache).
 
-**Distribuera statiska vyfiler**:
+**Så här distribuerar du statiska vyfiler**:
 
-1. Logga in på Commerce Server som, eller [växla till filsystemets ägare](../../installation/prerequisites/file-system/overview.md).
-1. Ta bort innehållet i `<magento_root>/pub/static`, förutom för `.htaccess` -fil. Ta inte bort filen.
-1. Köra distributionsverktyget för statiska vyfiler `<magento_root>/bin/magento setup:static-content:deploy`.
+1. Logga in på Commerce-servern som eller [växla till filsystemets ägare](../../installation/prerequisites/file-system/overview.md).
+1. Ta bort innehållet i `<magento_root>/pub/static`, förutom i filen `.htaccess`. Ta inte bort filen.
+1. Kör distributionsverktyget `<magento_root>/bin/magento setup:static-content:deploy` för statiska vyfiler.
 
    >[!INFO]
    >
-   >Om du aktiverar filsammanfogning i statisk vy i Admin `pub/static` katalogsystemet måste vara skrivbart.
+   >Om du aktiverar filsammanfogning i statisk vy i Admin måste katalogsystemet `pub/static` vara skrivbart.
 
    Kommandoalternativ:
 
@@ -53,17 +53,17 @@ I följande tabell förklaras det här kommandots parametrar och värden.
 
 | Alternativ | Beskrivning | Obligatoriskt? |
 | ------ | ----------- | --------- |
-| `<languages>` | Blankstegsavgränsad lista med [ISO-639](https://www.loc.gov/standards/iso639-2/php/code_list.php) språkkoder som statiska vyfiler ska skrivas ut för. (Standard är `en_US`.)<br>Hitta listan genom att köra: `bin/magento info:language:list` | Nej |
-| `--language (-l)` | Generera filer endast för de angivna språken. Standardinställningen, utan att något alternativ har angetts, är att generera filer för alla ISO-639-språkkoder. Du kan ange namnet på en språkkod i taget. Standardvärdet är **alla**.<br>Till exempel: `--language en_US --language es_ES` | Nej |
+| `<languages>` | Blankstegsavgränsad lista med [ISO-639](https://www.loc.gov/standards/iso639-2/php/code_list.php)-språkkoder som statiska vyfiler ska skrivas ut för. (Standard är `en_US`.)<br>Hitta listan genom att köra: `bin/magento info:language:list` | Nej |
+| `--language (-l)` | Generera filer endast för de angivna språken. Standardinställningen, utan att något alternativ har angetts, är att generera filer för alla ISO-639-språkkoder. Du kan ange namnet på en språkkod i taget. Standardvärdet är **all**.<br>Till exempel: `--language en_US --language es_ES` | Nej |
 | `--exclude-language` | Generera filer för angivna språkkoder. Standardinställningen, utan något alternativ angivet, är att ingenting ska uteslutas. Du kan ange namnet på en språkkod eller en kommaavgränsad lista med språkkoder. Standardvärdet är **ingen**. | Nej |
-| `--theme <theme>` | Teman där statiskt innehåll ska distribueras. Standardvärdet är **alla**.<br>Till exempel: `--theme Magento/blank --theme Magento/luma` | Nej |
-| `--exclude-theme <theme>` | Teman som ska uteslutas vid distribution av statiskt innehåll. Standardvärdet är **ingen**.<br>Till exempel: `--exclude-theme Magento/blank` | Nej |
-| `--area (-a)` | Generera filer endast för de angivna områdena. Standardinställningen, utan att något alternativ har angetts, är att generera filer för alla områden. Giltiga värden är `adminhtml` och `frontend`. Standardvärdet är **alla**.<br>Till exempel: `--area adminhtml` | Nej |
+| `--theme <theme>` | Teman där statiskt innehåll ska distribueras. Standardvärdet är **all**.<br>Till exempel: `--theme Magento/blank --theme Magento/luma` | Nej |
+| `--exclude-theme <theme>` | Teman som ska uteslutas vid distribution av statiskt innehåll. Standardvärdet är **ingen**.<br>Exempel: `--exclude-theme Magento/blank` | Nej |
+| `--area (-a)` | Generera filer endast för de angivna områdena. Standardinställningen, utan att något alternativ har angetts, är att generera filer för alla områden. Giltiga värden är `adminhtml` och `frontend`. Standardvärdet är **all**.<br>Till exempel: `--area adminhtml` | Nej |
 | `--exclude-area` | Generera inga filer för de angivna områdena. Standardinställningen, utan något alternativ angivet, är att ingenting ska uteslutas. Standardvärdet är **ingen**. | Nej |
 | `--jobs (-j)` | Aktivera [parallell bearbetning](manage-indexers.md#reindexing-in-parallel-mode) med angivet antal jobb. Standardvärdet är 0 (kör inte i parallella processer). Standardvärdet är **0**. | Nej |
 | `--symlink-locale` | Skapa länkar för filerna för de språkinställningarna som skickas för distribution, men som inte har några anpassningar. | Nej |
 | `--content-version=CONTENT-VERSION` | Anpassad version av statiskt innehåll kan användas om distributionen körs på flera noder för att säkerställa att den statiska innehållsversionen är identisk och att cachelagring fungerar som den ska. | Nej |
-| `--no-javascript` | Distribuera inte JavaScript-filer | Nej |
+| `--no-javascript` | Installera inte JavaScript-filer | Nej |
 | `--no-css` | Distribuera inte CSS-filer. | Nej |
 | `--no-less` | Distribuera inte LESS-filer. | Nej |
 | `--no-images` | Distribuera inte bilder. | Nej |
@@ -71,13 +71,13 @@ I följande tabell förklaras det här kommandots parametrar och värden.
 | `--no-html` | Distribuera inte HTML-filer. | Nej |
 | `--no-misc` | Distribuera inte andra typer av filer: MD, JBF, CSV, JSON, TXT, HTC, SWF | Nej |
 | `--no-html-minify` | Minimera inte HTML-filer. | Nej |
-| `-s <quick\|standard\|compact>` | Definiera distributionsstrategin. Använd endast dessa alternativ om du har fler än en lokal plats.<ul><li>Använd [snabb strategi](static-view-file-strategy.md#quick-strategy) för att minimera driftsättningstiden. Detta är standardkommandoalternativet om det inte anges.</li><li>Använd [standardstrategi](static-view-file-strategy.md#standard-strategy) för att distribuera alla statiska vyfiler för alla paket.</li><li>Använd [kompakt strategi](static-view-file-strategy.md#compact-strategy) för att spara diskutrymme på servern.</li></ul> | Nej |
-| `--no-parent` | Generera inga filer för det aktuella temats överordnade teman. Vi rekommenderar starkt att du använder den här flaggan om du inte uttryckligen använder det överordnade temat för det aktuella temat som du försöker distribuera. Detta gör processen betydligt snabbare. Den här flaggan är tillgänglig i Commerce 2.4.2 | Nej |
+| `-s <quick\|standard\|compact>` | Definiera distributionsstrategin. Använd endast dessa alternativ om du har fler än en lokal plats.<ul><li>Använd [snabbstrategin](static-view-file-strategy.md#quick-strategy) för att minimera distributionstiden. Detta är standardkommandoalternativet om det inte anges.</li><li>Använd [standardstrategin](static-view-file-strategy.md#standard-strategy) för att distribuera alla statiska vyfiler för alla paket.</li><li>Använd [kompakt strategi](static-view-file-strategy.md#compact-strategy) för att spara diskutrymme på servern.</li></ul> | Nej |
+| `--no-parent` | Generera inga filer för det aktuella temats överordnade teman. Vi rekommenderar starkt att du använder den här flaggan om du inte uttryckligen använder det överordnade temat för det aktuella temat som du försöker distribuera. Detta gör processen betydligt snabbare. Den här flaggan finns i Commerce 2.4.2 | Nej |
 | `--force (-f)` | Distribuera filer i valfritt läge. (som standard kan verktyget för distribution av statiskt innehåll endast köras i produktionsläge. Använd det här alternativet om du vill köra det i standardläge eller utvecklarläge). | Nej |
 
 >[!INFO]
 >
->Om du anger värden för båda `<languages>` och `--language`, `<languages>` har företräde.
+>Om du anger värden för både `<languages>` och `--language` har `<languages>` företräde.
 
 ## Exempel
 
@@ -85,7 +85,7 @@ Här följer några exempelkommandon.
 
 ### Utesluta ett tema och HTML-miniatyr
 
-Följande kommando distribuerar statiskt innehåll för amerikansk engelska (`en_US`), utelämnar Luma-temat som finns i Commerce och minierar inte HTML-filer.
+Följande kommando distribuerar statiskt innehåll för amerikansk engelska (`en_US`), exkluderar Luma-temat som ingår i Commerce och minierar inte HTML-filer.
 
 ```bash
 bin/magento setup:static-content:deploy en_US --exclude-theme Magento/luma --no-html-minify
@@ -124,7 +124,7 @@ bin/magento setup:static-content:deploy -s quick --no-misc --no-html --no-fonts 
 
 ### Generera statiska vyfiler för ett tema och ett område
 
-Följande kommando genererar statiska vyfiler för alla språk, endast för klientdelen, temat för Commerce Luma, utan att generera teckensnitt:
+Följande kommando genererar statiska visningsfiler för alla språk, endast för frontend-området och Commerce Luma-temat, utan att generera teckensnitt:
 
 ```bash
 bin/magento setup:static-content:deploy --area frontend --no-fonts --theme Magento/luma
@@ -152,13 +152,13 @@ Du kanske vill köra distributionsprocessen i en separat, icke-produktionsmiljö
 
 Gör så här:
 
-1. Kör [`bin/magento app:config:dump`](../cli/export-configuration.md) för att exportera konfigurationen från produktionssystemet.
+1. Kör [`bin/magento app:config:dump`](../cli/export-configuration.md) om du vill exportera konfigurationen från produktionssystemet.
 1. Kopiera de exporterade filerna till kodbasen för icke-produktion.
 1. Distribuera statiska vyfiler: `bin/magento setup:static-content:deploy`
 
 ## Felsöka distributionsverktyget för statiska vyfiler
 
-[Installera Commerce-programvaran först](../../installation/overview.md)Annars kan du inte köra distributionsverktyget för statiska vyfiler.
+[Installera Commerce först](../../installation/overview.md), annars kan du inte köra distributionsverktyget för statiska vyfiler.
 
 **Symptom**: Följande fel visas när du kör distributionsverktyget för statiska vyfiler:
 
@@ -170,9 +170,9 @@ ERROR: You need to install the Commerce application before running this utility.
 
 Gör så här:
 
-1. Installera Commerce-programvaran med [kommandorad](../../installation/composer.md).
-1. Logga in på programservern som, eller [växla till](../../installation/prerequisites/file-system/overview.md), filsystemets ägare.
-1. Ta bort innehållet i `<app_root>/pub/static` katalog, förutom `.htaccess` -fil. Ta inte bort filen.
+1. Installera Commerce-programmet med kommandoraden [](../../installation/composer.md).
+1. Logga in på programservern som, eller [växla till](../../installation/prerequisites/file-system/overview.md), ägare av filsystemet.
+1. Ta bort innehållet i katalogen `<app_root>/pub/static`, förutom i filen `.htaccess`. Ta inte bort filen.
 1. Distribuera statiska vyfiler: `bin/magento setup:static-content:deploy`
 
 ## Tips för utvecklare som anpassar verktyget för statisk innehållsdistribution

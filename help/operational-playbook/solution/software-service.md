@@ -1,5 +1,5 @@
 ---
-title: Commerce Software Services
+title: Commerce programvarutjänster
 description: Lär dig mer om viktiga skillnader mellan SaaS-program och andra alternativ för e-handel med öppen källkod som är självbetjänade (lokalt).
 exl-id: 9be70e1e-76d5-4696-862e-f2b71eb1abb0
 feature: Best Practices, Saas
@@ -50,4 +50,5 @@ De lockande återförsäljarna behöver e-handelsplattformar som kan skalas när
 
 Vi rekommenderar att återförsäljarna använder det bästa av sina system, vilket innebär att de använder det bästa systemet för varje del av sin verksamhet. För det mesta håller er inte längre med att välja en plattform för att utföra alla aspekter och funktioner i ert företag.
 
-Företagen bör i stället kunna använda ett valfritt antal system för sina ERP-, POS-, 3PL- och e-handelssystem och integrera dessa system för att synkronisera lager, order, kunder, artiklar och data för leverans/spårning automatiserar era affärsprocesser. Molnbaserade SaaS-plattformar uppfyller ofta dessa affärskrav på ett flexibelt och enkelt sätt.
+Företagen bör i stället kunna använda valfritt antal system för
+sina ERP-, POS-, 3PL- och e-handelssystem och integrera dessa system för att synkronisera lager, order, kunder, artiklar och data för leverans/spårning automatiserar era affärsprocesser. Molnbaserade SaaS-plattformar uppfyller ofta dessa affärskrav på ett flexibelt och enkelt sätt.

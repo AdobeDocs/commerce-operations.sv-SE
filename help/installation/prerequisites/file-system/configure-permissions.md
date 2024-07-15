@@ -13,7 +13,7 @@ ht-degree: 0%
 
 I det här avsnittet beskrivs hur du anger läs- och skrivbehörigheter för webbservergruppen innan du installerar Adobe Commerce. Detta är nödvändigt för att kommandoraden ska kunna skriva filer till filsystemet.
 
-Hur du använder dem varierar beroende på om du använder [delad värdtjänst](#set-permissions-for-one-user-on-shared-hosting) och har en användare eller om du använder [privat server](#set-ownership-and-permissions-for-two-users) och har två användare.
+Proceduren du använder skiljer sig åt beroende på om du använder [delad värdtjänst](#set-permissions-for-one-user-on-shared-hosting) och har en användare eller om du använder en [privat server](#set-ownership-and-permissions-for-two-users) och har två användare.
 
 ## Ange behörigheter för en användare vid delad värdtjänst
 
@@ -58,9 +58,9 @@ Så här anger du behörigheter innan du installerar programmet:
 1. Om du inte redan har gjort det ska du skaffa programmet på något av följande sätt:
 
    * [Metapaket för disposition](../../composer.md)
-   * [Klona databasen (endast medverkande utvecklare)](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)
+   * [Klona databasen (endast bidragsutvecklare)](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)
 
-1. När du har angett ägarskap och behörigheter för filsystemet, [installera programmet](../../advanced.md)
+1. [Installera programmet](../../advanced.md) när du har angett ägarskap och behörigheter för filsystemet
 
 >[!NOTE]
 >
@@ -68,7 +68,7 @@ Så här anger du behörigheter innan du installerar programmet:
 
 ## Ange ägarskap och behörigheter för två användare
 
-I det här avsnittet beskrivs hur du ställer in ägarskap och behörigheter för din egen server eller en privat värdkonfiguration. I den här typen av konfiguration brukar du *inte* loggar in som, eller växlar till, webbserveranvändaren. Du loggar vanligtvis in som en användare och kör webbservern som en annan användare.
+I det här avsnittet beskrivs hur du ställer in ägarskap och behörigheter för din egen server eller en privat värdkonfiguration. I den här typen av konfiguration kan du *inte* logga in som, eller växla till, webbserveranvändaren. Du loggar vanligtvis in som en användare och kör webbservern som en annan användare.
 
 Så här anger du ägarskap och behörigheter för ett tvåanvändarsystem:
 
@@ -83,25 +83,25 @@ Utför följande uppgifter i den ordning som visas:
 
 ### Om den delade gruppen
 
-Att göra det möjligt för webbservern att skriva filer och kataloger i filsystemet, men även att underhålla *ägandeskap* av filsystemägaren måste båda användarna finnas i samma grupp. Detta är nödvändigt för att båda användarna ska kunna dela åtkomst till filer (inklusive filer som skapats med Admin eller andra webbaserade verktyg).
+Om du vill att webbservern ska kunna skriva filer och kataloger i filsystemet, men att filsystemets ägare ska behålla *ägarskap*, måste båda användarna finnas i samma grupp. Detta är nödvändigt för att båda användarna ska kunna dela åtkomst till filer (inklusive filer som skapats med Admin eller andra webbaserade verktyg).
 
 I det här avsnittet beskrivs hur du skapar en ägare av ett filsystem och placerar användaren i webbservergruppen. Du kan använda ett befintligt användarkonto om du vill. Vi rekommenderar att användaren har ett starkt lösenord av säkerhetsskäl.
 
 >[!NOTE]
 >
->Hoppa till [Hitta webbserverns användargrupp](#find-the-web-server-user-group) om du tänker använda ett befintligt användarkonto.
+>Gå till [Hitta webbserverns användargrupp](#find-the-web-server-user-group) om du tänker använda ett befintligt användarkonto.
 
 ### Skapa filsystemets ägare och ge användaren ett starkt lösenord
 
-I det här avsnittet beskrivs hur du skapar filsystemets ägare. (filsystemets ägare är en annan term för *kommandoradsanvändare*.)
+I det här avsnittet beskrivs hur du skapar filsystemets ägare. (filsystemets ägare är en annan term för kommandoradsanvändaren **.)
 
-Om du vill skapa en användare i CentOS eller Ubuntu anger du följande kommando som en användare med `root` behörighet:
+Om du vill skapa en användare på CentOS eller Ubuntu anger du följande kommando som en användare med `root`-behörighet:
 
 ```bash
 adduser <username>
 ```
 
-Om du vill ge användaren ett lösenord anger du följande kommando som användare med `root` behörighet:
+Om du vill ge användaren ett lösenord anger du följande kommando som en användare med `root`-behörighet:
 
 ```bash
 passwd <username>
@@ -111,9 +111,9 @@ Följ instruktionerna på skärmen för att skapa ett lösenord för användaren
 
 >[!WARNING]
 >
->Om du inte har `root` behörighet på programservern kan du använda ett annat lokalt användarkonto. Kontrollera att användaren har ett starkt lösenord och fortsätt med [Placera filsystemets ägare i webbservergruppen](#step-3-put-the-file-system-owner-in-the-web-servers-group).
+>Om du inte har `root`-behörighet på programservern kan du använda ett annat lokalt användarkonto. Kontrollera att användaren har ett starkt lösenord och fortsätt med [Placera filsystemägaren i webbservergruppen](#step-3-put-the-file-system-owner-in-the-web-servers-group).
 
-Om du till exempel vill skapa en användare med namnet `magento_user` och ge användaren ett lösenord, ange:
+Om du till exempel vill skapa en användare med namnet `magento_user` och ge användaren ett lösenord anger du:
 
 ```bash
 sudo adduser magento_user
@@ -125,7 +125,7 @@ sudo passwd magento_user
 
 >[!WARNING]
 >
->Eftersom syftet med att skapa den här användaren är att lägga till extra säkerhet måste du skapa en [starkt lösenord](https://en.wikipedia.org/wiki/Password_strength).
+>Eftersom syftet med att skapa den här användaren är att tillhandahålla extra säkerhet, måste du skapa ett [starkt lösenord](https://en.wikipedia.org/wiki/Password_strength).
 
 ### Hitta webbserverns användargrupp
 
@@ -145,22 +145,22 @@ Så här hittar du webbserverns användargrupp:
 
 Vanligtvis är både användar- och gruppnamnet `apache`.
 
-* Ubuntu: `ps aux | grep apache` för att hitta Apache-användaren `groups <apache user>` för att hitta gruppen.
+* Ubuntu: `ps aux | grep apache` för att hitta Apache-användaren och sedan `groups <apache user>` för att hitta gruppen.
 
 Vanligtvis är både användarnamnet och gruppnamnet `www-data`.
 
 ### Placera filsystemets ägare i webbservergruppen
 
-Om du vill placera filsystemägaren i webbserverns primära grupp (med det typiska Apache-gruppnamnet för CentOS och Ubuntu) anger du följande kommando som en användare med `root` behörighet:
+Om du vill placera filsystemägaren i webbserverns primära grupp (med det typiska Apache-gruppnamnet för CentOS och Ubuntu) anger du följande kommando som en användare med `root`-behörighet:
 
 * CentOS: `usermod -a -G apache <username>`
 * Ubuntu: `usermod -a -G www-data <username>`
 
 >[!NOTE]
 >
->The `-a -G` alternativ är viktiga eftersom de lägger till `apache` eller `www-data` som *sekundär* grupp till användarkontot, som bevarar användarens *primär* grupp. Om du lägger till en sekundär grupp till ett användarkonto blir det enklare [begränsa filägarskap och behörigheter](#set-ownership-and-permissions-for-two-users) för att säkerställa att medlemmar i en delad grupp endast har åtkomst till vissa filer.
+>Alternativen för `-a -G` är viktiga eftersom de lägger till `apache` eller `www-data` som en *sekundär* grupp i användarkontot, vilket bevarar användarens *primära* grupp. Om du lägger till en sekundär grupp till ett användarkonto kan [begränsa filägarskap och behörigheter](#set-ownership-and-permissions-for-two-users) för att säkerställa att medlemmar i en delad grupp bara har åtkomst till vissa filer.
 
-Om du till exempel vill lägga till användaren `magento_user` till `apache` primär grupp i CentOS:
+Så här lägger du till användaren `magento_user` i den primära gruppen `apache` i CentOS:
 
 ```bash
 sudo usermod -a -G apache magento_user
@@ -192,7 +192,7 @@ Starta om webbservern för att slutföra åtgärden:
 Om du inte redan har gjort det ska du skaffa programmet på något av följande sätt:
 
 * [Metapaket för disposition](../../composer.md)
-* [Klona databasen (endast medverkande utvecklare)](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)
+* [Klona databasen (endast bidragsutvecklare)](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)
 
 ### Ange ägarskap och behörigheter för den delade gruppen
 
@@ -227,7 +227,7 @@ Om du vill ange alla kommandon på en rad anger du följande under förutsättni
 cd /var/www/html/magento2 && find var generated vendor pub/static pub/media app/etc -type f -exec chmod g+w {} + && find var generated vendor pub/static pub/media app/etc -type d -exec chmod g+ws {} + && chown -R :apache . && chmod u+x bin/magento
 ```
 
-Om filsystembehörigheterna inte har angetts korrekt och inte kan ändras av filsystemets ägare, kan du ange kommandot som en användare med `root` behörighet:
+Om filsystembehörigheterna inte har angetts korrekt och inte kan ändras av filsystemets ägare, kan du ange kommandot som en användare med `root`-behörighet:
 
 ```bash
 cd /var/www/html/magento2 && sudo find var generated vendor pub/static pub/media app/etc -type f -exec chmod g+w {} + && sudo find var generated vendor pub/static pub/media app/etc -type d -exec chmod g+ws {} + && sudo chown -R :apache . && sudo chmod u+x bin/magento

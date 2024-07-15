@@ -5,7 +5,7 @@ feature: Best Practices
 exl-id: 77275d37-4f1d-462d-ba11-29432791da6a
 source-git-commit: e63f68dd469564e70269154810cbfbd95d2b2e57
 workflow-type: tm+mt
-source-wordcount: '1239'
+source-wordcount: '1172'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Om du följer dessa standarder kan du förhindra obehörig åtkomst och skadliga
 
 >[!TIP]
 >
->Adobe har upptäckt att de flesta säkerhetsincidenter inträffar när hotskådespelare drar nytta av befintliga, ej patchade säkerhetsluckor, dåliga lösenord och svaga ägarskaps- och behörighetsinställningar i Commerce-programmet och infrastrukturkonfigurationen. Minimera antalet säkerhetstillbud genom att granska och följa de bästa säkerhetsrutinerna för Adobe när du konfigurerar, konfigurerar och uppdaterar Adobe Commerce-installationer. Se [Skydda din Commerce-webbplats och infrastruktur](../launch/security-best-practices.md).
+>Adobe har upptäckt att de flesta säkerhetsincidenter inträffar när hotskådespelare drar nytta av befintliga, ej patchade säkerhetsluckor, dåliga lösenord och svaga ägar- och behörighetsinställningar i Commerce program- och infrastrukturkonfiguration. Minimera antalet säkerhetstillbud genom att granska och följa de bästa säkerhetsrutinerna för Adobe när du konfigurerar, konfigurerar och uppdaterar Adobe Commerce-installationer. Se [Skydda din Commerce-webbplats och infrastruktur](../launch/security-best-practices.md).
 
 
 ## Berörda produkter och versioner
@@ -67,18 +67,18 @@ Det första steget i incidentanalysen är att samla in så många fakta som möj
 
   Rapporten Åtgärdsloggar innehåller en detaljerad beskrivning av alla administratörsåtgärder som har aktiverats för loggning. Varje post är tidstämplad och registrerar användarens IP-adress och namn. Logginformationen innehåller administratörsanvändardata och relaterade ändringar som gjordes under åtgärden.
 
-- Analysera händelser med [Observera för Adobe Commerce](../../../tools/observation-for-adobe-commerce/intro.md).
+- Analysera händelser med verktyget [Observation for Adobe Commerce](../../../tools/observation-for-adobe-commerce/intro.md).
 
   Med verktyget Observation for Adobe Commerce kan du analysera komplexa problem för att identifiera rotorsaker. Istället för att spåra olika data kan ni lägga tid på att korrelera händelser och fel för att få djupare insikter i orsakerna till flaskhalsar i prestandan.
 
-  Använd **Säkerhet** för att få en tydlig överblick över potentiella säkerhetsproblem som hjälper till att identifiera rotorsaker och få webbplatserna att fungera optimalt.
+  Använd fliken **Säkerhet** i verktyget för att få en tydlig bild av potentiella säkerhetsproblem som hjälper till att identifiera rotorsaker och se till att webbplatserna fungerar optimalt.
 
-- Analysera loggar med [New Relic Logs](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/new-relic-service.html)
+- Analysera loggar med [New Relic-loggar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/new-relic-service.html)
 
-  Adobe Commerce om molninfrastruktur Pro-projekten innefattar [New Relic Logs](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/log-management.html) service. Tjänsten är förkonfigurerad för att samla alla loggdata från dina miljö för förproduktion och produktion och visa dem på en central kontrollpanel för logghantering där du kan söka efter och visualisera aggregerade data.
+  Adobe Commerce i molninfrastrukturproprojekt innehåller tjänsten [New Relic Logs](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/log-management.html). Tjänsten är förkonfigurerad för att samla alla loggdata från dina miljö för förproduktion och produktion och visa dem på en central kontrollpanel för logghantering där du kan söka efter och visualisera aggregerade data.
 
-  För andra Commerce-projekt kan du konfigurera och använda [New Relic Logs](https://docs.newrelic.com/docs/logs/get-started/get-started-log-management/) för att utföra följande uppgifter:
-   - Använd [New Relic-frågor](https://docs.newrelic.com/docs/logs/new-relic-logs/ui-data/query-syntax-logs) om du vill söka efter aggregerade loggdata.
+  För andra Commerce-projekt kan du konfigurera och använda tjänsten [New Relic Logs](https://docs.newrelic.com/docs/logs/get-started/get-started-log-management/) för att utföra följande uppgifter:
+   - Använd [New Relic-frågor](https://docs.newrelic.com/docs/logs/new-relic-logs/ui-data/query-syntax-logs) för att söka efter aggregerade loggdata.
    - Visualisera loggdata via programmet New Relic Logs.
 
 ## Granskningskonton, kod och databas
@@ -89,17 +89,17 @@ Fortsätt att noga övervaka webbplatsen efter incidenten eftersom många webbpl
 
 ### Granska administratörens användarkonton
 
-- [Granska administratörsanvändaråtkomst](https://experienceleague.adobe.com/docs/commerce-admin/systems/user-accounts/permissions-users-all.html)—Ta bort gamla, oanvända eller misstänkta konton och rotera lösenord för alla administratörsanvändare.
+- [Granska administratörsanvändaråtkomst](https://experienceleague.adobe.com/docs/commerce-admin/systems/user-accounts/permissions-users-all.html) - Ta bort gamla, oanvända eller misstänkta konton och rotera lösenord för alla administratörsanvändare.
 
-- [Granska säkerhetsinställningar för administratörer](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-admin.html)—Verifiera att administratörens säkerhetsinställningar följer god säkerhetspraxis.
+- [Granska säkerhetsinställningarna för administratörer](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-admin.html) - Verifiera att säkerhetsinställningarna för administratörer följer god säkerhetspraxis.
 
-- [Granska användarkonton för Adobe Commerce i molninfrastrukturprojekt](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/user-access.html)—Ta bort gamla, oanvända eller misstänkta konton och rotera lösenord för alla användare i molnprojektet som är administratörer. Kontrollera att kontosäkerhetsinställningarna är korrekt konfigurerade.
+- [Granska användarkonton för Adobe Commerce i molninfrastrukturprojekt](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/user-access.html) - Ta bort gamla, oanvända eller misstänkta konton och rotera lösenord för alla användare i molnprojektadministratören. Kontrollera att kontosäkerhetsinställningarna är korrekt konfigurerade.
 
 - [Granska SSH-nycklar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/secure-connections.html) för Adobe Commerce i molninfrastruktur - Granska, ta bort och rotera SSH-nycklar.
 
 ### Granskningskod
 
-- Gå till [Konfiguration av sidhuvud och sidfot i HTML](https://experienceleague.adobe.com/docs/commerce-admin/content-design/design/page-setup.html) i alla omfångsnivåer, inklusive `website` och `store view`. Ta bort okänd JavaScript-kod från skript och formatmallar samt övriga HTML-inställningar. Behåll endast identifierad kod som spårningsfragment.
+- Gå till konfigurationen [HTML för sidhuvud och sidfot](https://experienceleague.adobe.com/docs/commerce-admin/content-design/design/page-setup.html) i Admin i alla omfångsnivåer, inklusive `website` och `store view`. Ta bort okänd JavaScript-kod från skript och formatmallar samt olika HTML-inställningar. Behåll endast identifierad kod som spårningsfragment.
 
 - Jämför den aktuella produktionskodbasen med kodbasen som lagras i Version Control System (VCS).
 
@@ -115,7 +115,7 @@ Fortsätt att noga övervaka webbplatsen efter incidenten eftersom många webbpl
 
 - Kontrollera att det inte längre finns någon skadlig kod genom att skanna webbplatsen med offentligt tillgängliga skanningsverktyg för skadlig kod.
 
-- Skydda administrationspanelen genom att ändra dess namn och verifiera att webbplatsen `app/etc/local.xml` och `var` URL:er är inte tillgängliga för alla.
+- Skydda administrationspanelen genom att ändra dess namn och verifiera att URL:erna för webbplatsen `app/etc/local.xml` och `var` inte är tillgängliga för alla.
 
 - Fortsätt att noga övervaka webbplatsen efter incidenten eftersom många webbplatser på nytt komprometteras inom några timmar. Se till att logggranskningen och filintegritetsövervakningen sker kontinuerligt för att snabbt upptäcka tecken på nya kompromisser.
 

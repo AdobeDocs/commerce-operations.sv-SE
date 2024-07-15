@@ -4,7 +4,7 @@ description: Läs mer om vilka Adobe Commerce-funktioner som stöds och kontroll
 exl-id: 7e8e8ac2-a0b9-4023-a813-c0f1293e54c2
 source-git-commit: 9761e3827add0e8b60e1bb53664ff65170608317
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '285'
 ht-degree: 0%
 
 ---
@@ -31,13 +31,13 @@ Följande tabell visar versionsstödet för varje tillägg i förhållande till 
 
 ## Commerce Services
 
-[Commerce Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/home.html) är en serie funktioner som ligger i Adobe och som ger robusta funktioner och snabba svarstider, i samverkan med en Commerce-instans.
+[Commerce Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/home.html) är en uppsättning värdbaserade funktioner i Adobe som ger robusta funktioner och snabba svarstider i kombination med din Commerce-instans.
 
 Handlarna bör använda den senaste versionen av en tjänst för att säkerställa högsta stabilitet och funktionalitet. Dokumentationen beskriver den version som släpps för tillfället.
 
 * Adobe Commerce Services är för närvarande kompatibelt med Commerce 2.4.4 och senare. Handlarna bör använda den senaste versionen av tjänsten.
 * Tjänster anses vara kompatibla med tidigare versioner av Commerce 2.4.x, men stöds inte officiellt.
-* Tjänsterna är inte kompatibla med Commerce 2.3.x, utom för Product Recommendations 3.3.7 och tidigare.
+* Tjänsterna är inte kompatibla med Commerce 2.3.x, utom för Recommendations 3.3.7 och tidigare.
 
 Följande tabell visar versionsstödet för varje tjänst i förhållande till Adobe Commerce-versionen.
 

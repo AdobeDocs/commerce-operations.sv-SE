@@ -4,7 +4,7 @@ user-guide-description: Lär dig hur ni gör ert företag redo för att driva en
 feature: Best Practices
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '138'
 ht-degree: 0%
 
 ---
@@ -13,12 +13,12 @@ ht-degree: 0%
 # Operativ spelningsbok {#operational-playbook}
 
 - [Ökning](overview.md)
-- Handel {#intro}
+- Commerce {#intro}
    - [Adobe Commerce](intro/commerce.md)
    - [Vad är e-handel?](intro/ecommerce.md)
    - [Affärsmodell](intro/business-model.md)
-   - [Handelsåtgärder](intro/operations.md)
-   - [Funktioner för handel](intro/features.md)
+   - [Commerce](intro/operations.md)
+   - [Commerce-funktioner](intro/features.md)
 - Ledarskap {#leadership}
    - [Principer](leadership/principles.md)
    - [Mål](leadership/goals.md)
@@ -32,7 +32,7 @@ ht-degree: 0%
    - [Tredjepartsintegreringar](solution/integrations.md)
    - [Uppgraderingar, säkerhetskopiering och underhåll](solution/maintenance.md)
 - Strategi {#strategy}
-   - [Handelsstrategi](strategy/commerce.md)
+   - [Commerce strategi](strategy/commerce.md)
    - [Fokus](strategy/focus.md)
    - [Innehållsstrategi](strategy/content.md)
    - [Löptid](strategy/maturity.md)
@@ -45,7 +45,7 @@ ht-degree: 0%
    - [Agile Scrum-metod](process/agile-scrum.md)
    - [Gemensamma projektseminarier](process/project-workshops.md)
    - [Testning](process/testing.md)
-- Folk {#people}
+- Personer {#people}
    - [Team](people/teams.md)
    - [Teamstruktur](people/team-structure.md)
    - [Organisationsstruktur](people/organizational-structure.md)
@@ -69,9 +69,9 @@ ht-degree: 0%
    - [Kundtjänst online](product/customer-service.md)
    - [SEO](product/search-engine-optimization.md)
    - [E-postmarknadsföring](product/marketing.md)
-   - [Personalisering](product/personalization.md)
+   - [Personalization](product/personalization.md)
    - [Klicka och samla](product/click-collect.md)
    - [PWA](product/progressive-web-app.md)
 - [Checklistor och mallar](checklists-templates/home.md)
 - [Ordlista](glossary.md)
-- [Återgå till bruksanvisningar](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
+- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

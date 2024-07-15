@@ -23,4 +23,4 @@ Om moduluppdateringen misslyckas visas meddelanden som liknar följande i konsol
 
 I föregående exempel finns det ingen komponentversion att återställa till. Kontakta komponentleverantören eller försök lösa problemet själv.
 
-Under tiden kan du gå tillbaka till en tidigare version genom att klicka på **Återställning**, som återställer dina data även om du inte har säkerhetskopierat tidigare.
+Under tiden kan du återgå till en tidigare version genom att klicka på **Återställning**, som återställer dina data även om du inte har säkerhetskopierat tidigare.

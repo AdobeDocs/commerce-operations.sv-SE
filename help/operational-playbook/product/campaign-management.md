@@ -5,7 +5,7 @@ exl-id: 466f2f83-ea19-4230-b33b-4435974effb7
 feature: Best Practices, Promotions/Events
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
@@ -35,10 +35,10 @@ Hela e-handelsmodellen finns på webbplatsen, vilket innebär att butiken måste
 
 Skillnader mellan B2B- och B2C-kampanjhantering:
 
-- **Utveckla relation**- B2B använder kampanjhantering för att bygga upp långsiktiga relationer, medan B2C använder kampanjhantering för att bygga upp kortvariga relationer
+- **Utveckla relation** - B2B använder kampanjhantering för att bygga upp långsiktiga relationer, medan B2C använder kampanjhantering för att bygga upp kortvariga relationer
 
-- **Varumärke**- Hanteringen av B2B-kampanjer fokuserar mer på att generera leads, medan B2C fokuserar på varumärkesvärde
+- **Varumärke** - Hanteringen av B2B-kampanjer fokuserar mer på att generera leads, medan B2C fokuserar på varumärkesvärde
 
-- **Beslutsfattande**- B2B-kampanjbeslut är logiska, medan B2C-kampanjbeslut är känslomässiga
+- **Beslutsfattande** - B2B-kampanjbeslut är logiska, medan beslut för B2C-kampanjer är känslomässiga
 
-- **Målgrupp**- Kampanjhantering inom B2B omfattar flera intressenter, medan kampanjhantering inom B2C riktar sig till enskilda slutanvändare
+- **Målgrupp** - Hantering av B2B-kampanjer omfattar flera intressenter, medan hantering av B2C-kampanjer riktar sig till enskilda slutanvändare

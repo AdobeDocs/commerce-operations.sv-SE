@@ -6,16 +6,16 @@ feature: Best Practices
 exl-id: a6d2f324-f9b9-4b2b-997f-36df02c37465
 source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
-source-wordcount: '200'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---
 
 # Bästa tillvägagångssätt för privata innehållsblock
 
-När ett privat innehållsblock innehåller `_isScopePrivate` -variabel är blocket inte tillgängligt. Eftersom det privata blocket inte cachelagras måste Adobe Commerce hämta samma data för varje kundbegäran, vilket ökar serverbelastningen.
+När ett privat innehållsblock innehåller variabeln `_isScopePrivate` är blocket inte tillgängligt. Eftersom det privata blocket inte cachelagras måste Adobe Commerce hämta samma data för varje kundbegäran, vilket ökar serverbelastningen.
 
-I stället för att använda `_isScopePrivate` -variabel för privat innehåll, skapa ett -block och en -mall för att visa användaragnostiska data. Dessa data ersätts med användarspecifika data av Adobe Commerce UI-komponenten som hanterar data före återgivning mer effektivt. Instruktioner finns i [Privat innehåll](https://developer.adobe.com/commerce/php/development/cache/page/private-content/) i _[!DNL Commerce PHP Extensions Guide]_.
+I stället för att använda variabeln `_isScopePrivate` för privat innehåll skapar du ett block och en mall för att visa användaragnostiska data. Dessa data ersätts med användarspecifika data av Adobe Commerce UI-komponenten som hanterar data före återgivning mer effektivt. Instruktioner finns i [Privat innehåll](https://developer.adobe.com/commerce/php/development/cache/page/private-content/) i _[!DNL Commerce PHP Extensions Guide]_.
 
 ## Berörda produkter och versioner
 
@@ -26,7 +26,7 @@ I stället för att använda `_isScopePrivate` -variabel för privat innehåll, 
 
 ## Potentiell inverkan på prestanda
 
-Webbplatser med privata innehållsblock som innehåller `_isScopePrivate` -variabler utlöser AJAX förfrågningar om att hämta samma data för varje kundförfrågan. Detta ökar svarstiden och använder ytterligare resurser som kan användas för att hantera mer affärskritiska butiksåtgärder som kundregistrering, kundvagnsuppdateringar, orderinlämning och betalningstransaktioner.
+Webbplatser med privata innehållsblock som innehåller variablerna `_isScopePrivate` utlöser AJAX förfrågningar om att hämta samma data för varje kundförfrågan. Detta ökar svarstiden och använder ytterligare resurser som kan användas för att hantera mer affärskritiska butiksåtgärder som kundregistrering, kundvagnsuppdateringar, orderinlämning och betalningstransaktioner.
 
 ## Ytterligare information
 

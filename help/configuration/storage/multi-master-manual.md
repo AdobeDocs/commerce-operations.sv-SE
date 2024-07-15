@@ -5,7 +5,7 @@ recommendations: noCatalog
 exl-id: 2c357486-4a8a-4a36-9e13-b53c83f69456
 source-git-commit: af45ac46afffeef5cd613628b2a98864fd7da69b
 workflow-type: tm+mt
-source-wordcount: '1379'
+source-wordcount: '1373'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 {{deprecate-split-db}}
 
-Om Commerce-programmet redan är i produktion eller om du redan har installerat anpassad kod eller komponenter kan du behöva konfigurera delade databaser manuellt. Innan du fortsätter kontaktar du Adobe Commerce Support för att se om det är nödvändigt.
+Om Commerce-programmet redan är i produktion eller om du redan har installerat anpassad kod eller komponenter, kan du behöva konfigurera delade databaser manuellt. Innan du fortsätter kontaktar du Adobe Commerce Support för att se om det är nödvändigt.
 
 Manuell delning av databaser innefattar:
 
@@ -29,16 +29,16 @@ Manuell delning av databaser innefattar:
 
 >[!WARNING]
 >
->Om någon anpassad kod använder JOIN-koder med tabeller i försäljnings- och offertdatabaserna _inte_ använda delade databaser. Om du är osäker kan du kontakta författarna till en anpassad kod eller tillägg för att kontrollera att deras kod inte använder JOIN-koder.
+>Om någon anpassad kod använder JOIN-koder med tabeller i försäljnings- och offertdatabaserna kan du _inte_ använda delade databaser. Om du är osäker kan du kontakta författarna till en anpassad kod eller tillägg för att kontrollera att deras kod inte använder JOIN-koder.
 
 I det här avsnittet används följande namnkonventioner:
 
-- Huvuddatabasnamnet är `magento` och dess användarnamn och lösenord `magento`
-- Namnet på offertdatabasen är `magento_quote` och dess användarnamn och lösenord `magento_quote`
+- Huvuddatabasnamnet är `magento` och användarnamnet och lösenordet är båda `magento`
+- Citatdatabasnamnet är `magento_quote` och användarnamnet och lösenordet är båda `magento_quote`
 
-  Offertdatabasen kallas även _utcheckning_ databas.
+  Offertdatabasen kallas även _utcheckningsdatabasen_.
 
-- Försäljningsdatabasens namn är `magento_sales` och dess användarnamn och lösenord `magento_sales`
+- Försäljningsdatabasnamnet är `magento_sales` och användarnamnet och lösenordet är båda `magento_sales`
 
   Försäljningsdatabasen kallas också OMS-databasen.
 
@@ -46,13 +46,13 @@ I det här avsnittet används följande namnkonventioner:
 >
 >I den här guiden antas att alla tre databaserna finns på samma värd som Commerce-programmet. Det är dock upp till dig att välja var databaserna ska hittas och vad de ska namnges. Vi hoppas att våra exempel gör instruktionerna enklare att följa.
 
-## Säkerhetskopiera handelssystemet
+## Säkerhetskopiera Commerce
 
 Adobe rekommenderar starkt att du säkerhetskopierar din aktuella databas och ditt filsystem så att du kan återställa den om du får problem under processen.
 
-**Säkerhetskopiera systemet**:
+**Så här säkerhetskopierar du systemet**:
 
-1. Logga in på din Commerce-server som eller växla till [ägare av filsystem](../../installation/prerequisites/file-system/overview.md).
+1. Logga in på din Commerce-server som, eller växla till, ägare av [filsystemet](../../installation/prerequisites/file-system/overview.md).
 1. Ange följande kommandon:
 
    ```bash
@@ -65,7 +65,7 @@ Adobe rekommenderar starkt att du säkerhetskopierar din aktuella databas och di
 
 I det här avsnittet beskrivs hur du skapar databasinstanser för försäljnings- och offerttabeller.
 
-**Skapa offertdatabaser för försäljning och OMS**:
+**Så här skapar du databaser för sälj- och OMS-offerter**:
 
 1. Logga in på databasservern som vilken användare som helst.
 1. Ange följande kommando för att komma till en MySQL-kommandotolk:
@@ -74,8 +74,8 @@ I det här avsnittet beskrivs hur du skapar databasinstanser för försäljnings
    mysql -u root -p
    ```
 
-1. Ange MySQL `root` användarens lösenord när du uppmanas till det.
-1. Ange följande kommandon i den ordning som visas för att skapa databasinstanser med namnet `magento_quote` och `magento_sales` med samma användarnamn och lösenord:
+1. Ange användarens lösenord för MySQL `root` när du uppmanas till det.
+1. Ange följande kommandon i den ordning som visas för att skapa databasinstanser med namnen `magento_quote` och `magento_sales` med samma användarnamn och lösenord:
 
    ```shell
    create database magento_quote;
@@ -87,7 +87,7 @@ I det här avsnittet beskrivs hur du skapar databasinstanser för försäljnings
    GRANT ALL ON magento_sales.* TO magento_sales@localhost IDENTIFIED BY 'magento_sales';
    ```
 
-1. Retur `exit` för att avsluta kommandotolken.
+1. Ange `exit` för att avsluta kommandotolken.
 
 1. Verifiera databaserna, en åt gången:
 
@@ -126,7 +126,7 @@ Tabellnamn för försäljningsdatabas börjar med:
 - `salesrule_`
 - `sales_`
 - `magento_sales_`
-- The `magento_customercustomattributes_sales_flat_order` tabellen påverkas också
+- Tabellen `magento_customercustomattributes_sales_flat_order` påverkas också
 
 >[!INFO]
 >
@@ -139,13 +139,13 @@ Mer information finns i:
 
 ### Skapa SQL-skript för försäljningsdatabas
 
-Skapa följande SQL-skript på en plats som är tillgänglig för den användare som du loggar in på din Commerce-server. Om du till exempel loggar in eller kör kommandon som `root`kan du skapa skripten i `/root/sql-scripts` katalog.
+Skapa följande SQL-skript på en plats som är tillgänglig för den användare som du loggar in på din Commerce-server. Om du till exempel loggar in eller kör kommandon som `root` kan du skapa skripten i katalogen `/root/sql-scripts`.
 
 #### Ta bort sekundärnycklar
 
 Det här skriptet tar bort sekundärnycklar som refererar till icke-försäljningsregister från försäljningsdatabasen.
 
-Skapa följande skript och ge det ett namn som `1_foreign-sales.sql`. Ersätt `<your main DB name>` med namnet på databasen.
+Skapa följande skript och ge det namnet `1_foreign-sales.sql`. Ersätt `<your main DB name>` med namnet på databasen.
 
 ```sql
 use <your main DB name>;
@@ -206,7 +206,7 @@ Kör föregående skript:
    mysql -u root -p
    ```
 
-1. På `mysql>` kör du skriptet enligt följande:
+1. Kör skriptet på följande sätt vid `mysql>`-prompten:
 
    ```shell
    source <path>/<script>.sql
@@ -218,15 +218,15 @@ Kör föregående skript:
    source /root/sql-scripts/1_foreign-sales.sql
    ```
 
-1. När skriptet har körts anger du `exit`.
+1. Ange `exit` när skriptet har körts.
 
 ### Säkerhetskopiera säljdata
 
-I det här avsnittet beskrivs hur du säkerhetskopierar försäljningstabeller från den huvudsakliga Commerce-databasen så att du kan återställa dem i den separata försäljningsdatabasen.
+I det här avsnittet beskrivs hur du säkerhetskopierar försäljningstabeller från Commerce huvuddatabas så att du kan återställa dem i den separata försäljningsdatabasen.
 
-Om du är vid `mysql>` prompt, enter `exit` för att återgå till kommandoskalet.
+Om du just nu är i `mysql>`-prompten anger du `exit` för att återgå till kommandoskalet.
 
-Kör följande `mysqldump` kommandon, en åt gången, från kommandoskalet. Ersätt följande i varje exempel:
+Kör följande `mysqldump`-kommandon, en åt gången, från kommandoskalet. Ersätt följande i varje exempel:
 
 - `<your database root username>` med namnet på databasens rotanvändare
 - `<your database root user password>` med användarens lösenord
@@ -263,7 +263,7 @@ Det här skriptet återställer försäljningsdata i offertdatabasen.
 
 #### NDB-krav
 
-Om du använder en [Nätverksdatabas (NDB)](https://dev.mysql.com/doc/refman/5.6/en/mysql-cluster.html) kluster:
+Om du använder ett [NDB-kluster (Network Database)](https://dev.mysql.com/doc/refman/5.6/en/mysql-cluster.html):
 
 1. Konvertera tabeller från InnoDb till NDB-typ i dumpfiler:
 
@@ -301,7 +301,7 @@ Plats
 
 - `<root username>` med ditt MySQL-rotanvändarnamn
 - `<root user password>` med användarens lösenord
-- Verifiera platsen för de säkerhetskopierade filer som du skapade tidigare (till exempel `/var/sales.sql`)
+- Verifiera platsen för de säkerhetskopieringsfiler som du skapade tidigare (till exempel `/var/sales.sql`)
 
 ## Konfigurera offertdatabasen
 
@@ -311,7 +311,7 @@ I det här avsnittet behandlas uppgifter som krävs för att ta bort externa nyc
 >
 >Det här avsnittet innehåller skript med specifika databastabellnamn. Om du har utfört anpassningar eller om du vill se en fullständig lista över tabeller innan du utför åtgärder på dem läser du [Referensskript](#reference-scripts).
 
-Tabellnamn för offertdatabaser börjar med `quote`. The `magento_customercustomattributes_sales_flat_quote` och `magento_customercustomattributes_sales_flat_quote_address` tabeller påverkas också
+Offertdatabastabellens namn börjar med `quote`. Tabellerna `magento_customercustomattributes_sales_flat_quote` och `magento_customercustomattributes_sales_flat_quote_address` påverkas också
 
 ### Släpp sekundärnycklar från offerttabeller
 
@@ -334,7 +334,7 @@ Kör skriptet på följande sätt:
    mysql -u root -p
    ```
 
-1. På `mysql >` kör du skriptet enligt följande:
+1. Kör skriptet på följande sätt vid `mysql >`-prompten:
    `source <path>/<script>.sql`
 
    Exempel:
@@ -343,7 +343,7 @@ Kör skriptet på följande sätt:
    source /root/sql-scripts/2_foreign-key-quote.sql
    ```
 
-1. När skriptet har körts anger du `exit`.
+1. Ange `exit` när skriptet har körts.
 
 ### Säkerhetskopiera offerttabeller
 
@@ -357,7 +357,7 @@ mysqldump -u <your database root username> -p <your main Commerce DB name> magen
 
 ### NDB-krav
 
-Om du använder en [Nätverksdatabas (NDB)](https://dev.mysql.com/doc/refman/5.6/en/mysql-cluster.html) kluster:
+Om du använder ett [NDB-kluster (Network Database)](https://dev.mysql.com/doc/refman/5.6/en/mysql-cluster.html):
 
 1. Konvertera tabeller från InnoDb till NDB-typ i dumpfiler:
 
@@ -375,7 +375,7 @@ mysql -u root -p magento_quote < /<path>/quote.sql
 
 ## Släpp försäljnings- och offerttabeller från databasen
 
-Det här skriptet säljer- och offerttabeller från Commerce-databasen. Ersätt `<your main DB name>` med namnet på din Commerce-databas.
+Skriptet säljer och citerar tabeller från Commerce-databasen. Ersätt `<your main DB name>` med namnet på din Commerce-databas.
 
 Skapa följande skript och ge det ett namn som `3_drop-tables.sql`:
 
@@ -457,7 +457,7 @@ Kör skriptet på följande sätt:
    mysql -u root -p
    ```
 
-1. På `mysql>` kör du skriptet enligt följande:
+1. Kör skriptet på följande sätt vid `mysql>`-prompten:
 
    ```shell
    source <path>/<script>.sql
@@ -469,26 +469,26 @@ Kör skriptet på följande sätt:
    source /root/sql-scripts/3_drop-tables.sql
    ```
 
-1. När skriptet har körts anger du `exit`.
+1. Ange `exit` när skriptet har körts.
 
 ## Uppdatera din distributionskonfiguration
 
-Det sista steget i att dela databaser manuellt är att lägga till anslutnings- och resursinformation i Commerce distributionskonfiguration. `env.php`.
+Det sista steget i att dela databaser manuellt är att lägga till anslutnings- och resursinformation i Commerce distributionskonfiguration, `env.php`.
 
 Så här uppdaterar du distributionskonfigurationen:
 
-1. Logga in på din Commerce-server som eller växla till [ägare av filsystem](../../installation/prerequisites/file-system/overview.md).
+1. Logga in på din Commerce-server som, eller växla till, ägare av [filsystemet](../../installation/prerequisites/file-system/overview.md).
 1. Säkerhetskopiera din distributionskonfiguration:
 
    ```bash
    cp <magento_root>/app/etc/env.php <magento_root>/app/etc/env.php.orig
    ```
 
-1. Öppna `<magento_root>/app/etc/env.php` i en textredigerare och uppdatera den med hjälp av de riktlinjer som beskrivs i följande avsnitt.
+1. Öppna `<magento_root>/app/etc/env.php` i en textredigerare och uppdatera den enligt riktlinjerna som beskrivs i följande avsnitt.
 
 ### Uppdatera databasanslutningar
 
-Hitta blocket som börjar med `'default'` (under `'connection'`) och lägga till `'checkout'` och `'sales'` -avsnitt. Ersätt exempelvärden med värden som passar din plats.
+Leta reda på blocket som börjar med `'default'` (under `'connection'`) och lägg till `'checkout'` och `'sales'` avsnitt. Ersätt exempelvärden med värden som passar din plats.
 
 ```php
  'default' =>
@@ -529,7 +529,7 @@ Hitta blocket som börjar med `'default'` (under `'connection'`) och lägga till
 
 ### Uppdatera resurser
 
-Hitta blocket som börjar med `'resource'` och lägga till `'checkout'` och `'sales'` enligt följande:
+Leta reda på blocket som börjar med `'resource'` och lägg till `'checkout'` och `'sales'` avsnitt i det enligt följande:
 
 ```php
 'resource' =>
@@ -555,16 +555,16 @@ I det här avsnittet finns skript som du kan köra för att skriva ut en fullst�
 Så här använder du dessa skript:
 
 1. Skapa ett SQL-skript med innehållet i varje skript i det här avsnittet.
-1. Ersätt `<your main DB name>` med namnet på din Commerce-databas.
+1. Ersätt `<your main DB name>` med namnet på din Commerce-databas i varje skript.
 
    I det här avsnittet är exempeldatabasens namn `magento`.
 
-1. Kör varje skript från `mysql>` prompt as `source <script name>`
+1. Kör varje skript från `mysql>`-prompten som `source <script name>`
 1. Granska utdata.
 1. Kopiera resultatet av varje skript till ett annat SQL-skript och ta bort lodstreck (`|`).
-1. Kör varje skript från `mysql>` prompt as `source <script name>`.
+1. Kör varje skript från `mysql>`-prompten som `source <script name>`.
 
-   När du kör det här andra skriptet utförs åtgärderna i din huvudCommerce-databas.
+   När du kör det här andra skriptet utförs åtgärderna i Commerce huvuddatabas.
 
 ### Ta bort sekundärnycklar (försäljningstabeller)
 
@@ -637,7 +637,7 @@ where for_name like '<your main DB name>/%'
 
 ### Släpp försäljningstabeller
 
-Det här skriptet släpper säljtabeller från Commerce-databasen.
+Skriptet släpper säljtabeller från Commerce-databasen.
 
 ```sql
 use <your main DB name>;

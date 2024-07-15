@@ -23,7 +23,7 @@ Dessa metodtips är ordnade efter implementeringsfas så att du kan hitta rekomm
     <img alt="Planering" src="../../assets/icons/enterprise.svg" width="80" height="80"/>
     </a>
     <div>
-    <a href="planning/overview.md"><strong>Planering</strong></a>
+    <a href="planning/overview.md"><strong>Planerar</strong></a>
     </div>
     Insamling av krav, arkitekturdesign, katalogdesign, projektomfång, kontotilldelning, användaråtkomst, utökade inköp
     <br>

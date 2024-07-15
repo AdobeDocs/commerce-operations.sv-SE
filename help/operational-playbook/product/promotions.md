@@ -5,7 +5,7 @@ exl-id: 3b1cf7ab-6a24-40eb-b504-c19e3a064231
 feature: Best Practices, Promotions/Events
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '199'
+source-wordcount: '201'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ I och med att de flesta av befolkningen går över till onlinehandel måste deta
 
 Var och en av de sex leverantörerna är lika viktig, men för att marknadsföra produkter måste återförsäljarna använda kampanjer som en taktik för att öka trafiken på webbplatsen och leda till högre konverteringsgrader. Kampanjer hjälper till att marknadsföra produkter och tjänster som erbjuds av varumärket. Det finns olika kampanjnivåer, som frakt, produkt och beställning.
 
-![exempel på reklamannonser](../../assets/playbooks/promotion-example.png)
+![exempel på kampanjannonsering](../../assets/playbooks/promotion-example.png)
 
 ## Erbjudandetyper
 

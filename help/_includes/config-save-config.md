@@ -7,7 +7,7 @@ ht-degree: 0%
 ---
 # Uppdatera den delade konfigurationen
 
-**Uppdatera konfigurationen**:
+**Så här uppdaterar du konfigurationen**:
 
 1. Logga in på utvecklingssystemet som ägare av filsystemet eller växla till det.
 
@@ -18,14 +18,14 @@ ht-degree: 0%
    php bin/magento app:config:dump
    ```
 
-   Om Commerce till exempel är installerat i `/var/www/html/magento2`, ange:
+   Om Commerce till exempel är installerat i `/var/www/html/magento2` anger du:
 
    ```bash
    cd /var/www/html/magento2
    php bin/magento app:config:dump
    ```
 
-1. Bekräfta att `app/etc/config.php` uppdaterades.
+1. Bekräfta att `app/etc/config.php` har uppdaterats.
 
    ```bash
    git status
@@ -43,9 +43,9 @@ ht-degree: 0%
 
    >[!WARNING]
    >
-   >Gör _not_ skicka ändringar av `generated`, `pub/media`, eller `pub/static` kataloger till källkontroll. Du genererar dessa filer i ditt byggsystem. Utvecklingssystemet har förmodligen kod, teman och så vidare som inte är klara att användas i produktionssystemet.
+   >Skicka _inte_ ändringar i katalogerna `generated`, `pub/media` eller `pub/static` till källkontrollen. Du genererar dessa filer i ditt byggsystem. Utvecklingssystemet har förmodligen kod, teman och så vidare som inte är klara att användas i produktionssystemet.
 
-1. Checka in dina ändringar i `app/etc/config.php` endast till källkontroll.
+1. Checka endast in dina ändringar i `app/etc/config.php` för källkontroll.
 
    ```bash
    git add app/etc/config.php && git commit -m "Updated shared configuration" && git push mconfig m2.2_deploy

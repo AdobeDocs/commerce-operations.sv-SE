@@ -11,7 +11,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->The [!DNL Upgrade Compatibility Tool] finns endast för Adobe Commerce-instanser.
+>[!DNL Upgrade Compatibility Tool] är endast tillgänglig för Adobe Commerce-instanser.
 
 <!-- Configuration guide snippets -->
 
@@ -19,13 +19,13 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->Alla Magento CLI-kommandon måste köras av [ägare av filsystem](/help/configuration/cli/config-cli.md#prerequisites).
+>Alla Magento CLI-kommandon måste köras av [filsystemets ägare](/help/configuration/cli/config-cli.md#prerequisites).
 
 ## Säkerhetskopieringskommandon {#tip-backup-command}
 
 >[!TIP]
 >
->The `support:backup` kommandot är _not_ samma kodsäkerhetskopiering som utförs av `setup:backup` -kommando. The `support:backup` ska säkerhetskopiera kod för granskning av Adobe Commerce Support.
+>Kommandot `support:backup` är _inte_ samma kodsäkerhetskopiering som utfördes av kommandot `setup:backup`. Kommandot `support:backup` är avsett att säkerhetskopiera kod för granskning av Adobe Commerce Support.
 
 ## Endast Adobe Commerce {#ee-only}
 
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Den delade databasfunktionen var [inaktuell](https://community.magento.com/t5/Magento-DevBlog/Deprecation-of-Split-Database-in-Magento-Commerce/ba-p/465187?_ga=2.128934671.2024864496.1657558157-1596100530.1657558157) i version 2.4.2 av Adobe Commerce. Se [Återgå från en delad databas till en enda databas](/help/configuration/storage/revert-split-database.md).
+>Den delade databasfunktionen var [inaktuell](https://community.magento.com/t5/Magento-DevBlog/Deprecation-of-Split-Database-in-Magento-Commerce/ba-p/465187?_ga=2.128934671.2024864496.1657558157-1596100530.1657558157) i version 2.4.2 av Adobe Commerce. Se [Återgå från en delad databas till en enskild databas](/help/configuration/storage/revert-split-database.md).
 
 <!-- End of Configuration guide snippets -->
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Commerce-versioner kan innehålla ändringar som är inkompatibla bakåt (BIC). Om du vill granska ändringar som är inkompatibla bakåt kan du läsa [BIC-referens](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/reference/). Viktiga bakåtkompatibla problem beskrivs i [BIC i korthet](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/highlights/). Inte alla releaser innehåller viktiga BIC:er.
+>Adobe Commerce-versioner kan innehålla ändringar som är inkompatibla bakåt (BIC). Om du vill granska ändringar som är inkompatibla bakåt läser du [BIC-referens](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/reference/). Viktiga bakåtkompatibla problem beskrivs i [BIC-markeringar](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/highlights/). Inte alla releaser innehåller viktiga BIC:er.
 
 ## CVE-meddelande {#cve-notice}
 
@@ -61,4 +61,4 @@ ht-degree: 0%
 
 ## PHP-processkontroll {#php-process-control}
 
-Innan du kan köra indexerare i parallellt läge måste du aktivera stöd för processkontroll (`pcntl`) i PHP Se [Installation](https://www.php.net/manual/en/pcntl.installation.php) i PHP-dokumentationen.
+Innan du kan köra indexerare i parallellt läge måste du aktivera stöd för processkontroll (`pcntl`) i PHP. Se [Installation](https://www.php.net/manual/en/pcntl.installation.php) i PHP-dokumentationen.

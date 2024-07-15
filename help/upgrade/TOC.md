@@ -5,7 +5,7 @@ feature: Upgrade
 topic: Administration, Commerce, Development, Upgrade
 source-git-commit: ee69fcec4986fc85f93e336dc654a9bfff486d8b
 workflow-type: tm+mt
-source-wordcount: '144'
+source-wordcount: '139'
 ht-degree: 0%
 
 ---
@@ -38,20 +38,20 @@ ht-degree: 0%
    - [Systemkrav](upgrade-compatibility-tool/prerequisites.md)
    - Använd [!DNL Upgrade Compatibility Tool] {#use-upgrade-compatibility-tool}
       - [Kör verktyget i ett kommandoradsgränssnitt](upgrade-compatibility-tool/run.md)
-      - [Integrera med [!DNL Site-Wide Analysis Tool]](upgrade-compatibility-tool/integrate-analysis-tool.md)
+      - [Integrera med  [!DNL Site-Wide Analysis Tool]](upgrade-compatibility-tool/integrate-analysis-tool.md)
       - [Kör verktyget i Magento PHPStorm-pluginprogrammet](upgrade-compatibility-tool/run-configuration-phpstorm-plugin.md)
-   - Rapportering {#reporting}
+   - Rapporterar {#reporting}
       - [Rapporter](upgrade-compatibility-tool/reports.md)
       - [Felmeddelanden](upgrade-compatibility-tool/error-messages.md)
    - [Relaterade verktyg](upgrade-compatibility-tool/related-tools.md)
 - Medverkande utvecklare {#developer}
    - [Uppgradera en Git-baserad installation](developer/git-installs.md)
    - [Hantera moduler](developer/manage-modules.md)
-- Felsökning {#troubleshooting}
+- Felsökning av {#troubleshooting}
    - [Aktuell sökmotor stöds inte](troubleshooting/search-engine-not-supported.md)
    - [Återställning efter moduluppdateringsfel](troubleshooting/roll-back-after-update-failure.md)
    - [Alternativ för underhållsläge vid uppgradering](troubleshooting/maintenance-mode-options.md)
-- Resurs {#resources}
+- Resurser {#resources}
    - [Rekommenderad läsning](resources/recommended-reading.md)
    - [Modernisera plattformen med Adobe Commerce](resources/recommended-upgrade-paths.md)
-- [Återgå till bruksanvisningar](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
+- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

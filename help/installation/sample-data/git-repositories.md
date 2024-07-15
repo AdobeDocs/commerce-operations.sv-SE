@@ -15,29 +15,29 @@ I det här avsnittet beskrivs hur du klonar och lägger till exempeldata om du k
 
 Om du inte är en bidragsgivare väljer du ett av de andra alternativen som visas i innehållsförteckningen till vänster på sidan.
 
-Utvecklare kan använda den här metoden för att installera exempeldata *endast* om följande är sant:
+Utvecklare som deltar kan använda den här metoden för att installera exempeldata *endast* om följande är sant:
 
 * Du använder Magento Open Source
 * Du [klonade GitHub-databasen](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)
 
 >[!WARNING]
 >
->Du kan använda exempeldata med `develop` gren (mer aktuell) eller en frisläppt gren (till exempel `2.4` (stabilare). Vi rekommenderar att du använder en frisläppt gren eftersom den är stabilare. Om du bidrar med kod till databasen och behöver den senaste koden använder du `develop` gren. Oavsett vilken gren du väljer måste du [klona](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/) den motsvarande grenen i GitHub-databasen i Magento Open Source. Exempeldata för `develop` grenen kan användas *endast* med Magento Open Source `develop` gren.
+>Du kan använda exempeldata med antingen grenen `develop` (mer aktuell) eller en släppt gren (till exempel `2.4` (mer stabil)). Vi rekommenderar att du använder en frisläppt gren eftersom den är stabilare. Om du bidrar med kod till databasen och du behöver den senaste koden använder du grenen `develop`. Oavsett vilken gren du väljer måste du [klona](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/) motsvarande gren i Magento Open Source GitHub-databasen. Exempeldata för grenen `develop` kan till exempel användas *endast* med grenen Magento Open Source `develop`.
 
 ## Klona exempeldatabasen
 
 I det här avsnittet beskrivs hur du installerar exempeldata genom att klona databasen med exempeldata. Du kan klona exempeldatabasen på något av följande sätt:
 
-* Klona med [SSH-protokoll](#clone-with-ssh)
-* Klona med [HTTPS-protokoll](#clone-with-https)
+* Klona med [SSH-protokollet](#clone-with-ssh)
+* Klona med [HTTPS-protokollet](#clone-with-https)
 
 ### Klona med SSH
 
 Så här klonar du GitHub-databasen med exempeldata med SSH-protokollet:
 
-1. I en webbläsare går du till [exempeldatalager](https://github.com/magento/magento2-sample-data).
-1. Klicka på bredvid namnet på grenen **SSH** från listan.
-1. Klicka **Kopiera till Urklipp**
+1. Gå till [exempeldatalagret](https://github.com/magento/magento2-sample-data) i en webbläsare.
+1. Klicka på **SSH** i listan bredvid namnet på grenen.
+1. Klicka på **Kopiera till Urklipp**
 
    I bilden nedan visas ett exempel.
 
@@ -45,9 +45,9 @@ Så här klonar du GitHub-databasen med exempeldata med SSH-protokollet:
 
 1. Byt till webbserverns dokumentrotkatalog.
 
-   Vanligtvis är det för Ubuntu `/var/www` och för CentOS `/var/www/html`.
+   Vanligtvis är det `/var/www` för Ubuntu och `/var/www/html` för CentOS.
 
-1. Retur `git clone` och klistra in värdet som du fick tidigare.
+1. Ange `git clone` och klistra in värdet som du fick tidigare.
 
    Ett exempel följer:
 
@@ -59,7 +59,7 @@ Så här klonar du GitHub-databasen med exempeldata med SSH-protokollet:
 
    >[!NOTE]
    >
-   >Om följande fel visas kontrollerar du att [delade SSH-nyckeln](https://docs.github.com/articles/generating-ssh-keys/) med GitHub:<br>
+   >Om följande fel visas kontrollerar du att du [delade din SSH-nyckel](https://docs.github.com/articles/generating-ssh-keys/) med GitHub:<br>
 
    ```terminal
    Cloning into 'magento2'...
@@ -67,13 +67,13 @@ Så här klonar du GitHub-databasen med exempeldata med SSH-protokollet:
    fatal: The remote end hung up unexpectedly
    ```
 
-1. Se till att du checkar ut den gren i exempeldatalagret som motsvarar den gren du använde från huvuddelen `magento2` databas.
+1. Kontrollera att du checkar ut den gren i exempeldatalagret som motsvarar den gren du använde från huvuddatabasen `magento2`.
 
    Exempel:
 
-   Om du använde `2.4-develop` grenen Sample Data i Magento Open Source GitHub-databasen ska `2.4-develop`.
+   Om du använde `2.4-develop`-grenen i Magento Open Source GitHub-databasen bör Sample Data-grenen vara `2.4-develop`.
 
-   Om du vill checka ut rätt gren kör du följande kommando från exempeldatalagrets rotkatalog (förutsatt att du behöver `2.4-develop` gren):
+   Om du vill checka ut rätt gren kör du följande kommando från exempeldatalagrets rotkatalog (förutsatt att du behöver `2.4-develop`-grenen):
 
    ```bash
    git checkout 2.4-develop
@@ -100,9 +100,9 @@ Så här klonar du GitHub-databasen med exempeldata med SSH-protokollet:
 
 Så här klonar du GitHub-databasen med exempeldata med HTTPS-protokollet:
 
-1. I en webbläsare går du till [exempeldatalager](https://github.com/magento/magento2-sample-data).
-1. Till höger på sidan, under **klona URL** fält, klicka **HTTPS**.
-1. Klicka **Kopiera till Urklipp**.
+1. Gå till [exempeldatalagret](https://github.com/magento/magento2-sample-data) i en webbläsare.
+1. Klicka på **HTTPS** under fältet **klon-URL** till höger på sidan.
+1. Klicka på **Kopiera till Urklipp**.
 
    I bilden nedan visas ett exempel.
 
@@ -110,9 +110,9 @@ Så här klonar du GitHub-databasen med exempeldata med HTTPS-protokollet:
 
 1. Byt till webbserverns dokumentrotkatalog.
 
-   Vanligtvis är det för Ubuntu `/var/www` och för CentOS `/var/www/html`.
+   Vanligtvis är det `/var/www` för Ubuntu och `/var/www/html` för CentOS.
 
-1. Retur `git clone` och klistra in värdet som du fick tidigare.
+1. Ange `git clone` och klistra in värdet som du fick tidigare.
 
    Ett exempel följer:
 
@@ -121,13 +121,13 @@ Så här klonar du GitHub-databasen med exempeldata med HTTPS-protokollet:
    ```
 
 1. Vänta tills databasen har klonats på servern.
-1. Se till att du checkar ut den gren i exempeldatalagret som motsvarar den gren du använde från huvuddelen `magento2` databas.
+1. Kontrollera att du checkar ut den gren i exempeldatalagret som motsvarar den gren du använde från huvuddatabasen `magento2`.
 
    Exempel:
 
-   Om du använde `2.4-develop` grenen Sample Data i Magento Open Source GitHub-databasen ska `2.4-develop`.
+   Om du använde `2.4-develop`-grenen i Magento Open Source GitHub-databasen bör Sample Data-grenen vara `2.4-develop`.
 
-   Om du vill checka ut rätt gren kör du följande kommando från exempeldatalagrets rotkatalog (förutsatt att du behöver `2.4-develop` gren):
+   Om du vill checka ut rätt gren kör du följande kommando från exempeldatalagrets rotkatalog (förutsatt att du behöver `2.4-develop`-grenen):
 
    ```bash
    git checkout 2.4-develop
@@ -151,7 +151,7 @@ Så här klonar du GitHub-databasen med exempeldata med HTTPS-protokollet:
 
 >[!WARNING]
 >
->Om du installerar exempeldata *efter* När du installerar Adobe Commerce måste du också köra följande kommando för att uppdatera databasen och schemat:
+>Om du installerar exempeldata *efter*-installationen av Adobe Commerce måste du också köra följande kommando för att uppdatera databasen och schemat:
 >
 >```bash
 ><magento_root>/bin/magento setup:upgrade
@@ -159,7 +159,7 @@ Så här klonar du GitHub-databasen med exempeldata med HTTPS-protokollet:
 
 ## Ange ägarskap och behörigheter för filsystemet
 
-På grund av `php build-sample-data.php` skriptet skapar länkar mellan exempeldatalagret och din Magento Open Source-databas. Du måste ange filsystembehörigheter och ägarskap i exempeldatalagret. Om du inte gör det blir det fel att öppna butiken.
+Eftersom skriptet `php build-sample-data.php` skapar länkar mellan exempeldatalagret och din Magento Open Source-databas måste du ange filsystembehörigheter och ägarskap i exempeldatalagret. Om du inte gör det blir det fel att öppna butiken.
 
 Så här anger du behörigheter och ägarskap för filsystemet i exempeldatabasen:
 

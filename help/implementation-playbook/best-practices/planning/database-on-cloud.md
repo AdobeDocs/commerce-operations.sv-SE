@@ -21,7 +21,7 @@ Adobe Commerce i molninfrastruktur
 
 ## Konvertera alla MyISAM-tabeller till InnoDB
 
-Adobe rekommenderar att du använder InnoDB-databasmotorn. I en standardinstallation av Adobe Commerce lagras alla tabeller i databasen med InnoDB-motorn. Vissa tredjepartsmoduler (tillägg) kan emellertid presentera tabeller i MyISAM-format. När du har installerat en modul från tredje part bör du kontrollera databasen för att identifiera tabeller i `myisam` och konvertera dem till `innodb` format.
+Adobe rekommenderar att du använder InnoDB-databasmotorn. I en standardinstallation av Adobe Commerce lagras alla tabeller i databasen med InnoDB-motorn. Vissa tredjepartsmoduler (tillägg) kan emellertid presentera tabeller i MyISAM-format. När du har installerat en modul från en annan leverantör bör du kontrollera databasen för att identifiera tabeller i formatet `myisam` och konvertera dem till formatet `innodb`.
 
 ### Kontrollera om en modul innehåller MyISAM-tabeller
 
@@ -37,7 +37,7 @@ SELECT table_schema, CONCAT(ROUND((index_length+data_length)/1024/1024),'MB')
 
 ### Ändra lagringsmotorn till InnoDB
 
-I `db_schema.xml` som deklarerar tabellen, ange `engine` attributvärde för motsvarande `table` nod till `innodb`. Mer information finns i [Konfigurera deklarativt schema > tabellnod](https://developer.adobe.com/commerce/php/development/components/declarative-schema/configuration/) i vår dokumentation för utvecklare.
+I filen `db_schema.xml` som deklarerar tabellen anger du attributvärdet `engine` för motsvarande `table`-nod till `innodb`. Mer information finns i [Konfigurera deklarativt schema > tabellnod](https://developer.adobe.com/commerce/php/development/components/declarative-schema/configuration/) i utvecklardokumentationen.
 
 Det deklarativa systemet infördes i Adobe Commerce för molninfrastruktur version 2.3.
 
@@ -76,18 +76,18 @@ Mer information om alternativ till att använda anpassade utlösare finns i [MyS
 
 ## Uppgradera [!DNL ECE-Tools] till version 2002.0.21 eller senare {#ece-tools-version}
 
-För att undvika potentiella problem med kroniska lås uppgraderar du ECE-Tools till version 2002.0.21 eller senare. Instruktioner finns i [Uppdatera `ece-tools` version](https://devdocs.magento.com/cloud/project/ece-tools-update.html) i vår dokumentation för utvecklare.
+För att undvika potentiella problem med kroniska lås uppgraderar du ECE-Tools till version 2002.0.21 eller senare. Instruktioner finns i [Uppdatera `ece-tools` version ](https://devdocs.magento.com/cloud/project/ece-tools-update.html) i utvecklardokumentationen.
 
 ## Växla indexeringsläge på ett säkert sätt
 
 <!--This best practice might belong in the Maintenance phase. Database lock prevention might be consolidated under a single heading-->
 
-Om du växlar indexerare genereras [!DNL data definition language] (DDL)-satser för att skapa utlösare som kan orsaka databaslås. Du kan förhindra det här problemet genom att försätta webbplatsen i underhållsläge och inaktivera cron-jobb innan du ändrar konfigurationen.
-Instruktioner finns i [Konfigurera indexerare](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html#configure-indexers-1) i *Konfigurationshandbok för Adobe Commerce*.
+När du växlar indexerare genereras [!DNL data definition language] (DDL)-satser för att skapa utlösare som kan orsaka databaslås. Du kan förhindra det här problemet genom att försätta webbplatsen i underhållsläge och inaktivera cron-jobb innan du ändrar konfigurationen.
+Instruktioner finns i [Konfigurera indexerare](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html#configure-indexers-1) i *Konfigurationshandboken för Adobe Commerce*.
 
 ## Kör inte DDL-satser i produktionen
 
-Undvik att köra DDL-satser i produktionsmiljön för att förhindra konflikter (som tabelländringar och skapande). The `setup:upgrade` -processen är ett undantag.
+Undvik att köra DDL-satser i produktionsmiljön för att förhindra konflikter (som tabelländringar och skapande). Processen `setup:upgrade` är ett undantag.
 
 Om du behöver köra en DDL-sats placerar du webbplatsen i underhållsläge och inaktiverar cron (se instruktionerna för att växla index på ett säkert sätt i föregående avsnitt).
 
@@ -95,7 +95,7 @@ Om du behöver köra en DDL-sats placerar du webbplatsen i underhållsläge och 
 
 Aktivera arkivering av order från administratören för att minska utrymmet som krävs för försäljningstabeller när orderdata växer. Arkivering sparar diskutrymme för MySQL och förbättrar utcheckningsprestanda.
 
-Se [Aktivera arkivering](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/order-management/orders/order-archive.html) i Adobe Commerce Merchant-dokumentationen.
+Se [Aktivera arkivering](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/order-management/orders/order-archive.html) i dokumentationen för Adobe Commerce Merchant.
 
 ## Ytterligare information
 

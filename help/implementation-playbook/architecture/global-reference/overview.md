@@ -19,9 +19,9 @@ ht-degree: 0%
 
 När man driver företag som har flera webbplatser för flera varumärken på flera lokala marknader (med lokaliserade valutor, språk, medier, delade kataloger och unika kundvagnar) och som vill undvika onödiga kostnader för implementering av samma funktioner och integreringar är GRA alltid ett bra alternativ.
 
-![Tabell som förklarar kostnaderna för skillnader i arkitektur](../../../assets/playbooks/divergent-architecture.svg)
+![Tabell som förklarar kostnaden för skillnader i arkitektur](../../../assets/playbooks/divergent-architecture.svg)
 
-![Tabell som förklarar kostnaden för konsoliderad arkitektur](../../../assets/playbooks/consolidated-architecture.svg)
+![Tabell som förklarar kostnaden för konsolidering i arkitektur](../../../assets/playbooks/consolidated-architecture.svg)
 
 GRA är:
 

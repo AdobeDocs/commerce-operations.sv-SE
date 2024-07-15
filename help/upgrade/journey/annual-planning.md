@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Många företag arbetar med årliga budgetar och färdplaner. Under dessa årliga diskussioner är det mycket viktigt att du talar om din plattformsövergripande strategi för hälsa, riktning och uppgradering, tillsammans med hur den passar in i företagets övergripande mål och nyckeltal (KPI).
 
-Efter [publiceringsschema](https://devdocs.magento.com/release/), tilldela budget- och lanseringsfönster för uppgraderingar, undvika semester, företagsstängningar och högtider. Genom att förstå tidsplanen för lanseringen av Adobe och hålla dig informerad om vilka ändringar och förbättringar som ingår i varje release via [versionsinformation](https://devdocs.magento.com/guides/v2.4/release-notes/bk-release-notes.html)kan du planera ditt år bättre.
+Efter [releaseschemat](https://devdocs.magento.com/release/) tilldelar du budget- och releasefönster för uppgraderingar, så att du slipper semester, företagsstängningar och högtider. Genom att förstå Adobe-releaseschemat och hålla dig informerad om vilka ändringar och förbättringar som ingår i varje release via [versionsinformationen](https://devdocs.magento.com/guides/v2.4/release-notes/bk-release-notes.html), kan du planera ditt år bättre.
 
 Under planeringen kanske du vill fråga dig själv:
 

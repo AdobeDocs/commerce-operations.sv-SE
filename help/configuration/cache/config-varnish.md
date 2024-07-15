@@ -12,31 +12,31 @@ ht-degree: 0%
 
 # Konfigurera lack
 
-[Finska cache] är en webbprogramsaccelerator med öppen källkod (kallas även _HTTP-acceleration_ eller _cachelagring av omvänd HTTP-proxy_). I Finish lagras (eller cachelagrar) filer eller fragment av filer i minnet, vilket gör att Varnish kan minska svarstiden och bandbreddsanvändningen för framtida, likvärdiga begäranden. Till skillnad från webbservrar som Apache och nginx har Varnish utformats för att endast användas med HTTP-protokollet.
+[Avvikande cacheminne] är en webbprogramaccelerator med öppen källkod (kallas även _HTTP-accelerator_ eller _cachelagring av HTTP-proxy_). I Finish lagras (eller cachelagrar) filer eller fragment av filer i minnet, vilket gör att Varnish kan minska svarstiden och bandbreddsanvändningen för framtida, likvärdiga begäranden. Till skillnad från webbservrar som Apache och nginx har Varnish utformats för att endast användas med HTTP-protokollet.
 
-[Systemkrav](../../installation/system-requirements.md) listar de versioner av engelska som stöds.
+[Systemkrav](../../installation/system-requirements.md) visar vilka versioner av engelska som stöds.
 
 >[!WARNING]
 >
->Vi _starkt rekommendera_ du använder varnish i produktionen. Den inbyggda helsidescachningen - för filsystemet eller [databas](https://developer.adobe.com/commerce/php/development/cache/partial/database-caching/)—är mycket långsammare än varnish, och varnish är utformat för att accelerera HTTP-trafiken.
+>Vi _rekommenderar starkt_ att du använder lack i produktionen. Den inbyggda helsidescachningen, antingen för filsystemet eller [databasen](https://developer.adobe.com/commerce/php/development/cache/partial/database-caching/), är mycket långsammare än för Varnish, och Varnish är utformat för att accelerera HTTP-trafiken.
 
 Mer information om lack finns i:
 
-- [The Big Varnish Picture]
-- [Alternativ för avslutning av lack]
-- [Prestanda för lack och webbplatser]
+- [Den stora svartvita bilden]
+- [Alternativ för avslutad start]
+- [Prestanda för lack och webbplats]
 
 ## Topologidiagram för lack
 
-Följande bild visar en grundläggande vy av lack i din Commerce-topologi.
+Följande bild visar en grundläggande vy av lack i din Commerce topologi.
 
-![Basic Varnish-diagram](../../assets/configuration/varnish-basic.png)
+![Grundläggande lack-diagram](../../assets/configuration/varnish-basic.png)
 
-I föregående bild resulterar användarens HTTP-begäran över Internet i många begäranden om CSS, HTML, JavaScript och bilder (kallas tillsammans för _resurser_). Finska sitter framför webbservern och proxiderar dessa begäranden till webbservern.
+I föregående bild resulterar användarens HTTP-begäran över Internet i många begäranden om CSS, HTML, JavaScript och bilder (kallas tillsammans _resurser_). Finska sitter framför webbservern och proxiderar dessa begäranden till webbservern.
 
-Efterhand som webbservern returnerar resurser lagras cachelagrade resurser i svenska. Efterföljande förfrågningar om dessa resurser besvaras av Varnish (vilket innebär att förfrågningarna inte når webbservern). Finska returnerar cachelagrat innehåll extremt snabbt. Resultatet blir snabbare svarstider för att återsända innehållet till användarna och ett minskat antal förfrågningar som måste uppfyllas av Commerce.
+Efterhand som webbservern returnerar resurser lagras cachelagrade resurser i svenska. Efterföljande förfrågningar om dessa resurser besvaras av Varnish (vilket innebär att förfrågningarna inte når webbservern). Finska returnerar cachelagrat innehåll extremt snabbt. Resultatet blir snabbare svarstider för att skicka tillbaka innehållet till användarna och ett reducerat antal förfrågningar som måste uppfyllas av Commerce.
 
-Resurser som cachas av Varnish förfaller vid ett konfigurerbart intervall eller ersätts av senare versioner av samma resurser. Du kan även rensa cacheminnet manuellt antingen med hjälp av Admin eller [`magento cache:clean`](../cli/manage-cache.md#clean-and-flush-cache-types) -kommando.
+Assets som cachas av Varnish förfaller vid ett konfigurerbart intervall eller ersätts av senare versioner av samma resurser. Du kan även rensa cachen manuellt med hjälp av Admin eller kommandot [`magento cache:clean`](../cli/manage-cache.md#clean-and-flush-cache-types).
 
 ## Processöversikt
 
@@ -44,16 +44,16 @@ I det här avsnittet beskrivs hur du initialt installerar Varnish med en minimal
 
 Processen kan sammanfattas enligt följande:
 
-1. Installera lack och testa den på en Commerce-sida för att se om du får HTTP-svarshuvuden som anger att Varnish fungerar.
-1. Installera Commerce-programvaran och använd administratören för att skapa en lack-konfigurationsfil.
+1. Installera Varnish och testa det genom att gå till en Commerce-sida för att se om du får HTTP-svarshuvuden som anger att Varnish fungerar.
+1. Installera Commerce och använd administratören för att skapa en lack-konfigurationsfil.
 1. Ersätt den befintliga konfigurationsfilen för lack med den som genererats av administratören.
 1. Testa allting igen.
 
-   Om det inte finns något i din `<magento_root>/var/page_cache` har du konfigurerat engelska med Commerce!
+   Om det inte finns något i katalogen `<magento_root>/var/page_cache` har du konfigurerat Varnish med Commerce!
 
 >[!NOTE]
 >
->- Förutom där det anges måste du ange alla kommandon som beskrivs i det här avsnittet som en användare med `root` behörighet.
+>- Förutom där det anges måste du ange alla kommandon som beskrivs i det här avsnittet som en användare med `root`-behörighet.
 >
 >- Det här avsnittet är skrivet för lack i CentOS och Apache 2.4. Om du konfigurerar lack i en annan miljö kan vissa kommandon vara annorlunda. Mer information finns i dokumentationen för Varnish.
 
@@ -61,11 +61,11 @@ Processen kan sammanfattas enligt följande:
 
 Vi känner till följande problem med Varnish:
 
-- [Varnish stöder inte SSL]
+- [lack stöder inte SSL]
 
   Alternativt kan du använda SSL-avslutning eller en SSL-avslutningsproxy.
 
-- Om du tar bort innehållet i `<magento_root>/var/cache` måste du starta om Varnish.
+- Om du tar bort innehållet i katalogen `<magento_root>/var/cache` manuellt måste du starta om lack.
 
 - Möjligt fel vid installation av Commerce:
 
@@ -76,7 +76,7 @@ Vi känner till följande problem med Varnish:
   Varnish cache server
   ```
 
-  Om det här felet uppstår kan du redigera `default.vcl` och lägga till en timeout i `backend` stanza enligt följande:
+  Om det här felet uppstår redigerar du `default.vcl` och lägger till en timeout i `backend`-instansen enligt följande:
 
   ```conf
   backend default {
@@ -88,11 +88,11 @@ Vi känner till följande problem med Varnish:
 
 ## Översikt över cachning i lack
 
-Cachelagring av lack fungerar tillsammans med Commerce med:
+Cachelagring i lack fungerar med Commerce:
 
 - [`nginx.conf.sample`](https://github.com/magento/magento2/blob/2.4/nginx.conf.sample) från GitHub-databasen Magento 2
 - `.htaccess` distribuerad konfigurationsfil för Apache som tillhandahålls med Commerce
-- `default.vcl` konfiguration för lack som genererats med [Administratör](../cache/configure-varnish-commerce.md)
+- `default.vcl`-konfiguration för lack genererad med [Admin](../cache/configure-varnish-commerce.md)
 
 >[!INFO]
 >
@@ -114,7 +114,7 @@ I det här avsnittet används en webbläsarkontroll för att visa hur resurser l
 
 I bilden nedan visas ett exempel med en webbläsarkontroll:
 
-![Första gången en begäran görs för ett cachelagrat objekt skickas det till webbläsaren av Varnish](../../assets/configuration/varnish-apache-first-visit.png)
+![Första gången en begäran görs för ett cachelagrat objekt skickas den till webbläsaren ](../../assets/configuration/varnish-apache-first-visit.png)
 
 I exemplet ovan visas en begäran för huvudsidan för butiken (`m2_ce_my`). CSS- och JavaScript-resurser cachelagras i klientwebbläsaren.
 
@@ -126,11 +126,11 @@ I exemplet ovan visas en begäran för huvudsidan för butiken (`m2_ce_my`). CSS
 
 Om samma webbläsare begär samma sida igen levereras dessa resurser från den lokala webbläsarcachen, vilket visas i följande bild.
 
-![Nästa gång samma objekt begärs, läses resurser in från den lokala webbläsarens cache](../../assets/configuration/varnish-apache-second-visit.png)
+![Nästa gång samma objekt begärs, läses resurser in från den lokala webbläsarcachen](../../assets/configuration/varnish-apache-second-visit.png)
 
 Observera skillnaden i svarstid mellan den första och den andra begäran. Även här har statiska resurser en 200-svarskod (OK) eftersom de levereras från det lokala cacheminnet för första gången.
 
-## Så här använder Commerce Etag
+## Hur Commerce använder Etag
 
 I följande exempel visas svarshuvuden för en viss statisk resurs.
 
@@ -140,9 +140,9 @@ I följande exempel visas svarshuvuden för en viss statisk resurs.
 
 Dessutom returneras statiska resurser med en HTTP-statuskod på 304 (inte ändrad), vilket visas i bilden nedan.
 
-![HTTP 304-svarskoden (inte ändrad) anger att den statiska resursen i det lokala cacheminnet är densamma som på servern](../../assets/configuration/varnish-304.png)
+![HTTP 304-svarskoden (inte ändrad) anger att den statiska resursen i det lokala cache-minnet är densamma som på servern](../../assets/configuration/varnish-304.png)
 
-304-statuskoden inträffar eftersom användaren ogiltigförklarade sin lokala cache och innehållet på servern inte ändrades. På grund av 304-statuskoden är den statiska resursen _innehåll_ överförs inte. Endast HTTP-huvuden hämtas till webbläsaren.
+304-statuskoden inträffar eftersom användaren ogiltigförklarade sin lokala cache och innehållet på servern inte ändrades. På grund av 304-statuskoden överförs inte den statiska resursen _content_; bara HTTP-huvuden hämtas till webbläsaren.
 
 Om innehållet ändras på servern hämtar klienten den statiska resursen med en HTTP 200-statuskod (OK) och en ny ETag.
 

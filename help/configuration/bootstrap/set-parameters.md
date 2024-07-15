@@ -1,17 +1,17 @@
 ---
 title: Ange värdet för bootstrap-parametrar
-description: Lär dig hur du ställer in startparametrar för Commerce-programmet.
+description: Lär dig hur du ställer in bootstrap-parametrar för Commerce.
 exl-id: 4e1e4e5e-e1bc-49a5-8a2a-2e6b91ca9175
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '568'
 ht-degree: 1%
 
 ---
 
 # Bootstrap-parametrar
 
-I det här avsnittet visas hur du anger värden för startparametrar för Commerce-program. Se [Översikt över programinitiering och -start](initialization.md).
+I det här avsnittet visas hur du ställer in värden för startparametrar för Commerce-program. Se [Översikt över programinitiering och -start](initialization.md).
 
 I följande tabell beskrivs bootstrap-parametrarna som du kan ange:
 
@@ -23,7 +23,7 @@ I följande tabell beskrivs bootstrap-parametrarna som du kan ange:
 >[!INFO]
 >
 >- Alla bootstrap-parametrar finns inte dokumenterade.
->- Nu anger du programläge (utvecklare, standard, produktion) med [`magento deploy:mode:set {mode}`](../cli/set-mode.md) -kommando.
+>- Du anger nu programläge (utvecklare, standard, produktion) med kommandot [`magento deploy:mode:set {mode}`](../cli/set-mode.md).
 
 ## Ange parametrar med en miljövariabel
 
@@ -33,13 +33,13 @@ I det här avsnittet beskrivs hur du anger värden för bootstrap-parametrar med
 
 Du kan ange bootstrap-variabler som systemomfattande systemvariabler, vilket gör att alla processer kan använda dem.
 
-Du kan till exempel använda `MAGE_PROFILER` systemmiljövariabel för att ange ett läge enligt följande:
+Du kan till exempel använda systemmiljövariabeln `MAGE_PROFILER` för att ange ett läge enligt följande:
 
 ```terminal
 MAGE_PROFILER={firebug|csv|<custom value>}
 ```
 
-Ange variabeln med ett gränssnittsspecifikt kommando. Eftersom skal har olika syntax bör du använda en referens som [unix.stackexchange.com][unix-stackx].
+Ange variabeln med ett gränssnittsspecifikt kommando. Eftersom skal har olika syntax bör du läsa en referens som [unix.stackexchange.com][unix-stackx].
 
 Exempel på Bash-skal för CentOS:
 
@@ -49,7 +49,7 @@ export MAGE_PROFILER=firebug
 
 >[!INFO]
 >
->Om en `PHP Fatal error` visas i webbläsaren när du har angett ett profileringsvärde startar du om webbservern. Orsaken kan vara PHP-bytekodscachning, som cachelagrar bytekoder och PHP-klassökvägar.
+>Om `PHP Fatal error` visas i webbläsaren när du har angett ett profileringsvärde startar du om webbservern. Orsaken kan vara PHP-bytekodscachning, som cachelagrar bytekoder och PHP-klassökvägar.
 
 ## Ange parametrar för Apache eller Nginx
 
@@ -57,22 +57,22 @@ I det här avsnittet beskrivs hur du anger läge för antingen Apache eller Ngin
 
 ### Nginx-inställning
 
-Se [Nginx-exempelkonfiguration] på _GitHub_.
+Se [Nginx-exempelkonfigurationen] på _GitHub_.
 
 ### Apache.htaccess-inställning
 
-Ett sätt att ange programläge är genom att redigera `.htaccess`. På så sätt behöver du inte ändra inställningarna för Apache.
+Ett sätt att ange programläge är att redigera `.htaccess`. På så sätt behöver du inte ändra inställningarna för Apache.
 
-Du kan ändra `.htaccess` på någon av följande platser, beroende på din startpunkt för Commerce-programmet:
+Du kan ändra `.htaccess` på följande platser, beroende på startpunkten till Commerce-programmet:
 
 - `<magento_root>/.htaccess`
 - `<magento_root>/pub/.htaccess`
 
-**Ange en variabel**:
+**Så här anger du en variabel**:
 
 1. Öppna någon av de föregående filerna i en textredigerare och lägg till eller ta bort kommentaren till den önskade inställningen.
 
-   Du kan till exempel ange en [läge](application-modes.md)avkommenterar du följande:
+   Om du till exempel vill ange ett [läge](application-modes.md) avkommenterar du följande:
 
    ```conf
    #   SetEnv MAGE_PROFILER firebug
@@ -86,25 +86,25 @@ Du kan ändra `.htaccess` på någon av följande platser, beroende på din star
    <custom value>
    ```
 
-1. Spara ändringarna i `.htaccess`; du behöver inte starta om Apache för att ändringen ska börja gälla.
+1. Spara ändringarna i `.htaccess`. Du behöver inte starta om Apache för att ändringen ska börja gälla.
 
 ### Apache-inställning
 
-Webbservern Apache har stöd för att ställa in programläge med `mod_env` direktiv.
+Apache-webbservern stöder inställning av programläge med `mod_env` direktiv.
 
-Apache `mod_env` -direktivet skiljer sig något åt i [Apache version 2.2] och [Apache version 2.4].
+Apache `mod_env`-direktivet skiljer sig något åt i [Apache version 2.2] och [Apache version 2.4].
 
-De procedurer som följer visar hur du ställer in programläget i en virtuell Apache-värd. Detta är inte det enda sättet att använda `mod_env` direktiv; se Apache-dokumentationen för mer information.
+De procedurer som följer visar hur du ställer in programläget i en virtuell Apache-värd. Det här är inte det enda sättet att använda `mod_env`-direktiv. Mer information finns i Apache-dokumentationen.
 
 >[!TIP]
 >
->I följande avsnitt förutsätts att du redan har konfigurerat din virtuella värd. Om du inte har det, bör du kontakta en resurs som [den här självstudiekursen om DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-14-04-lts).
+>I följande avsnitt förutsätts att du redan har konfigurerat din virtuella värd. Om du inte har det kan du titta på en resurs som [den här självstudiekursen för DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-14-04-lts).
 
-**Ange en bootstrap-variabel för Apache i Ubuntu**:
+**Så här anger du en bootstrap-variabel för Apache på Ubuntu**:
 
-1. Som användare med `root` behörigheter, öppna konfigurationsfilen för det virtuella värdsystemet i en textredigerare.
+1. Som användare med `root`-behörighet öppnar du konfigurationsfilen för det virtuella värdsystemet i en textredigerare.
 
-   Om din virtuella värd till exempel har ett namn `my.magento`,
+   Om din virtuella värd till exempel har namnet `my.magento`,
 
    - Apache 2.4: `vim /etc/apache2/sites-available/my.magento.conf`
    - Apache 2.2: `vim /etc/apache2/sites-available/my.magento`
@@ -141,11 +141,11 @@ De procedurer som följer visar hur du ställer in programläget i en virtuell A
 
 >[!TIP]
 >
->I det här avsnittet förutsätts att du redan har konfigurerat din virtuella värd. Om du inte har det, bör du kontakta en resurs som [den här självstudiekursen om DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-centos-6).
+>I det här avsnittet förutsätts att du redan har konfigurerat din virtuella värd. Om du inte har det kan du titta på en resurs som [den här självstudiekursen för DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-centos-6).
 
-**Ange en bootstrap-variabel för Apache i CentOS**:
+**Så här anger du en bootstrap-variabel för Apache i CentOS**:
 
-1. Som användare med `root` behörighet, öppna `/etc/httpd/conf/httpd.conf` i en textredigerare.
+1. Som användare med `root`-behörighet öppnar du `/etc/httpd/conf/httpd.conf` i en textredigerare.
 
 1. Lägg till följande rad var som helst i konfigurationen av det virtuella värdsystemet:
 

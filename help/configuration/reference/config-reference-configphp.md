@@ -4,14 +4,14 @@ description: Se en lista med värden i filen config.php.
 exl-id: 9b355d6d-ea66-480b-ad96-0ea9e7e61844
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '147'
 ht-degree: 0%
 
 ---
 
 # config.php-referens
 
-The `config.php` filen innehåller följande avsnitt:
+Filen `config.php` innehåller följande avsnitt:
 
 | Namn | Beskrivning |
 | --------- | -------------------|
@@ -82,7 +82,7 @@ Innehåller en array med scopets konfigurationsvärden. Den har följande delnod
 ]
 ```
 
-Läs mer om [Handelsomfång][scopes].
+Läs mer om [Commerce-scope][scopes].
 
 ## system
 

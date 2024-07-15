@@ -4,7 +4,7 @@ description: Se ett exempel på hur du ställer in delade, systemspecifika och k
 exl-id: d0058e9f-a5a9-48a6-9c66-c61515666335
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '1019'
+source-wordcount: '1023'
 ht-degree: 0%
 
 ---
@@ -12,11 +12,11 @@ ht-degree: 0%
 # Exempel med CLI-kommandon
 
 I det här exemplet visas hur du ställer in delade, systemspecifika och känsliga värden i utvecklingssystemet och sedan distribuerar dessa värden till produktionssystemet.
-Detta görs med en kombination av delade konfigurationer, `config.php` och Commerce CLI-kommandot.
+Detta görs genom att använda en kombination av delade konfigurationer, filen `config.php` och Commerce CLI-kommandot.
 
 I det här exemplet används följande konfigurationsinställningar:
 
-- **momsregistreringsnummer** och **Butiksnamn** för inställningarna för den delade konfigurationen.
+- **Vat Number** och **Store Name** för de delade konfigurationsinställningarna.
 
   Dessa finns under **Lager** > Inställningar > **Konfiguration** > Allmänt > **Allmänt**.
 
@@ -26,7 +26,7 @@ I det här exemplet används följande konfigurationsinställningar:
 
 - **Standarddomän för e-post** för det systemspecifika konfigurationsvärdet.
 
-  Detta finns under **Lager** > Inställningar > **Konfiguration** > Kunder > **Kundkonfiguration** > **Skapa nya kontoalternativ**.
+  Detta hittar du under **Lager** > Inställningar > **Konfiguration** > Kunder > **Kundkonfiguration** > **Skapa nya kontoalternativ**.
 
 Du kan använda samma procedur som i det här exemplet för att konfigurera inställningar i följande referenser:
 
@@ -37,7 +37,7 @@ Du kan använda samma procedur som i det här exemplet för att konfigurera inst
 
 ## Innan du börjar
 
-Innan du börjar ska du konfigurera filsystembehörigheter och ägarskap enligt [Krav för utvecklings-, bygg- och produktionssystem](../deployment/prerequisites.md).
+Konfigurera filsystembehörigheter och ägarskap enligt beskrivningen i [Krav för utvecklings-, bygg- och produktionssystem](../deployment/prerequisites.md) innan du börjar.
 
 ## Antaganden
 
@@ -54,30 +54,30 @@ I det här exemplet förutsätts följande:
 Så här anger du standardinställningar för nationella inställningar och viktenheter i utvecklingssystemet:
 
 1. Logga in på Admin.
-1. Klicka **Lager** > Inställningar > **Konfiguration** > Allmänt > **Allmänt**.
-1. Om du har fler än en webbplats tillgänglig använder du **Butiksvy** i det övre vänstra hörnet för att växla till en annan webbplats som bilden nedan visar.
+1. Klicka på **Lagrar** > Inställningar > **Konfiguration** > Allmänt > **Allmänt**.
+1. Om du har fler än en webbplats tillgänglig kan du använda listan **Butiksvy** i det övre vänstra hörnet för att växla till en annan webbplats som på bilden nedan.
 
-   ![Byt webbplatser](../../assets/configuration/split-deploy-switch-website.png)
+   ![Växla webbplatser](../../assets/configuration/split-deploy-switch-website.png)
 
-1. Expandera i den högra rutan **Butiksinformation**.
-1. Rensa **Använd standard** kryssrutan bredvid **Momsnummer** och **Butiksnamn** fält.
-1. Ange en siffra i fältet (till exempel `12345`).
-1. I **Butiksnamn** fält, ange ett värde (som `My Store`).
-1. Klicka **Spara konfiguration**.
-1. Klicka på under Allmänt i den vänstra navigeringen **Kontakter**.
-1. Expandera i den högra rutan **E-postalternativ**.
-1. Rensa **Använd standard** kryssrutan bredvid **Skicka e-post till** fält.
+1. Expandera **Lagra information** i den högra rutan.
+1. Om det behövs avmarkerar du kryssrutan **Använd standard** bredvid fälten **Momsnummer** och **Butiksnamn**.
+1. Ange ett tal i fältet (till exempel `12345`).
+1. Ange ett värde (till exempel `My Store`) i fältet **Butiksnamn**.
+1. Klicka på **Spara konfiguration**.
+1. Klicka på **Kontakter** under Allmänt i den vänstra navigeringen.
+1. Expandera **E-postalternativ** i den högra rutan.
+1. Om det behövs avmarkerar du kryssrutan **Använd standard** bredvid fältet **Skicka e-post till**.
 1. Ange en e-postadress i fältet.
-1. Klicka **Spara konfiguration**.
-1. Använd **Butiksvy** listan för att välja **Standardkonfiguration** som bilden nedan visar.
+1. Klicka på **Spara konfiguration**.
+1. Använd listan **Butiksvy** för att välja **Standardkonfiguration** enligt bilden nedan.
 
    ![Växla till standardkonfigurationen](../../assets/configuration/split-deploy-default-config.png)
 
-1. Klicka på Kunder > **Kundkonfiguration**.
-1. Expandera i den högra rutan **Skapa nya kontoalternativ**.
-1. Rensa **Använd systemvärde** kryssrutan bredvid **Standarddomän för e-post** fält.
+1. Klicka på Kunder > **Kundkonfiguration** i den vänstra rutan.
+1. Expandera **Skapa nya kontoalternativ** i den högra rutan.
+1. Om det behövs avmarkerar du kryssrutan **Använd systemvärde** bredvid fältet **Standarddomän för e-post**.
 1. Ange ett domännamn i fältet.
-1. Klicka **Spara konfiguration**.
+1. Klicka på **Spara konfiguration**.
 1. Rensa cachen om du uppmanas till det.
 
 ## Steg 2: Uppdatera konfigurationen
@@ -86,7 +86,7 @@ Nu när du har ändrat konfigurationen i Admin skriver du den delade konfigurati
 
 {{$include /help/_includes/config-save-config.md}}
 
-Även om `app/etc/env.php` (den systemspecifika konfigurationen) uppdaterades, checka inte in den i källkontrollen.
+Även om `app/etc/env.php` (den systemspecifika konfigurationen) har uppdaterats, ska du inte checka in den i källkontrollen.
 Du kommer att skapa samma konfigurationsinställningar i produktionssystemet senare under den här proceduren.
 
 ## Steg 3: Uppdatera ditt byggsystem och generera filer
@@ -108,9 +108,9 @@ Om du vill ange känsliga och systemspecifika inställningar med hjälp av syste
 
 - Omfång för varje inställning
 
-  Om du följde instruktionerna i steg 1, kan du **Skicka e-post till** är webbplats och har **Standarddomän för e-post** är global (d.v.s. standardkonfigurationsomfånget).
+  Om du följde instruktionerna i steg 1 är omfattningen för **Skicka e-post till** en webbplats och omfattningen för **Standarddomän för e-post** är global (d.v.s. standardkonfigurationsomfånget).
 
-  Du behöver webbplatskoden för att ange **Skicka e-post till** konfigurationsvärde.
+  Du behöver webbplatskoden för att ange konfigurationsvärdet **Skicka e-post till**.
 
   Mer information om hur du hittar det här värdet finns i: [Använd miljövariabler för att åsidosätta konfigurationsinställningar](../reference/override-config-settings.md#environment-variables).
 
@@ -121,7 +121,7 @@ Om du vill ange känsliga och systemspecifika inställningar med hjälp av syste
   | Skicka e-post till | `contact/email/recipient_email` |
   | Standarddomän för e-post | `customer/create_account/email_domain` |
 
-  Information om alla känsliga och systemspecifika konfigurationssökvägar finns i: [Referens för känsliga och systemspecifika konfigurationssökvägar](../reference/config-reference-sens.md).
+  Information om alla känsliga och systemspecifika konfigurationssökvägar finns i: [Känsliga och systemspecifika konfigurationssökvägar, referens](../reference/config-reference-sens.md).
 
 ### Ange variabler med CLI-kommandon
 
@@ -130,7 +130,7 @@ Använd följande CLI-kommandon för att ange systemspecifika och känsliga konf
 - `magento config:set` för systemspecifika inställningar
 - `magento config:sensitive:set` för känsliga inställningar
 
-Ange systemspecifik inställning **Standarddomän för e-post**, som finns i standardomfånget, använder du följande kommando:
+Använd följande kommando för att ange den systemspecifika inställningen **Standarddomän för e-post**, som finns i standardomfånget:
 
 ```bash
 bin/magento config:set customer/create_account/email_domain <email domain>
@@ -138,7 +138,7 @@ bin/magento config:set customer/create_account/email_domain <email domain>
 
 Du behöver inte använda scopet i kommandot eftersom det är standardscopet.
 
-Ange värden för **Skicka e-post till** Du måste dock känna till omfångstypen (`website`) och omfångskoden, som troligtvis skiljer sig åt på alla platser.
+Om du vill ange värden för **Skicka e-post till** måste du dock känna till omfångstypen (`website`) och omfångskoden, som troligtvis är annorlunda på alla webbplatser.
 
 Exempel:
 
@@ -157,27 +157,27 @@ I det här avsnittet beskrivs hur du kan dra in alla ändringar du har gjort i d
 Så här verifierar du konfigurationsinställningarna:
 
 1. Logga in i produktionssystemets administratör.
-1. Klicka **Lager** > Inställningar > **Konfiguration** > Allmänt > **Allmänt**.
-1. Använd **Butiksvy** i det övre vänstra hörnet för att byta till en annan webbplats.
+1. Klicka på **Lagrar** > Inställningar > **Konfiguration** > Allmänt > **Allmänt**.
+1. Använd listan **Butiksvy** i det övre vänstra hörnet för att växla till en annan webbplats.
 
    De alternativ för delad konfiguration som du anger i utvecklingssystemet visas på liknande sätt som följande.
 
-   ![Kontrollera inställningar i produktionssystemet](../../assets/configuration/split-deploy-verify-storeinfo.png)
+   ![Kontrollera inställningarna i produktionssystemet](../../assets/configuration/split-deploy-verify-storeinfo.png)
 
    >[!INFO]
    >
-   >The **Butiksnamn** -fältet kan redigeras i webbplatsens omfång, men om du växlar till standardomfånget för konfiguration går det inte att redigera det. Detta är resultatet av hur du anger alternativen i utvecklingssystemet. Värdet för **Momsnummer** går inte att redigera i webbplatsens omfång.
+   >Fältet **Butiksnamn** kan redigeras i webbplatsomfånget, men om du växlar till standardomfånget för konfiguration går det inte att redigera det. Detta är resultatet av hur du anger alternativen i utvecklingssystemet. Värdet **VAT Number** kan inte redigeras i webbplatsomfånget.
 
 1. Om du inte redan har gjort det växlar du till Standardkonfigurationsomfång.
-1. Klicka på under Allmänt i den vänstra navigeringen **Kontakter**.
+1. Klicka på **Kontakter** under Allmänt i den vänstra navigeringen.
 
-   The **Skicka e-post till** -fältet går inte att redigera, vilket visas i bilden nedan. Det här är en känslig inställning.
+   Fältet **Skicka e-post till** kan inte redigeras, vilket visas i bilden nedan. Det här är en känslig inställning.
 
-   ![Kontrollera inställningar i produktionssystemet](../../assets/configuration/split-deploy-verify-contacts.png)
+   ![Kontrollera inställningarna i produktionssystemet](../../assets/configuration/split-deploy-verify-contacts.png)
 
-1. Klicka på Kunder > **Kundkonfiguration**.
-1. Expandera i den högra rutan **Skapa nya kontoalternativ**.
+1. Klicka på Kunder > **Kundkonfiguration** i den vänstra rutan.
+1. Expandera **Skapa nya kontoalternativ** i den högra rutan.
 
-   Värdet för **Standarddomän för e-post** visas enligt följande. Detta är en systemspecifik inställning.
+   Värdet i fältet **Standarddomän för e-post** visas enligt följande. Detta är en systemspecifik inställning.
 
-   ![Kontrollera inställningar i produktionssystemet](../../assets/configuration/split-default-domain.png)
+   ![Kontrollera inställningarna i produktionssystemet](../../assets/configuration/split-default-domain.png)

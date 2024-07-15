@@ -4,32 +4,32 @@ description: Lär dig att anpassa kroner med hjälp av cron-grupper.
 exl-id: 16e342ff-aa94-4e31-8c75-dfea1ef02706
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '512'
 ht-degree: 0%
 
 ---
 
 # Anpassa crons-referens
 
-I det här avsnittet får du hjälp med att konfigurera konstanter och (valfritt) kundgrupper för anpassade moduler. Om din anpassade modul behöver schemalägga aktiviteter regelbundet måste du skapa en crontab för den modulen. A _crontab_ är en konfiguration för cron-jobb.
+I det här avsnittet får du hjälp med att konfigurera konstanter och (valfritt) kundgrupper för anpassade moduler. Om din anpassade modul behöver schemalägga aktiviteter regelbundet måste du skapa en crontab för den modulen. En _crontab_ är en cron-jobbkonfiguration.
 
 Du kan också konfigurera en anpassad grupp, vilket bland annat gör att du kan köra cron-jobb som definierats i den gruppen oberoende av andra cron-jobb.
 
-En stegvis självstudiekurs finns på [Konfigurera anpassade cron-jobb och cron-grupper (självstudiekurs)](custom-cron-tutorial.md).
+En stegvis självstudiekurs finns i [Konfigurera anpassade cron-jobb och cron-grupper (självstudiekurs)](custom-cron-tutorial.md).
 
-En översikt över kronjobb finns i [Konfigurera cron-jobb](../cli/configure-cron-jobs.md).
+En översikt över cron-jobb finns i [Konfigurera cron-jobb](../cli/configure-cron-jobs.md).
 
 ## Konfigurera kundgrupper
 
 I det här avsnittet beskrivs hur du kan skapa en cron-grupp för en anpassad modul. Om du inte behöver göra det fortsätter du med nästa avsnitt.
 
-A _kreditgrupp_ är en logisk grupp som gör att du enkelt kan köra cron i mer än en process i taget. De flesta Commerce-moduler använder `default` cron group; vissa moduler använder `index` grupp.
+En _cron-grupp_ är en logisk grupp som gör att du enkelt kan köra kron för mer än en process i taget. I de flesta Commerce-moduler används kronigruppen `default`. I vissa moduler används gruppen `index`.
 
-Om du implementerar kron för en anpassad modul kan du välja att använda `default` eller en annan grupp.
+Om du implementerar cron för en anpassad modul kan du välja att använda gruppen `default` eller en annan grupp.
 
-**Konfigurera en cron-grupp för modulen**:
+**Så här konfigurerar du en cron-grupp för modulen**:
 
-Skapa en `crontab.xml` i modulkatalogen:
+Skapa en `crontab.xml`-fil i modulkatalogen:
 
 ```text
 <your component base dir>/<vendorname>/module-<name>/etc/crontab.xml
@@ -55,8 +55,8 @@ Var:
 | `group_name` | Namn på cron-gruppen. Gruppnamnet behöver inte vara unikt. Du kan köra cron för en grupp i taget. |
 | `job_name` | Unikt ID för det här kronijobbet. |
 | `classpath` | Klass som ska instansieras (klassökväg). |
-| `method` | Metod in `classpath` att ringa. |
-| `time` | Schemalägg i cron-format. Utelämna den här parametern om schemat har definierats i Commerce-databasen eller annan lagring. |
+| `method` | Metod i `classpath` att anropa. |
+| `time` | Schemalägg i cron-format. Utelämna den här parametern om schemat är definierat i Commerce-databasen eller annan lagring. |
 
 Resultatet `crontab.xml` med två grupper kan se ut så här:
 
@@ -82,17 +82,17 @@ Resultatet `crontab.xml` med två grupper kan se ut så här:
 </config>
 ```
 
-Ett exempel finns i [Magento_Customer crontab.xml](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Customer/etc/crontab.xml).
+Se till exempel [Magento_Customer crontab.xml](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Customer/etc/crontab.xml).
 
 ### Ange alternativ för Cron-grupp
 
-Du kan deklarera en ny grupp och ange dess konfigurationsalternativ (som alla körs i butiksvyn) via `cron_groups.xml` -fil, som finns i:
+Du kan deklarera en ny grupp och ange dess konfigurationsalternativ (som alla körs i butiksvyn) via filen `cron_groups.xml` som finns i:
 
 ```text
 <your component base dir>/<vendorname>/module-<name>/etc/cron_groups.xml
 ```
 
-Nedan visas ett exempel på `cron_groups.xml` fil:
+Nedan visas ett exempel på filen `cron_groups.xml`:
 
 ```xml
 <?xml version="1.0"?>
@@ -113,8 +113,8 @@ Var:
 
 | Alternativ | Beskrivning |
 | -------------------------- | ------------------------------------------------------------------------------------------------------ |
-| `schedule_generate_every` | Täthet (i minuter) som scheman skrivs till `cron_schedule` tabell. |
-| `schedule_ahead_for` | Tid (i minuter) i förväg som tidsplanerna skrivs till `cron_schedule` tabell. |
+| `schedule_generate_every` | Täthet (i minuter) som scheman skrivs till tabellen `cron_schedule`. |
+| `schedule_ahead_for` | Tid (i minuter) i förväg som scheman skrivs till tabellen `cron_schedule`. |
 | `schedule_lifetime` | Tidsfönster (i minuter) som ett kron-jobb måste starta eller så betraktas kron-jobbet som missat (&quot;för sent&quot; för att köras). |
 | `history_cleanup_every` | Tid (i minuter) som seriehistoriken sparas i databasen. |
 | `history_success_lifetime` | Tid (i minuter) som posten för slutförda kronjobb sparas i databasen. |
@@ -123,9 +123,9 @@ Var:
 
 ## Inaktivera ett cron-jobb
 
-Kronijobb har ingen `disable` som vi har för [observatörer](https://developer.adobe.com/commerce/php/development/components/events-and-observers/#observers). Ett cron-jobb kan dock inaktiveras med följande teknik: `schedule` en tid som innehåller ett datum som aldrig kommer att inträffa.
+Kronijobb har inte en `disable`-funktion som vi har för [observatörer](https://developer.adobe.com/commerce/php/development/components/events-and-observers/#observers). Ett cron-jobb kan dock inaktiveras med följande teknik: `schedule` en tid som innehåller ett datum som aldrig kommer att inträffa.
 
-Du kan till exempel inaktivera `visitor_clean` cron-jobb som definieras i `Magento_Customer` modul:
+Inaktivera t.ex. cron-jobbet `visitor_clean` som definierats i modulen `Magento_Customer`:
 
 ```xml
 ...
@@ -137,7 +137,7 @@ Du kan till exempel inaktivera `visitor_clean` cron-jobb som definieras i `Magen
 ...
 ```
 
-Så här inaktiverar du `visitor_clean` cron-jobb, skapa en anpassad modul och skriva om `visitor_clean` cron `schedule`:
+Om du vill inaktivera cron-jobbet `visitor_clean` skapar du en anpassad modul och skriver om `visitor_clean` cron-jobbet `schedule`:
 
 ```xml
 ...
@@ -149,4 +149,4 @@ Så här inaktiverar du `visitor_clean` cron-jobb, skapa en anpassad modul och s
 ...
 ```
 
-Nu `visitor_clean` cron-jobbet är inställt på att köras kl. 00:00 den 30 februari - det datum som aldrig inträffar.
+Nu har kron-jobbet `visitor_clean` ställts in att köras kl. 00:00 den 30 februari - vid ett datum som aldrig inträffar.

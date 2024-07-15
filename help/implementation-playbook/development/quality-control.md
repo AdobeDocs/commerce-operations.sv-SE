@@ -77,7 +77,7 @@ Kvalitetskontrollprocessen i det föregående diagrammet kan kortfattat beskriva
   <tr>
     <td></td>
     <td></td>
-    <td>Skicka buggar till felspårningssystem (Jira/Redmine/Trello)</td>
+    <td>Post bugs to bug tracking system (Jira/Redmine/Trello)</td>
     <td>Prioritera/schemalägg tester för anpassning till den projektplanering som definieras av PM</td>
   </tr>
   <tr>
@@ -143,7 +143,7 @@ Kvalitetskontrollprocessen i det föregående diagrammet kan kortfattat beskriva
 </tbody>
 </table>
 
-Liknar [verktyg](project-management-tools.md) som vi har identifierat för utvecklingsprocessen har vi valt en handfull vallösningar och plattformar som vi ofta använder för kvalitetskontrolltester.
+Ungefär som de [verktyg](project-management-tools.md) vi identifierade för utvecklingsprocessen har vi valt en handfull vallösningar och plattformar som vi ofta använder för kvalitetskontrolltestning.
 
 | Syfte | Verktyg |
 |---------------------------|---------------------------------------------------|
@@ -181,7 +181,7 @@ BrowserStack är en webb- och mobiltestningsplattform i molnet som gör att utve
 
 Postman är samarbetsplattformen för API-utveckling. Postman förenklar varje steg i skapandet av ett API och effektiviserar samarbetet så att ni kan skapa bättre API:er.
 
-SoapUI är ett testprogram för webbtjänster med öppen källkod för SOAP (Simple Object Access Protocol) och REST (Representational State Transfer). Dess funktionalitet omfattar web service-inspektion, anrop, utveckling, simulering och gungning, funktionstestning, lastnings- och kompatibilitetstestning.
+SoapUI är ett testprogram för webbtjänster med öppen källkod för Simple Object Access Protocol (SOAP) och REST (Representational State Transfer). Dess funktionalitet omfattar web service-inspektion, anrop, utveckling, simulering och gungning, funktionstestning, lastnings- och kompatibilitetstestning.
 
 ## Automatiseringstestning
 

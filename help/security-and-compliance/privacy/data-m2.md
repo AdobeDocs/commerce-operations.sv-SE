@@ -28,19 +28,19 @@ Dataflödesdiagrammen visar vilka typer av data som kunder och administratörer 
 
 Användaren kan ange kund-, adress- och betalningsinformation när han eller hon registrerar sig för ett konto, under utcheckning och liknande händelser.
 
-![Frontend-datainmatningspunkter](../../assets/security-compliance/frontend-data-entry-points.svg)
+![Framåtinmatningspunkter för data](../../assets/security-compliance/frontend-data-entry-points.svg)
 
 ### Åtkomstpunkter för klientdata
 
 Adobe Commerce läser in kundinformation när kunden loggar in och visar flera olika sidor, eller checkar ut.
 
-![Åtkomstpunkter för klientdata](../../assets/security-compliance/frontend-data-access-points.svg)
+![Förse dataåtkomstpunkter](../../assets/security-compliance/frontend-data-access-points.svg)
 
 ### Datainmatningspunkter för backend
 
 En handlare kan ange kundinformation, adressdata och betalningsdata när han eller hon skapar en kund eller beställning från administratören.
 
-![Datainmatningspunkter för backend](../../assets/security-compliance/backend-data-entry-points.svg)
+![Datainmatningspunkter för serverdelen](../../assets/security-compliance/backend-data-entry-points.svg)
 
 ### Åtkomstpunkter för backend-data
 
@@ -69,9 +69,9 @@ Adobe Commerce kan konfigureras för att lagra följande kundattribut:
 >
 >I enlighet med gällande säkerhets- och integritetspraxis bör du vara medveten om eventuella juridiska risker och säkerhetsrisker som är förknippade med lagring av kunders fullständiga födelsedatum (månad, dag, år) tillsammans med andra personliga identifierare, t.ex. fullständigt namn, innan du samlar in eller behandlar sådana data.
 
-#### `customer_entity` och customer_entity-referenser
+#### Referenser för `customer_entity` och &#39;customer_entity&#39;
 
-Följande kolumner i `customer_entity` tabellen innehåller kundinformation:
+Följande kolumner i tabellen `customer_entity` innehåller kundinformation:
 
 | Kolumn | Datatyp |
 | ------------ | ------------ |
@@ -84,7 +84,7 @@ Följande kolumner i `customer_entity` tabellen innehåller kundinformation:
 | `dob` | datum |
 | `gender` | smallint(5) |
 
-Tabellreferenser `customer_entity` och kan innehålla anpassade kundattribut:
+De här tabellerna refererar till `customer_entity` och kan innehålla anpassade kundattribut:
 
 | Tabell | Kolumn | Datatyp |
 | -------------------------- | ------- | ------------- |
@@ -94,9 +94,9 @@ Tabellreferenser `customer_entity` och kan innehålla anpassade kundattribut:
 | `customer_entity_text` | `value` | text |
 | `customer_entity_varchar` | `value` | varchar(255) |
 
-#### `customer_grid_flat` table
+#### `customer_grid_flat`-tabell
 
-Följande kolumner i `customer_grid_flat` tabellen innehåller kundinformation:
+Följande kolumner i tabellen `customer_grid_flat` innehåller kundinformation:
 
 | Kolumn | Datatyp |
 | -------------------- | ------------ |
@@ -139,7 +139,7 @@ Adobe Commerce lagrar följande kundattribut:
 
 #### `customer_address_entity` och `customer_address_entity` referenser
 
-Följande kolumner i `customer_address_entity` tabellen innehåller kundinformation:
+Följande kolumner i tabellen `customer_address_entity` innehåller kundinformation:
 
 | Kolumn | Datatyp |
 | ------------ | ------------ |
@@ -158,7 +158,7 @@ Följande kolumner i `customer_address_entity` tabellen innehåller kundinformat
 | `telephone` | varchar(255) |
 | `vat_id` | varchar(255) |
 
-Tabellreferenser `customer_address_entity` och kan innehålla anpassade kundattribut:
+De här tabellerna refererar till `customer_address_entity` och kan innehålla anpassade kundattribut:
 
 | Tabell | Kolumn | Datatyp |
 | ---------------------------------- | ------- | ------------- |
@@ -170,11 +170,11 @@ Tabellreferenser `customer_address_entity` och kan innehålla anpassade kundattr
 
 ### Beställningsdata
 
-The `sales_order` och tillhörande tabeller innehåller kundens namn, fakturerings- och leveransadresser samt tillhörande data.
+Registren `sales_order` och relaterade register innehåller kundens namn, fakturerings- och leveransadresser samt relaterade data.
 
-#### `sales_order` table
+#### `sales_order`-tabell
 
-Följande kolumner i `sales_order` tabellen innehåller kundinformation:
+Följande kolumner i tabellen `sales_order` innehåller kundinformation:
 
 | Kolumn | Datatyp |
 | --------------------- | ------------ |
@@ -193,9 +193,9 @@ Följande kolumner i `sales_order` tabellen innehåller kundinformation:
 | `remote_ip` | varchar(32) |
 | `x_forwarded_for` | varchar(32) |
 
-#### `sales_order_address` table
+#### `sales_order_address`-tabell
 
-The `sales_order_address` tabellen innehåller kundens adress.
+Tabellen `sales_order_address` innehåller kundens adress.
 
 | Kolumn | Datatyp |
 | --------------------- | ------------ |
@@ -216,9 +216,9 @@ The `sales_order_address` tabellen innehåller kundens adress.
 | `suffix` | varchar(255) |
 | `company` | varchar(255) |
 
-#### `sales_order_grid` table
+#### `sales_order_grid`-tabell
 
-Följande kolumner i `sales_order_grid` tabellen innehåller kundinformation:
+Följande kolumner i tabellen `sales_order_grid` innehåller kundinformation:
 
 | Kolumn | Datatyp |
 | ---------------------- | ------------ |
@@ -235,9 +235,9 @@ Följande kolumner i `sales_order_grid` tabellen innehåller kundinformation:
 
 Offerterna innehåller en kunds namn, e-postadress, adress och relaterad information.
 
-#### `quote` table
+#### `quote`-tabell
 
-Följande kolumner i `quote` tabellen innehåller kundinformation:
+Följande kolumner i tabellen `quote` innehåller kundinformation:
 
 | Kolumn | Datatyp |
 | --------------------- | ------------ |
@@ -252,9 +252,9 @@ Följande kolumner i `quote` tabellen innehåller kundinformation:
 | `customer_taxvat` | varchar(255) |
 | `customer_gender` | varchar(255) |
 
-#### `quote_address` table
+#### `quote_address`-tabell
 
-Följande kolumner i `quote_address` tabellen innehåller kundinformation:
+Följande kolumner i tabellen `quote_address` innehåller kundinformation:
 
 | Kolumn | Datatyp |
 | ------------- | ------------ |
@@ -277,7 +277,7 @@ Följande kolumner i `quote_address` tabellen innehåller kundinformation:
 
 ### Betalningsdata
 
-The `sales_order_payment` tabellen innehåller kreditkortsinformation och annan transaktionsinformation.
+Tabellen `sales_order_payment` innehåller kreditkortsinformation och annan transaktionsinformation.
 
 | Kolumn | Datatyp |
 | ------------------------ | ------------ |
@@ -297,9 +297,9 @@ The `sales_order_payment` tabellen innehåller kreditkortsinformation och annan 
 
 Adobe Commerce kan konfigureras så att kunderna kan skicka inbjudningar till privat försäljning och evenemang.
 
-#### `magento_invitation` table
+#### `magento_invitation`-tabell
 
-The `magento_invitation` tabellen innehåller kund-ID, e-post och hänvisnings-ID.
+Tabellen `magento_invitation` innehåller kund-ID, e-post och hänvisnings-ID.
 
 | Kolumn | Datatyp |
 | ------------- | ------------ |
@@ -307,9 +307,9 @@ The `magento_invitation` tabellen innehåller kund-ID, e-post och hänvisnings-I
 | `email` | varchar(255) |
 | `referral_id` | int(10) |
 
-#### `magento_invitation_track` table
+#### `magento_invitation_track`-tabell
 
-The `magento_invitation_track` tabellen innehåller även kundinformation.
+Tabellen `magento_invitation_track` innehåller även kundinformation.
 
 | Kolumn | Datatyp |
 | ------------- | --------- |
@@ -318,7 +318,7 @@ The `magento_invitation_track` tabellen innehåller även kundinformation.
 
 ### Diverse tabeller som refererar till kund
 
-Följande tabeller innehåller en `customer_id` kolumn:
+Följande tabeller innehåller en `customer_id`-kolumn:
 
 - `catalog_compare_item`
 - `catalog_product_frontend_action`

@@ -1,18 +1,18 @@
 ---
-title: Konfigurera [!DNL Data Migration Tool]
-description: Lär dig mer om de två metoderna för att konfigurera [!DNL Data Migration Tool] att överföra data mellan Magento 1 och Magento 2.
+title: Konfigurera  [!DNL Data Migration Tool]
+description: Lär dig mer om de två metoderna för att konfigurera  [!DNL Data Migration Tool]  för överföring av data mellan Magento 1 och Magento 2.
 exl-id: 273be997-8085-4488-a455-f6005a85b406
 topic: Commerce, Migration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '808'
 ht-degree: 0%
 
 ---
 
 # Konfigurera [!DNL Data Migration Tool]
 
-När du har installerat [!DNL Data Migration Tool], innehåller följande katalog mappnings- och konfigurationsfiler:
+När du har installerat [!DNL Data Migration Tool] innehåller följande katalog mappnings- och konfigurationsfiler:
 
 * Magento Open Source:
    * `<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/opensource-to-opensource`: Konfiguration och skript för migrering från Magento Open Source 1 till Magento Open Source 2
@@ -28,10 +28,10 @@ Föregående kataloger innehåller underkataloger för varje version som stöds.
 Det finns två sätt att konfigurera [!DNL Data Migration Tool]:
 
 * Konfigurera [!DNL Data Migration Tool] i en separat modul (rekommenderas)
-* Ändra [!DNL Data Migration Tool] i `<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/` katalog.
+* Ändra [!DNL Data Migration Tool]-konfigurationen i katalogen `<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/`.
 
 Om du vill använda källkontroll för att hantera din migreringskonfiguration och använda den för distribution måste du skapa en separat modul.
-Om du tänker köra [!DNL Data Migration Tool] endast lokalt kan du redigera filer i `<your Magento 2 install dir>/vendor/magento/data-migration-tool/` direkt i katalogen.
+Om du bara tänker köra [!DNL Data Migration Tool] lokalt kan du redigera filer direkt i katalogen `<your Magento 2 install dir>/vendor/magento/data-migration-tool/`.
 
 ### Konfigurera migrering i en separat modul
 
@@ -92,7 +92,7 @@ Innan du migrerar några data måste du skapa en Magento 2-modul.
    </config>
    ```
 
-1. Kopiera `config.xml.dist` konfigurationsfilen från lämplig katalog i [!DNL Data Migration Tool] (`<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/<migration edition>/<ce or version>`) till `<your Magento 2 install dir>/app/code/Vendor/Migration/etc/<migration edition>/<ce or version>/config.xml` -fil.
+1. Kopiera konfigurationsfilen `config.xml.dist` från lämplig katalog för [!DNL Data Migration Tool] (`<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/<migration edition>/<ce or version>`) till filen `<your Magento 2 install dir>/app/code/Vendor/Migration/etc/<migration edition>/<ce or version>/config.xml`.
 
    Om du till exempel migrerar `Magento 1.9.3.6 Community Edition` till `Magento 2 Open Source`:
 
@@ -104,17 +104,17 @@ Innan du migrerar några data måste du skapa en Magento 2-modul.
    cp vendor/magento/data-migration-tool/etc/opensource-to-opensource/1.9.3.6/config.xml.dist app/code/Vendor/Migration/etc/opensource-to-opensource/1.9.3.6/config.xml
    ```
 
-1. I `config.xml` måste du ange åtkomstinformation för M1- och M2-databaser och krypteringsnyckel.
+1. I filen `config.xml` måste du ange åtkomstinformation till M1- och M2-databaser och krypteringsnyckel.
 
 1. Om din M1-butik har anpassade ändringar bör du mappa resten av konfigurationsfilerna till dina anpassningar för Magento 1-butiken. Se [Arbeta med konfigurations- och mappningsfiler](#migration-config).
 
-### Konfigurera migrering i `vendor` mapp
+### Konfigurera migrering i mappen `vendor`
 
-Innan du migrerar några data måste du skapa en `config.xml` konfigurationsfilen från det angivna exemplet.
+Innan du migrerar några data måste du skapa en `config.xml`-konfigurationsfil från det angivna exemplet.
 
-Konfigurera [!DNL Data Migration Tool] för migrering:
+Så här konfigurerar du [!DNL Data Migration Tool] för migrering:
 
-1. Logga in på programservern som, eller växla till [ägare av filsystem](../../installation/prerequisites/file-system/overview.md).
+1. Logga in på programservern som, eller växla till, ägare av [filsystemet](../../installation/prerequisites/file-system/overview.md).
 
 1. Byt till följande katalog:
 
@@ -122,7 +122,7 @@ Konfigurera [!DNL Data Migration Tool] för migrering:
    <your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/<migration edition>/<ce or version>
    ```
 
-1. Ange följande kommando för att skapa en `config.xml` från det tillhandahållna provet:
+1. Ange följande kommando för att skapa en `config.xml` från det angivna exemplet:
 
    ```bash
    cp config.xml.dist config.xml
@@ -144,15 +144,15 @@ Konfigurera [!DNL Data Migration Tool] för migrering:
    </options>
    ```
 
-   The &lt;crypt_key> -taggen måste innehålla ett värde. Du kan hitta den inuti `<key>` -taggen, som finns i app/etc/local.xml-filen på din Magento 1-instans.
+   Taggen &lt;crypt_key> måste innehålla ett värde. Du kan hitta den inuti taggen `<key>`, som finns i app/etc/local.xml-filen på Magento 1-instansen.
 
    Valfria parametrar:
 
-   * Lösenord för databasanvändare: `password=<password>`
-   * Anpassad port för databas: `port=<port>`
+   * Användarlösenord för databas: `password=<password>`
+   * Anpassad databasport: `port=<port>`
    * Tabellprefix: `<source_prefix>`, `<dest_prefix>`
 
-   Om databasägarens användarnamn till exempel är `root` med lösenord `pass` och du använder prefixet `magento1` i din Magento 1-databas använder du följande i `config.xml`:
+   Om databasägarens användarnamn till exempel är `root` med lösenordet `pass` och du använder prefixet `magento1` i din Magento 1-databas använder du följande i `config.xml`:
 
    ```xml
    <source>
@@ -167,11 +167,11 @@ Konfigurera [!DNL Data Migration Tool] för migrering:
    </options>
    ```
 
-När du är klar sparar du ändringarna i `config.xml` och avsluta textredigeraren.
+När du är klar sparar du ändringarna i `config.xml` och avslutar textredigeraren.
 
 ### Anslut med TLS-protokollet
 
-Du kan också ansluta till en databas med TLS-protokollet (dvs. med offentliga/privata kryptografiska nycklar). Lägg till följande valfria attribut i `database` element:
+Du kan också ansluta till en databas med TLS-protokollet (dvs. med offentliga/privata kryptografiska nycklar). Lägg till följande valfria attribut i elementet `database`:
 
 * `ssl_ca`
 * `ssl_cert`
@@ -190,7 +190,7 @@ Exempel:
 
 ## Arbeta med konfigurations- och mappningsfiler
 
-The [!DNL Data Migration Tool] använder *mappningsfiler* så att du kan utföra anpassad databasmappning mellan dina Magento 1- och Magento 2-databaser, inklusive:
+[!DNL Data Migration Tool] använder *mappningsfiler* för att du ska kunna utföra anpassad databasmappning mellan Magento 1- och Magento 2-databaser, inklusive:
 
 * Ändra tabellnamn
 
@@ -204,17 +204,17 @@ Mappningsfiler för Magento-versioner som stöds finns i underkataloger till `<y
 
 Så här använder du mappningsfilerna:
 
-1. Kopiera dem från `<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/<migration edition>/<ce or version>/` till `<your Magento 2 install dir>/app/code/Vendor/Migration/etc/<migration edition>/<ce or version>/` och ta bort `.dist` tillägg.
+1. Kopiera dem från `<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/<migration edition>/<ce or version>/` till `<your Magento 2 install dir>/app/code/Vendor/Migration/etc/<migration edition>/<ce or version>/` och ta bort tillägget `.dist`.
 
-1. Uppdatera sökvägen till den nyligen kopierade filen i `<options>` nod på `config.xml`. Den uppdaterade sökvägen ska vara någon av följande:
+1. Uppdatera sökvägen till den nyligen kopierade filen i noden `<options>` i `config.xml`. Den uppdaterade sökvägen ska vara någon av följande:
 
-   1. Absolut filsökväg, t.ex. `/var/www/html/app/code/Vendor/Migration/etc/opensource-to-opensource/1.9.4.1/map.xml`
-   1. sökväg till den relativa filen magento/data-migration-tool: `etc/opensource-to-opensource/1.9.4.1/map.xml`
+   1. Absolut filsökväg, t ex `/var/www/html/app/code/Vendor/Migration/etc/opensource-to-opensource/1.9.4.1/map.xml`
+   1. modulen magento/data-migration-tool relativ filsökväg: `etc/opensource-to-opensource/1.9.4.1/map.xml`
    1. Magento rotberoende filsökväg: `app/code/Vendor/Migration/etc/opensource-to-opensource/1.9.4.1/map.xml`
 
-The `<Magento 2 dir>/vendor/magento/data-migration-tool/etc` och `<Magento 2 dir>/vendor/magento/data-migration-tool/etc/<ce version>` kataloger innehåller följande konfigurationsfiler:
+Katalogerna `<Magento 2 dir>/vendor/magento/data-migration-tool/etc` och `<Magento 2 dir>/vendor/magento/data-migration-tool/etc/<ce version>` innehåller följande konfigurationsfiler:
 
-Även om du jobbar med `map.xml.dist` för det mesta beskrivs varje mappning och andra filer i följande tabell.
+Även om du arbetar med filen `map.xml.dist` för det mesta, beskrivs varje mappning och andra filer i följande tabell.
 
 | Mappningsfilnamn | Beskrivning |
 | --- | --- |
@@ -230,7 +230,7 @@ The `<Magento 2 dir>/vendor/magento/data-migration-tool/etc` och `<Magento 2 dir
 | `map-log.xml.dist` | Loggmappningsfil. |
 | *Endast Adobe Commerce*. `map-sales.xml.dist` | Mappningsfil som används i SalesOrder Step. |
 | `map.xml.dist` | Mappningsfil krävs för mappningssteget. |
-| `settings.xml.dist` | Ställer in migreringskonfigurationsfil som anger regler som krävs för att migrera `core_config_data` tabell. |
+| `settings.xml.dist` | Anger en migreringskonfigurationsfil som anger regler som krävs för att migrera tabellen `core_config_data`. |
 | `customer-attribute-groups.xml.dist` | Innehåller en lista med attribut som används i steget Kundattribut. |
 | `customer-document-groups.xml.dist` | Innehåller en lista med tabeller som används i steget Kundattribut. |
 | `map-customer.xml.dist` | Mappningsfil som används i steget Kundattribut. |
@@ -242,4 +242,4 @@ The `<Magento 2 dir>/vendor/magento/data-migration-tool/etc` och `<Magento 2 dir
 | *Endast Adobe Commerce*. `visual_merchandiser_attribute_groups.xml.dist` | Innehåller en lista med attribut som används i VisualMerchandiser Step. |
 | *Endast Adobe Commerce*. `visual_merchandiser_document_groups.xml.dist` | Innehåller en lista med tabeller som används i VisualMerchandiser Step. |
 
-Du kan referera till [[!DNL Data Migration Tool] Teknisk specifikation](technical-specification.md) för mer information.
+Mer information finns i [[!DNL Data Migration Tool] den tekniska specifikationen](technical-specification.md).

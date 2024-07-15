@@ -7,18 +7,18 @@ kt: 11420
 doc-type: tutorial
 audience: all
 last-substantial-update: 2023-04-13T00:00:00Z
-exl-id: 728e9439-63d0-4481-b014-7ba2ce97b9d0
+exl-id: 5aa03f91-1240-47f6-8d06-b06e64973266
 feature: Install, Logs, Observability
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: 823498f041a6d12cfdedd6757499d62ac2aced3d
 workflow-type: tm+mt
-source-wordcount: '1716'
+source-wordcount: '1710'
 ht-degree: 0%
 
 ---
 
 # Självhosting Adobe Commerce Monitoring - telemetri och verktyg
 
-Med övervakningsverktygen kan man upptäcka förändringar utan att behöva betala någon för att se allting hela tiden. Med de flesta verktyg kan du lägga till varningar och meddelanden om ett tröskelvärde uppnås, t.ex. när det blir ont om utrymme på hårddisken. Vissa verktyg ger utdata som ska spåras och beräknas, till exempel resultat av inläsningstest. Oavsett vilket verktyg du använder har alla verktyg ett syfte och när de används på ett konsekvent sätt kan de hjälpa dig att hantera programmet. Det finns kostnadsfria alternativ för alla verktyg, men kom ihåg att betala för en tjänst ofta ger snabbare och tillförlitligare support och kan vara värd investeringen. New Relic är ett exempel på ett verktyg som erbjuder ett kostnadsfritt skikt och en betalversion som frigör mycket mer kraft och möjligheter. Det finns andra, till exempel DataDog eller Dynatrace. Hitta ett bra alternativ för dig och använd det konsekvent.
+Med övervakningsverktygen kan man upptäcka förändringar utan att behöva betala någon för att se allting hela tiden. Med de flesta verktyg kan du lägga till varningar och meddelanden om ett tröskelvärde uppnås, t.ex. när det blir ont om utrymme på hårddisken. Vissa verktyg ger utdata som ska spåras och beräknas, till exempel resultat av inläsningstest. Oavsett vilket verktyg du använder har alla verktyg ett syfte och när de används på ett konsekvent sätt kan de hjälpa dig att hantera programmet. Det finns kostnadsfria alternativ för alla verktyg, men kom ihåg att betala för en tjänst ofta ger snabbare och tillförlitligare support och kan vara värd investeringen. New Relic är ett exempel på ett verktyg som erbjuder ett kostnadsfritt skikt och en betalversion som frigör mycket mer kraft och möjligheter. Det finns andra som DataDog eller Dynatrace. Hitta ett bra alternativ för dig och använd det konsekvent.
 
 ## Infrastrukturövervakning
 
@@ -47,13 +47,13 @@ Instrumentpaneler ger snabb åtkomst till de vanliga eller viktiga aspekterna av
 
 ## Loggsamling och rotation
 
-Loggfiler finns på programservrar som bearbetar begäranden eller MySQL-loggar när det tar för lång tid att köra. Det svåraste med loggar är att de är åtskilda från varandra och att hitta alla, och att analysera informationen från varje logg kan vara besvärligt. För många år sedan löstes problemet med en teknik som kallas _loggaggregering_. Detta tar loggfiler från alla dina loggplatser som överför dem till en central plats. När dokumenten har flyttats kan en del program läsa dem och ge olika sätt att söka, filtrera och granska informationen. Det här kan vara en svår process att få rätt. Det finns många alternativ, men om du har tur kan övervakningsverktygen läsa och sammanställa dina loggfiler, till exempel New Relic. Genom att hitta ett bra verktyg kan du spara dig själv en omätbar tid i framtiden. Om du inte bara har en enda server som gör allt för att din webbplats ska kunna köras och fungera är det viktigt att du har en loggaggregering. Detta är särskilt användbart när du försöker ta reda på om du är utsatt för en DDoS-attack eller upplever en legitim trafikspik, eller när du undersöker varför en viss begäran misslyckas.
+Loggfiler finns på programservrar som bearbetar begäranden eller MySQL-loggar när det tar för lång tid att köra. Det svåraste med loggar är att de är åtskilda från varandra och att hitta alla, och att analysera informationen från varje logg kan vara besvärligt. För många år sedan löstes det här problemet med en teknik som kallas _loggaggregering_. Detta tar loggfiler från alla dina loggplatser som överför dem till en central plats. När dokumenten har flyttats kan en del program läsa dem och ge olika sätt att söka, filtrera och granska informationen. Det här kan vara en svår process att få rätt. Det finns många alternativ, men om du har tur kan övervakningsverktygen läsa och sammanställa dina loggfiler, till exempel New Relic. Genom att hitta ett bra verktyg kan du spara dig själv en omätbar tid i framtiden. Om du inte bara har en enda server som gör allt för att din webbplats ska kunna köras och fungera är det viktigt att du har en loggaggregering. Detta är särskilt användbart när du försöker ta reda på om du är utsatt för en DDoS-attack eller upplever en legitim trafikspik, eller när du undersöker varför en viss begäran misslyckas.
 
-En annan viktig del för loggarna är att se till att rotationen sker. Det här historiskt gäller `run-away logs` som av misstag kan fylla i hårddisken och få webbplatsen att krascha. En version av loggrotation kan inträffa när en loggfil når en viss storlek, till exempel 1 GB. Det finns verktyg på servernivå som `logrotate` som automatiskt kan ta bort dem. Den kan t.ex. ta bort mycket stora loggfiler när de blir större än 1 GB eller ta bort loggfiler som är äldre än 90 dagar. Du definierar en loggpolicy, så det är viktigt att förstå dina resursbegränsningar.
+En annan viktig del för loggarna är att se till att rotationen sker. Detta gäller historiskt `run-away logs` som av misstag kan fylla i hårddisken och få webbplatsen att krascha. En version av loggrotation kan inträffa när en loggfil når en viss storlek, till exempel 1 GB. Det finns verktyg på servernivå, till exempel `logrotate`, som automatiskt kan ta bort dem. Den kan t.ex. ta bort mycket stora loggfiler när de blir större än 1 GB eller ta bort loggfiler som är äldre än 90 dagar. Du definierar en loggpolicy, så det är viktigt att förstå dina resursbegränsningar.
 
 ## Skannade program
 
-Många webbhotell som är dedikerade till Adobe Commerce har ett bibliotek med kända explosioner och skadlig kod. De bör erbjuda en skanning antingen automatiskt eller på begäran. Där de är effektiva är de reaktionära och fungerar bara när ny skadlig kod upptäcks. Det kan vara en bra idé att ha ett proaktivt verktyg som kan undersöka koden och databasen för känd skadlig kod. Det finns ett antal alternativ, till exempel [MageReport](https://www.magereport.com){target="_blank"}, [Sansec](https://sansec.io){target="_blank"}, or [Magento Malware Scanner](https://github.com/gwillem/magento-malware-scanner){target="_blank"}. De kan antingen göra en fjärrsökning utifrån eller installeras och uppdatera/skanna/övervaka proaktivt efter att de har konfigurerats på servrarna. Dessa kan vara ett bra alternativ eftersom deras bibliotek uppdateras kontinuerligt eftersom de installeras och övervakar tusentals webbplatser om du väljer en lösning som Sansec. När en ny skadlig kod upptäcks kommer varje projekt de övervakar att informationen är bra och nu kommer att uppmärksammas om den upptäcks.
+Många webbhotell som är dedikerade till Adobe Commerce har ett bibliotek med kända explosioner och skadlig kod. De bör erbjuda en skanning antingen automatiskt eller på begäran. Där de är effektiva är de reaktionära och fungerar bara när ny skadlig kod upptäcks. Det kan vara en bra idé att ha ett proaktivt verktyg som kan undersöka koden och databasen för känd skadlig kod. Det finns några tillgängliga alternativ, till exempel [MageReport](https://www.magereport.com){target="_blank"}, [Sansec](https://sansec.io){target="_blank"} eller [Skanner för skadlig kod i Magento](https://github.com/gwillem/magento-malware-scanner){target="_blank"}. De kan antingen göra en fjärrsökning utifrån eller installeras och uppdatera/skanna/övervaka proaktivt efter att de har konfigurerats på servrarna. Dessa kan vara ett bra alternativ eftersom deras bibliotek uppdateras kontinuerligt eftersom de installeras och övervakar tusentals webbplatser om du väljer en lösning som Sansec. När en ny skadlig kod upptäcks kommer varje projekt de övervakar att informationen är bra och nu kommer att uppmärksammas om den upptäcks.
 
 Det finns några kostnadsfria versioner att tänka på, men för skadlig kod bör du verkligen överväga en betallösning. Detta kan vara en skillnad mellan din infektion under några minuter och några månader. Att ha ett utnyttjandemärke på er sajt orsakar enorma problem, det här är ett område som man bör överväga att betala för en tjänst.
 
@@ -65,7 +65,7 @@ På sidan Recommendations i verktyget för webbplatsanalys visas rekommendatione
 
 Lär dig mer om de bästa sätten att förbättra webbplatsens prestanda. Spåra och implementera de rekommendationer som anges per prioritet.
 
-Mer information om hur du installerar detta i ditt projekt finns på [Installationshandbok för Site-Wide Analysis Tool](https://experienceleague.adobe.com/docs/commerce-operations/tools/site-wide-analysis-tool/installation.html){target="_blank"}.
+Mer information om hur du installerar det här i ditt projekt finns i [Installationshandboken för analysverktyget](https://experienceleague.adobe.com/docs/commerce-operations/tools/site-wide-analysis-tool/installation.html){target="_blank"}.
 
 ## SSL-övervakning
 
@@ -77,7 +77,7 @@ Att utföra automatiska tester som funktionstester eller enhetstester hjälper o
 
 Belastningstester kan vara svåra att få det rätt. Mycket av komplexiteten kommer från hur frontend används och implementeras. Om din webbplats har en headless edge kan du läsa in testnings-API:erna för GraphQL och REST. Det är upp till dig och DevOps-teamet att avgöra hur belastningstesten ska gå till. Se till att varje laddningstest, som utförs så snart som möjligt, ger en inblick i projektets status. Den innehåller också riktmärken för framtida provningar för att se om det finns några drastiska förändringar i belastningsprovningsresultaten. Om så är fallet, och de är negativa, är detta ett bra tillfälle att granska de senaste kodändringarna och leta efter prestandapåverkande avsnitt som kan förbättras.
 
-Adobe Commerce har goda riktlinjer för att förstå hur du kör enhetstester, se [Testning av PHP-enheter](https://developer.adobe.com/commerce/testing/guide/unit/){target="_blank"} i _Programtestguide_ på Adobe Developer dokumentationswebbplats.
+Adobe Commerce har god vägledning om hur du kör enhetstester. Mer information finns i [PHP-enhetstestning](https://developer.adobe.com/commerce/testing/guide/unit/){target="_blank"} i _Programtestningsguiden_ på dokumentationswebbplatsen för Adobe Developer.
 
 Mer information om funktionstestning finns på [Introduktion till Functional Testing Framework](https://developer.adobe.com/commerce/testing/functional-testing-framework/){target="_blank"}.
 

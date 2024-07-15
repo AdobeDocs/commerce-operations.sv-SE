@@ -4,7 +4,7 @@ description: Lär dig hur du inaktiverar modulutdata.
 exl-id: af556bf5-8454-4d65-8ac8-4a64c108f092
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '348'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Som standard konfigureras alla moduler så att modulutdata kan skrivas till en vy. Om du stänger av utdata kan du inaktivera en modul som inte kan inaktiveras på grund av allvarliga beroenden.
 
-Till exempel `Customer` är beroende av `Review` så att `Review` kan inte inaktiveras. Om du inte vill att kunderna ska kunna tillhandahålla granskningar kan du stänga av utdata från `Review` -modul.
+Modulen `Customer` är till exempel beroende av modulen `Review`, så modulen `Review` kan inte inaktiveras. Om du inte vill att kunderna ska kunna tillhandahålla granskningar kan du stänga av utdata från modulen `Review`.
 
 >[!INFO]
 >
@@ -32,13 +32,13 @@ Inaktiveringen av utdata utförs i följande klasser:
 
 Så här inaktiverar du modulutdata i pipeline-distributionen eller någon annan distribution, med flera instanser av Commerce-programmet:
 
-1. Redigera `Backend` modulens `config.xml` -fil.
+1. Redigera `config.xml`-filen för modulen `Backend`.
 1. Exportera konfigurationsändringarna.
 
-### Redigera `Backend` modul `config.xml` fil
+### Redigera `Backend`-modulfilen `config.xml`
 
-1. Arkivera originalet `config.xml` -fil.
-1. Lägg till rader som liknar följande i `<Magento_install_dir>/vendor/magento/module-backend/etc/config.xml` fil, direkt under `<default>` element:
+1. Arkivera den ursprungliga `config.xml`-filen.
+1. Lägg till rader som liknar följande i filen `<Magento_install_dir>/vendor/magento/module-backend/etc/config.xml`, direkt under elementet `<default>`:
 
    ```xml
    <advanced>
@@ -52,7 +52,7 @@ Så här inaktiverar du modulutdata i pipeline-distributionen eller någon annan
 
    - `<modules_disable_output>` innehåller en lista med moduler.
    - `<Magento_Newsletter></Magento_Newsletter>` anger vilken modul som utdata ska inaktiveras för.
-   - `1` är flaggan som inaktiverar utdata för `Magento_Newsletter` -modul.
+   - `1` är flaggan som inaktiverar utdata för modulen `Magento_Newsletter`.
 
 Som ett exempelresultat av den här konfigurationen kan kunderna inte längre registrera sig för att få nyhetsbrev.
 
@@ -64,7 +64,7 @@ Kör följande kommando för att exportera konfigurationsändringarna:
 bin/magento app:config:dump
 ```
 
-Resultatet skrivs till `<Magento_install_dir>/app/etc/config.php` -fil.
+Resultatet skrivs till filen `<Magento_install_dir>/app/etc/config.php`.
 
 Rensa sedan cacheminnet för att aktivera den nya inställningen:
 
@@ -78,8 +78,8 @@ Se [Exportera konfigurationen](../cli/export-configuration.md).
 
 Det är enklare att inaktivera modulutdata i en enda instans av Commerce eftersom ändringarna inte behöver distribueras.
 
-1. Arkivera originalet `<Magento_install_dir>/app/etc/config.php` -fil.
-1. Lägg till `advanced` och `modules_disable_output` avsnitt till `config.php` fil (om de inte finns):
+1. Arkivera den ursprungliga `<Magento_install_dir>/app/etc/config.php`-filen.
+1. Lägg till avsnitten `advanced` och `modules_disable_output` i filen `config.php` (om de inte finns):
 
    ```php
    'system' =>
@@ -100,5 +100,5 @@ Det är enklare att inaktivera modulutdata i en enda instans av Commerce efterso
      ),
    ```
 
-I det här exemplet används utdata för `Magento_Review` har inaktiverats och kunderna kan inte längre granska produkter.
+I det här exemplet har utdata för modulen `Magento_Review` inaktiverats och kunderna kan inte längre granska produkter.
 Om du vill återaktivera utdata anger du värdet till `0`.

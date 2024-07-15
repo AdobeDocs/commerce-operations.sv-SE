@@ -25,7 +25,7 @@ _Termattribut:_
 
 ### aktiv gren
 
-_noun_
+_substantiv_
 
 En aktiv gren eller miljö är en gren som är ansluten till en distribuerad eller körs instans med tillgång till tjänster.
 När du inaktiverar tas anslutningen till tjänsterna och till den instans som körs bort, men koden bevaras.
@@ -37,7 +37,7 @@ _Termattribut:_
 
 ### adapter
 
-_noun_
+_substantiv_
 
 En klass som gör att två annars inkompatibla system kan fungera tillsammans utan att ändra systemets källkod.
 Exempel är databasadaptrar, cacheadaptrar, filsystemadaptrar, kort för efterprocessorbibliotek och andra typer av datoradaptrar.
@@ -48,7 +48,7 @@ _Termattribut:_
 
 ### admin
 
-_noun_
+_substantiv_
 
 I programvara är det en användarroll med fullständig administratörsbehörighet som hanterar alla funktioner.
 I Adobe Commerce har administratörsanvändare fullständig behörighet och tillgång till alla funktioner, alternativ och funktioner i Admin.
@@ -58,29 +58,29 @@ Läs mer: [Lägga till användare](https://experienceleague.adobe.com/docs/comme
 
 _Termattribut:_
 
-* _Fält: e-handelsprogram_
+* _Fält: e-handelsprogramvara_
 * _Synonymer: administratör, superanvändare_
 * _Relaterade termer: e-handelsadministratör_
 
 ### Administratörsområde
 
-_noun_
+_substantiv_
 
 Det lösenordsskyddade back office i din butik där beställningar, kataloger, innehåll och konfigurationer hanteras.
 Användare har tillgång till administrationsområdet för att hantera butiken, inklusive produkter, order, leveranser, CMS-innehåll, design av butiken, kundinformation osv.
 Administratörsanvändare har en associerad roll med behörigheter som styr åtkomst till funktioner, alternativ och funktioner.
 
-Läs mer: [Adobe Commerce Användarhandbok](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html)
+Läs mer: [Adobe Commerce användarhandbok](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html)
 
 _Termattribut:_
 
-* _Fält: e-handelsprogram_
+* _Fält: e-handelsprogramvara_
 * _Synonymer: Admin, Admin Panel, backend, Administration Interface, Admin UI_
 * _Relaterade termer: admin_
 
 ### ADMIN-variabler
 
-_noun_
+_substantiv_
 
 ADMIN-variabler är projektmiljövariabler som åsidosätter konfigurationsinställningarna för administratörskontot för åtkomst till administratörsgränssnittet.
 
@@ -92,20 +92,20 @@ _Termattribut:_
 
 ### adminhtml
 
-_noun_
+_substantiv_
 
 Det interna områdesnamn som tilldelats administratören.
 
-Läs mer: [Adobe Commerce Användarhandbok](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html)
+Läs mer: [Adobe Commerce användarhandbok](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html)
 
 _Termattribut:_
 
-* _Fält: e-handelsprogram_
+* _Fält: e-handelsprogramvara_
 * _Relaterade termer: område, e-handelsadministratör_
 
 ### area
 
-_noun_
+_substantiv_
 
 Område är en abstrakt term för ett Magento-programomfång.
 Områden är logiska komponenter som organiserar kod för optimerad bearbetning av begäranden.
@@ -120,12 +120,12 @@ Adobe Commerce omfattar följande:
 
 _Termattribut:_
 
-* _Fält: e-handelsprogram_
+* _Fält: e-handelsprogramvara_
 * _Relaterade termer: handelskomponent, storefront_
 
 ### attribute
 
-_noun_
+_substantiv_
 
 En egenskap eller egenskap hos en produkt som beskriver någon aspekt av produkten.
 Adobe Commerce-användare kan skapa anpassade attribut som läggs till i standardattributuppsättningen eller en anpassad attributuppsättning.
@@ -146,18 +146,18 @@ _Termattribut:_
 
 ### attributgrupp
 
-_noun_
+_substantiv_
 
 En logisk gruppering av attribut i en attributuppsättning.
 
 _Termattribut:_
 
-* _Fält: e-handelsprogram_
+* _Fält: e-handelsprogramvara_
 * _Relaterade termer: attribut_
 
 ### attributuppsättning
 
-_noun_
+_substantiv_
 
 En samling attributgrupper, anpassade för en viss produkt.
 Exempel: En T-shirts-attributuppsättning kan innehålla färg, storlek, kön och märke.
@@ -169,20 +169,20 @@ _Termattribut:_
 
 ### genomsnittlig lagerkostnad
 
-_noun_
+_substantiv_
 
 Produktpris, minus kuponger eller rabatter, plus frakt och moms.
 Det genomsnittliga värdet bestäms genom att den ingående kostnaden för lagret läggs till varje månad, plus den slutliga kostnaden för lagret för periodens sista månad.
 
 _Termattribut:_
 
-* _Fält: produkt, prissättning, lager_
+* _Fält: produkt, pris, lager_
 
 ## B
 
 ### basvaluta
 
-_noun_
+_substantiv_
 
 Den primära valutan som används per butiksvy för alla onlinebetalningar.
 Butiker kan ta emot valutor från över 200 länder runt om i världen.
@@ -194,11 +194,11 @@ Läs mer: [Valuta](https://experienceleague.adobe.com/docs/commerce-admin/stores
 
 _Termattribut:_
 
-* _Fält: Priser_
+* _Fält: pricing_
 
 ### gruppbearbetning
 
-_noun_
+_substantiv_
 
 Om du vill utföra en uppgift eller ändra flera objekt samtidigt, utan manuell upprepning.
 
@@ -209,22 +209,22 @@ _Termattribut:_
 
 ### block
 
-_noun_
+_substantiv_
 
 En enhet för sidutdata som återger visst distinkt innehåll - information, användargränssnittselement - allt som är visuellt påtagligt för slutanvändaren.
 [Block](https://experienceleague.adobe.com/docs/commerce-admin/content-design/elements/blocks/blocks.html) implementeras och tillhandahålls av moduler.
 Blocken använder mallar för att generera HTML.
 Exempel på block är en kategorilista, en minikundvagn, produkttaggar och produktlista.
 
-[Dynamiska block](https://experienceleague.adobe.com/docs/commerce-admin/content-design/elements/dynamic-blocks/dynamic-blocks.html) tillhandahåller innehåll baserat på logik, t.ex. prisregler.
+[Dynamiska block](https://experienceleague.adobe.com/docs/commerce-admin/content-design/elements/dynamic-blocks/dynamic-blocks.html) tillhandahåller innehåll baserat på logik, till exempel prisregler.
 
-Page Builder utökar interaktiviteten och skapar [block](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/add-content/block.html) och [dynamiska block](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/add-content/dynamic-block.html).
+Page Builder utökas när [block](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/add-content/block.html) och [dynamiska block](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/add-content/dynamic-block.html) skapas.
 
 _Termattribut:_
 
-* _Fält: e-handelsprogram_
+* _Fält: e-handelsprogramvara_
 * _Synonymer: Dynamiska block_
-* _Relaterade termer: cms-block, statiskt block, container, layout_
+* _Relaterade termer: cms-block, statiskt block, behållare, layout_
 
 ### varumärke
 
@@ -240,7 +240,7 @@ Vissa tillägg och integreringar kan använda eller kräva ett varumärke för d
 
 _Termattribut:_
 
-* _Fält: företag_
+* _Fält: business_
 
 ### tegelsten och murbruk
 
@@ -248,7 +248,7 @@ _adjektiv_
 
 Ett detaljhandelsföretag med en permanent fysisk plats, till skillnad från företag som fungerar praktiskt taget eller enbart via internet.
 
-För [Inventory management](https://experienceleague.adobe.com/docs/commerce-admin/inventory/sources/sources-manage.html) och [Orderhantering](https://omsdocs.magento.com/getting-started/terminology/)är den här butiken en källa för att spåra produktkvantiteter, leveransorder och support för upphämtning i butiken.
+För [Inventory management](https://experienceleague.adobe.com/docs/commerce-admin/inventory/sources/sources-manage.html) och [Order Management](https://omsdocs.magento.com/getting-started/terminology/) är den här butiken en källa för att spåra produktkvantiteter, leveransorder och stöd för upphämtning i butik.
 
 _Termattribut:_
 
@@ -256,7 +256,7 @@ _Termattribut:_
 
 ### gruppåtgärder
 
-_noun_
+_substantiv_
 
 Gruppåtgärder är åtgärder som utförs i stor skala.
 Exempel på gruppåtgärder är att importera eller exportera artiklar, ändra priser i en massskala och tilldela produkter till ett lager.
@@ -269,7 +269,7 @@ _Termattribut:_
 
 ### paketprodukt
 
-_noun_
+_substantiv_
 
 Gör att kunderna kan sätta ihop en egen, anpassningsbar produkt av olika alternativ och konfigurationer.
 Varje objekt i paketet är antingen en separat enkel eller virtuell produkt.
@@ -283,22 +283,22 @@ _Termattribut:_
 
 ### paketerat tillägg
 
-_noun_
+_substantiv_
 
 Koden som utökar eller anpassar Adobe Commerce-beteendet betraktas som ett paketerat tillägg.
 Den kan innehålla moduler, teman och språkpaket.
 
 _Termattribut:_
 
-* _Fält: paketerat tillägg, tillägg_
+* _Fält: bundlat tillägg, tillägg_
 * _Synonymer: tillägg_
-* _Relaterade villkor: tillägg, leverantörspaket_
+* _Relaterade villkor: tillägg, leverantörbundet tillägg_
 
 ## C
 
 ### cachelagra serverdel
 
-_noun_
+_substantiv_
 
 Lagrar cacheposter i ett serverdelssystem på två nivåer i Zends standardramverk.
 En cache på första nivån är snabb - till exempel en APC eller en cache-lagrad serverdel - men den är begränsad och stöder inte taggning och gruppering av cacheposter.
@@ -307,11 +307,11 @@ En cache på andra nivån - till exempel ett filsystem eller en Redis-serverdel 
 _Termattribut:_
 
 * _Fält: programmering_
-* _Relaterade termer: serverdel_
+* _Relaterade termer: backend_
 
 ### cachefrontend
 
-_noun_
+_substantiv_
 
 Anger vilken typ av data som lagras i cachens serverdel.
 
@@ -322,7 +322,7 @@ _Termattribut:_
 
 ### cachetyp
 
-_noun_
+_substantiv_
 
 I ett cacheminne lagras data så att framtida anrop av dessa data kan läsas in snabbare.
 
@@ -360,34 +360,34 @@ Transaktioner kan inte registreras förrän de har godkänts och tillstånd kan 
 
 _Termattribut:_
 
-* _Fält: företag_
+* _Fält: business_
 * _Relaterade villkor: auktorisering, orderstatus_
 
 ### kortinnehavare
 
-_noun_
+_substantiv_
 
 En person som auktoriserats av ett finansinstitut att göra inköp på ett kreditkortskonto.
 
 _Termattribut:_
 
-* _Fält: företag, order_
+* _Fält: företag, beställning_
 
 ### kundvagnsregler
 
-_noun_
+_substantiv_
 
 Prisregler som tillämpas på kundvagnen och utlöser en åtgärd som svar på en uppsättning villkor.
 Används för att skapa kampanjer.
 
 _Termattribut:_
 
-* _Fält: e-handelsprogram, priser, produkt_
+* _Fält: e-handelsprogramvara, priser, produkt_
 * _Relaterade termer: katalogregler, kundvagn_
 
 ### katalog
 
-_noun_
+_substantiv_
 
 För handlare representerar katalogen deras produktlager.
 I Adobe Commerce-arkitekturen består katalogen av kategorier, produkter och produktattribut.
@@ -401,24 +401,24 @@ Du kan skapa så många rotkategorier du vill, men bara en (standardvärdet) kan
 
 _Termattribut:_
 
-* _Fält: e-handelsprogram, priser, produkt_
+* _Fält: e-handelsprogramvara, priser, produkt_
 * _Relaterade termer: delad katalog, katalogregel_
 
 ### katalogregler
 
-_noun_
+_substantiv_
 
 Prisregler som tillämpas på specifika produkter och som utlöser en åtgärd som svar på en uppsättning villkor.
 Används för att skapa kampanjer.
 
 _Termattribut:_
 
-* _Fält: e-handelsprogram, priser, produkt_
+* _Fält: e-handelsprogramvara, priser, produkt_
 * _Relaterade termer: kundvagnsregler, katalog_
 
 ### kategori
 
-_noun_
+_substantiv_
 
 En grupp produkter som har något gemensamt.
 Butikens huvudmeny är ordnad i kategorier och underkategorier.
@@ -429,14 +429,14 @@ _Termattribut:_
 
 ### utcheckning
 
-_noun_
+_substantiv_
 
 Processen för att samla in den betalnings- och leveransinformation som krävs för att slutföra köpet av artiklar i kundvagnen.
 När kunden har granskat informationen och skickat in beställningen skickas en bekräftelse via e-post till kunden.
 
 Utcheckningen har många alternativ och konfigurationer som är färdiga att användas och som har utökats.
 
-Läs mer: [Självstudiekurs](https://developer.adobe.com/commerce/php/tutorials/frontend/custom-checkout/)
+Mer information: [Självstudiekurs om utcheckning](https://developer.adobe.com/commerce/php/tutorials/frontend/custom-checkout/)
 
 _Termattribut:_
 
@@ -444,11 +444,11 @@ _Termattribut:_
 
 ### molnvariabler
 
-_noun_
+_substantiv_
 
-Cloud-variabler är miljövariabler som är specifika för Adobe Commerce i molninfrastrukturen och använder **`MAGENTO_CLOUD`** prefix.
+Molnvariabler är miljövariabler som är specifika för Adobe Commerce i molninfrastrukturen och använder prefixet **`MAGENTO_CLOUD`**.
 
-Läs mer: [Molnvariabler](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-cloud.html)
+Läs mer: [Cloud-variabler](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-cloud.html)
 
 _Termattribut:_
 
@@ -456,18 +456,18 @@ _Termattribut:_
 
 ### CMS-block
 
-_noun_
+_substantiv_
 
-En speciell variant av [block](https://experienceleague.adobe.com/docs/commerce-admin/content-design/elements/blocks/blocks.html) som bara kan skapas i Admin och som inte kan refereras via layoutfiler.
+En särskild variant av [block](https://experienceleague.adobe.com/docs/commerce-admin/content-design/elements/blocks/blocks.html) som bara kan skapas i Admin och som inte kan refereras via layoutfiler.
 
 _Termattribut:_
 
-* _Fält: e-handelsprogram_
-* _Relaterade termer: block, static block_
+* _Fält: e-handelsprogramvara_
+* _Relaterade termer: block, statiskt block_
 
 ### komplexa data
 
-_noun_
+_substantiv_
 
 Data som är kopplade till flera produktalternativ.
 
@@ -477,19 +477,19 @@ _Termattribut:_
 
 ### komponent
 
-_noun_
+_substantiv_
 
 Används för att referera till en modul, ett tema eller ett språkpaket i Adobe Commerce.
 
 _Termattribut:_
 
-* _Fält: e-handelsprogram_
+* _Fält: e-handelsprogramvara_
 * _Synonymer: komponent_
 * _Relaterade termer: ui-komponent_
 
 ### konfigurerbar produkt
 
-_noun_
+_substantiv_
 
 En konfigurerbar produkt ser ut som en enskild produkt med listrutor med alternativ för varje ändring.
 Varje alternativ är i själva verket en separat enkel produkt med en unik SKU, som gör det möjligt att spåra lager för varje produktvariation.
@@ -510,17 +510,17 @@ _Termattribut:_
 
 ### konverteringsgrad
 
-_noun_
+_substantiv_
 
 Andelen besökare som konverteras till köpare.
 
 _Termattribut:_
 
-* _Fält: företag, order_
+* _Fält: företag, beställning_
 
 ### skalning på kärnnivå
 
-_noun_
+_substantiv_
 
 Skalning på kärnnivå består av tre servicenoder för datalagring, cache och tjänster, som OpenSearch, Elasticsearch, MariaDB och Redis.
 
@@ -530,34 +530,34 @@ _Termattribut:_
 
 ### kreditnota
 
-_noun_
+_substantiv_
 
 Ett dokument som handlaren utfärdat till en kund för att skriva av ett utestående saldo på grund av överkostnad, rabatt eller retur av varor.
 PM:et återställer medel till kundens konto.
 
 _Termattribut:_
 
-* _Fält: företag, order_
+* _Fält: företag, beställning_
 
 ### kreditnota-kommentar
 
-_noun_
+_substantiv_
 
 Information om varför ett kreditnotsbelopp krediterades kunden.
 
 _Termattribut:_
 
-* _Fält: företag, order_
+* _Fält: företag, beställning_
 
 ### kreditnotanbjekt
 
-_noun_
+_substantiv_
 
 En fakturerad artikel som en handlare skapar en kreditnota för.
 
 _Termattribut:_
 
-* _Fält: företag, order_
+* _Fält: företag, beställning_
 
 ### korsförsäljning
 
@@ -574,14 +574,14 @@ _Termattribut:_
 
 ### CVM
 
-_noun_
+_substantiv_
 
 En förkortning av &quot;Cardholder Verification Method&quot;.
 Ett sätt att verifiera kundens identitet genom att bekräfta en 3- eller 4-siffrig kreditkortssäkerhetskod med betalningsprocessorn.
 
 _Termattribut:_
 
-* _Fält: företag, order_
+* _Fält: företag, beställning_
 * _Synonymer: Verifieringsmetod för kortinnehavare_
 * _Relaterade villkor: säkerhetskod_
 
@@ -589,7 +589,7 @@ _Termattribut:_
 
 ### databasschema
 
-_noun_
+_substantiv_
 
 Datastrukturen i en databas.
 Definierar hur data ordnas och hur datarelationer styrs, inklusive alla begränsningar som tillämpas på data.
@@ -602,7 +602,7 @@ _Termattribut:_
 
 ### beroendeinjektion
 
-_noun_
+_substantiv_
 
 Ett designmönster för programvara som gör att en klass kan ange sina beroenden utan att behöva konstruera dem.
 Den här klassen delegerar ansvaret för att mata in beroendet till den anropande klassen.
@@ -615,7 +615,7 @@ _Termattribut:_
 
 ### distributionsnyckel
 
-_noun_
+_substantiv_
 
 En distributionsnyckel är den offentliga nyckeln för ditt projekt SSH och ger skrivskyddad eller skrivskyddad (om den är aktiverad) åtkomst till en Git-databas.
 
@@ -633,11 +633,11 @@ En e-postverifieringsprocess som kräver att potentiella prenumeranter slutför 
 
 _Termattribut:_
 
-* _Fält: företag_
+* _Fält: business_
 
 ### nedladdningsbar produkt
 
-_noun_
+_substantiv_
 
 En digitalt nedladdningsbar produkt som består av en eller flera filer som har laddats ned, till exempel en e-bok, musik, video, programvara eller en uppdatering.
 Du kan erbjuda ett album att sälja och sälja varje låt separat.
@@ -652,7 +652,7 @@ _Termattribut:_
 
 ### dynamiskt innehåll
 
-_noun_
+_substantiv_
 
 Innehåll som genereras av kod i stället för att läsas från en statisk mall.
 När dynamiskt innehåll först återges när en användare besöker en sida kan innehållet ibland cachas och återanvändas utan att ett nytt dynamiskt anrop krävs.
@@ -664,7 +664,7 @@ _Termattribut:_
 
 ### URL för dynamiska media
 
-_noun_
+_substantiv_
 
 En URL-adress som genereras dynamiskt av systemet för att referera till en bild eller andra medier.
 Adressen länkar direkt till resurser som lagras på en server eller ett leveransnätverk.
@@ -678,17 +678,17 @@ Kodformat: media url=&quot;path/to/image.jpg&quot;
 _Termattribut:_
 
 * _Fält: programmering_
-* _Relaterade termer: leveransnätverk, url_
+* _Relaterade villkor: leveransnätverk, url_
 
 ## E
 
 ### hjälpmedelspaket
 
-_noun_
+_substantiv_
 
 En uppsättning skript och verktyg som är utformade för att hantera och driftsätta Commerce-programmet. Det här paketet förenklar många Adobe Commerce-processer för molninfrastruktur, bland annat distribution till en Docker-miljö, hantering av kroner, verifiering av projektkonfiguration och användning av Adobe-korrigeringsfiler.
 
-Läs mer: [hjälpmedelspaket](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/package-overview.html)
+Läs mer: [ece-tools-paket](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/package-overview.html)
 
 _Termattribut:_
 
@@ -696,7 +696,7 @@ _Termattribut:_
 
 ### enhet
 
-_noun_
+_substantiv_
 
 En unik enhet eller ett unikt objekt i programmeringen.
 Innehåller attribut eller parametrar som kan ändras.
@@ -704,12 +704,12 @@ Exempel är mellanlagring - där en uppdatering kan ändra enheter som prisregle
 
 _Termattribut:_
 
-* _Fält: e-handelsprogram_
+* _Fält: e-handelsprogramvara_
 * _Relaterade termer: attribut, kundvagnsregler, katalogregler_
 
 ### entitetsattributvärde
 
-_noun_
+_substantiv_
 
 För databasentiteter, en datamodell som effektivt kodar entiteter.
 Lagrar enhets-ID, attributnamn och värde som en trippel, vilket gör att nya entitetsattributnamn kan skapas när som helst.
@@ -725,17 +725,17 @@ _Termattribut:_
 
 ### vintergrönt
 
-_noun_
+_substantiv_
 
 Innehåll som har lång hållbarhet eller innehåll som kan återanvändas.
 
 _Termattribut:_
 
-* _Fält: företag_
+* _Fält: business_
 
 ### extension
 
-_noun_
+_substantiv_
 
 Kod som utökar eller anpassar Adobe Commerce beteende.
 Du kan även paketera och distribuera ett tillägg på Commerce Marketplace eller ett annat tilläggsdistributionssystem.
@@ -743,27 +743,27 @@ Ett Commerce-tillägg kan innehålla moduler, teman och språkpaket.
 
 _Termattribut:_
 
-* _Fält: e-handelsprogram_
+* _Fält: e-handelsprogramvara_
 * _Relaterade termer: komponent, modul, paket_
 
 ### extension-attribut
 
-_noun_
+_substantiv_
 
 Utöka funktionaliteten och använd ofta mer komplexa datatyper än anpassade attribut. Attributen visas inte i det grafiska användargränssnittet.
 
-Läs mer: [Lägga till tilläggsattribut till entiteten](https://developer.adobe.com/commerce/php/development/components/add-attributes/)
+Läs mer: [Lägger till tilläggsattribut till entiteten](https://developer.adobe.com/commerce/php/development/components/add-attributes/)
 
 _Termattribut:_
 
-* _Fält: e-handelsprogram_
+* _Fält: e-handelsprogramvara_
 * _Relaterade termer: attribut, entitetsattributvärde_
 
 ## F
 
 ### frakt ombord
 
-_noun_
+_substantiv_
 
 I internationell sjöfart innebär denna term att den mottagande parten ansvarar för fraktkostnaderna.
 FOB kan baseras på ursprungs- eller destinationsplatsen och anges som antingen fraktsamling eller förbetald frakt.
@@ -789,11 +789,11 @@ _Termattribut:_
 
 * _Fält: design, programmering_
 * _Synonymer: klientsida_
-* _Relaterade termer: serverdel, butiksserver, cacheklientdel_
+* _Relaterade termer: backend, storefront, cache front_
 
 ### egenskaper för framtend
 
-_noun_
+_substantiv_
 
 Egenskaper som bestämmer hur ett attribut visas och fungerar utifrån kundens situation i din butik.
 
@@ -803,19 +803,19 @@ _Termattribut:_
 
 ### uppfyllelse
 
-_noun_
+_substantiv_
 
 Processen för att hantera kundleveranser.
 
 _Termattribut:_
 
-* _Fält: företag_
+* _Fält: business_
 
 ## G
 
 ### presentkort
 
-_noun_
+_substantiv_
 
 Ett förbetalt kort eller presentkort som kan användas för inköp i butiken.
 Varje presentkort tilldelas en unik kod som anges i kassan.
@@ -834,22 +834,22 @@ Presentkort kan fungera som ett lojalitetsprogram som riktar sig till de mest ak
 
 _Termattribut:_
 
-* _Fält: e-handelsprogram_
+* _Fält: e-handelsprogramvara_
 * _Relaterade termer: produkttyper_
 
 ### bruttomarginal
 
-_noun_
+_substantiv_
 
 Skillnaden mellan kostnaden och priset för en produkt.
 
 _Termattribut:_
 
-* _Fält: företag_
+* _Fält: business_
 
 ### grupperad produkt
 
-_noun_
+_substantiv_
 
 En produkttyp med flera liknande fristående produkter grupperade på en enda sida.
 Kan erbjudas med variationer av en enskild produkt eller genom att gruppera dem efter årstid eller tema för att skapa en koordinerad uppsättning.
@@ -867,7 +867,7 @@ _Termattribut:_
 
 ### handtag
 
-_noun_
+_substantiv_
 
 I allmänhet är ett handtag ett sätt att referera till ett objekt.
 I Adobe Commerce används handtag på många ställen, vanligtvis för att identifiera en sida.
@@ -878,11 +878,11 @@ Här är &quot;front&quot; områdesnamnet och &quot;checkout_cart_index&quot; ä
 _Termattribut:_
 
 * _Fält: programmering_
-* _Synonymer: sidhandtag_
+* _Synonymer: sidreferens_
 
 ### vågrät skalförändring
 
-_noun_
+_substantiv_
 
 Vågrät skalförändring (även kallat utskalning) är processen att lägga till ytterligare noder eller datorer i infrastrukturen för att möta den växande efterfrågan.
 
@@ -894,7 +894,7 @@ _Termattribut:_
 
 ### avlyssning
 
-_noun_
+_substantiv_
 
 Processen att injicera ny kod före, efter eller runt en befintlig offentlig funktion i en PHP-klass.
 
@@ -911,7 +911,7 @@ _Termattribut:_
 
 ### layout
 
-_noun_
+_substantiv_
 
 När du skapar en Commerce-sida är en layout en serie block som är sammansatta i en hierarki och som representerar sidans struktur.
 
@@ -925,7 +925,7 @@ _Termattribut:_
 
 ### layoutinstruktioner
 
-_noun_
+_substantiv_
 
 Markering i en layoutfil som beskriver ändringar som ska tillämpas på ett strukturerat elementträd med block, behållare och UI-komponenter.
 En enda layoutfil kan innehålla flera layoutinstruktioner.
@@ -938,7 +938,7 @@ _Termattribut:_
 
 ### layoutuppdatering
 
-_noun_
+_substantiv_
 
 Används för kodfragment som läggs till för att ändra XML-layouten eller för att importera layoutinstruktioner från en annan fil.
 
@@ -948,7 +948,7 @@ _Termattribut:_
 
 ### Licensägare
 
-_noun_
+_substantiv_
 
 Licensägaren (även kallad Kontoägare) är den person i en affärsorganisation som hanterar betalningar och andra affärsrelaterade problem för Adobe Commerce på molninfrastrukturskontot.
 Den här personen fungerar som kontaktpunkt för Adobe.
@@ -956,13 +956,13 @@ När ett företag har köpt en Adobe Commerce-prenumeration på en molninfrastru
 
 _Termattribut:_
 
-* _Fält: företag_
+* _Fält: business_
 
 ## M
 
 ### MAGEID
 
-_noun_
+_substantiv_
 
 MAGEID är vanligtvis faktureringskontakten på Adobe Commerce-kontot (och är kanske inte projektägare till Adobe Commerce i molninfrastrukturprojekt).
 För åtkomstbehörighet till Adobe Commerce och Adobe Commerce för molninfrastrukturpaket måste du använda åtkomstnycklar som är kopplade till ett MAGEID som har beviljats åtkomst till dessa paket.
@@ -971,14 +971,14 @@ Läs mer: [Hämta dina autentiseringsnycklar](https://experienceleague.adobe.com
 
 _Termattribut:_
 
-* _Fält: e-handelsprogram_
+* _Fält: e-handelsprogramvara_
 
 ### markering
 
-_noun_
+_substantiv_
 
 I marknadsförings- och detaljhandelsledet läggs en procentandel till kostnaden för en artikel för att fastställa detaljhandelspriset.
-[Konfigurera koden](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/settings/settings-advanced-custom-options.html), eller markering, av en produkt med anpassningsbara alternativ.
+[Konfigurera markering](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/settings/settings-advanced-custom-options.html), eller markering, för en produkt med anpassningsbara alternativ.
 
 Under utvecklingen är det ett datorspråk som styr bearbetning, presentation och formatering av text.
 Markup-taggar är kodfragment som lägger till funktioner eller innehåll på en CMS-sida eller -block.
@@ -990,7 +990,7 @@ _Termattribut:_
 
 ### huvudmiljö
 
-_noun_
+_substantiv_
 
 På Adobe Commerce i molninfrastruktur använder Pro-projekt en aktiv Platform som en tjänst-miljö (PaaS) som kallas master och innehåller en kopia av din produktionsmiljödatabas och webbserver.
 
@@ -1000,30 +1000,30 @@ _Termattribut:_
 
 ### handlarkonto
 
-_noun_
+_substantiv_
 
 Ett konto hos en bank eller ett finansinstitut som gör det möjligt att acceptera kreditkortstransaktioner.
 
 _Termattribut:_
 
-* _Fält: företag_
+* _Fält: business_
 
 ### MFTF
 
-_noun_
+_substantiv_
 
-MFTF är en [Funktionellt testramverk](https://developer.adobe.com/commerce/testing/functional-testing-framework/).
+MFTF är ett [Funktionellt testramverk](https://developer.adobe.com/commerce/testing/functional-testing-framework/).
 Det utgör ett testramverk för Commerce-utvecklare och programvaruingenjörer, som QA-specialister, PHP-utvecklare och systemintegratörer.
 Utvecklare och QA kan skriva tester för att testa användarinteraktioner med webbprogram, verifiera funktioner och automatisera regressionstestning.
 
 _Termattribut:_
 
 * _Fält: e-handelsprogram, programmering_
-* _Relaterade termer: cms-block, statiskt block, container, layout_
+* _Relaterade termer: cms-block, statiskt block, behållare, layout_
 
 ### modul
 
-_noun_
+_substantiv_
 
 Kod som ändrar eller utökar funktioner som tillhandahålls av programmet Magento.
 En modul finns i en katalogstruktur som innehåller PHP- och XML-filer (konfiguration, block, styrenheter, hjälpredor, modeller och så vidare) som rör en viss funktion för att leverera en tydlig samling av produktfunktioner.
@@ -1037,14 +1037,14 @@ Ett undantag: När modulen är beroende av andra moduler, vilket kräver att de 
 
 _Termattribut:_
 
-* _Fält: e-handelsprogram_
+* _Fält: e-handelsprogramvara_
 * _Relaterade termer: php, xml, block_
 
 ## O
 
 ### OMS
 
-_noun_
+_substantiv_
 
 [OMS](https://omsdocs.magento.com) är Adobe Order Management System.
 
@@ -1058,17 +1058,17 @@ OMS-funktioner:
 * Enklare och mer lättillgänglig kundtjänst
 * Bättre kundupplevelser och lojalitet
 
-Läs mer: [Komma igång med OMS](https://omsdocs.magento.com/en/getting-started/), [OMS Docs-plats](https://omsdocs.magento.com/en/)
+Läs mer: [Komma igång med OMS](https://omsdocs.magento.com/en/getting-started/), [OMS Docs-webbplats](https://omsdocs.magento.com/en/)
 
 _Termattribut:_
 
 * _Fält: funktion, e-handelsprogram, orderhantering_
 * _Synonymer: orderhantering, MOM, orderhanteringssystem, Magento Order Management_
-* _Relaterade villkor: orderhantering_
+* _Relaterade termer: orderhantering_
 
 ### ursprungsinsvepning
 
-_noun_
+_substantiv_
 
 Insvepning är en säkerhetsfunktion som gör det möjligt för Adobe Commerce på molninfrastrukturen att blockera all trafik som inte är snabb för att förhindra DDoS-attacker genom att gå till molninfrastrukturen (ursprung).
 
@@ -1077,20 +1077,20 @@ Läs mer: [Insvepning med snabbt ursprung](https://experienceleague.adobe.com/do
 _Termattribut:_
 
 * _Fält: säkerhet_
-* _Relaterade termer: brandvägg för webbprogram_
+* _Relaterade termer: webbprogrammets brandvägg_
 
 ## P
 
 ### Page Builder
 
-_noun_
+_substantiv_
 
 Page Builder är ett Commerce-tillägg för att skapa innehållsrika sidor genom att dra och släppa färdiga kontroller för att definiera anpassade layouter.
 Dessa kontroller kallas även&quot;innehållstyper&quot;.
 Merchants kan designa layouter och sidor utan kodningsupplevelse.
 Utvecklare kan utöka Page Builder med stöd för tillägg.
 
-Läs mer: [Användarhandbok för Page Builder](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/introduction.html), [Page Builder DevDocs](https://developer.adobe.com/commerce/frontend-core/page-builder/)
+Läs mer: [Användarhandbok för Page Builder](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/introduction.html), [DevDocs för Page Builder](https://developer.adobe.com/commerce/frontend-core/page-builder/)
 
 _Termattribut:_
 
@@ -1100,7 +1100,7 @@ _Termattribut:_
 
 ### betalningsgateway
 
-_noun_
+_substantiv_
 
 En betalningstjänst är en tredjepartstjänst som smidigt behandlar kreditkortstransaktioner utan att kunden behöver lämna handlarens webbplats.
 
@@ -1112,7 +1112,7 @@ _Termattribut:_
 
 ### relaterad produkt
 
-_noun_
+_substantiv_
 
 Ett urval produkter som presenteras som ett incitament att köpa ytterligare artiklar.
 Om kunden till exempel visar produktsidan för en kamera, kan de relaterade produkterna innehålla andra jämförbara kameror, ett kamerafält och ett stativ.
@@ -1125,7 +1125,7 @@ _Termattribut:_
 
 ### försäljningsregler
 
-_noun_
+_substantiv_
 
 Inkluderar korgs- och katalogregler, som används för att prissätta en produkt för kampanjer.
 
@@ -1136,7 +1136,7 @@ _Termattribut:_
 
 ### omfång
 
-_noun_
+_substantiv_
 
 I Adobe Commerce beskriver omfattningen av din butikshierarki som en inställning kan påverka.
 Omfattningen kan gälla följande:
@@ -1150,11 +1150,11 @@ I hierarkin kan inställningar som används på en lägre nivå åsidosätta vis
 
 _Termattribut:_
 
-* _Fält: e-handelsprogram_
+* _Fält: e-handelsprogramvara_
 
 ### tjänstekontrakt
 
-_noun_
+_substantiv_
 
 En uppsättning PHP-gränssnitt som är definierade för en modul.
 Ett serviceavtal innehåller datagränssnitt som bevarar dataintegriteten och servicegränssnitt, som döljer affärslogikdetaljer för tjänstbegärare som t.ex. kontrollanter, webbtjänster och andra moduler.
@@ -1167,17 +1167,17 @@ _Termattribut:_
 
 ### inlösen
 
-_noun_
+_substantiv_
 
 Kvittning sker när den förvärvande banken och emittentens valutareserver och intäkterna är insatta i handelskontot.
 
 _Termattribut:_
 
-* _Fält: företag_
+* _Fält: business_
 
 ### Delad katalog
 
-_noun_
+_substantiv_
 
 En funktion som gör att handlare kan skapa en katalog som kan fungera som hela eller en delmängd av den och sedan tilldela anpassade priser för en eller flera produkter.
 Handlare kan sedan tilldela katalogen till ett eller flera företag.
@@ -1197,38 +1197,38 @@ _Termattribut:_
 
 ### försändelse
 
-_noun_
+_substantiv_
 
 En försändelse innehåller produkter som ska levereras och genererar ett register över produkterna i en beställning som har skickats.
 Mer än en leverans kan kopplas till en enda order.
 
 _Termattribut:_
 
-* _Fält: företag, order_
+* _Fält: företag, beställning_
 
 ### leveransdokument
 
-_noun_
+_substantiv_
 
 Ett dokument som medföljer en leverans. I dokumentet visas produkterna och deras kvantiteter i leveranspaketet.
 
 _Termattribut:_
 
-* _Fält: företag, order_
+* _Fält: företag, beställning_
 
 ### fraktfirma
 
-_noun_
+_substantiv_
 
 Ett företag som transporterar paket. Vanliga bärare är UPS, FedEx, DHL och USPS.
 
 _Termattribut:_
 
-* _Fält: företag, order_
+* _Fält: företag, beställning_
 
 ### kundvagn
 
-_noun_
+_substantiv_
 
 Den uppsättning produkter som en kund har valt att köpa men ännu inte köpt.
 Avser också ett område på en e-handelsplats där dessa produkter kan beställas för granskning och utcheckning.
@@ -1236,12 +1236,12 @@ Avser också ett område på en e-handelsplats där dessa produkter kan beställ
 _Termattribut:_
 
 * _Fält: företag, design, produkt, programmering_
-* _Synonymer: vagn, korg_
+* _Synonymer: kundvagn, korg_
 * _Relaterade termer: kundvagnsregler_
 
 ### enkel produkt
 
-_noun_
+_substantiv_
 
 Den mest grundläggande produkttypen, en fysisk artikel med en enda SKU.
 Enkla produkter har olika prissättnings- och indatakontroller som gör det möjligt att sälja varianter av produkten.
@@ -1255,7 +1255,7 @@ _Termattribut:_
 
 ### SKU
 
-_noun_
+_substantiv_
 
 Förkortning för lagerhållningsenhet.
 Ett nummer eller en kod som tilldelats en produkt för att identifiera produkten, alternativen, priset och tillverkaren.
@@ -1267,7 +1267,7 @@ _Termattribut:_
 
 ### välkomstsida
 
-_noun_
+_substantiv_
 
 En kampanjsida med en produkt eller en annons, som vanligtvis visas före startsidan.
 
@@ -1277,7 +1277,7 @@ _Termattribut:_
 
 ### statiskt block
 
-_noun_
+_substantiv_
 
 En modulär innehållsenhet som en användare kan montera i CMS på en sida för att visa text och bilder eller köra kodfragment.
 Statiska block innehåller redigerbart innehåll och kan fungera som landningssidor för produktkategorier.
@@ -1285,12 +1285,12 @@ Du kan lägga till widgetar i statiska block för att få ytterligare funktioner
 
 _Termattribut:_
 
-* _Fält: e-handelsprogram_
-* _Relaterade termer: cms block, block_
+* _Fält: e-handelsprogramvara_
+* _Relaterade termer: cms-block, block_
 
 ### statiskt innehåll
 
-_noun_
+_substantiv_
 
 Användargenererat innehåll (som inte genereras av kod) som inte ändras så ofta.
 
@@ -1301,17 +1301,17 @@ _Termattribut:_
 
 ### statiska filer
 
-_noun_
+_substantiv_
 
 Samlingen av resurser, t.ex. CSS, teckensnitt, bilder och JavaScript som används av ett tema.
 
 _Termattribut:_
 
-* _Fält: e-handelsprogram_
+* _Fält: e-handelsprogramvara_
 
 ### store
 
-_noun_
+_substantiv_
 
 Commerce omfångsnivå för&quot;store&quot; är den andra nivån i webbplatshierarkin, som ser ut så här: webbplats > butik > butiksvy.
 Du kan ordna arkiv i ett eller flera lager. Varje butik har en egen rotkategori och delar alla kataloger och kunddata.
@@ -1325,7 +1325,7 @@ _Termattribut:_
 
 ### butiksvy
 
-_noun_
+_substantiv_
 
 Commerce omfångsnivå i&quot;butiksvy&quot; avser den tredje nivån i hierarkin med webbplatser, butiker och butiksvyer.
 I butiksvyer visas butiken vanligtvis på ett annat språk och språk.
@@ -1338,7 +1338,7 @@ _Termattribut:_
 
 ### storefront
 
-_noun_
+_substantiv_
 
 Den webbutik kunderna upplever när de besöker er Commerce webbplats.
 
@@ -1350,17 +1350,17 @@ _Termattribut:_
 
 ### momsregel
 
-_noun_
+_substantiv_
 
 En kombination av en produktskatteklass, kundskatteklass och momssats. Den här regeln definierar vilken momsberäkning som används.
 
 _Termattribut:_
 
-* _Fält: företag_
+* _Fält: business_
 
 ### mall
 
-_noun_
+_substantiv_
 
 Kort för HTML-mall eller PHTML-mall.
 En PHTML-fil innehåller en blandning av HTML-kod och PHP-kod för att mata in dynamiskt innehåll i HTML.
@@ -1369,12 +1369,12 @@ I mallarna Admin kombinerar e-post och nyhetsbrev text, bilder och variabler med
 
 _Termattribut:_
 
-* _Fält: e-handelsprogram_
+* _Fält: e-handelsprogramvara_
 * _Relaterade termer: block_
 
 ### tema
 
-_noun_
+_substantiv_
 
 Innehåller grafik- och utseendeinformation.
 Anpassar butikens utseende och känsla.
@@ -1384,36 +1384,36 @@ Paket är den enhet som används för att ladda ned Composer, och - via Commerce
 
 _Termattribut:_
 
-* _Fält: e-handelsprogram_
+* _Fält: e-handelsprogramvara_
 
 ## U
 
 ### UI-komponent
 
-_noun_
+_substantiv_
 
 En tagg som är utformad för Adobe Commerce för enklare och flexiblare återgivning av användargränssnitt.
 Målen för UI-komponentsystemet är följande:
 
 * Förenkla XML-filer för layouthantering
-* Flytta element i användargränssnittet från HTML+JavaScript till ett&quot;rent JavaScript&quot;-widgetsystem
+* Flytta element i användargränssnittet för administratörer från HTML+JavaScript till ett anpassat JavaScript-widgetsystem
 * Skapa mer komplexa gränssnittskomponenter av mindre komponenter
 * Förrenderingsdata för UI-komponenter som JSON, som är nära knutna till backend-dataobjekt
 * Uppdatera komponentdata med AJAX
 * Vi presenterar en ny DSL för att skapa ovanstående objekt
 
-Läs mer: [Guide för komponenter i användargränssnittet](https://developer.adobe.com/commerce/frontend-core/ui-components/), [Page Builder](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/introduction.html)
+Läs mer: [Guiden för gränssnittskomponenter](https://developer.adobe.com/commerce/frontend-core/ui-components/), [Page Builder](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/introduction.html)
 
 _Termattribut:_
 
 * _Fält: programmering_
-* _Relaterade termer: JavaScript, layout, komponent, page builder_
+* _Relaterade termer: JavaScript, layout, komponent, sidbyggare_
 
 ### UPPGRADERING
 
-_noun_
+_substantiv_
 
-[PWA Studio](https://github.com/magento/pwa-studio) använder [UPPGRADERING](https://developer.adobe.com/commerce/pwa-studio/guides/packages/upward/) inom utveckling.
+[PWA Studio](https://github.com/magento/pwa-studio) använder [UPWARD](https://developer.adobe.com/commerce/pwa-studio/guides/packages/upward/) under utvecklingen.
 UPWARD är en akronym för svarsdefinitionen i Unified Progressive Web App.
 En UPWARD-definitionsfil beskriver hur en webbserver levererar och stöder Progressive Web Application.
 
@@ -1435,13 +1435,13 @@ _Termattribut:_
 
 ### Leverantörspaketerat tillägg
 
-_noun_
+_substantiv_
 
 Leverantörstillverkad kod som utökar eller anpassar Commerce beteende och fungerar som ett tillägg från tredje part betraktas som ett VBE (Leverantör Bundled Extension).
 VBE-programmen testas grundligt och ingår i alla versioner av Adobe Commerce som stöds.
 Ett VBE kan innehålla moduler, teman och språkpaket.
 
-Läs mer i [Ämne för tillägg som paketerats av leverantör](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/modules/upgrade.html).
+Mer information finns i avsnittet [Leverantörspaket ](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/modules/upgrade.html).
 
 _Termattribut:_
 
@@ -1451,7 +1451,7 @@ _Termattribut:_
 
 ### lodrät skalförändring
 
-_noun_
+_substantiv_
 
 Vertikal skalning (uppskalning) avser att öka processorkraften för en enskild server eller kluster genom att lägga till disk- eller nätverks-I/O, processorer eller RAM.
 
@@ -1461,7 +1461,7 @@ _Termattribut:_
 
 ### virtuell produkt
 
-_noun_
+_substantiv_
 
 Representerar en icke-fysisk produkt som kan säljas, till exempel ett medlemskap, en tjänst, en garanti eller en prenumeration.
 Virtuella produkter kan säljas individuellt eller inkluderas som en del av följande produkttyper: grupperad produkt och paketprodukt.
@@ -1477,10 +1477,10 @@ _Termattribut:_
 
 ### virtuell typ
 
-_noun_
+_substantiv_
 
 Virtuella typer är ett sätt att infoga olika beroenden i befintliga PHP-klasser utan att påverka andra klasser och utan att behöva skapa en klassfil.
-Virtuella typer kan bara refereras av argumentåsidosättningar i en `<type>` -element i di.xml-filer, aldrig i källkod.
+Virtuella typer kan bara refereras av argumentåsidosättningar i ett `<type>`-element i di.xml-filer, aldrig i källkoden.
 De kan inte utökas och kan inte vara referenser som beroenden i en klasskonstruktor.
 
 _Termattribut:_
@@ -1492,7 +1492,7 @@ _Termattribut:_
 
 ### webbplats
 
-_noun_
+_substantiv_
 
 I Adobe Commerce är det den högsta nivån i webbplatshierarkin, ovanför butiken och butiksvyn.
 Du kan ha flera webbplatser, och varje webbplats kan ha olika domännamn.
@@ -1500,14 +1500,14 @@ Webbplatser kan konfigureras för att dela kunddata eller för att inte dela dat
 
 _Termattribut:_
 
-* _Fält: e-handelsprogram, design, produkt_
+* _Fält: e-handelsprogramvara, design, produkt_
 * _Relaterade termer: butik, butiksvy_
 
 ### widget
 
-_noun_
+_substantiv_
 
-A [widget](https://experienceleague.adobe.com/docs/commerce-admin/content-design/elements/widgets/widgets.html) är ett förberett kodfragment som kan användas för att placera block, länkar och dynamiskt innehåll på specifika platser på butikssidor.
+En [widget](https://experienceleague.adobe.com/docs/commerce-admin/content-design/elements/widgets/widgets.html) är ett förberett kodfragment som kan användas för att placera block, länkar och dynamiskt innehåll på specifika platser på butikssidor.
 Ni kan använda widgetar för att skapa landningssidor för marknadsföringskampanjer, visa kampanjinnehåll på specifika platser i hela butiken.
 Du kan också använda widgetar för att lägga till interaktiva element och åtgärdsblock för externa granskningssystem, videochatt, röstformulär och prenumerationsformulär, eller för att tillhandahålla navigeringselement för taggmoln och bildreglage.
 

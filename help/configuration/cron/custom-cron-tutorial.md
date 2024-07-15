@@ -4,42 +4,42 @@ description: Använd den här stegvisa självstudiekursen för att skapa ett anp
 exl-id: d8efcafc-3ae1-4c2d-a8ad-4a806fb48932
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '809'
 ht-degree: 0%
 
 ---
 
 # Konfigurera ett anpassat cron-jobb
 
-Den här stegvisa självstudiekursen visar hur du skapar ett anpassat cron-jobb och eventuellt en cron-grupp i en exempelmodul. Du kan använda en modul som du redan har eller använda en exempelmodul från [`magento2-samples` databas][samples].
+Den här stegvisa självstudiekursen visar hur du skapar ett anpassat cron-jobb och eventuellt en cron-grupp i en exempelmodul. Du kan använda en modul som du redan har eller så kan du använda en exempelmodul från [`magento2-samples`-databasen ][samples].
 
-Om du kör kronjobbet läggs en rad till i `cron_schedule` tabell med namnet på cron-jobbet, `custom_cron`.
+Om du kör cron-jobbet läggs en rad till i tabellen `cron_schedule` med namnet på cron-jobbet `custom_cron`.
 
 Vi visar även hur du kan skapa en cron-grupp som du kan använda för att köra anpassade cron-jobb med andra inställningar än standardinställningarna för Commerce-program.
 
 I den här självstudiekursen antar vi följande:
 
-- Commerce-programmet är installerat i `/var/www/html/magento2`
+- Commerce-programmet installeras i `/var/www/html/magento2`
 - Ditt användarnamn och lösenord för Commerce-databasen är båda `magento`
-- Du utför alla åtgärder som [ägare av filsystem](../../installation/prerequisites/file-system/overview.md)
+- Du utför alla åtgärder som ägare av [filsystemet](../../installation/prerequisites/file-system/overview.md)
 
 ## Steg 1: Hämta en exempelmodul
 
-Om du vill konfigurera ett anpassat cron-jobb behöver du en provmodul. Vi föreslår `magento-module-minimal` -modul.
+Om du vill konfigurera ett anpassat cron-jobb behöver du en provmodul. Vi föreslår modulen `magento-module-minimal`.
 
 Om du redan har en exempelmodul kan du använda den. Hoppa över det här steget och nästa steg och fortsätt med steg 3: Skapa en klass att köra cron.
 
 **Hämta en exempelmodul**:
 
-1. Logga in på din Commerce-server som eller växla till [ägare av filsystem](../../installation/prerequisites/file-system/overview.md).
-1. Byt till en katalog som inte finns i Commerce-programmets rot (till exempel din arbetskatalog).
-1. Klona [`magento2-samples` databas][samples].
+1. Logga in på din Commerce-server som, eller växla till, ägare av [filsystemet](../../installation/prerequisites/file-system/overview.md).
+1. Byt till en katalog som inte finns i programroten för Commerce (till exempel din arbetskatalog).
+1. Klona [`magento2-samples`-databasen ][samples].
 
    ```bash
    git clone git@github.com:magento/magento2-samples.git
    ```
 
-   Om kommandot misslyckas med felet `Permission denied (publickey).`måste du [lägga till din offentliga SSH-nyckel i GitHub.com][git-ssh].
+   Om kommandot misslyckas med felet `Permission denied (publickey).` måste du [lägga till den offentliga SSH-nyckeln på GitHub.com][git-ssh].
 
 1. Skapa en katalog dit exempelkoden ska kopieras:
 
@@ -103,11 +103,11 @@ Innan du fortsätter kontrollerar du att exempelmodulen är registrerad och akti
 
 >[!TIP]
 >
->Om utdata indikerar att `Module does not exist`, granska [Steg 1](#step-1-get-a-sample-module) försiktigt. Kontrollera att koden finns i rätt katalog. Stavning och skiftläge är viktiga. Om något är annorlunda läses modulen inte in. Glöm inte att köra `magento setup:upgrade`.
+>Om utdata indikerar att `Module does not exist` finns granskar du [Steg 1](#step-1-get-a-sample-module) noggrant. Kontrollera att koden finns i rätt katalog. Stavning och skiftläge är viktiga. Om något är annorlunda läses modulen inte in. Glöm inte att köra `magento setup:upgrade`.
 
 ## Steg 3: Skapa en klass att köra cron
 
-I det här steget visas en enkel klass för att skapa ett cron-jobb. Klassen skriver bara en rad till `cron_schedule` tabell som bekräftar att den har konfigurerats.
+I det här steget visas en enkel klass för att skapa ett cron-jobb. Klassen skriver bara en rad till tabellen `cron_schedule` som bekräftar att den har konfigurerats.
 
 Så här skapar du en klass:
 
@@ -145,9 +145,9 @@ Så här skapar du en klass:
 
 ## Steg 4: Skapa `crontab.xml`
 
-The `crontab.xml` filen anger ett schema för att köra din anpassade cron-kod.
+Filen `crontab.xml` ställer in ett schema för att köra din anpassade kundkod.
 
-Skapa `crontab.xml` enligt följande i `/var/www/html/magento2/app/code/Magento/SampleMinimal/etc` katalog:
+Skapa `crontab.xml` enligt följande i katalogen `/var/www/html/magento2/app/code/Magento/SampleMinimal/etc`:
 
 ```xml
 <?xml version="1.0"?>
@@ -160,7 +160,7 @@ Skapa `crontab.xml` enligt följande i `/var/www/html/magento2/app/code/Magento/
 </config>
 ```
 
-Föregående `crontab.xml` kör `Magento/SampleMinimal/Cron/Test.php` klass en gång per minut, vilket resulterar i att en rad läggs till i `cron_schedule` tabell.
+Ovanstående `crontab.xml` kör klassen `Magento/SampleMinimal/Cron/Test.php` en gång per minut, vilket resulterar i att en rad läggs till i tabellen `cron_schedule`.
 
 Använd konfigurationssökvägen för systemkonfigurationsfältet för att göra schemat för cron konfigurerbart från Admin.
 
@@ -175,7 +175,7 @@ Använd konfigurationssökvägen för systemkonfigurationsfältet för att göra
 </config>
 ```
 
-Var, `system/config/path` är en systemkonfigurationssökväg som definieras i `etc/adminhtml/system.xml` för en modul.
+Där `system/config/path` är en systemkonfigurationssökväg som definieras i `etc/adminhtml/system.xml` för en modul.
 
 ## Steg 5: Kompilera och cachelagra rent
 
@@ -193,7 +193,7 @@ bin/magento cache:clean
 
 ## Steg 6: Verifiera kron-jobbet
 
-I det här steget visas hur du verifierar det anpassade cron-jobbet med hjälp av en SQL-fråga på `cron_schedule` databastabell.
+I det här steget visas hur du verifierar det anpassade cron-jobbet med hjälp av en SQL-fråga i databastabellen `cron_schedule`.
 
 Så här kontrollerar du cron:
 
@@ -203,15 +203,15 @@ Så här kontrollerar du cron:
    bin/magento cron:run
    ```
 
-1. Ange `magento cron:run` kommando två eller tre gånger.
+1. Ange kommandot `magento cron:run` två eller tre gånger.
 
    Första gången du anger kommandot köas jobben, och därefter körs cron-jobben. Du måste ange kommandot _minst_ två gånger.
 
 1. Kör SQL-frågan `SELECT * from cron_schedule WHERE job_code like '%custom%'` enligt följande:
 
-   1. Retur `mysql -u magento -p`
-   1. På `mysql>` prompt, enter `use magento;`
-   1. Retur `SELECT * from cron_schedule WHERE job_code like '%custom%';`
+   1. Ange `mysql -u magento -p`
+   1. Ange `use magento;` vid uppmaningen `mysql>`
+   1. Ange `SELECT * from cron_schedule WHERE job_code like '%custom%';`
 
       Resultatet ska vara som följer:
 
@@ -226,7 +226,7 @@ Så här kontrollerar du cron:
       +-------------+----------------+---------+----------+---------------------+---------------------+---------------------+---------------------+
       ```
 
-1. (Valfritt) Kontrollera att meddelanden skrivs till Commerce-systemets systemlogg:
+1. (Valfritt) Kontrollera att meddelanden skrivs till Commerce systemlogg:
 
    ```bash
    cat /var/www/html/magento2/var/log/system.log
@@ -238,14 +238,14 @@ Så här kontrollerar du cron:
    [2016-11-02 22:17:03] main.INFO: Cron Works [] []
    ```
 
-   Dessa meddelanden kommer från `execute` metod i `Test.php`:
+   De här meddelandena kommer från metoden `execute` i `Test.php`:
 
    ```php
    public function execute() {
         $this->logger->info('Cron Works');
    ```
 
-Om SQL-kommandot och systemloggen inte innehåller några poster kör du `magento cron:run` och vänta några gånger till. Det kan ta en stund innan databasen uppdateras.
+Om SQL-kommandot och systemloggen inte innehåller några poster kör du kommandot `magento cron:run` några gånger till och väntar. Det kan ta en stund innan databasen uppdateras.
 
 ## Steg 7 (valfritt): Konfigurera en anpassad cron-grupp
 
@@ -277,11 +277,11 @@ En beskrivning av vad alternativen betyder finns i [Anpassa crons-referens](cust
 
 ## Steg 8: Verifiera din anpassade kundgrupp
 
-Detta _valfri_ visas hur du verifierar din anpassade cron-grupp med Admin.
+I det här _valfria_ steget visas hur du verifierar din anpassade kundgrupp med hjälp av Admin.
 
 Så här verifierar du din anpassade cron-grupp:
 
-1. Kör Commerce cron-jobb för din anpassade grupp:
+1. Kör Commerce cron-jobb för din egen grupp:
 
    ```bash
    php /var/www/html/magento2/bin/magento cron:run --group="custom_crongroup"
@@ -296,8 +296,8 @@ Så här verifierar du din anpassade cron-grupp:
    ```
 
 1. Logga in på administratören som administratör.
-1. Klicka **Lager** > **Inställningar** > **Konfiguration** > **Avancerat** > **System**.
-1. Expandera i den högra rutan **Cron**.
+1. Klicka på **Lagrar** > **Inställningar** > **Konfiguration** > **Avancerat** > **System**.
+1. Expandera **Kron** i den högra rutan.
 
    Kronsgruppen visas enligt följande:
 

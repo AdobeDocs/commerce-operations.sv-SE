@@ -6,22 +6,22 @@ badge: label="Bidragen av Kalpesh Mehta från Corra" type="Informative" url="htt
 exl-id: ddafd03c-77b2-42e8-b593-7d655d08e9c3
 source-git-commit: 56a2461edea2799a9d569bd486f995b0fe5b5947
 workflow-type: tm+mt
-source-wordcount: '150'
+source-wordcount: '137'
 ht-degree: 0%
 
 ---
 
 # Security TXT-fil
 
-När forskare upptäcker säkerhetsluckor saknas ofta lämpliga rapporteringskanaler. Därför rapporteras inte vissa sårbarheter. Syftet med `security.txt` [filformat](https://datatracker.ietf.org/doc/html/draft-foudil-securitytxt-09) ska ge säkerhetsforskare den information de kan använda för att rapportera sina resultat.
+När forskare upptäcker säkerhetsluckor saknas ofta lämpliga rapporteringskanaler. Därför rapporteras inte vissa sårbarheter. Syftet med filen `security.txt` [filformat](https://datatracker.ietf.org/doc/html/draft-foudil-securitytxt-09) är att ge säkerhetsforskare den information de kan använda för att rapportera sina upptäckter.
 
-Handlare kan ange sin kontaktinformation för [rapportering av säkerhetsproblem](https://docs.magento.com/user-guide/stores/security-issue-reporting.html) från handeln _Administratör_. För utvecklare `Magento_Securitytxt` i modulen finns följande funktioner:
+Handläggarna kan ange sin kontaktinformation för [säkerhetsproblemrapportering](https://docs.magento.com/user-guide/stores/security-issue-reporting.html) från Commerce _Admin_. För utvecklare innehåller modulen `Magento_Securitytxt` följande funktioner:
 
-- Tillåter att säkerhetskonfigurationer sparas från _Administratör_.
-- Innehåller en router som matchar programåtgärdsklassen för begäranden till `.well-known/security.txt` och `.well-known/security.txt.sig` filer.
-- Serverar innehållet i `.well-known/security.txt` och `.well-known/security.txt.sig` filer.
+- Tillåter att säkerhetskonfigurationer sparas från _administratören_.
+- Innehåller en router som matchar programåtgärdsklassen för begäranden till filerna `.well-known/security.txt` och `.well-known/security.txt.sig`.
+- Hanterar innehållet i `.well-known/security.txt`- och `.well-known/security.txt.sig`-filerna.
 
-Ett giltigt `security.txt` filen kan se ut så här:
+En giltig `security.txt`-fil kan se ut så här:
 
 ```text
 Contact: mailto:security@example.com
@@ -32,7 +32,7 @@ Policy: https://example.com/security-policy.html
 Signature: https://example.com/.well-known/security.txt.sig
 ```
 
-Skapa `security.txt` signatur (`security.txt.sig`):
+Så här skapar du signaturfilen `security.txt` (`security.txt.sig`):
 
 ```bash
 gpg -u KEYID --output security.txt.sig --armor --detach-sig security.txt

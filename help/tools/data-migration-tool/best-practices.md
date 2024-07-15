@@ -6,7 +6,7 @@ feature: Best Practices, Configuration
 topic: Commerce, Migration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '201'
+source-wordcount: '216'
 ht-degree: 0%
 
 ---
@@ -17,13 +17,13 @@ I det här avsnittet finns de bästa rekommendationerna för att snabba upp och 
 
 * **Använd en kopia av databasen från en Magento 1-instans** när du utför migreringstestning. Använd inte produktionsinstansen för din Magento 1-databas.
 
-* **Ta bort inaktuella och redundanta data** från din Magento 1-databas före migrering.
+* **Ta bort inaktuella och redundanta data** från Magento 1-databasen före migreringen.
 
 Sådana data kan vara loggar, ordercitat, nyligen visade eller jämförda produkter, besökare, händelsespecifika kategorier och kampanjregler.
 
-* **Följ [allmänna regler för lyckad migrering](migrate-data/overview.md#migration-overview)**.
+* **Följ de [allmänna reglerna för slutförd migrering](migrate-data/overview.md#migration-overview)**.
 
-* För att förbättra prestanda **aktivera `direct_document_copy` option** i `config.xml` fil:
+* **Aktivera alternativet `direct_document_copy`** i `config.xml`-filen om du vill öka prestanda:
 
   ```xml
   <direct_document_copy>1</direct_document_copy>

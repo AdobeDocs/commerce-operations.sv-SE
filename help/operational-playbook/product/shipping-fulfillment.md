@@ -20,27 +20,27 @@ En hel del arbete går åt till att ge kunderna den bästa onlineupplevelsen. P�
 
 Leverans och slutförande har några grundläggande faktorer som fungerar som grund, bland annat:
 
-- **Leveransmetoder och kostnader**—Företagen måste analysera och dela upp hela fraktkostnaden och avgöra om de ska absorbera fraktkostnaderna, föra över kostnaderna till kunderna eller dela kostnaderna? Hur kommer företaget att erbjuda fri frakt eller frakt? Hur levereras produkterna? Kommer det att finnas mer än en fraktmetod och fraktkostnader?
+- **Leveransmetoder och kostnader** - Företag måste analysera och dela upp hela fraktkostnaden och avgöra om de ska absorbera fraktkostnader, överföra kostnader till kunderna eller dela kostnaden? Hur kommer företaget att erbjuda fri frakt eller frakt? Hur levereras produkterna? Kommer det att finnas mer än en fraktmetod och fraktkostnader?
 
-- **Produkt**- Varje produkt är annorlunda i fråga om antal artiklar, vikt, destination och hållbarhet. Företagen måste analysera dessa uppgifter för att förstå den totala fraktkostnaden eftersom olika produkter har olika fraktkostnader.
+- **Produkt** - Varje produkt skiljer sig åt när det gäller antal artiklar, vikt, destination och hållbarhet. Företagen måste analysera dessa uppgifter för att förstå den totala fraktkostnaden eftersom olika produkter har olika fraktkostnader.
 
-- **Paketering**—Paketeringen spelar också en viktig roll när det gäller att förstå leveranssätt och kostnad. Är produkten till exempel skört eller packad som en gåva?
+- **Paketering** - Paketering spelar också en viktig roll när det gäller att förstå leveranssätt och kostnad. Är produkten till exempel skört eller packad som en gåva?
 
-- **Säsong**—Vilka förändringar bör man göra under högsäsong, som klickfreni och festivaler.
+- **Säsong** - Vilka ändringar ska göras under högsäsong, som klickfreni och festivaler.
 
-- **Operatörer**—Vilket tredjepartsrederi passar bäst för verksamheten? Vilka tjänster tillhandahåller rederierna? Vad kostar det?
+- **Operatörer** - Vilket tredjepartsrederi passar bäst för verksamheten? Vilka tjänster tillhandahåller rederierna? Vad kostar det?
 
 ## Leveransmetoder
 
 Innan ett företag levererar sin produkt måste man bestämma sig för leveransmetoder och fraktkostnader. Det finns olika leveranssätt:
 
-- **Fri frakt**—Erbjudandet om fri frakt till kunder kan vara den bästa kundupplevelsen, men kanske inte passar verksamheten.
+- **Fri frakt** - Att tillhandahålla fri frakt till kunder kan vara den bästa kundupplevelsen, men passar kanske inte verksamheten.
 
-- **Realtidshastigheter**- Genom att samarbeta med tredjepartsleverantörer kan återförsäljarna bokföra den fraktmetod och de kostnader som fraktbolaget för närvarande tar ut. På så sätt kan kunderna välja leveranssätt.
+- **Realtidspriser** - Genom att samarbeta med tredjepartsleverantörer kan återförsäljare bokföra leveransmetoden och kostnaden som fraktföretaget för närvarande debiterar. På så sätt kan kunderna välja leveranssätt.
 
-- **Schablonbelopp**- Ett av de populäraste leveransalternativen. Tricket här är att se till att handlarna inte överbelastar eller undertrycker kunderna. Detta fungerar också om detaljhandlarna har en standardprodukt men kan bli komplicerade om detaljhandlarna har en mängd olika produkter.
+- **Schablonpris** - Ett av de populäraste leveransalternativen. Tricket här är att se till att handlarna inte överbelastar eller undertrycker kunderna. Detta fungerar också om detaljhandlarna har en standardprodukt men kan bli komplicerade om detaljhandlarna har en mängd olika produkter.
 
-- **Kostnadsfri frakt**—Återförsäljare kan erbjuda fri frakt när kunden köper mer än ett visst belopp. Återförsäljare måste beräkna det beloppet för att kunna tillhandahålla den här tjänsten.
+- **Fri frakt över ett belopp** - Återförsäljare kan tillhandahålla fri frakt när kunden köper mer än ett visst belopp. Återförsäljare måste beräkna det beloppet för att kunna tillhandahålla den här tjänsten.
 
 Leverans och slutförande krävde samordning av teamet både internt och externt. En strategi för leverans och fullgörande bör delas med hela organisationen så att de anpassas efter varandra. Om marknadsföringsteamet till exempel vill skicka ut en kampanj som inkluderar fri frakt, måste de anpassa den efter frakt- och leveransstrategin och teamet för att eliminera negativa kundupplevelser.
 

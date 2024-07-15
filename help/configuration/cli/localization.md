@@ -4,7 +4,7 @@ description: Lär dig hur du genererar översättningsordlistor och bygger språ
 exl-id: dd27ccdd-158d-40a6-a2e2-563857820ae9
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '1503'
+source-wordcount: '1432'
 ht-degree: 0%
 
 ---
@@ -13,10 +13,10 @@ ht-degree: 0%
 
 {{file-system-owner}}
 
-Med Commerce translations kan ni anpassa och lokalisera er butik för flera regioner och marknader genom att generera:
+Med Commerce-översättningar kan ni anpassa och lokalisera er butik för flera regioner och marknader genom att generera:
 
-- **Översättningsordlistor** som är ett praktiskt sätt att anpassa eller översätta _några_ ord och fraser, t.ex. för en anpassad modul eller ett tema.
-- **Språkpaket** som gör att du kan översätta _alla_ ord och fraser i handelsprogrammet.
+- **Översättningsordlistor**, som är ett praktiskt sätt att anpassa eller översätta _vissa_ ord och fraser, till exempel för en anpassad modul eller ett anpassat tema.
+- **Språkpaket** som gör att du kan översätta _några eller alla_ ord och fraser i Commerce-programmet.
 
 Se [Översättningar - översikt].
 
@@ -33,9 +33,9 @@ Så här genererar du ordlistan och börjar översättningen:
 
    Det finns alternativ för att använda den översatta ordlistan:
 
-1. Du kan paketera översättningsordlistorna i ett språkpaket och ge paketet till Commerce Store-administratören.
+1. Du kan paketera översättningsordlistorna i ett språkpaket och skicka paketet till Commerce Store-administratören.
 
-1. Butiksadministratören i Admin [konfigurerar översättningarna].
+1. I Admin konfigurerar lagringsadministratören [översättningarna].
 
 Kommandoalternativ:
 
@@ -53,17 +53,17 @@ I följande tabell förklaras parametrar och värden:
 
 >[!INFO]
 >
->Om du vill skapa ett språkpaket från en översättningsordlista _måste_ använder `-m|--magento` alternativ.
+>Om du vill skapa ett språkpaket från en översättningsordlista _måste_ använda alternativet `-m|--magento`.
 
 ### Riktlinjer för översättning
 
 Använd följande riktlinjer när du översätter ord och fraser:
 
 - Ändra bara innehållet i den andra kolumnen. Översätt fraserna från engelska (`US`) till önskat språk.
-- När du skapar ordlistor för språkområden ska du använda de vanliga Commerce-strängarna.
-- Tänk på platshållarna när du översätter: `%1`, `%2`
+- När du skapar ordlistor för språkområden ska du använda Commerce standardsträngar.
+- Var uppmärksam på platshållare vid översättning: `%1`, `%2`
 
-I Commerce används platshållarna för att infoga kontextvärden. De är _not_ används för översättningar. Exempel:
+Commerce använder platshållarna för att infoga kontextvärden. De används _inte_ för översättningar. Exempel:
 
 ```text
 Product '%1' has been added to shopping cart.
@@ -75,7 +75,7 @@ Fyller med ett värde:
 Product 'Multimeter-2000' has been added to shopping cart.
 ```
 
-Den resulterande frasen måste innehålla minst en platshållare. Anta till exempel att det finns platshållare från `%1` till `%3` i den ursprungliga frasen. Översättningen kan ha så många av dessa platshållare i vilken ordning som helst, men det måste finnas minst en förekomst av `%1`, `%2`och `%3`. Översättningen får inte innehålla platshållarvärden som inte finns i det ursprungliga värdet (till exempel `%4`, `%5`och så vidare).
+Den resulterande frasen måste innehålla minst en platshållare. Anta till exempel att det finns platshållare från `%1` till `%3` i den ursprungliga frasen. Översättningen kan ha så många av dessa platshållare i vilken ordning som helst, men det måste finnas minst en förekomst av `%1`, `%2` och `%3`. Översättningen får inte innehålla platshållarvärden som inte finns i det ursprungliga värdet (till exempel `%4`, `%5` och så vidare).
 
 Ett exempel på översättning av en fras:
 
@@ -89,10 +89,10 @@ I motsats till en översättningsordlista kan du översätta några eller alla o
 
 I det här avsnittet beskrivs hur du skapar ett språkpaket som skriver CSV-filer till moduler och teman. Om du vill skapa ett språkpaket måste du utföra de uppgifter som beskrivs i följande avsnitt:
 
-1. [Samla in och översätta ord och fraser](#generate-a-translation-dictionary). (Med `--magento` parameter krävs.)
+1. [Samla in och översätta ord och fraser](#generate-a-translation-dictionary). (Parametern `--magento` krävs.)
 1. [Kör språkpaketkommandot](#run-the-language-package-command).
 1. [Skapa kataloger och filer](#create-directories-and-files).
-1. (Valfritt.) [Konfigurera flera paket för ett språk](#configure-multiple-packages-for-a-language).
+1. (Valfritt.) [Konfigurera flera paket för ett språk ](#configure-multiple-packages-for-a-language).
 
 ### Kör språkpaketkommandot
 
@@ -106,18 +106,18 @@ I följande tabell förklaras parametrarna och värdena för språkpaketkommando
 
 | Parameter | Värde | Obligatoriskt? |
 |--- |--- |--- |
-| `<source>` | Absolut filsystemsökväg och filnamn för en CSV-fil som innehåller den kombinerade översättningsordlistan och metainformation som krävs för att brytas ned till ett språkpaket.<br><br>Använd [`bin/magento i18n:collect-phrases`](#config-cli-subcommands-xlate-dict-dict) för att skapa CSV-filen och sedan skapa språkpaketet enligt beskrivningen i [Skapa kataloger och filer](#m2devgde-xlate-files). | Ja |
-| `<locale>` | [ISO 639-1] (språk) [ISO 3166] identifierare för det språk som används som filnamn för alla CSV-filer som skapas. Exempel: `de_DE`, `pt_PT`, `pt_BR`. | Ja |
-| `-m --mode` | Om det finns en målfil anger om det befintliga språkpaketet ska ersättas eller om det ska sammanfogas med det nya språkpaketet. Sammanfogning åsidosätter befintliga fraser och lägger till nya.<br><br>Värden: sammanfoga eller ersätta (standard). | Nej |
+| `<source>` | Absolut filsystemsökväg och filnamn för en CSV-fil som innehåller den kombinerade översättningsordlistan och metainformation som krävs för att brytas ned till ett språkpaket.<br><br>Använd [`bin/magento i18n:collect-phrases`](#config-cli-subcommands-xlate-dict-dict) för att skapa CSV-filen och skapa sedan språkpaketet enligt beskrivningen i [Skapa kataloger och filer](#m2devgde-xlate-files). | Ja |
+| `<locale>` | [ISO 639-1] (språk) och [ISO 3166] (land)-identifierare för språk som används som filnamn för alla resulterande CSV-filer. Exempel: `de_DE`, `pt_PT`, `pt_BR`. | Ja |
+| `-m --mode` | Om det finns en målfil anger om det befintliga språkpaketet ska ersättas eller om det ska sammanfogas med det nya språkpaketet. Sammanfogning åsidosätter befintliga fraser och lägger till nya.<br><br>Värden: sammanfoga eller ersätt (standard). | Nej |
 | `-d --allow-duplicates` | Inkludera det här alternativet om du vill tillåta dubbletter i språkpaketet. Annars misslyckas kommandot med ett fel om samma fras påträffas i flera poster med olika översättningar. | Nej |
 
 ### Skapa kataloger och filer
 
-Språkpaketen finns i en katalog under `app/i18n/<VendorName>` i handelsfilsystemet med följande innehåll:
+Språkpaket finns i en katalog under `app/i18n/<VendorName>` i Commerce-filsystemet med följande innehåll:
 
 - Nödvändiga licensfiler
 - `composer.json`
-- `registration.php` att [register] språkpaketet
+- `registration.php` som [registrerar] språkpaketet
 - [`language.xml`](#language-package-languagexml) metainformationsfil
 
 >[!INFO]
@@ -128,18 +128,18 @@ Så här skapar du dessa filer:
 
 1. Skapa en katalog under `app/i18n`.
 
-   Exempelvis finns språkpaket för Commerce i `app/i18n/magento`
+   Commerce språkpaket finns till exempel i `app/i18n/magento`
 
 1. Lägg till nödvändiga licensfiler.
 1. Lägg till [`composer.json`] som anger beroenden för ditt språkpaket.
 1. Registrera språkpaketet med [`registration.php`]
-1. Lägg till `language.xml` metainformationsfilen som beskrivs i nästa avsnitt.
+1. Lägg till `language.xml` metainformationsfil enligt beskrivningen i nästa avsnitt.
 
 #### Språk.xml
 
-När ett språkpaket deklareras i `language.xml` konfigurationsfilen måste du ange språkarvssekvensen för det här paketet.
+När du deklarerar ett språkpaket i konfigurationsfilen `language.xml` måste du ange språkarvssekvensen för det här paketet.
 
-Med språkarv kan du skapa en översättning som kallas _child_ baserat på en befintlig översättning som kallas _parent_. De underordnade översättningarna åsidosätter den överordnade. Om den underordnade översättningen inte kan överföras eller visas, eller om en fras eller ett ord saknas, används det överordnade språkområdet i Commerce. [Exempel på arv av språkpaket](#example-of-language-inheritance).
+Med språkarv kan du skapa en översättning som kallas _underordnad_ baserat på en befintlig översättning som kallas _överordnad_. De underordnade översättningarna åsidosätter den överordnade. Om den underordnade översättningen inte kan överföras eller visas, eller om en fras eller ett ord saknas, använder Commerce den överordnade språkinställningen. [Exempel på arv av språkpaket](#example-of-language-inheritance).
 
 Om du vill deklarera ett paket anger du följande information:
 
@@ -156,11 +156,11 @@ Om du vill deklarera ett paket anger du följande information:
 
 Var:
 
-- `code`—Språkpaket - nationella inställningar (krävs)
-- `vendor`—Modulens leverantörsnamn (obligatoriskt)
-- `package`—Språkpaketnamn (obligatoriskt)
-- `sort_order`—Prioritet för att överföra ett paket när det finns flera språkpaket tillgängliga för en butik
-- `use`- Språkinställning för överordnat språkpaket som ordlistor ska ärvas från
+- `code` - Språkpaketets nationella inställningar (krävs)
+- `vendor` - Modulens leverantörsnamn (obligatoriskt)
+- `package` - Namn på språkpaket (obligatoriskt)
+- `sort_order` - Prioritet för att överföra ett paket när det finns flera språkpaket tillgängliga för en butik
+- `use` - Språkpaket för överordnat språk som ordlistor ska ärvas från
 
 Om det behövs kan du ange flera överordnade paket. De överordnade paketen tillämpas på den första listade, först använda basen.
 
@@ -168,7 +168,7 @@ Om det behövs kan du ange flera överordnade paket. De överordnade paketen til
 
 Anta att ett språkpaket ärver från två andra paket och att dessa paket också har överordnade och &quot;indirekt överordnade&quot; paket.
 
-Om ett språkpaket ärver från två paket är dess `language.xml` kan se ut så här:
+Om ett språkpaket ärver från två paket kan dess `language.xml` se ut så här:
 
 ```xml
 <language xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/Language/package.xsd">
@@ -186,7 +186,7 @@ I föregående exempel:
 - `language_package_one` ärver från `en_au_package` och `en_au_package` ärver från `en_ie_package`
 - `language_package_two` ärver från `en_ca_package` och `en_ca_package` ärver från `en_us_package`
 
-Om Commerce-programmet inte kan hitta ord eller fras i `en_GB` paketet, det söker i andra paket i följande sekvens:
+Om Commerce-programmet inte kan hitta ord eller fras i paketet `en_GB` söker det i andra paket i följande sekvens:
 
 1. `parent-package-one/language_package_one`
 1. `<vendorname>/en_au_package`
@@ -195,13 +195,13 @@ Om Commerce-programmet inte kan hitta ord eller fras i `en_GB` paketet, det sök
 1. `<vendorname>/en_ca_package`
 1. `<vendorname>/en_us_package`
 
-Om du anger alla arv mellan språkpaketen kan det leda till att cirkulära arvskedjor skapas. Använd [Magento\Test\Integrity\App\Language\CircularDependencyTest] testa för att hitta och åtgärda sådana kedjor.
+Om du anger alla arv mellan språkpaketen kan det leda till att cirkulära arvskedjor skapas. Använd [Magento\Test\Integrity\App\Language\CircularDependencyTest] för att hitta och åtgärda sådana kedjor.
 
 ### Konfigurera flera paket för ett språk
 
 Du kan göra din butik mer flexibel genom att ladda upp flera språkpaket för samma språk i butiken. Du kan alltså använda olika anpassade paket för olika delar av din butik eftersom systemet kompilerar ett paket från alla paket som är tillgängliga för ett språk.
 
-Om du vill aktivera ytterligare ett paket för ett befintligt språk namnger du det nya paketet vilket namn som helst, förutom ett befintligt språkkodsnamn (för att undvika missförstånd). Ange konfigurationer för ett paket i språkpaketets `language.xml` metainformationsfilen som beskrivs i nästa avsnitt.
+Om du vill aktivera ytterligare ett paket för ett befintligt språk namnger du det nya paketet vilket namn som helst, förutom ett befintligt språkkodsnamn (för att undvika missförstånd). Ange konfigurationer för ett paket i språkpaketets `language.xml`-metainformationsfil, vilket beskrivs i nästa avsnitt.
 
 ## Exempel på hur du använder översättningskommandon
 
@@ -219,14 +219,14 @@ Så här lägger du till en tysk översättning till en modul eller ett tema som
 
    >[!INFO]
    >
-   >CSV-filnamnet måste _exakt matchning_ språkinställningen, inklusive tecknens skiftläge.
+   >CSV-filnamnet måste _exakt matcha_ språkinställningen, inklusive tecknens skiftläge.
 
 1. Översätt ord och fraser med [dessa riktlinjer](#translation-guidelines).
-1. Kopiera vid behov `xx_YY.csv` till `/var/www/html/magento2/app/code/ExampleCorp/SampleModule/i18n` eller till modulens temakatalog (beroende på om översättningsordlistan är för en modul eller ett tema).
+1. Om det behövs kopierar du `xx_YY.csv` till `/var/www/html/magento2/app/code/ExampleCorp/SampleModule/i18n` eller till modulens temakatalog (beroende på om översättningsordlistan är för en modul eller ett tema).
 
 ### Exempel: Skapa ett språkpaket
 
-Generera en CSV-fil på ungefär samma sätt som i föregående exempel, men i stället för att ange en modul eller temakatalog anger du hela Commerce-programmets rotkatalog. Den resulterande CSV-filen innehåller fraser som kommandot kan hitta i koden.
+Generera en CSV-fil på ungefär samma sätt som i föregående exempel, men i stället för att ange en modul eller temakatalog anger du hela Commerce programrotkatalog. Den resulterande CSV-filen innehåller fraser som kommandot kan hitta i koden.
 
 1. Samla in fraser från modulen:
 
@@ -236,7 +236,7 @@ Generera en CSV-fil på ungefär samma sätt som i föregående exempel, men i s
 
    >[!INFO]
    >
-   >CSV-filnamnet måste _exakt matchning_ språkinställningen, inklusive tecknens skiftläge.
+   >CSV-filnamnet måste _exakt matcha_ språkinställningen, inklusive tecknens skiftläge.
 
 1. Översätt ord och fraser med [dessa riktlinjer](#translation-guidelines).
 1. Skapa språkpaketet.
@@ -252,9 +252,9 @@ Generera en CSV-fil på ungefär samma sätt som i föregående exempel, men i s
 1. Lägg till följande i den katalogen:
 
    - En licens, om det behövs
-   - `composer.json` (exempel efter)
-   - `registration.php` (exempel efter)
-   - `language.xml` (exempel efter)
+   - `composer.json` (exemplet nedan)
+   - `registration.php` (exemplet nedan)
+   - `language.xml` (exemplet nedan)
 
    **Exempel`composer.json`**:
 

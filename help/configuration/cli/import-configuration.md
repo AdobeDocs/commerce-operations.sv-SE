@@ -4,7 +4,7 @@ description: Importera konfigurationsinställningar för Adobe Commerce från ko
 exl-id: 7d9f156c-e8d3-4888-b359-5d9aa8c4ea05
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '493'
 ht-degree: 0%
 
 ---
@@ -13,14 +13,14 @@ ht-degree: 0%
 
 {{file-system-owner}}
 
-När du konfigurerar ett produktionssystem med Commerce 2.2 [distributionsmodell för pipeline](../deployment/technical-details.md)måste du _import_ konfigurationsinställningar från `config.php` och `env.php` till databasen.
+När du konfigurerar ett produktionssystem med Commerce 2.2 [pipeline-distributionsmodellen](../deployment/technical-details.md) måste du _importera_ konfigurationsinställningar från `config.php` och `env.php` till databasen.
 Dessa inställningar omfattar konfigurationssökvägar och -värden, webbplatser, butiker, butiksvyer och teman.
 
 När du har importerat webbplatser, butiker, vyer och teman kan du skapa produktattribut och tillämpa dem på webbplatser, butiker och butiksvyer i produktionssystemet.
 
 >[!INFO]
 >
->The `bin/magento app:config:import` -kommandot bearbetar inte konfiguration som lagras i miljövariabler.
+>Kommandot `bin/magento app:config:import` bearbetar inte konfigurationen som lagras i miljövariabler.
 
 ## Importera, kommando
 
@@ -30,7 +30,7 @@ Kör följande kommando på produktionssystemet för att importera data från ko
 bin/magento app:config:import [-n, --no-interaction]
 ```
 
-Använd det valfria `[-n, --no-interaction]` för att importera data utan interaktion.
+Använd den valfria flaggan `[-n, --no-interaction]` för att importera data utan interaktion.
 
 Om du anger `bin/magento app:config:import` utan den valfria flaggan måste du bekräfta ändringarna.
 
@@ -42,7 +42,7 @@ These Groups will be created: New Store
 Do you want to continue [yes/no]?
 ```
 
-Fortsätt importen genom att ange `yes`.
+Ange `yes` om du vill fortsätta med importen.
 
 Om distributionskonfigurationsfilerna innehåller data som ska importeras visas ett meddelande som liknar följande:
 
@@ -64,48 +64,48 @@ I följande avsnitt beskrivs i detalj vilka data vi importerar.
 
 ### Systemkonfiguration
 
-I Commerce används värden direkt i `system` i `config.php` eller `env.php` i stället för att importera dem till databasen, eftersom de kräver vissa för- och efterbearbetningsåtgärder.
+Commerce använder värden direkt i `system`-arrayen i `config.php` - eller `env.php`-filerna i stället för att importera dem till databasen eftersom de kräver vissa för- och efterbearbetningsåtgärder.
 
-Värdet för konfigurationssökvägen `web/secure/base_url` måste valideras med backend-modeller.
+Värdet för konfigurationssökvägen `web/secure/base_url` måste till exempel valideras med serverdelsmodeller.
 
 #### Backend-modeller
 
 Servermodeller är en mekanism för bearbetning av ändringar i systemkonfigurationen.
 Du definierar serverdelsmoduler i `<module_name>/adminhtml/system.xml`.
 
-Alla backend-modeller måste utöka [`Magento\Framework\App\Config\Value`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/App/Config/Value.php) klassen.
+Alla backend-modeller måste utöka klassen [`Magento\Framework\App\Config\Value`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/App/Config/Value.php).
 
 När vi importerar backend-modeller sparas inte konfigurationsvärdena.
 
 ### Konfiguration av webbplatser, butiker och butiksgrupper
 
 Vi importerar följande typer av konfigurationer.
-(Dessa konfigurationer finns under `scopes` array in `config.php`.)
+(Dessa konfigurationer finns under arrayen `scopes` i `config.php`.)
 
 - `websites`: webbplatsrelaterad konfiguration
 - `groups`: lagrar relaterad konfiguration
-- `stores`: butiksvyer relaterad konfiguration
+- `stores`: butiksvyer visar relaterad konfiguration
 
 De föregående konfigurationerna kan importeras i följande lägen:
 
-- `create`: `config.php` innehåller nya enheter (`websites`, `groups`, `stores`) som inte finns i produktionsmiljön
+- `create`: `config.php` innehåller nya entiteter (`websites`, `groups`, `stores`) som inte finns i produktionsmiljön
 - `update`: `config.php` innehåller entiteter (`websites`, `groups`, `stores`) som skiljer sig från produktionsmiljön
-- `delete`: `config.php` gör _not_ innehåller entiteter (`websites`, `groups`, `stores`) som finns i produktionsmiljön
+- `delete`: `config.php` innehåller _inte_ entiteter (`websites`, `groups`, `stores`) som finns i produktionsmiljön
 
 >[!INFO]
 >
->Vi importerar inte den rotkategori som är associerad med butiker. Du måste associera en rotkategori med en butik med Commerce Admin.
+>Vi importerar inte den rotkategori som är associerad med butiker. Du måste associera en rotkategori med en butik med hjälp av Commerce Admin.
 
 ### Temakonfiguration
 
-Temakonfigurationen innehåller alla teman som är registrerade i ert Commerce-system. Informationen hämtas direkt från `theme` databastabell. (Temakonfigurationen finns i `themes` array in `config.php`.)
+Temakonfigurationen innehåller alla teman som är registrerade i ditt Commerce-system. Data kommer direkt från databastabellen `theme`. (Temakonfigurationen finns i arrayen `themes` i `config.php`.)
 
 #### Temadatas struktur
 
-Nyckeln till arrayen är fullständig temats sökväg: `area` + `theme path`
+Nyckeln i matrisen är fullständig temats sökväg: `area` + `theme path`
 
-Exempel, `frontend/Magento/luma`.
-`frontend` är area och `Magento/luma` är temats sökväg.
+Exempel: `frontend/Magento/luma`.
+`frontend` är ett område och `Magento/luma` är en temaväge.
 
 Värdet för arrayen är data om temat: kod, titel, sökväg, överordnat id
 
@@ -127,4 +127,4 @@ Fullständigt exempel:
 >[!INFO]
 >
 >- _Temaregistrering_. Om ett temadata definieras i `config.php` men temats källkod inte finns i filsystemet, ignoreras temat (d.v.s. inte registrerat).
->- _Ta bort teman_. Om ett tema inte finns i `config.php` men källkoden finns i filsystemet, tas inte temat bort.
+>- _Ta bort teman_. Om det inte finns något tema i `config.php` men källkoden finns i filsystemet tas temat inte bort.

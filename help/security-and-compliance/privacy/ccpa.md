@@ -15,26 +15,26 @@ ht-degree: 0%
 >
 >Detta är ett av ett antal ämnen som hjälper Adobe Commerce handlare och utvecklare att förstå konsekvenserna av California Consumer Privacy Act (CCPA). Uppgifterna är endast avsedda som information och bör inte tolkas som juridisk rådgivning. Kontakta ditt juridiska ombud för att få reda på om och hur ditt företag ska uppfylla juridiska skyldigheter.
 
-The [CCPA](https://oag.ca.gov/privacy/ccpa) Utvidgar konsumenternas rättigheter i Kalifornien för att avgöra hur deras personuppgifter samlas in, lagras och används, med tonvikt på att skydda konsumenterna mot obehörig försäljning eller utbyte av deras personuppgifter. CCPA antogs 2018 och träder i kraft den 1 januari 2020.
+[CCPA](https://oag.ca.gov/privacy/ccpa) utökar konsumenternas rättigheter i Kalifornien för att avgöra hur deras personuppgifter samlas in, lagras och används, med tonvikt på att skydda konsumenterna mot obehörig försäljning eller utbyte av deras personuppgifter. CCPA antogs 2018 och träder i kraft den 1 januari 2020.
 
 CCPA ger konsumenterna följande nya rättigheter:
 
-- **Rätt att få veta** de kategorier av personuppgifter om dem som samlats in, använts, delats eller sålts under de senaste tolv månaderna.
-- **Rätt att radera** vissa typer av personuppgifter som innehas av ett företag och/eller deras tjänsteleverantörer.
-- **Rätt att avanmäla sig** om försäljningen av deras personuppgifter.
-- **Rätt till icke-diskriminering** i termer av pris eller tjänst för att ha utövat en integritetsrätt enligt CCPA.
+- **Rätt att känna till** de kategorier av personuppgifter om dem som samlats in, använts, delats eller sålts under de senaste 12 månaderna.
+- **Rättighet att ta bort** vissa typer av personlig information som innehas av ett företag och/eller deras tjänsteleverantörer.
+- **Rätt att avanmäla** från försäljningen av deras personuppgifter.
+- **Rätt till icke-diskriminering** i form av pris eller tjänst för att ha utövat en integritetsrätt enligt CCPA.
 
 ## CCPA-kompatibilitet
 
-Utvecklingen och genomförandet av en CCPA-efterlevnadsplan kräver en samordnad insats. Vi uppmuntrar handlare att sätta ihop ett funktionsövergripande team och följa den färdplan som beskrivs i [CCPA Compliance Guide](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-ccpa.html) för att se till att deras företag följer förordningen. Som utvecklare kan du bli inbjuden att delta som intressent med tonvikt på steg 2 till 5 i processen. Se [CCPA Compliance Guide](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-ccpa.html) för mer information.
+Utvecklingen och genomförandet av en CCPA-efterlevnadsplan kräver en samordnad insats. Vi uppmuntrar handlarna att sätta ihop ett funktionsövergripande team och följa den färdplan som beskrivs i [CCPA Compliance Guide](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-ccpa.html) för att se till att deras företag följer reglerna. Som utvecklare kan du bli inbjuden att delta som intressent med tonvikt på steg 2 till 5 i processen. Mer information finns i [CCPA-kompatibilitetshandboken](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-ccpa.html).
 
 1. Samla ihop ett funktionsövergripande team för att hantera kompatibiliteten med CCPA.
 
-1. **Inventera digitala resurser.**
+1. **Inventera digitala egenskaper.**
 
-1. **Kartlägg kundresan och datainsamlingsprocesserna.**
+1. **Mappa kundresan och datainsamlingsprocesserna.**
 
-1. **Upprätta rutiner och mekanismer för att besvara kundförfrågningar.**
+1. **Upprätta procedurer och mekanismer för att svara på kundförfrågningar.**
 
 1. **Skriv innehållet för nödvändiga CCPA-kundmeddelanden.**
 

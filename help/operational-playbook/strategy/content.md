@@ -16,7 +16,7 @@ Framgångsrika marknadsföringsplaner för e-handelsinnehåll kommer inte från 
 
 ## Ramverk för innehållsstrategi
 
-![Ramverksdiagram för innehållsstrategi](../../assets/playbooks/content-strategy-framework.png)
+![Ramverk för innehållsstrategi](../../assets/playbooks/content-strategy-framework.png)
 
 ### Förproduktion
 
@@ -26,7 +26,7 @@ I det här steget måste du börja med din användare, förstå deras behov, ta 
 
 I det här steget ska du skapa innehåll. Detta innefattar framtagning av innehåll, redigering, produktion av resurser och innehållsoptimering - tillgänglighet, SEO, taggning och klassificering, outsourcing i produktionen, roll för verktyg och teknik från tredje part samt återanvändning av innehåll.
 
-### Postproduktion
+### Post
 
 Detta steg omfattar granskning och utvärdering av innehåll, anpassning och optimering. Detta inkluderar utvärdering, optimering, test, inlärning och användarupplevelse av analyser.
 
@@ -38,10 +38,10 @@ Oavsett om ni hanterar grundläggande webbinnehåll eller innehåll som ska slä
 
 Adobe Experience Manager kombinerar ett antal funktioner på infrastruktur- och applikationsnivå i ett enda integrerat paket. Erbjudandeadresserna
 
-- **Webbplatser**- Skapa och leverera snabbt relevanta webbplatser och mobilappar och uppdatera innehållet när som helst utan att IT-avdelningen behöver belastas.
-- **Resurser**- Hantera enkelt bilder, videor och andra resurser i alla digitala kanaler och leverera personaliserade kundupplevelser.
-- **Communities**- Skapa framgångsrika communityn och engagerande konversationer i alla era sociala kanaler så att ni kan inspirera till nya nivåer av lärande och kundlojalitet.
-- **Forms**- Integrera blanketter på företagsnivå på era webbplatser och i era mobila upplevelser och förenkla framtagningen av blanketter och slutförandet av transaktioner.
-- **Appar**—Skapa och leverera mobilappar med en lösning som överbryggar klyftan mellan marknadsförare och IT så att marknadsförarna enkelt kan uppdatera innehåll (även efter lanseringen).
+- **Webbplatser** - Skapa och leverera snabbt relevanta webbplatser och mobilappar och uppdatera innehållet när som helst utan att belasta IT-avdelningen.
+- **Assets** - Hantera enkelt bilder, videor och andra resurser i alla digitala kanaler och leverera personaliserade kundupplevelser.
+- **Communities** - Bygg framgångsrika communityer och engagerande konversationer i alla era sociala kanaler så att ni kan inspirera nya nivåer av lärande och kundlojalitet.
+- **Forms** - Integrera formulär på företagsnivå på era webbplatser och i era mobila upplevelser och gör det enklare att skapa formulär och slutföra transaktioner.
+- **Appar** - Skapa och leverera mobilappar med en lösning som överbryggar klyftan mellan marknadsförare och IT så att marknadsförare enkelt kan uppdatera innehåll (även efter lanseringen).
 
-![Ramverksdiagram för innehållsstrategi](../../assets/playbooks/content-strategy-framework2.png)
+![Ramverk för innehållsstrategi](../../assets/playbooks/content-strategy-framework2.png)

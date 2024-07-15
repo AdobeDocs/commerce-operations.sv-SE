@@ -5,7 +5,7 @@ exl-id: 830abd81-4c6d-418b-9da4-b6acd95f5ec8
 topic: Commerce, Migration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '278'
+source-wordcount: '287'
 ht-degree: 0%
 
 ---
@@ -33,17 +33,17 @@ I det här avsnittet beskrivs hur du migrerar mediefiler manuellt.
 >Databasmedielagringsmetoden används inte i Magento 2.4.3.
 
 
-Det här avsnittet gäller dig *endast* om du sparar mediefiler i Magento-databasen. Detta steg bör utföras före [migrering av data](data.md):
+Det här avsnittet gäller *endast* om du lagrar mediefiler i Magento-databasen. Det här steget bör utföras före [migrering av data](data.md):
 
 1. Logga in som administratör på administratörspanelen för Magento 1.
 
-1. Klicka **System** > **Konfiguration** > AVANCERAT > **System**.
+1. Klicka på **System** > **Konfiguration** > AVANCERAT > **System**.
 
-1. I den högra rutan bläddrar du till **Lagringskonfiguration för media**.
+1. Bläddra till **Lagringskonfiguration för media** i den högra rutan.
 
-1. Från **Välj mediedatabas** klickar du på namnet på din medielagringsdatabas.
+1. Klicka på namnet på medielagringsdatabasen i listan **Välj mediedatabas**.
 
-1. Klicka **Synkronisera**.
+1. Klicka på **Synkronisera**.
 
 Upprepa sedan samma steg på administratörspanelen i Magento 2.
 
@@ -51,7 +51,7 @@ Upprepa sedan samma steg på administratörspanelen i Magento 2.
 
 Alla mediefiler (bilder för produkter, kategorier, WYSIWYG-redigeraren och så vidare) ska kopieras manuellt från `<your Magento 1 install dir>/media` till `<your Magento 2 install dir>/pub/media`.
 
-Men gör *not* kopiera `.htaccess` filer i Magento 1 `media` mapp. Magento 2 har sin egen `.htaccess` som bör bevaras.
+Kopiera *inte* `.htaccess`-filerna som finns i mappen Magento 1 `media` . Magento 2 har en egen `.htaccess` som ska bevaras.
 
 ## Layout för butiker
 
@@ -69,4 +69,4 @@ Du måste återskapa alla manuellt:
 
 >[!NOTE]
 >
->Du kan justera tidszonen för en databasenhet med `\Migration\Handler\Timezone` hanterare. Se [uppföljning](follow-up.md) för mer information.
+>Du kan justera tidszonen för en databasentitet med hjälp av hanteraren `\Migration\Handler\Timezone`. Mer information finns i avsnittet [uppföljning](follow-up.md).

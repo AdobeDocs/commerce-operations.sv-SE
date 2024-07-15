@@ -7,7 +7,7 @@ ht-degree: 0%
 ---
 # Uppdatera byggsystem
 
-**Uppdatera byggsystemet**:
+**Så här uppdaterar du byggsystemet**:
 
 1. Logga in på byggsystemet som ägare av filsystemet.
 1. Byt till programmets rotkatalog.
@@ -16,7 +16,7 @@ ht-degree: 0%
    cd <Magento root dir>
    ```
 
-1. Dra ändringarna till `app/etc/config.php` från källkontroll.
+1. Dra in ändringarna i `app/etc/config.php` från källkontrollen.
 
    ```bash
    git pull mconfig m2.2_deploy

@@ -5,7 +5,7 @@ feature: Configuration, Logs
 exl-id: fdb1b431-405a-4c32-aff1-9e50bf0a2c90
 source-git-commit: 991bd5fb34a2ffe61aa194ec46e2b04b4ce5b3e7
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '111'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Om du vill börja arbeta med en logger måste du skapa en instans av `\Psr\Log\L
 - [notice()](https://github.com/php-fig/log/blob/master/src/LoggerInterface.php#L89)
 - [warning()](https://github.com/php-fig/log/blob/master/src/LoggerInterface.php#L79)
 
-Ett sätt att göra detta beskrivs i [Loggdatabasaktivitet](../logs/database-activity.md) exempel.
+Ett sätt att göra detta beskrivs i exemplet [Loggdatabasaktivitet](../logs/database-activity.md).
 
 Ett annat sätt är:
 
@@ -49,6 +49,6 @@ class SomeModel
  }
 ```
 
-Exemplet nedan visar att `SomeModel` får ett `\Psr\Log\LoggerInterface` objekt med konstruktorinjektion. I en metod `doSomething`, om ett fel inträffar, loggas den på en metod `critical` (`$this->logger->critical($e);`).
+Exemplet ovan visar att `SomeModel` tar emot ett `\Psr\Log\LoggerInterface`-objekt med hjälp av konstruktorinjektion. Om ett fel inträffar i en metod `doSomething` loggas den till metoden `critical` (`$this->logger->critical($e);`).
 
-[RFC 5424](https://datatracker.ietf.org/doc/html/rfc5424) definierar åtta loggnivåer (felsökning, info, notifiering, varning, fel, kritisk, varning och nödsituation).
+[RFC 5424](https://datatracker.ietf.org/doc/html/rfc5424) definierar åtta loggnivåer (felsökning, information, meddelanden, varning, fel, kritisk, varning och nödsituation).

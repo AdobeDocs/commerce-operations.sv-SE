@@ -13,33 +13,33 @@ ht-degree: 0%
 
 # Bästa praxis för utcheckning av prestanda
 
-The [utcheckning](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/point-of-purchase/checkout/checkout-process) i Adobe Commerce är en viktig del av butiksupplevelsen. Den bygger på den inbyggda [kundvagn](https://experienceleague.adobe.com/en/docs/commerce-admin/start/storefront/storefront#shopping-cart) och [utcheckning](https://experienceleague.adobe.com/en/docs/commerce-admin/start/storefront/storefront#checkout-page) funktioner.
+Processen [Checka ut](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/point-of-purchase/checkout/checkout-process) i Adobe Commerce är en viktig del av butiksupplevelsen. Den bygger på de inbyggda funktionerna [cart](https://experienceleague.adobe.com/en/docs/commerce-admin/start/storefront/storefront#shopping-cart) och [checkout](https://experienceleague.adobe.com/en/docs/commerce-admin/start/storefront/storefront#checkout-page) .
 
-Prestanda är avgörande när det gäller att upprätthålla en bra användarupplevelse. Granska [sammanfattning av prestandatest](../implementation-playbook/infrastructure/performance/benchmarks.md) om du vill veta mer om prestandaförväntningar. Du kan optimera utcheckningsprestanda genom att konfigurera följande alternativ för **orderhantering med hög genomströmning**:
+Prestanda är avgörande när det gäller att upprätthålla en bra användarupplevelse. Granska sammanfattningen för [prestandatestet](../implementation-playbook/infrastructure/performance/benchmarks.md) om du vill veta mer om prestandaförväntningarna. Du kan optimera utcheckningsprestanda genom att konfigurera följande alternativ för **bearbetning av order med hög genomströmning**:
 
-- [AsyncOrder](#asynchronous-order-placement)—Beställningar bearbetas asynkront med en kö.
-- [Uppskjuten total beräkning](#deferred-total-calculation)- Skjut upp beräkningar för ordersummor tills utcheckningen börjar.
-- [Lagerkontroll vid kundvagnsinläsning](#disable-inventory-check)- Välj att hoppa över lagervalidering av kundvagnsartiklar.
-- [Belastningsutjämning](#load-balancing)—Aktivera sekundära anslutningar för MySQL-databasen och Redis-instansen.
+- [AsyncOrder](#asynchronous-order-placement) - Bearbetar order asynkront med en kö.
+- [Uppskjuten total beräkning](#deferred-total-calculation) - Skjut upp beräkningar för ordersummor tills utcheckningen börjar.
+- [Inventeringskontroll vid kundvagnsinläsning](#disable-inventory-check) - Välj om du vill hoppa över lagervalidering av kundvagnsartiklar.
+- [Lastbalansering](#load-balancing) - Aktivera sekundära anslutningar för MySQL-databasen och Redis-instansen.
 
 Konfigurationsalternativen AsyncOrder, Laterred Total Calculation och Inventory Check on Cart Load fungerar alla oberoende av varandra. Du kan använda alla tre funktionerna samtidigt eller aktivera och inaktivera funktionerna i valfri kombination.
 
 >[!NOTE]
 >
->Använd inte anpassad PHP-kod för att anpassa de inbyggda funktionerna för kundvagn och utcheckning. Förutom potentiella prestandaproblem kan anpassad PHP-kod leda till komplexa uppgraderingar och underhållsproblem. De här problemen ökar din totala ägandekostnad. Om det inte går att undvika anpassningar av PHP-baserade kundvagn och kassor kan du använda [Adobe Commerce Marketplace](https://commercemarketplace.adobe.com/)-godkända tillägg. Alla tillägg på marknadsplatsen omfattas av [omfattande granskning](https://developer.adobe.com/commerce/marketplace/guides/sellers/extension-quality-program/) för att kontrollera att de uppfyller Adobe Commerce kodningsstandarder och bästa praxis.
+>Använd inte anpassad PHP-kod för att anpassa de inbyggda funktionerna för kundvagn och utcheckning. Förutom potentiella prestandaproblem kan anpassad PHP-kod leda till komplexa uppgraderingar och underhållsproblem. De här problemen ökar din totala ägandekostnad. Om det inte går att undvika anpassningar av varukorgar och kassor använder du bara tillägg som godkänts av [Adobe Commerce Marketplace](https://commercemarketplace.adobe.com/). Alla tillägg på marknadsplatsen genomgår [omfattande granskning](https://developer.adobe.com/commerce/marketplace/guides/sellers/extension-quality-program/) för att verifiera att de uppfyller Adobe Commerce kodningsstandarder och bästa praxis.
 
 ## Asynkron orderplacering
 
-The _Asynkron ordning_ aktiverar asynkron placering av order, vilket markerar ordningen som `received`, placerar ordern i en kö och bearbetar order från kön först-i-först-ut-baserat. AsyncOrder är **inaktiverad** som standard.
+Modulen _Asynkron ordning_ aktiverar asynkron placering av ordningen som `received`, placerar ordern i en kö och bearbetar order från kön första-i-första-ut-basis. AsyncOrder är **inaktiverad** som standard.
 
-En kund t.ex. lägger till en produkt i kundvagnen och väljer **[!UICONTROL Proceed to Checkout]**. De fyller ut **[!UICONTROL Shipping Address]** formulär, välj önskat **[!UICONTROL Shipping Method]**, väljer en betalningsmetod och gör en beställning. Kundvagnen är rensad, ordern är markerad som **[!UICONTROL Received]**, men produktkvantiteten har inte justerats ännu och inte heller skickas ett säljmejl till kunden. Ordern tas emot, men orderinformationen är inte tillgänglig än eftersom ordern inte har bearbetats fullständigt. Den finns kvar i kön tills `placeOrderProcess` konsumenten börjar, verifierar beställningen med [lagerkontroll](#disable-inventory-check) funktionen (aktiverad som standard) och uppdaterar ordningen enligt följande:
+En kund lägger till exempel till en produkt i kundvagnen och väljer **[!UICONTROL Proceed to Checkout]**. De fyller i formuläret **[!UICONTROL Shipping Address]**, väljer önskad **[!UICONTROL Shipping Method]**, väljer en betalningsmetod och gör en beställning. Kundvagnen har rensats, ordern har markerats som **[!UICONTROL Received]**, men produktkvantiteten har inte justerats ännu och inte heller skickas ett e-postmeddelande till kunden. Ordern tas emot, men orderinformationen är inte tillgänglig än eftersom ordern inte har bearbetats fullständigt. Den ligger kvar i kön tills konsumenten `placeOrderProcess` börjar, verifierar ordern med funktionen [ lagerkontroll](#disable-inventory-check) (aktiverad som standard) och uppdaterar ordningen enligt följande:
 
-- **Produkten finns tillgänglig**—orderstatusen ändras till _Väntande_, produktkvantiteten justeras, ett e-postmeddelande med beställningsinformation skickas till kunden och beställningsinformationen blir tillgänglig för visning i **Beställningar och returer** lista med alternativ som kan ändras, t.ex. ändra ordning.
-- **Produkt som inte finns i lager eller som har låg tillgång**—orderstatusen ändras till _Avvisad_, produktkvantiteten inte justeras, ett e-postmeddelande med beställningsinformation om problemet skickas till kunden och den avvisade beställningsinformationen blir tillgänglig i **Beställningar och returer** lista utan alternativ som kan användas.
+- **Produkten är tillgänglig** - orderstatusen ändras till _Väntande_, produktkvantiteten justeras, ett e-postmeddelande med orderinformation skickas till kunden och den slutförda orderinformationen blir tillgänglig för visning i listan **Beställningar och Returer** med åtgärdbara alternativ, till exempel ändra ordning.
+- **Produkten är inte i lager eller har låg leverans** - orderstatusen ändras till _Avvisad_, produktkvantiteten justeras inte, ett e-postmeddelande med orderinformation om utgåvan skickas till kunden och den avvisade orderinformationen blir tillgänglig i listan **Beställningar och Returer** utan några åtgärdbara alternativ.
 
-Använd kommandoradsgränssnittet för att aktivera dessa funktioner eller redigera `app/etc/env.php` enligt motsvarande README-filer som definieras i [_Referenshandbok för modul_](https://developer.adobe.com/commerce/php/module-reference/).
+Använd kommandoradsgränssnittet för att aktivera de här funktionerna eller redigera filen `app/etc/env.php` enligt motsvarande README-filer som definieras i [_Modulreferenshandboken_](https://developer.adobe.com/commerce/php/module-reference/).
 
-**Aktivera AsyncOrder**:
+**Så här aktiverar du AsyncOrder**:
 
 Du kan aktivera AsyncOrder med kommandoradsgränssnittet:
 
@@ -47,7 +47,7 @@ Du kan aktivera AsyncOrder med kommandoradsgränssnittet:
 bin/magento setup:config:set --checkout-async 1
 ```
 
-The `set` skriver följande till `app/etc/env.php` fil:
+Kommandot `set` skriver följande till filen `app/etc/env.php`:
 
 ```conf
 ...
@@ -56,13 +56,13 @@ The `set` skriver följande till `app/etc/env.php` fil:
    ]
 ```
 
-Se [AsyncOrder](https://developer.adobe.com/commerce/php/module-reference/module-async-order/) i _Referenshandbok för modul_.
+Se [AsyncOrder](https://developer.adobe.com/commerce/php/module-reference/module-async-order/) i _Modulens referenshandbok_.
 
 **Så här inaktiverar du AsyncOrder**:
 
 >[!WARNING]
 >
->Innan du inaktiverar modulen AsyncOrder måste du verifiera att _alla_ asynkrona orderprocesser är slutförda.
+>Innan du inaktiverar AsyncOrder-modulen måste du verifiera att _alla_ asynkrona orderprocesser är slutförda.
 
 Du kan inaktivera AsyncOrder med kommandoradsgränssnittet:
 
@@ -70,7 +70,7 @@ Du kan inaktivera AsyncOrder med kommandoradsgränssnittet:
 bin/magento setup:config:set --checkout-async 0
 ```
 
-The `set` skriver följande till `app/etc/env.php` fil:
+Kommandot `set` skriver följande till filen `app/etc/env.php`:
 
 ```conf
 ...
@@ -85,11 +85,11 @@ AsyncOrder stöder en begränsad uppsättning Adobe Commerce-funktioner.
 
 | Kategori | Funktion som stöds |
 |------------------|--------------------------------------------------------------------------|
-| Utcheckningstyper | OnePage Checkout<br>Standardutcheckning<br>B2B - överlåtbar offert |
-| Betalningsmetoder | Check-/penningbeställning<br>Kontant vid leverans<br>Braintree<br>PayPal PayFlow Pro |
+| Utcheckningstyper | OnePage-utcheckning<br>Standardutcheckning<br>Förhandlingsbar B2B-offert |
+| Betalningsmetoder | Check/Money Order<br>Cash on Delivery<br>Braintree<br>PayPal PayFlow Pro |
 | Leveransmetoder | Alla leveransmetoder stöds. |
 
-Följande funktioner är **not** stöds av AsyncOrder, men fortsätter att fungera synkront:
+Följande funktioner stöds **inte** av AsyncOrder, men fortsätter att fungera synkront:
 
 - Betalningsmetoder som inte ingår i listan över funktioner som stöds
 - Checka ut flera adresser
@@ -116,19 +116,19 @@ När modulen AsyncOrder är aktiverad körs följande REST-slutpunkter och Graph
 
 #### Utesluta betalningsmetoder
 
-Utvecklare kan uttryckligen exkludera vissa betalningsmetoder från asynkron orderplacering genom att lägga till dem i `Magento\AsyncOrder\Model\OrderManagement::paymentMethods` array. Order som använder uteslutna betalningsmetoder behandlas synkront.
+Utvecklare kan uttryckligen exkludera vissa betalningsmetoder från asynkron orderplacering genom att lägga till dem i `Magento\AsyncOrder\Model\OrderManagement::paymentMethods`-arrayen. Order som använder uteslutna betalningsmetoder behandlas synkront.
 
 ### Asynk order för överlåtbar offert
 
-The _Asynk order för överlåtbar offert_ Med B2B-modulen kan du spara orderobjekt asynkront för `NegotiableQuote` funktionalitet. AsyncOrder och NegotiableQuote måste vara aktiverade.
+Med B2B-modulen _Förhandlingsbar offertasynkron ordning_ kan du spara orderobjekt asynkront för funktionen `NegotiableQuote`. AsyncOrder och NegotiableQuote måste vara aktiverade.
 
 ## Uppskjuten total beräkning
 
-The _Uppskjuten total beräkning_ I denna modul optimeras utcheckningsprocessen genom att den totala beräkningen skjuts upp tills den begärs för kundvagnen eller under de sista utcheckningsstegen. När det här alternativet är aktiverat beräknas endast delsumman när kunden lägger till produkter i kundvagnen.
+Modulen _Uppskjuten total beräkning_ optimerar utcheckningsprocessen genom att skjuta upp den totala beräkningen tills den begärs för kundvagnen eller under de sista utcheckningsstegen. När det här alternativet är aktiverat beräknas endast delsumman när kunden lägger till produkter i kundvagnen.
 
-Uppskjuten total beräkning är **inaktiverad** som standard. Använd kommandoradsgränssnittet för att aktivera dessa funktioner eller redigera `app/etc/env.php` enligt motsvarande README-filer som definieras i [_Referenshandbok för modul_](https://developer.adobe.com/commerce/php/module-reference/).
+Uppskjuten total beräkning är **inaktiverad** som standard. Använd kommandoradsgränssnittet för att aktivera de här funktionerna eller redigera filen `app/etc/env.php` enligt motsvarande README-filer som definieras i [_Modulreferenshandboken_](https://developer.adobe.com/commerce/php/module-reference/).
 
-**Aktivera uppskjutenTotalCalculation**:
+**Så här aktiverar du DeferredTotalCalculation**:
 
 Du kan aktivera DeferredTotalCalculation med kommandoradsgränssnittet:
 
@@ -136,7 +136,7 @@ Du kan aktivera DeferredTotalCalculation med kommandoradsgränssnittet:
 bin/magento setup:config:set --deferred-total-calculating 1
 ```
 
-The `set` skriver följande till `app/etc/env.php` fil:
+Kommandot `set` skriver följande till filen `app/etc/env.php`:
 
 ```conf
 ...
@@ -145,7 +145,7 @@ The `set` skriver följande till `app/etc/env.php` fil:
    ]
 ```
 
-**Inaktivera uppskjutenTotalCalculation**:
+**Så här inaktiverar du DeferredTotalCalculation**:
 
 Du kan inaktivera DeferredTotalCalculation med kommandoradsgränssnittet:
 
@@ -153,7 +153,7 @@ Du kan inaktivera DeferredTotalCalculation med kommandoradsgränssnittet:
 bin/magento setup:config:set --deferred-total-calculating 0
 ```
 
-The `set` skriver följande till `app/etc/env.php` fil:
+Kommandot `set` skriver följande till filen `app/etc/env.php`:
 
 ```conf
 ...
@@ -162,7 +162,7 @@ The `set` skriver följande till `app/etc/env.php` fil:
    ]
 ```
 
-Se [UppskjutenSummaBeräkning](https://developer.adobe.com/commerce/php/module-reference/module-deferred-total-calculating/) i _Referenshandbok för modul_.
+Se [DeferredTotalCalculating](https://developer.adobe.com/commerce/php/module-reference/module-deferred-total-calculating/) i _referenshandboken för modulen_.
 
 ### Fast produktskatt
 
@@ -170,19 +170,19 @@ När Uppskjuten total beräkning är aktiverad inkluderas inte FPT (Fixed Produc
 
 ## Inaktivera lagerkontroll
 
-The _Aktivera lager vid kundvagnsinläsning_ global inställning avgör om en inventeringskontroll ska utföras när en produkt läses in i kundvagnen. Om du inaktiverar lagerkontrollprocessen förbättras prestanda för alla utcheckningssteg, särskilt när du hanterar bulkprodukter i vagnen.
+Den globala inställningen _Aktivera lager vid kundvagnsbeläggning_ avgör om en inventeringskontroll ska utföras när en produkt läses in i kundvagnen. Om du inaktiverar lagerkontrollprocessen förbättras prestanda för alla utcheckningssteg, särskilt när du hanterar bulkprodukter i vagnen.
 
-När alternativet är inaktiverat görs ingen lagerkontroll när en produkt läggs till i kundvagnen. Om inventeringskontrollen hoppas över kan vissa scenarier utanför lagret ge upphov till andra typer av fel. En lagerkontroll _alltid_ inträffar vid orderplaceringssteget, även när det är inaktiverat.
+När alternativet är inaktiverat görs ingen lagerkontroll när en produkt läggs till i kundvagnen. Om inventeringskontrollen hoppas över kan vissa scenarier utanför lagret ge upphov till andra typer av fel. En lagerkontroll _alltid_ utförs vid orderplaceringssteget, även när den är inaktiverad.
 
-**Aktivera lagerkontroll vid vagninläsning** är aktiverat (inställt på Ja) som standard. Om du vill inaktivera lagerkontrollen när vagnen läses in anger du **[!UICONTROL Enable Inventory Check On Cart Load]** till `No` i administratörsgränssnittet **Lager** > **Konfiguration** > **Katalog** > **Lager** > **Alternativ för Stock** -avsnitt. Se [Konfigurera globala alternativ](https://experienceleague.adobe.com/en/docs/commerce-admin/inventory/configuration/global-options) och [Kataloginventering](https://experienceleague.adobe.com/en/docs/commerce-admin/inventory/guide-overview) i _Användarhandbok_.
+**Aktivera inläsning av kundvagn för lagerkontroll** är aktiverat (inställt på Ja) som standard. Om du vill inaktivera lagerkontrollen när vagnen läses in anger du **[!UICONTROL Enable Inventory Check On Cart Load]** till `No` i administratörsgränssnittet **Lagrar** > **Konfiguration** > **Katalog** > **Lager** > **Stock-alternativ** . Se [Konfigurera globala alternativ](https://experienceleague.adobe.com/en/docs/commerce-admin/inventory/configuration/global-options) och [Kataloginventering](https://experienceleague.adobe.com/en/docs/commerce-admin/inventory/guide-overview) i _användarhandboken_.
 
 ## Belastningsutjämning
 
 Du kan hjälpa till att balansera inläsningen mellan olika noder genom att aktivera sekundära anslutningar för MySQL-databasen och Redis-instansen.
 
-Adobe Commerce kan läsa flera databaser eller Redis-instanser asynkront. Om du använder Commerce i molninfrastruktur kan du konfigurera de sekundära anslutningarna genom att redigera [MYSQL_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy#mysql_use_slave_connection) och [REDIS_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy#redis_use_slave_connection) värden i `.magento.env.yaml` -fil. Endast en nod behöver hantera läs- och skrivtrafik, så variabeln måste anges till `true` resulterar i att en sekundär anslutning skapas för skrivskyddad trafik. Ange värdena till `false` om du vill ta bort en befintlig skrivskyddad anslutningsmatris från `env.php` -fil.
+Adobe Commerce kan läsa flera databaser eller Redis-instanser asynkront. Om du använder Commerce i en molninfrastruktur kan du konfigurera de sekundära anslutningarna genom att redigera värdena [MYSQL_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy#mysql_use_slave_connection) och [REDIS_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy#redis_use_slave_connection) i filen `.magento.env.yaml` . Endast en nod behöver hantera läs- och skrivtrafik, så om variablerna anges till `true` skapas en sekundär anslutning för skrivskyddad trafik. Ange värdena till `false` om du vill ta bort en befintlig skrivskyddad anslutningsmatris från filen `env.php`.
 
-Exempel på `.magento.env.yaml` fil:
+Exempel på filen `.magento.env.yaml`:
 
 ```yaml
 stage:

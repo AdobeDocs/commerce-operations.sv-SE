@@ -12,25 +12,25 @@ ht-degree: 0%
 
 # Uppgradera
 
-Du kan uppgradera _lokal_ distributioner av Adobe Commerce-programmet från kommandoraden om du har installerat programmet av:
+Du kan uppgradera _lokala_-distributioner av Adobe Commerce-programmet från kommandoraden om du har installerat programmet av:
 
-- Hämta Composer-metapaketet med `composer create-project` -kommando.
+- Hämtar Composer-metapaketet med kommandot `composer create-project`.
 - Installerar det komprimerade arkivet.
 
 >[!NOTE]
 >
->- Information om projekt för molninfrastruktur för Adobe Commerce finns på [Uppgradera Commerce-version](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/commerce-version.html) i molnguiden.
+>- Information om projekt för molninfrastruktur finns i [Uppgradera Commerce-version](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/commerce-version.html) i molnhandboken.
 >- Använd inte den här metoden för att uppgradera om du klonade GitHub-databasen. Se [Uppgradera en Git-baserad installation](../developer/git-installs.md).
 
-Följande instruktioner visar hur du uppgraderar med Composer-pakethanteraren. Adobe Commerce 2.4.2 har nu stöd för Composer 2. Om du försöker uppgradera från &lt;2.4.1 måste du först uppgradera till en version som är kompatibel med Composer 2 (till exempel 2.4.2) med Composer 1 _före_ uppgradera till Composer 2 för >2.4.2-uppgraderingar. Dessutom måste du köra en [version som stöds](../../installation/system-requirements.md) PHP.
+Följande instruktioner visar hur du uppgraderar med Composer-pakethanteraren. Adobe Commerce 2.4.2 har nu stöd för Composer 2. Om du försöker uppgradera från &lt;2.4.1 måste du först uppgradera till en version som är kompatibel med Composer 2 (t.ex. 2.4.2) med Composer 1 _innan_ du uppgraderar till Composer 2 för >2.4.2. Dessutom måste du köra en [version](../../installation/system-requirements.md) av PHP som stöds.
 
 >[!WARNING]
 >
->Förfarandet för uppgradering av Adobe Commerce har ändrats. Du måste installera en ny version av `magento/composer-root-update-plugin` paket (se [krav](../prepare/prerequisites.md)). Dessutom har kommandona för uppgradering ändrats från `composer require magento/<package_name>` till `composer require-commerce magento/<package_name>`.
+>Förfarandet för uppgradering av Adobe Commerce har ändrats. Du måste installera en ny version av paketet `magento/composer-root-update-plugin` (se [Krav](../prepare/prerequisites.md)). Dessutom har kommandona för uppgradering ändrats från `composer require magento/<package_name>` till `composer require-commerce magento/<package_name>`.
 
 ## Innan du börjar
 
-Du måste fylla i [uppgraderingskrav](../prepare/prerequisites.md) för att förbereda miljön innan du startar uppgraderingsprocessen.
+Du måste slutföra uppgraderingskraven för [uppgraderingen](../prepare/prerequisites.md) för att kunna förbereda miljön innan du startar uppgraderingsprocessen.
 
 ## Hantera paket
 
@@ -48,7 +48,7 @@ Du måste fylla i [uppgraderingskrav](../prepare/prerequisites.md) för att för
 
 1. Om du startar uppgraderingsprocessen medan asynkrona processer, som meddelandeköanvändare, körs, kan det medföra att data skadas. Inaktivera alla kroniska jobb för att förhindra att data skadas.
 
-   _Adobe Commerce om molninfrastruktur:_
+   _Adobe Commerce i molninfrastruktur:_
 
    ```bash
    ./vendor/bin/ece-tools cron:disable
@@ -66,9 +66,9 @@ Du måste fylla i [uppgraderingskrav](../prepare/prerequisites.md) för att för
    bin/magento cron:run --group=consumers
    ```
 
-   Vänta på att kron-jobbet slutförs. Du kan övervaka jobbets status med ett processvisningsprogram eller genom att köra `ps aux | grep 'bin/magento queue'` kommandot flera gånger tills alla processer är slutförda.
+   Vänta på att kron-jobbet slutförs. Du kan övervaka statusen för jobbet med ett processvisningsprogram eller genom att köra kommandot `ps aux | grep 'bin/magento queue'` flera gånger tills alla processer är slutförda.
 
-1. Skapa en säkerhetskopia av `composer.json` -fil.
+1. Skapa en säkerhetskopia av filen `composer.json`.
 
    ```bash
    cp composer.json composer.json.bak
@@ -100,7 +100,7 @@ Du måste fylla i [uppgraderingskrav](../prepare/prerequisites.md) för att för
      composer require magento/module-bundle-sample-data:100.4.* magento/module-widget-sample-data:100.4.* magento/module-theme-sample-data:100.4.* magento/module-catalog-sample-data:100.4.* magento/module-customer-sample-data:100.4.* magento/module-cms-sample-data:100.4.*  magento/module-catalog-rule-sample-data:100.4.* magento/module-sales-rule-sample-data:100.4.* magento/module-review-sample-data:100.4.* magento/module-tax-sample-data:100.4.* magento/module-sales-sample-data:100.4.* magento/module-grouped-product-sample-data:100.4.* magento/module-downloadable-sample-data:100.4.* magento/module-msrp-sample-data:100.4.* magento/module-configurable-sample-data:100.4.* magento/module-product-links-sample-data:100.4.* magento/module-wishlist-sample-data:100.4.* magento/module-swatches-sample-data:100.4.* magento/sample-data-media:100.4.* magento/module-offline-shipping-sample-data:100.4.* --no-update
      ```
 
-1. Uppgradera instansen med följande `composer require-commerce` kommandosyntax:
+1. Uppgradera din instans med följande `composer require-commerce`-kommandosyntax:
 
    ```bash
    composer require-commerce magento/<product> <version> --no-update [--interactive-root-conflicts] [--force-root-updates] [--help]
@@ -108,19 +108,19 @@ Du måste fylla i [uppgraderingskrav](../prepare/prerequisites.md) för att för
 
    Kommandoalternativen är:
 
-   - `<product>` —(Obligatoriskt) Paketet som ska uppgraderas. För lokala installationer måste detta värde vara antingen `product-community-edition` eller `product-enterprise-edition`.
+   - `<product>` —(Obligatoriskt) Paketet som ska uppgraderas. För lokala installationer måste värdet vara antingen `product-community-edition` eller `product-enterprise-edition`.
 
-   - `<version>` —(Obligatoriskt) Den version av Adobe Commerce som du uppgraderar till. Till exempel: `2.4.3`.
+   - `<version>` —(Obligatoriskt) Den version av Adobe Commerce som du uppgraderar till. Exempel: `2.4.3`.
 
    - `--no-update` —(Obligatoriskt) Inaktiverar den automatiska uppdateringen av beroenden.
 
-   - `--interactive-root-conflicts` —(Valfritt) Du kan interaktivt visa och uppdatera inaktuella värden från tidigare versioner eller anpassade värden som inte matchar den version du uppgraderar till.
+   - `--interactive-root-conflicts` - (Valfritt) Gör att du interaktivt kan visa och uppdatera inaktuella värden från tidigare versioner eller anpassade värden som inte matchar den version du uppgraderar till.
 
    - `--force-root-updates` —(Valfritt) Åsidosätter alla anpassade värden som står i konflikt med de förväntade Commerce-värdena.
 
    - `--help` —(Valfritt) Anger användningsinformation om plugin-programmet.
 
-   Om ingen `--interactive-root-conflicts` eller `--force-root-updates` Om du anger det behåller kommandot de befintliga värden som är i konflikt och ett varningsmeddelande visas. Mer information om plugin-programmet finns i [Plugin-användning VIKTIGT](https://github.com/magento/composer-root-update-plugin/blob/develop/src/Magento/ComposerRootUpdatePlugin/README.md).
+   Om varken `--interactive-root-conflicts` eller `--force-root-updates` anges behåller kommandot de befintliga värden som är i konflikt och visar ett varningsmeddelande. Mer information om plugin-programmet finns i [Viktigt om plugin-användning](https://github.com/magento/composer-root-update-plugin/blob/develop/src/Magento/ComposerRootUpdatePlugin/README.md).
 
 1. Uppdatera beroenden.
 
@@ -146,7 +146,7 @@ composer show magento/product-enterprise-edition 2.4.* --available | grep -m 1 v
 
 ### Exempel - Kvalitetskorrigering
 
-Patchar för kvalitet innehåller i första hand funktioner _och_ säkerhetskorrigeringar. De kan dock ibland innehålla nya bakåtkompatibla funktioner. Använd Composer för att hämta en kvalitetskorrigering.
+Kvalitetsuppdateringar innehåller i första hand funktionella _- och_-säkerhetskorrigeringar. De kan dock ibland innehålla nya bakåtkompatibla funktioner. Använd Composer för att hämta en kvalitetskorrigering.
 
 _Adobe Commerce_:
 
@@ -162,7 +162,7 @@ composer require-commerce magento/product-community-edition 2.4.6 --no-update
 
 ### Exempel - Säkerhetsuppdatering
 
-Säkerhetsuppdateringar innehåller endast säkerhetskorrigeringar. De är utformade för att göra uppgraderingsprocessen snabbare och enklare. Säkerhetsuppdateringar använder namnkonventionen för Composer `2.4.x-px`.
+Säkerhetsuppdateringar innehåller endast säkerhetskorrigeringar. De är utformade för att göra uppgraderingsprocessen snabbare och enklare. Säkerhetsuppdateringar använder Composer-namnkonventionen `2.4.x-px`.
 
 _Adobe Commerce_:
 
@@ -178,11 +178,11 @@ composer require-commerce magento/product-community-edition 2.4.6-p3 --no-update
 
 ## Uppdatera metadata
 
-1. Uppdatera `"name"`, `"version"`och `"description"` fälten i `composer.json` vid behov.
+1. Uppdatera fälten `"name"`, `"version"` och `"description"` i filen `composer.json` efter behov.
 
    >[!NOTE]
    >
-   >Uppdatera metadata i `composer.json` filen är helt ytlig, inte funktionell.
+   >Uppdatering av metadata i filen `composer.json` är helt ytliga, fungerar inte.
 
 1. Använd uppdateringar.
 
@@ -190,7 +190,7 @@ composer require-commerce magento/product-community-edition 2.4.6-p3 --no-update
    composer update
    ```
 
-1. Rensa `var/` och `generated/` underkataloger:
+1. Rensa underkatalogerna `var/` och `generated/`:
 
    ```bash
    rm -rf var/cache/*
@@ -232,9 +232,9 @@ composer require-commerce magento/product-community-edition 2.4.6-p3 --no-update
 
 Om du vill kontrollera om uppgraderingen lyckades öppnar du din butiks-URL i en webbläsare. Om uppgraderingen misslyckades läses inte butiken in korrekt.
 
-Om programmet misslyckas med en  `We're sorry, an error has occurred while generating this email.` fel:
+Om programmet misslyckas med felet `We're sorry, an error has occurred while generating this email.`:
 
-1. Återställ [ägarskap och behörigheter för filsystem](../../installation/prerequisites/file-system/configure-permissions.md) som en användare med `root` behörighet.
+1. Återställ [filsystemets ägarskap och behörigheter](../../installation/prerequisites/file-system/configure-permissions.md) som en användare med `root`-behörighet.
 1. Rensa följande kataloger:
    - `var/cache/`
    - `var/page_cache/`

@@ -66,7 +66,7 @@ Meddelandeköer är en asynkron kommunikationsmekanism där avsändaren och mott
 
 ## Säkerhetsverktyg
 
-The [Adobe Commerce Security Scan Tool](https://docs.magento.com/user-guide/magento/security-scan.html) gör att du regelbundet kan övervaka dina butikers webbplatser och få uppdateringar för kända säkerhetsrisker, skadlig kod och inaktuell programvara. Vanligtvis börjar du använda det här verktyget när du börjar testa användargodkännande (UAT). Förutom verktyget Adobe Commerce Security Scan, som är kostnadsfritt och tillgängligt för alla implementeringar och versioner av Adobe Commerce, finns det andra alternativ som kan användas under CI/CD-processen och före varje release.
+Med [Adobe Commerce Security Scan Tool](https://docs.magento.com/user-guide/magento/security-scan.html) kan du regelbundet övervaka dina butikswebbplatser och få uppdateringar för kända säkerhetsrisker, skadlig kod och inaktuell programvara. Vanligtvis börjar du använda det här verktyget när du börjar testa användargodkännande (UAT). Förutom verktyget Adobe Commerce Security Scan, som är kostnadsfritt och tillgängligt för alla implementeringar och versioner av Adobe Commerce, finns det andra alternativ som kan användas under CI/CD-processen och före varje release.
 
 SonarQube är en plattform för kvalitetshantering med öppen källkod som är utformad för att analysera och mäta kodens tekniska kvalitet. SonarQube ger inte bara en fullständig rapport över kodfel, syntaxfel och sårbarheter, utan också förslag och exempel på hur du kan åtgärda koden. SonarQube är perfekt att använda i en CI/CD-miljö som ett verktyg som kan analysera koden innan den distribueras.
 

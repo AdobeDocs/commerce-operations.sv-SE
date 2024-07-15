@@ -28,4 +28,4 @@ Fördelarna med denna form av centraliserad modell i ett digitalt implementering
 
 I följande diagram visas ett exempel på en rekommenderad projektbaserad organisationsstruktur:
 
-![Projektbaserad organisationsstruktur](../../assets/playbooks/org-structure-project.png)
+![Projektbaserat organisationsstrukturdiagram](../../assets/playbooks/org-structure-project.png)

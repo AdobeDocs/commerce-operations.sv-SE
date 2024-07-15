@@ -37,16 +37,16 @@ Vi hoppas att den här spelboken ger insikter och vägledning till en mängd oli
 
 Den här spelbokens struktur följer den typiska livscykeln för ett Adobe Commerce-implementeringsprojekt. Detta förenklar navigeringen i hela dokumentet eftersom läsarna direkt kan hoppa till relevant avsnitt i ett projekt för all relevant information.
 
-- **Projektomfång**- En beskrivning av viktiga intressenter, processer, tidslinjer och krav som är avgörande för att varumärken ska förstå och slutföra en lyckad implementering.
+- **Projektomfång** - En beskrivning av viktiga intressenter, processer, tidslinjer och krav som är viktiga för varumärken att förstå och slutföra för en lyckad implementering.
 
-- **Utveckling och kvalitetskontroll**- En titt på de verktyg, lösningar, processer och metoder som har testats och slutförts i ett antal Adobe Commerce-implementeringar, samt våra rekommendationer för vilka lösningar passar bäst för specifika affärsbehov och mål.
+- **Utvecklings- och kvalitetskontroll** - En titt på de verktyg, lösningar, processer och metoder som har testats och optimerats för ett antal Adobe Commerce-implementeringar, samt våra rekommendationer för vilka lösningar passar bäst för specifika affärsbehov och mål.
 
-- **Planering och styrning**- En dykning i att skapa en plan för att leverera en lösning i tid, med budget, som passar dina behov är avgörande för framgång.
+- **Planering och styrning** - En dykning i att skapa en plan för att leverera en lösning i tid, med budget och som uppfyller dina behov är avgörande för att lyckas.
 
-- **Arkitektur och integreringar**- Funktioner, arkitektur och integreringar som gör Adobe Commerce till en av de mest betrodda och tillförlitliga e-handelsplattformarna på marknaden.
+- **Arkitektur och integreringar** - Funktioner, arkitektur och integreringar som gör Adobe Commerce till en av de mest betrodda och tillförlitliga e-handelsplattformarna på marknaden.
 
-- **Infrastruktur och driftsättning**- Vi går längre in i själva plattformen och sätter fokus på den infrastruktur och de miljöer som ligger bakom Adobe Commerce och de programvarulösningar som gör den till en så stabil plattform.
+- **Infrastruktur och distribution** - Vi går längre in i själva plattformen och sätter fokus på den infrastruktur och de miljöer som driver Adobe Commerce och de programvarulösningar som gör den till en så stabil plattform.
 
-- **Start- och överklippsprocess**- Den taktik och de åtgärder som måste vidtas för att webbplatsen ska publiceras och förbli effektiv från dag ett och samma dag.
+- **Start- och överklippsprocess** - Den taktik och de åtgärder som måste utföras för att webbplatsen ska fungera och förbli effektiv från dag ett och samma dag.
 
-- **Löpande support och underhåll**- Information om övergångsfasen och olika typer av modeller och SLA:er runt en pågående supportplan för att fortsätta föra ert varumärke framåt efter lanseringen.
+- **Fortlöpande support och underhåll** - Information om övergångsfasen och typer av modeller och servicenivåavtal runt en pågående supportplan för att fortsätta föra varumärket framåt efter lanseringen.

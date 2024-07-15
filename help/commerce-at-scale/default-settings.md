@@ -6,7 +6,7 @@ feature: Integration, Cache
 topic: Commerce, Performance
 source-git-commit: 76ccc5aa8e5e3358dc52a88222fd0da7c4eb9ccb
 workflow-type: tm+mt
-source-wordcount: '1143'
+source-wordcount: '1142'
 ht-degree: 0%
 
 ---
@@ -19,13 +19,14 @@ För att minska fördröjningen mellan den AEM utgivaren och Adobe Commerce Grap
 
 ## GraphQL-cachning i Adobe Commerce
 
-När användarens webbläsare eller AEM anropar Adobe Commerce GraphQL cachelagras vissa samtal i Snabb. De frågor som cachelagras är vanligtvis de som innehåller icke-personuppgifter och som sannolikt inte ändras så ofta. Det här är till exempel kategorier, categoryList och produkter. De som uttryckligen inte cachelagras är de som ändras regelbundet och om de cachelagras kan medföra risker för personuppgifter och webbplatsåtgärder, t.ex. frågor som cart och customerPaymentTokens.
+När användarens webbläsare eller AEM anropar Adobe Commerce GraphQL cachelagras vissa samtal
+i snabb takt. De frågor som cachelagras är vanligtvis de som innehåller icke-personuppgifter och som sannolikt inte ändras så ofta. Det här är till exempel kategorier, categoryList och produkter. De som uttryckligen inte cachelagras är de som ändras regelbundet och om de cachelagras kan medföra risker för personuppgifter och webbplatsåtgärder, t.ex. frågor som cart och customerPaymentTokens.
 
 Med GraphQL kan du göra flera frågor i ett enda samtal. Observera att om du anger en enda fråga som Adobe Commerce inte cachelagrar med många andra som inte är cachelagrade, kommer Adobe Commerce att kringgå cacheminnet för alla frågor i samtalet. Detta bör beaktas av utvecklare när de kombinerar flera frågor för att säkerställa att frågor som kan vara tillgängliga inte oavsiktligt kringgås‡.
 
 >[!NOTE]
 >
-> Mer information om cachelagrade och icke cachelagrade frågor finns i Adobe Commerce [dokumentation för utvecklare](https://devdocs.magento.com/guides/v2.4/graphql/caching.html).
+> Mer information om cachelagrade och icke cachelagrade frågor finns i Adobe Commerce [utvecklardokumentation](https://devdocs.magento.com/guides/v2.4/graphql/caching.html).
 
 ## Platt tabell för katalog
 
@@ -41,7 +42,7 @@ Skärmsläckning med snabb origo kan aktiveras i Adobe Commerce-administratören
 
 När du har aktiverat skärmsläckning med nollpunkt kan du även aktivera snabbbildsoptimering. Där produktkatalogbilder lagras på Adobe Commerce ger den här tjänsten möjlighet att avlasta alla resurskrävande omformningsprocesser för produktkatalogbilder snabbt och enkelt från Adobe Commerce ursprung. Slutanvändarens svarstider har också förbättrats för sidinläsningstider, eftersom bilderna omvandlas vid kantpositionen, vilket eliminerar fördröjning genom att minska antalet förfrågningar tillbaka till Adobe Commerce-startpunkten.
 
-Snabb bildoptimering kan aktiveras genom&quot;aktivera djupbildsoptimering&quot; i Snabb konfiguration i admin, men först efter att originalskyddet har aktiverats. Mer information om konfigurationer för snabb bildoptimering finns i Adobe Commerce [dokumentation för utvecklare](https://devdocs.magento.com/cloud/cdn/fastly-image-optimization.html).
+Snabb bildoptimering kan aktiveras genom&quot;aktivera djupbildsoptimering&quot; i Snabb konfiguration i admin, men först efter att originalskyddet har aktiverats. Mer information om konfigurationer för snabbbildsoptimering finns i Adobe Commerce [utvecklardokumentation](https://devdocs.magento.com/cloud/cdn/fastly-image-optimization.html).
 
 ![Skärmbild av Snabb bildoptimering i Adobe Commerce Admin](../assets/commerce-at-scale/image-optimization.svg)
 
@@ -57,7 +58,7 @@ Om en extrem belastning förväntas i Adobe Commerce-instansen aktiveras master-
 
 Som vägledning kan du när du aktiverar slavanslutningar i miljöer med normal belastning sänka prestanda med 10-15 %. Men i kluster med hög belastning och trafik ökar prestandan med cirka 10-15 %. Därför är det viktigt att du läser in testmiljön med förväntade trafiknivåer för att utvärdera om den här inställningen skulle vara bra för prestandatiderna under belastningen.
 
-Om du vill aktivera/inaktivera slavanslutningar för mysql och redis bör du redigera `.magento.env.yaml` som ska innehålla följande:
+Om du vill aktivera/inaktivera slavanslutningar för mysql och redis bör du redigera din `.magento.env.yaml`-fil så att den innehåller följande:
 
 ```
 stage:

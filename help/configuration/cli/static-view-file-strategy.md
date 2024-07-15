@@ -1,11 +1,11 @@
 ---
 title: Distributionsstrategier för statiska vyfiler
-description: Läs om distributionsstrategier för Commerce-programmet.
+description: Läs om distributionsstrategier för Commerce.
 feature: Configuration, Deploy, Extensions
 exl-id: 12ebbd36-f813-494f-9515-54ce697ca2e4
 source-git-commit: 403a5937561d82b02fd126c95af3f70b0ded0747
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '446'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 När du distribuerar statiska vyfiler kan du välja en av de tre tillgängliga strategierna. Vart och ett av dem ger optimala distributionsresultat för olika användningsområden:
 
 - [Standard](#standard-strategy): den vanliga distributionsprocessen.
-- [Snabb](#quick-strategy) (_standard_): minimerar tiden som krävs för distribution när filer för fler än en språkinställning distribueras.
+- [Snabb](#quick-strategy) (_standard_): minimerar den tid som krävs för distribution när filer för fler än en språkinställning distribueras.
 - [Kompakt](#compact-strategy): minimerar utrymmet som tas av de publicerade vyfilerna.
 
 I följande avsnitt beskrivs implementeringsdetaljer och funktioner för varje strategi.
@@ -38,15 +38,15 @@ Den snabba strategin utför följande åtgärder:
 
 >[!INFO]
 >
->Av _liknande_, menar vi filer som är oberoende av språkområdet, temat eller området. Dessa filer kan innehålla CSS, bilder och teckensnitt.
+>Med _liknande_ menar vi filer som är oberoende av språkområdet, temat eller området. Dessa filer kan innehålla CSS, bilder och teckensnitt.
 
 Den här metoden minimerar den driftsättningstid som krävs för flera språkområden, även om många filer är duplicerade.
 
 ## Kompakt strategi
 
-Med den kompakta strategin undviker du filduplicering genom att lagra liknande filer i `base` underkataloger.
+Den kompakta strategin undviker filduplicering genom att lagra liknande filer i `base` underkataloger.
 
-För det mest optimerade resultatet fördelas tre omfång för möjlig likhet: område, tema och språkområde. The `base` underkataloger skapas för alla kombinationer av dessa omfattningar.
+För det mest optimerade resultatet fördelas tre omfång för möjlig likhet: område, tema och språkområde. `base`-underkatalogerna skapas för alla kombinationer av dessa omfattningar.
 
 Filerna distribueras till dessa underkataloger enligt följande mönster.
 
@@ -66,9 +66,9 @@ Den distributionsmetod som används i den kompakta strategin innebär att filer 
 - `map.php`
 - `requirejs-map.js`
 
-The `map.php` filen används av [`Magento\Framework\View\Asset\Repository`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/View/Asset/Repository.php) för att skapa korrekta URL:er.
+Filen `map.php` används av [`Magento\Framework\View\Asset\Repository`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/View/Asset/Repository.php) för att skapa korrekta URL:er.
 
-The `requirejs-map.js` används av `baseUrlResolver` plugin för RequireJS.
+`requirejs-map.js` används av plugin-programmet `baseUrlResolver` för RequireJS.
 
 Exempel på `map.php`:
 
@@ -101,6 +101,6 @@ require.config({
 
 ## Tips för tilläggsutvecklare
 
-Om du vill skapa URL:er till statiska vyfiler använder du [`\Magento\Framework\View\Asset\Repository::createAsset()`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/View/Asset/Repository.php#L211-L244).
+Använd [`\Magento\Framework\View\Asset\Repository::createAsset()`](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/View/Asset/Repository.php#L211-L244) om du vill skapa URL:er till statiska vyfiler.
 
 Använd inte URL-sammanfogningar för att undvika problem med att statiska filer inte hittas och inte visas under sidåtergivning.

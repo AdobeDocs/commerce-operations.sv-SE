@@ -11,9 +11,9 @@ ht-degree: 0%
 
 # Nginx
 
-Adobe Commerce har stöd för nginx 1.x (eller [senaste huvudversionen](https://nginx.org/en/linux_packages.html#mainline)). Du måste också installera den senaste versionen av `php-fpm`.
+Adobe Commerce stöder nginx 1.x (eller den [senaste huvudversionen](https://nginx.org/en/linux_packages.html#mainline)). Du måste också installera den senaste versionen av `php-fpm`.
 
-Installationsanvisningarna varierar beroende på vilket operativsystem du använder. Se [PHP](../php-settings.md) för information.
+Installationsanvisningarna varierar beroende på vilket operativsystem du använder. Mer information finns i [PHP](../php-settings.md).
 
 ## Ubuntu
 
@@ -25,13 +25,13 @@ I följande avsnitt beskrivs hur du installerar Adobe Commerce 2.x på Ubuntu me
 sudo apt -y install nginx
 ```
 
-Du kan också [skapa nginx från källa](https://www.armanism.com/blog/install-nginx-on-ubuntu)
+Du kan även [skapa nginx från källan](https://www.armanism.com/blog/install-nginx-on-ubuntu)
 
 När vi har slutfört följande avsnitt och installerat programmet använder vi en exempelkonfigurationsfil för att [konfigurera nginx](#configure-nginx).
 
 ### Installera och konfigurera php-fpm
 
-Adobe Commerce kräver flera [PHP-tillägg](../php-settings.md) att fungera som det ska. Förutom dessa tillägg måste du även installera och konfigurera `php-fpm` om du använder nginx.
+Adobe Commerce kräver flera [PHP-tillägg](../php-settings.md) för att fungera korrekt. Utöver dessa tillägg måste du även installera och konfigurera tillägget `php-fpm` om du använder nginx.
 
 Installera och konfigurera `php-fpm`:
 
@@ -43,9 +43,9 @@ Installera och konfigurera `php-fpm`:
 
    >[!NOTE]
    >
-   >Det här kommandot installerar den senaste tillgängliga versionen av PHP 7.2.X. Se [systemkrav](../../system-requirements.md) för PHP-versioner som stöds.
+   >Det här kommandot installerar den senaste tillgängliga versionen av PHP 7.2.X. Se [systemkraven](../../system-requirements.md) för PHP-versioner som stöds.
 
-1. Öppna `php.ini` filer i en redigerare:
+1. Öppna `php.ini`-filerna i en redigerare:
 
    ```bash
    vim /etc/php/7.2/fpm/php.ini
@@ -65,11 +65,11 @@ Installera och konfigurera `php-fpm`:
 
    >[!NOTE]
    >
-   >Vi rekommenderar att du anger minnesgränsen till 2 G när du testar Adobe Commerce. Se [Nödvändiga PHP-inställningar](../php-settings.md) för mer information.
+   >Vi rekommenderar att du anger minnesgränsen till 2 G när du testar Adobe Commerce. Mer information finns i [Nödvändiga PHP-inställningar](../php-settings.md).
 
 1. Spara och avsluta redigeraren.
 
-1. Starta om `php-fpm` tjänst:
+1. Starta om tjänsten `php-fpm`:
 
    ```bash
    systemctl restart php7.2-fpm
@@ -77,7 +77,7 @@ Installera och konfigurera `php-fpm`:
 
 ### Installera och konfigurera MySQL
 
-Se [MySQL](../database/mysql.md) för mer information.
+Mer information finns i [MySQL](../database/mysql.md).
 
 ### Installera och konfigurera
 
@@ -89,9 +89,9 @@ Det finns flera sätt att ladda ned Adobe Commerce:
 
 I det här exemplet visas en Composer-baserad installation med kommandoraden.
 
-1. Som [ägare av filsystem](../file-system/overview.md)loggar du in på programservern.
+1. Logga in på programservern som [filsystemsägare](../file-system/overview.md).
 
-1. Byt till webbserverns dokumentkatalog eller en katalog som du har konfigurerat som ett virtuellt värddokument. I det här exemplet använder vi Ubuntu-standardinställningen `/var/www/html`.
+1. Byt till webbserverns dokumentkatalog eller en katalog som du har konfigurerat som ett virtuellt värddokument. I det här exemplet använder vi Ubuntu-standardvärdet `/var/www/html`.
 
    ```bash
    cd /var/www/html
@@ -117,7 +117,7 @@ I det här exemplet visas en Composer-baserad installation med kommandoraden.
    composer create-project --repository=https://repo.magento.com/ magento/project-enterprise-edition <install-directory-name>
    ```
 
-   Ange [autentiseringsnycklar](../authentication-keys.md). Dina _publik nyckel_ är ditt användarnamn; din _privat nyckel_ är ditt lösenord.
+   Ange dina [autentiseringsnycklar](../authentication-keys.md) när du uppmanas till detta. Din _offentliga nyckel_ är ditt användarnamn. Din _privata nyckel_ är ditt lösenord.
 
 1. Ange läs- och skrivbehörighet för webbservergruppen innan du installerar programmet. Detta är nödvändigt för att kommandoraden ska kunna skriva filer till filsystemet.
 
@@ -141,7 +141,7 @@ I det här exemplet visas en Composer-baserad installation med kommandoraden.
    chmod u+x bin/magento
    ```
 
-1. Installera från [kommandorad](../../advanced.md). I det här exemplet antas att installationskatalogen har ett namn `magento2ee`, `db-host` finns på samma dator (`localhost`) och att `db-name`, `db-user`och `db-password` är alla `magento`:
+1. Installera från [kommandoraden](../../advanced.md). I det här exemplet antas att installationskatalogen har namnet `magento2ee`, att `db-host` finns på samma dator (`localhost`) och att `db-name`, `db-user` och `db-password` alla är `magento`:
 
    ```bash
    bin/magento setup:install \
@@ -177,9 +177,9 @@ I det här exemplet visas en Composer-baserad installation med kommandoraden.
 
 ### Konfigurera nginx
 
-Vi rekommenderar att du konfigurerar index med `nginx.conf.sample` konfigurationsfilen som finns i installationskatalogen och det nya virtuella värdsystemet.
+Vi rekommenderar att du konfigurerar nginx med konfigurationsfilen `nginx.conf.sample` som finns i installationskatalogen och det nya virtuella värdsystemet.
 
-Dessa instruktioner förutsätter att du använder Ubuntu-standardplatsen för det virtuella värdsystemet nginx (till exempel `/etc/nginx/sites-available`) och Ubuntu standarddocroot (till exempel `/var/www/html`) kan du dock ändra de här platserna så att de passar din miljö.
+Dessa instruktioner förutsätter att du använder Ubuntu-standardplatsen för det nya virtuella värdsystemet (till exempel `/etc/nginx/sites-available`) och Ubuntu-standarddokumentroten (till exempel `/var/www/html`), men du kan ändra de här platserna så att de passar din miljö.
 
 1. Skapa ett nytt virtuellt värdsystem för din plats:
 
@@ -205,13 +205,13 @@ Dessa instruktioner förutsätter att du använder Ubuntu-standardplatsen för d
 
    >[!NOTE]
    >
-   >The `include` -direktivet måste peka på exempelkonfigurationsfilen nginx i installationskatalogen.
+   >Direktivet `include` måste peka på exempelkonfigurationsfilen nginx i installationskatalogen.
 
 1. Ersätt `www.magento-dev.com` med ditt domännamn. Detta måste matcha den bas-URL som du angav när du installerade Adobe Commerce.
 
 1. Spara och avsluta redigeraren.
 
-1. Aktivera det nya virtuella värdsystemet genom att skapa en länk till det i `/etc/nginx/sites-enabled` katalog:
+1. Aktivera det nya virtuella värdsystemet genom att skapa en länk till det i katalogen `/etc/nginx/sites-enabled`:
 
    ```bash
    ln -s /etc/nginx/sites-available/magento /etc/nginx/sites-enabled
@@ -231,7 +231,7 @@ Dessa instruktioner förutsätter att du använder Ubuntu-standardplatsen för d
 
 ### Verifiera installationen
 
-Öppna en webbläsare och navigera till platsens bas-URL till [verifiera installationen](../../next-steps/verify.md).
+Öppna en webbläsare och navigera till platsens bas-URL för att [verifiera installationen](../../next-steps/verify.md).
 
 ## CentOS 7
 
@@ -261,7 +261,7 @@ När du har slutfört följande avsnitt och installerat programmet använder vi 
 
 ### Installera och konfigurera php-fpm
 
-Adobe Commerce kräver flera [PHP](../php-settings.md) tillägg för att fungera korrekt. Förutom dessa tillägg måste du även installera och konfigurera `php-fpm` om du använder nginx.
+Adobe Commerce kräver flera [PHP](../php-settings.md)-tillägg för att fungera korrekt. Utöver dessa tillägg måste du även installera och konfigurera tillägget `php-fpm` om du använder nginx.
 
 1. Installera `php-fpm`:
 
@@ -269,9 +269,9 @@ Adobe Commerce kräver flera [PHP](../php-settings.md) tillägg för att fungera
    yum -y install php70w-fpm
    ```
 
-1. Öppna `/etc/php.ini` i en redigerare.
+1. Öppna filen `/etc/php.ini` i en redigerare.
 
-1. Avkommentera `cgi.fix_pathinfo` rad och ändra värdet till `0`.
+1. Avkommentera raden `cgi.fix_pathinfo` och ändra värdet till `0`.
 
 1. Redigera filen så att den matchar följande rader:
 
@@ -283,7 +283,7 @@ Adobe Commerce kräver flera [PHP](../php-settings.md) tillägg för att fungera
 
    >[!NOTE]
    >
-   >Vi rekommenderar att du anger minnesgränsen till 2 G när du testar Adobe Commerce. Se [Nödvändiga PHP-inställningar](../php-settings.md) för mer information.
+   >Vi rekommenderar att du anger minnesgränsen till 2 G när du testar Adobe Commerce. Mer information finns i [Nödvändiga PHP-inställningar](../php-settings.md).
 
 1. Avkommentera sessionssökvägskatalogen och ange sökvägen:
 
@@ -318,7 +318,7 @@ Adobe Commerce kräver flera [PHP](../php-settings.md) tillägg för att fungera
 
 1. Spara och avsluta redigeraren.
 
-1. Skapa en katalog för PHP-sessionssökvägen och ändra ägaren till `apache` användare och grupp:
+1. Skapa en katalog för PHP-sessionssökvägen och ändra ägaren till användaren och gruppen `apache`:
 
    ```bash
    mkdir -p /var/lib/php/session/
@@ -328,7 +328,7 @@ Adobe Commerce kräver flera [PHP](../php-settings.md) tillägg för att fungera
    chown -R apache:apache /var/lib/php/
    ```
 
-1. Skapa en katalog för PHP-sessionssökvägen och ändra ägaren till `apache` användare och grupp:
+1. Skapa en katalog för PHP-sessionssökvägen och ändra ägaren till användaren och gruppen `apache`:
 
    ```bash
    mkdir -p /run/php-fpm/
@@ -338,7 +338,7 @@ Adobe Commerce kräver flera [PHP](../php-settings.md) tillägg för att fungera
    chown -R apache:apache /run/php-fpm/
    ```
 
-1. Starta `php-fpm` och konfigurera den så att den startar vid start:
+1. Starta tjänsten `php-fpm` och konfigurera den så att den startar vid start:
 
    ```bash
    systemctl start php-fpm
@@ -348,7 +348,7 @@ Adobe Commerce kräver flera [PHP](../php-settings.md) tillägg för att fungera
    systemctl enable php-fpm
    ```
 
-1. Verifiera att `php-fpm` tjänsten körs:
+1. Kontrollera att tjänsten `php-fpm` körs:
 
    ```bash
    netstat -pl | grep php-fpm.sock
@@ -356,7 +356,7 @@ Adobe Commerce kräver flera [PHP](../php-settings.md) tillägg för att fungera
 
 ### Installera och konfigurera MySQL
 
-Se [MySQL](..//database/mysql.md) för mer information.
+Mer information finns i [MySQL](..//database/mysql.md).
 
 ### Installera och konfigurera
 
@@ -368,9 +368,9 @@ Det finns flera sätt att ladda ned Adobe Commerce:
 
 I det här exemplet visas en Composer-baserad installation med kommandoraden.
 
-1. Som [ägare av filsystem](../file-system/overview.md)loggar du in på programservern.
+1. Logga in på programservern som [filsystemsägare](../file-system/overview.md).
 
-1. Byt till webbserverns dokumentkatalog eller en katalog som du har konfigurerat som ett virtuellt värddokument. I det här exemplet använder vi Ubuntu-standardinställningen `/var/www/html`.
+1. Byt till webbserverns dokumentkatalog eller en katalog som du har konfigurerat som ett virtuellt värddokument. I det här exemplet använder vi Ubuntu-standardvärdet `/var/www/html`.
 
    ```bash
    cd /var/www/html
@@ -396,7 +396,7 @@ I det här exemplet visas en Composer-baserad installation med kommandoraden.
    composer create-project --repository=https://repo.magento.com/ magento/project-enterprise-edition <install-directory-name>
    ```
 
-   Ange [autentiseringsnycklar](../authentication-keys.md). Dina _publik nyckel_ är ditt användarnamn; din _privat nyckel_ är ditt lösenord.
+   Ange dina [autentiseringsnycklar](../authentication-keys.md) när du uppmanas till detta. Din _offentliga nyckel_ är ditt användarnamn. Din _privata nyckel_ är ditt lösenord.
 
 1. Ange läs- och skrivbehörighet för webbservergruppen innan du installerar programmet. Detta är nödvändigt för att kommandoraden ska kunna skriva filer till filsystemet.
 
@@ -420,7 +420,7 @@ I det här exemplet visas en Composer-baserad installation med kommandoraden.
    chmod u+x bin/magento
    ```
 
-1. Installera från [kommandorad](../../advanced.md). I det här exemplet antas att installationskatalogen har ett namn `magento2ee`, `db-host` finns på samma dator (`localhost`) och att `db-name`, `db-user`och `db-password` är alla `magento`:
+1. Installera från [kommandoraden](../../advanced.md). I det här exemplet antas att installationskatalogen har namnet `magento2ee`, att `db-host` finns på samma dator (`localhost`) och att `db-name`, `db-user` och `db-password` alla är `magento`:
 
    ```bash
    bin/magento setup:install \
@@ -453,9 +453,9 @@ I det här exemplet visas en Composer-baserad installation med kommandoraden.
 
 ### Konfigurera nginx
 
-Vi rekommenderar att du konfigurerar index med `nginx.conf.sample` konfigurationsfilen som finns i installationskatalogen och det nya virtuella värdsystemet.
+Vi rekommenderar att du konfigurerar nginx med konfigurationsfilen `nginx.conf.sample` som finns i installationskatalogen och det nya virtuella värdsystemet.
 
-Dessa instruktioner förutsätter att du använder CentOS-standardplatsen för det virtuella värdsystemet (till exempel `/etc/nginx/conf.d`) och standarddokumentrot (till exempel `/usr/share/nginx/html`) kan du dock ändra de här platserna så att de passar din miljö.
+Dessa instruktioner förutsätter att du använder CentOS-standardplatsen för det nya virtuella värdsystemet (till exempel `/etc/nginx/conf.d`) och standarddokumentroten (till exempel `/usr/share/nginx/html`), men du kan ändra de här platserna så att de passar din miljö.
 
 1. Skapa ett nytt virtuellt värdsystem för din plats:
 
@@ -481,7 +481,7 @@ Dessa instruktioner förutsätter att du använder CentOS-standardplatsen för d
 
    >[!NOTE]
    >
-   >The `include` -direktivet måste peka på exempelkonfigurationsfilen nginx i installationskatalogen.
+   >Direktivet `include` måste peka på exempelkonfigurationsfilen nginx i installationskatalogen.
 
 1. Ersätt `www.magento-dev.com` med ditt domännamn.
 
@@ -569,4 +569,4 @@ Så här konfigurerar du SELinux och firewall:
 
 ### Verifiera installationen
 
-Öppna en webbläsare och navigera till platsens bas-URL till [verifiera installationen](../../next-steps/verify.md).
+Öppna en webbläsare och navigera till platsens bas-URL för att [verifiera installationen](../../next-steps/verify.md).

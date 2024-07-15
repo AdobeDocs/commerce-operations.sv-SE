@@ -7,7 +7,7 @@ ht-degree: 0%
 ---
 # Om Adobe Commerce säkerhetsuppdateringar
 
-**Felkorrigering för säkerhet**: En programvarukodsändring som åtgärdar ett identifierat säkerhetsproblem och ger förväntat resultat i ett påverkat produktområde. Dessa korrigeringar är vanligtvis bakåtkompatibla.
+**Säkerhetsfelkorrigering**: En programkodändring som åtgärdar ett identifierat säkerhetsproblem och ger förväntade resultat i ett påverkat produktområde. Dessa korrigeringar är vanligtvis bakåtkompatibla.
 
 **Säkerhetsförbättring**: En programvaruförbättring eller konfigurationsändring som proaktivt förbättrar säkerheten i programmet. Dessa säkerhetsförbättringar hjälper till att hantera säkerhetsrisker som påverkar säkerhetsställningen i Adobe Commerce-programmet, men som kan vara inkompatibla bakåt.
 
@@ -15,4 +15,4 @@ Med säkerhetsuppdateringar kan du skydda din webbplats utan att lägga på ytte
 
 Varje säkerhetsuppdatering baseras på den tidigare fullständiga patchversionen. Den innehåller kvalitets- och säkerhetskorrigeringar från tidigare korrigeringsversioner och säkerhetskorrigeringar som skapats mellan den tidigare fullständiga korrigeringsversionen och säkerhetsuppdateringen.
 
-Instruktioner om hur du hämtar och använder säkerhetspatchar finns i [Snabbstart](../installation/composer.md#example---security-patch).
+Instruktioner om hur du hämtar och använder säkerhetspatchar finns i [Snabbstart vid installation](../installation/composer.md#example---security-patch).

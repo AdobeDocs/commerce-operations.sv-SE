@@ -38,7 +38,7 @@ För bästa prestanda bör du använda följande riktlinjer för att hantera kun
 
 Använd följande strategier för att hantera antalet kundvagnsartiklar
 
-- Dela upp order i flera mindre order med ett mindre antal rader genom att använda [!UICONTROL Add Item by SKU] -funktion.
+- Dela upp order i flera mindre order med ett mindre antal rader genom att använda funktionen [!UICONTROL Add Item by SKU].
 - Lägg bara till den anpassade logik och kundvagnsanpassning som krävs för att läsa in en lista med objekt.
 
 ## Kategoribegränsningar
@@ -112,7 +112,7 @@ Ta bort oanvända produktattributuppsättningar med MySQL.
 
 ### Potentiell inverkan på prestanda
 
-Konfigurera många **produktattribut** ökar mallstorleken för varje produkt (EAV-struktur) och mängden data som måste hämtas. Ökningen påverkar åtgärder på följande sätt:
+Om du konfigurerar många **produktattribut** ökas produktmallens storlek för varje produkt (EAV-struktur) och mängden data som måste hämtas. Ökningen påverkar åtgärder på följande sätt:
 
 - Ökning i SQL-frågor, trafik som är relaterad till EAV-datahämtning och mängden data som bearbetas, vilket ger minskat databasflöde
 - Betydande ökning av storleken på Adobe Commerce-index och fulltextsökningsindex
@@ -125,7 +125,7 @@ Konfigurera många **produktattribut** ökar mallstorleken för varje produkt (E
 - Funktionen för produktmassåtgärder kan blockeras.
 - Indexåterskapningstiden för medelstora och stora kataloger kan inte utföras dagligen på grund av långa körningstider.
 
-Konfigurera många **attributalternativ** kan påverka webbplatsens prestanda på följande sätt:
+Om du konfigurerar många **attributalternativ** kan platsens prestanda påverkas på följande sätt:
 
 - Långa efterfrågnings- och renderingstider för produktinformation (PDP) och kategorisidor som innehåller komplexa produkter.
 - Admin - produkt sparar Åtgärdens svarstid ökar över optimala prestandamål.
@@ -155,7 +155,7 @@ Använd följande strategier för att minska antalet produktalternativ per produ
 
 När du konfigurerar många produktalternativ ökar mängden data som hämtas för varje produkt vid alla läs- och skrivåtgärder, vilket resulterar i:
 
-- Ökad SQL-frågetrafik och högre `JOIN` åtgärder ökar databasens genomströmning.
+- Ökad SQL-frågetrafik och tyngre `JOIN`-åtgärder ökar databasens genomströmning.
 - Ökad storlek för Adobe Commerce-index och fulltextsökningsindex.
 
 Ökningarna ovan kan påverka webbplatsens prestanda på följande sätt:
@@ -177,7 +177,7 @@ För många produkter per sida kan påverka prestanda.
 
 ### Uppdatera produktlistekonfigurationen
 
-Om du har för många produkter i en kategori kan du uppdatera konfigurationen för storefront-katalogen för att inaktivera alternativet att **Tillåt alla produkter per sida**.
+Om du har för många produkter i en kategori kan du uppdatera katalogkonfigurationen för storefront så att alternativet **Tillåt alla produkter per sida** inaktiveras.
 
 När du har inaktiverat det här alternativet använder Adobe Commerce sidnumreringskontrollerna för att hantera antalet produkter som visas i butikskomponenter. Instruktioner finns i [Konfigurera sidnumreringskontroller](https://experienceleague.adobe.com/docs/commerce-admin/catalog/catalog/navigation/navigation-product-listings.html#configure-the-pagination-controls).
 
@@ -205,7 +205,7 @@ Använd följande strategier för att minska antalet produkter (SKU):
    - Minska antalet SKU:er genom att minska antalet webbplatser, kundgrupper, delade kataloger, antalet produkter eller antalet konfigurerbara produktalternativ
 - Skapa fler produktvarianter genom att använda anpassade alternativ istället för att skapa separata produkter.
 - Med tanke på att en effektiv SKU kan innehålla ett antal möjliga permutationer av priserna, eftersom priserna kan anges olika för varje butik eller kundgrupp.
-- Inaktivera eller ta bort oanvända systemkomponenter som moduler. Se  [Avinstallera moduler](../../../installation/tutorials/uninstall-modules.md).
+- Inaktivera eller ta bort oanvända systemkomponenter som moduler. Se [Avinstallera moduler](../../../installation/tutorials/uninstall-modules.md).
 - Hantera produkter i ett externt plattformshanteringssystem.
 
 ## Produktvariationer
@@ -261,4 +261,4 @@ Om du har fler än det rekommenderade maximala antalet kundvagnsregler eller kup
 - Ökad svarstid när produkter läggs till i kundvagnen.
 - Ökad tid för inläsning och rendering av minikortet.
 - Den tid det tog att återge kundvagnssidan ökade.
-- Ökad tid för att återge **Summor** -block på utcheckningssidan.
+- Den tid det tog att återge blocket **Totals** på utcheckningssidan har ökat.

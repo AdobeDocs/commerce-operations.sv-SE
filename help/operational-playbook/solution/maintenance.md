@@ -1,10 +1,10 @@
 ---
-title: Underhåll av Commerce Project
+title: Commerce Project Maintenance
 description: Ställa in standarder med hög kvalitet och inrätta mekanismer för att bibehålla dessa standarder över tid.
 exl-id: 8f394ae0-02c4-4efc-a313-40b8c48aecbb
 source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '712'
 ht-degree: 0%
 
 ---
@@ -29,17 +29,18 @@ Genom att uppgradera är ni framtidssäkra på er verksamhet och ger er möjligh
 
 Här följer en lista med frågor du behöver ställa när du planerar en uppgradering:
 
-- **Platsrensning**—Vad kan jag behålla och vad kan ändras? Vilka nya saker vill jag implementera? Vilka ändringar vill jag göra i taxonomi och produktstruktur, eller innehållsändringar?
+- **Platsrensning** - Vad kan jag behålla och vad kan ändras? Vilka nya saker vill jag implementera? Vilka ändringar vill jag göra i taxonomi och produktstruktur, eller innehållsändringar?
 
-- **Analyskontroll**—Vad är mina nuvarande KPI:er? Vad säger mina uppgifter om hur min webbplats skulle kunna förbättras? Finns det nya nyckeltal som jag vill ska implementeras för min nya webbplats?
+- **Analyskontroll** - Vad är mina aktuella KPI:er? Vad säger mina uppgifter om hur min webbplats skulle kunna förbättras? Finns det nya nyckeltal som jag vill ska implementeras för min nya webbplats?
 
-- **Tillägg**—Behöver jag dem fortfarande? Vilka tillägg från tredje part täcker mina behov?
+- **Tillägg** - Behöver jag dem ändå? Vilka tillägg från tredje part täcker mina behov?
 
-- **Integreringar**—Vilka tredjepartssystem, som ERP och redovisning, behöver jag integrera med? Har de specifika kopplingar eller behövs anpassade integreringar?
+- **Integrationer** - Vilka tredjepartssystem, till exempel ERP och redovisning, behöver jag integrera med? Har de specifika kopplingar eller behövs anpassade integreringar?
 
-- **Utbildning**—Har uppgraderingsteamet rätt kunskaper och utbildning? Vad har jag för plan för att utbilda slutanvändare om hur de ska använda den nya administratören innan den publiceras?
+- **Utbildning** - Har uppgraderingsteamet rätt kunskaper och utbildning? Vad är
+min plan att utbilda slutanvändare om hur de ska använda den nya administratören innan den blir aktiv?
 
-- **Uppgradera team**—Vem riktar sig till uppgraderingsprojektet (både interna och externa experter)? Har de nödvändigt stöd från ledningen och andra interna team?
+- **Upgrade team** - Vem är dedikerad till uppgraderingsprojektet (både interna och externa experter)? Har de nödvändigt stöd från ledningen och andra interna team?
 
 ## Vanliga uppgraderingsfrågor
 
@@ -50,7 +51,7 @@ S: Det beror på plattform och arkitektur. Det finns många variabler, och om du
 
 F: Vad kostar det att uppgradera?
 
-S: Återigen beror det på din nuvarande situation och dina krav på den nya webbplatsen. Den goda nyheten är att när partner och utvecklare har blivit mer bekanta med er Commerce-plattform så har uppgraderingskostnaderna och projektens längd sjunkit. Vi rekommenderar att du kontaktar din Solution Partner för att få en uppskattning.
+S: Återigen beror det på din nuvarande situation och dina krav på den nya webbplatsen. Den goda nyheten är att när partner och utvecklare har blivit mer bekanta med er Commerce-plattform så har uppgraderingskostnaderna och projektlängden minskat. Vi rekommenderar att du kontaktar din Solution Partner för att få en uppskattning.
 
 F: Finns det Adobe Commerce 2-versioner av mina Adobe Commerce 1-tillägg?
 

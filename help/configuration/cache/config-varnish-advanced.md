@@ -12,15 +12,15 @@ ht-degree: 0%
 
 # Avancerad lack-konfiguration
 
-På engelska finns flera funktioner som förhindrar kunder från att drabbas av långa förseningar och timeout när Commerce-servern inte fungerar som den ska. Dessa funktioner kan konfigureras i `default.vcl` -fil. I det här avsnittet beskrivs de tillägg som finns i den VCL-fil (Varnish Configuration Language) som du hämtar från administratören.
+På engelska finns flera funktioner som förhindrar kunder från att drabbas av långa förseningar och timeout när Commerce-servern inte fungerar som den ska. Dessa funktioner kan konfigureras i filen `default.vcl`. I det här avsnittet beskrivs de tillägg som Commerce tillhandahåller i VCL-filen (Varnish Configuration Language) som du hämtar från administratören.
 
-Se [Referenshandbok för lack](https://varnish-cache.org/docs/index.html) om du vill ha mer information om hur du använder Konfigurationsspråk för engelska.
+Mer information om hur du använder konfigureringsspråket Variish finns i [Definitionsmanualen](https://varnish-cache.org/docs/index.html).
 
 ## Hälsokontroll
 
 Funktionen för hälsokontroll av lack avfrågar Commerce-servern för att avgöra om den svarar i tid. Om det svarar normalt genereras nytt innehåll när TTL-perioden (Time to Live) har gått ut. Om inte, har Varnish alltid kvar sitt gamla innehåll.
 
-I Commerce definieras följande standardhälsokontroll:
+Commerce definierar följande standardhälsokontroll:
 
 ```conf
 .probe = {
@@ -32,42 +32,42 @@ I Commerce definieras följande standardhälsokontroll:
     }
 ```
 
-Var 5:e sekund anropar den här hälsokontrollen `pub/health_check.php` skript. Det här skriptet kontrollerar tillgängligheten för servern, varje databas och Redis (om det är installerat). Skriptet måste returnera ett svar inom 2 sekunder. Om skriptet fastställer att någon av dessa resurser inte fungerar returneras en HTTP-felkod på 500. Om den här felkoden tas emot i sex av tio försök anses serverdelen vara felfri.
+Var femte sekund anropar den här hälsokontrollen skriptet `pub/health_check.php`. Det här skriptet kontrollerar tillgängligheten för servern, varje databas och Redis (om det är installerat). Skriptet måste returnera ett svar inom 2 sekunder. Om skriptet fastställer att någon av dessa resurser inte fungerar returneras en HTTP-felkod på 500. Om den här felkoden tas emot i sex av tio försök anses serverdelen vara felfri.
 
-The `health_check.php` skriptet finns i `pub` katalog. Om Commerce-rotkatalogen är `pub`och se sedan till att ändra banan i `url` parameter från `/pub/health_check.php` till `health_check.php`.
+Skriptet `health_check.php` finns i katalogen `pub`. Om Commerce rotkatalog är `pub` måste du ändra sökvägen i parametern `url` från `/pub/health_check.php` till `health_check.php`.
 
-Mer information finns i [Djurhälsokontroller](https://varnish-cache.org/docs/7.4/users-guide/vcl-backends.html#health-checks) dokumentation.
+Mer information finns i dokumentationen för [Hälsokontroller för lack](https://varnish-cache.org/docs/7.4/users-guide/vcl-backends.html#health-checks).
 
 ## Behagelläge
 
 Med Grace-läget kan Varnish behålla ett objekt i cachen utanför dess TTL-värde. Slutgiltigt innehåll kan sedan användas medan det hämtar en ny version. Detta förbättrar trafikflödet och minskar inläsningstiden. Det används i följande situationer:
 
-- När Commerce-serverdelen är felfri, men en begäran tar längre tid än normalt
-- När Commerce-serverdelen inte är hälsosam.
+- När Commerce serverdel är felfri, men en begäran tar längre tid än normalt
+- När Commerce serverdel inte är felfri.
 
-The `vcl_hit` subrutin definierar hur lack svarar på en begäran om objekt som har cache-lagrats.
+Underrutinen `vcl_hit` definierar hur Varnish svarar på en begäran om objekt som har cachelagrats.
 
-### När Commerce-serverdelen är hälsosam
+### När Commerce serverdel är felfri
 
-När hälsokontrollerna avgör att Commerce-serverdelen är hälsosam kontrollerar lack om tiden ligger kvar inom fristen. Standardrespitperioden är 300 sekunder, men en handlare kan ange värdet från administratören enligt beskrivningen i [Konfigurera Commerce att använda engelska](configure-varnish-commerce.md). Om respitperioden inte har gått ut levererar engelska det inaktuella innehållet och uppdaterar objektet asynkront från Commerce-servern. Om respitperioden har gått ut, skickar Varnish det inaktuella innehållet och uppdaterar objektet synkront från Commerce-serverdelen.
+När hälsokontrollerna avgör att Commerce serverdel är hälsosam kontrollerar lack om tiden är inne i fristen. Standardrespitperioden är 300 sekunder, men en handlare kan ange värdet från administratören enligt beskrivningen i [Konfigurera Commerce för användning av engelska](configure-varnish-commerce.md). Om respitperioden inte har gått ut skickar lack det inaktuella innehållet och objektet uppdateras asynkront från Commerce-servern. Om respitperioden har gått ut, skickar Varnish det inaktuella innehållet och uppdaterar objektet synkront från Commerce backend.
 
 Den maximala tid som varnish skickar ett inaktuellt objekt är summan av respitperioden (300 sekunder som standard) och TTL-värdet (86400 sekunder som standard).
 
-Ändra standardrespitperioden från `default.vcl` -fil, redigera följande rad i `vcl_hit` subrutin:
+Om du vill ändra standardfristen från filen `default.vcl` redigerar du följande rad i underrutinen `vcl_hit`:
 
 ```conf
 if (obj.ttl + 300s > 0s) {
 ```
 
-### När Commerce-serverdelen inte är felfri
+### När Commerce serverdel inte är felfri
 
-Om Commerce-serverdelen inte är responsiv, visar Varnish gammalt innehåll från cache i tre dagar (eller enligt definitionen i `beresp.grace`) plus återstående TTL (som är en dag som standard), såvida inte det cachelagrade innehållet rensas manuellt.
+Om Commerce-serverdelen inte är responsiv, skickar Varnish inaktuellt innehåll från cache i tre dagar (eller enligt definitionen i `beresp.grace`) plus den återstående TTL-nivån (som är en dag som standard), såvida inte det cachelagrade innehållet rensas manuellt.
 
 ## Saint-läge
 
-I läget Saint exkluderas ohälsosamma bakgrunder under en konfigurerbar tidsperiod. Därför kan ohälsosamma serverdelar inte generera trafik när Varnish används som belastningsutjämnare. Saint-läget kan användas i respitläge för att möjliggöra komplex hantering av ohälsosamma serverdelsservrar. Om till exempel en backend-server inte är felfri kan försök dirigeras till en annan server. Om alla andra servrar är nere kan du skicka inaktuella cachelagrade objekt. Värdar i helskärmsläget och utbrottsperioder definieras i `default.vcl` -fil.
+I läget Saint exkluderas ohälsosamma bakgrunder under en konfigurerbar tidsperiod. Därför kan ohälsosamma serverdelar inte generera trafik när Varnish används som belastningsutjämnare. Saint-läget kan användas i respitläge för att möjliggöra komplex hantering av ohälsosamma serverdelsservrar. Om till exempel en backend-server inte är felfri kan försök dirigeras till en annan server. Om alla andra servrar är nere kan du skicka inaktuella cachelagrade objekt. Värdar för helskärmsläge och utbrottsperioder definieras i filen `default.vcl`.
 
-Saint-läge kan också användas när Commerce-instanser tas offline för att utföra underhålls- och uppgraderingsuppgifter utan att det påverkar tillgängligheten för Commerce-webbplatsen.
+Saint-läge kan även användas när Commerce-instanser tas offline för att utföra underhålls- och uppgraderingsuppgifter utan att detta påverkar tillgängligheten för Commerce webbplats.
 
 ### Förutsättningar för Saint-läge
 
@@ -75,9 +75,9 @@ Ange en dator som primär installation. Installera huvudinstansen av Commerce, m
 
 På alla andra datorer måste Commerce-instansen ha åtkomst till den primära datorns mySQL-databas. De sekundära datorerna bör också ha tillgång till filerna för den primära Commerce-instansen.
 
-Alternativt kan versionshantering av statiska filer inaktiveras på alla datorer. Det här kan du komma åt från administratören under **Lager** > Inställningar > **Konfiguration** > **Avancerat** > **Utvecklare** > **Inställningar för statiska filer** > **Signera statiska filer** = **Nej**.
+Alternativt kan versionshantering av statiska filer inaktiveras på alla datorer. Du kan få åtkomst till detta från administratören under **Lager** > Inställningar > **Konfiguration** > **Avancerat** > **Utvecklare** > **Inställningar för statiska filer** > **Signera statiska filer** = **Nej**.
 
-Slutligen måste alla handelsinstanser vara i produktionsläge. Rensa cacheminnet för varje instans innan lack startas. Gå till Admin **System** > Verktyg > **Cachehantering** och klicka **Rensa Magento-cache**. Du kan också köra följande kommando för att rensa cachen:
+Slutligen måste alla Commerce-instanser vara i produktionsläge. Rensa cacheminnet för varje instans innan lack startas. Gå till **System** > Verktyg > **Cachehantering** i Admin och klicka på **Rensa Magento-cache**. Du kan också köra följande kommando för att rensa cachen:
 
 ```bash
 bin/magento cache:flush
@@ -85,11 +85,11 @@ bin/magento cache:flush
 
 ### Installation
 
-Saint-läget ingår inte i Varnish-paketet. Det är en separat version `vmod` som måste hämtas och installeras. Därför måste du kompilera om Varnish från källan enligt beskrivningen i [installationsanvisningar](https://varnish-cache.org/docs/index.html) för din version av Varnish.
+Saint-läget ingår inte i Varnish-paketet. Det är en separat version av `vmod` som måste hämtas och installeras. Därför måste du kompilera om Varnish från källan, vilket beskrivs i [installationsanvisningarna](https://varnish-cache.org/docs/index.html) för din version av Varnish.
 
 När du har kompilerat om kan du installera modulen för det smarta läget. I allmänhet gör du så här:
 
-1. Hämta källkoden från [Finska moduler](https://github.com/varnish/varnish-modules). Klona Git-versionen (huvudversion) eftersom 0.9.x-versionerna innehåller ett källkodsfel.
+1. Hämta källkoden från [lack-moduler](https://github.com/varnish/varnish-modules). Klona Git-versionen (huvudversion) eftersom 0.9.x-versionerna innehåller ett källkodsfel.
 1. Bygg källkoden med autoverktyg:
 
    ```bash
@@ -101,11 +101,11 @@ När du har kompilerat om kan du installera modulen för det smarta läget. I al
    sudo make install
    ```
 
-Se [Samling med slutna moduler](https://github.com/varnish/varnish-modules) om du vill ha information om hur du installerar modulen för det smarta läget.
+Mer information om hur du installerar modulen för det smarta läget finns i [Samling med engelska ](https://github.com/varnish/varnish-modules).
 
 ### Exempel på VCL-fil
 
-I följande kodexempel visas den kod som måste läggas till i VCL-filen för att helskärmsläget ska aktiveras. Placera `import` programsatser och `backend` -definitioner överst i filen.
+I följande kodexempel visas den kod som måste läggas till i VCL-filen för att helskärmsläget ska aktiveras. Placera `import`-programsatser och `backend` -definitioner överst i filen.
 
 ```cpp
 import saintmode;

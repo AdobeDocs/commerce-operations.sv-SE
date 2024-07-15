@@ -4,14 +4,14 @@ description: Se en lista med värden för filen env.php.
 exl-id: cf02da8f-e0de-4f0e-bab6-67ae02e9166f
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '693'
 ht-degree: 0%
 
 ---
 
 # env.php reference
 
-The `env.php` filen innehåller följande avsnitt:
+Filen `env.php` innehåller följande avsnitt:
 
 | Namn | Beskrivning |
 |-------------------------------|-----------------------------------------------------------------|
@@ -23,12 +23,12 @@ The `env.php` filen innehåller följande avsnitt:
 | `crypt` | Krypteringsnyckeln för kryptografiska funktioner |
 | `db` | Inställningar för databasanslutning |
 | `default_connection` | Standardanslutning för meddelandeköer |
-| `directories` | Mappningsinställningar för Commerce-kataloger |
+| `directories` | Inställningar för mappning av Commerce-kataloger |
 | `downloadable_domains` | Lista över hämtningsbara domäner |
 | `install` | Installationsdatum |
 | `lock` | Lås providerinställningar |
-| `MAGE_MODE` | The [programläge](../bootstrap/application-modes.md) |
-| `queue` | [Meddelandeköer](../queues/manage-message-queues.md) inställningar |
+| `MAGE_MODE` | Programläget [](../bootstrap/application-modes.md) |
+| `queue` | Inställningar för [Meddelandeköer](../queues/manage-message-queues.md) |
 | `resource` | Mappning av resursnamn till en anslutning |
 | `session` | Sessionslagringsdata |
 | `system` | Inaktiverar fältet för redigering i administratören |
@@ -36,7 +36,7 @@ The `env.php` filen innehåller följande avsnitt:
 
 ## serverdel
 
-Konfigurera **frontName** för Commerce Admin url med `backend` i env.php.
+Konfigurera **frontName** för Commerce-administratörens URL med noden `backend` i env.php.
 
 ```conf
 'backend' => [
@@ -46,7 +46,7 @@ Konfigurera **frontName** för Commerce Admin url med `backend` i env.php.
 
 ## cache
 
-Konfigurera redis-sida och standardcachelagring med `cache` noden i `env.php` -fil.
+Konfigurera redis-sida och standardcachelagring genom att använda noden `cache` i filen `env.php`.
 
 ```conf
 'cache' => [
@@ -98,11 +98,11 @@ Alla konfigurationer av cachetyper är tillgängliga från den här noden.
 ]
 ```
 
-Läs mer om olika [Cache-typer](../cli/manage-cache.md).
+Läs mer om olika [cachetyper](../cli/manage-cache.md).
 
 ## containers_wait_for_messages
 
-Ange om konsumenterna ska fortsätta att avfråga meddelanden om antalet bearbetade meddelanden är mindre än `max_messages` värde. Standardvärdet är `1`.
+Ange om konsumenterna ska fortsätta att avfråga meddelanden om antalet bearbetade meddelanden är mindre än värdet `max_messages`. Standardvärdet är `1`.
 
 ```conf
 'queue' => [
@@ -112,17 +112,17 @@ Ange om konsumenterna ska fortsätta att avfråga meddelanden om antalet bearbet
 
 Följande alternativ är tillgängliga:
 
-- `1`—Konsumenterna fortsätter att bearbeta meddelanden från meddelandekön tills de når `max_messages` det värde som anges i `env.php` innan TCP-anslutningen stängs och konsumentprocessen avslutas. Om kön töms innan användaren når `max_messages` värdet, väntar konsumenten på fler meddelanden.
+- `1` - Konsumenterna fortsätter att bearbeta meddelanden från meddelandekön tills det `max_messages` -värde som anges i filen `env.php` nås innan TCP-anslutningen stängs och konsumentprocessen avslutas. Om kön töms innan värdet `max_messages` uppnås väntar konsumenten på att fler meddelanden ska komma fram.
 
   Vi rekommenderar den här inställningen för stora handlare eftersom ett konstant meddelandeflöde förväntas och förseningar i bearbetningen är oönskade.
 
-- `0`—Konsumenterna bearbetar tillgängliga meddelanden i kön, stänger TCP-anslutningen och avslutar. Konsumenterna väntar inte på att ytterligare meddelanden ska skickas till kön, även om antalet bearbetade meddelanden är mindre än `max_messages` det värde som anges i `env.php` -fil. Detta kan hjälpa till att förhindra problem med kronijobb som orsakas av långa förseningar i meddelandeköhanteringen.
+- `0` - Konsumenterna bearbetar tillgängliga meddelanden i kön, stänger TCP-anslutningen och avslutar. Konsumenterna väntar inte på att ytterligare meddelanden ska skickas till kön, även om antalet bearbetade meddelanden är mindre än värdet `max_messages` som anges i filen `env.php`. Detta kan hjälpa till att förhindra problem med kronijobb som orsakas av långa förseningar i meddelandeköhanteringen.
 
   Vi rekommenderar den här inställningen för mindre handlare som inte förväntar sig ett konstant meddelandeflöde och som föredrar att spara datorresurser i utbyte mot mindre förseningar när det inte finns några meddelanden på några dagar.
 
 ## cron
 
-Aktivera eller inaktivera cron-jobb för Commerce-programmet. Kronijobb är som standard aktiverade. Om du vill inaktivera dem lägger du till `cron` till `env.php` och ange värdet till `0`.
+Aktivera eller inaktivera cron-jobb för Commerce-programmet. Kronijobb är som standard aktiverade. Om du vill inaktivera dem lägger du till konfigurationen `cron` i filen `env.php` och anger värdet till `0`.
 
 ```conf
 'cron' => [
@@ -132,13 +132,13 @@ Aktivera eller inaktivera cron-jobb för Commerce-programmet. Kronijobb är som 
 
 >[!WARNING]
 >
->Var försiktig när du inaktiverar cron-jobb. När de är inaktiverade kommer viktiga processer som krävs av Commerce-programmet inte att köras.
+>Var försiktig när du inaktiverar cron-jobb. När de är inaktiverade körs inte de viktiga processer som krävs av Commerce.
 
-Läs mer om [Kroner](../cli/configure-cron-jobs.md).
+Läs mer om [Crons](../cli/configure-cron-jobs.md).
 
 ## kryptera
 
-Handel använder en krypteringsnyckel för att skydda lösenord och andra känsliga data. Den här nyckeln genereras under installationsprocessen.
+Commerce använder en krypteringsnyckel för att skydda lösenord och andra känsliga data. Den här nyckeln genereras under installationsprocessen.
 
 ```conf
 'crypt' => [
@@ -146,7 +146,7 @@ Handel använder en krypteringsnyckel för att skydda lösenord och andra känsl
 ]
 ```
 
-Läs mer om [Krypteringsnyckel](https://docs.magento.com/user-guide/system/encryption-key.html) i _Handbok för Commerce-användare_.
+Läs mer om [Krypteringsnyckel](https://docs.magento.com/user-guide/system/encryption-key.html) i användarhandboken för _Commerce_.
 
 ## db
 
@@ -172,7 +172,7 @@ Alla databaskonfigurationer är tillgängliga i den här noden.
 
 ## default_connection
 
-Definierar standardanslutningen för meddelandeköer. Värdet kan vara `db`, `amqp`eller ett anpassat kösystem som `redismq`. Om du anger något annat värde än `db`måste meddelandeköprogrammet först installeras och konfigureras. Annars kommer meddelanden inte att behandlas korrekt.
+Definierar standardanslutningen för meddelandeköer. Värdet kan vara `db`, `amqp` eller ett anpassat kösystem som `redismq`. Om du anger något annat värde än `db` måste meddelandeköprogrammet först installeras och konfigureras. Annars kommer meddelanden inte att behandlas korrekt.
 
 ```conf
 'queue' => [
@@ -180,12 +180,12 @@ Definierar standardanslutningen för meddelandeköer. Värdet kan vara `db`, `am
 ]
 ```
 
-If `queue/default_connection` anges i systemet `env.php` den här anslutningen används för alla meddelandeköer via systemet, såvida inte en viss anslutning definieras i en `queue_topology.xml`, `queue_publisher.xml` eller `queue_consumer.xml` -fil.
-Om `queue/default_connection` är `amqp` in `env.php` men en `db` anslutningen anges i kökonfigurations-XML-filerna för en modul, använder modulen MySQL som meddelandehanterare.
+Om `queue/default_connection` anges i systemfilen `env.php` används den här anslutningen för alla meddelandeköer via systemet, såvida inte en viss anslutning definieras i en `queue_topology.xml`-, `queue_publisher.xml`- eller `queue_consumer.xml`-fil.
+Om `queue/default_connection` till exempel är `amqp` i `env.php` men en `db`-anslutning har angetts i kökonfigurationens XML-filer för en modul, använder modulen MySQL som meddelandehanterare.
 
 ## kataloger
 
-Valfria katalogmappningsalternativ som måste anges när webbservern är konfigurerad för att hantera Commerce-appen från `/pub` katalog [förbättrad säkerhet](../../installation/tutorials/docroot.md).
+Valfria katalogmappningsalternativ som måste anges när webbservern är konfigurerad för att hantera Commerce-programmet från katalogen `/pub` för [förbättrad säkerhet](../../installation/tutorials/docroot.md).
 
 ```conf
 'directories' => [
@@ -217,7 +217,7 @@ Installationsdatumet för Commerce-programmet.
 
 ## lock
 
-Lås providerinställningar konfigureras med `lock` nod.
+Lås providerinställningar konfigureras med noden `lock`.
 
 Läs mer om [Lås providerkonfiguration](../../installation/tutorials/lock-provider.md).
 
@@ -260,7 +260,7 @@ Resurskonfigurationsinställningar är tillgängliga i den här noden.
 
 ## session
 
-Sessionskonfigurationer lagras i `session` nod.
+Sessionskonfigurationer lagras i noden `session`.
 
 ```conf
 'session' => [
@@ -282,7 +282,7 @@ Läs mer om [x-frame-options](../security/xframe-options.md).
 
 ## system
 
-Med den här noden låses konfigurationsvärdena i `env.php` och sedan inaktiverar fältet i administratören.
+Med den här noden låser Commerce konfigurationsvärdena i filen `env.php` och inaktiverar sedan fältet i administratören.
 
 ```conf
 'system' => [

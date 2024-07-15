@@ -18,16 +18,16 @@ Från och med 2.4.4, 2.4.3-p2 och 2.3.7-p3 stöder Adobe Commerce OpenSearch. Lo
 
 ## Migreringssökväg
 
-Stegen för att migrera till OpenSearch är enkla och följer i stort sett stegen för konfiguration av Elasticsearch. I dessa steg antas att Adobe Commerce är det enda programmet som använder sökmotorn. Om flera program använder sökmotorn följer du den officiella migreringshandboken [Gå från Elasticsearch med öppen källkod till OpenSearch](https://opensearch.org/blog/technical-posts/2021/10/moving-from-opensource-elasticsearch-to-opensearch/).
+Stegen för att migrera till OpenSearch är enkla och följer i stort sett stegen för konfiguration av Elasticsearch. I dessa steg antas att Adobe Commerce är det enda programmet som använder sökmotorn. Om flera program använder sökmotorn följer du den officiella migreringsguiden [Flytta från Elasticsearch med öppen källkod till OpenSearch](https://opensearch.org/blog/technical-posts/2021/10/moving-from-opensource-elasticsearch-to-opensearch/).
 
-1. Kontrollera att installationen uppfyller [krav för sökmotor](../../installation/prerequisites/search-engine/overview.md).
+1. Kontrollera att installationen uppfyller kraven för [sökmotorn](../../installation/prerequisites/search-engine/overview.md).
 
-1. Placera platsen i [Underhållsläge](../../installation/tutorials/maintenance-mode.md).
+1. Placera platsen i [underhållsläge](../../installation/tutorials/maintenance-mode.md).
 
 1. Du kan även avinstallera Elasticsearch.
 
 1. [Installera OpenSearch](https://opensearch.org/docs/latest/opensearch/install/important-settings/).
 
-1. [Konfigurera sökmotorn](../../configuration/search/configure-search-engine.md) och utföra relaterade uppgifter, till exempel tömma cachen och indexera om katalogsökindexet.
+1. [Konfigurera sökmotorn ](../../configuration/search/configure-search-engine.md) och utför relaterade åtgärder, till exempel tömning av cachen och omindexering av katalogsökindexet.
 
 Inga ytterligare ändringar av konfigurationsvärdet behövs.

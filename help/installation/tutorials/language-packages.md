@@ -13,9 +13,9 @@ ht-degree: 0%
 
 I det här avsnittet beskrivs hur du avinstallerar ett eller flera språkpaket, inklusive språkpaketets kod från filsystemet. Du kan skapa säkerhetskopior först så att du kan återställa data senare.
 
-Det här kommandot avinstallerar *endast* språkpaket som anges i `composer.json`, med andra ord, språkpaket som tillhandahålls som dispositionspaket. Om språkpaketet inte är ett Composer-paket måste du avinstallera det manuellt genom att ta bort språkpaketkoden från filsystemet.
+Det här kommandot avinstallerar *endast* språkpaket som anges i `composer.json`, med andra ord språkpaket som tillhandahålls som Composer-paket. Om språkpaketet inte är ett Composer-paket måste du avinstallera det manuellt genom att ta bort språkpaketkoden från filsystemet.
 
-Du kan återställa säkerhetskopior när som helst med [`magento setup:rollback`](uninstall-modules.md#roll-back-the-file-system-database-or-media-files) -kommando.
+Du kan återställa säkerhetskopior när som helst med kommandot [`magento setup:rollback`](uninstall-modules.md#roll-back-the-file-system-database-or-media-files).
 
 Kommandoanvändning:
 
@@ -29,8 +29,8 @@ Avinstallationskommandot för språkpaket utför följande åtgärder:
 
    Du kan undvika detta genom att antingen avinstallera alla beroende språkpaket samtidigt eller genom att avinstallera de beroende språkpaketen först.
 
-1. If `--backup code` är specificerat, säkerhetskopiera filsystemet (förutom `var` och `pub/static` kataloger) till `var/backups/<timestamp>_filesystem.tgz`
-1. Tar bort språkpaketfiler från koddatabasen med `composer remove`.
+1. Om `--backup code` anges säkerhetskopierar du filsystemet (exklusive `var` och `pub/static` kataloger) till `var/backups/<timestamp>_filesystem.tgz`
+1. Tar bort språkpaketfiler från kodbasen med `composer remove`.
 1. Rensar cachen.
 
 Om du till exempel försöker avinstallera ett språkpaket som ett annat språkpaket är beroende av visas följande meddelande:

@@ -32,17 +32,17 @@ Målgruppen för den här spelboken är:
 
 Det här dokumentet följer en struktur som hjälper dig att förstå de viktigaste fokusområdena för att få ut så mycket som möjligt av er investering i Adobe Commerce. Denna struktur bygger på Deloitte och Adobe Commerce Governance Framework, som skapar en lämplig affärsmiljö för digitala operationer och omvandlingar för att lyckas. Den innehåller följande uppgifter:
 
-- **Ledarskap**- Verkställande inköps- och support för en framgångsrik hantering av en e-handelsplattform.
+- **Ledarskap** - Chefsköp och support för en framgångsrik hantering av en e-handelsplattform.
 
-- **Strategi**- Klarhet och anpassning kring viktiga affärsmål för utvärdering av digitala prestanda och e-handelsverksamhet.
+- **Strategi** - Klarhet och anpassning kring viktiga affärsmål för utvärdering av digitala prestanda och e-handelsåtgärder.
 
-- **Lösning**- Värdtjänster och utvärdering av infrastruktur för olika affärs- och e-handelskrav.
+- **Lösning** - Värdtjänst- och infrastrukturutvärdering för olika affärs- och e-handelskrav.
 
-- **Folk**- Resurser, sakkunskap och lämplig teamstruktur för att effektivt kunna driva e-handelsverksamhet.
+- **Personer** - Resurser, sakkunskap och lämplig teamstruktur för att kunna köra e-handelsåtgärder effektivt.
 
-- **Process**- Förfaranden, projekthantering och arbetsflöden för effektiv hantering av en e-handelsplats.
+- **Process** - Procedurer, projekthantering och arbetsflöden för effektiv hantering av en e-handelsplats.
 
-- **Produkt**- Allmänna e-handelslösningar, vanliga integreringar och automatiseringar.
+- **Produkt** - Allmänna e-handelslösningar, vanliga integreringar och automatiseringar.
 
 >[!NOTE]
 >

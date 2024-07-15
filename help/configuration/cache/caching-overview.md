@@ -12,24 +12,24 @@ ht-degree: 0%
 
 # Konfigurera cachelagring
 
-[!DNL Commerce] I kan du konfigurera alternativ till standardfilsystemets cachning. I den här guiden diskuteras några av dessa alternativ, nämligen
+Med [!DNL Commerce] kan du konfigurera alternativ till standardfilsystemets cachelagring. I den här guiden diskuteras några av dessa alternativ, nämligen
 
-- Ställ in följande cacheminnesmekanismer i [!DNL Commerce] konfiguration:
+- Ställ in följande cachemekanismer i konfigurationen [!DNL Commerce]:
 
    - [Databas](https://developer.adobe.com/commerce/php/development/cache/partial/database-caching/)
    - [Redis](config-redis.md)
    - Filsystem (standard): Ingen konfiguration behövs för att använda standardfilsystemets cachelagring.
 
-- Konfigurera [Varnish](config-varnish.md) utan att ändra [!DNL Commerce] konfiguration.
+- Konfigurera [lack](config-varnish.md) utan att ändra [!DNL Commerce]-konfigurationen.
 
 ## Cachelagring av terminologi
 
 [!DNL Commerce] använder följande cachelagringsterminologi:
 
-- **Frontend**- Liknar ett gränssnitt eller en gateway för cachelagring, implementerat av [Magento\Framework\Cache\Frontend](https://github.com/magento/magento2/tree/2.4/lib/internal/Magento/Framework/Cache/Frontend).
-- **Cache-typer**—Kan vara någon av typerna i [!DNL Commerce] eller du kan [skapa egna](https://developer.adobe.com/commerce/php/development/cache/partial/cache-type/).
-- **Backend**—Anger information om [cache-lagring](https://framework.zend.com/manual/1.12/en/zend.cache.backends.html), implementerat av [Magento\Framework\Cache\Backend](https://github.com/magento/magento2/tree/2.4/lib/internal/Magento/Framework/Cache/Backend)
-- **Backend på två nivåer**—Lagrar cacheposter i två bakgrunder: en snabbare och en långsammare.
+- **Frontend** - Liknar ett gränssnitt eller en gateway för cache-lagring, som implementeras av [Magento\Framework\Cache\Frontend](https://github.com/magento/magento2/tree/2.4/lib/internal/Magento/Framework/Cache/Frontend).
+- **Cachetyper** - Kan vara någon av typerna i [!DNL Commerce] eller så kan du [skapa egna](https://developer.adobe.com/commerce/php/development/cache/partial/cache-type/).
+- **Backend** - Anger information om [cache-lagring](https://framework.zend.com/manual/1.12/en/zend.cache.backends.html) som implementeras av [Magento\Framework\Cache\Backend](https://github.com/magento/magento2/tree/2.4/lib/internal/Magento/Framework/Cache/Backend)
+- **Backend på två nivåer** - Lagrar cacheposter i två backends: en snabbare och en långsammare.
 
   >[!INFO]
   >
@@ -37,14 +37,14 @@ ht-degree: 0%
 
 ## Konfigurationsalternativ
 
-- Ändra angiven `default` cachefrontend—
+- Ändrar angiven `default`-cacheklientstruktur—
 
-  Du ändrar bara `<magento_root>/app/etc/di.xml` filen, Commerce-programmets globala konfiguration för beroendeinjicering.
+  Du ändrar bara filen `<magento_root>/app/etc/di.xml`, Commerce-programmets globala konfiguration för beroendeinjicering.
 
 - Konfigurera en egen anpassad cacheklientserver -
 
-  Du ändrar bara `<magento_root>/app/etc/env.php` eftersom den åsidosätter motsvarande konfiguration i `di.xml` -fil.
+  Du ändrar bara filen `<magento_root>/app/etc/env.php` eftersom den åsidosätter motsvarande konfiguration i filen `di.xml`.
 
 >[!TIP]
 >
->På engelska krävs inga ändringar i [!DNL Commerce] konfiguration. Se [Konfigurera och använda engelska](config-varnish.md).
+>För lack krävs inga ändringar av konfigurationen [!DNL Commerce]. Se [Konfigurera och använda engelska](config-varnish.md).

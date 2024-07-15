@@ -17,7 +17,7 @@ Du bör endast avinstallera en modul om du är säker på att du inte kommer att
 
 >[!NOTE]
 >
->Det här kommandot kontrollerar att endast beroenden som har deklarerats i `composer.json` -fil. Om du avinstallerar en modul som _not_ definieras i `composer.json` avinstallerar det här kommandot modulen utan att kontrollera om det finns beroenden. Det här kommandot gör _not_ Ta dock bort modulens kod från filsystemet. Du måste använda filsystemverktygen för att ta bort modulens kod (till exempel `rm -rf <path to module>`). Som ett alternativ kan du [disable](manage-modules.md) moduler som inte är dispositionsmoduler.
+>Det här kommandot kontrollerar att endast beroenden som har deklarerats i filen `composer.json` har deklarerats. Om du avinstallerar en modul som _inte_ har definierats i filen `composer.json` avinstalleras modulen med det här kommandot utan att någon kontroll av beroenden görs. Det här kommandot tar _inte_ bort modulens kod från filsystemet. Du måste använda filsystemverktyg för att ta bort modulens kod (till exempel `rm -rf <path to module>`). Som ett alternativ kan du [inaktivera](manage-modules.md) moduler som inte är Composer.
 
 Kommandoanvändning:
 
@@ -26,7 +26,7 @@ bin/magento module:uninstall [--backup-code] [--backup-media] [--backup-db] [-r|
   {ModuleName} ... {ModuleName}
 ```
 
-Plats `{ModuleName}` anger modulnamnet i `<VendorName>_<ModuleName>` format. Kundmodulens namn är till exempel `Magento_Customer`. Om du vill visa en lista med modulnamn anger du `magento module:status`
+Där `{ModuleName}` anger modulnamnet i formatet `<VendorName>_<ModuleName>`. Kundmodulens namn är till exempel `Magento_Customer`. Om du vill visa en lista med modulnamn anger du `magento module:status`
 
 Avinstallationskommandot för modulen utför följande åtgärder:
 
@@ -44,25 +44,25 @@ Avinstallationskommandot för modulen utför följande åtgärder:
 
    | Alternativ | Betydelse | Säkerhetskopians filnamn och plats |
    | ---------------- | -------------------------------------------------------------------------------- | -------------------------------------------- |
-   | `--backup-code` | Säkerhetskopierar filsystemet (förutom `var` och `pub/static` kataloger). | `var/backups/<timestamp>_filesystem.tgz` |
+   | `--backup-code` | Säkerhetskopierar filsystemet (exklusive `var`- och `pub/static`-kataloger). | `var/backups/<timestamp>_filesystem.tgz` |
    | `--backup-media` | Säkerhetskopierar katalogen pub/media. | `var/backups/<timestamp>_filesystem_media.tgz` |
    | `--backup-db` | Säkerhetskopierar databasen. | `var/backups/<timestamp>_db.gz` |
 
-1. If `--remove-data` har angetts tar du bort databasschemat och data som definierats i modulens `Uninstall` -klasser.
+1. Om `--remove-data` anges tar du bort databasschemat och data som definierats i modulens `Uninstall` -klasser.
 
-   För varje angiven modul som ska avinstalleras anropas `uninstall` metoden i sin `Uninstall` klassen. Den här klassen måste ärva från [Magento\Framework\Setup\UninstallInterface](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Setup/UninstallInterface.php).
+   Anropar metoden `uninstall` i klassen `Uninstall` för varje angiven modul som ska avinstalleras. Den här klassen måste ärva från [Magento\Framework\Setup\UninstallInterface](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Setup/UninstallInterface.php).
 
-1. Tar bort angivna moduler från `setup_module` databastabell.
-1. Tar bort angivna moduler från modullistan i [distributionskonfiguration](../../configuration/reference/deployment-files.md).
+1. Tar bort angivna moduler från databastabellen `setup_module`.
+1. Tar bort angivna moduler från modullistan i [distributionskonfigurationen](../../configuration/reference/deployment-files.md).
 1. Tar bort kod från kodbasen med `composer remove`.
 
    >[!NOTE]
    >
-   >Avinstallera en modul _alltid_ körningar `composer remove`. The `--remove-data` alternativ tar bort databasdata och schema som definieras av modulens `Uninstall` klassen.
+   >Om du avinstallerar modulen _always_ körs `composer remove`. Alternativet `--remove-data` tar bort databasdata och schema som definieras av modulens `Uninstall`-klass.
 
 1. Rensar cachen.
 1. Uppdateringsgenererade klasser.
-1. If `--clear-static-content` anges, rengöringar [genererade statiska vyfiler](../../configuration/cli/static-view-file-deployment.md).
+1. Om `--clear-static-content` anges rensas [genererade statiska vyfiler](../../configuration/cli/static-view-file-deployment.md).
 1. Tar arkivet ur underhållsläge.
 
 Om du till exempel försöker avinstallera en modul som en annan modul är beroende av visas följande meddelande:
@@ -73,7 +73,7 @@ magento module:uninstall Magento_SampleMinimal
         Magento_SampleModifyContent
 ```
 
-Ett alternativ är att avinstallera båda modulerna efter säkerhetskopiering av modulens filsystem, `pub/media` filer och databastabeller, men _not_ ta bort modulens databasschema eller data:
+Ett alternativ är att avinstallera båda modulerna efter säkerhetskopiering av modulens filsystem, `pub/media` filer och databastabeller, men _inte_ tar bort modulens databasschema eller data:
 
 ```bash
 bin/magento module:uninstall Magento_SampleMinimal Magento_SampleModifyContent --backup-code --backup-media --backup-db
@@ -126,11 +126,11 @@ Använd följande kommando om du vill återställa kodbasen till det läge där 
 bin/magento setup:rollback [-c|--code-file="<filename>"] [-m|--media-file="<filename>"] [-d|--db-file="<filename>"]
 ```
 
-Plats `<filename>` är namnet på säkerhetskopieringsfilen i `<app_root>/var/backups` katalog. Om du vill visa en lista över säkerhetskopierade filer anger du `magento info:backups:list`
+Där `<filename>` är namnet på säkerhetskopieringsfilen i katalogen `<app_root>/var/backups`. Om du vill visa en lista över säkerhetskopierade filer anger du `magento info:backups:list`
 
 >[!WARNING]
 >
->Med det här kommandot tas de angivna filerna eller databasen bort innan de återställs. Till exempel `--media-file` alternativet tar bort medieresurser under `pub/media` katalog före återställning från den angivna återställningsfilen. Kontrollera att du inte har ändrat det filsystem eller den databas som du vill behålla innan du använder det här kommandot.
+>Med det här kommandot tas de angivna filerna eller databasen bort innan de återställs. Alternativet `--media-file` tar till exempel bort medieresurser under katalogen `pub/media` innan den angivna återställningsfilen återställs. Kontrollera att du inte har ändrat det filsystem eller den databas som du vill behålla innan du använder det här kommandot.
 
 >[!NOTE]
 >
@@ -142,7 +142,7 @@ Det här kommandot utför följande uppgifter:
 1. Verifierar namnet på säkerhetskopieringsfilen.
 1. Om du anger en fil för kodinspelning:
 
-   a. Verifierar att målplatserna för återställningen är skrivbara (observera att `pub/static` och `var` mappar ignoreras).
+   a. Verifierar att målplatserna för återställningen är skrivbara (observera att mapparna `pub/static` och `var` ignoreras).
 
    b. Tar bort alla filer och kataloger under programinstallationskatalogen.
 
@@ -172,7 +172,7 @@ Om du till exempel vill återställa en säkerhetskopia av kod (det vill säga e
   magento info:backups:list
   ```
 
-* Återställa en filsäkerhetskopia med namnet `1433876616_filesystem.tgz`:
+* Återställ en säkerhetskopia av filen med namnet `1433876616_filesystem.tgz`:
 
   ```bash
   magento setup:rollback --code-file="1433876616_filesystem.tgz"
@@ -191,4 +191,4 @@ Om du till exempel vill återställa en säkerhetskopia av kod (det vill säga e
 
 >[!NOTE]
 >
->Så här kör du `magento` utan att ändra kataloger kan du behöva ange `cd pwd`.
+>Om du vill köra kommandot `magento` igen utan att ändra kataloger kan du behöva ange `cd pwd`.

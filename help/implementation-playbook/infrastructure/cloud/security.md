@@ -5,7 +5,7 @@ exl-id: cd5d1106-c8db-4b70-b1c7-12378d7d77a7
 feature: Cloud, Security
 source-git-commit: 8d8cd0d33c1a3a95186948e670df6d9865b9a871
 workflow-type: tm+mt
-source-wordcount: '1739'
+source-wordcount: '1691'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Säkerhet
 
-Adobe Commerce [Proffsarkitektur](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-architecture.html) är utformat för att ge en mycket säker miljö. Varje kund driftsätts i sin egen isolerade servermiljö, skild från andra kunder. Säkerhetsdetaljerna för produktionsmiljön beskrivs nedan.
+Planarkitekturen ](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-architecture.html) för Adobe Commerce [Pro är utformad för att ge en mycket säker miljö. Varje kund driftsätts i sin egen isolerade servermiljö, skild från andra kunder. Säkerhetsdetaljerna för produktionsmiljön beskrivs nedan.
 
 ## Webbläsare
 
@@ -23,7 +23,7 @@ Största delen av trafiken i och från molnmiljön kommer från konsumenternas w
 
 Tillhandahåller snabbt ett CDN-skydd (Content Delivery Network) och DoS-skydd (Distributed Denial of Service). Snabbt CDN hjälper till att isolera direkt åtkomst till de ursprungliga servrarna. Den offentliga DNS:en pekar bara på snabbnätverket. Den snabba DDoS-lösningen skyddar mot mycket störande Layer 3- och Layer 4-attacker och mer komplexa Layer 7-attacker. Layer 7-attacker kan blockeras med anpassade regler som baseras på hela HTTP/HTTPS-begäranden och som baseras på klient- och frågekriterier som headers, cookies, begärandesökväg och klient-IP, eller indikatorer som geolocation.
 
-Se [Snabb översikt över tjänster](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/fastly.html) i _Molnguide_.
+Se [Översikt över snabba tjänster](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/fastly.html) i _molnguiden_.
 
 ## Brandvägg för webbaserade program
 
@@ -31,7 +31,7 @@ WAF (Snably Web Application Firewall) används för att ge ytterligare skydd. Fa
 
 WAF-reglerna uppdateras av Adobe Commerce om nya säkerhetsluckor upptäcks som gör att Managed Services kan&quot;åtgärda&quot; säkerhetsproblem före programkorrigeringar. Fast WAF tillhandahåller inte hastighetsbegränsande eller robotdetekteringstjänster. Om så önskas kan kunderna licensiera en tredjepartstjänst för robotdetektering som är kompatibel med Fastly.
 
-Se [Brandvägg för webbaserade program (WAF)](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/fastly-waf-service.html) i _Molnguide_.
+Se [Brandvägg för webbaserade program (WAF)](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/fastly-waf-service.html) i _molnhandboken_.
 
 ## Virtuellt privat moln
 
@@ -47,7 +47,7 @@ Adobe Commerce-programmet stöder inte kryptering på kolumn- eller radnivå ell
 
 ## Slutpunktsidentifiering och -svar
 
-[!DNL CrowdStrike Falcon], installeras en lättviktsagent, nästa generationens EDR-agent (Endpoint Detection and Response) på alla slutpunkter (inklusive servrar) inom Adobe. EDR-agenter skyddar data och system från Adobe med kontinuerlig övervakning och insamling i realtid, vilket möjliggör snabb identifiering och åtgärder av hot.
+[!DNL CrowdStrike Falcon], en EDR-agent (Endpoint Detection and Response) av nästa generation som är ljusviktig, installeras på alla slutpunkter (inklusive servrar) inom Adobe. EDR-agenter skyddar data och system från Adobe med kontinuerlig övervakning och insamling i realtid, vilket möjliggör snabb identifiering och åtgärder av hot.
 
 ## Testning av penetration
 
@@ -68,15 +68,15 @@ Adobe testar regelbundet kärnprogramkoden för att se om det finns några säke
 - OWASPZAP
 - andSqlMap
 
-Den fullständiga kodbasen skannas med dessa verktyg varannan vecka. Kunderna meddelas om säkerhetsuppdateringar via direkt e-post, meddelanden i programmet och i [Security Center](https://helpx.adobe.com/security.html).
+Den fullständiga kodbasen skannas med dessa verktyg varannan vecka. Kunderna meddelas om säkerhetsuppdateringar via direkt e-post, meddelanden i programmet och i [Säkerhetscenter](https://helpx.adobe.com/security.html).
 
-Kunderna måste se till att dessa korrigeringsfiler tillämpas på deras anpassade program inom 30 dagar efter lanseringen, enligt PCI-riktlinjerna. Adobe har också en [Verktyg för säkerhetsgenomsökning](https://docs.magento.com/user-guide/magento/security-scan.html) som gör det möjligt för handlare att regelbundet övervaka sina webbplatser och få uppdateringar om kända säkerhetsrisker, skadlig kod och obehörig åtkomst. Verktyget för säkerhetssökning är en kostnadsfri tjänst och kan köras på alla versioner av Adobe Commerce.
+Kunderna måste se till att dessa korrigeringsfiler tillämpas på deras anpassade program inom 30 dagar efter lanseringen, enligt PCI-riktlinjerna. Adobe har också ett [säkerhetssökningsverktyg](https://docs.magento.com/user-guide/magento/security-scan.html) som gör det möjligt för handlare att regelbundet övervaka sina webbplatser och få uppdateringar om kända säkerhetsrisker, skadlig kod och obehörig åtkomst. Verktyget för säkerhetssökning är en kostnadsfri tjänst och kan köras på alla versioner av Adobe Commerce.
 
-Adobe Commerce har en [buggprogram](https://hackerone.com/magento) utöver intern testning. Kunden får dessutom den fullständiga källkoden för programmet för egen granskning om så önskas.
+För att uppmuntra säkerhetsforskare att identifiera och rapportera säkerhetsluckor har Adobe Commerce ett [felbegränsningsprogram](https://hackerone.com/magento) förutom intern testning. Kunden får dessutom den fullständiga källkoden för programmet för egen granskning om så önskas.
 
 ## Skrivskyddat filsystem
 
-All körbar kod distribueras till en skrivskyddad filsystembild, vilket dramatiskt minskar de ytor som kan attackeras. Distributionsprocessen skapar en Squash-FS-avbildning för att minska möjligheterna att injicera PHP- eller JavaScript-kod i systemet eller ändra Adobe Commerce-programfiler.
+All körbar kod distribueras till en skrivskyddad filsystembild, vilket dramatiskt minskar de ytor som kan attackeras. Distributionsprocessen skapar en Squash-FS-avbildning för att minska möjligheterna att injicera PHP- eller JavaScript-kod i systemet eller ändra Adobe Commerce programfiler.
 
 ## Fjärrdistribution
 
@@ -84,15 +84,15 @@ Det enda sättet att få körbar kod i Managed Services produktionsmiljö är at
 
 ## Loggning
 
-Alla AWS-aktiviteter loggas i AWS CloudTrail. Operativsystem, programserver och databasloggar lagras på produktionsservrarna och lagras i säkerhetskopior. Alla ändringar av källkoden registreras i en Git-databas. Distributionshistorik finns i Adobe Commerce [Project Web Interface](https://devdocs.magento.com/cloud/project/projects.html#login). All supportåtkomst loggas och supportsessioner registreras.
+Alla AWS-aktiviteter loggas i AWS CloudTrail. Operativsystem, programserver och databasloggar lagras på produktionsservrarna och lagras i säkerhetskopior. Alla ändringar av källkoden registreras i en Git-databas. Distributionshistorik är tillgänglig i Adobe Commerce [Project Web Interface](https://devdocs.magento.com/cloud/project/projects.html#login). All supportåtkomst loggas och supportsessioner registreras.
 
-Se [Visa och hantera loggar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/test/log-locations.html) i _Molnguide_.
+Se [Visa och hantera loggar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/test/log-locations.html) i _molnguiden_.
 
 ## Känsliga data
 
 Känsliga data kan omfatta antingen personuppgifter från konsumenter eller konfidentiella uppgifter från Managed Services-kunder. Skyddet av känsliga data från kunder och konsumenter är en viktig skyldighet för Adobe Commerce Managed Services. Både Managed Services- och Adobe-kunder har juridiska skyldigheter avseende personligt identifierbar information. Förutom arkitekturens säkerhetsfunktioner finns det andra kontroller som begränsar distributionen och åtkomsten till känsliga data.
 
-Kunderna äger sina data och har kontroll över var dessa data finns. Kunden anger var deras produktions- och utvecklingsinstanser finns. De anger också vilken plats som används för Adobe Commerce rapporteringsmiljö med Commerce och om det Adobe Commerce Reporting-programmet har tillgång till personligt identifierbar information eller inte. Produktionsinstanser kan finnas i de flesta AWS-regioner, medan utvecklings- och Adobe Commerce Reporting-miljöer för närvarande finns i antingen USA eller EU.
+Kunderna äger sina data och har kontroll över var dessa data finns. Kunden anger var deras produktions- och utvecklingsinstanser finns. De anger också vilken plats som används för Adobe Commerce Reporting-miljön med Commerce och om Adobe Commerce Reporting-programmet har tillgång till personligt identifierbar information eller inte. Produktionsinstanser kan finnas i de flesta AWS-regioner, medan utvecklings- och Adobe Commerce Reporting-miljöer för närvarande finns i antingen USA eller EU.
 
 Känsliga data kan passera genom snabbnätverket för CDN-servrar, men lagras inte i snabbnätverket. Alla partners som ingår i Managed Services-erbjudandet har avtalsenliga skyldigheter att säkerställa skydd av känsliga uppgifter. Managed Services flyttar inte känsliga kund- eller konsumentdata från de platser som kunden anger.
 
@@ -110,14 +110,14 @@ GDPR kräver att all personligt identifierbar information (t.ex. namn, ras och f
 
 >[!NOTE]
 >
->Den här sidan innehåller en allmän översikt över vad du bör tänka på för GDPR. Se _[Handbok för säkerhet och efterlevnad](../../../security-and-compliance/privacy/gdpr.md)_ om du vill veta mer om hur Adobe Commerce lagrar personuppgifter. För att avgöra hur ditt företag ska uppfylla juridiska skyldigheter, rådfråga ditt juridiska ombud eller se [officiell text](https://eur-lex.europa.eu/eli/reg/2016/679/oj).
+>Den här sidan innehåller en allmän översikt över vad du bör tänka på för GDPR. Se _[Säkerhets- och efterlevnadshandboken](../../../security-and-compliance/privacy/gdpr.md)_ för mer information om hur personuppgifter lagras i Adobe Commerce. Om du vill ta reda på hur ditt företag ska uppfylla juridiska skyldigheter, rådgör med ditt juridiska ombud eller referera till den [officiella texten](https://eur-lex.europa.eu/eli/reg/2016/679/oj).
 
 ## Säkerhetskopior
 
-Säkerhetskopieringar utförs varje timme under de senaste 24 timmarna. Efter 24-timmarsperioden sparas säkerhetskopior enligt ett schema med tjänsten AWS EBS Snapshot. Se [Bevarandeprincip](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-architecture.html#retention-policy) i _Molnguide_.
+Säkerhetskopieringar utförs varje timme under de senaste 24 timmarna. Efter 24-timmarsperioden sparas säkerhetskopior enligt ett schema med tjänsten AWS EBS Snapshot. Se [Bevarandeprincip](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-architecture.html#retention-policy) i _molnhandboken_.
 
 Tjänsten skapar en oberoende säkerhetskopiering av redundant lagring. Eftersom EBS-volymerna är krypterade krypteras även säkerhetskopiorna. Managed Services utför även säkerhetskopiering på begäran av kunden.
 
 Managed Services metod för säkerhetskopiering och återställning använder en arkitektur med hög tillgänglighet kombinerat med säkerhetskopiering i hela systemet. Varje projekt replikeras - data, kod och resurser - mellan tre olika tillgänglighetszoner för AWS; varje zon har ett separat datacenter.
 
-Se [Ögonblicksbilder och hantering av säkerhetskopiering](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/storage/snapshots.html) i _Molnguide_.
+Se [Ögonblicksbilder och hantering av säkerhetskopior](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/storage/snapshots.html) i _molnhandboken_.

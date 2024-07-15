@@ -17,7 +17,7 @@ De andra valfria verktygen som beskrivs i det här avsnittet kan hjälpa dig med
 
 ## Installera och konfigurera NTP (Network Time Protocol)
 
-[NTP](https://www.ntp.org/) gör att servrar kan synkronisera sina systemklockor med [globalt tillgängliga poolservrar](https://www.ntppool.org/en/). Vi rekommenderar att du använder NTP-servrar som du litar på, oavsett om det är dedikerade maskinvarulösningar i ditt interna nätverk eller externa, offentliga servrar.
+Med [NTP](https://www.ntp.org/) kan servrar synkronisera sina systemklockor med hjälp av [globalt tillgängliga poolservrar](https://www.ntppool.org/en/). Vi rekommenderar att du använder NTP-servrar som du litar på, oavsett om det är dedikerade maskinvarulösningar i ditt interna nätverk eller externa, offentliga servrar.
 
 Om du distribuerar Adobe Commerce på flera värdar är NTP ett enkelt sätt att säkerställa att alla deras klockor är synkroniserade, oavsett i vilken tidszon servrarna befinner sig. Dessutom beror uppgifter som är relaterade till kron (som indexering och transaktionsmeddelanden) på att serverns klocka är korrekt.
 
@@ -41,7 +41,7 @@ Så här installerar och konfigurerar du NTP:
    yum search ntp
    ```
 
-1. Välj ett paket som ska installeras. Till exempel: `ntp.x86_64`.
+1. Välj ett paket som ska installeras. Exempel: `ntp.x86_64`.
 
 1. Installera paketet.
 
@@ -59,7 +59,7 @@ Så här installerar och konfigurerar du NTP:
 
 ### Använd NTP-poolservrar
 
-Det är upp till dig att välja poolservrar. Om du använder NTP-poolservrar bör du ntp.org [poolservrar](https://www.ntppool.org/en/) som ligger nära serverns tidszon enligt vad som beskrivs på [Projektsida för NTP-pool](https://www.ntppool.org/en/use.html). Om du har en privat NTP-server som är tillgänglig för alla värdar i din distribution kan du använda den servern i stället.
+Det är upp till dig att välja poolservrar. Om du använder NTP-poolservrar rekommenderar ntp.org att du använder [poolservrar](https://www.ntppool.org/en/) som ligger nära serverns tidszon enligt beskrivningen på [NTP-poolprojektsidan](https://www.ntppool.org/en/use.html). Om du har en privat NTP-server som är tillgänglig för alla värdar i din distribution kan du använda den servern i stället.
 
 1. Öppna `/etc/ntp.conf` i en textredigerare.
 
@@ -89,21 +89,21 @@ Det är upp till dig att välja poolservrar. Om du använder NTP-poolservrar bö
 
    * CentOS: `service ntpd restart`
 
-1. Retur `date` för att kontrollera serverns datum.
+1. Ange `date` för att kontrollera serverns datum.
 
    Om datumet är felaktigt kontrollerar du att NTP-klientporten (vanligtvis UDP 123) är öppen i brandväggen.
 
-   Prova `ntpdate _[pool server hostname]_` -kommando. Om det inte fungerar söker du efter felet som returneras.
+   Prova kommandot `ntpdate _[pool server hostname]_`. Om det inte fungerar söker du efter felet som returneras.
 
    Om inget annat fungerar kan du försöka starta om servern.
 
 ## Skapa phpinfo.php
 
-The [`phpinfo.php`](https://www.php.net/manual/en/function.phpinfo.php) -filen visar mycket information om PHP och dess tillägg.
+Filen [`phpinfo.php`](https://www.php.net/manual/en/function.phpinfo.php) visar en stor mängd information om PHP och dess tillägg.
 
 >[!NOTE]
 >
->Använd `phpinfo.php` i ett utvecklingssystem _endast_. Det kan vara ett säkerhetsproblem i produktionen.
+>Använd `phpinfo.php` i ett utvecklingssystem _only_. Det kan vara ett säkerhetsproblem i produktionen.
 
 Lägg till följande kod var som helst i webbserverns dokumentmapp:
 
@@ -113,7 +113,7 @@ Lägg till följande kod var som helst i webbserverns dokumentmapp:
 phpinfo();
 ```
 
-Mer information finns i [manuell phpinfo-sida](https://www.php.net/manual/en/function.phpinfo.php).
+Mer information finns på [informationsmanualen](https://www.php.net/manual/en/function.phpinfo.php).
 
 Om du vill visa resultatet anger du följande URL-adress i webbläsarens plats- eller adressfält:
 
@@ -126,21 +126,21 @@ Om ett 404-fel (Hittades inte) visas kontrollerar du följande:
 * Starta webbservern om det behövs.
 * Kontrollera att brandväggen tillåter trafik på port 80.
 
-  [Hjälp för Ubuntu](https://help.ubuntu.com/community/UFW)
+  [Hjälp om Ubuntu](https://help.ubuntu.com/community/UFW)
 
-  [Hjälp för CentOS](https://wiki.centos.org/HowTos%282f%29Network%282f%29IPTables.html)
+  [Hjälp om CentOS](https://wiki.centos.org/HowTos%282f%29Network%282f%29IPTables.html)
 
 ## phpMyAdmin
 
 Programmet phpMyAdmin är ett lättanvänt, kostnadsfritt databasadministrationsverktyg. Du kan använda den för att kontrollera och ändra innehållet i databasen. Du måste logga in på phpMyAdmin som administrativ användare för MySQL-databasen.
 
-Mer information om phpMyAdmin finns i [phpMyAdmin - startsida](https://www.phpmyadmin.net/).
+Mer information om phpMyAdmin finns på [phpMyAdmin hemsida](https://www.phpmyadmin.net/).
 
-Mer information om installationen finns i [phpMyAdmin - installationsdokumentation](https://docs.phpmyadmin.net/en/latest/setup.html#quick-install).
+Mer information om installationen finns i [installationsdokumentationen för phpMyAdmin](https://docs.phpmyadmin.net/en/latest/setup.html#quick-install).
 
 >[!NOTE]
 >
->Använd phpMyAdmin i ett utvecklingssystem _endast_. Det kan vara ett säkerhetsproblem i produktionen.
+>Använd phpMyAdmin i ett utvecklingssystem _only_. Det kan vara ett säkerhetsproblem i produktionen.
 
 1. Om du vill använda phpMyAdmin anger du följande kommando i webbläsarens adress- eller platsfält:
 
@@ -148,4 +148,4 @@ Mer information om installationen finns i [phpMyAdmin - installationsdokumentati
    http://<web server host or IP>/phpmyadmin
    ```
 
-1. Logga in med din MySQL-databas när du uppmanas till det `root` eller administratörens användarnamn och lösenord.
+1. När du uppmanas till det loggar du in med din MySQL-databas `root` eller administratörsanvändarens användarnamn och lösenord.

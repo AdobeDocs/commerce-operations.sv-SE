@@ -15,7 +15,7 @@ Testning är en viktig del av utvecklingslivscykeln.
 
 ## A/B-tester
 
-![Ikon för AB-testning](../../assets/playbooks/a-b-testing.png)
+![AB-testningsikon](../../assets/playbooks/a-b-testing.png)
 
 A/B-testning är processen att jämföra två olika versioner av webbplatsen för att se skillnaden i prestanda.
 

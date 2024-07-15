@@ -4,7 +4,8 @@ description: Lär dig hur och när du ska ändra Adobe Commerce och tredjeparts 
 role: Developer, Architect
 feature: Best Practices
 last-substantial-update: 2023-12-8
-source-git-commit: ab02552939d595627f0de83b8508c7cd21777642
+exl-id: 32b3137d-fc00-4be8-ba02-5d8d48a51fe1
+source-git-commit: d47567a8d69ccdae3db01e964f1db12e8ae26717
 workflow-type: tm+mt
 source-wordcount: '1747'
 ht-degree: 0%
@@ -46,7 +47,7 @@ index 51b68411d40..ac4a3468322 100644
 
 #### Vad som kan ändras med en patch
 
-Vad som helst. Alla tecken i en målfil kan ändras. Patchar är inte begränsade till någon viss filtyp eller kodspråk. Vanligtvis använder du en patch för att skapa målfiler i `vendor` katalog. 
+Vad som helst. Alla tecken i en målfil kan ändras. Patchar är inte begränsade till någon viss filtyp eller kodspråk. Vanligtvis använder du en korrigering för målfiler i katalogen `vendor`. 
 
 #### När ska en patch användas
 
@@ -69,7 +70,7 @@ Observera att (vanligtvis) den nya PHP-klassen som ersätter den ursprungliga PH
 
 #### Ange en inställning
 
-Det är en ganska enkel process att deklarera en inställning. En enda kodrad måste läggas till i en `di.xml` i en modul. Detta kan göras globalt eller inom vilket Adobe Commerce-område som helst, till exempel `frontend`, `adminhtml`, `graphql`, `webapi_rest`och `crontab`.
+Det är en ganska enkel process att deklarera en inställning. En enda kodrad måste läggas till i en `di.xml`-fil i en modul. Detta kan göras globalt eller inom ett Adobe Commerce-område, till exempel `frontend`, `adminhtml`, `graphql`, `webapi_rest` och `crontab`.
 
 ```xml
 <preference for="Magento\Elasticsearch7\SearchAdapter\Adapter" type="Vendor\Namespace\Adapter\AlgoliaElasticSearch7Adapter"/>
@@ -105,11 +106,11 @@ Inställningar är ett bra sätt att ändra kod och bör bara användas när and
 
 En observatör är en händelseavlyssnare som finns i många program, plattformar, bibliotek och kodningsspråk. Konceptet är inte unikt för Adobe Commerce. Observatörer har bakats in i plattformen sedan Magento 1-dagarna och anses vara ett primärt val när det gäller att ändra kärnkod och tredjepartskod. 
 
-Huvudkodbasen och eventuella tredjepartsmoduler kan skicka en händelse på en vald plats i koden. Observatören, som deklareras i en `events.xml` och lyssnar efter den skickade händelsen per namn, kan arbeta på global nivå eller begränsas till ett Adobe Commerce-område, till exempel `frontend`, `adminhtml`, `graphql`, `webapi_rest`och `crontab`.
+Huvudkodbasen och eventuella tredjepartsmoduler kan skicka en händelse på en vald plats i koden. Observatören, som deklareras i en `events.xml`-fil och lyssnar efter den skickade händelsen efter namn, kan arbeta på en global nivå eller begränsas till ett Adobe Commerce-område, till exempel `frontend`, `adminhtml`, `graphql`, `webapi_rest` och `crontab`.
 
 #### Deklarera en observatör
 
-Observatörer kan konfigureras på en global eller områdesspecifik `events.xml` -fil.
+Observatörer kan konfigureras i en global eller områdesspecifik `events.xml`-fil.
 
 ```xml
     <event name="sales_model_service_quote_submit_before">
@@ -164,11 +165,11 @@ En annan begränsande faktor för observatörer är också att den skickade hän
 
 ### Plugin
 
-Ett plugin-program är ett flexibelt koncept som introducerats i Adobe Commerce. Du kan hämta, ersätta och ändra alla offentliga PHP-metoder. Med plugin-program kan du ändra argumenten som går in i en metod innan målmetoden körs, ändra resultatet efter att målmetoden har körts eller helt ersätta målmetoden. Du kan ändra många metoder i en PHP-målklass i en enda plugin-fil. Du kan även använda `$subject` argument för att köra alla publika metoder som finns i den PHP-riktade klassen.
+Ett plugin-program är ett flexibelt koncept som introducerats i Adobe Commerce. Du kan hämta, ersätta och ändra alla offentliga PHP-metoder. Med plugin-program kan du ändra argumenten som går in i en metod innan målmetoden körs, ändra resultatet efter att målmetoden har körts eller helt ersätta målmetoden. Du kan ändra många metoder i en PHP-målklass i en enda plugin-fil. Du kan också använda argumentet `$subject` för att köra alla publika metoder som finns i målklassen PHP.
 
 #### Deklarera ett plugin-program
 
-Plugin-program kan konfigureras på en global eller områdesspecifik `di.xml` -fil.
+Plugins kan konfigureras i en global eller områdesspecifik `di.xml`-fil.
 
 ```xml
     <type name="Magento\Catalog\Api\CategoryRepositoryInterface">

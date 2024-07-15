@@ -1,11 +1,11 @@
 ---
 title: Loggdatabasaktivitet
-description: Konfigurera Commerce för att logga databasaktivitet med loggningsgränssnittet.
+description: Konfigurera Commerce för att logga databasaktivitet med Logger-gränssnittet.
 feature: Configuration, Logs, Storage
 exl-id: 2487c5ec-a01e-4d87-bc5e-c33643b032df
 source-git-commit: 991bd5fb34a2ffe61aa194ec46e2b04b4ce5b3e7
 workflow-type: tm+mt
-source-wordcount: '119'
+source-wordcount: '87'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 0%
 I följande exempel visas hur du loggar databasaktivitet med [`Magento\Framework\DB\LoggerInterface`][interface], som har två implementeringar:
 
 - Inget loggas (standard): [`Magento\Framework\DB\Logger\Quiet`][quiet]
-- Loggar till `var/log` katalog: [`Magento\Framework\DB\Logger\File`][file]
+- Loggar till katalogen `var/log`: [`Magento\Framework\DB\Logger\File`][file]
 
 >[!TIP]
 >
 >Du kan använda Commerce CLI för att [aktivera och inaktivera databasloggning](../cli/enable-logging.md#database-logging).
 
-Så här ändrar du standardkonfigurationen för `\Magento\Framework\DB\Logger\LoggerProxy`, redigera `app/etc/di.xml`.
+Om du vill ändra standardkonfigurationen för `\Magento\Framework\DB\Logger\LoggerProxy` redigerar du `app/etc/di.xml`.
 
 Ändra först standardvärdena för `loggerAlias` och `logCallStack` argument till:
 
@@ -36,7 +36,7 @@ Så här ändrar du standardkonfigurationen för `\Magento\Framework\DB\Logger\L
 </type>
 ```
 
-Sedan anger du filsökvägen för `Magento\Framework\DB\Logger\File`:
+Ange sedan filsökvägen för `Magento\Framework\DB\Logger\File`:
 
 ```xml
 <type name="Magento\Framework\DB\Logger\File">

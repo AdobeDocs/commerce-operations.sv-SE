@@ -29,7 +29,7 @@ Continuous Delivery (CD) distribuerar omedelbart källkoden till servern när al
 
 När bygget körs på byggsystemet minimeras inte bara driftsättningens driftstopp, utan även belastningen på servern minskas. Därför påverkas inte de QA-aktiviteter som sker på servern lika mycket.
 
-![Infografik för kontinuerlig leverans](../../assets/playbooks/cicd.svg)
+![Kontinuerlig leveransinformationsgrafik](../../assets/playbooks/cicd.svg)
 
 CI/CD-processen i det föregående diagrammet kan kortfattat beskrivas på följande sätt:
 

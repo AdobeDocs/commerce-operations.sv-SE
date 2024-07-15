@@ -6,14 +6,14 @@ feature: Configuration, Cache
 exl-id: 7dccafa5-df79-4690-be5c-ff774c66bb2a
 source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: '129'
 ht-degree: 0%
 
 ---
 
 # Varnish ESI block
 
-Edge Side Includes (ESI) är speciella direktiv som du kan använda för att inkludera webbsidor på andra webbsidor.
+ESI (Edge Side Includes) är speciella direktiv som du kan använda för att inkludera webbsidor på andra webbsidor.
 
 Ett exempel:
 
@@ -23,14 +23,14 @@ Ett exempel:
 </div>
 ```
 
-Finska hämtar innehåll från `http://domain.com/index.php/page_cache/block/esi/blocks` och ersätta `<esi>` tagga med den.
+Avvikelse hämtar innehåll från `http://domain.com/index.php/page_cache/block/esi/blocks` och ersätter taggen `<esi>` med den.
 
-## Commerce och Varnish ESI
+## Commerce och varnish ESI
 
-I Commerce Framework skapas en ESI-tagg när följande villkor är uppfyllda:
+Commerce-ramverket skapar en ESI-tagg när följande villkor är uppfyllda:
 
-- Cachelagringsprogrammet är inställt på `Varnish Cache`
-- En XML-layout `block` element läggs till med `ttl` attribute
+- Cachningsprogrammet är inställt på `Varnish Cache`
+- Ett XML-layoutelement `block` har lagts till med ett `ttl`-attribut
 
 ### Exempel
 
@@ -42,7 +42,7 @@ I Commerce Framework skapas en ESI-tagg när följande villkor är uppfyllda:
    </referenceContainer>
 ```
 
-I exemplet ovan är `block` elementet lägger till innehåll från `esi.phtml` till en hemsida så uppdateras det automatiskt var 30:e sekund av Varannan mall.
+I exemplet ovan lägger elementet `block` till innehåll från mallen `esi.phtml` på en hemsida och sedan uppdaterar det automatiskt var 30:e sekund.
 
 ## Begränsningar
 

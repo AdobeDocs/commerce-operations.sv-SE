@@ -1,11 +1,11 @@
 ---
-title: Orderhanteringssystem
+title: Order Management Systems
 description: Slutför ert e-handelsprojekt med ett system för paketering, leverans och returer.
 exl-id: 2a5f19fa-e8fe-452b-9ab6-65428dda691d
 feature: Best Practices, Orders
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '878'
+source-wordcount: '864'
 ht-degree: 0%
 
 ---
@@ -20,13 +20,13 @@ Ett OMS-system ger integrering och automatisering genom kundorderresan i bakgrun
 
 OMS är viktigt för en e-handelsplats eftersom det hjälper varumärken att växa. Kunderna har höga förväntningar, vilket ger inget utrymme för misstag. Några av skälen till att ett system för allmän information är nödvändigt är:
 
-- **Ger snabbare leverans**- I nästa eller tvådagars leveranstid måste företagen leta efter sätt att lägga ut sina order snabbare när orderperioden blir smalare. Ett OMS-system meddelas omedelbart när en order läggs och OMS-systemet kan välja det närmaste lagerstället till orderdestinationen för att underlätta leveransen. OMS skickar automatiserad orderinformation till lagerteamet för att förbereda och packa beställningen för leverans med en kostnadseffektiv leveransmetod.
+- **Ger snabbare leverans** - I nästa eller tvådagars leveransålder måste företag leta efter sätt att skicka sina beställningar snabbare när orderns slutdatum blir snävare. Ett OMS-system meddelas omedelbart när en order läggs och OMS-systemet kan välja det närmaste lagerstället till orderdestinationen för att underlätta leveransen. OMS skickar automatiserad orderinformation till lagerteamet för att förbereda och packa beställningen för leverans med en kostnadseffektiv leveransmetod.
 
-- **Begränsade fel**: Ett felmeddelande hjälper till att minska antalet mänskliga fel. Dessa fel kan vara tidskrävande och dyra. Ett OMS-system meddelar teamet när lagernivåerna är låga, när en produkt inte säljer eller vilken produkt som har den högsta avkastningen. På så sätt kan företaget åtgärda leveransfel och analysera orsaken till returer.
+- **Begränsade fel**: Ett OMS-system hjälper till att minska antalet mänskliga fel. Dessa fel kan vara tidskrävande och dyra. Ett OMS-system meddelar teamet när lagernivåerna är låga, när en produkt inte säljer eller vilken produkt som har den högsta avkastningen. På så sätt kan företaget åtgärda leveransfel och analysera orsaken till returer.
 
-- **Ökad skalbarhet**—Ett system för automatisk systemkonfiguration kan skalas efter verksamhetens behov, till skillnad från äldre manuella system. OMS-programvara ger företag möjlighet att anpassa sig efter marknaden.
+- **Ökad skalbarhet** - Ett OMS-system kan skalas efter verksamhetens behov, till skillnad från äldre manuella system. OMS-programvara ger företag möjlighet att anpassa sig efter marknaden.
 
-- **Fler möjligheter för flera kanaler**- I en era av flerkanalsförsäljning på webbplatser, marknadsplatser eller partners (Facebook och Instagram) kan det vara komplicerat att spåra beställningar eftersom de skickas till flera platser med en eller flera leveransmetoder. Ett OMS-system sammanför det och ökar kundupplevelsen.
+- **Fler flerkanalsmöjligheter** - I en era av flerkanalsförsäljning på webbplatser, marknadsplatser eller partners (Facebook och Instagram) kan det vara komplicerat att spåra order eftersom de skickas till flera platser med en eller flera leveransmetoder. Ett OMS-system sammanför det och ökar kundupplevelsen.
 
 ## Viktiga funktioner
 

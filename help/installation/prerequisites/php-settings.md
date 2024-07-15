@@ -17,9 +17,9 @@ I det här avsnittet beskrivs hur du ställer in obligatoriska PHP-alternativ.
 
 >[!NOTE]
 >
->För den senaste versionen av Adobe Commerce krävs minst PHP 8.1. Se [systemkrav](../system-requirements.md) för alla PHP-versioner som stöds.
+>För den senaste versionen av Adobe Commerce krävs minst PHP 8.1. Se [systemkraven](../system-requirements.md) för alla PHP-versioner som stöds.
 
-Mer information om konfigurering av molnet finns i [PHP-inställningar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/php-settings.html) i _Commerce on Cloud Infrastructure_ guide.
+Mer information om molnkonfiguration finns i [PHP-inställningar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/php-settings.html) i guiden _Commerce om molninfrastruktur_.
 
 ## PHP-processkontroll
 
@@ -65,7 +65,7 @@ Så här verifierar du installerade tillägg:
 
 >[!WARNING]
 >
->Om du använder PHP 7.4.20 anger du `pcre.jit=0` i `php.ini` -fil. Det här kommer runt en PHP [bug](https://bugs.php.net/bug.php?id=81101) som förhindrar att CSS läses in.
+>Om du använder PHP 7.4.20 anger du `pcre.jit=0` i `php.ini`-filen. Det här kommer runt en PHP [bug](https://bugs.php.net/bug.php?id=81101) som förhindrar att CSS läses in.
 
 - Ställ in systemtidszonen för PHP, annars kanske fel som följande visas under installationen och tidsrelaterade åtgärder som kron inte fungerar:
 
@@ -77,9 +77,9 @@ PHP Warning:  date(): It is not safe to rely on the system's timezone settings. 
 
   Adobe rekommenderar följande:
 
-   - Kompilera kod eller distribuera statiska resurser, `1G`
+   - Kompilerar kod eller distribuerar statiska resurser, `1G`
    - Felsökning, `2G`
-   - Testning, `~3-4G`
+   - Testar, `~3-4G`
 
 - Öka värdena för PHP `realpath_cache_size` och `realpath_cache_ttl` till rekommenderade inställningar:
 
@@ -104,9 +104,9 @@ PHP Warning:  date(): It is not safe to rely on the system's timezone settings. 
 
 I det här avsnittet beskrivs hur du hittar de konfigurationsfiler som behövs för att uppdatera de nödvändiga inställningarna.
 
-### Sök `php.ini` konfigurationsfil
+### Sök efter konfigurationsfilen `php.ini`
 
-Om du vill hitta webbserverkonfigurationen kör du en [`phpinfo.php` fil](optional-software.md#create-phpinfophp) i webbläsaren och leta efter `Loaded Configuration File` enligt följande:
+Om du vill hitta webbserverkonfigurationen kör du en [`phpinfo.php`-fil ](optional-software.md#create-phpinfophp) i webbläsaren och söker efter `Loaded Configuration File` enligt följande:
 
 ![PHP-informationssida](../../assets/installation/config_phpini-webserver.png)
 
@@ -118,19 +118,19 @@ php --ini | grep "Loaded Configuration File"
 
 >[!NOTE]
 >
->Om du bara har en `php.ini` ändrar du den filen. Om du har två `php.ini` filer, ändra *båda* filer. Om du inte gör det kan prestandan bli oförutsägbar.
+>Om du bara har en `php.ini`-fil ändrar du den filen. Om du har två `php.ini` filer ändrar du *båda* filer. Om du inte gör det kan prestandan bli oförutsägbar.
 
 ### Sök efter inställningar för OPcache-konfiguration
 
-Inställningarna för PHP OPcache finns vanligtvis antingen i `php.ini` eller `opcache.ini`. Platsen kan vara beroende av operativsystemet och PHP-versionen. Konfigurationsfilen för OPCache kan ha en `opcache` -avsnitt eller inställningar som `opcache.enable`.
+Inställningarna för PHP OPcache finns vanligtvis antingen i `php.ini` eller `opcache.ini`. Platsen kan vara beroende av operativsystemet och PHP-versionen. Konfigurationsfilen för OPCache kan ha ett `opcache`-avsnitt eller inställningar som `opcache.enable`.
 
 Använd följande riktlinjer för att hitta den:
 
 - Apache-webbserver:
 
-  För Ubuntu med Apache finns inställningarna för OPcache vanligtvis i `php.ini` -fil.
+  För Ubuntu med Apache finns inställningarna för OPcache vanligtvis i filen `php.ini`.
 
-  För CentOS med Apache eller nginx finns inställningarna för OPcache vanligtvis i `/etc/php.d/opcache.ini`
+  För CentOS med Apache eller nginx finns OPcache-inställningarna vanligtvis i `/etc/php.d/opcache.ini`
 
   Om inte, använder du följande kommando för att hitta den:
 
@@ -140,14 +140,14 @@ Använd följande riktlinjer för att hitta den:
 
 - nginx-webbserver med PHP-FPM: `/etc/php/8.1/fpm/php.ini`
 
-Om du har fler än en `opcache.ini`, ändra alla.
+Om du har fler än en `opcache.ini` ändrar du alla.
 
 ## Ange PHP-alternativ
 
 Så här anger du PHP-alternativ:
 
 1. Öppna en `php.ini` i en textredigerare.
-1. Leta reda på serverns tidszon i den tillgängliga [tidszonsinställningar](https://www.php.net/manual/en/timezones.php)
+1. Hitta serverns tidszon i de tillgängliga [tidszonsinställningarna](https://www.php.net/manual/en/timezones.php)
 1. Leta reda på följande inställning och avkommentera den om det behövs:
 
    ```conf
@@ -164,7 +164,7 @@ Så här anger du PHP-alternativ:
    memory_limit=2G
    ```
 
-1. Lägg till eller uppdatera `realpath_cache` som matchar följande värden:
+1. Lägg till eller uppdatera `realpath_cache`-konfigurationen så att den matchar följande värden:
 
    ```conf
    ;
@@ -184,7 +184,7 @@ Så här anger du PHP-alternativ:
 
 ## Ange alternativ för OPCache
 
-Till `opcache.ini` alternativ:
+Så här anger du `opcache.ini` alternativ:
 
 1. Öppna din OPCache-konfigurationsfil i en textredigerare:
 
@@ -192,8 +192,8 @@ Till `opcache.ini` alternativ:
    - `php.ini` (Ubuntu)
    - `/etc/php/8.1/fpm/php.ini` (nginx-webbserver (CentOS eller Ubuntu))
 
-1. Sök `opcache.save_comments` och avkommentera vid behov.
-1. Se till att dess värde är inställt på `1`.
+1. Leta reda på `opcache.save_comments` och avkommentera den om det behövs.
+1. Kontrollera att värdet är `1`.
 1. Spara ändringarna och avsluta textredigeraren.
 1. Starta om webbservern:
 
@@ -206,7 +206,7 @@ Till `opcache.ini` alternativ:
 Se följande Adobe Commerce supportartiklar för hjälp med felsökning av PHP-problem:
 
 - [PHP-versionsfel eller 404-fel vid åtkomst till Adobe Commerce i en webbläsare](https://support.magento.com/hc/en-us/articles/360033117152-PHP-version-error-or-404-error-when-accessing-Magento-in-browser)
-- [Fel i PHP-inställningar](https://support.magento.com/hc/en-us/articles/360034599631-PHP-settings-errors)
+- [PHP-inställningsfel](https://support.magento.com/hc/en-us/articles/360034599631-PHP-settings-errors)
 - [PHP-krypteringstillägget har inte installerats korrekt](https://support.magento.com/hc/en-us/articles/360034280132-PHP-mcrypt-extension-not-installed-properly-)
 - [Problem med beredskapskontroll av PHP-version](https://support.magento.com/hc/en-us/articles/360033546411)
 - [Vanliga PHP-allvarliga fel och lösningar](https://support.magento.com/hc/en-us/articles/360030568432)

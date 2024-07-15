@@ -5,7 +5,7 @@ exl-id: 692236fd-b909-4061-8038-0db19e0ed72b
 feature: Best Practices, Checkout
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '672'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Utcheckning är en viktig del av onlineshoppingen. Det är här som de reella pe
 
 Utcheckningsflödet är som slutresultatet, där kunderna blir kunder som gör transaktioner. Men även en liten skillnad i kassan kan ha en stor negativ inverkan på konverteringsgraden och avkastningen, vilket innebär att en förbättring av konverteringsgraden till och med kan bidra till att öka avkastningen avsevärt. Att förbättra utcheckningsflöden och -processer börjar redan före utcheckningssidan.
 
-![Flödesdiagram för kassaprocess](../../assets/playbooks/checkout-diagram.png)
+![Utcheckningsprocessflödesdiagram](../../assets/playbooks/checkout-diagram.png)
 
 ## Produktsidor
 
@@ -69,7 +69,7 @@ Tvinga inte en typ av alternativ för användaren.
 
 Återförsäljarna bör tillhandahålla olika leveransmetoder för att tillgodose behoven hos olika kunder.
 
-Förutom betalningsalternativ kan återförsäljarna även erbjuda alternativ som [klicka och samla in](click-collect.md).
+Förutom betalningsalternativ kan återförsäljarna även tillhandahålla alternativ som [klicka och samla in](click-collect.md).
 
 ## Betalningsinformation
 
@@ -107,7 +107,7 @@ Det finns en skillnad mellan arbetsflöden och processer för B2B- och B2C-utche
 - Olika betalningsalternativ, som kreditkort och e-plånbok
 - Kan lägga till kupongkod i kassan
 
-![B2C-checkdiagram](../../assets/playbooks/checkout-b2c.png)
+![Utcheckningsdiagram för B2C](../../assets/playbooks/checkout-b2c.png)
 
 ### B2B
 
@@ -117,4 +117,4 @@ Det finns en skillnad mellan arbetsflöden och processer för B2B- och B2C-utche
 - Olika betalningsalternativ som inköpsorder, banköverföring eller check
 - Enkel process att ordna om
 
-![B2B-diagram](../../assets/playbooks/checkout-b2b.png)
+![B2B-utcheckningsdiagram](../../assets/playbooks/checkout-b2b.png)

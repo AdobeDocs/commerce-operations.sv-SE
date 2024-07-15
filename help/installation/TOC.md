@@ -15,7 +15,7 @@ ht-degree: 0%
 - [Ökning](overview.md)
 - [Systemkrav](system-requirements.md)
 - Förutsättningar {#prerequisites}
-   - [Ökning](prerequisites/overview.md)
+   - [Översikt](prerequisites/overview.md)
    - Filsystem {#file-system}
       - [Ökning](prerequisites/file-system/overview.md)
       - [Konfigurera behörigheter](prerequisites/file-system/configure-permissions.md)
@@ -38,7 +38,7 @@ ht-degree: 0%
    - [Valfri programvara](prerequisites/optional-software.md)
 - [Snabbstart](composer.md)
 - [Avancerad installation](advanced.md)
-- Steg efter installation {#next-steps}
+- Post-installationssteg {#next-steps}
    - [Verifiera installationen](next-steps/verify.md)
    - [Konfigurera programmet](next-steps/configuration.md)
    - [Ange en mask (valfritt)](next-steps/set-umask.md)
@@ -67,4 +67,4 @@ ht-degree: 0%
    - [Avinstallera eller installera om Commerce](tutorials/uninstall.md)
    - [Avinstallera teman](tutorials/themes.md)
    - [Uppgradera databasschemat](tutorials/database-upgrade.md)
-- [Återgå till bruksanvisningar](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
+- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

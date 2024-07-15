@@ -7,11 +7,11 @@ kt: 11420
 doc-type: tutorial
 audience: all
 last-substantial-update: 2023-04-13T00:00:00Z
-exl-id: c4912f02-0411-466f-8c77-d610de9eb35d
+exl-id: f76a8906-af31-4a61-be68-f5dad87161e2
 feature: Install, Security
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: 823498f041a6d12cfdedd6757499d62ac2aced3d
 workflow-type: tm+mt
-source-wordcount: '1571'
+source-wordcount: '1546'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Följande koncept finns inte i någon speciell ordning. De är avsedda att ge vi
 
 ## Skrivskyddat filsystem
 
-Skrivskyddat filsystem lånades från [Adobe Commerce i molninfrastruktur](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/getting-started/cloud/1-overview.html){target="_blank"}. Detta tar helt bort ett större område som används av en dålig skådespelare. Många utnyttjanden har dragit nytta av att ändra en fil som förväntas finnas i Commerce-programmet för att undvika identifiering. I stället för att skapa en så ändras innehållet i en befintlig fil så att en oväntad åtgärd utförs. Om du skrivskyddar filsystemet minskar den här attackvektorn avsevärt.
+Skrivskyddat filsystemskoncept lånades från [Adobe Commerce i molninfrastrukturen](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/getting-started/cloud/1-overview.html){target="_blank"}. Detta tar helt bort ett större område som används av en dålig skådespelare. Många utnyttjar möjligheten att ändra en fil som förväntas finnas i Commerce-programmet för att undvika identifiering. I stället för att skapa en så ändras innehållet i en befintlig fil så att en oväntad åtgärd utförs. Om du skrivskyddar filsystemet minskar den här attackvektorn avsevärt.
 
 ## Använd TWO Factor Authentication och lösenordshanterare
 
@@ -36,11 +36,11 @@ Skadlig programvara hittas oftast från en värdleverantör som försöker speci
 
 ## Site-Wide Analysis Tool for Commerce
 
-The [Site-Wide Analysis Tool](https://experienceleague.adobe.com/docs/commerce-operations/tools/site-wide-analysis-tool/intro.html){target="_blank"} är ett proaktivt självbetjäningsverktyg och en central lagringsplats som innehåller detaljerade systeminsikter och rekommendationer för att säkerställa säkerheten och användbarheten för din Adobe Commerce-installation. Den ger prestandaövervakning, rapporter och råd i realtid dygnet runt alla dagar för att identifiera potentiella problem och bättre synlighet för webbplatsens hälsa, säkerhet och programkonfigurationer. Det minskar upplösningstiden och förbättrar webbplatsens stabilitet och prestanda.
+[Site-Wide Analysis Tool](https://experienceleague.adobe.com/docs/commerce-operations/tools/site-wide-analysis-tool/intro.html){target="_blank"} är ett proaktivt självbetjäningsverktyg och en central lagringsplats med detaljerade systeminsikter och rekommendationer för att säkerställa säkerheten och användbarheten för din Adobe Commerce-installation. Den ger prestandaövervakning, rapporter och råd i realtid dygnet runt alla dagar för att identifiera potentiella problem och bättre synlighet för webbplatsens hälsa, säkerhet och programkonfigurationer. Det minskar upplösningstiden och förbättrar webbplatsens stabilitet och prestanda.
 
 ## Aktivera och verifiera inställningar för administratörsåtgärdsloggning
 
-Du hittar detta när du har loggat in på Adobe Commerce-administratören och navigerat till Lager > Konfiguration > Avancerat > Admin > Loggning av administrationsåtgärder. Här finns en lista över händelser som övervakas och spelas in. Det är användbart när man gör kriminaltekniska analyser på en utnyttjad plats, om misstanken är att de har fått tillgång till Commerce Admin. Denna loggning och rapport kan vara användbara för att se vilka händelser den dåliga skådespelaren har utfört. Om någon administratörsåtgärd för loggning är inaktiverad, vilket är ett tecken på att någon har inaktiverat dem för att täcka över loggningen när vissa åtgärder utförs.
+Du hittar detta när du har loggat in på Adobe Commerce-administratören och navigerat till Lager > Konfiguration > Avancerat > Admin > Loggning av administrationsåtgärder. Här finns en lista över händelser som övervakas och spelas in. Det är användbart när man gör kriminalteknisk analys på en utnyttjad webbplats, om misstanken om detta ger tillgång till Commerce-administratören. Denna loggning och rapport kan vara användbara för att se vilka händelser den dåliga skådespelaren har utfört. Om någon administratörsåtgärd för loggning är inaktiverad, vilket är ett tecken på att någon har inaktiverat dem för att täcka över loggningen när vissa åtgärder utförs.
 
 ## Basserver för SSH-åtkomst
 
@@ -58,7 +58,8 @@ För att upptäcka oönskade eller obehöriga administratörsanvändare bör adm
 
 Begränsa åtkomst till produktionsdata. Dessa utsedda teammedlemmar bör ha möjlighet att dra ned på produktionsdatabaser och rensa dem från verkliga data. Om det är ett alternativ att ta bort data kan du korta av de tabeller som används, t.ex. order, citattecken och kunder. Ibland vill du dock ha en fullständig uppsättning data, men värdena kan anonymiseras. Detta gäller vanligtvis i en staging-miljö. Det är också användbart före uppgraderingar. Genom att ha den verkliga datavolymen, men anonymiserat, kan du testa och validera den tid det tar att köra en distribution för att uppgradera ordentligt. Om du har en begränsad uppsättning data kan du underskatta uppgraderingsprocessen och tidsåtgången.
 
-+++Slumpmässigt exempel på kundinformation Här är ett exempel på hur du kan byta ut kundens e-postadress mot en slumpmässig sträng och alla för- och efterhandsfält i vissa standardtabeller som lagras i Adobe Commerce. **Kom ihåg att kontrollera om alla tabeller innehåller känsliga data. Den här listan är inte alla inkluderade i de tabeller där kunddata kan lagras**
++++Exempel på slumpmässig kundinformation
+Här är ett exempel på hur du ändrar ut kundens e-postadress med en slumpmässig sträng och alla för- och efterhandsfält i vissa standardtabeller som Adobe Commerce lagrar data i. **Kom ihåg att kontrollera alla tabeller för att se om det finns känsliga data. Den här listan ingår inte i de tabeller som kan lagra kunddata.**
 
 ```SQL
 SET FOREIGN_KEY_CHECKS=0;
@@ -104,7 +105,8 @@ SET FOREIGN_KEY_CHECKS=1;
 
 +++
 
-+++Ta bort information i stort exempel Här är ett exempel på hur du tar bort alla order, offerter, kreditnotor med mera innan du startar programmet eller i en lägre utvecklingsmiljö
++++Ta bort information i ett fullständigt exempel
+Här är ett exempel på hur du tar bort alla order, offerter, kreditnotor med mera innan du startar programmet eller i en lägre utvecklingsmiljö
 
 ```SQL
 DELETE FROM `gift_message`;
@@ -214,7 +216,7 @@ ALTER TABLE sequence_shipment_7 AUTO_INCREMENT=1;
 
 Genom att använda miljövariabler blir det lättare att ange vissa värden som kan och bör ändras för varje miljö. Du kanske vill ha olika administratörs-URL:er för varje miljö. Genom att ange det här värdet som en miljövariabel kan du konfigurera det och snabbt referera till det här värdet från molngränssnittet när det behövs.
 
-Du kan läsa mer om det här ämnet i Experience League [Commerce on Cloud Infrastructure Environment Variables](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-intro.html){target="_blank"}
+Du kan läsa mer om det här avsnittet i Experience League [Commerce om miljövariabler för molninfrastruktur](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-intro.html){target="_blank"}
 
 ## Skanningsverktyg för sårbarhet i programvara
 
@@ -232,6 +234,6 @@ WAF undersöker webb- och administratörstrafik för att identifiera misstänkt 
 
 Som molnbaserad tjänst kräver WAF ingen maskinvara eller programvara för att kunna installera eller underhålla. Snabb, en befintlig teknikpartner, tillhandahåller programvara och expertis. Deras högpresterande, alltid aktiverade WAF finns i varje cache-nod över Fastlys globala leveransnätverk.
 
-Mer information om WAF på Adobe Commerce i molnet får du av Fastly i [Vanliga frågor om Adobe Commerce Knowledge Base](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/web-application-firewall-waf-powered-by-fastly-the-faq.html){target="_blank"}.
+Mer information om WAF på Adobe Commerce i molnet får du av Fastly i [Adobe Commerce Knowledge Base FAQ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/web-application-firewall-waf-powered-by-fastly-the-faq.html){target="_blank"}.
 
 {{$include /help/_includes/hosting-related-links.md}}

@@ -1,29 +1,29 @@
 ---
-title: Anpassa [!DNL Data Migration Tool]
-description: Lär dig hur du anpassar [!DNL Data Migration Tool] för att överföra data som skapats genom tillägg mellan Magento 1 och Magento 2.
+title: Anpassa  [!DNL Data Migration Tool]
+description: Lär dig hur du anpassar  [!DNL Data Migration Tool]  för att överföra data som har skapats med tillägg mellan Magento 1 och Magento 2.
 exl-id: a5c1575f-9d77-416e-91fe-a82905ef2e1c
 topic: Commerce, Migration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '836'
 ht-degree: 0%
 
 ---
 
 # Konfigurera [!DNL Data Migration Tool]
 
-Ibland kan dataformatet och strukturen som skapas av [tillägg](https://marketplace.magento.com/extensions.html) eller egen kod skiljer sig åt mellan Magento 1 och Magento 2. Använd tilläggspunkter i [!DNL Data Migration Tool] för att migrera dessa data. Om dataformatet och strukturen är desamma kan verktyget automatiskt migrera data utan att användaren behöver göra något.
+Ibland skiljer sig dataformatet och strukturen som skapas av [extensions](https://marketplace.magento.com/extensions.html) eller anpassad kod mellan Magento 1 och Magento 2. Använd tilläggspunkter i [!DNL Data Migration Tool] för att migrera dessa data. Om dataformatet och strukturen är desamma kan verktyget automatiskt migrera data utan att användaren behöver göra något.
 
-Under migreringen [Kartsteg](technical-specification.md#map-step) skannar och jämför alla Magento 1- och Magento 2-tabeller, inklusive de som skapas av tillägg. Om tabellerna är desamma migreras data automatiskt. Om tabellerna skiljer sig åt avslutas verktyget och användaren meddelas om detta.
+Under migreringen skannar och jämför [Kartsteget](technical-specification.md#map-step) alla Magento 1- och Magento 2-tabeller, inklusive de som skapats med tillägg. Om tabellerna är desamma migreras data automatiskt. Om tabellerna skiljer sig åt avslutas verktyget och användaren meddelas om detta.
 
 >[!NOTE]
 >
->Läs [Teknisk specifikation](technical-specification.md) innan du försöker utöka [!DNL Data Migration Tool]. Granska även [Migreringshandbok](../overview.md) om du vill ha allmän information om hur du använder migreringsverktyget.
+>Läs den [tekniska specifikationen](technical-specification.md) innan du försöker utöka [!DNL Data Migration Tool]. Granska även [migreringshandboken](../overview.md) för allmän information om hur du använder migreringsverktyget.
 
 
 ## Mindre förändringar i dataformat och struktur
 
-I de flesta fall är [Kartsteg](technical-specification.md#map-step) tillräckligt löser mindre dataformat och strukturändringar med hjälp av följande metoder i `map.xml` fil:
+I de flesta fall löser [Mappningssteget](technical-specification.md#map-step) mindre dataformat och strukturändringar tillräckligt med hjälp av följande metoder i filen `map.xml`:
 
 - Ändra tabell- eller fältnamn med mappningsregler
 - Omforma dataformat med befintliga hanterare eller en anpassad hanterare
@@ -71,28 +71,28 @@ I följande exempel visas ett exempel på hur du använder både mappningsregler
 </destination>
 ```
 
-- Migrera inte onödiga data från `great_blog_index` indextabell.
+- Migrera inte onödiga data från indextabellen `great_blog_index`.
 - Tabellen `great_blog_publication` har bytt namn till `great_blog_post` i Magento 2, så data migreras till den nya tabellen.
-   - The `summary` fältet har bytt namn till `title`så data migreras till det nya fältet.
-   - The `priority` fältet har tagits bort och finns inte längre i Magento 2.
-   - Data i `body` fältet har ändrat format och ska bearbetas av den anpassade hanteraren: `\Migration\Handler\GreatBlog\NewFormat`.
+   - Fältet `summary` har bytt namn till `title`, så data migreras till det nya fältet.
+   - Fältet `priority` togs bort och finns inte längre i Magento 2.
+   - Data i fältet `body` har ändrat format och bör bearbetas av den anpassade hanteraren: `\Migration\Handler\GreatBlog\NewFormat`.
 - En ny klassificeringsfunktion har utvecklats för tillägget&quot;GreatBlog&quot; i Magento 2.
-   - En ny `great_blog_rating` tabellen skapades.
-   - En ny `great_blog_post.rating` fältet skapades.
+   - En ny `great_blog_rating`-tabell skapades.
+   - Ett nytt `great_blog_post.rating`-fält skapades.
 
 ### Utöka mappningen i andra steg
 
-Andra steg stöder mappning, t.ex. [EAV-steg](technical-specification.md#eav-step) och steget Kundattribut. Med de här stegen migreras en fördefinierad lista med Magento-tabeller. Anta till exempel att tillägget &quot;GreatBlog&quot; har ytterligare ett fält i `eav_attribute` tabellen och namnet har ändrats i Magento 2. Eftersom tabellen bearbetas av [EAV-steg](technical-specification.md#eav-step), mappningsregler ska skrivas för `map-eav.xml` -fil. The `map.xml` och `map-eav.xml` filer använder samma `map.xsd` så mappningsreglerna förblir desamma.
+Andra steg har stöd för mappning, som [EAV Step](technical-specification.md#eav-step) och Customer Attributes Step. Med de här stegen migreras en fördefinierad lista med Magento-tabeller. Anta till exempel att tillägget GreatBlog har ett extra fält i tabellen `eav_attribute` och att namnet har ändrats i Magento 2. Eftersom tabellen bearbetas av [EAV-steget](technical-specification.md#eav-step) bör mappningsregler skrivas för filen `map-eav.xml`. Filerna `map.xml` och `map-eav.xml` använder samma `map.xsd`-schema, så mappningsreglerna är desamma.
 
 ## Större förändringar i dataformat och struktur
 
-Förutom Kartsteget finns det andra steg i `config.xml` fil som migrerar data med viktiga format- och strukturändringar, inklusive:
+Förutom schemasteget finns det andra steg i filen `config.xml` som migrerar data med viktiga format- och strukturändringar, bland annat:
 
 - [Omskrivningssteg för URL](technical-specification.md#url-rewrite-step)
 - OrderGrid-steg
 - [EAV-steg](technical-specification.md#eav-step)
 
-Till skillnad från [Kartsteg](technical-specification.md#map-step)genomsöks en fördefinierad lista med tabeller i stället för alla tabeller.
+Till skillnad från [kartsteget](technical-specification.md#map-step) skannar de här stegen en fördefinierad lista med tabeller i stället för alla tabeller.
 
 Skapa ett anpassat steg för större ändringar av dataformat och struktur.
 
@@ -100,7 +100,7 @@ Skapa ett anpassat steg för större ändringar av dataformat och struktur.
 
 Anta att tillägget har en tabell i Magento 1, men att det har fått två tabeller i Magento 2, med samma&quot;GreatBlog&quot;-exempel.
 
-I Magento 1 fanns en `greatblog_post` tabell:
+I Magento 1 fanns en enda `greatblog_post`-tabell:
 
 ```text
 | Field     | Type     |
@@ -112,7 +112,7 @@ I Magento 1 fanns en `greatblog_post` tabell:
 | tags      | TEXT     |
 ```
 
-I Magento 2, en ny tabell för taggar `greatblog_post_tags` infördes:
+I Magento 2 introducerades en ny tabell för taggarna `greatblog_post_tags`:
 
 ```text
 | Field      | Type     |
@@ -122,7 +122,7 @@ I Magento 2, en ny tabell för taggar `greatblog_post_tags` infördes:
 | sort_order | SMALLINT |
 ```
 
-MAGENTO 2 `greatblog_post` tabellen ser nu ut så här:
+Tabellen Magento 2 `greatblog_post` ser nu ut så här:
 
 ```text
 | Field     | Type     |
@@ -133,7 +133,7 @@ MAGENTO 2 `greatblog_post` tabellen ser nu ut så här:
 | author_id | SMALLINT |
 ```
 
-Om du vill migrera alla data från den gamla tabellstrukturen till en ny kan du skapa ett anpassat steg i `config.xml` -fil. Exempel:
+Om du vill migrera alla data från den gamla tabellstrukturen till en ny kan du skapa ett anpassat steg i filen `config.xml`. Exempel:
 
 ```xml
 <steps mode="data">
@@ -153,7 +153,7 @@ Om du vill migrera alla data från den gamla tabellstrukturen till en ny kan du 
 </steps>
 ```
 
-Verktyget kör steg enligt deras position i `config.xml` fil; uppifrån och ned. I vårt exempel `GreatBlog Step` kör sist.
+Verktyget kör steg utifrån deras position i filen `config.xml`, uppifrån och ned. I vårt exempel körs `GreatBlog Step` sist.
 
 Stegen kan innehålla fyra typer av klasser:
 
@@ -164,12 +164,12 @@ Stegen kan innehålla fyra typer av klasser:
 
 >[!NOTE]
 >
->Se [Konfiguration](technical-specification.md#configuration), [Stega interna](technical-specification.md#step-internals), [Steg](technical-specification.md#step-stages)och [Körningslägen](technical-specification.md#running-modes) för mer information.
+>Mer information finns i [Konfiguration](technical-specification.md#configuration), [Steginterna](technical-specification.md#step-internals), [Steg](technical-specification.md#step-stages) och [Körningslägen](technical-specification.md#running-modes).
 
 
-Komplexa SQL-frågor kan sammanställas inuti dessa klasser för att hämta och migrera data. Dessutom ska dessa tabeller&quot;ignoreras&quot; i [Kartsteg](technical-specification.md#map-step) därför att den söker igenom alla befintliga tabeller och försöker migrera data såvida de inte finns i `<ignore>` -taggen i `map.xml` -fil.
+Komplexa SQL-frågor kan sammanställas inuti dessa klasser för att hämta och migrera data. Dessutom ska dessa tabeller&quot;ignoreras&quot; i [mappningssteget](technical-specification.md#map-step) eftersom den söker igenom alla befintliga tabeller och försöker migrera data om de inte finns i `<ignore>` -taggen i `map.xml`-filen.
 
-För integritetskontroll definierar du ytterligare en mappningsfil i `config.xml` för att verifiera att tabellstrukturen är som vi förväntar oss.
+För integritetskontroll kan du definiera ytterligare en mappningsfil i filen `config.xml` för att verifiera att tabellstrukturen är som förväntat.
 
 ```xml
 <config xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
@@ -205,7 +205,7 @@ Mappningsfil `map-greatblog.xml`:
 </map>
 ```
 
-Klassen för integritetskontroll `Vendor\Migration\Step\GreatBlog\Integrity` extends `Migration\App\Step\AbstractIntegrity` och innehåller `perform` metod där vi verifierar tabellstrukturen:
+Integritetskontrollklassen `Vendor\Migration\Step\GreatBlog\Integrity` utökar `Migration\App\Step\AbstractIntegrity` och innehåller metoden `perform` där tabellstrukturen verifieras:
 
 ```php
 class Integrity extends \Migration\App\Step\AbstractIntegrity
@@ -326,7 +326,7 @@ class Data implements \Migration\App\Step\StageInterface
 }
 ```
 
-I klassen Volume `Vendor\Migration\Step\GreatBlog\Volume`kontrollerar vi om data har migrerats fullständigt:
+I en volymklass `Vendor\Migration\Step\GreatBlog\Volume` kontrollerar vi om data har migrerats fullständigt:
 
 ```php
 class Volume extends \Migration\App\Step\AbstractVolume
@@ -355,7 +355,7 @@ class Volume extends \Migration\App\Step\AbstractVolume
 }
 ```
 
-Lägg till en ny grupp i `deltalog.xml` -fil. I `group`anger du namnet på de tabeller som måste kontrolleras för ändringar:
+Om du vill lägga till deltamigreringsfunktioner lägger du till en ny grupp i filen `deltalog.xml`. I `group` anger du namnet på de tabeller som måste kontrolleras för ändringar:
 
 ```xml
 <groups>
@@ -366,7 +366,7 @@ Lägg till en ny grupp i `deltalog.xml` -fil. I `group`anger du namnet på de ta
 </groups>
 ```
 
-Skapa sedan `Delta` class `Vendor\Migration\Step\GreatBlog\Delta` som utökar `Migration\App\Step\AbstractDelta`:
+Skapa sedan `Delta`-klassen `Vendor\Migration\Step\GreatBlog\Delta` som utökar `Migration\App\Step\AbstractDelta`:
 
 ```php
 class Delta extends \Migration\App\Step\AbstractDelta
@@ -406,10 +406,11 @@ class Delta extends \Migration\App\Step\AbstractDelta
 }
 ```
 
-Efter den anpassade stegimplementeringen som finns i exemplen hämtar systemet data från den enskilda Magento 1-tabellen, och bearbetar det med `Vendor\Migration\Step\GreatBlog\Data` och lagra data i två Magento 2-tabeller. Nya och ändrade poster levereras vid deltamigrering med `Vendor\Migration\Step\GreatBlog\Delta` klassen.
+Efter den anpassade stegimplementeringen som anges i exemplen hämtar systemet data från den enda Magento 1-tabellen,
+bearbeta den med klassen `Vendor\Migration\Step\GreatBlog\Data` och lagra data i två Magento 2-tabeller. Nya och ändrade poster levereras vid deltamigrering med klassen `Vendor\Migration\Step\GreatBlog\Delta`.
 
 ## Otillåtna tilläggsmetoder
 
-Sedan [!DNL Data Migration Tool] och Magento 2 utvecklas hela tiden. Befintliga steg och hanterare kan komma att ändras. Vi rekommenderar att du inte åsidosätter beteendet för steg som [Kartsteg](technical-specification.md#map-step), [URL-omskrivningssteg](technical-specification.md#url-rewrite-step)och hanterare genom att utöka deras klasser.
+Eftersom [!DNL Data Migration Tool] och Magento 2 utvecklas hela tiden kan befintliga steg och hanterare ändras. Vi rekommenderar att du inte åsidosätter beteendet för steg som [Mappningssteg](technical-specification.md#map-step), [URL-omskrivningssteg](technical-specification.md#url-rewrite-step) och hanterare genom att utöka deras klasser.
 
-Vissa steg stöder inte mappning och kan inte ändras utan att koden ändras. Du kan antingen skriva ett extra steg som ändrar data i slutet av migreringen eller skapa en [GitHub-problem](https://github.com/magento/data-migration-tool/issues) och fråga efter en ny tilläggspunkt i det befintliga steget.
+Vissa steg stöder inte mappning och kan inte ändras utan att koden ändras. Du kan antingen skriva ett extra steg som ändrar data i slutet av migreringen eller skapa ett [GitHub-problem](https://github.com/magento/data-migration-tool/issues) och be om en ny tilläggspunkt i det befintliga steget.

@@ -5,7 +5,7 @@ exl-id: eab50191-0744-41da-99ba-2e06ea61da27
 feature: Best Practices, Payments
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '541'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Det fanns en tid då kontanter var huvudkällan till transaktioner, men onlinevärlden har tagit över och onlinebetalningsmetoderna ersätter gamla betalningsmetoder. Allt finns nu online, vilket gör det enklare och mer tillgängligt, inklusive kreditkort, e-plånböcker och banköverföringar.
 
-![Leverantörslogotyper för betalningsgateway](../../assets/playbooks/payment-gateways.png)
+![Logotyper för betalningsgatewayleverantör](../../assets/playbooks/payment-gateways.png)
 
 En betalningstjänst är en tjänsteleverantör som ansluter och bearbetar betalningar för e-handelswebbplatser. De spelar en viktig roll när det gäller kundupplevelsen och konverteringsgraden. Komplexa betalningssystem tenderar att få kunderna att överge sina kundvagnar. Det är viktigt att ge kunderna ett enkelt, användarvänligt betalningssystem där även om en betalningsmetod misslyckas, har de en alternativ metod att motivera dem att slutföra köpet.
 
@@ -43,7 +43,8 @@ När ett företag bestämmer sig för att integrera en betalningstjänst med sin
 
 B2B- och B2C-företag har liknande betalningssystem, men B2B-företag har fler regler, bestämmelser och processer. B2B-företag tenderar att handla i större volymer jämfört med B2C-företag.
 
-B2C-kunder köper produkter eller tjänster för enskilt bruk. Kunderna betalar vanligtvis samma pris som andra kunder och det är ingen förhandling. B2B-kunder har olika intressenter, vilket gör godkännandet mer komplicerat och dyrt.
+B2C-kunder köper produkter eller tjänster för enskilt bruk. Kunderna betalar vanligtvis samma pris som andra kunder och det är ingen förhandling. B2B-kunder har olika
+som gör godkännandet mer komplicerat och dyrt.
 
 B2B-kunder har olika beställningar och krav som måste behandlas och godkännas av säljaren eller en säljare måste involveras när en kund köper online med en anbudsförfrågan eller en inköpsorder.
 

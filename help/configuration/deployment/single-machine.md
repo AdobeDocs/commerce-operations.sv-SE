@@ -5,30 +5,30 @@ feature: Configuration, Deploy
 exl-id: ca73309c-7584-4506-99de-dd933651eeb6
 source-git-commit: dcc283b901917e3681863370516771763ae87462
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '180'
 ht-degree: 1%
 
 ---
 
 # Driftsättning av en dator
 
-Det här avsnittet innehåller anvisningar om hur du distribuerar uppdateringar till Commerce på en produktionsserver med kommandoraden. Den här processen gäller tekniska användare som ansvarar för butiker som körs på en enda dator med vissa teman och språkområden installerade.
+I det här avsnittet finns anvisningar om hur du distribuerar uppdateringar till Commerce på en produktionsserver med kommandoraden. Den här processen gäller tekniska användare som ansvarar för butiker som körs på en enda dator med vissa teman och språkområden installerade.
 
 ## Antaganden
 
-- Du har installerat Commerce med [Disposition](../../installation/composer.md).
+- Du installerade Commerce med [Composer](../../installation/composer.md).
 - Du installerar uppdateringar direkt på servern.
 
 >[!WARNING]
 >
->Den här guiden gäller inte om du använder den `git clone` för att installera Commerce.
->Medverkande utvecklare bör använda [den här guiden][install] för att uppdatera sin Commerce-installation.
+>Den här guiden gäller inte om du använde `git clone` för att installera Commerce.
+>Deltagande utvecklare bör använda [den här handboken][install] för att uppdatera sin Commerce-installation.
 
 ## Distributionssteg
 
-1. Logga in på produktionsservern som eller växla till [ägare av filsystem](../../installation/prerequisites/file-system/overview.md).
+1. Logga in på produktionsservern som, eller växla till, ägare av [filsystemet](../../installation/prerequisites/file-system/overview.md).
 
-1. Ändra katalog till Commerce-baskatalogen:
+1. Ändra katalog till Commerce baskatalog:
 
    ```bash
    cd <Commerce base directory>
@@ -40,7 +40,7 @@ Det här avsnittet innehåller anvisningar om hur du distribuerar uppdateringar 
    bin/magento maintenance:enable
    ```
 
-1. Använd uppdateringar i Commerce eller dess komponenter med följande kommandomönster:
+1. Tillämpa uppdateringar på Commerce eller dess komponenter med följande kommandomönster:
 
    ```bash
    composer require-commerce <package> <version> --no-update
@@ -53,7 +53,7 @@ Det här avsnittet innehåller anvisningar om hur du distribuerar uppdateringar 
    - `magento/product-community-edition`
    - `magento/product-enterprise-edition`
 
-   **version**: Målversionen för det paket som du vill uppdatera.
+   **version**: Målversionen för paketet som du vill uppdatera.
 
 1. Uppdatera komponenter med Composer:
 

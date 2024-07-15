@@ -7,7 +7,7 @@ ht-degree: 0%
 ---
 # Uppdatera produktionssystem
 
-**Uppdatera produktionssystemet**:
+**Så här uppdaterar du produktionssystemet**:
 
 1. Logga in i produktionssystemet som filsystemsägare.
 1. Byt till programroten och aktivera underhållsläge.
@@ -20,9 +20,9 @@ ht-degree: 0%
    bin/magento maintenance:enable
    ```
 
-   Ytterligare alternativ, till exempel möjligheten att ange en vitlista för IP-adresser, finns i [`magento maintenance:enable`](../installation/tutorials/maintenance-mode.md).
+   Ytterligare alternativ, som möjligheten att ange en vitlista för IP-adresser, finns i [`magento maintenance:enable`](../installation/tutorials/maintenance-mode.md).
 
-1. Stoppa alla köarbetare som körs genom att ange `cron_run` till `false` in `app/etc/env.php` enligt följande:
+1. Stoppa alla köarbetare som körs genom att ange `cron_run` till `false` i `app/etc/env.php` enligt följande:
 
    ```php?start_inline=1
    'cron_consumers_runner' => [
@@ -36,13 +36,13 @@ ht-degree: 0%
    bin/magento app:config:import
    ```
 
-1. Äntligen `kill` alla aktiva konsumentprocesser.
+1. Slutligen `kill` alla aktiva konsumentprocesser.
 
    ```bash
    kill <PID>
    ```
 
-   Plats `PID` är det process-ID som ska dödas, till exempel:
+   Där `PID` är process-ID:t som ska dödas, till exempel:
 
    ```bash
    kill 1234

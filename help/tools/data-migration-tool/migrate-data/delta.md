@@ -1,18 +1,18 @@
 ---
 title: Migrera ändringar
-description: Lär dig hur du migrerar endast data som har ändrats sedan den senaste datamigreringen för Magento 1 med [!DNL Data Migration Tool].
+description: Lär dig hur du migrerar endast data som har ändrats sedan din senaste datamigrering för Magento 1 med  [!DNL Data Migration Tool].
 exl-id: c300c567-77d3-4c25-8b28-a7ae4ab0092e
 topic: Commerce, Migration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '350'
+source-wordcount: '355'
 ht-degree: 0%
 
 ---
 
 # Migrera ändringar
 
-Med verktyget för inkrementell migrering installerar du deltabeller (med prefix) `m2_cl_*`) och utlösare (för att spåra ändringar) i Magento 1-databasen under [migrering av data](data.md). Dessa tabeller och utlösare är viktiga för att du ska kunna migrera endast de ändringar som gjorts i Magento 1 sedan du senast migrerade data. Dessa ändringar är:
+Med verktyget för inkrementell migrering installeras deltalogtabeller (med prefixet `m2_cl_*`) och utlösare (för att spåra ändringar) i Magento 1-databasen under [datamigreringen](data.md). Dessa tabeller och utlösare är viktiga för att du ska kunna migrera endast de ändringar som gjorts i Magento 1 sedan du senast migrerade data. Dessa ändringar är:
 
 * Data som kunderna lagt till via butiken (skapade order, recensioner och ändringar i kundprofiler)
 
@@ -25,10 +25,10 @@ Med verktyget för inkrementell migrering installerar du deltabeller (med prefix
 
 Innan du börjar utför du följande steg:
 
-1. Logga in på programservern som [filsystemets ägare](../../../installation/prerequisites/file-system/overview.md).
-1. Ändra till `/bin` eller se till att den läggs till i systemet `PATH`.
+1. Logga in på programservern som [ägare av filsystemet](../../../installation/prerequisites/file-system/overview.md).
+1. Ändra till katalogen `/bin` eller se till att den har lagts till i systemet `PATH`.
 
-Se [första steget](overview.md#first-steps) för mer information.
+Mer information finns i avsnittet om [de första stegen](overview.md#first-steps).
 
 ## Kör kommandot för stegvis migrering
 
@@ -44,7 +44,7 @@ Var:
 
 * `[-a|--auto]` är ett valfritt argument som förhindrar att migreringen stoppas när integritetskontrollfel påträffas.
 
-* `{<path to config.xml>}` är den absoluta filsystemsökvägen till `config.xml`; det här argumentet krävs.
+* `{<path to config.xml>}` är den absoluta filsystemsökvägen till `config.xml`. Det här argumentet är obligatoriskt.
 
 >[!NOTE]
 >
@@ -53,10 +53,10 @@ Var:
 
 ## Migrera data som skapats av tillägg från tredje part
 
-I `Delta` läge, [!DNL Data Migration Tool] migrerar data som bara skapats av Magento egna moduler och ansvarar inte för kod eller tillägg som skapats av tredjepartsutvecklare. Om dessa tillägg skapade data i storefront-databasen och handlaren vill ha dessa data i Magento 2 - konfigurationsfiler för [!DNL Data Migration Tool] bör skapas och ändras i enlighet med detta.
+I `Delta`-läget migrerar [!DNL Data Migration Tool] endast data som skapats av Magento egna moduler och ansvarar inte för koden eller tilläggen som skapats av tredjepartsutvecklare. Om dessa tillägg skapade data i storefront-databasen och handlaren vill ha dessa data i Magento 2, ska konfigurationsfilerna för [!DNL Data Migration Tool] skapas och ändras i enlighet med detta.
 
 Om ett tillägg har egna tabeller, och du behöver spåra ändringar för deltamigrering, gör du så här:
 
-1. Lägg till de tabeller som ska spåras i `deltalog.xml` fil
-1. Skapa ytterligare en delta-klass som utökar `Migration\App\Step\AbstractDelta`
+1. Lägg till de tabeller som ska spåras i filen `deltalog.xml`
+1. Skapa en ytterligare delta-klass som utökar `Migration\App\Step\AbstractDelta`
 1. Lägg till namnet på den nyligen skapade klassen i delta-lägesavsnittet i `config.xml`

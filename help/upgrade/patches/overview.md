@@ -25,15 +25,15 @@ När korrigeringsprogrammet körs läses den här filen in och de angivna ändri
 
 Det finns tre typer av patchar:
 
-- **Programfixar**—Patchar som Adobe publicerar på [Security Center](https://magento.com/security/patches).
-- **Enskilda patchar**—Patchar som Adobe Commerce Support skapar och distribuerar individuellt.
-- **Egna patchar**—Icke-officiella korrigeringsfiler som du kan skapa från en Git-implementering.
+- **Programfixar** - Programfixar som Adobe publicerar på [Säkerhetscenter](https://magento.com/security/patches).
+- **Enskilda korrigeringsfiler** - korrigeringsfiler som skapas och distribueras individuellt av Adobe Commerce Support.
+- **Anpassade korrigeringsfiler** - Ej officiella korrigeringsfiler som du kan skapa från en Git-implementering.
 
 ## Programfixar
 
 Programfixar är korrigeringar som innehåller effektiva säkerhets- eller kvalitetskorrigeringar som påverkar många handlare. Dessa korrigeringar tillämpas på nästa korrigeringsversion för den tillämpliga delversionen. Adobe släpper snabbkorrigeringar efter behov.
 
-Du hittar snabbkorrigeringar i [Security Center](https://magento.com/security/patches). Följ instruktionerna på sidan för att hämta korrigeringsfilen, beroende på version och installationstyp. Använd [kommandorad](../patches/apply.md#) eller [Disposition](../patches/apply.md) för att använda snabbkorrigeringar.
+Du hittar snabbkorrigeringar i [Säkerhetscenter](https://magento.com/security/patches). Följ instruktionerna på sidan för att hämta korrigeringsfilen, beroende på version och installationstyp. Använd [kommandoraden](../patches/apply.md#) eller [Composer](../patches/apply.md) för att tillämpa snabbkorrigeringar.
 
 >[!NOTE]
 >
@@ -43,7 +43,7 @@ Du hittar snabbkorrigeringar i [Security Center](https://magento.com/security/pa
 
 Enskilda korrigeringsfiler innehåller korrigeringar av låg kvalitet för ett specifikt problem. Dessa korrigeringar tillämpas på den senaste delversionen som stöds (till exempel 2.4.x), men kan saknas i den tidigare delversionen som stöds (till exempel 2.3.x). Adobe släpper enskilda patchar efter behov.
 
-Använd [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"} för att lägga på individuella plåster.
+Använd [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"} för att tillämpa enskilda korrigeringsfiler.
 
 >[!NOTE]
 >
@@ -51,25 +51,25 @@ Använd [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/c
 
 ## Egna patchar
 
-Ibland tar det ett tag för Adobe Engineering Team att inkludera en felkorrigering som gjorts på GitHub i en Adobe Commerce Composer-version. Under tiden kan du skapa en patch från GitHub och använda [`cweagans/composer-patches`](https://github.com/cweagans/composer-patches/) plugin-program för att använda det i din Composer-baserade installation.
+Ibland tar det ett tag för Adobe Engineering Team att inkludera en felkorrigering som gjorts på GitHub i en Adobe Commerce Composer-version. Under tiden kan du skapa en patch från GitHub och använda plugin-programmet [`cweagans/composer-patches`](https://github.com/cweagans/composer-patches/) för att tillämpa den på din Composer-baserade installation.
 
-Använd [kommandorad](apply.md#command-line) eller [Disposition](apply.md#composer) om du vill använda anpassade korrigeringsfiler.
+Använd [kommandoraden](apply.md#command-line) eller [disposition](apply.md#composer) för att använda anpassade korrigeringsfiler.
 
 Det finns många sätt att skapa anpassade korrigeringsfiler. I följande exempel fokuseras på att skapa en korrigering från en känd Git-implementering.
 
 Så här skapar du en anpassad patch:
 
-1. Skapa en `patches/composer` i ditt lokala projekt.
-1. Identifiera GitHub-implementeringen eller pull-begäran som ska användas för korrigeringen. I det här exemplet används [`2d31571`](https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede) implementering, länkad till GitHub-utgåva [#6474](https://github.com/magento/magento2/issues/6474).
-1. Lägg till `.patch` eller `.diff` tillägg till implementerings-URL:en. Använd `.diff` för en mindre filstorlek. Till exempel: [https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede.diff](https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede.diff)
-1. Spara sidan som en fil i `patches/composer` katalog. Till exempel: `github-issue-6474.diff`.
-1. Redigera filen och ta bort `app/code/<VENDOR>/<PACKAGE>` från alla sökvägar så att de är relativa till `vendor/<VENDOR>/<PACKAGE>` katalog.
+1. Skapa en `patches/composer`-katalog i ditt lokala projekt.
+1. Identifiera GitHub-implementeringen eller pull-begäran som ska användas för korrigeringen. I det här exemplet används [`2d31571`](https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede) commit, som är länkat till GitHub-utgåvan [#6474](https://github.com/magento/magento2/issues/6474).
+1. Lägg till `.patch` eller `.diff`-tilläggen i den implementerade URL:en. Använd `.diff` för en mindre filstorlek. Till exempel: [https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede.diff](https://github.com/magento/magento2/commit/2d31571f1bacd11aa2ec795180abf682e0e9aede.diff)
+1. Spara sidan som en fil i katalogen `patches/composer`. Exempel: `github-issue-6474.diff`.
+1. Redigera filen och ta bort `app/code/<VENDOR>/<PACKAGE>` från alla sökvägar så att de är relativa till katalogen `vendor/<VENDOR>/<PACKAGE>`.
 
    >[!NOTE]
    >
    >Textredigerare som automatiskt tar bort efterföljande tomt utrymme eller lägger till nya rader kan bryta lagningen. Använd en enkel textredigerare för att göra dessa ändringar.
 
-I följande exempel visas den tidigare nämnda DIFF-filen efter att alla instanser av `app/code/Magento/Payment`:
+I följande exempel visas den tidigare nämnda DIFF-filen när alla instanser av `app/code/Magento/Payment` har tagits bort:
 
 ```diff
 diff --git a/view/frontend/web/js/view/payment/iframe.js b/view/frontend/web/js/view/payment/iframe.js
@@ -96,4 +96,4 @@ Du kan använda patchar på något av följande sätt:
 
 >[!NOTE]
 >
->Information om hur du tillämpar en korrigering på ett Adobe Commerce-infrastrukturprojekt finns i [Tillämpa patchar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i _Commerce on Cloud-guide_.
+>Information om hur du tillämpar en korrigering på ett Adobe Commerce-infrastrukturprojekt finns i [Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i _Commerce på molnet_.

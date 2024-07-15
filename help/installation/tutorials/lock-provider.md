@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Konfigurera låsprovidern
 
-Innan du kör kommandot måste du göra följande *eller* du måste [installera programmet](../advanced.md):
+Innan du kör det här kommandot måste du göra följande *eller* måste du [installera programmet](../advanced.md):
 
 * [Skapa eller uppdatera distributionskonfigurationen](deployment.md)
 * [Skapa databasschemat](database.md)
@@ -26,7 +26,7 @@ Konfigurera en låsleverantör för att förhindra att dubblettcron-jobb och cro
 
 Adobe Commerce använder databasen för att spara lås som standard. Om du har flera noder på dina servrar rekommenderar vi att du använder Zookeeper som låsleverantör.
 
-Om du kör Adobe Commerce i molninfrastruktur behöver du inte konfigurera inställningar för låsleverantör. Programmet konfigurerar fillås-providern för Pro-projekt under provisioneringsprocessen. Se [Molnvariabler](https://devdocs.magento.com/cloud/env/variables-cloud.html).
+Om du kör Adobe Commerce i molninfrastruktur behöver du inte konfigurera inställningar för låsleverantör. Programmet konfigurerar fillås-providern för Pro-projekt under provisioneringsprocessen. Se [Cloud-variabler](https://devdocs.magento.com/cloud/env/variables-cloud.html).
 
 ### Kommandoanvändning
 
@@ -38,8 +38,8 @@ bin/magento setup:config:set [--<parameter_name>=<value>, ...]
 
 | Namn | Värde | Obligatoriskt? |
 |--- |--- |--- |
-| `--lock-provider` | Lås leverantörens namn: `db`, `zookeeper`, eller `file`.<br><br>Standardlåsleverantör: `db` | Nej |
-| `--lock-db-prefix` | Det specifika db-prefixet för att undvika låskonflikter när du använder `db` låsleverantör.<br><br>Standardvärdet: `NULL` | Nej |
-| `--lock-zookeeper-host` | Värd och port att ansluta till Zookeeper-klustret när du använder `zookeeper` låsleverantör.<br><br>Till exempel: `127.0.0.1:2181` | Ja, om du anger `--lock-provider=zookeeper` |
+| `--lock-provider` | Lås providerns namn: `db`, `zookeeper` eller `file`.<br><br>Standardlåsleverantör: `db` | Nej |
+| `--lock-db-prefix` | Det specifika db-prefixet för att undvika låskonflikter när `db`-låsprovidern används.<br><br>Standardvärdet: `NULL` | Nej |
+| `--lock-zookeeper-host` | Värd och port för att ansluta till Zookeeper-klustret när du använder `zookeeper`-låsprovidern.<br><br>Till exempel: `127.0.0.1:2181` | Ja, om du anger `--lock-provider=zookeeper` |
 | `--lock-zookeeper-path` | Sökvägen där Zookeeper sparar lås.<br><br>Standardsökvägen är: `/magento/locks` | Nej |
 | `--lock-file-path` | Sökvägen där fillås sparas. | Ja, om du anger `--lock-provider=file` |

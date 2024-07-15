@@ -4,19 +4,19 @@ description: Se ett exempel på hur du ändrar inställningar i ett utvecklingss
 exl-id: c980ec01-ca2d-43db-b68d-8e9435e07e6a
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '465'
 ht-degree: 0%
 
 ---
 
 # Exempel med en delad konfiguration
 
-I det här exemplet visas hur du ändrar följande inställningar i utvecklingssystemet, uppdaterar den delade konfigurationsfilen, `config.php`, i ditt byggsystem och implementera samma inställningar i ditt produktionssystem:
+I det här exemplet visas hur du ändrar följande inställningar i utvecklingssystemet, uppdaterar den delade konfigurationsfilen, `config.php`, i ditt build-system och implementerar samma inställningar i produktionssystemet:
 
 - Tidszon
 - Viktenhet
 
-De här inställningarna är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > Allmänt > **Allmänt**.
+De här inställningarna är tillgängliga i Admin i **Lagrar** > Inställningar > **Konfiguration** > Allmänt > **Allmänt**.
 
 Du kan använda samma procedur för att konfigurera icke-känsliga, icke-systemspecifika inställningar i följande referenser:
 
@@ -26,7 +26,7 @@ Du kan använda samma procedur för att konfigurera icke-känsliga, icke-systems
 
 ## Innan du börjar
 
-Innan du börjar ska du konfigurera filsystembehörigheter och ägarskap enligt [Krav för utveckling, bygge och produktion av system](../deployment/prerequisites.md).
+Innan du börjar konfigurerar du filsystembehörigheter och ägarskap enligt beskrivningen i [Förutsättningar för utvecklings-, bygg- och produktionssystem](../deployment/prerequisites.md).
 
 ## Antaganden
 
@@ -43,22 +43,22 @@ I det här exemplet förutsätts följande:
 Så här anger du tidszon- och viktenheter i utvecklingssystemet:
 
 1. Logga in på Admin.
-1. Klicka **Lager** > Inställningar > **Konfiguration** > Allmänt > **Allmänt**.
-1. Expandera i den högra rutan **Nationella inställningar**.
+1. Klicka på **Lagrar** > Inställningar > **Konfiguration** > Allmänt > **Allmänt**.
+1. Expandera **Språkalternativ** i den högra rutan.
 
    I bilden nedan visas ett exempel.
 
    ![Ange språkinställningar i utvecklingssystemet](../../assets/configuration/split-deploy-set-locale.png)
 
-1. Från **Tidszon** lista, klicka på **GMT+00.00 (UTC)**.
-1. Rensa **Använd systemvärde** kryssrutan bredvid **Viktenhet** fält.
-1. Från **Viktenhet** lista, klicka på **kgs**.
-1. Klicka **Spara konfiguration**.
+1. Klicka på **GMT+00:00 (UTC)** i listan **Tidszon**.
+1. Avmarkera kryssrutan **Använd systemvärde** intill fältet **Viktenhet**.
+1. Klicka på **kgs** i listan **Viktenhet**.
+1. Klicka på **Spara konfiguration**.
 1. Rensa cachen om du uppmanas till det.
 
 ## Steg 2: Uppdatera den delade konfigurationen
 
-Generera den delade konfigurationsfilen, `app/etc/config.php`, i ditt utvecklingssystem och överför det med hjälp av källkontroll till ditt byggsystem, vilket beskrivs i det här avsnittet.
+Generera den delade konfigurationsfilen, `app/etc/config.php`, i utvecklingssystemet och överför den med hjälp av källkontroll till ditt build-system, vilket beskrivs i det här avsnittet.
 
 {{$include /help/_includes/config-save-config.md}}
 
@@ -76,11 +76,11 @@ Det sista steget i processen är att uppdatera produktionssystemet från källko
 
 ### Verifiera ändringarna i administratören
 
-**Verifiera att dessa inställningar inte kan redigeras i Admin**:
+**Så här verifierar du att de här inställningarna inte går att redigera i Admin**:
 
 1. Logga in på Admin.
-1. Klicka **Lager** > Inställningar > **Konfiguration** > Allmänt > **Allmänt**.
-1. Expandera i den högra rutan **Nationella inställningar**.
+1. Klicka på **Lagrar** > Inställningar > **Konfiguration** > Allmänt > **Allmänt**.
+1. Expandera **Språkalternativ** i den högra rutan.
 
    De alternativ du just anger visas enligt följande:
 
@@ -88,4 +88,4 @@ Det sista steget i processen är att uppdatera produktionssystemet från källko
 
 >[!INFO]
 >
->Använd knappen [`magento config:set --lock` kommando](../cli/set-configuration-values.md).
+>Om du vill ändra en inställning som är låst i Admin använder du kommandot [`magento config:set --lock` ](../cli/set-configuration-values.md).

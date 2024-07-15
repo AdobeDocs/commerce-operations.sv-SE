@@ -5,14 +5,14 @@ feature: Configuration, Cache, Storage
 exl-id: fc4ad18b-7e99-496e-aebc-1d7640d8716c
 source-git-commit: af45ac46afffeef5cd613628b2a98864fd7da69b
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '550'
 ht-degree: 0%
 
 ---
 
 # Konfigurera cachelagrade i CentOS
 
-I det här avsnittet finns anvisningar om hur du installerar cachelagrade CentOS. Mer information finns i [ansluten wiki](https://github.com/memcached/old-wiki).
+I det här avsnittet finns anvisningar om hur du installerar cachelagrade CentOS. Mer information finns i den [cachelagrade wiki](https://github.com/memcached/old-wiki).
 
 >[!INFO]
 >
@@ -21,17 +21,17 @@ I det här avsnittet finns anvisningar om hur du installerar cachelagrade CentOS
 Eftersom PHP inte har inbyggt stöd för memcache måste du installera ett tillägg för PHP för att kunna använda det. Det finns två PHP-tillägg tillgängliga och det är viktigt att avkoda vilka som ska användas:
 
 - `memcache` (_no d_) - ett äldre men populärt tillägg som inte underhålls regelbundet.
-The `memcache` tillägg för närvarande _inte_ arbeta med PHP 7. Se [PHP-dokumentation för memcache](https://www.php.net/manual/en/book.memcache.php).
+Tillägget `memcache` för närvarande _fungerar inte_ med PHP 7. Mer information om memcache](https://www.php.net/manual/en/book.memcache.php) finns i [PHP-dokumentationen.
 
   Det exakta namnet är `php-pecl-memcache` för CentOS.
 
-- `memcached` (_med`d`_) - ett nyare och underhållet tillägg som är kompatibelt med PHP 7. Se [PHP-dokumentation för cachelagrad](https://www.php.net/manual/en/book.memcached.php).
+- `memcached` (_med en`d`_) - ett nyare och underhållet tillägg som är kompatibelt med PHP 7. Se [PHP-dokumentation för cachelagring](https://www.php.net/manual/en/book.memcached.php).
 
   Det exakta namnet är `php-pecl-memcached` för CentOS.
 
 ## Installera och konfigurera cachelagrade i CentOS
 
-Om du vill installera cachelagrade filer i CentOS utför du följande åtgärder som en användare med `root` behörighet:
+Utför följande uppgifter som en användare med behörighet `root` för att installera som är ansluten till CentOS:
 
 1. Installera cachelagrade filer och dess beroenden:
 
@@ -53,19 +53,19 @@ Om du vill installera cachelagrade filer i CentOS utför du följande åtgärder
 
    >[!INFO]
    >
-   >Syntaxen för föregående kommandon kan bero på vilka paketdatabaser du använder. Om du t.ex. använder webb och PHP 5.6 anger du `yum install -y php56w-pecl-memcache`. Använd `yum search memcache|grep php` för att hitta rätt paketnamn.
+   >Syntaxen för föregående kommandon kan bero på vilka paketdatabaser du använder. Om du t.ex. använder webbstatistik och PHP 5.6 anger du `yum install -y php56w-pecl-memcache`. Använd `yum search memcache|grep php` för att hitta rätt paketnamn.
 
 
 1. Ändra den cachelagrade konfigurationsinställningen för `CACHESIZE` och `OPTIONS`:
 
    1. Öppna `/etc/sysconfig/memcached` i en textredigerare.
-   1. Hitta värdet för `CACHESIZE` och ändra den till minst 1 GB. Exempel:
+   1. Leta reda på värdet för `CACHESIZE` och ändra det till minst 1 GB. Exempel:
 
       ```config
       CACHESIZE="1GB"
       ```
 
-   1. Hitta värdet för `OPTIONS` och ändra det till `localhost` eller `127.0.0.1`
+   1. Leta reda på värdet för `OPTIONS` och ändra det till `localhost` eller `127.0.0.1`
 
 1. Spara ändringarna i `memcached` och avsluta textredigeraren.
 1. Omstarten är cachelagrad.
@@ -84,15 +84,15 @@ Om du vill installera cachelagrade filer i CentOS utför du följande åtgärder
 
 1. Fortsätt med nästa avsnitt.
 
-## Verifiera anslutna arbeten innan Commerce installeras
+## Kontrollera att det finns anslutna verk innan du installerar Commerce
 
-Adobe rekommenderar att du testar i cache-minnet för att kontrollera att det fungerar innan du installerar Commerce. Det tar bara några minuter och kan förenkla felsökningen senare.
+Adobe rekommenderar att du testar cachelagrade data för att kontrollera att de fungerar innan du installerar Commerce. Det tar bara några minuter och kan förenkla felsökningen senare.
 
 ### Verifiera att cachelagrade data känns igen av webbservern
 
 Så här verifierar du att cachelagrade data känns igen av webbservern:
 
-1. Skapa en `phpinfo.php` i webbserverns dokumentrot:
+1. Skapa en `phpinfo.php`-fil i webbserverns dokumentrot:
 
    ```php
    <?php
@@ -106,17 +106,17 @@ Så här verifierar du att cachelagrade data känns igen av webbservern:
 
 1. Se till att minnet visas enligt följande:
 
-![Bekräfta att memcache känns igen av webbservern](../../assets/configuration/memcache.png)
+![Bekräfta memcache känns igen av webbservern](../../assets/configuration/memcache.png)
 
 Kontrollera att du använder den cachelagrade versionen 3.0.5 eller senare.
 
-Om minnet inte visas startar du om webbservern och uppdaterar webbläsarsidan. Om den fortfarande inte visas kontrollerar du att du har installerat `php-pecl-memcache` tillägg.
+Om minnet inte visas startar du om webbservern och uppdaterar webbläsarsidan. Om det fortfarande inte visas kontrollerar du att du har installerat tillägget `php-pecl-memcache`.
 
 ### Skapa ett memcache-test som består av en MySQL-databas och ett PHP-skript
 
-Testet använder en MySQL-databas, tabell och data för att verifiera att du kan hämta databasdata och lagra dem i memcache. Ett PHP-skript söker först i cachen. Om resultatet inte finns frågar skriptet databasen. När frågan har slutförts av den ursprungliga databasen lagrar skriptet resultatet i memcache med hjälp av `set` -kommando.
+Testet använder en MySQL-databas, tabell och data för att verifiera att du kan hämta databasdata och lagra dem i memcache. Ett PHP-skript söker först i cachen. Om resultatet inte finns frågar skriptet databasen. När frågan har slutförts av den ursprungliga databasen lagrar skriptet resultatet i memcache med kommandot `set`.
 
-[Mer information om det här testet](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-memcache-on-ubuntu-12-04)
+[Mer information om testet](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-memcache-on-ubuntu-12-04)
 
 Skapa MySQL-databasen:
 
@@ -124,7 +124,7 @@ Skapa MySQL-databasen:
 mysql -u root -p
 ```
 
-På `mysql` anger du följande kommandon:
+Ange följande kommandon vid `mysql`-prompten:
 
 ```sql
 create database memcache_test;
@@ -163,7 +163,7 @@ print "got result from memcached\n";
 return 0;
 ```
 
-Plats `<memcached hostname or ip>` är antingen `localhost`, `127.0.0.1`, eller minnesvärdnamnet eller IP-adressen. The `<memcached port>` är avlyssningsporten; som standard `11211`.
+Där `<memcached hostname or ip>` antingen är `localhost`, `127.0.0.1` eller memcache-värdnamnet eller IP-adressen. `<memcached port>` är avlyssningsporten, som standard `11211`.
 
 Kör skriptet från kommandoraden.
 
@@ -177,7 +177,7 @@ php cache-test.php
 
 Det första resultatet är `got result from mysql`. Det innebär att nyckeln inte fanns i ett cache-minne, men den hämtades från MySQL.
 
-Det andra resultatet är `got result from memcached`, som verifierar att värdet har lagrats i ett cache-minne.
+Det andra resultatet är `got result from memcached`, vilket verifierar att värdet har sparats i cache-minnet.
 
 Slutligen kan du visa minnesknapparna med Telnet:
 

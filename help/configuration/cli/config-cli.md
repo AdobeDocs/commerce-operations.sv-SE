@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Kommandoradsverktyg
 
-Commerce har ett kommandoradsgränssnitt -`<magento_root>/bin/magento`—som kör installations- och konfigureringsuppgifter, inklusive:
+Commerce har ett kommandoradsgränssnitt (CLI) -`<magento_root>/bin/magento` - som kör installations- och konfigureringsuppgifter, inklusive:
 
 - Installera Commerce (och relaterade uppgifter som att uppdatera databasschemat, skapa en distributionskonfiguration)
 - Rensar cachen
@@ -23,20 +23,20 @@ Commerce har ett kommandoradsgränssnitt -`<magento_root>/bin/magento`—som kö
 
 Ytterligare fördelar:
 
-- Ett enda kommando (`<magento_root>/bin/magento list`) listar alla tillgängliga installations- och konfigurationskommandon.
+- Ett enskilt kommando (`<magento_root>/bin/magento list`) visar alla tillgängliga installations- och konfigurationskommandon.
 - Enhetligt användargränssnitt baserat på Symfoni.
 - CLI är utbyggbart så att tredjepartsutvecklare kan&quot;ansluta&quot; till det. Detta innebär också att man slipper inlärningskurva.
 - Kommandon för inaktiverade moduler visas inte.
 
-I det här avsnittet diskuteras hur du konfigurerar Adobe Commerce-programmet med CLI. Information om hur du installerar Commerce finns i [Installationsflöde](../../installation/overview.md) i _Installationsguide_.
+I det här avsnittet diskuteras hur du konfigurerar Adobe Commerce-programmet med CLI. Information om hur du installerar Commerce finns i [Installationsflöde](../../installation/overview.md) i _Installationsguiden_.
 
 ## Förutsättningar
 
 Innan du börjar använda CLI bör du kontrollera att:
 
-1. Ditt system uppfyller kraven i [Systemkrav](../../installation/system-requirements.md) i _Installationsguide_.
-1. Alla nödvändiga uppgifter som diskuterades i [Förutsättningar](../../installation/prerequisites/overview.md) i _Installationsguide_.
-1. När du har loggat in på Commerce-servern växlar du till en användare som har behörighet att skriva till Commerce filsystem. Se [växla till filsystemets ägare](../../installation/prerequisites/file-system/overview.md) i _Installationsguide_.
+1. Ditt system uppfyller de krav som beskrivs i [Systemkrav](../../installation/system-requirements.md) i _Installationsguiden_.
+1. Du har slutfört alla nödvändiga uppgifter som diskuterades i [Förutsättningar](../../installation/prerequisites/overview.md) i _installationshandboken_.
+1. När du har loggat in på Commerce-servern växlar du till en användare som har behörighet att skriva till Commerce filsystem. Se [växla till filsystemets ägare](../../installation/prerequisites/file-system/overview.md) i _installationshandboken_.
 
 ## Kör kommandon
 
@@ -52,9 +52,9 @@ Om filsystemets ägare inte tillåter inloggningar kan du använda följande:
 sudo -u <file system owner> <command>
 ```
 
-**Köra CLI-kommandon från vilken katalog som helst**:
+**Så här kör du CLI-kommandon från valfri katalog**:
 
-Lägg till `<magento_root>/bin` till ditt system `PATH`.
+Lägg till `<magento_root>/bin` i systemet `PATH`.
 
 Exempel på basgränssnitt för CentOS:
 
@@ -66,4 +66,4 @@ Du kan också köra följande:
 
 - `cd <magento_root>/bin` och kör dem som `./magento <command name>`
 - `<magento_root>/bin/magento <command name>`
-- `<magento_root>` är en underkatalog till webbserverns dokument
+- `<magento_root>` är en underkatalog till webbserverns docroot

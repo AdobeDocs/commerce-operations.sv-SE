@@ -27,7 +27,7 @@ Läs mer om Adobe Commerce uppgraderingar här.
             <li><a href="https://solutionpartners.adobe.com/solution-partners.html">Partnerportal för lösningar</a></li>
           </ul>
         </td>
-      <td><strong>verktyg</strong>
+      <td><strong>Verktyg</strong>
         <p>Bläddra bland verktyg som gör det enklare för dig att hitta och använda Adobe Commerce.</p>
           <ul>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-learn/tutorials/uct-phpstorm.html">Upgrade Compatibility Tool PhpStorm plugin</a> (video)</li>
@@ -38,7 +38,7 @@ Läs mer om Adobe Commerce uppgraderingar här.
       </td>
     </tr>
     <tr>
-      <td><strong>Kalendrar och policy</strong>
+      <td><strong>Kalendrar och princip</strong>
         <p>Läs mer om Adobe Commerce releaser och profiler.</p>
           <ul>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/adobe-commerce-eos-policy-faq.html">Vanliga frågor om Adobe Commerce-programvarans slut</a></li>
@@ -66,7 +66,7 @@ Läs mer om Adobe Commerce uppgraderingar här.
             <li><a href="recommended-upgrade-paths.md">Rekommenderade uppgraderingsalternativ</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-learn/tutorials/upgrade-workshop.html?lang=en">2.4 Technical Upgrade Workshop - inspelning</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/cannot-access-the-latest-magento-commerce-pre-release.html">Åtkomst till förhandsversioner</a></li>
-            <li><a href="../../release/beta.md">Betaversioner - översikt</a></li>
+            <li><a href="../../release/beta.md">Beta - översikt</a></li>
             <li><a href="https://developer.adobe.com/commerce/contributor/guides/code-contributions/backward-compatibility-policy/">Bakåtkompatibel utveckling</a></li>
             <li><a href="https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/highlights/">Bakåtkompatibla ändringar</a></li>
             <li><a href="../../implementation-playbook/best-practices/maintenance/upgrade-checklist.md">Checklista för Upgrade Plan</a></li>
@@ -74,7 +74,7 @@ Läs mer om Adobe Commerce uppgraderingar här.
             <li><a href="../../release/product-availability.md">Programvarutillgänglighet</a></li>
           </ul>
       </td>
-      <td><strong>Storefront Experience</strong>
+      <td><strong>StoreFront Experience</strong>
         <p>Läs om den senaste tekniken som ni kan använda för att skapa unika upplevelser för era kunder.</p>
           <ul>
             <li><a href="https://developer.adobe.com/commerce/pwa-studio/">PWA Studio</a></li>

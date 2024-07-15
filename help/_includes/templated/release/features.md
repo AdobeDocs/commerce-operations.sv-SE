@@ -1,11 +1,11 @@
 ---
 source-git-commit: d1af1ffe584b18cbc6c664cab31283c13f36c25e
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '180'
 ht-degree: 8%
 
 ---
-# Funktioner för handel
+# Commerce-funktioner
 
 <!--This include content is automatically generated using the features.html template and the "_data/release/features.yml" data file. To update the content, add new information to the data file. Follow the instructions in the README instructions to generate the updated content: 
 https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#templates -->
@@ -14,11 +14,11 @@ https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#template
   <tbody>
     <tr style="background:lightgray;">
       <th style="border-style:none;">Maximera konvertering och försäljning</th>
-      <th style="border-style:none;">2.0</th>
-      <th style="border-style:none;">2.1</th>
-      <th style="border-style:none;">2.2</th>
-      <th style="border-style:none;">2.3</th>
-      <th style="border-style:none;">2.4</th>
+      <th style="border-style:none;">2,0</th>
+      <th style="border-style:none;">2,1</th>
+      <th style="border-style:none;">2,2</th>
+      <th style="border-style:none;">2,3</th>
+      <th style="border-style:none;">2,4</th>
     </tr>
     <tr>
       <td>Live Search från Adobe Sensei (B2C och B2B)</td>
@@ -104,11 +104,11 @@ https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#template
   <tbody>
     <tr style="background:lightgray;">
       <th style="border-style:none;">Smartare och snabbare drift</th>
-      <th style="border-style:none;">2.0</th>
-      <th style="border-style:none;">2.1</th>
-      <th style="border-style:none;">2.2</th>
-      <th style="border-style:none;">2.3</th>
-      <th style="border-style:none;">2.4</th>
+      <th style="border-style:none;">2,0</th>
+      <th style="border-style:none;">2,1</th>
+      <th style="border-style:none;">2,2</th>
+      <th style="border-style:none;">2,3</th>
+      <th style="border-style:none;">2,4</th>
     </tr>
     <tr>
       <td>Betalningstjänster</td>
@@ -159,7 +159,7 @@ https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#template
       <td>+</td>
     </tr>
     <tr>
-      <td>Inventory management med flera källor</td>
+      <td>Flera Source Inventory management</td>
       <td></td>
       <td></td>
       <td></td>
@@ -194,11 +194,11 @@ https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#template
   <tbody>
     <tr style="background:lightgray;">
       <th style="border-style:none;">Förbättringar av plattform, prestanda och säkerhet</th>
-      <th style="border-style:none;">2.0</th>
-      <th style="border-style:none;">2.1</th>
-      <th style="border-style:none;">2.2</th>
-      <th style="border-style:none;">2.3</th>
-      <th style="border-style:none;">2.4</th>
+      <th style="border-style:none;">2,0</th>
+      <th style="border-style:none;">2,1</th>
+      <th style="border-style:none;">2,2</th>
+      <th style="border-style:none;">2,3</th>
+      <th style="border-style:none;">2,4</th>
     </tr>
     <tr>
       <td>Site-Wide Analysis Tool</td>

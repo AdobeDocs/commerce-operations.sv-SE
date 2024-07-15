@@ -4,7 +4,7 @@ description: Ge era kunder högkvalitativa produktbilder och videor för att ök
 exl-id: 080f177e-f668-4154-8a05-ea4724c29c5f
 source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '488'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Olika typer av bilder kan användas beroende på verksamhetens behov.
 
 ## Produktbilder
 
-![Produktbild](../../assets/playbooks/product-image-feature.png)
+![Aktuell produktbild](../../assets/playbooks/product-image-feature.png)
 
 ## Livsstilsbilder
 
@@ -39,7 +39,7 @@ Olika typer av bilder kan användas beroende på verksamhetens behov.
 
 ## Produktpaketeringsbilder
 
-![Produktbild](../../assets/playbooks/product-image-packaging.png)
+![Aktuell produktbild](../../assets/playbooks/product-image-packaging.png)
 
 ## Ej förpackade bilder
 
@@ -51,19 +51,19 @@ Olika typer av bilder kan användas beroende på verksamhetens behov.
 
 ## God praxis
 
-- **Demo av produkten**- Om produkten har ett definierat syfte kan du demonstrera produkten för att visa funktioner och funktioner.
+- **Demonstrera produkten** - Om produkten har ett definierat syfte kan du demonstrera produkten och visa dess funktioner och funktioner.
 
-- **Befordra användargenererade bilder**- Användare som laddar upp sina bilder med produkten som recension, vilket motiverar andra kunder att köpa produkten.
+- **Befordra användargenererade bilder** - Användare som överför sina bilder med produkten som en recension, vilket motiverar andra kunder att köpa produkten.
 
-- **360-gradersvy över produkten**—Att ladda upp en 360-gradersvideo eller GIF av produkten kan ge en detaljerad bild till kunden och motivera dem att köpa produkten.
+- **360-gradersvy av produkten** - Om du överför en 360-gradersvy eller GIF av produkten kan du ge kunden en detaljerad vy och motivera dem att köpa produkten.
 
-- **Namngivningskonvention**- Gör det till en regel att följa en namngivningskonvention för produktbilden, vilket minimerar felen med att överföra en felaktig bild för en produkt och hjälper teamet att enkelt hantera bilder.
+- **Namngivningskonvention** - Gör det till en regel att följa en namngivningskonvention för produktavbildningen, vilket minimerar felet med att överföra en felaktig bild för en produkt och hjälper teamet att hantera bilder.
 
-- **Sidinläsning**- Överför inte bilder som kan öka sidans inläsningstid. Om en kund måste vänta på att bilden ska visas kan han eller hon lämna webbplatsen.
+- **Sidinläsning** - Överför inte bilder som ökar sidinläsningstiden. Om en kund måste vänta på att bilden ska visas kan han eller hon lämna webbplatsen.
 
-- **Enkelt innehåll**—Komplexa inte innehållet för mycket. Försök att göra innehållet enkelt och attraktivt där det är produkten som är i fokus. Ett bra exempel är att ha produktbilden mot en vit bakgrund för att förbättra produktbilden.
+- **Enkelt innehåll** - Förenkla inte innehållet för mycket. Försök att göra innehållet enkelt och attraktivt där det är produkten som är i fokus. Ett bra exempel är att ha produktbilden mot en vit bakgrund för att förbättra produktbilden.
 
-- **Real product image**- När en kund köper en produkt online förväntar de sig att se produkten som den är på webbplatsen. Undvik att använda filter eller förbättra bilden för att ändra hur den ser ut. Det är viktigt att vara transparent med kunden, annars kan ni få hög avkastning.
+- **Reell produktbild** - När en kund köper en produkt online förväntar de sig att se produkten som den är på webbplatsen. Undvik att använda filter eller förbättra bilden för att ändra hur den ser ut. Det är viktigt att vara transparent med kunden, annars kan ni få hög avkastning.
 
 >[!TIP]
 >

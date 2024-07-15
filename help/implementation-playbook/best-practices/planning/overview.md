@@ -105,11 +105,11 @@ Följande avsnitt innehåller information om god praxis för planeringsfasen.
 | Bästa praxis | Beskrivning |
 |---------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
 | [Kategorikonfiguration](catalog-management.md#category-limits) | Konfigurera produktkategorier för optimala prestanda. |
-| [&#x200B; för produktkonfiguration](catalog-management.md#product-sku-limits) | Konfigurera SKU:er för optimala prestanda. |
+| [Produktkonfiguration &#x200B;](catalog-management.md#product-sku-limits) | Konfigurera SKU:er för optimala prestanda. |
 | [Produktvariantkonfiguration](catalog-management.md#product-variations) | Konfigurera produktvariationer för optimala prestanda. |
 | [Konfiguration av produktalternativ](catalog-management.md#product-options) | Konfigurera produktalternativ för optimala prestanda. |
-| [&#x200B; för produktattribut](catalog-management.md#product-attributes) | Konfigurera produktattribut för optimala prestanda. |
-| [Sidnumreringskonfiguration för produktlistor](catalog-management.md#product-listing-pagination) | Konfigurera sidnumrering i produktlistor för optimala prestanda. |
+| [Konfigurationen av produktattribut &#x200B;](catalog-management.md#product-attributes) | Konfigurera produktattribut för optimala prestanda. |
+| [Sidbrytningskonfiguration för produktlistor](catalog-management.md#product-listing-pagination) | Konfigurera sidnumrering i produktlistor för optimala prestanda. |
 
 ## Tillägg
 
@@ -121,12 +121,12 @@ Följande avsnitt innehåller information om god praxis för planeringsfasen.
 
 | Bästa praxis | Beskrivning |
 |--------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| [Eskaleringar av partners](partner-escalation.md) | Förbered dig för att eskalera ett partnerproblem med ett Adobe-kontoteam eller lär dig hur du undviker eskalering. |
+| [Partnereskaleringar](partner-escalation.md) | Förbered dig för att eskalera ett partnerproblem med ett Adobe-kontoteam eller lär dig hur du undviker eskalering. |
 | [Betalningslagringsbearbetning](payment-processing-storage.md) | Bearbeta och lagra betalningsinformation på ett säkert sätt. |
 
 ## Försäljning och marknadsföring
 
 | Bästa praxis | Beskrivning |
 |------------------------------------------------------------|--------------------------------------------------------------|
-| [Gränser för produktvarukorgar](catalog-management.md#cart-limits) | Hantera kundvagnsbegränsningar för optimala prestanda. |
-| [Konfigurera kampanjer](catalog-management.md#promotions) | Konfigurera försäljning och kampanjer för artiklar i en kundvagn. |
+| [Begränsningar för produktvarukorgen](catalog-management.md#cart-limits) | Hantera kundvagnsbegränsningar för optimala prestanda. |
+| [Konfigurerar kampanjer](catalog-management.md#promotions) | Konfigurera försäljning och kampanjer för artiklar i en kundvagn. |

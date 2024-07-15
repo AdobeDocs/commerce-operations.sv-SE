@@ -1,15 +1,15 @@
 ---
-title: Handelsstrategi
+title: Commerce Strategy
 description: Lås upp kärnfunktioner för e-handel med vårt föreslagna strategiska ramverk.
 exl-id: 0efb424b-9026-439d-a50c-d2d935c07c8c
 source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
-source-wordcount: '350'
+source-wordcount: '347'
 ht-degree: 0%
 
 ---
 
-# Handelsstrategi
+# Commerce strategi
 
 Den digitala handeln är en snabbt föränderlig kraft som utvecklas snabbt varje år. Även om detta kan vara spännande för individer, medför det också många utmaningar för organisationer som försöker navigera i det land som är e-handel.
 
@@ -79,4 +79,4 @@ Följande lista innehåller viktiga mål att tänka på när du planerar en digi
 
 I följande diagram finns ett förslag på en strategi för e-handel:
 
-![Ramdiagram för handelsstrategi](../../assets/playbooks/commerce-strategy-framework.png)
+![Commerce strategiramverk](../../assets/playbooks/commerce-strategy-framework.png)

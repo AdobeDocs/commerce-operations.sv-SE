@@ -11,31 +11,31 @@ ht-degree: 0%
 
 # Snabbstart av lokal installation
 
-Instruktionerna på den här sidan beskriver hur du installerar Adobe Commerce på [värdbaserad](../implementation-playbook/infrastructure/self-hosting/overview.md) infrastruktur. Vägledning om hur du uppgraderar en befintlig installation finns i [_Uppgraderingshandbok_](../upgrade/overview.md).
+Instruktionerna på den här sidan beskriver hur du installerar Adobe Commerce på [en självvärdbaserad](../implementation-playbook/infrastructure/self-hosting/overview.md) infrastruktur. Mer information om hur du uppgraderar en befintlig installation finns i [_uppgraderingshandboken_](../upgrade/overview.md).
 
-Adobe använder [Disposition](https://getcomposer.org/) för att hantera Adobe Commerce-komponenter och deras beroenden. Att använda Composer för att hämta Adobe Commerce-metapaketet ger följande fördelar:
+Adobe använder [Composer](https://getcomposer.org/) för att hantera Adobe Commerce-komponenter och deras beroenden. Att använda Composer för att hämta Adobe Commerce-metapaketet ger följande fördelar:
 
 - Återanvänd bibliotek från tredje part utan att paketera dem med källkod
 - Minska antalet tilläggskonflikter och kompatibilitetsproblem genom att använda en komponentbaserad arkitektur med robust beroendehantering
-- Anta till [PHP-Framework Interoperability Group (FIG)](https://www.php-fig.org/) standarder
+- Ansluta till standarden [PHP-Framework Interoperability Group (FIG)](https://www.php-fig.org/)
 - Paketera Magento Open Source med andra komponenter
 - Använda Adobe Commerce i produktionsmiljö
 
 >[!NOTE]
 >
->Utvecklare som bidrar till Magento Open Source bör använda [Git-baserad](https://developer.adobe.com/commerce/contributor/guides/install/) installationsmetod.
+>Utvecklare som bidrar till Magento Open Source bör använda installationsmetoden [git-baserad](https://developer.adobe.com/commerce/contributor/guides/install/) .
 
 ## Förutsättningar
 
 Innan du fortsätter måste du göra följande:
 
-- Slutför alla [nödvändiga uppgifter](system-requirements.md).
+- Slutför alla [nödvändiga aktiviteter](system-requirements.md).
 - [Installera disposition](https://getcomposer.org/download/).
 - Hämta [autentiseringsnycklar](prerequisites/authentication-keys.md) till Adobe Commerce Composer-databasen.
 
 ## Logga in som ägare av filsystemet
 
-Läs mer om ägarskap, behörigheter och filsystemets ägare i [Översikt över ägarskap och behörigheter](prerequisites/file-system/overview.md).
+Läs mer om ägarskap, behörigheter och filsystemets ägare i [Översikt över ägarskap och behörigheter ](prerequisites/file-system/overview.md).
 
 Så här byter du till filsystemets ägare:
 
@@ -53,9 +53,9 @@ Så här byter du till filsystemets ägare:
    sudo -u <file system owner>  <command>
    ```
 
-1. Om du vill köra CLI-kommandon från valfri katalog lägger du till `<app_root>/bin` till ditt system `PATH`.
+1. Om du vill köra CLI-kommandon från en katalog lägger du till `<app_root>/bin` i systemet `PATH`.
 
-   Eftersom skal har olika syntaxer bör du använda en referens som [unix.stackexchange.com](https://unix.stackexchange.com/questions/117467/how-to-permanently-set-environmental-variables).
+   Eftersom skal har olika syntaxer bör du läsa en referens som [unix.stackexchange.com](https://unix.stackexchange.com/questions/117467/how-to-permanently-set-environmental-variables).
 
    Exempel på basgränssnitt för CentOS:
 
@@ -67,13 +67,13 @@ Så här byter du till filsystemets ägare:
 
    - `cd <app_root>/bin` och kör dem som `./magento <command name>`
    - `app_root>/bin/magento <command name>`
-   - `<app_root>` är en underkatalog till webbserverns dokument
+   - `<app_root>` är en underkatalog till webbserverns docroot
 
 ## Hämta metapackage
 
 Så här hämtar du Adobe Commerce metapaket:
 
-1. Logga in på programservern som, eller växla till [ägare av filsystem](prerequisites/file-system/overview.md).
+1. Logga in på programservern som, eller växla till, ägare av [filsystemet](prerequisites/file-system/overview.md).
 1. Byt till webbserverns dokumentkatalog eller en katalog som du har konfigurerat som ett virtuellt värddokument.
 1. Skapa ett Composer-projekt med ett Commerce-metapaket.
 
@@ -93,11 +93,11 @@ Så här hämtar du Adobe Commerce metapaket:
 
    >[!NOTE]
    >
-   > När du använder en disposition `auth.json` fil- eller miljövariabel uppmanas du inte att ange dina autentiseringsnycklar.
+   > När du använder en Composer `auth.json`-fil eller miljövariabel uppmanas du inte att ange dina autentiseringsnycklar.
 
-   Om du stöter på fel, till exempel `Could not find package...` eller `...no matching package found`kontrollerar du att det inte finns några stavfel i kommandot. Om du fortfarande råkar ut för fel kanske du inte har behörighet att ladda ned Adobe Commerce. Kontakt [Adobe Commerce Support](https://support.magento.com/hc/en-us) om du behöver hjälp.
+   Om du stöter på fel, till exempel `Could not find package...` eller `...no matching package found`, kontrollerar du att det inte finns några stavfel i kommandot. Om du fortfarande råkar ut för fel kanske du inte har behörighet att ladda ned Adobe Commerce. Kontakta [Adobe Commerce Support](https://support.magento.com/hc/en-us) om du behöver hjälp.
 
-   Se [Felsökning](https://support.magento.com/hc/en-us/articles/360033818091) om du vill ha hjälp med fler fel.
+   Se [Felsökning](https://support.magento.com/hc/en-us/articles/360033818091) om du behöver hjälp med fler fel.
 
 ### Exempel - Mindre version
 
@@ -109,7 +109,7 @@ composer create-project --repository-url=https://repo.magento.com/ magento/proje
 
 ### Exempel - Kvalitetskorrigering
 
-Patchar för kvalitet innehåller i första hand funktioner _och_ säkerhetskorrigeringar. De kan dock ibland även innehålla nya bakåtkompatibla funktioner. Använd Composer för att hämta en kvalitetskorrigering. Om du till exempel vill ange metapaketet för Adobe Commerce 2.4.6:
+Kvalitetsuppdateringar innehåller i första hand funktionella _- och_-säkerhetskorrigeringar. De kan dock ibland även innehålla nya bakåtkompatibla funktioner. Använd Composer för att hämta en kvalitetskorrigering. Om du till exempel vill ange metapaketet för Adobe Commerce 2.4.6:
 
 ```bash
 composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.4.6 <install-directory-name>
@@ -119,7 +119,7 @@ composer create-project --repository-url=https://repo.magento.com/ magento/proje
 
 Säkerhetsuppdateringar innehåller endast säkerhetskorrigeringar. De är utformade för att göra uppgraderingsprocessen snabbare och enklare.
 
-Säkerhetsuppdateringar använder namnkonventionen för Composer `2.4.6-px`. Använd Composer för att ange en korrigering. Om du till exempel vill hämta metapaketet Adobe Commerce 2.4.6-p1:
+Säkerhetsuppdateringar använder Composer-namnkonventionen `2.4.6-px`. Använd Composer för att ange en korrigering. Om du till exempel vill hämta metapaketet Adobe Commerce 2.4.6-p1:
 
 ```bash
 composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=2.4.6-p1 <install-directory-name>
@@ -141,7 +141,7 @@ chmod u+x bin/magento
 
 Du måste använda kommandoraden för att installera Adobe Commerce.
 
-I det här exemplet antas att installationskatalogen har ett namn `magento2ee`, `db-host` finns på samma dator (`localhost`) och att `db-name`, `db-user`och `db-password` är alla `magento`:
+I det här exemplet antas att installationskatalogen har namnet `magento2ee`, att `db-host` finns på samma dator (`localhost`) och att `db-name`, `db-user` och `db-password` alla är `magento`:
 
 ```bash
 bin/magento setup:install \
@@ -168,11 +168,11 @@ bin/magento setup:install \
 
 >[!TIP]
 >
->Du kan anpassa Admin URI med `--backend-frontname` alternativ. Adobe rekommenderar dock att du utelämnar det här alternativet och låter installationskommandot automatiskt generera en slumpmässig URI. En slumpmässig URI är svårare för hackare eller skadlig programvara att utnyttja. URI:n visas i konsolen när installationen är klar.
+>Du kan anpassa Admin URI med alternativet `--backend-frontname`. Adobe rekommenderar dock att du utelämnar det här alternativet och låter installationskommandot automatiskt generera en slumpmässig URI. En slumpmässig URI är svårare för hackare eller skadlig programvara att utnyttja. URI:n visas i konsolen när installationen är klar.
 
 >[!TIP]
 >
->En fullständig beskrivning av CLI-installationsalternativen finns på [Installera programmet från kommandoraden](advanced.md).
+>En fullständig beskrivning av CLI-installationsalternativen finns i [Installera programmet från kommandoraden](advanced.md).
 
 ## Sammanfattning av kommandon
 
@@ -212,7 +212,7 @@ Följande tabell sammanfattar de tillgängliga kommandona. Kommandon visas endas
 | `magento setup:db-schema:upgrade` | Uppdaterar databasschemat. | Distributionskonfiguration |
 | `magento setup:db-data:upgrade` | Uppdaterar databasdata. | Distributionskonfiguration |
 | `magento setup:db:status` | Kontrollerar om databasen är uppdaterad med koden. | Distributionskonfiguration |
-| `magento admin:user:create` | Skapar en administratör. | Du kan skapa användare för följande:<br><br>Distributionskonfiguration<br><br>Aktivera minst `Magento_User` och `Magento_Authorization` moduler<br><br>Databas (enklaste sättet är att använda `bin/magento setup:upgrade`) |
+| `magento admin:user:create` | Skapar en administratör. | Du kan skapa användare för följande:<br><br>Distributionskonfiguration<br><br>Aktivera minst databasen `Magento_User` och `Magento_Authorization` modules<br><br>(enklaste sättet är att använda `bin/magento setup:upgrade`) |
 | `magento list` | Visar alla tillgängliga kommandon. | Ingen |
 | `magento help` | Tillhandahåller hjälp för det angivna kommandot. | Ingen |
 
@@ -222,14 +222,14 @@ Följande argument är gemensamma för alla kommandon. Dessa kommandon kan köra
 
 | Lång version | Kort version | Betydelse |
 |--- |--- |--- |
-| `--help` | `-h` | Få hjälp för alla kommandon. Till exempel: `./magento help setup:install` eller `./magento help setup:config:set`. |
+| `--help` | `-h` | Få hjälp för alla kommandon. Till exempel `./magento help setup:install` eller `./magento help setup:config:set`. |
 | `--quiet` | `-q` | Tyst läge, inga utdata. |
 | `--no-interaction` | `-n` | Inga interaktiva frågor. |
-| `--verbose=1,2,3` | `-v, -vv, -vvv` | Detaljnivå. Till exempel: `--verbose=3` eller `-vvv` I visas felsökningsintensitet, som är den mest utförliga utdata. Standard är `--verbose=1` eller `-v`. |
+| `--verbose=1,2,3` | `-v, -vv, -vvv` | Detaljnivå. `--verbose=3` eller `-vvv` visar till exempel felsökningsintensiteten, som är den mest detaljerade utdata. Standardvärdet är `--verbose=1` eller `-v`. |
 | `--version` | `-V` | Visa den här programversionen |
 | `--ansi` | n/a | Framtvinga ANSI-utdata |
 | `--no-ansi` | n/a | Inaktivera ANSI-utdata |
 
 >[!NOTE]
 >
->Grattis! Du har slutfört snabbinstallationen. Behöver du mer avancerad hjälp? Kolla in [Avancerad installation](advanced.md) guide.
+>Grattis! Du har slutfört snabbinstallationen. Behöver du mer avancerad hjälp? Ta en titt på guiden [Avancerad installation](advanced.md).

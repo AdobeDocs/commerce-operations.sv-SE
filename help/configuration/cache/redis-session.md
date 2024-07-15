@@ -5,7 +5,7 @@ feature: Configuration, Cache
 exl-id: f93f500d-65b0-4788-96ab-f1c3d2d40a38
 source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '712'
 ht-degree: 1%
 
 ---
@@ -14,12 +14,12 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Du måste [installera Redis](config-redis.md#install-redis) innan du fortsätter.
+>Du måste [installera Redis](config-redis.md#install-redis) innan du kan fortsätta.
 
 
-Commerce har nu kommandoradsalternativ för att konfigurera Redis-sessionslagring. I tidigare versioner redigerade du `<Commerce install dir>app/etc/env.php` -fil. Kommandoraden innehåller validering och är den rekommenderade konfigurationsmetoden, men du kan fortfarande redigera `env.php` -fil.
+Commerce har nu kommandoradsalternativ för att konfigurera Redis-sessionslagring. I tidigare versioner redigerade du filen `<Commerce install dir>app/etc/env.php`. Kommandoraden innehåller validering och är den rekommenderade konfigurationsmetoden, men du kan fortfarande redigera filen `env.php`.
 
-Kör `setup:config:set` och ange Redis-specifika parametrar.
+Kör kommandot `setup:config:set` och ange Redis-specifika parametrar.
 
 ```bash
 bin/magento setup:config:set --session-save=redis --session-save-redis-<parameter_name>=<parameter_value>...
@@ -29,17 +29,17 @@ där
 
 `--session-save=redis` aktiverar Redis-sessionslagring. Om den här funktionen redan har aktiverats utelämnar du den här parametern.
 
-`--session-save-redis-<parameter_name>=<parameter_value>` är en lista med parameter-/värdepar som konfigurerar sessionslagring:
+`--session-save-redis-<parameter_name>=<parameter_value>` är en lista över parameter-/värdepar som konfigurerar sessionslagring:
 
 | Kommandoradsparameter | Parameternamn | Betydelse | Standardvärde |
 |--- |--- |--- |--- |
 | session-save-redis-host | värd | Fullständigt kvalificerat värdnamn, IP-adress eller absolut sökväg om UNIX-socketar används. | localhost |
 | session-save-redis-port | port | Redis-serverns avlyssningsport. | 6379 |
 | session-save-redis-password | lösenord | Anger ett lösenord om Redis-servern kräver autentisering. | tom |
-| session-save-redis-timeout | timeout | Anslutningens timeout, i sekunder. | 2.5 |
+| session-save-redis-timeout | timeout | Anslutningens timeout, i sekunder. | 2,5 |
 | session-save-redis-persistent-id | persistent_identifier | Unik sträng för att aktivera beständiga anslutningar (till exempel sess-db0).<br>[Kända fel med phpredis och php-fpm](https://github.com/phpredis/phpredis/issues/70). |
-| session-save-redis-db | databas | Unikt Redis-databasnummer som rekommenderas för att skydda mot dataförlust.<br><br>**Viktigt**: Om du använder Redis för mer än en typ av cachning måste databasnumren vara olika. Vi rekommenderar att du tilldelar standardvärdet för cachningsdatabasen till 0, sidcachningsdatabasnumret till 1 och sessionslagringsdatabasnumret till 2. | 0 |
-| session-save-redis-compression-threshold | compression_threshold | Ange 0 om du vill inaktivera komprimering (rekommenderas när `suhosin.session.encrypt = On`).<br>[Känt problem med strängar över 64 kB](https://github.com/colinmollenhour/Cm_Cache_Backend_Redis/issues/18). | 2048 |
+| session-save-redis-db | databas | Unikt Redis-databasnummer som rekommenderas för att skydda mot dataförlust.<br><br>**Viktigt**: Om du använder Redis för mer än en typ av cachelagring måste databasnumren vara olika. Vi rekommenderar att du tilldelar standardvärdet för cachningsdatabasen till 0, sidcachningsdatabasnumret till 1 och sessionslagringsdatabasnumret till 2. | 0 |
+| session-save-redis-compression-threshold | compression_threshold | Ange 0 om du vill inaktivera komprimering (rekommenderas när `suhosin.session.encrypt = On`).<br>[Känt fel med strängar som är större än 64 kB](https://github.com/colinmollenhour/Cm_Cache_Backend_Redis/issues/18). | 2048 |
 | session-save-redis-compression-lib | compression_library | Alternativ: gzip, lzf, lz4 eller snappy. | gzip |
 | session-save-redis-log-level | log_level | Ange något av följande, i ordning från minst utförlig till mest utförlig:<ul><li>0 (kris: endast de allvarligaste felen)<li>1 (varning: omedelbar åtgärd krävs)<li>2 (kritiskt: programkomponenten är inte tillgänglig)<li>3 (fel: körningsfel, inte kritiska men måste övervakas)<li>4 (varning: ytterligare information rekommenderas)<li>5 (observera: normalt men signifikant tillstånd)<li>6 (info: informationsmeddelanden)<li>7 (debug: the most information for development or testing only)</ul> | 1 |
 | session-save-redis-max-concurrency | max_concurrency | Maximalt antal processer som kan vänta på ett lås i en session. För stora produktionskluster ska detta anges till minst 10 % av antalet PHP-processer. | 6 |
@@ -58,7 +58,7 @@ där
 
 ## Exempel
 
-I följande exempel ställs Redis in som sessionsdatalager och värden ställs in på `127.0.0.1`, ställer in loggnivån på 4 och ställer in databasnumret på 2. Alla andra parametrar ställs in på standardvärdet.
+I följande exempel ställs Redis in som sessionsdatalager, värden ställs in på `127.0.0.1`, loggnivån ställs in på 4 och databasnumret ställs in på 2. Alla andra parametrar ställs in på standardvärdet.
 
 ```bash
 bin/magento setup:config:set --session-save=redis --session-save-redis-host=127.0.0.1 --session-save-redis-log-level=4 --session-save-redis-db=2
@@ -66,7 +66,7 @@ bin/magento setup:config:set --session-save=redis --session-save-redis-host=127.
 
 ### Resultat
 
-Commerce lägger till rader som liknar följande: `<magento_root>app/etc/env.php`:
+Commerce lägger till rader som liknar följande i `<magento_root>app/etc/env.php`:
 
 ```php
     'session' =>
@@ -127,10 +127,10 @@ Exempel på sessionslagringsutdata:
 redis-cli ping
 ```
 
-`PONG` bör vara svaret.
+`PONG` ska vara svaret.
 
 Om båda kommandona lyckades är Redis korrekt konfigurerat.
 
 ### Inspektera komprimerade data
 
-Om du vill inspektera komprimerade sessionsdata och sidcachen, [RESP.app](https://flathub.org/apps/details/app.resp.RESP) har stöd för automatisk dekomprimering av Commerce 2 Session och Page Cache och visar PHP-sessionsdata i en läsbar form.
+Om du vill inspektera komprimerade sessionsdata och sidcache stöder [RESP.app](https://flathub.org/apps/details/app.resp.RESP) automatisk dekomprimering av Commerce 2 Session och Page Cache och visar PHP-sessionsdata i en läsbar form.

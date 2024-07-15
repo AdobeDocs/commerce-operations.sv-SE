@@ -5,7 +5,7 @@ exl-id: b600b0e3-c6fd-4b86-ad2a-a445e599f1bd
 feature: Services
 source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
-source-wordcount: '1108'
+source-wordcount: '1107'
 ht-degree: 0%
 
 ---
@@ -25,9 +25,9 @@ Adobe Managed Services tillhandahåller värdbaserade och hanterade program och 
 
 Adobe Managed Services ger viktiga fördelar jämfört med lokala och icke-hanterade molnimplementeringar, bland annat:
 
-- **Förbättrade servicenivåmål**- Snabbare svarstider än Adobe Commerce standardsupport.
-- **Förbättrade servicenivåavtal (SLA)**- 99,9 % av de program som Adobe Commerce regelbundet använder i molninfrastruktur ligger steget före infrastrukturnivån på 99,99 %.
-- **Utsedd molnexpertis**—Managed Services förser kunderna med en utsedd Customer Success Engineer (CSE) som fungerar som expert på program- och molninfrastruktur. CSE samarbetar med kunder och deras partner för att ge dem bästa praxis och vägledning som snabbar upp time-to-market, inklusive:
+- **Förbättrade servicenivåmål (SLT)** - Snabbare svarstider än Adobe Commerce standardsupport.
+- **Förbättrade servicenivåavtal (SLA)** - 99,9 % programnivå som vanliga Adobe Commerce på molninfrastrukturkunder får utöver 99,99 % infrastrukturnivå.
+- **Utsedd molnexpertis** - Managed Services förser kunderna med en utsedd Customer Success Engineer (CSE) som fungerar som expert på program- och molninfrastruktur. CSE samarbetar med kunder och deras partner för att ge dem bästa praxis och vägledning som snabbar upp time-to-market, inklusive:
    - Guide och support via introduktionsprocessen
    - Hantera etablering och plattformskonfiguration
    - Rådgivning om arkitektoniska principer för integreringar och anpassningar
@@ -37,7 +37,7 @@ Adobe Managed Services ger viktiga fördelar jämfört med lokala och icke-hante
 
 Se följande bild för en mer detaljerad jämförelse av fördelarna med Managed Services:
 
-![Infografik som visar en jämförelse mellan Adobe Managed Services och andra implementeringsalternativ för Adobe Commerce](../../assets/playbooks/managed-services-compare.png)
+![Infografik som visar en jämförelse mellan Adobe Managed Services och andra Adobe Commerce-implementeringsalternativ ](../../assets/playbooks/managed-services-compare.png)
 
 ## Roller och ansvarsområden
 
@@ -372,7 +372,7 @@ Adobe tillhandahåller en uppsättning tjänster för tillhandahållande, utveck
 
 Adobe säkerhetsstack för Managed Services bygger säkerhet på alla nivåer med automatisering och konsekvens för att minska antalet fel. Utvecklings- och verksamhetsteamen ärver automatiskt säkerhetskontroller från olika nivåer i stacken.
 
-Plattformspartners, som Amazon Web Services och Microsoft Azure, säkerställer maximal säkerhetstäckning vid användning av plattformsanpassningar, medan Adobe Managed Services-teamet tillhandahåller centrala säkerhetstjänster som regelefterlevnad, loggning, autentisering, skanning och övervakning samt serversäkerhet och säker programkonfiguration. Se [Adobe Commerce Security](https://business.adobe.com/products/magento/secure-ecommerce.html) för mer information.
+Plattformspartners, som Amazon Web Services och Microsoft Azure, säkerställer maximal säkerhetstäckning vid användning av plattformsanpassningar, medan Adobe Managed Services-teamet tillhandahåller centrala säkerhetstjänster som regelefterlevnad, loggning, autentisering, skanning och övervakning samt serversäkerhet och säker programkonfiguration. Mer information finns i [Adobe Commerce Security](https://business.adobe.com/products/magento/secure-ecommerce.html).
 
 I följande diagram visas säkerhetsstacken Adobe Managed Services:
 
@@ -402,29 +402,29 @@ Adobe tillhandahåller en uppsättning tjänster för provisionering, utveckling
     <td>Skapa uppgraderingsprojektplan</td>
     <td>Ägare</td>
     <td>Medarbetare</td>
-    <td>Medarbetare<br />CSE tillhandahåller exempel på uppgraderingsmallar och uppgraderingsplaner; ger råd och tips om god praxis.</td>
+    <td>Contributor<br />CSE tillhandahåller exempel på uppgraderingsmallar och uppgraderingsplaner. Här finns råd och tips om god praxis.</td>
   </tr>
   <tr>
     <td>Identifiera nödvändiga infrastrukturändringar</td>
     <td></td>
     <td>Medarbetare</td>
-    <td>Ägare<br />CSE granskar staging- och produktionsinfrastruktur för att säkerställa en korrekt storlek.</td>
+    <td>Ägare<br />CSE granskar staging- och produktionsinfrastruktur för att säkerställa korrekt storlek.</td>
   </tr>
   <tr>
-    <td>Utvärdera komplexiteten i uppgraderingen<br />Identifiera och dokumentera paket, utgåvor och korrigeringar samt anpassade moduler från tredje part</td>
+    <td>Utvärdera uppgraderingskomplexitet<br />Identifiera och dokumentera paket, utgåvor och korrigeringar samt anpassade moduler från tredje part och</td>
     <td>Medarbetare</td>
     <td>Ägare</td>
-    <td>Medarbetare<br />CSE tillhandahåller rapporter och rekommendationer för verktyget Kompatibilitet för uppgradering.</td>
+    <td>Contributor<br />CSE tillhandahåller rapporter och rekommendationer för verktyget Kompatibilitet för uppgradering.</td>
   </tr>
   <tr>
     <td rowspan="3">Kör uppgradering</td>
-    <td>Upgrade Infrastructure Services<br />[MariaDB, Redis, Open Search och Rabbit MQ] (Staging and Production)</td>
+    <td>Uppgradera infrastrukturtjänster <br />[MariaDB, Redis, Open Search och Rabbit MQ] (mellanlagring och produktion)</td>
     <td></td>
     <td></td>
-    <td>Ägare<br />CSE koordinerar uppgraderingar av infrastrukturtjänster.<br />CSE planerar konferensmöte för uppgraderingar.<br />CSE hjälper till med datamigrering från produktion till mellanlagring.</td>
+    <td>Ägare<br />CSE koordinerar uppgraderingar av infrastrukturtjänster.<br />CSE schemalägger konferenshändelse för uppgraderingar.<br />CSE hjälper till med datamigrering från produktion till mellanlagring.</td>
   </tr>
   <tr>
-    <td>Uppdatera bas och anpassningar för Commerce-kod; kodomkompilering och kodomfaktorisering</td>
+    <td>Uppdatera Commerce-kodbas och -anpassningar; kodomkompilering och kodomfaktorisering</td>
     <td>Medarbetare</td>
     <td>Ägare</td>
     <td></td>
@@ -433,29 +433,29 @@ Adobe tillhandahåller en uppsättning tjänster för provisionering, utveckling
     <td>Genomför efteruppgraderingskontroller och felsökning</td>
     <td></td>
     <td>Ägare</td>
-    <td>Medarbetare<br />CSE kör en runbook efter uppgraderingen för att upptäcka och åtgärda problem med uppgraderingen.</td>
+    <td>Contributor<br />CSE kör en runbook efter uppgraderingen för att identifiera och åtgärda problem med uppgraderingen.</td>
   </tr>
   <tr>
     <td rowspan="3">UAT och Launch</td>
     <td>Kör prestanda- och säkerhetstester</td>
     <td>Medarbetare</td>
     <td>Ägare</td>
-    <td>Medarbetare<br />CSE underlättar lasttestning genom att övervaka prestanda för applikationer och infrastruktur.<br />CSE hjälper till att konfigurera Commerce Security Scan Tool.</td>
+    <td>Contributor<br />CSE hjälper till med inläsningstestning genom att övervaka prestanda för program och infrastruktur.<br />CSE är till hjälp när Commerce säkerhetssökningsverktyg konfigureras.</td>
   </tr>
   <tr>
     <td>Testning av användargodkännande vid mellanlagring</td>
     <td>Ägare</td>
     <td>Medarbetare</td>
-    <td>Medarbetare<br />CSE validerar att programmet och infrastrukturen fungerar korrekt efter uppgraderingen.</td>
+    <td>Contributor<br />CSE verifierar programmet och infrastrukturen fungerar korrekt efter uppgraderingen.</td>
   </tr>
   <tr>
     <td>Starta i produktion</td>
     <td>Medarbetare</td>
     <td>Ägare</td>
-    <td>Medarbetare<br />CSE schemalägger för konferensmöte.</td>
+    <td>Contributor<br />CSE schemalägger konferensmöte.</td>
   </tr>
   <tr>
-    <td>Efter start</td>
+    <td>Post-Launch</td>
     <td></td>
     <td>Medarbetare</td>
     <td>Medarbetare</td>

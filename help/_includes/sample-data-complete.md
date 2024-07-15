@@ -7,7 +7,7 @@ ht-degree: 0%
 ---
 # Slutför installationen av exempeldata
 
-När du har hämtat exempeldatapaketen loggar du in på programservern som, eller växlar till, ägaren av filsystemet och anger följande kommando i `<app_root>` katalog:
+När du har hämtat exempeldatapaketen loggar du in på programservern som, eller växlar till, ägaren av filsystemet och anger följande kommando i katalogen `<app_root>`:
 
 ```bash
 bin/magento setup:upgrade

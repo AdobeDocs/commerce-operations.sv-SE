@@ -6,7 +6,7 @@ feature: Best Practices
 exl-id: ada8b987-97ed-4232-9e1b-7e0a791a0807
 source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '197'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Adobe Commerce i molninfrastruktur
 
 ## Optimera och komprimera bilder
 
-Innan du överför bilder till dina Commerce-sajter måste du optimera och komprimera dem för att balansera prestanda med visningskvalitet. Detta bidrar till att öka utrymmet och minska sidinläsningstiden.
+Innan du överför bilder till dina Commerce-sajter bör du optimera och komprimera dem för att balansera prestanda med visningskvalitet. Detta bidrar till att öka utrymmet och minska sidinläsningstiden.
 
 - PNG-formatet ger bilder i mindre storlek för bilder med stora enfärgade områden.
 
@@ -32,7 +32,7 @@ Innan du överför bilder till dina Commerce-sajter måste du optimera och kompr
 
 ## Aktivera och konfigurera snabb bildoptimering
 
-När du har konfigurerat snabbtjänsten för ditt Adobe Commerce Cloud-projekt kan du gå till [Snabb bildoptimering](https://devdocs.magento.com/cloud/cdn/fastly-image-optimization.html) för instruktioner om hur du aktiverar och konfigurerar bildoptimering.
+När du har konfigurerat tjänsten Snabbt för ditt Adobe Commerce Cloud-projekt kan du läsa [Snabbt bildoptimering](https://devdocs.magento.com/cloud/cdn/fastly-image-optimization.html) för instruktioner om hur du aktiverar och konfigurerar bildoptimering.
 
 ## Ytterligare information
 

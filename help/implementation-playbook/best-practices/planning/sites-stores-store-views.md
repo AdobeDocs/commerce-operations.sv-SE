@@ -6,7 +6,7 @@ feature: Best Practices
 exl-id: 3ea0c6c5-15a9-4e77-b4d0-ce15721c7167
 source-git-commit: a81e88a4293880ae90cd531ce60c5a2b177188f2
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
@@ -34,12 +34,12 @@ Om ditt projekt kräver många webbplatser, butiker eller butiksvyer kan du för
 
 Webbplatser och butiker är multipler för katalogdata, så om du har många webbplatser och butiker kan det påverka webbplatsens prestanda negativt på följande sätt:
 
-- Större indextabeller ökar den tid som krävs för att slutföra indexeringen [Prisindex].
+- Större indextabeller ökar den tid som krävs för att slutföra indexeringsåtgärderna [Prisindex].
 - Ökad tid för hämtning av programkonfiguration försämrar svarstiden för butiker för icke-cachelagrade katalogsidor.
 - Avsevärt längre tid än vad som krävs för att slutföra Spara-åtgärder i Admin eftersom data sparas separat för varje webbplats.
 
 
 ## Ytterligare information
 
-- [Förstå webbplatser, butiker och butiksvyer](https://devdocs.magento.com/cloud/configure/configure-best-practices.html#sites)
+- [Om webbplatser, butiker och butiksvyer](https://devdocs.magento.com/cloud/configure/configure-best-practices.html#sites)
 - [Konfigurera flera webbplatser eller butiker](https://devdocs.magento.com/cloud/project/project-multi-sites.html)

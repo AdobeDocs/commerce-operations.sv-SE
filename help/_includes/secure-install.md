@@ -9,8 +9,8 @@ ht-degree: 0%
 
 Om du vill använda SSL (Secure Sockets Layer), som även kallas HTTPS, för både administratören och butiken, måste du ange alla följande parametrar:
 
-* `--use-secure`: Ange till `1`
-* `--base-url-secure`: Ange en säker URL (d.v.s. börja med `https://`)
-* `--use-secure-admin` Ange till `1`
+* `--use-secure`: Ange som `1`
+* `--base-url-secure`: Ange som en säker URL (d.v.s. från `https://`)
+* `--use-secure-admin` inställd på `1`
 
 Mer information om de här parametrarna finns senare i det här avsnittet.

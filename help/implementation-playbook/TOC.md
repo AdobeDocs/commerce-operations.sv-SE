@@ -13,7 +13,7 @@ ht-degree: 0%
 # Implementera spelningsbok {#implementation-playbook}
 
 - [Ökning](overview.md)
-- Handel {#intro}
+- Commerce {#intro}
    - [Om Adobe Commerce](intro/about-commerce.md)
    - [Principer för plattformsutveckling](intro/platform-development.md)
 - Projektomfång {#project-scope}
@@ -36,13 +36,13 @@ ht-degree: 0%
    - Global referensarkitektur {#global-reference-architecture}
       - [Ökning](architecture/global-reference/overview.md)
       - [Exempel](architecture/global-reference/examples.md)
-      - Utveckling av disposition {#composer}
+      - Composer-utveckling {#composer}
          - [Ökning](architecture/global-reference/composer/overview.md)
          - [Projektstruktur](architecture/global-reference/composer/project-structure.md)
          - [Tips och råd](architecture/global-reference/composer/tips-and-tricks.md)
-- Infrastruktur och driftsättning {#infrastructure}
+- Infrastruktur och distribution {#infrastructure}
    - [Ökning](infrastructure/overview.md)
-   - Självvärdande {#self-hosting}
+   - Självvärd {#self-hosting}
       - [Ökning](infrastructure/self-hosting/overview.md)
       - [Lokal infrastruktur](infrastructure/self-hosting/on-premises.md)
       - [Säkerhetskoncept](infrastructure/self-hosting/security-concepts.md)
@@ -62,13 +62,13 @@ ht-degree: 0%
    - [Ökning](launch/overview.md)
    - [Steg före start](launch/pre-launch-steps.md)
    - [Starta steg](launch/launch-steps.md)
-   - [Steg efter start](launch/post-launch-steps.md)
+   - [Steg för att starta Post](launch/post-launch-steps.md)
 - Underhåll och support {#maintenance}
    - [Ökning](maintenance/overview.md)
    - [Adobe Managed Services](maintenance/adobe-managed-services.md)
 - God praxis {#best-practices}
    - [Ökning](best-practices/phases.md)
-   - Planering {#planning}
+   - Planerar {#planning}
       - [Ökning](best-practices/planning/overview.md)
       - [Kataloghantering](best-practices/planning/catalog-management.md)
       - [Konfiguration av platser, butiker och butiksvy](best-practices/planning/sites-stores-store-views.md)
@@ -96,7 +96,7 @@ ht-degree: 0%
       - [Privata innehållsblock](best-practices/development/private-content-block-configuration.md)
       - [Statisk innehållsdistribution](best-practices/development/static-content-deployment.md)
       - [Ändra databastabeller](best-practices/development/modifying-core-and-third-party-tables.md)
-      - [Ändra kärnkod och tredjepartskod](best-practices/development/modifying-core-and-third-party-code.md)
+      - [Ändrar kärnkod och tredjepartskod](best-practices/development/modifying-core-and-third-party-code.md)
    - Starta {#launch}
       - [Ökning](best-practices/launch/overview.md)
       - [Konfigurera webbcrawler](best-practices/launch/robots-txt.md)
@@ -114,4 +114,4 @@ ht-degree: 0%
       - [Uppdatera tjänster](best-practices/maintenance/update-services.md)
       - [Checklista för uppgradering](best-practices/maintenance/upgrade-checklist.md)
       - [Krav för uppgradering av MariaDB](best-practices/maintenance/mariadb-upgrade.md)
-- [Återgå till bruksanvisningar](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
+- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

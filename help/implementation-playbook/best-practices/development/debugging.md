@@ -3,13 +3,13 @@ title: Bästa tillvägagångssätt vid felsökning
 description: Lär dig tekniker för att lösa vanliga Adobe Commerce-utvecklingsproblem.
 feature: Best Practices
 role: Developer
-source-git-commit: 291c3f5ea3c58678c502d34c2baee71519a5c6dc
+exl-id: 78fbea7b-28e8-4713-990d-b4cae159250c
+source-git-commit: 823498f041a6d12cfdedd6757499d62ac2aced3d
 workflow-type: tm+mt
-source-wordcount: '1143'
+source-wordcount: '1139'
 ht-degree: 0%
 
 ---
-
 
 # Bästa praxis för felsökning av Adobe Commerce
 
@@ -22,7 +22,7 @@ I det här avsnittet beskrivs de vanligaste problemen som kan uppstå under utve
 ### Cache
 
 - Töm cacheminnet innan ytterligare utredning
-- Tänk på APC-cachen, CDN, lack, genererad kod och `var/view_preprocessed` och `pub/static/` kataloger
+- Titta på APC-cachen, CDN, lack, genererad kod samt katalogerna `var/view_preprocessed` och `pub/static/`
 - Stoppa och starta om köhanterare när du har tömt cachen eller ändrat kod
 
 I följande kodexempel finns praktiska kommandon för hantering av cachen (kan inte köras i produktionsmiljöer):
@@ -96,7 +96,7 @@ bin/magento cache:flush
 
 ### Utvecklarläge
 
-Kontrollera att din lokala installation finns i `developer` läge.
+Kontrollera att din lokala installation är i läget `developer`.
 
 ### Ny modul
 
@@ -108,9 +108,9 @@ Om du har skapat en modul kan du söka efter följande problem:
   bin/magento module --enable Your_Module
   ```
 
-  Kontrollera `app/etc/config.php` för din nya modul.
+  Kontrollera filen `app/etc/config.php` för din nya modul.
 
-- Kontrollera fil- och katalogstrukturkapslingen. Exempel: är layoutfiler i `view/layout/` katalog i stället för `view/frontend/layout` katalog? Finns mallar i `view/frontend/template` katalog i stället för `view/frontend/templates` katalog?
+- Kontrollera fil- och katalogstrukturkapslingen. Finns till exempel layoutfiler i katalogen `view/layout/` i stället för i katalogen `view/frontend/layout`? Finns det mallar i katalogen `view/frontend/template` i stället för i katalogen `view/frontend/templates`?
 
 ## Felsökning: Halvdelning
 
@@ -118,9 +118,9 @@ Om de vanliga misstänkta inte erbjuder någon lösning på problemet är det sn
 
 Se följande diagram:
 
-![Vektorgrafik](../../../assets/playbooks/bisect.png)
+![Objektdiagram](../../../assets/playbooks/bisect.png)
 
-![Vektorgrafik](../../../assets/playbooks/bisect2.png)
+![Objektdiagram](../../../assets/playbooks/bisect2.png)
 
 Det finns flera sätt att se på hur man gör en beskärning, men Adobe rekommenderar att du följer den här ordningen:
 
@@ -132,12 +132,12 @@ Det finns flera sätt att se på hur man gör en beskärning, men Adobe rekommen
 
 Om problemet kanske inte är kodrelaterat bör du ta bort de stora delarna först. Några av de stora segment du bör tänka på är:
 
-- **Adobe Commerce Framework**—Är problemet relaterat till Adobe Commerce eller kan det vara relaterat till ett annat anslutet system?
-- **Server och klient**—Rensa webbläsarens cache och lagring. Är problemet löst? Det kan utesluta en serverrelaterad orsak. Finns problemet fortfarande? Du behöver inte slösa mer tid på webbläsarfelsökning.
-- **Session**—Uppstår problemet för alla användare? Annars kan problemet vara begränsat till sessions- eller webbläsarrelaterade ämnen.
-- **Cache**—Kommer inaktivering av alla cacheminnen att ändra någonting? I så fall kan du fokusera på cacherelaterade ämnen.
-- **Databas**—Inträffar problemet i alla miljöer där samma kod körs? Annars kan du leta efter problem med konfigurationen och andra databasrelaterade ämnen.
-- **Code**—Sök efter kodproblem om inget av ovanstående löser problemet.
+- **Adobe Commerce Framework** - Är problemet relaterat till Adobe Commerce eller kan det vara relaterat till ett annat anslutet system?
+- **Server och klient** - Rensa webbläsarens cache och lagring. Är problemet löst? Det kan utesluta en serverrelaterad orsak. Finns problemet fortfarande? Du behöver inte slösa mer tid på webbläsarfelsökning.
+- **Session** - uppstår problemet för alla användare? Annars kan problemet vara begränsat till sessions- eller webbläsarrelaterade ämnen.
+- **Cache** - Ändrar inaktivering av alla cacheminnen något? I så fall kan du fokusera på cacherelaterade ämnen.
+- **Databas** - inträffar problemet i alla miljöer där samma kod körs? Annars kan du leta efter problem med konfigurationen och andra databasrelaterade ämnen.
+- **Kod** - Sök efter kodproblem om inget av ovanstående åtgärdade problemet.
 
 ### Steg 2: Skeva efter implementering
 
@@ -148,7 +148,7 @@ Du kan ersätta veckor och dagar med implementeringar. Återställ till 100 impl
 ### Steg 3: Visa upp bilderna efter filer
 
 - Dela upp Adobe Commerce efter filtyp (kärna och icke-kärna). Inaktivera först alla kund- och marknadsplatsmoduler. Finns problemet fortfarande? Det är sannolikt ett icke-kärnrelaterat problem.
-- Aktivera (ungefär) hälften av modulerna igen i `app/etc/config.php` -fil. Var medveten om beroenden. Det är bäst att aktivera modulkluster med samma ämne samtidigt. Finns problemet fortfarande?
+- Aktivera (ungefär) hälften av modulerna igen i filen `app/etc/config.php`. Var medveten om beroenden. Det är bäst att aktivera modulkluster med samma ämne samtidigt. Finns problemet fortfarande?
 - Aktivera en fjärdedel av återstående moduler. Finns problemet fortfarande? Inaktivera hälften av det du aktiverat. Den här metoden kan hjälpa dig att isolera rotorsaken till en enda modul.
 
 ## Tidsbesparande funktioner
@@ -169,7 +169,7 @@ Ibland kan det vara ett enkelt steg att glömma bland all kod och allt tekniskt 
 
 ### Internetsökning
 
-Gör en Internetsökning med termer som är relaterade till problemet. Det kan bero på att någon annan redan har stött på samma problem. Sök i [Adobe Commerce GitHub-problem](https://github.com/magento/magento2/issues).
+Gör en Internetsökning med termer som är relaterade till problemet. Det kan bero på att någon annan redan har stött på samma problem. Sök igenom [Adobe Commerce GitHub-utgåvorna](https://github.com/magento/magento2/issues).
 
 ### Ta en paus
 
@@ -177,7 +177,7 @@ Om du tittar på ett problem för länge kan det vara svårt att hitta en lösni
 
 ## verktyg
 
-The n98 magerun CLI Tools ([https://github.com/netz98/n98-magerun2](https://github.com/netz98/n98-magerun2)) kan du arbeta med Adobe Commerce via kommandoraden. Speciellt följande kommandon:
+CLI-verktygen för n98-magerun ([https://github.com/netz98/n98-magerun2](https://github.com/netz98/n98-magerun2)) ger användbara funktioner för att arbeta med Adobe Commerce från kommandoraden. Speciellt följande kommandon:
 
 ```bash
 n98-magerun2.phar dev:console
@@ -191,7 +191,7 @@ n98-magerun2.phar index:trigger:recreate
 
 Följande avsnitt innehåller kodfragment som kan användas för att logga eller identifiera problem i Commerce-projekt.
 
-### Kontrollera om en XML-fil används i Commerce
+### Kontrollera om en XML-fil används av Commerce
 
 Lägg till ett syntaxfel i en XML-fil för att se om den används. Öppna en tagg och stäng den inte, till exempel:
 

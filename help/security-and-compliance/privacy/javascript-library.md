@@ -13,25 +13,25 @@ ht-degree: 0%
 
 # Sekretessbibliotek för JavaScript
 
-JavaScript-biblioteket för sekretess är en uppsättning verktyg som hjälper dig att skapa en process för åtkomst till och borttagning av privata data som samlats in av Adobe Commerce.
+JavaScript Sekretessbibliotek är en uppsättning verktyg som hjälper dig att skapa en process för att komma åt och ta bort privata data som samlats in av Adobe Commerce.
 
-Commerce dataspårningstjänster kan lagra privat information som är tillämplig på sekretessregler som [Allmänna dataskyddsförordningen (GDPR)](gdpr.md) och [California Consumer Privacy Act (CCPA)](ccpa.md).
+Commerce dataspårningstjänster kan lagra privat information som är tillämplig på sekretessbestämmelser, som [General Data Protection Regulation (GDPR)](gdpr.md) och [California Consumer Privacy Act (CCPA)](ccpa.md).
 
 Det här biblioteket innehåller en uppsättning funktioner för att skapa förfrågningar om sekretessdata och samla in deras svar. Använd det här biblioteket för att hämta och ta bort data som lagras i webbläsaren av Adobe Commerce dataspårningstjänst.
 
 >[!NOTE]
 >
->If [Begränsningsläge för cookie](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-cookie-law.html) är aktiverat samlar Commerce inte in beteendedata förrän kunden godkänner det. If [!UICONTROL **Begränsningsläge för cookie**] är inaktiverat samlar Commerce in beteendedata som standard.
+>Om [läget för cookie-begränsning](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-cookie-law.html) är aktiverat samlar Commerce inte in beteendedata förrän kunden godkänner det. Om [!UICONTROL **läget för cookie-begränsning**] är inaktiverat samlar Commerce in beteendedata som standard.
 
 ## Installation
 
-JavaScript-biblioteket för sekretess finns på följande CDN-plats: `commerce.adobe.net/magentoprivacy.js`
+Sekretessbiblioteket för JavaScript finns på följande CDN-plats: `commerce.adobe.net/magentoprivacy.js`
 
-När du har filen måste du lägga till den i en anpassad modul eller ett anpassat tema som är installerat i din Adobe Commerce-instans. Följ instruktionerna i [Använd anpassad JavaScript](https://developer.adobe.com/commerce/frontend-core/javascript/custom/) ämne som ska utföra den här uppgiften.
+När du har filen måste du lägga till den i en anpassad modul eller ett anpassat tema som är installerat i din Adobe Commerce-instans. Följ instruktionerna som beskrivs i avsnittet [Använd anpassad JavaScript](https://developer.adobe.com/commerce/frontend-core/javascript/custom/) för att utföra den här åtgärden.
 
 ### Initiering
 
-Importera och instansiera en ny `MagentoPrivacy` -objektet eller använder `window` -objekt för att komma åt JavaScript-funktioner för sekretess.
+Importera och instansiera ett nytt `MagentoPrivacy`-objekt eller använd `window`-objektet för att komma åt JavaScript sekretessfunktioner.
 
 Exempel med `import`:
 
@@ -61,7 +61,7 @@ magePriv.retrieveIdentity().then((ids)=>console.log(ids))
 
 `removeIdentity()`
 : Tar bort identitetsdata från en tjänst i webbläsaren.
-Den här funktionen returnerar ett JavaScript-löfte för ett identitetsobjekt med ett `isDeleted` boolesk egenskap som anger om data har tagits bort.
+Den här funktionen returnerar ett JavaScript-löfte för ett identitetsobjekt med en boolesk egenskap på `isDeleted` som anger om data har tagits bort.
 
 ```js
 magePriv.removeIdentity().then((ids)=>console.log(ids))

@@ -15,7 +15,7 @@ ht-degree: 0%
 >
 >Detta är ett av ett antal ämnen som hjälper Adobe Commerce handlare och utvecklare att förstå konsekvenserna av den allmänna dataskyddsförordningen (GDPR). Uppgifterna är endast avsedda som information och bör inte tolkas som juridisk rådgivning. Kontakta ditt juridiska ombud för att få reda på om och hur ditt företag ska uppfylla juridiska skyldigheter.
 
-EU antog [Allmän dataskyddsförordning](https://ec.europa.eu/info/law/law-topic/data-protection_en) (GDPR) för att ge medborgarna bättre kontroll över sina personuppgifter. GDPR gäller alla organisationer som är verksamma inom EU. Det gäller också organisationer utanför EU som erbjuder varor eller tjänster till kunder eller företag inom EU.
+Europeiska unionen (EU) antog [den allmänna dataskyddsförordningen](https://ec.europa.eu/info/law/law-topic/data-protection_en) (GDPR) för att ge sina medborgare bättre kontroll över sina personuppgifter. GDPR gäller alla organisationer som är verksamma inom EU. Det gäller också organisationer utanför EU som erbjuder varor eller tjänster till kunder eller företag inom EU.
 
 Systemintegratörer kan använda dataflödesdiagram och databasinformation i personinformationsreferensen för att skapa skript för att lösa användningsområden som liknar de här:
 
@@ -31,5 +31,5 @@ Teknisk information finns i dataflödesdiagram och mappningar av databasentitete
 
 Mer information om hur Adobe Commerce hjälper handlare att följa GDPR finns i:
 
-- [GDPR-efterlevnad](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-gdpr.html)
+- [GDPR-kompatibilitet](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-gdpr.html)
 - [Adobe Commerce är redo för GDPR](https://business.adobe.com/privacy/general-data-protection-regulation.html)

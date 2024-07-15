@@ -5,7 +5,7 @@ feature: Configuration, Cache, Storage
 exl-id: 831193d2-3e81-472c-9b87-78a8d52959b4
 source-git-commit: af45ac46afffeef5cd613628b2a98864fd7da69b
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '440'
 ht-degree: 0%
 
 ---
@@ -21,19 +21,19 @@ I det här avsnittet finns anvisningar om hur du installerar som är cachelagrad
 Eftersom PHP inte har inbyggt stöd för memcache måste du installera ett tillägg för PHP för att kunna använda det. Det finns två PHP-tillägg tillgängliga och det är viktigt att avkoda vilka som ska användas:
 
 - `memcache` (_no d_) - ett äldre men populärt tillägg som inte underhålls regelbundet.
-The `memcache` tillägg för närvarande _inte_ arbeta med PHP 7. Se [PHP-dokumentation för memcache](https://www.php.net/manual/en/book.memcache.php).
+Tillägget `memcache` för närvarande _fungerar inte_ med PHP 7. Mer information om memcache](https://www.php.net/manual/en/book.memcache.php) finns i [PHP-dokumentationen.
 
   Det exakta namnet är `php5-memcache` för Ubuntu.
 
-- `memcached` (_med`d`_) - ett nyare och underhållet tillägg som är kompatibelt med PHP 7. Se [PHP-dokumentation för cachelagrad](https://www.php.net/manual/en/book.memcached.php).
+- `memcached` (_med en`d`_) - ett nyare och underhållet tillägg som är kompatibelt med PHP 7. Se [PHP-dokumentation för cachelagring](https://www.php.net/manual/en/book.memcached.php).
 
   Det exakta namnet är `php5-memcached` för Ubuntu.
 
 ## Installera och konfigurera cachelagrade filer på Ubuntu
 
-**Installera och konfigurera cachelagrade filer på Ubuntu**:
+**Så här installerar och konfigurerar du anslutna till Ubuntu**:
 
-1. Som användare med `root` behörigheter, ange följande kommando:
+1. Som användare med `root`-behörighet anger du följande kommando:
 
    ```bash
    apt-get -y update
@@ -46,10 +46,10 @@ The `memcache` tillägg för närvarande _inte_ arbeta med PHP 7. Se [PHP-dokume
 1. Ändra den cachelagrade konfigurationsinställningen för `CACHESIZE` och `-l`:
 
    1. Öppna `/etc/memcached.conf` i en textredigerare.
-   1. Leta reda på `-m` parameter.
+   1. Leta reda på parametern `-m`.
    1. Ändra värdet till minst `1GB`
-   1. Leta reda på `-l` parameter.
-   1. Ändra värdet till `127.0.0.1` eller `localhost`
+   1. Leta reda på parametern `-l`.
+   1. Ändra dess värde till `127.0.0.1` eller `localhost`
    1. Spara ändringarna i `memcached.conf` och avsluta textredigeraren.
    1. Omstarten är cachelagrad.
 
@@ -59,19 +59,19 @@ The `memcache` tillägg för närvarande _inte_ arbeta med PHP 7. Se [PHP-dokume
 
 1. Starta om webbservern.
 
-   För Apache `service apache2 restart`
+   För Apache, `service apache2 restart`
 
 1. Fortsätt med nästa avsnitt.
 
 ## Kontrollera att det finns anslutna arbeten innan du installerar Magento
 
-Adobe rekommenderar att du testar i cache-minnet för att kontrollera att det fungerar innan du installerar Commerce. Det tar bara några minuter och kan förenkla felsökningen senare.
+Adobe rekommenderar att du testar cachelagrade data för att kontrollera att de fungerar innan du installerar Commerce. Det tar bara några minuter och kan förenkla felsökningen senare.
 
 ### Verifiera att cachelagrade data känns igen av webbservern
 
 Så här verifierar du att cachelagrade data känns igen av webbservern:
 
-1. Skapa en `phpinfo.php` i webbserverns dokumentrot:
+1. Skapa en `phpinfo.php`-fil i webbserverns dokumentrot:
 
    ```php
    <?php
@@ -87,17 +87,17 @@ Så här verifierar du att cachelagrade data känns igen av webbservern:
 
 1. Kontrollera att de anslutna skärmarna är följande:
 
-   ![Bekräfta att cachelagrade data känns igen av webbservern](../../assets/configuration/memcache.png)
+   ![Bekräftelse av cachelagrad fil känns igen av webbservern](../../assets/configuration/memcache.png)
 
    Kontrollera att du använder den cachelagrade versionen 3.0.5 eller senare.
 
-   Om det inte går att visa den anslutna sidan startar du om webbservern och uppdaterar webbläsarsidan. Om den fortfarande inte visas kontrollerar du att du har installerat `php-pecl-memcached` tillägg.
+   Om det inte går att visa den anslutna sidan startar du om webbservern och uppdaterar webbläsarsidan. Om det fortfarande inte visas kontrollerar du att du har installerat tillägget `php-pecl-memcached`.
 
 ### Verifiera att cachelagrade data kan cachelagra
 
 I det här testet används ett PHP-skript för att verifiera att cachelagrade data kan lagra och hämta cachedata.
 
-Mer information om testet finns i [Installera och använda PMcache i självstudiekursen](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-memcache-on-ubuntu-14-04).
+Mer information om det här testet finns i [Så här installerar och använder du PM i självstudiekursen för Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-memcache-on-ubuntu-14-04).
 
 Skapa `cache-test.php` i webbserverns dokument med följande innehåll:
 
@@ -116,9 +116,9 @@ if ($result) {
 }
 ```
 
-Plats `<memcached hostname or ip>` är antingen `localhost`, `127.0.0.1`, eller minnesvärdnamnet eller IP-adressen. The `<memcached port>` är avlyssningsporten; som standard `11211`.
+Där `<memcached hostname or ip>` antingen är `localhost`, `127.0.0.1` eller memcache-värdnamnet eller IP-adressen. `<memcached port>` är avlyssningsporten, som standard `11211`.
 
-Gå till den sidan i en webbläsare. Exempel
+Gå till den sidan i en webbläsare. Till exempel
 
 ```http
 http://192.0.2.1/cache-test.php

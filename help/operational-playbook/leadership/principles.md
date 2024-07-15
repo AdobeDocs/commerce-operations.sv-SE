@@ -1,5 +1,5 @@
 ---
-title: Handelsprinciper
+title: Commerce-principer
 description: Använd dessa viktiga ledningsprinciper för att säkerställa att Adobe Commerce-projektet fungerar effektivt.
 exl-id: 70b7346a-8536-428f-a980-b240bd5eb5ab
 source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
@@ -15,21 +15,21 @@ Vi rekommenderar att du följer vissa ledningsprinciper när du driver ett e-han
 
 ## Sponsorship
 
-![Hand vikt hjärta](../../assets/playbooks/sponsorship.png)
+![Hand, vikande hjärta](../../assets/playbooks/sponsorship.png)
 Genom att ha en effektiv medverkande sponsor kan projektet nå största möjliga framgång. För att bli verkligt effektiv bör den här interna medverkande sponsorn ha tillräckligt hög befattning och inflytande inom företaget för att kunna köpa in från andra intressenter i organisationen. De bör också ha ett högt självintresse för webbutikens framgång och en passion för digital omvandling och e-handel. Att tro på hur Adobe Commerce kommer att förändra verksamheten är också avgörande.
 
 En effektiv medverkande sponsor bör garantera att e-handelsplattformen förvaltas, färdplan och stadigvarande tillväxt i linje med företagsstrategin, skydda den från motstridiga initiativ eller intern politik och bidra till att hantera eventuella begränsande faktorer, som resursbrist, kunskapsbrist eller budgetbegränsningar.
 
 ## Köp
 
-![Biljettinställning utanför maskinen](../../assets/playbooks/buyin.png)
+![Biljetten sticker ut från datorn](../../assets/playbooks/buyin.png)
 Det är också viktigt att ni lyckas med ert hanteringsköp i ert ledarteam. Genom att ha flera förändringsagenter för att öka tillväxten blir tillväxten enklare och snabbare. Ansvaret för en framgångsrik hantering av Adobe Commerce måste delas av hela ledningsteamet. Det är då det verkställande sponsorns ansvar att vinna över det verkställande teamet genom att dela med sig av exempel som bevisar värdet av Adobe Commerce som helhet. Vanligtvis fokuserar detta på att leverera en bättre kundupplevelse och efterföljande fördelar för företaget.
 
 När man hanterar e-handelsplatser eller implementerar digitala projekt som Adobe Commerce ansvarar ledarna för att övervaka olika avdelningar och team som äger olika delar av e-handelsinitiativen. Det är viktigt att se till att alla grupper delar en gemensam strategi för att uppnå gemensamma mål. Med en intern strategi för att få stöd från chefer kan man öka medvetenheten, anpassa team och få de resurser som behövs för en optimal implementering.
 
 ## Ansvarsskyldighet
 
-![bilder som samlats runt en tabell](../../assets/playbooks/accountability.png)
+![figurer som samlats runt en tabell](../../assets/playbooks/accountability.png)
 Projektledarskap är en handling där man leder ett team mot ett framgångsrikt slutförande av ett mål. Det kan ofta vara ett av de mest kritiska områdena att lyckas med att leverera ett e-handelsprojekt. Framgångsrik projektledarskap kräver kompetens inom både ledning och ledarskap för att säkra inköp från rätt personer, samtidigt som teamet är ledande i rätt riktning.
 
 ## C-nivå
@@ -72,8 +72,10 @@ Ansvarig för att se till att projektet är inriktat på att uppnå sina mål oc
 
 - Utformar och utser projekthanteringsteamen
 - Övervakar utvecklingen av affärsärendet och säkerställer företagets strategiska anpassning
-- Övervakar och kontrollerar utvecklingen på strategisk nivå, särskilt genom att regelbundet granska affärsplanen
-- Eskalerar problem och risker (är eskaleringspunkten för problem och risker, och ser till att alla risker som är förknippade med affärsärendet identifieras, utvärderas och kontrolleras)
+- Övervakar och kontrollerar utvecklingen på strategisk nivå, särskilt
+regelbundet granska affärsärendet
+- Eskalerar problem och risker (är eskaleringspunkten för problem och
+risker, och ser till att alla risker i samband med affärsärendet identifieras, utvärderas och kontrolleras)
 - Funderar beslut om eskalerade problem med särskild inriktning på fortsatta affärsjusteringar
 - Säkerställer den övergripande affärssäkerheten för projektet och ser till att det håller sig på mål att leverera produkter som uppnår de förväntade affärsfördelarna
 
@@ -157,4 +159,5 @@ Effektiv hantering av en e-handelsplats kräver att projektledningsteamet har ku
 
 För att få organisationen att komma igång är det alltid en bra idé att dela visionen och upprepade gånger förstärka anledningen till varför ert företag investerar i e-handelsteknik genom att uttrycka både kundfördelar och affärsfördelar.
 
-Genom att dela dokumentation, t.ex. fallstudier av digitala implementeringar, kan ni validera varför och hur den här investeringen tar organisationen till en ny nivå. Om ni vill att organisationen ska anamma digital omvandling är det viktigt att de anställda vet att det är en prioritet.
+Dela dokumentation, t.ex. lyckade fallstudier av digitala
+implementeringar, hjälper er att validera varför och hur den här investeringen tar organisationen till en ny nivå. Om ni vill att organisationen ska anamma digital omvandling är det viktigt att de anställda vet att det är en prioritet.

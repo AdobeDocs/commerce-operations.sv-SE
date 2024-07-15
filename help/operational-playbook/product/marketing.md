@@ -5,7 +5,7 @@ exl-id: a6b38975-ff85-4cc1-86e3-9792562369ab
 feature: Best Practices, Promotions/Events
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '493'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Därför bör ni överväga e-postmarknadsföring:
 
 Att få det första intrycket att stanna är avgörande i e-handelsverksamheten. Om det första e-postmeddelandet du skickar till nya kunder är effektivt kommer det att ge kunderna ett bestående intryck i minnet. Försök att hålla designen enkel och originaltrogen. Vissa varumärken ger till exempel rabatter i e-postmeddelandet när kunden registrerar sig.
 
-![Exempel på e-post för välkomstmarknadsföring](../../assets/playbooks/marketing-email-welcome.png)
+![Exempel på välkomstmarknadsföring via e-post](../../assets/playbooks/marketing-email-welcome.png)
 
 ## Kuraterad e-post
 
@@ -40,7 +40,7 @@ Samlad e-post är en av de bästa formerna av e-post eftersom den gör det möjl
 
 Kunderna kan enkelt glömma bort e-postmeddelanden, men om e-postmeddelanden skickas som e-postmeddelanden om engagemang är sannolikheten att en kund tar bort det utan att titta på det lägre. E-postmeddelanden om engagemang kan vara i form av en kampanj som ger användarna en befordran, till exempel fri frakt.
 
-![Exempel på e-postmarknadsföring med engagemang](../../assets/playbooks/marketing-email-engagement.png)
+![Exempel på e-post om engagemangsmarknadsföring](../../assets/playbooks/marketing-email-engagement.png)
 
 ## E-post för hänskjutande
 
@@ -52,19 +52,19 @@ Munord är en av de bästa marknadsföringsstrategierna. Du kan t.ex. skicka hä
 
 Att erbjuda rabatter via e-post är en effektiv marknadsföringsstrategi. Du bör erbjuda rabatter till prenumeranter för att behålla deras lojalitet.
 
-![Exempel på e-post för rabattmarknadsföring](../../assets/playbooks/marketing-email-discount.png)
+![Exempel på e-post om rabattmarknadsföring](../../assets/playbooks/marketing-email-discount.png)
 
 ## Övergiven e-post
 
 Kunderna överger sina varukorgar av olika skäl, bland annat höga fraktkostnader eller otillfredsställande returpolicy. Du kan försöka konvertera dessa kunder till framgångsrika kunder genom att skicka en påminnelse via e-post om produkten de lämnade i kundvagnen. Dessutom kan du erbjuda incitament att slutföra utcheckningen, inklusive fri frakt, rabatt eller en kupong för nästa inköp. Detta bidrar till att öka konverteringsgraden.
 
-![Exempel på e-postmarknadsföring som överges](../../assets/playbooks/marketing-email-abandon.png)
+![Exempel på att kunden överger e-post för marknadsföring](../../assets/playbooks/marketing-email-abandon.png)
 
 ## E-postmeddelande med orderbekräftelse
 
 E-postmeddelanden med orderbekräftelse hjälper inte bara till att öka försäljningen, utan ger även kunderna förtroende för att de har gjort sin beställning, vilket ökar kundupplevelsen och kundlojaliteten.
 
-![Exempel på orderbekräftad e-postmarknadsföring](../../assets/playbooks/marketing-email-order-confirmation.png)
+![Exempel på e-postmeddelande med orderbekräftelse](../../assets/playbooks/marketing-email-order-confirmation.png)
 
 ## E-postenkät
 

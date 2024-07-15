@@ -4,7 +4,7 @@ description: Lär dig mer om de olika roller och ansvarsområden som ingår i et
 exl-id: 6e61dcce-ad71-4380-bae4-48be1a3d88b9
 source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1166'
 ht-degree: 0%
 
 ---
@@ -130,12 +130,12 @@ Innehållsteamet sitter antingen inom marknadsföringsteamet, e-handelsteamet el
 
 Innehållsteamet ansvarar för följande:
 
-- **Ordna innehållet**—Element, URL:er, navigering och sidstruktur måste vara enkla och användarvänliga. Om sajten är för komplicerad går kunderna vilse.
+- **Ordna innehållet** - Element, URL:er, navigering och sidstruktur måste vara enkla och användarvänliga. Om sajten är för komplicerad går kunderna vilse.
 
-- **Korrigera brutet innehåll**- Brutna bilder, sidor, saknade sidor, utcheckningsflöde och felmeddelanden gör att kunderna lämnar er webbplats och lämnar ett negativt intryck.
+- **Åtgärdar skadat innehåll** - Brutna bilder, sidor, saknade sidor, utcheckningsflöde och felmeddelanden gör att kunderna lämnar din webbplats och lämnar ett negativt intryck.
 
-- **Uppdaterar innehåll**—Innehållet på webbplatsen måste vara uppdaterat. Om webbplatsen består av inaktuellt innehåll, påverkar det kundupplevelsen och ökar kundtjänstteamets arbetsbörda. De måste till exempel svara på kundfrågor som borde ha besvarats av innehåll på webbplatsen.
+- **Uppdaterar innehåll** - Innehållet på webbplatsen måste vara uppdaterat. Om webbplatsen består av inaktuellt innehåll, påverkar det kundupplevelsen och ökar kundtjänstteamets arbetsbörda. De måste till exempel svara på kundfrågor som borde ha besvarats av innehåll på webbplatsen.
 
-- **Förenkla innehållet**- Innehållsteamet behöver skapa enkelt och rakt framåtriktat innehåll. Enkelt språk fungerar bäst när ni interagerar med kunderna.
+- **Förenklar innehåll** - Innehållsteamet måste skapa enkelt och rakt framåtriktat innehåll. Enkelt språk fungerar bäst när ni interagerar med kunderna.
 
 Innehållsteamet skapar, testar, hanterar och optimerar allt innehåll på webbplatsen, vilket ökar avkastningen.

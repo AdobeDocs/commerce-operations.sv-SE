@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Struktur för Composer-projekt
 
-I den här guiden beskrivs hur du konfigurerar och underhåller [Alternativet separata paket](../examples.md#option-1-separate-packages) beskrivs i exemplen på den globala referensarkitekturen (GRA).
+I den här guiden beskrivs hur du konfigurerar och underhåller det [separata paketalternativet](../examples.md#option-1-separate-packages) som beskrivs i GRA-exemplen (Global Reference Architecture).
 
 ## Förutsättningar
 
@@ -23,7 +23,7 @@ Kontrollera följande innan du börjar:
 
 - Du har en Git-databas
 - Du har en Composer-databas (det här avsnittet innehåller information om privata paket)
-- Du har konfigurerat din Composer-databas så att den speglar `repo.magento.com` och `packagist.org` databaser
+- Du har konfigurerat din Composer-databas så att den speglar databaserna `repo.magento.com` och `packagist.org`
 
 ## Huvudsaklig Git-projektdatabas
 
@@ -37,7 +37,7 @@ Den huvudsakliga Git-projektdatabasen ska bara innehålla ett Composer-projekt. 
 └─ composer.lock
 ```
 
-Lägg till följande innehåll i `.gitignore` fil:
+Lägg till följande innehåll i filen `.gitignore`:
 
 ```tree
 /*
@@ -47,9 +47,9 @@ Lägg till följande innehåll i `.gitignore` fil:
 
 ## Initiera huvudprojektet
 
-1. Skapa en anropad Git-databas `project-<region/country/brand>`.
+1. Skapa en Git-databas med namnet `project-<region/country/brand>`.
 
-1. Skapa `composer.json` och `composer.lock` filer:
+1. Skapa `composer.json`- och `composer.lock`-filer:
 
    ```bash
    composer create-project --no-install --repository-url=https://repo.magento.com/ magento/project-enterprise-edition project-<region/country/brand>
@@ -71,11 +71,11 @@ Lägg till följande innehåll i `.gitignore` fil:
 
 ## Spara filer som inte är moduler
 
-1. Lägg till `app/etc/config.xml` till Git-databasen.
+1. Lägg till filen `app/etc/config.xml` i Git-databasen.
 
-   Du kan använda modulen som du ska skapa för att installera andra regioner eller varumärkesspecifika filer, som `.htaccess`, Google- eller Bing-autentiseringsfiler, körbara filer eller andra statiska filer som inte hanteras av Adobe Commerce-moduler.
+   Du kan använda modulen som du ska skapa för att installera andra regioner eller varumärkesspecifika filer, som `.htaccess`, Google- eller Bing-autentiseringstextfiler, körbara filer eller andra statiska filer som inte hanteras av Adobe Commerce-moduler.
 
-   Använd `magento2-component` typpaket för att skapa en filmappning för att kopiera filer till Git-huvuddatabasen under `composer install` och `composer update` åtgärder.
+   Använd `magento2-component`-typpaket för att skapa en filmappning för att kopiera filer till Git-huvuddatabasen under `composer install`- och `composer update`-åtgärder.
 
 1. Skapa en Git-databas som följer namnkonventionen `component-environment-<region/country/brand>`:
 
@@ -94,7 +94,7 @@ Lägg till följande innehåll i `.gitignore` fil:
    composer config -e
    ```
 
-1. Lägg till `app/etc/config.php` som en mappning i `extra.map` ditt attribut `composer.json` fil:
+1. Lägg till filen `app/etc/config.php` som en mappning i attributet `extra.map` i filen `composer.json`:
 
    ```json
    {
@@ -115,7 +115,7 @@ Lägg till följande innehåll i `.gitignore` fil:
    }
    ```
 
-1. Validera `composer.json` och implementera den i Git-databasen:
+1. Verifiera din `composer.json`-fil och implementera den i Git-databasen:
 
    ```bash
    composer validate
@@ -203,7 +203,7 @@ Lägg till följande innehåll i `.gitignore` fil:
    git push --tags
    ```
 
-1. Verifiera att Composer kopierade `app/etc/config.php` fil från `<client>/component-environment-<region/country/brand>`.
+1. Kontrollera att Composer kopierade filen `app/etc/config.php` från `<client>/component-environment-<region/country/brand>`.
 
 ## Distribuera kod
 
@@ -211,22 +211,22 @@ På webbservern kan du distribuera kod med Composer, men du kan inte uppdatera h
 
 ## Lägga till andra instanser och paket
 
-Varje instans (region, varumärke eller på annat sätt unik Adobe Commerce-installation) ska få sin egen **huvudprojekt** instans, **specifikt metapaket** och **miljökomponentpaket**. The **GRA-metapaket** bör **delad** i alla instanser.
+Varje instans (region, varumärke eller på annat sätt unik Adobe Commerce-installation) ska hämta sin egen **huvudprojektinstans**, **specifika metapaket** och **miljökomponentpaket**. **GRA-metapaketet** ska vara **delat** i alla instanser.
 
 Funktionspaket (t.ex. Adobe Commerce-moduler, teman, språkpaket och bibliotek) och tredjepartspaket ska krävas av antingen
 
-- **GRA-metapaket**—För installation på _alla_ instanser
-- **instansspecifikt metapaket**—För installation på ett enda varumärke eller i en enda region
+- **GRA-metapaket** - För installation på _alla_ instanser
+- **instansspecifikt metapaket** - För installation på ett enskilt varumärke eller en enskild region
 
 >[!IMPORTANT]
 >
->Kräv inte paket i huvudprojektets `composer.json` filen på `main` eller `release` grenar.
+>Kräv inte paket i huvudprojektets `composer.json`-fil i grenarna `main` eller `release`.
 
 ## Förbered för utveckling
 
-Installera `develop` versioner av alla moduler som du underhåller.
+Installera `develop` versioner av alla moduler som du underhåller för utveckling.
 
-Beroende på er förgreningsstrategi kan ni ha `develop`, `qa`, `uat`och `main` grenar. Varje gren finns i Composer med en `dev-` prefix. Så `develop` gren kan krävas via Composer som version `dev-develop`.
+Beroende på din förgreningsstrategi kan du ha grenarna `develop`, `qa`, `uat` och `main`. Varje gren finns i Composer med prefixet `dev-`. `develop`-grenen kan därför krävas via Composer som version `dev-develop`.
 
 1. Skapa `develop` grenar i alla moduler och projektdatabaser.
 
@@ -262,7 +262,7 @@ Beroende på er förgreningsstrategi kan ni ha `develop`, `qa`, `uat`och `main` 
    "magento-services/component-environment-fantasy-corp:dev-develop as 0.999"
    ```
 
-   Föregående steg genererar följande rader i `composer.json` fil:
+   I föregående steg genereras följande rader i din `composer.json`-fil:
 
    ```json
    "require": {
@@ -274,4 +274,4 @@ Beroende på er förgreningsstrategi kan ni ha `develop`, `qa`, `uat`och `main` 
 
    >[!IMPORTANT]
    >
-   >**Sammanfoga inte** dessa `composer.json` filändringar i produktionsgrenen. Installera endast stabila versioner av paket på `release` och `main` grenar. Du kan definiera dessa beroenden för `qa` filialer och andra icke-huvudgrenar.
+   >**Sammanfoga inte** de här `composer.json` filändringarna i din produktionsgren. Installera endast stabila versioner av paket på `release`- och `main`-grenar. Du kan definiera dessa beroenden för `qa` grenar och andra icke-huvudgrenar.

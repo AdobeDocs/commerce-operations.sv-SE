@@ -14,27 +14,27 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Träder i kraft den 23 april 2024 [!DNL Site-Wide Analysis Tool] kommer att avvecklas för alla Adobe Commerce lokala kunder.
+>Från och med den 23 april 2024 kommer [!DNL Site-Wide Analysis Tool] att tas bort för alla Adobe Commerce lokala kunder.
 
-The [!DNL Site-Wide Analysis Tool] tillhandahåller prestandaövervakning, rapporter och rekommendationer i realtid dygnet runt, alla dagar för att säkerställa Adobe Commerce säkerhet och driftsäkerhet vid installation av molninfrastruktur. Här finns också detaljerad information om tillgängliga och installerade korrigeringsfiler, tillägg från tredje part och din Adobe Commerce-installation.
+[!DNL Site-Wide Analysis Tool] tillhandahåller prestandaövervakning, rapporter och rekommendationer i realtid dygnet runt, alla dagar för att säkerställa Adobe Commerce säkerhet och användbarhet vid installation av molninfrastruktur. Här finns också detaljerad information om tillgängliga och installerade korrigeringsfiler, tillägg från tredje part och din Adobe Commerce-installation.
 
 >[!INFO]
 >
->Läs [aktivera](../site-wide-analysis-tool/access.md) den [!DNL Site-Wide Analysis Tool] och generera rapporter.
+>Lär dig [hur du aktiverar](../site-wide-analysis-tool/access.md) [!DNL Site-Wide Analysis Tool] och genererar rapporter.
 
 Om du har en lokal installation av Adobe Commerce installerar du en agent på din infrastruktur för att använda verktyget. Du behöver inte installera agenten på Adobe Commerce i molninfrastrukturprojekt.
 
 ## Agent
 
-The [!DNL Site-Wide Analysis Tool] Agenten låter dig använda [!DNL Site-Wide Analysis Tool] för lokala installationer av Adobe Commerce.
+Med agenten [!DNL Site-Wide Analysis Tool] kan du använda [!DNL Site-Wide Analysis Tool] för lokala installationer av Adobe Commerce.
 
-The [!DNL Site-Wide Analysis Tool] Agenten samlar in program- och affärsdata, analyserar dem och ger ytterligare insikter om hur bra din installation är, så att du kan förbättra kundupplevelsen. Den övervakar ditt program och hjälper dig att identifiera problem med prestanda, säkerhet, tillgänglighet och program.
+Agenten [!DNL Site-Wide Analysis Tool] samlar in program- och affärsdata, analyserar dem och ger ytterligare insikter om installationstillståndet så att du kan förbättra kundupplevelsen. Den övervakar ditt program och hjälper dig att identifiera problem med prestanda, säkerhet, tillgänglighet och program.
 
 Följande steg krävs för att installera agenten:
 
 1. Kontrollera systemkraven.
 
-1. Konfigurera API-nycklar i [!UICONTROL Commerce Services Connector] tillägg.
+1. Konfigurera API-nycklar i tillägget [!UICONTROL Commerce Services Connector].
 
 1. Installera agenten.
 
@@ -50,7 +50,7 @@ Din lokala infrastruktur måste uppfylla följande krav innan du installerar age
 
 - Operativsystem
 
-   - [!DNL Linux x86-64] distributioner, som [!DNL Red Hat® Enterprise Linux (RHEL)], [!DNL CentOS], [!DNL Ubuntu], [!DNL Debian], och liknande
+   - [!DNL Linux x86-64]-fördelningar, som [!DNL Red Hat® Enterprise Linux (RHEL)], [!DNL CentOS], [!DNL Ubuntu], [!DNL Debian] och liknande
 
   >[!IMPORTANT]
   >
@@ -78,35 +78,35 @@ Din lokala infrastruktur måste uppfylla följande krav innan du installerar age
 
 ## [!DNL Commerce Services Connector]
 
-Agenten kräver [[!DNL Commerce Services Connector]](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html) tillägg som ska installeras på datorn och [konfigurerad](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html) med API-nycklar. Kontrollera att tillägget är installerat genom att köra följande kommando:
+Agenten kräver att tillägget [[!DNL Commerce Services Connector]](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html) är installerat på datorn och [konfigurerat](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html) med API-nycklar. Kontrollera att tillägget är installerat genom att köra följande kommando:
 
 ```bash
 bin/magento module:status Magento_ServicesId
 ```
 
-Om du har installerat tillägget och konfigurerat det med en befintlig API-nyckel för en annan tjänst, **API-nyckeln MÅSTE genereras om** och uppdatera den i Adobe Commerce Admin för agenten.
+Om du har installerat tillägget och konfigurerat det med en befintlig API-nyckel för en annan tjänst, **MÅSTE du generera om API-nyckeln** och uppdatera den i Adobe Commerce Admin för agenten.
 
-1. Lägg in webbsidor i [underhållsläge](../../installation/tutorials/maintenance-mode.md).
+1. Placera webbplatsen i [underhållsläge](../../installation/tutorials/maintenance-mode.md).
 
-1. Logga in [account.magento.com](https://account.magento.com/customer/account/login?_ga=2.164207871.117144580.1649172612-1623400270.1640858671).
+1. Logga in på [account.magento.com](https://account.magento.com/customer/account/login?_ga=2.164207871.117144580.1649172612-1623400270.1640858671).
 
    >[!NOTE]
    >
-   > Om du har problem med att få åtkomst till ditt konto kan du läsa [Det går inte att logga in på Adobe Commerce support eller molnkonto](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/unable-to-log-in-to-support-or-cloud-project.html) för felsökningshjälp.
+   > Om du har problem med att få åtkomst till ditt konto kan du läsa [Det går inte att logga in på Adobe Commerce support eller molnkontot](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/unable-to-log-in-to-support-or-cloud-project.html) för att få hjälp med felsökning.
 
 1. Klicka på **[!UICONTROL API Portal]**.
 
-1. Klicka **[!UICONTROL Delete]** bredvid den befintliga API-nyckeln.
+1. Klicka på **[!UICONTROL Delete]** bredvid den befintliga API-nyckeln.
 
 1. [Konfigurera](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html) en ny API-nyckel.
 
 >[!IMPORTANT]
 >
-> Om du genererar nya nycklar i API-portalen ska du omedelbart uppdatera API-nycklarna i [!DNL Admin configuration]. Om du genererar nya nycklar och inte uppdaterar nycklarna i [!DNL Admin]kommer SaaS-tilläggen inte längre att fungera och du kommer att förlora värdefulla data.
+> Om du genererar nya nycklar i API-portalen ska du omedelbart uppdatera API-nycklarna i [!DNL Admin configuration]. Om du genererar nya nycklar och inte uppdaterar nycklarna i [!DNL Admin] kommer dina SaaS-tillägg inte längre att fungera och du kommer att förlora värdefulla data.
 
 Om tillägget inte är installerat följer du instruktionerna nedan för att installera det:
 
-1. Lägg till tillägget i `composer.json` och installera det.
+1. Lägg till tillägget i din `composer.json`-fil och installera det.
 
    ```bash
    composer require magento/services-id
@@ -134,7 +134,7 @@ Om tillägget inte är installerat följer du instruktionerna nedan för att ins
 
 ## Installera agenten
 
-Vi har skapat en [gränssnittsskript](https://github.com/magento-swat/install-agent-helpers/blob/main/install.sh) för att förenkla installationen. Vi rekommenderar att du använder gränssnittsskriptet, men du kan följa [manuell installation](#manual) metod om det behövs.
+Vi har skapat ett [gränssnittsskript](https://github.com/magento-swat/install-agent-helpers/blob/main/install.sh) som förenklar installationen. Vi rekommenderar att du använder gränssnittsskriptet, men du kan följa metoden [manuell installation](#manual) om det behövs.
 
 >[!INFO]
 >
@@ -163,7 +163,7 @@ Vi har skapat en [gränssnittsskript](https://github.com/magento-swat/install-ag
    Success exit.
    ```
 
-1. När du har hämtat och installerat agenten [konfigurera det att köras](#run-the-agent) med någon av följande metoder:
+1. När du har hämtat och installerat agenten [konfigurerar du den så att den körs](#run-the-agent) på något av följande sätt:
 
    - [Tjänst](#service) (helst om du har rotåtkomst)
 
@@ -171,7 +171,7 @@ Vi har skapat en [gränssnittsskript](https://github.com/magento-swat/install-ag
 
 ### Manuell {#manual}
 
-Om du inte vill använda våra [gränssnittsskript](https://github.com/magento-swat/install-agent-helpers/blob/main/install.sh) Om du vill installera agenten måste du installera den manuellt genom att följa dessa steg:
+Om du inte vill använda vårt [gränssnittsskript](https://github.com/magento-swat/install-agent-helpers/blob/main/install.sh) för att installera agenten måste du installera den manuellt genom att följa de här stegen:
 
 1. Skapa en katalog där du vill hämta agenten.
 
@@ -183,9 +183,9 @@ Om du inte vill använda våra [gränssnittsskript](https://github.com/magento-s
 
    >[!INFO]
    >
-   >Använd [!DNL Site-Wide Analysis Tool]måste du först läsa och godkänna de användarvillkor som visas när du öppnar instrumentpanelen från Adobe Commerce Admin.
+   >Om du vill använda [!DNL Site-Wide Analysis Tool] måste du först läsa och godkänna användningsvillkoren som presenteras när du öppnar instrumentpanelen från Adobe Commerce Admin.
 
-   För **AMD64** arkitektur:
+   För **AMD64**-arkitekturen:
 
    1. Ladda ned startarkivet.
 
@@ -199,7 +199,7 @@ Om du inte vill använda våra [gränssnittsskript](https://github.com/magento-s
       tar -xf launcher.linux-amd64.tar.gz
       ```
 
-   För **ARM64** arkitektur:
+   För **ARM64**-arkitekturen:
 
    1. Ladda ned startarkivet.
 
@@ -213,7 +213,7 @@ Om du inte vill använda våra [gränssnittsskript](https://github.com/magento-s
       tar -xf launcher.linux-arm64.tar.gz
       ```
 
-1. *(Valfritt)* Kontrollera signaturen för kontrollsummefilen.
+1. *(Valfritt)* Verifiera signaturen för kontrollsummefilen.
 
    ```bash
    echo -n "LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0KTUlJQ0lqQU5CZ2txaGtpRzl3MEJBUUVGQUFPQ0FnOEFNSUlDQ2dLQ0FnRUE0M2FBTk1WRXR3eEZBdTd4TE91dQpacG5FTk9pV3Y2aXpLS29HendGRitMTzZXNEpOR3lRS1Jha0MxTXRsU283VnFPWnhUbHZSSFhQZWt6TG5vSHVHCmdmNEZKa3RPUEE2S3d6cjF4WFZ3RVg4MEFYU1JNYTFadzdyOThhenh0ZHdURVh3bU9GUXdDcjYramFOM3ErbUoKbkRlUWYzMThsclk0NVJxWHV1R294QzBhbWVoakRnTGxJUSs1d1kxR1NtRGRiaDFJOWZqMENVNkNzaFpsOXFtdgorelhjWGh4dlhmTUU4MUZsVUN1elRydHJFb1Bsc3dtVHN3ODNVY1lGNTFUak8zWWVlRno3RFRhRUhMUVVhUlBKClJtVzdxWE9kTGdRdGxIV0t3V2ppMFlrM0d0Ylc3NVBMQ2pGdEQzNytkVDFpTEtzYjFyR0VUYm42V3I0Nno4Z24KY1Q4cVFhS3pYRThoWjJPSDhSWjN1aFVpRHhZQUszdmdsYXJSdUFacmVYMVE2ZHdwYW9ZcERKa29XOXNjNXlkWApBTkJsYnBjVXhiYkpaWThLS0lRSURnTFdOckw3SVNxK2FnYlRXektFZEl0Ni9EZm1YUnJlUmlMbDlQMldvOFRyCnFxaHNHRlZoRHZlMFN6MjYyOU55amgwelloSmRUWXRpdldxbGl6VTdWbXBob1NrVnNqTGtwQXBiUUNtVm9vNkgKakJmdU1sY1JPeWI4TXJCMXZTNDJRU1MrNktkMytwR3JyVnh0akNWaWwyekhSSTRMRGwrVzUwR1B6LzFkeEw2TgprZktZWjVhNUdCZm00aUNlaWVNa3lBT2lKTkxNa1cvcTdwM200ejdUQjJnbWtldm1aU3Z5MnVMNGJLYlRoYXRlCm9sdlpFd253WWRxaktkcVkrOVM1UlNVQ0F3RUFBUT09Ci0tLS0tRU5EIFBVQkxJQyBLRVktLS0tLQ==" | base64 -d > release.pub
@@ -223,13 +223,13 @@ Om du inte vill använda våra [gränssnittsskript](https://github.com/magento-s
    openssl dgst -sha256 -verify release.pub -signature launcher.sha256 launcher.checksum
    ```
 
-1. *(Valfritt)* Kontrollera kontrollsumman.
+1. *(Valfritt)* Verifiera kontrollsumman.
 
    ```bash
    shasum -a 512 -c launcher.checksum
    ```
 
-1. Skapa `config.yaml` med följande innehåll.
+1. Skapa filen `config.yaml` med följande innehåll.
 
    ```yaml
    project:
@@ -262,7 +262,7 @@ Om du inte vill använda våra [gränssnittsskript](https://github.com/magento-s
    Success exit.
    ```
 
-1. När du har hämtat och installerat agenten måste du [konfigurera det att köras](#run-the-agent) med någon av följande metoder:
+1. När du har hämtat och installerat agenten måste du [konfigurera den så att den körs](#run-the-agent) på något av följande sätt:
 
    - [Tjänst](#service) (helst om du har rotåtkomst)
 
@@ -274,7 +274,7 @@ Vi rekommenderar att du konfigurerar agenten så att den körs som en tjänst. O
 
 ### Tjänst {#service}
 
-1. Skapa en systemenhetsfil `(/etc/systemd/system/scheduler.service)` med följande konfiguration (ersätt `<filesystemowner>` med den UNIX®-användare som äger katalogen där agenten och Adobe Commerce är installerade). Om du hämtade agenten som rotanvändare ändrar du ägare av katalogen och de kapslade filerna.
+1. Skapa en systemenhetsfil `(/etc/systemd/system/scheduler.service)` med följande konfiguration (ersätt `<filesystemowner>` med UNIX®-användaren som äger katalogen där agenten och Adobe Commerce-programvaran är installerade). Om du hämtade agenten som rotanvändare ändrar du ägare av katalogen och de kapslade filerna.
 
    ```config
    [Unit]
@@ -338,19 +338,19 @@ Kör följande kommandon för att avinstallera tjänsten från datorn och ta bor
    systemctl disable scheduler
    ```
 
-1. Ta bort schemaläggningstjänstens `systemd` enhetsfil.
+1. Ta bort enhetsfilen `systemd` för schemaläggningstjänsten.
 
    ```bash
    rm /etc/systemd/system/scheduler.service
    ```
 
-1. Läs in `systemd` hanterarkonfiguration.
+1. Läs in hanterarkonfigurationen för `systemd` igen.
 
    ```bash
    systemctl daemon-reload
    ```
 
-1. Återställ alla `systemd` enheter från ett felaktigt tillstånd.
+1. Återställ eventuella `systemd` enheter från ett felaktigt tillstånd.
 
    ```bash
    systemctl reset-failed
@@ -401,19 +401,19 @@ FATA[2022-12-10 20:38:44] bad http status from https://updater.supportinsights.a
 
 Lös det här felet genom att försöka med följande steg:
 
-1. Gör en [skriptad installation](#scripted), spara utdata och granska utdata för att se om det finns fel.
-1. Granska den genererade `config.yaml` och verifiera att sökvägen till din Commerce-instans och PHP är korrekt.
-1. Kontrollera att användaren som kör schemaläggaren finns i [ägare av filsystem](../../installation/prerequisites/file-system/overview.md) Unix-gruppen eller är samma användare som filsystemets ägare.
-1. Se till att [Commerce Services Connector](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html) knapparna är korrekt installerade och försöker uppdatera dem för att ansluta tillägget till systemet.
-1. [Avinstallera](#uninstall) agenten när nycklarna har uppdaterats och ominstallerats med [installationsskript](#scripted).
+1. Gör en [skriptad installation](#scripted), spara utdata och granska utdata för fel.
+1. Granska den genererade `config.yaml`-filen och kontrollera att sökvägen till din Commerce-instans och PHP är korrekt.
+1. Kontrollera att användaren som kör schemaläggaren finns i Unix-gruppen [för filsystemet](../../installation/prerequisites/file-system/overview.md) eller är samma användare som filsystemets ägare.
+1. Kontrollera att nycklarna för [Commerce Services Connector](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html) är korrekt installerade och försök uppdatera dem för att ansluta tillägget till systemet.
+1. [Avinstallera](#uninstall) agenten efter att nycklarna har uppdaterats och installera om med [installationsskriptet](#scripted).
 1. Kör schemaläggaren och se om du fortfarande får samma fel.
-1. Om du fortfarande får samma fel ökar du loggnivån i dialogrutan `config.yaml` för att felsöka och öppna en supportanmälan.
+1. Om du fortfarande får samma fel kan du öka loggnivån i `config.yaml` för att felsöka och öppna en supportanmälan.
 
 ### *SIGFAULT* Fel
 
-Om du ser *SIGFAULT* när du kör binära filer, kör du förmodligen inte detta som filägare för Adobe Commerce- och agentfiler.
+Om du får ett *SIGFAULT*-fel när du kör binära filer, kommer du förmodligen inte att köra detta som filägare för Adobe Commerce- och agentfiler.
 Kontrollera också om alla filer i agentkatalogen som har samma användare som fileägaren som Adobe Commerce-filer har och binärfiler ska köras under den användaren.
-Du kan använda `chown` om du vill ändra filens ägare och växla till rätt användare.
+Du kan använda kommandot `chown` för att ändra filägaren och växla till lämplig användare.
 Kontrollera att din daemoniseringsmekanism (Cron eller System.d) kör processen under rätt användare.
 
 >[!INFO]

@@ -6,18 +6,18 @@ feature: Best Practices
 exl-id: 635f38d3-0199-4d96-ba75-9edd0cb94b5c
 source-git-commit: db0fce79b22d409e8d639b959dc5a04693e72659
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '478'
 ht-degree: 0%
 
 ---
 
 # Bästa metoder för betalningshantering och lagring
 
-En av de viktigaste principerna för att upprätthålla [PCI-kompatibilitet](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/payments/compliance-pci.html) har en strategi för att hantera och lagra kreditkortsbetalningar korrekt.
+En av de viktigaste principerna för att upprätthålla [PCI-kompatibilitet](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/payments/compliance-pci.html) är att ha en strategi för att hantera och lagra kreditkortsbetalningar korrekt.
 
-Att lagra kortinnehavardata i Adobe Commerce är **strikt förbjuden** och det kan vara ett brott mot dina skyldigheter som handlare enligt PCI-DSS (Payment Card Industry Data Security Standard). Mer information om modellen för delat ansvar och riktlinjer för skyldigheter för handlare finns i [Adobe Commerce Shared Responsibility Model Guide](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-commerce-shared-responsibilities-guide.pdf) på Adobe Trust Center.
+Det är **strängt förbjudet** att lagra kortinnehavardata i Adobe Commerce, vilket kan vara ett brott mot dina skyldigheter som handlare enligt PCI-DSS (Payment Card Industry Data Security Standard). Mer information om modellen för delat ansvar och riktlinjer för affärsförpliktelser finns i [Adobe Commerce Shared Responsibility Model Guide](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-commerce-shared-responsibilities-guide.pdf) på Adobe Trust Center.
 
-Följ de bästa metoderna nedan för att se till att du hanterar betalningsinformation på din e-handelsplats. Mer information om bästa säkerhetsmetoder finns i [Skydda er webbplats och infrastruktur](../launch/security-best-practices.md).
+Följ de bästa metoderna nedan för att se till att du hanterar betalningsinformation på din e-handelsplats. Mer information om bästa säkerhetspraxis finns i [Skydda din webbplats och infrastruktur](../launch/security-best-practices.md).
 
 ## Berörda produkter och versioner
 
@@ -32,7 +32,7 @@ Om det behövs lagring av kortinnehavardata ska kortinnehavardata lagras utanfö
 
 Skyddet för kryptografiska nycklar är avgörande för dataskyddsstrategier. Det är viktigt att ha kunniga och pålitliga förvarare som övervakar nycklarna.
 
-Slutligen måste ett primärt kontonummer (PAN) vara oläsbart under lagring, t.ex. maskerat med `XXX`. Detta inkluderar flyttbara lagringsmedier och säkerhetskopieringsmedia som flash-enheter, USB och externa hårddiskar samt granskningsloggar.
+Slutligen måste ett primärt kontonummer (PAN) vara oläsbart under lagring, till exempel maskerat med `XXX`. Detta inkluderar flyttbara lagringsmedier och säkerhetskopieringsmedia som flash-enheter, USB och externa hårddiskar samt granskningsloggar.
 
 ## Kryptera överföring av kortinnehavardata
 
@@ -53,4 +53,4 @@ Den rekommenderade metoden för att hantera kortinnehavardata är att tokenisera
 
 ## Ytterligare information
 
-Om du letar efter rekommenderade betalningslösningar från Adobe bör du överväga [Betalningstjänster för Adobe](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/overview.html).
+Om du letar efter rekommenderade betalningslösningar från Adobe bör du överväga [Adobe Payment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/overview.html).

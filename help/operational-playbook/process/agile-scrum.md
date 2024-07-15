@@ -19,12 +19,12 @@ Scrum uppmuntrar självorganiserade, funktionsövergripande team att lösa probl
 
 I Scrum-metoden finns det flera möten som används för att driva på transparensen och framstegen i ett e-handelsprojekt:
 
-- **Sprint-planering**—Ett planeringsmöte där teammedlemmarna samlas för att bestämma hur mycket arbete som kan utföras i en svep.
+- **Sprint-planering** - Ett planeringsmöte där teammedlemmar samlas för att bestämma hur mycket arbete som kan slutföras i en utskrift.
 
-- **Daglig trumma**- Ett 15-minuters möte som används för att dela uppdateringar om vad varje teammedlem arbetar med.
+- **Dagligt rum** - Ett 15-minuters möte används för att dela uppdateringar om vad varje teammedlem arbetar med.
 
-- **Sprint-granskning**—Ett möte som används för att visa status från fjädringen.
+- **Sprint-granskning** - Ett möte som används för att visa förloppet från fjädringen.
 
-- **Sprint retrospective**—Ett möte som används för att reflektera över det föregående seminariet och för att identifiera möjligheter till förbättring.
+- **Sprint retrospective** - Ett möte som användes för att reflektera på föregående sprite och identifiera möjligheter till förbättring.
 
 I slutet av varje utskrift bör en värdeökning (till exempel nya funktioner, felkorrigeringar, uppgraderingar eller allmänna koduppdateringar) levereras och kunna frisläppas till kunderna.

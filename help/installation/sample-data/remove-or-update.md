@@ -13,9 +13,9 @@ ht-degree: 0%
 
 I det här avsnittet beskrivs hur du:
 
-* [Ta bort exempeldatamoduler](#remove-sample-data-modules) från en Adobe Commerce-installation `composer.json`. Det här alternativet gör det *not* ta bort exempeldata från databasen.
+* [Ta bort exempeldatamoduler](#remove-sample-data-modules) från en Adobe Commerce-installation `composer.json`. Det här alternativet tar *inte* bort exempeldata från databasen.
 
-* [Förbered uppdatering av exempeldata](#prepare-to-update-sample-data) (till exempel innan du uppdaterar programmet Magento).
+* [Förbered dig för att uppdatera exempeldata](#prepare-to-update-sample-data) (till exempel innan du uppdaterar programmet Magento).
 
 ## Ta bort exempeldatamoduler
 
@@ -59,4 +59,4 @@ Om du vill förbereda exempeldata för uppdatering anger du följande kommando:
 bin/magento sampledata:reset
 ```
 
-Efter det har [uppdatera programmet](../tutorials/uninstall.md#update-the-application).
+Därefter [uppdaterar du programmet](../tutorials/uninstall.md#update-the-application).

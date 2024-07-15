@@ -4,7 +4,7 @@ description: Läs om hur du ställer in Adobe Commerce driftslägen.
 exl-id: 62d183fa-d4ff-441d-b8bd-64ef5ae10978
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '385'
 ht-degree: 0%
 
 ---
@@ -13,15 +13,15 @@ ht-degree: 0%
 
 {{file-system-owner}}
 
-För att förbättra säkerheten och förenkla användningen har vi lagt till ett kommando som växlar [programlägen](../bootstrap/application-modes.md) från utvecklare till produktion och vice versa.
+För att förbättra säkerheten och användarvänligheten har vi lagt till ett kommando som växlar [programlägen](../bootstrap/application-modes.md) från utvecklare till produktion och vice versa.
 
-Produktionsläget har bättre prestanda eftersom statiska vyfiler fylls i i `pub/static` på grund av kodkompilering.
+Produktionsläget har bättre prestanda eftersom statiska vyfiler fylls i i katalogen `pub/static` och på grund av kodkompilering.
 
 >[!INFO]
 >
->I version 2.0.6 och senare anges inte uttryckligen fil- eller katalogbehörigheter i Commerce när du växlar mellan standardläge, utvecklings- och produktionsläge. Till skillnad från andra lägen ställs utvecklare och produktionslägen in i `env.php` -fil. Adobe Commerce i molninfrastruktur har endast stöd för produktions- och underhållslägen.
+>I version 2.0.6 och senare ställer Commerce inte uttryckligen in fil- eller katalogbehörigheter när du växlar mellan standardläge, utvecklings- och produktionsläge. Till skillnad från andra lägen ställs utvecklare och produktionslägen in i filen `env.php`. Adobe Commerce i molninfrastruktur har endast stöd för produktions- och underhållslägen.
 >
->Se [Äganderätt och tillstånd för handel inom utveckling och produktion](../deployment/file-system-permissions.md).
+>Se [Commerce ägarskap och behörigheter i utveckling och produktion](../deployment/file-system-permissions.md).
 
 När du byter till utvecklare eller produktionsläge tar vi bort innehållet i följande kataloger:
 
@@ -36,15 +36,15 @@ pub/static
 Undantag:
 
 - `.htaccess` filer tas inte bort
-- `pub/static` innehåller en fil som anger version av statiskt innehåll. Filen tas inte bort
+- `pub/static` innehåller en fil som anger version av statiskt innehåll. Den här filen tas inte bort
 
 >[!INFO]
 >
->Som standard använder Commerce `var` kataloger för att lagra cache, loggar och kompilerad kod. Du kan anpassa den här katalogen, men i den här handboken antas den vara `var`.
+>Som standard använder Commerce katalogerna `var` för att lagra cache, loggar och kompilerad kod. Du kan anpassa den här katalogen, men i den här guiden antas den vara `var`.
 
 ## Visa det aktuella läget
 
-Det enklaste sättet är att köra det här kommandot som [ägare av filsystem](../../installation/prerequisites/file-system/overview.md). Om du har delat värdskap är detta den användare som din leverantör ger dig att logga in på servern. Om du har en privat server är det vanligtvis ett lokalt användarkonto på Commerce-servern.
+Det enklaste sättet att göra det är att köra det här kommandot som [filsystemsägare](../../installation/prerequisites/file-system/overview.md). Om du har delat värdskap är detta den användare som din leverantör ger dig att logga in på servern. Om du har en privat server är det vanligtvis ett lokalt användarkonto på Commerce-servern.
 
 Kommandoanvändning:
 
@@ -60,7 +60,7 @@ Current application mode: {mode}. (Note: Environment variables may override this
 
 där:
 
-- **`{mode}`** kan vara antingen `default`, `developer`, eller `production`
+- **`{mode}`** kan vara antingen `default`, `developer` eller `production`
 
 ## Ändra lägen
 
@@ -72,9 +72,9 @@ bin/magento deploy:mode:set {mode} [-s|--skip-compilation]
 
 där:
 
-- **`{mode}`** krävs; det kan antingen `developer` eller `production`
+- **`{mode}`** krävs; det kan vara antingen `developer` eller `production`
 
-- **`--skip-compilation`** är en valfri parameter som du kan använda för att hoppa över [kodkompilering](../cli/code-compiler.md) när du byter till produktionsläge.
+- **`--skip-compilation`** är en valfri parameter som du kan använda för att hoppa över [kodkompilering](../cli/code-compiler.md) när du ändrar till produktionsläge.
 
 Här följer några exempel.
 
@@ -129,7 +129,7 @@ Enabled production mode.
 
 När du byter från produktion till utvecklarläge bör du rensa genererade klasser och objekthanterarentiteter som proxies för att undvika oväntade fel. När du har gjort det kan du ändra läge. Gör så här:
 
-1. Om du byter från produktionsläge till utvecklarläge tar du bort innehållet i `generated/code` och `generated/metadata` kataloger:
+1. Om du ändrar från produktionsläge till utvecklarläge tar du bort innehållet i katalogerna `generated/code` och `generated/metadata`:
 
    ```bash
    rm -rf <magento_root>/generated/metadata/* <magento_root>/generated/code/*
@@ -163,4 +163,4 @@ Enabled default mode.
 
 [Kör CLI-kommandon var som helst](../cli/config-cli.md#config-install-cli-first).
 
-Om du inte har lagt till `<Commerce-install-directory>/bin` till ditt system `PATH`, kan du förvänta dig ett fel när du kör kommandot själv.
+Om du inte har lagt till `<Commerce-install-directory>/bin` i systemet `PATH` kan du förvänta dig ett fel när du kör kommandot själv.

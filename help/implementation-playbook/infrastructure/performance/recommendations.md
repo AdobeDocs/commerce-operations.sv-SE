@@ -18,7 +18,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->Se [_Guide till bästa praxis för prestanda_](../../../performance/overview.md) för mer information om prestandaoptimering.
+>Mer information om prestandaoptimering finns i [_handboken om bästa metoder för prestanda_](../../../performance/overview.md).
 
 ## Infrastruktur
 
@@ -58,15 +58,15 @@ N[Cores] = (N [Expected Requests] / 2) + N [Expected Cron Processes])
 
 Optimering av de här inställningarna beror på prestandatestresultaten för olika projekt.
 
-- **ByteCode**- För att få ut så mycket som möjligt av Adobe Commerce på PHP 7 måste du aktivera `opcache` och konfigurera den.
+- **ByteCode** - För att få ut så mycket hastighet som möjligt av Adobe Commerce på PHP 7 måste du aktivera modulen `opcache` och konfigurera den på rätt sätt.
 
-- **APCU**—Adobe rekommenderar att PHP APCu-tillägget aktiveras och att Composer konfigureras för optimering för maximala prestanda. Det här tillägget cachelagrar filplatser för öppnade filer, vilket ökar prestanda för Adobe Commerce-serveranrop, inklusive sidor, Ajax-anrop och slutpunkter.
+- **APCU** - Adobe rekommenderar att PHP APCu-tillägget aktiveras och att Composer konfigureras för optimering för maximala prestanda. Det här tillägget cachelagrar filplatser för öppnade filer, vilket ökar prestanda för Adobe Commerce-serveranrop, inklusive sidor, Ajax-anrop och slutpunkter.
 
-- **Realpath_cacheConfiguration**—Optimering `realpath_cache` gör att PHP-processer kan cachelagra sökvägar till filer i stället för att leta upp dem varje gång en sida läses in.
+- **Realpath_cacheConfiguration** - Optimering `realpath_cache` gör att PHP-processer kan cachelagra sökvägar till filer i stället för att leta upp dem varje gång en sida läses in.
 
 ### Webbserver
 
-Endast en liten omkonfiguration behövs för att använda nginx som webbserver. Nginx-webbservern ger bättre prestanda och är enkel att konfigurera med exempelkonfigurationsfilen från Adobe Commerce ([`nginx.conf.sample`](https://github.com/magento/magento2/blob/2.4/nginx.conf.sample)).
+Endast en liten omkonfiguration behövs för att använda nginx som webbserver. nginx-webbservern ger bättre prestanda och är enkel att konfigurera med exempelkonfigurationsfilen från Adobe Commerce ([`nginx.conf.sample`](https://github.com/magento/magento2/blob/2.4/nginx.conf.sample)).
 
 - Konfigurera PHP-FPM med TCP korrekt
 
@@ -80,7 +80,7 @@ Det här dokumentet innehåller inga detaljerade MySQL-justeringsanvisningar eft
 
 Adobe Commerce-databasen (och alla andra databaser) är beroende av hur mycket minne som finns tillgängligt för att lagra data och index. För att effektivt kunna använda MySQL-dataindexering bör mängden tillgängligt minne vara minst hälften så stor som storleken på de data som lagras i databasen.
 
-Optimera `innodb_buffer_pool_instances` för att undvika problem med flera trådar som försöker få åtkomst till samma instans. Värdet för `max_connections` parametern ska korrelera med det totala antalet PHP-trådar som konfigurerats i programservern. Använd följande formel för att beräkna det bästa värdet för `innodb-thread-concurrency`:
+Optimera `innodb_buffer_pool_instances`-inställningen för att undvika problem med flera trådar som försöker få åtkomst till samma instans. Värdet för parametern `max_connections` ska korrelera med det totala antalet PHP-trådar som konfigurerats i programservern. Använd följande formel för att beräkna det bästa värdet för `innodb-thread-concurrency`:
 
 ```
 innodb-thread-concurrency = 2 * (NumCPUs+NumDisks)
@@ -94,7 +94,7 @@ Redis bör ha tillräckligt med minne för att rymma alla andra cacheminnen för
 
 ### Sidcachning
 
-Adobe rekommenderar starkt att du använder lack för helsidescache i din Adobe Commerce-butik. The `PageCache` modulen finns fortfarande i kodbasen, men den bör endast användas i utvecklingssyfte.
+Adobe rekommenderar starkt att du använder lack för helsidescache i din Adobe Commerce-butik. Modulen `PageCache` finns fortfarande i kodbasen, men den bör bara användas i utvecklingssyfte.
 
 Installera lack på en separat server framför webbskiktet. Den ska acceptera alla inkommande begäranden och tillhandahålla cachelagrade sidkopior. För att Varnish ska kunna arbeta effektivt med skyddade sidor kan en SSL-termineringsproxy placeras framför Varnish. Nginx kan användas för detta ändamål.
 
@@ -102,7 +102,7 @@ Installera lack på en separat server framför webbskiktet. Den ska acceptera al
 
 ### Meddelandeköer
 
-MQF (Message Queue Framework) är ett system som gör att en modul kan publicera meddelanden till köer. Det definierar också de konsumenter som tar emot meddelandena asynkront. Adobe Commerce stöder [!DNL RabbitMQ] som meddelandeförmedlare, som tillhandahåller en skalbar plattform för att skicka och ta emot meddelanden.
+MQF (Message Queue Framework) är ett system som gör att en modul kan publicera meddelanden till köer. Det definierar också de konsumenter som tar emot meddelandena asynkront. Adobe Commerce stöder [!DNL RabbitMQ] som meddelandeförmedlare, vilket ger en skalbar plattform för att skicka och ta emot meddelanden.
 
 ### Prestandatestning och övervakning
 
@@ -126,7 +126,7 @@ Det finns ett separat avsnitt som är dedikerat till [headless](../../architectu
 
 ### Håll Adobe Commerce uppdaterat
 
-Adobe Commerce har alltid bättre prestanda när den senaste versionen körs. Även om det inte är möjligt att hålla Adobe Commerce uppdaterat efter att varje ny version släppts rekommenderar vi fortfarande att [uppgradera](../../../upgrade/overview.md) när Adobe Commerce introducerar betydande prestandaoptimeringar.
+Adobe Commerce har alltid bättre prestanda när den senaste versionen körs. Även om det inte går att hålla Adobe Commerce uppdaterat efter att varje ny version har släppts, rekommenderas ändå [uppgradering](../../../upgrade/overview.md) när Adobe Commerce introducerar betydande prestandaoptimeringar.
 
 År 2020 släppte Adobe t.ex. en optimering av Redis-lagret, som åtgärdade många ineffektivitet, anslutningsproblem och onödig dataöverföring mellan Redis och Adobe Commerce. Den övergripande prestandan mellan 2.3 och 2.4 är natt och dag och ger avsevärda förbättringar i kundvagn, kassan, samtidiga användare, bara på grund av Redis-optimeringen.
 

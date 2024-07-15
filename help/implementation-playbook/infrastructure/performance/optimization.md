@@ -44,7 +44,7 @@ Långsammare inläsning betraktas vanligtvis som en indikator som definierar den
 
 Adobe Commerce kan byggas ut med verksamheten genom sina funktioner:
 
-![Bild som visar Adobe Commerce skalbara funktioner](../../../assets/playbooks/scalable-capabilities.svg)
+![Diagram som visar de skalbara funktionerna i Adobe Commerce](../../../assets/playbooks/scalable-capabilities.svg)
 
 Det finns också viktiga faktorer som driver på handelns skala, vilket också påverkar det övergripande resultatet.
 
@@ -57,4 +57,4 @@ Det finns också viktiga faktorer som driver på handelns skala, vilket också p
 
 För skalbara och cacheable-arkitekturer kan du använda det här diagrammet som referens.
 
-![Bild som visar hur du använder Adobe Commerce GraphQL API i en tillgänglig arkitektur](../../../assets/playbooks/cacheable-architecture.svg)
+![Diagram som visar hur du använder Adobe Commerce GraphQL API i en tillgänglig arkitektur](../../../assets/playbooks/cacheable-architecture.svg)

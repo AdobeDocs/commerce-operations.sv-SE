@@ -1,35 +1,35 @@
 ---
-title: Kör [!DNL Upgrade Compatibility Tool]
-description: Följ de här stegen för att köra [!DNL Upgrade Compatibility Tool] i ett kommandoradsgränssnitt för ditt Adobe Commerce-projekt.
+title: Kör  [!DNL Upgrade Compatibility Tool]
+description: Följ de här stegen för att köra  [!DNL Upgrade Compatibility Tool]  i ett kommandoradsgränssnitt för ditt Adobe Commerce-projekt.
 exl-id: ea467a74-18eb-476b-96e2-23f4fc257d73
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1077'
 ht-degree: 0%
 
 ---
 
-# Ladda ned [!DNL Upgrade Compatibility Tool]
+# Hämta [!DNL Upgrade Compatibility Tool]
 
 {{commerce-only}}
 
-Så här kommer du igång med [!DNL Upgrade Compatibility Tool] i ett kommandoradsgränssnitt hämtar du det genom att köra följande kommando:
+Om du vill komma igång med [!DNL Upgrade Compatibility Tool] i ett kommandoradsgränssnitt hämtar du det genom att köra följande kommando:
 
 ```bash
 composer create-project magento/upgrade-compatibility-tool uct --repository https://repo.magento.com
 ```
 
-Du kan behöva ge verktyget körbara behörigheter med `chmod` kommando:
+Du kan behöva ge verktyget körbar behörighet med kommandot `chmod`:
 
 ```bash
 chmod +x ./uct/bin/uct
 ```
 
-## The [!DNL Upgrade Compatibility Tool] i ett kommandoradsgränssnitt
+## [!DNL Upgrade Compatibility Tool] i ett kommandoradsgränssnitt
 
-The [!DNL Upgrade Compatibility Tool] är ett verktyg som kontrollerar en Adobe Commerce-anpassad instans mot en viss version genom att analysera alla moduler som är installerade i den. Den returnerar en lista med allvarliga problem, fel och varningar som måste åtgärdas innan du uppgraderar till den senaste versionen av Adobe Commerce.
+[!DNL Upgrade Compatibility Tool] är ett verktyg som kontrollerar en Adobe Commerce-anpassad instans mot en viss version genom att analysera alla installerade moduler. Den returnerar en lista med allvarliga problem, fel och varningar som måste åtgärdas innan du uppgraderar till den senaste versionen av Adobe Commerce.
 
-Se det här [videosjälvstudie](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/upgrade/upgrade-compatibility-tool-overview.html?lang=en) (06:02) om du vill veta mer om [!DNL Upgrade Compatibility Tool].
+Se den här [videosjälvstudien](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/upgrade/upgrade-compatibility-tool-overview.html?lang=en) (06:02) om du vill veta mer om [!DNL Upgrade Compatibility Tool].
 
 Tillgängliga kommandon för [!DNL Upgrade Compatibility Tool] i ett kommandoradsgränssnitt:
 
@@ -41,27 +41,27 @@ Tillgängliga kommandon för [!DNL Upgrade Compatibility Tool] i ett kommandorad
 | `refactor` | Det här kommandot åtgärdar automatiskt en reducerad uppsättning problem. |
 | `graphql:compare` | Det här kommandot ger möjlighet att granska två GraphQL-slutpunkter och jämföra deras scheman. |
 | `list` | Det här kommandot returnerar en lista med alla [!DNL Upgrade Compatibility Tool] tillgängliga kommandon. |
-| `help` | Det här kommandot returnerar alla tillgängliga `help`för [!DNL Upgrade Compatibility Tool]. Det här kommandot kan köras såväl som ett alternativ med de föregående kommandona. |
+| `help` | Det här kommandot returnerar alla tillgängliga `help`-alternativ för [!DNL Upgrade Compatibility Tool]. Det här kommandot kan köras såväl som ett alternativ med de föregående kommandona. |
 
-## Använd `upgrade:check` kommando
+## Använd kommandot `upgrade:check`
 
-The `upgrade:check` -kommandot kontrollerar om det finns några ändringar i kärnkoden för den specifika Adobe Commerce-instansen och alla anpassade kodändringar som har installerats i den.
+Kommandot `upgrade:check` söker efter kärnkodändringar för den specifika Adobe Commerce-instansen och alla anpassade kodändringar som är installerade i den.
 
-The `upgrade:check` är det huvudsakliga kommandot som kör verktyget:
+Kommandot `upgrade:check` är huvudkommandot för att köra verktyget:
 
 ```bash
 bin/uct upgrade:check <dir>
 ```
 
-Plats `<dir>` värde är den katalog där din Adobe Commerce-instans finns.
+Värdet `<dir>` är den katalog där din Adobe Commerce-instans finns.
 
-Tillgängliga alternativ för `upgrade:check` kommando:
+Tillgängliga alternativ för kommandot `upgrade:check`:
 
 | **Kommando** | **Tillgängliga alternativ** |
 |----------------|-----------------|
 | `upgrade:check` | <ul><li>—help: Returnerar alla tillgängliga alternativ.</li><li>—current-version: Aktuell Adobe Commerce-version. Den här parametern är obligatorisk och måste alltid användas.</li><li>—min-issue-level: Du kan filtrera utgåvor efter den minsta utgåvnivån (standardvärdet är VARNING).</li><li>—ignore-current-version-compatibility-issues (eller -i): Om du inte vill ta med kritiska problem, fel och varningar från den aktuella versionen i rapporten.</li><li>—coming-version (eller -c): Ange en specifik Adobe Commerce-version som mål. Senaste tillgängliga kommer att användas om det utelämnas.</li></ul> |
 
-The [!DNL Upgrade Compatibility Tool] låter dig köra `upgrade:check` kommando med `--ignore-current-version-compatibility-issues` alternativ. Använd det här alternativet om du bara vill få nya utgåvor som introduceras med uppdateringen från den aktuella versionen till målversionen i din [!DNL Upgrade Compatibility Tool] rapport:
+Med [!DNL Upgrade Compatibility Tool] kan du köra kommandot `upgrade:check` med ett `--ignore-current-version-compatibility-issues`-alternativ. Använd det här alternativet om du bara vill få nya utgåvor som introduceras med uppdateringen från den aktuella versionen till målversionen i din [!DNL Upgrade Compatibility Tool]-rapport:
 
 ```bash
 bin/uct upgrade:check --ignore-current-version-compatibility-issues <dir>
@@ -71,26 +71,26 @@ bin/uct upgrade:check --ignore-current-version-compatibility-issues <dir>
 >
 > Detta gäller endast för PHP API-valideringar.
 
-### Lägga till `--coming-version` option
+### Lägger till alternativet `--coming-version`
 
-Du kan jämföra din nuvarande Adobe Commerce-installation med valfri Adobe Commerce-version `>=2.3` genom att använda `--coming-version` alternativ.
+Du kan jämföra din nuvarande Adobe Commerce-installation med valfri Adobe Commerce-version `>=2.3` genom att använda alternativet `--coming-version`.
 
-Du måste ange versionen som en parameter när du kör `upgrade:check` kommando:
+Du måste ange versionen som en parameter när du kör kommandot `upgrade:check`:
 
 ```bash
 bin/uct upgrade:check <dir> -c 2.4.3
 ```
 
-Plats `-c, --coming-version[=COMING-VERSION]` avser målversionen av Adobe Commerce.
+Där `-c, --coming-version[=COMING-VERSION]` refererar till målversionen för Adobe Commerce.
 
-Det finns vissa begränsningar när du kör `--coming-version`:
+Det finns vissa begränsningar när `--coming-version` körs:
 
 - Den här parametern refererar till taggar som identifierar en viss version av Adobe Commerce.
 - Det är ett krav att uttryckligen ange detta, att bara värdet av det inte fungerar.
-- Ange taggversionen utan citattecken (varken enkla eller dubbla): ~~2.4.1-develop~~.
+- Ange taggversionen utan citattecken (varken enkla eller dubbla): ~~&#39;2.4.1-develop&#39;~~.
 - Du bör INTE tillhandahålla äldre versioner än den som du har installerat, eller äldre än 2.3, som för närvarande är den äldsta som stöds.
 
-## Använd `dbschema:diff` kommando
+## Använd kommandot `dbschema:diff`
 
 Du kan hämta skillnaden mellan databasschemat för två Adobe Commerce-versioner.
 
@@ -125,7 +125,7 @@ Table admin_user_session column session_id comment value is different. 2.4.3: "S
 Total detected differences between version 2.4.3 and 2.4.3-p3: 11
 ```
 
-## Använd `core:code:changes` kommando
+## Använd kommandot `core:code:changes`
 
 Du kan jämföra din nuvarande Adobe Commerce-installation för att kontrollera om Adobe Commerce kärnkod har ändrats för att implementera en anpassning. Det här kommandot visar endast en lista över viktiga ändringar:
 
@@ -136,53 +136,53 @@ bin/uct core:code:changes <dir> <vanilla dir>
 Där argumenten är följande:
 
 - `<dir>`: Adobe Commerce installationskatalog.
-- `<vanilla dir>`: Adobe Commerce vaniljas installationskatalog.
+- `<vanilla dir>`: Installationskatalogen för Adobe Commerce vanilla.
 
-Tillgängliga alternativ för `core:code:changes` kommando:
+Tillgängliga alternativ för kommandot `core:code:changes`:
 
 | **Kommando** | **Tillgängliga alternativ** |
 |----------------|-----------------|
-| `core:code:changes` | `--help`: Returnerar alla tillgängliga `--help` alternativ. |
+| `core:code:changes` | `--help`: Returnerar alla tillgängliga `--help`-alternativ. |
 
 >[!NOTE]
 >
-> Det är en god vana att hålla anpassad kod utanför kärnkoden. Se Adobe Commerce 2.4 [uppgraderingsguide](https://experienceleague.adobe.com/docs/commerce-operations/assets/adobe-commerce-2-4-upgrade-guide.pdf) om du vill ha mer information om bästa praxis för uppgradering.
+> Det är en god vana att hålla anpassad kod utanför kärnkoden. Mer information om bästa praxis för uppgradering finns i Adobe Commerce 2.4 [uppgraderingsguiden](https://experienceleague.adobe.com/docs/commerce-operations/assets/adobe-commerce-2-4-upgrade-guide.pdf) .
 
 ### Vanilla-installation
 
-A _vanilj_ installation är en ren installation av en angiven versionstagg eller gren för en specifik version.
+En _vanilj_-installation är en ren installation av en angiven versionstagg eller gren för en specifik version.
 
-The `bin/uct core:code:changes` -kommandot kontrollerar om det finns en vanilj-instans i systemet. Om det här är första gången du använder en vanilj-installation uppmanas du av en interaktiv kommandoradsfråga att hämta vaniljprojektet från Adobe Commerce-databasen (`https://repo.magento.com/`).
+Kommandot `bin/uct core:code:changes` kontrollerar om det finns en vanilj-instans i systemet. Om det här är första gången du använder en vanilj-installation uppmanas du av en interaktiv kommandoradsfråga att hämta vanilj-projektet från Adobe Commerce-databasen (`https://repo.magento.com/`).
 
-Du kan köra en [!DNL Upgrade Compatibility Tool] med kommandot `--vanilla-dir` om du vill ange installationskatalogen för Adobe Commerce vanilla.
+Du kan köra ett [!DNL Upgrade Compatibility Tool]-kommando med alternativet `--vanilla-dir` för att ange Adobe Commerce vanilj-installationskatalogen.
 
-Se [Distribuera vanilj-instans](https://developer.adobe.com/commerce/contributor/guides/code-contributions/#deploy-vanilla-magento-open-source-instance) för mer information.
+Mer information finns i avsnittet [Distribuera vanilj-instans](https://developer.adobe.com/commerce/contributor/guides/code-contributions/#deploy-vanilla-magento-open-source-instance).
 
-## Använd `refactor` kommando
+## Använd kommandot `refactor`
 
-The [!DNL Upgrade Compatibility Tool] har möjlighet att automatiskt åtgärda en reducerad uppsättning problem:
+[!DNL Upgrade Compatibility Tool] kan automatiskt åtgärda en reducerad uppsättning problem:
 
 - Funktioner som var tillåtna att användas utan att ett argument skickades, men med sådan användning har nu tagits bort.
 - Användning av `$this` i Magento-mallar.
-- Användning av PHP-nyckelord `final` i privata metoder.
+- Användning av PHP-nyckelordet `final` i privata metoder.
 
-För det kör du `refactor` kommando:
+För det kör du kommandot `refactor`:
 
 ```bash
 bin/uct refactor <dir>
 ```
 
-Plats `<dir>` värde är den katalog där din Adobe Commerce-instans finns.
+Värdet `<dir>` är den katalog där din Adobe Commerce-instans finns.
 
-Tillgängliga alternativ för `refactor` kommando:
+Tillgängliga alternativ för kommandot `refactor`:
 
 | **Kommando** | **Tillgängliga alternativ** |
 |----------------|-----------------|
-| `refactor` | `--help`: Returnerar alla tillgängliga `--help` alternativ. |
+| `refactor` | `--help`: Returnerar alla tillgängliga `--help`-alternativ. |
 
-## Använd `graphql:compare` kommando
+## Använd kommandot `graphql:compare`
 
-Det här kommandot ger möjlighet att [!DNL Upgrade Compatibility Tool] för att presentera två GraphQL-slutpunkter och jämföra sina scheman för att hitta nya och farliga förändringar mellan dem:
+Det här kommandot ger [!DNL Upgrade Compatibility Tool] möjlighet att granska två GraphQL-slutpunkter och jämföra deras scheman för att hitta brytningar och farliga ändringar mellan dem:
 
 ```bash
 bin/uct graphql:compare <schema1> <schema2>
@@ -193,29 +193,29 @@ Där argumenten är följande:
 - `<schema1>`: Slutpunkts-URL för den befintliga installationen.
 - `<schema2>`: Slutpunkts-URL för vanilj-installationen.
 
-Tillgängliga alternativ för `graphql:compare` kommando:
+Tillgängliga alternativ för kommandot `graphql:compare`:
 
 | **Kommando** | **Tillgängliga alternativ** |
 |----------------|-----------------|
-| `graphql:compare` | `--help`: Returnerar alla tillgängliga `--help` alternativ. |
+| `graphql:compare` | `--help`: Returnerar alla tillgängliga `--help`-alternativ. |
 
-## Använd `list` kommando
+## Använd kommandot `list`
 
-Returnera en lista med [!DNL Upgrade Compatibility Tool] tillgängliga kommandon, kör:
+Om du vill returnera en lista över de [!DNL Upgrade Compatibility Tool] tillgängliga kommandona kör du:
 
 ```bash
 bin/uct list
 ```
 
-## Använd `help` kommando
+## Använd kommandot `help`
 
-Om du vill se [!DNL Upgrade Compatibility Tool] allmänna kommandoalternativ och hjälp, kör:
+Om du vill visa allmänna alternativ och hjälp för kommandot [!DNL Upgrade Compatibility Tool] kör du:
 
 ```bash
 bin/uct --help
 ```
 
-Den returnerar en lista med alla tillgängliga `help` för [!DNL Upgrade Compatibility Tool] i ett kommandoradsgränssnitt:
+Den returnerar en lista med alla tillgängliga `help`-alternativ för [!DNL Upgrade Compatibility Tool] i ett kommandoradsgränssnitt:
 
 ```terminal
 - --raw             To output raw command list
@@ -229,15 +229,15 @@ Den returnerar en lista med alla tillgängliga `help` för [!DNL Upgrade Compati
 - -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
 ```
 
-Det går att köra `--help` som ett alternativ när du kör ett specifikt kommando. Returnerar `--help` för det angivna kommandot.
+Det går att köra `--help` som ett alternativ när ett specifikt kommando körs. Det returnerar `--help` alternativ för det angivna kommandot.
 
-Exempel på `upgrade:check` kommando med `--help` alternativ:
+Exempel på kommandot `upgrade:check` med alternativet `--help`:
 
 ```bash
 bin/uct upgrade:check --help
 ```
 
-Detta returnerar specifika alternativ som kan köras för `upgrade:check` kommando:
+Detta returnerar specifika alternativ som kan köras för kommandot `upgrade:check`:
 
 ```terminal
 - -a, --current-version[=CURRENT-VERSION]: Current Adobe Commerce version, version of the Adobe Commerce installation will be used if omitted.
@@ -258,14 +258,14 @@ Detta returnerar specifika alternativ som kan köras för `upgrade:check` komman
 ## Följ Adobe Commerce metodtips
 
 - Undvik två moduler med samma namn.
-- Följ Adobe Commerce [kodstandarder](https://developer.adobe.com/commerce/php/coding-standards/).
+- Följ Adobe Commerce [kodningsstandarder](https://developer.adobe.com/commerce/php/coding-standards/).
 - Adobe Commerce 2.4 [Uppgraderingsguide](https://experienceleague.adobe.com/docs/commerce-operations/assets/adobe-commerce-2-4-upgrade-guide.pdf) bästa praxis.
-- Kör [!DNL Upgrade Compatibility Tool] från [[!DNL Site-Wide Analysis Tool]](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool.html) for [Adobe Commerce i molninfrastruktur](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html){target=_blank} projekt.
+- Kör [!DNL Upgrade Compatibility Tool] från [[!DNL Site-Wide Analysis Tool]](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool.html) för [Adobe Commerce i molninfrastrukturprojekt](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html){target=_blank}.
 
 ## Optimera resultatet
 
-The [!DNL Upgrade Compatibility Tool] innehåller en rapport med resultat med alla problem som identifieras i ditt projekt som standard. Du kan optimera resultaten för att fokusera på de problem som du måste åtgärda för att slutföra uppgraderingen:
+[!DNL Upgrade Compatibility Tool] tillhandahåller en rapport som innehåller resultat med alla problem som identifieras i ditt projekt som standard. Du kan optimera resultaten för att fokusera på de problem som du måste åtgärda för att slutföra uppgraderingen:
 
-- Använd alternativet `--ignore-current-version-compatibility-issues` när du bara vill få nya utgåvor som introduceras med uppdateringen från den aktuella versionen till målversionen i [!DNL Upgrade Compatibility Tool] rapport.
-- Lägga till `--min-issue-level` den här inställningen gör att du kan ange en miniminivå för utgåvor, så att du bara kan prioritera de viktigaste problemen med din uppgradering.
-- The [!DNL Upgrade Compatibility Tool] kräver minst 2 GB RAM-minne för att köras. Den här inställningen rekommenderas för att undvika problem på grund av en låg minnesbegränsning. The [!DNL Upgrade Compatibility Tool] visar en fråga om du kör `upgrade:check` kommando med låg `memory_limit` inställning.
+- Använd alternativet `--ignore-current-version-compatibility-issues` om du bara vill få nya utgåvor som introduceras med uppdateringen från den aktuella versionen till målversionen i din [!DNL Upgrade Compatibility Tool]-rapport.
+- Om du lägger till alternativet `--min-issue-level` kan du med den här inställningen ange lägsta problemnivå, så att du bara kan prioritera de viktigaste problemen med uppgraderingen.
+- [!DNL Upgrade Compatibility Tool] kräver minst 2 GB RAM för att kunna köras. Den här inställningen rekommenderas för att undvika problem på grund av en låg minnesbegränsning. [!DNL Upgrade Compatibility Tool] visar en fråga om du kör kommandot `upgrade:check` med låg `memory_limit`-inställning.

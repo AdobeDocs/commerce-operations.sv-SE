@@ -26,13 +26,13 @@ Adobe Commerce stöder Apache 2.4.x.
 
 ## Apache-skrivningar och åtkomst
 
-I det här avsnittet beskrivs hur du aktiverar Apache 2.4-omskrivningar och anger en inställning för [distribuerad konfigurationsfil, `.htaccess`](https://httpd.apache.org/docs/current/howto/htaccess.html).
+I det här avsnittet beskrivs hur du aktiverar Apache 2.4-omskrivningar och anger en inställning för den [distribuerade konfigurationsfilen, `.htaccess`](https://httpd.apache.org/docs/current/howto/htaccess.html).
 
-Adobe Commerce använder serveråterskrivningar och `.htaccess` för att ge katalognivåinstruktioner för Apache. Följande instruktioner finns även i alla andra avsnitt i det här avsnittet.
+Adobe Commerce använder serverskrivningar och `.htaccess` för att tillhandahålla katalognivåinstruktioner för Apache. Följande instruktioner finns även i alla andra avsnitt i det här avsnittet.
 
-Använd det här avsnittet för att aktivera Apache 2.4-omskrivningar och ange en inställning för [distribuerad konfigurationsfil, `.htaccess`](https://httpd.apache.org/docs/current/howto/htaccess.html)
+Använd det här avsnittet om du vill aktivera Apache 2.4-omskrivningar och ange en inställning för den [distribuerade konfigurationsfilen, `.htaccess`](https://httpd.apache.org/docs/current/howto/htaccess.html)
 
-Adobe Commerce använder serveråterskrivningar och `.htaccess` för att ge katalognivåinstruktioner för Apache.
+Adobe Commerce använder serverskrivningar och `.htaccess` för att tillhandahålla katalognivåinstruktioner för Apache.
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ Adobe Commerce använder serveråterskrivningar och `.htaccess` för att ge kata
    a2enmod rewrite
    ```
 
-1. Så här aktiverar du programmet att använda den distribuerade `.htaccess` konfigurationsfilen, se riktlinjerna i [Dokumentation för Apache 2.4](https://httpd.apache.org/docs/current/mod/mod_rewrite.html).
+1. Om du vill att programmet ska kunna använda den distribuerade konfigurationsfilen `.htaccess` läser du riktlinjerna i [ Apache 2.4-dokumentationen](https://httpd.apache.org/docs/current/mod/mod_rewrite.html).
 
    >[!TIP]
    >
@@ -60,7 +60,7 @@ Adobe Commerce använder serveråterskrivningar och `.htaccess` för att ge kata
 
    >[!NOTE]
    >
-   >Ibland kan ytterligare parametrar behövas. Mer information finns i [Dokumentation för Apache 2.4](https://httpd.apache.org/docs/2.4/mod/mod_access_compat.html#order).
+   >Ibland kan ytterligare parametrar behövas. Mer information finns i [Apache 2.4-dokumentationen](https://httpd.apache.org/docs/2.4/mod/mod_access_compat.html#order).
 
 1. Om du har ändrat Apache-inställningarna startar du om Apache:
 
@@ -70,8 +70,8 @@ Adobe Commerce använder serveråterskrivningar och `.htaccess` för att ge kata
 
    >[!NOTE]
    >
-   >- Om du har uppgraderat från en tidigare Apache-version ska du först leta efter `<Directory "/var/www/html">` eller `<Directory "/var/www">` in `000-default.conf`.
-   >- Du måste ändra värdet för `AllowOverride` i direktivet för den katalog som du vill installera Adobe Commerce-programmet i. Om du till exempel vill installera i webbserverdokumentet redigerar du direktivet i `<Directory /var/www>`.
+   >- Om du uppgraderade från en tidigare Apache-version söker du först efter `<Directory "/var/www/html">` eller `<Directory "/var/www">` i `000-default.conf`.
+   >- Du måste ändra värdet för `AllowOverride` i direktivet för den katalog som du vill installera Adobe Commerce-programvaran i. Om du till exempel vill installera i webbserverdokumentet redigerar du direktivet i `<Directory /var/www>`.
 
 >[!NOTE]
 >
@@ -103,7 +103,7 @@ Server version: Apache/2.4.04 (Ubuntu)
 Server built: Jul 22 2020 14:35:32
 ```
 
-- Om Apache *not* finns i:
+- Om Apache *inte* är installerat, se:
    - [Installera eller uppgradera Apache på Ubuntu](#installing-apache-on-ubuntu)
    - [Installerar Apache på CentOS](#installing-apache-on-centos)
 
@@ -137,13 +137,13 @@ Installera standardversionen av Apache:
    Server built: 2020-04-15T18:00:57
    ```
 
-1. Aktivera [skriver om och `.htaccess`](#apache-rewrites-and-htaccess).
+1. Aktivera [omskrivningar och `.htaccess`](#apache-rewrites-and-htaccess).
 
 ### Uppgraderar Apache på Ubuntu
 
 Uppgradera till Apache 2.4:
 
-1. Lägg till `ppa:ondrej` databas med Apache 2.4:
+1. Lägg till databasen `ppa:ondrej` som har Apache 2.4:
 
    ```bash
    apt-get -y update
@@ -180,13 +180,13 @@ Uppgradera till Apache 2.4:
    Server built: Jul 22 2020 22:46:25
    ```
 
-1. Aktivera [skriver om och `.htaccess`](#apache-rewrites-and-htaccess).
+1. Aktivera [omskrivningar och `.htaccess`](#apache-rewrites-and-htaccess).
 
 ## Installerar Apache på CentOS
 
-Adobe Commerce kräver omskrivning av Apache-servern. Du måste också ange vilken typ av direktiv som kan användas i `.htaccess`som programmet använder för att ange regler för omskrivning.
+Adobe Commerce kräver omskrivning av Apache-servern. Du måste också ange vilken typ av direktiv som kan användas i `.htaccess`, som programmet använder för att ange regler för omskrivning.
 
-Installation och konfigurering av Apache är i stort sett en trestegsprocess: installera programmet, aktivera omskrivning och ange `.htaccess` direktiv.
+Installation och konfigurering av Apache är i princip en trestegsprocess: installera programmet, aktivera omskrivningar och ange `.htaccess` direktiv.
 
 ### Installerar Apache
 
@@ -217,7 +217,7 @@ Installation och konfigurering av Apache är i stort sett en trestegsprocess: in
 
 ### Aktivera omskrivning och .htaccess för CentOS
 
-1. Öppna `/etc/httpd/conf/httpd.conf` fil för redigering:
+1. Öppna filen `/etc/httpd/conf/httpd.conf` för redigering:
 
    ```bash
    vim /etc/httpd/conf/httpd.conf`
@@ -244,7 +244,7 @@ Installation och konfigurering av Apache är i stort sett en trestegsprocess: in
 
    >[!NOTE]
    >
-   >Föregående värden för `Order` kanske inte fungerar i alla fall. Mer information finns i dokumentationen för Apache ([2.4](https://httpd.apache.org/docs/2.4/mod/mod_authz_host.html#order)).
+   >Föregående värden för `Order` kanske inte fungerar i alla fall. Mer information finns i Apache-dokumentationen ([2.4](https://httpd.apache.org/docs/2.4/mod/mod_authz_host.html#order)).
 
 1. Spara filen och avsluta textredigeraren.
 
@@ -260,7 +260,7 @@ Installation och konfigurering av Apache är i stort sett en trestegsprocess: in
 
 ### Aktivera omskrivning och .htaccess för Ubuntu
 
-1. Öppna `/etc/apache2/sites-available/default` fil för redigering:
+1. Öppna filen `/etc/apache2/sites-available/default` för redigering:
 
    ```bash
    vim /etc/apache2/sites-available/default
@@ -285,7 +285,7 @@ Installation och konfigurering av Apache är i stort sett en trestegsprocess: in
 
 1. Spara filen och avsluta textredigeraren.
 
-1. Konfigurera Apache att använda `mod_rewrite` modul:
+1. Konfigurera Apache att använda modulen `mod_rewrite`:
 
    ```bash
    cd /etc/apache2/mods-enabled
@@ -307,7 +307,7 @@ Om du stöter på 403 Otillåtna fel när du försöker få åtkomst till webbpl
 
 ### Lösning av 403 Otillåtna fel för Apache 2.4
 
-Om du vill att webbplatsbesökare ska kunna komma åt din webbplats använder du något av [Kräv direktiv](https://httpd.apache.org/docs/2.4/howto/access.html).
+Använd något av [direktiven ](https://httpd.apache.org/docs/2.4/howto/access.html) som krävs om du vill att webbplatsbesökare ska kunna komma åt din webbplats.
 
 Exempel:
 
@@ -322,4 +322,4 @@ Exempel:
 
 >[!NOTE]
 >
->Föregående värden för `Order` kanske inte fungerar i alla fall. Mer information finns i [Apache-dokumentation](https://httpd.apache.org/docs/2.4/mod/mod_access_compat.html#order).
+>Föregående värden för `Order` kanske inte fungerar i alla fall. Mer information finns i [Apache-dokumentationen](https://httpd.apache.org/docs/2.4/mod/mod_access_compat.html#order).

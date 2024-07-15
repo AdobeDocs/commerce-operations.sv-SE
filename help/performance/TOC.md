@@ -23,6 +23,6 @@ ht-degree: 0%
 - [Distributionsflöde](deployment-flow.md)
 - Avancerade begrepp {#concepts}
    - [Avancerad konfiguration](advanced-setup.md)
-   - [Avancerat [!DNL JavaScript] paketering](advanced-js-bundling.md)
+   - [Avancerad [!DNL JavaScript] paketering](advanced-js-bundling.md)
    - [GraphQL Application Server](application-server.md)
-- [Återgå till bruksanvisningar](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
+- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

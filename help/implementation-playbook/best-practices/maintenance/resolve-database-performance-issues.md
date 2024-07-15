@@ -6,7 +6,7 @@ feature: Best Practices
 exl-id: e40e0564-a4eb-43a8-89dd-9f6c5cedb4a7
 source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '541'
 ht-degree: 0%
 
 ---
@@ -29,17 +29,17 @@ Avgör om MySQL-frågor körs långsamt. Beroende på din Adobe Commerce-plan f�
 
 Du kan använda MySQL för att identifiera och lösa frågor som körs länge i Adobe Commerce i molninfrastrukturprojekt.
 
-1. Kör [`SHOW \[FULL\] PROCESSLIST`](https://dev.mysql.com/doc/refman/8.0/en/show-processlist.html) -programsats.
-1. Om du ser frågor som körs länge ska du köra [MySQL `EXPLAIN` och `EXPLAIN ANALYZE`](https://mysqlserverteam.com/mysql-explain-analyze/) för var och en av dem, för att ta reda på vad som får frågan att köras länge.
+1. Kör programsatsen [`SHOW \[FULL\] PROCESSLIST`](https://dev.mysql.com/doc/refman/8.0/en/show-processlist.html).
+1. Om du ser frågor som körs länge kör du [MySQL `EXPLAIN` och `EXPLAIN ANALYZE`](https://mysqlserverteam.com/mysql-explain-analyze/) för var och en av dem för att ta reda på vad som gör att frågan körs länge.
 1. Beroende på vilka problem som hittas kan du åtgärda frågan så att den körs snabbare.
 
 ### Analysera frågor med Percona Toolkit (endast för Pro-arkitekturen)
 
 Om ditt Adobe Commerce-projekt används i Pro-arkitekturen kan du använda Percona Toolkit för att analysera frågor.
 
-1. Kör `pt-query-digest --type=slowlog` kommandot mot långsamma MySQL-frågeloggar.
-   * Information om var de långsamma frågeloggarna finns i **[!UICONTROL Log locations > Service Logs]**(https://devdocs.magento.com/cloud/project/log-locations.html#service-logs) i vår utvecklardokumentation.
-   * Se [Percona Toolkit > pt-query-digest](https://www.percona.com/doc/percona-toolkit/LATEST/pt-query-digest.html#pt-query-digest) dokumentation.
+1. Kör kommandot `pt-query-digest --type=slowlog` mot långsamma MySQL-frågeloggar.
+   * Information om var de långsamma frågeloggarna finns i **[!UICONTROL Log locations > Service Logs]**(https://devdocs.magento.com/cloud/project/log-locations.html#service-logs) i utvecklardokumentationen.
+   * Se dokumentationen för [Percona Toolkit > pt-query-digest](https://www.percona.com/doc/percona-toolkit/LATEST/pt-query-digest.html#pt-query-digest).
 1. Beroende på vilka problem som hittas kan du åtgärda frågan så att den körs snabbare.
 
 ## Verifiera att alla tabeller har en primärnyckel
@@ -58,15 +58,15 @@ Förebygg dessa problem genom att definiera en primärnyckel för alla tabeller 
    SELECT table_catalog, table_schema, table_name, engine FROM information_schema.tables        WHERE (table_catalog, table_schema, table_name) NOT IN (SELECT table_catalog, table_schema, table_name FROM information_schema.table_constraints  WHERE constraint_type = 'PRIMARY KEY') AND table_schema NOT IN ('information_schema', 'pg_catalog');    
    ```
 
-1. För tabeller som saknar en primärnyckel lägger du till en primärnyckel genom att uppdatera `db_schema.xml` (det deklarativa schemat) med en nod som liknar följande:
+1. För alla tabeller som saknar en primärnyckel lägger du till en primärnyckel genom att uppdatera `db_schema.xml` (det deklarativa schemat) med en nod som liknar följande:
 
    ```html
    <constraint xsi:type="primary" referenceId="PRIMARY">         <column name="id_column"/>     </constraint>    
    ```
 
-   Ersätt `referenceID` och `column name` variabler med anpassade värden.
+   När du lägger till noden ersätter du variablerna `referenceID` och `column name` med dina anpassade värden.
 
-Mer information finns i [Konfigurera deklarativt schema](https://developer.adobe.com/commerce/php/development/components/declarative-schema/configuration/) i vår dokumentation för utvecklare.
+Mer information finns i [Konfigurera deklarativt schema](https://developer.adobe.com/commerce/php/development/components/declarative-schema/configuration/) i utvecklardokumentationen.
 
 ## Identifiera och ta bort dubblettindex
 
@@ -82,11 +82,11 @@ SELECT s.INDEXED_COL,GROUP_CONCAT(INDEX_NAME) FROM (SELECT INDEX_NAME,GROUP_CONC
 
 Frågan returnerar kolumnnamnen och namnen på eventuella dubblettindex.
 
-Handläggare som arbetar med Pro-arkitektur kan också köra kontrollen med Percona Toolkit  `[pt-duplicate-key checker](https://www.percona.com/doc/percona-toolkit/LATEST/pt-duplicate-key-checker.html%C2%A0)` -kommando.
+Handlare som arbetar med Pro-arkitektur kan också köra kontrollen med hjälp av Percona Toolkit `[pt-duplicate-key checker](https://www.percona.com/doc/percona-toolkit/LATEST/pt-duplicate-key-checker.html%C2%A0)`-kommandot.
 
 ### Ta bort dubblettindex
 
-Använd SQL [DROP INDEX-sats](https://dev.mysql.com/doc/refman/8.0/en/drop-index.html) om du vill ta bort dubblettindex.
+Använd SQL [DROP INDEX Statement](https://dev.mysql.com/doc/refman/8.0/en/drop-index.html) för att ta bort dubblettindex.
 
 ```SQL
 DROP INDEX

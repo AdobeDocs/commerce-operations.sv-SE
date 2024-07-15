@@ -18,9 +18,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Stöd för OpenSearch lades till i 2.4.4. OpenSearch är en kompatibel gaffel för Elasticsearch. Se [Migrera Elasticsearch till OpenSearch](../../../upgrade/prepare/opensearch-migration.md) för mer information.
+>Stöd för OpenSearch lades till i 2.4.4. OpenSearch är en kompatibel gaffel för Elasticsearch. Mer information finns i [Migrera Elasticsearch till OpenSearch](../../../upgrade/prepare/opensearch-migration.md).
 
-I det här avsnittet beskrivs hur du konfigurerar index som *osäker* så att Adobe Commerce kan använda en sökmotor som körs på den här servern. I det här avsnittet beskrivs inte hur du konfigurerar HTTP Basic-autentisering. Det beskrivs i [Säker kommunikation med nginx](#secure-communication-with-nginx).
+I det här avsnittet beskrivs hur du konfigurerar nginx som en *osäker* -proxy så att Adobe Commerce kan använda en sökmotor som körs på den här servern. I det här avsnittet beskrivs inte konfigurering av grundläggande HTTP-autentisering. Det beskrivs i [Säker kommunikation med nginx](#secure-communication-with-nginx).
 
 >[!NOTE]
 >
@@ -28,7 +28,7 @@ I det här avsnittet beskrivs hur du konfigurerar index som *osäker* så att Ad
 
 ### Ange ytterligare konfigurationsfiler i den globala konfigurationen
 
-Se till att din globala `/etc/nginx/nginx.conf` innehåller följande rad så att de andra konfigurationsfilerna som beskrivs i följande avsnitt läses in:
+Kontrollera att din globala `/etc/nginx/nginx.conf` innehåller följande rad så att den läser in de andra konfigurationsfilerna som beskrivs i följande avsnitt:
 
 ```conf
 include /etc/nginx/conf.d/*.conf;
@@ -38,7 +38,7 @@ include /etc/nginx/conf.d/*.conf;
 
 I det här avsnittet beskrivs hur du anger vilka som ska få åtkomst till Nginx-servern.
 
-1. Skapa en fil med en textredigerare `/etc/nginx/conf.d/magento_es_auth.conf` med följande innehåll:
+1. Använd en textredigerare för att skapa filen `/etc/nginx/conf.d/magento_es_auth.conf` med följande innehåll:
 
    ```conf
    server {
@@ -81,14 +81,14 @@ I det här avsnittet beskrivs hur du anger vilka som ska få åtkomst till Nginx
 
 ## Säker kommunikation med nginx
 
-I det här avsnittet beskrivs hur du konfigurerar [Grundläggande HTTP-autentisering](https://nginx.org/en/docs/http/ngx_http_auth_basic_module.html) med din säkra proxy. Användning av TLS och HTTP Basic-autentisering tillsammans förhindrar alla från att kommunicera med Elasticsearch eller OpenSearch eller med programservern.
+I det här avsnittet beskrivs hur du konfigurerar [grundläggande HTTP-autentisering](https://nginx.org/en/docs/http/ngx_http_auth_basic_module.html) med din säkra proxy. Användning av TLS och HTTP Basic-autentisering tillsammans förhindrar alla från att kommunicera med Elasticsearch eller OpenSearch eller med programservern.
 
-Eftersom ursprungligt stöd för HTTP Basic-autentisering rekommenderas det till exempel över [Sammanfattad autentisering](https://www.nginx.com/resources/wiki/modules/auth_digest/)som inte rekommenderas i produktionen.
+Eftersom ursprungligt stöd för grundläggande HTTP-autentisering rekommenderas det, till exempel [Sammanfattad autentisering](https://www.nginx.com/resources/wiki/modules/auth_digest/), som inte rekommenderas i produktionen.
 
 Ytterligare resurser:
 
-* [Ställa in lösenordsautentisering med Nginx på Ubuntu 14.04 (Digital Ocean)](https://www.digitalocean.com/community/tutorials/how-to-set-up-password-authentication-with-nginx-on-ubuntu-14-04)
-* [Grundläggande HTTP-autentisering med Nginx (THTOForge)](https://www.howtoforge.com/basic-http-authentication-with-nginx)
+* [Så här konfigurerar du lösenordsautentisering med Nginx i Ubuntu 14.04 (Digital Ocean)](https://www.digitalocean.com/community/tutorials/how-to-set-up-password-authentication-with-nginx-on-ubuntu-14-04)
+* [Grundläggande HTTP-autentisering med NINX (THTOForge)](https://www.howtoforge.com/basic-http-authentication-with-nginx)
 * [Exempel på Nginx-konfigurationer för Elasticsearch](https://gist.github.com/karmi/b0a9b4c111ed3023a52d)
 
 Mer information finns i följande avsnitt:
@@ -100,24 +100,24 @@ Mer information finns i följande avsnitt:
 
 ### Skapa ett lösenord
 
-Du bör använda Apache `htpasswd` för att koda lösenord för en användare med åtkomst till Elasticsearch eller OpenSearch (namngivna `magento_elasticsearch` i det här exemplet).
+Vi rekommenderar att du använder Apache `htpasswd`-kommandot för att koda lösenord för en användare som har åtkomst till Elasticsearch eller OpenSearch (som heter `magento_elasticsearch` i det här exemplet).
 
 Skapa ett lösenord:
 
-1. Ange följande kommando för att avgöra om `htpasswd` är redan installerat:
+1. Ange följande kommando för att avgöra om `htpasswd` redan är installerat:
 
    ```bash
    which htpasswd
    ```
 
-   Om en sökväg visas installeras den. Om kommandot inte returnerar några utdata visas `htpasswd` är inte installerat.
+   Om en sökväg visas installeras den. Om kommandot inte returnerar några utdata installeras inte `htpasswd`.
 
-1. Installera vid behov `htpasswd`:
+1. Installera `htpasswd` om det behövs:
 
    * Ubuntu: `apt-get -y install apache2-utils`
    * CentOS: `yum -y install httpd-tools`
 
-1. Skapa en `/etc/nginx/passwd` katalog där lösenord ska lagras:
+1. Skapa en `/etc/nginx/passwd`-katalog för att lagra lösenord:
 
    ```bash
    mkdir -p /etc/nginx/passwd
@@ -129,15 +129,15 @@ Skapa ett lösenord:
 
    >[!WARNING]
    >
-   >Av säkerhetsskäl `<filename>` måste vara dold, d.v.s. börja med en punkt.
+   >Av säkerhetsskäl bör `<filename>` döljas, dvs. den måste börja med en punkt.
 
-1. *(Valfritt).* Om du vill lägga till en annan användare i lösenordsfilen anger du samma kommando utan `-c` (skapa), alternativ:
+1. *(valfritt).* Om du vill lägga till en annan användare i lösenordsfilen anger du samma kommando utan alternativet `-c` (skapa):
 
    ```bash
    htpasswd /etc/nginx/passwd/.<filename> <username>
    ```
 
-1. Verifiera att innehållet i `/etc/nginx/passwd` är korrekt.
+1. Kontrollera att innehållet i `/etc/nginx/passwd` är korrekt.
 
 ### Konfigurera åtkomst till nginx
 
@@ -145,9 +145,9 @@ I det här avsnittet beskrivs hur du anger vilka som ska få åtkomst till Nginx
 
 >[!WARNING]
 >
->Exemplet som visas är för *osäker* -proxy. Om du vill använda en säker proxy lägger du till följande innehåll (förutom lyssningsporten) i det säkra serverblocket.
+>Exemplet som visas är för en *osäker*-proxy. Om du vill använda en säker proxy lägger du till följande innehåll (förutom lyssningsporten) i det säkra serverblocket.
 
-Använd en textredigerare för att ändra `/etc/nginx/conf.d/magento_es_auth.conf` (osäkert) eller ditt säkra serverblock med följande innehåll:
+Använd en textredigerare för att ändra antingen `/etc/nginx/conf.d/magento_es_auth.conf` (osäkert) eller ditt säkra serverblock med följande innehåll:
 
 ```conf
 server {
@@ -192,7 +192,7 @@ I det här avsnittet beskrivs hur du anger vilka som får åtkomst till sökmoto
    mkdir /etc/nginx/auth/
    ```
 
-1. Skapa en fil med en textredigerare `/etc/nginx/auth/magento_elasticsearch.conf` med följande innehåll:
+1. Använd en textredigerare för att skapa filen `/etc/nginx/auth/magento_elasticsearch.conf` med följande innehåll:
 
    ```conf
    location /elasticsearch {
@@ -206,7 +206,7 @@ I det här avsnittet beskrivs hur du anger vilka som får åtkomst till sökmoto
    }
    ```
 
-1. Om du konfigurerar en säker proxy tar du bort `/etc/nginx/conf.d/magento_es_auth.conf`.
+1. Om du har konfigurerat en säker proxy tar du bort `/etc/nginx/conf.d/magento_es_auth.conf`.
 1. Starta om nästa och fortsätt med nästa avsnitt:
 
    ```bash

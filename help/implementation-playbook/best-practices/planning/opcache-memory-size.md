@@ -6,14 +6,14 @@ feature: Best Practices
 exl-id: d1e10068-e4e8-4e75-9f30-f3a89a08d791
 source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '138'
 ht-degree: 0%
 
 ---
 
 # Bästa sättet att hantera OPcache-minnesstorlek i Adobe Commerce
 
-För Adobe Commerce on cloud infrastructure Pro rekommenderas arkitektur 2.3.x `opcache.memory_consumption` till minst 2 GB för att undvika prestandaförsämringar.
+För Adobe Commerce i molninfrastruktur rekommenderas Pro-planarkitekturen 2.3.x att ställa in `opcache.memory_consumption` på minst 2 GB för att undvika prestandaförsämringar.
 
 ## Berörda produkter och versioner
 
@@ -22,7 +22,7 @@ För Adobe Commerce on cloud infrastructure Pro rekommenderas arkitektur 2.3.x `
 
 ## Konfigurera minne
 
-Allokera minst **2 GB** av minnet för [PHP-modul för OPcache](https://www.php.net/manual/en/book.opcache.php). OPcache-modulen är konfigurerad i `php.ini` -fil. Om du vill allokera 2 048 MB minne anger du `opcache.memory_consumption = 2048`.
+Allokera minst **2 GB** minne för PHP-modulen [OPcache](https://www.php.net/manual/en/book.opcache.php). OPcache-modulen är konfigurerad i filen `php.ini`. Om du vill allokera 2 048 MB minne anger du `opcache.memory_consumption = 2048`.
 
 ## Ytterligare information
 

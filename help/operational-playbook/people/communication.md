@@ -65,7 +65,7 @@ I följande lista visas olika sätt att använda JIRA i olika organisationer:
 
 Med JIRA kan teamen skapa och skriva detaljerade uppgifter, generera rapporter, anpassa arbetsflöden och tilldela jobb mellan individer relativt snabbt.
 
-Hanterare, marknadsförings- och utvecklingsteam, även intressenter på C-nivå, kan följa den dagliga, veckovisa, månadsvisa och årliga utvecklingen för varje given JIRA-uppgift eller -projekt. Det Atlassiska projektledningsverktyget finns i tre versioner, bland annat JIRA Align, JIRA Core och JIRA Software.
+Commerce chefer, marknads- och utvecklingsteam, även intressenter på C-nivå, kan följa den dagliga, veckovisa, månadsvisa och årliga utvecklingen för varje given JIRA-uppgift eller -projekt. Det Atlassiska projektledningsverktyget finns i tre versioner, bland annat JIRA Align, JIRA Core och JIRA Software.
 
 Fördelarna med att använda JIRA inom alla e-handelsföretag är möjligheten för flera team att samarbeta på en och samma plattform. Många gånger bevittnar företag marknadsförings-, utvecklings-, kreativitets- och e-handelsteamen som alla arbetar i olika lokaler. Med ett projektledningsverktyg som JIRA kan varje team representera olika prioriteringar. Frågor kan representera allt som team vill spåra och som alla finns i olika projekt som består av återkommande aktiviteter som team måste slutföra. Varje problem genomgår en process som kallas arbetsflöde.
 

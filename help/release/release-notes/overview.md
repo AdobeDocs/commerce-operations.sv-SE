@@ -16,7 +16,7 @@ Använd följande tabell för att hitta versionsinformation och viktig informati
 
 >[!TIP]
 >
->- Om du inte har använt Adobe Commerce tidigare kan du läsa [företagsarkitektur](../../implementation-playbook/architecture/enterprise-blueprint.md) och [om Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-admin/start/about) ämnen som ska orienteras.
+>- Om du inte har använt Adobe Commerce tidigare läser du [företagsarkitekturen](../../implementation-playbook/architecture/enterprise-blueprint.md) och [ om Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-admin/start/about) för att få information om hur du kommer igång.
 >- Mer information om uppgraderingar finns i [rekommenderad läsning](../../upgrade/resources/recommended-reading.md).
 
 <table>
@@ -36,9 +36,9 @@ Använd följande tabell för att hitta versionsinformation och viktig informati
         <p>Läs om de senaste förbättringarna av paketen Cloud Suite för Adobe Commerce, som är utformade för att distribuera och hantera Adobe Commerce-installationer och uppgraderingar på molnplattformen.</p>
           <ul>
             <li><a href="https://devdocs.magento.com/cloud/release-notes/backward-incompatible-changes.html">Bakåtkompatibla ändringar</a></li>
-            <li><a href="https://devdocs.magento.com/cloud/release-notes/mcp-release-notes.html">Cloud Patches for Commerce</a></li>
-            <li><a href="https://devdocs.magento.com/cloud/release-notes/mcd-release-notes.html">Cloud Docker for Commerce</a></li>
-            <li><a href="https://devdocs.magento.com/cloud/release-notes/mcc-release-notes.html">Cloud Components for Commerce</a></li>
+            <li><a href="https://devdocs.magento.com/cloud/release-notes/mcp-release-notes.html">Molnkorrigeringar för Commerce</a></li>
+            <li><a href="https://devdocs.magento.com/cloud/release-notes/mcd-release-notes.html">Cloud Docker för Commerce</a></li>
+            <li><a href="https://devdocs.magento.com/cloud/release-notes/mcc-release-notes.html">Cloud-komponenter för Commerce</a></li>
             <li><a href="https://devdocs.magento.com/cloud/release-notes/ece-release-notes.html">ece-tools</a></li>
           </ul>
       </td>
@@ -59,10 +59,10 @@ Använd följande tabell för att hitta versionsinformation och viktig informati
             <li><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/store-fulfillment/release-notes.html?lang=en">Lagra uppfyllelse</a></li>
           </ul>
         </td>
-      <td><strong>verktyg</strong>
+      <td><strong>Verktyg</strong>
         <p>Läs om de senaste förbättringarna av verktyg som gör det enklare att hitta och använda Adobe Commerce.</p>
           <ul>
-            <li><a href="https://developer.adobe.com/graphql-mesh-gateway/">API Mesh för Adobe APP Builder Developer</a></li>
+            <li><a href="https://developer.adobe.com/graphql-mesh-gateway/">API Mesh för Adobe App Builder Developer</a></li>
             <li><a href="https://developer.adobe.com/commerce/events/get-started/release-notes/">Adobe I/O Events for Adobe Commerce</a></li>
             <li><a href="https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/release-notes/">Administratörsgränssnitt SDK</a></li>
             <li><a href="../../tools/quality-patches-tool/release-notes.md">Verktyget Kvalitetspatchar</a></li>
@@ -72,7 +72,7 @@ Använd följande tabell för att hitta versionsinformation och viktig informati
       </td>
     </tr>
     <tr>
-       <td><strong>Storefront Experience</strong>
+       <td><strong>StoreFront Experience</strong>
         <p>Läs om de senaste förbättringarna av butikstekniken som ni kan använda för att skapa unika upplevelser för era kunder.</p>
           <ul>
             <li><a href="https://experienceleague.adobe.com/developer/commerce/storefront/">Adobe Commerce Storefront</a></li>

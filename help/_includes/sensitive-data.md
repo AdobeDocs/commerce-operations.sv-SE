@@ -13,7 +13,7 @@ Adobe Commerce använder din krypteringsnyckel för att kryptera följande:
 * Användarnamn och lösenord som anges i Admin-konfigurationen (t.ex. inloggningar på betalningsgateways)
 * CAPTCHA-värden som skickas över nätverket
 
-Adobe Commerce do *not* kryptera:
+Adobe Commerce krypterar *inte*:
 
 * Användarnamn och lösenord för administration och kund (dessa lösenord hashas)
 * Adress

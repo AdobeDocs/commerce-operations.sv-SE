@@ -3,13 +3,13 @@ title: Bästa tillvägagångssätt för att ändra storlek på katalogbilder
 description: Lär dig hur du förhindrar prestandaförsämringar innan du lanserar Adobe Commerce webbplats.
 feature: Best Practices
 role: Developer
-source-git-commit: 94d37b6a95cae93f465daf8eb96363a198833e27
+exl-id: 591b1a62-bdba-4301-858a-77620ee657a9
+source-git-commit: 823498f041a6d12cfdedd6757499d62ac2aced3d
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '464'
 ht-degree: 0%
 
 ---
-
 
 # Bästa tillvägagångssätt för att ändra storlek på katalogbilder
 
@@ -64,18 +64,18 @@ Det finns ett annat sätt att ändra storlek på bilder med hjälp av förgrunde
 Fördelarna med detta tillvägagångssätt är bland annat:
 
 - Processen är flertrådig
-- Processen består av flera servrar (om du har flera webbnoder, en belastningsutjämnare och delat diskutrymme för `media/` katalog)
+- Processen är flerserver (om du har flera webbnoder, en belastningsutjämnare och delat diskutrymme för katalogen `media/`)
 - Processen hoppar över bilder som redan har ändrat storlek
 
 Detta arbetssätt ändrar storlek på 100 000 bilder på mindre än 8 timmar, medan det tar 6 dagar att slutföra CLI-kommandot.
 
 1. Logga in på servern.
 1. Navigera till `pub/media/catalog/product` och notera en av hash-koderna (till exempel 0047d83143a5a3a4683afdf116df680).
-1. I följande exempel ersätter du `www.example.com` med domänen för din butik och ersätt hashen med den som du har noterat.
+1. Ersätt `www.example.com` med domänen för din butik i följande exempel och ersätt hash-koden med den som du angav.
 
 >[!BEGINTABS]
 
->[!TAB används]
+>[!TAB Använt]
 
 ```bash
 cd pub/
@@ -84,37 +84,37 @@ find ./media/catalog/product -path ./media/catalog/product/cache -prune -o -type
 
 >[!TAB belägring]
 
-Nackdelen `siege` är att den besöker alla URL:er i tio gånger om samtidighet är inställd på 10.
+Nackdelen med `siege` är att den besöker alla URL:er i tio gånger om samtidighet har angetts till 10.
 
 ```bash
 siege --file=./images.txt --user-agent="image-resizer" --no-follow --no-parser --concurrent=10 --reps=once
 ```
 
->[!TAB kurva]
+>[!TAB curl]
 
 ```bash
 xargs -0 -n 1 -P 10 curl -X HEAD -s -w "%{http_code} %{time_starttransfer} %{url_effective}\n" < <(tr \\n \\0 <images.txt)
 ```
 
-The `-P` -argumentet avgör antalet trådar.
+Argumentet `-P` avgör antalet trådar.
 
->[!TAB bash one-liner]
+>[!TAB bash one-line]
 
-Enkelradsverktyget för `find/curl` om du till exempel kan köra `curl` från samma dator som bilderna finns på:
+Den linjära för exemplet `find/curl` om du kan köra `curl` från samma dator som bilderna finns på:
 
 ```bash
 find ./media/catalog/product -path ./media/catalog/product/cache -prune -o -type f -print | sed 's~./media/catalog/product/~https://www.example.com/media/catalog/product/cache/0047d83143a5a3a4683afdf1116df680/~g' | xargs -n 1 -P 10 curl -X HEAD -s -w "%{http_code} %{time_starttransfer} %{url_effective}\n"
 ```
 
-Ersätt igen `www.example.com` med webbplatsens domän och `-P` till det antal trådar som servern kan hantera utan att krascha.
+Ersätt igen `www.example.com` med webbplatsens domän och ställ in `-P` på det antal trådar som servern kan hantera utan att krascha.
 
 >[!ENDTABS]
 
-Utdata returnerar en lista med alla produktbilder i butiken. Du kan crawla bilderna (med `siege` eller någon annan crawler) som använder alla servrar och processorkärnor som är tillgängliga för dig och skapar cacheminnet för storleksändring med betydligt högre hastighet än andra metoder.
+Utdata returnerar en lista med alla produktbilder i butiken. Du kan crawla bilderna (med `siege` eller någon annan crawler) med alla servrar och processorkärnor som är tillgängliga för dig och generera cacheminnet för storleksändring med betydligt högre hastighet än andra metoder.
 
 Om du besöker en URL för bildcache genereras alla bildstorlekar i bakgrunden om de inte finns än. Dessutom hoppas filer som redan har ändrat storlek över.
 
 >[!NOTE]
 >
->- Adobe Commerce i molninfrastrukturprojekt kan avlasta storleksändringen av produktbilder till tjänsten Snabbt. Se [Djupgående bildoptimering](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/fastly-image-optimization.html?lang=en#deep-image-optimization) i _Molnguide_.
->- Om du använder fjärrlagringsmodulen kan du också försöka med att avlasta bildens storlek så att den ändras till nginx. Se [Konfigurera storleksändring av bilder för fjärrlagring](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/storage/remote-storage/remote-storage-image-resize.html) i _Konfigurationshandbok_.
+>- Adobe Commerce i molninfrastrukturprojekt kan avlasta storleksändringen av produktbilder till tjänsten Snabbt. Se [Djupbildoptimering](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/fastly-image-optimization.html?lang=en#deep-image-optimization) i _molnguiden_.
+>- Om du använder fjärrlagringsmodulen kan du också försöka med att avlasta bildens storlek så att den ändras till nginx. Se [Konfigurera storleksändring av bilder för fjärrlagring](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/storage/remote-storage/remote-storage-image-resize.html) i _Konfigurationshandboken_.

@@ -6,7 +6,7 @@ feature: Best Practices
 exl-id: d15fe845-670f-4f7e-9645-7e111e6e809f
 source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '236'
 ht-degree: 0%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 0%
 
 När ordervolymen ökar på dina Commerce-sajter kan du optimera utcheckningsprestanda och orderbearbetning genom att aktivera följande alternativ för butikskonfiguration:
 
-- **[!UICONTROL Asynchronous indexing]**—Aktivera det här alternativet om du vill förhindra databaslås och långsammare bearbetning som kan inträffa när ett stort antal order placeras samtidigt.
-- **[!UICONTROL Asynchronous email notifications]**—Aktivera det här alternativet om du vill snabba upp utcheckningen genom att skicka utcheckning och beställa e-postmeddelanden med angivna intervall i stället för att skicka dem direkt.
-- **[!UICONTROL Enable Archiving]**—Aktivera det här alternativet om du vill förbättra prestanda för order, fakturor, leveranser och kreditnotor, och hålla arbetsytan fri från onödig information så att du kan fokusera på den aktuella verksamheten. Se [Aktivera arkivering](https://docs.magento.com/user-guide/sales/order-archive.html#to-enable-archiving).
+- **[!UICONTROL Asynchronous indexing]** - Aktivera det här alternativet för att förhindra databaslås och långsam bearbetning som kan inträffa när ett stort antal order placeras samtidigt.
+- **[!UICONTROL Asynchronous email notifications]** - Aktivera det här alternativet om du vill öka utcheckningsprestanda genom att skicka utcheckning och beställa e-postmeddelanden med angivna intervall i stället för att skicka dem direkt.
+- **[!UICONTROL Enable Archiving]** - Aktivera det här alternativet om du vill förbättra prestanda för beställningar, fakturor, leveranser och kreditnotor, och hålla arbetsytan fri från onödig information så att du kan fokusera på den aktuella verksamheten. Se [Aktivera arkivering](https://docs.magento.com/user-guide/sales/order-archive.html#to-enable-archiving).
 
 ## Berörda produkter och versioner
 

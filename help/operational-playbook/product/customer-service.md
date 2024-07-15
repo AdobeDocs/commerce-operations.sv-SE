@@ -5,7 +5,7 @@ exl-id: ef798b1b-96d0-493e-b125-1d67aa7644a1
 feature: Best Practices, Customers
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '470'
 ht-degree: 0%
 
 ---
@@ -18,11 +18,11 @@ E-handeln är digitalt baserad och det enda teamet som interagerar med den verkl
 
 Återförsäljarna måste vara proaktiva när det gäller kundservice eftersom inte bara varumärkesnamnet står på spel, utan framför allt kundens lojalitet. För att återförsäljarna ska lyckas leverera den bästa kundupplevelsen finns det några bästa metoder som de kan följa:
 
-- **Flerstödskanal**—Det räcker inte att tillhandahålla tjänster via e-post eller telefon i dagens tid. Kundtjänst måste tillhandahållas i olika kanaler, som live chatt, e-post, telefonsamtal, sociala medier och textmeddelanden. Var och en av dem har sina egna proffs och ikoner som återförsäljarna behöver analysera.
+- **Kanal med flera stöd** - Det räcker inte att tillhandahålla tjänster via e-post eller telefon i dagens tid. Kundtjänst måste tillhandahållas i olika kanaler, som live chatt, e-post, telefonsamtal, sociala medier och textmeddelanden. Var och en av dem har sina egna proffs och ikoner som återförsäljarna behöver analysera.
 
-- **Personlig tjänst**—All kundaktivitet görs online, som återförsäljarna kan spåra för att förstå kundbeteendet. När en kund t.ex. kontaktar kundtjänstteamet får teamet information i förväg, t.ex. namn, e-postadress, orderhistorik och returer. Detta hjälper kundtjänst att tillhandahålla snabb och korrekt service och även ge kunderna skräddarsydd service.
+- **Personlig tjänst** - Alla kundaktiviteter görs online, som återförsäljare kan spåra för att förstå kundbeteendet. När en kund t.ex. kontaktar kundtjänstteamet får teamet information i förväg, t.ex. namn, e-postadress, orderhistorik och returer. Detta hjälper kundtjänst att tillhandahålla snabb och korrekt service och även ge kunderna skräddarsydd service.
 
-- **Självbetjäning**—Kunderna kan också få tillgång till självbetjäning, t.ex. frågor och svar, integritetspolicy, villkor och forum.
+- **Självbetjäning** - Kunder kan även få tillgång till självbetjäning, som att tillhandahålla vanliga frågor och svar, sekretesspolicy, villkor och forum.
 
 Återförsäljarna bör sätta sig i kundens skor för att förstå sina problem och tillhandahålla den bästa kundupplevelsen. Kundupplevelsen håller kunderna lojala och främjar varumärket.
 

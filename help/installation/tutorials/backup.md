@@ -13,17 +13,17 @@ ht-degree: 0%
 
 Med det här kommandot kan du säkerhetskopiera:
 
-* Filsystemet (förutom `var` och `pub/static` kataloger)
-* The `pub/media` katalog
+* Filsystemet (exklusive `var` och `pub/static` kataloger)
+* Katalogen `pub/media`
 * Databasen
 
-Säkerhetskopior lagras i `var/backups` och kan återställas när som helst med [`magento setup:rollback`](uninstall-modules.md#roll-back-the-file-system-database-or-media-files) -kommando.
+Säkerhetskopior lagras i katalogen `var/backups` och kan återställas när som helst med kommandot [`magento setup:rollback`](uninstall-modules.md#roll-back-the-file-system-database-or-media-files).
 
-Efter säkerhetskopiering kan du [återställning](#rollback) senare.
+Efter säkerhetskopiering kan du [återställa](#rollback) senare.
 
 >[!TIP]
 >
->Information om projekt för molninfrastruktur för Adobe Commerce finns på [Ögonblicksbilder och hantering av säkerhetskopiering](https://devdocs.magento.com/cloud/project/project-webint-snap.html) i _Molnguide_.
+>Information om projekt för molninfrastruktur finns i [Ögonblicksbilder och hantering av säkerhetskopiering](https://devdocs.magento.com/cloud/project/project-webint-snap.html) i _molnguiden_.
 
 ## Aktivera säkerhetskopiering
 
@@ -40,17 +40,17 @@ bin/magento config:set system/backup/functionality_enabled 1
 
 ## Ange gräns för öppna filer
 
-Återställning till en tidigare säkerhetskopia kan misslyckas i tysthet, vilket resulterar i att ofullständiga data skrivs till filsystemet eller databasen med [`magento setup:rollback`](uninstall-modules.md#roll-back-the-file-system-database-or-media-files) -kommando.
+Återställning till en tidigare säkerhetskopia kan misslyckas i tysthet, vilket resulterar i att ofullständiga data skrivs till filsystemet eller databasen med kommandot [`magento setup:rollback`](uninstall-modules.md#roll-back-the-file-system-database-or-media-files).
 
 Ibland kan en lång frågesträng få användarens tilldelade minnesutrymme att ta slut på minne på grund av för många rekursiva anrop.
 
 ## Ange öppna filer `ulimit`
 
-Vi rekommenderar att du ställer in öppna filer [`ulimit`](https://ss64.com/bash/ulimit.html) för filsystemanvändaren till värdet `65536` eller mer.
+Vi rekommenderar att du anger de öppna filerna [`ulimit`](https://ss64.com/bash/ulimit.html) för filsystemanvändaren till värdet `65536` eller mer.
 
 Du kan antingen göra detta på kommandoraden eller göra det till en permanent inställning för användaren genom att redigera gränssnittsskriptet.
 
-Innan du fortsätter, om du inte redan har gjort det, växlar du till [ägare av filsystem](../prerequisites/file-system/overview.md).
+Innan du fortsätter, om du inte redan har gjort det, växlar du till [filsystemets ägare](../prerequisites/file-system/overview.md).
 
 Kommando:
 
@@ -66,7 +66,7 @@ Du kan ändra det till ett större värde om det behövs.
 
 Om du vill kan du ange värdet i användarens Bash-skal:
 
-1. Om du inte redan har gjort det växlar du till [ägare av filsystem](../prerequisites/file-system/overview.md).
+1. Om du inte redan har gjort det växlar du till [filsystemets ägare](../prerequisites/file-system/overview.md).
 1. Öppna `/home/<username>/.bashrc` i en textredigerare.
 1. Lägg till följande rad:
 
@@ -78,7 +78,7 @@ Om du vill kan du ange värdet i användarens Bash-skal:
 
 >[!WARNING]
 >
->Vi rekommenderar att du undviker att ange ett värde för [`pcre.recursion_limit`](https://www.php.net/manual/en/pcre.configuration.php) i `php.ini` eftersom det kan resultera i ofullständiga återställningar utan felmeddelande.
+>Vi rekommenderar att du undviker att ange ett värde för [`pcre.recursion_limit`](https://www.php.net/manual/en/pcre.configuration.php) i filen `php.ini` eftersom det kan resultera i ofullständiga återställningar utan felmeddelande.
 
 ## Säkerhetskopierar
 
@@ -140,7 +140,7 @@ Om du vill återställa en tidigare säkerhetskopia anger du:
 bin/magento setup:rollback [-c|--code-file="<name>"] [-m|--media-file="<name>"] [-d|--db-file="<name>"]
 ```
 
-Om du till exempel vill återställa en mediesäkerhetskopiering med namnet `1440611839_filesystem_media.tgz`, ange
+Om du till exempel vill återställa en mediesäkerhetskopiering med namnet `1440611839_filesystem_media.tgz` anger du
 
 ```bash
 bin/magento setup:rollback -m 1440611839_filesystem_media.tgz

@@ -4,7 +4,7 @@ description: Följ den här självstudiekursen för att konfigurera flera webbpl
 exl-id: 4c6890b3-f15a-46f2-a3e8-6f2a9b57a6ad
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '505'
+source-wordcount: '485'
 ht-degree: 0%
 
 ---
@@ -13,30 +13,30 @@ ht-degree: 0%
 
 Vi antar att:
 
-Om det behövs kopierar du den befintliga `index.php` startpunktsskript för webbplatsen eller butiksvyn och lägg till följande i det:
+Om det behövs kopierar du det befintliga `index.php`-startpunktsskriptet för webbplatsen eller butiksvyn och lägger till följande i det:
 
 - Du arbetar på en utvecklingsmaskin (bärbar dator, virtuell dator osv.)
 
   Ytterligare uppgifter kan behövas för att distribuera flera webbplatser i en värdmiljö. Kontakta din värdleverantör för mer information.
 
-  Ytterligare uppgifter krävs för att konfigurera Adobe Commerce i molninfrastrukturen. När du har slutfört de uppgifter som beskrivs i det här avsnittet, se [Konfigurera flera webbplatser eller butiker](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html) i _Guide för Commerce on Cloud Infrastructure_.
+  Ytterligare uppgifter krävs för att konfigurera Adobe Commerce i molninfrastrukturen. När du har slutfört de uppgifter som beskrivs i det här avsnittet kan du läsa [Konfigurera flera webbplatser eller butiker](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html) i _guiden för Commerce om molninfrastruktur_.
 
 - Du använder en virtuell värd per webbplats. Konfigurationsfilen för den virtuella värden är `/etc/httpd/httpd.conf`
 
-  Olika versioner av Apache på olika operativsystem ställer in virtuella värdar på olika sätt. Läs [Apache-dokumentation](https://httpd.apache.org/docs/2.4/vhosts) eller en nätverksadministratör om du inte är säker på hur du konfigurerar en virtuell värd.
+  Olika versioner av Apache på olika operativsystem ställer in virtuella värdar på olika sätt. Läs [dokumentationen för Apache](https://httpd.apache.org/docs/2.4/vhosts) eller en nätverksadministratör om du inte är säker på hur du konfigurerar en virtuell värd.
 
-- Commerce-programvaran är installerad i `/var/www/html/magento2`
+- Commerce installeras i `/var/www/html/magento2`
 - Du har två andra webbplatser än standardwebbplatsen:
 
-   - `french.mysite.mg` med webbplatskod `french` och butiksvykod `fr`
-   - `german.mysite.mg` med webbplatskod `german` och butiksvykod `de`
+   - `french.mysite.mg` med webbplatskod `french` och spara vykod `fr`
+   - `german.mysite.mg` med webbplatskod `german` och spara vykod `de`
 
 ## Vägkarta för att skapa flera webbplatser med Apache
 
 Du kan konfigurera flera arkiv på följande sätt:
 
-1. [Konfigurera webbplatser, butiker och butiksvyer](ms-admin.md) i Admin.
-1. Skapa en [Virtuell värd för Apache](#step-2-create-apache-virtual-hosts) per Commerce-webbplats.
+1. [Konfigurera webbplatser, butiker och butiksvyer](ms-admin.md) i administratören.
+1. Skapa en [virtuell Apache-värd](#step-2-create-apache-virtual-hosts) per Commerce-webbplats.
 
 ## Steg 1: Skapa webbplatser, butiker och butiksvyer i administratören
 
@@ -44,16 +44,16 @@ Se [Konfigurera flera webbplatser, butiker och butiksvyer i administratören](ms
 
 ## Steg 2: Skapa virtuella Apache-värdar
 
-I det här avsnittet beskrivs hur du anger värden för `MAGE_RUN_TYPE` och `MAGE_RUN_CODE` med hjälp av servervariabeln Apache `SetEnvIf` i en virtuell värd.
+I det här avsnittet beskrivs hur du anger värden för `MAGE_RUN_TYPE` och `MAGE_RUN_CODE` med hjälp av Apache-servervariabeln `SetEnvIf` i en virtuell värd.
 
-Mer information om `SetEnvIf`, se:
+Mer information om `SetEnvIf` finns i:
 
 - [Apache 2.2](https://httpd.apache.org/docs/2.2/mod/mod_setenvif.html)
 - [Apache 2.4](https://httpd.apache.org/docs/2.4/mod/mod_setenvif.html)
 
-**Skapa virtuella Apache-värdar**:
+**Så här skapar du virtuella Apache-värdar**:
 
-1. Som användare med `root` behörighet, öppna konfigurationsfilen för det virtuella värdsystemet i en textredigerare.
+1. Som en användare med `root`-behörighet öppnar du konfigurationsfilen för det virtuella värdsystemet i en textredigerare.
 
    Öppna till exempel `/etc/httpd/conf/httpd.conf`
 
@@ -89,9 +89,9 @@ Mer information om `SetEnvIf`, se:
 
 ## Verifiera platsen
 
-Om du inte har ställt in DNS för butikernas URL:er måste du lägga till en statisk väg till värden i din `hosts` fil:
+Om du inte har ställt in DNS för butikernas URL:er måste du lägga till en statisk väg till värden i din `hosts`-fil:
 
-1. Hitta ditt operativsystem `hosts` -fil.
+1. Leta reda på operativsystemsfilen `hosts`.
 1. Lägg till den statiska vägen i formatet:
 
    ```conf
@@ -110,10 +110,10 @@ Om du inte har ställt in DNS för butikernas URL:er måste du lägga till en st
 >[!INFO]
 >
 >- Ytterligare uppgifter kan behövas för att distribuera flera webbplatser i en värdmiljö. Kontakta din värdleverantör för mer information.
->- Ytterligare uppgifter krävs för att konfigurera Adobe Commerce för molninfrastruktur. Mer information finns [Konfigurera flera olika Creative Cloud-webbplatser eller -butiker](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html) i _Guide för Commerce on Cloud Infrastructure_.
+>- Ytterligare uppgifter krävs för att konfigurera Adobe Commerce för molninfrastruktur. Se [Konfigurera flera molnwebbplatser eller molnbutiker](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html) i _Commerce för molninfrastruktur_.
 
 ### Felsökning
 
-- Om de franska och tyska webbplatserna returnerar 404s men administratören läser in, måste du kontrollera att du har fyllt i [Steg 6: Lägg till butikskoden i bas-URL:en](ms-admin.md#step-6-add-the-store-code-to-the-base-url).
+- Om de franska och tyska webbplatserna returnerar 404s men administratören läser in, kontrollerar du att du har slutfört [Steg 6: Lägg till butikskoden i bas-URL:en](ms-admin.md#step-6-add-the-store-code-to-the-base-url).
 - Om alla URL-adresser returnerar 404s måste du starta om webbservern.
 - Om administratören inte fungerar som den ska ska du kontrollera att du har konfigurerat dina virtuella värdar korrekt.

@@ -22,7 +22,7 @@ Från och med Adobe Commerce 2.4 måste alla installationer vara konfigurerade a
 
 Du måste installera och konfigurera antingen Elasticsearch eller OpenSearch innan du installerar Adobe Commerce 2.4.4 och senare.
 
-Se [Systemkrav](../../system-requirements.md) för specifik versionsinformation.
+Se [Systemkraven](../../system-requirements.md) för specifik versionsinformation.
 
 ## Rekommenderad konfiguration
 
@@ -41,7 +41,7 @@ I bilden ovan visas:
 
 * Commerce-programmet och sökmotorn installeras på olika värdar.
 
-  Körning på separata värdar kräver att proxering fungerar. (Att klustera sökmotorn ligger utanför den här handbokens räckvidd, men du hittar mer information i [Dokumentation för Elasticsearch-klustring](https://www.elastic.co/guide/en/elasticsearch/guide/current/distributed-cluster.html).)
+  Körning på separata värdar kräver att proxering fungerar. (Att klustra sökmotorn ligger utanför den här handbokens omfång, men du hittar mer information i [Elasticsearch klusterdokumentationen](https://www.elastic.co/guide/en/elasticsearch/guide/current/distributed-cluster.html).)
 
 * Varje värd har en egen webbserver. Webbservrarna behöver inte vara samma.
 
@@ -83,7 +83,7 @@ Säkerhetsrelaterad programvara (iptables, SELinux, AppArmor) kan som standard k
 Om du vill konfigurera regler för att tillåta kommunikation med brandväggen eller SELinux aktiverat kan du läsa följande resurser:
 
 * [iptables how-to](https://help.ubuntu.com/community/IptablesHowTo)
-* [Så här redigerar du iptables rules (fedora project)](https://fedoraproject.org/wiki/How_to_edit_iptables_rules)
+* [Så här redigerar du iptables-regler (fedora-projekt)](https://fedoraproject.org/wiki/How_to_edit_iptables_rules)
 * [Introduktion till SELinux (CentOS.org)](https://www.centos.org)
 * [SELinux How-To Wiki (CentOS.org)](https://wiki.centos.org/HowTos/SELinux)
 
@@ -95,7 +95,7 @@ Ange följande kommando för att avgöra om Java redan är installerat:
 java -version
 ```
 
-Om meddelandet `java: command not found` måste du installera Java SDK så som beskrivs i nästa avsnitt.
+Om meddelandet `java: command not found` visas måste du installera Java SDK enligt beskrivningen i nästa avsnitt.
 
 Se något av följande avsnitt:
 
@@ -104,9 +104,9 @@ Se något av följande avsnitt:
 
 #### Installera JDK i CentOS
 
-Se det här [Digital Ocean, genomgång](https://www.digitalocean.com/community/tutorials/how-to-install-java-on-centos-and-fedora#install-oracle-java-8).
+Se den här [självstudiekursen om digitala oceaner](https://www.digitalocean.com/community/tutorials/how-to-install-java-on-centos-and-fedora#install-oracle-java-8).
 
-Installera JDK och *not* JRE.
+Installera JDK och *inte* JRE.
 
 ```bash
 yum -y install java-1.8.0-openjdk
@@ -114,11 +114,11 @@ yum -y install java-1.8.0-openjdk
 
 >[!NOTE]
 >
->Java version 8 kanske inte är tillgänglig för alla operativsystem. Du kan till exempel [sök i listan över tillgängliga paket för Ubuntu](https://packages.ubuntu.com/).
+>Java version 8 kanske inte är tillgänglig för alla operativsystem. Du kan till exempel [söka i listan över tillgängliga paket för Ubuntu](https://packages.ubuntu.com/).
 
 #### Installera JDK på Ubuntu
 
-Om du vill installera JDK 1.8 i Ubuntu anger du följande kommandon som en användare med `root` behörighet:
+Om du vill installera JDK 1.8 i Ubuntu anger du följande kommandon som en användare med `root`-behörighet:
 
 ```bash
 apt-get -y update
@@ -132,7 +132,7 @@ Andra alternativ finns i [Oraclets dokumentation](https://docs.oracle.com/javase
 
 ### Installera sökmotorn
 
-Följ [Installerar Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html) eller [Installera och konfigurera OpenSearch](https://opensearch.org/docs/latest/opensearch/install/index/) för era plattformsspecifika steg.
+Följ [Installera Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html) eller [Installera och konfigurera OpenSearch](https://opensearch.org/docs/latest/opensearch/install/index/) för de plattformsspecifika stegen.
 
 Kontrollera att Elasticsearch fungerar genom att ange följande kommando på den server som programmet körs på:
 
@@ -159,10 +159,10 @@ curl -XGET https://<host>:9200/_cat/plugins?v -u 'admin:admin' --insecure
 
 ## Uppgraderar Elasticsearch
 
-Se [Uppgraderar Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html) om du vill ha fullständiga anvisningar om hur du säkerhetskopierar data, upptäcker potentiella migreringsproblem och testar uppgraderingar innan du distribuerar till produktionen. Beroende på vilken version av Elasticsearch du använder behöver du kanske inte starta om hela klustret.
+Mer information om hur du säkerhetskopierar data, identifierar potentiella migreringsproblem och testar uppgraderingar innan du distribuerar till produktionen finns i [Uppgraderar Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html). Beroende på vilken version av Elasticsearch du använder behöver du kanske inte starta om hela klustret.
 
 Elasticsearch kräver JDK 1.8 eller senare. Se [Installera Java Software Development Kit](#install-the-java-software-development-kit) för att kontrollera vilken version av JDK som är installerad.
 
 ## Ytterligare resurser
 
-Se [Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html) eller [OpenSearch](https://opensearch.org/docs/latest/) dokumentation.
+Se dokumentationen för [Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html) eller [OpenSearch](https://opensearch.org/docs/latest/).

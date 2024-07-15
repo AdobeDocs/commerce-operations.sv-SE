@@ -1,36 +1,36 @@
 ---
 title: Åtkomstbehörigheter för filsystem
-description: Se hur du konfigurerar ägare eller ägare av Commerce-programmets filsystem för ett utvecklings- och produktionssystem.
+description: Se hur du konfigurerar ägare eller ägare av Commerce-filsystemet för ett utvecklings- och produktionssystem.
 feature: Configuration, Roles/Permissions
 exl-id: 95b27db9-5247-4f58-a9af-1590897d73db
 source-git-commit: dcc283b901917e3681863370516771763ae87462
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '864'
 ht-degree: 0%
 
 ---
 
 # Åtkomstbehörigheter för filsystem
 
-I det här avsnittet beskrivs hur du ställer in ägare eller ägare av Commerce-filsystemet för ett utvecklings- och produktionssystem. Innan du fortsätter bör du läsa de koncept som beskrivs i [Översikt över ägarskap och behörigheter i filsystemet](../../installation/prerequisites/file-system/overview.md).
+I det här avsnittet beskrivs hur du konfigurerar ägare eller ägare av Commerce filsystem för ett utvecklings- och produktionssystem. Granska de koncept som beskrivs i [Översikt över ägarskap och behörigheter i filsystemet](../../installation/prerequisites/file-system/overview.md) innan du fortsätter.
 
-Det här ämnet handlar om utveckling och produktion av handel. Om du installerar Commerce kan du läsa [Ange ägarskap och behörigheter för förinstallation](../../installation/prerequisites/file-system/configure-permissions.md).
+Det här ämnet handlar om Commerce utvecklings- och produktionssystem. Om du installerar Commerce kan du läsa [Ange ägarskap och behörigheter för förinstallation](../../installation/prerequisites/file-system/configure-permissions.md).
 
 De avsnitt som följer behandlar kraven för en eller två ägare av filsystem. Det innebär:
 
-- **En användare**- Används vanligtvis av delade värdtjänstleverantörer, som gör att du bara kan komma åt en användare på servern. Den här användaren kan logga in, överföra filer med FTP och den här användaren kör även webbservern.
+- **En användare** - Krävs oftast för delade värdtjänstleverantörer, som bara ger dig åtkomst till en användare på servern. Den här användaren kan logga in, överföra filer med FTP och den här användaren kör även webbservern.
 
-- **Två användare**- Vi rekommenderar två användare om du kör en egen Commerce-server: en som överför filer och kör kommandoradsverktyg samt en separat användare för webbserverprogrammet. När det är möjligt är detta att föredra eftersom det är säkrare.
+- **Två användare** - Vi rekommenderar två användare om du kör en egen Commerce-server: en för att överföra filer och köra kommandoradsverktyg samt en separat användare för webbserverprogrammet. När det är möjligt är detta att föredra eftersom det är säkrare.
 
   I stället har du separata användare:
 
    - Webbserveranvändaren som kör Admin och storefront.
 
-   - A _kommandoradsanvändare_, som är ett lokalt användarkonto som du kan använda för att logga in på servern. Den här användaren kör Commerce cron-jobb och kommandoradsverktyg.
+   - En _kommandoradsanvändare_, som är ett lokalt användarkonto som du kan använda för att logga in på servern. Den här användaren kör Commerce cron-jobb och kommandoradsverktyg.
 
 ## Ägande av produktionsfilsystem för delad värdtjänst (en användare)
 
-Om du vill använda enägarsinställningarna måste du logga in på din Commerce-server som samma användare som kör webbservern. Detta är typiskt för delade värdtjänster.
+Om du vill använda enägarskonfigurationen måste du logga in på din Commerce-server som samma användare som kör webbservern. Detta är typiskt för delade värdtjänster.
 
 Eftersom det är mindre säkert att ha en ägare av ett filsystem rekommenderar vi att du distribuerar Commerce i produktion på en privat server i stället för på en delad värdtjänst, om det är möjligt.
 
@@ -70,7 +70,7 @@ Så här tar du bort skrivbehörigheter till filer och kataloger från webbserve
 
 1. Logga in på din Commerce-server.
 
-1. Ändra till installationskatalogen för Commerce.
+1. Byt till Commerce installationskatalog.
 
 1. Byt till produktionsläge.
 
@@ -92,37 +92,37 @@ Så här tar du bort skrivbehörigheter till filer och kataloger från webbserve
 
 #### Göra kodfiler och kataloger skrivbara
 
-Så här gör du filer och kataloger skrivbara så att du kan uppdatera komponenter och uppgradera Commerce-programmet:
+Så här gör du filer och kataloger skrivbara så att du kan uppdatera komponenter och uppgradera Commerce:
 
 1. Logga in på din Commerce-server.
-1. Ändra till installationskatalogen för Commerce.
+1. Byt till Commerce installationskatalog.
 1. Ange följande kommandon:
 
    ```bash
    chmod -R u+w .
    ```
 
-### Valfritt angivet `magento_umask`
+### Ange `magento_umask` om du vill
 
-Se [Ange en mask om du vill](../../installation/next-steps/set-umask.md) i _Installationsguide_.
+Se [Ange en mask](../../installation/next-steps/set-umask.md) i _installationshandboken_ om du vill.
 
 ## Ägarskap för produktionsfilsystem för privat värdtjänst (två användare)
 
 Om du använder en egen server (inklusive en värdleverantörs privata serverkonfiguration) finns det två användare:
 
-- The **webbserveranvändare**, som kör Admin och storefront.
+- Webbserveranvändaren **1}, som kör Admin och storefront.**
 
-  Linux-system har vanligtvis inget gränssnitt för den här användaren. Du kan inte logga in på Commerce-servern som, eller växla till, webbserveranvändaren.
+  I Linux-system finns vanligtvis inget gränssnitt för den här användaren. Du kan inte logga in på Commerce-servern som, eller växla till, webbserveranvändaren.
 
-- The **kommandoradsanvändare** som du loggar in på din Commerce-server som eller byter till.
+- Kommandoradsanvändaren **som du loggar in på din Commerce-server som eller växlar till.**
 
   Commerce använder den här användaren för att köra CLI-kommandon och cron.
 
   >[!INFO]
   >
-  >Kommandoradsanvändaren kallas även _ägare av filsystem_.
+  >Kommandoradsanvändaren kallas även _filsystemsägare_.
 
-Eftersom de här användarna kräver åtkomst till samma filer rekommenderar vi att du skapar en [delad grupp](../../installation/prerequisites/file-system/configure-permissions.md#about-the-shared-group) som de båda tillhör. Följande procedurer förutsätter att du redan har gjort detta.
+Eftersom de här användarna kräver åtkomst till samma filer rekommenderar vi att du skapar en [delad grupp](../../installation/prerequisites/file-system/configure-permissions.md#about-the-shared-group) som båda tillhör. Följande procedurer förutsätter att du redan har gjort detta.
 
 Se något av följande avsnitt:
 
@@ -139,19 +139,19 @@ Filer i följande kataloger måste vara skrivbara av båda användarna i utveckl
 - `pub/media`
 - `app/etc`
 
-Ange [`setgid`](https://linuxg.net/how-to-set-the-setuid-and-setgid-bit-for-files-in-linux-and-unix/) biten i kataloger så att behörigheter alltid ärver från den överordnade katalogen.
+Ange biten [`setgid`](https://linuxg.net/how-to-set-the-setuid-and-setgid-bit-for-files-in-linux-and-unix/) i kataloger så att behörigheter alltid ärver från den överordnade katalogen.
 
 >[!INFO]
 >
->`setgid` endast tillämpas på kataloger, _not_ till filer.
+>`setgid` gäller bara för kataloger, _inte_ för filer.
 
 Katalogerna bör dessutom vara skrivbara av webbservergruppen. Eftersom innehåll kan finnas i dessa kataloger lägger du till behörigheterna rekursivt.
 
 #### Ange behörigheter och `setgid`
 
-Till `setgid` och behörigheter för utvecklarläget:
+Så här anger du `setgid` och behörigheter för utvecklarläget:
 
-1. Logga in på Commerce-servern som ägare av filsystemet eller växla till den.
+1. Logga in på din Commerce-server som ägare av filsystemet eller växla till det.
 1. Ange följande kommandon i den ordning som visas:
 
    ```bash
@@ -185,14 +185,14 @@ När du är redo att distribuera webbplatsen till produktion bör du ta bort skr
 Så här tar du bort skrivbara behörigheter till filer och kataloger från webbserverns användargrupp:
 
 1. Logga in på din Commerce-server.
-1. Ändra till installationskatalogen för Commerce.
+1. Byt till Commerce installationskatalog.
 1. Som ägare av filsystemet anger du följande kommando för att växla till produktionsläge:
 
    ```bash
    bin/magento deploy:mode:set production
    ```
 
-1. Ange följande kommando som en användare med `root` behörighet:
+1. Ange följande kommando som en användare med behörigheten `root`:
 
    ```bash
    find app/code lib pub/static app/etc generated/code generated/metadata var/view_preprocessed \( -type d -or -type f \) -exec chmod g-w {} + && chmod o-rwx app/etc/env.php
@@ -200,10 +200,10 @@ Så här tar du bort skrivbara behörigheter till filer och kataloger från webb
 
 #### Göra kodfiler och kataloger skrivbara
 
-Så här gör du filer och kataloger skrivbara så att du kan uppdatera komponenter och uppgradera Commerce-programmet:
+Så här gör du filer och kataloger skrivbara så att du kan uppdatera komponenter och uppgradera Commerce:
 
 1. Logga in på din Commerce-server.
-1. Ändra till installationskatalogen för Commerce.
+1. Byt till Commerce installationskatalog.
 1. Ange följande kommando:
 
    ```bash

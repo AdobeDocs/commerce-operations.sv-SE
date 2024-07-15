@@ -33,11 +33,11 @@ Större installationer kan överväga att migrera sina dataindex från den befin
 Index behöver inte migreras eftersom de enkelt kan återskapas på AWS-instansen.
 När du migrerar dataindex måste du dock se till att versionerna av Elasticsearch/OpenSearch är kompatibla.
 
-Se Amazon [Migrerar till Amazon OpenSearch-tjänsten](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/migration.html) för mer information.
+Mer information finns i Amazon [Migrering till Amazon OpenSearch-tjänsten](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/migration.html) .
 
 ### Konfigurera Commerce för OpenSearch
 
-Steg för att konfigurera OpenSearch beskrivs i [Avancerad installation](../../advanced.md) ämne.
+Steg för konfiguration av OpenSearch beskrivs i avsnittet [Avancerad installation](../../advanced.md).
 
 Testa OpenSearch-slutpunkten direkt om du vill testa att den nya konfigurationen fungerar:
 
@@ -45,12 +45,12 @@ Testa OpenSearch-slutpunkten direkt om du vill testa att den nya konfigurationen
 1. Indexera om via administratören.
 1. Fråga OpenSearch-slutpunkten (finns i AWS UI):
 
-   Om du vill hämta index lägger du till: `/_cat/indices/*?v=true` till webbadressen:
+   Om du vill hämta index lägger du till: `/_cat/indices/*?v=true` i URL:en:
    `<AWS OS endpoint>/_cat/indices/*?v=true`
 
-Lägg till följande för att hämta produkter från index: `/magento2docker_product_1/_search?q=*` till webbadressen:
+Om du vill hämta produkter från indexet lägger du till: `/magento2docker_product_1/_search?q=*` i URL:en:
 `<AWS OS endpoint>/magento2docker_product_1/_search?q=testproduct1`
 
 ## Ytterligare resurser
 
-Mer information finns i [OpenSearch AWS-dokumentation](https://docs.aws.amazon.com/opensearch-service/index.html).
+Mer information finns i [OpenSearch AWS-dokumentationen](https://docs.aws.amazon.com/opensearch-service/index.html).

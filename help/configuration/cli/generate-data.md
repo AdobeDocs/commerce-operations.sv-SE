@@ -14,17 +14,17 @@ ht-degree: 9%
 
 ## Profiler
 
-Du kan justera mängden data som du skapar med _profiler_ (liten, medelstor, stor och extra stor). Profilerna finns i `<magento_root>/setup/performance-toolkit/profiles/<ce|ee>` katalog.
+Du kan justera mängden data som du skapar med _profiler_ (liten, mellanstor, stor och extra stor). Profilerna finns i katalogen `<magento_root>/setup/performance-toolkit/profiles/<ce|ee>`.
 
 Exempel: `/var/www/html/magento2/setup/performance-toolkit/profiles/ce`
 
-Följande bild visar hur en produkt visas i butiken med hjälp av _liten_ profil:
+Följande bild visar hur en produkt visas på butiken med profilen _small_:
 
 ![Exempelarkiv med genererade data](../../assets/configuration/generate-data.png)
 
 Följande tabell innehåller information om datageneratorprofilerna: small, medium, large och extra large.
 
-| Parameter | Liten profil | Medelhög profil | Medelhög profil för flera platser | Stor profil | Extra stor profil |
+| Parameter | Liten profil | Medium | Medium-profil för flera webbplatser | Stor profil | Extra stor profil |
 | --- | --- | --- | --- | --- | --- |
 | `websites` | 1 | 3 | 25 | 5 | 5 |
 | `store_groups` | 1 | 3 | 25 | 5 | 5 |
@@ -50,7 +50,7 @@ Följande tabell innehåller information om datageneratorprofilerna: small, medi
 >
 >Innan du kör datageneratorn ska du inaktivera alla cron-jobb som körs på servern. Genom att inaktivera cron-jobb förhindrar du att datageneratorn utför åtgärder som hamnar i konflikt med aktiva cron-jobb och undviker onödiga fel.
 >
->Om du tänker implementera händelser med [!DNL Adobe I/O Events for Adobe Commerce] när du testar prestanda, kör kommandot innan du prenumererar [händelser](https://developer.adobe.com/commerce/extensibility/events/). Prenumerationshändelser kan orsaka fel.
+>Om du tänker implementera en händelse med [!DNL Adobe I/O Events for Adobe Commerce] när du testar prestanda kör du det här kommandot innan du prenumererar på [händelser](https://developer.adobe.com/commerce/extensibility/events/). Prenumerationshändelser kan orsaka fel.
 
 Kör kommandot enligt beskrivningen i det här avsnittet. När kommandot har körts måste du [indexera om alla indexerare](../cli/manage-indexers.md).
 
@@ -60,7 +60,7 @@ Kommandoalternativ:
 bin/magento setup:perf:generate-fixtures <path-to-profile>
 ```
 
-Plats `<path-to-profile>` anger den absoluta filsystemsökvägen till och namnet på en profil.
+Där `<path-to-profile>` anger den absoluta filsystemsökvägen till och namnet på en profil.
 
 Exempel:
 
@@ -125,7 +125,7 @@ Genererar attributuppsättningar med angiven konfiguration. XML-profilnod:
 
 ### Paketprodukter
 
-Skapar paketprodukter. Genererade paketmarkeringar visas inte individuellt i katalogen. Produkterna är jämnt fördelade per kategori och webbplats. If  `assign_entities_to_all_websites` från profilen är inställd på `1`. Produkterna tilldelas alla webbplatser.
+Skapar paketprodukter. Genererade paketmarkeringar visas inte individuellt i katalogen. Produkterna är jämnt fördelade per kategori och webbplats. Om `assign_entities_to_all_websites` från profilen är inställd på `1`. Produkterna tilldelas alla webbplatser.
 
 XML-profilnod:
 
@@ -163,7 +163,7 @@ Skapar katalogprisregler. XML-profilnod:
 
 ### Kategorier
 
-Genererar kategorier. If `assign_entities_to_all_websites` är inställd på `0`, är alla kategorier jämnt fördelade per rotkategori, annars tilldelas alla kategorier till en rotkategori.
+Genererar kategorier. Om `assign_entities_to_all_websites` är inställt på `0` fördelas alla kategorier jämnt per rotkategori, annars tilldelas alla kategorier till en rotkategori.
 
 XML-profilnod:
 
@@ -195,7 +195,7 @@ Anger värden för konfigurationsfält. XML-profilnod:
 
 ### Konfigurerbara produkter
 
-Skapar konfigurerbara produkter. Genererade konfigurerbara alternativ visas inte individuellt i katalogen. Produkterna är jämnt fördelade per kategori och webbplats. If `assign_entities_to_all_websites` är inställd på `1`, tilldelas produkter till alla webbplatser.
+Skapar konfigurerbara produkter. Genererade konfigurerbara alternativ visas inte individuellt i katalogen. Produkterna är jämnt fördelade per kategori och webbplats. Om `assign_entities_to_all_websites` är `1` tilldelas produkter till alla webbplatser.
 
 Följande XML-nodformat stöds:
 
@@ -380,9 +380,9 @@ XML-profilnod:
 
 ### Enkla produkter
 
-Genererar enkla produkter. Produkterna distribueras per standard och fördefinierade attributuppsättningar. Om extra attributuppsättningar anges som: `<product_attribute_sets>{int}</product_attribute_sets>`, fördelas produkterna också per ytterligare attributuppsättningar.
+Genererar enkla produkter. Produkterna distribueras per standard och fördefinierade attributuppsättningar. Om extra attributuppsättningar anges i profilen som: `<product_attribute_sets>{int}</product_attribute_sets>`, fördelas produkterna även per ytterligare attributuppsättningar.
 
-Produkterna är jämnt fördelade per kategori och webbplats. If `assign_entities_to_all_websites` är inställd på `1`, tilldelas produkter till alla webbplatser.
+Produkterna är jämnt fördelade per kategori och webbplats. Om `assign_entities_to_all_websites` är `1` tilldelas produkter till alla webbplatser.
 
 XML-profilnod:
 
@@ -402,7 +402,7 @@ Skapar webbplatser. XML-profilnod:
 
 ### Butiksgrupper
 
-Skapar butiksgrupper (refereras i administratören som _butiker_). Butiksgrupper distribueras normalt mellan webbplatser.
+Skapar butiksgrupper (som i administratören kallas _butiker_). Butiksgrupper distribueras normalt mellan webbplatser.
 
 XML-profilnod:
 
@@ -434,16 +434,16 @@ Genererar momssatser. XML-profilnod:
 
 ## Ytterligare konfigurationsinformation:
 
-- `<Commerce root dir>/setup/performance-toolkit/config/attributeSets.xml`—Standardattributset
+- `<Commerce root dir>/setup/performance-toolkit/config/attributeSets.xml` - Standardattributuppsättningar
 
-- `<Commerce root dir>/setup/performance-toolkit/config/customerConfig.xml`—Kundkonfiguration
+- `<Commerce root dir>/setup/performance-toolkit/config/customerConfig.xml` - Kundkonfiguration
 
-- `<Commerce root dir>/setup/performance-toolkit/config/description.xml`—Konfiguration av fullständig produktbeskrivning
+- `<Commerce root dir>/setup/performance-toolkit/config/description.xml` - Konfiguration av fullständig produktbeskrivning
 
-- `<Commerce root dir>/setup/performance-toolkit/config/shortDescription.xml`—Konfiguration av kort produktbeskrivning
+- `<Commerce root dir>/setup/performance-toolkit/config/shortDescription.xml` - Konfiguration av kort produktbeskrivning
 
-- `<Commerce root dir>/setup/performance-toolkit/config/searchConfig.xml`—Konfiguration för kort och fullständig beskrivning av produkten. Den här äldre implementeringen tillhandahålls för bakåtkompatibilitet.
+- `<Commerce root dir>/setup/performance-toolkit/config/searchConfig.xml` - Konfiguration för kort och fullständig beskrivning av produkten. Den här äldre implementeringen tillhandahålls för bakåtkompatibilitet.
 
-- `<Commerce root dir>/setup/performance-toolkit/config/searchTerms.xml`—Ett litet antal söktermer i korta och fullständiga beskrivningar
+- `<Commerce root dir>/setup/performance-toolkit/config/searchTerms.xml` - Ett litet antal söktermer i korta och fullständiga beskrivningar
 
-- `<Commerce root dir>/setup/performance-toolkit/config/searchTermsLarge.xml`—Större antal söktermer att använda i kort och fullständig beskrivning.
+- `<Commerce root dir>/setup/performance-toolkit/config/searchTermsLarge.xml` - Större antal söktermer att använda i kort och fullständig beskrivning.

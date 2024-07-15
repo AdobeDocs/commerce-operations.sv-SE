@@ -5,7 +5,7 @@ exl-id: bd10881f-0336-4aa4-82ad-4d635010e2e4
 feature: Deploy
 source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '522'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Checklistan före start krävs för att verifiera statusen före start, som inne
 - Aktivera verktyget för prestandaövervakning (nya resultat)
 - Datamigreringsaktiviteter vid repetering (om sådana finns)
 
-![Bild som visar fas 1 av startprocessen](../../assets/playbooks/launch-steps-1.svg)
+![Diagram som visar fas 1 av startprocessen](../../assets/playbooks/launch-steps-1.svg)
 
 De största skillnaderna mellan Adobe Commerce lokala implementeringar och molnimplementeringar är distributionsskript och verktyg samt konfigurationen för SSL, Mail och CDN. Processen är dock fortfarande densamma.
 
@@ -57,4 +57,4 @@ Den fullständiga checklistan före start visar alla större aktiviteter vars fu
 - Betalningskonfiguration för produktionsmiljö (för vissa används sandlådeläge för testning)
 - Testdata (kund, önskelista, recensioner, order och relaterade data) från produktionsdatabasen rensas
 
-![Bild som visar fas 2 av startprocessen](../../assets/playbooks/launch-steps-2.svg)
+![Diagram som visar fas 2 av startprocessen](../../assets/playbooks/launch-steps-2.svg)

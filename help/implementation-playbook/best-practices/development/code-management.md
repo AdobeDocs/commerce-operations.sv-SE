@@ -3,13 +3,13 @@ title: Bästa praxis för kodhantering
 description: Läs om de effektivaste strategierna för kodhantering i utvecklingsfasen av Adobe Commerce-projekt.
 feature: Best Practices
 role: Developer
-source-git-commit: 0902997fb0bf862b37a5e29026f462bf8c86c96b
+exl-id: 0bff4c7a-1082-4b3e-b19c-bc8ad529b131
+source-git-commit: 823498f041a6d12cfdedd6757499d62ac2aced3d
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '670'
 ht-degree: 0%
 
 ---
-
 
 # De bästa sätten att hantera kod för Adobe Commerce
 
@@ -26,7 +26,7 @@ Det här avsnittet är utformat för att hjälpa dig att avgöra om du ska anvä
 - Adobe Commerce i molninfrastruktur
 - Adobe Commerce lokalt
 
-Den omfattar båda [global referensarkitektur (GRA)](../../architecture/global-reference/overview.md) och enskilda installationer.
+Den omfattar både [global referensarkitektur (GRA)](../../architecture/global-reference/overview.md) och eninstansinstallationer.
 
 ## Definitioner
 
@@ -80,11 +80,11 @@ Den omfattar båda [global referensarkitektur (GRA)](../../architecture/global-r
 
 | Funktion | Git | Disposition |
 |------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| Huvudkodarkiv | All kod finns i en enda eller några Git-databaser | All kod finns i paketen i en Composer-databas<br>Varje enskilt Composer-paket representeras av en Git-databas |
-| Kodplats | Utveckling sker i `app/` katalog | Utveckling sker i `vendor/` katalog |
+| Huvudkodarkiv | All kod finns i en enda eller några Git-databaser | All kod finns i paketen i en Composer-databas<br>Varje Composer-paket representeras av en Git-databas |
+| Kodplats | Utveckling sker i katalogen `app/` | Utveckling sker i katalogen `vendor/` |
 | Core upgrade management | Adobe Commerce Core installeras och uppgraderas med Composer och resultatet implementeras i Git | Adobe Commerce Core installeras och uppgraderas med Composer; resultatet implementeras i Git |
-| Modulhantering från tredje part | Tredjepartsmoduler installeras i `vendor/` om de installeras via Marketplace eller packagist.org. Annars installeras de i `app/` | Alla tredjepartsmoduler installeras i `vendor/` katalog |
-| Utgåvor | Utgåvan kännetecknas av `git merge` och `git pull` eller `git checkout` kommandon | Utgåvan kännetecknas av `composer update` och `git pull` eller `git checkout` kommandon |
+| Modulhantering från tredje part | Tredjepartsmoduler installeras i `vendor/` om de installeras via Marketplace eller packagist.org. Annars installeras de i `app/` | Alla tredjepartsmoduler är installerade i katalogen `vendor/` |
+| Utgåvor | Frisläppningen kännetecknas av kommandona `git merge` och `git pull` eller `git checkout` | Frisläppningen kännetecknas av kommandona `composer update` och `git pull` eller `git checkout` |
 | Antal Git-databaser | Få | Många |
 | Utvecklingskomplexitet | Enkel | Komplex |
 | Komplexitet för pull-begäran | Enkel | Komplex |
@@ -93,8 +93,8 @@ Den omfattar båda [global referensarkitektur (GRA)](../../architecture/global-r
 | GRA-stöd | ![Ja, ikon](../../../assets/yes.svg) | ![Ja, ikon](../../../assets/yes.svg) |
 | Moduler kan installera externa bibliotek automatiskt | ![Ingen ikon](../../../assets/no.svg) | ![Ja, ikon](../../../assets/yes.svg) |
 | Flexibilitet i GRA-sammansättning | ![Ingen ikon](../../../assets/no.svg) | ![Ja, ikon](../../../assets/yes.svg) |
-| Modulberoendehantering | ![Ja, ikon](../../../assets/yes.svg) Endast via `module.xml`, begränsad funktionalitet | ![Ja, ikon](../../../assets/yes.svg) Full beroendehantering via `composer.json` |
-| Modulversionshantering | ![Ja, ikon](../../../assets/yes.svg) Du kan definiera en version, men du kan inte installera en specifik version | ![Ja, ikon](../../../assets/yes.svg) Fullversion |
+| Modulberoendehantering | ![Ja, ikon](../../../assets/yes.svg) Endast via `module.xml`, begränsad funktionalitet | ![Ja, ikon](../../../assets/yes.svg) Fullständig beroendehantering via `composer.json` |
+| Modulversionshantering | ![Ja, ikon](../../../assets/yes.svg) Du kan definiera en version, men du kan inte installera en viss version | ![Ja, ikon](../../../assets/yes.svg) Stöd för fullversion |
 | Betalda tjänster krävs | Git-databas | Git-arkiv, privat Packagist (± 600 euro per år) |
 | Bitbucket-integrering med Jira möjlig | ![Ja, ikon](../../../assets/yes.svg) | ![Ja, ikon](../../../assets/yes.svg) |
 | Kodändringar som är direkt tillgängliga för installation | ![Ja, ikon](../../../assets/yes.svg) | ![Ja, ikon](../../../assets/yes.svg) |
@@ -107,8 +107,8 @@ Den omfattar båda [global referensarkitektur (GRA)](../../architecture/global-r
 
    Exempel:
    - Förklara både Git- och Composer-arbetsflöden (i stället för bara ett av dem) för utvecklingsteamet.
-   - Installera inkompatibla moduler i `app/code` eftersom det inte finns något som kan stoppa det från att hända.
-   - Flytta en modul från `app/code` för Composer (eller omvänt) är krångligt, särskilt med pågående utveckling.
+   - Installera inkompatibla moduler i `app/code` eftersom det inte finns något som kan stoppa det.
+   - Det är besvärligt att flytta en modul från `app/code` till Composer (eller omvänt), särskilt med pågående utveckling.
 
 1. **Satis Package Manager**
 

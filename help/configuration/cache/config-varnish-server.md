@@ -5,7 +5,7 @@ feature: Configuration, Cache, Install, Logs
 exl-id: b31179ef-3c0e-4a6b-a118-d3be1830ba4e
 source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '738'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ I följande avsnitt används port 8080 som exempel.
 **Så här ändrar du Apache 2.4-lyssningsporten**:
 
 1. Öppna `/etc/httpd/conf/httpd.conf` i en textredigerare.
-1. Leta reda på `Listen` -direktivet.
+1. Leta reda på direktivet `Listen`.
 1. Ändra värdet för lyssningsporten till `8080`. (Du kan använda valfri tillgänglig lyssningsport.)
 1. Spara ändringarna i `httpd.conf` och avsluta textredigeraren.
 
@@ -27,7 +27,7 @@ I följande avsnitt används port 8080 som exempel.
 
 Så här ändrar du systemkonfigurationen för engelska:
 
-1. Som användare med `root` behörighet, öppna din VDanish-konfigurationsfil i en textredigerare:
+1. Som användare med `root`-behörighet öppnar du konfigurationsfilen för spanska i en textredigerare:
 
    - CentOS 6: `/etc/sysconfig/varnish`
    - CentOS 7: `/etc/varnish/varnish.params`
@@ -40,7 +40,7 @@ Så här ändrar du systemkonfigurationen för engelska:
    VARNISH_LISTEN_PORT=80
    ```
 
-   Kontrollera att DAEMON_OPTS innehåller rätt avlyssningsport för `-a` parameter (även om VARNISH_LISTEN_PORT har rätt värde):
+   För lack 4.x kontrollerar du att DAEMON_OPTS innehåller rätt avlyssningsport för parametern `-a` (även om VARNISH_LISTEN_PORT har rätt värde):
 
    ```conf
    DAEMON_OPTS="-a :80 \
@@ -54,11 +54,11 @@ Så här ändrar du systemkonfigurationen för engelska:
 
 ### Ändra standard-VCL
 
-I det här avsnittet beskrivs hur du tillhandahåller minimal konfiguration så att Varnish returnerar HTTP-svarshuvuden. Detta gör att du kan verifiera att lack fungerar innan du konfigurerar [!DNL Commerce] program som ska använda varnish.
+I det här avsnittet beskrivs hur du tillhandahåller minimal konfiguration så att Varnish returnerar HTTP-svarshuvuden. Detta gör att du kan verifiera att lack fungerar innan du konfigurerar programmet [!DNL Commerce] att använda Varnish.
 
 Så här konfigurerar du engelska minimalt:
 
-1. Säkerhetskopiera `default.vcl`:
+1. Säkerhetskopiera `default.vcl`
 
    ```bash
    cp /etc/varnish/default.vcl /etc/varnish/default.vcl.bak
@@ -74,9 +74,9 @@ Så här konfigurerar du engelska minimalt:
    }
    ```
 
-1. Ersätt värdet för `.host` med det fullständiga värdnamnet eller IP-adressen och avlyssningsporten för varnish _serverdel_ eller _origin-server_, d.v.s. servern som tillhandahåller innehållet varnish kommer att accelerera.
+1. Ersätt värdet för `.host` med det fullständiga, kvalificerade värdnamnet eller IP-adressen och avlyssningsporten för den fullständiga _serverdelen_ eller _ursprungsservern_, d.v.s. servern som tillhandahåller innehållet varnish kommer att accelerera.
 
-   Vanligtvis är det här din webbserver. Se [Backend-servrar](https://varnish-cache.org/docs/trunk/users-guide/vcl-backends.html) i _Varnish - guide_.
+   Vanligtvis är det här din webbserver. Se [Serverdelsservrar](https://varnish-cache.org/docs/trunk/users-guide/vcl-backends.html) i _Slutredigeringsguiden_.
 
 1. Ersätt värdet för `.port` med webbserverns lyssningsport (8080 i det här exemplet).
 
@@ -116,7 +116,7 @@ Detta bör visa felmeddelanden.
 
 ## Kontrollera att lack fungerar
 
-I följande avsnitt beskrivs hur du kan verifiera att Varnish fungerar, men _utan_ konfigurerar Commerce för att använda den. Du bör prova detta innan du konfigurerar Commerce.
+I följande avsnitt beskrivs hur du kan verifiera att Varnish fungerar, men _utan_ konfigurerar Commerce att använda det. Du bör testa detta innan du konfigurerar Commerce.
 
 Utför de uppgifter som beskrivs i följande avsnitt i den ordning som visas:
 
@@ -137,7 +137,7 @@ Om Varnish inte kan starta som en tjänst startar du den från kommandoraden enl
 
 1. Starta den underordnade processen för lack:
 
-   När du uppmanas till det anger du `start`
+   Ange `start` när du uppmanas till detta
 
    Följande meddelanden visas för att bekräfta att starten lyckades:
 
@@ -168,13 +168,13 @@ tcp        0      0 ::1:48509                   :::*                        LIST
 
 I föregående exempel visas hur Varnish körs på port 80 och Apache som körs på port 8080.
 
-Om du inte ser utdata för `varnishd`, se till att Varnish är igång.
+Om du inte ser utdata för `varnishd` kontrollerar du att Varnish körs.
 
 Se [`netstat` alternativ](https://tldp.org/LDP/nag2/x-087-2-iface.netstat.html).
 
-## Installera Commerce-programvaran
+## Installera Commerce
 
-Installera Commerce-programvaran om du inte redan har gjort det. När du uppmanas att ange en bas-URL använder du värddatorn Varnish och port 80 (för Varnish) eftersom Varnish tar emot alla inkommande HTTP-begäranden.
+Installera Commerce om du inte redan har gjort det. När du uppmanas att ange en bas-URL använder du värddatorn Varnish och port 80 (för Varnish) eftersom Varnish tar emot alla inkommande HTTP-begäranden.
 
 Möjligt fel vid installation av Commerce:
 
@@ -185,7 +185,7 @@ XID: 303394517
 Varnish cache server
 ```
 
-Om det här felet uppstår kan du redigera `default.vcl` och lägga till en timeout i `backend` stanza enligt följande:
+Om det här felet uppstår redigerar du `default.vcl` och lägger till en timeout i `backend`-instansen enligt följande:
 
 ```conf
 backend default {
@@ -199,11 +199,11 @@ backend default {
 
 Nu kan du verifiera att Varnish serverar sidor genom att titta på HTML svarshuvuden som returneras från vilken sida som helst.
 
-Innan du kan titta på rubriker måste du ange Commerce för utvecklarläge. Det finns flera sätt att göra det på. Det enklaste är att ändra `.htaccess` i Commerce-programmets rot. Du kan också använda [`magento deploy:mode:set`](../cli/set-mode.md) -kommando.
+Innan du kan titta på rubriker måste du ange Commerce för utvecklarläge. Det finns flera sätt att göra det på. Det enklaste är att ändra `.htaccess` i Commerce-programroten. Du kan också använda kommandot [`magento deploy:mode:set`](../cli/set-mode.md).
 
-### Ange handel för utvecklarläge
+### Ange Commerce för utvecklarläge
 
-Om du vill ange Commerce för utvecklarläge använder du [`magento deploy:mode:set`](../cli/set-mode.md#change-to-developer-mode) -kommando.
+Använd kommandot [`magento deploy:mode:set`](../cli/set-mode.md#change-to-developer-mode) om du vill ställa in Commerce för utvecklarläget.
 
 ### Titta på varnish-loggen
 
@@ -213,7 +213,7 @@ Kontrollera att Varnish körs och ange sedan följande kommando på Varnish-serv
 varnishlog
 ```
 
-Gå till valfri Commerce-sida i en webbläsare.
+Gå till en Commerce-sida i en webbläsare.
 
 En lång lista med svarshuvuden visas i kommandotolken. Leta efter rubriker som följande:
 
@@ -232,13 +232,13 @@ En lång lista med svarshuvuden visas i kommandotolken. Leta efter rubriker som 
 -   ReqHeader      Origin: http://10.249.151.10
 ```
 
-Om rubriker som dessa gör det _not_ visa, stoppa Varnish, kontrollera `default.vcl`och försök igen.
+Om rubriker som dessa _inte_ visas stoppar du Varnish, kontrollerar `default.vcl` och försöker igen.
 
 ### Titta på sidhuvuden för svar från HTML
 
 Det finns flera sätt att titta på svarshuvuden, bland annat med hjälp av ett webbläsarplugin-program eller en webbläsarkontroll.
 
-I följande exempel används `curl`. Du kan ange det här kommandot från alla datorer som har åtkomst till Commerce-servern med HTTP.
+I följande exempel används `curl`. Du kan ange det här kommandot från alla datorer som har åtkomst till Commerce-servern via HTTP.
 
 ```bash
 curl -I -v --location-trusted '<your Commerce base URL>'

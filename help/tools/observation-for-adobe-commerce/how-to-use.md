@@ -1,16 +1,16 @@
 ---
-title: Så här använder du [!DNL Observation for Adobe Commerce] nerdlet
-description: Lär dig använda [!DNL Observation for Adobe Commerce] nördlet.
+title: Så här använder du  [!DNL Observation for Adobe Commerce] nerdleten
+description: Lär dig hur du använder  [!DNL Observation for Adobe Commerce] nördleten.
 exl-id: 3c368814-0786-4e8f-ac81-9a77cec94677
 feature: Configuration, Observability
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '627'
 ht-degree: 0%
 
 ---
 
-# Så här använder du [!DNL Observation for Adobe Commerce] nerdlet
+# Så här använder du [!DNL Observation for Adobe Commerce]-nördleten
 
 ## Allmän metod för att se på frågor
 
@@ -24,26 +24,26 @@ Kontrollera tillstånd för miljöresurser:
 
    * Om dessa visar mycket små minneslägen kan de bidra till problem.
 
-* Undersök **[!UICONTROL Alerts during the timeframe]** bildruta.
+* Granska bildrutan **[!UICONTROL Alerts during the timeframe]**.
 
-   * Adobe Commerce molninfrastruktur tillhandahåller [!DNL Managed alerts]. Du kan klicka på länken i sidhuvudet för att se [!DNL Support Knowledge Base] artiklar som hjälper dig att avgöra vilka åtgärder du ska vidta för att få specifika aviseringar.
+   * Adobe Commerce i molninfrastrukturen tillhandahåller [!DNL Managed alerts]. Du kan klicka på länken i sidhuvudet för att se [!DNL Support Knowledge Base] artiklar som hjälper dig att avgöra vilka åtgärder du ska vidta för specifika aviseringar.
 
-* Undersök **[!UICONTROL CPU % by host]** bildruta: Om den har hög processoranvändning ska du kontrollera [!DNL Support Knowledge Base] artikel i bildrutans sidhuvud. Kontrollera också att import/export eller säkerhetskopiering av databaser inte sker under trafiktoppar.
+* Granska **[!UICONTROL CPU % by host]**-bildrutan: Om den har hög processoranvändning kontrollerar du artikeln [!DNL Support Knowledge Base] i bildrutans rubrik. Kontrollera också att import/export eller säkerhetskopiering av databaser inte sker under trafiktoppar.
 
-* Kontrollera **[!UICONTROL Web Traffic volume compared to one week ago]** Bildruta: Om trafiken är mycket högre än föregående vecka under samma period, kan det då förklaras (t.ex. en försäljningskampanj eller nya produkter som har marknadsförts)?
+* Kontrollera **[!UICONTROL Web Traffic volume compared to one week ago]**-bildrutan: Om trafiken är mycket högre än föregående vecka under samma period, kan den förklaras (t.ex. en försäljningskampanj eller nya produkter som har marknadsförts)?
    * Om det inte går att förklara en trafikökning tittar du på den genomsnittliga svarstiden (millisekunder) för produktionsmiljön. Bidrar den högre trafiken till en annan svarstid än vad som är normalt? Expandera tidsramen för att se om det är en avvikelse.
-   * Påverkar den ökade trafiken webbtransaktioner? Kontrollera **[!UICONTROL Response Code]** bildruta för fel. Om platsen är nere kan du klicka på `Site Down?` i bildrutehuvudet. Bildrutan identifierar eventuella fel som inträffar och deras frekvens.
-   * Distribuerade någon ändringar på din webbplats? The **[!UICONTROL Deployment Log Entries]** bildrutan anger om några distributioner har gjorts under problemets tidsram. Om problemet uppstår omedelbart efter distributionen kan det bero på att distributionsaktiviteterna lägger till ytterligare belastning på platsen (cachelagrar rensas, tjänster startas om osv.).
-   * Uppstod en storleksändring eller en storleksändring? Om platsens storlek tillfälligt har uppgraderats kan den ha återgått till den ursprungliga klusterstorleken. Om en begäran gjordes om att öka platskapaciteten kan det bero på att platsens storlek har ändrats. Kontrollera **[!UICONTROL Upsize/Downsize – vCPU view over the timeline]** bildruta. Den här bildrutan upptäcker ibland ett avbrott på en viss nod. Om storleken minskar kan det tyda på ett problem med en eller flera noder.
+   * Påverkar den ökade trafiken webbtransaktioner? Kontrollera om det finns fel i bildrutan **[!UICONTROL Response Code]**. Om webbplatsen är nere kan du klicka på länken `Site Down?` i bildrutehuvudet. Bildrutan identifierar eventuella fel som inträffar och deras frekvens.
+   * Distribuerade någon ändringar på din webbplats? Bildrutan **[!UICONTROL Deployment Log Entries]** anger om några distributioner har gjorts under problemets tidsram. Om problemet uppstår omedelbart efter distributionen kan det bero på att distributionsaktiviteterna lägger till ytterligare belastning på platsen (cachelagrar rensas, tjänster startas om osv.).
+   * Uppstod en storleksändring eller en storleksändring? Om platsens storlek tillfälligt har uppgraderats kan den ha återgått till den ursprungliga klusterstorleken. Om en begäran gjordes om att öka platskapaciteten kan det bero på att platsens storlek har ändrats. Kontrollera bildrutan **[!UICONTROL Upsize/Downsize – vCPU view over the timeline]**. Den här bildrutan upptäcker ibland ett avbrott på en viss nod. Om storleken minskar kan det tyda på ett problem med en eller flera noder.
 
-* The **[!UICONTROL IP Frequency]** identifierar begärandefrekvens från IP-adresser som görs mot de ursprungliga servrarna (vilket innebär att begäran inte kunde hanteras från [!DNL Fastly] 74 var det inte cachelagrat).
+* Fliken **[!UICONTROL IP Frequency]** identifierar begärandefrekvens från IP-adresser som görs mot de ursprungliga servrarna (vilket innebär att begäran inte kunde hanteras från [!DNL Fastly] eftersom 74 den inte cachelagrades).
 
-   * För alla [!DNL Fastly] relaterade problem, kontrollera **[!UICONTROL Fastly Cache]** bildruta och välj felaspekten för att se hur många procent av förfrågningarna som är fel. De kan tyda på ett serverdelsfel om de sammanfaller med icke-webbexport.
+   * Kontrollera bildrutan **[!UICONTROL Fastly Cache]** för eventuella [!DNL Fastly]-relaterade problem och välj felaspekten för att se hur många begäranden som är fel. De kan tyda på ett serverdelsfel om de sammanfaller med icke-webbexport.
    * Om inläsningen inte verkar bero på webbtrafik kan det finnas fel eller en kombination av icke-webbförfrågningar, som långsamma frågor eller [!DNL crons].
 
-* Kontrollera **[!UICONTROL Database Errors]** bildruta för fel som kan sammanfalla med problemets/problemets tidslinje.
-* Kontrollera **[!UICONTROL Database mysql-slow.log]** bildruta för att identifiera SQL-satser som inträffar. `INSERT`, `UPDATE`och `DELETE` kan ta en stund om frågan inte är optimerad. Jämn `SELECT` -satser kan vara mycket ineffektiva om de utförs mot stora tabeller.
-* **[!UICONTROL PHP States]** och **[!UICONTROL PHP Errors]** kommer att visa potentiella problem med PHP. The **[!UICONTROL PHP States]** bildrutan visar PHP-processavslutningar, start och när tjänsten når ready-läget per nod. The **[!UICONTROL PHP Errors]** bildrutan kan hjälpa till att isolera var problemet finns med PHP, t.ex. minnesstorlek, arbetare eller antalet servrar.
-* Om du vill visa fördröjning i transaktioner kan tabellen Transaktioner - Medel, Max och Min sorteras efter kolumn för att visa den längsta varaktigheten för transaktioner. Ett överbelastat kluster har fördröjda varaktigheter i transaktioner, men det visar även avvikelser som kan tyda på ett problem med en metod eller [!DNL cron].
-* The **[!UICONTROL Cron error]** bildrutan visas [!DNL cron] lås, SQL-fel som kan associeras med [!DNL cron] loggar och delad mellanlagring [!DNL crons] som kan köras i produktionsmiljöer när det finns en dedikerad testmiljö.
-* The [!UICONTROL ElasticSearch Errors] bildrutan visar fel som kan tyda på större problem med [!DNL Elasticsearch] frågor, data eller index.
+* Kontrollera bildrutan **[!UICONTROL Database Errors]** för att se om det finns fel som kan sammanfalla med tidslinjen för problem/problem.
+* Kontrollera **[!UICONTROL Database mysql-slow.log]**-bildrutan för att identifiera SQL-satser som inträffar. Kommandona `INSERT`, `UPDATE` och `DELETE` kan ta en stund om frågan inte är optimerad. Även `SELECT`-satser kan vara mycket ineffektiva om de utförs mot stora tabeller.
+* **[!UICONTROL PHP States]** och **[!UICONTROL PHP Errors]** bildrutor visar potentiella problem med PHP. Bildrutan **[!UICONTROL PHP States]** visar PHP-processavslutningar, starter och när tjänsten når färdigt läge per nod. Bildrutan **[!UICONTROL PHP Errors]** kan hjälpa dig att isolera var problemet finns med PHP, t.ex. minnesstorlek, arbetare eller antalet servrar.
+* Om du vill visa fördröjning i transaktioner kan tabellen Transaktioner - Medel, Max och Min sorteras efter kolumn för att visa den längsta varaktigheten för transaktioner. Ett överlagrat kluster kommer att ha latenta varaktigheter i transaktioner, men det kommer också att visa avvikelser som kan tyda på ett problem med en metod eller [!DNL cron].
+* Bildrutan **[!UICONTROL Cron error]** visar [!DNL cron] lås, SQL-fel som kan vara kopplade till [!DNL cron]-loggar och delad mellanlagring [!DNL crons] som kan köras i produktionsmiljöer när det finns en dedikerad mellanlagringsmiljö.
+* Bildrutan [!UICONTROL ElasticSearch Errors] innehåller fel som kan tyda på större problem med [!DNL Elasticsearch] frågor, data eller index.

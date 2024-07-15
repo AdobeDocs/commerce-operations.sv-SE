@@ -17,7 +17,7 @@ Det finns många skäl att starta en ny Adobe Commerce-implementering eller flyt
 
 I följande diagram visas referensarkitekturen för driftsättning av Adobe Commerce lokalt i AWS infrastruktur. Andra molnleverantörer som Azure, Google Cloud och Alibaba Cloud delar en liknande infrastrukturdesign och homologa tjänster.
 
-![Bild som visar Adobe Commerce-infrastruktur för värdtjänster på molntjänster från tredje part](/help/assets/playbooks/on-premises-infrastructure.svg)
+![Diagram som visar Adobe Commerce-infrastruktur som värd för sig på molntjänster från tredje part](/help/assets/playbooks/on-premises-infrastructure.svg)
 
 Låt oss fördjupa oss i rollerna och funktionerna i varje aspekt av den infrastruktur som visas ovan:
 

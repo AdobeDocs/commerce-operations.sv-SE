@@ -12,15 +12,15 @@ ht-degree: 0%
 
 # Referens för försäljningskonfigurationssökvägar
 
-I det här avsnittet visas variabelnamn och konfigurationssökvägar som är tillgängliga för alternativ i Admin under **Lager** > Inställningar > **Konfiguration** > **Försäljning**.
+I det här avsnittet visas variabelnamn och konfigurationssökvägar som är tillgängliga för alternativ i Admin under **Lagrar** > Inställningar > **Konfiguration** > **Försäljning**.
 
-The [`magento app:config:dump` kommando](../cli/export-configuration.md) skriver dessa värden i den delade konfigurationsfilen, `app/etc/config.php`, som bör vara i källkontroll. Om du vill åsidosätta konfigurationsinställningar eller ange känsliga inställningar läser du [Använd miljövariabler för att åsidosätta konfigurationsinställningar](override-config-settings.md#environment-variables). Det här avsnittet gör _not_ list [känsliga och systemspecifika värden](config-reference-sens.md).
+[`magento app:config:dump`-kommandot ](../cli/export-configuration.md) skriver dessa värden till den delade konfigurationsfilen `app/etc/config.php` som ska finnas i källkontrollen. Om du vill åsidosätta konfigurationsinställningar eller ange känsliga inställningar läser du [Använda miljövariabler för att åsidosätta konfigurationsinställningar](override-config-settings.md#environment-variables). Det här avsnittet listar _inte_ [känsliga och systemspecifika värden](config-reference-sens.md).
 
 ## Försäljningsvägar
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Försäljning** > **Försäljning**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Store** > Inställningar > **Konfiguration** > **Försäljning** > **Försäljning**.
 
-| Namn | Konfigurationssökväg | Endast handel? |
+| Namn | Konfigurationssökväg | Endast Commerce? |
 |--------------|--------------|--------------|
 | Dölj Kund-IP | `sales/general/hide_customer_ip` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Delsumma | `sales/totals_sort/subtotal` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -29,8 +29,8 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Moms | `sales/totals_sort/tax` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Fast produktskatt | `sales/totals_sort/weee` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Summa | `sales/totals_sort/grand_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Presentkort | `sales/totals_sort/giftcardaccount` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Butikskrediter | `sales/totals_sort/customerbalance` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Presentkort | `sales/totals_sort/giftcardaccount` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Butikskrediter | `sales/totals_sort/customerbalance` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Tillåt ombeställning | `sales/reorder/allow` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Logo for PDF Print-outs (200x50) | `sales/identity/logo` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Logotyp för HTML Print View | `sales/identity/logo_html` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -47,33 +47,33 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Löptid för väntande betalningsorder (minuter) | `sales/orders/delete_pending_after` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Tillåt presentmeddelanden på ordernivå | `sales/gift_options/allow_order` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Tillåt presentmeddelanden för orderartiklar | `sales/gift_options/allow_items` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Tillåt flyttning av presentkort på ordernivå | `sales/gift_options/wrapping_allow_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Tillåt Presentbrytning för orderobjekt | `sales/gift_options/wrapping_allow_items` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Tillåt presentkvitto | `sales/gift_options/allow_gift_receipt` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Tillåt utskrivna kort | `sales/gift_options/allow_printed_card` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Standardpris för utskriftskort | `sales/gift_options/printed_card_price` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Tillåt flyttning av presentkort på ordernivå | `sales/gift_options/wrapping_allow_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Tillåt Presentbrytning för orderobjekt | `sales/gift_options/wrapping_allow_items` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Tillåt presentkvitto | `sales/gift_options/allow_gift_receipt` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Tillåt utskrivna kort | `sales/gift_options/allow_printed_card` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Standardpris för utskriftskort | `sales/gift_options/printed_card_price` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Aktivera MAP | `sales/msrp/enabled` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Visa faktiskt pris | `sales/msrp/display_price_type` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Standardmeddelande för popup-text | `sales/msrp/explanation_message` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Standardtextmeddelande för &quot;What&#39;s This&quot; | `sales/msrp/explanation_message_whats_this` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Aktivera Beställning efter SKU på Mitt konto i Storefront | `sales/product_sku/my_account_enable` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Aktivera Beställning efter SKU på Mitt konto i Storefront | `sales/product_sku/my_account_enable` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Aktiverad | `sales/instant_purchase/active` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Knapptext | `sales/instant_purchase/button_text` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Kundgrupper | `sales/product_sku/allowed_groups` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Aktivera arkivering | `sales/magento_salesarchive/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Arkivera inköpsorder | `sales/magento_salesarchive/age` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Orderstatus som ska arkiveras | `sales/magento_salesarchive/order_statuses` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Aktivera RMA på Storefront | `sales/magento_rma/enabled` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Aktivera RMA på produktnivå | `sales/magento_rma/enabled_on_product` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Använd butiksadress | `sales/magento_rma/use_store_address` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Kundgrupper | `sales/product_sku/allowed_groups` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Aktivera arkivering | `sales/magento_salesarchive/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Arkivera inköpsorder | `sales/magento_salesarchive/age` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Orderstatus som ska arkiveras | `sales/magento_salesarchive/order_statuses` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Aktivera RMA på Storefront | `sales/magento_rma/enabled` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Aktivera RMA på produktnivå | `sales/magento_rma/enabled_on_product` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Använd butiksadress | `sales/magento_rma/use_store_address` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 
 {style="table-layout:auto"}
 
 ## Sökvägar för e-post
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Försäljning** > **Försäljningsmejl**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Store** > Inställningar > **Konfiguration** > **Försäljning** > **Försäljningsmeddelanden**.
 
-| Namn | Konfigurationssökväg | Endast handel? |
+| Namn | Konfigurationssökväg | Endast Commerce? |
 |--------------|--------------|--------------|
 | Asynkron sändning | `sales_email/general/async_sending` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Aktiverad | `sales_email/order/enabled` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -116,26 +116,26 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | E-postmall för kreditnotskommentar | `sales_email/creditmemo_comment/template` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | E-postmall för kreditnotkommentar för gäst | `sales_email/creditmemo_comment/guest_template` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Skicka e-postkopieringsmetod för kreditnotkommentarer | `sales_email/creditmemo_comment/copy_method` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Aktiverad | `sales_email/magento_rma/enabled` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| RMA-e-postavsändare | `sales_email/magento_rma/identity` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| RMA-e-postmall | `sales_email/magento_rma/template` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Mall för RMA-e-post för gäst | `sales_email/magento_rma/guest_template` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Skicka RMA-postkopieringsmetod | `sales_email/magento_rma/copy_method` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Aktiverad | `sales_email/magento_rma_auth/enabled` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| E-postavsändare för RMA-auktorisering | `sales_email/magento_rma_auth/identity` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| E-postmall för RMA-auktorisering | `sales_email/magento_rma_auth/template` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| E-postmall för RMA-auktorisering för gäst | `sales_email/magento_rma_auth/guest_template` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Skicka e-postkopieringsmetod för RMA-auktorisering | `sales_email/magento_rma_auth/copy_method` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Aktiverad | `sales_email/magento_rma_comment/enabled` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| E-postavsändare för RMA-kommentar | `sales_email/magento_rma_comment/identity` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| E-postmall för RMA-kommentar | `sales_email/magento_rma_comment/template` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| E-postmall för RMA-kommentar för gäst | `sales_email/magento_rma_comment/guest_template` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Skicka RMA-postkopieringsmetod | `sales_email/magento_rma_comment/copy_method` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Aktiverad | `sales_email/magento_rma_customer_comment/enabled` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| E-postavsändare för RMA-kommentar | `sales_email/magento_rma_customer_comment/identity` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| E-postmottagare för RMA-kommentar | `sales_email/magento_rma_customer_comment/recipient` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| E-postmall för RMA-kommentar | `sales_email/magento_rma_customer_comment/template` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Skicka RMA-postkopieringsmetod | `sales_email/magento_rma_customer_comment/copy_method` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `sales_email/magento_rma/enabled` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| RMA-e-postavsändare | `sales_email/magento_rma/identity` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| RMA-e-postmall | `sales_email/magento_rma/template` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Mall för RMA-e-post för gäst | `sales_email/magento_rma/guest_template` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Skicka RMA-postkopieringsmetod | `sales_email/magento_rma/copy_method` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `sales_email/magento_rma_auth/enabled` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| E-postavsändare för RMA-auktorisering | `sales_email/magento_rma_auth/identity` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| E-postmall för RMA-auktorisering | `sales_email/magento_rma_auth/template` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| E-postmall för RMA-auktorisering för gäst | `sales_email/magento_rma_auth/guest_template` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Skicka e-postkopieringsmetod för RMA-auktorisering | `sales_email/magento_rma_auth/copy_method` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `sales_email/magento_rma_comment/enabled` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| E-postavsändare för RMA-kommentar | `sales_email/magento_rma_comment/identity` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| E-postmall för RMA-kommentar | `sales_email/magento_rma_comment/template` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| E-postmall för RMA-kommentar för gäst | `sales_email/magento_rma_comment/guest_template` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Skicka RMA-postkopieringsmetod | `sales_email/magento_rma_comment/copy_method` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `sales_email/magento_rma_customer_comment/enabled` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| E-postavsändare för RMA-kommentar | `sales_email/magento_rma_customer_comment/identity` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| E-postmottagare för RMA-kommentar | `sales_email/magento_rma_customer_comment/recipient` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| E-postmall för RMA-kommentar | `sales_email/magento_rma_customer_comment/template` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Skicka RMA-postkopieringsmetod | `sales_email/magento_rma_customer_comment/copy_method` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Visa order-ID i sidhuvud | `sales_pdf/invoice/put_order_id` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Visa order-ID i sidhuvud | `sales_pdf/shipment/put_order_id` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Visa order-ID i sidhuvud | `sales_pdf/creditmemo/put_order_id` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -144,12 +144,12 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 
 ## Skattevägar
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Försäljning** > **Moms**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Store** > Inställningar > **Konfiguration** > **Försäljning** > **Skatt**.
 
-| Namn | Konfigurationssökväg | Endast handel? |
+| Namn | Konfigurationssökväg | Endast Commerce? |
 |--------------|--------------|--------------|
 | Skatteklass för leverans | `tax/classes/shipping_tax_class` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Skatteklass för presentalternativ | `tax/classes/wrapping_tax_class` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Skatteklass för presentalternativ | `tax/classes/wrapping_tax_class` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Standardskatteklass för produkt | `tax/classes/default_product_tax_class` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Standardskatteklass för kund | `tax/classes/default_customer_tax_class` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Momsberäkningsmetod baserad på | `tax/calculation/algorithm` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -162,22 +162,22 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Aktivera gränsöverskridande handel | `tax/calculation/cross_border_trade_enabled` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Standardland | `tax/defaults/country` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Standardläge | `tax/defaults/region` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Standardpostnummer | `tax/defaults/postcode` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
+| Post-standardkod | `tax/defaults/postcode` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Visa produktpriser i katalog | `tax/display/type` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Visa leveranspriser | `tax/display/shipping` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Visningspriser | `tax/cart_display/price` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Visa delsumma | `tax/cart_display/subtotal` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Visa leveransbelopp | `tax/cart_display/shipping` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Visa presentfigursättningspriser | `tax/cart_display/gift_wrapping` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Visa utskrivna kortpriser | `tax/cart_display/printed_card` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Visa presentfigursättningspriser | `tax/cart_display/gift_wrapping` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Visa utskrivna kortpriser | `tax/cart_display/printed_card` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Inkludera moms i ordersumma | `tax/cart_display/grandtotal` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Visa fullständig momssammanfattning | `tax/cart_display/full_summary` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Visa delsumma för nollskatt | `tax/cart_display/zero_tax` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Visningspriser | `tax/sales_display/price` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Visa delsumma | `tax/sales_display/subtotal` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Visa leveransbelopp | `tax/sales_display/shipping` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Visa presentfigursättningspriser | `tax/sales_display/gift_wrapping` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Visa utskrivna kortpriser | `tax/sales_display/printed_card` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Visa presentfigursättningspriser | `tax/sales_display/gift_wrapping` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Visa utskrivna kortpriser | `tax/sales_display/printed_card` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Inkludera moms i ordersumma | `tax/sales_display/grandtotal` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Visa fullständig momssammanfattning | `tax/sales_display/full_summary` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Visa delsumma för nollskatt | `tax/sales_display/zero_tax` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -193,9 +193,9 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 
 ## Utcheckningsbanor
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Försäljning** > **Utcheckning**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Lagrar** > Inställningar > **Konfiguration** > **Försäljning** > **Utcheckning**.
 
-| Namn | Konfigurationssökväg | Endast handel? |
+| Namn | Konfigurationssökväg | Endast Commerce? |
 |--------------|--------------|--------------|
 | Aktivera OnePage-utcheckning | `checkout/options/onepage_checkout_enabled` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Tillåt gästutcheckning | `checkout/options/guest_checkout` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -205,7 +205,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Efter att en produktomdirigering lagts till i kundvagnen | `checkout/cart/redirect_to_cart` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Grupperad produktbild | `checkout/cart/grouped_product_image` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Konfigurerbar produktbild | `checkout/cart/configurable_product_image` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Livstid för förhandsgranskning av offert (minuter) | `checkout/cart/preview_quota_lifetime` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Livstid för förhandsgranskning av offert (minuter) | `checkout/cart/preview_quota_lifetime` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Visa kundvagnssammanfattning | `checkout/cart_link/use_qty` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Visa kundvagn, sidopanel | `checkout/sidebar/display` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Maximalt antal senast tillagda objekt | `checkout/sidebar/count` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -218,9 +218,9 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 
 ## Banor för leveransinställningar
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Försäljning** > **Leveransinställningar**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Lagrar** > Inställningar > **Konfiguration** > **Försäljning** > **Leveransinställningar**.
 
-| Namn | Konfigurationssökväg | Endast handel? |
+| Namn | Konfigurationssökväg | Endast Commerce? |
 |--------------|--------------|--------------|
 | Använd anpassad leveranspolicy | `shipping/shipping_policy/enable_shipping_policy` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Leveranspolicy | `shipping/shipping_policy/shipping_policy_content` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -229,9 +229,9 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 
 ## Banor för multileveransinställningar
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Försäljning** > **Inställningar för flera leveranser**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Store** > Inställningar > **Konfiguration** > **Försäljning** > **Multileveransinställningar**.
 
-| Namn | Konfigurationssökväg | Endast handel? |
+| Namn | Konfigurationssökväg | Endast Commerce? |
 |--------------|--------------|--------------|
 | Tillåt leverans till flera adresser | `multishipping/options/checkout_multiple` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Högsta tillåtna antal för leverans till flera adresser | `multishipping/options/checkout_multiple_maximum_qty` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -240,9 +240,9 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 
 ## Sökvägar för leveransmetoder
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Försäljning** > **Leveransmetoder**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Lagrar** > Inställningar > **Konfiguration** > **Försäljning** > **Leveransmetoder**.
 
-| Namn | Konfigurationssökväg | Endast handel? |
+| Namn | Konfigurationssökväg | Endast Commerce? |
 |--------------|--------------|--------------|
 | Aktiverad | `carriers/flatrate/active` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Titel | `carriers/flatrate/title` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -280,7 +280,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Visa metod om den inte är tillämplig | `carriers/tablerate/showmethod` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Sorteringsordning | `carriers/tablerate/sort_order` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Aktiverad för utcheckning | `carriers/ups/active` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Aktiverat för RMA | `carriers/ups/active_rma` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Aktiverat för RMA | `carriers/ups/active_rma` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | UPS-typ | `carriers/ups/type` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Läge | `carriers/ups/mode_xml` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Leveransens ursprung | `carriers/ups/origin_shipment` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -307,7 +307,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Visa metod om den inte är tillämplig | `carriers/ups/showmethod` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Sorteringsordning | `carriers/ups/sort_order` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Aktiverad för utcheckning | `carriers/usps/active` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Aktiverat för RMA | `carriers/usps/active_rma` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Aktiverat för RMA | `carriers/usps/active_rma` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Läge | `carriers/usps/mode` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Typ av paketbegäran | `carriers/usps/shipment_requesttype` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Behållare | `carriers/usps/container` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -332,7 +332,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Visa metod om den inte är tillämplig | `carriers/usps/showmethod` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Sorteringsordning | `carriers/usps/sort_order` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Aktiverad för utcheckning | `carriers/fedex/active` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Aktiverat för RMA | `carriers/fedex/active_rma` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Aktiverat för RMA | `carriers/fedex/active_rma` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Titel | `carriers/fedex/title` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Webbtjänst-URL (produktion) | `carriers/fedex/production_webservices_url` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Webbtjänst-URL (sandlåda) | `carriers/fedex/sandbox_webservices_url` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -357,7 +357,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Visa metod om den inte är tillämplig | `carriers/fedex/showmethod` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Sorteringsordning | `carriers/fedex/sort_order` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Aktiverad för utcheckning | `carriers/dhl/active` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Aktiverat för RMA | `carriers/dhl/active_rma` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Aktiverat för RMA | `carriers/dhl/active_rma` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Titel | `carriers/dhl/title` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Innehållstyp | `carriers/dhl/content_type` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Beräkna hanteringsavgift | `carriers/dhl/handling_type` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -386,19 +386,19 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 
 ## Google API-sökvägar
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Försäljning** > **GOOGLE API**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Store** > Inställningar > **Konfiguration** > **Försäljning** > **Google API**.
 
-| Namn | Konfigurationssökväg | Endast handel? |
+| Namn | Konfigurationssökväg | Endast Commerce? |
 |--------------|--------------|--------------|
 | Aktivera | `google/analytics/active` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Kontotyp | `google/analytics/type` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Kontotyp | `google/analytics/type` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Aktivera innehållsexperiment | `google/analytics/experiments` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Listegenskap för katalogsidan | `google/analytics/catalog_page_list_value` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| List-egenskap för korsförsäljningsblocket | `google/analytics/crosssell_block_list_value` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| List-egenskap för merförsäljningsblocket | `google/analytics/upsell_block_list_value` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| List-egenskap för det relaterade produktblocket | `google/analytics/related_block_list_value` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Listegenskap för sökresultatsidan | `google/analytics/search_page_list_value` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| &quot;Internal Promotion&quot; för kampanjfältet &quot;Label&quot;. | `google/analytics/promotions_list_value` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Listegenskap för katalogsidan | `google/analytics/catalog_page_list_value` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| List-egenskap för korsförsäljningsblocket | `google/analytics/crosssell_block_list_value` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| List-egenskap för merförsäljningsblocket | `google/analytics/upsell_block_list_value` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| List-egenskap för det relaterade produktblocket | `google/analytics/related_block_list_value` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Listegenskap för sökresultatsidan | `google/analytics/search_page_list_value` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| &quot;Internal Promotion&quot; för kampanjfältet &quot;Label&quot;. | `google/analytics/promotions_list_value` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Aktivera | `google/adwords/active` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Konverterings-ID | `google/adwords/conversion_id` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Konverteringsspråk | `google/adwords/conversion_language` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -412,9 +412,9 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 
 ## Presentkortsbanor
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Försäljning** > **Presentkort**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Store** > Inställningar > **Konfiguration** > **Försäljning** > **Presentkort**.
 
-| Namn | Konfigurationssökväg | Endast handel? |
+| Namn | Konfigurationssökväg | Endast Commerce? |
 |--------------|--------------|--------------|
 | E-postavsändare för presentkortsmeddelande | `giftcard/email/identity` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | E-postmall för presentkortsmeddelanden | `giftcard/email/template` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |

@@ -16,8 +16,8 @@ ht-degree: 0%
 Du kan köra följande typer av rapporter:
 
 - **Modulberoenden**: Visar det totala antalet beroenden mellan moduler och om beroendena är hårda eller mjuka.
-- **Cirkelberoenden**: Visar det totala antalet beroendekedjor samt antalet och listan över cirkulära beroenden för varje modul.
-- **Ramberoenden**: Visar det totala antalet beroenden av Commerce Framework per modul (inklusive det totala antalet ramverksposter för varje bibliotek).
+- **Cirkulära beroenden**: Visar det totala antalet beroendekedjor samt antalet och listan med cirkulära beroenden för varje modul.
+- **Ramverksberoenden**: Visar det totala antalet beroenden av Commerce Framework per modul (inklusive det totala antalet ramverksposter för varje bibliotek).
 
 Ett beroende i en kommentar är också ett beroende.
 

@@ -4,7 +4,7 @@ description: Lär dig hur du hanterar meddelandeköer från kommandoraden för A
 exl-id: 619e5df1-39cb-49b6-b636-618b12682d32
 source-git-commit: 8dce1f1e961ec02d7783a7423a51a7d4567dce79
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '387'
 ht-degree: 0%
 
 ---
@@ -15,9 +15,9 @@ Du kan hantera meddelandeköer från kommandoraden med hjälp av cron-jobb eller
 
 ## Processhantering
 
-Kronjobb är standardmekanismen för att återstarta konsumenter. Processer som startats av `cron` förbruka det angivna antalet meddelanden och avsluta sedan. Körs om `cron` startar om konsumenten.
+Kronjobb är standardmekanismen för att återstarta konsumenter. Processer som har startats av `cron` förbrukar det angivna antalet meddelanden och avslutar sedan. Om `cron` startas om startas konsumenten om.
 
-I följande exempel visas `crontab` konfiguration för konsumenter:
+I följande exempel visas `crontab`-konfigurationen för konsumenter som kör:
 
 > /app/code/Magento/MessageQueue/etc/crontab.xml
 
@@ -31,11 +31,11 @@ I följande exempel visas `crontab` konfiguration för konsumenter:
 
 >[!INFO]
 >
->Hur ofta du kontrollerar meddelandeköer kan bero på din affärslogik och tillgängliga systemresurser. I allmänhet kanske du vill söka efter nya kunder och skicka välkomstmeddelanden oftare än med en mer resurskrävande process, som att uppdatera katalogen. Du bör definiera `cron` scheman efter företagets behov.
+>Hur ofta du kontrollerar meddelandeköer kan bero på din affärslogik och tillgängliga systemresurser. I allmänhet kanske du vill söka efter nya kunder och skicka välkomstmeddelanden oftare än med en mer resurskrävande process, som att uppdatera katalogen. Du bör definiera `cron`-scheman efter dina affärsbehov.
 >
 >Den kan konfigureras i Admin Stores > Settings > Configuration > Advanced > System > Cron configuration options for group: customers.
 >
->Se [Konfigurera och kör cron](../cli/configure-cron-jobs.md) för mer information om hur du använder `cron` med Commerce.
+>Mer information om hur du använder `cron` med Commerce finns i [Konfigurera och kör cron](../cli/configure-cron-jobs.md).
 
 Du kan också använda en processhanterare som [Supervisor](https://supervisord.readthedocs.io/en/latest/) för att övervaka processernas status. Hanteraren kan använda kommandoraden för att starta om processerna efter behov.
 
@@ -43,17 +43,17 @@ Du kan också använda en processhanterare som [Supervisor](https://supervisord.
 
 ### Som standard
 
-- Kronjobb `consumers_runner` är aktiverat
-- Kronjobb `consumers_runner` kör alla definierade konsumenter
+- Kronijobbet `consumers_runner` är aktiverat
+- Kronijobbet `consumers_runner` kör alla definierade konsumenter
 - Varje konsument bearbetar 10000 meddelanden och avslutas sedan
 
 >[!INFO]
 >
->Om din Adobe Commerce-butik finns på molnplattformen använder du [`CRON_CONSUMERS_RUNNER`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#cron_consumers_runner) för att konfigurera `consumers_runner` cron-jobb.
+>Om din Adobe Commerce-butik finns på molnplattformen använder du [`CRON_CONSUMERS_RUNNER`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#cron_consumers_runner) för att konfigurera `consumers_runner` cron-jobbet.
 
 ### Specifik konfiguration
 
-Redigera `/app/etc/env.php` fil för att konfigurera cron-jobbet `consumers_runner`.
+Redigera filen `/app/etc/env.php` om du vill konfigurera cron-jobbet `consumers_runner`.
 
 ```php
 ...
@@ -71,17 +71,17 @@ Redigera `/app/etc/env.php` fil för att konfigurera cron-jobbet `consumers_runn
 ...
 ```
 
-- `cron_run` - Ett booleskt värde som aktiverar eller inaktiverar `consumers_runner` cron-jobb (standard = `true`).
-- `max_messages` - Det maximala antalet meddelanden som varje konsument måste behandla innan de avbryts (standard = `10000`). Även om vi inte rekommenderar det kan du använda 0 för att hindra konsumenten från att säga upp sig. Se [`consumers_wait_for_messages`](../reference/config-reference-envphp.md#consumerswaitformessages) för att konfigurera hur konsumenter ska bearbeta meddelanden från meddelandekön.
-- `consumers` - en array med strängar som anger vilka konsumenter som ska köras. En tom array körs *alla* konsumenter.
-- `multiple_processes` - en array med nyckelvärdepar som anger vilken konsument som ska köras i hur många processer. Stöds i Commerce 2.4.4 eller senare.
+- `cron_run` - Ett booleskt värde som aktiverar eller inaktiverar `consumers_runner` cron-jobbet (standard = `true`).
+- `max_messages` - Det maximala antalet meddelanden som varje konsument måste bearbeta innan de avbryts (standard = `10000`). Även om vi inte rekommenderar det kan du använda 0 för att hindra konsumenten från att säga upp sig. Se [`consumers_wait_for_messages`](../reference/config-reference-envphp.md#consumerswaitformessages) om du vill konfigurera hur konsumenter bearbetar meddelanden från meddelandekön.
+- `consumers` - en matris med strängar som anger vilka konsumenter som ska köras. En tom array kör *alla* konsumenter.
+- `multiple_processes` - en matris med nyckelvärdepar som anger vilken konsument som ska köras i hur många processer. Stöds i Commerce 2.4.4 eller senare.
 
   >[!INFO]
   >
-  >Du bör inte köra flera användare på en MySQL-styrd kö. Se [Ändra meddelandekö från MySQL till AMQP](https://developer.adobe.com/commerce/php/development/components/message-queues/#change-message-queue-from-mysql-to-amqp) för mer information.
+  >Du bör inte köra flera användare på en MySQL-styrd kö. Mer information finns i [Ändra meddelandekö från MySQL till AMQP](https://developer.adobe.com/commerce/php/development/components/message-queues/#change-message-queue-from-mysql-to-amqp).
 
   >[!INFO]
   >
   >Om din Adobe Commerce-butik finns på molnplattformen använder du [`CONSUMERS_WAIT_FOR_MAX_MESSAGES`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#consumers_wait_for_max_messages) för att konfigurera hur konsumenter ska bearbeta meddelanden från meddelandekön.
 
-Se [Starta användare i meddelandekön](../cli/start-message-queues.md).
+Se [Starta meddelandekökonsumenter](../cli/start-message-queues.md).

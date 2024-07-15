@@ -4,8 +4,8 @@ description: Läs om de olika affärsmodellerna i Commerce.
 exl-id: d66b4a7f-d54b-4902-8791-7a8f67fa4b43
 source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
-source-wordcount: '274'
-ht-degree: 1%
+source-wordcount: '266'
+ht-degree: 0%
 
 ---
 
@@ -52,9 +52,9 @@ Kundtjänst för B2B:
 Kundtjänst för B2C:
 
 - Kundtjänst dygnet runt
-- Returköp efter försäljning
-- Postförsäljning
-- Utleveranser efter försäljning
+- Återförsäljningar från Post
+- Post-försäljning
+- Problem med Post
 - Tillgänglighet
 
 ## Sammanfattning av skillnader mellan B2B och B2C

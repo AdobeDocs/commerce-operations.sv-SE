@@ -26,7 +26,7 @@ Utvecklingsfasen omfattar följande verksamheter:
 
 >[!TIP]
 >
->Se [god praxis](general.md) för rekommendationer på hög nivå om övergripande hantering av utvecklingsprocessen.
+>Se [allmän bästa praxis](general.md) för rekommendationer på hög nivå om övergripande hantering av utvecklingsprocessen.
 
 Följande avsnitt innehåller information om bästa praxis för utvecklingsfasen.
 
@@ -42,7 +42,7 @@ Följande avsnitt innehåller information om bästa praxis för utvecklingsfasen
 
 | Bästa praxis | Beskrivning |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| [Bygger och driftsätter](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/best-practices.html){target="_blank"} | Beskriver de bästa sätten att skapa och distribuera Adobe Commerce-faser i molninfrastrukturprojekt |
+| [Bygger och distribuerar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/best-practices.html){target="_blank"} | Beskriver de bästa sätten att skapa och distribuera Adobe Commerce-faser i molninfrastrukturprojekt |
 | Felsökning | Systematisk och effektiv felsökning av Adobe Commerce-ramverket |
 | [Statisk innehållsdistribution](static-content-deployment.md) | Undvik problem med statiskt innehåll som inte visas i butiken |
 | [Felsökning](troubleshooting.md) | Felsöka vanliga problem med Adobe Commerce-implementering |
@@ -57,8 +57,8 @@ Följande avsnitt innehåller information om bästa praxis för utvecklingsfasen
 
 | Bästa praxis | Beskrivning |
 |-----------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| [Ändra storlek på katalogbild](catalog-image-resizing.md) | Tillhandahåller vägledning om storleksändring av bilder innan en butik går till produktion för att säkerställa optimala prestanda |
-| [CSS och JS](optimize-css-js-files.md) | Sammanfoga och minimera CSS- och JavaScript-filer (JS) från Admin eller kommandoraden |
+| [Storleksändring av katalogbild](catalog-image-resizing.md) | Tillhandahåller vägledning om storleksändring av bilder innan en butik går till produktion för att säkerställa optimala prestanda |
+| [CSS och JS](optimize-css-js-files.md) | Sammanfoga och miniatyrbilder av CSS- och JavaScript-filer (JS) från Admin eller kommandoraden |
 | [Bilder](image-optimization.md) | Optimera bilder och använd snabbt för att optimera svarstiden |
 
 ## Framtidsutveckling

@@ -26,21 +26,21 @@ Om du vill optimera och underhålla platsprestanda granskar och uppdaterar du in
 
 Adobe Commerce har två typer av indexeringslägen: [!UICONTROL Update on Save] (standardinställning) och [!DNL Update on Schedule].
 
-- **[!UICONTROL Update on Save]** Läget uppdaterar index omedelbart när katalogen eller andra data ändras. Om en Admin-användare till exempel lägger till nya produkter i en kategori omindexeras kategoriproduktindexet omedelbart när uppdateringen sparas.
+- **[!UICONTROL Update on Save]**-läget uppdaterar index omedelbart när katalogen eller andra data ändras. Om en Admin-användare till exempel lägger till nya produkter i en kategori omindexeras kategoriproduktindexet omedelbart när uppdateringen sparas.
 
-- **[!UICONTROL Update on Schedule]** I lagras information om datauppdateringar, och omindexeringsåtgärder och indexuppdateringar hanteras av ett cron-jobb som körs i bakgrunden med schemalagda intervall. Kronijobbet utför inte alltid en indexering varje gång det körs. Den indexeras bara om det finns nya poster i indexerarens ändringsloggar (det finns t.ex. en eftersläpning i indexerarna).
+- **[!UICONTROL Update on Schedule]**-läget lagrar information om datauppdateringar, och omindexeringsåtgärder och indexuppdateringar hanteras av ett cron-jobb som körs i bakgrunden med schemalagda intervall. Kronijobbet utför inte alltid en indexering varje gång det körs. Den indexeras bara om det finns nya poster i indexerarens ändringsloggar (det finns t.ex. en eftersläpning i indexerarna).
 
-Att ha en stor butik med flera administratörer som arbetar i bakgrunden eller har många import- och exportfunktioner utlöser ofta indexuppdateringar. Om platsindexkonfigurationen är inställd på [!UICONTROL Update on Save] ofta återkommande omindexering försämrar databasens prestanda, vilket saktar ned webbplatsens prestanda och orsakar långa förseningar i omindexeringsprocessen, särskilt för stora butiker.
+Att ha en stor butik med flera administratörer som arbetar i bakgrunden eller har många import- och exportfunktioner utlöser ofta indexuppdateringar. Om platsindexkonfigurationen är inställd på läget [!UICONTROL Update on Save] försämras databasprestanda ofta vid omindexering, vilket försämrar webbplatsens prestanda och orsakar långa förseningar i omindexeringsprocessen, särskilt för stora butiker.
 
 Så här maximerar du webbplatsens prestanda:
 
 - Granska indexkonfigurationen.
-- Ställ in indexerarna på _[!UICONTROL Update on Schedule]_för stora webbplatser och webbplatser med ofta återkommande uppdateringar och stor trafik. Se [Indexhantering](https://docs.magento.com/user-guide/system/index-management.html#change-the-index-mode).
-- Följ [bästa praxis](../../../performance/configuration.md) för att hantera index.
+- Ställ in indexerarna på _[!UICONTROL Update on Schedule]_för stora webbplatser och webbplatser med frekventa uppdateringar och stor trafik. Se [Indexhantering](https://docs.magento.com/user-guide/system/index-management.html#change-the-index-mode).
+- Följ de [bästa metoderna](../../../performance/configuration.md) för prestanda när du hanterar index.
 
 >[!IMPORTANT]
 >
->The [!DNL Customer Grid] kan bara indexeras om med [!UICONTROL Update on Save] alternativ. Indexet stöder inte `Update by Schedule` alternativ.
+>[!DNL Customer Grid] kan bara indexeras om med alternativet [!UICONTROL Update on Save]. Indexet stöder inte alternativet `Update by Schedule`.
 
 ## Ytterligare information
 

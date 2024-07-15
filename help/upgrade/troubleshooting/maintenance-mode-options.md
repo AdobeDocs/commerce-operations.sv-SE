@@ -17,7 +17,7 @@ Om du skapar en anpassad sida som användare kan omdirigeras till, förhindras �
 
 >[!NOTE]
 >
->Du måste utföra uppgifterna i det här avsnittet som en användare med `root` behörighet. Det går inte att ange anpassade underhållssidor i utvecklarläge.
+>Du måste utföra uppgifterna i det här avsnittet som en användare med behörigheten `root`. Det går inte att ange anpassade underhållssidor i utvecklarläge.
 
 ## Skapa den anpassade underhållssidan
 
@@ -59,7 +59,7 @@ I det här avsnittet beskrivs hur du skapar en anpassad underhållssida och hur 
 Exemplet i det här avsnittet visar hur du ändrar följande filer, som är ett sätt att konfigurera underhållssidan:
 
 - Apache 2.4: `/etc/apache2/sites-available/000-default.conf`
-- Apache 2.2: `/etc/apache2/sites-available/default` Ubuntu `/etc/httpd/conf/httpd.conf` (CentOS)
+- Apache 2.2: `/etc/apache2/sites-available/default` (Ubuntu), `/etc/httpd/conf/httpd.conf` (CentOS)
 
 Så här omdirigerar du trafik till en anpassad underhållssida:
 
@@ -105,7 +105,7 @@ I det här avsnittet beskrivs hur du skapar en anpassad underhållssida och hur 
 Så här omdirigerar du trafik till en anpassad underhållssida:
 
 1. Använd ett textredigeringsprogram för att öppna konfigurationsfilen nginx som innehåller serverblocket.
-1. Lägg till följande i serverblocket (`server` visas endast för tydlighet (lägg inte till ett andra serverblock).
+1. Lägg till följande i serverblocket (`server` visas endast för tydlighet. Lägg inte till ett andra serverblock).
 
    Följande tillåtslista IP-adressen 192.0.2.110 och 192.0.2.115 för på ett system där Magento är installerat i `/var/www/html/magento2`:
 
@@ -156,7 +156,7 @@ Så här omdirigerar du trafik till en anpassad underhållssida:
 
 1. [Uppgradera systemet](../implementation/perform-upgrade.md).
 1. Testa webbplatsen för att kontrollera att den fungerar som den ska.
-1. När uppgraderingen är klar tar du bort eller byter namn `maintenance.enable`
+1. När uppgraderingen är klar tar du bort eller byter namn på `maintenance.enable`
 1. Läs in nästa konfiguration igen:
 
    ```bash

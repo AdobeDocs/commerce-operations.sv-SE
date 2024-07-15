@@ -1,5 +1,5 @@
 ---
-title: Handelsintegreringar
+title: Commerce Integrations
 description: Förse teamet med de verktyg de behöver för att glädja era kunder och säkerställa smidiga dagliga åtgärder.
 exl-id: 52bfa6c7-0687-45de-8889-c529cea7d01a
 feature: Best Practices, Integration
@@ -16,7 +16,8 @@ De flesta företag förstår att många unika strategier och processer måste se
 
 De flesta av de operativa behoven kan tillgodoses med olika programplattformar, bland annat ERP, Marketplace, verktyg för affärsanalys, redovisningsprogram, rapporteringsprogram och många andra. Den extra programvaran väljs för att minska företagets tid och arbete samtidigt som kundupplevelsen och verksamheten optimeras.
 
-När man väljer en tredjepartsleverantör bör man använda en enkel och effektiv metod för integrering som passar deras behov. Efter att ha förståelse för kundernas behov kan ni fatta beslut om en detaljerad plan med hjälp av berörda parter. När du har bestämt dig för planen ska du skapa ett specifikationsdokument som definierar hur systemet kommunicerar och vilken typ av data som krävs och skickas till den tredje parten.
+När företag väljer en tredjepartsleverantör bör de använda en enkel
+och en effektiv strategi för integrering som uppfyller deras behov. Efter att ha förståelse för kundernas behov kan ni fatta beslut om en detaljerad plan med hjälp av berörda parter. När du har bestämt dig för planen ska du skapa ett specifikationsdokument som definierar hur systemet kommunicerar och vilken typ av data som krävs och skickas till den tredje parten.
 
 >[!NOTE]
 >

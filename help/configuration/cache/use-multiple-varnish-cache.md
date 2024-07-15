@@ -18,11 +18,11 @@ I det här avsnittet beskrivs grunderna för hur du konfigurerar flera Varnish-i
 
 ## Konfiguration för att rensa flera Varnish-instanser
 
-Commerce tömmer varnish-värdar efter att du har konfigurerat varnish-värdar med [`magento setup:config:set`](../../installation/tutorials/deployment.md) -kommando.
+Commerce tömmer Varnish-värdar efter att du har konfigurerat Varnish-värdar med kommandot [`magento setup:config:set`](../../installation/tutorials/deployment.md).
 
-Du bör använda `--http-cache-hosts` -parameter för att ange en kommaavgränsad lista med Varnish-värdar och avlyssningsportar. (Separera inte värdar med ett blanksteg.)
+Du bör använda parametern `--http-cache-hosts` för att ange en kommaavgränsad lista med varnish-värdar och avlyssningsportar. (Separera inte värdar med ett blanksteg.)
 
-Parameterformatet måste vara `<hostname or ip>:<listen port>`där du kan utesluta `<listen port>` om det är port 80.
+Parameterformatet måste vara `<hostname or ip>:<listen port>`, där du kan utelämna `<listen port>` om det är port 80.
 
 Exempel:
 
@@ -30,8 +30,8 @@ Exempel:
 bin/magento setup:config:set --http-cache-hosts=192.0.2.100,192.0.2.155:8080
 ```
 
-Du kan sedan rensa alla varnish-värdar när du uppdaterar Commerce-cachen (kallas även för _rengöring_ cacheminnet) i Admin eller via kommandoraden.
+Du kan sedan rensa alla lack-värdar när du uppdaterar Commerce-cachen (kallas även _rensning_ av cachen) i Admin eller via kommandoraden.
 
-Om du vill uppdatera cachen med hjälp av administratören klickar du på **SYSTEM** > Verktyg > **Cachehantering** och sedan klicka **Rensa Magento-cache** överst på sidan. (Du kan också uppdatera enskilda cachetyper.)
+Om du vill uppdatera cacheminnet med Admin klickar du på **SYSTEM** > Verktyg > **Cachehantering** och sedan på **Rensa cacheminnet i Magento** överst på sidan. (Du kan också uppdatera enskilda cachetyper.)
 
-Om du vill uppdatera cachen för flera Varnish-instanser från klippet använder du [`magento cache:clean <type>`](../cli/manage-cache.md#clean-and-flush-cache-types) kommandot som [ägare av filsystem](../../installation/prerequisites/file-system/overview.md).
+Om du vill uppdatera cachen för flera Varnish-instanser från klippet använder du kommandot [`magento cache:clean <type>`](../cli/manage-cache.md#clean-and-flush-cache-types) som [filsystemsägare](../../installation/prerequisites/file-system/overview.md).

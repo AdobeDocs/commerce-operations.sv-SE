@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Konfigurera meddelandeanvändare
 
-Innan du kör kommandot måste du göra följande *eller* du måste [installera programmet](../advanced.md):
+Innan du kör det här kommandot måste du göra följande *eller* måste du [installera programmet](../advanced.md):
 
 * [Skapa eller uppdatera distributionskonfigurationen](deployment.md)
 * [Skapa databasschemat](database.md)

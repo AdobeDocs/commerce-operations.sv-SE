@@ -12,15 +12,15 @@ ht-degree: 0%
 
 # Referens för kundkonfigurationssökvägar
 
-I det här avsnittet visas variabelnamn och konfigurationssökvägar som är tillgängliga för alternativ i Admin under **Lager** > Inställningar > **Konfiguration** > **Kunder**.
+I det här avsnittet visas variabelnamn och konfigurationssökvägar som är tillgängliga för alternativ i Admin under **Lagrar** > Inställningar > **Konfiguration** > **Kunder**.
 
-The [`magento app:config:dump` kommando](../cli/export-configuration.md) skriver dessa värden i den delade konfigurationsfilen, `app/etc/config.php`, som bör vara i källkontroll. Om du vill åsidosätta konfigurationsinställningar eller ange känsliga inställningar läser du [Använd miljövariabler för att åsidosätta konfigurationsinställningar](override-config-settings.md#environment-variables). Det här avsnittet gör _not_ list [känsliga och systemspecifika värden](config-reference-sens.md).
+[`magento app:config:dump`-kommandot ](../cli/export-configuration.md) skriver dessa värden till den delade konfigurationsfilen `app/etc/config.php` som ska finnas i källkontrollen. Om du vill åsidosätta konfigurationsinställningar eller ange känsliga inställningar läser du [Använda miljövariabler för att åsidosätta konfigurationsinställningar](override-config-settings.md#environment-variables). Det här avsnittet listar _inte_ [känsliga och systemspecifika värden](config-reference-sens.md).
 
 ## Sökvägar till nyhetsbrev
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Kunder** > **Nyhetsbrev**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Store** > Inställningar > **Konfiguration** > **Kunder** > **Nyhetsbrev**.
 
-| Namn | Konfigurationssökväg | Endast handel? |
+| Namn | Konfigurationssökväg | Endast Commerce? |
 |--------------|--------------|--------------|
 | Tillåt gästprenumeration | `newsletter/subscription/allow_guest_subscribe` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Bekräfta måste | `newsletter/subscription/confirm` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -35,9 +35,9 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 
 ## Sökvägar för kundkonfiguration
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Kunder** > **Kundkonfiguration**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Store** > Inställningar > **Konfiguration** > **Kunder** > **Kundkonfiguration**.
 
-| Namn | Konfigurationssökväg | Endast handel? |
+| Namn | Konfigurationssökväg | Endast Commerce? |
 |--------------|--------------|--------------|
 | Intervall för onlineminuter | `customer/online_customers/online_minutes_interval` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Dela kundkonton | `customer/account_share/scope` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -77,20 +77,20 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Visa mellannamn (inledande) | `customer/address/middlename_show` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Visa suffix | `customer/address/suffix_show` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Listrutealternativ för suffix | `customer/address/suffix_options` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Visa födelsedatum | `customer/address/dob_show`<br>I enlighet med gällande säkerhets- och integritetspraxis bör du vara medveten om eventuella juridiska risker och säkerhetsrisker som är förknippade med lagring av kunders fullständiga födelsedatum (månad, dag, år) tillsammans med andra personliga identifierare, t.ex. fullständigt namn, innan du samlar in eller behandlar sådana data. | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
+| Visa födelsedatum | `customer/address/dob_show`<br>I enlighet med gällande säkerhets- och sekretessrutiner måste du vara medveten om eventuella juridiska risker och säkerhetsrisker som är förknippade med lagring av kundens fullständiga födelsedatum (månad, dag, år) tillsammans med andra personliga identifierare, till exempel fullständigt namn, innan du samlar in eller bearbetar sådana data. | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Visa momsregistreringsnummer | `customer/address/taxvat_show` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Visa kön | `customer/address/gender_show` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Aktivera butikskreditfunktioner | `customer/magento_customerbalance/is_enabled` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Visa butikskredithistorik för kunder | `customer/magento_customerbalance/show_history` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Återbetala butikskrediten automatiskt | `customer/magento_customerbalance/refund_automatically` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| E-postavsändare för butikskredituppdatering | `customer/magento_customerbalance/email_identity` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| E-postmall för butikskredituppdatering | `customer/magento_customerbalance/email_template` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Aktivera butikskreditfunktioner | `customer/magento_customerbalance/is_enabled` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Visa butikskredithistorik för kunder | `customer/magento_customerbalance/show_history` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Återbetala butikskrediten automatiskt | `customer/magento_customerbalance/refund_automatically` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| E-postavsändare för butikskredituppdatering | `customer/magento_customerbalance/email_identity` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| E-postmall för butikskredituppdatering | `customer/magento_customerbalance/email_template` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Omdirigera kund till kontouppsättningen efter inloggning | `customer/startup/redirect_dashboard` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Text | `customer/address_templates/text` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Text en rad | `customer/address_templates/oneline` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | HTML | `customer/address_templates/html` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | PDF | `customer/address_templates/pdf` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Aktivera funktioner för kundsegment | `customer/magento_customersegment/is_enabled` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Aktivera funktioner för kundsegment | `customer/magento_customersegment/is_enabled` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Aktivera CAPTCHA på Storefront | `customer/captcha/enable` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Teckensnitt | `customer/captcha/font` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Forms | `customer/captcha/forms` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -105,13 +105,13 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 
 ## Sökvägar i önskelistan
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Kunder** > **Önsklista**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Store** > Inställningar > **Konfiguration** > **Kunder** > **Önsklista**.
 
-| Namn | Konfigurationssökväg | Endast handel? |
+| Namn | Konfigurationssökväg | Endast Commerce? |
 |--------------|--------------|--------------|
 | Aktiverad | `wishlist/general/active` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Aktivera flera önskelistor | `wishlist/general/multiple_enabled` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Antal flera önskelistor | `wishlist/general/multiple_wishlist_number` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Aktivera flera önskelistor | `wishlist/general/multiple_enabled` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Antal flera önskelistor | `wishlist/general/multiple_wishlist_number` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | E-postavsändare | `wishlist/email/email_identity` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | E-postmall | `wishlist/email/email_template` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Max antal e-postmeddelanden som får skickas | `wishlist/email/number_limit` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -122,69 +122,69 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 
 ## Sökvägar för inbjudningar
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Kunder** > **Inbjudningar**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Store** > Inställningar > **Konfiguration** > **Kunder** > **Inbjudningar**.
 
-| Namn | Konfigurationssökväg | Endast handel? |
+| Namn | Konfigurationssökväg | Endast Commerce? |
 |--------------|--------------|--------------|
-| Aktivera funktioner för inbjudningar | `magento_invitation/general/enabled` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Aktivera inbjudningar i Storefront | `magento_invitation/general/enabled_on_front` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Refererad kundgrupp | `magento_invitation/general/registration_use_inviter_group` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Registrering av nya konton | `magento_invitation/general/registration_required_invitation` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Tillåt kunder att lägga till anpassat meddelande i e-postinbjudan | `magento_invitation/general/allow_customer_message` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Maximalt antal inbjudningar som kan skickas samtidigt | `magento_invitation/general/max_invitation_amount_per_send` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Avsändare av e-postinbjudan till kund | `magento_invitation/email/identity` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| E-postmall för kundinbjudan | `magento_invitation/email/template` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Aktivera funktioner för inbjudningar | `magento_invitation/general/enabled` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Aktivera inbjudningar i Storefront | `magento_invitation/general/enabled_on_front` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Refererad kundgrupp | `magento_invitation/general/registration_use_inviter_group` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Registrering av nya konton | `magento_invitation/general/registration_required_invitation` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Tillåt kunder att lägga till anpassat meddelande i e-postinbjudan | `magento_invitation/general/allow_customer_message` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Maximalt antal inbjudningar som kan skickas samtidigt | `magento_invitation/general/max_invitation_amount_per_send` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Avsändare av e-postinbjudan till kund | `magento_invitation/email/identity` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| E-postmall för kundinbjudan | `magento_invitation/email/template` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 
 {style="table-layout:auto"}
 
 ## Banor för belöningspunkter
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Kunder** > **Belöningspunkter**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Store** > Inställningar > **Konfiguration** > **Kunder** > **Belöningspunkter**.
 
-| Namn | Konfigurationssökväg | Endast handel? |
+| Namn | Konfigurationssökväg | Endast Commerce? |
 |--------------|--------------|--------------|
-| Aktivera funktionen för belöningspunkter | `magento_reward/general/is_enabled` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Aktivera funktionen Belöna punkter på Storefront | `magento_reward/general/is_enabled_on_front` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Kunder kan se historik över belöningspunkter | `magento_reward/general/publish_history` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Inlösningströskel för belöningspoäng | `magento_reward/general/min_points_balance` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Belöningspoäng för tak vid | `magento_reward/general/max_points_balance` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Belöningspoäng förfaller om (dagar) | `magento_reward/general/expiration_days` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Beräkning av förfallodatum för belöningspunkter | `magento_reward/general/expiry_calculation` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Återbetala belöningspunkter automatiskt | `magento_reward/general/refund_automatically` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Ta automatiskt bort belöningspunkter från återbetalningsbelopp | `magento_reward/general/deduct_automatically` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Landningssida | `magento_reward/general/landing_page` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Inköp | `magento_reward/points/order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Registrering | `magento_reward/points/register` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Registrering av nyhetsbrev | `magento_reward/points/newsletter` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Konverterar inbjudan till kund | `magento_reward/points/invitation_customer` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Kvantitetsgräns för inbjudan till kundkonvertering | `magento_reward/points/invitation_customer_limit` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Konverterar inbjudan till ordning | `magento_reward/points/invitation_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Kvantitetsgräns för inbjudan till orderkonvertering | `magento_reward/points/invitation_order_limit` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Inbjudningskonvertering till orderbelöning | `magento_reward/points/invitation_order_frequency` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Granska inlämningen | `magento_reward/points/review` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Kvantitetsgräns för mottagna granskningar | `magento_reward/points/review_limit` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| E-postavsändare | `magento_reward/notification/email_sender` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Prenumerera kunder som standard | `magento_reward/notification/subscribe_by_default` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| E-post för saldouppdatering | `magento_reward/notification/balance_update_template` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| E-postmeddelande om förfallovarning för belöningspunkter | `magento_reward/notification/expiry_warning_template` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Förfallovarning före (dagar) | `magento_reward/notification/expiry_day_before` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Aktivera funktionen för belöningspunkter | `magento_reward/general/is_enabled` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Aktivera funktionen Belöna punkter på Storefront | `magento_reward/general/is_enabled_on_front` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Kunder kan se historik över belöningspunkter | `magento_reward/general/publish_history` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Inlösningströskel för belöningspoäng | `magento_reward/general/min_points_balance` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Belöningspoäng för tak vid | `magento_reward/general/max_points_balance` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Belöningspoäng förfaller om (dagar) | `magento_reward/general/expiration_days` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Beräkning av förfallodatum för belöningspunkter | `magento_reward/general/expiry_calculation` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Återbetala belöningspunkter automatiskt | `magento_reward/general/refund_automatically` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Ta automatiskt bort belöningspunkter från återbetalningsbelopp | `magento_reward/general/deduct_automatically` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Landningssida | `magento_reward/general/landing_page` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Inköp | `magento_reward/points/order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Registrering | `magento_reward/points/register` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Registrering av nyhetsbrev | `magento_reward/points/newsletter` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Konverterar inbjudan till kund | `magento_reward/points/invitation_customer` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Kvantitetsgräns för inbjudan till kundkonvertering | `magento_reward/points/invitation_customer_limit` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Konverterar inbjudan till ordning | `magento_reward/points/invitation_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Kvantitetsgräns för inbjudan till orderkonvertering | `magento_reward/points/invitation_order_limit` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Inbjudningskonvertering till orderbelöning | `magento_reward/points/invitation_order_frequency` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Granska inlämningen | `magento_reward/points/review` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Kvantitetsgräns för mottagna granskningar | `magento_reward/points/review_limit` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| E-postavsändare | `magento_reward/notification/email_sender` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Prenumerera kunder som standard | `magento_reward/notification/subscribe_by_default` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| E-post för saldouppdatering | `magento_reward/notification/balance_update_template` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| E-postmeddelande om förfallovarning för belöningspunkter | `magento_reward/notification/expiry_warning_template` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Förfallovarning före (dagar) | `magento_reward/notification/expiry_day_before` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 
 {style="table-layout:auto"}
 
 ## Kampanjsökvägar
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Kunder** > **Erbjudanden**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Store** > Inställningar > **Konfiguration** > **Kunder** > **Kampanjer**.
 
-| Namn | Konfigurationssökväg | Endast handel? |
+| Namn | Konfigurationssökväg | Endast Commerce? |
 |--------------|--------------|--------------|
 | Aktivera påminnelsemeddelanden | `promo/magento_reminder/enabled` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Frekvens | `promo/magento_reminder/frequency` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Intervall | `promo/magento_reminder/interval` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Minut av timmen | `promo/magento_reminder/minutes` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Starttid | `promo/magento_reminder/time` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Maximalt antal e-postmeddelanden per körning | `promo/magento_reminder/limit` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Feltröskel för e-postutskick | `promo/magento_reminder/threshold` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Påminnelse - e-postavsändare | `promo/magento_reminder/identity` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Minut av timmen | `promo/magento_reminder/minutes` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Starttid | `promo/magento_reminder/time` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Maximalt antal e-postmeddelanden per körning | `promo/magento_reminder/limit` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Feltröskel för e-postutskick | `promo/magento_reminder/threshold` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Påminnelse - e-postavsändare | `promo/magento_reminder/identity` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Kodlängd | `promo/auto_generated_coupon_codes/length` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Kodformat | `promo/auto_generated_coupon_codes/format` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Kodprefix | `promo/auto_generated_coupon_codes/prefix` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -195,9 +195,9 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 
 ## Sökvägar för presentregister
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Kunder** > **Presentregister**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Store** > Inställningar > **Konfiguration** > **Kunder** > **Presentregister**.
 
-| Namn | Konfigurationssökväg | Endast handel? |
+| Namn | Konfigurationssökväg | Endast Commerce? |
 |--------------|--------------|--------------|
 | Aktivera presentregistret | `magento_giftregistry/general/enabled` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Högsta antal registranter | `magento_giftregistry/general/max_registrant` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -213,9 +213,9 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 
 ## Beständiga kundvagnssökvägar
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Kunder** > **Beständig kundvagn**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Store** > Inställningar > **Konfiguration** > **Kunder** > **Beständig varukorg**.
 
-| Namn | Konfigurationssökväg | Endast handel? |
+| Namn | Konfigurationssökväg | Endast Commerce? |
 |--------------|--------------|--------------|
 | Aktivera beständighet | `persistent/options/enabled` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Livstid för beständighet (sekunder) | `persistent/options/lifetime` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |

@@ -9,15 +9,16 @@ ht-degree: 0%
 
 ---
 
-# Leverera upplevelser i stor skala med Adobe Commerce, Commerce Integration Framework och Adobe Experience Manager
+# Leverera upplevelser i stor skala med Adobe Commerce, Commerce integration framework och Adobe Experience Manager
 
-Ett rekommenderat integreringsmönster mellan AEM och Adobe Commerce som använder CIF som en koppling är för AEM att äga presentationslagret (&quot;glaset&quot;) och Adobe Commerce för att driva handelsbackend som en&quot;headless&quot; backend. Denna integreringsstrategi drar nytta av styrkan i varje program: redigering, personalisering och flerkanalsfunktioner i Adobe Commerce AEM och e-handelsverksamhet.
+Ett rekommenderat integreringsmönster mellan AEM och Adobe Commerce som använder CIF som koppling är för AEM att äga presentationslagret (&quot;glaset&quot;) och Adobe Commerce för att driva handelsbackend som en&quot;headless&quot; backend. Denna integreringsstrategi drar nytta av styrkan i varje program: redigering, personalisering och flerkanalsfunktioner i Adobe Commerce AEM och e-handelsverksamhet.
 
-I en AEM-/CIF-/Adobe Commerce-miljö kommer besökare på e-handelsplatsen till att börja med att AEM. AEM kontrollerar om den begärda sidan finns tillgänglig i dess dispatcherns cache. Om sidan finns kommer den här cachelagrade sidan att skickas till besökaren och ingen ytterligare bearbetning krävs. Om dispatchern inte innehåller den begärda sidan, eller om den har gått ut, begär dispatchern att den AEM utgivaren ska bygga sidan, där utgivaren anropar Adobe Commerce för e-handelsdata för att vid behov skapa sidan. Den inbyggda sidan skickas sedan till avsändaren för att betjäna besökaren och cachelagras sedan för att förhindra att ytterligare inläsningar behöver placeras på servrarna vid efterföljande förfrågningar till samma sida från andra besökare.
+I en AEM/CIF/Adobe Commerce-miljö kommer besökarna till e-handelsplatsen till att börja med AEM. AEM kontrollerar om den begärda sidan finns tillgänglig i dess dispatcherns cache. Om sidan finns kommer den här cachelagrade sidan att skickas till besökaren och ingen ytterligare bearbetning krävs. Om dispatchern inte innehåller den begärda sidan, eller om den har gått ut, begär dispatchern att den AEM utgivaren ska bygga sidan, där utgivaren anropar Adobe Commerce för e-handelsdata för att vid behov skapa sidan. Den inbyggda sidan skickas sedan till avsändaren för att betjäna besökaren och cachelagras sedan för att förhindra att ytterligare inläsningar behöver placeras på servrarna vid efterföljande förfrågningar till samma sida från andra besökare.
 
 ![Översiktsdiagram över Adobe Experience Manager och Adobe Commerce-arkitektur](../assets/commerce-at-scale/overview.png)
 
-En kombination av serversidesrendering och klientsidesrendering kan användas i AEM/CIF/Adobe Commerce-modellen: serversidesrendering för att leverera statiskt innehåll och klientsidesrendering för att leverera dynamiskt innehåll som ofta ändras eller är personligt genom direktanrop till Adobe Commerce för specifika komponenter inifrån användarens webbläsare.
+En kombination av serversidesrendering och klientsidesrendering kan användas i AEM/CIF/Adobe Commerce-modellen: serversidesrendering för att leverera statiskt innehåll och klientsidesrendering för att leverera dynamiskt innehåll som ofta ändras eller är personligt genom direktanrop till Adobe Commerce för specifika komponenter
+i användarens webbläsare.
 
 Ett exempel på de olika komponenterna på en produktinformationssida på ett exempel AEM e-handel storefront visas i exemplet nedan:
 
@@ -25,7 +26,7 @@ Ett exempel på de olika komponenterna på en produktinformationssida på ett ex
 
 ## Återgivning på serversidan
 
-E-handelssidor som produktinformationssidor (PDP) och produktlistsidor (PLP) ändras sannolikt inte ofta och är lämpliga att cachelagras till fullo efter att de har renderats på serversidan med AEM CIF Core Components. Sidorna ska återges på den AEM utgivaren med hjälp av generiska mallar som skapas i AEM. Dessa komponenter hämtar data från Adobe Commerce via GraphQL API:er. Dessa sidor skapas dynamiskt, återges på servern, cachelagras i AEM och skickas sedan till webbläsaren. Exempel på detta visas i de lila rutorna i exemplet ovan.
+E-handelssidor som produktinformationssidor (PDP) och produktlistsidor (PLP) ändras sannolikt inte ofta och är lämpliga att cachelagras till fullo efter att de har renderats på serversidan med AEM Core Components (kärnkomponenter) CIF. Sidorna ska återges på den AEM utgivaren med hjälp av generiska mallar som skapas i AEM. Dessa komponenter hämtar data från Adobe Commerce via GraphQL API:er. Dessa sidor skapas dynamiskt, återges på servern, cachelagras i AEM och skickas sedan till webbläsaren. Exempel på detta visas i de lila rutorna i exemplet ovan.
 
 ## Återgivning på klientsidan
 

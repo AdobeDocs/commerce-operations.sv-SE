@@ -4,7 +4,7 @@ description: Följ den här självstudiekursen för att konfigurera flera webbpl
 exl-id: f13926a2-182c-4ce2-b091-19c5f978f267
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '943'
 ht-degree: 0%
 
 ---
@@ -17,33 +17,33 @@ Vi antar att:
 
   Ytterligare uppgifter kan behövas för att distribuera flera webbplatser i en värdmiljö. Kontakta din värdleverantör för mer information.
 
-  Ytterligare uppgifter krävs för att konfigurera Adobe Commerce i molninfrastrukturen. När du har slutfört de uppgifter som beskrivs i det här avsnittet, se [Konfigurera flera webbplatser eller butiker](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html) i _Guide för Commerce on Cloud Infrastructure_.
+  Ytterligare uppgifter krävs för att konfigurera Adobe Commerce i molninfrastrukturen. När du har slutfört de uppgifter som beskrivs i det här avsnittet kan du läsa [Konfigurera flera webbplatser eller butiker](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html) i _guiden för Commerce om molninfrastruktur_.
 
 - Du godkänner flera domäner i en virtuell värdfil eller använder en virtuell värd per webbplats. Konfigurationsfilerna för den virtuella värden finns i `/etc/nginx/sites-available`.
-- Du använder `nginx.conf.sample` tillhandahålls av Commerce med endast de ändringar som diskuteras i den här självstudiekursen.
-- Commerce-programvaran är installerad i `/var/www/html/magento2`.
+- Du använder `nginx.conf.sample` som tillhandahålls av Commerce med endast de ändringar som beskrivs i den här självstudiekursen.
+- Commerce är installerat i `/var/www/html/magento2`.
 - Du har två andra webbplatser än standardwebbplatsen:
 
-   - `french.mysite.mg` med webbplatskod `french` och butiksvykod `fr`
-   - `german.mysite.mg` med webbplatskod `german` och butiksvykod `de`
+   - `french.mysite.mg` med webbplatskod `french` och spara vykod `fr`
+   - `german.mysite.mg` med webbplatskod `german` och spara vykod `de`
    - `mysite.mg` är standardwebbplats och standardbutiksvy
 
 >[!TIP]
 >
->Se [Skapa webbplatser](ms-admin.md#step-2-create-websites) och [Skapa butiksvyer](ms-admin.md#step-4-create-store-views) om du vill ha hjälp med att hitta dessa värden.
+>Mer information om hur du hittar dessa värden finns i [Skapa webbplatser](ms-admin.md#step-2-create-websites) och [Skapa butiksvyer](ms-admin.md#step-4-create-store-views).
 
 Här följer en färdplan för hur du konfigurerar flera webbplatser med Nginx:
 
-1. [Konfigurera webbplatser, butiker och butiksvyer](ms-admin.md) i Admin.
-1. Skapa en [Nginx virtuell värd](#step-2-create-nginx-virtual-hosts)) för att mappa många webbplatser eller en Nginx virtuell värd per Commerce-webbplats (steg som beskrivs nedan).
-1. Skicka värdena för [MAGE-variabler](ms-overview.md) `$MAGE_RUN_TYPE` och `$MAGE_RUN_CODE` till nginx med hjälp av Magento `nginx.conf.sample` (steg som beskrivs nedan).
+1. [Konfigurera webbplatser, butiker och butiksvyer](ms-admin.md) i administratören.
+1. Skapa en [Nginx virtuell värd](#step-2-create-nginx-virtual-hosts) för att mappa många webbplatser eller en Nginx virtuell värd per Commerce webbplats (steg som beskrivs nedan).
+1. Skicka värdena för [MAGE-variablerna](ms-overview.md) `$MAGE_RUN_TYPE` och `$MAGE_RUN_CODE` till nginx med hjälp av Magento `nginx.conf.sample` (steg som anges nedan).
 
    - `$MAGE_RUN_TYPE` kan vara antingen `store` eller `website`:
 
-      - Använd `website` för att läsa in webbplatsen i butiken.
-      - Använd `store` för att läsa in alla butiksvyer i butiken.
+      - Använd `website` för att läsa in din webbplats i din butik.
+      - Använd `store` för att läsa in alla butiksvyer i din butik.
 
-   - `$MAGE_RUN_CODE` är den unika kod för webbplats- eller butiksvyn som motsvarar `$MAGE_RUN_TYPE`.
+   - `$MAGE_RUN_CODE` är den unika webbplatsens eller butiksvyns kod som motsvarar `$MAGE_RUN_TYPE`.
 
 1. Uppdatera bas-URL-konfigurationen för Commerce-administratören.
 
@@ -53,13 +53,13 @@ Se [Konfigurera flera webbplatser, butiker och butiksvyer i administratören](ms
 
 ## Steg 2: Skapa nya virtuella värdar
 
-I det här steget beskrivs hur du läser in webbplatser i butiken. Du kan använda antingen webbplatser eller butiksvyer. Om du använder butiksvyer måste du justera parametervärdena därefter. Du måste slutföra uppgifterna i det här avsnittet som en användare med `sudo` behörighet.
+I det här steget beskrivs hur du läser in webbplatser i butiken. Du kan använda antingen webbplatser eller butiksvyer. Om du använder butiksvyer måste du justera parametervärdena därefter. Du måste slutföra uppgifterna i det här avsnittet som en användare med behörigheten `sudo`.
 
-Genom att bara använda en [nginx virtuell värdfil](#step-2-create-nginx-virtual-hosts)kan du göra din ursprungliga konfiguration enkel och ren. Genom att använda flera virtuella värdfiler kan du anpassa varje butik (och använda en anpassad plats för `french.mysite.mg` till exempel).
+Genom att bara använda en [nginx virtuell värdfil](#step-2-create-nginx-virtual-hosts) kan du hålla din ursprungliga konfiguration enkel och ren. Genom att använda flera virtuella värdfiler kan du anpassa varje butik (till exempel för att använda en anpassad plats för `french.mysite.mg`).
 
-**Skapa en virtuell värd** (förenklad):
+**Så här skapar du en virtuell värd** (förenklad):
 
-Den här konfigurationen utökas [nginx-konfiguration](../../installation/prerequisites/web-server/nginx.md).
+Den här konfigurationen utökas vid [nginx-konfigurationen](../../installation/prerequisites/web-server/nginx.md).
 
 1. Öppna en textredigerare och lägg till följande innehåll i en ny fil med namnet `/etc/nginx/sites-available/magento`:
 
@@ -95,7 +95,7 @@ Den här konfigurationen utökas [nginx-konfiguration](../../installation/prereq
 
    Om fel visas kontrollerar du syntaxen för konfigurationsfilerna för det virtuella värdsystemet.
 
-1. Skapa en symbolisk länk i dialogrutan `/etc/nginx/sites-enabled` katalog:
+1. Skapa en symbolisk länk i katalogen `/etc/nginx/sites-enabled`:
 
    ```bash
    cd /etc/nginx/sites-enabled
@@ -105,10 +105,10 @@ Den här konfigurationen utökas [nginx-konfiguration](../../installation/prereq
    ln -s /etc/nginx/sites-available/magento magento
    ```
 
-Mer information om mappningsdirektivet finns i [nginx-dokumentation om kardirektivet](http://nginx.org/en/docs/http/ngx_http_map_module.html#map).
+Mer information om mappningsdirektivet finns i [nginx-dokumentationen för mappningsdirektivet](http://nginx.org/en/docs/http/ngx_http_map_module.html#map).
 
 
-**Skapa flera virtuella värdar**:
+**Så här skapar du flera virtuella värdar**:
 
 1. Öppna en textredigerare och lägg till följande innehåll i en ny fil med namnet `/etc/nginx/sites-available/french.mysite.mg`:
 
@@ -153,7 +153,7 @@ Mer information om mappningsdirektivet finns i [nginx-dokumentation om kardirekt
 
    Om fel visas kontrollerar du syntaxen för konfigurationsfilerna för det virtuella värdsystemet.
 
-1. Skapa symboliska länkar i `/etc/nginx/sites-enabled` katalog:
+1. Skapa symboliska länkar i katalogen `/etc/nginx/sites-enabled`:
 
    ```bash
    cd /etc/nginx/sites-enabled
@@ -171,13 +171,13 @@ Mer information om mappningsdirektivet finns i [nginx-dokumentation om kardirekt
 
 >[!TIP]
 >
->Redigera inte `nginx.conf.sample` fil; det är en viktig Commerce-fil som kan uppdateras med varje ny release. I stället kopierar du `nginx.conf.sample` , ändra namn på filen och redigera sedan den kopierade filen.
+>Redigera inte filen `nginx.conf.sample`. Det är en viktig Commerce-fil som kan uppdateras med varje ny version. Kopiera istället filen `nginx.conf.sample`, byt namn på den och redigera sedan den kopierade filen.
 
-**Redigera PHP-startpunkten för huvudprogrammet**:
+**Så här redigerar du PHP-startpunkten för huvudprogrammet**:
 
-Ändra `nginx.conf.sample` fil**:
+Så här ändrar du filen `nginx.conf.sample`**:
 
-1. Öppna en textredigerare och granska `nginx.conf.sample` fil,`<magento2_installation_directory>/nginx.conf.sample`. Leta efter följande avsnitt:
+1. Öppna en textredigerare och granska filen `nginx.conf.sample`,`<magento2_installation_directory>/nginx.conf.sample`. Leta efter följande avsnitt:
 
    ```conf
    # PHP entry point for main application
@@ -197,7 +197,7 @@ Mer information om mappningsdirektivet finns i [nginx-dokumentation om kardirekt
    }
    ```
 
-1. Uppdatera `nginx.conf.sample` fil med följande två rader före programsatsen include:
+1. Uppdatera filen `nginx.conf.sample` med följande två rader före programsatsen include:
 
    ```conf
    fastcgi_param MAGE_RUN_TYPE $MAGE_RUN_TYPE;
@@ -231,27 +231,27 @@ location ~ (index|get|static|report|404|503|health_check)\.php$ {
 
 ## Steg 4: Uppdatera konfigurationen för bas-URL
 
-Du måste uppdatera bas-URL:en för `french` och `german` webbplatser i Commerce Admin.
+Du måste uppdatera bas-URL:en för webbplatserna `french` och `german` i Commerce-administratören.
 
 ### Uppdatera bas-URL för fransk webbplats
 
-1. Logga in på Commerce Admin och navigera till **Lager** > **Inställningar** > **Konfiguration** > **Allmänt** > **Webb**.
-1. Ändra _konfigurationsomfång_ till `french` webbplats.
-1. Expandera **Bas-URL** och uppdatera **Bas-URL** och **Bas länk-URL** värde till `http://french.magento24.com/`.
-1. Expandera **Bas-URL:er (säkra)** och uppdatera **URL för säker bas** och **URL för säker baslänk** värde till `https://french.magento24.com/`.
-1. Klicka **Spara konfiguration** och spara konfigurationsändringarna.
+1. Logga in på Commerce-administratören och gå till **Lager** > **Inställningar** > **Konfiguration** > **Allmänt** > **Webb**.
+1. Ändra _konfigurationsomfånget_ till webbplatsen `french`.
+1. Expandera avsnittet **Bas-URL:er** och uppdatera värdet **Bas-URL** och **Bas-länk-URL** till `http://french.magento24.com/`.
+1. Expandera avsnittet **Bas-URL:er (säker)** och uppdatera URL:en för **säker bas** och **säker baslänk** till `https://french.magento24.com/`.
+1. Klicka på **Spara konfiguration** och spara konfigurationsändringarna.
 
 ### Uppdatera bas-URL för tysk webbplats
 
-1. Logga in på Commerce Admin och navigera till **Lager** > **Inställningar** > **Konfiguration** > **Allmänt** > **Webb**.
-1. Ändra _konfigurationsomfång_ till `german` webbplats.
-1. Expandera **Bas-URL** och uppdatera **Bas-URL** och **Bas länk-URL** värde till `http://german.magento24.com/`.
-1. Expandera **Bas-URL:er (säkra)** och uppdatera **URL för säker bas** och **URL för säker baslänk** värde till `https://german.magento24.com/`.
-1. Klicka **Spara konfiguration** och spara konfigurationsändringarna.
+1. Logga in på Commerce-administratören och gå till **Lager** > **Inställningar** > **Konfiguration** > **Allmänt** > **Webb**.
+1. Ändra _konfigurationsomfånget_ till webbplatsen `german`.
+1. Expandera avsnittet **Bas-URL:er** och uppdatera värdet **Bas-URL** och **Bas-länk-URL** till `http://german.magento24.com/`.
+1. Expandera avsnittet **Bas-URL:er (säker)** och uppdatera URL:en för **säker bas** och **säker baslänk** till `https://german.magento24.com/`.
+1. Klicka på **Spara konfiguration** och spara konfigurationsändringarna.
 
 ### Rensa cachen
 
-Kör följande kommando för att rensa `config` och `full_page` cacher.
+Kör följande kommando för att rensa cacheminnen `config` och `full_page`.
 
 ```bash
 bin/magento cache:clean config full_page
@@ -259,9 +259,9 @@ bin/magento cache:clean config full_page
 
 ## Verifiera platsen
 
-Om du inte har ställt in DNS för butikernas URL:er måste du lägga till en statisk väg till värden i din `hosts` fil:
+Om du inte har ställt in DNS för butikernas URL:er måste du lägga till en statisk väg till värden i din `hosts`-fil:
 
-1. Hitta ditt operativsystem `hosts` -fil.
+1. Leta reda på operativsystemsfilen `hosts`.
 1. Lägg till den statiska vägen i formatet:
 
    ```conf
@@ -280,10 +280,10 @@ Om du inte har ställt in DNS för butikernas URL:er måste du lägga till en st
 >[!INFO]
 >
 >- Ytterligare uppgifter kan behövas för att distribuera flera webbplatser i en värdmiljö. Kontakta din värdleverantör för mer information.
->- Ytterligare uppgifter krävs för att konfigurera Adobe Commerce för molninfrastruktur. Mer information finns [Konfigurera flera olika Creative Cloud-webbplatser eller -butiker](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html) i _Guide för Commerce on Cloud Infrastructure_.
+>- Ytterligare uppgifter krävs för att konfigurera Adobe Commerce för molninfrastruktur. Se [Konfigurera flera molnwebbplatser eller molnbutiker](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html) i _Commerce för molninfrastruktur_.
 
 ### Felsökning
 
-- Om de franska och tyska webbplatserna returnerar 404s men administratören läser in, måste du kontrollera att du har fyllt i [Steg 6: Lägg till butikskoden i bas-URL:en](ms-admin.md#step-6-add-the-store-code-to-the-base-url).
+- Om de franska och tyska webbplatserna returnerar 404s men administratören läser in, kontrollerar du att du har slutfört [Steg 6: Lägg till butikskoden i bas-URL:en](ms-admin.md#step-6-add-the-store-code-to-the-base-url).
 - Om alla URL-adresser returnerar 404s måste du starta om webbservern.
 - Om administratören inte fungerar som den ska ska du kontrollera att du har konfigurerat dina virtuella värdar korrekt.

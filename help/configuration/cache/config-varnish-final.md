@@ -5,20 +5,20 @@ feature: Configuration, Cache
 exl-id: 01f28c93-75cd-4969-9142-b8dac0aa2adb
 source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '345'
 ht-degree: 0%
 
 ---
 
 # Slutlig verifiering av lack-konfiguration
 
-Nu när du använder `default.vcl` som har skapats för dig i Commerce kan du utföra vissa slutverifieringar för att se till att lack fungerar.
+Nu när du använder de `default.vcl` som har genererats av Commerce kan du utföra några slutverifieringar för att se till att Varnish fungerar.
 
 ## Verifiera HTTP-svarshuvuden
 
 Använd `curl` eller något annat verktyg för att visa HTTP-svarshuvuden när du besöker en Commerce-sida i en webbläsare.
 
-Kontrollera först att du använder [utvecklarläge](../cli/set-mode.md#change-to-developer-mode); annars visas inte sidhuvudena.
+Kontrollera först att du använder [utvecklarläget](../cli/set-mode.md#change-to-developer-mode). Annars ser du inte rubrikerna.
 
 Exempel:
 
@@ -36,7 +36,7 @@ X-Magento-Cache-Debug: MISS
 
 >[!INFO]
 >
->Detta värde är också acceptabelt: `X-Magento-Cache-Debug: HIT`.
+>Det här värdet är också godtagbart: `X-Magento-Cache-Debug: HIT`.
 
 ## Kontrollera sidinläsningstider
 
@@ -44,16 +44,16 @@ Om lack fungerar bör alla Commerce-sidor med cache-lagrade block läsas in på 
 
 Använd en webbläsarkontroll för att mäta sidinläsningstiden.
 
-Så här använder du till exempel Chrome-kontrollen:
+Så här använder du till exempel Chrome-inspektören:
 
 1. Gå till alla cachelagrade Commerce-sidor i Chrome.
 1. Högerklicka var som helst på sidan.
-1. På popup-menyn klickar du på **[!UICONTROL Inspect Element]**
-1. Klicka på knappen **[!UICONTROL Network]** -fliken.
+1. Klicka på **[!UICONTROL Inspect Element]** på snabbmenyn.
+1. Klicka på fliken **[!UICONTROL Network]** i kontrollpanelen.
 1. Uppdatera sidan.
 1. Bläddra till toppen av kontrollpanelen så att du kan se URL-adressen till sidan som du visar.
 
-   I bilden nedan visas ett exempel på hur du läser in `magento2` indexsida.
+   I följande bild visas ett exempel på hur indexsidan `magento2` läses in.
 
    ![Klicka på sidan som du visar](../../assets/configuration/varnish-inspector.png)
 
@@ -63,9 +63,9 @@ Så här använder du till exempel Chrome-kontrollen:
 
    Du kan visa HTTP-rubriker som beskrivs mer ingående i avsnittet Verifiera HTTP-svarshuvuden.
 
-## Verifiera Commerce-cachen
+## Verifiera Commerce cache
 
-Se till att `<magento_root>/var/page_cache` katalogen är tom:
+Kontrollera att katalogen `<magento_root>/var/page_cache` är tom:
 
 1. Logga in på Commerce-servern eller växla till filsystemets ägare.
 1. Ange följande kommando:
@@ -74,13 +74,13 @@ Se till att `<magento_root>/var/page_cache` katalogen är tom:
    rm -rf <magento_root>/var/page_cache/*
    ```
 
-1. Åtkomst till en eller flera cachelagrade Commerce-sidor.
-1. Kontrollera `var/page_cache/` katalog.
+1. Åtkomst till en eller flera tillgängliga Commerce-sidor.
+1. Kontrollera katalogen `var/page_cache/`.
 
    Om katalogen är tom, grattis! Varnish och Commerce har konfigurerats att samarbeta!
 
-1. Om du rensade `var/page_cache/` katalog, starta om Varnish.
+1. Om du har rensat katalogen `var/page_cache/` startar du om Varnish.
 
 >[!TIP]
 >
->Om 503-fel (Backend Fetch Failed) inträffar, se [Felsökning 503 (tjänsten är inte tillgänglig) fel](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshooting-503-errors.html) i _Adobe Commerce Help Center_.
+>Om 503-fel (Backend Fetch Failed) inträffar, se [Felsökning 503-fel (tjänsten är inte tillgänglig)](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshooting-503-errors.html) i _Adobe Commerce Help Center_.

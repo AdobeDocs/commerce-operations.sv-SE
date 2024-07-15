@@ -18,9 +18,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Stöd för OpenSearch lades till i 2.4.4. OpenSearch är en kompatibel gaffel för Elasticsearch. Se [Migrera Elasticsearch till OpenSearch](../../../upgrade/prepare/opensearch-migration.md) för mer information.
+>Stöd för OpenSearch lades till i 2.4.4. OpenSearch är en kompatibel gaffel för Elasticsearch. Mer information finns i [Migrera Elasticsearch till OpenSearch](../../../upgrade/prepare/opensearch-migration.md).
 
-I det här avsnittet beskrivs hur du konfigurerar Apache som *osäker* så att Adobe Commerce kan använda en sökmotor som körs på den här servern. I det här avsnittet beskrivs inte hur du konfigurerar HTTP Basic-autentisering. Det beskrivs i [Säker kommunikation med Apache](#secure-communication-with-apache).
+I det här avsnittet beskrivs hur du konfigurerar Apache som en *osäker* -proxy så att Adobe Commerce kan använda en sökmotor som körs på den här servern. I det här avsnittet beskrivs inte konfigurering av grundläggande HTTP-autentisering. Det beskrivs i [Säker kommunikation med Apache](#secure-communication-with-apache).
 
 >[!NOTE]
 >
@@ -36,7 +36,7 @@ I det här avsnittet beskrivs hur du konfigurerar en proxy med hjälp av ett vir
    a2enmod proxy_http
    ```
 
-1. Använda en textredigerare för att öppna `/etc/apache2/sites-available/000-default.conf`
+1. Öppna `/etc/apache2/sites-available/000-default.conf` med en textredigerare
 1. Lägg till följande direktiv högst upp i filen:
 
    ```conf
@@ -84,9 +84,9 @@ I det här avsnittet beskrivs hur du konfigurerar en proxy med hjälp av ett vir
 
 ## Säker kommunikation med Apache
 
-I det här avsnittet beskrivs hur du skyddar kommunikationen mellan Apache och sökmotorn med [HTTP Basic](https://datatracker.ietf.org/doc/html/rfc2617) autentisering med Apache. Mer information finns i följande resurser:
+I det här avsnittet beskrivs hur du skyddar kommunikationen mellan Apache och sökmotorn med hjälp av [HTTP Basic](https://datatracker.ietf.org/doc/html/rfc2617) -autentisering med Apache. Mer information finns i följande resurser:
 
-* [Självstudiekurs om autentisering och behörighet i Apache 2.4](https://httpd.apache.org/docs/2.4/howto/auth.html)
+* [Autentiserings- och auktoriseringsjälvstudiekurs för Apache 2.4](https://httpd.apache.org/docs/2.4/howto/auth.html)
 
 Se något av följande avsnitt:
 
@@ -99,24 +99,24 @@ Av säkerhetsskäl kan du hitta lösenordsfilen var som helst, förutom webbserv
 
 #### Installera htpassword om det behövs
 
-Kontrollera först om du har Apache `htpasswd` utility installeras enligt följande:
+Kontrollera först om du har Apache `htpasswd`-verktyget installerat enligt följande:
 
-1. Ange följande kommando för att avgöra om `htpasswd` är redan installerat:
+1. Ange följande kommando för att avgöra om `htpasswd` redan är installerat:
 
    ```bash
    which htpasswd
    ```
 
-   Om en sökväg visas installeras den. Om kommandot inte returnerar några utdata visas `htpasswd` är inte installerat.
+   Om en sökväg visas installeras den. Om kommandot inte returnerar några utdata installeras inte `htpasswd`.
 
-1. Installera vid behov `htpasswd`:
+1. Installera `htpasswd` om det behövs:
 
    * Ubuntu: `apt-get -y install apache2-utils`
    * CentOS: `yum -y install httpd-tools`
 
 #### Skapa en lösenordsfil
 
-Ange följande kommandon som en användare med `root` behörighet:
+Ange följande kommandon som en användare med behörigheten `root`:
 
 ```bash
 mkdir -p /usr/local/apache/password
@@ -134,9 +134,9 @@ Plats
 
   I det här exemplet använder vi webbserveranvändaren, men det är upp till dig att välja användare.
 
-   * Konfigurera Elasticsearch: användaren har ett namn `magento_elasticsearch` i detta exempel
+   * Konfigurera Elasticsearch: användaren har namnet `magento_elasticsearch` i det här exemplet
 
-* `<password file name>` måste vara en dold fil (börjar med `.`) och bör återspegla användarens namn. Mer information finns i exemplen senare i det här avsnittet.
+* `<password file name>` måste vara en dold fil (börjar med `.`) och ska återspegla användarens namn. Mer information finns i exemplen senare i det här avsnittet.
 
 Följ instruktionerna på skärmen för att skapa ett lösenord för användaren.
 
@@ -166,7 +166,7 @@ htpasswd -c /usr/local/apache/password/.htpasswd_elasticsearch magento_elasticse
 
 #### Lägg till ytterligare användare
 
-Om du vill lägga till en annan användare i lösenordsfilen anger du följande kommando som en användare med `root` behörighet:
+Om du vill lägga till en annan användare i lösenordsfilen anger du följande kommando som en användare med `root`-behörighet:
 
 ```bash
 htpasswd /usr/local/apache/password/.htpasswd <username>
@@ -174,7 +174,7 @@ htpasswd /usr/local/apache/password/.htpasswd <username>
 
 ### Säker kommunikation med Apache
 
-I det här avsnittet beskrivs hur du konfigurerar [Grundläggande HTTP-autentisering](https://httpd.apache.org/docs/2.2/howto/auth.html). Användning av TLS och HTTP Basic-autentisering tillsammans förhindrar alla från att kommunicera med Elasticsearch eller OpenSearch eller med programservern.
+I det här avsnittet beskrivs hur du konfigurerar [grundläggande HTTP-autentisering](https://httpd.apache.org/docs/2.2/howto/auth.html). Användning av TLS och HTTP Basic-autentisering tillsammans förhindrar alla från att kommunicera med Elasticsearch eller OpenSearch eller med programservern.
 
 I det här avsnittet beskrivs hur du anger vilka som får åtkomst till Apache-servern.
 
@@ -200,7 +200,7 @@ I det här avsnittet beskrivs hur du anger vilka som får åtkomst till Apache-s
    </Proxy>
    ```
 
-1. Om du har lagt till föregående till din säkra virtuella värd tar du bort `Listen 8080` och `<VirtualHost *:8080>` Direktiv som du lade till tidigare i din osäkra virtuella värd.
+1. Om du har lagt till föregående till din säkra virtuella värd tar du bort `Listen 8080` och de `<VirtualHost *:8080>`-direktiv som du har lagt till tidigare till din osäkra virtuella värd.
 
 1. Spara ändringarna, avsluta textredigeraren och starta om Apache:
 

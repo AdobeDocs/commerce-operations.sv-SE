@@ -17,7 +17,7 @@ Från och med version 2.4.4 kräver Adobe Commerce antingen [Elasticsearch] elle
 - [Krav för sökmotor](../../installation/prerequisites/search-engine/overview.md)
 - [Konfigurera nginx för sökmotorn](../../installation/prerequisites/search-engine/configure-nginx.md)
 - [Konfigurera Apache för sökmotorn](../../installation/prerequisites/search-engine/configure-apache.md)
-- [Installera Commerce](../../installation/composer.md) (kommandoradsgränssnitt)
+- [Installera Commerce-programmet](../../installation/composer.md) (kommandoradsgränssnitt)
 
 När du har installerat och integrerat sökmotorn med Adobe Commerce måste du utföra ytterligare underhåll:
 

@@ -12,14 +12,14 @@ ht-degree: 0%
 <!-- The template to render with above values -->
 **Version**: 3.0.17
 
-Den här referensen innehåller 9 kommandon som är tillgängliga via `bin/uct` kommandoradsverktyg.
-Den inledande listan genereras automatiskt med `bin/uct list` på Adobe Commerce.
+Referensen innehåller nio kommandon som är tillgängliga via kommandoradsverktyget `bin/uct`.
+Den inledande listan genereras automatiskt med kommandot `bin/uct list` på Adobe Commerce.
 
-Läs mer om verktyget i [Ökning](/help/upgrade/upgrade-compatibility-tool/overview.md).
+Läs mer om verktyget i [Översikt](/help/upgrade/upgrade-compatibility-tool/overview.md).
 
 >[!NOTE]
 >
->Den här referensen genereras från programmets kodbas. Om du vill ändra innehållet kan du uppdatera källkoden för motsvarande kommandoimplementering i [kodbas](https://github.com/magento) arkivera och skicka in dina ändringar för granskning. Ett annat sätt är att _Ge oss feedback_ (hitta länken i det övre högra hörnet). Information om riktlinjer för bidrag finns i [Kodavgifter](https://developer.adobe.com/commerce/contributor/guides/code-contributions/).
+>Den här referensen genereras från programmets kodbas. Om du vill ändra innehållet kan du uppdatera källkoden för motsvarande kommandoimplementering i databasen [codebase](https://github.com/magento) och skicka ändringarna för granskning. Ett annat sätt är att _ge oss feedback_ (hitta länken uppe till höger). Information om riktlinjer för bidrag finns i [Kodavgifter](https://developer.adobe.com/commerce/contributor/guides/code-contributions/).
 
 ## `_complete`
 

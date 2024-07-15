@@ -12,15 +12,15 @@ ht-degree: 0%
 
 # Referens för sökvägar för betalningskonfiguration
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Försäljning** > **Betalningsmetoder**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Lagrar** > Inställningar > **Konfiguration** > **Försäljning** > **Betalningsmetoder**.
 
-The [`magento app:config:dump` kommando](../cli/export-configuration.md) skriver dessa värden i den delade konfigurationsfilen, `app/etc/config.php`, som bör vara i källkontroll. Om du vill åsidosätta konfigurationsinställningar eller ange känsliga inställningar läser du [Använd miljövariabler för att åsidosätta konfigurationsinställningar](override-config-settings.md#environment-variables). Det här avsnittet gör _not_ list [känsliga och systemspecifika värden](config-reference-sens.md).
+[`magento app:config:dump`-kommandot ](../cli/export-configuration.md) skriver dessa värden till den delade konfigurationsfilen `app/etc/config.php` som ska finnas i källkontrollen. Om du vill åsidosätta konfigurationsinställningar eller ange känsliga inställningar läser du [Använda miljövariabler för att åsidosätta konfigurationsinställningar](override-config-settings.md#environment-variables). Det här avsnittet listar _inte_ [känsliga och systemspecifika värden](config-reference-sens.md).
 
 Inställningarna ordnas ytterligare efter betalningsmetod.
 
 ## PayPal-banor
 
-| Namn | Konfigurationssökväg | Endast handel? | Krypterad? |
+| Namn | Konfigurationssökväg | Endast Commerce? | Krypterad? |
 |--------------|--------------|--------------|--------------|
 | Aktivera den här lösningen | `payment/payflowpro/active` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Aktivera sammanhangsbaserad utcheckning | `payment/paypal_express/in_context` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -89,7 +89,7 @@ Inställningarna ordnas ytterligare efter betalningsmetod.
 
 ## PayPal Payments Pro
 
-| Namn | Konfigurationssökväg | Endast handel? | Krypterad? |
+| Namn | Konfigurationssökväg | Endast Commerce? | Krypterad? |
 |--------------|--------------|--------------|--------------|
 | API-autentiseringsmetoder | `paypal/wpp/api_authentication` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | API använder proxy | `paypal/wpp/use_proxy` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -100,9 +100,9 @@ Inställningarna ordnas ytterligare efter betalningsmetod.
 
 ## Payments Pro Hosted Solution (Storbritannien)
 
-Dessa alternativ är bara tillgängliga om du väljer Storbritannien som [handelsland](../reference/config-reference-sens.md#payment-sensitive-and-system-specific-paths).
+De här alternativen är bara tillgängliga om du har valt Storbritannien som [handelsland](../reference/config-reference-sens.md#payment-sensitive-and-system-specific-paths).
 
-| Namn | Konfigurationssökväg | Endast handel? | Krypterad? |
+| Namn | Konfigurationssökväg | Endast Commerce? | Krypterad? |
 |--------------|--------------|--------------|--------------|
 | Aktivera den här lösningen | `payment/hosted_pro/active` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Titel | `payment/hosted_pro/title` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -117,7 +117,7 @@ Dessa alternativ är bara tillgängliga om du väljer Storbritannien som [handel
 
 ## PayPal Payflow Pro
 
-| Namn | Konfigurationssökväg | Endast handel? | Krypterad? |
+| Namn | Konfigurationssökväg | Endast Commerce? | Krypterad? |
 |--------------|--------------|--------------|--------------|
 | Valv aktiverat | `payment/payflowpro_cc_vault/active` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Titel | `payment/payflowpro/title` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -159,7 +159,7 @@ Dessa alternativ är bara tillgängliga om du väljer Storbritannien som [handel
 
 ## Länk till PayPal-betalningsflöde
 
-| Namn | Konfigurationssökväg | Endast handel? | Krypterad? |
+| Namn | Konfigurationssökväg | Endast Commerce? | Krypterad? |
 |--------------|--------------|--------------|--------------|
 | Partner | `payment/payflow_link/partner` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Leverantör | `payment/payflow_link/vendor` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -181,7 +181,7 @@ Dessa alternativ är bara tillgängliga om du väljer Storbritannien som [handel
 
 ## Noll delsumma utcheckningsbanor
 
-| Namn | Konfigurationssökväg | Endast handel? | Krypterad? |
+| Namn | Konfigurationssökväg | Endast Commerce? | Krypterad? |
 |--------------|--------------|--------------|--------------|
 | Aktiverad | `payment/free/active` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Titel | `payment/free/title` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -195,7 +195,7 @@ Dessa alternativ är bara tillgängliga om du väljer Storbritannien som [handel
 
 ## Betalningsvägar för kontanter
 
-| Namn | Konfigurationssökväg | Endast handel? | Krypterad? |
+| Namn | Konfigurationssökväg | Endast Commerce? | Krypterad? |
 |--------------|--------------|--------------|--------------|
 | Aktiverad | `payment/cashondelivery/active` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Titel | `payment/cashondelivery/title` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -211,7 +211,7 @@ Dessa alternativ är bara tillgängliga om du väljer Storbritannien som [handel
 
 ## Betalningsvägar för banköverföring
 
-| Namn | Konfigurationssökväg | Endast handel? | Krypterad? |
+| Namn | Konfigurationssökväg | Endast Commerce? | Krypterad? |
 |--------------|--------------|--------------|--------------|
 | Aktiverad | `payment/banktransfer/active` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Titel | `payment/banktransfer/title` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -227,7 +227,7 @@ Dessa alternativ är bara tillgängliga om du väljer Storbritannien som [handel
 
 ## Kontrollera och beställa pengar
 
-| Namn | Konfigurationssökväg | Endast handel? | Krypterad? |
+| Namn | Konfigurationssökväg | Endast Commerce? | Krypterad? |
 |--------------|--------------|--------------|--------------|
 | Aktiverad | `payment/checkmo/active` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Titel | `payment/checkmo/title` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -243,7 +243,7 @@ Dessa alternativ är bara tillgängliga om du väljer Storbritannien som [handel
 
 ## Sökvägar för inköpsorder
 
-| Namn | Konfigurationssökväg | Endast handel? | Krypterad? |
+| Namn | Konfigurationssökväg | Endast Commerce? | Krypterad? |
 |--------------|--------------|--------------|--------------|
 | Aktiverad | `payment/purchaseorder/active` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Titel | `payment/purchaseorder/title` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -260,9 +260,9 @@ Dessa alternativ är bara tillgängliga om du väljer Storbritannien som [handel
 
 >[!INFO]
 >
->Vilka banor som är tillgängliga beror på vad du väljer [Handelsland](../reference/config-reference-sens.md#payment-sensitive-and-system-specific-paths).
+>Vilka sökvägar som är tillgängliga beror på ditt val av [handelsland](../reference/config-reference-sens.md#payment-sensitive-and-system-specific-paths).
 
-| Namn | Konfigurationssökväg | Endast handel? | Krypterad? |
+| Namn | Konfigurationssökväg | Endast Commerce? | Krypterad? |
 |--------------|--------------|--------------|--------------|
 | SFTP-autentiseringsuppgifter | `payment_nz/express_checkout_other/settings_ec/settings_ec_advanced/express_checkout_settlement_report/heading_sftp` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Schemalagd hämtning | `payment_nz/express_checkout_other/settings_ec/settings_ec_advanced/express_checkout_settlement_report/heading_schedule` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -329,39 +329,39 @@ Dessa alternativ är bara tillgängliga om du väljer Storbritannien som [handel
 | Minsta ordersumma | `payment_nz/authorizenet_directpost/min_order_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Maximal ordersumma | `payment_nz/authorizenet_directpost/max_order_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Sorteringsordning | `payment_nz/authorizenet_directpost/sort_order` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Aktiverad | `payment_nz/cybersource/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_nz/cybersource/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_nz/cybersource/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Ny orderstatus | `payment_nz/cybersource/order_status` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_nz/cybersource/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Kreditkortstyper | `payment_nz/cybersource/cctypes` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_nz/cybersource/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_nz/cybersource/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Minsta ordersumma | `payment_nz/cybersource/min_order_total` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Maximal ordersumma | `payment_nz/cybersource/max_order_total` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_nz/cybersource/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Aktiverad | `payment_nz/worldpay/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_nz/worldpay/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Tillåt redigering av kontaktinformation | `payment_nz/worldpay/fix_contact` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Dölj kontaktinformation | `payment_nz/worldpay/hide_contact` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Signaturfält | `payment_nz/worldpay/signature_fields` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_nz/worldpay/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd för test | `payment_nz/worldpay/test_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_nz/worldpay/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_nz/worldpay/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_nz/worldpay/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Ange beställningsstatus till Misstänkt bedrägeri för CVV | `payment_nz/worldpay/cvv_fraud_case` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Ange beställningsstatus till Misstänkt bedrägeri för postnummer AVS | `payment_nz/worldpay/avs_fraud_case` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_nz/worldpay/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Aktiverad | `payment_nz/eway/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Anslutningstyp | `payment_nz/eway/connection_type` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_nz/eway/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_nz/eway/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_nz/eway/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Kreditkortstyper | `payment_nz/eway/cctypes` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_nz/eway/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_nz/eway/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_nz/eway/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_nz/cybersource/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_nz/cybersource/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_nz/cybersource/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Ny orderstatus | `payment_nz/cybersource/order_status` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_nz/cybersource/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Kreditkortstyper | `payment_nz/cybersource/cctypes` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_nz/cybersource/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_nz/cybersource/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Minsta ordersumma | `payment_nz/cybersource/min_order_total` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Maximal ordersumma | `payment_nz/cybersource/max_order_total` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_nz/cybersource/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_nz/worldpay/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_nz/worldpay/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Tillåt redigering av kontaktinformation | `payment_nz/worldpay/fix_contact` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Dölj kontaktinformation | `payment_nz/worldpay/hide_contact` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Signaturfält | `payment_nz/worldpay/signature_fields` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_nz/worldpay/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd för test | `payment_nz/worldpay/test_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_nz/worldpay/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_nz/worldpay/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_nz/worldpay/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Ange beställningsstatus till Misstänkt bedrägeri för CVV | `payment_nz/worldpay/cvv_fraud_case` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Ange beställningsstatus till Misstänkt bedrägeri för postnummer AVS | `payment_nz/worldpay/avs_fraud_case` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_nz/worldpay/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_nz/eway/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Anslutningstyp | `payment_nz/eway/connection_type` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_nz/eway/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_nz/eway/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_nz/eway/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Kreditkortstyper | `payment_nz/eway/cctypes` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_nz/eway/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_nz/eway/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_nz/eway/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Schemalagd hämtning | `payment_hk/express_checkout_other/settings_ec/settings_ec_advanced/express_checkout_settlement_report/heading_schedule` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Format för PayPal Merchant Pages | `payment_hk/express_checkout_other/settings_ec/settings_ec_advanced/express_checkout_frontend/paypal_pages` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Schemalagd hämtning | `payment_hk/paypal_group_all_in_one/payments_pro_hosted_solution_hk/pphs_settings/pphs_settings_advanced/pphs_settlement_report/heading_schedule` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -421,39 +421,39 @@ Dessa alternativ är bara tillgängliga om du väljer Storbritannien som [handel
 | Minsta ordersumma | `payment_hk/authorizenet_directpost/min_order_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Maximal ordersumma | `payment_hk/authorizenet_directpost/max_order_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Sorteringsordning | `payment_hk/authorizenet_directpost/sort_order` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Aktiverad | `payment_hk/cybersource/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_hk/cybersource/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_hk/cybersource/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Ny orderstatus | `payment_hk/cybersource/order_status` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_hk/cybersource/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Kreditkortstyper | `payment_hk/cybersource/cctypes` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_hk/cybersource/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_hk/cybersource/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Minsta ordersumma | `payment_hk/cybersource/min_order_total` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Maximal ordersumma | `payment_hk/cybersource/max_order_total` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_hk/cybersource/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Aktiverad | `payment_hk/worldpay/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_hk/worldpay/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Tillåt redigering av kontaktinformation | `payment_hk/worldpay/fix_contact` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Dölj kontaktinformation | `payment_hk/worldpay/hide_contact` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_hk/worldpay/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd för test | `payment_hk/worldpay/test_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_hk/worldpay/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_hk/worldpay/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_hk/worldpay/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Ange beställningsstatus till Misstänkt bedrägeri för CVV | `payment_hk/worldpay/cvv_fraud_case` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Ange beställningsstatus till Misstänkt bedrägeri för postnummer AVS | `payment_hk/worldpay/avs_fraud_case` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_hk/worldpay/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Aktiverad | `payment_hk/eway/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Anslutningstyp | `payment_hk/eway/connection_type` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_hk/eway/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sandlådeläge | `payment_hk/eway/sandbox_flag` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_hk/eway/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_hk/eway/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Kreditkortstyper | `payment_hk/eway/cctypes` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_hk/eway/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_hk/eway/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_hk/eway/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_hk/cybersource/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_hk/cybersource/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_hk/cybersource/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Ny orderstatus | `payment_hk/cybersource/order_status` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_hk/cybersource/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Kreditkortstyper | `payment_hk/cybersource/cctypes` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_hk/cybersource/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_hk/cybersource/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Minsta ordersumma | `payment_hk/cybersource/min_order_total` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Maximal ordersumma | `payment_hk/cybersource/max_order_total` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_hk/cybersource/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_hk/worldpay/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_hk/worldpay/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Tillåt redigering av kontaktinformation | `payment_hk/worldpay/fix_contact` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Dölj kontaktinformation | `payment_hk/worldpay/hide_contact` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_hk/worldpay/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd för test | `payment_hk/worldpay/test_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_hk/worldpay/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_hk/worldpay/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_hk/worldpay/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Ange beställningsstatus till Misstänkt bedrägeri för CVV | `payment_hk/worldpay/cvv_fraud_case` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Ange beställningsstatus till Misstänkt bedrägeri för postnummer AVS | `payment_hk/worldpay/avs_fraud_case` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_hk/worldpay/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_hk/eway/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Anslutningstyp | `payment_hk/eway/connection_type` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_hk/eway/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sandlådeläge | `payment_hk/eway/sandbox_flag` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_hk/eway/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_hk/eway/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Kreditkortstyper | `payment_hk/eway/cctypes` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_hk/eway/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_hk/eway/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_hk/eway/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Schemalagd hämtning | `payment_es/express_checkout_other/settings_ec/settings_ec_advanced/express_checkout_settlement_report/heading_schedule` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Format för PayPal Merchant Pages | `payment_es/express_checkout_other/settings_ec/settings_ec_advanced/express_checkout_frontend/paypal_pages` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Schemalagd hämtning | `payment_es/paypal_group_all_in_one/payments_pro_hosted_solution_es/pphs_settings/pphs_settings_advanced/pphs_settlement_report/heading_schedule` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -514,42 +514,42 @@ Dessa alternativ är bara tillgängliga om du väljer Storbritannien som [handel
 | Minsta ordersumma | `payment_es/authorizenet_directpost/min_order_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Maximal ordersumma | `payment_es/authorizenet_directpost/max_order_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Sorteringsordning | `payment_es/authorizenet_directpost/sort_order` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Aktiverad | `payment_es/cybersource/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_es/cybersource/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_es/cybersource/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Profil-ID | `payment_es/cybersource/profile_id` | ![Endast handel](/help/assets/configuration/cloud-ee.png) | ![Krypterad](/help/assets/configuration/cloud-enc.png) |
-| Ny orderstatus | `payment_es/cybersource/order_status` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_es/cybersource/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Kreditkortstyper | `payment_es/cybersource/cctypes` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_es/cybersource/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_es/cybersource/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Minsta ordersumma | `payment_es/cybersource/min_order_total` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Maximal ordersumma | `payment_es/cybersource/max_order_total` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_es/cybersource/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Aktiverad | `payment_es/worldpay/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_es/worldpay/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Installations-ID | `payment_es/worldpay/installation_id` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Installations-ID för fjärradministratör | `payment_es/worldpay/admin_installation_id` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Tillåt redigering av kontaktinformation | `payment_es/worldpay/fix_contact` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Dölj kontaktinformation | `payment_es/worldpay/hide_contact` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Signaturfält | `payment_es/worldpay/signature_fields` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Testläge | `payment_es/worldpay/sandbox_flag` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd för test | `payment_es/worldpay/test_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_es/worldpay/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_es/worldpay/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_es/worldpay/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Ange beställningsstatus till Misstänkt bedrägeri för CVV | `payment_es/worldpay/cvv_fraud_case` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Ange beställningsstatus till Misstänkt bedrägeri för postnummer AVS | `payment_es/worldpay/avs_fraud_case` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_es/worldpay/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Aktiverad | `payment_es/eway/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Anslutningstyp | `payment_es/eway/connection_type` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_es/eway/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_es/eway/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_es/eway/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Kreditkortstyper | `payment_es/eway/cctypes` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_es/eway/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_es/eway/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_es/eway/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_es/cybersource/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_es/cybersource/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_es/cybersource/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Profil-ID | `payment_es/cybersource/profile_id` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) | ![Krypterad](/help/assets/configuration/cloud-enc.png) |
+| Ny orderstatus | `payment_es/cybersource/order_status` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_es/cybersource/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Kreditkortstyper | `payment_es/cybersource/cctypes` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_es/cybersource/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_es/cybersource/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Minsta ordersumma | `payment_es/cybersource/min_order_total` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Maximal ordersumma | `payment_es/cybersource/max_order_total` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_es/cybersource/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_es/worldpay/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_es/worldpay/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Installations-ID | `payment_es/worldpay/installation_id` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Installations-ID för fjärradministratör | `payment_es/worldpay/admin_installation_id` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Tillåt redigering av kontaktinformation | `payment_es/worldpay/fix_contact` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Dölj kontaktinformation | `payment_es/worldpay/hide_contact` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Signaturfält | `payment_es/worldpay/signature_fields` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Testläge | `payment_es/worldpay/sandbox_flag` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd för test | `payment_es/worldpay/test_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_es/worldpay/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_es/worldpay/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_es/worldpay/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Ange beställningsstatus till Misstänkt bedrägeri för CVV | `payment_es/worldpay/cvv_fraud_case` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Ange beställningsstatus till Misstänkt bedrägeri för postnummer AVS | `payment_es/worldpay/avs_fraud_case` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_es/worldpay/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_es/eway/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Anslutningstyp | `payment_es/eway/connection_type` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_es/eway/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_es/eway/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_es/eway/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Kreditkortstyper | `payment_es/eway/cctypes` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_es/eway/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_es/eway/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_es/eway/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Schemalagd hämtning | `payment_it/express_checkout_other/settings_ec/settings_ec_advanced/express_checkout_settlement_report/heading_schedule` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Format för PayPal Merchant Pages | `payment_it/express_checkout_other/settings_ec/settings_ec_advanced/express_checkout_frontend/paypal_pages` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Schemalagd hämtning | `payment_it/paypal_group_all_in_one/payments_pro_hosted_solution_it/pphs_settings/pphs_settings_advanced/pphs_settlement_report/heading_schedule` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -609,39 +609,39 @@ Dessa alternativ är bara tillgängliga om du väljer Storbritannien som [handel
 | Minsta ordersumma | `payment_it/authorizenet_directpost/min_order_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Maximal ordersumma | `payment_it/authorizenet_directpost/max_order_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Sorteringsordning | `payment_it/authorizenet_directpost/sort_order` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Aktiverad | `payment_it/cybersource/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_it/cybersource/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_it/cybersource/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Ny orderstatus | `payment_it/cybersource/order_status` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_it/cybersource/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Kreditkortstyper | `payment_it/cybersource/cctypes` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_it/cybersource/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_it/cybersource/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Minsta ordersumma | `payment_it/cybersource/min_order_total` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Maximal ordersumma | `payment_it/cybersource/max_order_total` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_it/cybersource/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Aktiverad | `payment_it/worldpay/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_it/worldpay/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Tillåt redigering av kontaktinformation | `payment_it/worldpay/fix_contact` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Dölj kontaktinformation | `payment_it/worldpay/hide_contact` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Signaturfält | `payment_it/worldpay/signature_fields` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_it/worldpay/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd för test | `payment_it/worldpay/test_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_it/worldpay/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_it/worldpay/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_it/worldpay/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Ange beställningsstatus till Misstänkt bedrägeri för CVV | `payment_it/worldpay/cvv_fraud_case` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Ange beställningsstatus till Misstänkt bedrägeri för postnummer AVS | `payment_it/worldpay/avs_fraud_case` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_it/worldpay/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Aktiverad | `payment_it/eway/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Anslutningstyp | `payment_it/eway/connection_type` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_it/eway/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_it/eway/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_it/eway/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Kreditkortstyper | `payment_it/eway/cctypes` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_it/eway/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_it/eway/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_it/eway/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_it/cybersource/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_it/cybersource/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_it/cybersource/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Ny orderstatus | `payment_it/cybersource/order_status` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_it/cybersource/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Kreditkortstyper | `payment_it/cybersource/cctypes` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_it/cybersource/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_it/cybersource/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Minsta ordersumma | `payment_it/cybersource/min_order_total` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Maximal ordersumma | `payment_it/cybersource/max_order_total` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_it/cybersource/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_it/worldpay/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_it/worldpay/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Tillåt redigering av kontaktinformation | `payment_it/worldpay/fix_contact` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Dölj kontaktinformation | `payment_it/worldpay/hide_contact` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Signaturfält | `payment_it/worldpay/signature_fields` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_it/worldpay/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd för test | `payment_it/worldpay/test_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_it/worldpay/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_it/worldpay/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_it/worldpay/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Ange beställningsstatus till Misstänkt bedrägeri för CVV | `payment_it/worldpay/cvv_fraud_case` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Ange beställningsstatus till Misstänkt bedrägeri för postnummer AVS | `payment_it/worldpay/avs_fraud_case` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_it/worldpay/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_it/eway/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Anslutningstyp | `payment_it/eway/connection_type` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_it/eway/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_it/eway/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_it/eway/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Kreditkortstyper | `payment_it/eway/cctypes` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_it/eway/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_it/eway/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_it/eway/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Schemalagd hämtning | `payment_fr/express_checkout_other/settings_ec/settings_ec_advanced/express_checkout_settlement_report/heading_schedule` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Format för PayPal Merchant Pages | `payment_fr/express_checkout_other/settings_ec/settings_ec_advanced/express_checkout_frontend/paypal_pages` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Schemalagd hämtning | `payment_fr/paypal_group_all_in_one/payments_pro_hosted_solution_fr/pphs_settings/pphs_settings_advanced/pphs_settlement_report/heading_schedule` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -701,38 +701,38 @@ Dessa alternativ är bara tillgängliga om du väljer Storbritannien som [handel
 | Minsta ordersumma | `payment_fr/authorizenet_directpost/min_order_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Maximal ordersumma | `payment_fr/authorizenet_directpost/max_order_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Sorteringsordning | `payment_fr/authorizenet_directpost/sort_order` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Aktiverad | `payment_fr/cybersource/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_fr/cybersource/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_fr/cybersource/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Ny orderstatus | `payment_fr/cybersource/order_status` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_fr/cybersource/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Kreditkortstyper | `payment_fr/cybersource/cctypes` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_fr/cybersource/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_fr/cybersource/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Minsta ordersumma | `payment_fr/cybersource/min_order_total` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Maximal ordersumma | `payment_fr/cybersource/max_order_total` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_fr/cybersource/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Aktiverad | `payment_fr/worldpay/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_fr/worldpay/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Tillåt redigering av kontaktinformation | `payment_fr/worldpay/fix_contact` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Dölj kontaktinformation | `payment_fr/worldpay/hide_contact` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_fr/worldpay/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd för test | `payment_fr/worldpay/test_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_fr/worldpay/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_fr/worldpay/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_fr/worldpay/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Ange beställningsstatus till Misstänkt bedrägeri för CVV | `payment_fr/worldpay/cvv_fraud_case` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Ange beställningsstatus till Misstänkt bedrägeri för postnummer AVS | `payment_fr/worldpay/avs_fraud_case` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_fr/worldpay/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Aktiverad | `payment_fr/eway/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Anslutningstyp | `payment_fr/eway/connection_type` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_fr/eway/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_fr/eway/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_fr/eway/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Kreditkortstyper | `payment_fr/eway/cctypes` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_fr/eway/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_fr/eway/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_fr/eway/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_fr/cybersource/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_fr/cybersource/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_fr/cybersource/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Ny orderstatus | `payment_fr/cybersource/order_status` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_fr/cybersource/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Kreditkortstyper | `payment_fr/cybersource/cctypes` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_fr/cybersource/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_fr/cybersource/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Minsta ordersumma | `payment_fr/cybersource/min_order_total` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Maximal ordersumma | `payment_fr/cybersource/max_order_total` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_fr/cybersource/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_fr/worldpay/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_fr/worldpay/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Tillåt redigering av kontaktinformation | `payment_fr/worldpay/fix_contact` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Dölj kontaktinformation | `payment_fr/worldpay/hide_contact` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_fr/worldpay/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd för test | `payment_fr/worldpay/test_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_fr/worldpay/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_fr/worldpay/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_fr/worldpay/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Ange beställningsstatus till Misstänkt bedrägeri för CVV | `payment_fr/worldpay/cvv_fraud_case` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Ange beställningsstatus till Misstänkt bedrägeri för postnummer AVS | `payment_fr/worldpay/avs_fraud_case` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_fr/worldpay/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_fr/eway/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Anslutningstyp | `payment_fr/eway/connection_type` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_fr/eway/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_fr/eway/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_fr/eway/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Kreditkortstyper | `payment_fr/eway/cctypes` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_fr/eway/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_fr/eway/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_fr/eway/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Schemalagd hämtning | `payment_jp/express_checkout_other/settings_ec/settings_ec_advanced/express_checkout_settlement_report/heading_schedule` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Format för PayPal Merchant Pages | `payment_jp/express_checkout_other/settings_ec/settings_ec_advanced/express_checkout_frontend/paypal_pages` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Schemalagd hämtning | `payment_jp/paypal_group_all_in_one/payments_pro_hosted_solution_jp/pphs_settings/pphs_settings_advanced/pphs_settlement_report/heading_schedule` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -792,37 +792,37 @@ Dessa alternativ är bara tillgängliga om du väljer Storbritannien som [handel
 | Minsta ordersumma | `payment_jp/authorizenet_directpost/min_order_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Maximal ordersumma | `payment_jp/authorizenet_directpost/max_order_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Sorteringsordning | `payment_jp/authorizenet_directpost/sort_order` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Aktiverad | `payment_jp/cybersource/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_jp/cybersource/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_jp/cybersource/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_jp/cybersource/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Kreditkortstyper | `payment_jp/cybersource/cctypes` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_jp/cybersource/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_jp/cybersource/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Minsta ordersumma | `payment_jp/cybersource/min_order_total` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Maximal ordersumma | `payment_jp/cybersource/max_order_total` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_jp/cybersource/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Aktiverad | `payment_jp/worldpay/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_jp/worldpay/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Tillåt redigering av kontaktinformation | `payment_jp/worldpay/fix_contact` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Dölj kontaktinformation | `payment_jp/worldpay/hide_contact` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_jp/worldpay/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd för test | `payment_jp/worldpay/test_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_jp/worldpay/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_jp/worldpay/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_jp/worldpay/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Ange beställningsstatus till Misstänkt bedrägeri för CVV | `payment_jp/worldpay/cvv_fraud_case` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Ange beställningsstatus till Misstänkt bedrägeri för postnummer AVS | `payment_jp/worldpay/avs_fraud_case` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_jp/worldpay/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Aktiverad | `payment_jp/eway/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Anslutningstyp | `payment_jp/eway/connection_type` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_jp/eway/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_jp/eway/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_jp/eway/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Kreditkortstyper | `payment_jp/eway/cctypes` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_jp/eway/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_jp/eway/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_jp/eway/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_jp/cybersource/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_jp/cybersource/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_jp/cybersource/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_jp/cybersource/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Kreditkortstyper | `payment_jp/cybersource/cctypes` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_jp/cybersource/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_jp/cybersource/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Minsta ordersumma | `payment_jp/cybersource/min_order_total` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Maximal ordersumma | `payment_jp/cybersource/max_order_total` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_jp/cybersource/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_jp/worldpay/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_jp/worldpay/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Tillåt redigering av kontaktinformation | `payment_jp/worldpay/fix_contact` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Dölj kontaktinformation | `payment_jp/worldpay/hide_contact` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_jp/worldpay/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd för test | `payment_jp/worldpay/test_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_jp/worldpay/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_jp/worldpay/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_jp/worldpay/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Ange beställningsstatus till Misstänkt bedrägeri för CVV | `payment_jp/worldpay/cvv_fraud_case` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Ange beställningsstatus till Misstänkt bedrägeri för postnummer AVS | `payment_jp/worldpay/avs_fraud_case` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_jp/worldpay/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_jp/eway/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Anslutningstyp | `payment_jp/eway/connection_type` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_jp/eway/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_jp/eway/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_jp/eway/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Kreditkortstyper | `payment_jp/eway/cctypes` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_jp/eway/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_jp/eway/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_jp/eway/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Schemalagd hämtning | `payment_au/express_checkout_other/settings_ec/settings_ec_advanced/express_checkout_settlement_report/heading_schedule` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Format för PayPal Merchant Pages | `payment_au/express_checkout_other/settings_ec/settings_ec_advanced/express_checkout_frontend/paypal_pages` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Schemalagd hämtning | `payment_au/paypal_group_all_in_one/payments_pro_hosted_solution_au/pphs_settings/pphs_settings_advanced/pphs_settlement_report/heading_schedule` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -887,43 +887,43 @@ Dessa alternativ är bara tillgängliga om du väljer Storbritannien som [handel
 | Minsta ordersumma | `payment_au/authorizenet_directpost/min_order_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Maximal ordersumma | `payment_au/authorizenet_directpost/max_order_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Sorteringsordning | `payment_au/authorizenet_directpost/sort_order` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Aktiverad | `payment_au/cybersource/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_au/cybersource/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_au/cybersource/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Affärs-ID | `payment_au/cybersource/merchant_id` | ![Endast handel](/help/assets/configuration/cloud-ee.png) | ![Krypterad](/help/assets/configuration/cloud-enc.png) |
-| Profil-ID | `payment_au/cybersource/profile_id` | ![Endast handel](/help/assets/configuration/cloud-ee.png) | ![Krypterad](/help/assets/configuration/cloud-enc.png) |
-| Ny orderstatus | `payment_au/cybersource/order_status` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_au/cybersource/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Kreditkortstyper | `payment_au/cybersource/cctypes` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_au/cybersource/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_au/cybersource/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Minsta ordersumma | `payment_au/cybersource/min_order_total` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Maximal ordersumma | `payment_au/cybersource/max_order_total` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_au/cybersource/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Aktiverad | `payment_au/worldpay/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_au/worldpay/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Installations-ID | `payment_au/worldpay/installation_id` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Tillåt redigering av kontaktinformation | `payment_au/worldpay/fix_contact` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Dölj kontaktinformation | `payment_au/worldpay/hide_contact` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Signaturfält | `payment_au/worldpay/signature_fields` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_au/worldpay/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Testläge | `payment_au/worldpay/sandbox_flag` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd för test | `payment_au/worldpay/test_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_au/worldpay/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_au/worldpay/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_au/worldpay/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Ange beställningsstatus till Misstänkt bedrägeri för CVV | `payment_au/worldpay/cvv_fraud_case` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Ange beställningsstatus till Misstänkt bedrägeri för postnummer AVS | `payment_au/worldpay/avs_fraud_case` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_au/worldpay/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Aktiverad | `payment_au/eway/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Anslutningstyp | `payment_au/eway/connection_type` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_au/eway/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_au/eway/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_au/eway/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Kreditkortstyper | `payment_au/eway/cctypes` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_au/eway/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_au/eway/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_au/eway/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_au/cybersource/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_au/cybersource/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_au/cybersource/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Affärs-ID | `payment_au/cybersource/merchant_id` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) | ![Krypterad](/help/assets/configuration/cloud-enc.png) |
+| Profil-ID | `payment_au/cybersource/profile_id` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) | ![Krypterad](/help/assets/configuration/cloud-enc.png) |
+| Ny orderstatus | `payment_au/cybersource/order_status` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_au/cybersource/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Kreditkortstyper | `payment_au/cybersource/cctypes` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_au/cybersource/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_au/cybersource/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Minsta ordersumma | `payment_au/cybersource/min_order_total` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Maximal ordersumma | `payment_au/cybersource/max_order_total` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_au/cybersource/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_au/worldpay/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_au/worldpay/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Installations-ID | `payment_au/worldpay/installation_id` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Tillåt redigering av kontaktinformation | `payment_au/worldpay/fix_contact` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Dölj kontaktinformation | `payment_au/worldpay/hide_contact` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Signaturfält | `payment_au/worldpay/signature_fields` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_au/worldpay/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Testläge | `payment_au/worldpay/sandbox_flag` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd för test | `payment_au/worldpay/test_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_au/worldpay/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_au/worldpay/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_au/worldpay/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Ange beställningsstatus till Misstänkt bedrägeri för CVV | `payment_au/worldpay/cvv_fraud_case` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Ange beställningsstatus till Misstänkt bedrägeri för postnummer AVS | `payment_au/worldpay/avs_fraud_case` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_au/worldpay/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_au/eway/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Anslutningstyp | `payment_au/eway/connection_type` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_au/eway/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_au/eway/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_au/eway/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Kreditkortstyper | `payment_au/eway/cctypes` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_au/eway/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_au/eway/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_au/eway/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Schemalagd hämtning | `payment_ca/express_checkout_other/settings_ec/settings_ec_advanced/express_checkout_settlement_report/heading_schedule` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Format för PayPal Merchant Pages | `payment_ca/express_checkout_other/settings_ec/settings_ec_advanced/express_checkout_frontend/paypal_pages` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Schemalagd hämtning | `payment_ca/paypal_group_all_in_one/wps_other/settings_ec/settings_ec_advanced/express_checkout_settlement_report/heading_schedule` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -990,38 +990,38 @@ Dessa alternativ är bara tillgängliga om du väljer Storbritannien som [handel
 | Minsta ordersumma | `payment_ca/authorizenet_directpost/min_order_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Maximal ordersumma | `payment_ca/authorizenet_directpost/max_order_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Sorteringsordning | `payment_ca/authorizenet_directpost/sort_order` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Aktiverad | `payment_ca/cybersource/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_ca/cybersource/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_ca/cybersource/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_ca/cybersource/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Kreditkortstyper | `payment_ca/cybersource/cctypes` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_ca/cybersource/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_ca/cybersource/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Minsta ordersumma | `payment_ca/cybersource/min_order_total` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Maximal ordersumma | `payment_ca/cybersource/max_order_total` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_ca/cybersource/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Aktiverad | `payment_ca/worldpay/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_ca/worldpay/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Tillåt redigering av kontaktinformation | `payment_ca/worldpay/fix_contact` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Dölj kontaktinformation | `payment_ca/worldpay/hide_contact` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Signaturfält | `payment_ca/worldpay/signature_fields` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_ca/worldpay/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd för test | `payment_ca/worldpay/test_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_ca/worldpay/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_ca/worldpay/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_ca/worldpay/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Ange beställningsstatus till Misstänkt bedrägeri för CVV | `payment_ca/worldpay/cvv_fraud_case` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Ange beställningsstatus till Misstänkt bedrägeri för postnummer AVS | `payment_ca/worldpay/avs_fraud_case` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_ca/worldpay/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Aktiverad | `payment_ca/eway/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Anslutningstyp | `payment_ca/eway/connection_type` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_ca/eway/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_ca/eway/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_ca/eway/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Kreditkortstyper | `payment_ca/eway/cctypes` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_ca/eway/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_ca/eway/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_ca/eway/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_ca/cybersource/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_ca/cybersource/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_ca/cybersource/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_ca/cybersource/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Kreditkortstyper | `payment_ca/cybersource/cctypes` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_ca/cybersource/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_ca/cybersource/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Minsta ordersumma | `payment_ca/cybersource/min_order_total` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Maximal ordersumma | `payment_ca/cybersource/max_order_total` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_ca/cybersource/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_ca/worldpay/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_ca/worldpay/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Tillåt redigering av kontaktinformation | `payment_ca/worldpay/fix_contact` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Dölj kontaktinformation | `payment_ca/worldpay/hide_contact` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Signaturfält | `payment_ca/worldpay/signature_fields` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_ca/worldpay/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd för test | `payment_ca/worldpay/test_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_ca/worldpay/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_ca/worldpay/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_ca/worldpay/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Ange beställningsstatus till Misstänkt bedrägeri för CVV | `payment_ca/worldpay/cvv_fraud_case` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Ange beställningsstatus till Misstänkt bedrägeri för postnummer AVS | `payment_ca/worldpay/avs_fraud_case` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_ca/worldpay/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_ca/eway/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Anslutningstyp | `payment_ca/eway/connection_type` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_ca/eway/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_ca/eway/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_ca/eway/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Kreditkortstyper | `payment_ca/eway/cctypes` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_ca/eway/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_ca/eway/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_ca/eway/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Schemalagd hämtning | `payment_other/express_checkout_other/settings_ec/settings_ec_advanced/express_checkout_settlement_report/heading_schedule` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Format för PayPal Merchant Pages | `payment_other/express_checkout_other/settings_ec/settings_ec_advanced/express_checkout_frontend/paypal_pages` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Schemalagd hämtning | `payment_other/paypal_group_all_in_one/wps_other/settings_ec/settings_ec_advanced/express_checkout_settlement_report/heading_schedule` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -1080,38 +1080,38 @@ Dessa alternativ är bara tillgängliga om du väljer Storbritannien som [handel
 | Minsta ordersumma | `payment_other/authorizenet_directpost/min_order_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Maximal ordersumma | `payment_other/authorizenet_directpost/max_order_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Sorteringsordning | `payment_other/authorizenet_directpost/sort_order` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Aktiverad | `payment_other/cybersource/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_other/cybersource/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_other/cybersource/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_other/cybersource/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Kreditkortstyper | `payment_other/cybersource/cctypes` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_other/cybersource/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_other/cybersource/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Minsta ordersumma | `payment_other/cybersource/min_order_total` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Maximal ordersumma | `payment_other/cybersource/max_order_total` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_other/cybersource/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Aktiverad | `payment_other/worldpay/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_other/worldpay/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Tillåt redigering av kontaktinformation | `payment_other/worldpay/fix_contact` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Dölj kontaktinformation | `payment_other/worldpay/hide_contact` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Signaturfält | `payment_other/worldpay/signature_fields` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_other/worldpay/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd för test | `payment_other/worldpay/test_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_other/worldpay/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_other/worldpay/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_other/worldpay/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Ange beställningsstatus till Misstänkt bedrägeri för CVV | `payment_other/worldpay/cvv_fraud_case` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Ange beställningsstatus till Misstänkt bedrägeri för postnummer AVS | `payment_other/worldpay/avs_fraud_case` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_other/worldpay/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Aktiverad | `payment_other/eway/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Anslutningstyp | `payment_other/eway/connection_type` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_other/eway/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_other/eway/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_other/eway/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Kreditkortstyper | `payment_other/eway/cctypes` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_other/eway/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_other/eway/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_other/eway/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_other/cybersource/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_other/cybersource/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_other/cybersource/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_other/cybersource/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Kreditkortstyper | `payment_other/cybersource/cctypes` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_other/cybersource/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_other/cybersource/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Minsta ordersumma | `payment_other/cybersource/min_order_total` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Maximal ordersumma | `payment_other/cybersource/max_order_total` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_other/cybersource/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_other/worldpay/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_other/worldpay/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Tillåt redigering av kontaktinformation | `payment_other/worldpay/fix_contact` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Dölj kontaktinformation | `payment_other/worldpay/hide_contact` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Signaturfält | `payment_other/worldpay/signature_fields` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_other/worldpay/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd för test | `payment_other/worldpay/test_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_other/worldpay/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_other/worldpay/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_other/worldpay/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Ange beställningsstatus till Misstänkt bedrägeri för CVV | `payment_other/worldpay/cvv_fraud_case` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Ange beställningsstatus till Misstänkt bedrägeri för postnummer AVS | `payment_other/worldpay/avs_fraud_case` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_other/worldpay/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_other/eway/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Anslutningstyp | `payment_other/eway/connection_type` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_other/eway/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_other/eway/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_other/eway/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Kreditkortstyper | `payment_other/eway/cctypes` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_other/eway/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_other/eway/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_other/eway/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Schemalagd hämtning | `payment_de/paypal_payment_solutions/express_checkout_de/settings_ec/settings_ec_advanced/express_checkout_settlement_report/heading_schedule` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Format för PayPal Merchant Pages | `payment_de/paypal_payment_solutions/express_checkout_de/settings_ec/settings_ec_advanced/express_checkout_frontend/paypal_pages` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Aktiverad | `payment_de/checkmo/active` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -1155,17 +1155,17 @@ Dessa alternativ är bara tillgängliga om du väljer Storbritannien som [handel
 | Minsta ordersumma | `payment_de/purchaseorder/min_order_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Maximal ordersumma | `payment_de/purchaseorder/max_order_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Sorteringsordning | `payment_de/purchaseorder/sort_order` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Aktiverad | `payment_de/cybersource/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_de/cybersource/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_de/cybersource/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Ny orderstatus | `payment_de/cybersource/order_status` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_de/cybersource/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Kreditkortstyper | `payment_de/cybersource/cctypes` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_de/cybersource/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_de/cybersource/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Minsta ordersumma | `payment_de/cybersource/min_order_total` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Maximal ordersumma | `payment_de/cybersource/max_order_total` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_de/cybersource/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_de/cybersource/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_de/cybersource/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_de/cybersource/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Ny orderstatus | `payment_de/cybersource/order_status` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_de/cybersource/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Kreditkortstyper | `payment_de/cybersource/cctypes` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_de/cybersource/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_de/cybersource/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Minsta ordersumma | `payment_de/cybersource/min_order_total` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Maximal ordersumma | `payment_de/cybersource/max_order_total` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_de/cybersource/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Aktiverad | `payment_de/authorizenet_directpost/active` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Betalningsåtgärd | `payment_de/authorizenet_directpost/payment_action` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Titel | `payment_de/authorizenet_directpost/title` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -1179,28 +1179,28 @@ Dessa alternativ är bara tillgängliga om du väljer Storbritannien som [handel
 | Minsta ordersumma | `payment_de/authorizenet_directpost/min_order_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Maximal ordersumma | `payment_de/authorizenet_directpost/max_order_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Sorteringsordning | `payment_de/authorizenet_directpost/sort_order` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Aktiverad | `payment_de/worldpay/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_de/worldpay/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Tillåt redigering av kontaktinformation | `payment_de/worldpay/fix_contact` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Dölj kontaktinformation | `payment_de/worldpay/hide_contact` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Signaturfält | `payment_de/worldpay/signature_fields` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Testläge | `payment_de/worldpay/sandbox_flag` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd för test | `payment_de/worldpay/test_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_de/worldpay/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_de/worldpay/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_de/worldpay/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Ange beställningsstatus till Misstänkt bedrägeri för CVV | `payment_de/worldpay/cvv_fraud_case` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Ange beställningsstatus till Misstänkt bedrägeri för postnummer AVS | `payment_de/worldpay/avs_fraud_case` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_de/worldpay/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Aktiverad | `payment_de/eway/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Anslutningstyp | `payment_de/eway/connection_type` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_de/eway/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_de/eway/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_de/eway/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Kreditkortstyper | `payment_de/eway/cctypes` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_de/eway/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_de/eway/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_de/eway/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_de/worldpay/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_de/worldpay/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Tillåt redigering av kontaktinformation | `payment_de/worldpay/fix_contact` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Dölj kontaktinformation | `payment_de/worldpay/hide_contact` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Signaturfält | `payment_de/worldpay/signature_fields` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Testläge | `payment_de/worldpay/sandbox_flag` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd för test | `payment_de/worldpay/test_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_de/worldpay/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_de/worldpay/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_de/worldpay/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Ange beställningsstatus till Misstänkt bedrägeri för CVV | `payment_de/worldpay/cvv_fraud_case` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Ange beställningsstatus till Misstänkt bedrägeri för postnummer AVS | `payment_de/worldpay/avs_fraud_case` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_de/worldpay/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_de/eway/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Anslutningstyp | `payment_de/eway/connection_type` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_de/eway/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_de/eway/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_de/eway/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Kreditkortstyper | `payment_de/eway/cctypes` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_de/eway/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_de/eway/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_de/eway/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Schemalagd hämtning | `payment_gb/paypal_alternative_payment_methods/express_checkout_gb/settings_ec/settings_ec_advanced/express_checkout_settlement_report/heading_schedule` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Format för PayPal Merchant Pages | `payment_gb/paypal_alternative_payment_methods/express_checkout_gb/settings_ec/settings_ec_advanced/express_checkout_frontend/paypal_pages` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Schemalagd hämtning | `payment_gb/paypal_group_all_in_one/payments_pro_hosted_solution_with_express_checkout/pphs_settings/pphs_settings_advanced/pphs_settlement_report/heading_schedule` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -1249,17 +1249,17 @@ Dessa alternativ är bara tillgängliga om du väljer Storbritannien som [handel
 | Minsta ordersumma | `payment_gb/purchaseorder/min_order_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Maximal ordersumma | `payment_gb/purchaseorder/max_order_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Sorteringsordning | `payment_gb/purchaseorder/sort_order` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Aktiverad | `payment_gb/cybersource/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_gb/cybersource/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_gb/cybersource/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Ny orderstatus | `payment_gb/cybersource/order_status` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_gb/cybersource/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Kreditkortstyper | `payment_gb/cybersource/cctypes` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_gb/cybersource/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_gb/cybersource/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Minsta ordersumma | `payment_gb/cybersource/min_order_total` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Maximal ordersumma | `payment_gb/cybersource/max_order_total` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_gb/cybersource/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_gb/cybersource/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_gb/cybersource/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_gb/cybersource/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Ny orderstatus | `payment_gb/cybersource/order_status` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_gb/cybersource/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Kreditkortstyper | `payment_gb/cybersource/cctypes` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_gb/cybersource/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_gb/cybersource/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Minsta ordersumma | `payment_gb/cybersource/min_order_total` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Maximal ordersumma | `payment_gb/cybersource/max_order_total` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_gb/cybersource/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Aktiverad | `payment_gb/authorizenet_directpost/active` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Betalningsåtgärd | `payment_gb/authorizenet_directpost/payment_action` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Titel | `payment_gb/authorizenet_directpost/title` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -1273,29 +1273,29 @@ Dessa alternativ är bara tillgängliga om du väljer Storbritannien som [handel
 | Minsta ordersumma | `payment_gb/authorizenet_directpost/min_order_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Maximal ordersumma | `payment_gb/authorizenet_directpost/max_order_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Sorteringsordning | `payment_gb/authorizenet_directpost/sort_order` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Aktiverad | `payment_gb/worldpay/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_gb/worldpay/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| MD5-hemlighet för transaktioner | `payment_gb/worldpay/md5_secret` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Tillåt redigering av kontaktinformation | `payment_gb/worldpay/fix_contact` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Dölj kontaktinformation | `payment_gb/worldpay/hide_contact` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Signaturfält | `payment_gb/worldpay/signature_fields` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_gb/worldpay/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd för test | `payment_gb/worldpay/test_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_gb/worldpay/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_gb/worldpay/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_gb/worldpay/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Ange beställningsstatus till Misstänkt bedrägeri för CVV | `payment_gb/worldpay/cvv_fraud_case` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Ange beställningsstatus till Misstänkt bedrägeri för postnummer AVS | `payment_gb/worldpay/avs_fraud_case` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_gb/worldpay/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Aktiverad | `payment_gb/eway/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Anslutningstyp | `payment_gb/eway/connection_type` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_gb/eway/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_gb/eway/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_gb/eway/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Kreditkortstyper | `payment_gb/eway/cctypes` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_gb/eway/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_gb/eway/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_gb/eway/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_gb/worldpay/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_gb/worldpay/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| MD5-hemlighet för transaktioner | `payment_gb/worldpay/md5_secret` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Tillåt redigering av kontaktinformation | `payment_gb/worldpay/fix_contact` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Dölj kontaktinformation | `payment_gb/worldpay/hide_contact` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Signaturfält | `payment_gb/worldpay/signature_fields` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_gb/worldpay/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd för test | `payment_gb/worldpay/test_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_gb/worldpay/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_gb/worldpay/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_gb/worldpay/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Ange beställningsstatus till Misstänkt bedrägeri för CVV | `payment_gb/worldpay/cvv_fraud_case` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Ange beställningsstatus till Misstänkt bedrägeri för postnummer AVS | `payment_gb/worldpay/avs_fraud_case` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_gb/worldpay/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_gb/eway/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Anslutningstyp | `payment_gb/eway/connection_type` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_gb/eway/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_gb/eway/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_gb/eway/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Kreditkortstyper | `payment_gb/eway/cctypes` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_gb/eway/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_gb/eway/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_gb/eway/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Schemalagd hämtning | `payment_us/paypal_alternative_payment_methods/express_checkout_us/settings_ec/settings_ec_advanced/express_checkout_settlement_report/heading_schedule` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Format för PayPal Merchant Pages | `payment_us/paypal_alternative_payment_methods/express_checkout_us/settings_ec/settings_ec_advanced/express_checkout_frontend/paypal_pages` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Schemalagd hämtning | `payment_us/paypal_group_all_in_one/payflow_advanced/settings_payments_advanced/settings_payments_advanced_advanced/settlement_report/heading_schedule` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -1368,38 +1368,38 @@ Dessa alternativ är bara tillgängliga om du väljer Storbritannien som [handel
 | Minsta ordersumma | `payment_us/authorizenet_directpost/min_order_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Maximal ordersumma | `payment_us/authorizenet_directpost/max_order_total` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Sorteringsordning | `payment_us/authorizenet_directpost/sort_order` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Aktiverad | `payment_us/cybersource/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_us/cybersource/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_us/cybersource/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Ny orderstatus | `payment_us/cybersource/order_status` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_us/cybersource/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Kreditkortstyper | `payment_us/cybersource/cctypes` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_us/cybersource/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_us/cybersource/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Minsta ordersumma | `payment_us/cybersource/min_order_total` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Maximal ordersumma | `payment_us/cybersource/max_order_total` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_us/cybersource/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Aktiverad | `payment_us/worldpay/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_us/worldpay/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Tillåt redigering av kontaktinformation | `payment_us/worldpay/fix_contact` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Dölj kontaktinformation | `payment_us/worldpay/hide_contact` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Signaturfält | `payment_us/worldpay/signature_fields` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_us/worldpay/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd för test | `payment_us/worldpay/test_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_us/worldpay/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_us/worldpay/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_us/worldpay/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Ange beställningsstatus till Misstänkt bedrägeri för CVV | `payment_us/worldpay/cvv_fraud_case` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Ange beställningsstatus till Misstänkt bedrägeri för postnummer AVS | `payment_us/worldpay/avs_fraud_case` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Sorteringsordning | `payment_us/worldpay/sort_order` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Aktiverad | `payment_us/eway/active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Anslutningstyp | `payment_us/eway/connection_type` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Titel | `payment_us/eway/title` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalningsåtgärd | `payment_us/eway/payment_action` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Felsök | `payment_us/eway/debug` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Kreditkortstyper | `payment_us/eway/cctypes` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Betalning från tillämpliga länder | `payment_us/eway/allowspecific` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Stöd från särskilda länder | `payment_us/eway/specificcountry` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_us/cybersource/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_us/cybersource/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_us/cybersource/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Ny orderstatus | `payment_us/cybersource/order_status` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_us/cybersource/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Kreditkortstyper | `payment_us/cybersource/cctypes` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_us/cybersource/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_us/cybersource/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Minsta ordersumma | `payment_us/cybersource/min_order_total` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Maximal ordersumma | `payment_us/cybersource/max_order_total` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_us/cybersource/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_us/worldpay/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_us/worldpay/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Tillåt redigering av kontaktinformation | `payment_us/worldpay/fix_contact` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Dölj kontaktinformation | `payment_us/worldpay/hide_contact` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Signaturfält | `payment_us/worldpay/signature_fields` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_us/worldpay/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd för test | `payment_us/worldpay/test_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_us/worldpay/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_us/worldpay/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_us/worldpay/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Ange beställningsstatus till Misstänkt bedrägeri för CVV | `payment_us/worldpay/cvv_fraud_case` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Ange beställningsstatus till Misstänkt bedrägeri för postnummer AVS | `payment_us/worldpay/avs_fraud_case` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Sorteringsordning | `payment_us/worldpay/sort_order` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Aktiverad | `payment_us/eway/active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Anslutningstyp | `payment_us/eway/connection_type` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Titel | `payment_us/eway/title` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalningsåtgärd | `payment_us/eway/payment_action` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Felsök | `payment_us/eway/debug` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Kreditkortstyper | `payment_us/eway/cctypes` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Betalning från tillämpliga länder | `payment_us/eway/allowspecific` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Stöd från särskilda länder | `payment_us/eway/specificcountry` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Sorteringsordning | `payment_us/eway/sort_order` | |
 
 {style="table-layout:auto"}

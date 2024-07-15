@@ -12,9 +12,9 @@ ht-degree: 3%
 
 # Hantera moduler och tillägg
 
-Uppgradera moduler och tillägg för utvecklare genom att ange deras versioner i Adobe Commerce `composer.json` -fil. Om du inte är en bidragsgivare kan du se [Uppgradera](../implementation/perform-upgrade.md).
+Medverkande utvecklare uppgraderar moduler och tillägg genom att ange sina versioner i Adobe Commerce `composer.json`-filen. Om du inte är en utvecklare som bidrar läser du [Utför en uppgradering](../implementation/perform-upgrade.md).
 
-Du kan antingen lägga till en `require` till `composer.json` eller så kan du använda `composer require` enligt följande:
+Du kan antingen lägga till ett `require`-avsnitt i filen `composer.json` eller så kan du använda kommandot `composer require` enligt följande:
 
 {{$include /help/_includes/server-login.md}}
 
@@ -34,7 +34,7 @@ Exempel:
 composer show --all example/module
 ```
 
-## Använd `composer require` kommando
+## Använd kommandot `composer require`
 
 Kommandoanvändning:
 
@@ -50,11 +50,11 @@ composer require example/module:1.0.0
 
 Vänta medan Composer uppdaterar beroenden och installerar modulen.
 
-## Lägg till en `require` till filen Composer.json
+## Lägg till ett `require`-avsnitt i filen Composer.json
 
 1. Öppna `composer.json` i en textredigerare.
 
-1. Lägg till en `require` -avsnitt.
+1. Lägg till ett `require`-avsnitt.
 
    ```json
    "require": {
@@ -63,9 +63,9 @@ Vänta medan Composer uppdaterar beroenden och installerar modulen.
    }
    ```
 
-1. Spara ändringarna i `composer.json` och avsluta textredigeraren.
+1. Spara ändringarna i filen `composer.json` och avsluta textredigeraren.
 
-1. Lös beroenden och skriv exakta versioner till `composer.lock` -fil.
+1. Lös beroenden och skriv exakta versioner till filen `composer.lock`.
 
    ```bash
    composer update

@@ -8,7 +8,7 @@ ht-degree: 8%
 # Serverinloggning
 
 1. Logga in på servern.
-1. Växla till [ägare av filsystem](../installation/prerequisites/file-system/overview.md).
+1. Växla till [filsystemets ägare](../installation/prerequisites/file-system/overview.md).
 1. Byt till den katalog där du klonade programmet. Exempel:
 
    ```bash

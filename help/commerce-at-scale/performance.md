@@ -6,7 +6,7 @@ feature: Integration, Cache
 topic: Commerce, Performance
 source-git-commit: 76ccc5aa8e5e3358dc52a88222fd0da7c4eb9ccb
 workflow-type: tm+mt
-source-wordcount: '2248'
+source-wordcount: '2246'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,9 @@ Följande avsnitt visar på en hög nivå det rekommenderade fokusområdet som s
 
 ## TTL-baserad cachelagring av AEM
 
-Cachelagring av så mycket som möjligt av webbplatsen på avsändare är bästa praxis för alla AEM projekt. Om du använder tidsbaserad cacheogiltigförklaring cachelagras serversidans renderade CIF-sidor under en begränsad tidsperiod. När den angivna tiden har gått ut återskapar nästa begäran sidan från den AEM utgivaren och Adobe Commerce GraphQL och sparar den i dispatcherns cache igen tills nästa ogiltigförklaring görs.
+Cachelagring av så mycket som möjligt av webbplatsen på avsändare är bästa praxis för alla AEM projekt. Om du använder tidsbaserad cacheogiltigförklaring cachelagras återgivna CIF sidor under en begränsad tidsperiod. När den angivna tiden har gått ut återskapar nästa begäran sidan från den AEM utgivaren och Adobe Commerce GraphQL och sparar den i dispatcherns cache igen tills nästa ogiltigförklaring görs.
 
-TTL-cachningsfunktionen kan konfigureras i AEM med komponenten Dispatcher TTL i ACS-AEM Commons-paketet och med inställningen /enableTTL 1 i Dispatcher.any-konfigurationsfilen.
+TTL-cachningsfunktionen kan konfigureras i AEM med hjälp av komponenten Dispatcher TTL i ACS-AEM Commons-paketet och med inställningen /enableTTL 1 i dispatcher.any-konfigurationsfilen.
 
 Om det här alternativet är aktiverat utvärderas svarshuvuden från serverdelen och om de innehåller ett max-age-värde för Cache-Control eller ett förfallodatum skapas en extra, tom fil bredvid cachefilen, med en ändringstid som är lika med förfallodatumet. När den cachelagrade filen begärs efter ändringstiden återbegärs den automatiskt från serverdelen. Detta ger en effektiv cachningsmekanism som inte kräver någon manuell åtgärd eller underhåll när produktuppdateringsfördröjningen har bekräftats och accepterats av företagsintressenter.
 
@@ -29,20 +29,20 @@ Om det här alternativet är aktiverat utvärderas svarshuvuden från serverdele
 
 TTL-metoden för avsändare ovan minskar avsevärt antalet förfrågningar och belastningen på utgivaren, men det finns vissa resurser som sannolikt inte kommer att ändras och därför kan till och med förfrågningar till avsändaren minskas genom att relevanta filer cachelagras lokalt i användarens webbläsare. Till exempel behöver webbplatsens logotyp, som visas på varje sida på webbplatsen i webbplatsmallen, inte efterfrågas varje gång till avsändaren. Detta kan i stället lagras i användarens webbläsarcache. Minskade bandbreddskrav för varje sidinläsning skulle få stor effekt på webbplatsens svarstider och sidinläsningstiderna.
 
-Cachelagring på webbläsarnivå sker vanligtvis via svarshuvudet &quot;Cache-Control: max-age=&quot;. Inställningen maxage anger för webbläsaren hur många sekunder filen ska cachelagras i innan ett försök görs att &quot;verifiera om&quot; eller begära den från platsen igen. Konceptet cacheminne max-age kallas vanligtvis &quot;Cachelagring förfaller&quot; eller TTL (&quot;TTL-tid&quot;). Leverera e-handelsupplevelser i stor skala - med Adobe Experience Manager, Commerce Integration Framework, Adobe Commerce 7
+Cachelagring på webbläsarnivå sker vanligtvis via svarshuvudet &quot;Cache-Control: max-age=&quot;. Inställningen maxage anger för webbläsaren hur många sekunder filen ska cachelagras i innan ett försök görs att &quot;verifiera om&quot; eller begära den från platsen igen. Konceptet cacheminne max-age kallas vanligtvis &quot;Cachelagring förfaller&quot; eller TTL (&quot;TTL-tid&quot;). Leverera e-handelsupplevelser i stor skala - med Adobe Experience Manager, Commerce integration framework, Adobe Commerce 7
 
 Vissa delar av en AEM/CIF/Adobe Commerce-webbplats som kan ställas in för cachelagring i klientens webbläsare är:
 
 - Bilder (i själva AEM, t.ex. webbplatslogotyp och malldesignbilder - katalogproduktbilder anropas från Adobe Commerce via Snabbt och cachelagring av dessa bilder behandlas senare)
 - HTML-filer (för sidor som ändrats sällan - villkor osv.)
 - CSS-filer
-- Alla JavaScript-filer för webbplatser - inklusive CIF JavaScript-filer
+- Alla platsens JavaScript-filer - inklusive CIF JavaScript-filer
 
-## Optimering av tidsgräns för nedrustningsgräns för utskicksstatus
+## Optimering av Dispatcher statfilelevanbd-respitperiod
 
-I standardkonfigurationen för dispatcher används inställningen /statfillevel &quot;0&quot; - det innebär att en enskild .stat-fil placeras i roten för htdocs-katalogen (dokumentets rotkatalog). Om en ändring görs av en sida eller fil i AEM uppdateras ändringstiden för den här enskilda lägesfilen till tidpunkten för ändringen. Om tiden är nyare än resursens ändringstid kommer dispatchern att granska alla resurser som ogiltigförklaras och alla efterföljande begäranden om en ogiltig resurs kommer att utlösa ett anrop till publiceringsinstansen. Så i stort sett, med den här inställningen blir alla aktiveringar ogiltiga i hela cachen.
+I standardkonfigurationen för dispatcher används inställningen /statfillevel &quot;0&quot; - det innebär att en enskild .stat-fil placeras i roten för htdocs-katalogen (dokumentets rotkatalog). Om en ändring görs av en sida eller fil i AEM uppdateras ändringstiden för den här enskilda lägesfilen till tidpunkten för ändringen. Om tiden är senare än resursens ändringstid, kommer dispatchern att granska alla resurser som har ogiltigförklarats och alla efterföljande begäranden om en ogiltig resurs kommer att utlösa ett anrop till Publish-instansen. Så i stort sett, med den här inställningen blir alla aktiveringar ogiltiga i hela cachen.
 
-För alla webbplatser, särskilt e-handelswebbplatser med stor belastning, skulle detta innebära en onödig belastning på AEM publiceringsnivå för att hela webbplatsstrukturen skulle ogiltigförklaras med en enda uppdatering.
+För alla webbplatser, särskilt e-handelssajter med stor belastning, skulle detta innebära en onödig belastning på AEM Publish-nivå för att hela webbplatsstrukturen skulle bli ogiltig med endast en uppdatering.
 
 I stället kan statusnivåinställningen ändras till ett högre värde, som motsvarar djupet för underkataloger i htdocs-katalogen från dokumentets rotkatalog, så att när en fil som finns på en viss nivå blir ogiltig uppdateras bara filer på den .stat-katalognivån och nedan.
 
@@ -68,11 +68,12 @@ En annan inställning som optimeras när statusfilnivån konfigureras är instä
 
 >[!NOTE]
 >
-> Mer detaljerad information om detta finns i [aem-dispatcher-experiment](https://github.com/adobe/aem-dispatcher-experiments/tree/main/experiments/gracePeriod) GitHub-databas.
+> Mer detaljerad läsning av det här avsnittet finns i GitHub-databasen [aem-dispatcher-experiment](https://github.com/adobe/aem-dispatcher-experiments/tree/main/experiments/gracePeriod).
 
-## CIF - GraphQL-cachning via komponenter
+## CIF - GraphQL cachning via komponenter
 
-Enskilda komponenter i AEM kan ställas in för cachelagring, vilket innebär att GraphQL-begäran till Adobe Commerce anropas en gång och sedan hämtas efterföljande begäranden, upp till den konfigurerade tidsgränsen, från AEM cache och skulle inte placera ytterligare inläsning på Adobe Commerce. Exempel är en webbplatsnavigering baserad på ett kategoriträd som visas på varje sida och alternativ inom en fasetterad sökfunktion - det är bara två områden där resurskrävande frågor på Adobe Commerce behöver byggas men som sannolikt inte ändras regelbundet och därför är bra att ha för cachning. På det här sättet kommer, till exempel, även när utgivaren återskapar en PDP eller PLP, den resurskrävande GraphQL-begäran för navigeringsbygget inte att drabba Adobe Commerce och kan hämtas från GraphQL-cachen AEM CIF.
+Enskilda komponenter i AEM kan anges som cachelagrade, vilket innebär att GraphQL begär till Adobe
+Commerce anropas en gång och därefter hämtas efterföljande begäranden, upp till den angivna tidsgränsen, från AEM cache och laddas inte vidare till Adobe Commerce. Exempel är en webbplatsnavigering baserad på ett kategoriträd som visas på varje sida och alternativ inom en fasetterad sökfunktion - det är bara två områden där resurskrävande frågor på Adobe Commerce behöver byggas men som sannolikt inte ändras regelbundet och därför är bra att ha för cachning. På det här sättet kommer, till exempel, även när utgivaren återskapar en PDP eller PLP, den resurskrävande GraphQL-begäran för navigeringsbygget inte att drabba Adobe Commerce och kan hämtas från GraphQL-cachen AEM CIF.
 
 Ett exempel nedan är om navigeringskomponenten ska cachelagras eftersom samma GraphQL-fråga skickas till alla sidor på platsen. I begäran nedan cachelagras de senaste 100 posterna under 10 minuter för navigeringsstrukturen:
 
@@ -88,7 +89,8 @@ com.adobe.cq.commerce.core.search.services.SearchFilterService:true:100:3600
 
 Begäran, inklusive alla anpassade http-huvuden och variabler, måste matcha exakt för att cachen ska få en träff och för att förhindra ett upprepat anrop till Adobe Commerce. Det bör noteras att det inte finns något enkelt sätt att göra cachen ogiltig manuellt när den väl har angetts. Detta kan innebära att om en ny kategori läggs till i Adobe Commerce, kommer den inte att börja visas i navigeringen förrän den förfallotid som angetts i cachen ovan har gått ut och GraphQL-begäran har uppdaterats. Detsamma gäller för sökfacets. Med tanke på de prestandafördelar som cachelagringen medför är detta dock vanligtvis en godtagbar kompromiss.
 
-Cachelagringsalternativen ovan kan ställas in med konfigurationskonsolen för AEM OSGi i GraphQL Client Configuration Factory. Varje cachekonfigurationspost kan anges med följande format:
+Cachelagringsalternativen ovan kan ställas in med konfigurationskonsolen för AEM OSGi i &quot;GraphQL Client
+Configuration Factory&quot;. Varje cachekonfigurationspost kan anges med följande format:
 
 ```
 * NAME:ENABLE:MAXSIZE:TIMEOUT like for example mycache:true:1000:60 where each attribute is defined as:
@@ -100,7 +102,7 @@ Cachelagringsalternativen ovan kan ställas in med konfigurationskonsolen för A
 
 ## Hybrid-cachning - klientsidan begär GraphQL-filer på cachelagrade dispatchersidor
 
-Det är också möjligt att använda en hybridmetod för att cachelagra sidor: en CIF-sida kan innehålla komponenter som alltid skulle begära den senaste informationen från Adobe Commerce direkt från kundens webbläsare. Detta kan vara användbart för specifika delar av sidan i en mall som är viktiga att hålla uppdaterad med information i realtid: Produktpriser i en PDP, till exempel. Om priserna ändras ofta på grund av dynamisk prismatchning kan den informationen konfigureras så att den inte cachas av dispatchern, i stället kan priserna hämtas på klientsidan i kundens webbläsare direkt från Adobe Commerce via GraphQL API:er med AEM CIF-webbkomponenter.
+Det är också möjligt att använda en hybridmetod för att cachelagra sidor: en CIF kan innehålla komponenter som alltid skulle begära den senaste informationen från Adobe Commerce direkt från kundens webbläsare. Detta kan vara användbart för specifika delar av sidan i en mall som är viktiga att hålla uppdaterad med information i realtid: Produktpriser i en PDP, till exempel. Där priserna ändras ofta på grund av dynamisk prismatchning kan den informationen konfigureras så att den inte cachas av dispatchern, i stället kan priserna hämtas på klientsidan i kundens webbläsare direkt från Adobe Commerce via GraphQL API:er med AEM webbkomponenter.
 
 Detta kan konfigureras via AEM komponentinställningar - för prisinformation på produktlistsidor kan detta konfigureras i produktlistmallen, markera produktlistkomponenten på sidinställningarna och markera alternativet &quot;load prices&quot;. Samma tillvägagångssätt skulle fungera för lagernivåerna.
 
@@ -128,12 +130,12 @@ Vid en plötslig händelse kan detta till och med leda till att de AEM utgivarna
 
 >[!NOTE]
 >
->Läs mer om vikten av att ställa in `ignoreUrlParams` finns i [aem-dispatcher-experiment](https://github.com/adobe/aem-dispatcher-experiments/tree/main/experiments/ignoreUrlParams) GitHub-databas.
+>Det finns mer information om vikten av att ange `ignoreUrlParams` i GitHub-databasen [ aem-dispatcher-experiment](https://github.com/adobe/aem-dispatcher-experiments/tree/main/experiments/ignoreUrlParams).
 
 Den bör därför konfigureras så att den ignorerar alla parametrar som standard i ignoreUrlParams, utom när en GET-parameter används som skulle ändra sidans HTML-struktur. Ett exempel på detta är en söksida där söktermen finns i URL:en som GET-parameter. I det här fallet bör du manuellt konfigurera ignoreUrlParams så att parametrar som gclid, fbclid och andra spårningsparametrar som används i dina annonskanaler ignoreras, vilket gör att de GET-parametrar som krävs för vanliga webbplatsåtgärder inte påverkas.
 
 ## MPM-arbetare begränsar antalet utskickare
 
-MPM-arbetarnas inställningar är en avancerad konfiguration för Apache HTTP-servern som skulle kräva grundliga tester för att optimera baserat på Dispatcher-datorns tillgängliga processor och RAM. I det här whitepaper rekommenderar vi att ServerLimit och MaxRequestWorkers ökas till en nivå som serverns tillgängliga processor och RAM stöder, och sedan ökas både MinSpareThreads och MaxSpareThreads till en nivå som matchar MaxRequestWorkers.
+MPM-arbetarnas inställningar är en avancerad konfiguration för Apache HTTP-server som skulle kräva grundliga tester för att optimera baserat på din tillgängliga Dispatcher processor och RAM. I det här whitepaper rekommenderar vi att ServerLimit och MaxRequestWorkers ökas till en nivå som serverns tillgängliga processor och RAM stöder, och sedan ökas både MinSpareThreads och MaxSpareThreads till en nivå som matchar MaxRequestWorkers.
 
 Den här konfigurationen lämnar Apache HTTP på en inställning för fullständig beredskap, vilket är en högpresterande konfiguration för servrar med stort RAM-minne och flera processorkärnor. Den här konfigurationen ger bästa möjliga svarstider från Apache HTTP genom att behålla beständiga öppna anslutningar som är klara att betjäna förfrågningar och tar bort eventuella förseningar i att skapa nya processer som svar på plötsliga trafikökningar, som vid blixtförsäljning.

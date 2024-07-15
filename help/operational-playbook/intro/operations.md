@@ -1,5 +1,5 @@
 ---
-title: Handelsåtgärder
+title: Commerce
 description: Lär dig vad som krävs för att få en framgångsrik operativ strategi för e-handeln.
 exl-id: 21123987-0508-4d52-8af4-837b7a3ba1cb
 source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
@@ -9,9 +9,9 @@ ht-degree: 0%
 
 ---
 
-# Handelsåtgärder
+# Commerce
 
-Handelsåtgärder handlar om att centralisera backend-åtgärder så att de fungerar smartare, snabbare och mer effektivt. En framgångsrik operativ strategi kräver en stark IT-infrastruktur som stöder kompletta e-handelsoperationer, produktkataloger, lagerhantering, utcheckning och frakt. E-handelsåtgärderna bygger på flera saker, t.ex. en användarvänlig butik, olika produkter, god lagerhantering, kampanjer, enkel utcheckning samt praktiska betalnings- och leveransmetoder.
+Commerce-åtgärder handlar om att centralisera backend-åtgärder så att de fungerar smartare, snabbare och mer effektivt. En framgångsrik operativ strategi kräver en stark IT-infrastruktur som stöder kompletta e-handelsoperationer, produktkataloger, lagerhantering, utcheckning och frakt. E-handelsåtgärderna bygger på flera saker, t.ex. en användarvänlig butik, olika produkter, god lagerhantering, kampanjer, enkel utcheckning samt praktiska betalnings- och leveransmetoder.
 
 ## Varför är strategin för e-handel viktig?
 

@@ -28,19 +28,19 @@ Dataflödesdiagrammen visar vilka typer av data som kunder och administratörer 
 
 Användaren kan ange kund-, adress- och betalningsinformation när han eller hon registrerar sig för ett konto, under utcheckning och liknande händelser.
 
-![Frontend-datainmatningspunkter](../../assets/security-compliance/frontend-data-entry-points.svg)
+![Framåtinmatningspunkter för data](../../assets/security-compliance/frontend-data-entry-points.svg)
 
 ### Åtkomstpunkter för klientdata
 
 Commerce läser in kundinformation när kunden loggar in och visar flera olika sidor eller checkar ut.
 
-![Åtkomstpunkter för klientdata](../../assets/security-compliance/frontend-data-access-points.svg)
+![Förse dataåtkomstpunkter](../../assets/security-compliance/frontend-data-access-points.svg)
 
 ### Datainmatningspunkter för backend
 
 En handlare kan ange kund-, adress- och betalningsinformation från administratören för att skapa en kund eller order.
 
-![Datainmatningspunkter för backend](../../assets/security-compliance/backend-data-entry-points.svg)
+![Datainmatningspunkter för serverdelen](../../assets/security-compliance/backend-data-entry-points.svg)
 
 ### Åtkomstpunkter för backend-data
 
@@ -54,17 +54,17 @@ Magento 1 lagrar kundinformation i kundregister, säljregister och andra databas
 
 ### Kunddata
 
-Magento 1 lagrar kundinformation i `customer_entity` och `customer_address_entity` tabeller. Båda tabellerna har flera referenstabeller som kan innehålla anpassade kundattribut.
+Magento 1 lagrar kundinformation i tabellerna `customer_entity` och `customer_address_entity`. Båda tabellerna har flera referenstabeller som kan innehålla anpassade kundattribut.
 
 #### `customer_entity` och referenstabeller
 
-Följande kolumner i `customer_entity`tabellen innehåller kundinformation:
+Följande kolumner i tabellen `customer_entity` innehåller kundinformation:
 
 | Kolumn | Datatyp |
 | --- | --- |
 | `email` | varchar(255) |
 
-Tabellreferenser `customer_entity` och kan innehålla anpassade kundattribut:
+De här tabellerna refererar till `customer_entity` och kan innehålla anpassade kundattribut:
 
 | Tabell | Kolumn | Datatyp |
 | --- | --- | --- |
@@ -76,7 +76,7 @@ Tabellreferenser `customer_entity` och kan innehålla anpassade kundattribut:
 
 #### `customer_address_entity` och referenstabeller
 
-Följande tabellreferens `customer_address_entity` och kan innehålla anpassade kundattribut:
+Följande tabeller refererar till `customer_address_entity` och kan innehålla anpassade kundattribut:
 
 | Tabell | Kolumn | Datatyp |
 | --- | --- | --- |
@@ -88,11 +88,11 @@ Följande tabellreferens `customer_address_entity` och kan innehålla anpassade 
 
 ### Beställningsdata
 
-The `sales_flat_order` och tillhörande tabeller innehåller kundens namn, fakturerings- och leveransadress samt relaterad information.
+Registren `sales_flat_order` och relaterade register innehåller kundens namn, fakturerings- och leveransadresser samt relaterad information.
 
-#### `sales_flat_order` table
+#### `sales_flat_order`-tabell
 
-Följande kolumner i `sales_order` tabellen innehåller kundinformation:
+Följande kolumner i tabellen `sales_order` innehåller kundinformation:
 
 | Kolumn | Datatyp |
 | --- | --- |
@@ -107,9 +107,9 @@ Följande kolumner i `sales_order` tabellen innehåller kundinformation:
 | `customer_taxvat` | varchar(32) |
 | `remote_ip` | varchar(32) |
 
-#### `sales_flat_order_address` table
+#### `sales_flat_order_address`-tabell
 
-The `sales_flat_order_address` tabellen innehåller kundens adress.
+Tabellen `sales_flat_order_address` innehåller kundens adress.
 
 | Kolumn | Datatyp |
 | --- | --- |
@@ -129,9 +129,9 @@ The `sales_flat_order_address` tabellen innehåller kundens adress.
 | `company` | varchar(255) |
 | `vat_id` | text |
 
-#### `sales_flat_order_grid` table
+#### `sales_flat_order_grid`-tabell
 
-Följande kolumner i `sales_flat_order_grid` tabellen innehåller kundinformation:
+Följande kolumner i tabellen `sales_flat_order_grid` innehåller kundinformation:
 
 | Kolumn | Datatyp |
 | --- | --- |
@@ -139,9 +139,9 @@ Följande kolumner i `sales_flat_order_grid` tabellen innehåller kundinformatio
 | `shipping_name` | varchar(255) |
 | `billing_name` | varchar(255) |
 
-#### `sales_flat_order_payment` table
+#### `sales_flat_order_payment`-tabell
 
-Följande kolumner i `sales_flat_order_payment` tabellen innehåller kundinformation:
+Följande kolumner i tabellen `sales_flat_order_payment` innehåller kundinformation:
 
 | Kolumn | Datatyp |
 | --- | --- |
@@ -159,9 +159,9 @@ Följande kolumner i `sales_flat_order_payment` tabellen innehåller kundinforma
 
 Offerterna innehåller en kunds namn, e-postadress, adress och relaterad information.
 
-#### `sales_flat_quote` table
+#### `sales_flat_quote`-tabell
 
-Följande kolumner i `sales_flat_quote` tabellen innehåller kundinformation:
+Följande kolumner i tabellen `sales_flat_quote` innehåller kundinformation:
 
 | Kolumn | Datatyp |
 | --- | --- |
@@ -179,9 +179,9 @@ Följande kolumner i `sales_flat_quote` tabellen innehåller kundinformation:
 | `remote_ip` | varchar(255) |
 | `customer_gender` | varchar(255) |
 
-#### `sales_flat_quote_address` table
+#### `sales_flat_quote_address`-tabell
 
-Följande kolumner i `sales_flat_quote_address` tabellen innehåller kundinformation:
+Följande kolumner i tabellen `sales_flat_quote_address` innehåller kundinformation:
 
 | Kolumn | Datatyp |
 | --- | --- |
@@ -198,9 +198,9 @@ Följande kolumner i `sales_flat_quote_address` tabellen innehåller kundinforma
 | `postcode` | varchar(255) |
 | `fax` | varchar(255) |
 
-#### `sales_flat_quote_payment` table
+#### `sales_flat_quote_payment`-tabell
 
-The `sales_flat_quote_payment` tabellen innehåller kreditkortsinformation och annan transaktionsinformation.
+Tabellen `sales_flat_quote_payment` innehåller kreditkortsinformation och annan transaktionsinformation.
 
 | Kolumn | Datatyp |
 | --- | --- |

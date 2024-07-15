@@ -13,4 +13,4 @@ ht-degree: 0%
 
 DACI-modellen är en projektledningsstruktur som används för att tydligt definiera roller och ansvarsområden för olika intressenter i ett projekt, vilket leder till effektiva gruppbeslut. DACI står för Driver, Approver, Contributor och Informed. Med de här rollerna blir det tydligt vem som har behörighet i vissa områden och situationer, vilket gör att ett projekt kan utvecklas smidigt.
 
-![DACI projekthanteringsdiagram](../../assets/playbooks/daci-model.png)
+![DACI-projekthanteringsdiagram](../../assets/playbooks/daci-model.png)

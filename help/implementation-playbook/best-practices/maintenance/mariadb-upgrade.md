@@ -21,7 +21,7 @@ Innan du uppgraderar Adobe Commerce på molninfrastruktur kan du behöva uppgrad
 
 ## Adobe Commerce 2.4.6
 
-Från och med MariaDB 10.5.1 markeras kolumner med gamla temporala format med en `/* mariadb-5.3 */` -kommentar i utdata från `SHOW CREATE TABLE`, `SHOW COLUMNS`, `DESCRIBE` -programsatser, liksom i `COLUMN_TYPE` kolumn i `INFORMATION_SCHEMA.COLUMNS` tabell. [Se MariaDB-dokumentation](https://mariadb.com/kb/en/datetime/#internal-format).
+Från och med MariaDB 10.5.1 markeras kolumner med gamla temporala format med en `/* mariadb-5.3 */`-kommentar i utdata för `SHOW CREATE TABLE` -, `SHOW COLUMNS` -, `DESCRIBE` -programsatserna samt i kolumnen `COLUMN_TYPE` i tabellen `INFORMATION_SCHEMA.COLUMNS`. [Se MariaDB-dokumentation](https://mariadb.com/kb/en/datetime/#internal-format).
 
 Adobe Commerce kan inte mappa datumkolumnerna till en korrekt datatyp på grund av MariaDB-kommentaren, som kan orsaka oväntat beteende i anpassad kod.
 
@@ -29,7 +29,7 @@ För att undvika oväntade beteenden när du uppgraderar MariaDB från äldre ve
 
 ### Standardkonfiguration
 
-I MariaDB 10.1.2 introducerades ett nytt tidsformat från MySQL 5.6. The `mysql56_temporal_format` systemvariabeln gör att databasen automatiskt kan konvertera det gamla datumformatet till det nya när en ändringstabell körs eller databasen importeras. Standardkonfigurationen för `mysql56_temporal_format` är alltid aktiverat på Adobe Commerce i molninfrastruktur.
+I MariaDB 10.1.2 introducerades ett nytt tidsformat från MySQL 5.6. Systemvariabeln `mysql56_temporal_format` gör att databasen automatiskt kan konvertera det gamla datumformatet till det nya när en ändringstabell körs eller databasen importeras. Standardkonfigurationen för `mysql56_temporal_format` är alltid aktiverad på Adobe Commerce i molninfrastrukturen.
 
 ### Migrera datumkolumner
 
@@ -47,7 +47,7 @@ SELECT CONCAT( 'ALTER TABLE `', COALESCE(TABLE_NAME), '`', ' MODIFY ', '`', COAL
 
 >[!NOTE]
 >
->Det är viktigt att migrera kolumnerna till det nya interna datumformatet _före_ distribuera den nya koden för att undvika oväntade beteenden.
+>Det är viktigt att migrera kolumnerna till det nya interna datumformatet _före_ som distribuerar den nya koden för att undvika oväntade beteenden.
 
 ## Adobe Commerce 2.3.5
 
@@ -64,13 +64,13 @@ Innan Adobe Commerce supportteam börjar uppgraderingsprocessen förbereder du d
 
 Tänk på följande när du planerar och schemalägger konverteringen:
 
-- Konverterar från `COMPACT` till `DYNAMIC` tabeller kan ta flera timmar med en stor databas.
+- Konvertering från `COMPACT` till `DYNAMIC`-tabeller kan ta flera timmar med en stor databas.
 
 - För att förhindra att data skadas ska du inte slutföra konverteringsarbetet på en publicerad webbplats.
 
 - Slutför konverteringsarbetet under en begränsad trafikperiod på webbplatsen.
 
-- Byt till [underhållsläge](../../../installation/tutorials/maintenance-mode.md) innan du kör kommandona för att konvertera databastabeller.
+- Byt plats till [underhållsläge](../../../installation/tutorials/maintenance-mode.md) innan du kör kommandona för att konvertera databastabeller.
 
 #### Konvertera radformat för databastabell
 
@@ -106,18 +106,18 @@ Du kan konvertera tabeller på en nod i klustret. Ändringarna replikeras automa
 
 Processen att konvertera lagringsformatet skiljer sig åt för Adobe Commerce Starter- och Adobe Commerce Pro-projekt.
 
-- Använd MySQL för startarkitekturen `ALTER` för att konvertera formatet.
-- På Pro-arkitekturen använder du MySQL `CREATE` och `SELECT` kommandon för att skapa en databastabell med `InnoDB` lagra och kopiera data från den befintliga tabellen till den nya tabellen. Den här metoden ser till att ändringarna replikeras till alla noder i klustret.
+- Använd kommandot MySQL `ALTER` för att konvertera formatet för startarkitekturen.
+- I Pro-arkitekturen använder du kommandona MySQL `CREATE` och `SELECT` för att skapa en databastabell med `InnoDB`-lagring och kopiera data från den befintliga tabellen till den nya tabellen. Den här metoden ser till att ändringarna replikeras till alla noder i klustret.
 
 **Konvertera tabelllagringsformat för Adobe Commerce Pro-projekt**
 
-1. Identifiera tabeller som använder `MyISAM` lagring.
+1. Identifiera register som använder `MyISAM`-lagring.
 
    ```mysql
    SELECT table_name FROM INFORMATION_SCHEMA.TABLES WHERE engine = 'MyISAM';
    ```
 
-1. Konvertera alla tabeller till `InnoDB` lagringsformat en åt gången.
+1. Konvertera alla tabeller till lagringsformatet `InnoDB` en åt gången.
 
    - Byt namn på den befintliga tabellen för att förhindra namnkonflikter.
 
@@ -125,7 +125,7 @@ Processen att konvertera lagringsformatet skiljer sig åt för Adobe Commerce St
      RENAME TABLE <existing_table> <table_old>;
      ```
 
-   - Skapa en tabell som använder `InnoDB` lagring med data från den befintliga tabellen.
+   - Skapa en tabell som använder `InnoDB`-lagring med data från den befintliga tabellen.
 
      ```mysql
      CREATE TABLE <existing_table> ENGINE=InnoDB SELECT * from <table_old>;
@@ -138,13 +138,13 @@ Processen att konvertera lagringsformatet skiljer sig åt för Adobe Commerce St
 
 **Konvertera tabelllagringsformat för Adobe Commerce Starter-projekt**
 
-1. Identifiera tabeller som använder `MyISAM` lagring.
+1. Identifiera register som använder `MyISAM`-lagring.
 
    ```mysql
    SELECT table_name FROM INFORMATION_SCHEMA.TABLES WHERE engine = 'MyISAM';
    ```
 
-1. Konvertera tabeller som använder `MyISAM` lagring till `InnoDB` lagring.
+1. Konvertera tabeller som använder `MyISAM`-lagring till `InnoDB`-lagring.
 
    ```mysql
    ALTER TABLE [ table name here ] ENGINE=InnoDB;
@@ -156,13 +156,13 @@ Dagen före den schemalagda uppgraderingen till MariaDB version 10.3, 10.4 eller
 
 1. Logga in i databasen.
 
-1. Kontrollera om det finns tabeller som fortfarande har `COMPACT` radformat.
+1. Sök efter tabeller som fortfarande har radformatet `COMPACT`.
 
    ```mysql
    SELECT table_name, row_format FROM information_schema.tables WHERE table_schema=DATABASE() and row_format = 'Compact';
    ```
 
-1. Sök efter tabeller som fortfarande använder `MyISAM` lagringsformat
+1. Sök efter tabeller som fortfarande använder lagringsformatet `MyISAM`
 
    ```mysql
    SELECT table_name FROM INFORMATION_SCHEMA.TABLES WHERE engine = 'MyISAM';

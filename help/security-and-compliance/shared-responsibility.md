@@ -106,10 +106,10 @@ Adobe Commerce lösning för molninfrastruktur använder CDN-leverantörer för 
 
 I följande sammanfattande tabell används RACI-modellen för att visa säkerhetsansvar som delas mellan Adobe, handlaren och molntjänstleverantören:
 
-**R** — Ansvarig
-**A** — Konto
-**C** — Konsulterad
-**I** - Informerad
+**R** - Ansvarig
+**A** - Redovisningsbar
+**C** - konsulterat
+**I** - Informad
 
 >[!ENDSHADEBOX]
 
@@ -132,7 +132,7 @@ I följande sammanfattande tabell används RACI-modellen för att visa säkerhet
     <td></td>
   </tr>
   <tr>
-    <td>Tillämpa korrigeringsfiler på stödtjänster<br>(Till exempel Nginx eller MySQL.)</td>
+    <td>Tillämpar korrigeringar på stödtjänster <br> (till exempel Nginx eller MySQL.)</td>
     <td>R</td>
     <td>I</td>
     <td></td>
@@ -230,7 +230,7 @@ I följande sammanfattande tabell används RACI-modellen för att visa säkerhet
     <td></td>
   </tr>
   <tr>
-    <td>Konfigurera källdatabasen<sup>1</sup></td>
+    <td>Konfigurerar källdatabasen <sup>1</sup></td>
     <td>R</td>
     <td>I</td>
     <td></td>
@@ -440,7 +440,7 @@ I följande sammanfattande tabell används RACI-modellen för att visa säkerhet
     <td></td>
   </tr>
   <tr>
-    <td>Reparera Adobe Commerce på PCI-skanningar i molninfrastruktur<sup>4</sup></td>
+    <td>Reparerar Adobe Commerce på PCI-skanningar i molninfrastruktur<sup>4</sup></td>
     <td>R</td>
     <td>R</td>
     <td></td>
@@ -521,7 +521,7 @@ I följande sammanfattande tabell används RACI-modellen för att visa säkerhet
   <tr>
     <td colspan="5">
       <p><sup><strong>1</strong></sup> Endast om Adobe Commerce i molninfrastrukturdatabasen används som huvuddatabas. Handlaren ansvarar själv för att andra externa arkiv används.</p>
-      <p><sup><strong>2</strong></sup> Adobe tillhandahåller nivå 1-stöd för problem med CDN-leverantörer.</p>
+      <p><sup><strong>2</strong></sup> Adobe ger nivå 1-stöd för problem med CDN-providers.</p>
       <p><sup><strong>3</strong></sup> Handlaren ansvarar för alla Ngnix-kontroller som de konfigurerar för sina program.</p>
       <p><sup><strong>4</strong></sup> För PCI delas kraven på penetrationstestning mellan Adobe och handlaren.</p>
     </td>
@@ -639,7 +639,7 @@ Handlarna ansvarar för att synkronisera data mellan olika miljöer.
 | --- | --- | --- |
 | Roterande loggar | R |   |
 | Anpassat Adobe Commerce-program | | R |
-| Tillgång till New Relic tjänster:<br>APM-applikationer och agentintegration, infrastrukturapplikation,<br>Loggning och integrering | R |   |
+| Tillgänglighet för New Relic-tjänster:<br>APM-program och agentintegration, infrastrukturprogram,<br>Loggning och integrering | R |   |
 | Konfigurera New Relic Alerts |     | R |
 | Distribuera New Relic Agent på PaaS-servrar |     | R |
 
@@ -662,7 +662,7 @@ Handlarna ansvarar för att synkronisera data mellan olika miljöer.
 | --- | --- | --- |
 | Programkonfiguration |     | R |
 | Lägga till domäner i Adobe Commerce-programmet (bas-URL:er) |     | R |
-| Konfigurera PaaS för att använda tjänstversioner som stöds av den distribuerade Adobe Commerce-versionen<br><br>Olika Commerce-versioner är till exempel kompatibla med specifika versioner av PHP, Redis och så vidare. |     | R |
+| Konfigurera PaaS att använda tjänstversioner som stöds av den distribuerade Adobe Commerce-versionen<br><br>Olika Commerce-versioner är till exempel kompatibla med vissa versioner av PHP, Redis och så vidare. |     | R |
 
 {style="table-layout:auto"}
 
@@ -702,8 +702,8 @@ Handlarna ansvarar för att synkronisera data mellan olika miljöer.
 |     | Adobe | Merchant |
 | --- | --- | --- |
 | Tillgång till tjänsterna Galera och MariaDB | R | |
-| Fortlöpande underhåll av standarddatabasinställningar<br><br>(indexera och optimera huvudtabeller, optimera standardinställningar för systemadministratörer) | R |   |
-| Löpande underhåll av handlardata och ändrade inställningar<br><br>(konfigurera normaliserade och platta tabeller, indexera och optimera anpassade tabeller och tabeller från tredje part, arkivera eller ta bort data, konfigurera systemadministrationsinställningar) |     | R |
+| Fortlöpande underhåll av standarddatabasinställningarna <br><br> (indexering och optimering av huvudtabeller, optimering av standardinställningar för sys-admin) | R |   |
+| Fortlöpande underhåll av affärsdata och ändrade inställningar <br><br> (konfigurerar normaliserade och platta tabeller, indexerar och optimerar anpassade tabeller och tredjepartstabeller, arkiverar eller tar bort data, konfigurerar systemadministrationsinställningar) |     | R |
 | Konfiguration av Galera och MySQL | R |   |
 | Fortlöpande kvalitet och patchning av Galera och MariaDB | R |   |
 | Kontinuerlig infrastrukturoptimering | R |   |
@@ -755,7 +755,7 @@ Handlarna ansvarar för att synkronisera data mellan olika miljöer.
 | --- | --- | --- |
 | E-posttjänsten SendGrid och dess integrering är tillgängliga | R |   |
 | Övervaka handlarens SendGrid-användning mot begränsningar | R |   |
-| Merchant ansvarar endast för att använda tjänsten för utgående transaktionsmeddelanden<br>Tjänsten stöder inte sändning av e-post för marknadsföring. |     | R |
+| Merchant ansvarar endast för att använda tjänsten för utgående transaktionsmejl<br>Tjänsten stöder inte sändning av marknadsföringsmejl. |     | R |
 | Konfigurera valfria e-posttjänster från tredje part |     | R |
 
 {style="table-layout:auto"}
@@ -786,8 +786,8 @@ Handlarna ansvarar för att synkronisera data mellan olika miljöer.
 | Tillgänglighet för Adobe Commerce Business Intelligence | R |   |
 | MBI-datasynkroniseringsprocesser | R |   |
 | Identifiera MBI-synkroniseringsproblem | R |   |
-| Konfigurera MBI-datasynkronisering till Adobe Commerce Cloud Pro, Starter, On Premises eller andra program än Adobe Commerce<br>(API, datakvalitet och dataformatering, handlarnätverk,<br>DB-anslutningar både innanför och utanför Adobe Commerce Cloud DB, över datatrösklar) |     | R |
-| Konfigurerar MBI-datasynkronisering till Adobe Commerce Cloud Pro<br>(Adobe Commerce Cloud databaskonfiguration) | R |   |
+| Konfigurerar MBI-datasynkronisering till Adobe Commerce Cloud Pro, Starter, On Premises eller icke-Adobe Commerce<br> (API, datakvalitet och dataformatering, handelsnätverk,<br>DB-anslutningar både innanför och utanför Adobe Commerce Cloud DB, över datatrösklar) |     | R |
+| Konfigurerar MBI-datasynkronisering till Adobe Commerce Cloud Pro<br> (Adobe Commerce Cloud-databaskonfiguration) | R |   |
 
 {style="table-layout:auto"}
 
@@ -857,7 +857,7 @@ Handlarna ansvarar för att synkronisera data mellan olika miljöer.
 | Konfiguration av PrivateLink inkommande till Merchants VPC-tjänstslutpunkt |     | R |
 | Godkännande av PrivateLink inkommande till Merchants VPC-tjänstslutpunkt | R |   |
 | Konfiguration av PrivateLink-integreringar (slutpunkt till konto) |     | R |
-| Konfiguration av handelsägd VPC för PrivateLink-slutpunkt<br><br> (inklusive eventuella VPN-anslutningar) |     | R |
+| Konfiguration av handelsägd VPC för PrivateLink-slutpunkt <br><br> (inklusive alla VPN-anslutningar) |     | R |
 
 {style="table-layout:auto"}
 

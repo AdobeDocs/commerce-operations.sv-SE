@@ -20,14 +20,14 @@ Det här avsnittet går djupare in i några av de viktigaste standarderna för A
 - Arkitektöverväganden, inklusive GRA
 - Säkerhetsstandarder mot skript och explosioner
 - Bästa praxis för utveckling av tillägg
-- Webb-API-integrering med REST, SOAP och GraphQL
+- Web API-integrationer med REST, SOAP och GraphQL
 - Prestandaförbättringar för kodning och infrastruktur
 - Testverktyg, strategier och metoder
 
 Vissa implementerare kan ha egna preferenser för metoder, processer och verktyg, men den här spelboken fokuserar på vedertagna bästa metoder och metoder som kan delas i de flesta implementeringar.
 
-Precis som alla andra stora IT-projekt bygger Adobe Commerce på kodningsstandarder som använder bästa praxis och standardiseringar samt standarder som har upprättats inom Adobe Commerce [Kodningsstandard](https://developer.adobe.com/commerce/php/coding-standards/). Att följa dessa standarder är viktigt för att eliminera buggar och förbättra kvaliteten och underhållet i skräddarsydd kod.
+Precis som alla andra stora IT-projekt bygger Adobe Commerce på kodningsstandarder som använder bästa praxis och standardiseringar samt standarder som har upprättats i Adobe Commerce [Coding Standard](https://developer.adobe.com/commerce/php/coding-standards/). Att följa dessa standarder är viktigt för att eliminera buggar och förbättra kvaliteten och underhållet i skräddarsydd kod.
 
 ## Adobe Commerce i molninfrastruktur
 
-Adobe Commerce i molninfrastruktur är en hanterad, automatiserad värdplattform för Adobe Commerce. Adobe Commerce i molninfrastruktur har olika funktioner som skiljer den från lokala Adobe Commerce-implementeringar. Se [Molnguide](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/overview.html).
+Adobe Commerce i molninfrastruktur är en hanterad, automatiserad värdplattform för Adobe Commerce. Adobe Commerce i molninfrastruktur har olika funktioner som skiljer den från lokala Adobe Commerce-implementeringar. Se [molnguiden](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/overview.html).

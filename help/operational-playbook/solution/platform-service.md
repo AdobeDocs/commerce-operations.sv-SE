@@ -18,9 +18,9 @@ PaaS tillhandahålls som en tjänst i leverantörens infrastruktur och kan nås 
 
 PaaS fungerar på privata, offentliga och hybridmoln:
 
-- **Privat moln**—PaaS levereras innanför klientens brandvägg för säkerhetsändamål, där data lagras lokalt.
-- **Offentligt moln**- Klienten har kontroll över distributionerna och providern ansvarar för alla andra komponenter, till exempel nätverk och operativsystem.
-- **Hybrid cloud**—Hybrid blandar funktionerna både privat och offentligt så att klienten kan ha flexibilitet.
+- **Privat moln** - PaaS levereras i klientens brandvägg av säkerhetsskäl, där data lagras lokalt.
+- **Offentligt moln** - Klienten har kontroll över distributionerna och providern ansvarar för alla andra komponenter, till exempel nätverk och operativsystem.
+- **Hybrid cloud** - Hybrid blandar funktionerna hos både private och public så att klienten kan ha flexibilitet.
 
 ## Fördelar
 
@@ -40,7 +40,8 @@ PaaS fungerar på privata, offentliga och hybridmoln:
 
 - Kan leda till ett säkerhetshot eftersom allt lagras i molnet
 - Beroende av tjänsteleverantören
-- Om leverantören upplever ett driftstopp är det ett problem för kunden
+- Om leverantören upplever ett driftstopp är det ett problem för
+klient
 - Gör det enkelt och snabbt att uppdatera
 
 När kunden använder PaaS i e-handeln behöver de inte hantera systemet och operativprogramvaran. Klienten har en plattform för att konfigurera sin e-handelsplats där de skapar och konfigurerar innehåll, koddata och produkter. som är skilt från administrationssidan av saker som rör PaaS.

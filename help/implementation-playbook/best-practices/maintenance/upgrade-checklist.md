@@ -21,7 +21,7 @@ Använd checklistan under årliga och kvartalsvisa samtal med ert e-handelsteam.
 
 >[!NOTE]
 >
->En detaljerad beskrivning av de tekniska stegen för att uppgradera finns i [Krav för fullständig uppgradering](../../../upgrade/prepare/prerequisites.md) i vår användardokumentation.
+>En detaljerad beskrivning av de tekniska stegen för att uppgradera finns i [Fullständiga uppgraderingskrav](../../../upgrade/prepare/prerequisites.md) i användardokumentationen.
 
 ## Berörda produkter och versioner
 
@@ -46,7 +46,7 @@ Använd checklistan under årliga och kvartalsvisa samtal med ert e-handelsteam.
 
 ## Budget och timing
 
-▢ Använda Adobe Commerce [publiceringsschema](../../../release/schedule.md) för att planera nästa uppgradering och förbereda i förväg.
+▢ Använd Adobe Commerce [release schedule](../../../release/schedule.md) för att planera nästa uppgradering och förbereda i förväg.
 
 ▢ Diskutera vilken version du tror att du kommer att anta (fullständig eller enbart säkerhetsrelaterad) baserat på förväntade behov.
 
@@ -61,11 +61,11 @@ Använd checklistan under årliga och kvartalsvisa samtal med ert e-handelsteam.
 ▢ Tidig tillgång
 
 - Partnern deltar i [Beta](../../../release/beta.md)
-- Granskning av betaversionsinformation.
+- Beta release note review.
 
 ▢ Godkänn budget, tidslinje, omfattning.
 
-▢ Kör [Kompatibilitetsverktyg för uppgradering](../../../upgrade/upgrade-compatibility-tool/overview.md)
+▢ [Kompatibilitetsverktyget för uppgradering](../../../upgrade/upgrade-compatibility-tool/overview.md)
 
 ▢ Överväg att använda uppgraderingen för att åtgärda problem som identifieras av [Site Wide Analysis Tool](../../../tools/site-wide-analysis-tool/intro.md).
 
@@ -77,17 +77,17 @@ Använd checklistan under årliga och kvartalsvisa samtal med ert e-handelsteam.
 
 Underhållsperiod för ▢ om driftstopp förväntas.
 
-▢ Granska och godkänn testningsstrategin. Överväg att använda Adobe Commerce [testramverk](https://developer.adobe.com/commerce/testing/) eller ett program från tredje part för automatisering.
+▢ Granska och godkänn teststrategin. Överväg att använda Adobe Commerce [testramverk](https://developer.adobe.com/commerce/testing/) eller en tredjepartsserie för automatisering.
 
 ▢ Bekräfta att alla tillägg och anpassningar är kompatibla.
 
 ▢ Granska och uppdatera spelboken efter start. Den används om problem upptäcks under eller efter uppgraderingen.
 
-## Bokför distribution
+## Driftsättning av Post
 
 ▢ Övervaka webbplatsen för att hitta problem - prestanda, orderhantering, analyser och annat.
 
-▢ Utför en Adobe Commerce [säkerhetsgenomsökning](https://account.magento.com/scanner/dashboard/) eller andra tredjepartsprogram som söker efter och granskar potentiella säkerhetsproblem.
+▢ Utför en Adobe Commerce [säkerhetssökning](https://account.magento.com/scanner/dashboard/) eller annan tredjepartssökning och granska potentiella säkerhetsproblem.
 
 ▢ Utför en retroaktiv översikt med alla intressenter och dokumentera vad som gick bra, vad som inte gick bra och hur du skulle förbättra.
 

@@ -5,7 +5,7 @@ exl-id: 275eb21d-fa52-4b97-9453-8f8553128b53
 feature: Integration, Cache
 source-git-commit: 76ccc5aa8e5e3358dc52a88222fd0da7c4eb9ccb
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '348'
 ht-degree: 0%
 
 ---
@@ -20,16 +20,16 @@ Det inledande steget i cachningsstrategin bör därför vara att tillsammans med
 |---------------------------------------------------------------|--------------------|-------------------------------------------|-----------------------------------------------------|
 | HTML sidor med webbplatsinnehåll, uppdaterade via CMS | Ovanligt | Låg | 1 dag |
 | Mallmedier/resurser för webbplatsinnehåll - logotyp, CSS-design, bilder | Ovanligt | Låg | 1 vecka |
-| Produktlistsidor (PLP) | Ovanligt | Medel | 1 dag |
-| Produktinformationssida (PDP) | Ibland | Medel | 1 timme |
-| Produktkategorier | Ovanligt | Medel | 1 dag |
+| Produktlistsidor (PLP) | Ovanligt | Medium | 1 dag |
+| Produktinformationssida (PDP) | Ibland | Medium | 1 timme |
+| Produktkategorier | Ovanligt | Medium | 1 dag |
 | Priser | Ofta | Hög | Ingen cache |
 | Lager/lager | Ofta | Hög | Ingen cache |
-| Webbplatssökning | De flesta användare är unika | Medel | Cachelagra resultat från de 100 främsta sökfraserna under en dag |
+| Webbplatssökning | De flesta användare är unika | Medium | Cachelagra resultat från de 100 främsta sökfraserna under en dag |
 | Utcheckning | Alla unika användare | Mycket hög | Ingen cache |
 | Kundvagn | Alla unika användare | Mycket hög | Ingen cache |
 | Betalningssidor | Alla unika användare | Mycket hög | Ingen cache |
 
 När den här inledande planeringen är klar kan den tekniska konfigurationen börja användas för att konfigurera cacheminnen baserat på dessa krav.
 
-Även om innehållet uppdateras och behöver göras tillgängligt i TTL-filen för cachelagring är det i de flesta fall möjligt att manuellt rensa cacheminnen för [AEM](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=en) och [Adobe Commerce](../configuration//cli/manage-cache.md#clean-and-flush-cache-types) cachelagra selektivt för det innehållet, vilket innebär att brådskande ändringar omedelbart återspeglas. Processen runt manuell cacherensning bör också planeras och testas i förväg, så om det behövs att manuellt framtvinga en uppdatering av visst innehåll, dokumenteras den i en körningsbok för webbplatsoperationer och klargör hur och vem som behöver göra detta.
+Även om innehållet uppdateras och behöver göras tillgängligt i TTL-filen för cachelagring är det i de flesta fall möjligt att manuellt rensa cacheminnen för [AEM dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=en) och [Adobe Commerce](../configuration//cli/manage-cache.md#clean-and-flush-cache-types) -cachen selektivt för det innehållet, vilket innebär att brådskande ändringar omedelbart återspeglas. Processen runt manuell cacherensning bör också planeras och testas i förväg, så om det behövs att manuellt framtvinga en uppdatering av visst innehåll, dokumenteras den i en körningsbok för webbplatsoperationer och klargör hur och vem som behöver göra detta.

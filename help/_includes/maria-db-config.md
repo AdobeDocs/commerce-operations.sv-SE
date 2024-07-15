@@ -12,7 +12,7 @@ Omindexering av MariaDB 10.4 och 10.6 tar längre tid jämfört med tidigare ver
 * [`optimizer_switch='rowid_filter=off'`](https://mariadb.com/kb/en/optimizer-switch/)
 * [`optimizer_use_condition_selectivity = 1`](https://mariadb.com/products/skysql/docs/reference/es/system-variables/optimizer_use_condition_selectivity/)
 
-Om prestandaförsämringar inte har att göra med indexering efter uppgradering till MariaDB 10.6 kan du aktivera [`--query-cache-type`](https://mariadb.com/kb/en/server-system-variables/#query_cache_type) inställning. Till exempel: `--query-cache-type=ON`.
+Om prestandaförsämringar inte har att göra med indexering efter uppgradering till MariaDB 10.6 bör du aktivera inställningen [`--query-cache-type`](https://mariadb.com/kb/en/server-system-variables/#query_cache_type). Exempel: `--query-cache-type=ON`.
 
 Innan du uppgraderar Adobe Commerce i molninfrastrukturprojekt kan du behöva uppgradera MariaDB ([se MariaDB upgrade best practices](../implementation-playbook/best-practices/maintenance/mariadb-upgrade.md)).
 

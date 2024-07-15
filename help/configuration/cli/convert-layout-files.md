@@ -4,7 +4,7 @@ description: Konvertera XML-layoutfiler.
 exl-id: 9852b735-9b4b-43ce-887f-5c37d398bbf7
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '94'
+source-wordcount: '82'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,6 @@ bin/magento dev:xml:convert [-o|--overwrite] {xml file} {xslt stylesheet}
 
 Var:
 
-- `{xml file}`—är den fullständiga sökvägen och filnamnet för en XML-layoutfil som ska konverteras (obligatoriskt)
-- `{xslt stylesheet}`—är den fullständiga sökvägen och filnamnet för en XSLT-formatmallsfil som ska användas för konvertering (obligatoriskt)
-- `-o|--overwrite`—include this option to overwrite the existing XML file
+- `{xml file}` - är den fullständiga sökvägen och filnamnet för en XML-layoutfil som ska konverteras (obligatoriskt)
+- `{xslt stylesheet}` - är den fullständiga sökvägen och filnamnet för en XSLT-formatmallsfil som ska användas för konvertering (obligatoriskt)
+- `-o|--overwrite` - inkludera det här alternativet om du vill skriva över den befintliga XML-filen

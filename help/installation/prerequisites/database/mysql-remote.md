@@ -21,13 +21,13 @@ Aurora är en högpresterande, helt kompatibel MySQL-server som finns på AWS.
 
 Att använda Aurora som databas är lika enkelt som att ange databasen i den vanliga Adobe Commerce-konfigurationen med hjälp av standarddatabaskopplingen.
 
-Vid körning `bin/magento setup:install`använder du Aurora-informationen i `db-` fält:
+Använd Aurora-informationen i fälten `db-` när du kör `bin/magento setup:install`:
 
 ```bash
 bin/magento setup:install ... --db-host='database-aurora.us-east-1.rds.amazonaws.com' --db-name='magento2' --db-user='username' --db-password='password' ...
 ```
 
-The `db-host` värdet är Aurora-URL:en med `https://` och efterföljande `:portnumber`  borttagen.
+Värdet `db-host` är Aurora-URL:en där `https://` och efterföljande `:portnumber` har tagits bort.
 
 ## Konfigurera en fjärrdatabasanslutning
 
@@ -39,7 +39,7 @@ The `db-host` värdet är Aurora-URL:en med `https://` och efterföljande `:port
 
 Innan du börjar måste du:
 
-* [Installera MySQL-server](mysql.md) på databasservern.
+* [Installera MySQL-servern](mysql.md) på databasservern.
 * [Skapa en databasinstans](mysql.md#configuring-the-database-instance) på databasservern.
 * Installera MySQL-klienten på Adobe Commerce webbnod. Mer information finns i MySQL-dokumentationen.
 
@@ -60,7 +60,7 @@ Om du har problem med att ansluta till någon av värdarna måste du först ping
 
 Så här skapar du en fjärranslutning:
 
-1. På databasservern, som en användare med `root` behörighet, öppna MySQL-konfigurationsfilen.
+1. Öppna MySQL-konfigurationsfilen som en användare med `root`-behörighet på databasservern.
 
    Om du vill hitta den anger du följande kommando:
 
@@ -79,11 +79,11 @@ Så här skapar du en fjärranslutning:
    >
    >På Ubuntu 16 är sökvägen vanligtvis `/etc/mysql/mysql.conf.d/mysqld.cnf`.
 
-1. Sök i konfigurationsfilen efter `bind-address`.
+1. Sök efter `bind-address` i konfigurationsfilen.
 
    Om den finns ändrar du värdet enligt följande.
 
-   Om den inte finns lägger du till den i `[mysqld]` -avsnitt.
+   Om den inte finns lägger du till den i avsnittet `[mysqld]`.
 
    ```conf
    bind-address = <ip address of your web node>
@@ -100,18 +100,18 @@ Så här skapar du en fjärranslutning:
 
    >[!NOTE]
    >
-   >Om MySQL inte kan startas söker du efter källan till problemet i syslog. Lös problemet med hjälp av [MySQL-dokumentation](https://dev.mysql.com/doc/refman/5.6/en/server-options.html#option_mysqld_bind-address) eller någon annan auktoritativ källa.
+   >Om MySQL inte kan startas söker du efter källan till problemet i syslog. Lös problemet med [MySQL-dokumentation](https://dev.mysql.com/doc/refman/5.6/en/server-options.html#option_mysqld_bind-address) eller en annan auktoritativ källa.
 
 ## Bevilja åtkomst för en databasanvändare
 
 Om du vill att webbnoden ska kunna ansluta till databasservern måste du ge en användare i en webbnoddatabas åtkomst till databasen på fjärrservern.
 
-I det här exemplet tilldelas `root` databasanvändaren har fullständig åtkomst till databasen på fjärrvärden.
+Det här exemplet ger databasanvändaren `root` fullständig åtkomst till databasen på fjärrvärden.
 
 Så här beviljar du åtkomst till en databasanvändare:
 
 1. Logga in på databasservern.
-1. Anslut till MySQL-databasen som `root` användare.
+1. Anslut till MySQL-databasen som `root`-användare.
 1. Ange följande kommando:
 
    ```shell
@@ -155,8 +155,8 @@ Om webbservern är klustrad anger du kommandot på varje webbservervärd.
 
 När du installerar Adobe Commerce måste du ange följande:
 
-* Bas-URL (kallas även *butiksadress*) anger värdnamnet eller IP-adressen för *webbnod*
-* Databasvärden är *fjärrdatabasserver* IP-adress (eller belastningsutjämnare om databasservern är klustrad)
-* Databasens användarnamn är *lokal webbnod* databasanvändare som du gav åtkomst till
+* Bas-URL (kallas även *butiksadressen*) anger värdnamnet eller IP-adressen för *webbnoden*
+* Databasvärden är IP-adressen för *fjärrdatabasservern* (eller belastningsutjämnaren om databasservern är klustrad)
+* Databasanvändarnamnet är den *lokala webbnodens*-databasanvändare som du gav åtkomst till
 * Databaslösenordet är den lokala webbnodens användarlösenord
 * Databasnamnet är namnet på databasen på fjärrservern

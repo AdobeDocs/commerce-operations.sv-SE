@@ -28,7 +28,7 @@ Använd det här kommandot om du vill skapa en administratör eller redigera en 
 
 >[!NOTE]
 >
->Om du redigerar en administratör är det bara `first name`, `last name`och `password` kan redigeras.
+>Om du redigerar en administratör kan bara `first name`, `last name` och `password` redigeras.
 
 Kommandoanvändning:
 
@@ -75,7 +75,7 @@ Admin last name: Doe Young
 Created Magento administrator user named John
 ```
 
-Följande exempel uppdateras `first name`, `last name`och `password` av `j.doe` admin-användare:
+I följande exempel uppdateras `first name`, `last name` och `password` för `j.doe`-administratörsanvändaren:
 
 ```bash
 bin/magento admin:user:create --admin-firstname="John X" --admin-lastname="Doe X" --admin-email=j.doe@example.com --admin-user=j.doe --admin-password=A1234567

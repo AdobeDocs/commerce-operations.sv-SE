@@ -28,13 +28,13 @@ Detta tillvägagångssätt består av följande steg:
 
 - Scrum team rollouts for brand and commerce sites
 
-![Exempel på modell för planeringsmetod](../../assets/playbooks/planning-model.svg)
+![Exempel på modell för planeringsinflygning](../../assets/playbooks/planning-model.svg)
 
 Hybridmodellen gör att ni kan utnyttja kraften i Agile-metoden och hålla er till målet för tidslinjen, kostnaden och kvaliteten. Hela planen är uppdelad i två skilda faser, följda av start-, optimerings- och underhållsaktiviteter.
 
-- **Få rätt idé**- Detta är en fas före implementeringen för att säkerställa att kraven, utformningen och tekniklösningen är strategiska, dokumenterade och samarbetade mellan olika intressenter. Eftersläpningen när det gäller implementering är grumlig och byggd, utvecklingssprutor planeras och en sekventiell strategi för att bygga produkten färdigställs.
+- **Rätt idé** - Detta är en förimplementeringsfas som säkerställer att kraven, designen och tekniklösningen är strategiska, dokumenterade och samarbetade mellan olika intressenter. Eftersläpningen när det gäller implementering är grumlig och byggd, utvecklingssprutor planeras och en sekventiell strategi för att bygga produkten färdigställs.
 
-- **Rätt idé**- Detta är implementeringsfasen för att skapa produkten iterativt, testa noggrant och frisläppa den på rätt sätt. Det första steget är att utveckla koden med hjälp av flera sprintar. Varje sprint innehåller utveckling och testning i sprint, följt av testning av systemintegration, prestanda- och säkerhetstestning, testning av användarnas acceptans och publiceringsaktiviteter.
+- **Perfekt idé** - Det här är implementeringsfasen för att skapa produkten iterativt, testa noggrant och frigöra på rätt sätt. Det första steget är att utveckla koden med hjälp av flera sprintar. Varje sprint innehåller utveckling och testning i sprint, följt av testning av systemintegration, prestanda- och säkerhetstestning, testning av användarnas acceptans och publiceringsaktiviteter.
 
 Projektplanering är en kritisk aktivitet. Där får intressenter, team, sponsorer och projektledare tips om hur man övervakar, hanterar och kontrollerar projektfaser. Det hjälper också till att identifiera mål, undvika deadlines som saknas, prioritera viktiga uppgifter, minska riskerna och leverera önskade resultat.
 
@@ -43,7 +43,7 @@ Projektplanen består vanligtvis av fyra faser:
 - Initiering och planering
 - Körning
 - Starta
-- Efter start
+- Post-lansering
 
 Varje fas kan levereras genom flera mindre sprutor, vilket gör att förloppet och resultaten hanteras i mindre steg och med större flexibilitet. Planeringen är dock unik eftersom den vanligtvis är en del av de tre andra faserna. Vi har gjort en detaljerad beskrivning av varje fas och ett exempel på en projektplan för en framgångsrik Adobe Commerce-implementering:
 
@@ -51,4 +51,4 @@ Varje fas kan levereras genom flera mindre sprutor, vilket gör att förloppet o
 
 Den metod vi har definierat visar olika projektfaser som sammanförs för att möjliggöra ett framgångsrikt projektgenomförande. Projektledningskontoret (PMO) har en nära överblick på olika nivåer och ser till att man lyckas i varje fas (och i varje steg) med att uppnå ett framgångsrikt och vältajmat genomförande med optimal kvalitet och kostnad.
 
-![Exempel på grafik för planeringsmetod](../../assets/playbooks/planning-approach-sample.svg)
+![Informgrafik om provplaneringsinriktning](../../assets/playbooks/planning-approach-sample.svg)

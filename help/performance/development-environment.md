@@ -15,15 +15,15 @@ Den här sidan innehåller rekommendationer för Commerce utvecklingsmiljöer.
 
 ## Rensa cacheminnen i stället för att inaktivera
 
-Många utvecklare tenderar att inaktivera alla cacheminnen på sina utvecklarinstanser. Vi rekommenderar att du bara städar cacher, utan att inaktivera alla cacheminnen. [!DNL Commerce] blir effektivare när du [rengöra cacheminnen](../configuration/cli/manage-cache.md#clean-and-flush-cache-types) i stället för att inaktivera dem helt. De flesta typer av cacher blir sällan ogiltiga under utvecklingen.
+Många utvecklare tenderar att inaktivera alla cacheminnen på sina utvecklarinstanser. Vi rekommenderar att du bara städar cacher, utan att inaktivera alla cacheminnen. [!DNL Commerce] körs mer effektivt när du [rensar cacheminnen](../configuration/cli/manage-cache.md#clean-and-flush-cache-types) i stället för att inaktivera dem helt. De flesta typer av cacher blir sällan ogiltiga under utvecklingen.
 
-Om du [inaktivera caches](../configuration/cli/manage-cache.md#enable-or-disable-cache-types)rekommenderar vi att du bara inaktiverar Page- och Block-cacher i utvecklingsinstanser. Kom ihåg att aktivera alla cacheminnen under testningen.
+Om du [inaktiverar cacheminnen](../configuration/cli/manage-cache.md#enable-or-disable-cache-types) rekommenderar vi endast att du inaktiverar cacheminnen för sidor och block i utvecklingsinstanser. Kom ihåg att aktivera alla cacheminnen under testningen.
 
 ## Kommandon som ska undvikas i utvecklingsläget
 
 I utvecklingsläget ska du inte köra kommandon för kompilering, kodgenerering och statisk innehållsdistribution. Dessa kommandon har skapats för användning endast i produktionsläge.
 
-**Kör inte** produktionskommandon i utvecklingsläge:
+**Kör inte**-produktionskommandon i utvecklingsläge:
 
 * `setup:di:compile` genererar automatiskt genererade klasser och optimerade konfigurationscache.
 
@@ -31,7 +31,7 @@ I utvecklingsläget ska du inte köra kommandon för kompilering, kodgenerering 
   bin/magento setup:di:compile
   ```
 
-  I utvecklingsläget utför Magento genereringen on-demand, du behöver inte köra den. Om du har ändrat en signatur för en klass och behöver återskapa dess automatiskt genererade `factories/proxies/interceptors`, tar bort dessa klasser eller _genererad_ mapp.
+  I utvecklingsläget utför Magento genereringen on-demand, du behöver inte köra den. Om du har ändrat en signatur för en klass och behöver återskapa dess automatiskt genererade `factories/proxies/interceptors` tar du bort dessa klasser eller mappen _generated_.
 
 * `setup:static-content:deploy` distribuerar statiskt innehåll för en butik.
 

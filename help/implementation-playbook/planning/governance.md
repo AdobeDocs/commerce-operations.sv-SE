@@ -66,7 +66,7 @@ Förutom Sprint-mätvärdena är det också viktigt att mäta nyckeltal för pro
 
 ## Sprint- och release-bränning
 
-![Exempeldiagram över nedladdning av tidpunkter](../../assets/playbooks/sprint-release-burndown.svg)
+![Exempeldiagram för att skriva ut och frigöra nedladdningar](../../assets/playbooks/sprint-release-burndown.svg)
 
 Utmaningar eller förändringar inträffar under hela projektet. Att ge rätt personer i organisationen möjlighet att spåra, mäta och vrida när en utmaning är klar ökar sannolikheten för att du kommer ut ur projektet när du har nått dina mål och är nöjd med resultatet.
 

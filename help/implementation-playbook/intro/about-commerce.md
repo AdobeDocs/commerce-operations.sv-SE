@@ -5,7 +5,7 @@ exl-id: a9ebd4a6-87b4-47b9-8ae8-72d99e1797eb
 feature: Cloud, Integration, Inventory, Orders, Security, Staging, Shipping/Delivery
 source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '296'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Adobe Commerce funktioner utvecklas alltid med konsumenterna i åtanke när man 
 
 ## Sömlösa shoppingupplevelser överallt
 
-Handelstillväxten drivs vidare av kundernas behov. Utvidga er räckvidd och utöka er till nya kanaler, platser och sälj online till både företag och konsumenter på en och samma plattform. För ut e-handeln till era kunder var de vill, när de vill och hur de föredrar att handla.
+Commerce tillväxt drivs vidare av kundernas behov. Utvidga er räckvidd och utöka er till nya kanaler, platser och sälj online till både företag och konsumenter på en och samma plattform. För ut e-handeln till era kunder var de vill, när de vill och hur de föredrar att handla.
 
 - Mobile commerce
 - B2B-e-handel

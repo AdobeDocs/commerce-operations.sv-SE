@@ -5,7 +5,7 @@ feature: Configuration, Logs
 exl-id: 6c94ebcf-70df-4818-a17b-32512eba516d
 source-git-commit: 991bd5fb34a2ffe61aa194ec46e2b04b4ce5b3e7
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '394'
 ht-degree: 0%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 Loggar ger synlighet i systemprocesserna, t.ex. felsökningsinformation som hjälper dig att förstå när ett fel inträffade eller vad som ledde till felet.
 
-Det här avsnittet fokuserar på filbaserad loggning, men Commerce ger även flexibilitet att lagra loggar i databasen.
+Det här avsnittet fokuserar på filbaserad loggning, men Commerce erbjuder även flexibiliteten att lagra loggar i databasen.
 
 Adobe rekommenderar att centraliserad programloggning används av följande skäl:
 
 - Den gör att loggar kan lagras på en annan server än programservern och minskar I/O-diskåtgärder, vilket förenklar stödet för programservern.
 
-- Det gör databehandlingen effektivare med specialverktyg som [Logstash], [Logplex], eller [fluentd]- utan påverkan på en produktionsserver.
+- Den gör bearbetningen av loggdata mer effektiv med hjälp av specialverktyg, som [Logstash], [Logplex] eller [fluentd], utan att påverka en produktionsserver.
 
   >[!INFO]
   >
@@ -28,17 +28,17 @@ Adobe rekommenderar att centraliserad programloggning används av följande skä
 
 ## PSR-3-kompatibilitet
 
-The [PSR-3-standard][laminas] definierar ett vanligt PHP-gränssnitt för loggning av bibliotek. Det främsta målet för PSR-3 är att tillåta bibliotek att ta emot en `Psr\Log\LoggerInterface` objekt och skriva loggar på ett enkelt och universellt sätt.
+[PSR-3-standarden][laminas] definierar ett vanligt PHP-gränssnitt för loggning av bibliotek. Det främsta målet för PSR-3 är att tillåta bibliotek att ta emot ett `Psr\Log\LoggerInterface`-objekt och skriva loggar till det på ett enkelt och universellt sätt.
 
 Detta gör att implementeringen enkelt kan ersättas utan att du behöver oroa dig för att en sådan ersättning kan bryta programkoden. Det garanterar också att en anpassad komponent fungerar även när loggimplementeringen ändras i en framtida version av systemet.
 
 ## Monolog
 
-Commerce 2 följer PSR-3-standarden. Som standard använder Commerce [Monolog]. Monolog implementeras som en inställning för `Psr\Log\LoggerInterface` i Commerce-programmet [`di.xml`][di].
+Commerce 2 uppfyller PSR-3-standarden. Som standard använder Commerce [Monolog]. Monolog har implementerats som en inställning för `Psr\Log\LoggerInterface` i Commerce-programmet [`di.xml`][di].
 
 Monolog är en populär PHP-loggningslösning med ett stort antal hanterare som gör att du kan skapa avancerade loggningsstrategier. Här följer en sammanfattning av hur Monolog fungerar.
 
-A Monolog _loggare_ är en kanal som har en egen uppsättning _hanterare_. Monolog har många hanterare, bland annat:
+En Monolog _log_ är en kanal som har en egen uppsättning med _hanterare_. Monolog har många hanterare, bland annat:
 
 - Logga in på filer och syslog
 - Skicka aviseringar och e-post

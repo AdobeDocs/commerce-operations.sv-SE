@@ -5,27 +5,27 @@ feature: Configuration, B2B, Companies, Payments, Quotes
 exl-id: 3414dea1-17c9-4462-8b8a-51a6045b0bc9
 source-git-commit: 16e9396f19693436dfc7bdac78d84624a78f0c21
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '837'
 ht-degree: 0%
 
 ---
 
 # Referens för konfigurationssökvägar för B2B-tillägg
 
-_Detta är tillgängligt för instanser där B2B för Adobe Commerce är installerat._
+_Det här är tillgängligt för instanser där B2B för Adobe Commerce är installerat._
 
-I det här avsnittet visas konfigurationssökvägar för Commerce Enterprise B2B-tillägg. The [`magento app:config:dump` kommando](../cli/export-configuration.md) skriver dessa värden i den delade konfigurationsfilen, `app/etc/config.php`, som bör vara i källkontroll.
+I det här avsnittet visas konfigurationssökvägar för Commerce Enterprise B2B-tillägg. [`magento app:config:dump`-kommandot ](../cli/export-configuration.md) skriver dessa värden till den delade konfigurationsfilen `app/etc/config.php` som ska finnas i källkontrollen.
 
 >[!INFO]
 >
->Denna referenslista _endast_ konfigurationssökvägar unika för B2B för Adobe Commerce. Det här tillägget innehåller alla konfigurationssökvägar för Adobe Commerce.
+>Den här referensen visar _endast_ konfigurationssökvägar som är unika för B2B för Adobe Commerce. Det här tillägget innehåller alla konfigurationssökvägar för Adobe Commerce.
 
 Information om dessa konfigurationssökvägar finns i:
 
 - [Sökvägar för betalningskonfiguration](config-reference-payment.md)
 - [Referens för känsliga och systemspecifika konfigurationssökvägar](config-reference-sens.md)
 
-Om du vill åsidosätta konfigurationsinställningar eller ange känsliga inställningar läser du [Använd miljövariabler för att åsidosätta konfigurationsinställningar](override-config-settings.md#environment-variables).
+Om du vill åsidosätta konfigurationsinställningar eller ange känsliga inställningar läser du [Använda miljövariabler för att åsidosätta konfigurationsinställningar](override-config-settings.md#environment-variables).
 
 ## Allmän kategori
 
@@ -93,7 +93,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **[!UICONTROL Stores]** 
 
 ### Rekvisitionslistor - sökvägar
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Kunder** > **Rekvisitionslistor**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Store** > Inställningar > **Konfiguration** > **Kunder** > **Rekvisitionslistor**.
 
 | Namn | Konfigurationssökväg | Krypterad? | Systemspecifik? | Känslig? |
 | -------------- | -------------- | -------------- | -------------- | -------------- |
@@ -103,11 +103,11 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 
 ## Försäljningskategori
 
-I det här avsnittet visas variabelnamn och konfigurationssökvägar som är tillgängliga för alternativ i Admin under **Lager** > Inställningar > **Konfiguration** > **Försäljning**.
+I det här avsnittet visas variabelnamn och konfigurationssökvägar som är tillgängliga för alternativ i Admin under **Lagrar** > Inställningar > **Konfiguration** > **Försäljning**.
 
 ### Säljmejlsökvägar
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Försäljning** > **Försäljningsmejl**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Store** > Inställningar > **Konfiguration** > **Försäljning** > **Försäljningsmeddelanden**.
 
 | Namn | Konfigurationssökväg | Krypterad? | Systemspecifik? | Känslig? |
 | -------------- | -------------- | -------------- | -------------- | -------------- |
@@ -126,7 +126,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 
 ### Citattecken
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Försäljning** > **Citat**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Store** > Inställningar > **Konfiguration** > **Försäljning** > **Kurser**.
 
 | Namn | Konfigurationssökväg | Krypterad? | Systemspecifik? | Känslig? |
 | -------------- | -------------- | -------------- | -------------- | -------------- |
@@ -145,7 +145,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 
 ## Sökvägar för betalningsmetod
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Försäljning** > **Betalningsmetoder**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Lagrar** > Inställningar > **Konfiguration** > **Försäljning** > **Betalningsmetoder**.
 
 >[!INFO]
 >

@@ -1,11 +1,11 @@
 ---
 title: Skapa systeminställningar
-description: Lär dig hur du distribuerar Commerce till ett byggsystem.
+description: Lär dig hur du driftsätter Commerce i ett byggsystem.
 feature: Configuration, Build, Deploy
 exl-id: f6daf5c6-6d12-46b0-b775-76791bacea53
 source-git-commit: dcc283b901917e3681863370516771763ae87462
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '367'
 ht-degree: 0%
 
 ---
@@ -14,23 +14,23 @@ ht-degree: 0%
 
 Du kan ha ett byggsystem som uppfyller följande krav:
 
-- All handelskod styrs av källan i samma databas som utvecklings- och produktionssystemen
-- Se till att alla följande är _ingår_ i källkontroll:
+- All Commerce-kod kontrolleras av källan i samma databas som utvecklings- och produktionssystemen
+- Kontrollera att alla följande är _inkluderade_ i källkontrollen:
 
    - `app/etc/config.php`
-   - `generated` katalog (och underkataloger)
-   - `pub/media` katalog
-   - `pub/media/wysiwyg` katalog (och underkataloger)
-   - `pub/static` katalog (och underkataloger)
+   - `generated`-katalog (och underkataloger)
+   - `pub/media`-katalog
+   - `pub/media/wysiwyg`-katalog (och underkataloger)
+   - `pub/static`-katalog (och underkataloger)
 
 - Måste ha en kompatibel PHP-version installerad
 - Composer måste vara installerat
-- Ägarskap och behörigheter för filsystemet anges enligt beskrivningen i [Krav för dina utvecklings-, bygg- och produktionssystem](../deployment/technical-details.md).
-- Build-systemet behöver inte ha Commerce installerat, men koden måste vara tillgänglig för det.
+- Den har ägarskap och behörigheter för filsystemet inställda enligt beskrivningen i [Krav för ditt utvecklings-, bygg- och produktionssystem](../deployment/technical-details.md).
+- Commerce behöver inte vara installerat, men koden måste vara tillgänglig.
 
 >[!WARNING]
 >
->Databasanslutningen behövs inte om den redan finns i `config.php`; se [Exportera konfigurationen](../cli/export-configuration.md). Annars krävs databasanslutningen.
+>Databasanslutningen krävs inte om den redan finns i `config.php`. Se [Exportera konfigurationen](../cli/export-configuration.md). Annars krävs databasanslutningen.
 
 >[!INFO]
 >
@@ -67,7 +67,7 @@ Så här installerar du Composer:
    mv composer.phar /usr/local/bin/composer
    ```
 
-Ytterligare installationsalternativ finns i [Installationsdokumentation för Composer][composer].
+Ytterligare installationsalternativ finns i [Installationsdokumentationen för Composer][composer].
 
 ### Installera PHP
 
@@ -86,7 +86,7 @@ Så här konfigurerar du byggsystemet:
    git clone [-b <branch name>] <repository URL>
    ```
 
-1. Ändra till Commerce-rotkatalogen och ange:
+1. Byt till Commerce rotkatalog och ange:
 
    ```bash
    composer install
@@ -105,8 +105,8 @@ Så här konfigurerar du byggsystemet:
    chown -R commerce-username:apache .
    ```
 
-1. Om du använder Git, öppna `.gitignore` i en textredigerare.
-1. Börja var och en av följande rader med en `#` för att kommentera ut dem:
+1. Om du använder Git öppnar du `.gitignore` i en textredigerare.
+1. Starta var och en av följande rader med ett `#`-tecken för att kommentera ut dem:
 
    ```conf
    # app/etc/config.php
@@ -124,7 +124,7 @@ Så här konfigurerar du byggsystemet:
    git add .gitignore && git commit -m "Modify .gitignore for build and production"
    ```
 
-   Se [`.gitignore` referens](../reference/config-reference-gitignore.md) för mer information.
+   Mer information finns i [`.gitignore`-referensen](../reference/config-reference-gitignore.md).
 
 1. Build-systemet ska använda [standardläge](../bootstrap/application-modes.md#default-mode) eller [utvecklarläge](../bootstrap/application-modes.md#developer-mode):
 
@@ -132,7 +132,7 @@ Så här konfigurerar du byggsystemet:
    bin/magento deploy:mode:set <mode>
    ```
 
-   `<mode>` är obligatoriskt. Det kan vara antingen `default` eller `developer`.
+   `<mode>` krävs. Det kan vara antingen `default` eller `developer`.
 
 <!-- Link Definitions -->
 

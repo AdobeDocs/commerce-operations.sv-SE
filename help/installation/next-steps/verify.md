@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Verifiera installationen
 
-Gå till butiken i en webbläsare. Om t.ex. din installationsbas-URL är `http://www.example.com`, anger du den i webbläsarens adress- eller platsfält.
+Gå till butiken i en webbläsare. Om t.ex. din installationsbas-URL är `http://www.example.com` anger du den i webbläsarens adress- eller platsfält.
 
 I bilden nedan visas ett exempel på en butikssida. Om den visas på följande sätt har installationen lyckats!
 
@@ -19,28 +19,28 @@ I bilden nedan visas ett exempel på en butikssida. Om den visas på följande s
 
 ## Verifiera butiken (inga exempeldata)
 
-Gå till butiken i en webbläsare. Om t.ex. din installationsbas-URL är `http://www.example.com`, anger du den i webbläsarens adress- eller platsfält.
+Gå till butiken i en webbläsare. Om t.ex. din installationsbas-URL är `http://www.example.com` anger du den i webbläsarens adress- eller platsfält.
 
 I bilden nedan visas ett exempel på en butikssida. Om den visas på följande sätt har installationen lyckats!
 
 ![Storefront som verifierar en lyckad installation](../../assets/installation/install-success_store.png)
 
-Om sidan visar en `404 (Not Found)` fel eller visar inte format, se [felsökning](https://support.magento.com/hc/en-us/articles/360032994352).
+Om sidan visar ett `404 (Not Found)`-fel eller inte visar format, se [felsökning](https://support.magento.com/hc/en-us/articles/360032994352).
 
 ## Verifiera administratören
 
-Gå till administratören i en webbläsare. Om t.ex. din installationsbas-URL är `http://www.example.com`och Admin-URI är `admin_au1nT`, ange `http://www.example.com/admin_au1nT` i webbläsarens adress eller platsfält.
+Gå till administratören i en webbläsare. Om t.ex. din installationsbas-URL är `http://www.example.com` och Admin-URI är `admin_au1nT` anger du `http://www.example.com/admin_au1nT` i webbläsarens adress- eller platsfält.
 
-(Admin-URI anges av värdet för `backend-frontname` installationsparameter.)
+(Admin-URI anges av värdet för installationsparametern `backend-frontname`.)
 
 Logga in som administratör när du uppmanas till detta.
 
 I bilden nedan visas ett exempel på en admin-sida. Om den visas på följande sätt har installationen lyckats!
 
-![Administratör som verifierar en lyckad installation](../../assets/installation/install_success_admin.png)
+![Admin som verifierar en lyckad installation](../../assets/installation/install_success_admin.png)
 
-Om sidan inte visar några format, se [felsökning](https://support.magento.com/hc/en-us/articles/360032994352).
+Om sidan inte visar format kan du läsa [felsökning](https://support.magento.com/hc/en-us/articles/360032994352).
 
-Om du får ett 404-fel (Hittades inte) som liknar följande finns mer information i [PHP-versionsfel eller 404 vid åtkomst till Adobe Commerce i webbläsaren](https://support.magento.com/hc/en-us/articles/360033117152).
+Om du får ett 404-fel (Hittades inte) som det nedan kan du läsa [PHP-versionsfel eller 404 när du använder Adobe Commerce i webbläsaren](https://support.magento.com/hc/en-us/articles/360033117152).
 
 `The requested URL /magento2index.php/admin/admin/dashboard/index/key/0c81957145a968b697c32a846598dc2e/ was not found on this server.`

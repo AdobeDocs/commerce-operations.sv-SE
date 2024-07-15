@@ -5,26 +5,26 @@ feature: Configuration, Observability, Roles/Permissions, System
 exl-id: 3c557746-5182-4929-aebf-5b6fe76f0d8f
 source-git-commit: 16e9396f19693436dfc7bdac78d84624a78f0c21
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '961'
 ht-degree: 0%
 
 ---
 
 # Allmän och avancerad konfigurationssökvägsreferens
 
-Det här avsnittet innehåller allmänna och avancerade konfigurationssökvägar och _not_ [känsliga och systemspecifika värden](config-reference-sens.md). The [`magento app:config:dump` kommando](../cli/export-configuration.md) skriver dessa värden i den delade konfigurationsfilen, `app/etc/config.php`, som bör vara i källkontroll.
+I det här avsnittet visas allmänna och avancerade konfigurationssökvägar och _inte_ [känsliga och systemspecifika värden](config-reference-sens.md). [`magento app:config:dump`-kommandot ](../cli/export-configuration.md) skriver dessa värden till den delade konfigurationsfilen `app/etc/config.php` som ska finnas i källkontrollen.
 
-Om du vill åsidosätta konfigurationsinställningar eller ange känsliga inställningar läser du [Använd miljövariabler för att åsidosätta konfigurationsinställningar](override-config-settings.md#environment-variables).
+Om du vill åsidosätta konfigurationsinställningar eller ange känsliga inställningar läser du [Använda miljövariabler för att åsidosätta konfigurationsinställningar](override-config-settings.md#environment-variables).
 
 ## Allmän kategori
 
-I det här avsnittet visas variabelnamn och konfigurationssökvägar som är tillgängliga för alternativ i Admin under **Lager** > Inställningar > **Konfiguration** > **Allmänt**.
+I det här avsnittet visas variabelnamn och konfigurationssökvägar som är tillgängliga för alternativ i Admin under **Lagrar** > Inställningar > **Konfiguration** > **Allmänt**.
 
 ### Allmänna sökvägar
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > Allmänt > **Allmänt**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Lagrar** > Inställningar > **Konfiguration** > Allmänt > **Allmänt**.
 
-| Namn | Konfigurationssökväg | Endast handel? | Känslig? |
+| Namn | Konfigurationssökväg | Endast Commerce? | Känslig? |
 |--------------|--------------|--------------|--------------|
 | Standardland | `general/country/default` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 | Tillåt länder | `general/country/allow` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | ![Känslig](/help/assets/configuration/cloud-sens.png) |
@@ -38,11 +38,11 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Viktenhet | `general/locale/weight_unit` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
 | Veckodag 1 | `general/locale/firstday` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
 | Veckodagar | `general/locale/weekend` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
-| Åtkomstbegränsning | `general/restriction/is_active` | ![Endast handel](/help/assets/configuration/cloud-ee.png) | |
-| Begränsningsläge | `general/restriction/mode` | ![Endast handel](/help/assets/configuration/cloud-ee.png) | |
-| Startsida | `general/restriction/http_redirect` | ![Endast handel](/help/assets/configuration/cloud-ee.png) | |
-| Landningssida | `general/restriction/cms_page` | ![Endast handel](/help/assets/configuration/cloud-ee.png) | |
-| HTTP-svar | `general/restriction/http_status` | ![Endast handel](/help/assets/configuration/cloud-ee.png) | |
+| Åtkomstbegränsning | `general/restriction/is_active` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) | |
+| Begränsningsläge | `general/restriction/mode` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) | |
+| Startsida | `general/restriction/http_redirect` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) | |
+| Landningssida | `general/restriction/cms_page` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) | |
+| HTTP-svar | `general/restriction/http_status` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) | |
 | Butiksnamn | `general/store_information/name` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
 | Telefonnummer till butik | `general/store_information/phone` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
 | Öppettider för butik | `general/store_information/hours` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
@@ -59,9 +59,9 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 
 ### Webbsökvägar
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Allmänt** > **Webb**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Lagrar** > Inställningar > **Konfiguration** > **Allmänt** > **Webb**.
 
-| Namn | Konfigurationssökväg | Endast handel? |
+| Namn | Konfigurationssökväg | Endast Commerce? |
 |--------------|--------------|--------------|
 | Lägg till butikskod i URL:er | `web/url/use_store` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Automatisk omdirigering till bas-URL | `web/url/redirect_to_base` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -91,9 +91,9 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 
 ### Sökvägar för valutainställningar
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Allmänt** > **Valutainställningar**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Lagrar** > Inställningar > **Konfiguration** > **Allmänt** > **Valutainställning**.
 
-| Namn | Konfigurationssökväg | Endast handel? |
+| Namn | Konfigurationssökväg | Endast Commerce? |
 |--------------|--------------|--------------|
 | Basvaluta | `currency/options/base` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Standardvisningsvaluta | `currency/options/default` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -116,9 +116,9 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 
 ### Kontaktsökvägar
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Allmänt** > **Kontakter**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Lagrar** > Inställningar > **Konfiguration** > **Allmänt** > **Kontakter**.
 
-| Namn | Konfigurationssökväg | Endast handel? |
+| Namn | Konfigurationssökväg | Endast Commerce? |
 |--------------|--------------|--------------|
 | Aktivera Kontakta oss | `contact/contact/enabled` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Skicka e-post till | `contact/email/recipient_email` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -129,9 +129,9 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 
 ### Rapportsökvägar
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Allmänt** > **Rapporter**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Lagrar** > Inställningar > **Konfiguration** > **Allmänt** > **Rapporter**.
 
-| Namn | Konfigurationssökväg | Endast handel? |
+| Namn | Konfigurationssökväg | Endast Commerce? |
 |--------------|--------------|--------------|
 | Från år till datum | `reports/dashboard/ytd_start` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Aktuell månadsstart | `reports/dashboard/mtd_start` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -140,9 +140,9 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 
 ### Sökvägar för innehållshantering
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Allmänt** > **Innehållshantering**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Lagrar** > Inställningar > **Konfiguration** > **Allmänt** > **Innehållshantering**.
 
-| Namn | Konfigurationssökväg | Endast handel? |
+| Namn | Konfigurationssökväg | Endast Commerce? |
 |--------------|--------------|--------------|
 | Aktivera WYSIWYG Editor | `cms/wysiwyg/enabled` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Använd statiska URL:er för mediainnehåll i WYSIWYG för katalog | `cms/wysiwyg/use_static_urls_in_catalog` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -154,9 +154,9 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 
 ### New Relic rapporteringsvägar
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Allmänt** > **New Relic Reporting**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Lagrar** > Inställningar > **Konfiguration** > **Allmänt** > **New Relic Reporting**.
 
-| Namn | Konfigurationssökväg | Endast handel? |
+| Namn | Konfigurationssökväg | Endast Commerce? |
 |--------------|--------------|--------------|
 | Aktivera New Relic-integrering | `newrelicreporting/general/enable` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | New Relic-programnamn | `newrelicreporting/general/app_name` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -166,13 +166,13 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 
 ## Avancerad kategori
 
-I det här avsnittet visas variabelnamn och konfigurationssökvägar som är tillgängliga för alternativ i Admin under **Lager** > Inställningar > **Konfiguration** > **Avancerat**.
+I det här avsnittet visas variabelnamn och konfigurationssökvägar som är tillgängliga för alternativ i Admin under **Lagrar** > Inställningar > **Konfiguration** > **Avancerat**.
 
 ### Administratörssökvägar
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Avancerat** > **Administratör**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Lagrar** > Inställningar > **Konfiguration** > **Avancerat** > **Admin**.
 
-| Namn | Konfigurationssökväg | Endast handel? |
+| Namn | Konfigurationssökväg | Endast Commerce? |
 |--------------|--------------|--------------|
 | E-postmall för glömt lösenord | `admin/emails/forgot_email_template` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Har du glömt och återställt e-postavsändare | `admin/emails/forgot_email_identity` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -208,9 +208,9 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 
 ### Systemsökvägar
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Avancerat** > **System**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Store** > Inställningar > **Konfiguration** > **Avancerat** > **System**.
 
-| Namn | Konfigurationssökväg | Endast handel? |
+| Namn | Konfigurationssökväg | Endast Commerce? |
 |--------------|--------------|--------------|
 | Livstid för slutförda meddelanden | `system/mysqlmq/successful_messages_lifetime` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Försök igen efter pågående meddelanden | `system/mysqlmq/retry_inprogress_after` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -229,20 +229,20 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Händelserensning var | `system/cron/default/history_cleanup_every` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Livstid för lyckad historik | `system/cron/default/history_success_lifetime` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Livstid för felhistorik | `system/cron/default/history_failure_lifetime` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Generera scheman var | `system/cron/staging/schedule_generate_every` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Schemalägg i förväg | `system/cron/staging/schedule_ahead_for` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Missat om det inte körs inom | `system/cron/staging/schedule_lifetime` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Händelserensning var | `system/cron/staging/history_cleanup_every` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Livstid för lyckad historik | `system/cron/staging/history_success_lifetime` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Livstid för felhistorik | `system/cron/staging/history_failure_lifetime` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Använd separat process | `system/cron/staging/use_separate_process` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Generera scheman var | `system/cron/catalog/event/schedule_generate_every` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Schemalägg i förväg | `system/cron/catalog/event/schedule_ahead_for` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Missat om det inte körs inom | `system/cron/catalog/event/schedule_lifetime` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Händelserensning var | `system/cron/catalog/event/history_cleanup_every` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Livstid för lyckad historik | `system/cron/catalog/event/history_success_lifetime` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Livstid för felhistorik | `system/cron/catalog/event/history_failure_lifetime` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
-| Använd separat process | `system/cron/catalog/event/use_separate_process` | ![Endast handel](/help/assets/configuration/cloud-ee.png) |
+| Generera scheman var | `system/cron/staging/schedule_generate_every` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Schemalägg i förväg | `system/cron/staging/schedule_ahead_for` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Missat om det inte körs inom | `system/cron/staging/schedule_lifetime` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Händelserensning var | `system/cron/staging/history_cleanup_every` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Livstid för lyckad historik | `system/cron/staging/history_success_lifetime` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Livstid för felhistorik | `system/cron/staging/history_failure_lifetime` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Använd separat process | `system/cron/staging/use_separate_process` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Generera scheman var | `system/cron/catalog/event/schedule_generate_every` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Schemalägg i förväg | `system/cron/catalog/event/schedule_ahead_for` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Missat om det inte körs inom | `system/cron/catalog/event/schedule_lifetime` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Händelserensning var | `system/cron/catalog/event/history_cleanup_every` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Livstid för lyckad historik | `system/cron/catalog/event/history_success_lifetime` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Livstid för felhistorik | `system/cron/catalog/event/history_failure_lifetime` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Använd separat process | `system/cron/catalog/event/use_separate_process` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Använd separat process | `system/cron/default/use_separate_process` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Inaktivera e-postkommunikation | `system/smtp/disable` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Ange retursökväg | `system/smtp/set_return_path` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -276,9 +276,9 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 
 ### Utvecklarsökvägar
 
-Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställningar > **Konfiguration** > **Avancerat** > **Utvecklare**.
+Dessa konfigurationsvärden är tillgängliga i Admin i **Store** > Inställningar > **Konfiguration** > **Avancerat** > **Utvecklare**.
 
-| Namn | Konfigurationssökväg | Endast handel? |
+| Namn | Konfigurationssökväg | Endast Commerce? |
 |--------------|--------------|--------------|
 | Typ av arbetsflöde | `dev/front_end_development_workflow/type` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Tillåt symbollänkar | `dev/template/allow_symlink` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -291,7 +291,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lager** > Inställning
 | Aktiverat för Storefront | `dev/translate_inline/active` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Aktiverad för administratör | `dev/translate_inline/active_admin` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Sammanfoga JavaScript-filer | `dev/js/merge_files` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Aktivera JavaScript-paketering | `dev/js/enable_js_bundling` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
+| Aktivera JavaScript Bundling | `dev/js/enable_js_bundling` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Minska JavaScript-filer | `dev/js/minify_files` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Översättningsstrategi | `dev/js/translate_strategy` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Logga JS-fel till sessionslagring | `dev/js/session_storage_logging` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |

@@ -4,7 +4,7 @@ description: Utvärdera vilket stadium ert företag befinner sig i baserat på d
 exl-id: 5cf9f080-0ac4-4426-837f-3c245d10e504
 source-git-commit: e76f101df47116f7b246f21f0fe0fa72769d2776
 workflow-type: tm+mt
-source-wordcount: '1045'
+source-wordcount: '1044'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Tänk på en mognadsmodell som en robust rapport som hjälper er att avgöra hur
 
 I följande diagram sammanfattas de olika behoven på olika mognadsnivåer:
 
-![Diagram över behov över mognadsnivåer](../../assets/playbooks/maturity-levels.png)
+![Behov över mognadsnivåer - diagram](../../assets/playbooks/maturity-levels.png)
 
 ## Löptider
 

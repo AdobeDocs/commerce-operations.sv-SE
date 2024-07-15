@@ -1,10 +1,10 @@
 ---
-title: '''[!DNL Upgrade Compatibility Tool] Felmeddelanden'
-description: Läs mer om felmeddelanden du får när du använder [!DNL Upgrade Compatibility Tool] i ditt Adobe Commerce-projekt.
+title: '[!DNL Upgrade Compatibility Tool] felmeddelanden'
+description: Läs mer om felmeddelanden du får när du använder  [!DNL Upgrade Compatibility Tool]  i ditt Adobe Commerce-projekt.
 exl-id: fe4a17a9-a807-4315-b3cd-e35f34e39f6d
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '4113'
+source-wordcount: '4105'
 ht-degree: 4%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 4%
 
 {{commerce-only}}
 
-Den här felmeddelandereferensen innehåller information om fel som kan uppstå när [!DNL Upgrade Compatibility Tool].
+Den här felmeddelandereferensen innehåller information om fel som kan inträffa när [!DNL Upgrade Compatibility Tool] körs.
 
 Felmeddelanden kategoriseras efter nivå (kritiska problem, fel och varningar) och typ (huvudkod, anpassad kod och GraphQL-scheman). Varje typ innehåller följande information:
 
-- **Felkod**: Adobe Commerce-identifierare för felmeddelandet.
+- **Felkod**: Den Adobe Commerce-tilldelade identifieraren för felmeddelandet.
 - **Felbeskrivning**: En beskrivning som sammanfattar orsaken till felet.
-- **Fel: Föreslagen åtgärd**: Om det är tillämpligt, ger vägledning för felsökning och lösning.
+- **Felföreslagen åtgärd**: Tillhandahåller vägledning för felsökning och lösning av felet om det är tillämpligt.
 
 ## Kritiska problem
 
@@ -29,10 +29,10 @@ Dessa fel rapporteras när vissa av kärnfilerna saknas eller inte matchar origi
 
 | Felkod | Felbeskrivning | Föreslagen åtgärd |
 | --- | --- | --- |
-| 2001 | Kärnfilen hittades inte | Kör `composer install` från projektets rotkatalog. |
-| 2002 | Kärnfilen har ändrats | Kör `composer install` från projektets rotkatalog. |
-| 2003 | Composer-beroendet har inte installerats | Kompositörens beroende saknas, vilket kan leda till problem. Återställ beroende genom att köra `composer require package_name`. |
-| 2005 | Kärnmappen hittades inte | Kör `composer install` från projektets rotkatalog. |
+| 2001 | Kärnfilen hittades inte | Kör kommandot `composer install` från projektets rotkatalog. |
+| 2002 | Kärnfilen har ändrats | Kör kommandot `composer install` från projektets rotkatalog. |
+| 2003 | Composer-beroendet har inte installerats | Kompositörens beroende saknas, vilket kan leda till problem. Återställ beroendet genom att köra `composer require package_name`. |
+| 2005 | Kärnmappen hittades inte | Kör kommandot `composer install` från projektets rotkatalog. |
 
 {style="table-layout:auto"}
 
@@ -107,64 +107,64 @@ Allvarliga problem med GraphQL Schema uppstår om schemaobjekten inte finns i m�
 
 ### Egen kod
 
-Anpassade kodfel uppstår när anpassad kod använder Adobe Commerce-startpunkter som inte betraktas/markeras som `@api`. Beteendet för sådana ingångspunkter garanteras inte. Anpassningen bör vara beroende av `@api` startpunkter i stället. Den funktionalitet som baseras på Adobe Commerce-kod som inte är API bör testas efter uppgraderingen. Dessa fel rapporteras också när större kodningsstandarder har brutits.
+Anpassade kodfel uppstår när anpassad kod använder Adobe Commerce-startpunkter som inte betraktas/markeras som `@api`. Beteendet för sådana ingångspunkter garanteras inte. Anpassningen bör förlita sig på `@api` startpunkter i stället. Den funktionalitet som baseras på Adobe Commerce-kod som inte är API bör testas efter uppgraderingen. Dessa fel rapporteras också när större kodningsstandarder har brutits.
 
 | Felkod | Felbeskrivning | Föreslagen åtgärd |
 | --- | --- | --- |
-| 1104 | Använda en icke-API-klass som ärver API-gränssnittet | Klasser som inte har markerats som `@api` kan ändras. Överväg att uppdatera koden så att den är beroende av gränssnittet som markerats som `@api` i stället. I annat fall bör funktionaliteten som är beroende av den här implementeringen testas efter uppgraderingen. |
+| 1104 | Använda en icke-API-klass som ärver API-gränssnittet | Klasser som inte har markerats som `@api` kan ändras. Överväg att uppdatera koden så att den förlitar sig på gränssnittet som markerats som `@api` i stället. I annat fall bör funktionaliteten som är beroende av den här implementeringen testas efter uppgraderingen. |
 | 1121 | Utöka från API-klass som inte är Adobe Commerce | Den utökade klassen finns inte längre i kodbasen. Arv rekommenderas inte för att utöka Adobe Commerce-funktioner. Uppdatera koden så att den använder en klass som är markerad som `@api`. |
 | 1122 | Importera API-klass som inte är Adobe Commerce | Den utökade klassen finns inte längre i kodbasen. Uppdatera koden så att den använder en klass som är markerad som `@api`. I annat fall bör funktionaliteten som är beroende av den här implementeringen testas efter uppgraderingen. |
 | 1123 | Läser in API-klass som inte är Adobe Commerce | Den utökade klassen finns inte längre i kodbasen. Uppdatera koden så att den använder en klass som är markerad som `@api`. I annat fall bör funktionaliteten som är beroende av den här implementeringen testas efter uppgraderingen. |
 | 1124 | Använda API-klass som inte är Adobe Commerce | Den utökade klassen finns inte längre i kodbasen. Uppdatera koden så att den använder en klass som är markerad som `@api`. I annat fall bör funktionaliteten som är beroende av den här implementeringen testas efter uppgraderingen. |
-| 1224 | Använda icke-Adobe Commerce API-konstant | Konstanter som inte är markerade som `@api` kan ändras. Överväg att införa och använda en privat konstant av det värde som krävs i den anpassade koden i stället. |
-| 1225 | Åsidosätta icke-Adobe Commerce API-konstant | Konstanter som inte är markerade som `@api` kan ändras. Överväg att införa och använda en privat konstant av det värde som krävs i den anpassade koden i stället. |
-| 1226 | Tilldelning av icke-Adobe Commerce API-konstant | Konstanter som inte är markerade som `@api` kan ändras. Överväg att införa och använda en privat konstant av det värde som krävs i den anpassade koden i stället. |
-| 1322 | Importerat icke-Adobe Commerce API-gränssnitt | Gränssnitt har inte markerats som `@api` kan ändras. Ta bort det här arvet eller ersätt det med arv från Adobe Commerce-gränssnittet som är markerat som `@api` eller ett gränssnitt som introducerats i omfattningen av anpassningskoden. |
-| 1324 | Använt API-gränssnitt som inte är Adobe Commerce | Gränssnitt har inte markerats som `@api` kan ändras. Ta bort det här arvet eller ersätt det med arv från Adobe Commerce-gränssnittet som är markerat som `@api` eller ett gränssnitt som introducerats i omfattningen av anpassningskoden. |
-| 1327 | Ärvt API-gränssnitt som inte är Adobe Commerce | Konstanter som inte är markerade som `@api` kan ändras. Överväg att införa och använda en privat konstant av det värde som krävs i den anpassade koden i stället. |
-| 1328 | Implementerat API-gränssnitt som inte är Adobe Commerce | Gränssnitt har inte markerats som `@api` kan ändras. Ta bort det här arvet eller ersätt det med arv från Adobe Commerce-gränssnittet som är markerat som `@api` eller ett gränssnitt som introducerats i omfattningen av anpassningskoden. |
-| 1420 | Instansierar icke-Adobe Commerce API-klass/gränssnitt | Klasser som inte har markerats som `@api` kan ändras. Överväg att uppdatera koden så att den är beroende av gränssnittet som markerats som `@api` i stället. I annat fall bör funktionaliteten som är beroende av den här implementeringen testas efter uppgraderingen. Det rekommenderade sättet att hämta en instans av klassen är också att använda DI. Använd en fabrik om en ny instans av klassen krävs. |
-| 1428 | Möjligt beroende på implementeringsinformation. | Klasser som inte har markerats som `@api` kan ändras. Överväg att uppdatera koden så att den är beroende av gränssnittet som markerats som `@api` i stället. I annat fall bör funktionaliteten som är beroende av den här implementeringen testas efter uppgraderingen. |
+| 1224 | Använda icke-Adobe Commerce API-konstant | Konstanter som inte har markerats som `@api` kan ändras. Överväg att införa och använda en privat konstant av det värde som krävs i den anpassade koden i stället. |
+| 1225 | Åsidosätta icke-Adobe Commerce API-konstant | Konstanter som inte har markerats som `@api` kan ändras. Överväg att införa och använda en privat konstant av det värde som krävs i den anpassade koden i stället. |
+| 1226 | Tilldelning av icke-Adobe Commerce API-konstant | Konstanter som inte har markerats som `@api` kan ändras. Överväg att införa och använda en privat konstant av det värde som krävs i den anpassade koden i stället. |
+| 1322 | Importerat icke-Adobe Commerce API-gränssnitt | Gränssnitt som inte har markerats som `@api` kan ändras. Överväg att ta bort det här arvet eller att ersätta det med arv från Adobe Commerce-gränssnittet som är markerat som `@api` eller ett gränssnitt som introducerats i omfattningen av anpassningskoden. |
+| 1324 | Använt API-gränssnitt som inte är Adobe Commerce | Gränssnitt som inte har markerats som `@api` kan ändras. Överväg att ta bort det här arvet eller att ersätta det med arv från Adobe Commerce-gränssnittet som är markerat som `@api` eller ett gränssnitt som introducerats i omfattningen av anpassningskoden. |
+| 1327 | Ärvt API-gränssnitt som inte är Adobe Commerce | Konstanter som inte har markerats som `@api` kan ändras. Överväg att införa och använda en privat konstant av det värde som krävs i den anpassade koden i stället. |
+| 1328 | Implementerat API-gränssnitt som inte är Adobe Commerce | Gränssnitt som inte har markerats som `@api` kan ändras. Överväg att ta bort det här arvet eller att ersätta det med arv från Adobe Commerce-gränssnittet som är markerat som `@api` eller ett gränssnitt som introducerats i omfattningen av anpassningskoden. |
+| 1420 | Instansierar icke-Adobe Commerce API-klass/gränssnitt | Klasser som inte har markerats som `@api` kan ändras. Överväg att uppdatera koden så att den förlitar sig på gränssnittet som markerats som `@api` i stället. I annat fall bör funktionaliteten som är beroende av den här implementeringen testas efter uppgraderingen. Det rekommenderade sättet att hämta en instans av klassen är också att använda DI. Använd en fabrik om en ny instans av klassen krävs. |
+| 1428 | Möjligt beroende på implementeringsinformation. | Klasser som inte har markerats som `@api` kan ändras. Överväg att uppdatera koden så att den förlitar sig på gränssnittet som markerats som `@api` i stället. I annat fall bör funktionaliteten som är beroende av den här implementeringen testas efter uppgraderingen. |
 | 1429 | Anropa API-metoder som inte är Adobe Commerce | Metoder som inte har markerats som `@api` eller som inte har deklarerats inom API-klassen/gränssnittet kan ändras. Även om metodens gränssnitt inte uppdateras i den nya versionen kan dess beteende eller utdata vara annorlunda. Överväg att förlita dig på en gränssnittsmetod. I annat fall bör funktionaliteten som är beroende av den här implementeringen testas efter uppgraderingen. |
 | 1449 | Anrop till icke-gränssnittsmetod (som finns i implementeringen) | Metoder som inte har deklarerats i gränssnittet kan ändras. Överväg att förlita dig på en gränssnittsmetod. I annat fall bör funktionaliteten som är beroende av den här implementeringen testas efter uppgraderingen. |
-| 1524 | Använda API-egenskap som inte är Adobe Commerce | Värden för de egenskaper som inte är markerade som `@api` kan ändras. Överväg att förlita dig på API-gränssnittsmetoden i stället. |
-| 1525 | Åsidosätta icke-Adobe Commerce API-egenskap | Värden för de egenskaper som inte är markerade som `@api` kan ändras. Överväg att förlita dig på API-gränssnittsmetoden i stället. |
-| 1526 | Tilldelning av icke-Adobe Commerce API-egenskap | Värden för de egenskaper som inte är markerade som `@api` kan ändras. Överväg att förlita dig på API-gränssnittsmetoden i stället. |
+| 1524 | Använda API-egenskap som inte är Adobe Commerce | Värden för egenskaper som inte har markerats som `@api` kan ändras. Överväg att förlita dig på API-gränssnittsmetoden i stället. |
+| 1525 | Åsidosätta icke-Adobe Commerce API-egenskap | Värden för egenskaper som inte har markerats som `@api` kan ändras. Överväg att förlita dig på API-gränssnittsmetoden i stället. |
+| 1526 | Tilldelning av icke-Adobe Commerce API-egenskap | Värden för egenskaper som inte har markerats som `@api` kan ändras. Överväg att förlita dig på API-gränssnittsmetoden i stället. |
 | 5004 | Funktionen utan argument har tagits bort | Skicka indata som ska valideras som funktionens första argument. |
 | 5007 | Användningen av vissa funktioner bör inte användas | Undvik dessa funktioner. |
 | 5009 | Malldirektiv får inte anropa metoder. Endast åtkomst till skalära matriser tillåts | Ta bort metodanrop från mallen. |
-| 5010 | Mall `@vars` kommentarsblocket innehåller ogiltig JSON | Åtgärda ogiltig JSON. |
-| 5011 | Mall `@vars` kommentarsblocket innehåller en ogiltig etikett | Korrigera ogiltig etikett. |
-| 5012 | Mall `@vars` kommentarsblocket saknar en variabel som används i mallen | Lägg till en saknad variabel i @vars kommentarblock. |
+| 5010 | Mallens `@vars`-kommentarblock innehåller ogiltig JSON | Åtgärda ogiltig JSON. |
+| 5011 | Mallens kommentarblock `@vars` innehåller en ogiltig etikett | Korrigera ogiltig etikett. |
+| 5012 | Mallen `@vars` kommentarsblock saknar en variabel som används i mallen | Lägg till en saknad variabel i @vars kommentarblock. |
 | 5013 | Undvik att använda självstängande tagg med icke-void html-element | Använd close-taggen i stället. |
-| 5014 | The `"active"` attributet är föråldrat | Listan med aktiva moduler definieras i distributionskonfigurationen. |
-| 5015 | The `<param>` noden är inaktuell | Använd `<argument name="..." xsi:type="...">` i stället. |
-| 5016 | The `<instance>` noden är inaktuell | Använd `<argument name="..." xsi:type="object">` i stället. |
-| 5017 | The `<array>` noden är inaktuell | Använd `<argument name="..." xsi:type="array">` i stället. |
-| 5018 | The `<item key="...">` noden är inaktuell | Använd `<item name="..." xsi:type="...">` i stället. |
-| 5019 | The `<value>` noden är inaktuell | Ange i stället det faktiska värdet som en textlitteral. |
-| 5020 | Föråldrad nod: `<supported_blocks>` | Ersätts med `<supported_containers>`. |
-| 5021 | Föråldrad nod: `<block_name>` | Ersätts med `<container_name>`. |
+| 5014 | Attributet `"active"` är föråldrat | Listan med aktiva moduler definieras i distributionskonfigurationen. |
+| 5015 | Noden `<param>` är inaktuell | Använd `<argument name="..." xsi:type="...">` i stället. |
+| 5016 | Noden `<instance>` är inaktuell | Använd `<argument name="..." xsi:type="object">` i stället. |
+| 5017 | Noden `<array>` är inaktuell | Använd `<argument name="..." xsi:type="array">` i stället. |
+| 5018 | Noden `<item key="...">` är inaktuell | Använd `<item name="..." xsi:type="...">` i stället. |
+| 5019 | Noden `<value>` är inaktuell | Ange i stället det faktiska värdet som en textlitteral. |
+| 5020 | Föråldrad nod: `<supported_blocks>` | Ska ersättas med `<supported_containers>`. |
+| 5021 | Föråldrad nod: `<block_name>` | Ska ersättas med `<container_name>`. |
 | 5022 | Fabriksnamn har identifierats | Widgettypen ska inte börja med /. |
 | 5023 | En föråldrad ACL-struktur har identifierats | Kontrollera lib/internal/Magento/Framework/Acl/etc/acl.xsd. |
 | 5024 | Föråldrad menystruktur upptäcktes på raden | Kontrollera app/code/Magento/Backend/etc/menu.xsd. |
 | 5025 | En föråldrad systemkonfigurationsstruktur upptäcktes i filen | Kontrollera app/code/Magento/Config/etc/system_file.xsd. |
-| 5026 | Använd inte `"text/javascript"` type-attribut | Använd bara publika medlemmar. |
-| 5028 | Tillgång till skyddade och privata medlemmar i `Block` klassen är föråldrad i FTML-mallar | Använd bara publika medlemmar. |
-| 5031 | Innehåller föråldrad metod | Använd `getConnection()` i stället. |
+| 5026 | Använd inte typattributet `"text/javascript"` | Använd bara publika medlemmar. |
+| 5028 | Åtkomst till skyddade och privata medlemmar i klassen `Block` är föråldrad i FTML-mallar | Använd bara publika medlemmar. |
+| 5031 | Innehåller föråldrad metod | Använd metoden `getConnection()` i stället. |
 | 5042 | Felaktigt format för PHP-klassreferens | Kontrollera att klassen bara refereras med cameraCased-bokstäver, siffror och inget inledande snedstreck. |
 | 5043 | Felaktigt format för modulreferens | Kontrollera att modulen bara har bokstäver, siffror, understreck och inget inledande snedstreck som referens. |
-| 5044 | Klass `Zend_Db_Select` är begränsad | Föreslagen ersättning: `\Magento\Framework\DB\Select`. |
-| 5045 | Klass `Zend_Db_Adapter_Pdo_Mysql` är begränsad | Föreslagen ersättning: `\Magento\Framework\DB\Adapter\Pdo\Mysql`. |
-| 5046 | Klass `Magento\Framework\Serialize\Serializer\Serialize` är begränsad | Föreslagen ersättning: `Magento\Framework\Serialize\SerializerInterface`. |
-| 5047 | Klass `ArrayObject` är begränsad | Föreslagen ersättning: Anpassad klass, utökad från `ArrayObject` med överskriven serialisering/avserialisering-metod. |
-| 5048 | Klass `Magento\Framework\View\Element\UiComponent\ArrayObjectFactory` är begränsad | Föreslagen ersättning: Factory som skapar anpassad klass, utökad från `ArrayObject` med överskriven serialisering/avserialisering-metod. |
+| 5044 | Klassen `Zend_Db_Select` är begränsad | Föreslagen ersättning: `\Magento\Framework\DB\Select`. |
+| 5045 | Klassen `Zend_Db_Adapter_Pdo_Mysql` är begränsad | Föreslagen ersättning: `\Magento\Framework\DB\Adapter\Pdo\Mysql`. |
+| 5046 | Klassen `Magento\Framework\Serialize\Serializer\Serialize` är begränsad | Föreslagen ersättning: `Magento\Framework\Serialize\SerializerInterface`. |
+| 5047 | Klassen `ArrayObject` är begränsad | Föreslagen ersättning: Anpassad klass, utökad från `ArrayObject` med överskrivna serialiserings-/avserialiseringsmetoder. |
+| 5048 | Klassen `Magento\Framework\View\Element\UiComponent\ArrayObjectFactory` är begränsad | Föreslagen ersättning: Factory som skapar en anpassad klass, utökad från `ArrayObject` med överskrivna serialiserings-/avserialiseringsmetoder. |
 | 5050 | Blocket som refereras tas bort | Ta bort referens till block. |
 | 5051 | `output="toHtml"` är föråldrad | Använd `output="1"`. |
-| 5052 | klassen `\Magento\Framework\View\Element\Text\ListText` ska inte längre användas i layout | Ta bort klass `\Magento\Framework\View\Element\Text\ListText` från layout. |
-| 5053 | Anrop av metod via layoutinstruktion `<action>` tillåts inte | Undvik att använda felaktig metod i `<action>`. |
-| 5054 | `helper` attributet innehåller `/` | Ta bort `/` från hjälpattribut. |
-| 5055 | `helper` attributet innehåller inte `::` | Lägg till `::` till hjälpattribut. |
+| 5052 | Klassen `\Magento\Framework\View\Element\Text\ListText` ska inte längre användas i layout | Ta bort klass `\Magento\Framework\View\Element\Text\ListText` från layout. |
+| 5053 | Det är inte tillåtet att anropa metoden via layoutinstruktionen `<action>` | Undvik att använda en felaktig metod i `<action>`. |
+| 5054 | Attributet `helper` innehåller `/` | Ta bort `/` från hjälpattributet. |
+| 5055 | Attributet `helper` innehåller inte `::` | Lägg till `::` i hjälpattributet. |
 | 5056 | Installationsskript är föråldrade | Använd deklarativ schemainställning i modulens etc/db_schema.xml. |
 | 5057 | InstallSchema-skript är föråldrade | Använd deklarativ schemainställning i modulens etc/db_schema.xml. |
 | 5058 | InstallData-skript är föråldrade | Använd datapatchar i modulens Setup/Patch/Data dir. |
@@ -177,8 +177,8 @@ Anpassade kodfel uppstår när anpassad kod använder Adobe Commerce-startpunkte
 | 5065 | data finns i en ogiltig katalog | Skapa en datakorrigering i modulens inställnings-/korrigerings-/datamapp för datauppgraderingar eller använd den deklarativa schemametoden i modulens etc/db_schema.xml-fil för schemaändringar. |
 | 5066 | sql finns i en ogiltig katalog | Skapa en datakorrigering i modulens inställnings-/korrigerings-/datamapp för datauppgraderingar eller använd den deklarativa schemametoden i modulens etc/db_schema.xml-fil för schemaändringar. |
 | 5067 | Noder som identifieras av XPath är föråldrade | Föråldrad XML som anges i felet bör uppdateras. Följ förslagen från felmeddelandet. |
-| 5068 | Direktiv `{{htmlescape}}` är föråldrad | Använd `{{var}}` i stället. |
-| 5069 | Direktiv `{{escapehtml}}` är föråldrad | Använd `{{var}}` i stället. |
+| 5068 | Direktiv `{{htmlescape}}` är föråldrat | Använd `{{var}}` i stället. |
+| 5069 | Direktiv `{{escapehtml}}` är föråldrat | Använd `{{var}}` i stället. |
 | 5070 | Den tredje parametern behövs inte längre för `getChildHtml()` | Ta bort den tredje parametern från anropet till `getChildHtml()`. |
 | 5071 | Den fjärde parametern behövs inte längre för `getChildHtml()` | Ta bort den fjärde parametern från anropet till `getChildHtml()`. |
 | 5073 | Äldre tabellnamn med snedstreck måste vara fasta på direkta tabellnamn | Använd direkt tabellnamn i stället. |
@@ -190,26 +190,26 @@ Anpassade kodfel uppstår när anpassad kod använder Adobe Commerce-startpunkte
 | 5082 | Användningen av $this i mallar är inaktuell | Använd $block i stället. |
 | 5083 | Konstanter tillåts inte som det första argumentet i översättningsfunktionen | Använd stränglitteral i stället. |
 | 5085 | Användningen av vissa funktioner bör inte användas | Använd i stället den alternativa funktionen som finns i meddelandet. |
-| 5087 | PHP-kompatibilitetsproblem mellan versioner | Följ förslagen från meddelandet och kontrollera [migreringsguide](https://www.php.net/manual/en/migration81.php). |
+| 5087 | PHP-kompatibilitetsproblem mellan versioner | Följ förslagen från meddelandet och kontrollera [migreringsguiden](https://www.php.net/manual/en/migration81.php). |
 | 5088 | Valfria parametrar hittades efter obligatoriska | Flytta obligatoriska parametrar efter valfria parametrar. |
-| 5089 | Metodsynlighet `final private` hittad | Ändra metodsynlighet från `final private` endast `private`. |
-| 5090 | Magisk metod `__set_state` är inte definierad som `static` | Magisk metod `__set_state` måste definieras som `static`. |
-| 5091 | Klass med `__toString()` metoden ärver inte från `Stringable` gränssnitt | Lägg till `Stringable` gränssnitt till klass med `__toString()` -metod. |
-| 5092 | `is_resource()` metod som används för funktioner som nu returnerar Object | Ändra `is_resource()` till `instanceof` Objekt. |
-| 6001 | `jQuery.andSelf()` borttagen | Använd `jQuery.addBack()`. |
+| 5089 | Metodsynlighet `final private` hittades | Ändra metodsynlighet från `final private` till endast `private`. |
+| 5090 | Magisk metod `__set_state` är inte definierad som `static` | Den magiska metoden `__set_state` måste definieras som `static`. |
+| 5091 | Klassen med metoden `__toString()` ärver inte från gränssnittet `Stringable` | Lägg till gränssnittet `Stringable` i klassen med metoden `__toString()`. |
+| 5092 | Metoden `is_resource()` används för funktioner som nu returnerar Object | Ändra `is_resource()` till `instanceof`-objekt. |
+| 6001 | `jQuery.andSelf()` har tagits bort | Använd `jQuery.addBack()`. |
 | 6002 | jQuery `$.bind` och `$.unbind` är föråldrade | Använd `$.on` och `$.off` i stället. |
-| 6003 | jQuery-metoden för att prenumerera på en händelse är föråldrad och bör inte användas | Använd `.on("event name", fn)` i stället för att prenumerera på den händelsen. |
-| 6003 | jQuery-metoden för att utlösa en händelse är föråldrad och bör inte användas | Använd `.trigger("event name")` i stället för att utlösa den händelsen. |
+| 6003 | jQuery-metoden för att prenumerera på en händelse är föråldrad och bör inte användas | Använd metoden `.on("event name", fn)` i stället för att prenumerera på den händelsen. |
+| 6003 | jQuery-metoden för att utlösa en händelse är föråldrad och bör inte användas | Använd metoden `.trigger("event name")` i stället för att utlösa händelsen. |
 | 6004 | jQuery `$.delegate` och `$.undelegate` är föråldrade | Använd `$.on` och `$.off` i stället. |
-| 6005 | (`jQuery.load()` / `jQuery.unload()` / `jQuery.error()`) togs bort | Använd (`.on("load", fn)` / `.on("unload", fn)` / `.on("error", fn)`) istället. |
-| 6006 | `jQuery.size()` borttagen | Använd `jQuery.length`. |
+| 6005 | (`jQuery.load()` / `jQuery.unload()` / `jQuery.error()`) togs bort | Använd (`.on("load", fn)` / `.on("unload", fn)` / `.on("error", fn)`) i stället. |
+| 6006 | `jQuery.size()` har tagits bort | Använd `jQuery.length`. |
 | 6007 | `jQuery.trim` är inaktuell | Använd `String.prototype.trim`. |
 | 6008 | (`addButton`, `addContextToolbar`, `addMenuItem`, `addSidebar`, `file_browser_callback`, `insert_button_items`, inlite-tema, mobiltema, modernt tema) har tagits bort | Uppdatera koden så att den är kompatibel med tinymce5. |
-| 6009 | `jQuery.isFunction()` är inaktuell | I de flesta fall kan den ersättas med [typeof x === &quot;function&quot;]. |
-| 6009 | `jQuery.type()` är inaktuell | Ersätt med lämplig typkontroll som [typeof x === &quot;function&quot;]. |
+| 6009 | `jQuery.isFunction()` är inaktuell | I de flesta fall kan den ersättas med [typeof x ===&quot;function&quot;]. |
+| 6009 | `jQuery.type()` är inaktuell | Ersätt med en lämplig typkontroll som [typeof x ===&quot;function&quot;]. |
 | 6009 | `jQuery.isArray()` är inaktuell | Använd metoden Array.isArray i stället. |
 | 6009 | `jQuery.parseJSON()` är inaktuell | Om du vill analysera JSON-strängar använder du den systemspecifika JSON.parse-metoden i stället. |
-| 6010 | (`jQuery.expr[":"]`, `jQuery.expr.filters`) är föråldrat | Använd jQuery.expr.pseudos i stället. |
+| 6010 | (`jQuery.expr[":"]`, `jQuery.expr.filters`) är föråldrad | Använd jQuery.expr.pseudos i stället. |
 
 {style="table-layout:auto"}
 
@@ -244,29 +244,29 @@ Dessa varningar rapporteras när det finns mindre inkonsekvenser i kärnkodbasen
 
 ### Egen kod
 
-Anpassade kodvarningar visas när referenser till inaktuell kod identifieras. Sådana referenser bör ersättas med de tilläggspunkter som stöds. Var uppmärksam på `@see` anteckning av borttaget objekt för rekommendationer. Dessa fel rapporteras också när mindre kodningsstandarder har brutits.
+Anpassade kodvarningar visas när referenser till inaktuell kod identifieras. Sådana referenser bör ersättas med de tilläggspunkter som stöds. Var uppmärksam på `@see`-anteckningen för det borttagna objektet för rekommendationer. Dessa fel rapporteras också när mindre kodningsstandarder har brutits.
 
 | Felkod | Felbeskrivning | Föreslagen åtgärd |
 | --- | --- | --- |
-| 1131 | Utöka från Adobe Commerce ``@deprecated`` class | Den utökade klassen tas bort i kommande versioner. Arv rekommenderas inte för att utöka Adobe Commerce-funktioner. Uppdatera koden så att den använder en klass som är markerad som `@api`. |
-| 1132 | Importera Adobe Commerce `@deprecated` class | Den utökade klassen tas bort i kommande versioner. Överväg att använda Adobe Commerce-klass som är markerad som `@api` i stället. |
-| 1133 | Läser in Adobe Commerce `@deprecated` class | Den utökade klassen tas bort i kommande versioner. Överväg att använda Adobe Commerce-klass som är markerad som `@api` i stället. |
-| 1134 | Använda Adobe Commerce `@deprecated` class | Den utökade klassen tas bort i kommande versioner. Överväg att använda Adobe Commerce-klass som är markerad som `@api` i stället. |
-| 1234 | Använda Adobe Commerce `@deprecated` konstant | Den borttagna konstanten tas bort i kommande versioner. Överväg att använda en konstant som markerats som `@api` eller en privat konstant i implementeringen i stället. |
-| 1235 | Åsidosätta Adobe Commerce `@deprecated` konstant | Den borttagna konstanten tas bort i kommande versioner. Överväg att använda en konstant som markerats som `@api` eller en privat konstant i implementeringen i stället. |
-| 1236 | Tilldelning av Adobe Commerce `@deprecated` konstant | Den borttagna konstanten tas bort i kommande versioner. Överväg att använda en konstant som markerats som `@api` eller en privat konstant i implementeringen i stället. |
-| 1332 | Importerad Adobe Commerce `@deprecated` gränssnitt | Det borttagna gränssnittet tas bort i kommande versioner. Överväg att använda ett gränssnitt eller en klass som markerats som `@api` i stället. |
-| 1334 | Använt Adobe Commerce `@deprecated` gränssnitt | Det borttagna gränssnittet tas bort i kommande versioner. Överväg att använda ett gränssnitt eller en klass som markerats som `@api` i stället. |
-| 1337 | Ärvs från Adobe Commerce `@deprecated` gränssnitt | Det borttagna gränssnittet tas bort i kommande versioner. Överväg att ta bort gränssnittsarvet med ett gränssnitt som är markerat som `@api` eller ett gränssnitt som introducerats i implementeringen istället. |
-| 1338 | Implementerad Adobe Commerce `@deprecated` gränssnitt | Det borttagna gränssnittet tas bort i kommande versioner. Överväg att ta bort gränssnittsarvet med ett gränssnitt som är markerat som `@api` eller ett gränssnitt som introducerats i implementeringen istället. |
+| 1131 | Utöka från Adobe Commerce ``@deprecated``-klass | Den utökade klassen tas bort i kommande versioner. Arv rekommenderas inte för att utöka Adobe Commerce-funktioner. Uppdatera koden så att den använder en klass som är markerad som `@api`. |
+| 1132 | Importerar Adobe Commerce-klassen `@deprecated` | Den utökade klassen tas bort i kommande versioner. Överväg att använda Adobe Commerce-klass som markerats som `@api` i stället. |
+| 1133 | Läser in Adobe Commerce `@deprecated`-klass | Den utökade klassen tas bort i kommande versioner. Överväg att använda Adobe Commerce-klass som markerats som `@api` i stället. |
+| 1134 | Använda Adobe Commerce `@deprecated`-klassen | Den utökade klassen tas bort i kommande versioner. Överväg att använda Adobe Commerce-klass som markerats som `@api` i stället. |
+| 1234 | Använda Adobe Commerce `@deprecated`-konstanten | Den borttagna konstanten tas bort i kommande versioner. Använd en konstant som är markerad som `@api` eller en privat konstant i implementeringen i stället. |
+| 1235 | Åsidosätter Adobe Commerce `@deprecated`-konstanten | Den borttagna konstanten tas bort i kommande versioner. Använd en konstant som är markerad som `@api` eller en privat konstant i implementeringen i stället. |
+| 1236 | Tilldelning av Adobe Commerce `@deprecated`-konstanten | Den borttagna konstanten tas bort i kommande versioner. Använd en konstant som är markerad som `@api` eller en privat konstant i implementeringen i stället. |
+| 1332 | Adobe Commerce `@deprecated`-gränssnittet har importerats | Det borttagna gränssnittet tas bort i kommande versioner. Använd ett gränssnitt eller en klass som är markerad som `@api` i stället. |
+| 1334 | Använt Adobe Commerce `@deprecated`-gränssnitt | Det borttagna gränssnittet tas bort i kommande versioner. Använd ett gränssnitt eller en klass som är markerad som `@api` i stället. |
+| 1337 | Ärvs från Adobe Commerce `@deprecated`-gränssnittet | Det borttagna gränssnittet tas bort i kommande versioner. Överväg att ta bort gränssnittsarvet genom att använda ett gränssnitt som markerats som `@api` eller ett gränssnitt som introducerats i implementeringen i stället. |
+| 1338 | Adobe Commerce `@deprecated`-gränssnittet har implementerats | Det borttagna gränssnittet tas bort i kommande versioner. Överväg att ta bort gränssnittsarvet genom att använda ett gränssnitt som markerats som `@api` eller ett gränssnitt som introducerats i implementeringen i stället. |
 | 1430 | Anropet har inte deklarerats som dataobjektmetod | De magiska metoder som inte har deklarerats kan ändras. Överväg att förlita dig på gränssnittsmetoder i stället. |
-| 1439 | Ring Adobe Commerce `@deprecated` method | Den borttagna metoden kommer att tas bort i kommande versioner. Överväg att förlita dig på metoder som deklarerats i API-gränssnitt i stället. |
+| 1439 | Anropa Adobe Commerce `@deprecated`-metoden | Den borttagna metoden kommer att tas bort i kommande versioner. Överväg att förlita dig på metoder som deklarerats i API-gränssnitt i stället. |
 | 1440 | Felmatchad metodsignatur | Ett anrop eller åsidosättning av huvudmetoden upptäcks med parametrar, argument eller returtyp som inte matchar metodsignaturen. |
-| 1534 | Använda Adobe Commerce `@deprecated` property | Den borttagna metoden kommer att tas bort i kommande versioner. Överväg att förlita dig på metoder som deklarerats i API-gränssnitt i stället. |
-| 1535 | Åsidosätta Adobe Commerce `@deprecated` property | Den borttagna egenskapen tas bort i kommande versioner. Du bör i stället förlita dig på metoder som deklarerats i API-gränssnitt eller använda en privat egenskap i implementeringen. |
-| 1536 | Tilldelning av Adobe Commerce `@deprecated` property | Den borttagna metoden kommer att tas bort i kommande versioner. Överväg att förlita dig på metoder som deklarerats i API-gränssnitt i stället. |
+| 1534 | Använda Adobe Commerce-egenskapen `@deprecated` | Den borttagna metoden kommer att tas bort i kommande versioner. Överväg att förlita dig på metoder som deklarerats i API-gränssnitt i stället. |
+| 1535 | Åsidosätter Adobe Commerce `@deprecated`-egenskap | Den borttagna egenskapen tas bort i kommande versioner. Du bör i stället förlita dig på metoder som deklarerats i API-gränssnitt eller använda en privat egenskap i implementeringen. |
+| 1536 | Tilldelning av Adobe Commerce `@deprecated`-egenskap | Den borttagna metoden kommer att tas bort i kommande versioner. Överväg att förlita dig på metoder som deklarerats i API-gränssnitt i stället. |
 | 5006 | Proxies och spärrar MÅSTE aldrig uttryckligen begäras i konstruktorer | Den ursprungliga klassen ska deklareras som en typ av konstruktorparametern. Klassen Interceptor/Proxy skickas av implementeringen av ramverkets beroendeinjicering. |
-| 5074 | Användning av borttagen metod `getResource()` data för (spara/läsa in/ta bort) har identifierats. | Använd en databas i stället. |
+| 5074 | Användning av den inaktuella metoden `getResource()` för att (spara/läsa in/ta bort) data har identifierats. | Använd en databas i stället. |
 | 5086 | Synligheten har inte deklarerats för en konstant | Ange synligheten för alla konstanter. |
 
 {style="table-layout:auto"}

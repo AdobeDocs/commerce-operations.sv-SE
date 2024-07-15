@@ -5,7 +5,7 @@ exl-id: 5c87d762-06ce-4716-946a-f0fe5348fa18
 feature: System
 source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '372'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Följande tabell innehåller rekommenderade projekthanteringsverktyg:
 | Biljetthantering | Atlassiska JIRA |
 | SLA-hantering | Atlassisk JIRA Service Management |
 | Dokumenthantering | Atlassisk konferens |
-| Källkodshantering | Atlassian Bitbucket, GitHub |
+| Source kodhantering | Atlassian Bitbucket, GitHub |
 | Continuous Integration (CI)/Continuous Delivery (CD) | Jenkins |
 | Kommunikation | E-post, Microsoft Teams, telefon, Slack |
 | Möte | Zooma, Microsoft Teams |
@@ -43,7 +43,7 @@ Jira är ett system för uppföljning och hantering av biljetter (inklusive hant
 - Smidig visualisering av biljetter och flytt med Agile/Scrum
 - Öppen information mellan kundteam och utvecklingsteam
 
-## Källkodshantering
+## Source Code Management
 
 Bitbucket är mer än bara Git-kodhantering. Bitbucket ger team en plats att planera projekt, samarbeta om kod, testa och driftsätta. Med Bitbucket kan du godkänna kodgranskningar effektivare med pull-förfrågningar. Du kan också skapa en sammanfogad checklista med utsedda godkännare och hålla diskussioner direkt i källkoden med textbundna kommentarer.
 

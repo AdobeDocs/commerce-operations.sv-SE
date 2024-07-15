@@ -5,7 +5,7 @@ exl-id: cc9b090a-a504-4df3-aa32-81882f431dd9
 feature: Cloud
 source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '574'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ I följande information sammanfattas resultaten av jämförelsen och information
 
 ## Viktiga prestandamått
 
-I följande bild visas Commerce Store-konfigurationen för prestandatestet och nyckelresultatmåtten från testresultaten.
+Följande bild visar Commerce Store-konfigurationen för prestandatestet och nyckeltal från testresultaten.
 
 ![Prestandatest JMeter och produktionsinfrastruktur](../../../assets/performance/images/performance-benchmark-kpis-245-cloud.png){width="700" zoomable="yes"}
 
@@ -32,11 +32,11 @@ Baserat på testkriterier som härmar en företagsorganisation B2C kan systemet 
 
 ### Prestandaförbättringar
 
-- **Beställningar**—Behandlades 3 481 order per minut med en svarstid på mindre än 2 sekunder för den 99:e percentilen (99 % av förfrågningarna behandlades med en svarstid på mindre än 2 sekunder).
-- **Sidvyer**- Hanteras över 2 miljoner sidvisningar per timme med en svarstid på mindre än 2 sekunder för den 99:e percentilen.
-- **Effektiva SKU:er**- Kundprofilen innehöll 242 miljoner olika prisvariationer (<a href="https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/product-sku-limits.html">eSKU</a>) för 250 000 produkter.
-- **GraphQL-förfrågningar**- Systemet skalades till 10 500 ocachelagrade GraphQL-begäranden per minut med en svarstid på mindre än 2 sekunder för den 99:e percentilen.
-- **Samtidiga administratörsanvändare**- Systemet har skalats för att stödja 500 samtidiga administratörer samtidigt som svarstiderna är kortare än 2 sekunder för den 99:e percentilen.
+- **Beställningar** - 3 481 order per minut har bearbetats och svarstiderna är mindre än 2 sekunder för den 99:e percentilen (99 % av förfrågningarna behandlades med en svarstid på mindre än 2 sekunder).
+- **Sidvyer** - Hantera över 2 miljoner sidvyer per timme med en svarstid på mindre än 2 sekunder för den 99:e percentilen.
+- **Effektiva SKU:er** - Kundprofilen innehöll 242 miljoner olika prisvariationer (<a href="https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/product-sku-limits.html">eSKU</a>) för 250 000 produkter.
+- **GraphQL-begäranden** - Systemet skalades till 10 500 GraphQL-begäranden per minut utan cache-lagring och bibehåller svarstiderna på mindre än 2 sekunder för den 99:e percentilen.
+- **Samtidiga admin-användare** - Systemet har skalats för att stödja 500 samtidiga admin-användare samtidigt som svarstiderna för den 99:e percentilen behålls på mindre än 2 sekunder.
 
 ## Testmiljö
 
@@ -52,13 +52,13 @@ Prestandamätningarna baseras på simulerade dagliga butiksaktiviteter för kund
 
      Om du använder cache-lagret effektivt ökas antalet sidvisningar per timme.
 
-- **GRAPHQL API**
+- **GraphQL API**
    - 250 samtidiga trådar
    - Ange 0 % CDN-cache-träfffrekvens
 
      Svarstiderna förbättras avsevärt med ett cache-lager framför GraphQL.
 
-- **Administratörswebbplats**
+- **Admin Web**
    - 500 samtidiga användare
    - Ange 0 % CDN-cache-träfffrekvens
 
@@ -70,13 +70,13 @@ Inläsningstestningen slutfördes med JMeter-inläsningsprofiler som körs mot A
 
 ### Program
 
-<a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/adobe-commerce/2-4-5.html">Adobe Commerce 2.4.5</a> distribueras i molninfrastruktur med Pro-arkitektur.
+<a href="https://experienceleague.adobe.com/docs/commerce-operations/release/notes/adobe-commerce/2-4-5.html">Adobe Commerce 2.4.5</a> distribueras på molninfrastruktur med Pro-arkitektur.
 
 ### Infrastruktur
 
-För prestandatestet användes Adobe Commerce 2.4.5 på en [skalbar infrastruktur](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/scaled-architecture.html) med följande kapacitet.
+För prestandatestet distribuerades Adobe Commerce 2.4.5 på en [skalbar infrastruktur](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/scaled-architecture.html) med följande kapacitet.
 
-- **Specifikationer för webbnoder**
+- **Webbnodsspecifikationer**
    - vCPU 216 (72 x 3 noder)
    - Minne 432 GiB (144 x 3 noder)
    - Nätverksbandbredd 768 Gbit/s (256 x 3 noder)

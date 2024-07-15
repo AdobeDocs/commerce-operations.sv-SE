@@ -26,8 +26,8 @@ ht-degree: 0%
    - [Tillägg](site-wide-analysis-tool/extensions.md)
    - [Varningar](site-wide-analysis-tool/alerts.md)
    - [Patchar](site-wide-analysis-tool/patches.md)
-- Verktyget Kvalitetspatchar {#quality-patches-tool}
-   - [[!DNL Quality Patches Tool]: Sök efter patchar](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
+- Verktyget Kvalitetsuppdateringar {#quality-patches-tool}
+   - [[!DNL Quality Patches Tool]: Sök efter patchar ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
    - [Användning](quality-patches-tool/usage.md)
    - [Versionsinformation](quality-patches-tool/release-notes.md)
 - Referens för kommandoradsverktyg {#cli-reference}
@@ -40,7 +40,7 @@ ht-degree: 0%
    - [Välja fokusflikar](observation-for-adobe-commerce/choosing-focus-tabs.md)
    - [Fliken Sammanfattning](observation-for-adobe-commerce/summary.md)
    - [Fliken Elasticsearch](observation-for-adobe-commerce/elasticsearch.md)
-   - [Fliken Redis](observation-for-adobe-commerce/redis-tab.md)
+   - [Redis-fliken](observation-for-adobe-commerce/redis-tab.md)
    - [Fliken MySQL](observation-for-adobe-commerce/mysql-tab.md)
    - [Fliken PHP](observation-for-adobe-commerce/php-tab.md)
    - [Fliken Bots](observation-for-adobe-commerce/bots.md)
@@ -48,14 +48,14 @@ ht-degree: 0%
    - [Fliken Varningar](observation-for-adobe-commerce/alerts-tab.md)
    - [Fliken WAF](observation-for-adobe-commerce/waf-tab.md)
    - [CDN-fliken](observation-for-adobe-commerce/cdn-tab.md)
-   - [The [!DNL RabbitMQ] tab](observation-for-adobe-commerce/rabbitmq-tab.md)
+   - [Fliken  [!DNL RabbitMQ] ](observation-for-adobe-commerce/rabbitmq-tab.md)
    - [Fliken Kron](observation-for-adobe-commerce/cron-tab.md)
    - [Fliken Indexering](observation-for-adobe-commerce/indexing-tab.md)
    - [Fliken QuickView](observation-for-adobe-commerce/oac-quickview-tab.md)
    - [Fliken Säkerhet](observation-for-adobe-commerce/security-tab.md)
    - [Fliken Infra](observation-for-adobe-commerce/oac-infra.md)
    - [Så här använder du Observation for Adobe Commerce](observation-for-adobe-commerce/how-to-use.md)
-- Datamigreringsverktyg {#data-migration}
+- Datamigreringsverktyget {#data-migration}
    - [Så fungerar migrering](data-migration-tool/how-migration-works.md)
    - [God praxis](data-migration-tool/best-practices.md)
    - [Version som stöds](data-migration-tool/supported-versions.md)
@@ -74,8 +74,8 @@ ht-degree: 0%
       - [Ändringar](data-migration-tool/migrate-data/delta.md)
       - [Uppföljning](data-migration-tool/migrate-data/follow-up.md)
       - [Data som kräver manuell migrering](data-migration-tool/migrate-data/manual.md)
-      - [Steg efter datamigrering](data-migration-tool/migrate-data/post-migration.md)
-   - Resurs {#resources}
+      - [Migreringssteg för Post-data](data-migration-tool/migrate-data/post-migration.md)
+   - Resurser {#resources}
       - [Felsökning](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
-      - [Changelog](https://github.com/magento/data-migration-tool/blob/2.4/CHANGELOG.md)
-- [Återgå till bruksanvisningar](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
+      - [Ändra](https://github.com/magento/data-migration-tool/blob/2.4/CHANGELOG.md)
+- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

@@ -6,14 +6,14 @@ badge: label="Medverkad av Atwix" type="Informative" url="https://www.atwix.com/
 exl-id: 875f45e7-30c9-4b1b-afe9-d1a8d51ccdf0
 source-git-commit: 991bd5fb34a2ffe61aa194ec46e2b04b4ce5b3e7
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
 
 # Skriva till en anpassad loggfil
 
-The `Magento\Framework\Logger` -modulen innehåller följande hanterarklasser:
+Modulen `Magento\Framework\Logger` innehåller följande hanterarklasser:
 
 | Klass | Loggfil |
 | ----- | -------- |
@@ -23,7 +23,7 @@ The `Magento\Framework\Logger` -modulen innehåller följande hanterarklasser:
 | [Magento\Framework\Logger\Handler\Syslog][syslog] | - |
 | [Magento\Framework\Logger\Handler\System][system] | `/var/log/system.log` |
 
-Du kan hitta dem i `lib/internal/Magento/Framework/Logger/Handler` katalog.
+Du kan hitta dem i katalogen `lib/internal/Magento/Framework/Logger/Handler`.
 
 Du kan använda någon av följande metoder för att logga in i en anpassad fil:
 
@@ -32,9 +32,9 @@ Du kan använda någon av följande metoder för att logga in i en anpassad fil:
 
 ## Konfigurera en anpassad loggfil i `di.xml`
 
-I det här exemplet visas hur du använder [virtuella typer](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types) till logg `debug` meddelanden till en anpassad loggfil i stället för en standard `/var/log/debug.log`.
+I det här exemplet visas hur du använder [virtuella typer](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types) för att logga `debug`-meddelanden i en anpassad loggfil i stället för en standard `/var/log/debug.log`.
 
-1. I `di.xml` modulen, definiera en anpassad loggfil som [virtuell typ](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types).
+1. I filen `di.xml` i modulen definierar du en anpassad loggfil som en [virtuell typ](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types).
 
    ```xml
    <virtualType name="Magento\Payment\Model\Method\MyCustomDebug" type="Magento\Framework\Logger\Handler\Base">
@@ -44,7 +44,7 @@ I det här exemplet visas hur du använder [virtuella typer](https://developer.a
    </virtualType>
    ```
 
-   The `name` värde för `Magento\Payment\Model\Method\MyCustomDebug` måste vara unika.
+   Värdet `name` för `Magento\Payment\Model\Method\MyCustomDebug` måste vara unikt.
 
 1. Definiera hanteraren i en annan [virtuell typ](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types) med en unik `name`:
 
@@ -58,7 +58,7 @@ I det här exemplet visas hur du använder [virtuella typer](https://developer.a
    </virtualType>
    ```
 
-1. Mata in `MyCustomLogger` [virtuell typ](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types) i `Magento\Payment\Model\Method\Logger` objekt:
+1. Mata in `MyCustomLogger` [virtuell typ](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types) i `Magento\Payment\Model\Method\Logger`-objektet:
 
    ```xml
    <type name="Magento\Payment\Model\Method\Logger">
@@ -68,7 +68,7 @@ I det här exemplet visas hur du använder [virtuella typer](https://developer.a
    </type>
    ```
 
-1. Klassen virtual `Magento\Payment\Model\Method\MyCustomDebug` injiceras i `debug` hanteraren för `$logger` -egenskapen i `Magento\Payment\Model\Method\Logger` klassen.
+1. Den virtuella klassen `Magento\Payment\Model\Method\MyCustomDebug` injiceras i `debug`-hanteraren för egenskapen `$logger` i klassen `Magento\Payment\Model\Method\Logger`.
 
    ```xml
    ...
@@ -77,13 +77,13 @@ I det här exemplet visas hur du använder [virtuella typer](https://developer.a
    </argument>
    ```
 
-Undantagsmeddelanden loggas in i `/var/log/payment.log` -fil.
+Undantagsmeddelanden loggas in i filen `/var/log/payment.log`.
 
 ## Konfigurera en anpassad loggfil i klassen för logghanterare
 
-I det här exemplet visas hur du använder en anpassad logghanterarklass för att logga `error` meddelanden till en specifik loggfil.
+I det här exemplet visas hur du använder en anpassad logghanterarklass för att logga `error`-meddelanden i en specifik loggfil.
 
-1. Skapa en klass som loggar data. I detta exempel definieras klassen i `app/code/Vendor/ModuleName/Logger/Handler/ErrorHandler.php`.
+1. Skapa en klass som loggar data. I det här exemplet definieras klassen i `app/code/Vendor/ModuleName/Logger/Handler/ErrorHandler.php`.
 
    ```php
    <?php
@@ -117,7 +117,7 @@ I det här exemplet visas hur du använder en anpassad logghanterarklass för at
    }
    ```
 
-1. Definiera hanteraren för den här klassen som [virtuell typ](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types) i modulen `di.xml` -fil.
+1. Definiera hanteraren för den här klassen som en [virtuell typ](https://developer.adobe.com/commerce/php/development/build/dependency-injection-file/#virtual-types) i modulens `di.xml`-fil.
 
    ```xml
    <virtualType name="MyCustomLogger" type="Magento\Framework\Logger\Monolog">
@@ -131,7 +131,7 @@ I det här exemplet visas hur du använder en anpassad logghanterarklass för at
 
    `MyCustomLogger` är en unik identifierare.
 
-1. I `type` definierar du klassnamnet där den anpassade logghanteraren matas in. Använd det virtuella typnamnet från föregående steg som argument för den här typen.
+1. I definitionen `type` anger du klassnamnet där den anpassade logghanteraren matas in. Använd det virtuella typnamnet från föregående steg som argument för den här typen.
 
    ```xml
    <type name="Vendor\ModuleName\Observer\MyObserver">
@@ -141,7 +141,7 @@ I det här exemplet visas hur du använder en anpassad logghanterarklass för at
    </type>
    ```
 
-   Källkod för `Vendor\ModuleName\Observer\MyObserver` klass:
+   Source-kod för klassen `Vendor\ModuleName\Observer\MyObserver`:
 
    ```php
    <?php
@@ -193,7 +193,7 @@ I det här exemplet visas hur du använder en anpassad logghanterarklass för at
    }
    ```
 
-1. klassen `Vendor\ModuleName\Logger\Handler\ErrorHandler` injiceras i `error` hanteraren för `$logger` -egenskapen i `Vendor\ModuleName\Observer\MyObserver`.
+1. Klassen `Vendor\ModuleName\Logger\Handler\ErrorHandler` injiceras i `error`-hanteraren för egenskapen `$logger` i `Vendor\ModuleName\Observer\MyObserver`.
 
    ```xml
    ...
@@ -203,7 +203,7 @@ I det här exemplet visas hur du använder en anpassad logghanterarklass för at
    ...
    ```
 
-Undantagsmeddelanden loggas i `/var/log/my_custom_logger/error.log` -fil.
+Undantagsmeddelanden loggas i filen `/var/log/my_custom_logger/error.log`.
 
 <!-- link definitions -->
 

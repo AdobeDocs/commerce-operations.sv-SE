@@ -6,14 +6,14 @@ role: Developer
 exl-id: e7ad685b-3eaf-485b-8ab1-702f2e7ab89e
 source-git-commit: 4bf8dd5c5320cc9a34cfaa552ec5e91d517d3617
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
 
 # Bästa praxis för undantagshantering
 
-Om ett undantag inte skrivs till `exception.log` filen med undantagsmodellen som kontext, känns den inte igen och analyseras korrekt i New Relic eller annan monolog-kompatibel logglagring för PSR-3. Loggning av endast en del av undantaget (eller loggning av det till fel fil) leder till produktionsfel när undantag förbises.
+Om ett undantag inte skrivs till filen `exception.log` med undantagsmodellen som kontext, känns det inte igen och analyseras korrekt i New Relic eller andra PSR-3 monolog-kompatibla logglager. Loggning av endast en del av undantaget (eller loggning av det till fel fil) leder till produktionsfel när undantag förbises.
 
 ## Korrigera undantagshantering
 
@@ -31,7 +31,7 @@ try {
 }
 ```
 
-Den här metoden sparar automatiskt `$e->getMessage` till loggmeddelandet och `$e` till kontexten, efter [PSR-3-kontextstandard](https://www.php-fig.org/psr/psr-3/#13-context). Detta görs i `\Magento\Framework\Logger\Monolog::addRecord`.
+Detta arbetssätt sparar automatiskt `$e->getMessage` i loggmeddelandet och objektet `$e` i kontexten, enligt [PSR-3-kontextstandarden](https://www.php-fig.org/psr/psr-3/#13-context). Detta görs i `\Magento\Framework\Logger\Monolog::addRecord`.
 
 ### ![korrigera](../../../assets/yes.svg) Stäng av signaler
 
@@ -47,7 +47,7 @@ try {
 
 ### ![korrigera](../../../assets/yes.svg) Nedgraderingsundantag
 
-Nedgradera undantag genom att följa följande [PSR-3-kontextstandard](https://www.php-fig.org/psr/psr-3/#13-context).
+Nedgradera undantag genom att följa [PSR-3-kontextstandarden](https://www.php-fig.org/psr/psr-3/#13-context).
 
 ```php
 try {
@@ -57,7 +57,7 @@ try {
 }
 ```
 
-### ![korrigera](../../../assets/yes.svg) Loggning kommer alltid först
+### ![korrekt](../../../assets/yes.svg) Loggning kommer alltid först
 
 Loggning kommer alltid först i koden för att förhindra fall där ett annat undantag eller ett allvarligt fel inträffar innan loggen skrivs.
 
@@ -72,7 +72,7 @@ try {
 
 ### ![korrigera](../../../assets/yes.svg) Loggmeddelanden och hela undantagsspårningen
 
-Logga meddelanden och hela undantagsspårningen genom att följa [PSR-3-kontextstandard](https://www.php-fig.org/psr/psr-3/#13-context).
+Logga meddelanden och hela undantagsspårningen genom att följa [PSR-3-kontextstandarden](https://www.php-fig.org/psr/psr-3/#13-context).
 
 ```php
 try {
@@ -86,7 +86,7 @@ try {
 
 I följande exempel visas felaktig undantagshantering.
 
-### ![felaktig](../../../assets/no.svg) Logga in före loggning
+### ![felaktig](../../../assets/no.svg) Logic före loggning
 
 Logik före loggning kan leda till ett annat undantag eller ett allvarligt fel, som förhindrar att undantaget loggas och bör ersättas med [korrekt exempel](#logging-always-comes-first).
 
@@ -99,9 +99,9 @@ try {
 }
 ```
 
-### ![felaktig](../../../assets/no.svg) Tom `catch`
+### ![inkorrekt](../../../assets/no.svg) Tom `catch`
 
-Tom `catch` -block kan vara ett tecken på oavsiktlig ljudavstängning och bör ersättas med [korrekt exempel](#mute-signals).
+Tomma `catch`-block kan vara ett tecken på oavsiktlig avstängning och bör ersättas med [korrekt exempel](#mute-signals).
 
 ```php
 try {
@@ -122,7 +122,7 @@ try {
 }
 ```
 
-### ![felaktig](../../../assets/no.svg) Logga meddelanden och spåra till olika loggfiler
+### ![felaktiga](../../../assets/no.svg) Logga meddelanden och spåra till olika loggfiler
 
 Följande kod loggar stackspårningen felaktigt för ett undantag som en sträng till en loggfil.
 
@@ -137,11 +137,11 @@ try {
 
 Den här metoden infogar radbrytningar i meddelandet, som inte är kompatibelt med PSR-3. Undantaget, inklusive stackspårning, måste vara en del av meddelandekontexten för att säkerställa att den sparas korrekt med meddelandet i New Relic eller annan PSR-3-monologgkompatibel logglagring.
 
-Åtgärda problemet genom att ersätta koden enligt de korrekta exemplen i [Skriv till undantagsloggen](#write-to-the-exception-log) eller [Nedgraderingsundantag](#downgrade-exceptions).
+Åtgärda problemet genom att ersätta koden enligt de korrekta exemplen i [Skriv till undantagsloggen](#write-to-the-exception-log) eller [Nedgradera undantag](#downgrade-exceptions).
 
-### ![felaktig](../../../assets/no.svg) Nedgradera undantag utan sammanhang
+### ![felaktigt](../../../assets/no.svg) Nedgradera undantag utan kontext
 
-Undantaget nedgraderas till ett fel, vilket innebär att ett objekt inte kan skickas, utan bara en sträng, vilket innebär att `getMessage()`. Detta gör att spårningen försvinner och bör ersättas med de korrekta exemplen som visas i [Skriv till undantagsloggen](#write-to-the-exception-log) eller [Nedgraderingsundantag](#downgrade-exceptions).
+Undantaget nedgraderas till ett fel, som inte tillåter att ett objekt skickas, utan bara en sträng, alltså `getMessage()`. Detta gör att spårningen går förlorad och bör ersättas med rätt exempel som visas i [Skriv till undantagsloggen](#write-to-the-exception-log) eller [Nedgradera undantag](#downgrade-exceptions).
 
 ```php
 try {
@@ -151,9 +151,9 @@ try {
 }
 ```
 
-### ![felaktig](../../../assets/no.svg) Logga endast meddelandet i undantagsloggen
+### ![felaktigt](../../../assets/no.svg) Logga endast meddelandet i undantagsloggen
 
-I stället för att skicka objektet `$e`, endast `$e->getMessage()` har skickats. Detta gör att spårningen försvinner och bör ersättas med de korrekta exemplen som visas [Skriv till undantagsloggen](#write-to-the-exception-log) eller [Nedgraderingsundantag](#downgrade-exceptions).
+I stället för att skicka objektet `$e` skickas bara `$e->getMessage()`. Detta gör att spårningen går förlorad och bör ersättas med de korrekta exemplen som visas i [Skriv till undantagsloggen](#write-to-the-exception-log) eller [Nedgraderingsundantag](#downgrade-exceptions).
 
 ```php
 try {
@@ -163,9 +163,9 @@ try {
 }
 ```
 
-### ![felaktig](../../../assets/no.svg) Saknas `// phpcs:ignore Magento2.CodeAnalysis.EmptyBlock.DetectedCatch`
+### ![felaktigt](../../../assets/no.svg) Saknas `// phpcs:ignore Magento2.CodeAnalysis.EmptyBlock.DetectedCatch`
 
-Utelämnar `phpcs:ignore` Detta utlöser en varning i PHPCS och bör inte skicka din CI. Detta bör ersättas med rätt exempel som visas i [Stäng av signaler](#mute-signals).
+Om du utelämnar raden `phpcs:ignore` utlöses en varning i PHPCS och din CI ska inte skickas. Detta bör ersättas med rätt exempel som visas i [ljudsignaler](#mute-signals).
 
 ```php
 try {

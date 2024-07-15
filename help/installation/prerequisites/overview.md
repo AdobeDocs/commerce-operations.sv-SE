@@ -13,17 +13,17 @@ ht-degree: 1%
 
 Innan du installerar Adobe Commerce måste du göra följande:
 
-* Konfigurera en eller flera värdar som uppfyller [systemkrav](../system-requirements.md).
-* Om du konfigurerar mer än en webbnod med belastningsutjämning konfigurerar och testar du den delen av systemet _före_ du installerar programmet.
+* Konfigurera en eller flera värdar som uppfyller [systemkraven](../system-requirements.md).
+* Om du konfigurerar mer än en webbnod med belastningsutjämning konfigurerar och testar du den delen av systemet _innan_ du installerar programmet.
 * Se till att du kan säkerhetskopiera hela systemet vid olika tillfällen under installationen, så att du kan återställa det om det uppstår problem.
 
 >[!NOTE]
 >
->Vi antar att du installerar Adobe Commerce i en **utvecklingsmiljö** som du har rotanvändaråtkomst till datorn, **och** att maskinen inte behöver vara mycket säker. Om du konfigurerar en säkrare dator bör du kontakta en nätverksadministratör för att få mer hjälp.
+>Vi antar att du installerar Adobe Commerce i en **utvecklingsmiljö**, att du har rotanvändaråtkomst till datorn, **och** att datorn inte behöver vara mycket säker. Om du konfigurerar en säkrare dator bör du kontakta en nätverksadministratör för att få mer hjälp.
 
-Vi rekommenderar starkt att du uppdaterar och uppgraderar ditt operativsystem. Dessa uppgraderingar kan ge säkerhets- och programfixar som kan förhindra framtida problem. Vet du inte vad det här betyder? Kolla in vår [installationsöversikt](../overview.md).
+Vi rekommenderar starkt att du uppdaterar och uppgraderar ditt operativsystem. Dessa uppgraderingar kan ge säkerhets- och programfixar som kan förhindra framtida problem. Vet du inte vad det här betyder? Se vår [installationsöversikt](../overview.md).
 
-Ange följande kommandon som en användare med `root` behörighet:
+Ange följande kommandon som en användare med behörigheten `root`:
 
 * Ubuntu
 
@@ -62,15 +62,15 @@ Server version: Apache/2.4.0 (Unix)
 Server built:   Jul 23 2017 14:17:29
 ```
 
-Information om hur du installerar eller uppgraderar Apache finns i [Apache](web-server/apache.md).
+Mer information om hur du installerar eller uppgraderar Apache finns i [Apache](web-server/apache.md).
 
 ### PHP
 
-Se [systemkrav](../system-requirements.md) för de versioner av PHP och [PHP](../system-requirements.md#php-settings) för PHP-krav.
+Se [systemkraven](../system-requirements.md) för de versioner av PHP som stöds och [PHP](../system-requirements.md#php-settings) för PHP-kraven.
 
 ### MySQL
 
-Kontrollera att du har en kompatibel version av MySQL för den version av Adobe Commerce som du installerar. Se [Systemkrav](../system-requirements.md) för de versioner som stöds.
+Kontrollera att du har en kompatibel version av MySQL för den version av Adobe Commerce som du installerar. Mer information om vilka versioner som stöds finns i [Systemkrav](../system-requirements.md).
 
 ```bash
 mysql -u <database root user or database owner name> -p
@@ -96,11 +96,11 @@ affiliates. Other names may be trademarks of their respective
 owners.
 ```
 
-Typ `help` eller `\h` om du behöver hjälp. Typ `\c` för att rensa den aktuella inmatningssatsen.
+Skriv `help` eller `\h` om du vill ha hjälp. Skriv `\c` för att rensa den aktuella indatasatsen.
 
-Retur `exit` på `mysql>` fråga om du vill avsluta.
+Ange `exit` vid `mysql>`-prompten för att avsluta.
 
-Information om hur du installerar eller uppgraderar MySQL finns i [MySQL](database/mysql.md).
+Mer information om hur du installerar eller uppgraderar MySQL finns i [MySQL](database/mysql.md).
 
 ### Sökmotor
 

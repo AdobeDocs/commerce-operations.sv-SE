@@ -15,13 +15,13 @@ Det här avsnittet innehåller information om säkerhet, sekretess och regelefte
 
 ## Säkerhet
 
-- [Adobe produktsäkerhet](https://helpx.adobe.com/security.html): Läs mer om de senaste patcharna, säkerhetsuppdateringarna och de bästa metoderna för Adobe Commerce.
-- [Adobe Trust Center](https://www.adobe.com/trust.html): Få tillgång till den senaste tillgängliga informationen om driftshälsa, säkerhet, sekretess och efterlevnad för alla molntjänster i Adobe.
-- [Site-Wide Analysis Tool](../tools/site-wide-analysis-tool/dashboard.md): Få smidiga säkerhetsinsikter om din Adobe Commerce-webbplats, inklusive säkerhetsgenomsökning, slutservice och säkerhetsrekommendationer.
+- [Adobe produktsäkerhet](https://helpx.adobe.com/security.html): Lär dig mer om de senaste korrigeringarna, säkerhetsuppdateringarna och de bästa metoderna för Adobe Commerce.
+- [Adobe Trust Center](https://www.adobe.com/trust.html): Få tillgång till den senaste tillgängliga informationen om driftsäkerhet, säkerhet, sekretess och kompatibilitet för alla Adobe molntjänster.
+- [Site-Wide Analysis Tool](../tools/site-wide-analysis-tool/dashboard.md): Visa strömlinjeformade säkerhetsinsikter om din Adobe Commerce-webbplats, inklusive säkerhetsgenomsökningar, tjänster vid livscykeln och säkerhetsrekommendationer.
 
 ## Regelefterlevnad
 
-Handelsföretagen är skyldiga att följa branschens riktlinjer för att upprätthålla en säker miljö, juridiska krav i sin jurisdiktion och bästa praxis för onlinehandel. Om du vill veta mer ur ett affärsperspektiv kan du läsa [Lagra sekretesspolicy](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/privacy-policy.html).
+Handelsföretagen är skyldiga att följa branschens riktlinjer för att upprätthålla en säker miljö, juridiska krav i sin jurisdiktion och bästa praxis för onlinehandel. Om du vill veta mer om ditt företag kan du läsa [Store Privacy Policy](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/privacy-policy.html).
 
 Denna dokumentation ger den tekniska information som behövs för att säkerställa att Adobe Commerce installationer uppfyller kraven i den specifika integritetslagstiftningen. Vissa av dessa krav kräver att handlarna ska slutföra ytterligare utvecklingsarbete för att uppfylla kraven. Mer information finns i följande avsnitt:
 

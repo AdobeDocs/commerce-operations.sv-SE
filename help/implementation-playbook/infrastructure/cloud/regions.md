@@ -16,7 +16,7 @@ Följande avsnitt innehåller information om de olika AWS- och Azure-regionerna 
 
 ## AWS
 
-![Diagram som visar AWS-områden](../../../assets/playbooks/aws-regions.png)
+![Diagram som visar AWS-regioner](../../../assets/playbooks/aws-regions.png)
 
 >[!NOTE]
 >

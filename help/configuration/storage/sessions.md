@@ -5,7 +5,7 @@ feature: Configuration, Storage
 exl-id: 43cab98a-5b68-492e-b891-8db4cc99184e
 source-git-commit: af45ac46afffeef5cd613628b2a98864fd7da69b
 workflow-type: tm+mt
-source-wordcount: '260'
+source-wordcount: '257'
 ht-degree: 0%
 
 ---
@@ -14,17 +14,17 @@ ht-degree: 0%
 
 I det här avsnittet beskrivs hur du hittar var dina sessionsfiler lagras. Systemet använder följande logik för att lagra sessionsfiler:
 
-- Om du konfigurerade cachelagrade sessioner lagras de i RAM-minnet. Se [Använd cachelagrat för sessionslagring](memcached.md).
-- Om du har konfigurerat Redis lagras sessionerna på Redis-servern. Se [Använd Redis för sessionslagring](../cache/redis-session.md).
+- Om du konfigurerade cachelagrade sessioner lagras de i RAM-minnet. Mer information finns i [Använd cachelagrade för sessionslagring](memcached.md).
+- Om du har konfigurerat Redis lagras sessioner på Redis-servern. Mer information finns i [Använd Redis för sessionslagring](../cache/redis-session.md).
 - Om du använder standardfilbaserad sessionslagring lagrar vi sessioner på följande platser i den ordning som visas:
 
-   1. Katalog definierad i [`env.php`](#example-in-envphp)
-   1. Katalog definierad i [`php.ini`](#example-in-phpini)
-   1. `<magento_root>/var/session` katalog
+   1. Katalogen definierad i [`env.php`](#example-in-envphp)
+   1. Katalogen definierad i [`php.ini`](#example-in-phpini)
+   1. `<magento_root>/var/session`-katalog
 
 ## Exempel i `env.php`
 
-Ett exempelfragment från `<magento_root>/app/etc/env.php` följande:
+Ett exempelfragment från `<magento_root>/app/etc/env.php` följer:
 
 ```php
  'session' => [
@@ -37,21 +37,21 @@ I föregående exempel lagras sessionsfiler i `/var/www/session`
 
 ## Exempel i `php.ini`
 
-Som användare med `root` behörighet, öppna `php.ini` fil och sök efter värdet för `session.save_path`. Detta identifierar var sessionerna lagras.
+Som användare med `root`-behörighet öppnar du `php.ini`-filen och söker efter värdet `session.save_path`. Detta identifierar var sessionerna lagras.
 
 ## Hantera sessionsstorlek
 
-Se [Sessionshantering](https://docs.magento.com/user-guide/stores/security-session-management.html) i _Användarhandbok_.
+Se [Sessionshantering](https://docs.magento.com/user-guide/stores/security-session-management.html) i _Användarhandboken_.
 
 ## Konfiguration av skräpinsamling
 
-Om du vill rensa sessioner som gått ut anropar systemet `gc` (_skräpinsamling_)-hanterare slumpmässigt enligt en sannolikhet som beräknas av `gc_probability / gc_divisor` -direktivet. Om du t.ex. anger dessa direktiv som `1/100` det betyder sannolikhet för `1%` (_sannolikhet för ett anrop av skräpinsamling per 100 begäranden_).
+För att rensa bort utgångna sessioner anropar systemet hanteraren `gc` (_skräpinsamling_) slumpmässigt enligt en sannolikhet som beräknas av direktivet `gc_probability / gc_divisor`. Om du till exempel anger dessa direktiv som `1/100` betyder det att det är troligt att det är `1%` (_sannolikhet för ett anrop av skräpinsamlingen per 100 förfrågningar_).
 
-Hanteraren för skräpinsamling använder `gc_maxlifetime` direktiv - antalet sekunder som sessionerna ska ses som _skräp_ och kan ha rensats bort.
+Skräpinsamlingshanteraren använder direktivet `gc_maxlifetime` - det antal sekunder efter vilket sessionerna betraktas som _skräpinsamlingar_ och eventuellt rensas.
 
-På vissa operativsystem (Debian/Ubuntu) är standardinställningen `session.gc_probability` direktivet är `0`, vilket förhindrar att skräpinsamlingshanteraren körs.
+På vissa operativsystem (Debian/Ubuntu) är standarddirektivet `session.gc_probability` `0`, vilket förhindrar att skräpinsamlingshanteraren körs.
 
-Du kan skriva över `session.gc_` direktiv från `php.ini` i `<magento_root>/app/etc/env.php` fil:
+Du kan skriva över `session.gc_`-direktiven från filen `php.ini` i filen `<magento_root>/app/etc/env.php`:
 
 ```php
  'session' => [

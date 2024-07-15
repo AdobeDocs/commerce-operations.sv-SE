@@ -29,7 +29,7 @@ Använd följande kommando för att kontrollera den aktuella sökmotorn:
 bin/magento config:show catalog/search/engine
 ```
 
-Felet inträffar om det returnerade värdet är `mysql`, `elasticsearch`, eller `elasticsearch6`.
+Felet inträffar om det returnerade värdet är `mysql`, `elasticsearch` eller `elasticsearch6`.
 
 >[!WARNING]
 >
@@ -43,7 +43,7 @@ Felet inträffar om det returnerade värdet är `mysql`, `elasticsearch`, eller 
 >composer require-commerce magento/product-community-edition=<version>
 >```
 >
->Plats `<version>` är den version av Magento som du körde **före** uppgraderingen. Till exempel: `2.3.5`.
+>Där `<version>` är den version av Magento som du använde **före** uppgraderingen. Exempel: `2.3.5`.
 
 Följ riktlinjerna som beskrivs i följande avsnitt för att återställa efter ett inkonsekvent tillstånd.
 
@@ -62,11 +62,11 @@ När du har konfigurerat sökmotorn och indexerat om är du redo att uppgradera 
 
 Elasticsearch 6 och tidigare stöds inte längre.
 
-Värdet för `elasticsearch` visar att din äldre version av Adobe Commerce är konfigurerad att använda Elasticsearch 2.x. Den här versionen av Elasticsearch stöds inte längre.
+Värdet `elasticsearch` anger att din äldre version av Adobe Commerce är konfigurerad att använda Elasticsearch 2.x. Den här versionen av Elasticsearch stöds inte längre.
 
 Du måste utföra följande åtgärder innan du uppgraderar till 2.4:
 
-1. Uppdatera till en version av Elasticsearch som stöds av Commerce. Se [Uppgraderar Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html) om du vill ha fullständiga anvisningar om hur du säkerhetskopierar data, upptäcker potentiella migreringsproblem och testar uppgraderingar innan du distribuerar till produktionen. Beroende på vilken version av Elasticsearch du använder behöver du kanske inte starta om hela klustret.
+1. Uppdatera till en version av Elasticsearch som stöds av Commerce. Mer information om hur du säkerhetskopierar data, identifierar potentiella migreringsproblem och testar uppgraderingar innan du distribuerar till produktionen finns i [Uppgraderar Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html). Beroende på vilken version av Elasticsearch du använder behöver du kanske inte starta om hela klustret.
 
    >[!NOTE]
    >

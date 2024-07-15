@@ -1,10 +1,10 @@
 ---
-title: '''[!DNL Upgrade Compatibility Tool] rapporter'
-description: Följ de här stegen för att köra [!DNL Upgrade Compatibility Tool] i ditt Adobe Commerce-projekt.
+title: '[!DNL Upgrade Compatibility Tool] rapporter'
+description: Följ de här stegen för att köra  [!DNL Upgrade Compatibility Tool]  i ditt Adobe Commerce-projekt.
 exl-id: a2272339-46d6-443b-bd53-286b72f13d4e
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '584'
 ht-degree: 0%
 
 ---
@@ -13,10 +13,10 @@ ht-degree: 0%
 
 {{commerce-only}}
 
-Som ett resultat av analysen [!DNL Upgrade Compatibility Tool] kan exportera en rapport som innehåller en lista med problem för varje fil och ange hur allvarlig den är, felkoden och felbeskrivningen. The [!DNL Upgrade Compatibility Tool] exporterar rapporten i två olika format:
+Som ett resultat av analysen kan [!DNL Upgrade Compatibility Tool] exportera en rapport som innehåller en lista med problem för varje fil och ange dess allvarlighetsgrad, felkod och felbeskrivning. [!DNL Upgrade Compatibility Tool] exporterar rapporten i två olika format:
 
-- A [JSON-fil](reports.md#json-file).
-- An [HTML rapport](reports.md#html-report).
+- En [JSON-fil](reports.md#json-file).
+- En [HTML-rapport](reports.md#html-report).
 
 Se följande exempel på kommandoradsgränssnitt för en rapport:
 
@@ -27,19 +27,19 @@ File: /app/code/Custom/CatalogExtension/Controller/Index/Index.php
  * [ERROR][1328] Line 10: Implemented interface 'Magento\Framework\App\Action\HttpGetActionInterface' that is non API on version '2.4.4'
 ```
 
-Kontrollera [Felmeddelandereferens](../upgrade-compatibility-tool/error-messages.md) för mer information om de olika fel som rapporten kan ge.
+Läs avsnittet [Referens för felmeddelande](../upgrade-compatibility-tool/error-messages.md) om du vill ha mer information om de olika fel som rapporten kan ge.
 
 Den här rapporten innehåller även en detaljerad sammanfattning av
 
 - *Aktuell version*: den version som är installerad.
 - *Målversion*: den version du vill uppgradera till.
-- *Körningstid*: den tid det tog för analysen att bygga rapporten (mm:ss).
-- *Moduler som behöver uppdateras*: procentandelen moduler som innehåller kompatibilitetsproblem och som behöver uppdateras.
-- *Filer som behöver uppdateras*: procentandelen filer som innehåller kompatibilitetsproblem och som behöver uppdateras.
-- *Totalt antal kritiska fel*: antalet kritiska fel som påträffats.
-- *Totalt antal fel*: antalet fel som hittats.
+- *Körningstid*: Den tid det tog för analysen att skapa rapporten (mm:ss).
+- *Moduler som kräver uppdatering*: Procentandelen moduler som innehåller kompatibilitetsproblem och som behöver uppdateras.
+- *Filer som behöver uppdateras*: den procentandel av filerna som innehåller kompatibilitetsproblem och som behöver uppdateras.
+- *Totalt antal kritiska fel*: antalet kritiska fel som hittades.
+- *Totalt antal fel*: antalet fel som hittades.
 - *Totalt antal varningar*: antalet varningar som hittades.
-- *Maximal minnesanvändning*: den maximala mängden minne i [!DNL Upgrade Compatibility Tool] har nåtts under körningen.
+- *Maximal minnesanvändning*: den maximala minnesmängd som [!DNL Upgrade Compatibility Tool] har nått under körningen.
 
 Se följande exempel på kommandoradsgränssnitt:
 
@@ -59,14 +59,14 @@ Se följande exempel på kommandoradsgränssnitt:
 
 ## JSON-fil
 
-Du kan hämta JSON-utdata när du kör [!DNL Upgrade Compatibility Tool] i kommandoradsgränssnitt. The `JSON` filen innehåller exakt samma information som visas på [!DNL Upgrade Compatibility Tool] utdata:
+Du kan hämta JSON-filutdata när du kör [!DNL Upgrade Compatibility Tool] i ett kommandoradsgränssnitt. Filen `JSON` innehåller exakt samma information som visas i [!DNL Upgrade Compatibility Tool]-utdata:
 
 - En lista med identifierade problem.
 - En sammanfattning av analysen.
 
 För varje påträffat fel innehåller rapporten detaljerad information som problemets svårighetsgrad och beskrivning.
 
-Om du vill exportera `JSON` till en annan utdatamapp:
+Så här exporterar du den här `JSON`-filen till en annan utdatamapp:
 
 ```bash
 bin/uct upgrade:check <dir> --json-output-path[=JSON-OUTPUT-PATH]
@@ -75,7 +75,7 @@ bin/uct upgrade:check <dir> --json-output-path[=JSON-OUTPUT-PATH]
 Där argumenten är följande:
 
 - `<dir>`: Adobe Commerce installationskatalog.
-- `[=JSON-OUTPUT-PATH]`: Sökvägskatalog att exportera `JSON` utdatafil.
+- `[=JSON-OUTPUT-PATH]`: Sökvägskatalogen som exporterar `JSON`-utdatafilen.
 
 >[!NOTE]
 >
@@ -90,7 +90,7 @@ Du kan hämta HTML-rapporten när du kör verktyget i ett kommandoradsgränssnit
 
 ![HTML-rapport - sammanfattning](../../assets/upgrade-guide/uct-html-summary.png)
 
-Du kan enkelt navigera bland de identifierade problemen under [!DNL Upgrade Compatibility Tool] analys.
+Du kan enkelt navigera bland de identifierade problemen under [!DNL Upgrade Compatibility Tool]-analysen.
 
 Du kan filtrera utgåvor som visas i rapporten efter den minsta utgåvnivån (standardvärdet är `WARNING`).
 
@@ -104,20 +104,20 @@ Det finns en listruta i det övre högra hörnet där du kan välja en annan niv
 
 HTML-betänkandet innehåller även fyra olika diagram:
 
-- **Moduler efter allvarlighetsgrad för problem**: Visar allvarlighetsgrad fördelad efter moduler.
+- **Moduler efter allvarlighetsgrad för utgåva**: Visar allvarlighetsgrad fördelad på moduler.
 - **Filer efter allvarlighetsgrad för problem**: Visar allvarlighetsgrad för fildistribution.
-- **Moduler ordnade efter totalt antal utgåvor**: Visar de 10 mest komprometterade modulerna med hänsyn till varningar, fel och kritiska fel.
+- **Moduler ordnade efter totalt antal problem**: Visar de 10 mest komprometterade modulerna med hänsyn till varningar, fel och kritiska fel.
 - **Moduler med relativa storlekar och problem**: Ju fler filer en modul innehåller, desto större blir cirkeln. Ju fler problem en modul har, desto mer röd blir cirkeln.
 
 Med dessa diagram kan du identifiera de moduler som är mest komprometterade och de som kräver mer arbete för att kunna utföra en uppgradering.
 
 ![HTML-rapport - diagram](../../assets/upgrade-guide/uct-html-diagrams.png)
 
-Diagrammen i HTML-rapporten uppdateras också i enlighet med detta, med undantag för `Modules with relative sizes and issues`, som genereras med `min-issue-level` som ursprungligen var konfigurerad.
+HTML-rapportdiagrammen uppdateras också i enlighet med detta, med det enda undantaget för `Modules with relative sizes and issues` som genereras med `min-issue-level` som ursprungligen konfigurerats.
 
-Om du vill se olika resultat för `Modules with relative sizes and issues` måste du köra kommandot igen och ange ett annat värde för `--min-issue-level` alternativ.
+Om du vill se olika resultat för diagrammet `Modules with relative sizes and issues` måste du köra kommandot igen och ange ett annat värde för alternativet `--min-issue-level`.
 
-![HTML-rapport - Bubbeldiagram](../../assets/upgrade-guide/uct-html-filtered-diagrams.png)
+![HTML-rapport - Bubbeldiagram ](../../assets/upgrade-guide/uct-html-filtered-diagrams.png)
 
 Så här exporterar du HTML-rapporten till en annan utdatamapp:
 
@@ -128,7 +128,7 @@ bin/uct upgrade:check <dir> --html-output-path[=HTML-OUTPUT-PATH]
 Där argumenten är följande:
 
 - `<dir>`: Adobe Commerce installationskatalog.
-- `[=HTML-OUTPUT-PATH]`: Sökvägskatalog att exportera `.html` utdatafil.
+- `[=HTML-OUTPUT-PATH]`: Sökvägskatalogen som exporterar `.html`-utdatafilen.
 
 >[!NOTE]
 >

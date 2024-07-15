@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Progressivt webbprogram (PWA)
 
-Progressiva webbapplikationer (PWA) är framtiden för shoppingupplevelsen. PWA är nästa generations webbteknikstandard som levererar programliknande shoppingupplevelser på mobiler och datorer. Med PWA kan handlarna bygga sin egen högpresterande PWA ovanpå sin handelsplattform, vilket har visat sig öka användarengagemanget, öka konverteringsgraden och diversifiera intäkterna.
+Progressiva webbapplikationer (PWA) är framtiden för shoppingupplevelsen. PWA är nästa generations webbteknikstandard som levererar programliknande shoppingupplevelser på mobiler och datorer. Med PWA kan handlarna bygga sin egen högpresterande PWA ovanpå Commerce-plattformen, vilket har visat sig öka användarengagemanget, öka konverteringsgraden och diversifiera intäkterna.
 
 ## Funktioner
 

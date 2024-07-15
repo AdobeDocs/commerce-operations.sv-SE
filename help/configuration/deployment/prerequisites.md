@@ -1,6 +1,6 @@
 ---
 title: Krav för distribution
-description: Se en lista över förutsättningar för att distribuera Commerce till ett utvecklings-, bygg- eller produktionssystem.
+description: Se en lista över förutsättningarna för att driftsätta Commerce i ett utvecklings-, bygg- eller produktionssystem.
 feature: Configuration, Deploy
 exl-id: 9ea0eeff-e0f8-4532-887c-5d7f07d89ddd
 source-git-commit: dcc283b901917e3681863370516771763ae87462
@@ -20,10 +20,10 @@ Filbehörigheter och ägarskap måste vara enhetliga i alla utvecklings-, bygg- 
    - Se till att webbservern körs som samma användare i alla system
    - Kontrollera att filsystemägaren finns i webbservergruppen på alla system
 
-- Ändra behörigheter och ägarskap för Commerce-filsystem på varje system efter behov med hjälp av följande riktlinjer:
+- Ändra Commerce filsystembehörigheter och ägarskap för varje system enligt följande riktlinjer:
 
-   - Utveckling och byggteknik: [Ange ägarskap och behörigheter före installation (två användare)](file-system-permissions.md#set-up-two-owners-for-default-or-developer-mode)
-   - Produktion: [Äganderätt och tillstånd för handel inom utveckling och produktion](file-system-permissions.md)
+   - Utveckla och skapa: [Ange ägarskap och behörigheter före installation (två användare)](file-system-permissions.md#set-up-two-owners-for-default-or-developer-mode)
+   - Produktion: [Commerce ägarskap och behörigheter i utveckling och produktion](file-system-permissions.md)
 
 >[!INFO]
 >

@@ -1,7 +1,7 @@
 ---
 source-git-commit: 4c18f00e0b92e49924676274c4ed462a175a7e4b
 workflow-type: tm+mt
-source-wordcount: '146'
+source-wordcount: '147'
 ht-degree: 1%
 
 ---
@@ -9,10 +9,10 @@ ht-degree: 1%
 
 I det här avsnittet beskrivs två sätt att verifiera att grundläggande HTTP-autentisering fungerar:
 
-* Använda `curl` för att verifiera att du måste ange ett användarnamn och lösenord för att få klusterstatus
+* Använd ett `curl`-kommando för att verifiera att du måste ange ett användarnamn och lösenord för att få klusterstatus
 * Konfigurera grundläggande HTTP-autentisering i administratören
 
-## Använd en `curl` kommando för att verifiera klusterstatus
+## Använd ett `curl`-kommando för att verifiera klusterstatus
 
 Ange följande kommando:
 
@@ -68,8 +68,8 @@ Connection: keep-alive
 
 ## Konfigurera grundläggande HTTP-autentisering i administratören
 
-Utför samma uppgifter som beskrivs i [Sökmotorkonfiguration](../configuration/search/configure-search-engine.md) *utom* klicka **[!UICONTROL Yes]** från **[!UICONTROL Enable HTTP Auth]** och ange ditt användarnamn och lösenord i fälten.
+Utför samma uppgifter som beskrivs i [Sökmotorkonfigurationen](../configuration/search/configure-search-engine.md) *förutom att* klicka **[!UICONTROL Yes]** i listan **[!UICONTROL Enable HTTP Auth]** och ange ditt användarnamn och lösenord i de angivna fälten.
 
-Klicka **[!UICONTROL Test Connection]** för att vara säker på att det fungerar och klicka sedan på **[!UICONTROL Save Config]**.
+Klicka på **[!UICONTROL Test Connection]** för att kontrollera att den fungerar och klicka sedan på **[!UICONTROL Save Config]**.
 
 Du måste tömma cachen och indexera om innan du fortsätter.

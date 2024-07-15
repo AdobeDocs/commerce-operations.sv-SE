@@ -3,13 +3,13 @@ title: Bästa praxis för kodgranskning
 description: Läs mer om hur man lär sig mer om kodgranskning i utvecklingsfasen av Adobe Commerce-projekt.
 feature: Best Practices
 role: Developer
-source-git-commit: 291c3f5ea3c58678c502d34c2baee71519a5c6dc
+exl-id: 1ef78bce-2e69-4c95-a26e-1bf7196ce546
+source-git-commit: 823498f041a6d12cfdedd6757499d62ac2aced3d
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1161'
 ht-degree: 0%
 
 ---
-
 
 # Code review best practices for Adobe Commerce
 
@@ -49,7 +49,7 @@ Tänk också på följande när du implementerar kodgranskningsprocesser:
 
 Stilen kan testas automatiskt genom att köra PhpStorm-undersökningen (se nedan).
 
-Se till att konfigurera [PHPMD och PHPCS](https://developer.adobe.com/commerce/php/best-practices/phpstorm/code-inspection/) och köra [Kodningsstandard](https://github.com/magento/magento-coding-standard) från CLI (även nedan). Det finns en viss överlappning, men båda har också unika tester.
+Konfigurera [PHPMD och PHPCS](https://developer.adobe.com/commerce/php/best-practices/phpstorm/code-inspection/) och kör verktyget [Code Standard](https://github.com/magento/magento-coding-standard) från CLI (även nedan). Det finns en viss överlappning, men båda har också unika tester.
 
 ### Konvention och struktur
 
@@ -69,7 +69,7 @@ Granskningar för att se om de är fullständiga görs manuellt.
 
 - Kan koden aktiveras eller inaktiveras av konfigurationen och fungerar all nödvändig kod som förväntat?
 - Finns alla konfigurationer som nämns i biljetten? Kontrollera omfattning, datatyp, validering, översättning och standardvärden.
-- Hämtas konfigurationen alltid på lägsta möjliga nivå (visningsnivå, webbplatsnivå eller global nivå)? Konfigurationshämtningen måste matcha definitionen av scope i `system.xml` -fil.
+- Hämtas konfigurationen alltid på lägsta möjliga nivå (visningsnivå, webbplatsnivå eller global nivå)? Konfigurationshämtningen måste matcha definitionen av omfång i filen `system.xml`.
 - Omfattas alla banor i flödesschemat i den tekniska specifikationen? Omfattas alla andra tekniska specifikationer?
 - Definieras åtkomstkontrollistor för den nya funktionen?
 - Är PhpDocs tydlig? Är bekräftelsemeddelanden tydliga?
@@ -80,14 +80,14 @@ Granskningar för att se om de är fullständiga görs manuellt.
 Prestandagranskningar görs manuellt, vilket kan vägledas av exekvering av kod när du är osäker.
 
 - Körs frågor i en slinga? Den här slingan kan ligga utanför de redigerade filerna.
-- Kan du upptäcka `cachable="false"` attribut? Används de korrekt?
+- Kan du hitta några `cachable="false"`-attribut? Används de korrekt?
 
 ### Säkerhet
 
 Säkerhetsgranskningar görs manuellt och kan vägledas av textsökning. En del av säkerhetskontrollen hanteras genom automatiska tester.
 
 - Loggas undantag vid behov? Används rätt typer av undantag?
-- Kan `around` Undvik plugin-program?
+- Kan `around` plugin-program undvikas?
 - Returnerar plugin-program rätt typer av data?
 - Kan du hitta några SQL-råfrågor som ska byggas med databasens abstraktionslager?
 - Är någon ny typ av data exponerad för någon typ av användare, administratör eller frontend? Är den exponeringen en säkerhetsrisk?
@@ -95,7 +95,7 @@ Säkerhetsgranskningar görs manuellt och kan vägledas av textsökning. En del 
 
 ### Integritet och GDPR
 
-Sekretessgranskningar och [GDPR](../../../security-and-compliance/privacy/gdpr.md) görs manuellt.
+Sekretessgranskningar och [GDPR](../../../security-and-compliance/privacy/gdpr.md) utförs manuellt.
 
 - Hanterar koden kunddata eller e-postmeddelanden? Var särskilt uppmärksam.
 - Om den här koden kan köras i en slinga, kan den då läcka kunddata från en slingcykel till en annan?
@@ -131,19 +131,19 @@ Utvecklarna kan använda automatisering för att granska ID-kompilering, databas
   bin/magento deploy:mode:set developer || exit;
   ```
 
-- Databasschema `whitelist.json`—Kör följande CLI-kommando och validera att `db_schema_whitelist.json` filen har inte lagts till eller ändrats.
+- Databasschema `whitelist.json` - Kör följande CLI-kommando och verifiera att `db_schema_whitelist.json`-filen inte har lagts till eller ändrats.
 
   ```bash
   bin/magento setup:db-declaration:generate-whitelist --module-name[=MODULE-NAME]
   ```
 
-- Composer validate - Validera `composer.json` genom att köra följande CLI-kommando i katalogen som innehåller `composer.json` -fil.
+- Composer validate - Verifiera filen `composer.json` genom att köra följande CLI-kommando i den katalog som innehåller filen `composer.json`.
 
   ```bash
   composer validate
   ```
 
-- Kodningsstandard - Installera och kör kodningsstandardverktyget och kör det mot din modul. Följande fil visar hur du kan göra det möjligt att köra det var som helst genom att skriva `mcs ./app/code/Vendor/Module/`.
+- Kodningsstandard - Installera och kör kodningsstandardverktyget och kör det mot din modul. Följande fil visar hur du kan aktivera det för körning var som helst genom att skriva `mcs ./app/code/Vendor/Module/`.
 
   ```bash
   #!/usr/bin/env bash

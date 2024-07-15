@@ -23,4 +23,4 @@ Detta kan vara ett framgångsrikt tillvägagångssätt. Men en rekommendation so
 
 ## Exempel på tidslinjeaktiviteter
 
-![Exempel på tidslinjeaktiviteter för implementering av handel](../../assets/playbooks/timeline-activities-example.svg)
+![Exempel på tidslinjeaktiviteter för implementering av e-handel](../../assets/playbooks/timeline-activities-example.svg)

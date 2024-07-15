@@ -4,7 +4,7 @@ user-guide-description: Läs om regelefterlevnad och handlares ansvar för att u
 feature: Security
 source-git-commit: 28b94fe2fd4f976ad48fa9c59e7e1559db8ba35e
 workflow-type: tm+mt
-source-wordcount: '58'
+source-wordcount: '53'
 ht-degree: 0%
 
 ---
@@ -23,4 +23,4 @@ ht-degree: 0%
 - Referens {#reference}
    - [Kundpersonuppgifter (version 2.x)](privacy/data-m2.md)
    - [Kundpersonuppgifter (version 1.x)](privacy/data-m1.md)
-- [Återgå till bruksanvisningar](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
+- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

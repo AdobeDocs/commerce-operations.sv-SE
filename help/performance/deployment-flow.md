@@ -12,13 +12,13 @@ ht-degree: 0%
 
 # Distributionsflöde
 
-The [!DNL Commerce] produktionsflöde hjälper butiken att uppnå maximala prestanda.
+Produktionsdistributionsflödet [!DNL Commerce] hjälper en butik att uppnå maximala prestanda.
 
 ## Installera beroenden
 
-The `composer.json` och `composer.lock` filer hantera [!DNL Commerce] och installera rätt version för varje paket. Du måste installera beroenden innan [anvisningar för förbehandling av beroendeinjicering](#preprocess-dependency-injection-instructions) om du tänker uppdatera [autoloader](#update-the-autoloader).
+Filerna `composer.json` och `composer.lock` hanterar [!DNL Commerce] beroenden och installerar rätt version för varje paket. Du måste installera beroenden innan [förbearbetar beroendeinmatningsinstruktionerna](#preprocess-dependency-injection-instructions) om du tänker uppdatera [autoloader](#update-the-autoloader).
 
-Installera [!DNL Commerce] beroenden:
+Så här installerar du [!DNL Commerce] beroenden:
 
 ```bash
 composer install --no-dev
@@ -41,13 +41,13 @@ bin/magento setup:di:compile
 
 ## Uppdatera den automatiska inläsaren
 
-När kompileringen är klar bekräftar du att [APCu är aktiverat](../performance/software.md#php-settings) och uppdatera den automatiska inläsaren:
+När kompileringen är klar bekräftar du att [APCu är aktiverad](../performance/software.md#php-settings) och uppdaterar den automatiska inläsaren:
 
 Så här uppdaterar du den automatiska inläsaren:
 
 >[!INFO]
 >
->The `-o` gör att automatisk inläsning av PSR-0/4 konverteras till klassmappning för att få en snabbare automatisk inläsare. The `--apcu` används APCu för att cachelagra klasser som hittas eller inte hittas.
+>Alternativet `-o` konverterar automatisk inläsning av PSR-0/4 till en klassmappning för att få en snabbare automatisk inläsare. Alternativet `--apcu` använder APCu för att cachelagra klasser som hittats eller inte hittats.
 
 ```bash
 composer dump-autoload -o --apcu
@@ -73,7 +73,7 @@ bin/magento setup:static-content:deploy
 
 ## Distribuera statiskt innehåll
 
-Distribuera statiskt innehåll orsakar [!DNL Commerce] för att utföra följande åtgärder:
+Distribuering av statiskt innehåll gör att [!DNL Commerce] utför följande åtgärder:
 
 * Analysera alla statiska resurser
 * Sammanfoga, minimera och paketera innehåll
@@ -81,9 +81,9 @@ Distribuera statiskt innehåll orsakar [!DNL Commerce] för att utföra följand
 * Analysera temaflöde
 * Lagra allt bearbetat och materialiserat innehåll i en viss mapp för ytterligare användning
 
-Om statiskt innehåll inte distribueras, [!DNL Commerce] utför alla listade åtgärder på direkten, vilket leder till en avsevärd ökning av svarstiden.
+Om ditt statiska innehåll inte distribueras utför [!DNL Commerce] alla listade åtgärder direkt, vilket leder till en avsevärd ökning av svarstiden.
 
-Du kan använda en mängd alternativ för att anpassa distributionsåtgärder baserat på butikens storlek och leveransbehov. Den vanligaste är den kompakta distributionsstrategin. Se [Distributionsstrategier för statiska filer](../configuration/cli/static-view-file-strategy.md)
+Du kan använda en mängd alternativ för att anpassa distributionsåtgärder baserat på butikens storlek och leveransbehov. Den vanligaste är den kompakta distributionsstrategin. Se [Statiska distributionsstrategier för filer](../configuration/cli/static-view-file-strategy.md)
 
 Så här distribuerar du statiskt innehåll:
 
@@ -97,9 +97,9 @@ Med det här kommandot kan Composer återskapa mappningen till projektfiler så 
 
 >[!INFO]
 >
->Ställa in läget till produktion körs automatiskt `setup:di:compile` och `setup:static-content:deploy`.
+>Om du ställer in läget på produktion körs `setup:di:compile` och `setup:static-content:deploy` automatiskt.
 
-Slutligen måste du placera butiken i produktionsläge. Produktionsläget är specifikt optimerat för att ge butiken maximala prestanda. Den inaktiverar även alla utvecklarspecifika funktioner. Detta kan du göra i `.htaccess` eller `nginx.conf` fil:
+Slutligen måste du placera butiken i produktionsläge. Produktionsläget är specifikt optimerat för att ge butiken maximala prestanda. Den inaktiverar även alla utvecklarspecifika funktioner. Detta kan du göra i din `.htaccess`- eller `nginx.conf`-fil:
 
 `SetEnv MAGE_MODE production`
 

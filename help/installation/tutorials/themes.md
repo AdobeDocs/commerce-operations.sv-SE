@@ -12,9 +12,9 @@ ht-degree: 0%
 
 # Avinstallera teman
 
-Innan du använder det här kommandot måste du känna till den relativa sökvägen till temat. Teman finns i en underkatalog till `<magento_root>/app/design/<area name>`. Du måste ange sökvägen till temat som börjar med området, vilket antingen är `frontend` (för storefront-teman) eller `adminhtml` (för administratörsteman).
+Innan du använder det här kommandot måste du känna till den relativa sökvägen till temat. Teman finns i en underkatalog till `<magento_root>/app/design/<area name>`. Du måste ange sökvägen till temat som börjar med området, som antingen är `frontend` (för butiksteman) eller `adminhtml` (för administratörsteman).
 
-Sökvägen till Luma-temat som ingår i Adobe Commerce är `frontend/Magento/luma`.
+Sökvägen till Luma-temat som ingår i Adobe Commerce är till exempel `frontend/Magento/luma`.
 
 Mer information om teman finns i [temastruktur](https://developer.adobe.com/commerce/frontend-core/guide/themes/structure/).
 
@@ -22,12 +22,12 @@ Mer information om teman finns i [temastruktur](https://developer.adobe.com/comm
 
 I det här avsnittet beskrivs hur du avinstallerar ett eller flera teman, och du kan även ta med temats kod från filsystemet. Du kan skapa säkerhetskopior först så att du kan återställa data senare.
 
-Det här kommandot avinstallerar *endast* teman som anges i `composer.json`, med andra ord, teman som tillhandahålls som Composer-paket. Om temat inte är ett Composer-paket måste du avinstallera det manuellt genom att:
+Det här kommandot avinstallerar *endast* teman som anges i `composer.json`, med andra ord teman som tillhandahålls som Composer-paket. Om temat inte är ett Composer-paket måste du avinstallera det manuellt genom att:
 
-* Uppdaterar `parent` nodinformation i `theme.xml` för att ta bort referenser till temat.
+* Uppdaterar nodinformationen `parent` i `theme.xml` för att ta bort referenser till temat.
 * Tar bort temakod från filsystemet.
 
-  [Mer information om arv av teman](https://developer.adobe.com/commerce/frontend-core/guide/themes/inheritance/).
+  [Mer information om temarv](https://developer.adobe.com/commerce/frontend-core/guide/themes/inheritance/).
 
 ## Avinstallera teman
 
@@ -39,9 +39,9 @@ bin/magento theme:uninstall [--backup-code] [-c|--clear-static-content] {theme p
 
 Plats
 
-* `{theme path}` är den relativa sökvägen till temat, med början från områdesnamnet. Sökvägen till det tomma temat som medföljer Adobe Commerce är `frontend/Magento/blank`.
-* `--backup-code` säkerhetskopierar kodbasen enligt beskrivningen i de följande styckena.
-* `--clear-static-content` rensningar som genererats [statiska vyfiler](../../configuration/cli/static-view-file-deployment.md), vilket är nödvändigt för att statiska vyfiler ska visas korrekt.
+* `{theme path}` är den relativa sökvägen till temat och börjar med områdesnamnet. Sökvägen till det tomma temat som ingår i Adobe Commerce är till exempel `frontend/Magento/blank`.
+* `--backup-code` säkerhetskopierar kodbasen enligt beskrivningen i efterföljande stycken.
+* `--clear-static-content` rensar genererade [statiska vyfiler](../../configuration/cli/static-view-file-deployment.md), vilket krävs för att statiska vyfiler ska visas korrekt.
 
 Kommandot utför följande uppgifter:
 
@@ -54,17 +54,17 @@ Kommandot utför följande uppgifter:
 1. Verifierar att temat inte används. Om det används avslutas kommandot.
 1. Verifierar att temat inte är basen för det virtuella temat. Om det är basen för ett virtuellt tema avslutas kommandot.
 1. Placerar butiken i underhållsläge.
-1. If `--backup-code` är specificerat, säkerhetskopiera kodbasen, förutom `pub/static`, `pub/media`och `var` kataloger.
+1. Om `--backup-code` anges säkerhetskopierar du kodbasen, exklusive katalogerna `pub/static`, `pub/media` och `var`.
 
    Namnet på säkerhetskopieringsfilen är `var/backups/<timestamp>_filesystem.tgz`
 
-   Du kan återställa säkerhetskopior när som helst med [`magento setup:rollback`](uninstall-modules.md#roll-back-the-file-system-database-or-media-files) -kommando.
+   Du kan återställa säkerhetskopior när som helst med kommandot [`magento setup:rollback`](uninstall-modules.md#roll-back-the-file-system-database-or-media-files).
 
-1. Tar bort teman från `theme` databastabell.
+1. Tar bort teman från databastabellen `theme`.
 1. Ta bort teman från kodbasen med `composer remove`.
 1. Rensar cachen.
 1. Rensar genererade klasser
-1. If `--clear-static-content` anges, rengöringar [genererade statiska vyfiler](../../configuration/cli/static-view-file-deployment.md).
+1. Om `--clear-static-content` anges rensas [genererade statiska vyfiler](../../configuration/cli/static-view-file-deployment.md).
 
 Om du till exempel försöker avinstallera ett tema som ett annat tema är beroende av visas följande meddelande:
 

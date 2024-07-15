@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Skapa databasschemat
 
-Innan du kör kommandot måste du [Skapa eller uppdatera distributionskonfigurationen](deployment.md).
+Innan du kör det här kommandot måste du [skapa eller uppdatera distributionskonfigurationen](deployment.md).
 
 ## Konfigurera databasen och lägga till data
 

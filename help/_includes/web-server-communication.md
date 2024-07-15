@@ -7,13 +7,13 @@ ht-degree: 0%
 ---
 # Säker webbserverkommunikation
 
-I det här avsnittet beskrivs ett exempel på hur du säkrar kommunikationen mellan webbservern och sökmotorn (Elasticsearch eller OpenSearch) med en kombination av TLS-kryptering (Transport Layer Security) och [Grundläggande HTTP-autentisering](https://datatracker.ietf.org/doc/html/rfc2617). Du kan även konfigurera andra typer av autentisering. Vi tillhandahåller referenser för den informationen.
+I det här avsnittet beskrivs ett exempel på hur du säkrar kommunikationen mellan webbservern och sökmotorn (Elasticsearch eller OpenSearch) med en kombination av TLS-kryptering och [grundläggande HTTP-autentisering](https://datatracker.ietf.org/doc/html/rfc2617). Du kan även konfigurera andra typer av autentisering. Vi tillhandahåller referenser för den informationen.
 
 (En äldre term, Secure Sockets Layer (SSL), används ofta som synonymer med TLS. I det här avsnittet hänvisar vi till *TLS*.)
 
 >[!WARNING]
 >
->Om inget annat anges måste alla kommandon i det här avsnittet anges som en användare med `root` behörighet.
+>Om inget annat anges måste alla kommandon i det här avsnittet anges som en användare med `root`-behörighet.
 
 ## Recommendations
 
@@ -35,12 +35,12 @@ Se någon av följande resurser:
 
 * Apache
 
-   * [Apache 2.4, handledning för stark kryptering](https://httpd.apache.org/docs/2.4/ssl/ssl_howto.html)
-   * [Så här skapar du ett SSL-certifikat på Apache för Ubuntu 14.04 (självstudiekurs om digitaloceanen)](https://www.digitalocean.com/community/tutorials/how-to-create-a-ssl-certificate-on-apache-for-ubuntu-14-04)
+   * [Apache 2.4 - instruktiv kryptering](https://httpd.apache.org/docs/2.4/ssl/ssl_howto.html)
+   * [Så här skapar du ett SSL-certifikat i Apache för Ubuntu 14.04 (självstudiekurs om digitaloceanen)](https://www.digitalocean.com/community/tutorials/how-to-create-a-ssl-certificate-on-apache-for-ubuntu-14-04)
    * [Konfigurera en SSL-skyddad webbserver med CentOS (CentOS wiki)](https://wiki.centos.org/HowTos/Https)
 
 * Nginx
 
    * [Nginx SSL-avslutning](https://www.nginx.com/resources/admin-guide/nginx-ssl-termination/)
-   * [Så här skapar du ett SSL-certifikat på Nginx för Ubuntu 14.04 (självstudiekurs om digitala havet)](https://www.digitalocean.com/community/tutorials/how-to-create-an-ssl-certificate-on-nginx-for-ubuntu-14-04)
+   * [Så här skapar du ett SSL-certifikat på Nginx för Ubuntu 14.04 (självstudiekurs om digitaloceanen)](https://www.digitalocean.com/community/tutorials/how-to-create-an-ssl-certificate-on-nginx-for-ubuntu-14-04)
    * [Installation av Nginx SSL-certifikat (digicert)](https://www.digicert.com/ssl-certificate-installation-nginx.htm)
