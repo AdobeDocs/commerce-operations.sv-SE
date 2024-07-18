@@ -2,7 +2,7 @@
 title: Ange värdet för bootstrap-parametrar
 description: Lär dig hur du ställer in bootstrap-parametrar för Commerce.
 exl-id: 4e1e4e5e-e1bc-49a5-8a2a-2e6b91ca9175
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 1%
@@ -35,7 +35,7 @@ Du kan ange bootstrap-variabler som systemomfattande systemvariabler, vilket gö
 
 Du kan till exempel använda systemmiljövariabeln `MAGE_PROFILER` för att ange ett läge enligt följande:
 
-```terminal
+```
 MAGE_PROFILER={firebug|csv|<custom value>}
 ```
 
@@ -80,7 +80,7 @@ Du kan ändra `.htaccess` på följande platser, beroende på startpunkten till 
 
 1. Ange värdet för `MAGE_PROFILER` till något av följande:
 
-   ```terminal
+   ```
    firebug
    csvfile
    <custom value>

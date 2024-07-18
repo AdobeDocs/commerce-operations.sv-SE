@@ -2,7 +2,7 @@
 title: Hantera cachen
 description: Hantera cachetyper och visa cachestatus från kommandoraden med Commerce CLI
 exl-id: bbd76c00-727b-412e-a8e5-1e013a83a29a
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
 source-wordcount: '612'
 ht-degree: 0%
@@ -35,7 +35,7 @@ På kommandoraden för Commerce-programservern kan du visa status för cachen me
 
 Ett exempel följer:
 
-```terminal
+```
 Current status:
                         config: 1
                         layout: 1
@@ -100,7 +100,7 @@ bin/magento cache:disable db_ddl full_page
 
 Exempelresultat:
 
-```terminal
+```
    Changed cache status:
        db_ddl: 1 -> 0
     full_page: 1 -> 0
@@ -152,7 +152,7 @@ Där `[type]` är en blankstegsavgränsad lista med cachetyper. Om `[type]` utel
 
 Exempelresultat:
 
-```terminal
+```
    Flushed cache types:
    config
    layout

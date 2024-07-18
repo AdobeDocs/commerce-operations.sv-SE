@@ -2,7 +2,7 @@
 title: Klona exempeldata i Git-databaser
 description: Följ de här stegen för att installera exempeldata för Adobe Commerce genom att klona Git-databaser.
 exl-id: 748eee30-2821-457d-9c1c-62ede8bc0510
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
 source-wordcount: '733'
 ht-degree: 0%
@@ -61,7 +61,7 @@ Så här klonar du GitHub-databasen med exempeldata med SSH-protokollet:
    >
    >Om följande fel visas kontrollerar du att du [delade din SSH-nyckel](https://docs.github.com/articles/generating-ssh-keys/) med GitHub:<br>
 
-   ```terminal
+   ```
    Cloning into 'magento2'...
    Permission denied (publickey).
    fatal: The remote end hung up unexpectedly

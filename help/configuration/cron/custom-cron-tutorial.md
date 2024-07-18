@@ -2,7 +2,7 @@
 title: Konfigurera ett anpassat cron-jobb och en cron-grupp (självstudiekurs)
 description: Använd den här stegvisa självstudiekursen för att skapa ett anpassat cron-jobb.
 exl-id: d8efcafc-3ae1-4c2d-a8ad-4a806fb48932
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
 source-wordcount: '809'
 ht-degree: 0%
@@ -61,7 +61,7 @@ Om du redan har en exempelmodul kan du använda den. Hoppa över det här steget
 
    Följande resultat bör visas:
 
-   ```terminal
+   ```
    drwxrwsr-x.   4 magento_user apache  4096 Oct 30 13:19 .
    drwxrwsr-x. 121 magento_user apache  4096 Oct 30 13:19 ..
    -rw-rw-r--.   1 magento_user apache   372 Oct 30 13:19 composer.json
@@ -97,7 +97,7 @@ Innan du fortsätter kontrollerar du att exempelmodulen är registrerad och akti
 
 1. Kontrollera att modulen är aktiverad.
 
-   ```terminal
+   ```
    Module is enabled
    ```
 
@@ -215,7 +215,7 @@ Så här kontrollerar du cron:
 
       Resultatet ska vara som följer:
 
-      ```terminal
+      ```
       +-------------+----------------+---------+----------+---------------------+---------------------+---------------------+---------------------+
       | schedule_id | job_code       | status  | messages | created_at        | scheduled_at        | executed_at         | finished_at     |
       +-------------+----------------+---------+----------+---------------------+---------------------+---------------------+---------------------+
@@ -234,7 +234,7 @@ Så här kontrollerar du cron:
 
    Du bör se en eller flera poster som följande:
 
-   ```terminal
+   ```
    [2016-11-02 22:17:03] main.INFO: Cron Works [] []
    ```
 

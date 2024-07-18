@@ -2,7 +2,7 @@
 title: Importera data från konfigurationsfiler
 description: Importera konfigurationsinställningar för Adobe Commerce från konfigurationsfiler.
 exl-id: 7d9f156c-e8d3-4888-b359-5d9aa8c4ea05
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Om du anger `bin/magento app:config:import` utan den valfria flaggan måste du b
 
 Om konfigurationsfilen till exempel innehåller en ny webbplats och en ny butik visas följande meddelande:
 
-```terminal
+```
 These Websites will be created: New Website
 These Groups will be created: New Store
 Do you want to continue [yes/no]?
@@ -46,14 +46,14 @@ Ange `yes` om du vill fortsätta med importen.
 
 Om distributionskonfigurationsfilerna innehåller data som ska importeras visas ett meddelande som liknar följande:
 
-```terminal
+```
 Start import:
 Some information about importing
 ```
 
 Om distributionskonfigurationsfilerna inte innehåller några data att importera visas ett meddelande som liknar följande:
 
-```terminal
+```
 Start import:
 Nothing to import
 ```

@@ -2,7 +2,7 @@
 title: Kör supportverktygen
 description: Felsök ditt Commerce-projekt med det inbyggda supportverktyget.
 exl-id: 021b795f-e00d-43b5-9cbb-5b57a4795be7
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 0%
@@ -81,7 +81,7 @@ Var:
 
 Känsliga data innehåller kundinformation från följande databastabeller:
 
-```terminal
+```
 'customer_entity',
 'customer_entity_varchar',
 'customer_address_entity',
@@ -100,7 +100,7 @@ När kommandot har slutförts kan du säkerhetskopiera databasen till Adobe Comm
 
 Vi tillhandahåller kommandon som visar sökvägar till verktyg som krävs av datainsamlaren och kommandoraden. Du kan till exempel använda dessa kommandon om fel som följande visas i Admin eller på kommandoraden:
 
-```terminal
+```
 Utility lsof not found
 ```
 
@@ -119,7 +119,7 @@ Kör följande kommandon i den ordning som visas för att visa sökvägarna till
 
 Ett exempel följer:
 
-```terminal
+```
    gzip => /bin/gzip
    lsof => /usr/sbin/lsof
    mysqldump => /usr/bin/mysqldump

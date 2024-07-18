@@ -2,7 +2,7 @@
 title: Ange åtgärdsläge
 description: Läs om hur du ställer in Adobe Commerce driftslägen.
 exl-id: 62d183fa-d4ff-441d-b8bd-64ef5ae10978
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Produktionsläget har bättre prestanda eftersom statiska vyfiler fylls i i kata
 
 När du byter till utvecklare eller produktionsläge tar vi bort innehållet i följande kataloger:
 
-```terminal
+```
 var/cache
 generated/metadata
 generated/code
@@ -54,7 +54,7 @@ bin/magento deploy:mode:show
 
 Ett meddelande som liknar följande visas:
 
-```terminal
+```
 Current application mode: {mode}. (Note: Environment variables may override this value.)
 ```
 
@@ -86,7 +86,7 @@ bin/magento deploy:mode:set production
 
 Meddelanden som liknar följande:
 
-```terminal
+```
 Enabled maintenance mode
 Requested languages: en_US
 === frontend -> Magento/luma -> en_US ===
@@ -143,7 +143,7 @@ När du byter från produktion till utvecklarläge bör du rensa genererade klas
 
    Följande meddelande visas:
 
-   ```terminal
+   ```
    Enabled developer mode.
    ```
 
@@ -155,7 +155,7 @@ bin/magento deploy:mode:set default
 
 Följande meddelande visas:
 
-```terminal
+```
 Enabled default mode.
 ```
 

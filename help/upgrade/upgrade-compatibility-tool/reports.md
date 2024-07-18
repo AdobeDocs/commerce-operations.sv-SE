@@ -2,7 +2,7 @@
 title: '[!DNL Upgrade Compatibility Tool] rapporter'
 description: Följ de här stegen för att köra  [!DNL Upgrade Compatibility Tool]  i ditt Adobe Commerce-projekt.
 exl-id: a2272339-46d6-443b-bd53-286b72f13d4e
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
 source-wordcount: '584'
 ht-degree: 0%
@@ -20,7 +20,7 @@ Som ett resultat av analysen kan [!DNL Upgrade Compatibility Tool] exportera en 
 
 Se följande exempel på kommandoradsgränssnitt för en rapport:
 
-```terminal
+```
 File: /app/code/Custom/CatalogExtension/Controller/Index/Index.php
 ------------------------------------------------------------------
  * [WARNING][1131] Line 10: Extending from class 'Magento\Framework\App\Action\Action' that is @deprecated on version '2.4.4'
@@ -43,7 +43,7 @@ Den här rapporten innehåller även en detaljerad sammanfattning av
 
 Se följande exempel på kommandoradsgränssnitt:
 
-```terminal
+```
  ----------------------------- ----------------- 
   Current version               2.4.1            
   Target version                2.4.4            

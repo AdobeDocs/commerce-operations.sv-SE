@@ -2,7 +2,7 @@
 title: Beroenderapporter
 description: Skapa rapporter som visar summorna för modul-, cirkulär- och ramverksberoenden.
 exl-id: b7a32fe1-71c5-495f-8276-242503fb50ae
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
 source-wordcount: '240'
 ht-degree: 0%
@@ -51,7 +51,7 @@ Om ingen katalog eller filnamn skickas som argument används följande programro
 
 Följande är en del av utdata för en exempelmodulberoenderapport:
 
-```terminal
+```
 "","All","Hard","Soft"
 "Total number of dependencies","602","587","15"
 
@@ -75,7 +75,7 @@ Följande är en del av utdata för en exempelmodulberoenderapport:
 
 Följande är en del av utdata för en cirkelberoenderapport:
 
-```terminal
+```
 "Circular dependencies:","Total number of chains"
 "","848"
 
@@ -101,7 +101,7 @@ Följande är en del av utdata för en cirkelberoenderapport:
 
 Följande är en del av utdata för en exempelrapport om ramverksberoenden:
 
-```terminal
+```
 "Dependencies of framework:","Total number"
 "","111"
 

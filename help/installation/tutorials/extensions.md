@@ -2,7 +2,7 @@
 title: Hantera tillägg från tredje part
 description: Följ de här stegen för att installera, aktivera, uppgradera och avinstallera ett Adobe Commerce-tillägg.
 exl-id: b564662a-2e5f-4fa9-bae1-ca7498478fa9
-source-git-commit: 6da0e70acc77d2171d6336ab632e6a9a8dd16c67
+source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
 source-wordcount: '785'
 ht-degree: 0%
@@ -98,7 +98,7 @@ Lägg till tilläggets namn och version i din `composer.json`-fil:
 
 1. Vänta tills Composer har uppdaterat dina projektberoenden och kontrollera att inga fel uppstår:
 
-   ```terminal
+   ```
    Updating dependencies (including require-dev)
    Package operations: 1 install, 0 updates, 0 removals
      - Installing j2t/module-payplug (2.0.2): Downloading (100%)
@@ -116,7 +116,7 @@ bin/magento module:status J2t_Payplug
 
 Tillägget är antagligen inaktiverat som standard:
 
-```terminal
+```
 Module is disabled
 ```
 
@@ -140,7 +140,7 @@ Vissa tillägg fungerar inte korrekt om du inte först rensar genererade statisk
 
    Följande utdata bör visas:
 
-   ```terminal
+   ```
    The following modules have been enabled:
    - J2t_Payplug
    
@@ -170,7 +170,7 @@ Vissa tillägg fungerar inte korrekt om du inte först rensar genererade statisk
 
    Du bör se utdata som verifierar att tillägget inte längre är inaktiverat:
 
-   ```terminal
+   ```
    Module is enabled
    ```
 

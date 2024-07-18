@@ -2,7 +2,7 @@
 title: Apache
 description: Följ de här stegen för att installera och konfigurera Apache-webbservern för lokala installationer av Adobe Commerce.
 exl-id: a9a394c9-389f-42ef-9029-dd22c979cfb8
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
 source-wordcount: '759'
 ht-degree: 0%
@@ -52,7 +52,7 @@ Adobe Commerce använder serverskrivningar och `.htaccess` för att tillhandahå
 
    Du kan till exempel lägga till följande i slutet av `000-default.conf`:
 
-   ```terminal
+   ```
    <Directory "/var/www/html">
        AllowOverride All
    </Directory>
@@ -98,7 +98,7 @@ apache2 -v
 
 Resultatet ser ut ungefär så här:
 
-```terminal
+```
 Server version: Apache/2.4.04 (Ubuntu)
 Server built: Jul 22 2020 14:35:32
 ```
@@ -132,7 +132,7 @@ Installera standardversionen av Apache:
 
    Resultatet ser ut ungefär så här:
 
-   ```terminal
+   ```
    Server version: Apache/2.4.18 (Ubuntu)
    Server built: 2020-04-15T18:00:57
    ```
@@ -175,7 +175,7 @@ Uppgradera till Apache 2.4:
 
    Meddelanden som liknar följande bör visas:
 
-   ```terminal
+   ```
    Server version: Apache/2.4.10 (Ubuntu)
    Server built: Jul 22 2020 22:46:25
    ```
@@ -204,7 +204,7 @@ Installation och konfigurering av Apache är i princip en trestegsprocess: insta
 
    Meddelanden som liknar följande för att bekräfta att installationen lyckades:
 
-   ```terminal
+   ```
    Server version: Apache/2.4.40 (Unix)
    Server built: Oct 16 2020 14:48:21
    ```

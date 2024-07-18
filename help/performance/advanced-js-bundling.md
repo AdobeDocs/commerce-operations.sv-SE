@@ -2,7 +2,7 @@
 title: Avancerad [!DNL JavaScript] paketering
 description: Läs om hur JavaScript bundling kan minska storleken och frekvensen på serverförfrågningar.
 exl-id: 81a313f8-e541-4da6-801b-8bbd892d6252
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: f9f8aea1a77ef062d7076a61bbafd12433f15edf
 workflow-type: tm+mt
 source-wordcount: '2134'
 ht-degree: 0%
@@ -212,7 +212,7 @@ phantomjs deps.js <i>url-to-specific-page</i> &gt; <i>text-file-representing-pag
 
 Här är till exempel fyra sidor från Lumas exempelbutik som representerar de fyra sidtyperna som vi kommer att använda för att skapa våra fyra paket (hemsida, kategori, produkt, vagn):
 
-```terminal
+```
 phantomjs deps.js http://m2.loc/ > bundle/homepage.txt
 phantomjs deps.js http://m2.loc/women/tops-women/jackets-women.html > bundle/category.txt
 phantomjs deps.js http://m2.loc/beaumont-summit-kit.html > bundle/product.txt
@@ -234,7 +234,7 @@ Det här kommandot (används i skriptet [!DNL PhantomJS]) skapar samma lista med
 
 När du har sammanfogat [!DNL RequireJS]-beroenden till sidtypstextfiler kan du använda följande kommando för varje sidtypsberoende fil för att ersätta kommatecknen i dina filer med nya rader:
 
-```terminal
+```bash
 sed -i -e $'s/,/\\\n/g' bundle/category.txt
 sed -i -e $'s/,/\\\n/g' bundle/homepage.txt
 sed -i -e $'s/,/\\\n/g' bundle/product.txt
@@ -243,7 +243,7 @@ sed -i -e $'s/,/\\\n/g' bundle/product.txt
 
 Du bör också ta bort alla blandningar för varje fil eftersom blandar dubblettberoenden. Använd följande kommando för varje beroendefil:
 
-```terminal
+```bash
 sed -i -e 's/mixins\!.*$//g' bundle/homepage.txt
 sed -i -e 's/mixins\!.*$//g' bundle/category.txt
 sed -i -e 's/mixins\!.*$//g' bundle/product.txt
@@ -262,7 +262,7 @@ sort bundle/*.txt |uniq -c |sort -n
 
 Det här kommandot sammanfogar och sorterar beroenden som finns i `bundle/*.txt`-filerna.  Utdata visar också antalet filer som innehåller varje beroende:
 
-```terminal
+```
 1 buildTools,
 1 jquery/jquery.parsequery,
 1 jsbuild,
@@ -317,7 +317,7 @@ bash deps-map.sh
 
 Utdata från det här skriptet, som tillämpas på våra tre exempelsidtyper, ska se ut ungefär så här (men mycket längre):
 
-```terminal
+```
 bundle/product.txt   -->   buildTools,
 bundle/category.txt  -->   jquery/jquery.parsequery,
 bundle/product.txt   -->   jsbuild,
@@ -427,7 +427,7 @@ Innehållet i den nya paketkatalogen kan se ut så här:
 ll pub/static/frontend/Magento/luma/en_US/bundles
 ```
 
-```terminal
+```
 total 1900
 drwxr-xr-x  2 root root    4096 Mar 28 11:24 ./
 drwxr-xr-x 70 root root    4096 Mar 28 11:24 ../
