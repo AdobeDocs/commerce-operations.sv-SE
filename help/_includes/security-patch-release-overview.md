@@ -1,7 +1,7 @@
 ---
-source-git-commit: d532402e2d65a1f34558fc3c283d4291be5b006b
+source-git-commit: 50b87e6f2f604d195c2d079bd18451754edaa11c
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '188'
 ht-degree: 0%
 
 ---
@@ -15,4 +15,4 @@ Med säkerhetsuppdateringar kan du skydda din webbplats utan att lägga på ytte
 
 Varje säkerhetsuppdatering baseras på den tidigare fullständiga patchversionen. Den innehåller kvalitets- och säkerhetskorrigeringar från tidigare korrigeringsversioner och säkerhetskorrigeringar som skapats mellan den tidigare fullständiga korrigeringsversionen och säkerhetsuppdateringen.
 
-Instruktioner om hur du hämtar och använder säkerhetspatchar finns i [Snabbstart vid installation](../installation/composer.md#example---security-patch).
+Instruktioner om hur du hämtar och använder säkerhetspatchar finns i [Utför och uppgradera](../installation/composer.md#example---security-patch) i _uppgraderingshandboken_.
