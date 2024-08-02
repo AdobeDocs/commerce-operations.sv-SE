@@ -1,5 +1,5 @@
 ---
-source-git-commit: 0709cd6510adce0f513894fdecb2de5ac88d0e87
+source-git-commit: a6086afc0a1f099b62014ad61098a5a1dc9d4675
 workflow-type: tm+mt
 source-wordcount: '719'
 ht-degree: 3%
@@ -9,7 +9,7 @@ ht-degree: 3%
 
 Vi välkomnar bidrag från såväl communityn som från Adobe anställda utanför dokumentationsteamen.
 
-## Adobe uppförandekod med öppen källkod
+## Adobe Öppna Source uppförandekod
 
 Detta projekt har antagit [Adobe Open Source Code of Conduct](code-of-conduct.md) eller [.NET Foundation Code of Conduct](https://dotnetfoundation.org/code-of-conduct). Mer information finns i artikeln [Contributing](contributing.md).
 
@@ -21,7 +21,7 @@ Hur du bidrar beror på vem du är och vilken typ av ändringar du vill bidra me
 
 ### Mindre ändringar
 
-Om du bidrar med mindre uppdateringar kan du gå till artikeln och klicka på feedbackområdet som visas längst ned i artikeln. Klicka på **Detaljerade alternativ för feedback** och klicka sedan på **Föreslå en redigering** om du vill gå till källfilen för markering på GitHub. Använd GitHub-gränssnittet för att göra uppdateringar. Se det allmänna [Adobe Docs Contributor Guide](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html) för mer information.
+Om du bidrar med mindre uppdateringar kan du besöka artikeln och klicka på feedbackområdet som visas längst ned i artikeln, klicka på **Detaljerade feedbackalternativ** och sedan på **Föreslå en redigering** för att gå till markeringskällfilen på GitHub. Använd GitHub-gränssnittet för att göra uppdateringar. Mer information finns i den allmänna handboken [Adobe Docs Contributor](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html).
 
 Mindre korrigeringar och förtydliganden som du lämnar in för dokumentation och kodexempel i den här rapporten omfattas av Adobe användarvillkoren.
 
@@ -35,7 +35,7 @@ If you submit a pull request with significant changes to documentation and code 
 
 ### Stora förändringar för anställda i Adobe
 
-Om du är teknikskribent, programchef eller utvecklare för en Adobe Experience Cloud-lösning och det är ditt jobb att bidra till eller skriva tekniska artiklar bör du använda det privata arkivet på `https://git.corp.adobe.com/AdobeDocs`.
+Om du är teknikskribent, programchef eller utvecklare för en Adobe Experience Cloud-lösning och det är ditt jobb att bidra till eller skapa tekniska artiklar, bör du använda den privata databasen på `https://git.corp.adobe.com/AdobeDocs`.
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
@@ -43,14 +43,14 @@ Om du är teknikskribent, programchef eller utvecklare för en Adobe Experience 
 
 Deltagare i communityn kan använda GitHub-gränssnittet för grundläggande redigering eller förgrena rapporten för att göra större insatser.
 
-Se [Adobe Docs Contributor Guide](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html) för mer information.
+Mer information finns i [Adobe Docs Contributor Guide](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html).
 
 ## Så här använder du kod för att formatera ämnet
 
 Alla artiklar i den här databasen använder smaksatt GitHub-kod. Om du inte är van vid att markera något läser du:
 
-* [Grunderna i markeringar](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
-* [Utskrivbart markeringsblad](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
+* [Grunderna för markeringar](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
+* [Utskrivbart kalkylblad för markering](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
 
 ## Mallar
 
@@ -72,25 +72,25 @@ I allmänhet behöver de flesta skribenter bara lägga till en releaseversion ti
 >**OBS!**
 >
 >* För att generera mallinnehåll måste du arbeta på kommandoraden i en terminal.
->* Du måste ha installerat Ruby för att köra återgivningsskriptet. Se [_jekyll/.ruby-version](_jekyll/.ruby-version) för den version som krävs.
+>* Du måste ha installerat Ruby för att köra återgivningsskriptet. Se [_jekyll/.ruby-version ](_jekyll/.ruby-version) för den version som krävs.
 
 Här nedan finns en beskrivning av filstrukturen för mallat innehåll:
 
-* `_jekyll`—Innehåller teman och obligatoriska resurser
-* `_jekyll/_data`—Innehåller de maskinläsbara filformat som används för att återge mallar
-* `_jekyll/templated`—Innehåller HTML-baserade mallfiler som använder mallspråket Flytande
-* `help/_includes/templated`—Innehåller genererade utdata för mallinnehåll i `.md` filformat så att det kan publiceras i Experience League-ämnen; återgivningsskriptet skriver automatiskt genererade utdata i den här katalogen åt dig
+* `_jekyll` - Innehåller teman och obligatoriska resurser
+* `_jekyll/_data` - Innehåller de maskinläsbara filformat som används för att återge mallar
+* `_jekyll/templated` - Innehåller HTML-baserade mallfiler som använder mallspråket Flytande
+* `help/_includes/templated` - Innehåller genererade utdata för mallat innehåll i `.md`-filformat så att det kan publiceras i Experience League-ämnen. Återgivningsskriptet skriver automatiskt genererade utdata till den här katalogen åt dig
 
 Så här uppdaterar du mallinnehåll:
 
-1. Öppna en datafil i textredigeraren `/jekyll/_data` katalog. Exempel:
+1. Öppna en datafil i katalogen `/jekyll/_data` i textredigeraren. Exempel:
 
    * [Produkttillgänglighetstabeller](https://experienceleague.adobe.com/docs/commerce-operations/release/product-availability.html): `/jekyll/_data/product-availability.yml`
    * [Systemkravstabeller](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html): `/jekyll/_data/system-requirements.yml`
 
 1. Använd den befintliga YAML-strukturen för att skapa poster.
 
-   Om du till exempel vill lägga till en version av Adobe Commerce i produkttillgänglighetstabellerna lägger du till följande i varje post i `extensions` och `services` avsnitt i `/jekyll/_data/product-availability.yml` fil (ändra versionsnummer efter behov):
+   Om du till exempel vill lägga till en version av Adobe Commerce i produkttillgänglighetstabellerna lägger du till följande i varje post i `extensions`- och `services`-avsnitten i `/jekyll/_data/product-availability.yml`-filen (ändra versionsnummer efter behov):
 
    ```
    support:
@@ -98,27 +98,27 @@ Så här uppdaterar du mallinnehåll:
         version: 4.5.6
    ```
 
-1. Navigera till `_jekyll` katalog.
+1. Navigera till katalogen `_jekyll`.
 
    ```
    cd _jekyll
    ```
 
-1. Generera mallinnehåll och skriv utdata till `help/_includes/templated` katalog.
+1. Generera mallinnehåll och skriv utdata till katalogen `help/_includes/templated`.
 
    ```
    rake render
    ```
 
-   >**OBS!** Du måste köra skriptet från `_jekyll` katalog. Om detta är första gången du kör skriptet måste du installera Ruby-beroenden först med `bundle install` -kommando.
+   >**OBS!** Du måste köra skriptet från katalogen `_jekyll`. Om detta är första gången du kör skriptet måste du installera Ruby-beroenden först med kommandot `bundle install`.
 
-1. Navigera tillbaka till `root` katalog.
+1. Gå tillbaka till katalogen `root`.
 
    ```
    cd ..
    ```
 
-1. Verifiera att `help/_includes/templated` filer ändrades.
+1. Verifiera att de förväntade `help/_includes/templated` filerna har ändrats.
 
    ```
    git status
@@ -134,9 +134,9 @@ Så här uppdaterar du mallinnehåll:
 1. Gör ändringar.
 
    ```
-   git add
-   git commit -m "_descriptive message of the intended commit_"
+   git add .
+   git commit -m "descriptive message of the intended commit"
    git push
    ```
 
-Läs Jekyll-dokumentationen för mer information om [Datafiler](https://jekyllrb.com/docs/datafiles), [Flytande filter](https://jekyllrb.com/docs/liquid/filters/)och andra funktioner.
+Mer information om [datafiler](https://jekyllrb.com/docs/datafiles), [flytande filter](https://jekyllrb.com/docs/liquid/filters/) och andra funktioner finns i dokumentationen för Jekyll.
