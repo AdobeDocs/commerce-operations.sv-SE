@@ -2,7 +2,7 @@
 title: Gemensamma kommandon
 description: Se ett urval av vanliga Commerce CLI-kommandon och -användning.
 exl-id: d35a1dd9-10b3-4364-b6f4-b1e259a04e3d
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 3d0e6d6517e28a32816bfe2b328edfba97523740
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 0%
@@ -51,7 +51,7 @@ Kommandon visas endast i sammanfattningsform. Klicka på länken i kolumnen Komm
 
 ## Vanliga argument
 
-Följande argument är gemensamma för alla kommandon. Dessa kommandon kan köras före eller efter det att Commerce-programmet har installerats:
+Följande argument är gemensamma för [alla kommandon](/help/tools/reference/commerce-on-premises.md). Dessa kommandon kan köras före eller efter det att Commerce-programmet har installerats:
 
 | Lång version | Kort version | Betydelse |
 |--- |--- |--- |
