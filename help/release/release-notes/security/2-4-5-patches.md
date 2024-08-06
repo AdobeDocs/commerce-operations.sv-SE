@@ -2,9 +2,9 @@
 title: Adobe Commerce 2.4.5 Security Patch Release Notes
 description: Läs mer om säkerhetsfelkorrigeringar, säkerhetsförbättringar och andra säkerhetsrelaterade uppdateringar som ingår i säkerhetsuppdateringarna för Adobe Commerce version 2.4.5.
 exl-id: 1b5f6d84-877a-45ea-8ff5-db83e3d360dd
-source-git-commit: 2269c99908c0f8292ad62bd5837b1b8cebd50cb3
+source-git-commit: 6c8d686fd3a7ce76f966b9f390813f454aa093bf
 workflow-type: tm+mt
-source-wordcount: '1101'
+source-wordcount: '1111'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## Adobe Commerce 2.4.5-p8
 
-Säkerhetsutgåvan av Adobe Commerce 2.4.5-p7 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som har identifierats i tidigare versioner av 2.4.5.
+Säkerhetsutgåvan av Adobe Commerce 2.4.5-p8 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som har identifierats i tidigare versioner av 2.4.5.
 
 Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB24-40](https://helpx.adobe.com/security/products/magento/apsb24-40.html).
 
@@ -34,13 +34,13 @@ Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerh
 
 ## Adobe Commerce 2.4.5-p7
 
-Säkerhetsutgåvan av Adobe Commerce 2.4.5-p7 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som har identifierats i tidigare versioner.
+Säkerhetsutgåvan av Adobe Commerce 2.4.5-p7 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som har identifierats i tidigare versioner av 2.4.5.
 
 Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB24-18](https://helpx.adobe.com/security/products/magento/apsb24-18.html).
 
 ## Adobe Commerce 2.4.5-p6
 
-Säkerhetsutgåvan av Adobe Commerce 2.4.5-p6 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som har identifierats i tidigare versioner. Den här versionen innehåller även säkerhetsförbättringar som förbättrar efterlevnaden av de senaste säkerhetsstandarderna.
+Säkerhetsutgåvan av Adobe Commerce 2.4.5-p6 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som har identifierats i tidigare versioner av 2.4.5. Den här versionen innehåller även säkerhetsförbättringar som förbättrar efterlevnaden av de senaste säkerhetsstandarderna.
 
 Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB24-03](https://helpx.adobe.com/security/products/magento/apsb24-03.html).
 
@@ -59,7 +59,7 @@ Den här versionen innehåller två viktiga säkerhetsförbättringar:
 
 ## Adobe Commerce 2.4.5-p5
 
-Säkerhetsutgåvan av Adobe Commerce 2.4.5-p5 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som har identifierats i tidigare versioner. Den här versionen innehåller även säkerhetsförbättringar som förbättrar efterlevnaden av de senaste säkerhetsstandarderna.
+Säkerhetsutgåvan av Adobe Commerce 2.4.5-p5 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som har identifierats i tidigare versioner av 2.4.5. Den här versionen innehåller även säkerhetsförbättringar som förbättrar efterlevnaden av de senaste säkerhetsstandarderna.
 
 Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB23-50](https://helpx.adobe.com/security/products/magento/apsb23-50.html).
 
@@ -80,23 +80,23 @@ Om kontrollsummeproblemet kvarstår tar du bort filen `composer.lock` innan du k
 
 ## Adobe Commerce 2.4.5-p4
 
-Säkerhetsutgåvan av Adobe Commerce 2.4.5-p4 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som har identifierats i tidigare versioner.
+Säkerhetsutgåvan av Adobe Commerce 2.4.5-p4 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som har identifierats i tidigare versioner av 2.4.5.
 
 Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB23-42](https://helpx.adobe.com/security/products/magento/apsb23-42.html).
 
 ### Använd en patch för att åtgärda säkerhetsluckan CVE-2022-31160 i jQuery-UI-biblioteket
 
-`jQuery-UI` biblioteksversion 1.13.1 har ett känt säkerhetsproblem (CVE-2022-31160) som påverkar flera versioner av Adobe Commerce och Magento Open Source. Detta bibliotek är beroende av Adobe Commerce och Magento Open Source 2.4.4, 2.4.5 och 2.4.6. Handlare som kör berörda distributioner bör tillämpa den korrigering som anges i [jQuery UI-säkerhetsproblemet CVE-2022-31160 för version 2.4.4, 2.4.5 och 2.4.6 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/jquery-cve-2022-31160-fix-2.4.4-2.4.5-2.4.6.html) i kunskapsbasartikeln.
+`jQuery-UI` biblioteksversion 1.13.1 har ett känt säkerhetsproblem (CVE-2022-31160) som påverkar flera versioner av Adobe Commerce och Magento Open Source. Detta bibliotek är beroende av Adobe Commerce och Magento Open Source 2.4.4, 2.4.5 och 2.4.6. Handlare som kör berörda distributioner bör tillämpa den korrigering som anges i [jQuery UI-säkerhetsproblemet CVE-2022-31160 för version 2.4.4, 2.4.5 och 2.4.6 ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/jquery-cve-2022-31160-fix-2.4.4-2.4.5-2.4.6) i kunskapsbasartikeln.
 
 ## Adobe Commerce 2.4.5-p3
 
-Säkerhetsutgåvan av Adobe Commerce 2.4.5-p3 innehåller säkerhetsfixar för säkerhetsluckor som har identifierats i tidigare versioner. Den här versionen innehåller även säkerhetsförbättringar som förbättrar efterlevnaden av de senaste säkerhetsstandarderna.
+Säkerhetsutgåvan av Adobe Commerce 2.4.5-p3 innehåller säkerhetsfixar för säkerhetsluckor som har identifierats i tidigare versioner av 2.4.5. Den här versionen innehåller även säkerhetsförbättringar som förbättrar efterlevnaden av de senaste säkerhetsstandarderna.
 
 Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Säkerhetsbulletin för Adobe](https://helpx.adobe.com/security/products/magento/apsb23-35.html).
 
 ### Använd en patch för att åtgärda säkerhetsluckan CVE-2022-31160 i jQuery-UI-biblioteket
 
-`jQuery-UI` biblioteksversion 1.13.1 har ett känt säkerhetsproblem (CVE-2022-31160) som påverkar flera versioner av Adobe Commerce och Magento Open Source. Detta bibliotek är beroende av Adobe Commerce och Magento Open Source 2.4.4, 2.4.5 och 2.4.6. Handlare som kör berörda distributioner bör tillämpa den korrigering som anges i [säkerhetsluckan för användargränssnittsfrågor CVE-2022-31160 för version 2.4.4, 2.4.5 och 2.4.6 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/jquery-cve-2022-31160-fix-2.4.4-2.4.5-2.4.6.html) i kunskapsbasartikeln.
+`jQuery-UI` biblioteksversion 1.13.1 har ett känt säkerhetsproblem (CVE-2022-31160) som påverkar flera versioner av Adobe Commerce och Magento Open Source. Detta bibliotek är beroende av Adobe Commerce och Magento Open Source 2.4.4, 2.4.5 och 2.4.6. Handlare som kör berörda distributioner bör tillämpa den korrigering som anges i [säkerhetsluckan för användargränssnittsfrågor CVE-2022-31160 för version 2.4.4, 2.4.5 och 2.4.6 ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/jquery-cve-2022-31160-fix-2.4.4-2.4.5-2.4.6) i kunskapsbasartikeln.
 
 ### Säkerhetsmarkering
 
@@ -114,13 +114,13 @@ Plattformsuppgraderingar för den här versionen förbättrar efterlevnaden av d
 
 ## Versionsinformation om Adobe Commerce 2.4.5-p2
 
-Säkerhetsutgåvan av Adobe Commerce 2.4.5-p2 innehåller tre säkerhetskorrigeringar för säkerhetsluckor som har identifierats i tidigare versioner.
+Säkerhetsutgåvan av Adobe Commerce 2.4.5-p2 innehåller tre säkerhetskorrigeringar för säkerhetsluckor som har identifierats i tidigare versioner av 2.4.5.
 
 Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB23-17](https://helpx.adobe.com/security/products/magento/apsb23-17.html).
 
 ## Adobe Commerce 2.4.5-p1
 
-Säkerhetsutgåvan av Adobe Commerce 2.4.5-p1 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som har identifierats i den tidigare utgåvan (Adobe Commerce 2.4.5 och Magento Open Source 2.4.5).
+Säkerhetsutgåvan av Adobe Commerce 2.4.5-p1 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som har identifierats i tidigare versioner av 2.4.5.
 
 Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB22-48](https://helpx.adobe.com/security/products/magento/apsb22-48.html).
 
