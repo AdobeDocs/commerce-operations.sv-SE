@@ -2,9 +2,9 @@
 title: GraphQL Application Server
 description: Följ dessa anvisningar för att aktivera GraphQL Application Server i din Adobe Commerce-distribution.
 exl-id: 9b223d92-0040-4196-893b-2cf52245ec33
-source-git-commit: f9f8aea1a77ef062d7076a61bbafd12433f15edf
+source-git-commit: 620be59a5b66bd4f55997951c59e473ac14a5c21
 workflow-type: tm+mt
-source-wordcount: '2088'
+source-wordcount: '2085'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Med Commerce GraphQL Application Server kan Adobe Commerce upprätthålla status bland Commerce GraphQL API-begäranden. GraphQL Application Server, som bygger på svullningstillägget, fungerar som en process med arbetstrådar som hanterar bearbetningen av begäranden. Genom att bevara ett startläge för ett program bland GraphQL API-begäranden förbättrar GraphQL Application Server hanteringen av begäranden och produktens övergripande prestanda. API-förfrågningar blir betydligt effektivare.
 
-GraphQL Application Server finns endast för Adobe Commerce. Det finns inte för Magento Open Source. Du måste [skicka in en Adobe Commerce Support](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)-biljett för att kunna aktivera GraphQL Application Server i Pro-projekt.
+GraphQL Application Server finns endast för Adobe Commerce. Det finns inte för Magento Open Source. För Cloud Pro-projekt måste du [skicka in en Adobe Commerce Support](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)-biljett för att aktivera GraphQL Application Server.
 
 >[!NOTE]
 >
@@ -30,12 +30,13 @@ Det verkar som om logiken för hantering av förfrågningar övergår till en h�
 
 ## Fördelar
 
-Med GraphQL Application Server kan Adobe Commerce hantera tillstånd mellan efterföljande Commerce GraphQL API-begäranden. Genom att dela programtillstånd mellan begäranden blir API-förfrågningens effektivitet effektivare genom att minimera belastningen på processerna och optimera hanteringen av förfrågningar. Därför kan svarstiden för GraphQL-begäranden minskas till 30 %.
+Med GraphQL Application Server kan Adobe Commerce hantera tillstånd mellan efterföljande Commerce GraphQL API-begäranden. Genom att dela programtillstånd mellan begäranden blir API-förfrågningens effektivitet effektivare genom att minimera belastningen på processerna och optimera hanteringen av förfrågningar. Därför kan svarstiden för GraphQL-begäranden minskas med upp till 30 %.
 
 ## Systemkrav
 
 För att köra GraphQL Application Server krävs följande:
 
+* Commerce version 2.4.7+
 * PHP 8.2 eller senare
 * Svepande PHP-tillägg v5+ har installerats
 * Tillräckligt RAM och processor baserat på förväntad belastning
@@ -88,7 +89,7 @@ När Application Server-funktionen har aktiverats i ditt Pro-projekt utför du f
 
 ### Distribuera Pro-projekt
 
-När du är klar med aktiveringsstegen skickar du ändringar till Git-databasen för att distribuera GraphQL Application Server:
+När du är klar med aktiveringsstegen skickar du ändringarna till Git-databasen för att distribuera GraphQL Application Server:
 
 ```bash
 git push
@@ -125,7 +126,7 @@ Utför följande steg innan du distribuerar GraphQL Application Server i Starter
 
 >[!NOTE]
 >
->Se till att alla anpassade inställningar i rotfilen `.magento.app.yaml` migreras korrekt till filen `application-server/.magento/.magento.app.yaml`. När filen `application-server/.magento/.magento.app.yaml` har lagts till i ditt projekt bör du behålla den förutom rotfilen `.magento.app.yaml`. Om du till exempel behöver [konfigurera kaninitmq](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/service/rabbitmq) eller [hantera webbegenskaper](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/app/properties/web-property) bör du även lägga till samma konfiguration i `application-server/.magento/.magento.app.yaml`.
+>Se till att alla anpassade inställningar i rotfilen `.magento.app.yaml` migreras korrekt till filen `application-server/.magento/.magento.app.yaml`. När filen `application-server/.magento/.magento.app.yaml` har lagts till i ditt projekt bör du behålla den förutom rotfilen `.magento.app.yaml`. Om du till exempel behöver [konfigurera RabbitMQ-tjänsten](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/service/rabbitmq) eller [hantera webbegenskaper](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/app/properties/web-property) bör du även lägga till samma konfiguration i `application-server/.magento/.magento.app.yaml`.
 
 ### Distribuera startprojekt
 
@@ -182,7 +183,7 @@ Utför följande steg innan du aktiverar modulen `ApplicationServer`:
 
 #### Konfigurera Nginx
 
-Din specifika Commerce-distribution avgör hur du konfigurerar Nginx. I allmänhet är Nginx-konfigurationsfilen som standard `nginx.conf` och placeras i någon av följande kataloger: `/usr/local/nginx/conf`, `/etc/nginx` eller `/usr/local/etc/nginx`. Mer information om hur du konfigurerar Nginx finns i [Nybörjarhandbok](https://nginx.org/en/docs/beginners_guide.html).
+Din specifika Commerce-distribution avgör hur du konfigurerar Nginx. I allmänhet är Nginx-konfigurationsfilen som standard `nginx.conf` och placeras i någon av följande kataloger: `/usr/local/nginx/conf`, `/etc/nginx` eller `/usr/local/etc/nginx`. Mer information om hur du konfigurerar Nginx finns i _[nybörjarhandboken](https://nginx.org/en/docs/beginners_guide.html)_.
 
 Exempel på Nginx-konfiguration:
 
@@ -288,11 +289,11 @@ Ytterligare sätt att bekräfta att GraphQL Application Server körs är:
 
 ### Bekräfta att GraphQL-begäranden behandlas
 
-GraphQL Application Server lägger till svarshuvudet `X-Backend` med värdet `graphql_server` i varje begäran som bearbetas. Om du vill kontrollera om en begäran har hanterats av GraphQL Application Server ska du leta efter den här svarshuvudet.
+GraphQL Application Server lägger till svarshuvudet `X-Backend` med värdet `graphql_server` i varje begäran som bearbetas. Om du vill kontrollera om en begäran har hanterats av GraphQL Application Server ska du kontrollera den här svarshuvudet.
 
 ### Bekräfta kompatibilitet för tillägg och anpassning
 
-Tilläggsutvecklare och handlare bör först kontrollera att deras kod för tillägg och anpassning följer de tekniska riktlinjerna som beskrivs i [Tekniska riktlinjer](https://developer.adobe.com/commerce/php/coding-standards/technical-guidelines/).
+Tilläggsutvecklare och handlare bör först kontrollera att deras kod för tillägg och anpassning följer riktlinjerna som beskrivs i _[Tekniska riktlinjer](https://developer.adobe.com/commerce/php/coding-standards/technical-guidelines/)_.
 
 Tänk på följande när du utvärderar koden:
 
@@ -324,11 +325,11 @@ Hur du inaktiverar GraphQL Application Server varierar beroende på om servern k
 1. Kommentera avsnittet `/graphql` i filen `nginx.conf` som du lade till när du aktiverade GraphQL Application Server.
 1. Starta om nästa.
 
-Den här metoden för att inaktivera GraphQL Application Server kan vara användbar för att snabbt testa eller jämföra prestanda.
+Den här metoden för att inaktivera GraphQL Application Server kan vara användbar för att testa eller jämföra prestanda snabbt.
 
 ### Bekräfta att GraphQL Application Server är inaktiverad
 
-Bekräfta att GraphQL-begäranden behandlas av `php-fpm` i stället för av GraphQL Application Server genom att ange följande kommando: `ps aux | grep php`.
+Bekräfta att `php-fpm` bearbetar GraphQL-begäranden i stället för GraphQL Application Server genom att ange följande kommando: `ps aux | grep php`.
 
 När GraphQL Application Server har inaktiverats:
 
@@ -347,7 +348,7 @@ Det här testet är utformat för att identifiera lägesändringar i tjänstobje
 
 #### GraphQlStateTest-fel och möjlig reparation
 
-* **Det går inte att lägga till, hoppa över eller filtrera en lista**. Om du råkar ut för ett fel som tyder på att det inte är säkert att lägga till, hoppa över eller filtrera en lista, bör du överväga om klassen kan refactoras på ett bakåtkompatibelt sätt för att använda fabrikerna för de tjänsteklasser som har ändringsbart tillstånd.
+* **Det går inte att lägga till, hoppa över eller filtrera en lista**. Om det uppstår ett fel när du lägger till, hoppar över eller filtrerar en lista bör du överväga om du kan omfaktorisera klassen på ett bakåtkompatibelt sätt för att använda fabrikerna för tjänsteklasser som har ändringsbart läge.
 
 * **Klassen uppvisar ett ändringsbart tillstånd**. Om själva klassen har ett ändringsbart läge kan du försöka skriva om koden för att kringgå det här läget. Om det ändringsbara läget krävs av prestandaskäl implementerar du `ResetAfterRequestInterface` och använder `_resetState()` för att återställa objektet till dess ursprungliga konstruktionstillstånd.
 
@@ -369,11 +370,11 @@ Kör `GraphQlStateTest` genom att köra `vendor/bin/phpunit -c $(pwd)/dev/tests/
 
 ### Funktionstestning
 
-Tilläggsutvecklare bör köra WebAPI-funktionstester för GraphQL samt anpassade automatiska eller manuella funktionstester för GraphQL när de distribuerar GraphQL Application Server. Dessa funktionstester hjälper utvecklare att identifiera potentiella fel eller kompatibilitetsproblem.
+när du distribuerar GraphQL Application Server bör tilläggsutvecklare köra WebAPI-funktionstester och anpassade automatiska eller manuella funktionstester för GraphQL. Dessa funktionstester hjälper utvecklare att identifiera potentiella fel eller kompatibilitetsproblem.
 
 #### Läge för tillståndsövervakare
 
-När funktionstester körs (eller manuell testning) kan programservern köras med `--state-monitor mode` aktiverat för att hjälpa till att hitta klasser där tillståndet oavsiktligt återanvänds. Starta programservern normalt, förutom att lägga till parametern `--state-monitor`.
+När funktionstester körs (eller manuell testning) kan GraphQL Application Server köras med `--state-monitor mode` aktiverat för att hjälpa till att hitta klasser där tillståndet oavsiktligt återanvänds. Starta programservern normalt, förutom att lägga till parametern `--state-monitor`.
 
 ```
 bin/magento server:run --state-monitor
@@ -388,11 +389,11 @@ Exempel:
 /var/workspace/var/tmp/StateMonitor-junit-2024-04-10T18:50:39Z-oreUco.xml
 ```
 
-Dessa filer kan inspekteras med alla verktyg du använder för att visa XML eller JSON, som visar de ändrade egenskaperna för serviceobjekt som GraphQlStateTest gör. Läget `--state-monitor` använder samma hopplista och filterlista som GraphQlStateTest.
+De här filerna kan inspekteras med alla verktyg som du använder för att visa XML eller JSON som visar de ändrade egenskaperna för serviceobjekt som `GraphQlStateTest` gör. Läget `--state-monitor` använder samma hopplista och filterlista som GraphQlStateTest.
 
 >[!NOTE]
 >
->Använd inte läget `--state-monitor` i produktionen. Den är endast avsedd för utveckling och testning. Det skapar många utdatafiler och kommer att köras långsammare än normalt.
+>Använd inte läget `--state-monitor` i produktionen. Den är endast avsedd för utveckling och testning. Den skapar många utdatafiler och körs långsammare än normalt.
 
 >[!NOTE]
 >
