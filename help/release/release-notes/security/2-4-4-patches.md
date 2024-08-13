@@ -1,10 +1,10 @@
 ---
-title: Versionsinformation om säkerhetsuppdateringar för Adobe Commerce 2.4.4
+title: Adobe Commerce 2.4.4 Security Patch Release Notes
 description: Läs mer om säkerhetsfelkorrigeringar, säkerhetsförbättringar och andra säkerhetsrelaterade uppdateringar som ingår i säkerhetsuppdateringarna för Adobe Commerce version 2.4.4.
 exl-id: 136d7090-6bf2-41e3-8445-b07bdc67f12b
-source-git-commit: 2269c99908c0f8292ad62bd5837b1b8cebd50cb3
+source-git-commit: 3a2d104f0a689ac3715af302d470a1660857543c
 workflow-type: tm+mt
-source-wordcount: '1438'
+source-wordcount: '1461'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,21 @@ ht-degree: 0%
 
 {{$include /help/_includes/security-patch-release-notes-intro.md}}
 
-## Adobe Commerce 2.4.4-p9
+## 2.4.4-p10
+
+Säkerhetsutgåvan av Adobe Commerce 2.4.4-p10 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som identifierats i tidigare versioner av 2.4.4.
+
+Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB24-61](https://helpx.adobe.com/security/products/magento/apsb24-61.html).
+
+### Högdagrar
+
+{{$include /help/_includes/release-notes/2024-08/security.md}}
+
+### Programfixar som ingår i den här versionen
+
+{{$include /help/_includes/release-notes/2024-08/hotfixes-included.md}}
+
+## 2.4.4-p9
 
 Säkerhetsutgåvan av Adobe Commerce 2.4.4-p9 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som har identifierats i tidigare versioner av 2.4.4.
 
@@ -28,7 +42,7 @@ Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerh
 
 * **Stöd för MariaDB 10.5**. Den här korrigeringsversionen är kompatibel med MariaDB version 10.5. Adobe Commerce är fortfarande kompatibelt med MariaDB version 10.4, men Adobe rekommenderar att du endast använder Adobe Commerce 2.4.4-p9 och alla kommande 2.4.4-säkerhetsuppdateringar med MariaDB version 10.5 eftersom MariaDB 10.4-underhållet upphör den 18 juni 2024. <!--AC-11530-->
 
-### Ytterligare säkerhetsförbättringar
+### Högdagrar
 
 {{$include /help/_includes/release-notes/2-4-7-security.md}}
 
@@ -44,7 +58,7 @@ Säkerhetsutgåvan av Adobe Commerce 2.4.4-p7 innehåller säkerhetsfelkorrigeri
 
 Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB24-03](https://helpx.adobe.com/security/products/magento/apsb24-03.html).
 
-### Viktiga säkerhetsfunktioner
+### Högdagrar
 
 Den här versionen innehåller två viktiga säkerhetsförbättringar:
 
@@ -63,11 +77,11 @@ Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerh
 
 Den här versionen innehåller även säkerhetsförbättringar som förbättrar efterlevnaden av de senaste säkerhetsstandarderna.
 
-### Säkerhetsmarkering
+### Högdagrar
 
 I den här versionen introduceras en ny konfigurationsinställning för helsidescache, som hjälper till att minska riskerna med slutpunkten `{BASE-URL}/page_cache/block/esi HTTP`. Den här slutpunkten stöder obegränsade, dynamiskt inlästa innehållsfragment från Commerce layouthandtag och blockstrukturer. Den nya konfigurationsinställningen **[!UICONTROL Handles Param]** ställer in värdet för den här slutpunktens `handles` -parameter, som avgör det högsta tillåtna antalet hanterare per API. Egenskapens standardvärde är 100. Handlare kan ändra det här värdet från Admin (**[!UICONTROL Stores]** > **[!UICONTROL Settings: Configuration]** > **[!UICONTROL System]** > **[!UICONTROL Full Page Cache]** > **[!UICONTROL Handles Param]**). <!-- AC-9113 -->
 
-### Känt fel
+### Kända fel
 
 **Problem**: Adobe Commerce visar ett **fel kontrollsummefel** vid hämtning från Composer från `repo.magento.com` och pakethämtningen avbryts. Det här problemet kan uppstå vid hämtning av versionspaket som gjorts tillgängliga under förhandsversionen och orsakas av en ompaketering av paketet `magento/module-page-cache`.
 
@@ -84,7 +98,7 @@ Säkerhetsutgåvan av Adobe Commerce 2.4.4-p5 innehåller säkerhetsfelkorrigeri
 
 Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB23-42](https://helpx.adobe.com/security/products/magento/apsb23-42.html).
 
-### Använd en patch för att åtgärda säkerhetsluckan CVE-2022-31160 i jQuery-UI-biblioteket
+### Programfix för CVE-2022-31160
 
 `jQuery-UI` biblioteksversion 1.13.1 har ett känt säkerhetsproblem (CVE-2022-31160) som påverkar flera versioner av Adobe Commerce och Magento Open Source. Detta bibliotek är beroende av Adobe Commerce och Magento Open Source 2.4.4, 2.4.5 och 2.4.6. Handlare som kör berörda distributioner bör tillämpa den korrigering som anges i [jQuery UI-säkerhetsproblemet CVE-2022-31160 för version 2.4.4, 2.4.5 och 2.4.6 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/jquery-cve-2022-31160-fix-2.4.4-2.4.5-2.4.6.html) i kunskapsbasartikeln.
 
@@ -94,11 +108,11 @@ Säkerhetsutgåvan av Adobe Commerce 2.4.4-p4 innehåller säkerhetsfelkorrigeri
 
 Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB23-35](https://helpx.adobe.com/security/products/magento/apsb23-35.html).
 
-### Använd en patch för att åtgärda säkerhetsluckan CVE-2022-31160 i jQuery-UI-biblioteket
+### Programfix för CVE-2022-31160
 
 `jQuery-UI` biblioteksversion 1.13.1 har ett känt säkerhetsproblem (CVE-2022-31160) som påverkar flera versioner av Adobe Commerce och Magento Open Source. Detta bibliotek är beroende av Adobe Commerce och Magento Open Source 2.4.4, 2.4.5 och 2.4.6. Handlare som kör berörda distributioner bör tillämpa den korrigering som anges i [jQuery UI-säkerhetsproblemet CVE-2022-31160 för version 2.4.4, 2.4.5 och 2.4.6 ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/jquery-cve-2022-31160-fix-2.4.4-2.4.5-2.4.6.html) i kunskapsbasartikeln.
 
-### Säkerhetsmarkering
+### Högdagrar
 
 Standardbeteendet för GraphQL-frågan [`isEmailAvailable`](https://developer.adobe.com/commerce/webapi/graphql/schema/customer/queries/is-email-available/) och REST-slutpunkten ([`V1/customers/isEmailAvailable`](https://adobe-commerce.redoc.ly/2.4.6-admin/tag/customersisEmailAvailable/#operation/PostV1CustomersIsEmailAvailable)) har ändrats. API:t returnerar nu alltid `true` som standard. Handläggarna kan aktivera det ursprungliga beteendet, som är att returnera `true` om e-postmeddelandet inte finns i databasen och `false` om det finns. <!-- AC-6695 -->
 
@@ -138,7 +152,7 @@ Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Säkerhetsbul
 
 DHL har introducerat schemaversion 6.2 och kommer inom kort att föråldra schemaversion 6.0. Adobe Commerce 2.4.4 och tidigare versioner som stöder DHL-integration stöder endast version 6.0. Merchants som distribuerar dessa releaser ska tillämpa `AC-3022.patch` så snart som möjligt för att fortsätta erbjuda DHL som fraktfirma. Information om hur du hämtar och installerar korrigeringsfilen finns i [Använd en korrigeringsfil för att fortsätta erbjuda DHL som fraktfirma](https://support.magento.com/hc/en-us/articles/7707818131597-Apply-a-patch-to-continue-offering-DHL-as-shipping-carrier).
 
-### Viktiga säkerhetsfunktioner
+### Högdagrar
 
 Säkerhetsförbättringar för den här versionen förbättrar efterlevnaden av de senaste bästa säkerhetsrutinerna, inklusive:
 

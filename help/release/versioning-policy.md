@@ -2,9 +2,9 @@
 title: Versionspolicy
 description: Läs mer om de olika typerna av Adobe Commerce-utgåvor, inklusive smärre utgåvor, korrigeringsfiler, säkerhetskorrigeringar, funktioner, snabbkorrigeringar, enskilda korrigeringsfiler och anpassade korrigeringsfiler.
 exl-id: 61a83de6-6a7b-4a88-8fff-1638b4fe472a
-source-git-commit: 1eaf2329c16e6dbe3e93cb7fff3a6920b4b8379d
+source-git-commit: b5d120893668f4315e289a204649270db4f7a6bc
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '638'
 ht-degree: 0%
 
 ---
@@ -54,9 +54,9 @@ Tillgänglighetsreleaser av Adobe Commerce-funktioner är tillgängliga för all
 
 Beta Releases kan innehålla defekter och tillhandahålls i befintligt skick utan någon garanti av något slag. Adobe har ingen skyldighet att upprätthålla, korrigera, uppdatera, ändra, modifiera eller på annat sätt ge support (via Adobe Support Services eller på annat sätt) för Beta Releases. Kunderna rekommenderas att vara försiktiga och inte på något sätt förlita sig på att Beta-releaserna och/eller tillhörande dokumentation eller material fungerar korrekt eller fungerar korrekt. Därför är all användning av Beta Releases helt och hållet på kundens egen risk.
 
-## Utbyggbarhet, infrastruktur och tjänster
+## Funktioner, molninfrastruktur och utbyggbarhet
 
-Funktionsreleaser som innehåller nya funktioner och funktionsuppdateringar som levereras som fristående tjänster, åtskilda från patch-releaser. Exemplen omfattar utökningsteknik som API Mesh och Eventing, SaaS-produkter som Product Recommendations och Live Search, oberoende moduler som B2B och PWA Studio samt uppdateringar av våra molntjänster och vår infrastruktur.
+Molninfrastruktur och funktionsreleaser innehåller nya funktioner och funktionsuppdateringar som levereras som fristående tjänster, utöver korrigeringsutgåvor. Exempel är uppdateringar av våra molntjänster och vår infrastruktur, B2B-, SaaS-produkter (katalogtjänst, dataanslutning, Recommendations och Live Search) och utökningsteknik (API Mesh, Integration Starter Kit och Eventing).
 
 ## Hotfix
 
@@ -72,14 +72,12 @@ Enskilda korrigeringsfiler innehåller korrigeringar av låg kvalitet för ett s
 
 >[!NOTE]
 >
->Enskilda korrigeringsfiler innehåller inte ändringar som är inkompatibla bakåt.
+>Enskilda korrigeringsfiler innehåller inte ändringar som är bakåtkompatibla.
+
+## Isolerad patch
+
+Innehåller en fristående korrigering som ingår i den senaste säkerhetsuppdateringen eller en kommande säkerhetsuppdatering som släpps separat för snabbare implementering.
 
 ## Egen korrigering
 
 Skapas av annan personal än Adobe för att åtgärda ett problem eller ändra Adobe Commerce-koden av olika anledningar. Anpassade korrigeringsfiler levereras via [kvalitetskorrigeringsverktyget](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html).
-
-## Relaterade ämnen
-
-- [Versionshantering](https://developer.adobe.com/commerce/php/development/versioning/)
-- [Kommande versioner](schedule.md)
-- [Princip för programvarans livscykel](https://www.adobe.com/content/dam/cc/en/legal/terms/enterprise/pdfs/Adobe-Commerce-Software-Lifecycle-Policy.pdf)
