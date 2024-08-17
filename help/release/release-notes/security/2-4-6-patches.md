@@ -2,7 +2,7 @@
 title: Adobe Commerce 2.4.6 Security Patch Release Notes
 description: Läs mer om säkerhetsfelkorrigeringar, säkerhetsförbättringar och andra säkerhetsrelaterade uppdateringar som ingår i säkerhetsuppdateringarna för Adobe Commerce version 2.4.6.
 exl-id: cde096ac-d192-490d-873a-475996c474ff
-source-git-commit: 3a2d104f0a689ac3715af302d470a1660857543c
+source-git-commit: 7024c6a9c464257df00ed98f435a3d7793478db5
 workflow-type: tm+mt
 source-wordcount: '1201'
 ht-degree: 0%
@@ -40,7 +40,7 @@ För kompatibilitet med Commerce version 2.4.6-p6 måste handlare som har tillä
 
 {{$include /help/_includes/release-notes/2024-06/hotfixes-not-included.md}}
 
-För kompatibilitet med Commerce version 2.4.6-p6 måste handlare som har tillägget Adobe Commerce B2B uppgradera till [B2B version 1.4.2-p1](https://experienceleague.adobe.com/docs/commerce-admin/b2b/release-notes#b2b-v142p1.html).
+För kompatibilitet med Commerce version 2.4.6-p6 måste handlare som har tillägget Adobe Commerce B2B uppgradera till [B2B version 1.4.2-p1](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/release-notes#b2b-v142-p1).
 
 ### Högdagrar
 
