@@ -3,9 +3,9 @@ title: Känsliga och systemspecifika sökvägar
 description: Se en lista med systemspecifika och känsliga konfigurationsvärden.
 feature: Configuration, System
 exl-id: 127880ab-7507-4e53-8b51-dfa6557d0b18
-source-git-commit: 5a8e52d8eee1619697db40accb9775b92b4e8a9d
+source-git-commit: e5a1c5634124831c8d5a95df6818ec30c372e8dd
 workflow-type: tm+mt
-source-wordcount: '3696'
+source-wordcount: '3676'
 ht-degree: 0%
 
 ---
@@ -150,16 +150,16 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lagrar** > Inställnin
 | Elasticsearch HTTP-användarnamn | `catalog/search/elasticsearch_username` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | | ![Sys-specific](/help/assets/configuration/cloud-env.png) |
 | Elasticsearch HTTP-lösenord | `catalog/search/elasticsearch_password` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | | ![Sys-specific](/help/assets/configuration/cloud-env.png) |
 | Elasticsearch Server-timeout | `catalog/search/elasticsearch_server_timeout` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | | ![Sys-specific](/help/assets/configuration/cloud-env.png) |
-| Elasticsearch HTTP-användarnamn | `catalog/search/elasticsearch_username` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | (`{{ site.baseurl }}`/common/images/cloud_env.png) |
-| Elasticsearch HTTP-lösenord | `catalog/search/elasticsearch_password` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | (`{{ site.baseurl }}`/common/images/cloud_env.png) |
-| Elasticsearch Server-timeout | `catalog/search/elasticsearch_server_timeout` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | (`{{ site.baseurl }}`/common/images/cloud_env.png) |
-| OpenSearch Server-värdnamn | `catalog/search/opensearch_server_hostname` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | (`{{ site.baseurl }}`/common/images/cloud_env.png) | ![Känslig](/help/assets/configuration/cloud-sens.png) |
-| OpenSearch Server-port | `catalog/search/opensearch_server_port` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | (`{{ site.baseurl }}`/common/images/cloud_env.png) | ![Känslig](/help/assets/configuration/cloud-sens.png) |
-| Indexprefix för OpenSearch | `catalog/search/opensearch_index_prefix` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | (`{{ site.baseurl }}`/common/images/cloud_env.png) | ![Känslig](/help/assets/configuration/cloud-sens.png) |
-| Aktivera OpenSearch HTTP-autentisering | `catalog/search/opensearch_enable_auth` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | (`{{ site.baseurl }}`/common/images/cloud_env.png) |
-| OpenSearch HTTP-användarnamn | `catalog/search/opensearch_username` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | (`{{ site.baseurl }}`/common/images/cloud_env.png) |
-| OpenSearch HTTP-lösenord | `catalog/search/opensearch_password` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | (`{{ site.baseurl }}`/common/images/cloud_env.png) |
-| Timeout för OpenSearch Server | `catalog/search/opensearch_server_timeout` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | (`{{ site.baseurl }}`/common/images/cloud_env.png) |
+| Elasticsearch HTTP-användarnamn | `catalog/search/elasticsearch_username` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | ![Sys-specific](/help/assets/configuration/cloud-env.png) |
+| Elasticsearch HTTP-lösenord | `catalog/search/elasticsearch_password` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | ![Sys-specific](/help/assets/configuration/cloud-env.png) |
+| Elasticsearch Server-timeout | `catalog/search/elasticsearch_server_timeout` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | ![Sys-specific](/help/assets/configuration/cloud-env.png) |
+| OpenSearch Server-värdnamn | `catalog/search/opensearch_server_hostname` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | ![Sys-specific](/help/assets/configuration/cloud-env.png) | ![Känslig](/help/assets/configuration/cloud-sens.png) |
+| OpenSearch Server-port | `catalog/search/opensearch_server_port` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | ![Sys-specific](/help/assets/configuration/cloud-env.png) | ![Känslig](/help/assets/configuration/cloud-sens.png) |
+| Indexprefix för OpenSearch | `catalog/search/opensearch_index_prefix` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | ![Sys-specific](/help/assets/configuration/cloud-env.png) | ![Känslig](/help/assets/configuration/cloud-sens.png) |
+| Aktivera OpenSearch HTTP-autentisering | `catalog/search/opensearch_enable_auth` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | ![Sys-specific](/help/assets/configuration/cloud-env.png) |
+| OpenSearch HTTP-användarnamn | `catalog/search/opensearch_username` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | ![Sys-specific](/help/assets/configuration/cloud-env.png) |
+| OpenSearch HTTP-lösenord | `catalog/search/opensearch_password` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | ![Sys-specific](/help/assets/configuration/cloud-env.png) |
+| Timeout för OpenSearch Server | `catalog/search/opensearch_server_timeout` | <!-- ![Not EE-only](/help/assets/configuration/red-x.png) --> | | ![Sys-specific](/help/assets/configuration/cloud-env.png) |
 
 {style="table-layout:auto"}
 
