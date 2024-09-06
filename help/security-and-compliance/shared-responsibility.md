@@ -1,10 +1,10 @@
 ---
-title: Delat ansvar, säkerhet och operativ modell
+title: Delat ansvar, säkerhet och driftsmodell
 description: Läs mer om säkerhetsansvar för alla parter som deltar i ditt Adobe Commerce i molninfrastrukturprojekt.
 exl-id: f3cc1685-e469-4e30-b18e-55ce10dd69ce
-source-git-commit: 76aafb88855f7f41db8e57b06cf0e82370b57302
+source-git-commit: 9d0ab29be70c5638296694f90755fedac41b6a77
 workflow-type: tm+mt
-source-wordcount: '2802'
+source-wordcount: '2791'
 ht-degree: 0%
 
 ---
@@ -18,8 +18,8 @@ Denna delade modell gör det möjligt för handlare att utforma och implementera
 Adobe ansvarar i allmänhet för följande:
 
 - Utveckla och underhålla säker applikationskod
-- Upprätthålla plattformens säkerhet
-- Säkerställa att plattformen är SOC 2- och PCI-kompatibel och kompatibel med PCI-kompatibla teknikkomponenter (till exempel PHP, Redis)
+- Upprätthållande av plattformens säkerhet
+- Se till att plattformen är SOC 2- och PCI-kompatibel och kompatibel med PCI-kompatibla teknikkomponenter (till exempel PHP och Redis)
 - Svara på säkerhetsfrågor som rör kärnplattformen
 - Samarbeta med leverantörer av molntjänster och CDN-partners för att lösa problem som kan uppstå
 
@@ -42,7 +42,7 @@ Adobe ansvarar för säkerheten och tillgängligheten för Adobe Commerce i moln
 - Konfigurera server- och perimeterbrandväggar
 - Ansluta och konfigurera Adobe Commerce i molninfrastrukturdatabasen
 - Definiera, testa, implementera och dokumentera katastrofåterställningsplaner (DR) för de områden inom Adobe ansvarsområde
-- Definiera brandväggsregler för webbprogram på den globala plattformen (WAF)
+- Definiera brandväggsregler för webbprogram (WAF) på den globala plattformen
 - Förbättra operativsystemet
 - Implementera och underhålla integreringen av lösningar för nätverk för innehållsdistribution (CDN) och hantering av programprestanda (APM) med Adobe Commerce i molninfrastruktur
 - Periodiska säkerhetsuppdateringar och andra uppdateringar för Adobe Commerce om molninfrastrukturkoden (det är handlarens ansvar att tillämpa korrigeringsfiler)
@@ -51,13 +51,13 @@ Adobe ansvarar för säkerheten och tillgängligheten för Adobe Commerce i moln
 - Övervaka plattformsdriften och tillhandahålla support dygnet runt för Adobe Commerce på återförsäljare av molninfrastruktur
 - Etablera produktions- och stagningsmiljöer
 - Utvärdering av potentiella säkerhetshot mot plattformsdrift och infrastruktur
-- Skalning av databehandling, lagring, rutnät och andra resurser, enligt beskrivningen i serviceavtalet med handlaren
+- Skalning av data, lagring, rutnät och andra resurser, enligt beskrivningen i serviceavtalet (SLA) med handlaren
 - Konfigurera DNS (endast Adobe Commerce för infrastruktur i molnet)
 - Testa plattformen med avseende på säkerhetsbrister
 
 Adobe underhåller PCI-certifiering för den infrastruktur och de tjänster som används för Adobe Commerce-lösningen.  Handlarna ansvarar för att den egna koden, systemet och nätverksprocesserna samt organisationen är kompatibla.
 
-Adobe garanterar också att det finns tillgång till handlarens infrastruktur enligt vad som överenskommits i tillämpligt SLA.
+Adobe garanterar också att det finns tillgång till handlarens infrastruktur enligt överenskommelse i den tillämpliga SLA.
 
 ## Handläggaransvar
 
@@ -84,9 +84,9 @@ Handlaren ansvarar för följande säkerhetsrutiner för sin specifika, anpassad
 - Köra prestandatester på det anpassade programmet
 - Skydda åtkomst till plattformskonton, instansåtkomst och program
 - Testning och kvalitetskontroll av det anpassade programmet
-- Upprätthålla säkerheten i alla system och nätverk som handlaren ansluter till Adobe Commerce i molninfrastrukturapplikationen
+- Upprätthålla säkerheten för alla system eller nätverk som handlaren ansluter till Adobe Commerce i molninfrastrukturprogram
 
-## Leverantörens ansvar
+## Cloud Servicens leverantörsansvar
 
 Adobe förlitar sig på väletablerade molntjänsteleverantörer för att vara värd för Adobe Commerce molnserverinfrastruktur i molninfrastrukturen. Dessa leverantörer ansvarar för säkerheten i nätverket, inklusive routning, växling och perimeternätverkssäkerhet via brandväggssystem och system för intrångsdetektering (IDS). Tjänsteleverantörer i molnet ansvarar också för den fysiska säkerheten i datacenter som är värdar för Adobe Commerce på molninfrastrukturslösningen och för datacentrets miljösäkerhet.
 
@@ -96,9 +96,9 @@ Molntjänsteleverantörer ansvarar också för:
 - Skydda hypervisorn
 - Skydda datacentret, inklusive både fysisk åtkomst och nätverksåtkomst
 
-## CDN-leverantörsansvar
+## CDN-leverantörens ansvarsområden
 
-Adobe Commerce lösning för molninfrastruktur använder CDN-leverantörer för att snabba upp sidinläsningen, cachelagra innehåll och omedelbart rensa bort föråldrat innehåll. Dessa leverantörer ansvarar också för säkerhetsfrågor som har direkt samband med eller påverkar deras CDN samt för att definiera och underhålla CDN WAF-regler.
+Adobe Commerce i molnet-infrastrukturlösningen använder CDN-leverantörer för att påskynda sidinläsningstiden, cachelagra innehåll och omedelbart rensa föråldrat innehåll. Dessa leverantörer ansvarar också för säkerhetsfrågor som har direkt samband med eller påverkar deras CDN samt för att definiera och underhålla CDN WAF-regler.
 
 ## Sammanfattning av säkerhetsansvar
 
@@ -153,7 +153,7 @@ I följande sammanfattande tabell används RACI-modellen för att visa säkerhet
     <td>R</td>
   </tr>
   <tr>
-    <td>Distribuera plattformens WAF-regler</td>
+    <td>Distribuera plattformsregler för WAF</td>
     <td>R</td>
     <td>I</td>
     <td></td>
@@ -230,7 +230,7 @@ I följande sammanfattande tabell används RACI-modellen för att visa säkerhet
     <td></td>
   </tr>
   <tr>
-    <td>Konfigurerar källdatabasen <sup>1</sup></td>
+    <td>Konfigurerar källdatabasen<sup>1</sup></td>
     <td>R</td>
     <td>I</td>
     <td></td>
@@ -251,7 +251,7 @@ I följande sammanfattande tabell används RACI-modellen för att visa säkerhet
     <td></td>
   </tr>
   <tr>
-    <td>Distribuera kod till mellanlagring</td>
+    <td>Distribuera kod i mellanlagring</td>
     <td></td>
     <td>R</td>
     <td></td>
@@ -546,7 +546,7 @@ Följande sammanfattande tabeller klargör det operativa ansvaret för Adobe och
 | Publicera uppdateringar och patchar till Adobe Commerce Core | R |     |
 | Filsystemets tillgänglighet och korrigering | R |  |
 | Publicera uppdateringar och patchar till ECE-Tools | R |     |
-| Adobe Commerce programkvalitet | R |     |
+| Core Adobe Commerce-programkvalitet | R |     |
 
 {style="table-layout:auto"}
 
@@ -641,7 +641,7 @@ Handlarna ansvarar för att synkronisera data mellan olika miljöer.
 | Anpassat Adobe Commerce-program | | R |
 | Tillgänglighet för New Relic-tjänster:<br>APM-program och agentintegration, infrastrukturprogram,<br>Loggning och integrering | R |   |
 | Konfigurera New Relic Alerts |     | R |
-| Distribuera New Relic Agent på PaaS-servrar |     | R |
+| Distribuera New Relic Agent på PaaS-servrar | R |  |
 
 {style="table-layout:auto"}
 
@@ -724,7 +724,7 @@ Handlarna ansvarar för att synkronisera data mellan olika miljöer.
 | Optimering av sidcache |     | R |
 | Lägga till domäner till tjänster, CDN och infrastruktur | R |   |
 | Anpassade VCL-kodfragment |     | R |
-| WAF- och WAF-regler | R |   |
+| Regler för WAF och WAF | R |   |
 
 {style="table-layout:auto"}
 
@@ -825,8 +825,8 @@ Handlarna ansvarar för att synkronisera data mellan olika miljöer.
 |     | Adobe | Merchant |
 | --- | --- | --- |
 | Tillgänglighet och konfiguration av WAF | R |  |
-| Som vänder sig till falskt positiva värden för WAF-regel | R | |
-| Felaktiga positiva rapporter i WAF-regel |     | R |
+| Som vänder sig till WAF Rule False Positives | R | |
+| Rapportera felaktiga WAF-regelpositiva |     | R |
 | WAF-regeljustering (STÖDS INTE) |     |     |
 | WAF/CDN-loggar |     | R |
 
@@ -841,7 +841,6 @@ Handlarna ansvarar för att synkronisera data mellan olika miljöer.
 | DDOS-identifiering - lager 3-4 | R |   |
 | DDOS-identifiering - lager 7 |     | R |
 | DDOS-svar | R |   |
-| Konfiguration av Snabb begränsning av utökningshastighet och punktskydd (begränsat) |     | R |
 
 {style="table-layout:auto"}
 
@@ -850,14 +849,14 @@ Handlarna ansvarar för att synkronisera data mellan olika miljöer.
 |     | Adobe | Merchant |
 | --- | --- | --- |
 | Konfigurera och underhålla PrivateLink-anslutningar (om de används) med en VPC som ägs av Adobe | R |   |
-| Konfigurera och underhålla PrivateLink-anslutningar (om de används) med en företagsägd VPC |     | R |
+| Konfigurera och underhålla PrivateLink-anslutningar (om de används) med en Merchant-ägd VPC |     | R |
 | SSH-tillgänglighet (icke-privat länk) | R |   |
 | Konfiguration av PrivateLink inkommande till Adobe Commerce Cloud tjänstslutpunkt | R |   |
 | Godkännande av PrivateLink inkommande till Adobe Commerce Cloud tjänstslutpunkt |     | R |
 | Konfiguration av PrivateLink inkommande till Merchants VPC-tjänstslutpunkt |     | R |
 | Godkännande av PrivateLink inkommande till Merchants VPC-tjänstslutpunkt | R |   |
 | Konfiguration av PrivateLink-integreringar (slutpunkt till konto) |     | R |
-| Konfiguration av handelsägd VPC för PrivateLink-slutpunkt <br><br> (inklusive alla VPN-anslutningar) |     | R |
+| Konfiguration av handlarägd VPC för PrivateLink-slutpunkt <br><br> (inklusive alla VPN-anslutningar) |     | R |
 
 {style="table-layout:auto"}
 
@@ -867,7 +866,7 @@ Handlarna ansvarar för att synkronisera data mellan olika miljöer.
 
 |     | Adobe | Merchant |
 | --- | --- | --- |
-| Nginx-tillgänglighet | R |   |
+| Tillgänglighet till Nginx | R |   |
 | Konfiguration av Nginx | R |   |
 | Kontinuerlig kvalitet och patchning av Nginx | R |   |
 
