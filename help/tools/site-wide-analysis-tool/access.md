@@ -2,9 +2,9 @@
 title: Åtkomst till [!DNL Site-Wide Analysis Tool]
 description: Lär dig hur du kommer åt  [!DNL Site-Wide Analysis Tool]
 exl-id: b691fb2c-8d66-4cf9-8612-bbcb4df5b95f
-source-git-commit: 5f9f81b930a3b23c0b334ccbea94d296338a0048
+source-git-commit: 18416ae29cee182a5d088069065d73814fc7d860
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,8 @@ Tjänsten [!DNL Site-Wide Analysis Tool] är tillgänglig i [produktionsläge](h
 
 >[!NOTE]
 >
->Om du har en lokal installation av Adobe Commerce måste du installera en [agent](../site-wide-analysis-tool/installation.md) på din infrastruktur för att kunna använda verktyget.
+>Från och med den 23 april 2024 har [!DNL Site-Wide Analysis Tool] tagits bort och är inte längre tillgänglig för Adobe Commerce lokala kunder.
+
 
 ![Instrumentpanel för webbplatsövergripande analys](../../assets/tools/site-wide-analysis-tool-dashboard.png)
 *[!DNL Site-Wide Analysis Tool]Kontrollpanel*
