@@ -2,9 +2,9 @@
 title: Aktivera eller inaktivera underhållsläge
 description: Följ de här stegen för att anpassa vad kunderna ser när Adobe Commerce-driftsättningen är nere för underhåll.
 exl-id: 5d9f1493-e771-47b4-b906-3771026cf07a
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: a5dbefda6b77d993756143ef0e7270425f824c44
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '533'
 ht-degree: 0%
 
 ---
@@ -17,10 +17,8 @@ Adobe Commerce använder [underhållsläge](../../configuration/bootstrap/applic
 
 Programmet identifierar underhållsläge enligt följande:
 
-* Om `var/.maintenance.flag` inte finns är underhållsläget inaktiverat och programmet fungerar normalt.
-* Annars är underhållsläget aktiverat om inte `var/.maintenance.ip` finns.
-
-  `var/.maintenance.ip` kan innehålla en lista med IP-adresser. Om en startpunkt nås via HTTP och klientens IP-adress motsvarar en av posterna i listan, är underhållsläget inaktiverat.
+* Om `var/.maintenance.flag` finns är underhållsläget aktiverat och programmet returnerar en underhållssida på 503.
+* Om `var/.maintenance.ip` finns och klient-IP motsvarar en av IP-adressposterna i den här filen, ignoreras underhållssidan för begäran.
 
 ## Installera programmet
 
