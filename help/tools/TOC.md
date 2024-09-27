@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: b9164d958ddc366de3843c9f9b7f6521ad0b4ff2
+source-git-commit: d9354e2d63701f402adc4693785a50aa720fce67
 workflow-type: tm+mt
-source-wordcount: '5888'
+source-wordcount: '5904'
 ht-degree: 0%
 
 ---
@@ -625,7 +625,10 @@ ht-degree: 0%
          - [ACSD-60303: Problem med att lägga till administratörsorder har åtgärdats med HTML-minification aktiverat](quality-patches-tool/patches-available-in-qpt/v1-1-50/acsd-60303-admin-order-placement-fix.md)
       - v1.1.51 {#v1-1-51}
          - [Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.51](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-51/overview.md)
+         - [ACSD-61195: Cart GraphQL-begäran returnerar inte objekt på den sista sidan](quality-patches-tool/patches-available-in-qpt/v1-1-51/acsd-61195-empty-cart-on-final-graphql-page.md)
          - [ACSD-60538: Attribut visas inte om en produkt är inaktiverad](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-51/acsd-60538-if-product-is-disabled-attributes-dont-show.md)
+      - v1.1.52 {#v1-1-52}
+         - [Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.52](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-52/overview.md)
       - [Leta efter Adobe Commerce-problem med verktyget för kvalitetskorrigeringar](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
 
 - Referens för kommandoradsverktyg {#cli-reference}
