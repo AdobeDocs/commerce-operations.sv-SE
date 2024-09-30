@@ -3,9 +3,9 @@ title: 'ACSD-47908: *Ett värde som är mindre än eller lika med 0 förväntas*
 description: Använd patchen ACSD-47908 för att åtgärda Adobe Commerce-felet *Ett värde som är mindre än eller lika med 0 förväntas* när du väljer källa och kvantitet i leveranssteget under utcheckningen.
 feature: Admin Workspace, Checkout, Orders
 role: Admin
-source-git-commit: 49ac8ad1f174546fcc0454645b2480a40ead2924
+source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '472'
 ht-degree: 0%
 
 ---
@@ -66,7 +66,7 @@ Den nya utleveranssidan öppnas utan fel.
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
-* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html) i guiden [!DNL Quality Patches Tool].
+* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
 * Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning

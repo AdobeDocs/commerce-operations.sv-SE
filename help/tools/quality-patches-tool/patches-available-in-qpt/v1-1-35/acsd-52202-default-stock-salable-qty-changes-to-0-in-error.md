@@ -3,9 +3,9 @@ title: 'ACSD-52202: Standardvärdet för lagersaldokvantitet ändras till 0 om i
 description: Använd patchen ACSD-52202 för att åtgärda Adobe Commerce-problemet där standardkvantiteten för lagerförsäljning ändras till 0 om standardvärdet för lagersaldo är 0.
 feature: Inventory, Products
 role: Admin
-source-git-commit: 49ac8ad1f174546fcc0454645b2480a40ead2924
+source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
 workflow-type: tm+mt
-source-wordcount: '421'
+source-wordcount: '420'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ Den **försäljningsbara kvantiteten** = *0* för båda källorna.
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
-* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html) i guiden [!DNL Quality Patches Tool].
+* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
 * Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning

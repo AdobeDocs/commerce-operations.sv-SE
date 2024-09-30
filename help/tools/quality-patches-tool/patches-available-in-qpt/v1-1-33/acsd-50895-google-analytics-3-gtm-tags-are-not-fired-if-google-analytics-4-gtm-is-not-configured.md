@@ -2,9 +2,9 @@
 title: 'ACSD-50895: [!DNL Google Analytics] 3 GTM-taggar utlöses inte om [!DNL Google Analytics] 4 GTM inte har konfigurerats'
 description: Använd ACSD-50895-korrigeringen för att åtgärda Adobe Commerce-problemet där  [!DNL Google Analytics] 3 GTM-taggar inte utlöses om  [!DNL Google Analytics] 4 GTM inte har konfigurerats.
 role: Admin
-source-git-commit: 49ac8ad1f174546fcc0454645b2480a40ead2924
+source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '357'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ GTM-taggarna utlöses inte när **[!DNL Google Analytics]** 4 GTM är inaktivera
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
-* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html) i guiden [!DNL Quality Patches Tool].
+* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
 * Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning

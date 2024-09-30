@@ -1,9 +1,9 @@
 ---
 title: 'ACSD-50478: JS-problem för återställningsåtgärd i säkerhetskopieringsrutnät och kommandot för databasåterställning'
 description: Använd patchen ACSD-50478 för att åtgärda JS-problemet för återställningsåtgärden i säkerhetskopieringsrutnätet och kommandot för databasåterställning för ett fall när DB-dumpen innehåller utlösare och ett *delimiter* SQL-kommando.
-source-git-commit: 49ac8ad1f174546fcc0454645b2480a40ead2924
+source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '428'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,7 @@ Du observerade felen som nämns i steg 4 och steg 6.
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
-* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html) i guiden [!DNL Quality Patches Tool].
+* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
 * Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning

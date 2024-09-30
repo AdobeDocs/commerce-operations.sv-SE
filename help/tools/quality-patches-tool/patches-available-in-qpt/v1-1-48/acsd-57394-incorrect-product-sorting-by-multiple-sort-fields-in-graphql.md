@@ -3,9 +3,9 @@ title: 'ACSD-57394: Felaktig produktsortering efter flera sorteringsattribut i  
 description: Använd korrigeringen ACSD-57394 för att åtgärda Adobe Commerce-problemet där produkter sorteras felaktigt när flera sorteringsattribut används i  [!DNL GraphQL].
 feature: GraphQL, Products
 role: Admin, Developer
-source-git-commit: d722ba5ba25ffc03d87b9eddeb2830353124055d
+source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '367'
 ht-degree: 0%
 
 ---
@@ -91,7 +91,7 @@ Produkterna returneras inte i rätt ordning. Det går inte att sortera produkter
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
-* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html) i guiden [!DNL Quality Patches Tool].
+* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
 * Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning

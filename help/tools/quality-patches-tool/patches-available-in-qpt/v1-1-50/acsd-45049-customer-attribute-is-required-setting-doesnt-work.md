@@ -3,16 +3,16 @@ title: '"ACSD-45049: Kundens attributinställning "Är obligatorisk" fungerar in
 description: Använd korrigeringsfilen ACSD-45049 för att åtgärda Adobe Commerce-problemet där attributet [!UICONTROL Is required] för kund inte har åsidosatts korrekt enligt webbplatsomfånget i Admin.
 feature: Attributes, Customers
 role: Admin, Developer
-source-git-commit: d722ba5ba25ffc03d87b9eddeb2830353124055d
+source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '383'
 ht-degree: 0%
 
 ---
 
 # ACSD-45049: Kundens attributinställning *[!UICONTROL Is required]* fungerar inte enligt webbplatsomfånget i Admin
 
-Korrigeringen för ACSD-45049 åtgärdar ett problem där attributinställningen *[!UICONTROL Is required]* för kunden inte fungerar som den ska enligt webbplatsomfånget i Admin. Den här korrigeringen är tillgänglig när [[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html) 1.1.50 är installerad. Korrigerings-ID är ACSD-45049. Observera att problemet har åtgärdats i Adobe Commerce 2.4.6.
+Korrigeringen för ACSD-45049 åtgärdar ett problem där attributinställningen *[!UICONTROL Is required]* för kunden inte fungerar som den ska enligt webbplatsomfånget i Admin. Den här korrigeringen är tillgänglig när [[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/usage.md) 1.1.50 har installerats. Korrigerings-ID är ACSD-45049. Observera att problemet har åtgärdats i Adobe Commerce 2.4.6.
 
 ## Berörda produkter och versioner
 
@@ -53,7 +53,7 @@ Attributet krävs inte för den icke-förvalda webbplatsen.
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
-* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html) i guiden [!DNL Quality Patches Tool].
+* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
 * Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning

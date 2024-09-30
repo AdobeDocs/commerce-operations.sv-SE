@@ -3,9 +3,9 @@ title: 'ACSD-46869: Konfigurerbara produkter som inte uppdateras med REST API vi
 description: Korrigeringen ACSD-46869 åtgärdar ett problem där konfigurerbara produkter inte uppdateras med REST API vid utcheckningen. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.20 är installerat. Korrigerings-ID är ACSD-46869. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.6.
 feature: REST, Checkout, Configuration, Orders, Products
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '404'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ Värdet uppdateras enligt ändringarna.
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
-* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tools] > Användning ](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html) i guiden för kvalitetspatchar.
+* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tools] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden för kvalitetspatchar.
 * Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning

@@ -3,9 +3,9 @@ title: 'ACSD-53204: *Det går inte att spara produkten* fel vid samtidig begära
 description: Använd patchen ACSD-53204 för att åtgärda Adobe Commerce-problemet där *Felet inte kan sparas* uppstår när du gör samtidiga begäranden om att lägga till bilder i produktgalleriet med resten/V1/products/&lt;sku&gt;/media endpoint.
 feature: Catalog Management, Media, Products, REST
 role: Admin, Developer
-source-git-commit: d722ba5ba25ffc03d87b9eddeb2830353124055d
+source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
 workflow-type: tm+mt
-source-wordcount: '391'
+source-wordcount: '390'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ Bilderna sparas utan fel.
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
-* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html) i guiden [!DNL Quality Patches Tool].
+* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
 * Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning

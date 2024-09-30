@@ -3,9 +3,9 @@ title: 'ACSD-48448: Problem med spårningsvillkor under orderannulleringar som o
 description: Använd patchen ACSD-48448 för att åtgärda Adobe Commerce-prestandaproblemet där problemet med ansiktsvillkor inträffar under orderannulleringarna, vilket orsakar dubblerade poster i tabellen Inventering_reservation.
 feature: Orders, Checkout
 role: Admin
-source-git-commit: 49ac8ad1f174546fcc0454645b2480a40ead2924
+source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '363'
 ht-degree: 0%
 
 ---
@@ -74,7 +74,7 @@ Dubblettposter skapas i tabellen `inventory_reservation` för `order_canceled`.
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
-* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html) i guiden [!DNL Quality Patches Tool].
+* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
 * Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning

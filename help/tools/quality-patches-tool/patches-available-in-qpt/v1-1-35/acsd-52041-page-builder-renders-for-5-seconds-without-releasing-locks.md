@@ -3,9 +3,9 @@ title: "ACSD-52041: Page Builder-återgivning frigör inte lås"
 description: Använd korrigeringsfilen ACSD-52041 för att åtgärda Adobe Commerce-problemet där Page Builder renderar i fem sekunder utan att frigöra lås.
 feature: Page Builder
 role: Admin, Developer
-source-git-commit: 49ac8ad1f174546fcc0454645b2480a40ead2924
+source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
 workflow-type: tm+mt
-source-wordcount: '350'
+source-wordcount: '349'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ Fel i konsolen: ``Page Builder was rendering for 5 seconds without releasing loc
 
 Om du vill använda enskilda korrigeringsfiler för versionerna **2.4.4 - 2.4.4-p5, 2.4.5 - 2.4.5-p4 och 2.4.6 - 2.4.6-p2** använder du följande länkar beroende på distributionsmetod:
 
-* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](<https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html>) i guiden [!DNL Quality Patches Tool].
+* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](</help/tools/quality-patches-tool/usage.md>) i guiden [!DNL Quality Patches Tool].
 * Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning

@@ -3,9 +3,9 @@ title: 'ACSD-47076: [!DNL Vimeo] videor kan inte spelas upp i butiken'
 description: Använd ACSD-47076-korrigeringen för att åtgärda Adobe Commerce-problemet där  [!DNL Vimeo] videor inte kan spelas upp i butiken.
 feature: Storefront
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '316'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ ACSD-47076-korrigeringen åtgärdar ett problem där [!DNL Vimeo] videor inte ka
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
-* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html) i guiden [!DNL Quality Patches Tool].
+* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
 * Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning

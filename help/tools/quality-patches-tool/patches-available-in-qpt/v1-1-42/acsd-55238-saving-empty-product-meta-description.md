@@ -3,9 +3,9 @@ title: 'ACSD-55238: Sparar den tomma metabeskrivningen för produkten'
 description: Använd patchen ACSD-55238 för att åtgärda problemet med Adobe Commerce där en produktbeskrivning som innehåller HTML-kod som genererats av  [!DNL Page Builder]  eller en annan HTML-redigerare alltid visas i metabeskrivningen och det inte finns något sätt att ange den som tom.
 feature: Products, Page Builder, Page Content
 role: Admin, Developer
-source-git-commit: d722ba5ba25ffc03d87b9eddeb2830353124055d
+source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ När en produkt har ett block i beskrivningen används den för produktmetabeskr
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
-* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html) i guiden [!DNL Quality Patches Tool].
+* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
 * Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning

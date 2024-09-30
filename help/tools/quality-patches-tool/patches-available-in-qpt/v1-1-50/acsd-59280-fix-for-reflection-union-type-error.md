@@ -3,9 +3,9 @@ title: '"ACSD-59280: "ReflectionUnionType::getName()"-fel i 2.4.4-pX-installatio
 description: Använd patchen ACSD-59280 för att åtgärda Adobe Commerce-problemet där felet "anrop till undefined method ReflectionUnionType::getName()" inträffar under installationen av version 2.4.4-pX.
 feature: Install, Upgrade
 role: Admin, Developer
-source-git-commit: 52742cbc2098958f8e4cddf8534e0c2bf79d5c3e
+source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
 workflow-type: tm+mt
-source-wordcount: '303'
+source-wordcount: '302'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ Följande fel visas under `setup:upgrade`-processen:
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
-* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html) i guiden [!DNL Quality Patches Tool].
+* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
 * Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning

@@ -3,9 +3,9 @@ title: 'ACSD-54739: *[!UICONTROL Product Stock]*-status används inte för *[!UI
 description: Använd ACSD-54739-korrigeringen för att åtgärda Adobe Commerce-problemet där *[!UICONTROL Product Stock]*-status inte tillämpas för *[!UICONTROL Related Product Rules]*.
 feature: Products
 role: Admin, Developer
-source-git-commit: d722ba5ba25ffc03d87b9eddeb2830353124055d
+source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '326'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Produkten i lager/utanför lager matchar inte i *[!UICONTROL Related Product Rul
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
-* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html) i guiden [!DNL Quality Patches Tool].
+* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
 * Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning

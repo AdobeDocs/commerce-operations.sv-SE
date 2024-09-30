@@ -3,9 +3,9 @@ title: 'ACSD-54264: Fel när kunden försöker checka ut med överlåtbar offert
 description: Åtgärda Adobe Commerce-problemet med korrigeringen ACSD-54264 där felmeddelandet"Du kan inte uppdatera det begärda attributet" visas. Rad-ID:store_id" visas när en kund försöker checka ut med en överlåtbar offert från en annan butiksvy.
 feature: B2B, Checkout
 role: Admin, Developer
-source-git-commit: d722ba5ba25ffc03d87b9eddeb2830353124055d
+source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '445'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Kunden lägger en order med denna offert.
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
-* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html) i guiden [!DNL Quality Patches Tool].
+* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
 * Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning

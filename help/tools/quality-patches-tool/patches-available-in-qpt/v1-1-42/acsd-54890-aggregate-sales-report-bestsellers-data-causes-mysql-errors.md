@@ -3,9 +3,9 @@ title: '"ACSD-54890: "aggregat_sales_report_bestsellers_data" orsakar [!DNL MySQ
 description: Använd korrigeringsfilen ACSD-54890 för att åtgärda Adobe Commerce-problemet där "aggregate_sales_report_bestsellers_data" orsakar  [!DNL MySQL] fel på grund av att "/tmpdisk" inte har tillräckligt med utrymme.
 feature: Attributes
 role: Admin, Developer
-source-git-commit: d722ba5ba25ffc03d87b9eddeb2830353124055d
+source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '308'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Följande fel inträffar:
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
-* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html) i guiden [!DNL Quality Patches Tool].
+* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
 * Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning

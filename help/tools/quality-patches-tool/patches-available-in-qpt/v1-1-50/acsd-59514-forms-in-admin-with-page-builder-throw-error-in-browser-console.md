@@ -3,9 +3,9 @@ title: 'ACSD-59514: Forms i Admin med  [!DNL Page Builder] ett fel i webbläsark
 description: Använd ACSD-59514-korrigeringen för att åtgärda Adobe Commerce-problemet där formulär i Admin med  [!DNL Page Builder] orsakade felet [!DNL Page Builder] återgav i 5 sekunder utan att frigöra lås. i webbläsarkonsolen när formuläret har skickats och ändringarna kan inte sparas.
 feature: Page Builder
 role: Admin, Developer
-source-git-commit: 52742cbc2098958f8e4cddf8534e0c2bf79d5c3e
+source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '419'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ Inläsaren slutar inte snurra och blocket sparas inte. Följande fel visas i web
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
-* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html) i guiden [!DNL Quality Patches Tool].
+* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
 * Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning

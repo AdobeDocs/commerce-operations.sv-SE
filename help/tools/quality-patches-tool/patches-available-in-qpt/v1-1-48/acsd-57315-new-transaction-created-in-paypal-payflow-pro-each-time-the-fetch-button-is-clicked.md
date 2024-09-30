@@ -3,9 +3,9 @@ title: 'ACSD-57315: Ny transaktion skapas i [!DNL PayPal Payflow Pro] varje gån
 description: Använd korrigeringsfilen ACSD-57315 för att åtgärda Adobe Commerce-problemet där en ny transaktion skapas i  [!DNL PayPal Payflow Pro] varje gång hämtningsknappen klickas på visningstransaktionsskärmen i [!UICONTROL Admin].
 feature: Payments
 role: Admin, Developer
-source-git-commit: d722ba5ba25ffc03d87b9eddeb2830353124055d
+source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '379'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ En ny betalningstransaktion skapas för en order som redan har betalats.
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
-* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html) i guiden [!DNL Quality Patches Tool].
+* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
 * Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
