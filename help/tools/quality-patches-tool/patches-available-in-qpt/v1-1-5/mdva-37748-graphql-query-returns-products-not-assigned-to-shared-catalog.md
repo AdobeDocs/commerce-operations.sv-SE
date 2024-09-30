@@ -3,7 +3,7 @@ title: 'MDVA-37748: GraphQL-frågan returnerar produkter som inte har tilldelats
 description: Korrigeringen MDVA-37748 åtgärdar ett problem där en GraphQL-fråga returnerar produkter som inte har tilldelats en delad katalog. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.5 är installerat. Patch-ID:t är MDVA-37748. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.4.
 feature: B2B, GraphQL, Catalog Management, Categories, Products
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+source-git-commit: 1fb76b8d648cbbe2a9f602d2b1a0149f1f4f0e46
 workflow-type: tm+mt
 source-wordcount: '494'
 ht-degree: 0%
@@ -329,4 +329,4 @@ Mer information om verktyget för kvalitetskorrigeringar finns i:
 * [Verktyget för kvalitetskorrigeringar har släppts: ett nytt verktyg för självbetjäning av kvalitetskorrigeringar](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) i kunskapsbasen för support.
 * [Kontrollera om det finns en korrigeringsfil för ditt Adobe Commerce-problem med verktyget för kvalitetskorrigeringar ](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md) i [!DNL Quality Patches Tool]-handboken.
 
-Mer information om andra tillgängliga korrigeringsfiler i QPT finns i avsnittet [Patchar i QPT](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html-).
+Mer information om andra tillgängliga korrigeringsfiler i QPT finns i avsnittet [Patchar i QPT](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html).
