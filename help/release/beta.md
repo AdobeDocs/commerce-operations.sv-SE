@@ -2,9 +2,9 @@
 title: Beta-versioner
 description: Läs mer om betaversioner av Adobe Commerce och hur du deltar.
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
-source-git-commit: f90279e0e152204ac976db307ca14d4418cbcba8
+source-git-commit: a6c0a7f8c2a2bd6156f19838e05f8046209177e4
 workflow-type: tm+mt
-source-wordcount: '1094'
+source-wordcount: '1102'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ Den här betaversionen stöder tre nya funktioner i [`productSearch`-frågan ](h
 
       - Obs! Den här söktypen skiljer sig från den befintliga [frassökningen](https://developer.adobe.com/commerce/services/graphql/live-search/product-search/#phrase), som utför en automatisk sökning. Om produktattributvärdet till exempel är &quot;utomhusbyxor&quot; returnerar en frassökning ett svar för &quot;out pan&quot;, men returnerar inget svar för &quot;or ants&quot;. En sökning innehåller emellertid ett svar på &quot;eller ants&quot;.
 
-De här nya villkoren förbättrar funktionen för filtrering av sökfrågor för att förfina sökresultaten. De här nya villkoren påverkar inte huvudsökfrågan. Skicka ett e-postmeddelande till `sagonzal@adobe.com` eller `alexj@adobe.com` för betaåtkomst.
+De här nya villkoren förbättrar funktionen för filtrering av sökfrågor för att förfina sökresultaten. De här nya villkoren påverkar inte huvudsökfrågan. Om du vill delta i betaversionen skickar du en e-postförfrågan till [Sandra Gonzales Mangana](mailto:sagonzal@adobe.com) eller [Alex Jose](mailto:alexj@adobe.com).
 
 Mer information om hur du installerar betaversionen av Live Search finns i [Live Search-guiden](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/live-search/install#install-the-live-search-beta).
 
