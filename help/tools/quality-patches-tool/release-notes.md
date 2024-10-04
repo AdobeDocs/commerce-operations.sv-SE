@@ -2,9 +2,9 @@
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: b1b7152caa8a9f04ee779e4483c6b82d2002fcc7
+source-git-commit: e951ffec9b6b6178f58a1721095b7d62e4f006d3
 workflow-type: tm+mt
-source-wordcount: '21646'
+source-wordcount: '21987'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,21 @@ ht-degree: 0%
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som har skapats av gemenskapen för Magento Open Source finns i [versionsinformationen](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.52 {#v1-1-52}
+
+* **BUNDLE-3375** (för Adobe Commerce och Magento Open Source) - Lägger till alla nödvändiga fält för att uppfylla kraven för 3DS VISA-fullmakt när [!DNL Braintree] används som betalningsgateway.
+* **ACSD-59366** (för Adobe Commerce >=2.4.6 &lt;2.4.8) - Åtgärdar ett fel som inträffar när ett försök görs att ta bort ett team som innehåller inaktiverade användare som inte visas i grupplistan.
+* **ACSD-59865** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.7) - Korrigerar problemet där en [!UICONTROL Cart Price Rule] inte avbryter tidigare tillämpade regler om kvantiteten av produkten i vagnen inte är tillräckligt för att reglerna ska tillämpas.
+* **ACSD-59925** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet med sortering av objekt i [!UICONTROL Media Gallery] efter position i GraphQL.
+* **ACSD-59952** (för Adobe Commerce >=2.4.4 &lt;2.4.8) - Korrigerar problemet när ett fel inträffar när en [!UICONTROL Shared Catalog] skapas med ett grupp-ID som är tilldelat till ett befintligt [!UICONTROL Shared Catalog].
+* **ACSD-60590** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.7) - Förbättrar prestanda för generering av [!UICONTROL Bestsellers Aggregated Daily Reports] för ett stort antal placerade order.
+* **ACSD-60673** (för Adobe Commerce >=2.4.4 &lt;2.4.8) - Korrigerar problemet där [!UICONTROL Cart Price Rule] för flera betalningsmetoder vid utcheckning inte gäller korrekt för den specifika betalningsmetoden.
+* **ACSD-60684** (för Adobe Commerce och Magento Open Source >=2.4.6 &lt;2.4.7) - Korrigerar problemet där GraphQL produktsortering efter flera fält inte fungerar som förväntat.
+* **ACSD-60788** (för Adobe Commerce >=2.4.7 &lt;2.4.8) - Korrigerar problemet där anpassade skript för [!DNL Google Tag Manager] inte körs på grund av fel i Content Security Policy (CSP).
+* **ACSD-61322** (för Adobe Commerce >=2.4.6 &lt;2.4.8) - Korrigerar problemet där [!UICONTROL Products/Categories] som inte har tilldelats [!UICONTROL Shared Catalog] för standardgruppen (allmän grupp) fortfarande ingår i XML-platskartan.
+* **ACSD-61366** (för Adobe Commerce och Magento Open Source >=2.4.7 &lt;2.4.8) - Korrigerar problemet där `setup:static-content:deploy --jobs 4`-kommandot körs med flera jobb som inte fungerar med *Port måste konfigureras i värdparameterfelet* när porten har angetts för databasanslutningen.
+* Uppdaterade patchar: ACSD-51857, ACSD-57394
 
 ## v1.1.51 {#v1-1-51}
 
