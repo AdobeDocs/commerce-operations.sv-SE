@@ -2,9 +2,9 @@
 title: Hantera indexerare
 description: Se exempel på hur du visar och hanterar Commerce-indexerare.
 exl-id: d2cd1399-231e-4c42-aa0c-c2ed5d7557a0
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 9a92204369d3a8310aadfb94f8193a6c89f78c30
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '947'
 ht-degree: 0%
 
 ---
@@ -194,7 +194,7 @@ Catalog Search indexer has been invalidated.
 
 Använd det här kommandot för att ange följande indexeringsalternativ:
 
-- **Uppdatera vid sparande (`realtime`)**: Indexerade data uppdateras när en ändring görs i administratören. (Exempel: kategoriproduktindexet indexeras om efter att produkterna har lagts till i en kategori i Admin.) Det här är standardinställningen.
+- **Uppdatera vid sparande (`realtime`)**: Indexerade data uppdateras när en ändring görs i administratören. (Exempel: kategoriproduktindexet indexeras om efter att produkterna har lagts till i en kategori i Admin.)
 - **Uppdatera enligt schema (`schedule`)**: Data indexeras enligt det schema som angetts av ditt cron-jobb.
 
 [Läs mer om indexering](https://developer.adobe.com/commerce/php/development/components/indexing/).

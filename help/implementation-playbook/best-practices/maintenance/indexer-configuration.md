@@ -4,9 +4,9 @@ description: Underhåll och optimera webbplatsens prestanda genom att följa ved
 role: Admin, User
 feature: Best Practices
 exl-id: b35806f9-4bc6-407e-bedd-5ce3f09c1b9f
-source-git-commit: af66d47279245f8ee105030bbb33d77b1b35c3e5
+source-git-commit: 153cf3bae74a78d7a41176e0216203d354d2513b
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '296'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Om du vill optimera och underhålla platsprestanda granskar och uppdaterar du in
 
 ## Ange att indexerare ska uppdateras i ett schema
 
-Adobe Commerce har två typer av indexeringslägen: [!UICONTROL Update on Save] (standardinställning) och [!DNL Update on Schedule].
+Adobe Commerce har två typer av indexeringslägen: [!UICONTROL Update on Save] och [!DNL Update on Schedule].
 
 - **[!UICONTROL Update on Save]**-läget uppdaterar index omedelbart när katalogen eller andra data ändras. Om en Admin-användare till exempel lägger till nya produkter i en kategori omindexeras kategoriproduktindexet omedelbart när uppdateringen sparas.
 

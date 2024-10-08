@@ -1,7 +1,7 @@
 ---
-source-git-commit: 1eaf2329c16e6dbe3e93cb7fff3a6920b4b8379d
+source-git-commit: ab3401c2629b550655c7b2a382b998ce2c8ac6f0
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '377'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,12 @@ ht-degree: 0%
 >
 >Kommandot `support:backup` är _inte_ samma kodsäkerhetskopiering som utfördes av kommandot `setup:backup`. Kommandot `support:backup` är avsett att säkerhetskopiera kod för granskning av Adobe Commerce Support.
 
+## B2B-patchar {#b2b-patches}
+
+>[!NOTE]
+>
+>När säkerhetsuppdateringen har installerats måste Adobe Commerce B2B-handlare även uppdatera till den senaste kompatibla versionen av B2B-säkerhetsuppdateringen. Se [Versionsinformation för B2B](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/release-notes).
+
 ## Endast Adobe Commerce {#ee-only}
 
 >[!NOTE]
@@ -46,6 +52,12 @@ ht-degree: 0%
 >[!NOTE]
 >
 >Adobe Commerce-versioner kan innehålla ändringar som är inkompatibla bakåt (BIC). Om du vill granska ändringar som är inkompatibla bakåt läser du [BIC-referens](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/reference/). Viktiga bakåtkompatibla problem beskrivs i [BIC-markeringar](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/highlights/). Inte alla releaser innehåller viktiga BIC:er.
+
+## Beta ansvarsfriskrivning {#beta}
+
+>[!IMPORTANT]
+>
+>Beta-releaser kan innehålla defekter och tillhandahålls i befintligt skick utan någon garanti av något slag. Adobe har ingen skyldighet att upprätthålla, korrigera, uppdatera, ändra, modifiera eller på annat sätt ge support (från Adobe Support Services eller någon annan tjänst) för betaversioner. Kunderna bör vara försiktiga och inte på något sätt förlita sig på att betaversioner och/eller tillhörande dokumentation eller material fungerar eller fungerar korrekt. Därför är all användning av betaversioner helt och hållet på kundens egen risk.
 
 ## CVE-meddelande {#cve-notice}
 
