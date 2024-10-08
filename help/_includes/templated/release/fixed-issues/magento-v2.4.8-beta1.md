@@ -1,7 +1,7 @@
 ---
-source-git-commit: cb3392b7716667201305b7502f6c9c31bc7d1a23
+source-git-commit: d2fe92c778cb90912062c5f318332a02f6a4131e
 workflow-type: tm+mt
-source-wordcount: '14443'
+source-wordcount: '14792'
 ht-degree: 0%
 
 ---
@@ -144,7 +144,7 @@ säkerställa kompatibilitet och aktuell funktionalitet. Tidigare kunde uppdater
 
 ## Åtgärdade problem
 
-Vi har åtgärdat 253 problem i Magento Open Source 2.4.8-kärnkoden. En deluppsättning av de åtgärdade problemen som ingår i den här versionen beskrivs nedan.
+Vi har åtgärdat 254 problem i Magento Open Source 2.4.8-kärnkoden. En deluppsättning av de åtgärdade problemen som ingår i den här versionen beskrivs nedan.
 
 ### API:er
 
@@ -207,6 +207,10 @@ Tidigare var det möjligt att skapa kundgruppen Duplicera webbplatsens grupppris
    * _Korrigera anteckning_: Systemet accepterar nu produktavbildningar med filtillägg i versaler, vilket ger en smidig process för att skapa produkter. Tidigare nekades bildöverföringar med filtillägg i versaler, vilket tvingade användarna att ändra filnamnstillägget till gemener.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38831>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/c8f87c25>
+* _AC-6975_: [Problem] Ange standardindexeringsläget till &quot;schedule&quot;
+   * _Korrigera anteckning_: Alla nya indexerare är som standard i **[!UICONTROL Update by Schedule]**-läge.  Tidigare var standardläget **[!UICONTROL Update on Save]**. Befintliga indexerare påverkas inte. [GitHub-36419](https://github.com/magento/magento2/issues/36419)
+   * _GitHub-problem_: <https://github.com/magento/magento2/issues/36419>
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/0b410856>
 * _AC-7700_: [Utgåva] Ta bort indexerarändringstabeller när mview-prenumerationen avbryts
    * _Korrigera anteckning_: Systemet tar nu automatiskt bort oanvända ändringstabeller när ett index ändras från &quot;uppdatera enligt schema&quot; till &quot;uppdatera vid spara&quot;, vilket markerar indexet som ogiltigt för att säkerställa att inga poster missas. Om du tidigare växlade ett index till&quot;update on save&quot; skulle oanvända ändringsloggtabeller i systemet utelämnas och alla ändrade index markeras som&quot;valid&quot;.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/29789>
@@ -300,18 +304,24 @@ Vi kan nu uppdatera beställningsstatus som har skapats av användaren, men tidi
 ### Braintree
 
 * _BUNDLE-3367_: Betala via LPM
+   * _Korrigera anteckning_: Systemet återger nu LPM (Local Payment Methods) korrekt vid första inläsningen, även när en inloggad kunds frakt- och faktureringsadresser inte stämmer, vilket ger en smidig utcheckningsprocess. Tidigare var det fel på kundens leverans- och faktureringsadresser som förhindrar LPM-återgivning, vilket kan orsaka störningar vid utcheckningen.
    * _GitHub-kodbidrag_: <https://github.com/magento/ext-braintree/pull/204>
 * _BUNDLE-3368_: Kan konfigureras med virtuell som underordnad produkt
+   * _Korrigera anteckning_: Systemet tillåter nu expressbetalningsmetoder för konfigurerbara produkter som har en virtuell underordnad produkt, vilket ger en smidig utcheckningsprocess. Tidigare var expressbetalningsmetoder inte tillgängliga när en konfigurerbar produkt med en virtuell underordnad produkt lades till i kundvagnen.
    * _GitHub-kodbidrag_: <https://github.com/magento/ext-braintree/pull/204>
 * _BUNDLE-3369_: Fel vid CVV-verifiering
    * _GitHub-kodbidrag_: <https://github.com/magento/ext-braintree/pull/204>
 * _BUNDLE-3370_: Vaulting Via kontoområdet Issues 247
+   * _Åtgärda anteckning_: Nu kan kunder spara ny kortinformation eller PayPal-kontoinformation på flera webbplatser utan att stöta på auktoriseringsfel. Tidigare kunde kunderna inte spara nya betalningsmetoder på olika webbplatser och fick ett felmeddelande om auktorisering.
    * _GitHub-kodbidrag_: <https://github.com/magento/ext-braintree/pull/204>
 * _BUNDLE-3371_: Leverera till en adress från ett annat land
+   * _Korrigera anteckning_: Systemet tillåter nu att transaktioner behandlas utan fel när de skickas till en adress från ett annat land, vilket ger en smidig utcheckningsprocess. Tidigare skulle försök att leverera till en adress från ett annat land resultera i konsolfel, trots att det inte finns några synliga fel på klientsidan.
    * _GitHub-kodbidrag_: <https://github.com/magento/ext-braintree/pull/204>
 * _BUNDLE-3372_: Kreditkort - Teardown-funktion
+   * _Korrigera anteckning_: Systemet hanterar nu rippningen av PayPal-komponenter i Braintree korrekt när en kund går tillbaka från betalningssidan till leveranssidan, vilket förhindrar fel och säkerställer att PayPal Express-knapparna återges korrekt. Tidigare uppstod det ibland ett fel när Braintree PayPal-komponenterna skulle kapas ned när du navigerade tillbaka till leveranssidan från betalningssidan.
    * _GitHub-kodbidrag_: <https://github.com/magento/ext-braintree/pull/204>
 * _BUNDLE-3373_: Leveransåteranrop för PayPal Express
+   * _Korrigera anteckning_: Systemet visar nu korrekt tillgängliga leveransmetoder i modala PayPal Express, så att kunderna kan välja önskad leveransmetod innan de går vidare till granskningssidan eller slutför transaktionen. Tidigare fanns det inga leveransmetoder att välja mellan i PayPal Express modal, vilket innebar att kunderna måste välja en leveransmetod på en separat granskningssida innan de kunde slutföra transaktionen.
    * _GitHub-kodbidrag_: <https://github.com/magento/ext-braintree/pull/204>
 
 ### Kort och utcheckning
