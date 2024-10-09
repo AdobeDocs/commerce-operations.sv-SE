@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: 98d47457b80ff542c3b84927555a6cbee87072be
+source-git-commit: a19b19560a84dcbc308c1f778262689bce0bdb65
 workflow-type: tm+mt
-source-wordcount: '5930'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -625,6 +625,7 @@ ht-degree: 0%
          - [ACSD-60303: Problem med att lägga till administratörsorder har åtgärdats med HTML-minification aktiverat](quality-patches-tool/patches-available-in-qpt/v1-1-50/acsd-60303-admin-order-placement-fix.md)
       - v1.1.51 {#v1-1-51}
          - [Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.51](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-51/overview.md)
+         - [ACSD-60632: Adressen har sparats vid varje orderförsök](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-51/acsd-60632-address-saved-on-every-order-attempt.md)
          - [ACSD-61195: Cart GraphQL-begäran returnerar inte objekt på den sista sidan](quality-patches-tool/patches-available-in-qpt/v1-1-51/acsd-61195-empty-cart-on-final-graphql-page.md)
          - [ACSD-60538: Attribut visas inte om en produkt är inaktiverad](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-51/acsd-60538-if-product-is-disabled-attributes-dont-show.md)
       - v1.1.52 {#v1-1-52}
