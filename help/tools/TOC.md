@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: 07d7aafc25c9d9cdf9b6adfe6ff09f1088c53749
+source-git-commit: d53bc380e3bb0a2e6e510f8e73f327c035088aab
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '5959'
 ht-degree: 0%
 
 ---
@@ -634,6 +634,7 @@ ht-degree: 0%
          - [ACSD-61322: Produkter som inte har tilldelats [!UICONTROL Shared Catalogue] ingår i XML-platskartan](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-52/acsd-61322-products-not-assigned-to-shared-catalogue.md)
          - [ACSD-60590: Förbättra prestanda för BBestsellers Generering av Aggregated Daily Report](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-52/acsd-60590-optimized-bestseller-report-generation.md)
          - [ACSD-59925: Sorterar objekt i [!UICONTROL Media Gallery]](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-52/acsd-59925-sorting-items-in-media-gallery.md)
+         - [ACSD-59865: [!UICONTROL Cart Price Rule] kan inte avbryta tidigare regler på grund av otillräckligt antal](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-52/acsd-59865-cart-price-rule-fix-for-insufficient-quantity-issue.md)
       - [Leta efter Adobe Commerce-problem med verktyget för kvalitetskorrigeringar](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
 
 - Referens för kommandoradsverktyg {#cli-reference}
