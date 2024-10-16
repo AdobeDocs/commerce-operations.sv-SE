@@ -1,7 +1,7 @@
 ---
-source-git-commit: 26cad28ae0f40fe8f46c317eb7411136ac2fe783
+source-git-commit: a8f4df78dfec2a1e94d650cac03c7fba21f398e8
 workflow-type: tm+mt
-source-wordcount: '1664'
+source-wordcount: '912'
 ht-degree: 0%
 
 ---
@@ -9,17 +9,70 @@ ht-degree: 0%
 
 <!-- All the assigned and captured content is used in the included template -->
 
+
+
 <!-- The template to render with above values -->
 **Version**: 3.0.19
 
 Referensen innehåller nio kommandon som är tillgängliga via kommandoradsverktyget `bin/uct`.
 Den inledande listan genereras automatiskt med kommandot `bin/uct list` på Adobe Commerce.
 
+## Allmänt
+
 Läs mer om verktyget i [Översikt](/help/upgrade/upgrade-compatibility-tool/overview.md).
 
->[!NOTE]
->
->Den här referensen genereras från programmets kodbas. Om du vill ändra innehållet kan du uppdatera källkoden för motsvarande kommandoimplementering i databasen [codebase](https://github.com/magento) och skicka ändringarna för granskning. Ett annat sätt är att _ge oss feedback_ (hitta länken uppe till höger). Information om riktlinjer för bidrag finns i [Kodavgifter](https://developer.adobe.com/commerce/contributor/guides/code-contributions/).
+Den här referensdokumentationen genereras från programmets källkod. Om du vill ändra dokumentationen bör du öppna en pull-begäran för motsvarande kommando i den relevanta [koddatabasen](https://github.com/magento). Mer information finns i [Kodbidrag](https://developer.adobe.com/commerce/contributor/guides/code-contributions/).
+
+### Globala alternativ
+
+#### `--help`, `-h`
+
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+#### `--quiet`, `-q`
+
+Skriv inget meddelande
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+#### `--verbose`, `-v|-vv|-vvv`
+
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+#### `--version`, `-V`
+
+Visa den här programversionen
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+#### `--ansi`
+
+Tvinga (eller inaktivera) ANSI-utdata
+
+- Accepterar inte ett värde
+
+#### `--no-ansi`
+
+Ignorera alternativet &quot;—ansi&quot;
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+#### `--no-interaction`, `-n`
+
+Ställ inga interaktiva frågor
+
+- Standard: `false`
+- Accepterar inte ett värde
+
 
 ## `_complete`
 
@@ -29,79 +82,34 @@ bin/uct _complete [-s|--shell SHELL] [-i|--input INPUT] [-c|--current CURRENT] [
 
 Internt kommando för att ge förslag på komplettering av skalet
 
+### Alternativ
 
-### `--shell`, `-s`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--shell`, `-s`
 
 Gränssnittstypen (&quot;bash&quot;)
 
 - Kräver ett värde
 
-### `--input`, `-i`
+#### `--input`, `-i`
 
 En array med indatatoken (t.ex. COMP_WORDS eller argv)
 
 - Standard: `[]`
 - Kräver ett värde
 
-### `--current`, `-c`
+#### `--current`, `-c`
 
 Indexvärdet för den inmatningsarray där markören finns (t.ex. COMP_CWORD)
 
 - Kräver ett värde
 
-### `--symfony`, `-S`
+#### `--symfony`, `-S`
 
 Versionen av det slutförda skriptet
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `completion`
@@ -111,7 +119,6 @@ bin/uct completion [--debug] [--] [<shell>]
 ```
 
 Dumpa skriptet för gränssnittets slutförande
-
 
 ```
 The completion command dumps the shell completion script required
@@ -142,63 +149,19 @@ Add this to the end of your shell configuration file (e.g. "~/.bashrc"):
     eval "$(/var/jenkins/workspace/gendocs-uct-cli/uct/bin/uct completion bash)"
 ```
 
+### Argument
 
-### `shell`
+#### `shell`
 
 Gränssnittstypen (t.ex. &quot;bash&quot;), värdet för &quot;$SHELL&quot; env var, används om detta inte anges
 
+### Alternativ
 
-### `--debug`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--debug`
 
 Avsluta felsökningsloggen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -212,7 +175,6 @@ bin/uct help [--format FORMAT] [--raw] [--] [<command_name>]
 
 Visa hjälp för ett kommando
 
-
 ```
 The help command displays help for a given command:
 
@@ -225,72 +187,28 @@ You can also output the help in other formats by using the --format option:
 To display the list of available commands, please use the list command.
 ```
 
+### Argument
 
-### `command_name`
+#### `command_name`
 
 Kommandonamnet
 
 - Standard: `help`
 
+### Alternativ
 
-### `--format`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--format`
 
 Utdataformatet (txt, xml, json eller md)
 
 - Standard: `txt`
 - Kräver ett värde
 
-### `--raw`
+#### `--raw`
 
 Hjälp för att skriva ut råformat
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -303,7 +221,6 @@ bin/uct list [--raw] [--format FORMAT] [--short] [--] [<namespace>]
 ```
 
 Listkommandon
-
 
 ```
 The list command lists all commands:
@@ -323,77 +240,33 @@ It's also possible to get raw list of commands (useful for embedding command run
   uct/bin/uct list --raw
 ```
 
+### Argument
 
-### `namespace`
+#### `namespace`
 
 Namnutrymmets namn
 
+### Alternativ
 
-### `--raw`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--raw`
 
 Utdata för kommandolista
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--format`
+#### `--format`
 
 Utdataformatet (txt, xml, json eller md)
 
 - Standard: `txt`
 - Kräver ett värde
 
-### `--short`
+#### `--short`
 
 Så här beskriver du inte kommandots argument
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -407,61 +280,17 @@ bin/uct refactor <path>
 
 Åtgärdar problem som kan korrigeras automatiskt. Koden i sökvägen uppdateras.
 
+### Argument
 
-
-### `path`
+#### `path`
 
 Sökväg för att lösa problem i.
 
 - Obligatoriskt
 
-### `--help`, `-h`
+### Alternativ
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `core:code:changes`
@@ -472,72 +301,28 @@ bin/uct core:code:changes [-o|--output [OUTPUT]] [--] <dir> [<vanilla-dir>]
 
 Kompatibilitetsverktyget för uppgradering är ett kommandoradsverktyg som kontrollerar en Adobe Commerce-instans mot en viss version genom att analysera alla andra moduler än Adobe Commerce som är installerade i den. Returnerar en lista med fel och varningar som du måste åtgärda innan du uppgraderar till en ny version av Adobe Commerce-koden.
 
+### Argument
 
-
-### `dir`
+#### `dir`
 
 Adobe Commerce installationskatalog.
 
 - Obligatoriskt
 
-### `vanilla-dir`
+
+#### `vanilla-dir`
 
 Installationskatalogen för Adobe Commerce vanilla.
 
+### Alternativ
 
-### `--output`, `-o`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--output`, `-o`
 
 Sökväg till filen som ska exporteras (Json-format)
 
 - Accepterar ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `dbschema:diff`
@@ -548,67 +333,24 @@ bin/uct dbschema:diff <current-version> <target-version>
 
 Tillåt att lista skillnader i Adobe Commerce DB-scheman mellan två valda versioner. Tillgängliga versioner: 2.3.0 | 2.3.1 | 2.3.2 | 2.3.2-p2 | 2.3.3 | 2.3.3-p1 | 2.3.4 | 2.3.4-p1 | 2.3.4-p2 | 2.3.5 | 2.3.5-p1 | 2.3.5-p2 | 2.3.6 | 2.3.6-p1 | 2.3.7 | 2.3.7-p1 | 2.3.7-p2 | 2.3.7-p3 | 2.3.7-p4 | 2.4.0 | 2.4.0-p1 | 2.4.1 | 2.4.1-p1 | 2.4.2 | 2.4.2-p1 | 2.4.2-p2 | 2.4.3 | 2.4.3-p1 | 2.4.3-p2 | 2.4.3-p3 | 2.4.4 | 2.4.4-p1 | 2.4.5 | 2.4.4-p2 | 2.4.5-p1 | 2.4.4-p3 | 2.4.4-p4 | 2.4.4-p5 | 2.4.5-p2 | 2.4.5-p3 | 2.4.5-p4 | 2.4.6 | 2.4.6-p1 | 2.4.6-p2 | 2.4.7-beta1 | 2.4.4-p6 | 2.4.5-p5 | 2.4.6-p3 | 2.4.7-beta2 | 2.4.4-p7 | 2.4.5-p6 | 2.4.6-p4 | 2.4.7-beta3 | 2.4.7 | 2.4.6-p5 | 2.4.5-p7 | 2.4.4-p8 | 2.4.4-p9 | 2.4.5-p8 | 2.4.6-p6 | 2.4.7-p1 | 2.4.4-p10 | 2.4.5-p9 | 2.4.6-p7 | 2.4.7-p2 | 2.4.4-p11 | 2.4.5-p10 | 2.4.6-p8 | 2.4.7-p3 | 2.4.8-beta1
 
+### Argument
 
-
-### `current-version`
+#### `current-version`
 
 aktuell version (t.ex. 2.3.2).
 
 - Obligatoriskt
 
-### `target-version`
+
+#### `target-version`
 
 målversion (t.ex. 2.4.5).
 
 - Obligatoriskt
 
-### `--help`, `-h`
+### Alternativ
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `graphql:compare`
@@ -619,73 +361,30 @@ bin/uct graphql:compare [-o|--output [OUTPUT]] [--] <schema1> <schema2>
 
 Verifiering av schemakompatibilitet med GraphQL
 
+### Argument
 
-
-### `schema1`
+#### `schema1`
 
 Slutpunkts-URL som pekar på det första GraphQL-schemat.
 
 - Obligatoriskt
 
-### `schema2`
+
+#### `schema2`
 
 Slutpunkts-URL som pekar på det andra GraphQL-schemat.
 
 - Obligatoriskt
 
-### `--output`, `-o`
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--output`, `-o`
 
 Sökväg till filen som ska exporteras (JSON-format)
 
 - Accepterar ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `upgrade:check`
@@ -696,103 +395,59 @@ bin/uct upgrade:check [-a|--current-version [CURRENT-VERSION]] [-c|--coming-vers
 
 Kompatibilitetsverktyget för uppgradering är ett kommandoradsverktyg som kontrollerar en Adobe Commerce-anpassad instans mot en viss version genom att analysera alla moduler som är installerade i den. Returnerar en lista med fel och varningar som måste åtgärdas innan du uppgraderar till den senaste versionen av Adobe Commerce.
 
+### Argument
 
-
-### `dir`
+#### `dir`
 
 Adobe Commerce installationskatalog.
 
 - Obligatoriskt
 
-### `--current-version`, `-a`
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--current-version`, `-a`
 
 Aktuell Adobe Commerce-version, version av Adobe Commerce-installationen, används om den utelämnas.
 
 - Accepterar ett värde
 
-### `--coming-version`, `-c`
+#### `--coming-version`, `-c`
 
 Målversion för Adobe Commerce. Den senaste stabila versionen av Adobe Commerce kommer att användas om den utelämnas. Tillgängliga Adobe Commerce-versioner: 2.3.0 \| 2.3.1 \| 2.3.2 \| 2.3.2-p2 \| 2.3.3 \| 2.3.3-p1 \| 2.3.4 \| 2.3.4-p1 \| 2.3.4-p2 \| 2.3.5 \| 2.3.5-p1 \| 2.3.5-p2 \| 2.3.6 \| 2.3.6-p1 \| 2.3.7 \| 2.3.7-p1 \| 2.3.7-p2 \| 2.3.7-p3 \| 2.3.7-p4 \| 2.4.0 \| 2.4.0-p1 \| 2.4.1 \| 2.4.1-p1 \| 2.4.2 \| 2.4.2-p1 \| 2.4.2-p2 \| 2.4.3 \| 2.4.3-p1 \| 2.4.3-p2 \| 2.4.3-p3 \| 2.4.4 \| 2.4.4-p1 \| 2.4.4-p2 \| 2.4.4-p3 \| 2.4.4-p4 \| 2.4.4-p5 \| 2.4.4-p6 \| 2.4.4-p7 \| 2.4.4-p8 \| 2.4.4-p9 \| 2.4.4-p10 \| 2.4.4-p11 \| 2.4.5 \| 2.4.5-p1 \| 2.4.5-p2 \| 2.4.5-p3 \| 2.4.5-p4 \| 2.4.5-p5 \| 2.4.5-p6 \| 2.4.5-p7 \| 2.4.5-p8 \| 2.4.5-p9 \| 2.4.5-p10 \| 2.4.6 \| 2.4.6-p1 \| 2.4.6-p2 \| 2.4.6-p3 \| 2.4.6-p4 \| 2.4.6-p5 \| 2.4.6-p6 \| 2.4.6-p7 \| 2.4.6-p8 \| 2.4.7-beta1 \| 2.4.7-beta2 \| 2.4.7-beta3 \| 2.4.7 \| 2.4.7-p1 \| 2.4.7-p2 \| 2.4.7-p3 \| 2.4.8-beta1
 
 - Accepterar ett värde
 
-### `--json-output-path`
+#### `--json-output-path`
 
 Sökväg till filen där utdata ska exporteras i JSON-format
 
 - Accepterar ett värde
 
-### `--html-output-path`
+#### `--html-output-path`
 
 Sökväg till filen där utdata ska exporteras i HTML-format
 
 - Accepterar ett värde
 
-### `--min-issue-level`
+#### `--min-issue-level`
 
 Minimal problemnivå som du vill se i rapporten (varning, fel eller kritisk).
 
 - Standard: `warning`
 - Accepterar ett värde
 
-### `--ignore-current-version-compatibility-issues`, `-i`
+#### `--ignore-current-version-compatibility-issues`, `-i`
 
 Ignorera vanliga problem för aktuell och kommande version
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--context`
+#### `--context`
 
 Körningskontext. Det här alternativet är avsett för integrering och påverkar inte körningsresultatet.
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 

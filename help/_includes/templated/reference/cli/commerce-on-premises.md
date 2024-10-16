@@ -1,7 +1,7 @@
 ---
-source-git-commit: 1f8fda87e0d39fdcf2372f72373a0b2ea486d25a
+source-git-commit: a8f4df78dfec2a1e94d650cac03c7fba21f398e8
 workflow-type: tm+mt
-source-wordcount: '21185'
+source-wordcount: '8072'
 ht-degree: 0%
 
 ---
@@ -9,21 +9,73 @@ ht-degree: 0%
 
 <!-- All the assigned and captured content is used in the included template -->
 
+
+
 <!-- The template to render with above values -->
 
 **Version**: 2.4.7-p1
 
 Referensen innehåller 141 kommandon som är tillgängliga via kommandoradsverktyget `bin/magento`.
 Den inledande listan genereras automatiskt med kommandot `bin/magento list` på Adobe Commerce.
+
+## Allmänt
+
 Använd guiden [&quot;Lägg till CLI-kommandon&quot;](https://developer.adobe.com/commerce/php/development/cli-commands/) för att lägga till ett eget CLI-kommando.
 
->[!NOTE]
->
->Du kan anropa `bin/magento` CLI-kommandon med kortkommandon i stället för det fullständiga kommandonamnet. Du kan till exempel anropa `bin/magento setup:upgrade` med `bin/magento s:up`, `bin/magento s:upg`. Se [genvägssyntax](https://symfony.com/doc/current/components/console/usage.html#shortcut-syntax) om du vill veta hur du använder genvägar med ett CLI-kommando.
+Du kan anropa `bin/magento` CLI-kommandon med kortkommandon i stället för det fullständiga kommandonamnet. Du kan till exempel anropa `bin/magento setup:upgrade` med `bin/magento s:up`, `bin/magento s:upg`. Se [genvägssyntax](https://symfony.com/doc/current/components/console/usage.html#shortcut-syntax) om du vill veta hur du använder genvägar med ett CLI-kommando.
 
->[!NOTE]
->
->Den här referensen genereras från programmets kodbas. Om du vill ändra innehållet kan du uppdatera källkoden för motsvarande kommandoimplementering i databasen [codebase](https://github.com/magento) och skicka ändringarna för granskning. Ett annat sätt är att _ge oss feedback_ (hitta länken uppe till höger). Information om riktlinjer för bidrag finns i [Kodavgifter](https://developer.adobe.com/commerce/contributor/guides/code-contributions/).
+Den här referensdokumentationen genereras från programmets källkod. Om du vill ändra dokumentationen bör du öppna en pull-begäran för motsvarande kommando i den relevanta [koddatabasen](https://github.com/magento). Mer information finns i [Kodbidrag](https://developer.adobe.com/commerce/contributor/guides/code-contributions/).
+
+### Globala alternativ
+
+#### `--help`, `-h`
+
+Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+#### `--quiet`, `-q`
+
+Skriv inget meddelande
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+#### `--verbose`, `-v|-vv|-vvv`
+
+Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+#### `--version`, `-V`
+
+Visa den här programversionen
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+#### `--ansi`
+
+Tvinga (eller inaktivera) ANSI-utdata
+
+- Accepterar inte ett värde
+
+#### `--no-ansi`
+
+Ignorera alternativet &quot;—ansi&quot;
+
+- Standard: `false`
+- Accepterar inte ett värde
+
+#### `--no-interaction`, `-n`
+
+Ställ inga interaktiva frågor
+
+- Standard: `false`
+- Accepterar inte ett värde
+
 
 ## `_complete`
 
@@ -33,85 +85,40 @@ bin/magento _complete [-s|--shell SHELL] [-i|--input INPUT] [-c|--current CURREN
 
 Internt kommando för att ge förslag på komplettering av skalet
 
+### Alternativ
 
-### `--shell`, `-s`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--shell`, `-s`
 
 Skaltypen (&quot;bash&quot;, &quot;fish&quot;, &quot;zsh&quot;)
 
 - Kräver ett värde
 
-### `--input`, `-i`
+#### `--input`, `-i`
 
 En array med indatatoken (t.ex. COMP_WORDS eller argv)
 
 - Standard: `[]`
 - Kräver ett värde
 
-### `--current`, `-c`
+#### `--current`, `-c`
 
 Indexvärdet för den inmatningsarray där markören finns (t.ex. COMP_CWORD)
 
 - Kräver ett värde
 
-### `--api-version`, `-a`
+#### `--api-version`, `-a`
 
 API-versionen av det slutförda skriptet
 
 - Kräver ett värde
 
-### `--symfony`, `-S`
+#### `--symfony`, `-S`
 
 inaktuell
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `completion`
@@ -121,7 +128,6 @@ bin/magento completion [--debug] [--] [<shell>]
 ```
 
 Dumpa skriptet för gränssnittets slutförande
-
 
 ```
 The completion command dumps the shell completion script required
@@ -152,63 +158,19 @@ Add this to the end of your shell configuration file (e.g. "~/.bashrc"):
     eval "$(/var/www/html/magento2/bin/magento completion )"
 ```
 
+### Argument
 
-### `shell`
+#### `shell`
 
 Gränssnittstypen (t.ex. &quot;bash&quot;), värdet för &quot;$SHELL&quot; env var, används om detta inte anges
 
+### Alternativ
 
-### `--debug`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--debug`
 
 Avsluta felsökningsloggen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -222,7 +184,6 @@ bin/magento help [--format FORMAT] [--raw] [--] [<command_name>]
 
 Visa hjälp för ett kommando
 
-
 ```
 The help command displays help for a given command:
 
@@ -235,72 +196,28 @@ You can also output the help in other formats by using the --format option:
 To display the list of available commands, please use the list command.
 ```
 
+### Argument
 
-### `command_name`
+#### `command_name`
 
 Kommandonamnet
 
 - Standard: `help`
 
+### Alternativ
 
-### `--format`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--format`
 
 Utdataformatet (txt, xml, json eller md)
 
 - Standard: `txt`
 - Kräver ett värde
 
-### `--raw`
+#### `--raw`
 
 Hjälp för att skriva ut råformat
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -313,7 +230,6 @@ bin/magento list [--raw] [--format FORMAT] [--short] [--] [<namespace>]
 ```
 
 Listkommandon
-
 
 ```
 The list command lists all commands:
@@ -333,77 +249,33 @@ It's also possible to get raw list of commands (useful for embedding command run
   bin/magento list --raw
 ```
 
+### Argument
 
-### `namespace`
+#### `namespace`
 
 Namnutrymmets namn
 
+### Alternativ
 
-### `--raw`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--raw`
 
 Utdata för kommandolista
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--format`
+#### `--format`
 
 Utdataformatet (txt, xml, json eller md)
 
 - Standard: `txt`
 - Kräver ett värde
 
-### `--short`
+#### `--short`
 
 Så här beskriver du inte kommandots argument
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -417,54 +289,9 @@ bin/magento admin:adobe-ims:disable
 
 Inaktivera Adobe IMS-modul
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `admin:adobe-ims:enable`
@@ -475,78 +302,33 @@ bin/magento admin:adobe-ims:enable [-o|--organization-id [ORGANIZATION-ID]] [-c|
 
 Aktivera Adobe IMS-modulen.
 
+### Alternativ
 
-### `--organization-id`, `-o`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--organization-id`, `-o`
 
 Ange organisations-ID för Adobe IMS-konfigurationen. Krävs när modulen aktiveras
 
 - Accepterar ett värde
 
-### `--client-id`, `-c`
+#### `--client-id`, `-c`
 
 Ange klient-ID för Adobe IMS-konfigurationen. Krävs när modulen aktiveras
 
 - Accepterar ett värde
 
-### `--client-secret`, `-s`
+#### `--client-secret`, `-s`
 
 Ange klienthemlighet för Adobe IMS-konfigurationen. Krävs när modulen aktiveras
 
 - Accepterar ett värde
 
-### `--2fa`, `-t`
+#### `--2fa`, `-t`
 
 Kontrollera om 2FA är aktiverat för Organisation i Adobe Admin Console. Krävs när modulen aktiveras
 
 - Accepterar ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `admin:adobe-ims:info`
@@ -557,54 +339,9 @@ bin/magento admin:adobe-ims:info
 
 Information om Adobe IMS-modulkonfiguration
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `admin:adobe-ims:status`
@@ -615,54 +352,9 @@ bin/magento admin:adobe-ims:status
 
 Status för Adobe IMS-modul
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `admin:user:create`
@@ -673,90 +365,45 @@ bin/magento admin:user:create [--admin-user ADMIN-USER] [--admin-password ADMIN-
 
 Skapar en administratör
 
+### Alternativ
 
-### `--admin-user`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--admin-user`
 
 (Obligatoriskt) Administratörsanvändare
 
 - Kräver ett värde
 
-### `--admin-password`
+#### `--admin-password`
 
 (Obligatoriskt) Administratörslösenord
 
 - Kräver ett värde
 
-### `--admin-email`
+#### `--admin-email`
 
 (Obligatoriskt) Administratörens e-postadress
 
 - Kräver ett värde
 
-### `--admin-firstname`
+#### `--admin-firstname`
 
 (Obligatoriskt) Förnamn för administratör
 
 - Kräver ett värde
 
-### `--admin-lastname`
+#### `--admin-lastname`
 
 (Obligatoriskt) Administratörens efternamn
 
 - Kräver ett värde
 
-### `--magento-init-params`
+#### `--magento-init-params`
 
 Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magento. Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `admin:user:unlock`
@@ -767,67 +414,23 @@ bin/magento admin:user:unlock <username>
 
 Lås upp administratörskonto
 
-
 ```
 This command unlocks an admin account by its username.
 To unlock:
       bin/magento admin:user:unlock username
 ```
 
+### Argument
 
-### `username`
+#### `username`
 
 Administratörens användarnamn som ska låsas upp
 
 - Obligatoriskt
 
-### `--help`, `-h`
+### Alternativ
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `app:config:dump`
@@ -838,63 +441,18 @@ bin/magento app:config:dump [<config-types>...]
 
 Skapa programdump
 
+### Argument
 
-
-### `config-types`
+#### `config-types`
 
 Blankstegsavgränsad lista med konfigurationstyper eller utelämna att dumpa alla [omfattningar, system, teman, i18n]
 
 - Standard: `[]`
-
 - Array
 
-### `--help`, `-h`
+### Alternativ
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `app:config:import`
@@ -905,54 +463,9 @@ bin/magento app:config:import
 
 Importera data från delade konfigurationsfiler till lämplig datalagring
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `app:config:status`
@@ -963,54 +476,9 @@ bin/magento app:config:status
 
 Kontrollerar om konfigurationsspridning kräver uppdatering
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `braintree:migrate`
@@ -1021,78 +489,33 @@ bin/magento braintree:migrate [--host HOST] [--dbname DBNAME] [--username USERNA
 
 Migrera lagrade kort från en Magento 1-databas
 
+### Alternativ
 
-### `--host`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--host`
 
 Värdnamn/IP. Porten är valfri
 
 - Kräver ett värde
 
-### `--dbname`
+#### `--dbname`
 
 Databasnamn
 
 - Kräver ett värde
 
-### `--username`
+#### `--username`
 
 Användarnamn för databas. Måste ha läsåtkomst
 
 - Kräver ett värde
 
-### `--password`
+#### `--password`
 
 Lösenord
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `cache:clean`
@@ -1103,69 +526,24 @@ bin/magento cache:clean [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 Rensar cachetyper
 
+### Argument
 
-
-### `types`
+#### `types`
 
 Blankstegsavgränsad lista med cachetyper eller utelämna att använda för alla cachetyper.
 
 - Standard: `[]`
-
 - Array
 
-### `--bootstrap`
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--bootstrap`
 
 lägga till eller åsidosätta parametrar för bootstrap
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `cache:disable`
@@ -1176,69 +554,24 @@ bin/magento cache:disable [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 Inaktiverar cachetyp(er)
 
+### Argument
 
-
-### `types`
+#### `types`
 
 Blankstegsavgränsad lista med cachetyper eller utelämna att använda för alla cachetyper.
 
 - Standard: `[]`
-
 - Array
 
-### `--bootstrap`
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--bootstrap`
 
 lägga till eller åsidosätta parametrar för bootstrap
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `cache:enable`
@@ -1249,69 +582,24 @@ bin/magento cache:enable [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 Aktiverar cachetyp(er)
 
+### Argument
 
-
-### `types`
+#### `types`
 
 Blankstegsavgränsad lista med cachetyper eller utelämna att använda för alla cachetyper.
 
 - Standard: `[]`
-
 - Array
 
-### `--bootstrap`
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--bootstrap`
 
 lägga till eller åsidosätta parametrar för bootstrap
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `cache:flush`
@@ -1322,69 +610,24 @@ bin/magento cache:flush [--bootstrap BOOTSTRAP] [--] [<types>...]
 
 Tömmer cache-lagring som används av cachetyper
 
+### Argument
 
-
-### `types`
+#### `types`
 
 Blankstegsavgränsad lista med cachetyper eller utelämna att använda för alla cachetyper.
 
 - Standard: `[]`
-
 - Array
 
-### `--bootstrap`
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--bootstrap`
 
 lägga till eller åsidosätta parametrar för bootstrap
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `cache:status`
@@ -1395,60 +638,15 @@ bin/magento cache:status [--bootstrap BOOTSTRAP]
 
 Kontrollerar cachestatus
 
+### Alternativ
 
-### `--bootstrap`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--bootstrap`
 
 lägga till eller åsidosätta parametrar för bootstrap
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `catalog:images:resize`
@@ -1459,65 +657,20 @@ bin/magento catalog:images:resize [-a|--async] [--skip_hidden_images]
 
 Skapar storleksändrade produktbilder
 
+### Alternativ
 
-### `--async`, `-a`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--async`, `-a`
 
 Ändra storlek på bild i asynkront läge
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--skip_hidden_images`
+#### `--skip_hidden_images`
 
 Bearbeta inte bilder som markerats som dolda från produktsidan
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1531,54 +684,9 @@ bin/magento catalog:product:attributes:cleanup
 
 Tar bort oanvända produktattribut.
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `cms:wysiwyg:restrict`
@@ -1589,61 +697,17 @@ bin/magento cms:wysiwyg:restrict <restrict>
 
 Ange om innehållsvalidering från HTML ska framtvingas eller om en varning ska visas i stället
 
+### Argument
 
-
-### `restrict`
+#### `restrict`
 
 y\n
 
 - Obligatoriskt
 
-### `--help`, `-h`
+### Alternativ
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `config:sensitive:set`
@@ -1654,86 +718,41 @@ bin/magento config:sensitive:set [-i|--interactive] [--scope [SCOPE]] [--scope-c
 
 Ange känsliga konfigurationsvärden
 
+### Argument
 
-
-### `path`
+#### `path`
 
 Konfigurationssökväg för exempelvis grupp/avsnitt/fältnamn
 
 
-### `value`
+#### `value`
 
 Konfigurationsvärde
 
+### Alternativ
 
-### `--interactive`, `-i`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--interactive`, `-i`
 
 Aktivera interaktivt läge för att ställa in alla känsliga variabler
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--scope`
+#### `--scope`
 
 Omfång för konfiguration, om den inte anges, använd &#39;default&#39;
 
 - Standard: `default`
 - Accepterar ett värde
 
-### `--scope-code`
+#### `--scope-code`
 
 Omfångskod för konfiguration, tom sträng som standard
 
 - Standard: &quot;
 - Accepterar ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `config:set`
@@ -1744,98 +763,55 @@ bin/magento config:set [--scope SCOPE] [--scope-code SCOPE-CODE] [-e|--lock-env]
 
 Ändra systemkonfiguration
 
+### Argument
 
-
-### `path`
+#### `path`
 
 Konfigurationssökväg i formatavsnitt/grupp/fältnamn
 
 - Obligatoriskt
 
-### `value`
+
+#### `value`
 
 Konfigurationsvärde
 
 - Obligatoriskt
 
-### `--scope`
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--scope`
 
 Konfigurationsomfång (standard, webbplats eller butik)
 
 - Standard: `default`
 - Kräver ett värde
 
-### `--scope-code`
+#### `--scope-code`
 
 Scope-kod (krävs endast om scope inte är &#39;default&#39;)
 
 - Kräver ett värde
 
-### `--lock-env`, `-e`
+#### `--lock-env`, `-e`
 
 Lås värde som förhindrar ändringar i Admin (sparas i app/etc/env.php)
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--lock-config`, `-c`
+#### `--lock-config`, `-c`
 
 Lås och dela värdet med andra installationer, förhindra ändringar i Admin (sparas i app/etc/config.php)
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--lock`, `-l`
+#### `--lock`, `-l`
 
 Inaktuellt använder du alternativet —lock-env i stället.
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1849,74 +825,29 @@ bin/magento config:show [--scope [SCOPE]] [--scope-code [SCOPE-CODE]] [--] [<pat
 
 Visar konfigurationsvärde för angiven sökväg. Om ingen sökväg anges visas alla sparade värden
 
+### Argument
 
-
-### `path`
+#### `path`
 
 Konfigurationssökväg, till exempel section_id/group_id/field_id
 
+### Alternativ
 
-### `--scope`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--scope`
 
 Om inget konfigurationsområde anges används standardomfånget
 
 - Standard: `default`
 - Accepterar ett värde
 
-### `--scope-code`
+#### `--scope-code`
 
 Scope-kod (krävs endast om scope inte är `default`)
 
 - Standard: &quot;
 - Accepterar ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `cron:install`
@@ -1927,65 +858,20 @@ bin/magento cron:install [-f|--force] [-d|--non-optional]
 
 Skapar och installerar crontab för aktuell användare
 
+### Alternativ
 
-### `--force`, `-f`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--force`, `-f`
 
 Tvinga installationsaktiviteter
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--non-optional`, `-d`
+#### `--non-optional`, `-d`
 
 Installera endast icke-valfria (standard) uppgifter
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -1999,54 +885,9 @@ bin/magento cron:remove
 
 Tar bort uppgifter från crontab
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `cron:run`
@@ -2057,73 +898,28 @@ bin/magento cron:run [--group GROUP] [--exclude-group [EXCLUDE-GROUP]] [--bootst
 
 Kör jobb enligt schema
 
+### Alternativ
 
-### `--group`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--group`
 
 Kör endast jobb från angiven grupp
 
 - Kräver ett värde
 
-### `--exclude-group`
+#### `--exclude-group`
 
 Uteslut jobb från den angivna gruppen
 
 - Standard: `[]`
 - Accepterar flera värden
 
-### `--bootstrap`
+#### `--bootstrap`
 
 Lägga till eller åsidosätta parametrar för bootstrap
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `customer:hash:upgrade`
@@ -2134,54 +930,9 @@ bin/magento customer:hash:upgrade
 
 Uppgradera kundens hash enligt den senaste algoritmen
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `deploy:mode:set`
@@ -2192,65 +943,21 @@ bin/magento deploy:mode:set [-s|--skip-compilation] [--] <mode>
 
 Ange programläge.
 
+### Argument
 
-
-### `mode`
+#### `mode`
 
 Det programläge som ska anges. Tillgängliga alternativ är &quot;utvecklare&quot; eller &quot;produktion&quot;
 
 - Obligatoriskt
 
-### `--skip-compilation`, `-s`
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--skip-compilation`, `-s`
 
 Hoppar över rensning och omgenerering av statiskt innehåll (genererad kod, förbearbetad CSS och resurser i pub/static/)
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -2264,54 +971,9 @@ bin/magento deploy:mode:show
 
 Visar det aktuella programläget.
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `dev:di:info`
@@ -2322,61 +984,17 @@ bin/magento dev:di:info <class>
 
 Anger information om konfigurationen för beroendeinmatning för kommandot.
 
+### Argument
 
-
-### `class`
+#### `class`
 
 Klassnamn
 
 - Obligatoriskt
 
-### `--help`, `-h`
+### Alternativ
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `dev:email:newsletter-compatibility-check`
@@ -2387,54 +1005,9 @@ bin/magento dev:email:newsletter-compatibility-check
 
 Skannar nyhetsbrevmallar för potentiella kompatibilitetsproblem med variabel användning
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `dev:email:override-compatibility-check`
@@ -2445,54 +1018,9 @@ bin/magento dev:email:override-compatibility-check
 
 Söker igenom e-postmallåsidosättningar för eventuella kompatibilitetsproblem med variabel användning
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `dev:profiler:disable`
@@ -2503,54 +1031,9 @@ bin/magento dev:profiler:disable
 
 Inaktivera profileraren.
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `dev:profiler:enable`
@@ -2561,60 +1044,15 @@ bin/magento dev:profiler:enable [<type>]
 
 Aktivera profileraren.
 
+### Argument
 
-
-### `type`
+#### `type`
 
 Profilerartyp
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `dev:query-log:disable`
@@ -2625,54 +1063,9 @@ bin/magento dev:query-log:disable
 
 Inaktivera loggning av databasfrågor
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `dev:query-log:enable`
@@ -2683,75 +1076,30 @@ bin/magento dev:query-log:enable [--include-all-queries [INCLUDE-ALL-QUERIES]] [
 
 Aktivera loggning av databasfrågor
 
+### Alternativ
 
-### `--include-all-queries`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--include-all-queries`
 
 Logga alla frågor. [true\|false]
 
 - Standard: `true`
 - Accepterar ett värde
 
-### `--query-time-threshold`
+#### `--query-time-threshold`
 
 Frågetidströsklar.
 
 - Standard: `0.001`
 - Accepterar ett värde
 
-### `--include-call-stack`
+#### `--include-call-stack`
 
 Inkludera anropsstacken. [true\|false]
 
 - Standard: `true`
 - Accepterar ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `dev:source-theme:deploy`
@@ -2762,9 +1110,9 @@ bin/magento dev:source-theme:deploy [--type TYPE] [--locale LOCALE] [--area AREA
 
 Samlar in och publicerar källfiler för temat.
 
+### Argument
 
-
-### `file`
+#### `file`
 
 Filer som ska förbearbetas (filen ska anges utan filtillägg)
 
@@ -2772,81 +1120,37 @@ Filer som ska förbearbetas (filen ska anges utan filtillägg)
 
 - Array
 
-### `--type`
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--type`
 
 Typ av källfiler: [less]
 
 - Standard: `less`
 - Kräver ett värde
 
-### `--locale`
+#### `--locale`
 
 Språk: [en_US]
 
 - Standard: `en_US`
 - Kräver ett värde
 
-### `--area`
+#### `--area`
 
 Område: [frontend\|adminhtml]
 
 - Standard: `frontend`
 - Kräver ett värde
 
-### `--theme`
+#### `--theme`
 
 Tema: [Leverantör/tema]
 
 - Standard: `Magento/luma`
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `dev:template-hints:disable`
@@ -2857,54 +1161,9 @@ bin/magento dev:template-hints:disable
 
 Inaktivera malltips för frontend. En cachetömning kan behövas.
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `dev:template-hints:enable`
@@ -2915,54 +1174,9 @@ bin/magento dev:template-hints:enable
 
 Aktivera malltips för frontend. En cachetömning kan behövas.
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `dev:template-hints:status`
@@ -2973,54 +1187,9 @@ bin/magento dev:template-hints:status
 
 Visa status för malltips för förgreningstips.
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `dev:tests:run`
@@ -3031,69 +1200,24 @@ bin/magento dev:tests:run [-c|--arguments ARGUMENTS] [--] [<type>]
 
 Kör tester
 
+### Argument
 
-
-### `type`
+#### `type`
 
 Typ av test som ska köras. Tillgängliga typer: all, unit, integration, integration, all, static, static-all, integrity, legacy, default
 
 - Standard: `default`
 
+### Alternativ
 
-### `--arguments`, `-c`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--arguments`, `-c`
 
 Ytterligare argument för PHPUnit. Exempel: &quot;-c&quot;—filter=MyTest&quot; (inga blanksteg)
 
 - Standard: &quot;
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `dev:urn-catalog:generate`
@@ -3104,68 +1228,24 @@ bin/magento dev:urn-catalog:generate [--ide IDE] [--] <path>
 
 Skapar katalogen med URN:er till *.xsd-mappningar så att XML markeras.
 
+### Argument
 
-
-### `path`
+#### `path`
 
 Sökväg till fil för att mata ut katalogen. För PhpStorm använder du .idea/misc.xml
 
 - Obligatoriskt
 
-### `--ide`
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--ide`
 
 Formatet som katalogen ska skapas i. Stöds: [phpstorm, vscode]
 
 - Standard: `phpstorm`
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `dev:xml:convert`
@@ -3176,71 +1256,28 @@ bin/magento dev:xml:convert [-o|--overwrite] [--] <xml-file> <processor>
 
 Konverterar XML-fil med XSL-formatmallar
 
+### Argument
 
-
-### `xml-file`
+#### `xml-file`
 
 Sökväg till XML-fil som ska omvandlas
 
 - Obligatoriskt
 
-### `processor`
+
+#### `processor`
 
 Sökväg till XSL-formatmall som ska användas i XML-filen
 
 - Obligatoriskt
 
-### `--overwrite`, `-o`
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--overwrite`, `-o`
 
 Skriv över XML-fil
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -3254,63 +1291,18 @@ bin/magento downloadable:domains:add [<domains>...]
 
 Lägg till domäner i vitlistan över nedladdningsbara domäner
 
+### Argument
 
-
-### `domains`
+#### `domains`
 
 Domännamn
 
 - Standard: `[]`
-
 - Array
 
-### `--help`, `-h`
+### Alternativ
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `downloadable:domains:remove`
@@ -3321,63 +1313,18 @@ bin/magento downloadable:domains:remove [<domains>...]
 
 Ta bort domäner från vitlistan över nedladdningsbara domäner
 
+### Argument
 
-
-### `domains`
+#### `domains`
 
 Domännamn
 
 - Standard: `[]`
-
 - Array
 
-### `--help`, `-h`
+### Alternativ
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `downloadable:domains:show`
@@ -3388,54 +1335,9 @@ bin/magento downloadable:domains:show
 
 Visa lista över nedladdningsbara domäner
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `encryption:payment-data:update`
@@ -3446,54 +1348,9 @@ bin/magento encryption:payment-data:update
 
 Återkrypterar krypterade kreditkortsdata med det senaste krypteringschiffret.
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `events:create-event-provider`
@@ -3504,66 +1361,21 @@ bin/magento events:create-event-provider [--label [LABEL]] [--description [DESCR
 
 Skapa en anpassad händelseprovider i Adobe I/O Events för den här instansen. Om du inte anger alternativ för etikett och beskrivning måste de definieras i systemets app/etc/event-types.json.
 
+### Alternativ
 
-### `--label`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--label`
 
 En etikett som definierar din anpassade leverantör.
 
 - Accepterar ett värde
 
-### `--description`
+#### `--description`
 
 En beskrivning av din leverantör.
 
 - Accepterar ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `events:generate:module`
@@ -3574,54 +1386,9 @@ bin/magento events:generate:module
 
 Generera modul baserat på plugin-programlista
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `events:info`
@@ -3632,68 +1399,24 @@ bin/magento events:info [--depth [DEPTH]] [--] <event-code>
 
 Returnerar nyttolasten för den angivna händelsen.
 
+### Argument
 
-
-### `event-code`
+#### `event-code`
 
 Händelsekod
 
 - Obligatoriskt
 
-### `--depth`
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--depth`
 
 Antalet nivåer i händelsens nyttolast som ska returneras
 
 - Standard: `2`
 - Accepterar ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `events:list`
@@ -3704,54 +1427,9 @@ bin/magento events:list
 
 Visar en lista över prenumererade händelser
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `events:list:all`
@@ -3762,61 +1440,17 @@ bin/magento events:list:all <module_name>
 
 Returnerar en lista med prenumererbara händelser som definieras i den angivna modulen
 
+### Argument
 
-
-### `module_name`
+#### `module_name`
 
 Modulnamn
 
 - Obligatoriskt
 
-### `--help`, `-h`
+### Alternativ
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `events:metadata:populate`
@@ -3827,54 +1461,9 @@ bin/magento events:metadata:populate
 
 Skapar metadata i Adobe I/O från konfigurationslistan (XML och programkonfigurationer)
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `events:provider:info`
@@ -3885,54 +1474,9 @@ bin/magento events:provider:info
 
 Returnerar information om den konfigurerade händelseprovidern
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `events:registrations:list`
@@ -3943,54 +1487,9 @@ bin/magento events:registrations:list
 
 Visar händelseregistreringar i ditt App Builder-projekt
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `events:subscribe`
@@ -4001,106 +1500,62 @@ bin/magento events:subscribe [-f|--force] [--fields FIELDS] [--parent PARENT] [-
 
 Prenumererar på evenemanget
 
+### Argument
 
-
-### `event-code`
+#### `event-code`
 
 Händelsekod
 
 - Obligatoriskt
 
-### `--force`, `-f`
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--force`, `-f`
 
 Tvingar den angivna händelsen att prenumereras, även om den inte har definierats lokalt.
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--fields`
+#### `--fields`
 
 Listan med fält i händelsedatanyttolasten.
 
 - Standard: `[]`
 - Kräver ett värde
 
-### `--parent`
+#### `--parent`
 
 Den överordnade händelsekoden för en händelseprenumeration med regler.
 
 - Kräver ett värde
 
-### `--rules`
+#### `--rules`
 
 Listan med regler för händelseprenumerationen, där varje regel formateras som&quot;field\|operator\|value&quot;.
 
 - Standard: `[]`
 - Kräver ett värde
 
-### `--priority`, `-p`
+#### `--priority`, `-p`
 
 Underlättar överföringen av den här händelsen. Ange det här alternativet för händelser som måste levereras omedelbart. Som standard skickas händelser av cron en gång per minut.
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--destination`, `-d`
+#### `--destination`, `-d`
 
 Målet för den här händelsen. Ange det här alternativet för händelser som ska levereras till det anpassade målet.
 
 - Standard: `default`
 - Kräver ett värde
 
-### `--hipaaAuditRequired`
+#### `--hipaaAuditRequired`
 
 Anger att händelsen innehåller data som är föremål för HIPAA-granskning.
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4114,58 +1569,13 @@ bin/magento events:sync-events-metadata [-d|--delete]
 
 Synkronisera händelsemetadata för instansen
 
+### Alternativ
 
-### `--delete`, `-d`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--delete`, `-d`
 
 Ta bort metadata för händelser som inte längre behövs
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4179,61 +1589,17 @@ bin/magento events:unsubscribe <event-code>
 
 Tar bort prenumerationen på den angivna händelsen
 
+### Argument
 
-
-### `event-code`
+#### `event-code`
 
 Händelsekod att avbryta prenumerationen på
 
 - Obligatoriskt
 
-### `--help`, `-h`
+### Alternativ
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `i18n:collect-phrases`
@@ -4244,70 +1610,25 @@ bin/magento i18n:collect-phrases [-o|--output OUTPUT] [-m|--magento] [--] [<dire
 
 Upptäcker fraser i kodbasen
 
+### Argument
 
-
-### `directory`
+#### `directory`
 
 Katalogsökväg som ska tolkas. Behövs inte om flaggan —magento är inställd
 
+### Alternativ
 
-### `--output`, `-o`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--output`, `-o`
 
 Sökväg (inklusive filnamn) till en utdatafil. Om ingen fil har angetts är standardinställningen stdout.
 
 - Kräver ett värde
 
-### `--magento`, `-m`
+#### `--magento`, `-m`
 
 Använd parametern —magento för att tolka den aktuella Magento-kodbasen. Utelämna parametern om en katalog anges.
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4321,78 +1642,35 @@ bin/magento i18n:pack [-m|--mode MODE] [-d|--allow-duplicates] [--] <source> <lo
 
 Sparar språkpaket
 
+### Argument
 
-
-### `source`
+#### `source`
 
 Sökväg till källordsfil med översättningar
 
 - Obligatoriskt
 
-### `locale`
+
+#### `locale`
 
 Målspråk för ordlista, till exempel &quot;de_DE&quot;
 
 - Obligatoriskt
 
-### `--mode`, `-m`
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--mode`, `-m`
 
 Spara läge för ordlista -&quot;ersätt&quot; - ersätt språkpaket med nytt -&quot;sammanfoga&quot; - sammanfoga språkpaket, som standard&quot;ersätt&quot;
 
 - Standard: `replace`
 - Kräver ett värde
 
-### `--allow-duplicates`, `-d`
+#### `--allow-duplicates`, `-d`
 
 Använd parametern —allow-duplicates för att tillåta att dubbletter av translate sparas. Annars utelämnar du parametern.
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4406,68 +1684,24 @@ bin/magento i18n:uninstall [-b|--backup-code] [--] <package>...
 
 Avinstallerar språkpaket
 
+### Argument
 
-
-### `package`
+#### `package`
 
 Språkpaketets namn
 
 - Standard: `[]`
-
 - Obligatoriskt
+
 - Array
 
-### `--backup-code`, `-b`
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--backup-code`, `-b`
 
 Säkerhetskopiera kod och konfigurationsfiler (förutom temporära filer)
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -4481,54 +1715,9 @@ bin/magento indexer:info
 
 Visar tillåtna indexerare
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `indexer:reindex`
@@ -4539,63 +1728,18 @@ bin/magento indexer:reindex [<index>...]
 
 Indexerar om data
 
+### Argument
 
-
-### `index`
+#### `index`
 
 Blankstegsavgränsad lista med indextyper eller utelämna detta för alla index.
 
 - Standard: `[]`
-
 - Array
 
-### `--help`, `-h`
+### Alternativ
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `indexer:reset`
@@ -4606,63 +1750,18 @@ bin/magento indexer:reset [<index>...]
 
 Återställer indexerarstatus till ogiltig
 
+### Argument
 
-
-### `index`
+#### `index`
 
 Blankstegsavgränsad lista med indextyper eller utelämna detta för alla index.
 
 - Standard: `[]`
-
 - Array
 
-### `--help`, `-h`
+### Alternativ
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `indexer:set-dimensions-mode`
@@ -4673,65 +1772,20 @@ bin/magento indexer:set-dimensions-mode [<indexer> [<mode>]]
 
 Ange indexeringsläge för Dimensioner
 
+### Argument
 
-
-### `indexer`
+#### `indexer`
 
 Indexerarnamn [catalog_product_price|catalogpermissions_category]
 
 
-### `mode`
+#### `mode`
 
 Indexeringens dimensionslägen catalog_product_price          ingen,webbplats,kundgrupp,webbplats_och_kund_gruppkatalog behörigheter_kategori    ingen,kundgrupp
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `indexer:set-mode`
@@ -4742,68 +1796,23 @@ bin/magento indexer:set-mode [<mode> [<index>...]]
 
 Anger typ av indexläge
 
+### Argument
 
-
-### `mode`
+#### `mode`
 
 Indexerarlägestyp [realtid|schema]
 
 
-### `index`
+#### `index`
 
 Blankstegsavgränsad lista med indextyper eller utelämna detta för alla index.
 
 - Standard: `[]`
-
 - Array
 
-### `--help`, `-h`
+### Alternativ
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `indexer:set-status`
@@ -4814,69 +1823,25 @@ bin/magento indexer:set-status <status> [<index>...]
 
 Anger angiven indexerarstatus
 
+### Argument
 
-
-### `status`
+#### `status`
 
 Statustypen [ogiltig|pausad|giltig]
 
 - Obligatoriskt
 
-### `index`
+
+#### `index`
 
 Blankstegsavgränsad lista med indextyper eller utelämna detta för alla index.
 
 - Standard: `[]`
-
 - Array
 
-### `--help`, `-h`
+### Alternativ
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `indexer:show-dimensions-mode`
@@ -4887,63 +1852,18 @@ bin/magento indexer:show-dimensions-mode [<indexer>...]
 
 Visar indexerarens Dimension
 
+### Argument
 
-
-### `indexer`
+#### `indexer`
 
 Blankstegsavgränsad lista med indextyper eller utelämna den för alla index (catalog_product_price,catalogpermissions_category)
 
 - Standard: `[]`
-
 - Array
 
-### `--help`, `-h`
+### Alternativ
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `indexer:show-mode`
@@ -4954,63 +1874,18 @@ bin/magento indexer:show-mode [<index>...]
 
 Visar indexläge
 
+### Argument
 
-
-### `index`
+#### `index`
 
 Blankstegsavgränsad lista med indextyper eller utelämna detta för alla index.
 
 - Standard: `[]`
-
 - Array
 
-### `--help`, `-h`
+### Alternativ
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `indexer:status`
@@ -5021,63 +1896,18 @@ bin/magento indexer:status [<index>...]
 
 Visar indexerarens status
 
+### Argument
 
-
-### `index`
+#### `index`
 
 Blankstegsavgränsad lista med indextyper eller utelämna detta för alla index.
 
 - Standard: `[]`
-
 - Array
 
-### `--help`, `-h`
+### Alternativ
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `info:adminuri`
@@ -5088,54 +1918,9 @@ bin/magento info:adminuri
 
 Visar Magento Admin URI
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `info:backups:list`
@@ -5146,54 +1931,9 @@ bin/magento info:backups:list
 
 Skriver ut lista över tillgängliga säkerhetskopior
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `info:currency:list`
@@ -5204,54 +1944,9 @@ bin/magento info:currency:list
 
 Visar listan över tillgängliga valutor
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `info:dependencies:show-framework`
@@ -5262,61 +1957,16 @@ bin/magento info:dependencies:show-framework [-o|--output OUTPUT]
 
 Visar antalet beroenden till Magento-ramverket
 
+### Alternativ
 
-### `--output`, `-o`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--output`, `-o`
 
 Rapportfilnamn
 
 - Standard: `framework-dependencies.csv`
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `info:dependencies:show-modules`
@@ -5327,61 +1977,16 @@ bin/magento info:dependencies:show-modules [-o|--output OUTPUT]
 
 Visar antalet beroenden mellan moduler
 
+### Alternativ
 
-### `--output`, `-o`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--output`, `-o`
 
 Rapportfilnamn
 
 - Standard: `modules-dependencies.csv`
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `info:dependencies:show-modules-circular`
@@ -5392,61 +1997,16 @@ bin/magento info:dependencies:show-modules-circular [-o|--output OUTPUT]
 
 Visar antalet cirkulära beroenden mellan moduler
 
+### Alternativ
 
-### `--output`, `-o`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--output`, `-o`
 
 Rapportfilnamn
 
 - Standard: `modules-circular-dependencies.csv`
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `info:language:list`
@@ -5457,54 +2017,9 @@ bin/magento info:language:list
 
 Visar en lista över tillgängliga språkområden
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `info:timezone:list`
@@ -5515,54 +2030,9 @@ bin/magento info:timezone:list
 
 Visar listan över tillgängliga tidszoner
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `inventory:reservation:create-compensations`
@@ -5573,67 +2043,22 @@ bin/magento inventory:reservation:create-compensations [-r|--raw] [--] [<compens
 
 Skapa reservationer med angivna kompensationsargument
 
+### Argument
 
-
-### `compensations`
+#### `compensations`
 
 Lista med kompensationsargument i formatet &quot;::::&quot;
 
 - Standard: `[]`
-
 - Array
 
-### `--raw`, `-r`
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--raw`, `-r`
 
 Råutdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5647,79 +2072,34 @@ bin/magento inventory:reservation:list-inconsistencies [-c|--complete-orders] [-
 
 Visa alla order och produkter med inkonsekvenser i försäljningsbar kvantitet
 
+### Alternativ
 
-### `--complete-orders`, `-c`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--complete-orders`, `-c`
 
 Visa endast inkonsekvenser för fullständiga order
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--incomplete-orders`, `-i`
+#### `--incomplete-orders`, `-i`
 
 Visa endast inkonsekvenser för ofullständiga order
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--bunch-size`, `-b`
+#### `--bunch-size`, `-b`
 
 Definierar hur många order som läses in samtidigt
 
 - Standard: `50`
 - Accepterar ett värde
 
-### `--raw`, `-r`
+#### `--raw`, `-r`
 
 Råutdata
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -5733,64 +2113,20 @@ bin/magento inventory-geonames:import <countries>...
 
 Hämta och importera geonamn för källvalsalgoritm
 
+### Argument
 
-
-### `countries`
+#### `countries`
 
 Lista över landskoder som ska importeras
 
 - Standard: `[]`
-
 - Obligatoriskt
+
 - Array
 
-### `--help`, `-h`
+### Alternativ
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `maintenance:allow-ips`
@@ -5801,83 +2137,38 @@ bin/magento maintenance:allow-ips [--none] [--add] [--magento-init-params MAGENT
 
 Anger undantagna IP-adresser i underhållsläge
 
+### Argument
 
-
-### `ip`
+#### `ip`
 
 Tillåtna IP-adresser
 
 - Standard: `[]`
-
 - Array
 
-### `--none`
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--none`
 
 Rensa tillåtna IP-adresser
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--add`
+#### `--add`
 
 Lägg till IP-adressen i den befintliga listan
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--magento-init-params`
+#### `--magento-init-params`
 
 Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magento. Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `maintenance:disable`
@@ -5888,67 +2179,22 @@ bin/magento maintenance:disable [--ip IP] [--magento-init-params MAGENTO-INIT-PA
 
 Inaktiverar underhållsläge
 
+### Alternativ
 
-### `--ip`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--ip`
 
 Tillåtna IP-adresser (använd &#39;none&#39; för att rensa tillåten IP-lista)
 
 - Standard: `[]`
 - Kräver ett värde
 
-### `--magento-init-params`
+#### `--magento-init-params`
 
 Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magento. Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `maintenance:enable`
@@ -5959,67 +2205,22 @@ bin/magento maintenance:enable [--ip IP] [--magento-init-params MAGENTO-INIT-PAR
 
 Aktiverar underhållsläge
 
+### Alternativ
 
-### `--ip`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--ip`
 
 Tillåtna IP-adresser (använd &#39;none&#39; för att rensa tillåten IP-lista)
 
 - Standard: `[]`
 - Kräver ett värde
 
-### `--magento-init-params`
+#### `--magento-init-params`
 
 Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magento. Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `maintenance:status`
@@ -6030,60 +2231,15 @@ bin/magento maintenance:status [--magento-init-params MAGENTO-INIT-PARAMS]
 
 Visar status för underhållsläge
 
+### Alternativ
 
-### `--magento-init-params`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--magento-init-params`
 
 Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magento. Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `media-content:sync`
@@ -6094,54 +2250,9 @@ bin/magento media-content:sync
 
 Synkronisera innehåll med resurser
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `media-gallery:sync`
@@ -6152,54 +2263,9 @@ bin/magento media-gallery:sync
 
 Synkronisera medielagring och medieresurser i databasen
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `module:config:status`
@@ -6210,54 +2276,9 @@ bin/magento module:config:status
 
 Kontrollerar modulkonfigurationen i filen app/etc/config.php och rapporterar om den är uppdaterad eller inte
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `module:disable`
@@ -6268,90 +2289,45 @@ bin/magento module:disable [-f|--force] [--all] [-c|--clear-static-content] [--m
 
 Inaktiverar angivna moduler
 
+### Argument
 
-
-### `module`
+#### `module`
 
 Namn på modulen
 
 - Standard: `[]`
-
 - Array
 
-### `--force`, `-f`
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--force`, `-f`
 
 Åsidosätt beroendekontroll
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--all`
+#### `--all`
 
 Inaktivera alla moduler
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--clear-static-content`, `-c`
+#### `--clear-static-content`, `-c`
 
 Rensa genererade statiska vyfiler. Om modulerna har statiska visningsfiler krävs
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--magento-init-params`
+#### `--magento-init-params`
 
 Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magento. Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `module:enable`
@@ -6362,90 +2338,45 @@ bin/magento module:enable [-f|--force] [--all] [-c|--clear-static-content] [--ma
 
 Aktiverar angivna moduler
 
+### Argument
 
-
-### `module`
+#### `module`
 
 Namn på modulen
 
 - Standard: `[]`
-
 - Array
 
-### `--force`, `-f`
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--force`, `-f`
 
 Åsidosätt beroendekontroll
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--all`
+#### `--all`
 
 Aktivera alla moduler
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--clear-static-content`, `-c`
+#### `--clear-static-content`, `-c`
 
 Rensa genererade statiska vyfiler. Om modulerna har statiska visningsfiler krävs
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--magento-init-params`
+#### `--magento-init-params`
 
 Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magento. Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `module:status`
@@ -6456,83 +2387,38 @@ bin/magento module:status [--enabled] [--disabled] [--magento-init-params MAGENT
 
 Visar status för moduler
 
+### Argument
 
-
-### `module-names`
+#### `module-names`
 
 Modulnamn (valfritt)
 
 - Standard: `[]`
-
 - Array
 
-### `--enabled`
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--enabled`
 
 Skriv bara ut aktiverade moduler
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--disabled`
+#### `--disabled`
 
 Skriv bara ut inaktiverade moduler
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--magento-init-params`
+#### `--magento-init-params`
 
 Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magento. Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `module:uninstall`
@@ -6543,112 +2429,68 @@ bin/magento module:uninstall [-r|--remove-data] [--backup-code] [--backup-media]
 
 Avinstallerar moduler som installerats av disposition
 
+### Argument
 
-
-### `module`
+#### `module`
 
 Namn på modulen
 
 - Standard: `[]`
-
 - Obligatoriskt
+
 - Array
 
-### `--remove-data`, `-r`
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--remove-data`, `-r`
 
 Ta bort data som har installerats av moduler
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--backup-code`
+#### `--backup-code`
 
 Säkerhetskopiera kod och konfigurationsfiler (förutom temporära filer)
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--backup-media`
+#### `--backup-media`
 
 Säkerhetskopiera media
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--backup-db`
+#### `--backup-db`
 
 Utför fullständig säkerhetskopiering av databasen
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--non-composer`
+#### `--non-composer`
 
 Alla moduler som kommer att ligga utanför här är inte dispositionsbaserade
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--clear-static-content`, `-c`
+#### `--clear-static-content`, `-c`
 
 Rensa genererade statiska vyfiler. Om modulerna har statiska visningsfiler krävs
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--magento-init-params`
+#### `--magento-init-params`
 
 Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magento. Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `newrelic:create:deploy-marker`
@@ -6659,77 +2501,34 @@ bin/magento newrelic:create:deploy-marker <message> <change_log> [<user> [<revis
 
 Kontrollera om det finns poster i distributionskön och skapa en lämplig distributionsmarkör.
 
+### Argument
 
-
-### `message`
+#### `message`
 
 Vill du distribuera meddelandet?
 
 - Obligatoriskt
 
-### `change_log`
+
+#### `change_log`
 
 Ändra logg?
 
 - Obligatoriskt
 
-### `user`
+
+#### `user`
 
 Distributionsanvändare
 
 
-### `revision`
+#### `revision`
 
 Revision
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `queue:consumers:list`
@@ -6740,58 +2539,13 @@ bin/magento queue:consumers:list
 
 Lista över MessageQueue-användare
 
-
 ```
 This command shows list of MessageQueue consumers.
 ```
 
-### `--help`, `-h`
+### Alternativ
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `queue:consumers:restart`
@@ -6802,58 +2556,13 @@ bin/magento queue:consumers:restart
 
 Starta om MessageQueue-användare
 
-
 ```
 Command put poison pill for MessageQueue consumers and force to restart them after next status check.
 ```
 
-### `--help`, `-h`
+### Alternativ
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `queue:consumers:start`
@@ -6863,7 +2572,6 @@ bin/magento queue:consumers:start [--max-messages MAX-MESSAGES] [--batch-size BA
 ```
 
 Starta MessageQueue-konsument
-
 
 ```
 This command starts MessageQueue consumer by its name.
@@ -6897,97 +2605,54 @@ To define the number of processes per consumer:
     bin/magento queue:consumers:start someConsumer --multi-process=4
 ```
 
+### Argument
 
-### `consumer`
+#### `consumer`
 
 Namnet på den konsument som ska startas.
 
 - Obligatoriskt
 
-### `--max-messages`
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--max-messages`
 
 Antalet meddelanden som ska bearbetas av konsumenten innan processen avslutas. Om inget anges avslutas alla meddelanden som står i kö.
 
 - Kräver ett värde
 
-### `--batch-size`
+#### `--batch-size`
 
 Antalet meddelanden per batch. Gäller endast för batchkonsumenten.
 
 - Kräver ett värde
 
-### `--area-code`
+#### `--area-code`
 
 Standardområdet (global, adminhtml, osv.) är globalt.
 
 - Kräver ett värde
 
-### `--single-thread`
+#### `--single-thread`
 
 Det här alternativet förhindrar att flera kopior av en kund körs samtidigt.
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--multi-process`
+#### `--multi-process`
 
 Antalet processer per kund.
 
 - Accepterar ett värde
 
-### `--pid-file-path`
+#### `--pid-file-path`
 
 Filsökvägen för att spara PID (det här alternativet är föråldrat, använd —single-thread i stället)
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `remote-storage:sync`
@@ -6998,54 +2663,9 @@ bin/magento remote-storage:sync
 
 Synkronisera mediefiler med fjärrlagring.
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `saas:resync`
@@ -7056,97 +2676,52 @@ bin/magento saas:resync [--feed FEED] [--no-reindex] [--cleanup-feed] [--dry-run
 
 Synkroniserar om feed-data till SaaS-tjänsten.
 
+### Alternativ
 
-### `--feed`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--feed`
 
 Feed-namn för att helt synkronisera om till SaaS-tjänsten. Tillgängliga feeds: Betalningstjänster, Orderproduktion, Betalningstjänster, Ordersandlåda, Betalningstjänster, Orderstatus, Statussandlåda för Betalningstjänster, Butiksproduktion för Betalningstjänster, Butikssandlåda för Betalningstjänster
 
 - Kräver ett värde
 
-### `--no-reindex`
+#### `--no-reindex`
 
 Kör endast omsändning av feed-data till SaaS-tjänsten. Indexerar inte om. (Detta alternativ gäller inte för produkterna, produkterna, åsidosättningarna, prisflödena)
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--cleanup-feed`
+#### `--cleanup-feed`
 
 Tvinga rensning av flödesindexerartabellen före synkronisering.
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--dry-run`
+#### `--dry-run`
 
 Torr körning. Data exporteras inte. Spara nyttolast i loggfilen var/log/saas-export.log med miljövariabeln EXPORTER_EXTENDED_LOG=1.
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--thread-count`
+#### `--thread-count`
 
 Ange antalet synkroniseringstråd.
 
 - Kräver ett värde
 
-### `--batch-size`
+#### `--batch-size`
 
 Ange batchstorlek för synkronisering
 
 - Kräver ett värde
 
-### `--continue-resync`
+#### `--continue-resync`
 
 Fortsätt omsynkronisera från den senast lagrade positionen (det här alternativet gäller för produkterna, produktionsåsidosättningar, prisflöden)
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7160,58 +2735,13 @@ bin/magento sampledata:deploy [--no-update]
 
 Distribuera exempeldatamoduler för dispositionsbaserade Magento-installationer
 
+### Alternativ
 
-### `--no-update`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--no-update`
 
 Uppdatera Composer.json utan att köra Composer-uppdatering
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7225,58 +2755,13 @@ bin/magento sampledata:remove [--no-update]
 
 Ta bort alla exempeldatapaket från Composer.json
 
+### Alternativ
 
-### `--no-update`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--no-update`
 
 Uppdatera Composer.json utan att köra Composer-uppdatering
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7290,54 +2775,9 @@ bin/magento sampledata:reset
 
 Återställ alla exempeldatamoduler för ominstallation
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `security:recaptcha:disable-for-user-forgot-password`
@@ -7348,54 +2788,9 @@ bin/magento security:recaptcha:disable-for-user-forgot-password
 
 Inaktivera reCAPTCHA för administratörsanvändaren har glömt lösenordsformuläret
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `security:recaptcha:disable-for-user-login`
@@ -7406,54 +2801,9 @@ bin/magento security:recaptcha:disable-for-user-login
 
 Inaktivera reCAPTCHA för inloggningsformulär för administratörer
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `security:tfa:google:set-secret`
@@ -7464,67 +2814,24 @@ bin/magento security:tfa:google:set-secret <user> <secret>
 
 Ange hemligheten som används för generering av engångslösenord i Google.
 
+### Argument
 
-
-### `user`
+#### `user`
 
 Användarnamn
 
 - Obligatoriskt
 
-### `secret`
+
+#### `secret`
 
 Hemlighet
 
 - Obligatoriskt
 
-### `--help`, `-h`
+### Alternativ
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `security:tfa:providers`
@@ -7535,54 +2842,9 @@ bin/magento security:tfa:providers
 
 Visa alla tillgängliga leverantörer
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `security:tfa:reset`
@@ -7593,67 +2855,24 @@ bin/magento security:tfa:reset <user> <provider>
 
 Återställ konfigurationen för en användare
 
+### Argument
 
-
-### `user`
+#### `user`
 
 Användarnamn
 
 - Obligatoriskt
 
-### `provider`
+
+#### `provider`
 
 Providerkod
 
 - Obligatoriskt
 
-### `--help`, `-h`
+### Alternativ
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `server:run`
@@ -7664,114 +2883,69 @@ bin/magento server:run [-p|--port [PORT]] [-b|--background [BACKGROUND]] [-wn|--
 
 Kör programserver
 
+### Alternativ
 
-### `--port`, `-p`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--port`, `-p`
 
 port att servera på
 
 - Standard: `9501`
 - Accepterar ett värde
 
-### `--background`, `-b`
+#### `--background`, `-b`
 
 flagga för bakgrundsläge
 
 - Standard: `0`
 - Accepterar ett värde
 
-### `--workerNum`, `-wn`
+#### `--workerNum`, `-wn`
 
 antal arbetsprocesser att starta
 
 - Standard: `4`
 - Accepterar ett värde
 
-### `--dispatchMode`, `-dm`
+#### `--dispatchMode`, `-dm`
 
 läge för att skicka anslutningar till arbetsprocesserna
 
 - Standard: `3`
 - Accepterar ett värde
 
-### `--maxRequests`, `-mr`
+#### `--maxRequests`, `-mr`
 
 max antal begäranden innan arbetsprocessen startas om
 
 - Standard: `10000`
 - Accepterar ett värde
 
-### `--area`, `-a`
+#### `--area`, `-a`
 
 programserverområde
 
 - Standard: `graphql`
 - Accepterar ett värde
 
-### `--magento-init-params`, `-mip`
+#### `--magento-init-params`, `-mip`
 
 magento bootstrap init params
 
 - Standard: &quot;
 - Accepterar ett värde
 
-### `--maxWaitTime`, `-mwt`
+#### `--maxWaitTime`, `-mwt`
 
 Hur länge du väntar på arbetare efter omladdning (t.ex. konfigurationsändring) innan de dör
 
 - Standard: `3600`
 - Accepterar ett värde
 
-### `--state-monitor`
+#### `--state-monitor`
 
 Aktivera tillståndsövervakning. Använd endast detta för felsökning av tillståndsproblem!
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -7785,54 +2959,9 @@ bin/magento server:state-monitor:aggregate-output
 
 Sammanställa utdata från tillståndsövervakaren för ApplicationServer
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `setup:backup`
@@ -7843,81 +2972,36 @@ bin/magento setup:backup [--code] [--media] [--db] [--magento-init-params MAGENT
 
 Säkerhetskopierar Magento programkodbas, media och databas
 
+### Alternativ
 
-### `--code`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--code`
 
 Säkerhetskopiera kod och konfigurationsfiler (förutom temporära filer)
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--media`
+#### `--media`
 
 Säkerhetskopiera media
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--db`
+#### `--db`
 
 Utför fullständig säkerhetskopiering av databasen
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--magento-init-params`
+#### `--magento-init-params`
 
 Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magento. Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `setup:config:set`
@@ -7928,647 +3012,602 @@ bin/magento setup:config:set [--enable-debug-logging ENABLE-DEBUG-LOGGING] [--en
 
 Skapar eller ändrar distributionskonfigurationen
 
+### Alternativ
 
-### `--enable-debug-logging`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--enable-debug-logging`
 
 Aktivera felsökningsloggning
 
 - Kräver ett värde
 
-### `--enable-syslog-logging`
+#### `--enable-syslog-logging`
 
 Aktivera syslog-loggning
 
 - Kräver ett värde
 
-### `--backend-frontname`
+#### `--backend-frontname`
 
 Förnamn för serverdel (genereras automatiskt om det saknas)
 
 - Kräver ett värde
 
-### `--remote-storage-driver`
+#### `--remote-storage-driver`
 
 Drivrutin för fjärrlagring
 
 - Kräver ett värde
 
-### `--remote-storage-prefix`
+#### `--remote-storage-prefix`
 
 Prefix för fjärrlagring
 
 - Standard: &quot;
 - Kräver ett värde
 
-### `--remote-storage-endpoint`
+#### `--remote-storage-endpoint`
 
 Slutpunkt för fjärrlagring
 
 - Kräver ett värde
 
-### `--remote-storage-bucket`
+#### `--remote-storage-bucket`
 
 Fjärrlagringsbucket
 
 - Kräver ett värde
 
-### `--remote-storage-region`
+#### `--remote-storage-region`
 
 Fjärrlagringsregion
 
 - Kräver ett värde
 
-### `--remote-storage-key`
+#### `--remote-storage-key`
 
 Åtkomstnyckel för fjärrlagring
 
 - Standard: &quot;
 - Kräver ett värde
 
-### `--remote-storage-secret`
+#### `--remote-storage-secret`
 
 Hemlig nyckel för fjärrlagring
 
 - Standard: &quot;
 - Kräver ett värde
 
-### `--remote-storage-path-style`
+#### `--remote-storage-path-style`
 
 Stil för fjärrlagringssökväg
 
 - Standard: `0`
 - Kräver ett värde
 
-### `--id_salt`
+#### `--id_salt`
 
 GraphQl Salt
 
 - Kräver ett värde
 
-### `--config-async`
+#### `--config-async`
 
 Vill du aktivera Spara async Admin Config? 1 - Ja, 0 - Nej
 
 - Kräver ett värde
 
-### `--checkout-async`
+#### `--checkout-async`
 
 Vill du aktivera asynkron orderbearbetning? 1 - Ja, 0 - Nej
 
 - Kräver ett värde
 
-### `--amqp-host`
+#### `--amqp-host`
 
 AMQP-servervärd
 
 - Standard: &quot;
 - Kräver ett värde
 
-### `--amqp-port`
+#### `--amqp-port`
 
 AMQP-serverport
 
 - Standard: `5672`
 - Kräver ett värde
 
-### `--amqp-user`
+#### `--amqp-user`
 
 Användarnamn för AMQP-server
 
 - Standard: &quot;
 - Kräver ett värde
 
-### `--amqp-password`
+#### `--amqp-password`
 
 Lösenord för AMQP-server
 
 - Standard: &quot;
 - Kräver ett värde
 
-### `--amqp-virtualhost`
+#### `--amqp-virtualhost`
 
 Virtualhost för Amqp
 
 - Standard: `/`
 - Kräver ett värde
 
-### `--amqp-ssl`
+#### `--amqp-ssl`
 
 Amqp SSL
 
 - Standard: &quot;
 - Kräver ett värde
 
-### `--amqp-ssl-options`
+#### `--amqp-ssl-options`
 
 AMQP SSL-alternativ (JSON)
 
 - Standard: &quot;
 - Kräver ett värde
 
-### `--consumers-wait-for-messages`
+#### `--consumers-wait-for-messages`
 
 Ska konsumenterna vänta på ett meddelande från kön? 1 - Ja, 0 - Nej
 
 - Kräver ett värde
 
-### `--queue-default-connection`
+#### `--queue-default-connection`
 
 Standardanslutning för Message Queues. Kan vara db, amqp eller ett anpassat kösystem. Kösystemet måste vara installerat och konfigurerat, annars kommer meddelanden inte att behandlas korrekt.
 
 - Kräver ett värde
 
-### `--deferred-total-calculating`
+#### `--deferred-total-calculating`
 
 Vill du aktivera fördröjd total beräkning? 1 - Ja, 0 - Nej
 
 - Kräver ett värde
 
-### `--key`
+#### `--key`
 
 Krypteringsnyckel
 
 - Kräver ett värde
 
-### `--db-host`
+#### `--db-host`
 
 Databasservervärd
 
 - Kräver ett värde
 
-### `--db-name`
+#### `--db-name`
 
 Databasnamn
 
 - Kräver ett värde
 
-### `--db-user`
+#### `--db-user`
 
 Användarnamn för databasserver
 
 - Kräver ett värde
 
-### `--db-engine`
+#### `--db-engine`
 
 Databasservermotor
 
 - Kräver ett värde
 
-### `--db-password`
+#### `--db-password`
 
 Lösenord för databasserver
 
 - Kräver ett värde
 
-### `--db-prefix`
+#### `--db-prefix`
 
 Prefix för databastabell
 
 - Kräver ett värde
 
-### `--db-model`
+#### `--db-model`
 
 Databastyp
 
 - Kräver ett värde
 
-### `--db-init-statements`
+#### `--db-init-statements`
 
 Initial uppsättning kommandon för databas
 
 - Kräver ett värde
 
-### `--skip-db-validation`, `-s`
+#### `--skip-db-validation`, `-s`
 
 Om det anges hoppas validering av databasanslutning över
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--http-cache-hosts`
+#### `--http-cache-hosts`
 
 http-cachevärdar
 
 - Kräver ett värde
 
-### `--db-ssl-key`
+#### `--db-ssl-key`
 
 Fullständig sökväg till klientnyckelfilen för att upprätta en databasanslutning via SSL
 
 - Standard: &quot;
 - Kräver ett värde
 
-### `--db-ssl-cert`
+#### `--db-ssl-cert`
 
 Fullständig sökväg till klientcertifikatfilen för att upprätta en databasanslutning via SSL
 
 - Standard: &quot;
 - Kräver ett värde
 
-### `--db-ssl-ca`
+#### `--db-ssl-ca`
 
 Fullständig sökväg till servercertifikatfilen för att upprätta en databasanslutning via SSL
 
 - Standard: &quot;
 - Kräver ett värde
 
-### `--db-ssl-verify`
+#### `--db-ssl-verify`
 
 Verifiera servercertifiering
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--session-save`
+#### `--session-save`
 
 Hanterare för sessionssparande
 
 - Kräver ett värde
 
-### `--session-save-redis-host`
+#### `--session-save-redis-host`
 
 Fullständigt kvalificerat värdnamn, IP-adress eller absolut sökväg om UNIX-socketar används
 
 - Kräver ett värde
 
-### `--session-save-redis-port`
+#### `--session-save-redis-port`
 
 Redis-serverlyssningsport
 
 - Kräver ett värde
 
-### `--session-save-redis-password`
+#### `--session-save-redis-password`
 
 Redis-serverlösenord
 
 - Kräver ett värde
 
-### `--session-save-redis-timeout`
+#### `--session-save-redis-timeout`
 
 Anslutningens timeout, i sekunder
 
 - Kräver ett värde
 
-### `--session-save-redis-persistent-id`
+#### `--session-save-redis-persistent-id`
 
 Unik sträng för att aktivera beständiga anslutningar
 
 - Kräver ett värde
 
-### `--session-save-redis-db`
+#### `--session-save-redis-db`
 
 Redis-databasnummer
 
 - Kräver ett värde
 
-### `--session-save-redis-compression-threshold`
+#### `--session-save-redis-compression-threshold`
 
 Komprimeringströskel för Redis
 
 - Kräver ett värde
 
-### `--session-save-redis-compression-lib`
+#### `--session-save-redis-compression-lib`
 
 Redis-komprimeringsbibliotek. Värden: gzip (standard), lzf, lz4, snappy
 
 - Kräver ett värde
 
-### `--session-save-redis-log-level`
+#### `--session-save-redis-log-level`
 
 Redis-loggnivå. Värden: 0 (minst utförlig) till 7 (mest utförlig)
 
 - Kräver ett värde
 
-### `--session-save-redis-max-concurrency`
+#### `--session-save-redis-max-concurrency`
 
 Maximalt antal processer som kan vänta på ett lås i en session
 
 - Kräver ett värde
 
-### `--session-save-redis-break-after-frontend`
+#### `--session-save-redis-break-after-frontend`
 
 Antal sekunder att vänta innan ett lås för en klientsession bryts
 
 - Kräver ett värde
 
-### `--session-save-redis-break-after-adminhtml`
+#### `--session-save-redis-break-after-adminhtml`
 
 Antal sekunder att vänta innan ett lås för administratörssessionen bryts
 
 - Kräver ett värde
 
-### `--session-save-redis-first-lifetime`
+#### `--session-save-redis-first-lifetime`
 
 Livstid, i sekunder, för session för icke-bots vid första skrivning (använd 0 för att inaktivera)
 
 - Kräver ett värde
 
-### `--session-save-redis-bot-first-lifetime`
+#### `--session-save-redis-bot-first-lifetime`
 
 Livstid, i sekunder, för session för bots vid första skrivning (använd 0 för att inaktivera)
 
 - Kräver ett värde
 
-### `--session-save-redis-bot-lifetime`
+#### `--session-save-redis-bot-lifetime`
 
 Sessionens livstid för start vid efterföljande skrivningar (använd 0 för att inaktivera)
 
 - Kräver ett värde
 
-### `--session-save-redis-disable-locking`
+#### `--session-save-redis-disable-locking`
 
 Redis inaktiverar låsning. Värden: false (standard), true
 
 - Kräver ett värde
 
-### `--session-save-redis-min-lifetime`
+#### `--session-save-redis-min-lifetime`
 
 Redis-sessionens livstid i sekunder
 
 - Kräver ett värde
 
-### `--session-save-redis-max-lifetime`
+#### `--session-save-redis-max-lifetime`
 
 Maximal sessionstid för Redis, i sekunder
 
 - Kräver ett värde
 
-### `--session-save-redis-sentinel-master`
+#### `--session-save-redis-sentinel-master`
 
 Redis Sentinel master
 
 - Kräver ett värde
 
-### `--session-save-redis-sentinel-servers`
+#### `--session-save-redis-sentinel-servers`
 
 Redis Sentinel-servrar, kommaseparerade
 
 - Kräver ett värde
 
-### `--session-save-redis-sentinel-verify-master`
+#### `--session-save-redis-sentinel-verify-master`
 
 Redis Sentinel, verifiera master. Värden: false (standard), true
 
 - Kräver ett värde
 
-### `--session-save-redis-sentinel-connect-retries`
+#### `--session-save-redis-sentinel-connect-retries`
 
 Redis Sentinel-anslutningsförsök.
 
 - Kräver ett värde
 
-### `--cache-backend`
+#### `--cache-backend`
 
 Standardhanterare för cache
 
 - Kräver ett värde
 
-### `--cache-backend-redis-server`
+#### `--cache-backend-redis-server`
 
 Redis-server
 
 - Kräver ett värde
 
-### `--cache-backend-redis-db`
+#### `--cache-backend-redis-db`
 
 Databasnummer för cachen
 
 - Kräver ett värde
 
-### `--cache-backend-redis-port`
+#### `--cache-backend-redis-port`
 
 Redis-serverlyssningsport
 
 - Kräver ett värde
 
-### `--cache-backend-redis-password`
+#### `--cache-backend-redis-password`
 
 Redis-serverlösenord
 
 - Kräver ett värde
 
-### `--cache-backend-redis-compress-data`
+#### `--cache-backend-redis-compress-data`
 
 Ange 0 om du vill inaktivera komprimering (standard är 1, aktiverad)
 
 - Kräver ett värde
 
-### `--cache-backend-redis-compression-lib`
+#### `--cache-backend-redis-compression-lib`
 
 Komprimeringslib för att använda [snappy,lzf,l4z,zstd,gzip] (lämna tomt för att avgöra automatiskt)
 
 - Kräver ett värde
 
-### `--cache-backend-redis-use-lua`
+#### `--cache-backend-redis-use-lua`
 
 Ange 1 för att aktivera Llua (standard är 0, inaktiverat)
 
 - Kräver ett värde
 
-### `--cache-id-prefix`
+#### `--cache-id-prefix`
 
 ID-prefix för cachenycklar
 
 - Kräver ett värde
 
-### `--allow-parallel-generation`
+#### `--allow-parallel-generation`
 
 Tillåt generering av cache på ett icke-blockerande sätt
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--page-cache`
+#### `--page-cache`
 
 Standardhanterare för cache
 
 - Kräver ett värde
 
-### `--page-cache-redis-server`
+#### `--page-cache-redis-server`
 
 Redis-server
 
 - Kräver ett värde
 
-### `--page-cache-redis-db`
+#### `--page-cache-redis-db`
 
 Databasnummer för cachen
 
 - Kräver ett värde
 
-### `--page-cache-redis-port`
+#### `--page-cache-redis-port`
 
 Redis-serverlyssningsport
 
 - Kräver ett värde
 
-### `--page-cache-redis-password`
+#### `--page-cache-redis-password`
 
 Redis-serverlösenord
 
 - Kräver ett värde
 
-### `--page-cache-redis-compress-data`
+#### `--page-cache-redis-compress-data`
 
 Ange 1 för att komprimera helsidescachen (använd 0 för att inaktivera)
 
 - Kräver ett värde
 
-### `--page-cache-redis-compression-lib`
+#### `--page-cache-redis-compression-lib`
 
 Komprimeringsbibliotek som ska använda [snappy,lzf,l4z,zstd,gzip] (lämna tomt för att avgöra automatiskt)
 
 - Kräver ett värde
 
-### `--page-cache-id-prefix`
+#### `--page-cache-id-prefix`
 
 ID-prefix för cachenycklar
 
 - Kräver ett värde
 
-### `--lock-provider`
+#### `--lock-provider`
 
 Lås leverantörsnamn
 
 - Kräver ett värde
 
-### `--lock-db-prefix`
+#### `--lock-db-prefix`
 
 Installationsspecifikt låsprefix för att undvika låskonflikter
 
 - Kräver ett värde
 
-### `--lock-zookeeper-host`
+#### `--lock-zookeeper-host`
 
 Värd och port för anslutning till Zookeeper-klustret. Exempel: 127.0.0.1:2181
 
 - Kräver ett värde
 
-### `--lock-zookeeper-path`
+#### `--lock-zookeeper-path`
 
 Sökvägen där Zookeeper sparar lås. Standardsökvägen är: /magento/locks
 
 - Kräver ett värde
 
-### `--lock-file-path`
+#### `--lock-file-path`
 
 Sökvägen där fillås sparas.
 
 - Kräver ett värde
 
-### `--document-root-is-pub`
+#### `--document-root-is-pub`
 
 Flagga som ska visas är Pub är på roten, kan bara vara true eller false
 
 - Kräver ett värde
 
-### `--backpressure-logger`
+#### `--backpressure-logger`
 
 Hanterare för mottrycksloggare
 
 - Kräver ett värde
 
-### `--backpressure-logger-redis-server`
+#### `--backpressure-logger-redis-server`
 
 Redis-server
 
 - Kräver ett värde
 
-### `--backpressure-logger-redis-port`
+#### `--backpressure-logger-redis-port`
 
 Redis-serverlyssningsport
 
 - Kräver ett värde
 
-### `--backpressure-logger-redis-timeout`
+#### `--backpressure-logger-redis-timeout`
 
 Servertimeout för Redis
 
 - Kräver ett värde
 
-### `--backpressure-logger-redis-persistent`
+#### `--backpressure-logger-redis-persistent`
 
 Redis persistent
 
 - Kräver ett värde
 
-### `--backpressure-logger-redis-db`
+#### `--backpressure-logger-redis-db`
 
 Redis-databasnummer
 
 - Kräver ett värde
 
-### `--backpressure-logger-redis-password`
+#### `--backpressure-logger-redis-password`
 
 Redis-serverlösenord
 
 - Kräver ett värde
 
-### `--backpressure-logger-redis-user`
+#### `--backpressure-logger-redis-user`
 
 Redis-serveranvändare
 
 - Kräver ett värde
 
-### `--backpressure-logger-id-prefix`
+#### `--backpressure-logger-id-prefix`
 
 ID-prefix för nycklar
 
 - Kräver ett värde
 
-### `--magento-init-params`
+#### `--magento-init-params`
 
 Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magento. Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `setup:db-data:upgrade`
@@ -8579,60 +3618,15 @@ bin/magento setup:db-data:upgrade [--magento-init-params MAGENTO-INIT-PARAMS]
 
 Installerar och uppgraderar data i databasen
 
+### Alternativ
 
-### `--magento-init-params`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--magento-init-params`
 
 Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magento. Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `setup:db-declaration:generate-patch`
@@ -8643,81 +3637,38 @@ bin/magento setup:db-declaration:generate-patch [--revertable [REVERTABLE]] [--t
 
 Generera en patch och placera den i en specifik mapp.
 
+### Argument
 
-
-### `module`
+#### `module`
 
 Modulnamn
 
 - Obligatoriskt
 
-### `patch`
+
+#### `patch`
 
 Namn på korrigering
 
 - Obligatoriskt
 
-### `--revertable`
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--revertable`
 
 Kontrollera om korrigeringen kan ångras eller inte.
 
 - Standard: `false`
 - Accepterar ett värde
 
-### `--type`
+#### `--type`
 
 Ta reda på vilken typ av korrigering som ska skapas. Tillgängliga värden: `data`, `schema`.
 
 - Standard: `data`
 - Accepterar ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `setup:db-declaration:generate-whitelist`
@@ -8728,61 +3679,16 @@ bin/magento setup:db-declaration:generate-whitelist [--module-name [MODULE-NAME]
 
 Generera vitlista över tabeller och kolumner som kan redigeras av deklarationsinstallationsprogrammet
 
+### Alternativ
 
-### `--module-name`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--module-name`
 
 Namn på modulen där vitlistan ska genereras
 
 - Standard: `all`
 - Accepterar ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `setup:db-schema:add-slave`
@@ -8793,107 +3699,62 @@ bin/magento setup:db-schema:add-slave [--host HOST] [--dbname DBNAME] [--usernam
 
 Flytta tabeller relaterade till utcheckningsofferter till en separat databasserver
 
+### Alternativ
 
-### `--host`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--host`
 
 Slave DB-servervärd
 
 - Standard: `localhost`
 - Kräver ett värde
 
-### `--dbname`
+#### `--dbname`
 
 Slave-databasnamn
 
 - Kräver ett värde
 
-### `--username`
+#### `--username`
 
 Slave DB-användarnamn
 
 - Standard: `root`
 - Kräver ett värde
 
-### `--password`
+#### `--password`
 
 Slave DB-användarlösenord
 
 - Accepterar ett värde
 
-### `--connection`
+#### `--connection`
 
 Slavanslutningsnamn
 
 - Standard: `default`
 - Accepterar ett värde
 
-### `--resource`
+#### `--resource`
 
 Slavresursnamn
 
 - Standard: `default`
 - Accepterar ett värde
 
-### `--maxAllowedLag`
+#### `--maxAllowedLag`
 
 Maximal tillåten fördröjd slavanslutning (i sekunder)
 
 - Standard: &quot;
 - Accepterar ett värde
 
-### `--magento-init-params`
+#### `--magento-init-params`
 
 Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magento. Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `setup:db-schema:split-quote`
@@ -8904,98 +3765,53 @@ bin/magento setup:db-schema:split-quote [--host HOST] [--dbname DBNAME] [--usern
 
 Flytta tabeller relaterade till utcheckningsofferter till en separat databasserver. Borttagen sedan 2.4.2 och kommer att tas bort
 
+### Alternativ
 
-### `--host`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--host`
 
 Checkout DB Server-värd
 
 - Kräver ett värde
 
-### `--dbname`
+#### `--dbname`
 
 Namn på utcheckningsdatabas
 
 - Kräver ett värde
 
-### `--username`
+#### `--username`
 
 Användarnamn för utcheckning av databas
 
 - Kräver ett värde
 
-### `--password`
+#### `--password`
 
 Checkout-användarlösenord för DB
 
 - Accepterar ett värde
 
-### `--connection`
+#### `--connection`
 
 Anslutningsnamn för utcheckning
 
 - Standard: `checkout`
 - Accepterar ett värde
 
-### `--resource`
+#### `--resource`
 
 Utcheckningsresursnamn
 
 - Standard: `checkout`
 - Accepterar ett värde
 
-### `--magento-init-params`
+#### `--magento-init-params`
 
 Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magento. Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `setup:db-schema:split-sales`
@@ -9006,98 +3822,53 @@ bin/magento setup:db-schema:split-sales [--host HOST] [--dbname DBNAME] [--usern
 
 Flytta försäljningsrelaterade register till en separat databasserver. Borttagen sedan 2.4.2 och kommer att tas bort
 
+### Alternativ
 
-### `--host`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--host`
 
 Sales DB Server-värd
 
 - Kräver ett värde
 
-### `--dbname`
+#### `--dbname`
 
 Namn på försäljningsdatabas
 
 - Kräver ett värde
 
-### `--username`
+#### `--username`
 
 Användarnamn för försäljningsdatabas
 
 - Kräver ett värde
 
-### `--password`
+#### `--password`
 
 Användarlösenord för försäljningsdatabas
 
 - Accepterar ett värde
 
-### `--connection`
+#### `--connection`
 
 Namn på försäljningsanslutning
 
 - Standard: `sales`
 - Accepterar ett värde
 
-### `--resource`
+#### `--resource`
 
 Namn på försäljningsresurs
 
 - Standard: `sales`
 - Accepterar ett värde
 
-### `--magento-init-params`
+#### `--magento-init-params`
 
 Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magento. Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `setup:db-schema:upgrade`
@@ -9108,67 +3879,22 @@ bin/magento setup:db-schema:upgrade [--convert-old-scripts [CONVERT-OLD-SCRIPTS]
 
 Installerar och uppgraderar databasschemat
 
+### Alternativ
 
-### `--convert-old-scripts`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--convert-old-scripts`
 
 Tillåter konvertering av gamla skript (InstallSchema, UpgradeSchema) till formatet db_schema.xml
 
 - Standard: `false`
 - Accepterar ett värde
 
-### `--magento-init-params`
+#### `--magento-init-params`
 
 Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magento. Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `setup:db:status`
@@ -9179,60 +3905,15 @@ bin/magento setup:db:status [--magento-init-params MAGENTO-INIT-PARAMS]
 
 Kontrollerar om databasschemat eller data kräver uppgradering
 
+### Alternativ
 
-### `--magento-init-params`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--magento-init-params`
 
 Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magento. Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `setup:di:compile`
@@ -9243,54 +3924,9 @@ bin/magento setup:di:compile
 
 Genererar DI-konfiguration och alla saknade klasser som kan genereras automatiskt
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `setup:install`
@@ -9301,886 +3937,841 @@ bin/magento setup:install [--enable-debug-logging ENABLE-DEBUG-LOGGING] [--enabl
 
 Installerar programmet Magento
 
+### Alternativ
 
-### `--enable-debug-logging`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--enable-debug-logging`
 
 Aktivera felsökningsloggning
 
 - Kräver ett värde
 
-### `--enable-syslog-logging`
+#### `--enable-syslog-logging`
 
 Aktivera syslog-loggning
 
 - Kräver ett värde
 
-### `--backend-frontname`
+#### `--backend-frontname`
 
 Förnamn för serverdel (genereras automatiskt om det saknas)
 
 - Kräver ett värde
 
-### `--remote-storage-driver`
+#### `--remote-storage-driver`
 
 Drivrutin för fjärrlagring
 
 - Kräver ett värde
 
-### `--remote-storage-prefix`
+#### `--remote-storage-prefix`
 
 Prefix för fjärrlagring
 
 - Standard: &quot;
 - Kräver ett värde
 
-### `--remote-storage-endpoint`
+#### `--remote-storage-endpoint`
 
 Slutpunkt för fjärrlagring
 
 - Kräver ett värde
 
-### `--remote-storage-bucket`
+#### `--remote-storage-bucket`
 
 Fjärrlagringsbucket
 
 - Kräver ett värde
 
-### `--remote-storage-region`
+#### `--remote-storage-region`
 
 Fjärrlagringsregion
 
 - Kräver ett värde
 
-### `--remote-storage-key`
+#### `--remote-storage-key`
 
 Åtkomstnyckel för fjärrlagring
 
 - Standard: &quot;
 - Kräver ett värde
 
-### `--remote-storage-secret`
+#### `--remote-storage-secret`
 
 Hemlig nyckel för fjärrlagring
 
 - Standard: &quot;
 - Kräver ett värde
 
-### `--remote-storage-path-style`
+#### `--remote-storage-path-style`
 
 Stil för fjärrlagringssökväg
 
 - Standard: `0`
 - Kräver ett värde
 
-### `--id_salt`
+#### `--id_salt`
 
 GraphQl Salt
 
 - Kräver ett värde
 
-### `--config-async`
+#### `--config-async`
 
 Vill du aktivera Spara async Admin Config? 1 - Ja, 0 - Nej
 
 - Kräver ett värde
 
-### `--checkout-async`
+#### `--checkout-async`
 
 Vill du aktivera asynkron orderbearbetning? 1 - Ja, 0 - Nej
 
 - Kräver ett värde
 
-### `--amqp-host`
+#### `--amqp-host`
 
 AMQP-servervärd
 
 - Standard: &quot;
 - Kräver ett värde
 
-### `--amqp-port`
+#### `--amqp-port`
 
 AMQP-serverport
 
 - Standard: `5672`
 - Kräver ett värde
 
-### `--amqp-user`
+#### `--amqp-user`
 
 Användarnamn för AMQP-server
 
 - Standard: &quot;
 - Kräver ett värde
 
-### `--amqp-password`
+#### `--amqp-password`
 
 Lösenord för AMQP-server
 
 - Standard: &quot;
 - Kräver ett värde
 
-### `--amqp-virtualhost`
+#### `--amqp-virtualhost`
 
 Virtualhost för Amqp
 
 - Standard: `/`
 - Kräver ett värde
 
-### `--amqp-ssl`
+#### `--amqp-ssl`
 
 Amqp SSL
 
 - Standard: &quot;
 - Kräver ett värde
 
-### `--amqp-ssl-options`
+#### `--amqp-ssl-options`
 
 AMQP SSL-alternativ (JSON)
 
 - Standard: &quot;
 - Kräver ett värde
 
-### `--consumers-wait-for-messages`
+#### `--consumers-wait-for-messages`
 
 Ska konsumenterna vänta på ett meddelande från kön? 1 - Ja, 0 - Nej
 
 - Kräver ett värde
 
-### `--queue-default-connection`
+#### `--queue-default-connection`
 
 Standardanslutning för Message Queues. Kan vara db, amqp eller ett anpassat kösystem. Kösystemet måste vara installerat och konfigurerat, annars kommer meddelanden inte att behandlas korrekt.
 
 - Kräver ett värde
 
-### `--deferred-total-calculating`
+#### `--deferred-total-calculating`
 
 Vill du aktivera fördröjd total beräkning? 1 - Ja, 0 - Nej
 
 - Kräver ett värde
 
-### `--key`
+#### `--key`
 
 Krypteringsnyckel
 
 - Kräver ett värde
 
-### `--db-host`
+#### `--db-host`
 
 Databasservervärd
 
 - Kräver ett värde
 
-### `--db-name`
+#### `--db-name`
 
 Databasnamn
 
 - Kräver ett värde
 
-### `--db-user`
+#### `--db-user`
 
 Användarnamn för databasserver
 
 - Kräver ett värde
 
-### `--db-engine`
+#### `--db-engine`
 
 Databasservermotor
 
 - Kräver ett värde
 
-### `--db-password`
+#### `--db-password`
 
 Lösenord för databasserver
 
 - Kräver ett värde
 
-### `--db-prefix`
+#### `--db-prefix`
 
 Prefix för databastabell
 
 - Kräver ett värde
 
-### `--db-model`
+#### `--db-model`
 
 Databastyp
 
 - Kräver ett värde
 
-### `--db-init-statements`
+#### `--db-init-statements`
 
 Initial uppsättning kommandon för databas
 
 - Kräver ett värde
 
-### `--skip-db-validation`, `-s`
+#### `--skip-db-validation`, `-s`
 
 Om det anges hoppas validering av databasanslutning över
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--http-cache-hosts`
+#### `--http-cache-hosts`
 
 http-cachevärdar
 
 - Kräver ett värde
 
-### `--db-ssl-key`
+#### `--db-ssl-key`
 
 Fullständig sökväg till klientnyckelfilen för att upprätta en databasanslutning via SSL
 
 - Standard: &quot;
 - Kräver ett värde
 
-### `--db-ssl-cert`
+#### `--db-ssl-cert`
 
 Fullständig sökväg till klientcertifikatfilen för att upprätta en databasanslutning via SSL
 
 - Standard: &quot;
 - Kräver ett värde
 
-### `--db-ssl-ca`
+#### `--db-ssl-ca`
 
 Fullständig sökväg till servercertifikatfilen för att upprätta en databasanslutning via SSL
 
 - Standard: &quot;
 - Kräver ett värde
 
-### `--db-ssl-verify`
+#### `--db-ssl-verify`
 
 Verifiera servercertifiering
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--session-save`
+#### `--session-save`
 
 Hanterare för sessionssparande
 
 - Kräver ett värde
 
-### `--session-save-redis-host`
+#### `--session-save-redis-host`
 
 Fullständigt kvalificerat värdnamn, IP-adress eller absolut sökväg om UNIX-socketar används
 
 - Kräver ett värde
 
-### `--session-save-redis-port`
+#### `--session-save-redis-port`
 
 Redis-serverlyssningsport
 
 - Kräver ett värde
 
-### `--session-save-redis-password`
+#### `--session-save-redis-password`
 
 Redis-serverlösenord
 
 - Kräver ett värde
 
-### `--session-save-redis-timeout`
+#### `--session-save-redis-timeout`
 
 Anslutningens timeout, i sekunder
 
 - Kräver ett värde
 
-### `--session-save-redis-persistent-id`
+#### `--session-save-redis-persistent-id`
 
 Unik sträng för att aktivera beständiga anslutningar
 
 - Kräver ett värde
 
-### `--session-save-redis-db`
+#### `--session-save-redis-db`
 
 Redis-databasnummer
 
 - Kräver ett värde
 
-### `--session-save-redis-compression-threshold`
+#### `--session-save-redis-compression-threshold`
 
 Komprimeringströskel för Redis
 
 - Kräver ett värde
 
-### `--session-save-redis-compression-lib`
+#### `--session-save-redis-compression-lib`
 
 Redis-komprimeringsbibliotek. Värden: gzip (standard), lzf, lz4, snappy
 
 - Kräver ett värde
 
-### `--session-save-redis-log-level`
+#### `--session-save-redis-log-level`
 
 Redis-loggnivå. Värden: 0 (minst utförlig) till 7 (mest utförlig)
 
 - Kräver ett värde
 
-### `--session-save-redis-max-concurrency`
+#### `--session-save-redis-max-concurrency`
 
 Maximalt antal processer som kan vänta på ett lås i en session
 
 - Kräver ett värde
 
-### `--session-save-redis-break-after-frontend`
+#### `--session-save-redis-break-after-frontend`
 
 Antal sekunder att vänta innan ett lås för en klientsession bryts
 
 - Kräver ett värde
 
-### `--session-save-redis-break-after-adminhtml`
+#### `--session-save-redis-break-after-adminhtml`
 
 Antal sekunder att vänta innan ett lås för administratörssessionen bryts
 
 - Kräver ett värde
 
-### `--session-save-redis-first-lifetime`
+#### `--session-save-redis-first-lifetime`
 
 Livstid, i sekunder, för session för icke-bots vid första skrivning (använd 0 för att inaktivera)
 
 - Kräver ett värde
 
-### `--session-save-redis-bot-first-lifetime`
+#### `--session-save-redis-bot-first-lifetime`
 
 Livstid, i sekunder, för session för bots vid första skrivning (använd 0 för att inaktivera)
 
 - Kräver ett värde
 
-### `--session-save-redis-bot-lifetime`
+#### `--session-save-redis-bot-lifetime`
 
 Sessionens livstid för start vid efterföljande skrivningar (använd 0 för att inaktivera)
 
 - Kräver ett värde
 
-### `--session-save-redis-disable-locking`
+#### `--session-save-redis-disable-locking`
 
 Redis inaktiverar låsning. Värden: false (standard), true
 
 - Kräver ett värde
 
-### `--session-save-redis-min-lifetime`
+#### `--session-save-redis-min-lifetime`
 
 Redis-sessionens livstid i sekunder
 
 - Kräver ett värde
 
-### `--session-save-redis-max-lifetime`
+#### `--session-save-redis-max-lifetime`
 
 Maximal sessionstid för Redis, i sekunder
 
 - Kräver ett värde
 
-### `--session-save-redis-sentinel-master`
+#### `--session-save-redis-sentinel-master`
 
 Redis Sentinel master
 
 - Kräver ett värde
 
-### `--session-save-redis-sentinel-servers`
+#### `--session-save-redis-sentinel-servers`
 
 Redis Sentinel-servrar, kommaseparerade
 
 - Kräver ett värde
 
-### `--session-save-redis-sentinel-verify-master`
+#### `--session-save-redis-sentinel-verify-master`
 
 Redis Sentinel, verifiera master. Värden: false (standard), true
 
 - Kräver ett värde
 
-### `--session-save-redis-sentinel-connect-retries`
+#### `--session-save-redis-sentinel-connect-retries`
 
 Redis Sentinel-anslutningsförsök.
 
 - Kräver ett värde
 
-### `--cache-backend`
+#### `--cache-backend`
 
 Standardhanterare för cache
 
 - Kräver ett värde
 
-### `--cache-backend-redis-server`
+#### `--cache-backend-redis-server`
 
 Redis-server
 
 - Kräver ett värde
 
-### `--cache-backend-redis-db`
+#### `--cache-backend-redis-db`
 
 Databasnummer för cachen
 
 - Kräver ett värde
 
-### `--cache-backend-redis-port`
+#### `--cache-backend-redis-port`
 
 Redis-serverlyssningsport
 
 - Kräver ett värde
 
-### `--cache-backend-redis-password`
+#### `--cache-backend-redis-password`
 
 Redis-serverlösenord
 
 - Kräver ett värde
 
-### `--cache-backend-redis-compress-data`
+#### `--cache-backend-redis-compress-data`
 
 Ange 0 om du vill inaktivera komprimering (standard är 1, aktiverad)
 
 - Kräver ett värde
 
-### `--cache-backend-redis-compression-lib`
+#### `--cache-backend-redis-compression-lib`
 
 Komprimeringslib för att använda [snappy,lzf,l4z,zstd,gzip] (lämna tomt för att avgöra automatiskt)
 
 - Kräver ett värde
 
-### `--cache-backend-redis-use-lua`
+#### `--cache-backend-redis-use-lua`
 
 Ange 1 för att aktivera Llua (standard är 0, inaktiverat)
 
 - Kräver ett värde
 
-### `--cache-id-prefix`
+#### `--cache-id-prefix`
 
 ID-prefix för cachenycklar
 
 - Kräver ett värde
 
-### `--allow-parallel-generation`
+#### `--allow-parallel-generation`
 
 Tillåt generering av cache på ett icke-blockerande sätt
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--page-cache`
+#### `--page-cache`
 
 Standardhanterare för cache
 
 - Kräver ett värde
 
-### `--page-cache-redis-server`
+#### `--page-cache-redis-server`
 
 Redis-server
 
 - Kräver ett värde
 
-### `--page-cache-redis-db`
+#### `--page-cache-redis-db`
 
 Databasnummer för cachen
 
 - Kräver ett värde
 
-### `--page-cache-redis-port`
+#### `--page-cache-redis-port`
 
 Redis-serverlyssningsport
 
 - Kräver ett värde
 
-### `--page-cache-redis-password`
+#### `--page-cache-redis-password`
 
 Redis-serverlösenord
 
 - Kräver ett värde
 
-### `--page-cache-redis-compress-data`
+#### `--page-cache-redis-compress-data`
 
 Ange 1 för att komprimera helsidescachen (använd 0 för att inaktivera)
 
 - Kräver ett värde
 
-### `--page-cache-redis-compression-lib`
+#### `--page-cache-redis-compression-lib`
 
 Komprimeringsbibliotek som ska använda [snappy,lzf,l4z,zstd,gzip] (lämna tomt för att avgöra automatiskt)
 
 - Kräver ett värde
 
-### `--page-cache-id-prefix`
+#### `--page-cache-id-prefix`
 
 ID-prefix för cachenycklar
 
 - Kräver ett värde
 
-### `--lock-provider`
+#### `--lock-provider`
 
 Lås leverantörsnamn
 
 - Kräver ett värde
 
-### `--lock-db-prefix`
+#### `--lock-db-prefix`
 
 Installationsspecifikt låsprefix för att undvika låskonflikter
 
 - Kräver ett värde
 
-### `--lock-zookeeper-host`
+#### `--lock-zookeeper-host`
 
 Värd och port för anslutning till Zookeeper-klustret. Exempel: 127.0.0.1:2181
 
 - Kräver ett värde
 
-### `--lock-zookeeper-path`
+#### `--lock-zookeeper-path`
 
 Sökvägen där Zookeeper sparar lås. Standardsökvägen är: /magento/locks
 
 - Kräver ett värde
 
-### `--lock-file-path`
+#### `--lock-file-path`
 
 Sökvägen där fillås sparas.
 
 - Kräver ett värde
 
-### `--document-root-is-pub`
+#### `--document-root-is-pub`
 
 Flagga som ska visas är Pub är på roten, kan bara vara true eller false
 
 - Kräver ett värde
 
-### `--backpressure-logger`
+#### `--backpressure-logger`
 
 Hanterare för mottrycksloggare
 
 - Kräver ett värde
 
-### `--backpressure-logger-redis-server`
+#### `--backpressure-logger-redis-server`
 
 Redis-server
 
 - Kräver ett värde
 
-### `--backpressure-logger-redis-port`
+#### `--backpressure-logger-redis-port`
 
 Redis-serverlyssningsport
 
 - Kräver ett värde
 
-### `--backpressure-logger-redis-timeout`
+#### `--backpressure-logger-redis-timeout`
 
 Servertimeout för Redis
 
 - Kräver ett värde
 
-### `--backpressure-logger-redis-persistent`
+#### `--backpressure-logger-redis-persistent`
 
 Redis persistent
 
 - Kräver ett värde
 
-### `--backpressure-logger-redis-db`
+#### `--backpressure-logger-redis-db`
 
 Redis-databasnummer
 
 - Kräver ett värde
 
-### `--backpressure-logger-redis-password`
+#### `--backpressure-logger-redis-password`
 
 Redis-serverlösenord
 
 - Kräver ett värde
 
-### `--backpressure-logger-redis-user`
+#### `--backpressure-logger-redis-user`
 
 Redis-serveranvändare
 
 - Kräver ett värde
 
-### `--backpressure-logger-id-prefix`
+#### `--backpressure-logger-id-prefix`
 
 ID-prefix för nycklar
 
 - Kräver ett värde
 
-### `--base-url`
+#### `--base-url`
 
 Den URL som butiken ska vara tillgänglig på. Inaktuell, använd config:set med sökväg web/unsecure/base_url
 
 - Kräver ett värde
 
-### `--language`
+#### `--language`
 
 Standardspråkkod. Inaktuell, använd config:set med sökväg general/locale/code
 
 - Kräver ett värde
 
-### `--timezone`
+#### `--timezone`
 
 Standardkod för tidszon. Inaktuell, använd config:set med sökväg allmän/nationell inställning/tidszon
 
 - Kräver ett värde
 
-### `--currency`
+#### `--currency`
 
 Standardvalutakod. Inaktuellt, använd config:set med sökvägsvaluta/alternativ/bas, valuta/alternativ/standard och valuta/alternativ/tillåt
 
 - Kräver ett värde
 
-### `--use-rewrites`
+#### `--use-rewrites`
 
 Använd omskrivningar. Inaktuell, använd config:set med sökväg web/seo/use_rewrites
 
 - Kräver ett värde
 
-### `--use-secure`
+#### `--use-secure`
 
 Använd säkra URL:er. Aktivera bara det här alternativet om SSL är tillgängligt. Inaktuell, använd config:set med sökväg web/secure/use_in_frontTur
 
 - Kräver ett värde
 
-### `--base-url-secure`
+#### `--base-url-secure`
 
 Bas-URL för SSL-anslutning. Inaktuell, använd config:set med sökvägen web/secure/base_url
 
 - Kräver ett värde
 
-### `--use-secure-admin`
+#### `--use-secure-admin`
 
 Kör administratörsgränssnitt med SSL. Inaktuell, använd config:set med sökvägen web/secure/use_in_adminhtml
 
 - Kräver ett värde
 
-### `--admin-use-security-key`
+#### `--admin-use-security-key`
 
 Anger om en säkerhetsnyckelfunktion ska användas i Magento Admin-URL:er och -formulär. Inaktuell, använd config:set med sökvägsadministratör/säkerhet/use_form_key
 
 - Kräver ett värde
 
-### `--admin-user`
+#### `--admin-user`
 
 Administratörsanvändare
 
 - Accepterar ett värde
 
-### `--admin-password`
+#### `--admin-password`
 
 Administratörslösenord
 
 - Accepterar ett värde
 
-### `--admin-email`
+#### `--admin-email`
 
 Administratörens e-postadress
 
 - Accepterar ett värde
 
-### `--admin-firstname`
+#### `--admin-firstname`
 
 Förnamn för administratör
 
 - Accepterar ett värde
 
-### `--admin-lastname`
+#### `--admin-lastname`
 
 Administratörens efternamn
 
 - Accepterar ett värde
 
-### `--search-engine`
+#### `--search-engine`
 
 Sökmotor. Värden: elasticsearch7, elasticsearch8, opensearch
 
 - Kräver ett värde
 
-### `--elasticsearch-host`
+#### `--elasticsearch-host`
 
 Elasticsearch servervärd.
 
 - Kräver ett värde
 
-### `--elasticsearch-port`
+#### `--elasticsearch-port`
 
 Elasticsearch serverport.
 
 - Kräver ett värde
 
-### `--elasticsearch-enable-auth`
+#### `--elasticsearch-enable-auth`
 
 Ange 1 för att aktivera autentisering. (standard är 0, inaktiverad)
 
 - Kräver ett värde
 
-### `--elasticsearch-username`
+#### `--elasticsearch-username`
 
 Elasticsearch användarnamn. Gäller endast om HTTP-autentisering är aktiverat
 
 - Kräver ett värde
 
-### `--elasticsearch-password`
+#### `--elasticsearch-password`
 
 Elasticsearch lösenord. Gäller endast om HTTP-autentisering är aktiverat
 
 - Kräver ett värde
 
-### `--elasticsearch-index-prefix`
+#### `--elasticsearch-index-prefix`
 
 Elasticsearch-indexprefix.
 
 - Kräver ett värde
 
-### `--elasticsearch-timeout`
+#### `--elasticsearch-timeout`
 
 Servertimeout för Elasticsearch.
 
 - Kräver ett värde
 
-### `--opensearch-host`
+#### `--opensearch-host`
 
 OpenSearch-servervärd.
 
 - Kräver ett värde
 
-### `--opensearch-port`
+#### `--opensearch-port`
 
 OpenSearch-serverport.
 
 - Kräver ett värde
 
-### `--opensearch-enable-auth`
+#### `--opensearch-enable-auth`
 
 Ange 1 för att aktivera autentisering. (standard är 0, inaktiverad)
 
 - Kräver ett värde
 
-### `--opensearch-username`
+#### `--opensearch-username`
 
 OpenSearch-användarnamn. Gäller endast om HTTP-autentisering är aktiverat
 
 - Kräver ett värde
 
-### `--opensearch-password`
+#### `--opensearch-password`
 
 OpenSearch-lösenord. Gäller endast om HTTP-autentisering är aktiverat
 
 - Kräver ett värde
 
-### `--opensearch-index-prefix`
+#### `--opensearch-index-prefix`
 
 Index för OpenSearch.
 
 - Kräver ett värde
 
-### `--opensearch-timeout`
+#### `--opensearch-timeout`
 
 Tidsgräns för OpenSearch-server.
 
 - Kräver ett värde
 
-### `--cleanup-database`
+#### `--cleanup-database`
 
 Rensa databasen före installationen
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--sales-order-increment-prefix`
+#### `--sales-order-increment-prefix`
 
 Prefix för försäljningsordernummer
 
 - Kräver ett värde
 
-### `--use-sample-data`
+#### `--use-sample-data`
 
 Använd exempeldata
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--enable-modules`
+#### `--enable-modules`
 
 Lista med kommaavgränsade modulnamn. Detta måste ingå under installationen. Tillgängliga magiska param &quot;all&quot;.
 
 - Accepterar ett värde
 
-### `--disable-modules`
+#### `--disable-modules`
 
 Lista med kommaavgränsade modulnamn. Detta måste undvikas under installationen. Tillgängliga magiska param &quot;all&quot;.
 
 - Accepterar ett värde
 
-### `--convert-old-scripts`
+#### `--convert-old-scripts`
 
 Tillåter konvertering av gamla skript (InstallSchema, UpgradeSchema) till formatet db_schema.xml
 
 - Standard: `false`
 - Accepterar ett värde
 
-### `--interactive`, `-i`
+#### `--interactive`, `-i`
 
 Interaktiv installation av Magento
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--safe-mode`
+#### `--safe-mode`
 
 Säker installation av Magento med dumpar på destruktiva operationer, som borttagning av spalter
 
 - Accepterar ett värde
 
-### `--data-restore`
+#### `--data-restore`
 
 Återställ borttagna data från dumpar
 
 - Accepterar ett värde
 
-### `--dry-run`
+#### `--dry-run`
 
 Installationen av Magento kommer att köras i torrkörningsläge
 
 - Standard: `false`
 - Accepterar ett värde
 
-### `--magento-init-params`
+#### `--magento-init-params`
 
 Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magento. Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `setup:performance:generate-fixtures`
@@ -10191,65 +4782,21 @@ bin/magento setup:performance:generate-fixtures [-s|--skip-reindex] [--] <profil
 
 Skapar korrigeringar
 
+### Argument
 
-
-### `profile`
+#### `profile`
 
 Sökväg till profilkonfigurationsfil
 
 - Obligatoriskt
 
-### `--skip-reindex`, `-s`
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--skip-reindex`, `-s`
 
 Hoppa över omindexering
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -10263,78 +4810,33 @@ bin/magento setup:rollback [-c|--code-file CODE-FILE] [-m|--media-file MEDIA-FIL
 
 Återställer Magento-programkodbas, media och databas
 
+### Alternativ
 
-### `--code-file`, `-c`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--code-file`, `-c`
 
 Basnamn för säkerhetskopieringsfilen för kod i var/backups
 
 - Kräver ett värde
 
-### `--media-file`, `-m`
+#### `--media-file`, `-m`
 
 Basnamn för mediesäkerhetskopieringsfilen i var/backups
 
 - Kräver ett värde
 
-### `--db-file`, `-d`
+#### `--db-file`, `-d`
 
 Basnamn för databassäkerhetskopieringsfilen i var/backups
 
 - Kräver ett värde
 
-### `--magento-init-params`
+#### `--magento-init-params`
 
 Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magento. Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `setup:static-content:deploy`
@@ -10345,220 +4847,175 @@ bin/magento setup:static-content:deploy [-f|--force] [-s|--strategy [STRATEGY]] 
 
 Distribuerar statiska vyfiler
 
+### Argument
 
-
-### `languages`
+#### `languages`
 
 Blankstegsavgränsad lista med ISO-639-språkkoder som statiska vyfiler ska skrivas ut för.
 
 - Standard: `[]`
-
 - Array
 
-### `--force`, `-f`
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--force`, `-f`
 
 Distribuera filer i valfritt läge.
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--strategy`, `-s`
+#### `--strategy`, `-s`
 
 Distribuera filer med angiven strategi.
 
 - Standard: `quick`
 - Accepterar ett värde
 
-### `--area`, `-a`
+#### `--area`, `-a`
 
 Generera filer endast för de angivna områdena.
 
 - Standard: `all`
 - Accepterar flera värden
 
-### `--exclude-area`
+#### `--exclude-area`
 
 Generera inga filer för de angivna områdena.
 
 - Standard: `none`
 - Accepterar flera värden
 
-### `--theme`, `-t`
+#### `--theme`, `-t`
 
 Generera statiska vyfiler endast för de angivna temana.
 
 - Standard: `all`
 - Accepterar flera värden
 
-### `--exclude-theme`
+#### `--exclude-theme`
 
 Generera inte filer för de angivna temana.
 
 - Standard: `none`
 - Accepterar flera värden
 
-### `--language`, `-l`
+#### `--language`, `-l`
 
 Generera filer endast för de angivna språken.
 
 - Standard: `all`
 - Accepterar flera värden
 
-### `--exclude-language`
+#### `--exclude-language`
 
 Generera inte filer för de angivna språken.
 
 - Standard: `none`
 - Accepterar flera värden
 
-### `--jobs`, `-j`
+#### `--jobs`, `-j`
 
 Aktivera parallell bearbetning med angivet antal jobb.
 
 - Standard: `0`
 - Accepterar ett värde
 
-### `--max-execution-time`
+#### `--max-execution-time`
 
 Maximal förväntad körningstid för den statiska distributionsprocessen (i sekunder).
 
 - Standard: `900`
 - Accepterar ett värde
 
-### `--symlink-locale`
+#### `--symlink-locale`
 
 Skapa länkar för filerna för de språkinställningarna som skickas för distribution, men som inte har några anpassningar.
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--content-version`
+#### `--content-version`
 
 Anpassad version av statiskt innehåll kan användas om distributionen körs på flera noder för att säkerställa att den statiska innehållsversionen är identisk och att cachelagring fungerar som den ska.
 
 - Kräver ett värde
 
-### `--refresh-content-version-only`
+#### `--refresh-content-version-only`
 
 Om du bara uppdaterar versionen av statiskt innehåll kan du uppdatera statiskt innehåll i webbläsarens cache och CDN-cache.
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--no-javascript`
+#### `--no-javascript`
 
 Installera inte JavaScript-filer.
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--no-js-bundle`
+#### `--no-js-bundle`
 
 Distribuera inte JavaScript paketfiler.
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--no-css`
+#### `--no-css`
 
 Distribuera inte CSS-filer.
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--no-less`
+#### `--no-less`
 
 Distribuera inte LESS-filer.
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--no-images`
+#### `--no-images`
 
 Distribuera inte bilder.
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--no-fonts`
+#### `--no-fonts`
 
 Distribuera inte teckensnittsfiler.
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--no-html`
+#### `--no-html`
 
 Distribuera inte HTML-filer.
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--no-misc`
+#### `--no-misc`
 
 Distribuera inte filer av andra typer (.md, .jbf, .csv osv.).
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--no-html-minify`
+#### `--no-html-minify`
 
 Minimera inte HTML-filer.
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--no-parent`
+#### `--no-parent`
 
 Kompilera inte överordnade teman. Stöds endast i snabba och standardiserade strategier.
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -10572,114 +5029,69 @@ bin/magento setup:store-config:set [--base-url BASE-URL] [--language LANGUAGE] [
 
 Installerar butikskonfigurationen. Borttagen sedan 2.2.0. Använd config:set i stället
 
+### Alternativ
 
-### `--base-url`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--base-url`
 
 Den URL som butiken ska vara tillgänglig på. Inaktuell, använd config:set med sökväg web/unsecure/base_url
 
 - Kräver ett värde
 
-### `--language`
+#### `--language`
 
 Standardspråkkod. Inaktuell, använd config:set med sökväg general/locale/code
 
 - Kräver ett värde
 
-### `--timezone`
+#### `--timezone`
 
 Standardkod för tidszon. Inaktuell, använd config:set med sökväg allmän/nationell inställning/tidszon
 
 - Kräver ett värde
 
-### `--currency`
+#### `--currency`
 
 Standardvalutakod. Inaktuellt, använd config:set med sökvägsvaluta/alternativ/bas, valuta/alternativ/standard och valuta/alternativ/tillåt
 
 - Kräver ett värde
 
-### `--use-rewrites`
+#### `--use-rewrites`
 
 Använd omskrivningar. Inaktuell, använd config:set med sökväg web/seo/use_rewrites
 
 - Kräver ett värde
 
-### `--use-secure`
+#### `--use-secure`
 
 Använd säkra URL:er. Aktivera bara det här alternativet om SSL är tillgängligt. Inaktuell, använd config:set med sökväg web/secure/use_in_frontTur
 
 - Kräver ett värde
 
-### `--base-url-secure`
+#### `--base-url-secure`
 
 Bas-URL för SSL-anslutning. Inaktuell, använd config:set med sökvägen web/secure/base_url
 
 - Kräver ett värde
 
-### `--use-secure-admin`
+#### `--use-secure-admin`
 
 Kör administratörsgränssnitt med SSL. Inaktuell, använd config:set med sökvägen web/secure/use_in_adminhtml
 
 - Kräver ett värde
 
-### `--admin-use-security-key`
+#### `--admin-use-security-key`
 
 Anger om en säkerhetsnyckelfunktion ska användas i Magento Admin-URL:er och -formulär. Inaktuell, använd config:set med sökvägsadministratör/säkerhet/use_form_key
 
 - Kräver ett värde
 
-### `--magento-init-params`
+#### `--magento-init-params`
 
 Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magento. Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `setup:uninstall`
@@ -10690,60 +5102,15 @@ bin/magento setup:uninstall [--magento-init-params MAGENTO-INIT-PARAMS]
 
 Avinstallerar programmet Magento
 
+### Alternativ
 
-### `--magento-init-params`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--magento-init-params`
 
 Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magento. Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `setup:upgrade`
@@ -10754,93 +5121,48 @@ bin/magento setup:upgrade [--keep-generated] [--convert-old-scripts [CONVERT-OLD
 
 Uppgraderar Magento-programmet, DB-data och schema
 
+### Alternativ
 
-### `--keep-generated`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--keep-generated`
 
 Förhindrar att genererade filer tas bort. Vi avråder från att använda det här alternativet förutom när vi distribuerar till produktion. Kontakta systemintegratören eller administratören om du vill ha mer information.
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--convert-old-scripts`
+#### `--convert-old-scripts`
 
 Tillåter konvertering av gamla skript (InstallSchema, UpgradeSchema) till formatet db_schema.xml
 
 - Standard: `false`
 - Accepterar ett värde
 
-### `--safe-mode`
+#### `--safe-mode`
 
 Säker installation av Magento med dumpar på destruktiva operationer, som borttagning av spalter
 
 - Accepterar ett värde
 
-### `--data-restore`
+#### `--data-restore`
 
 Återställ borttagna data från dumpar
 
 - Accepterar ett värde
 
-### `--dry-run`
+#### `--dry-run`
 
 Installationen av Magento kommer att köras i torrkörningsläge
 
 - Standard: `false`
 - Accepterar ett värde
 
-### `--magento-init-params`
+#### `--magento-init-params`
 
 Lägg till i valfritt kommando för att anpassa initieringsparametrar för Magento. Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `store:list`
@@ -10851,54 +5173,9 @@ bin/magento store:list
 
 Visar listan över butiker
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `store:website:list`
@@ -10909,54 +5186,9 @@ bin/magento store:website:list
 
 Visar listan över webbplatser
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `support:backup:code`
@@ -10967,70 +5199,25 @@ bin/magento support:backup:code [--name [NAME]] [-o|--output [OUTPUT]] [-l|--log
 
 Skapa säkerhetskopia av kod
 
+### Alternativ
 
-### `--name`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--name`
 
 Dumpa namn
 
 - Accepterar ett värde
 
-### `--output`, `-o`
+#### `--output`, `-o`
 
 Utdatasökväg
 
 - Accepterar ett värde
 
-### `--logs`, `-l`
+#### `--logs`, `-l`
 
 Inkludera loggar
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -11044,77 +5231,32 @@ bin/magento support:backup:db [--name [NAME]] [-o|--output [OUTPUT]] [-l|--logs]
 
 Skapa DB-säkerhetskopiering
 
+### Alternativ
 
-### `--name`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--name`
 
 Dumpa namn
 
 - Accepterar ett värde
 
-### `--output`, `-o`
+#### `--output`, `-o`
 
 Utdatasökväg
 
 - Accepterar ett värde
 
-### `--logs`, `-l`
+#### `--logs`, `-l`
 
 Inkludera loggar
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--ignore-sanitize`, `-i`
+#### `--ignore-sanitize`, `-i`
 
 Ignorera sanering
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -11128,58 +5270,13 @@ bin/magento support:utility:check [--hide-paths]
 
 Kontrollera nödvändiga verktyg för säkerhetskopiering
 
+### Alternativ
 
-### `--hide-paths`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--hide-paths`
 
 Kontrollera bara nödvändiga konsolverktyg
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -11193,58 +5290,13 @@ bin/magento support:utility:paths [-f|--force]
 
 Skapa verktygssökvägslista
 
+### Alternativ
 
-### `--force`, `-f`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--force`, `-f`
 
 Tvinga
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -11258,75 +5310,31 @@ bin/magento theme:uninstall [--backup-code] [-c|--clear-static-content] [--] <th
 
 Avinstallerar tema
 
+### Argument
 
-
-### `theme`
+#### `theme`
 
 Sökväg till temat. Temasökvägen ska anges som fullständig sökväg, vilket är område/leverantör/namn. Till exempel front/Magento/blank
 
 - Standard: `[]`
-
 - Obligatoriskt
+
 - Array
 
-### `--backup-code`
+### Alternativ
+
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--backup-code`
 
 Säkerhetskopiera kod (förutom tillfälliga filer)
 
 - Standard: `false`
 - Accepterar inte ett värde
 
-### `--clear-static-content`, `-c`
+#### `--clear-static-content`, `-c`
 
 Rensa genererade statiska vyfiler.
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
 
 - Standard: `false`
 - Accepterar inte ett värde
@@ -11340,101 +5348,56 @@ bin/magento varnish:vcl:generate [--access-list ACCESS-LIST] [--backend-host BAC
 
 Skapar lack VCL och lägger det på kommandoraden
 
+### Alternativ
 
-### `--access-list`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--access-list`
 
 IP-åtkomstlista som kan rensa engelska
 
 - Standard: `localhost`
 - Kräver ett värde
 
-### `--backend-host`
+#### `--backend-host`
 
 Värd för webbserverdelen
 
 - Standard: `localhost`
 - Kräver ett värde
 
-### `--backend-port`
+#### `--backend-port`
 
 Port för webbserverdelen
 
 - Standard: `8080`
 - Kräver ett värde
 
-### `--export-version`
+#### `--export-version`
 
 The version of Varnish file
 
 - Standard: `6`
 - Kräver ett värde
 
-### `--grace-period`
+#### `--grace-period`
 
 Behåll programmet i sekunder
 
 - Standard: `300`
 - Kräver ett värde
 
-### `--input-file`
+#### `--input-file`
 
 Indatafil att generera cl från
 
 - Kräver ett värde
 
-### `--output-file`
+#### `--output-file`
 
 Sökväg till filen som ska skrivas vcl
 
 - Kräver ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `webhooks:dev:run`
@@ -11445,67 +5408,24 @@ bin/magento webhooks:dev:run <name> <payload>
 
 Kör en registrerad webkrok i utvecklingssyfte.
 
+### Argument
 
-
-### `name`
+#### `name`
 
 Webkrocksnamn
 
 - Obligatoriskt
 
-### `payload`
+
+#### `payload`
 
 Webkroknyttolasten i JSON-format
 
 - Obligatoriskt
 
-### `--help`, `-h`
+### Alternativ
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `webhooks:generate:module`
@@ -11516,54 +5436,9 @@ bin/magento webhooks:generate:module
 
 Generera plugin-program baserat på webkroks registreringar
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `webhooks:info`
@@ -11574,75 +5449,31 @@ bin/magento webhooks:info [--depth [DEPTH]] [--] <webhook-name> [<webhook-type>]
 
 Returnerar nyttolasten för den angivna webkroken.
 
+### Argument
 
-
-### `webhook-name`
+#### `webhook-name`
 
 Namn på webkrockmetod
 
 - Obligatoriskt
 
-### `webhook-type`
+
+#### `webhook-type`
 
 Webkrotyp (före, efter)
 
 - Standard: `before`
 
+### Alternativ
 
-### `--depth`
+Information om globala alternativ finns i [Globala alternativ](#global-options).
+
+#### `--depth`
 
 Antalet nivåer i webkroks nyttolast som ska returneras
 
 - Standard: `3`
 - Accepterar ett värde
-
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
 
 
 ## `webhooks:list`
@@ -11653,54 +5484,9 @@ bin/magento webhooks:list
 
 Visar en lista över webbhookar som prenumererar
 
+### Alternativ
 
-### `--help`, `-h`
-
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 
 ## `webhooks:list:all`
@@ -11711,58 +5497,14 @@ bin/magento webhooks:list:all <module_name>
 
 Returnerar en lista över webbhovsmetodnamn som stöds för den angivna modulen
 
+### Argument
 
-
-### `module_name`
+#### `module_name`
 
 Modulnamn
 
 - Obligatoriskt
 
-### `--help`, `-h`
+### Alternativ
 
-Visa hjälp för det angivna kommandot. När inget kommando anges visas hjälpen för listkommandot
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--quiet`, `-q`
-
-Skriv inget meddelande
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--verbose`, `-v|-vv|-vvv`
-
-Öka meddelandenas utförlighet: 1 för normal utskrift, 2 för mer utförlig utskrift och 3 för felsökning
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--version`, `-V`
-
-Visa den här programversionen
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--ansi`
-
-Tvinga (eller inaktivera) ANSI-utdata
-
-- Accepterar inte ett värde
-
-### `--no-ansi`
-
-Ignorera alternativet &quot;—ansi&quot;
-
-- Standard: `false`
-- Accepterar inte ett värde
-
-### `--no-interaction`, `-n`
-
-Ställ inga interaktiva frågor
-
-- Standard: `false`
-- Accepterar inte ett värde
+Information om globala alternativ finns i [Globala alternativ](#global-options).
