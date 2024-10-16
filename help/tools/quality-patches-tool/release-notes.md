@@ -2,9 +2,9 @@
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: e951ffec9b6b6178f58a1721095b7d62e4f006d3
+source-git-commit: f10eb87efbda20899574486f1e9db01f2a66f855
 workflow-type: tm+mt
-source-wordcount: '21987'
+source-wordcount: '22258'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,19 @@ ht-degree: 0%
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som har skapats av gemenskapen för Magento Open Source finns i [versionsinformationen](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.53 {#v1-1-53}
+
+* **ACSD-48318** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.7) - Korrigerar problemet där miljöemuleringsinkapsling inte tillåts. Emuleringen startar under anropet `send()` när emuleringen stoppas under anropet till `getInfoBlockHtml()`.
+* **ACSD-59930** (för Adobe Commerce >=2.4.6 &lt;2.4.8) - Förbättrar prestanda för företagets **[!UICONTROL Create]** -, **[!UICONTROL Save]** - och **[!UICONTROL Delete]** -flöden.
+* **ACSD-60584** (för Adobe Commerce och Magento Open Source >=2.4.5 &lt;2.4.7) - Korrigerar problemet där en åtkomsttoken som skapats för användaren på en webbplats tillåts komma åt eller ändra kundinformation på andra webbplatser.
+* **ACSD-60804** (för Adobe Commerce >=2.4.4 &lt;2.4.8) - Korrigerar problemet där redigering av en kund som är länkad till ett borttaget företag orsakar felet *Anrop till en medlemsfunktion `getSuperUserId()` på null*.
+* **ACSD-61133** (för Adobe Commerce >=2.4.4-p5 &lt;2.4.5) || >=2.4.5-p4 &lt;2.4.6 || >=2.4.6-p2 &lt;2.4.8) - Korrigerar problemet där `sales_clean_quotes` [!DNL cron] tar bort offerter från ej godkända inköpsorder.
+* **ACSD-61528** (för Adobe Commerce >=2.4.6 &lt;2.4.8) - Korrigerar problemet där hämtning av roller från [!UICONTROL Admin] med [!DNL GraphQL] inte ger några resultat.
+* **ACSD-61553** (för Adobe Commerce och Magento Open Source >=2.4.5 &lt;2.4.7) - Korrigerar problemet där **[!UICONTROL Cart Price Rule]** rabatter inte beräknas korrekt när flera rabatter med olika prioritet och **[!UICONTROL Maximum Qty Discount is Applied To]** används för produkten.
+* **ACSD-61667** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Förbättrar lagerprestanda för att skapa leveranser för många källor med upphämtning i butiken.
+* **ACSD-61969** (för Adobe Commerce >=2.4.7 &lt;2.4.8) - Korrigerar problemet där användaren måste skriva in en skiftlägeskänslig kupongkod för att matcha exakt som kupongkoden konfigurerats.
+* Uppdaterade patchar: ACSD-54989, ACSD-60632
 
 ## v1.1.52 {#v1-1-52}
 
