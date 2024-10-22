@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: 4a595d153b7b14939f9238e404ea3485f348dcdb
+source-git-commit: 5afe552b58fae28b4a8f020bdf2d3ec8b41b18d6
 workflow-type: tm+mt
-source-wordcount: '5975'
+source-wordcount: '5983'
 ht-degree: 0%
 
 ---
@@ -628,6 +628,7 @@ ht-degree: 0%
          - [ACSD-60632: Adressen har sparats vid varje orderförsök](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-51/acsd-60632-address-saved-on-every-order-attempt.md)
          - [ACSD-61195: Cart GraphQL-begäran returnerar inte objekt på den sista sidan](quality-patches-tool/patches-available-in-qpt/v1-1-51/acsd-61195-empty-cart-on-final-graphql-page.md)
          - [ACSD-60538: Attribut visas inte om en produkt är inaktiverad](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-51/acsd-60538-if-product-is-disabled-attributes-dont-show.md)
+         - [ACSD-59967: JavaScript-fel förhindrar att  [!DNL Google Maps] återges korrekt](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-51/acsd-59967-javascript-error-prevents-google-maps-from-rendering-correctly.md)
          - [ACSD-60326: GraphQL-fråga om kundens [!UICONTROL Returns]-status ger ett fel](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-51/acsd-60326-graphql-query-error-customer-return-status.md)
       - v1.1.52 {#v1-1-52}
          - [Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.52](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-52/overview.md)
