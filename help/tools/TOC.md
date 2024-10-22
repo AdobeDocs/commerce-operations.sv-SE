@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: 5afe552b58fae28b4a8f020bdf2d3ec8b41b18d6
+source-git-commit: 12f32287f1222725517344dcb0d6c2d3deade7cf
 workflow-type: tm+mt
-source-wordcount: '5983'
+source-wordcount: '5998'
 ht-degree: 0%
 
 ---
@@ -637,6 +637,7 @@ ht-degree: 0%
          - [ACSD-60590: Förbättra prestanda för BBestsellers Generering av Aggregated Daily Report](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-52/acsd-60590-optimized-bestseller-report-generation.md)
          - [ACSD-59925: Sorterar objekt i [!UICONTROL Media Gallery]](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-52/acsd-59925-sorting-items-in-media-gallery.md)
          - [ACSD-59865: [!UICONTROL Cart Price Rule] kan inte avbryta tidigare regler på grund av otillräckligt antal](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-52/acsd-59865-cart-price-rule-fix-for-insufficient-quantity-issue.md)
+         - [ACSD-59952: Fel vid borttagning av delad katalog med samma grupp-ID som en annan delad katalog](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-52/acsd-59952-error-on-deleting-shared-catalog-with-same-group-id-as-another-shared-catalog.md)
       - v1.1.53 {#v1-1-53}
          - [Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.53](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-53/overview.md)
       - [Leta efter Adobe Commerce-problem med verktyget för kvalitetskorrigeringar](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
