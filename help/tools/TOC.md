@@ -2,7 +2,7 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: 3efc57161e30a17dae50a52060a78698997649f0
+source-git-commit: fec2ee4a047d8b33fa1cb3b2c4d9364f925fa028
 workflow-type: tm+mt
 source-wordcount: '6061'
 ht-degree: 0%
@@ -632,7 +632,7 @@ ht-degree: 0%
          - [ACSD-60816: [!DNL New Relic] Skript för webbläsarövervakning som har injicerats av APM-agenten är inte kompatibla med CSP](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-51/acsd-60816-newrelic-browser-monitoring-scripts-injected-by-apm-agent-are-not-compliant-with-csp.md)
          - [ACSD-59967: JavaScript-fel förhindrar att  [!DNL Google Maps] återges korrekt](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-51/acsd-59967-javascript-error-prevents-google-maps-from-rendering-correctly.md)
          - [ACSD-60326: GraphQL-fråga om kundens [!UICONTROL Returns]-status ger ett fel](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-51/acsd-60326-graphql-query-error-customer-return-status.md)
-         - [ACSD-59786: GraphQL returnerar ett fel när ett offert-ID hämtas för en utgången offert](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-51/acsd-59786-graphql-returns-an-error-when-fetching-a-quote-id-for-an-expired.quote.md)
+         - [ACSD-59786: GraphQL returnerar ett fel när ett offert-ID hämtas för en utgången offert](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-51/acsd-59786-graphql-returns-an-error-when-fetching-a-quote-id-for-an-expired-quote.md)
       - v1.1.52 {#v1-1-52}
          - [Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.52](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-52/overview.md)
          - [ACSD-61366: Kommandot bin/magento setup:static-content:deploy —job 4 misslyckas med felet](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-52/acsd-61366-setup-command-fails-with-error.md)
