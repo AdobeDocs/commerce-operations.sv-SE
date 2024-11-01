@@ -3,7 +3,7 @@ title: Konfigurera fjärrlagring
 description: Lär dig hur du konfigurerar modulen Fjärrlagring för det lokala Commerce-programmet.
 feature: Configuration, Storage
 exl-id: 0428f889-46b0-44c9-8bd9-98c1be797011
-source-git-commit: 2a45fe77d5a6fac089ae2c55d0ad047064dd07b0
+source-git-commit: 4fce6763ec619b0b5069e71cced9ebeb81505304
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 0%
@@ -12,15 +12,27 @@ ht-degree: 0%
 
 # Konfigurera fjärrlagring
 
-Modulen Fjärrlagring ger möjlighet att lagra mediefiler och schemalägga import och export i en beständig fjärrlagringsbehållare med hjälp av en lagringstjänst som AWS S3. Som standard lagras mediefiler i samma filsystem som innehåller programmet i Adobe Commerce. Detta är ineffektivt för komplexa konfigurationer med flera servrar och kan leda till försämrade prestanda när resurser delas. Med modulen Fjärrlagring kan du lagra mediefiler i katalogen `pub/media` och importera/exportera filer i katalogen `var` i fjärrobjektets lagringsutrymme för att dra nytta av storleksändringen på serversidan.
+Modulen Fjärrlagring ger möjlighet att lagra mediefiler och schemalägga import och export i en beständig fjärrlagringsbehållare med hjälp av en lagringstjänst som AWS S3.
+
+Som standard lagras mediefiler i samma filsystem som innehåller programmet i Adobe Commerce. Detta är ineffektivt för komplexa konfigurationer med flera servrar och kan leda till försämrade prestanda när resurser delas. Med modulen Fjärrlagring kan du lagra mediefiler i katalogen `pub/media` och importera/exportera filer i katalogen `var` i fjärrobjektets lagringsutrymme för att dra nytta av storleksändringen på serversidan.
+
+>[!BEGINSHADEBOX]
+
+Du kan inte ha både fjärrlagring _och_-databaslagring aktiverat samtidigt. Du måste inaktivera databaslagring innan du aktiverar fjärrlagring.
+
+```bash
+bin/magento config:set system/media_storage_configuration/media_database 0
+```
+
+Om du aktiverar fjärrlagring kan det påverka din etablerade utvecklingsupplevelse. Vissa PHP-filfunktioner kanske inte fungerar som förväntat. Commerce Framework måste användas för filåtgärder. Listan över förbjudna inbyggda PHP-funktioner finns i databasen [magento-coding-standard](https://github.com/magento/magento-coding-standard/blob/develop/Magento2/Sniffs/Functions/DiscouragedFunctionSniff.php) .
+
+>[!ENDSHADEBOX]
 
 >[!INFO]
 >
->Fjärrlagring finns endast för Commerce version 2.4.2 och senare. Se versionsinformationen för [2.4.2](https://devdocs.magento.com/guides/v2.4/release-notes/open-source-2-4-2.html).
-
->[!INFO]
+>- Fjärrlagring finns endast för Commerce version 2.4.2 och senare. Se versionsinformationen för [2.4.2](https://devdocs.magento.com/guides/v2.4/release-notes/open-source-2-4-2.html).
 >
->Fjärrlagringsmodulen har _begränsat_ stöd för Adobe Commerce i molninfrastrukturen. Adobe kan inte felsöka nätverkskorttjänsten från tredje part helt. Mer information om hur du implementerar fjärrlagring för molnprojekt finns i [Konfigurera fjärrlagring för Commerce i molninfrastruktur](cloud-support.md) .
+>- Fjärrlagringsmodulen har _begränsat_ stöd för Adobe Commerce i molninfrastrukturen. Adobe kan inte felsöka nätverkskorttjänsten från tredje part helt. Mer information om hur du implementerar fjärrlagring för molnprojekt finns i [Konfigurera fjärrlagring för Commerce i molninfrastruktur](cloud-support.md) .
 
 ![schemabild](../../assets/configuration/remote-storage-schema.png)
 
@@ -69,18 +81,6 @@ Du kan installera fjärrlagring under en Adobe Commerce-installation eller lägg
 >
 >Information om Adobe Commerce molninfrastruktur finns i [Konfigurera fjärrlagring för Commerce i molninfrastrukturen](cloud-support.md).
 
-## Begränsningar
-
-Du kan inte ha både fjärrlagring och databaslagring aktiverat samtidigt. Inaktivera databaslagring om du använder fjärrlagring.
-
-```bash
-bin/magento config:set system/media_storage_configuration/media_database 0
-```
-
-Om du aktiverar fjärrlagring kan det påverka din etablerade utvecklingsupplevelse. Vissa PHP-filfunktioner kanske inte fungerar som förväntat. Commerce Framework måste användas för filåtgärder.
-
-Listan över förbjudna inbyggda PHP-funktioner finns i [magento-coding-standard-databasen][code-standard].
-
 ## Migrera innehåll
 
 När du har aktiverat fjärrlagring för ett specifikt kort kan du använda CLI för att migrera befintliga _media_ -filer till fjärrlagringen.
@@ -96,4 +96,3 @@ När du har aktiverat fjärrlagring för ett specifikt kort kan du använda CLI 
 <!-- link definitions -->
 
 [import-export]: https://docs.magento.com/user-guide/system/data-scheduled-import-export.html
-[code-standard]: https://github.com/magento/magento-coding-standard/blob/develop/Magento2/Sniffs/Functions/DiscouragedFunctionSniff.php
