@@ -4,7 +4,7 @@ description: Lär dig hur du optimerar bilder och använder snabb bildoptimering
 role: Developer, Admin
 feature: Best Practices
 exl-id: ada8b987-97ed-4232-9e1b-7e0a791a0807
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '197'
 ht-degree: 0%
@@ -32,9 +32,9 @@ Innan du överför bilder till dina Commerce-sajter bör du optimera och komprim
 
 ## Aktivera och konfigurera snabb bildoptimering
 
-När du har konfigurerat tjänsten Snabbt för ditt Adobe Commerce Cloud-projekt kan du läsa [Snabbt bildoptimering](https://devdocs.magento.com/cloud/cdn/fastly-image-optimization.html) för instruktioner om hur du aktiverar och konfigurerar bildoptimering.
+När du har konfigurerat tjänsten Snabbt för ditt Adobe Commerce Cloud-projekt kan du läsa [Snabbt bildoptimering](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/cdn/fastly-image-optimization) för instruktioner om hur du aktiverar och konfigurerar bildoptimering.
 
 ## Ytterligare information
 
-- [Konfigurera snabbt](https://devdocs.magento.com/cloud/cdn/configure-fastly.html)
+- [Konfigurera snabbt](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/cdn/setup-fastly/fastly-configuration)
 - [Dåligt optimerade bilder kan leda till prestandaproblem](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/file-storage-low-specific-page-loads-are-slow.html)

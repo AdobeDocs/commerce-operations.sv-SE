@@ -2,7 +2,7 @@
 title: Översättningsordlistor och språkpaket
 description: Lär dig hur du genererar översättningsordlistor och bygger språkpaket.
 exl-id: dd27ccdd-158d-40a6-a2e2-563857820ae9
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '1432'
 ht-degree: 0%
@@ -317,7 +317,7 @@ Generera en CSV-fil på ungefär samma sätt som i föregående exempel, men i s
 
 [Översättningar - översikt]: https://developer.adobe.com/commerce/frontend-core/guide/translations/
 [översättningsordlista]: https://developer.adobe.com/commerce/frontend-core/guide/translations/#translation-dictionaries
-[konfigurerar översättningarna]: https://docs.magento.com/user-guide/stores/store-language-add.html?Highlight=translation
+[konfigurerar översättningarna]: https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-localize
 [Läs mer om språkpaket]: https://developer.adobe.com/commerce/frontend-core/guide/translations/#language-packages
 [ISO 639-1]: https://www.iso.org/iso-639-language-codes.html
 [ISO 3166]: https://www.iso.org/iso-3166-country-codes.html

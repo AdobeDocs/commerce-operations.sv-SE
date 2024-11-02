@@ -2,7 +2,7 @@
 title: Kronjobb
 description: Lär dig mer om cron-grupper och hur du skapar ett anpassat cron-jobb.
 exl-id: a9d83af7-9979-4653-adc9-30ffeb13a5ce
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '155'
 ht-degree: 0%
@@ -21,5 +21,5 @@ Commerce-programmet innehåller följande cron-grupper:
 - `index`, som uppdaterar [indexerare](../cli/manage-indexers.md)
 - `consumers`, som kör meddelandekön [containers](../cli/start-message-queues.md)
 - Dessa ämnen finns endast i Adobe Commerce
-   - `staging`, som kör [Mellanlagringsrelaterade](https://docs.magento.com/user-guide/cms/content-staging.html) uppgifter
+   - `staging`, som kör [Mellanlagringsrelaterade](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/staging/content-staging) uppgifter
    - `catalog_event`, som kör aktiviteter för mål- och kundvagnsregler

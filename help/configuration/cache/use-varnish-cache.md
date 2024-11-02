@@ -3,7 +3,7 @@ title: Cachelagring med lack
 description: Lär dig hur cacherensning fungerar med lack och hur du använder det som en accelerator för webb-cachning för Adobe Commerce-programmet.
 feature: Configuration, Cache
 exl-id: 866da415-c428-4092-a045-c3079493cdc4
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: 79c8a15fb9686dd26d73805e9d0fd18bb987770d
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
@@ -42,7 +42,7 @@ När du har installerat och konfigurerat lack för att arbeta med Commerce kan f
 
 ## Konfigurera Commerce att rensa bort lack
 
-Commerce tömmer Varnish-värdar efter att du har konfigurerat Varnish-värdar med kommandot [`magento setup:config:set`](https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html#setupconfigset).
+Commerce tömmer Varnish-värdar efter att du har konfigurerat Varnish-värdar med kommandot [`magento setup:config:set`](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises#setupconfigset).
 
 Du kan använda den valfria parametern `--http-cache-hosts` för att ange en kommaavgränsad lista med Varnish-värdar och avlyssningsportar. Konfigurera alla varniska värdar, oavsett om du har en eller flera. (Separera inte värdar med ett blanksteg.)
 

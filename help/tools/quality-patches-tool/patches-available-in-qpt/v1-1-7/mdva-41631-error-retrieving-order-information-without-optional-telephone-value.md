@@ -3,7 +3,7 @@ title: 'MDVA-41631: Det gick inte att hämta orderinformation utan det valfria t
 description: MDVA-41631-korrigeringen åtgärdar ett problem där användare får felmeddelanden när de hämtar orderinformation utan att ange ett"telefonvärde" via GraphQL. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.7 är installerat. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.4.
 feature: Orders
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+source-git-commit: 79c8a15fb9686dd26d73805e9d0fd18bb987770d
 workflow-type: tm+mt
 source-wordcount: '415'
 ht-degree: 0%
@@ -36,8 +36,8 @@ Det går inte att hämta orderinformation utan telefonnummer via GraphQL.
 
 1. Gå till **Store** > **Konfiguration** > **Kunder** > **Kundkonfiguration** > **Alternativ för namn och adress** > **Visa telefonnummer** och ange telefonnumret som valfritt.
 1. Gör en beställning med GraphQL API som inloggad kund.
-   * Ange inte telefonnumret när du anger fakturerings- och leveransadress. Följ instruktionerna i [GraphQL självstudiekurs för utcheckning](https://devdocs.magento.com/guides/v2.4/graphql/tutorials/checkout/checkout-customer.html) i vår utvecklardokumentation.
-1. Hämta ordern med GraphQL [customerOrders-frågan](https://devdocs.magento.com/guides/v2.4/graphql/queries/customer-orders.html).
+   * Ange inte telefonnumret när du anger fakturerings- och leveransadress. Följ instruktionerna i [GraphQL självstudiekurs för utcheckning](https://developer.adobe.com/commerce/webapi/graphql/tutorials/checkout/checkout-customer.html) i vår utvecklardokumentation.
+1. Hämta ordern med GraphQL [customerOrders-frågan](https://developer.adobe.com/commerce/webapi/graphql/queries/customer-orders.html).
 
 <pre>
 <code class="language-graphql">

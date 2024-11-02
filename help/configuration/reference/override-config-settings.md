@@ -2,7 +2,7 @@
 title: Åsidosätt konfigurationsinställningar
 description: Lär dig hur du använder miljövariabler för att åsidosätta konfigurationsinställningar.
 exl-id: 788fd3cd-f8c1-4514-8141-547fed36e9ce
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '1202'
 ht-degree: 0%
@@ -62,8 +62,8 @@ Det allmänna formatet för systeminställningens variabelnamn följer:
   Mer information om omfång finns i:
 
    - [Steg 1: Hitta omfångsvärdet för webbplatsen eller butiksvyn](#step-1-find-the-website-or-store-view-scope-value)
-   - [Commerce User Guide topic on scope](https://docs.magento.com/user-guide/configuration/scope.html)
-   - [Snabbreferens för omfång](https://docs.magento.com/user-guide/stores/store-scope-reference.html)
+   - [Commerce User Guide topic on scope](https://experienceleague.adobe.com/en/docs/commerce-admin/start/setup/websites-stores-views#scope-settings)
+   - [Snabbreferens för omfång](https://experienceleague.adobe.com/en/docs/commerce-admin/config/scope-change#scope-quick-reference)
 
 `<SYSTEM__VARIABLE__NAME>` är konfigurationssökvägen med två understreck i stället för `/`. Mer information finns i [Steg 2: Ange systemvariabler](#step-2-set-global-website-or-store-view-variables).
 

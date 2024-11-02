@@ -3,7 +3,7 @@ title: Bästa praxis
 description: Använd de bästa metoderna som rekommenderas av Adobe för att hantera uppgraderingsprocessen för dina Adobe Commerce-projekt.
 feature: Upgrade, Best Practices
 exl-id: 53c505a3-8b99-4fc3-b1b4-f2f75208a51b
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '1055'
 ht-degree: 0%
@@ -49,7 +49,7 @@ Börja använda Adobe Commerce Extensibility-plattformen om du inte redan har gj
 
 - **UI-utökningsbarhet**. Utöka och utveckla din butiksfront oberoende av din backend- och mellanvara med [PWA Studio](https://developer.adobe.com/commerce/pwa-studio/).
 
-- **API-utökningsbarhet**. Använd [GraphQL](https://devdocs.magento.com/guides/v2.4/graphql/index.html) för att utöka webb-API-lagret genom att utveckla diagramdatamodellen och köra lambda-funktioner direkt från diagramlagret.
+- **API-utökningsbarhet**. Använd [GraphQL](https://developer.adobe.com/commerce/webapi/graphql/index.html) för att utöka webb-API-lagret genom att utveckla diagramdatamodellen och köra lambda-funktioner direkt från diagramlagret.
 
 - **Adobe I/O mellanvara och tjänster**. Anslut dina system till Adobe Commerce med Adobe mellanvara och en uppsättning appanslutningar som är byggda på [Adobe I/O](https://www.adobe.io/). Dessutom kan ni utöka era kärnplattformsfunktioner genom att skriva över standardbeteendet med er egen affärslogik som fungerar på Adobe I/O.
 
@@ -57,7 +57,7 @@ Börja använda Adobe Commerce Extensibility-plattformen om du inte redan har gj
 
 När vi ständigt utökar möjligheterna i Adobe Commerce är det viktigt att du utvecklar den senaste versionen och definierar en uppgraderingsstrategi i dina projektplaner. På så sätt kan ni vara säkra, kompatibla och uppdaterade med de senaste förbättringarna som gör att ni kan öka försäljningen snabbare, arbeta effektivare och ligga steget före konkurrenterna nu och i framtiden.
 
-För att hjälpa dig att planera och budgetera för uppgraderingar bör du övervaka vårt [releaseschema](https://devdocs.magento.com/release). Planera uppgraderingsuppgifter i teamets eftersläpning i förväg. Målet är att slutföra arbetet med GA.
+För att hjälpa dig att planera och budgetera för uppgraderingar bör du övervaka vårt [releaseschema](https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/schedule). Planera uppgraderingsuppgifter i teamets eftersläpning i förväg. Målet är att slutföra arbetet med GA.
 
 - Använd förhandsversionen för att lära dig mer om varje ny release. Förhandsversionen är den allmänna tillgänglighetskoden som är tillgänglig för Adobe Commerce handlare och alla partners två veckor före den allmänna tillgängligheten. Om du har flera butiker använder du förhandsversionen i din basbutik och kontrollerar att dina anpassade moduler och teman är kompatibla med den.
 
@@ -73,13 +73,13 @@ Uppgraderingar bör göras regelbundet och inom en fördefinierad budget. Vi rek
 
 Utvärdera det arbete som ska utföras för uppgradering:
 
-- Granska [versionsinformationen](https://devdocs.magento.com/guides/v2.4/release-notes/bk-release-notes.html) för att förstå den nya versionens omfång och effekt.
+- Granska [versionsinformationen](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/overview) för att förstå den nya versionens omfång och effekt.
 
 - Använd [[!DNL Upgrade Compatibility Tool]](../upgrade-compatibility-tool/overview.md) för att identifiera potentiella problem som måste åtgärdas i din anpassade kod innan du försöker uppgradera till en senare version.
 
 - Om du använder tillägg från tredje part ska du validera deras kompatibilitet med den målversion du planerar att uppgradera till.
 
-### Post-uppgraderingstestning
+### Testning efter uppgradering
 
 Testning är den fas av en uppgradering som kräver mest tid. Därför bör denna process vara så automatiserad som möjligt. Du kan dra nytta av att använda testverktygen. [Programtestguiden](https://developer.adobe.com/commerce/testing/guide/) innehåller information.
 

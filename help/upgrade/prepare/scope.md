@@ -2,7 +2,7 @@
 title: Förstå uppgraderingsomfång
 description: Lär dig mer om bakåtkompatibla ändringar i en release som kan påverka Adobe Commerce anpassade moduler eller tillägg från tredje part.
 exl-id: dab2a14f-dbf0-422e-afb4-642e2220ec7a
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '897'
 ht-degree: 0%
@@ -11,14 +11,14 @@ ht-degree: 0%
 
 # Förstå omfattningen av uppgraderingen
 
-Granska [versionsinformationen](https://devdocs.magento.com/guides/v2.4/release-notes/bk-release-notes.html) för att förstå omfattningen av en release, inklusive förbättringar, felkorrigeringar och kända problem som kan påverka externa och anpassade moduler.
+Granska [versionsinformationen](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/overview) för att förstå omfattningen av en release, inklusive förbättringar, felkorrigeringar och kända problem som kan påverka externa och anpassade moduler.
 
 ## Bakåtkompatibla ändringar
 
 Adobe Commerce-versioner kan innehålla ändringar som är inkompatibla bakåt. Läs igenom vår bakåtkompatibla ändringsdokumentation och se följande:
 
-- **[Större markeringar av ändringar](https://devdocs.magento.com/guides/v2.4/release-notes/backward-incompatible-changes/index.html)** - Ändringar som har stor effekt och som kräver detaljerade förklaringar och specialinstruktioner för att säkerställa att tredjepartsmoduler fortsätter att fungera.
-- **[Mindre ändring, referens](https://devdocs.magento.com/guides/v2.4/release-notes/backward-incompatible-changes/reference.html)** - Referensdokumentation som genererats från kodbasen som beskriver mindre ändringar av klasser, API-medlemskap, databas, beroendeinjektion, gränssnitt, layouter, system och XSD.
+- **[Större markeringar av ändringar](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/highlights/)** - Ändringar som har stor effekt och som kräver detaljerade förklaringar och specialinstruktioner för att säkerställa att tredjepartsmoduler fortsätter att fungera.
+- **[Mindre ändring, referens](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/reference/)** - Referensdokumentation som genererats från kodbasen som beskriver mindre ändringar av klasser, API-medlemskap, databas, beroendeinjektion, gränssnitt, layouter, system och XSD.
 
 ## Tredjepartstillägg
 
@@ -26,7 +26,7 @@ Adobe Commerce Marketplace nya kompatibilitetsprincip säkerställer att _alla_ 
 
 ## Anpassade moduler
 
-Alla anpassade moduler ska kontrolleras mot målversionen som du vill uppgradera till. Det här är den mest tids- och resursintensiva uppgraderingsprocessen. När du utvärderar dina anpassade moduler måste du leta efter bakåtkompatibla ändringar och vara medveten om nya metoder, som till exempel att kontrollenheten har kopplats ned. Du kan läsa mer om detta i [versionsinformationen](https://devdocs.magento.com/guides/v2.4/release-notes/bk-release-notes.html). Se även till att du följer [bästa praxis](https://developer.adobe.com/commerce/php/best-practices/extensions/) för modulutveckling.
+Alla anpassade moduler ska kontrolleras mot målversionen som du vill uppgradera till. Det här är den mest tids- och resursintensiva uppgraderingsprocessen. När du utvärderar dina anpassade moduler måste du leta efter bakåtkompatibla ändringar och vara medveten om nya metoder, som till exempel att kontrollenheten har kopplats ned. Du kan läsa mer om detta i [versionsinformationen](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/overview). Se även till att du följer [bästa praxis](https://developer.adobe.com/commerce/php/best-practices/extensions/) för modulutveckling.
 
 ## [!DNL Upgrade Compatibility Tool]
 

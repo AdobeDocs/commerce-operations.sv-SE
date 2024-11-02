@@ -3,7 +3,7 @@ title: Bästa praxis för konfiguration
 description: Optimera svarstiden för er Adobe Commerce-driftsättning med hjälp av dessa metodtips.
 feature: Best Practices, Configuration
 exl-id: 4cb0f5e7-49d5-4343-a8c7-b8e351170f91
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '1417'
 ht-degree: 0%
@@ -32,15 +32,15 @@ När du startar din butik i produktion aktiverar du alla cacheminnen från sidan
 
 ## Asynkrona e-postmeddelanden
 
-Om du aktiverar inställningen&quot;Asynkrona e-postmeddelanden&quot; flyttas processer som hanterar utcheckning och beställer e-postmeddelanden till bakgrunden. Om du vill aktivera den här funktionen går du till **[!UICONTROL Stores]> [!UICONTROL Settings] > [!UICONTROL Configuration] > [!UICONTROL Sales] > [!UICONTROL Sales Emails] > [!UICONTROL General Settings] >[!UICONTROL Asynchronous Sending]**. Mer information finns i [E-postmeddelanden](https://docs.magento.com/user-guide/configuration/sales/sales-emails.html) i _användarhandboken för administratören_.
+Om du aktiverar inställningen&quot;Asynkrona e-postmeddelanden&quot; flyttas processer som hanterar utcheckning och beställer e-postmeddelanden till bakgrunden. Om du vill aktivera den här funktionen går du till **[!UICONTROL Stores]> [!UICONTROL Settings] > [!UICONTROL Configuration] > [!UICONTROL Sales] > [!UICONTROL Sales Emails] > [!UICONTROL General Settings] >[!UICONTROL Asynchronous Sending]**. Mer information finns i [E-postmeddelanden](https://experienceleague.adobe.com/en/docs/commerce-admin/config/sales/sales-emails) i _användarhandboken för administratören_.
 
 ## Asynkron bearbetning av orderdata
 
-Det kan finnas tillfällen då intensiv försäljning i en butik sker samtidigt som [!DNL Commerce] utför intensiv orderbearbetning. Du kan konfigurera [!DNL Commerce] så att dessa två trafikmönster särskiljs på databasnivå för att undvika konflikter mellan läs- och skrivåtgärder i motsvarande tabeller. Du kan lagra och indexera orderdata asynkront. Beställningar läggs i tillfällig lagring och flyttas i bulk till Order Management rutnät utan några kollisioner. Du kan aktivera det här alternativet från **[!UICONTROL Stores]> [!UICONTROL Settings] > [!UICONTROL Configuration] > [!UICONTROL Advanced] > [!UICONTROL Developer] > [!UICONTROL Grid Settings] >[!UICONTROL Asynchronous indexing]**. Mer information finns i [Schemalagda stödrasteruppdateringar](https://docs.magento.com/user-guide/sales/order-grid-updates-schedule.html) i _användarhandboken för administratören_.
+Det kan finnas tillfällen då intensiv försäljning i en butik sker samtidigt som [!DNL Commerce] utför intensiv orderbearbetning. Du kan konfigurera [!DNL Commerce] så att dessa två trafikmönster särskiljs på databasnivå för att undvika konflikter mellan läs- och skrivåtgärder i motsvarande tabeller. Du kan lagra och indexera orderdata asynkront. Beställningar läggs i tillfällig lagring och flyttas i bulk till Order Management rutnät utan några kollisioner. Du kan aktivera det här alternativet från **[!UICONTROL Stores]> [!UICONTROL Settings] > [!UICONTROL Configuration] > [!UICONTROL Advanced] > [!UICONTROL Developer] > [!UICONTROL Grid Settings] >[!UICONTROL Asynchronous indexing]**. Mer information finns i [Schemalagda stödrasteruppdateringar](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/order-management/orders/order-scheduled-operations#enable-scheduled-grid-updates-and-reindexing) i _användarhandboken för administratören_.
 
 >[!WARNING]
 >
->Fliken **[!UICONTROL Developer]** och alternativen är bara tillgängliga i [Utvecklarläge](../configuration/cli/set-mode.md). [Adobe Commerce i molninfrastrukturen](https://devdocs.magento.com/cloud/requirements/cloud-requirements.html#cloud-req-test) stöder inte `Developer`-läge.
+>Fliken **[!UICONTROL Developer]** och alternativen är bara tillgängliga i [Utvecklarläge](../configuration/cli/set-mode.md). [Adobe Commerce i molninfrastrukturen](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/overview#cloud-req-test) stöder inte `Developer`-läge.
 
 ## Spara asynkron konfiguration
 
@@ -69,7 +69,7 @@ bin/magento queue:consumers:start saveConfigProcessor --max-messages=1
 
 ## Uppskjuten lageruppdatering
 
-I tider med intensiv försäljning kan [!DNL Commerce] skjuta upp lageruppdateringar relaterade till order. Detta minimerar antalet åtgärder och snabbar upp orderplaceringsprocessen. Det här alternativet är dock riskabelt och kan bara användas när restorder aktiveras i butiken, eftersom det här alternativet kan leda till negativa lagerkvantiteter. Det här alternativet kan ge avsevärda prestandaförbättringar i utcheckningsflöden för butiker som enkelt kan fylla i sitt lager på begäran. Om du vill aktivera fördröjda Stock-uppdateringar på din webbplats går du till **[!UICONTROL Stores]> [!UICONTROL Settings] > [!UICONTROL Configuration] > [!UICONTROL Catalog] > [!UICONTROL Inventory] > [!UICONTROL Product Stock Options] >[!UICONTROL Use Deferred Stock Update]**. Mer information finns i [Hantera lager](https://docs.magento.com/user-guide/catalog/inventory.html) i _Adobe Commerce användarhandbok_.
+I tider med intensiv försäljning kan [!DNL Commerce] skjuta upp lageruppdateringar relaterade till order. Detta minimerar antalet åtgärder och snabbar upp orderplaceringsprocessen. Det här alternativet är dock riskabelt och kan bara användas när restorder aktiveras i butiken, eftersom det här alternativet kan leda till negativa lagerkvantiteter. Det här alternativet kan ge avsevärda prestandaförbättringar i utcheckningsflöden för butiker som enkelt kan fylla i sitt lager på begäran. Om du vill aktivera fördröjda Stock-uppdateringar på din webbplats går du till **[!UICONTROL Stores]> [!UICONTROL Settings] > [!UICONTROL Configuration] > [!UICONTROL Catalog] > [!UICONTROL Inventory] > [!UICONTROL Product Stock Options] >[!UICONTROL Use Deferred Stock Update]**. Mer information finns i [Hantera lager](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-cloud) i _Adobe Commerce användarhandbok_.
 
 >[!INFO]
 >
@@ -95,7 +95,7 @@ Om du vill förbättra butiksvarstiden för din [!DNL Commerce]-instans går du 
 
 >[!INFO]
 >
->Fliken **[!UICONTROL Developer]** och alternativen är bara tillgängliga i [Utvecklarläge](../configuration/cli/set-mode.md). [Adobe [!DNL Commerce] i molninfrastrukturen](https://devdocs.magento.com/cloud/requirements/cloud-requirements.html#cloud-req-test) stöder inte `Developer`-läge.
+>Fliken **[!UICONTROL Developer]** och alternativen är bara tillgängliga i [Utvecklarläge](../configuration/cli/set-mode.md). [Adobe [!DNL Commerce] i molninfrastrukturen](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/overview#cloud-req-test) stöder inte `Developer`-läge.
 
 När du aktiverar alternativet **[!UICONTROL Enable [!DNL JavaScript] Bundling]** tillåter du att Commerce sammanfogar alla JS-resurser till ett eller flera paket som är inlästa på butikssidor. Paketeringen av JS resulterar i färre begäranden till servern, vilket förbättrar sidans prestanda. Det hjälper även webbläsaren att cachelagra JS-resurser vid det första anropet och återanvända dem för all vidare surfning. Det här alternativet ger även en lat utvärdering eftersom all JS läses in som text. Den initierar bara analys och utvärdering av kod efter att specifika åtgärder har utlösts på sidan. Den här inställningen rekommenderas dock inte för butiker där den första sidans laddningstid är extremt viktig eftersom allt JS-innehåll läses in vid det första anropet.
 
@@ -111,7 +111,7 @@ När du aktiverar alternativet **[!UICONTROL Enable [!DNL JavaScript] Bundling]*
 
 ## Validering av kundsegment
 
-Handlare som har ett stort antal [kundsegment](https://docs.magento.com/user-guide/marketing/customer-segments.html) kan uppleva betydande prestandaförsämringar med kundåtgärder, till exempel kundinloggning och tillägg av produkter i kundvagnen.
+Handlare som har ett stort antal [kundsegment](https://experienceleague.adobe.com/en/docs/commerce-admin/customers/segments/customer-segments) kan uppleva betydande prestandaförsämringar med kundåtgärder, till exempel kundinloggning och tillägg av produkter i kundvagnen.
 
 Kundåtgärder utlöser en valideringsprocess för kundsegment, vilket kan leda till sämre prestanda. Som standard validerar Adobe Commerce varje segment i realtid för att definiera vilka kundsegment som matchas och vilka som inte gör det.
 

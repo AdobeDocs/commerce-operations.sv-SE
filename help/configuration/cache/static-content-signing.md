@@ -3,7 +3,7 @@ title: Cache för statiskt innehåll
 description: Få en förståelse för hur man signerar statiskt innehåll och hur man aktiverar eller inaktiverar funktionen.
 feature: Configuration, Cache, SCD
 exl-id: b54ceea2-b3a1-4dbb-ba87-743f2af0d2fb
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '462'
 ht-degree: 0%
@@ -35,7 +35,7 @@ Detta ändrar URL:en för de statiska filerna och tvingar webbläsaren att läsa
 
 Commerce aktiverar den här funktionen som standard, och Adobe rekommenderar att funktionen är aktiverad för att förhindra problem som rör webbläsare som kan hantera gamla statiska resurser.
 
-Konfigurationen för signering av statiskt innehåll finns i [**[!UICONTROL Stores]**> Inställningar > Konfiguration >**[!UICONTROL Advanced]**>**[!UICONTROL Developer]**>**[!UICONTROL Static Files Settings]**](https://docs.magento.com/user-guide/system/static-file-signature.html).
+Konfigurationen för signering av statiskt innehåll finns i [**[!UICONTROL Stores]**> Inställningar > Konfiguration >**[!UICONTROL Advanced]**>**[!UICONTROL Developer]**>**[!UICONTROL Static Files Settings]**](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/developer-tools#static-file-signatures).
 
 - **Endast lokal**: Den här konfigurationen är tillgänglig om din plats **inte** är i [produktionsläge](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html#production-mode).
 - **Cloud**: Den här konfigurationen är dold eftersom produktionsläget används strikt. Du måste därför använda kommandoraden som visas nedan.

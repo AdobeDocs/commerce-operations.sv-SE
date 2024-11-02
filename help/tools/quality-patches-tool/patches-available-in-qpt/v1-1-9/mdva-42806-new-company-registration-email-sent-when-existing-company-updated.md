@@ -3,7 +3,7 @@ title: "MDVA-42806: Nytt e-postmeddelande om företagsregistrering skickas varje
 description: MDVA-42806-korrigeringen löser problemet där ett nytt e-postmeddelande om företagsregistrering skickas varje gång ett befintligt företag uppdateras via REST API. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.9 är installerat. Korrigerings-ID är MDVA-42806. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.5.
 feature: REST, B2B, Communications, Companies
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '431'
 ht-degree: 0%
@@ -39,7 +39,7 @@ B2B-moduler är installerade.
 <u>Steg som ska återskapas</u>:
 
 1. Skapa ett företag.
-1. Använd slutpunkten `/V1&#x200B;/company&#x200B;/<company_id>`. Mer information om hur du uppdaterar det skapade företaget finns i [Uppdatera företaget](https://devdocs.magento.com/guides/v2.4/b2b/company-object.html#update-the-company) i vår utvecklardokumentation. Nedan visas ett exempel på nyttolast:
+1. Använd slutpunkten `/V1&#x200B;/company&#x200B;/<company_id>`. Mer information om hur du uppdaterar det skapade företaget finns i [Uppdatera företaget](https://developer.adobe.com/commerce/webapi/rest/b2b/company-object/#update-the-company) i vår utvecklardokumentation. Nedan visas ett exempel på nyttolast:
 
 ```php
 {

@@ -2,7 +2,7 @@
 title: Konfigurera låsprovidern
 description: Följ de här stegen för att förhindra att duplicerade cron-jobb och cron-grupper körs på din Adobe Commerce-distribution.
 exl-id: c54e05b7-38fd-4731-bc77-a873b44d0ae8
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '224'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Konfigurera en låsleverantör för att förhindra att dubblettcron-jobb och cro
 
 Adobe Commerce använder databasen för att spara lås som standard. Om du har flera noder på dina servrar rekommenderar vi att du använder Zookeeper som låsleverantör.
 
-Om du kör Adobe Commerce i molninfrastruktur behöver du inte konfigurera inställningar för låsleverantör. Programmet konfigurerar fillås-providern för Pro-projekt under provisioneringsprocessen. Se [Cloud-variabler](https://devdocs.magento.com/cloud/env/variables-cloud.html).
+Om du kör Adobe Commerce i molninfrastruktur behöver du inte konfigurera inställningar för låsleverantör. Programmet konfigurerar fillås-providern för Pro-projekt under provisioneringsprocessen. Se [Cloud-variabler](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-cloud).
 
 ### Kommandoanvändning
 

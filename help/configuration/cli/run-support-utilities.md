@@ -2,7 +2,7 @@
 title: Kör supportverktygen
 description: Felsök ditt Commerce-projekt med det inbyggda supportverktyget.
 exl-id: 021b795f-e00d-43b5-9cbb-5b57a4795be7
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 {{file-system-owner}}
 
-Med Adobe Commerce supportverktyg, som även kallas [datainsamlaren](https://docs.magento.com/user-guide/system/support-data-collector.html), kan användare samla in felsökningsinformation om ditt system som kan användas av vårt supportteam.
+Med Adobe Commerce supportverktyg, som även kallas [datainsamlaren](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/support#data-collector), kan användare samla in felsökningsinformation om ditt system som kan användas av vårt supportteam.
 
 Adobe Commerce använder dessa säkerhetskopior, som också kallas _dumpar_, för att analysera problem som kräver åtkomst till din kod. Ett typiskt scenario följer:
 

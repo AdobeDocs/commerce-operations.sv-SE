@@ -2,7 +2,7 @@
 title: Årsplanering för uppgraderingar
 description: Tips om hur du skapar en årsuppgraderingsplan för ditt Adobe Commerce-projekt.
 exl-id: f28e5ad1-28ac-4419-a507-63d79dbd6376
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '221'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Många företag arbetar med årliga budgetar och färdplaner. Under dessa årliga diskussioner är det mycket viktigt att du talar om din plattformsövergripande strategi för hälsa, riktning och uppgradering, tillsammans med hur den passar in i företagets övergripande mål och nyckeltal (KPI).
 
-Efter [releaseschemat](https://devdocs.magento.com/release/) tilldelar du budget- och releasefönster för uppgraderingar, så att du slipper semester, företagsstängningar och högtider. Genom att förstå Adobe-releaseschemat och hålla dig informerad om vilka ändringar och förbättringar som ingår i varje release via [versionsinformationen](https://devdocs.magento.com/guides/v2.4/release-notes/bk-release-notes.html), kan du planera ditt år bättre.
+Efter [releaseschemat](https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/schedule) tilldelar du budget- och releasefönster för uppgraderingar, så att du slipper semester, företagsstängningar och högtider. Genom att förstå Adobe-releaseschemat och hålla dig informerad om vilka ändringar och förbättringar som ingår i varje release via [versionsinformationen](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/overview), kan du planera ditt år bättre.
 
 Under planeringen kanske du vill fråga dig själv:
 

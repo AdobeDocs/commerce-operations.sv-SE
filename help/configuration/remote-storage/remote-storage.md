@@ -3,7 +3,7 @@ title: Konfigurera fjärrlagring
 description: Lär dig hur du konfigurerar modulen Fjärrlagring för det lokala Commerce-programmet.
 feature: Configuration, Storage
 exl-id: 0428f889-46b0-44c9-8bd9-98c1be797011
-source-git-commit: 4fce6763ec619b0b5069e71cced9ebeb81505304
+source-git-commit: 419a21604d1fda0a76dd0375ae2340fd6e59ec89
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Om du aktiverar fjärrlagring kan det påverka din etablerade utvecklingsuppleve
 
 >[!INFO]
 >
->- Fjärrlagring finns endast för Commerce version 2.4.2 och senare. Se versionsinformationen för [2.4.2](https://devdocs.magento.com/guides/v2.4/release-notes/open-source-2-4-2.html).
+>- Fjärrlagring finns endast för Commerce version 2.4.2 och senare. Se versionsinformationen för [2.4.2](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/magento-open-source/2-4-2).
 >
 >- Fjärrlagringsmodulen har _begränsat_ stöd för Adobe Commerce i molninfrastrukturen. Adobe kan inte felsöka nätverkskorttjänsten från tredje part helt. Mer information om hur du implementerar fjärrlagring för molnprojekt finns i [Konfigurera fjärrlagring för Commerce i molninfrastruktur](cloud-support.md) .
 

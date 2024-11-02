@@ -2,7 +2,7 @@
 title: '[!DNL Exceptions]'
 description: Lär dig mer om fliken [!UICONTROL Exceptions] i  [!DNL Site-Wide Analysis Tool], när den ska användas, dess fördelar och bästa praxis.
 exl-id: bd793536-b95c-47db-9372-33c00be8e144
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '150'
 ht-degree: 0%
@@ -27,4 +27,4 @@ Använd sidan [!UICONTROL Exceptions] om du vill visa loggfilsfel/undantag för 
 
 ## God praxis
 
-Övervaka sidan [!DNL Site-Wide Analysis Tool’s] [!UICONTROL Exceptions] för att se vilka undantag som inträffar. Mer information finns i [Visa och hantera loggar](https://devdocs.magento.com/cloud/project/log-locations.html) i utvecklardokumentationen.
+Övervaka sidan [!DNL Site-Wide Analysis Tool’s] [!UICONTROL Exceptions] för att se vilka undantag som inträffar. Mer information finns i [Visa och hantera loggar](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/test/log-locations) i utvecklardokumentationen.

@@ -2,7 +2,7 @@
 title: env.php reference
 description: Se en lista med värden för filen env.php.
 exl-id: cf02da8f-e0de-4f0e-bab6-67ae02e9166f
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '693'
 ht-degree: 0%
@@ -146,7 +146,7 @@ Commerce använder en krypteringsnyckel för att skydda lösenord och andra kän
 ]
 ```
 
-Läs mer om [Krypteringsnyckel](https://docs.magento.com/user-guide/system/encryption-key.html) i användarhandboken för _Commerce_.
+Läs mer om [Krypteringsnyckel](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/encryption-key) i användarhandboken för _Commerce_.
 
 ## db
 
@@ -203,7 +203,7 @@ En lista över tillgängliga hämtningsbara domäner i den här noden. Ytterliga
 ]
 ```
 
-Läs mer om [Hämtningsbara domäner](https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html#downloadabledomainsadd).
+Läs mer om [Hämtningsbara domäner](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises#downloadabledomainsadd).
 
 ## installera
 

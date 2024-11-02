@@ -3,7 +3,7 @@ title: Lösenordshashning
 description: Läs om strategier för lösenordshashning och implementering.
 feature: Configuration, Security
 exl-id: 2865d041-950a-4d96-869c-b4b35f5c4120
-source-git-commit: 56a2461edea2799a9d569bd486f995b0fe5b5947
+source-git-commit: 79c8a15fb9686dd26d73805e9d0fd18bb987770d
 workflow-type: tm+mt
 source-wordcount: '372'
 ht-degree: 0%
@@ -61,4 +61,4 @@ Eftersom Commerce lagrar alla hash-versioner av lösenord som används tillsamma
 
 ## Implementering
 
-Klassen `\Magento\Framework\Encryption\Encryptor` ansvarar för generering och verifiering av lösenordshash. Kommandot [`bin/magento customer:hash:upgrade`](https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html#customerhashupgrade) uppgraderar en hash för kundlösenordet till den senaste hash-algoritmen.
+Klassen `\Magento\Framework\Encryption\Encryptor` ansvarar för generering och verifiering av lösenordshash. Kommandot [`bin/magento customer:hash:upgrade`](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises#customerhashupgrade) uppgraderar en hash för kundlösenordet till den senaste hash-algoritmen.

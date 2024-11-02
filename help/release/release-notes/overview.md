@@ -2,7 +2,7 @@
 title: Versionsinformation för Adobe Commerce
 description: Läs om var du hittar information om specifika versioner av Adobe Commerce.
 exl-id: f6385e12-5c3d-425f-939c-9dfd7ef6c4f5
-source-git-commit: 7edf0d26be64b4583d0a4d6ce313d25077662637
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '288'
 ht-degree: 3%
@@ -35,11 +35,11 @@ Använd följande tabell för att hitta versionsinformation och viktig informati
       <td><strong>Adobe Commerce i molninfrastruktur</strong>
         <p>Läs om de senaste förbättringarna av paketen Cloud Suite för Adobe Commerce, som är utformade för att distribuera och hantera Adobe Commerce-installationer och uppgraderingar på molnplattformen.</p>
           <ul>
-            <li><a href="https://devdocs.magento.com/cloud/release-notes/backward-incompatible-changes.html">Bakåtkompatibla ändringar</a></li>
-            <li><a href="https://devdocs.magento.com/cloud/release-notes/mcp-release-notes.html">Molnkorrigeringar för Commerce</a></li>
-            <li><a href="https://devdocs.magento.com/cloud/release-notes/mcd-release-notes.html">Cloud Docker för Commerce</a></li>
-            <li><a href="https://devdocs.magento.com/cloud/release-notes/mcc-release-notes.html">Cloud-komponenter för Commerce</a></li>
-            <li><a href="https://devdocs.magento.com/cloud/release-notes/ece-release-notes.html">ece-tools</a></li>
+            <li><a href="https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/release-notes/backward-incompatible-changes">Bakåtkompatibla ändringar</a></li>
+            <li><a href="https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/release-notes/cloud-patches">Molnkorrigeringar för Commerce</a></li>
+            <li><a href="https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/release-notes/cloud-docker">Cloud Docker för Commerce</a></li>
+            <li><a href="https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/release-notes/cloud-components">Cloud-komponenter för Commerce</a></li>
+            <li><a href="https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/release-notes/ece-tools-package">ece-tools</a></li>
           </ul>
       </td>
     </tr>

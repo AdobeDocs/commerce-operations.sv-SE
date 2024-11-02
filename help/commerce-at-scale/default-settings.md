@@ -4,7 +4,7 @@ description: Förbered ditt Adobe Commerce-projekt för att använda Adobe Exper
 exl-id: 55d77af7-508c-4ef7-888b-00911cc6e920
 feature: Integration, Cache
 topic: Commerce, Performance
-source-git-commit: 76ccc5aa8e5e3358dc52a88222fd0da7c4eb9ccb
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '1142'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Med GraphQL kan du göra flera frågor i ett enda samtal. Observera att om du an
 
 >[!NOTE]
 >
-> Mer information om cachelagrade och icke cachelagrade frågor finns i Adobe Commerce [utvecklardokumentation](https://devdocs.magento.com/guides/v2.4/graphql/caching.html).
+> Mer information om cachelagrade och icke cachelagrade frågor finns i Adobe Commerce [utvecklardokumentation](https://developer.adobe.com/commerce/webapi/graphql/caching.html).
 
 ## Platt tabell för katalog
 
@@ -42,7 +42,7 @@ Skärmsläckning med snabb origo kan aktiveras i Adobe Commerce-administratören
 
 När du har aktiverat skärmsläckning med nollpunkt kan du även aktivera snabbbildsoptimering. Där produktkatalogbilder lagras på Adobe Commerce ger den här tjänsten möjlighet att avlasta alla resurskrävande omformningsprocesser för produktkatalogbilder snabbt och enkelt från Adobe Commerce ursprung. Slutanvändarens svarstider har också förbättrats för sidinläsningstider, eftersom bilderna omvandlas vid kantpositionen, vilket eliminerar fördröjning genom att minska antalet förfrågningar tillbaka till Adobe Commerce-startpunkten.
 
-Snabb bildoptimering kan aktiveras genom&quot;aktivera djupbildsoptimering&quot; i Snabb konfiguration i admin, men först efter att originalskyddet har aktiverats. Mer information om konfigurationer för snabbbildsoptimering finns i Adobe Commerce [utvecklardokumentation](https://devdocs.magento.com/cloud/cdn/fastly-image-optimization.html).
+Snabb bildoptimering kan aktiveras genom&quot;aktivera djupbildsoptimering&quot; i Snabb konfiguration i admin, men först efter att originalskyddet har aktiverats. Mer information om konfigurationer för snabbbildsoptimering finns i Adobe Commerce [utvecklardokumentation](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/cdn/fastly-image-optimization).
 
 ![Skärmbild av Snabb bildoptimering i Adobe Commerce Admin](../assets/commerce-at-scale/image-optimization.svg)
 

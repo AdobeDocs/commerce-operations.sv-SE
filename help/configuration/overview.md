@@ -2,7 +2,7 @@
 title: Översikt över konfigurationsguiden
 description: Läs mer om alla konfigurerbara funktioner och tjänster för ditt Adobe Commerce-program.
 exl-id: c4997792-5a47-4ae5-903a-7e5d7235e42e
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '144'
 ht-degree: 9%
@@ -25,7 +25,7 @@ Guiden _Konfiguration_ innehåller referensmaterial och begränsad vägledning f
 
 ## Konfiguration av Commerce Admin
 
-Det finns motsvarande ämnen i [Commerce användarhandbok](https://docs.magento.com/user-guide/stores/configuration.html) som kan hjälpa dig att förstå fältbeskrivningar för alla konfigurationsinställningar i Commerce Admin.
+Det finns motsvarande ämnen i [Commerce användarhandbok](https://experienceleague.adobe.com/en/docs/commerce-admin/config/guide-overview) som kan hjälpa dig att förstå fältbeskrivningar för alla konfigurationsinställningar i Commerce Admin.
 
 ## Molnkonfiguration
 

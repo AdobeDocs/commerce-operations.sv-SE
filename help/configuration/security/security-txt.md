@@ -4,7 +4,7 @@ description: Lär dig hur du kan tillhandahålla information som hjälper säker
 feature: Configuration, Security
 badge: label="Bidragen av Kalpesh Mehta från Corra" type="Informative" url="https://solutionpartners.adobe.com/s/directory/detail/corra" tooltip="Kalpesh Mehta"
 exl-id: ddafd03c-77b2-42e8-b593-7d655d08e9c3
-source-git-commit: 56a2461edea2799a9d569bd486f995b0fe5b5947
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 När forskare upptäcker säkerhetsluckor saknas ofta lämpliga rapporteringskanaler. Därför rapporteras inte vissa sårbarheter. Syftet med filen `security.txt` [filformat](https://datatracker.ietf.org/doc/html/draft-foudil-securitytxt-09) är att ge säkerhetsforskare den information de kan använda för att rapportera sina upptäckter.
 
-Handläggarna kan ange sin kontaktinformation för [säkerhetsproblemrapportering](https://docs.magento.com/user-guide/stores/security-issue-reporting.html) från Commerce _Admin_. För utvecklare innehåller modulen `Magento_Securitytxt` följande funktioner:
+Handläggarna kan ange sin kontaktinformation för [säkerhetsproblemrapportering](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-issue-reporting) från Commerce _Admin_. För utvecklare innehåller modulen `Magento_Securitytxt` följande funktioner:
 
 - Tillåter att säkerhetskonfigurationer sparas från _administratören_.
 - Innehåller en router som matchar programåtgärdsklassen för begäranden till filerna `.well-known/security.txt` och `.well-known/security.txt.sig`.

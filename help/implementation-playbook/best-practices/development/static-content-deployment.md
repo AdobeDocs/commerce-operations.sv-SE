@@ -4,7 +4,7 @@ description: Lär dig hur du undviker problem med statiskt innehåll som inte vi
 role: Developer
 feature: Best Practices
 exl-id: 9f521963-6fe4-4844-b2d1-fd457b706900
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 0%
@@ -28,19 +28,19 @@ För att undvika problem med att statiskt innehåll inte är tillgängligt på d
 
 1. Följ riktlinjerna för distribution:
    * Information om Adobe Commerce lokala versioner (alla versioner) finns i [Distributionsöversikt](../../../configuration/deployment/overview.md) i utvecklardokumentationen.
-   * Information om Adobe Commerce molninfrastruktur (alla versioner) finns i [Driftsättningsprocess för molnet](https://devdocs.magento.com/cloud/deploy/cloud-deployment-process.html) och [Statiska strategier för innehållsdistribution](https://devdocs.magento.com/cloud/deploy/static-content-deployment.html) i utvecklardokumentationen.
+   * Information om Adobe Commerce molninfrastruktur (alla versioner) finns i [Driftsättningsprocess för molnet](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/deploy/process) och [Statiska strategier för innehållsdistribution](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/deploy/static-content) i utvecklardokumentationen.
 
-1. För Adobe Commerce i molninfrastruktur (alla versioner) måste du se till att verktygen finns i den senaste versionen. Se: [Uppdatera versionen för verktygen](https://devdocs.magento.com/cloud/release-notes/ece-release-notes.html) i utvecklardokumentationen.
-1. För Adobe Commerce i molninfrastruktur (alla versioner) måste du se till att statiskt innehåll distribueras under byggfasen i stället för distributionsfasen. Se [Konfigurationshantering för butiksinställningar - Statisk innehållsdistribution ](https://devdocs.magento.com/cloud/live/sens-data-over.html#cloud-confman-scd-over) i utvecklardokumentationen.
+1. För Adobe Commerce i molninfrastruktur (alla versioner) måste du se till att verktygen finns i den senaste versionen. Se: [Uppdatera versionen för verktygen](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/release-notes/ece-tools-package) i utvecklardokumentationen.
+1. För Adobe Commerce i molninfrastruktur (alla versioner) måste du se till att statiskt innehåll distribueras under byggfasen i stället för distributionsfasen. Se [Konfigurationshantering för butiksinställningar - Statisk innehållsdistribution ](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure-store/store-settings#cloud-confman-scd-over) i utvecklardokumentationen.
 1. Se till att du inte har några långvariga kronijobb och att du inte tar slut på några långvariga kroniprocesser. Långvariga cron-jobb kan ta upp processorresurser och potentiellt öka driftsättningstiden avsevärt.
 1. För Adobe Commerce lokala (alla versioner) kontrollerar du att processen `php` i CLI har åtkomst till katalogen `pub/static`. Annars kan du råka ut för ett problem där en statisk innehållsdistribution inte kan skriva filer till den katalogen. Mer information: [Åtkomstbehörigheter för filsystem](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/file-system-permissions.html) i utvecklardokumentationen.
 1. Kontrollera att katalogen `generated` inte är en delad katalog över byggen. Annars kan byggen misslyckas slumpmässigt. Mer information:
    * Adobe Commerce lokalt (alla versioner): [Teknisk information](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/deployment/technical-details.html) i vår utvecklardokumentation.
-   * Adobe Commerce i molninfrastruktur (alla versioner): [Distributionsprocess - fas 2: bygge](https://devdocs.magento.com/cloud/reference/discover-deploy.html#cloud-deploy-over-phases-build) i vår utvecklardokumentation.
+   * Adobe Commerce i molninfrastruktur (alla versioner): [Distributionsprocess - fas 2: bygge](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/deploy/best-practices#cloud-deploy-over-phases-build) i vår utvecklardokumentation.
 
 1. Kontrollera din SCD-strategi. Strategin *quick* är standard. Mer information:
    * Adobe Commerce lokala (alla versioner): [Statiska distributionsstrategier för filer](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy.html) i vår utvecklardokumentation.
-   * Adobe Commerce i molninfrastruktur (alla versioner): [Distribuera variabler - SCD\_STRATEGY](https://devdocs.magento.com/cloud/env/variables-deploy.html#scd_strategy) i vår utvecklardokumentation.
+   * Adobe Commerce i molninfrastruktur (alla versioner): [Distribuera variabler - SCD\_STRATEGY](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy#scd_strategy) i vår utvecklardokumentation.
 
 ## Ytterligare information
 
@@ -48,7 +48,7 @@ I vår utvecklardokumentation:
 
 * [Behållare för statiskt innehåll](https://developer.adobe.com/commerce/admin-developer/pattern-library/containers/static-content/)
 * [Statisk innehållssignering](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/static-content-signing.html)
-* [Distribuera variabler - STATIC\_CONTENT\_SYMLINK](https://devdocs.magento.com/cloud/env/variables-deploy.html#static_content_symlink)
+* [Distribuera variabler - STATIC\_CONTENT\_SYMLINK](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy#static_content_symlink)
 * [Distributionsflöde](../../../performance/deployment-flow.md)
-* [Ingen driftsättning vid driftstopp](https://devdocs.magento.com/cloud/deploy/reduce-downtime.html)
-* [Optimera molndistributionen](https://devdocs.magento.com/cloud/deploy/optimize-cloud-deployment.html)
+* [Ingen driftsättning vid driftstopp](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/deploy/reduce-downtime)
+* [Optimera molndistributionen](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/deploy/optimization)

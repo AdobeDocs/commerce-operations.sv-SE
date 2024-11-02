@@ -3,7 +3,7 @@ title: Säkerhet för molninfrastruktur
 description: Läs om hur Adobe skyddar Adobe Commerce i molninfrastrukturen.
 exl-id: cd5d1106-c8db-4b70-b1c7-12378d7d77a7
 feature: Cloud, Security
-source-git-commit: 8d8cd0d33c1a3a95186948e670df6d9865b9a871
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '1691'
 ht-degree: 0%
@@ -27,9 +27,9 @@ Se [Översikt över snabba tjänster](https://experienceleague.adobe.com/docs/co
 
 ## Brandvägg för webbaserade program
 
-WAF (Snably Web Application Firewall) används för att ge ytterligare skydd. Fastly molnbaserade WAF använder tredjepartsregler från kommersiella och öppna källor som OWASP Core-regler. Dessutom används Adobe Commerce-specifika regler. Kunderna skyddas från viktiga attacker på applikationsnivå, inklusive injektionsangrepp och skadliga indata, serveröverskridande skriptning, dataexfiltrering, HTTP-protokollöverträdelser och andra tio hot mot OWASP.
+Brandväggen för Snabbt webbprogram (WAF) används för att ge ytterligare skydd. Fastly molnbaserade WAF använder tredjepartsregler från kommersiella källor och öppen källkod som OWASP Core-regler. Dessutom används Adobe Commerce-specifika regler. Kunderna skyddas från viktiga attacker på applikationsnivå, inklusive injektionsangrepp och skadliga indata, serveröverskridande skriptning (cross-site scripting), dataexfiltrering, HTTP-protokollöverträdelser och andra av OWASP tio främsta hot.
 
-WAF-reglerna uppdateras av Adobe Commerce om nya säkerhetsluckor upptäcks som gör att Managed Services kan&quot;åtgärda&quot; säkerhetsproblem före programkorrigeringar. Fast WAF tillhandahåller inte hastighetsbegränsande eller robotdetekteringstjänster. Om så önskas kan kunderna licensiera en tredjepartstjänst för robotdetektering som är kompatibel med Fastly.
+WAF regler uppdateras av Adobe Commerce om nya säkerhetsluckor upptäcks som gör det möjligt för Managed Services att&quot;åtgärda&quot; säkerhetsproblem före programkorrigeringar. Fastly WAF tillhandahåller inte hastighetsbegränsande eller robotdetekteringstjänster. Om så önskas kan kunderna licensiera en tredjepartstjänst för robotdetektering som är kompatibel med Fastly.
 
 Se [Brandvägg för webbaserade program (WAF)](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/fastly-waf-service.html) i _molnhandboken_.
 
@@ -59,7 +59,7 @@ Adobe Commerce kräver integrering av betalgateway där kreditkortsdata skickas 
 
 ## Adobe Commerce
 
-Adobe testar regelbundet kärnprogramkoden för att se om det finns några säkerhetsluckor. Patchar för defekter och säkerhetsproblem tillhandahålls kunderna. Product Security Team validerar Adobe Commerce-produkter enligt OWASP:s riktlinjer för programsäkerhet. Flera verktyg för säkerhetsbedömning och externa leverantörer används för att testa och verifiera efterlevnad. Säkerhetsverktygen omfattar:
+Adobe testar regelbundet kärnprogramkoden för att se om det finns några säkerhetsluckor. Patchar för defekter och säkerhetsproblem tillhandahålls kunderna. Product Security Team validerar Adobe Commerce-produkter enligt OWASP riktlinjer för programsäkerhet. Flera verktyg för säkerhetsbedömning och externa leverantörer används för att testa och verifiera efterlevnad. Säkerhetsverktygen omfattar:
 
 - Veracode Static och Dynamic Scanning
 - RIPS-källkodskontroll
@@ -70,7 +70,7 @@ Adobe testar regelbundet kärnprogramkoden för att se om det finns några säke
 
 Den fullständiga kodbasen skannas med dessa verktyg varannan vecka. Kunderna meddelas om säkerhetsuppdateringar via direkt e-post, meddelanden i programmet och i [Säkerhetscenter](https://helpx.adobe.com/security.html).
 
-Kunderna måste se till att dessa korrigeringsfiler tillämpas på deras anpassade program inom 30 dagar efter lanseringen, enligt PCI-riktlinjerna. Adobe har också ett [säkerhetssökningsverktyg](https://docs.magento.com/user-guide/magento/security-scan.html) som gör det möjligt för handlare att regelbundet övervaka sina webbplatser och få uppdateringar om kända säkerhetsrisker, skadlig kod och obehörig åtkomst. Verktyget för säkerhetssökning är en kostnadsfri tjänst och kan köras på alla versioner av Adobe Commerce.
+Kunderna måste se till att dessa korrigeringsfiler tillämpas på deras anpassade program inom 30 dagar efter lanseringen, enligt PCI-riktlinjerna. Adobe har också ett [säkerhetssökningsverktyg](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan) som gör det möjligt för handlare att regelbundet övervaka sina webbplatser och få uppdateringar om kända säkerhetsrisker, skadlig kod och obehörig åtkomst. Verktyget för säkerhetssökning är en kostnadsfri tjänst och kan köras på alla versioner av Adobe Commerce.
 
 För att uppmuntra säkerhetsforskare att identifiera och rapportera säkerhetsluckor har Adobe Commerce ett [felbegränsningsprogram](https://hackerone.com/magento) förutom intern testning. Kunden får dessutom den fullständiga källkoden för programmet för egen granskning om så önskas.
 
@@ -84,7 +84,7 @@ Det enda sättet att få körbar kod i Managed Services produktionsmiljö är at
 
 ## Loggning
 
-Alla AWS-aktiviteter loggas i AWS CloudTrail. Operativsystem, programserver och databasloggar lagras på produktionsservrarna och lagras i säkerhetskopior. Alla ändringar av källkoden registreras i en Git-databas. Distributionshistorik är tillgänglig i Adobe Commerce [Project Web Interface](https://devdocs.magento.com/cloud/project/projects.html#login). All supportåtkomst loggas och supportsessioner registreras.
+Alla AWS-aktiviteter loggas i AWS CloudTrail. Operativsystem, programserver och databasloggar lagras på produktionsservrarna och lagras i säkerhetskopior. Alla ändringar av källkoden registreras i en Git-databas. Distributionshistorik är tillgänglig i Adobe Commerce [Project Web Interface](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/project/overview). All supportåtkomst loggas och supportsessioner registreras.
 
 Se [Visa och hantera loggar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/test/log-locations.html) i _molnguiden_.
 

@@ -3,7 +3,7 @@ title: Konfigurationsfiler för distribution
 description: Förstå hur konfigurationsfilerna fungerar för installation av Commerce-programmet.
 feature: Configuration, Deploy
 exl-id: 772a6814-6b18-4f8f-b31e-72faf790ff37
-source-git-commit: b40d2bd4d466782ba5bc1b29ee8681756d9e85cc
+source-git-commit: 79c8a15fb9686dd26d73805e9d0fd18bb987770d
 workflow-type: tm+mt
 source-wordcount: '435'
 ht-degree: 0%
@@ -51,7 +51,7 @@ Filen `config.php` innehåller en lista med installerade moduler. Adobe Commerce
 Exempel:
 
 - Avinstallera komponenter: [`bin/magento setup:uninstall`](../../installation/tutorials/uninstall-modules.md)
-- Kontrollera komponenternas status: [`bin/magento module:status`](https://devdocs.magento.com/guides/v2.4/reference/cli/magento.html#modulestatus)
+- Kontrollera komponenternas status: [`bin/magento module:status`](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises#modulestatus)
 - Aktivera eller inaktivera komponenter: [`bin/magento module:disable`](../../installation/tutorials/manage-modules.md), [`bin/magento module:enable`](../../installation/tutorials/manage-modules.md).
 
 > _config.php_

@@ -2,7 +2,7 @@
 title: Konfigurera flera webbplatser, butiker och butiksvyer i administratören
 description: Konfigurera ytterligare webbplatser, butiker och butiksvyer i Commerce Admin.
 exl-id: e6b4d14d-7504-48f9-a2e1-7e9a1bc76ab9
-source-git-commit: f7c82844fd6d006e4ebbcf56f6e10338f67d0bdd
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 0%
@@ -13,10 +13,10 @@ ht-degree: 0%
 
 Den här aktiviteten kräver att du skapar en rotkategori (och ytterligare kategorier om så önskas) för varje butik. De uppgifter som behandlas i det här avsnittet är ett sätt att konfigurera flera butiker. Mer information finns i följande resurser i användarhandboken för Commerce:
 
-- [Kategorier](https://docs.magento.com/user-guide/catalog/categories.html)
-- [Lägger till webbplatser](https://docs.magento.com/user-guide/stores/stores-all-create-website.html)
-- [Lagra URL:er](https://docs.magento.com/user-guide/stores/store-urls.html)
-- [Innehåll](https://docs.magento.com/user-guide/cms/content-menu.html)
+- [Kategorier](https://experienceleague.adobe.com/en/docs/commerce-admin/catalog/categories/categories)
+- [Lägger till webbplatser](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/stores#add-websites)
+- [Lagra URL:er](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls)
+- [Innehåll](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/content-menu)
 
 >[!INFO]
 >
@@ -34,7 +34,7 @@ Så här skapar du en rotkategori:
 1. I fältet **Kategorinamn** anger du ett unikt namn som identifierar den här kategorin.
 1. Kontrollera att Aktivera kategori är inställt på **Ja**.
 
-   Mer information om de andra alternativen på den här sidan finns i [Rotkategorier](https://docs.magento.com/user-guide/catalog/category-root.html).
+   Mer information om de andra alternativen på den här sidan finns i [Rotkategorier](https://experienceleague.adobe.com/en/docs/commerce-admin/catalog/categories/category-root).
 
    I bilden nedan visas ett exempel.
 
@@ -131,7 +131,7 @@ Commerce ger dig möjlighet att lägga till butikskoden i webbplatsens bas-URL, 
 
 Detta förhindrar att `index.php` och `.htaccess` kommer ur synk med Commerce-kodbasen vid framtida uppgraderingar.
 
-Se [Commerce användarhandbok](https://docs.magento.com/user-guide/stores/store-urls.html).
+Se [Commerce användarhandbok](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls).
 
 Så här lägger du till butikskoden i bas-URL:en:
 

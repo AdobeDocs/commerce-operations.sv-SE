@@ -4,7 +4,7 @@ description: Lär dig hur du skickar instruktioner om din Adobe Commerce-webbpla
 role: Developer
 feature: Best Practices
 exl-id: f3a81bab-a47a-46ad-b334-920df98c87ab
-source-git-commit: e1e7ad76b1df8e920ab7f9740fd4be8dc7335954
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '547'
 ht-degree: 0%
@@ -35,7 +35,7 @@ Ett Adobe Commerce-standardprojekt innehåller en hierarki som innehåller en we
 
 Följ dessa metodtips när du konfigurerar `robots.txt`- och `sitemap.xml`-filer för butiker med en plats:
 
-- Kontrollera att ditt projekt använder [`ece-tools`](https://devdocs.magento.com/cloud/release-notes/ece-release-notes.html) version 2002.0.12 eller senare.
+- Kontrollera att ditt projekt använder [`ece-tools`](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/release-notes/ece-tools-package) version 2002.0.12 eller senare.
 - Använd administratörsprogrammet för att lägga till innehåll i filen `robots.txt`.
 
   >[!TIP]
@@ -64,12 +64,12 @@ Följ dessa metodtips när du konfigurerar `robots.txt`- och `sitemap.xml`-filer
 
 >[!INFO]
 >
->Mer information finns i [Lägg till webbplatskarta och sökrobotar](https://devdocs.magento.com/cloud/trouble/robots-sitemap.html).
+>Mer information finns i [Lägg till webbplatskarta och sökrobotar](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure-store/robots-sitemap).
 
 
 ### Lagringsplatser för flera platser
 
-Du kan konfigurera och köra flera butiker med en enda implementering av Adobe Commerce i molninfrastrukturen. Se [Konfigurera flera webbplatser eller butiker](https://devdocs.magento.com/cloud/project/project-multi-sites.html).
+Du kan konfigurera och köra flera butiker med en enda implementering av Adobe Commerce i molninfrastrukturen. Se [Konfigurera flera webbplatser eller butiker](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites).
 
 Samma metodtips för att konfigurera `robots.txt`- och `sitemap.xml`-filer för [butiker med en plats](#single-site-storefronts) gäller för flera platslager med två viktiga skillnader:
 
@@ -111,7 +111,7 @@ Anvisningar om hur du redigerar filen `robots.txt` och tar bort alla poster i ad
 
 ## Ytterligare information
 
-- [Om webbplatser, butiker och butiksvyer](https://devdocs.magento.com/cloud/configure/configure-best-practices.html#sites)
-- [Lägger till webbplatser](https://docs.magento.com/user-guide/stores/stores-all-create-website.html)
-- [Använd Snabbt för att blockera skadlig trafik för dina Adobe Commerce-webbplatser](https://devdocs.magento.com/cloud/cdn/fastly-vcl-blocking.html)
+- [Om webbplatser, butiker och butiksvyer](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure-store/best-practices)
+- [Lägger till webbplatser](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/stores#add-websites)
+- [Använd Snabbt för att blockera skadlig trafik för dina Adobe Commerce-webbplatser](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/cdn/custom-vcl-snippets/fastly-vcl-blocking)
 - [robots.txt ger ett 404-fel i Adobe Commerce i molninfrastruktur 2.3.x](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/robots.txt-gives-404-error-magento-commerce-cloud-2.3.x.html)

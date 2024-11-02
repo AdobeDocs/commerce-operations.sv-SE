@@ -2,7 +2,7 @@
 title: Uppgraderingsmoduler och tillägg
 description: Använd kommandoradsgränssnittet och Composer för att uppgradera Adobe Commerce-moduler och tillägg.
 exl-id: 017d75df-fd21-4fb4-abc9-80a35fc47d0f
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 0%
@@ -47,7 +47,7 @@ Så här uppdaterar eller uppgraderar du en modul eller ett tillägg:
 
 ## VBE (Leverantör bundled extensions)
 
-Adobe tog bort alla [VBE](https://devdocs.magento.com/extensions/vendor/) i 2.4.4. Leverantörer fortsätter att ha stöd för dessa tillägg på Adobe Commerce Marketplace.
+Adobe tog bort alla [VBE](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/modules/upgrade) i 2.4.4. Leverantörer fortsätter att ha stöd för dessa tillägg på Adobe Commerce Marketplace.
 
 Om du vill fortsätta använda dessa tillägg med Adobe Commerce 2.4.4 och senare måste du uppdatera motsvarande paketberoenden i `composer.json`-filen _innan_ uppgraderar till 2.4.4. Kontakta leverantören för det paketnamn och den version som ska användas.
 

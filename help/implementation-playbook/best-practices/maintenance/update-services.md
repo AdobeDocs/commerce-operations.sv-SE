@@ -4,7 +4,7 @@ description: Lär dig hur du uppdaterar din Adobe Commerce i molninfrastrukturss
 role: Developer
 feature: Best Practices
 exl-id: 62aeffe3-b5a6-49f8-a39b-3219b46cd486
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '232'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Adobe Commerce i molninfrastruktur 2.4.x och senare
 
 Uppgradera de tjänster och komponenter som används av Adobe Commerce innan de når eller är i närheten av sista giltighetsdatum. Detta bidrar till att hålla jämna steg med PCI-kompatibiliteten och minska säkerhetsproblemen.
 
-Kunder som har Starter-planer kan själva tjäna på uppgraderingar av tjänster. Mer information om hur du gör detta finns i [Ändra tjänstversion](https://devdocs.magento.com/cloud/project/services.html#change-service-version).
+Kunder som har Starter-planer kan själva tjäna på uppgraderingar av tjänster. Mer information om hur du gör detta finns i [Ändra tjänstversion](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/service/services-yaml#change-service-version).
 
 Kunder som har Pro-planer kan bara självbetjäna tjänstuppgraderingar i sin [integreringsmiljö](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html). Om du vill uppgradera tjänster på Production måste du [skicka in en supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) och begära uppgraderingen.
 

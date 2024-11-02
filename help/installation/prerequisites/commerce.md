@@ -2,7 +2,7 @@
 title: Skaffa Adobe Commerce
 description: Lär dig hur du laddar ned Adobe Commerce.
 exl-id: 7a769d5b-5397-4572-8db5-7602068e6aad
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '358'
 ht-degree: 0%
@@ -15,7 +15,7 @@ Du är bland de 240 000 handlare världen över som litar på vår e-handelsprog
 
 ## Så här skaffar du programmet
 
-Kontrollera tillgängligheten av spännande nya funktioner och releaser och se hur du kan få dem på vår [produkttillgänglighetssida](https://devdocs.magento.com/release/availability.html).
+Kontrollera tillgängligheten av spännande nya funktioner och releaser och se hur du kan få dem på vår [produkttillgänglighetssida](https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability).
 
 Se följande tabell för att komma igång med installationen av Adobe Commerce.
 

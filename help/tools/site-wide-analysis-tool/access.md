@@ -2,7 +2,7 @@
 title: Åtkomst till [!DNL Site-Wide Analysis Tool]
 description: Lär dig hur du kommer åt  [!DNL Site-Wide Analysis Tool]
 exl-id: b691fb2c-8d66-4cf9-8612-bbcb4df5b95f
-source-git-commit: 18416ae29cee182a5d088069065d73814fc7d860
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 0%
@@ -15,7 +15,7 @@ Det finns två sätt att komma åt [!DNL Site-Wide Analysis Tool Dashboard].
 
 Du kan komma åt [!DNL dashboard] antingen från [[!DNL Site-Wide Analysis Tool] webbplatsen](https://supportinsights.adobe.com/commerce) direkt **(endast för Adobe Commerce i molninfrastrukturen)** och logga in med din Adobe ID, eller via [!DNL dashboard] från din butiks [!DNL Admin Panel].
 
-Tjänsten [!DNL Site-Wide Analysis Tool] är tillgänglig i [produktionsläge](https://docs.magento.com/user-guide/magento/installation-modes.html) för [!DNL Admin]-användare med behörighet att komma åt användarens [rollresurser](https://docs.magento.com/user-guide/system/permissions-user-roles.html).
+Tjänsten [!DNL Site-Wide Analysis Tool] är tillgänglig i [produktionsläge](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/developer-tools#operation-modes) för [!DNL Admin]-användare med behörighet att komma åt användarens [rollresurser](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/user-accounts/permissions-user-roles).
 
 >[!NOTE]
 >
@@ -46,7 +46,7 @@ Mer information finns i [Dela ett [!DNL Commerce] konto](https://experienceleagu
 
 ### Steg 1: Verifiera behörigheter
 
-Kontrollera att användarkontot [!DNL Admin] har behörighet att komma åt [!DNL Site-Wide Analysis Tool] via sin [tilldelade användarroll](https://docs.magento.com/user-guide/system/permissions-user-roles.html).
+Kontrollera att användarkontot [!DNL Admin] har behörighet att komma åt [!DNL Site-Wide Analysis Tool] via sin [tilldelade användarroll](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/user-accounts/permissions-user-roles).
 
 >[!IMPORTANT]
 >

@@ -3,7 +3,7 @@ title: plattformsverktyg
 description: Välj rekommenderade plattformsverktyg för implementeringen av Adobe Commerce.
 exl-id: 3fc164f9-a0fc-46e7-a54e-08ce101ccae7
 feature: Configuration
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '732'
 ht-degree: 0%
@@ -66,7 +66,7 @@ Meddelandeköer är en asynkron kommunikationsmekanism där avsändaren och mott
 
 ## Säkerhetsverktyg
 
-Med [Adobe Commerce Security Scan Tool](https://docs.magento.com/user-guide/magento/security-scan.html) kan du regelbundet övervaka dina butikswebbplatser och få uppdateringar för kända säkerhetsrisker, skadlig kod och inaktuell programvara. Vanligtvis börjar du använda det här verktyget när du börjar testa användargodkännande (UAT). Förutom verktyget Adobe Commerce Security Scan, som är kostnadsfritt och tillgängligt för alla implementeringar och versioner av Adobe Commerce, finns det andra alternativ som kan användas under CI/CD-processen och före varje release.
+Med [Adobe Commerce Security Scan Tool](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan) kan du regelbundet övervaka dina butikswebbplatser och få uppdateringar för kända säkerhetsrisker, skadlig kod och inaktuell programvara. Vanligtvis börjar du använda det här verktyget när du börjar testa användargodkännande (UAT). Förutom verktyget Adobe Commerce Security Scan, som är kostnadsfritt och tillgängligt för alla implementeringar och versioner av Adobe Commerce, finns det andra alternativ som kan användas under CI/CD-processen och före varje release.
 
 SonarQube är en plattform för kvalitetshantering med öppen källkod som är utformad för att analysera och mäta kodens tekniska kvalitet. SonarQube ger inte bara en fullständig rapport över kodfel, syntaxfel och sårbarheter, utan också förslag och exempel på hur du kan åtgärda koden. SonarQube är perfekt att använda i en CI/CD-miljö som ett verktyg som kan analysera koden innan den distribueras.
 

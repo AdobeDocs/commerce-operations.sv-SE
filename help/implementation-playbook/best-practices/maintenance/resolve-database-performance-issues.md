@@ -4,7 +4,7 @@ description: Lär dig hur du åtgärdar databasproblem som försämrar prestanda
 role: Developer, Admin
 feature: Best Practices
 exl-id: e40e0564-a4eb-43a8-89dd-9f6c5cedb4a7
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '541'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Du kan använda MySQL för att identifiera och lösa frågor som körs länge i 
 Om ditt Adobe Commerce-projekt används i Pro-arkitekturen kan du använda Percona Toolkit för att analysera frågor.
 
 1. Kör kommandot `pt-query-digest --type=slowlog` mot långsamma MySQL-frågeloggar.
-   * Information om var de långsamma frågeloggarna finns i **[!UICONTROL Log locations > Service Logs]**(https://devdocs.magento.com/cloud/project/log-locations.html#service-logs) i utvecklardokumentationen.
+   * Information om var de långsamma frågeloggarna finns i **[!UICONTROL Log locations > Service Logs]**(https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/test/log-locations#service-logs) i utvecklardokumentationen.
    * Se dokumentationen för [Percona Toolkit > pt-query-digest](https://www.percona.com/doc/percona-toolkit/LATEST/pt-query-digest.html#pt-query-digest).
 1. Beroende på vilka problem som hittas kan du åtgärda frågan så att den körs snabbare.
 

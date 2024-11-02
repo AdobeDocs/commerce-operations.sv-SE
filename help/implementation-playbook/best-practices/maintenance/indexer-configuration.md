@@ -4,7 +4,7 @@ description: Underhåll och optimera webbplatsens prestanda genom att följa ved
 role: Admin, User
 feature: Best Practices
 exl-id: b35806f9-4bc6-407e-bedd-5ce3f09c1b9f
-source-git-commit: 153cf3bae74a78d7a41176e0216203d354d2513b
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 0%
@@ -35,7 +35,7 @@ Att ha en stor butik med flera administratörer som arbetar i bakgrunden eller h
 Så här maximerar du webbplatsens prestanda:
 
 - Granska indexkonfigurationen.
-- Ställ in indexerarna på _[!UICONTROL Update on Schedule]_för stora webbplatser och webbplatser med frekventa uppdateringar och stor trafik. Se [Indexhantering](https://docs.magento.com/user-guide/system/index-management.html#change-the-index-mode).
+- Ställ in indexerarna på _[!UICONTROL Update on Schedule]_för stora webbplatser och webbplatser med frekventa uppdateringar och stor trafik. Se [Indexhantering](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/index-management#change-the-index-mode).
 - Följ de [bästa metoderna](../../../performance/configuration.md) för prestanda när du hanterar index.
 
 >[!IMPORTANT]

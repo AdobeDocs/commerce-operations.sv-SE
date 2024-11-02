@@ -4,7 +4,7 @@ description: Lär dig hur du konfigurerar databas- och programinställningar fö
 role: Developer, Admin
 feature: Best Practices
 exl-id: ca377dc8-c8bd-4f77-a24b-22a298e2bba4
-source-git-commit: fb449f0ee7d503d0c7ba60bf6bfbe3f528060606
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '651'
 ht-degree: 0%
@@ -59,9 +59,9 @@ Kör följande kommando för att avgöra vilken sökmotor som används för när
 
 Konfigurationsanvisningar finns i Utvecklarhandbok för Adobe Commerce i molnet:
 
-- [Konfigurera OpenSearch-tjänsten](https://devdocs.magento.com/cloud/project/services-opensearch.html)
+- [Konfigurera OpenSearch-tjänsten](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/service/opensearch)
 
-- [Konfigurera tjänsten Elasticsearch](https://devdocs.magento.com/cloud/project/services-elastic.html)
+- [Konfigurera tjänsten Elasticsearch](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/service/elasticsearch)
 
 ## Undvik anpassade utlösare
 
@@ -76,7 +76,7 @@ Mer information om alternativ till att använda anpassade utlösare finns i [MyS
 
 ## Uppgradera [!DNL ECE-Tools] till version 2002.0.21 eller senare {#ece-tools-version}
 
-För att undvika potentiella problem med kroniska lås uppgraderar du ECE-Tools till version 2002.0.21 eller senare. Instruktioner finns i [Uppdatera `ece-tools` version ](https://devdocs.magento.com/cloud/project/ece-tools-update.html) i utvecklardokumentationen.
+För att undvika potentiella problem med kroniska lås uppgraderar du ECE-Tools till version 2002.0.21 eller senare. Instruktioner finns i [Uppdatera `ece-tools` version ](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/update-package) i utvecklardokumentationen.
 
 ## Växla indexeringsläge på ett säkert sätt
 

@@ -3,7 +3,7 @@ title: "MDVA-44147: GraphQL-begäran returnerar inte rekvisition Lists"
 description: MDVA-44147-korrigeringen åtgärdar ett problem där GraphQL-begäran inte returnerar rekvisition Lists. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.14 är installerat. Korrigerings-ID är MDVA-44147. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.5.
 feature: B2B, GraphQL
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 0%
@@ -35,8 +35,8 @@ GraphQL-begäran returnerar inte rekvisitionslistor.
 <u>Steg som ska återskapas</u>:
 
 1. Gå till **Store** > **Inställningar** > **Konfiguration** > **Allmänt** > **B2B-funktioner** och aktivera rekvisitionslista.
-1. Logga in som kund och lägg till en produkt i [rekvisitionslistan](https://docs.magento.com/user-guide/customers/account-dashboard-requisition-lists.html).
-1. Skapa en [kundtoken](https://devdocs.magento.com/guides/v2.4/graphql/mutations/generate-customer-token.html).
+1. Logga in som kund och lägg till en produkt i [rekvisitionslistan](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/requisition-lists/requisition-lists).
+1. Skapa en [kundtoken](https://developer.adobe.com/commerce/webapi/graphql/mutations/generate-customer-token.html).
 
    <pre>
     <code class="language-graphql">
@@ -51,7 +51,7 @@ GraphQL-begäran returnerar inte rekvisitionslistor.
       </code>
       </pre>
 
-1. Använd följande fråga för att hämta alla rekvisitionslistor från kunden. Använd huvudet **Authorization** med värdet `Bearer <customer_token>`. Mer information finns i artikeln [Customer Query](https://devdocs.magento.com/guides/v2.4/graphql/queries/customer.html) i utvecklardokumentationen.
+1. Använd följande fråga för att hämta alla rekvisitionslistor från kunden. Använd huvudet **Authorization** med värdet `Bearer <customer_token>`. Mer information finns i artikeln [Customer Query](https://developer.adobe.com/commerce/webapi/graphql/queries/customer.html) i utvecklardokumentationen.
 
    Begäran:
 
