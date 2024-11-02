@@ -2,9 +2,9 @@
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: f10eb87efbda20899574486f1e9db01f2a66f855
+source-git-commit: efa483b3e5a09bf2f4a472f9ee9e30512a0ca211
 workflow-type: tm+mt
-source-wordcount: '22258'
+source-wordcount: '22642'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,23 @@ ht-degree: 0%
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som har skapats av gemenskapen för Magento Open Source finns i [versionsinformationen](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.54 {#v1-1-54}
+
+* **AC-13283** (för Adobe Commerce och Magento Open Source 2.4.6-p8) - Återställer monteringsordning bakåt och inkompatibla ändringar som ingår i 2.4.6-p8.
+* **ACSD-60267** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet där FPT (Fixed Product Tax) tillämpas korrekt när enkla produkter läggs till direkt i kundvagnen, men misslyckas när du väljer dessa produkter med konfigurerbara produktalternativ.
+* **ACSD-61103** (för Adobe Commerce och Magento Open Source >=2.4.6 &lt;2.4.7) - Korrigerar problemet där antalet fel i tabellen `customer_entity` inte återställs till noll när en kund har loggat in via API-slutpunkter.
+* **ACSD-61134** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.7) - Korrigerar problemet där betalningsmetoden [!DNL Braintree Vault] automatiskt avmarkeras i kassaarbetsflödet när en kund uppdaterar sin faktureringsadress genom att avmarkera kryssrutan *[!UICONTROL My billing and shipping address are the same]*.
+* **ACSD-61199** (för Adobe Commerce >=2.4.4 &lt;2.4.8) - Korrigerar problemet där sidhierarkifliken i CMS inte visar en korrekt trädstruktur när en CMS-sida med en befintlig hierarki redigeras.
+* **ACSD-61200** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet där beräkningarna för *[!UICONTROL Total Amount]* och *[!UICONTROL Total Amount Actual]* i försäljningen saknar *[!UICONTROL Discount Tax Compensation Amount]* och *[!UICONTROL Shipping Discount Tax Compensation Amount]*, vilket orsakar avvikelser i försäljningsorderdata.
+* **ACSD-61522** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet där det går att ange e-postadresser i gästkundens fält *[!UICONTROL First Name]* och *[!UICONTROL Last Name]* och skicka ogiltiga orderbekräftelsemeddelanden via e-post.
+* **ACSD-61756** (för Adobe Commerce >=2.4.4 &lt;2.4.7) - Förbättrar prestanda för `AdvancedSalesRule` filter.
+* **ACSD-61799** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.5) - Korrigerar problemet där den totala rabatten felaktigt beräknas när flera kundvagnsregler med fasta rabatter tillämpas på offerten.
+* **ACSD-61845** (för Adobe Commerce och Magento Open Source >=2.4.7-p1 &lt;2.4.8) - Korrigerar felet som inträffar när en begäran skickas med endast *text/html* accept header.
+* **ACSD-62056** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet där bildöverföringen för en konfigurerbar produkt misslyckas om MSI är installerat.
+* **ACSD-62485** (för Adobe Commerce >=2.4.4 &lt;2.4.6-p8) || >=2.4.7 &lt;2.4.8) - Korrigerar problemet där `async.operations.all` konsumenten slutar arbeta när ett företag skapas.
+* Uppdaterade patchar: ACSD-48661, ACSD-51846, ACSD-55100, ACSD-61553
+* Föråldrade patchar: ACSD-51846
 
 ## v1.1.53 {#v1-1-53}
 
