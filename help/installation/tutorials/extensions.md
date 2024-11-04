@@ -2,9 +2,9 @@
 title: Hantera tillägg från tredje part
 description: Följ de här stegen för att installera, aktivera, uppgradera och avinstallera ett Adobe Commerce-tillägg.
 exl-id: b564662a-2e5f-4fa9-bae1-ca7498478fa9
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: f057cf082eeab1e34957e284817c6b93517de21b
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '802'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ Tilläggen omfattar:
 - Teman (ändra utseende och känsla för din butik och administratör)
 - Språkpaket (lokalisera butiken och administratören)
 
->[!TIP]
->
->I det här avsnittet beskrivs hur du använder kommandoradsgränssnittet för att hantera tillägg från tredje part som du köper från Commerce Marketplace. Du kan använda samma procedur för att installera _valfritt_-tillägg. Allt du behöver är tilläggets Composer-namn och version. Om du vill hitta den öppnar du tilläggets `composer.json`-fil och noterar värdena för `"name"` och `"version"`.
+I det här avsnittet beskrivs hur du använder kommandoradsgränssnittet för att hantera tillägg från tredje part som du köper från Commerce Marketplace för _lokala_-projekt. Information om projekt för molninfrastruktur finns i [Hantera tillägg](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure-store/extensions).
+
+Du kan använda samma procedur för att installera _valfritt_-tillägg. Allt du behöver är tilläggets Composer-namn och version. Om du vill hitta den öppnar du tilläggets `composer.json`-fil och noterar värdena för `"name"` och `"version"`.
 
 ## Installera
 
@@ -70,7 +70,7 @@ Så här hämtar du tilläggets dispositionsnamn och version från Commerce Mark
 
    ![Marketplace, inköpshistorik](../../assets/installation//marketplace-my-purchases.png)
 
-1. Hitta det tillägg som du vill installera och klicka på **Teknisk information**.
+1. Hitta det tillägg som du vill installera och notera komponentnamnet och versionen.
 
    ![Teknisk information visar tilläggets disposition](../../assets/installation/marketplace-extension-technical-details.png)
 
@@ -241,13 +241,13 @@ Följande instruktioner innehåller allmän information om hur du avinstallerar 
    - För Composer-baserade tillägg tar du bort tillägget från Adobe Commerce `composer.json`-filen.
 
      ```bash
-     composer remove <package-name>
+     composer remove <component-name>
      ```
 
    - För icke-dispositionsbaserade tillägg tar du bort de fysiska filerna från Adobe Commerce projektdatabas.
 
      ```bash
-     rm -rf app/code/<vendor-name>/<module-name>
+     rm -rf app/code/<vendor-name>/<component-name>
      ```
 
 1. Om filen `config.php` ligger under källkontroll i Adobe Commerce projektdatabas tar du bort tillägget från filen `config.php`.
