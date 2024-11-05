@@ -3,9 +3,9 @@ title: 'ACSD-48216: *AUTO_INCREMENT of layer_source_item* table increase on *UPD
 description: Använd patchen ACSD-48216 för att åtgärda Adobe Commerce-problemet där *AUTO_INCREMENT för tabellen layer_source_item* ökar med åtgärden *UPDATE*.
 feature: Admin Workspace, Inventory, Orders
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+source-git-commit: 809defe75d7b218d8085f85ff815472a531040cf
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '342'
 ht-degree: 0%
 
 ---
@@ -30,11 +30,11 @@ Korrigeringen ACSD-48216 åtgärdar ett problem där *AUTO_INCREMENT* i tabellen
 
 ## Problem
 
-*AUTO_INCREMENT* för tabellen *_layer_source_item* ökar för åtgärden *UPDATE*.
+`AUTO_INCREMENT` av tabellen `inventory_source_item` ökar åtgärden `UPDATE`.
 
 <u>Steg som ska återskapas</u>:
 
-1. Kontrollera det aktuella värdet för *AUTO_INCREMENT* i tabellen *Inventering_source_item*:
+1. Kontrollera det aktuella värdet för `AUTO_INCREMENT` i tabellen `inventory_source_item`:
 
 ```bash
 MySQL > show create table inventory_source_item;
@@ -75,29 +75,27 @@ Nyttolast:
 }
 ```
 
-1. Kontrollera värdet *AUTO_INCREMENT* för tabellen *_layer_source_item* igen.
+1. Kontrollera värdet `AUTO_INCREMENT` för tabellen `inventory_source_item` igen.
 
 <u>Förväntade resultat</u>:
 
-Värdet *AUTO_INCREMENT* för tabellen *_layer_source_item* ökar inte efter varje uppdateringsåtgärd.
+Värdet `AUTO_INCREMENT` för tabellen `inventory_source_item` ökar inte efter varje uppdateringsåtgärd.
 
 <u>Faktiska resultat</u>:
 
-Värdet *AUTO_INCREMENT* för tabellen *_layer_source_item* ökar efter varje uppdateringsåtgärd.
+Värdet `AUTO_INCREMENT` för tabellen `inventory_source_item` ökar efter varje uppdateringsåtgärd.
 
 ## Tillämpa korrigeringen
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
-* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
+* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool]
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i guiden för Commerce om molninfrastruktur
 
 ## Relaterad läsning
 
-Mer information om [!DNL Quality Patches Tool] finns i:
-
-* [[!DNL Quality Patches Tool] släppt: ett nytt verktyg för självbetjäning av kvalitetspatchar](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) i kunskapsbasen för support.
-* [Kontrollera om det finns en korrigeringsfil för ditt Adobe Commerce-problem med  [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md) i guiden [!UICONTROL Quality Patches Tool].
-
+* [[!DNL Quality Patches Tool] släppt: ett nytt verktyg för självbetjäning av kvalitetspatchar](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) i kunskapsbasen för support
+* [Kontrollera om det finns en korrigeringsfil för ditt Adobe Commerce-problem med  [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md) i guiden [!UICONTROL Quality Patches Tool]
+* [Metodtips för att ändra databastabeller](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/development/modifying-core-and-third-party-tables#why-adobe-recommends-avoiding-modifications) i Commerce Implementeringspellbook
 
 Mer information om andra tillgängliga korrigeringsfiler i QPT finns i [[!DNL Quality Patches Tool]: Söka efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) i [!DNL Quality Patches Tool]-handboken.
