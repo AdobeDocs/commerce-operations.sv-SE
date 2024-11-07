@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: 0c03963e3ebe7239e52f34fcb3279eedb6fbf74a
+source-git-commit: 4ea3dede58424662be7e317807ff9b2d128cd261
 workflow-type: tm+mt
-source-wordcount: '6124'
+source-wordcount: '6128'
 ht-degree: 0%
 
 ---
@@ -651,6 +651,8 @@ ht-degree: 0%
          - [ACSD-59930: Förbättrar prestanda för företagets flöden](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-53/acsd-59930-improves-performance-of-company-flows.md)
          - [ACSD-60584: Åtkomsttoken som skapats för en webbplats har åtkomst till information på andra webbplatser](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-53/acsd-60584-access-token-created-for-one-website-is-allowed-to-access-information-on-other-websites.md)
          - [ACSD-48318: Fel vid kapsling av miljöemulering i system.log](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-53/acsd-48318-environment-emulation-nesting-error-in-system-log.md)
+      - v1.1.54 {#v1-1-54}
+         - [Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.54](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/overview.md)
       - [Leta efter Adobe Commerce-problem med verktyget för kvalitetskorrigeringar](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
 
 - Referens för kommandoradsverktyg {#cli-reference}
