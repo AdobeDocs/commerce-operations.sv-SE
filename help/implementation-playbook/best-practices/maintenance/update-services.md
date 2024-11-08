@@ -4,9 +4,9 @@ description: Lär dig hur du uppdaterar din Adobe Commerce i molninfrastrukturss
 role: Developer
 feature: Best Practices
 exl-id: 62aeffe3-b5a6-49f8-a39b-3219b46cd486
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: 5e3289b328b51eb50354efdc1571283791175b9a
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Kunder som har Pro-planer kan bara självbetjäna tjänstuppgraderingar i sin [i
 
 >[!WARNING]
 >
->Uppgraderingar av tjänster kan inte föras över till produktionsmiljön utan att vårt infrastrukturteam får 48 arbetstimmar i förväg. Detta är nödvändigt eftersom vi måste se till att det finns en infrastruktursupporttekniker tillgänglig som kan uppdatera din konfiguration inom en önskad tidsram med minimala driftavbrott i din produktionsmiljö.
+>Tjänsteuppgraderingar kan inte föras över till en produktionsmiljö utan att man inom 48 timmar varskor till Adobe infrastrukturteam. Detta är nödvändigt för att Adobe ska kunna säkerställa att en tekniker för infrastruktursupport är tillgänglig för att uppdatera din konfiguration inom en viss tidsperiod och med minimala driftavbrott i din produktionsmiljö. Adobe rekommenderar att du använder underhållsläge när du uppgraderar din webbplats.
 
 Du kan visa en lista över tjänstversioner och slutdatum i följande fil: [https://github.com/magento/ece-tools/blob/develop/config/eol.yaml](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml).
 
