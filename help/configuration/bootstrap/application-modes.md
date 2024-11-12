@@ -2,9 +2,9 @@
 title: Programlägen
 description: Commerce kan fungera i olika lägen beroende på dina behov. Visa en detaljerad lista över tillgängliga programlägen.
 exl-id: a2a71f43-682f-4fa4-940a-1f6a4d441c41
-source-git-commit: 5003e8dcbb3736201ea19ebe30d5e56775096157
+source-git-commit: c415c3427f513255b9d4ebe1d24ba4024df21928
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '739'
 ht-degree: 0%
 
 ---
@@ -24,11 +24,12 @@ Mer information om hur du ändrar åtgärdslägen manuellt finns i [Ange åtgär
 
 ## Molnsupport
 
-På grund av det skrivskyddade filsystemet kan du inte ändra lägen i fjärrmolnmiljöer. Försök inte ändra lägen genom att ändra filen `app/etc/env.php` eftersom filen som baseras på flera konfigurationskällor skrivs över av paketet `ece-tools`.
+På grund av det skrivskyddade filsystemet finns det en strikt restriktion mot att ändra lägen i fjärrmolnmiljöer, och det kan inte åsidosättas av Adobe Commerce Support. Försök inte ändra lägen genom att ändra filen `app/etc/env.php` eftersom filen som baseras på flera konfigurationskällor skrivs över av paketet `ece-tools`.
 
 Adobe Commerce i molninfrastrukturen kör automatiskt programmet i _underhållsläge_ under en distribution, vilket gör att webbplatsen är offline tills distributionen är klar. I annat fall förblir programmet i _produktions_-läge. Se [Distributionsprocess](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/process.html#deploy-phase) i guiden _Commerce om molninfrastruktur_.
 
 Om du använder Cloud Docker för Commerce som ett utvecklingsverktyg kan du distribuera ditt molninfrastrukturprojekt i en Docker-miljö i _developer_ -läge, men prestanda blir långsammare på grund av ytterligare filsynkroniseringsåtgärder. Se [Distribuera Docker-miljön](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/#launch-mode) i guiden _Cloud Docker för Commerce_.
+
 
 ## Standardläge
 
@@ -54,6 +55,10 @@ I utvecklarläge:
 - Ett undantag genereras i felhanteraren i stället för att loggas
 - Ett undantag genereras när en händelseprenumerant inte kan anropas
 - Visar anpassade rubriker för `X-Magento-*` HTTP-begäran och svar
+
+>[!NOTE]
+>
+>Det här läget stöds inte i Adobe Commerce Cloud-miljön och Adobe Commerce Support kan inte underlätta ändring av programläge.
 
 ## Produktionsläge
 
