@@ -1,11 +1,12 @@
 ---
-title: "ACSD-60804: Om du redigerar en kund som är associerad med ett borttaget företag uppstår ett fel"
+title: 'ACSD-60804: Om du redigerar en kund som är associerad med ett borttaget företag uppstår ett fel'
 description: Använd patchen ACSD-60804 för att åtgärda Adobe Commerce-problemet där redigering av en kund som är associerad med ett borttaget företag orsakar ett fel *Anrop till medlemsfunktionen getSuperUserId() på null*.
 feature: Companies, Customers, B2B
 role: Admin, Developer
-source-git-commit: 1231dac065565ff636424673a15ae4148a5f84dd
+exl-id: 09241160-f5ed-41f8-8bb6-2bb8ed5cccd5
+source-git-commit: 9d39b1045099a71d23f25ad1ef4932f78b1f33f0
 workflow-type: tm+mt
-source-wordcount: '391'
+source-wordcount: '356'
 ht-degree: 0%
 
 ---
@@ -64,8 +65,4 @@ Använd följande länkar beroende på distributionsmetod för att tillämpa ens
 
 Mer information om [!DNL Quality Patches Tool] finns i:
 
-* [[!DNL Quality Patches Tool] släppt: ett nytt verktyg för självbetjäning av kvalitetspatchar](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) i kunskapsbasen för support.
-* [Kontrollera om det finns en korrigeringsfil för ditt Adobe Commerce-problem med  [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md) i guiden [!UICONTROL Quality Patches Tool].
-
-
-Mer information om andra tillgängliga korrigeringsfiler i QPT finns i [[!DNL Quality Patches Tool]: Söka efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) i [!DNL Quality Patches Tool]-handboken.
+* [[!DNL Quality Patches Tool]: Ett självbetjäningsverktyg för kvalitetspatchar](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) i verktygshandboken.
