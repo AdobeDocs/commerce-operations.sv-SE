@@ -1,7 +1,7 @@
 ---
-source-git-commit: 2d46933005b9848fee526d0a9f96e2e5ff58cbb8
+source-git-commit: e05e4e4ef547bfb95fdcc53c2095ef0725b0a6e1
 workflow-type: tm+mt
-source-wordcount: '14732'
+source-wordcount: '14731'
 ht-degree: 0%
 
 ---
@@ -809,10 +809,10 @@ säkerställa kompatibilitet och aktuell funktionalitet. Tidigare kunde uppdater
    * _Korrigera anteckning_: Systemet lägger nu bara till det ändrade landet i konfigurationen &quot;general/region/state_required&quot; när ett nytt land med obligatoriska lägen läggs till, vilket förhindrar eventuella avbrott i den anpassade koden som förutsätter att regionen är inaktiverad. Om du tidigare lade till ett nytt land med obligatoriska lägen återställs konfigurationen General/region/state_required till standardländer med ett obligatoriskt tillstånd, vilket kan göra att affären bryts.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/37796>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/38076>
-* _AC-9712_: https://github.com/magento/magento2/issues/37841
-   * _Korrigera anteckning_: Skillnad i mindre kompilering mellan php- och nodatumbibliotek (grunt) med komplicerade `calc`-uttryck
-   * _GitHub-problem_: &lt;<https://github.com/magento/magento2/commit/b34c0a75>>
-   * _GitHub-kodbidrag_: Åtgärda skillnaden i mindre kompilering mellan php- och nodejs-biblioteket (grunt) efter uppdatering wikimedia/less.php:^5.x
+* _AC-9712_: Skillnad i mindre kompilering mellan php- och nodatumbibliotek (grunt) med komplicerade `calc`-uttryck
+   * _Korrigera anteckning_: Korrigera skillnaden i mindre kompilering mellan php- och nodejs-biblioteket (grunt) efter uppdatering wikimedia/less.php:^5.x
+   * _GitHub-problem_: <https://github.com/magento/magento2/issues/37841>
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/b34c0a75>
 * _ACP2E-2692_: Felet &quot;Bastabellen eller vyn hittades inte&quot; inträffar när partiell indexering körs
    * _Korrigera anteckning_: Partiell omindexering fungerar nu korrekt med stor ändringslogg vid sekundär databasanslutning
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/ba25af8a>
