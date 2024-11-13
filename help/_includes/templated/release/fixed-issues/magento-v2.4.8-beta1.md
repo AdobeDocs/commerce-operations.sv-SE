@@ -1,7 +1,7 @@
 ---
-source-git-commit: d2fe92c778cb90912062c5f318332a02f6a4131e
+source-git-commit: 2d46933005b9848fee526d0a9f96e2e5ff58cbb8
 workflow-type: tm+mt
-source-wordcount: '14792'
+source-wordcount: '14732'
 ht-degree: 0%
 
 ---
@@ -144,7 +144,7 @@ säkerställa kompatibilitet och aktuell funktionalitet. Tidigare kunde uppdater
 
 ## Åtgärdade problem
 
-Vi har åtgärdat 254 problem i Magento Open Source 2.4.8-kärnkoden. En deluppsättning av de åtgärdade problemen som ingår i den här versionen beskrivs nedan.
+Vi har åtgärdat 253 problem i Magento Open Source 2.4.8-kärnkoden. En deluppsättning av de åtgärdade problemen som ingår i den här versionen beskrivs nedan.
 
 ### API:er
 
@@ -1143,10 +1143,6 @@ to bin/magento config:set twofactorauth/google/leeway VALUE
 * _AC-12128_: Prototype.js security vulnerability fix CVE-2020-27511
    * _Åtgärdsmeddelande_: Systemet har uppdaterats för att åtgärda säkerhetsluckan CVE-2020-27511 i Prototype.js 1.7.3, vilket förbättrar den övergripande säkerheten i systemet. Före den här uppdateringen var systemet känsligt för en denial of service-attack (Regular Expression Denial of Service) genom borttagna HTML-taggar.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/de4dfb8e>
-* _AC-12128_:
-   * _Korrigera anteckning_: Prototype.js security vulnerability fix CVE-2020-27511
-   * _GitHub-problem_: &lt;<https://github.com/magento/magento2/commit/de4dfb8e>>
-   * _GitHub-kodbidrag_: Systemet har uppdaterats för att åtgärda säkerhetsluckan CVE-2020-27511 i Prototype.js 1.7.3, vilket förbättrar systemets övergripande säkerhet. Före den här uppdateringen var systemet känsligt för en denial of service-attack (Regular Expression Denial of Service) genom borttagna HTML-taggar.
 * _AC-12189_: Grunt Less använder pub/-prefix för källmappningar
    * _Korrigera anteckning_: Systemet genererar nu färre/css-källkartor utan prefixet /pub för sökvägar när grunt används, vilket eliminerar behovet av en lösning i webbserverkonfigurationen. Tidigare krävdes en specifik konfiguration på webbservern för att /pub-prefixet i källmappssökvägar skulle fungera korrekt.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38837>

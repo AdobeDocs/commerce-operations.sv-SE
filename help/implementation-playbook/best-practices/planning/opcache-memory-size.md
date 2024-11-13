@@ -4,7 +4,7 @@ description: Beskriver hur du undviker prestandaförsämringar genom särskilda 
 role: Developer
 feature: Best Practices
 exl-id: d1e10068-e4e8-4e75-9f30-f3a89a08d791
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: 6c0a9268cb3a3b2e76f4a389846e8407f0893b4f
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Allokera minst **2 GB** minne för PHP-modulen [OPcache](https://www.php.net/man
 ## Ytterligare information
 
 * [Bästa praxis för prestanda - PHP-inställningar](../../../performance/software.md#php-settings)
-* [Konfigurera PHP-alternativ](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/start/overview)
+* [Konfigurera PHP-alternativ](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/app/configure-app-yaml)
 * [Bästa databaspraxis för Adobe Commerce om molninfrastruktur](database-on-cloud.md)
 * [De vanligaste databasproblemen i Adobe Commerce om molninfrastruktur](../maintenance/resolve-database-performance-issues.md)
 * [Indexerare&quot;Update On Schedule&quot; optimerar Adobe Commerce prestanda](../maintenance/indexer-configuration.md)
