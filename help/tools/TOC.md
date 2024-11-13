@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: 8e92a5bafc045f719250756dbca4857bb76d990b
+source-git-commit: 247be06de65e4d6216419f8da0326ad5c150f20e
 workflow-type: tm+mt
-source-wordcount: '6165'
+source-wordcount: '6177'
 ht-degree: 0%
 
 ---
@@ -646,6 +646,7 @@ ht-degree: 0%
          - [ACSD-60788: Anpassade skript för  [!DNL Google Tag Manager] kördes inte på grund av CSP-fel](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-52/acsd-60788-fixes-issue-where-custom-scripts-for-google-tag-manager-are-not-executed-due-to-content-security-policy-errors.md)
          - [ACSD-59952: Fel vid borttagning av delad katalog med samma grupp-ID som en annan delad katalog](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-52/acsd-59952-error-on-deleting-shared-catalog-with-same-group-id-as-another-shared-catalog.md)
          - [ACSD-60673: Problem [!UICONTROL Cart Price Rule] har korrigerats för flera betalningsmetoder vid utcheckning](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-52/acsd-60673-cart-price-rule-fix-for-multiple-payment-methods-at-checkout.md)
+         - [ACSD-60684: [!DNL GraphQL] produktsortering efter flera fält fungerar inte som förväntat](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-52/acsd-60684-graphql-product-sorting-by-multiple-fields-does-not-work-as-expected.md)
       - v1.1.53 {#v1-1-53}
          - [Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.53](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-53/overview.md)
          - [ACSD-59930: Förbättrar prestanda för företagets flöden](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-53/acsd-59930-improves-performance-of-company-flows.md)
