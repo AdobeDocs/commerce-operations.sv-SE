@@ -1,18 +1,19 @@
 ---
-title: "MDVA-44147: GraphQL-begäran returnerar inte rekvisition Lists"
-description: MDVA-44147-korrigeringen åtgärdar ett problem där GraphQL-begäran inte returnerar rekvisition Lists. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.14 är installerat. Korrigerings-ID är MDVA-44147. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.5.
+title: "MDVA-44147: [!DNL GraphQL] begäran returnerar inte [!UICONTROL Requisition Lists]"
+description: MDVA-44147-korrigeringen åtgärdar ett problem där  [!DNL GraphQL] begäran inte returnerar [!UICONTROL Requisition Lists]. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.14 är installerat. Korrigerings-ID är MDVA-44147. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.5.
 feature: B2B, GraphQL
 role: Admin
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+exl-id: 534c4e45-6521-45c0-ae4e-c60b754f432f
+source-git-commit: fa95ca5ac2f7606386a785fb3b29f56672d555b1
 workflow-type: tm+mt
-source-wordcount: '424'
+source-wordcount: '403'
 ht-degree: 0%
 
 ---
 
-# MDVA-44147: GraphQL-begäran returnerar inte rekvisition Lists
+# MDVA-44147: [!DNL GraphQL]-begäran returnerar inte [!UICONTROL Requisition Lists]
 
-MDVA-44147-korrigeringen åtgärdar ett problem där GraphQL-begäran inte returnerar rekvisition Lists. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.14 är installerat. Korrigerings-ID är MDVA-44147. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.5.
+MDVA-44147-korrigeringen åtgärdar ett problem där [!DNL GraphQL]-begäran inte returnerar [!UICONTROL Requisition Lists]. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.14 är installerat. Korrigerings-ID är MDVA-44147. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.5.
 
 ## Berörda produkter och versioner
 
@@ -30,12 +31,12 @@ MDVA-44147-korrigeringen åtgärdar ett problem där GraphQL-begäran inte retur
 
 ## Problem
 
-GraphQL-begäran returnerar inte rekvisitionslistor.
+[!DNL GraphQL]-begäran returnerar inte [!UICONTROL Requisition Lists].
 
 <u>Steg som ska återskapas</u>:
 
-1. Gå till **Store** > **Inställningar** > **Konfiguration** > **Allmänt** > **B2B-funktioner** och aktivera rekvisitionslista.
-1. Logga in som kund och lägg till en produkt i [rekvisitionslistan](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/requisition-lists/requisition-lists).
+1. Gå till **Store** > **Inställningar** > **Konfiguration** > **Allmänt** > **B2B-funktioner** och aktivera **[!UICONTROL Requisition List]**.
+1. Logga in som kund och lägg till en produkt i [[!UICONTROL Requisition List]](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/requisition-lists/requisition-lists).
 1. Skapa en [kundtoken](https://developer.adobe.com/commerce/webapi/graphql/mutations/generate-customer-token.html).
 
    <pre>
@@ -51,7 +52,7 @@ GraphQL-begäran returnerar inte rekvisitionslistor.
       </code>
       </pre>
 
-1. Använd följande fråga för att hämta alla rekvisitionslistor från kunden. Använd huvudet **Authorization** med värdet `Bearer <customer_token>`. Mer information finns i artikeln [Customer Query](https://developer.adobe.com/commerce/webapi/graphql/queries/customer.html) i utvecklardokumentationen.
+1. Använd följande fråga för att hämta alla [!UICONTROL Requisition Lists] från kunden. Använd huvudet **Authorization** med värdet `Bearer <customer_token>`. Mer information finns i artikeln [Customer Query](https://developer.adobe.com/commerce/webapi/graphql/schema/customer/queries/customer/) i utvecklardokumentationen.
 
    Begäran:
 

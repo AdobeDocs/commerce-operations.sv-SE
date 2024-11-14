@@ -1,18 +1,19 @@
 ---
 title: 'MDVA-41631: Det gick inte att hämta orderinformation utan det valfria telefonvärdet'
-description: MDVA-41631-korrigeringen åtgärdar ett problem där användare får felmeddelanden när de hämtar orderinformation utan att ange ett"telefonvärde" via GraphQL. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.7 är installerat. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.4.
+description: Korrigeringen MDVA-41631 åtgärdar ett problem där användare får ett fel när de hämtar orderinformation utan valfritt telefonvärde till och med  [!DNL GraphQL]. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.7 är installerat. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.4.
 feature: Orders
 role: Admin
-source-git-commit: 79c8a15fb9686dd26d73805e9d0fd18bb987770d
+exl-id: e56cea59-ffc1-4520-85ca-136cda613884
+source-git-commit: 3f14d93eca09967e320aae4af5e94c6d0c16cd20
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '401'
 ht-degree: 0%
 
 ---
 
 # MDVA-41631: Fel vid hämtning av orderinformation utan &quot;telefonvärde&quot; (tillval)
 
-MDVA-41631-korrigeringen åtgärdar ett problem där användare får felmeddelanden när de hämtar orderinformation utan att ange ett&quot;telefonvärde&quot; via GraphQL. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.7 har installerats. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.4.
+Korrigeringen MDVA-41631 åtgärdar ett problem där användare får ett fel när de hämtar orderinformation utan valfritt telefonvärde via [!DNL GraphQL]. Den här korrigeringen är tillgänglig när [[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.7 installeras. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.4.
 
 ## Berörda produkter och versioner
 
@@ -30,14 +31,14 @@ Adobe Commerce (alla distributionsmetoder) 2.4.1 - 2.4.3-p1
 
 ## Problem
 
-Det går inte att hämta orderinformation utan telefonnummer via GraphQL.
+Användarna får ett fel vid hämtning av orderinformation utan valfritt telefonvärde till [!DNL GraphQL].
 
 <u>Steg som ska återskapas</u>:
 
 1. Gå till **Store** > **Konfiguration** > **Kunder** > **Kundkonfiguration** > **Alternativ för namn och adress** > **Visa telefonnummer** och ange telefonnumret som valfritt.
-1. Gör en beställning med GraphQL API som inloggad kund.
-   * Ange inte telefonnumret när du anger fakturerings- och leveransadress. Följ instruktionerna i [GraphQL självstudiekurs för utcheckning](https://developer.adobe.com/commerce/webapi/graphql/tutorials/checkout/checkout-customer.html) i vår utvecklardokumentation.
-1. Hämta ordern med GraphQL [customerOrders-frågan](https://developer.adobe.com/commerce/webapi/graphql/queries/customer-orders.html).
+1. Gör en beställning med [!DNL GraphQL API] som inloggad kund.
+   * Ange inte telefonnumret när du anger fakturerings- och leveransadress. Följ instruktionerna i [[!DNL GraphQL] självstudiekursen för utcheckning](https://developer.adobe.com/commerce/webapi/graphql/tutorials/checkout/) i utvecklardokumentationen.
+1. Hämta ordningen med [!DNL GraphQL] [`customerOrders`-frågan ](https://developer.adobe.com/commerce/webapi/graphql/schema/customer/queries/orders/).
 
 <pre>
 <code class="language-graphql">
@@ -81,7 +82,7 @@ country_code
 
 <u>Förväntade resultat</u>:
 
-Användarna får beställningsinformation.
+Användarna får orderinformationen.
 
 <u>Faktiska resultat</u>:
 
@@ -96,7 +97,7 @@ Använd följande länkar beroende på distributionsmetod för att tillämpa ens
 
 ## Relaterad läsning
 
-Mer information om verktyget för kvalitetskorrigeringar finns i:
+Mer information om [!DNL Quality Patches Tool] finns i:
 
 * [Verktyget för kvalitetskorrigeringar har släppts: ett nytt verktyg för självbetjäning av kvalitetskorrigeringar](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) i kunskapsbasen för support.
 * [Kontrollera om det finns en korrigeringsfil för ditt Adobe Commerce-problem med verktyget för kvalitetskorrigeringar ](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md) i [!DNL Quality Patches Tool]-handboken.
