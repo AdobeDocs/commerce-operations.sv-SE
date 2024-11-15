@@ -2,9 +2,9 @@
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: efa483b3e5a09bf2f4a472f9ee9e30512a0ca211
+source-git-commit: fb884f895cb03dcc920dc3de9baa63deb8737cd3
 workflow-type: tm+mt
-source-wordcount: '22642'
+source-wordcount: '23125'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,25 @@ ht-degree: 0%
 >
 >Mer information om [!DNL quality patches] som har skapats av gemenskapen för Magento Open Source finns i [versionsinformationen](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
 
+## v1.1.55 {#v1-1-55}
+
+* **ACSD-58383** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet där en återbetalning skapas via [!DNL REST API] med två identiska begäranden som utförs samtidigt, vilket skapar dubbla kreditnotor.
+* **ACSD-58471** (för Adobe Commerce >=2.4.4 &lt;2.4.8) - Korrigerar problemet där dynamiskt innehåll inte kan läsas in på produktinformationssidan när de associerade katalogprisreglerna var schemalagda.
+* **ACSD-58566** (för Adobe Commerce >=2.4.6 &lt;2.4.8) - Korrigerar problemet där [!DNL GraphQL] returnerar ett internt serverfel när fältet `created_at` frågas i mutationen `addPurchaseOrderComment`.
+* **ACSD-58685** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar det problem där e-postmeddelanden som initierats när e-postkommunikation inaktiverades, fortfarande skulle skickas när e-postkommunikation återaktiverades.
+* **ACSD-58735** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet där en begränsad administratör inte kunde visa de övergivna kundvagnarna på kundkontosidan i [!UICONTROL Admin] för en associerad webbplats.
+* **ACSD-58828** (för Adobe Commerce och Magento Open Source >=2.4.6 &lt;2.4.8) - Korrigerar problemet där serversidans valideringsmeddelande *address krävs* visas om ett obligatoriskt fält lämnas tomt, tillsammans med valideringsmeddelandet på klientsidan. Verifieringen på serversidan visar inte meddelandet om tomma obligatoriska fält, och verifieringen på klientsidan kommer att hantera felmeddelandet med meddelandet *Detta är ett obligatoriskt fält.*
+* **ACSD-60344** (för Adobe Commerce >=2.4.4 &lt;2.4.8) - Korrigerar problemet där e-postmeddelanden med dubblettorderbekräftelse skickas när en **[!UICONTROL Purchase Order]** används med automatiskt godkännande.
+* **ACSD-61348** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet där önskelisteobjekt visas via [!DNL GraphQL], men inte i butiken i en miljö med flera webbplatser.
+* **ACSD-61534** (för Adobe Commerce och Magento Open Source >=2.4.7 &lt;2.4.8) - Korrigerar problemet där designkonfigurationen inte kunde anges med kommandot `bin/magento config:set` och låsta värden kan ändras med formulärhantering. Låsta värden som angetts från [!DNL CLI] med `--lock-env` eller `--lock-conf` kan inte uppdateras.
+* **ACSD-61785** (för Adobe Commerce >=2.4.4 &lt;2.4.8) - Åtgärdar problemet där det inte gick att uppdatera `reward_warning_notification` -attributet via [!DNL GraphQL] mutation- och [!DNL REST API]-anrop, vilket justerar dess beteende med `reward_update_notification`.
+* **ACSD-62591** (för Adobe Commerce och Magento Open Source >=2.4.7 &lt;2.4.8) - Korrigerar problemet där temat inte växlar korrekt när **[!UICONTROL User Agent Rules]** är konfigurerat.
+* **ACSD-62793** (för Adobe Commerce och Magento Open Source >=2.4.7 &lt;2.4.8) - Korrigerar problemet där `datetime` -attribut i exporterade data inte innehåller tidskomponenten. Om **[!UICONTROL Fields Enclosure]** dessutom är *aktiverad* kommer attributvärden i kolumnen `additional_attributes` att omslutas av dubbla citattecken.
+* **ACSD-62332** (för Adobe Commerce >=2.4.6 &lt;2.4.7) - Korrigerar problemet där produktlistfrågan [!DNL GraphQL] var begränsad till `total_count` av 10 000 produkter. Korrigerar problemet där [!DNL Live Search] ställer in den aktuella sidan till ** i stället för sidan ** i sökvillkoren när frågan ställs via [!DNL GraphQL].
+* Uppdaterade versioner: **ACSD-46581**, **ACSD-49513**, **ACSD-52801**, **ACSD-59514**
+* Ersatta korrigeringsfiler: **ACSD-52801**, **ACSD-55100**
+* Föråldrade korrigeringsfiler: **ACSD-52085**, **ACSD-57854**
+
 ## v1.1.54 {#v1-1-54}
 
 * **AC-13283** (för Adobe Commerce och Magento Open Source 2.4.6-p8) - Återställer monteringsordning bakåt och inkompatibla ändringar som ingår i 2.4.6-p8.
@@ -35,8 +54,8 @@ ht-degree: 0%
 * **ACSD-61845** (för Adobe Commerce och Magento Open Source >=2.4.7-p1 &lt;2.4.8) - Korrigerar felet som inträffar när en begäran skickas med endast *text/html* accept header.
 * **ACSD-62056** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet där bildöverföringen för en konfigurerbar produkt misslyckas om MSI är installerat.
 * **ACSD-62485** (för Adobe Commerce >=2.4.4 &lt;2.4.6-p8) || >=2.4.7 &lt;2.4.8) - Korrigerar problemet där `async.operations.all` konsumenten slutar arbeta när ett företag skapas.
-* Uppdaterade patchar: ACSD-48661, ACSD-51846, ACSD-55100, ACSD-61553
-* Föråldrade patchar: ACSD-51846
+* Uppdaterade versioner: **ACSD-48661**, **ACSD-55100**, **ACSD-61553**
+* Inaktuella korrigeringsfiler: **ACSD-51846**
 
 ## v1.1.53 {#v1-1-53}
 
@@ -64,7 +83,7 @@ ht-degree: 0%
 * **ACSD-60788** (för Adobe Commerce >=2.4.7 &lt;2.4.8) - Korrigerar problemet där anpassade skript för [!DNL Google Tag Manager] inte körs på grund av fel i Content Security Policy (CSP).
 * **ACSD-61322** (för Adobe Commerce >=2.4.6 &lt;2.4.8) - Korrigerar problemet där [!UICONTROL Products/Categories] som inte har tilldelats [!UICONTROL Shared Catalog] för standardgruppen (allmän grupp) fortfarande ingår i XML-platskartan.
 * **ACSD-61366** (för Adobe Commerce och Magento Open Source >=2.4.7 &lt;2.4.8) - Korrigerar problemet där `setup:static-content:deploy --jobs 4`-kommandot körs med flera jobb som inte fungerar med *Port måste konfigureras i värdparameterfelet* när porten har angetts för databasanslutningen.
-* Uppdaterade patchar: ACSD-51857, ACSD-57394
+* Uppdaterade versioner: **ACSD-54989**, **ACSD-60632**
 
 ## v1.1.51 {#v1-1-51}
 
