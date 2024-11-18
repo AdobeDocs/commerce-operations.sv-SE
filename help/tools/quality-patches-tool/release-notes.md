@@ -2,7 +2,7 @@
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: fb884f895cb03dcc920dc3de9baa63deb8737cd3
+source-git-commit: 3f6093b55c7bbfaf8666438ac1fef8f90432d947
 workflow-type: tm+mt
 source-wordcount: '23125'
 ht-degree: 0%
@@ -68,7 +68,7 @@ ht-degree: 0%
 * **ACSD-61553** (för Adobe Commerce och Magento Open Source >=2.4.5 &lt;2.4.7) - Korrigerar problemet där **[!UICONTROL Cart Price Rule]** rabatter inte beräknas korrekt när flera rabatter med olika prioritet och **[!UICONTROL Maximum Qty Discount is Applied To]** används för produkten.
 * **ACSD-61667** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Förbättrar lagerprestanda för att skapa leveranser för många källor med upphämtning i butiken.
 * **ACSD-61969** (för Adobe Commerce >=2.4.7 &lt;2.4.8) - Korrigerar problemet där användaren måste skriva in en skiftlägeskänslig kupongkod för att matcha exakt som kupongkoden konfigurerats.
-* Uppdaterade patchar: ACSD-54989, ACSD-60632
+* Uppdaterade versioner: **ACSD-54989**, **ACSD-60632**
 
 ## v1.1.52 {#v1-1-52}
 
@@ -83,7 +83,7 @@ ht-degree: 0%
 * **ACSD-60788** (för Adobe Commerce >=2.4.7 &lt;2.4.8) - Korrigerar problemet där anpassade skript för [!DNL Google Tag Manager] inte körs på grund av fel i Content Security Policy (CSP).
 * **ACSD-61322** (för Adobe Commerce >=2.4.6 &lt;2.4.8) - Korrigerar problemet där [!UICONTROL Products/Categories] som inte har tilldelats [!UICONTROL Shared Catalog] för standardgruppen (allmän grupp) fortfarande ingår i XML-platskartan.
 * **ACSD-61366** (för Adobe Commerce och Magento Open Source >=2.4.7 &lt;2.4.8) - Korrigerar problemet där `setup:static-content:deploy --jobs 4`-kommandot körs med flera jobb som inte fungerar med *Port måste konfigureras i värdparameterfelet* när porten har angetts för databasanslutningen.
-* Uppdaterade versioner: **ACSD-54989**, **ACSD-60632**
+* Uppdaterade patchar: ACSD-51857, ACSD-57394
 
 ## v1.1.51 {#v1-1-51}
 
