@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: 4ad78705e8bf9b37f4d3b9ee71efdf4f24d7e244
+source-git-commit: b6ba3f3381c60e0158c85d77f70899f16ad7ca7b
 workflow-type: tm+mt
-source-wordcount: '6192'
+source-wordcount: '6203'
 ht-degree: 0%
 
 ---
@@ -659,6 +659,7 @@ ht-degree: 0%
          - [Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.54](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/overview.md)
          - [ACSD-61200: Fast rabattkompensation i totalberäkningar](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-61200-fixes-discount-tax-compensation-in-sales-total-calculations.md)
          - [ACSD-61522: E-postadresser i fälten Förnamn och Efternamn skickar ogiltiga orderbekräftelser](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-61522-email-in-name-fields-sends-invalid-order-confirmations.md)
+         - [ACSD-61845: Ett fel uppstod för begäranden med text/html-acceptera huvud](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-61845-error-occurs-for-requests-with-text-html-accept-header.md)
       - [Leta efter Adobe Commerce-problem med verktyget för kvalitetskorrigeringar](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
 
 - Referens för kommandoradsverktyg {#cli-reference}
