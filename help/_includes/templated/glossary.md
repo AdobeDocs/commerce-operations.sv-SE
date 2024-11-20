@@ -1,7 +1,7 @@
 ---
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 0d5eeb691281d7c62aa64a9d8cd042f18504a67f
 workflow-type: tm+mt
-source-wordcount: '6363'
+source-wordcount: '6370'
 ht-degree: 0%
 
 ---
@@ -248,7 +248,7 @@ _adjektiv_
 
 Ett detaljhandelsföretag med en permanent fysisk plats, till skillnad från företag som fungerar praktiskt taget eller enbart via internet.
 
-För [Inventory management](https://experienceleague.adobe.com/docs/commerce-admin/inventory/sources/sources-manage.html) och [Order Management](https://omsdocs.magento.com/getting-started/terminology/) är den här butiken en källa för att spåra produktkvantiteter, leveransorder och stöd för upphämtning i butik.
+För [Inventory management](https://experienceleague.adobe.com/docs/commerce-admin/inventory/sources/sources-manage.html) och [Order Management](#oms) är den här butiken en källa för att spåra produktkvantiteter, leveransorder och stöd för upphämtning i butik.
 
 _Termattribut:_
 
@@ -454,7 +454,7 @@ _Termattribut:_
 
 * _Fält: cloud_
 
-### CMS-block
+### CMS block
 
 _substantiv_
 
@@ -981,7 +981,7 @@ I marknadsförings- och detaljhandelsledet läggs en procentandel till kostnaden
 [Konfigurera markering](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/settings/settings-advanced-custom-options.html), eller markering, för en produkt med anpassningsbara alternativ.
 
 Under utvecklingen är det ett datorspråk som styr bearbetning, presentation och formatering av text.
-Markup-taggar är kodfragment som lägger till funktioner eller innehåll på en CMS-sida eller -block.
+Taggar för kod är kodfragment som lägger till funktioner eller innehåll på en CMS-sida eller ett-block.
 
 _Termattribut:_
 
@@ -1046,7 +1046,11 @@ _Termattribut:_
 
 _substantiv_
 
-[OMS](https://omsdocs.magento.com) är Adobe Order Management System.
+OMS är Adobe Order Management System.
+
+>[!IMPORTANT]
+>
+>Adobe Commerce Order Management (OMS) har nått slutet av livscykeln och stöds inte längre.
 
 OMS är en flexibel och prisvärd lösning för att hantera, sälja och uppfylla lager från valfri försäljningskanal.
 OMS ger en smidig kundupplevelse, som ökar försäljningen samtidigt som kostnaderna minskar och kortar time-to-market.
@@ -1058,7 +1062,7 @@ OMS-funktioner:
 * Enklare och mer lättillgänglig kundtjänst
 * Bättre kundupplevelser och lojalitet
 
-Läs mer: [Komma igång med OMS](https://omsdocs.magento.com/en/getting-started/), [OMS Docs-webbplats](https://omsdocs.magento.com/en/)
+Mer information: [Arkiverad OMS Docs-webbplats](https://commerce-docs.github.io/oms-documentation-archive/)
 
 _Termattribut:_
 
@@ -1279,7 +1283,7 @@ _Termattribut:_
 
 _substantiv_
 
-En modulär innehållsenhet som en användare kan montera i CMS på en sida för att visa text och bilder eller köra kodfragment.
+En modulär innehållsenhet som en användare i CMS kan montera på en sida för att visa text och bilder eller köra kodfragment.
 Statiska block innehåller redigerbart innehåll och kan fungera som landningssidor för produktkategorier.
 Du kan lägga till widgetar i statiska block för att få ytterligare funktioner.
 
