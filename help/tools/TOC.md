@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: f684470add56a13dc7bf898f50a73c792e26673c
+source-git-commit: 10c83d907fba94fcc65103bf6efce5f0c115c310
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '6217'
 ht-degree: 0%
 
 ---
@@ -657,6 +657,7 @@ ht-degree: 0%
          - [ACSD-60804: Om du redigerar en kund som är associerad med ett borttaget företag uppstår ett fel](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-53/acsd-60804-editing-customer-linked-to-deleted-company-causes-error.md)
       - v1.1.54 {#v1-1-54}
          - [Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.54](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/overview.md)
+         - [ACSD-61199: Fliken [!UICONTROL Hierarchy] på CMS-sidan visar inte rätt trädstruktur](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-61199-cms-page-hierarchy-tab-doesnt-display-proper-tree-structure.md)
          - [ACSD-61200: Fast rabattkompensation i totalberäkningar](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-61200-fixes-discount-tax-compensation-in-sales-total-calculations.md)
          - [ACSD-61522: E-postadresser i fälten Förnamn och Efternamn skickar ogiltiga orderbekräftelser](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-61522-email-in-name-fields-sends-invalid-order-confirmations.md)
          - [ACSD-61845: Ett fel uppstod för begäranden med text/html-acceptera huvud](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-61845-error-occurs-for-requests-with-text-html-accept-header.md)
