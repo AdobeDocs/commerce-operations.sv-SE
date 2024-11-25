@@ -3,7 +3,7 @@ title: Konfigurera Redis
 description: Få en översikt över Redis-funktioner och starta konfigurationen av Redis.
 feature: Configuration, Cache
 exl-id: e037c382-334a-4096-a417-a25fdb61a9ce
-source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
+source-git-commit: 95ea96a566b0579a22b2ba738bd4a4bceef8cd9c
 workflow-type: tm+mt
 source-wordcount: '372'
 ht-degree: 0%
@@ -41,7 +41,7 @@ För sessioner rekommenderar Adobe att du aktiverar beständighet för kopiering
 
 Du kan också aktivera både RDB- och AOF-alternativen samtidigt. Mer information, inklusive för- och nackdelar med alternativen för beständighet, finns i [Redis Persistence-dokumentationen](https://redis.io/topics/persistence).
 
-För cacheinstansen ställer du in instansen så att den är tillräckligt stor för att lagra hela Commerce-cachen. Storlekskraven beror på olika faktorer som antalet produkter och butiksvyer. Som utgångspunkt kan du använda storleken på cachemappen i filsystemet. Om mappen `var/cache` i filsystemet till exempel är 5 GB ska Redis-instansen konfigureras med minst 5 GB. Det krävs ingen beständighet för cacheinstansen eftersom Commerce-cachen kan återställas. Se [Redis Cache Guide](https://redis.io/docs/manual/eviction/).
+För cacheinstansen ställer du in instansen så att den är tillräckligt stor för att lagra hela Commerce-cachen. Storlekskraven beror på olika faktorer som antalet produkter och butiksvyer. Som utgångspunkt kan du använda storleken på cachemappen i filsystemet. Om mappen `var/cache` i filsystemet till exempel är 5 GB ska Redis-instansen konfigureras med minst 5 GB. Det krävs ingen beständighet för cacheinstansen eftersom Commerce-cachen kan återställas. Se [Redis Cache Guide](https://redis.io/docs/latest/develop/use/).
 
 För prestandajustering kan du aktivera följande inställningar för asynkron borttagning. De här inställningarna ändrar inte Redis beteende.
 

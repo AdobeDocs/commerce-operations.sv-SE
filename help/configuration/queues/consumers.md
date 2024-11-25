@@ -2,9 +2,9 @@
 title: Konsumenter i meddelandekön
 description: Läs om användare av Adobe Commerce meddelandekö, inklusive funktioner och systemkonfigurationsinställningar som är kopplade till dem.
 exl-id: 7fd7ab3f-581f-493c-956c-731f111d1b14
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: 95ea96a566b0579a22b2ba738bd4a4bceef8cd9c
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '824'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ I följande tabell visas alla meddelandeköanvändare, vad de gör och vilka kon
 | `saveConfigProcessor` | + |                         | + |
 | Sparar ändringar i lagringskonfigurationen asynkront genom att placera sparade jobb i en meddelandekö, vilket kan förbättra prestanda för distributioner som innehåller ett stort antal konfigurationer på butiksnivå. Krävs för att använda modulen [`AsyncConfig`](../../performance/configuration.md#asynchronous-configuration-save). |                |                         |                     |
 | `sales.rule.update.coupon.usage` | + | + | + |
-| Förhindrar [utgåva](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/coupon-code-used-more-than-once-adobe-commerce.html) där engångskuponger kan användas flera gånger. |                |                         |                     |
+| Förhindrar ett problem där engångskuponger kan användas flera gånger. |                |                         |                     |
 | `sharedCatalogUpdateCategoryPermissions` |                | + |                     |
 | Uppdaterar kategorier som tilldelats en delad katalogkategori. Krävs när alternativet [**[!UICONTROL Shared Catalogs]**](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/shared-catalogs/catalog-shared) är aktiverat i konfigurationsinställningarna för administratörssystemet. |                |                         |                     |
 | `sharedCatalogUpdatePrice` |                | + |                     |
