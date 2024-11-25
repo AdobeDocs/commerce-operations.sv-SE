@@ -2,7 +2,7 @@
 title: Översättningsordlistor och språkpaket
 description: Lär dig hur du genererar översättningsordlistor och bygger språkpaket.
 exl-id: dd27ccdd-158d-40a6-a2e2-563857820ae9
-source-git-commit: 02c69e890b40643781ab8f48c3133527dd79386a
+source-git-commit: 4116d0983edc797ce42d24e711fb5ecdbf8fdec9
 workflow-type: tm+mt
 source-wordcount: '1432'
 ht-degree: 0%
@@ -284,7 +284,7 @@ Generera en CSV-fil på ungefär samma sätt som i föregående exempel, men i s
    ```php
    <?php
    /**
-    * Copyright Adobe
+    * Copyright [first year code created] Adobe
     * All Rights Reserved.
     */
    
@@ -302,7 +302,7 @@ Generera en CSV-fil på ungefär samma sätt som i föregående exempel, men i s
    ```xml
    <?xml version="1.0"?>
    <!--
-   Copyright Adobe
+   Copyright [first year code created] Adobe
    All Rights Reserved.
    -->
    <language xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/Language/package.xsd">
