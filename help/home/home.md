@@ -2,9 +2,9 @@
 title: Handböcker - startsida
 description: Bläddra bland index över systemadministration och produktdokumentation för Adobe Commerce.
 exl-id: 45ec4948-338f-4276-8a70-d0db720322d9
-source-git-commit: a33d12a055db0cb4a4c8f64992d6ebf77842cbe7
+source-git-commit: 5a2aae6a2f3b1353457f003460d230db2b57abdd
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '163'
 ht-degree: 0%
 
 ---
@@ -27,13 +27,13 @@ Använd den här följande uppsättningen guider för att lära dig mer om syste
       <p>Läs igenom all versionsinformation om Adobe Commerce patchar och tjänster.</p>
     </div>
   </td>
-  <td valign="top">
-    <a href="../performance/overview.md">
-       <img alt="Prestanda" src="../assets/icons/gauge.svg" width="40"/>
+    <td valign="top">
+    <a href="../implementation-playbook/overview.md">
+      <img alt="Implementering" src="../assets/icons/play.svg" width="40"/>
     </a>
     <div>
-      <a href="../performance/overview.md"><strong>Bästa praxis för prestanda</strong></a>
-      <p>Använd de här rekommendationerna för att optimera prestandan för Adobe Commerce-driftsättningen.</p>
+      <a href="../implementation-playbook/overview.md"><strong>Implementeringspellbook</strong></a>
+      <p>Läs om strategier för att planera och implementera en framgångsrik Adobe Commerce-webbplats.</p>
     </div>
   </td>
   <td valign="top">
@@ -45,33 +45,13 @@ Använd den här följande uppsättningen guider för att lära dig mer om syste
       <p>Se hur Adobe Commerce handlare ansvarar för att upprätthålla en säker miljö.</p>
     </div>
   </td>
-</tr>
-<tr>
-  <td valign="top">
-    <a href="../implementation-playbook/overview.md">
-      <img alt="Implementering" src="../assets/icons/play.svg" width="40"/>
+    <td valign="top">
+    <a href="../performance/overview.md">
+       <img alt="Prestanda" src="../assets/icons/gauge.svg" width="40"/>
     </a>
     <div>
-      <a href="../implementation-playbook/overview.md"><strong>Implementeringspellbook</strong></a>
-      <p>Läs om strategier för att planera och implementera en framgångsrik Adobe Commerce-webbplats.</p>
-    </div>
-  </td>
-  <td valign="top">
-    <a href="../operational-playbook/overview.md">
-       <img alt="Operationer" src="../assets/icons/refresh.svg" width="40"/>
-    </a>
-    <div>
-      <a href="../operational-playbook/overview.md"><strong>Driftspelningsbok</strong></a>
-      <p>Lär dig hur ni gör ert företag redo för att driva en framgångsrik e-handelsplats.</p>
-    </div>
-  </td>
-  <td valign="top">
-    <a href="../commerce-at-scale/overview.md">
-       <img alt="Enterprise" src="../assets/icons/enterprise.svg" width="40"/>
-    </a>
-    <div>
-      <a href="../commerce-at-scale/overview.md"><strong>Commerce vid skalförändring</strong></a>
-      <p>Lär dig leverera upplevelser i stor skala med Adobe Commerce och Adobe Experience Manager.</p>
+      <a href="../performance/overview.md"><strong>Bästa praxis för prestanda</strong></a>
+      <p>Använd de här rekommendationerna för att optimera prestandan för Adobe Commerce-driftsättningen.</p>
     </div>
   </td>
 </tr>

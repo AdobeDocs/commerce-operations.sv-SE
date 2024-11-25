@@ -5,16 +5,16 @@ role: Developer
 feature: Best Practices
 badge: label="Medverkad av Anton Evers, Sr. Technical Architect, Adobe" type="Informative" url="https://www.linkedin.com/in/anton-evers/" tooltip="Medverkad av Anton Evers"
 exl-id: 08c38dc5-3dc2-49ee-b56f-59e1718e12b5
-source-git-commit: 823498f041a6d12cfdedd6757499d62ac2aced3d
+source-git-commit: ee7551374aa6d4ad462dd64ee3d05b934b43ce45
 workflow-type: tm+mt
-source-wordcount: '1259'
+source-wordcount: '1251'
 ht-degree: 0%
 
 ---
 
 # Bästa tillvägagångssätt för att distribuera Adobe Commerce-patchar i stor skala
 
-Om du hanterar flera Adobe Commerce-installationer kan [patchning](../../../upgrade/patches/apply.md) vara en komplex process. _Centraliserad korrigering_ är en viktig del av [den globala referensarkitekturen](../../architecture/global-reference/overview.md) och är en bra metod för företag. Det hjälper er att installera rätt patchar på alla era Adobe Commerce-installationer. I det här avsnittet beskrivs hur du uppnår centraliserad korrigeringsdistribution för alla typer av Adobe Commerce [korrigeringar](../../../upgrade/patches/overview.md).
+Om du hanterar flera Adobe Commerce-installationer kan [patchning](../../../upgrade/patches/apply.md) vara en komplex process. _Centraliserad korrigering_ är en bra metod för företag. Det hjälper er att installera rätt patchar på alla era Adobe Commerce-installationer. I det här avsnittet beskrivs hur du uppnår centraliserad korrigeringsdistribution för alla typer av Adobe Commerce [korrigeringar](../../../upgrade/patches/overview.md).
 
 >[!NOTE]
 >

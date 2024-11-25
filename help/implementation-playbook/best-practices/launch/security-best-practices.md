@@ -3,9 +3,9 @@ title: Säkra din Commerce webbplats och infrastruktur
 description: Upprätthåll säkerheten genom att implementera säkerhetspraxis när du konfigurerar, konfigurerar och uppdaterar Adobe Commerce-installationer.
 feature: Best Practices
 exl-id: 50d8a464-6496-4e9a-b642-0c6d0eb51ba0
-source-git-commit: a00b7b66beb6499f7fb19fda2dfd450799f73728
+source-git-commit: ee7551374aa6d4ad462dd64ee3d05b934b43ce45
 workflow-type: tm+mt
-source-wordcount: '2006'
+source-wordcount: '2000'
 ht-degree: 0%
 
 ---
@@ -115,10 +115,6 @@ Som en del av en katastrofåterställningsplan rekommenderar Adobe starkt att ku
 
 **Adobe Commerce har distribuerats lokalt**
 
-- [idéer om katastrofåterställning](../../infrastructure/self-hosting/disaster-recovery-ideas.md)
-
-- [Säkerhetskopiering och återställning](../../infrastructure/self-hosting/disaster-recovery-ideas.md)
-
 - [Exportera konfigurationsinställningar](../../../configuration/cli/export-configuration.md)
 
    - [Importera konfigurationsinställningar](../../../configuration/cli/import-configuration.md)
@@ -133,7 +129,7 @@ I det här avsnittet sammanfattas de effektivaste strategierna för underhåll a
 
 ![Checklista](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **Använd en brandvägg för webbprogram** - Analysera trafik och upptäcka misstänkta mönster, t.ex. kreditkortsinformation som skickas till en okänd IP-adress med hjälp av en Brandvägg för webbprogram.
 
-Adobe Commerce-installationer som distribueras i molninfrastruktur kan använda inbyggda WAF-tjänster som är tillgängliga med [integreringen av snabbtjänster](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/fastly.html)
+Adobe Commerce-installationer som distribueras i molninfrastruktur kan använda inbyggda WAF-tjänster som är tillgängliga med [Snabb integrering av tjänster](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/fastly.html)
 
 ![Checklista](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **Konfigurera avancerade säkerhetsinställningar för lösenord** - Konfigurera starka lösenord och ändra dem minst var 90:e dag, vilket rekommenderas av PCI-datasäkerhetsstandarden i avsnitt 8.2.4. Se [Konfigurera säkerhetsinställningar för administratörer](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-admin.html).
 

@@ -4,9 +4,9 @@ description: Lär dig hur du undviker prestandaproblem som orsakas av Adobe Comm
 role: Admin
 feature: Best Practices, Extensions
 exl-id: 95d2c7bf-fd2f-4c98-8293-96d69b86341f
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: 1fdbded7738365593ef7da64f4dbe6713984bff3
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '193'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,7 @@ ht-degree: 0%
 
 Adobe Commerce tredjepartstillägg (moduler) kan orsaka olika problem som kan påverka butikens prestanda negativt. Du kan undvika de här problemen genom att följa de bästa metoderna:
 
+- Utveckla dina Commerce-integreringar och anpassningar med [utbyggbarhet som inte har bearbetats](https://developer.adobe.com/commerce/extensibility/) så långt det är möjligt för att underlätta underhåll och uppgradering.
 - Hämta och köp tillägg från tredje part från en betrodd källa, som [Commerce Marketplace](https://marketplace.magento.com/extensions.html).
 - Uppdatera alla tillägg från tredje part till den senaste versionen.
 - Om du inte kan uppdatera tillägg från tredje part bör du använda andra tillägg.

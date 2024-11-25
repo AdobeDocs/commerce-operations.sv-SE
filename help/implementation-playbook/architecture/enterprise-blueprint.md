@@ -3,9 +3,9 @@ title: Referensarkitektur för företag
 description: Lär dig hur du implementerar Adobe Commerce med hjälp av Adobe senaste teknik för sammanställbar e-handel.
 feature: App Builder, Cloud, GraphQL, Integration, Paas, Saas
 exl-id: d066ab43-20e2-4e0b-8348-0c52d6a7ac8a
-source-git-commit: c2f6b7125f1a611e94f807999787fee48a0e5ece
+source-git-commit: 581a7dbcc19c31df80e03cb9f321a6adb5fa1a73
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '836'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,10 @@ Adobe Commerce kan integreras med alla Experience Cloud-lösningar för att leve
 
 >[!NOTE]
 >
->Mer teknisk information finns i [Planer för digitala upplevelser](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/overview).
+>Mer information finns i följande källor:
+>
+>- [Digital Experience-utkast](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/overview) för mer teknisk information.
+>- Se [Anpassa kundupplevelsen](https://experienceleague.adobe.com/en/docs/events/the-skill-exchange-recordings/commerce/aug2024/personalization).
 
 
 ## Integrering med tredjepartssystem
@@ -63,6 +66,11 @@ Adobe tillhandahåller följande utvecklingsverktyg för att bygga integreringar
 - [**Händelser**](https://developer.adobe.com/commerce/extensibility/events/) - Använd anpassade händelseutlösare för att interagera med andra utökningsbara utvecklingsverktyg.
 - [**Webhooks**](https://developer.adobe.com/commerce/extensibility/webhooks/) - Använd webhooks för att automatiskt aktivera interaktion mellan Commerce och tredjepartssystem.
 - [**Admin UI SDK**](https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/) - Anpassa och förbättra Commerce Admin med nya sidor och funktioner för era handlare.
+- [**Integration Starter Kit**](https://developer.adobe.com/commerce/extensibility/starter-kit/) - Snabba upp integreringen med referensintegreringar, introduktionsskript och en standardiserad arkitektur.
+
+>[!NOTE]
+>
+>Se [Den moderna metoden: Effektiv utökningsbarhet i Adobe Commerce](https://experienceleague.adobe.com/en/docs/events/the-skill-exchange-recordings/commerce/aug2024/extensibility).
 
 ## Tjänster för butikstjänster
 

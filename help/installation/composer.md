@@ -2,7 +2,7 @@
 title: Snabbstart av lokal installation
 description: Följ de här stegen för att installera Adobe Commerce på en infrastruktur som du äger.
 exl-id: a93476e8-2b30-461a-91df-e73eb1a14d3c
-source-git-commit: f9f8aea1a77ef062d7076a61bbafd12433f15edf
+source-git-commit: ee7551374aa6d4ad462dd64ee3d05b934b43ce45
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Snabbstart av lokal installation
 
-Instruktionerna på den här sidan beskriver hur du installerar Adobe Commerce på [en självvärdbaserad](../implementation-playbook/infrastructure/self-hosting/overview.md) infrastruktur. Mer information om hur du uppgraderar en befintlig installation finns i [_uppgraderingshandboken_](../upgrade/overview.md).
+Instruktionerna på den här sidan beskriver hur du installerar Adobe Commerce på en infrastruktur med självbetjäning. Mer information om hur du uppgraderar en befintlig installation finns i [_uppgraderingshandboken_](../upgrade/overview.md).
 
 Adobe använder [Composer](https://getcomposer.org/) för att hantera Adobe Commerce-komponenter och deras beroenden. Att använda Composer för att hämta Adobe Commerce-metapaketet ger följande fördelar:
 

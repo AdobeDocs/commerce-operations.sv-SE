@@ -4,9 +4,9 @@ description: Läs om de effektivaste strategierna för kodhantering i utveckling
 feature: Best Practices
 role: Developer
 exl-id: 0bff4c7a-1082-4b3e-b19c-bc8ad529b131
-source-git-commit: 823498f041a6d12cfdedd6757499d62ac2aced3d
+source-git-commit: ee7551374aa6d4ad462dd64ee3d05b934b43ce45
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '659'
 ht-degree: 0%
 
 ---
@@ -25,8 +25,6 @@ Det här avsnittet är utformat för att hjälpa dig att avgöra om du ska anvä
 
 - Adobe Commerce i molninfrastruktur
 - Adobe Commerce lokalt
-
-Den omfattar både [global referensarkitektur (GRA)](../../architecture/global-reference/overview.md) och eninstansinstallationer.
 
 ## Definitioner
 

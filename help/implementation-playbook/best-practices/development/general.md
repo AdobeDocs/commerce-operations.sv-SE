@@ -4,9 +4,9 @@ description: Läs mer om hur man utvecklar Adobe Commerce-projekt på bästa sä
 feature: Best Practices
 role: Developer
 exl-id: 35de9849-2d19-4bb6-b920-9ce3838bc8bc
-source-git-commit: 823498f041a6d12cfdedd6757499d62ac2aced3d
+source-git-commit: 68dc4635df9fc411925fe0d48a578edece8895dc
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '579'
 ht-degree: 0%
 
 ---
@@ -46,18 +46,6 @@ Nyckelorden &quot;MUST&quot;, &quot;MUST NOT&quot;, &quot;REQUIRED&quot;, &quot;
 1. Alla utvecklare BÖR utveckla och testa med samma teknologi som används på (framtida) produktionsservrar. Versionerna av programvaran i denna teknologi MÅSTE matcha den större och mindre versionen av programvaran som är installerad på produktionsservrarna. Mer information om den typiska teknikstacken för Adobe Commerce finns i [systemkraven](../../../installation/system-requirements.md).
 1. Systemadministratören eller den tekniska arkitekten får förse teamet med en centralt underhållen lokal utvecklingsmiljö för att säkerställa och främja likartade och aktuella lokala miljöer.
 1. Utvecklare och QA-tekniker MÅSTE ha tillgång till kommandoraden, databasen och loggfilerna för QA-miljön. Detta kan kräva en VPN-anslutning.
-
-## Kodstandarder
-
-1. All kod ska följa konventionerna om arkitektur, metoder och kodningsstandarder. Kreativitet önskas i funktion, inte i form.
-1. All kod ska vara i linje med [Adobe Commerce Architecture Guide](https://developer.adobe.com/commerce/php/architecture/){target="_blank}.
-1. All kod SKA följa [Adobe Commerce-kodningsstandarder](https://developer.adobe.com/commerce/php/coding-standards/).
-1. All kod SKA följa [Adobe Commerce tekniska riktlinjer](https://developer.adobe.com/commerce/php/coding-standards/technical-guidelines/).
-1. All kod SKA implementera [Adobe Commerce Best Practices](../phases.md), om tillämpligt.
-1. All kod BÖR följa standarden [PHP-Framework Interoperability Group (FIG)](https://www.php-fig.org/).
-1. Där det är möjligt rekommenderas att [Adobe Commerce tekniska Visions](https://developer.adobe.com/commerce/php/architecture/technical-vision/) beaktas.
-1. Alla integreringar med externa system BÖR ha integrationstester som validerar affärsprocessen.
-1. Alla moduler SKA ha testtäckning. Hur man testar exakt bör bestämmas av utvecklingsteamet i samarbete med den tekniska arkitekten eller den ledande utvecklaren. Detta fastställande bör bygga på kvalitativa åtgärder och inte på kvantitativa åtgärder. En hög kodsatser är inte en indikator på framgång och inte heller en hög kodkvalitet. I stället fastställa risken för att inte täcka en del av koden genom att bedöma sannolikheten för och svårighetsgraden av regressioner i den delen av programmet.
 
 ## Versioner
 

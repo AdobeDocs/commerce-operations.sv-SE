@@ -3,9 +3,9 @@ title: Bästa praxis för utcheckning av prestanda
 description: Lär dig hur du optimerar resultatet för utcheckningsupplevelser på din Adobe Commerce webbplats.
 feature: Best Practices, Orders
 exl-id: dc2d0399-0d7f-42d8-a6cf-ce126e0b052d
-source-git-commit: e4c1832076bb81cd3e70ff279a6921ffb29ea631
+source-git-commit: ee7551374aa6d4ad462dd64ee3d05b934b43ce45
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1121'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Processen [Checka ut](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/point-of-purchase/checkout/checkout-process) i Adobe Commerce är en viktig del av butiksupplevelsen. Den bygger på de inbyggda funktionerna [cart](https://experienceleague.adobe.com/en/docs/commerce-admin/start/storefront/storefront#shopping-cart) och [checkout](https://experienceleague.adobe.com/en/docs/commerce-admin/start/storefront/storefront#checkout-page) .
 
-Prestanda är avgörande när det gäller att upprätthålla en bra användarupplevelse. Granska sammanfattningen för [prestandatestet](../implementation-playbook/infrastructure/performance/benchmarks.md) om du vill veta mer om prestandaförväntningarna. Du kan optimera utcheckningsprestanda genom att konfigurera följande alternativ för **bearbetning av order med hög genomströmning**:
+Prestanda är avgörande när det gäller att upprätthålla en bra användarupplevelse. Du kan optimera utcheckningsprestanda genom att konfigurera följande alternativ för **bearbetning av order med hög genomströmning**:
 
 - [AsyncOrder](#asynchronous-order-placement) - Bearbetar order asynkront med en kö.
 - [Uppskjuten total beräkning](#deferred-total-calculation) - Skjut upp beräkningar för ordersummor tills utcheckningen börjar.
