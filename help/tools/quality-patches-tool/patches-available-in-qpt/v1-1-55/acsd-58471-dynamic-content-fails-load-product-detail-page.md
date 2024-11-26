@@ -1,15 +1,15 @@
 ---
-title: "ACSD-58471: Dynamiskt innehåll läses inte in på produktinformationssidan när de associerade katalogprisreglerna var schemalagda"
+title: 'ACSD-58471: Dynamiskt innehåll kan inte läsas in på produktinformationssidan när de associerade katalogprisreglerna var schemalagda'
 description: Använd patchen ACSD-58471 för att åtgärda Adobe Commerce-problemet där dynamiskt innehåll inte kan läsas in på produktinformationssidan när de tillhörande katalogprisreglerna var schemalagda.
 feature: Catalog Management
 role: Admin, Developer
-source-git-commit: a3afb779006de95ac70dff39a737360112220af8
+exl-id: 6ff68b74-67fc-400c-aa79-a1274fd19708
+source-git-commit: 28390659fe180180c9b2c8d16239008a1f8a510b
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '432'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-58471: Dynamiskt innehåll läses inte in på produktinformationssidan när de associerade katalogprisreglerna var schemalagda
 
@@ -28,6 +28,8 @@ Korrigeringen ACSD-58471 löser problemet där dynamiskt innehåll inte kan läs
 >Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
+
+Dynamiskt innehåll läses inte in på produktinformationssidan när katalogens prisregler är schemalagda.
 
 <u>Steg som ska återskapas</u>:
 
