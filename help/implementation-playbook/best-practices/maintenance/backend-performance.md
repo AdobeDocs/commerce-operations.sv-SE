@@ -5,7 +5,7 @@ badge: label="Medverkad av objektkälla" type="Informative" url="https://objects
 role: Admin, User, Developer
 feature: Best Practices
 exl-id: 18bc97a0-3d34-4d48-a3e2-84af2da7d0d3
-source-git-commit: ee7551374aa6d4ad462dd64ee3d05b934b43ce45
+source-git-commit: d884d434e696a911de626dc76983468556cf451f
 workflow-type: tm+mt
 source-wordcount: '977'
 ht-degree: 0%
@@ -81,7 +81,7 @@ Att åtgärda prestandaproblem i MySQL genom att implementera databasklustring o
 
 Webbplatser med hög trafik har ofta flaskhalsar i databasen, som främst orsakas av att man förlitar sig på en enda MySQL-server. Du kan ta itu med dessa flaskhalsar genom att implementera databasklustring, en distribuerad arkitektur som förbättrar prestanda och garanterar hög tillgänglighet.
 
-Databasklustring minimerar effekten av databasrelaterade problem under trafiktoppar genom att aktivera flera webbnoder för anslutning till flera MySQL-servrar. Använd verktyg som Galera Cluster för att konfigurera databasklustring för Commerce-webbplatser. Galerakluster ingår i [Adobe Commerce-projekt som distribueras i molninfrastrukturen](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/infrastructure/cloud/technology.html).
+Databasklustring minimerar effekten av databasrelaterade problem under trafiktoppar genom att aktivera flera webbnoder för anslutning till flera MySQL-servrar. Använd verktyg som Galera Cluster för att konfigurera databasklustring för Commerce-webbplatser. Galerakluster ingår i [Adobe Commerce-projekt som distribueras i molninfrastrukturen](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/architecture/pro-architecture).
 
 #### Optimera MySQL-frågor
 
