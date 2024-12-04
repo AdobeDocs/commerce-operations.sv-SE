@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: c03b0b3c81556f1c75ad5259a5905a5dd5b0224e
+source-git-commit: 73953020c85ffb0a941602e1dafe5de6a6175cff
 workflow-type: tm+mt
-source-wordcount: '6425'
+source-wordcount: '6437'
 ht-degree: 0%
 
 ---
@@ -670,6 +670,7 @@ ht-degree: 0%
          - [ACSD-61799: Felaktig total rabattberäkning med flera fasta rabattregler tillämpade på offert](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-61799-incorrect-total-discount-calculation-with-multiple-fixed-discount-rules.md)
          - [ACSD-62485: async.operations.all-konsument slutar att arbeta när företaget skapas](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-62485-async-operations-all-consumer-stops-working-when-company-is-created.md)
          - [ACSD-61845: Ett fel uppstod för begäranden med text/html-acceptera huvud](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-61845-error-occurs-for-requests-with-text-html-accept-header.md)
+         - [ACSD-62056: Bildöverföring för konfigurerbar produkt misslyckas om MSI är installerat](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-54/acsd-62056-image-upload-for-configurable-products-fail-msi-installed.md)
       - v1.1.55 {#v1-1-55}
          - [Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.55](/help//tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/overview.md)
          - [ACSD-58828: Meddelandet &quot;adress krävs&quot; på serversidan visas för alla tomma obligatoriska fält, tillsammans med validering på klientsidan](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-58828-server-side-address-required-message-appears-for-any-empty-required-field-alongside-client-side-validation.md)
