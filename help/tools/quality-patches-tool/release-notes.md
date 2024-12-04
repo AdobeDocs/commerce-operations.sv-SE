@@ -2,9 +2,9 @@
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: 3f6093b55c7bbfaf8666438ac1fef8f90432d947
+source-git-commit: dd6824c3f030d76e93372b8410e42ac5cd2f04c6
 workflow-type: tm+mt
-source-wordcount: '23125'
+source-wordcount: '23648'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,29 @@ ht-degree: 0%
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som har skapats av gemenskapen för Magento Open Source finns i [versionsinformationen](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.56 {#v1-1-56}
+
+* **ACSD-63244** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet där ett [!DNL JavaScript] -fel förhindrar att [!DNL Google Maps] återges korrekt. Åtgärdar problemet där det finns många *Uncaught TypeError: this._each är inte en funktion*-fel i konsolen på panelen [!UICONTROL Admin].
+* **ACSD-63242** (för Adobe Commerce och Magento Open Source >=2.4.6-p8 &lt;2.4.7) || >=2.4.7-p3 &lt;2.4.8) - Korrigerar problemet med låg importhastighet när katalogprodukter med fler än 10 000 poster läggs till.
+* **ACSD-63062** (för Adobe Commerce och Magento Open Source >=2.4.7 &lt;2.4.8) - Korrigerar problemet där felaktiga kundrabattberäkningar inträffar när flera överlappande regler tillämpas.
+* **ACSD-62979** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.7) - Korrigerar problemet där fel [!UICONTROL Store ID] i [!DNL GraphQL]-huvudet orsakar ett allvarligt minnesfel.
+* **ACSD-62971** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet där import av Stock-källor med icke-numeriska värden i kolumnen **quantity** resulterar i att **quantity** anges till *0*.
+* **ACSD-62872** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Åtgärdar problemet med unik attributvalidering där schemauppdateringar valideras felaktigt.
+* **ACSD-62755** (för Adobe Commerce och Magento Open Source >=2.4.4-p11 &lt;2.4.5) || >=2.4.5-p10 &lt;2.4.6 || >=2.4.6-p8 &lt;2.4.7 || >=2.4.7-p3 &lt;2.4.8) - Korrigerar problemet där [!DNL TinyMCE] 7 kräver att teckensnittsstorlek och teckensnitt läggs till specifikt i initieringsinställningarna för redigeraren.
+* **ACSD-62670** (för Adobe Commerce och Magento Open Source >=2.4.4-p11 &lt;2.4.5) || >=2.4.5-p10 &lt;2.4.6 || >=2.4.6-p8 &lt;2.4.7 || >=2.4.7-p3 &lt;2.4.8) - Korrigerar problemet där [!UICONTROL Products Ordered] rapporterar export till [!DNL CSV] och [!DNL XML] returnerar ett fel.
+* **ACSD-62577** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet med långsam prestanda för sökfrågor i butiker genom att optimera både fråga- och tabellindex.
+* **ACSD-62475** (för Adobe Commerce och Magento Open Source >=2.4.7 &lt;2.4.8) - Korrigerar problemet där [!UICONTROL Gift Card]-produkterna sammanfogas felaktigt i kundvagnen.
+* **ACSD-62428** (för Adobe Commerce och Magento Open Source >=2.4.6 &lt;2.4.7) - Korrigerar problemet där `is_out_of_stock` är inställt på ett felaktigt värde i katalogsökningsindexet när [!DNL SKU] inte är inställt som ett sökbart attribut.
+* **ACSD-62355** (för Adobe Commerce och Magento Open Source >=2.4.6 &lt;2.4.8) - Förbättrar inläsningstiden för den konfigurerbara produktredigeringssidan när den konfigurerbara produkten baseras på många attribut med många värden.
+* **ACSD-61805** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet där produkter ligger utanför lagret efter att bakgrundsorderstatusen har uppdaterats via [!DNL REST API].
+* **ACSD-60811** (för Adobe Commerce och Magento Open Source >=2.4.7 &lt;2.4.8) - Korrigerar problemet där det endast är möjligt att uppdatera orderstatus med ett anpassat värde eller en kommentar om den aktuella statusen är antingen *bearbetning* eller *bedrägeri*.
+* **ACSD-62952** (för Adobe Commerce >=2.4.4 &lt;2.4.8) - Korrigerar problemet där datumet [!UICONTROL Gift Registry] visas felaktigt på butiken.
+* **ACSD-55339** (för Adobe Commerce >=2.4.4 &lt;2.4.8) - Korrigerar problemet där en produkt [!DNL SKU] som börjar med &quot;0&quot; (noll) tar bort &quot;0&quot;, vilket förhindrar att offerten uppdateras.
+**
+* Uppdaterade patchar: **ACSD-59514**
+* Uppdaterade versioner: **ACSD-60816**
+* Ersatta korrigeringsfiler: **ACSD-59967**
 
 ## v1.1.55 {#v1-1-55}
 
