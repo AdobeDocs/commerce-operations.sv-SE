@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: f529a07568618b2b5e550896efaaf4d662445d30
+source-git-commit: 35094fd36ea666d428a593f79759ca5ff30c5d00
 workflow-type: tm+mt
-source-wordcount: '6456'
+source-wordcount: '6460'
 ht-degree: 0%
 
 ---
@@ -683,6 +683,8 @@ ht-degree: 0%
          - [ACSD-58383: Dubblettkreditnotor från samtidiga återbetalningsbegäranden via  [!DNL REST API]](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-58383-duplicate-credit-memos-from-simultaneous-refund-requests-via-rest-api.md)
          - [ACSD-58735: Administratören kan inte visa övergivna kundvagnar på kundkontot för den associerade webbplatsen](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-58735-restricted-admin-cant-view-abandoned-shopping-carts.md)
          - [ACSD-60344: Dubblerat orderbekräftelsemeddelande via e-post när [!UICONTROL Purchase Order] används med automatiskt godkännande](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-60344-duplicate-order-confirmation-emails-for-purchase-order-with-auto-approval.md)
+      - v1.1.56 {#v1-1-56}
+         - [Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.56](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/overview.md)
       - [Leta efter Adobe Commerce-problem med verktyget för kvalitetskorrigeringar](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
 
 - Referens för kommandoradsverktyg {#cli-reference}
