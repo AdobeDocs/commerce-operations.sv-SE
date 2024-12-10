@@ -2,9 +2,9 @@
 title: Förutsättningar
 description: Förbered ditt Adobe Commerce-projekt för en uppgradering genom att slutföra dessa nödvändiga steg.
 exl-id: f7775900-1d10-4547-8af0-3d1283d9b89e
-source-git-commit: fb449f0ee7d503d0c7ba60bf6bfbe3f528060606
+source-git-commit: 4c84710da62fbb31214a0de2adc8adbd68880a76
 workflow-type: tm+mt
-source-wordcount: '1604'
+source-wordcount: '1612'
 ht-degree: 0%
 
 ---
@@ -229,11 +229,11 @@ Resultat som liknar följande ska visas:
 
 Ett annat symtom på att kron inte körs är följande fel i Admin:
 
-![](../../assets/upgrade-guide/cron-not-running.png)
+![Systemmeddelanden - kron körs inte](../../assets/upgrade-guide/cron-not-running.png)
 
 Om du vill visa felet klickar du på **Systemmeddelanden** högst upp i fönstret enligt följande:
 
-![](../../assets/upgrade-guide/system-messages.png)
+![Systemmeddelanden](../../assets/upgrade-guide/system-messages.png)
 
 Mer information finns i [Konfigurera och köra cron](../../configuration/cli/configure-cron-jobs.md).
 
