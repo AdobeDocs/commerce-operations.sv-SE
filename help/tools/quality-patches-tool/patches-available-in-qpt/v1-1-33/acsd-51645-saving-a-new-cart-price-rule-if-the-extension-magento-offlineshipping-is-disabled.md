@@ -1,7 +1,8 @@
 ---
-title: 'ACSD-51645: Sparar en ny kundprisregel om tillägget Magento_OfflineShipping är inaktiverat'
+title: 'ACSD-51645: Spara en ny kundprisregel om tillägget Magento_OfflineShipping är inaktiverat'
 description: Använd patchen ACSD-51645 för att åtgärda Adobe Commerce-problemet när ett fel inträffar när en ny kundprisregel sparas om tillägget Magento_OfflineShipping är inaktiverat.
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: ce747ae4-6d2f-41c0-ba75-7da72be359c7
+source-git-commit: 1a78b2afa6e751d430700e72f512f7d82d1c1bdd
 workflow-type: tm+mt
 source-wordcount: '347'
 ht-degree: 0%
@@ -52,7 +53,7 @@ Följande fel inträffar:
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
-* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](</help/tools/quality-patches-tool/usage.md>) i guiden [!DNL Quality Patches Tool].
+* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
 * Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning

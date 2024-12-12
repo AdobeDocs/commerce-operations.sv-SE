@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-50949: Prisfiltret i den avancerade sökningen returnerar inte korrekta resultat när det används tillsammans med SKU-filtret'
+title: 'ACSD-50949: Prisfiltret i avancerad sökning returnerar inte korrekta resultat när det används tillsammans med SKU-filtret'
 description: Använd patchen ACSD-50949 för att åtgärda Adobe Commerce-problemet där prisfiltret i den avancerade sökningen inte returnerar korrekta resultat när det används tillsammans med SKU-filtret.
 feature: Orders, Search
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 89e54940-e763-4554-8641-a162516bcabd
+source-git-commit: 1a78b2afa6e751d430700e72f512f7d82d1c1bdd
 workflow-type: tm+mt
 source-wordcount: '426'
 ht-degree: 1%
@@ -62,7 +63,7 @@ Produkter med högre priser än *$21* returneras.
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
-* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](</help/tools/quality-patches-tool/usage.md>) i guiden [!DNL Quality Patches Tool].
+* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
 * Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning

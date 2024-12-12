@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-51984: Omarkerade [!UICONTROL Use Default Value] och icke-standardvärden för produktfält sparas inte för den andra webbplats-, butiks- och butiksvyn'
+title: 'ACSD-51984: Omarkerade [!UICONTROL Use Default Value] och icke-standardvärden för produktfält sparas inte för den andra webbplatsen, butiken och butiksvyn'
 description: Använd korrigeringen ACSD-51984 för att åtgärda Adobe Commerce-problemet där värdena för omarkerade [!UICONTROL Use Default Value] och icke-standardproduktfält inte sparas för den andra webbplatsen, butiken och butiksvyn.
 feature: Products
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 51a810fa-d416-4b37-b5bd-66eed9fe4626
+source-git-commit: 1a78b2afa6e751d430700e72f512f7d82d1c1bdd
 workflow-type: tm+mt
 source-wordcount: '434'
 ht-degree: 0%
@@ -57,7 +58,7 @@ Värdena för fälten och kryssrutorna sparas inte.
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
-* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](</help/tools/quality-patches-tool/usage.md>) i guiden [!DNL Quality Patches Tool].
+* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
 * Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning

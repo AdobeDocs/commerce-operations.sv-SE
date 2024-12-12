@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-51238: Lagerkällan tas bort när en konfigurerbar produkt uppdateras och priset redigeras'
+title: 'ACSD-51238: Lagerkällan tas bort när en konfigurerbar produkt uppdateras och priset ändras'
 description: Använd patchen ACSD-51238 för att åtgärda Adobe Commerce-problemet där lagerkällan tas bort när en konfigurerbar produkt uppdateras och priset redigeras.
 feature: Configuration, Inventory, Orders, Products
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 785f012f-e064-4ac6-b559-9e9aa42c679c
+source-git-commit: 1a78b2afa6e751d430700e72f512f7d82d1c1bdd
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 0%
@@ -54,7 +55,7 @@ Kvantiteten per källa i **[!UICONTROL Configuration tab]** är tom.
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
-* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](</help/tools/quality-patches-tool/usage.md>) i guiden [!DNL Quality Patches Tool].
+* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
 * Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning

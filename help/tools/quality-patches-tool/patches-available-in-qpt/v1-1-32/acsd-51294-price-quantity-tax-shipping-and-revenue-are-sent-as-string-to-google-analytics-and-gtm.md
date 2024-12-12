@@ -3,7 +3,8 @@ title: 'ACSD-51294: Pris, kvantitet, moms, frakt, intäkt skickad som sträng ti
 description: Använd patchen ACSD-51294 för att åtgärda Adobe Commerce-problemet där pris, kvantitet, moms, frakt och intäkter skickas som en sträng till  [!DNL Google Analytics]  och GTM.
 feature: Orders, Shipping/Delivery, Variables
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 99d2a311-2543-4007-99fd-6c34a2950773
+source-git-commit: 1a78b2afa6e751d430700e72f512f7d82d1c1bdd
 workflow-type: tm+mt
 source-wordcount: '344'
 ht-degree: 0%
@@ -51,7 +52,7 @@ Pris- och kvantitetsvärden är strängar.
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
-* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](</help/tools/quality-patches-tool/usage.md>) i guiden [!DNL Quality Patches Tool].
+* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
 * Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning

@@ -1,7 +1,8 @@
 ---
-title: 'ACSD-52160: Produktvalideringsresultat mot kundprisregeln'
+title: 'ACSD-52160: Produktvalideringsresultat jämfört med kundprisregeln'
 description: Använd patchen ACSD-52160 för att åtgärda Adobe Commerce-problemet där produktvalideringsresultatet mot kundprisregeln inte utvärderas korrekt baserat på regelvillkoret *[!UICONTROL If an item is FOUND/NOT FOUND in the cart with All/Any of these conditions true]*.
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 8f8799c9-850a-4c8f-bde4-68df64e46c85
+source-git-commit: 1a78b2afa6e751d430700e72f512f7d82d1c1bdd
 workflow-type: tm+mt
 source-wordcount: '373'
 ht-degree: 0%
@@ -53,7 +54,7 @@ Kupongkoden tillämpas.
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
-* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](</help/tools/quality-patches-tool/usage.md>) i guiden [!DNL Quality Patches Tool].
+* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
 * Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning

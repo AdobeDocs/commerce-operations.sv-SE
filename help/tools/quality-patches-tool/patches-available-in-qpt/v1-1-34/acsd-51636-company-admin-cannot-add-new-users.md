@@ -1,9 +1,10 @@
 ---
-title: "ACSD-51636: Företagsadministratören kan inte lägga till nya användare från kundkontoavsnittet"
+title: 'ACSD-51636: Företagsadministratören kan inte lägga till nya användare från kundkontoavsnittet'
 description: Använd korrigeringsfilen ACSD-51636 för att åtgärda Adobe Commerce-problemet där företagsadministratören inte kan lägga till nya användare från kundkontoavsnittet trots att de har alla nödvändiga roller och behörigheter.
 feature: Admin Workspace, B2B, Companies, Customer Service
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 46e79ae3-ea24-4cb2-b06e-e82cec33b16c
+source-git-commit: 1a78b2afa6e751d430700e72f512f7d82d1c1bdd
 workflow-type: tm+mt
 source-wordcount: '398'
 ht-degree: 0%
@@ -64,7 +65,7 @@ Administratörsanvändaren kan lägga till en ny användare.
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
-* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](</help/tools/quality-patches-tool/usage.md>) i guiden [!DNL Quality Patches Tool].
+* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
 * Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning

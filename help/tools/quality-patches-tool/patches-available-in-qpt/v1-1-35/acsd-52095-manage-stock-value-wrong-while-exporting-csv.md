@@ -1,9 +1,10 @@
 ---
-title: 'ACSD-52095: Hantera lagervärde är fel vid export av CSV'
+title: 'ACSD-52095: Det går inte att hantera lagervärdet vid export av CSV'
 description: Använd korrigeringsfilen ACSD-52095 för att åtgärda problemet med Adobe Commerce där produkthantering för Stock-värdet är fel vid export av CSV.
 feature: Inventory, Products
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 1f8415aa-23c6-480a-b54d-37b2b2d3199a
+source-git-commit: 1a78b2afa6e751d430700e72f512f7d82d1c1bdd
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 0%
@@ -57,7 +58,7 @@ Värdet **[!UICONTROL Manage Stock]** är *0* när det är aktiverat för produk
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
-* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](</help/tools/quality-patches-tool/usage.md>) i guiden [!DNL Quality Patches Tool].
+* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
 * Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
