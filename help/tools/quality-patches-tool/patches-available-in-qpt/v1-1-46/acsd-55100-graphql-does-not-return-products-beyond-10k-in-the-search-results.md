@@ -1,16 +1,21 @@
 ---
-title: "ACSD-55100: [!DNL GraphQL] returnerar inte produkter som överstiger 10 kB i sökresultaten"
+title: 'ACSD-55100: [!DNL GraphQL] returnerar inte produkter som överstiger 10 kB i sökresultaten'
 description: Använd patchen ACSD-55100 för att åtgärda Adobe Commerce-problemet där GraphQL inte returnerar produkter som överstiger *10 k* i sökresultaten.
 feature: GraphQL, Products, Search
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: f08b62b9-ed56-4eca-b7e7-6e2bd99df01f
+source-git-commit: ec05b041c7af477abd6d3ade6ea95fed5065f2fa
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
 
 # ACSD-55100: [!DNL GraphQL] returnerar inte produkter som överstiger 10 kB i sökresultaten
+
+>[!NOTE]
+>
+>En uppdaterad korrigering ([ACSD-62332](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-62332-product-listing-graphql-query-limit-plus-live-search-current-page.md)) har släppts för att lösa samma problem för versionerna 2.4.6-2.4.6-p8. Mer information finns i [ACSD-62332](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-62332-product-listing-graphql-query-limit-plus-live-search-current-page.md).
 
 Korrigeringen ACSD-55100 åtgärdar ett problem där [!DNL GraphQL] inte returnerar produkter efter *10 k* i sökresultaten. Den här korrigeringen är tillgänglig när [[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.46 har installerats. Korrigerings-ID är ACSD-55100. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.7.
 

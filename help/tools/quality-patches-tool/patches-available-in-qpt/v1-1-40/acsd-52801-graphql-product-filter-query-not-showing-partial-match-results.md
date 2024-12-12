@@ -1,16 +1,21 @@
 ---
-title: 'ACSD-52801: GraphQL produktfilterfråga visar inte delmatchningsresultat'
+title: 'ACSD-52801: GraphQL produktfilterfråga visar inte delvisa matchningsresultat'
 description: Använd korrigeringsfilen ACSD-52801 för att åtgärda Adobe Commerce-problemet där GraphQL produktfilterfråga inte visar partiella matchningsresultat.
 feature: Products
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 946a7189-60b2-4812-92ca-ed7ba35b2488
+source-git-commit: ec05b041c7af477abd6d3ade6ea95fed5065f2fa
 workflow-type: tm+mt
-source-wordcount: '350'
+source-wordcount: '385'
 ht-degree: 0%
 
 ---
 
 # ACSD-52801: GraphQL produktfilterfråga visar inte delvisa matchningsresultat
+
+>[!NOTE]
+>
+>En uppdaterad korrigering ([ACSD-62332](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-62332-product-listing-graphql-query-limit-plus-live-search-current-page.md)) har släppts för att lösa samma problem för versionerna 2.4.6-2.4.6-p8. Den ersätter patchen ACSD-52801 för version 2.4.6 och framåt. Mer information finns i [ACSD-62332](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-62332-product-listing-graphql-query-limit-plus-live-search-current-page.md).
 
 Korrigeringen ACSD-52801 åtgärdar ett problem där GraphQL produktfilterfråga inte visar partiella matchningsresultat. Den här korrigeringen är tillgänglig när [[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.40 har installerats. Korrigerings-ID är ACSD-52801. Observera att problemet har åtgärdats i Adobe Commerce 2.4.7.
 
