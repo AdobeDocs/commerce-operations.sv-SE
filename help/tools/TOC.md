@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: a7018909caf8147696a81afead8526946d076223
+source-git-commit: 21a0dbfdb679a35d79f001f78c921aed8441f0d4
 workflow-type: tm+mt
-source-wordcount: '6506'
+source-wordcount: '6523'
 ht-degree: 0%
 
 ---
@@ -682,6 +682,7 @@ ht-degree: 0%
          - [ACSD-58471: Dynamiskt innehåll läses inte in på produktinformationssidan när katalogprisregler är schemalagda](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-58471-dynamic-content-fails-load-product-detail-page.md)
          - [ACSD-58383: Dubblettkreditnotor från samtidiga återbetalningsbegäranden via  [!DNL REST API]](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-58383-duplicate-credit-memos-from-simultaneous-refund-requests-via-rest-api.md)
          - [ACSD-58735: Administratören kan inte visa övergivna kundvagnar på kundkontot för den associerade webbplatsen](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-58735-restricted-admin-cant-view-abandoned-shopping-carts.md)
+         - [ACSD-62793: Datetime-attribut i exporterar saknade tidskomponenter. Om [!UICONTROL Fields Enclosure] är aktiverat omges attributvärden av citattecken](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-62793-datetime-attributes-exports-missing-time-component-and-fields-enclosure-enabled-attribute-values-enclosed-within-double-quotes.md)
          - [ACSD-60344: Dubblerat orderbekräftelsemeddelande via e-post när [!UICONTROL Purchase Order] används med automatiskt godkännande](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-60344-duplicate-order-confirmation-emails-for-purchase-order-with-auto-approval.md)
          - [ACSD-62332: Produktlista GraphQL-fråga begränsad till 10 000 produkter och  [!DNL Live Search] anger den aktuella sidan till 1](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-62332-product-listing-graphql-query-limit-plus-live-search-current-page.md)
       - v1.1.56 {#v1-1-56}
