@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: 1cca6c27ff0dce3f3ffb961a1f1eb3f56ea8dd78
+source-git-commit: f8541ffca30199ab6f6409d79753c65e31fb13f6
 workflow-type: tm+mt
-source-wordcount: '6561'
+source-wordcount: '6578'
 ht-degree: 0%
 
 ---
@@ -688,6 +688,7 @@ ht-degree: 0%
          - [ACSD-62591: Temat växlar inte korrekt när [!UICONTROL User Agent Rules] har konfigurerats](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-62591-fixes-theme-doesnt-switch.md)
       - v1.1.56 {#v1-1-56}
          - [Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.56](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/overview.md)
+         - [ACSD-62971: Import av Stock-källor med icke-numeriska kvantitetsvärden resulterar i att kvantiteten ställs in på 0](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-62971-stock-import-error-non-numeric-quantity.md)
          - [ACSD-62979: Felaktigt arkiv-ID i GraphQL-huvudet orsakar ett allvarligt minnesfel](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-62979-incorrect-store-id-in-the-graphql-header-causes-a-fatal-memory-error.md)
          - [ACSD-62475: Korrigerar problem med att slå ihop presentkort i vagnen](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-62475-fixes-gift-card-merging-issues-in-the-cart.md)
          - [ACSD-63242: Långsam import när fler än 10 000 katalogprodukter läggs till](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-63242-slow-import-when-adding-catalog-products.md)
