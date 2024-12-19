@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: c97ab644e6372cd6b2dac284d68eb2a79d02c908
+source-git-commit: 6ec6aec8747e4b40943c864dec84b98e6b293d07
 workflow-type: tm+mt
-source-wordcount: '6541'
+source-wordcount: '6547'
 ht-degree: 0%
 
 ---
@@ -692,6 +692,7 @@ ht-degree: 0%
          - [ACSD-63242: Långsam import när fler än 10 000 katalogprodukter läggs till](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-63242-slow-import-when-adding-catalog-products.md)
          - [ACSD-63062: Felaktiga kundrabattberäkningar med flera överlappande regler](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-63062-incorrect-cart-discount-calculations-when-multiple-overlapping-rules.md)
          - [ACSD-62428: Stock-statusfel i katalogsökningsindex](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-62428-fixes-stock-status-errors-in-catalog-search-index.md)
+         - [ACSD-62577: Prestandaoptimering för Storefront-sökning](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-62577-storefront-search-performance-optimization.md)
       - [Leta efter Adobe Commerce-problem med verktyget för kvalitetskorrigeringar](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
 
 - Referens för kommandoradsverktyg {#cli-reference}
