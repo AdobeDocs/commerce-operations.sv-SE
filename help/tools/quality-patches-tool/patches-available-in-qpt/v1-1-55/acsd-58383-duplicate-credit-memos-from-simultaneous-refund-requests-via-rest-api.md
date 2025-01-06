@@ -1,17 +1,17 @@
 ---
-title: 'ACSD-58383: Dubblerade kreditnotor från samtidiga återbetalningsbegäranden via  [!DNL REST API]'
+title: 'ACSD-58383: Dubblettkreditnotor från samtidiga återbetalningsbegäranden via  [!DNL REST API]'
 description: Använd korrigeringsfilen ACSD-58383 för att korrigera Adobe Commerce-problemet där två identiska begäranden som körs samtidigt och som återbetalas via  [!DNL REST API]  skapar dubblettkreditnotor.
 feature: REST, Payments, Returns
 role: Admin, Developer
 exl-id: 962970d5-22e7-4bdc-afa0-70e1fa21ecec
-source-git-commit: 28390659fe180180c9b2c8d16239008a1f8a510b
+source-git-commit: d3d98c04afe32d80cdf985b1d93c8a2cb57236ed
 workflow-type: tm+mt
-source-wordcount: '343'
+source-wordcount: '340'
 ht-degree: 0%
 
 ---
 
-# ACSD-58383 Adobe Commerce-korrigering: Duplicera kreditnotor från samtidiga återbetalningsbegäranden via [!DNL REST API]
+# ACSD-58383: Dubblettkreditnotor från samtidiga återbetalningsbegäranden via [!DNL REST API]
 
 Korrigeringen ACSD-58383 åtgärdar problemet där utfärdande av en återbetalning via [!DNL REST API] med två identiska begäranden som utförs samtidigt resulterar i dubbla kreditnotor.
 
