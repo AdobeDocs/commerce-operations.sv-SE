@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: f2b773bdae1a892216d4384b85d1d929553529ea
+source-git-commit: d0a1da302c3e50b3b73a89d5d6326ef638005fec
 workflow-type: tm+mt
-source-wordcount: '6662'
+source-wordcount: '6674'
 ht-degree: 0%
 
 ---
@@ -705,6 +705,7 @@ ht-degree: 0%
          - [ACSD-62965: Åtgärdar ett LocalizedException-meddelande som saknas i GraphQL-svar på orderplacering](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62965-fixes-missing-localizedexception-message-in-graphql-order-placement-response.md)
          - [ACSD-62758: Löste problem med videoåtergivning på konfigurerbara produktsidor](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62758-resolved-video-rendering-issue-on-configurable-product-pages.md)
          - [ACSD-63326: Korrigera problem med administratörsomdirigering efter att en order har lagts från serverdelen](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-63326-fix-admin-redirection-issue-after-placing-an-order-from-the-backend.md)
+         - [ACSD-63286: Produkter som tilldelats en delad katalog måste kunna omindexeras manuellt för att visas](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-63286-products-in-shared-catalog-need-manual-reindexing-to-appear.md)
          - [ACSD-58325: Knappen [!UICONTROL Import] är tillgänglig även efter ett valideringsfel](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-58325-import-button-available-even-after-a-validation-error.md)
 - Referens för kommandoradsverktyg {#cli-reference}
    - [Adobe Commerce (lokalt)](reference/commerce-on-premises.md)
