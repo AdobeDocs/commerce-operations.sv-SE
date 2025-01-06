@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: d91b7e2b1fb5d467882e29e9c829153eedc1f20b
+source-git-commit: b06e25b27b7e07ec14defd59a95048b8027cbcbf
 workflow-type: tm+mt
-source-wordcount: '6682'
+source-wordcount: '6694'
 ht-degree: 0%
 
 ---
@@ -694,6 +694,7 @@ ht-degree: 0%
          - [ACSD-63242: Långsam import när fler än 10 000 katalogprodukter läggs till](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-63242-slow-import-when-adding-catalog-products.md)
          - [ACSD-63062: Felaktiga kundrabattberäkningar med flera överlappande regler](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-63062-incorrect-cart-discount-calculations-when-multiple-overlapping-rules.md)
          - [ACSD-62428: Stock-statusfel i katalogsökningsindex](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-62428-fixes-stock-status-errors-in-catalog-search-index.md)
+         - [ACSD-63244: Åtgärda problem med administratörspanelen i JavaScript, inklusive  [!DNL Google Maps] återgivning och konsolfel](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-63244-resolves-admin-panel-javascript-issues-including-google-maps-rendering-and-console-errors.md)
          - [AACSD-62355: Förbättrar prestanda för konfigurerbar redigering i Adobe Commerce](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-62355-improves-configurable-product-edit-performance-in-adobe-commerce.md)
          - [ACSD-62872: Schemauppdateringar har inte validerats korrekt](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-62872-schedule-updates-validated-incorrectly.md)
          - [ACSD-62952: Presentregisterdatumet visas felaktigt på butiken](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-62952-gift-registry-date-inaccurate-storefront.md)
