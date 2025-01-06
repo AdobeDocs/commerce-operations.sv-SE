@@ -2,9 +2,9 @@
 title: Produkttillgänglighet
 description: Läs mer om vilka Adobe Commerce-funktioner som stöds och kontrollera om de är kompatibla med vissa Adobe Commerce-utgåvor.
 exl-id: 7e8e8ac2-a0b9-4023-a813-c0f1293e54c2
-source-git-commit: 9761e3827add0e8b60e1bb53664ff65170608317
+source-git-commit: 56dabc0c35460a8ace6f6be455050f56119d1b16
 workflow-type: tm+mt
-source-wordcount: '285'
+source-wordcount: '311'
 ht-degree: 0%
 
 ---
@@ -38,6 +38,7 @@ Handlarna bör använda den senaste versionen av en tjänst för att säkerstäl
 * Adobe Commerce Services är för närvarande kompatibelt med Commerce 2.4.4 och senare. Handlarna bör använda den senaste versionen av tjänsten.
 * Tjänster anses vara kompatibla med tidigare versioner av Commerce 2.4.x, men stöds inte officiellt.
 * Tjänsterna är inte kompatibla med Commerce 2.3.x, utom för Recommendations 3.3.7 och tidigare.
+* Betalningstjänsten är för närvarande kompatibel med Magento Open Source 2.4.4 och senare. Handlarna bör använda den senaste versionen av tjänsten.
 
 Följande tabell visar versionsstödet för varje tjänst i förhållande till Adobe Commerce-versionen.
 
