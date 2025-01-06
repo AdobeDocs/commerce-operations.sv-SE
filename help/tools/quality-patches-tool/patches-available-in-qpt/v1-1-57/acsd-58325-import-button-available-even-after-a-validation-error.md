@@ -3,13 +3,13 @@ title: 'ACSD-58325: Knappen [!UICONTROL Import] är tillgänglig även efter ett
 description: Använd ACSD-58325-korrigeringen för att åtgärda Adobe Commerce-problemet där knappen [!UICONTROL Import] är tillgänglig även efter ett valideringsfel.
 feature: Data Import/Export
 role: Admin, Developer
-source-git-commit: 5a2709014828810827e71d9dd91d34102d80bd66
+exl-id: 551a9ac7-9b7f-49b5-9255-2014c330fb07
+source-git-commit: c50fa066d02c04a08c28730afffe4508019a93aa
 workflow-type: tm+mt
-source-wordcount: '293'
+source-wordcount: '287'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-58325: Knappen [!UICONTROL Import] är tillgänglig även efter ett valideringsfel
 
@@ -21,8 +21,7 @@ ACSD-58325-korrigeringen åtgärdar ett problem där knappen **[!UICONTROL Impor
 * Adobe Commerce (alla distributionsmetoder) 2.4.6-p3
 
 **Kompatibel med Adobe Commerce-versioner:**
-* Adobe Commerce lokal 2.4.6 - 2.4.6-p8
-* Adobe Commerce om molninfrastruktur 2.4.6 - 2.4.6-p8
+* Adobe Commerce (alla distributionsmetoder) 2.4.6 - 2.4.6-p8
 
 >[!NOTE]
 >
@@ -60,4 +59,3 @@ Använd följande länkar beroende på distributionsmetod för att tillämpa ens
 Mer information om [!DNL Quality Patches Tool] finns i:
 
 * [[!DNL Quality Patches Tool]: Ett självbetjäningsverktyg för kvalitetspatchar](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) i verktygshandboken.
-
