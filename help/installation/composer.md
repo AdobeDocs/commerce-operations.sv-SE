@@ -2,9 +2,9 @@
 title: Snabbstart av lokal installation
 description: Följ de här stegen för att installera Adobe Commerce på en infrastruktur som du äger.
 exl-id: a93476e8-2b30-461a-91df-e73eb1a14d3c
-source-git-commit: ee7551374aa6d4ad462dd64ee3d05b934b43ce45
+source-git-commit: 60db3da9154e76032c88d687b6b6e22d7b81f9ae
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '957'
 ht-degree: 0%
 
 ---
@@ -89,11 +89,11 @@ Så här hämtar du Adobe Commerce metapaket:
    composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition <install-directory-name>
    ```
 
-   Ange dina autentiseringsnycklar när du uppmanas att göra det. Offentliga och privata nycklar skapas och konfigureras i [Commerce Marketplace](https://commercemarketplace.adobe.com/customer/account/login/).
+   Ange dina autentiseringsnycklar när du uppmanas att göra det. Offentliga och privata nycklar skapas och konfigureras från [Commerce Marketplace - Åtkomstnycklar](https://commercemarketplace.adobe.com/customer/account/login/). Kopiera och klistra in värdet för den offentliga nyckeln för `[!UICONTROL username]`. Kopiera och klistra in värdet för den privata nyckeln för `[!UICONTROL password]`.
 
    >[!NOTE]
    >
-   > När du använder en Composer `auth.json`-fil eller miljövariabel uppmanas du inte att ange dina autentiseringsnycklar.
+   > Om du använder en Composer `[auth.json](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/authentication-keys)`-fil eller en systemvariabel som konfigurerats med dina Commerce-autentiseringsnycklar uppmanas du inte att ange autentiseringsnycklar.
 
    Om du stöter på fel, till exempel `Could not find package...` eller `...no matching package found`, kontrollerar du att det inte finns några stavfel i kommandot. Om du fortfarande råkar ut för fel kanske du inte har behörighet att ladda ned Adobe Commerce. Kontakta [Adobe Commerce Support](https://support.magento.com/hc/en-us) om du behöver hjälp.
 
