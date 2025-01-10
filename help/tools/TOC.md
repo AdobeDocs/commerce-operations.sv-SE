@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: 7fdd74ed6820b947563f3d887a666c02b9c37350
+source-git-commit: b6c055dc3fec27db450f629d4c09f526c57676e2
 workflow-type: tm+mt
-source-wordcount: '6763'
+source-wordcount: '6772'
 ht-degree: 0%
 
 ---
@@ -706,6 +706,7 @@ ht-degree: 0%
       - [Leta efter Adobe Commerce-problem med verktyget för kvalitetskorrigeringar](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
       - v1.1.57 {#v1-1-57}
          - [Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.57](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/overview.md)
+         - [ACSD-62629: Produktlistan i widgetar visar felaktiga kategorier](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62629-product-list-widgets-category-condition.md)
          - [ACSD-57570: Korrigera begränsad administratörsanvändaråtkomst till delade kataloger](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-57570-fix-restricted-admin-access.md)
          - [ACSD-62635: Produkter som är relaterade till flera lager visas felaktigt i  [!DNL GraphQL]](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62635-multistore-related-products-displayed-incorrectly-in-graphql.md)
          - [ACSD-61622: [!DNL FedEx] kontospecifika frekvenser saknas i REST API-svar](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-61622-fedex-account-specific-rates-missing-from-response.md)
