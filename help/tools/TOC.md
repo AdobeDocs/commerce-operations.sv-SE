@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: 7605d4a0e3c975f8ef67130a3ef58a34a41fd869
+source-git-commit: 7fdd74ed6820b947563f3d887a666c02b9c37350
 workflow-type: tm+mt
-source-wordcount: '6749'
+source-wordcount: '6763'
 ht-degree: 0%
 
 ---
@@ -688,6 +688,7 @@ ht-degree: 0%
          - [ACSD-62591: Temat växlar inte korrekt när [!UICONTROL User Agent Rules] har konfigurerats](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-62591-fixes-theme-doesnt-switch.md)
       - v1.1.56 {#v1-1-56}
          - [Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.56](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/overview.md)
+         - [ACSD-61805: Åtgärdar lagerproblem på butiken efter statusuppdatering för restorder via REST API](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-61805-stock-status-issue-storefront-backorder-status-update-rest-api.md)
          - [ACSD-60811: Korrigerar begränsning av uppdatering av orderstatus till anpassade värden](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-60811-fixes-limitation-in-updating-order-status-to-custom-values.md)
          - [ACSD-62971: Import av Stock-källor med icke-numeriska kvantitetsvärden resulterar i att kvantiteten ställs in på 0](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-62971-stock-import-error-non-numeric-quantity.md)
          - [ACSD-62979: Felaktigt arkiv-ID i GraphQL-huvudet orsakar ett allvarligt minnesfel](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-62979-incorrect-store-id-in-the-graphql-header-causes-a-fatal-memory-error.md)
