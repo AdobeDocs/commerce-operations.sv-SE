@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: ad941810716f34f252e401455fb3db64ae35f35f
+source-git-commit: 0ab8ce896243757d3b17375acfebff3614219a3b
 workflow-type: tm+mt
-source-wordcount: '6784'
+source-wordcount: '6796'
 ht-degree: 0%
 
 ---
@@ -707,6 +707,7 @@ ht-degree: 0%
       - [Leta efter Adobe Commerce-problem med verktyget för kvalitetskorrigeringar](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
       - v1.1.57 {#v1-1-57}
          - [Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.57](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/overview.md)
+         - [ACSD-62689: Det går inte att lägga till kategorier i [!UICONTROL Related Product Rules] och widgetar efter djup 4](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62689-customer-add-categories-issue-related-product-rules-and-widgets.md)
          - [ACSD-62629: Produktlistan i widgetar visar felaktiga kategorier](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62629-product-list-widgets-category-condition.md)
          - [ACSD-57570: Korrigera begränsad administratörsanvändaråtkomst till delade kataloger](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-57570-fix-restricted-admin-access.md)
          - [ACSD-62635: Produkter som är relaterade till flera lager visas felaktigt i  [!DNL GraphQL]](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62635-multistore-related-products-displayed-incorrectly-in-graphql.md)
