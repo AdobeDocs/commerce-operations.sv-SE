@@ -2,9 +2,9 @@
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: 696f8b1e24c38b7604058df88eff31c6c296d6e7
+source-git-commit: 9e71d979e0662770043fd9ca74b9ba8b5a6752f0
 workflow-type: tm+mt
-source-wordcount: '24185'
+source-wordcount: '24552'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,23 @@ ht-degree: 0%
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som har skapats av gemenskapen för Magento Open Source finns i [versionsinformationen](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.58 {#v1-1-58}
+
+* **ACSD-48570** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.7) - Korrigerar problemet där sidan för återställning av lösenord inte kunde nås genom att klicka på länken [!UICONTROL Admin] återställ lösenord när **Lägg till lagringskod till URL:er** var *aktiverad* som tidigare resulterade i inloggningssidan eller en 404} visas.
+* **ACSD-62118** (för Adobe Commerce >=2.4.6 &lt;2.4.8) - Korrigerar problemet där tabellen `sales_order_tax_item` inte uppdateras fullständigt när [!DNL B2B] order placeras med metoden Inköpsorder.
+* **ACSD-63067** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet där alla produktkvantiteter markeras felaktigt och meddelandet *[!DNL Please specify the quantity of product(s).]* visas för alla produkter i en grupperad produkt när endast en kvantitet är felaktig.
+* **ACSD-63090** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet där kundvagnsartiklar tas bort när en produkt tas bort efter att ha lagts till i vagnen.
+* **ACSD-63182** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet när ett fel inträffar när en duplicerad paketprodukt sparas med **[!DNL MSI]** *aktiverad*.
+* **ACSD-63283** (för Adobe Commerce >=2.4.4 &lt;2.4.8) - Korrigerar problemet där beställningsartiklar från presentregistret orsakar ett undantag och där presentregisteruppdateringar innehåller objekt som inte tillhör registret.
+* **ACSD-63299** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet där specialpriset för en konfigurerbar produkt inte visas i butiken.
+* **ACSD-63325** (för Adobe Commerce och Magento Open Source >=2.4.7 &lt;2.4.8) - Korrigerar problemet där ett `Syntax Error: Unexpected <EOF>`-fel inträffar när en tom [!DNL GraphQL] -begäran skickas.
+* **ACSD-63329** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet där standardvärden för attribut med **[!UICONTROL Date]** eller **[!UICONTROL Date and Time]** indatatyper inte anges när du skapar produkter via [!DNL REST API].
+* **ACSD-63572** (för Adobe Commerce och Magento Open Source >=2.4.5 &lt;2.4.8) - Korrigerar problemet där de temporära tabellerna för `CatalogRule`-indexeraren inte rensas om indexeringsprocessen avslutas.
+* **ACSD-63578** (för Adobe Commerce >=2.4.4 &lt;2.4.8) - Korrigerar problemet där **[!UICONTROL Delete]**-knappen i **[!UICONTROL Add to Order by SKU]** i [!UICONTROL Admin] inte tar bort [!DNL SKU] när du klickar på  -knappen.
+* Uppdaterade versioner: **MDVA-39305-V3**
+* Ersatta korrigeringsfiler: **ACSD-56280**
+* Inaktuella korrigeringsfiler: **ACSD-62872**
 
 ## v1.1.57 {#v1-1-57}
 
