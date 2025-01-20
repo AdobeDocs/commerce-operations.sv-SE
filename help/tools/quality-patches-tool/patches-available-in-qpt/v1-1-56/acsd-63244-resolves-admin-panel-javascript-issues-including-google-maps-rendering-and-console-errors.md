@@ -3,14 +3,15 @@ title: 'ACSD-63244: Åtgärda problem med administratörspanelen i JavaScript, i
 description: ACSD-63244-korrigeringen åtgärdar flera JavaScript-problem på administratörspanelen, inklusive problem med  [!DNL Google Maps] återgivning och återkommande Uncaught TypeError this._each är inte en funktion" i webbläsarkonsolen.
 feature: Admin Workspace
 role: Admin, Developer
-source-git-commit: 01d6d74bfb9a9491bc006f140a2eebf4bbee004b
+exl-id: 1985c845-219e-4af4-8f70-62dd57722494
+source-git-commit: 6b623811440238deee7a7fe859d887830f89782c
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '323'
 ht-degree: 0%
 
 ---
 
-# ACSD-63244: ACSD-63244: Åtgärda problem på administratörspanelen i JavaScript, inklusive [!DNL Google Maps] återgivnings- och konsolfel
+# ACSD-63244: Åtgärda problem med administratörspanelen i JavaScript, inklusive [!DNL Google Maps] återgivning och konsolfel
 
 Korrigeringen ACSD-63244 åtgärdar flera JavaScript-problem på administratörspanelen, bland annat problem med [!DNL Google Maps]-återgivning och återkommande `Uncaught TypeError: this._each is not a function`-fel i webbläsarkonsolen. Den här korrigeringen är tillgänglig med [[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.56. Korrigerings-ID är ACSD-63244. Observera att problemet var planerat att åtgärdas i Adobe Commerce 2.4.8.
 
