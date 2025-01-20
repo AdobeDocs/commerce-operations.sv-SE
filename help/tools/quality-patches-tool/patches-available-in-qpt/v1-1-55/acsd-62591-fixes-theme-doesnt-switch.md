@@ -3,17 +3,17 @@ title: 'ACSD-62591: Temat växlar inte när **[!UICONTROL User Agent Rules]** ha
 description: Använd korrigeringsfilen ACSD-62591 för att åtgärda Adobe Commerce-problemet där temat inte växlar korrekt när **[!UICONTROL User Agent Rules]** är konfigurerat.
 feature: Themes
 role: Admin, Developer
-source-git-commit: 319ac7ea1fb8f33f4ed7bfa440477cf6d6657cb5
+exl-id: 7b206b25-8918-40a6-a956-d38d5058d38f
+source-git-commit: e18a41c5abb1cc8b407ff6c188acdeed0e8a7659
 workflow-type: tm+mt
-source-wordcount: '308'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
 
-
 # ACSD-62591: Temat växlar inte korrekt när [!UICONTROL User Agent Rules] har konfigurerats
 
-Korrigeringen ACSD-62591 åtgärdar ett problem där temat inte växlar korrekt när **[!UICONTROL User Agent Rules]** har konfigurerats. Den här korrigeringen är tillgänglig när [[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.55 är installerad. Korrigerings-ID är ACSD-62591. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.8.
+Korrigeringen ACSD-62591 åtgärdar ett problem där temat inte växlar korrekt när **[!UICONTROL User Agent Rules]** har konfigurerats. Den här korrigeringen är tillgänglig när [[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.55 är installerad. Korrigerings-ID är ACSD-62591. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.8.
 
 ## Berörda produkter och versioner
 
@@ -61,3 +61,4 @@ Använd följande länkar beroende på distributionsmetod för att tillämpa ens
 Mer information om [!DNL Quality Patches Tool] finns i:
 
 * [[!DNL Quality Patches Tool]: Ett självbetjäningsverktyg för kvalitetspatchar](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) i verktygshandboken.
+

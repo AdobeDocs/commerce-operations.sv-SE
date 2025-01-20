@@ -3,16 +3,17 @@ title: 'ACSD-63286: Produkter som tilldelats en delad katalog måste kunna omind
 description: Använd korrigeringsfilen ACSD-63286 för att åtgärda Adobe Commerce-problemet där produkter som tilldelats en delad katalog via API inte visas i butiken förrän en manuell omindexering har utförts.
 feature: Products, REST
 role: Admin, Developer
-source-git-commit: 00b2b9285ca27d630bd0ece2750b531710e8d196
+exl-id: 0435c06e-337e-4320-acc6-fa79a3b34008
+source-git-commit: e18a41c5abb1cc8b407ff6c188acdeed0e8a7659
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
 
 # ACSD-63286: Produkter som tilldelats en delad katalog måste kunna omindexeras manuellt för att visas
 
-Korrigeringen ACSD-63286 åtgärdar ett problem där produkter som tilldelats en delad katalog via API inte visas i butiken förrän en manuell omindexering har utförts. Den här korrigeringen är tillgänglig när [[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.57 är installerad. Korrigerings-ID är ACSD-63286. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.8.
+Korrigeringen ACSD-63286 åtgärdar ett problem där produkter som tilldelats en delad katalog via API inte visas i butiken förrän en manuell omindexering har utförts. Den här korrigeringen är tillgänglig när [[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.57 är installerad. Korrigerings-ID är ACSD-63286. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.8.
 
 ## Berörda produkter och versioner
 
