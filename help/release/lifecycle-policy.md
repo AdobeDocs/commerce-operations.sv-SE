@@ -2,7 +2,7 @@
 title: Policy för programvarans livscykel
 description: Läs om viktiga datum för när programvarusupporten för Adobe Commerce upphör.
 exl-id: 9ee4ecc8-d893-412a-a605-5a8606a1b9a9
-source-git-commit: 2a611b87df0d25be0e047e4d07e8c0ac3cd4d904
+source-git-commit: ce7c322c5cf979a992e6f929c3105daf86d4aa49
 workflow-type: tm+mt
 source-wordcount: '521'
 ht-degree: 4%
@@ -38,8 +38,8 @@ Adobe uppmuntrar kunderna att uppgradera så snart som möjligt. För att ge st�
 |----------------------|----------------------|------------------------------------|-------------------------|-----------------------|------------------------------|
 | Adobe Commerce 2.4.7 | 9 april 2024 | 9 april 2027 | Ej tillämpligt | 8.2 och 8.3 | 10,6 |
 | Adobe Commerce 2.4.6 | 14 mars 2023 | 11 augusti 2026<sup>2</sup> | Ej tillämpligt | 8.1 och 8.2 | 10,6 |
-| Adobe Commerce 2.4.5 | 9 augusti 2022 | 9 augusti 2025 | 11 augusti 2026 | 8,1 | 10.5<sup>3</sup> |
-| Adobe Commerce 2.4.4 | 12 april 2022 | 24 april 2025 | 14 april 2026 | 8,1 | 10.5<sup>4</sup> |
+| Adobe Commerce 2.4.5 | 9 augusti 2022 | 9 augusti 2025 | 11 augusti 2026 | 8,1 | 10.6<sup>3</sup> |
+| Adobe Commerce 2.4.4 | 12 april 2022 | 24 april 2025 | 14 april 2026 | 8,1 | 10.6<sup>4</sup> |
 
 {style="table-layout:auto"}
 
@@ -47,8 +47,8 @@ Adobe uppmuntrar kunderna att uppgradera så snart som möjligt. För att ge st�
 >
 >- <sup>1</sup> Stödet för programvarans slut omfattar både slut på kvalitetskorrigeringar och slut på säkerhetskorrigeringar.
 >- <sup>2</sup> Uppdaterad för att justeras mot slutet av det utökade stödet för 2.4.5.
->- <sup>3</sup> Börjar med säkerhetspatchen 2.4.5-p8.
->- <sup>4</sup> Börjar med säkerhetspatchen 2.4.4-p9.
+>- <sup>3</sup> Börjar med säkerhetspatchen 2.4.5-p11.
+>- <sup>4</sup> Börjar med säkerhetspatchen 2.4.4-p12.
 >- Se [Princip för programvarans livscykel](https://www.adobe.com/content/dam/cc/en/legal/terms/enterprise/pdfs/Adobe-Commerce-Software-Lifecycle-Policy.pdf).
 
 <table style="table-layout:auto">
