@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: 34010e1b22e7230d7c249e06bff7061c38b7a805
+source-git-commit: fd62bcd5d101d694c3e4fefdd9a64545e4e1cf7c
 workflow-type: tm+mt
-source-wordcount: '6845'
+source-wordcount: '6854'
 ht-degree: 0%
 
 ---
@@ -706,6 +706,7 @@ ht-degree: 0%
          - [ACSD-62755: [!DNL TinyMCE] 7 behöver teckenstorlek och teckensnitt som har lagts till i initieringsinställningarna för redigeraren](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-62755-tinymce-7-needs-font-size-added-in-editor-initialization-setting.md)
       - v1.1.57 {#v1-1-57}
          - [Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.57](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/overview.md)
+         - [ACSD-62212: [!UICONTROL Forgot Password]-e-postmeddelande har inte översatts till visningsspråket för arkivet](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62212-forgot-password-email-not-translated-to-store-view-language.md)
          - [ACSD-62708: [!DNL TinyMCE] 7-redigerarens teckensnittsstorlek i administratörspanelen visar PT](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62708-tinymce-7-editor-font-size-issue.md)
          - [ACSD-62689: Det går inte att lägga till kategorier i [!UICONTROL Related Product Rules] och widgetar efter djup 4](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62689-customer-add-categories-issue-related-product-rules-and-widgets.md)
          - [ACSD-62629: Produktlistan i widgetar visar felaktiga kategorier](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62629-product-list-widgets-category-condition.md)
