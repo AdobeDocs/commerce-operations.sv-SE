@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: fd62bcd5d101d694c3e4fefdd9a64545e4e1cf7c
+source-git-commit: 100437ecc120fc09f25aea56c9ed2a1f3e21edd2
 workflow-type: tm+mt
-source-wordcount: '6854'
+source-wordcount: '6866'
 ht-degree: 0%
 
 ---
@@ -718,6 +718,7 @@ ht-degree: 0%
          - [ACSD-63326: Korrigera problem med administratörsomdirigering efter att en order har lagts från serverdelen](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-63326-fix-admin-redirection-issue-after-placing-an-order-from-the-backend.md)
          - [ACSD-63286: Produkter som tilldelats en delad katalog måste kunna omindexeras manuellt för att visas](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-63286-products-in-shared-catalog-need-manual-reindexing-to-appear.md)
          - [ACSD-58325: Knappen [!UICONTROL Import] är tillgänglig även efter ett valideringsfel](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-58325-import-button-available-even-after-a-validation-error.md)
+         - [ACSD-61895: [!DNL GraphQL] kategorifrågan misslyckades för privat delad katalog med begränsad vy](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-61895-graphql-not-returning-categories-with-allow-permission.md)
          - [ACSD-62671: [!DNL GraphQL] returnerar inte uppdaterad adress vid första försöket](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62671-graphql-not-returning-updated-address-on-first-attempt.md)
          - [ACSD-62481: Kundvagnen är tom även om [!UICONTROL Persistence] är aktiverat](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62481-shopping-cart-empty-even-with-persistence-enabled.md)
       - v1.1.58 {#v1-1-58}
