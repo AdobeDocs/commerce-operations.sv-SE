@@ -1,11 +1,12 @@
 ---
-title: "ACSD-44851: Kategori med underkategorier som inte kan öppnas eller expanderas"
+title: 'ACSD-44851: Kategori med underkategorier som inte kan öppnas eller expanderas'
 description: Den här artikeln innehåller en lösning på problemet där användaren inte kan öppna eller utöka en kategori med underkategorier.
 feature: Categories
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: c1ad13d8-94e1-47cf-ad65-9bc5ce1c26ad
+source-git-commit: a1c5898626fb8419af017a29a009a0a2c069326e
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '386'
 ht-degree: 0%
 
 ---
@@ -61,6 +62,6 @@ Använd följande länkar beroende på distributionsmetod för att tillämpa ens
 Mer information om verktyget för kvalitetskorrigeringar finns i:
 
 * [Verktyget för kvalitetskorrigeringar har släppts: ett nytt verktyg för självbetjäning av kvalitetskorrigeringar](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) i kunskapsbasen för support.
-* [Kontrollera om det finns en korrigeringsfil för din Adobe Commerce-utgåva med verktyget för kvalitetskorrigeringar](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/patches/check-patch-for-magento-issue-with-magento-quality-patches.html) i vår kunskapsbas för support.
+* [Kontrollera om det finns en korrigeringsfil för ditt Adobe Commerce-problem med  [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md) i guiden [!UICONTROL Quality Patches Tool].
 
 Mer information om andra korrigeringsfiler som är tillgängliga i QPT finns i [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) i guiden för verktyget för kvalitetspatchar.
