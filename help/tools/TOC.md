@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: 3864c393e06eca769d29e20da62cd19dff1cbd7a
+source-git-commit: 420a74a1c0e4d4d242691968cfa6b515a9f91e77
 workflow-type: tm+mt
-source-wordcount: '6952'
+source-wordcount: '6970'
 ht-degree: 0%
 
 ---
@@ -732,6 +732,7 @@ ht-degree: 0%
          - [ACSD-48570: Åtgärdar problem med lösenordslänk för administratörsåterställning med lagringskod i URL](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-48570-fixing-admin-reset-password-link-issue-with-store-card-in-url.md)
          - [ACSD-63299: Specialpriset för en konfigurerbar produkt visas inte i butiken](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63299-special-price-for-a-configurable-product-doesnt-display-on-the-storefront.md)
          - [ACSD-63325: Syntaxfel: Oväntat &lt; EOF >-fel när en tom [!DNL GraphQL] begäran skickades](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63325-syntax-error-when-submitting-graphql-request.md)
+         - [ACSD-63329: Standardvärden för datum- och tidsfält anges inte när produkter skapas med REST API](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63329-date-and-time-attributes-arent-set-when-creating-products-with-the-rest-api.md)
    - [Leta efter Adobe Commerce-problem med verktyget för kvalitetskorrigeringar](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
 - Referens för kommandoradsverktyg {#cli-reference}
    - [Adobe Commerce (lokalt)](reference/commerce-on-premises.md)
