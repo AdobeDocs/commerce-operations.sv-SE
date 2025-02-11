@@ -2,9 +2,9 @@
 title: Adobe Commerce 2.4.4 Security Patch Release Notes
 description: Läs mer om säkerhetsfelkorrigeringar, säkerhetsförbättringar och andra säkerhetsrelaterade uppdateringar som ingår i säkerhetsuppdateringarna för Adobe Commerce version 2.4.4.
 exl-id: 136d7090-6bf2-41e3-8445-b07bdc67f12b
-source-git-commit: cb4f388c90902c2fe1df4a5d84841280fa740104
+source-git-commit: 9397740c608e4f0521018d6f6c918ca267197c6c
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1535'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,19 @@ ht-degree: 0%
 
 # Versionsinformation om säkerhetsuppdateringar för Adobe Commerce 2.4.4
 
-{{$include /help/_includes/security-patch-release-notes-intro.md}}
+{{$include /help/_includes/release-notes/security-patch-intro.md}}
+
+## 2.4.4-p12
+
+Säkerhetsutgåvan av Adobe Commerce 2.4.4-p12 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som identifierats i tidigare versioner av 2.4.4.
+
+Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB25-08](https://helpx.adobe.com/security/products/magento/apsb25-08.html).
+
+{{b2b-patches}}
+
+### Högdagrar
+
+{{$include /help/_includes/release-notes/highlights/security-2025-02.md}}
 
 ## 2.4.4-p11
 
@@ -24,7 +36,7 @@ Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerh
 
 ### Högdagrar
 
-{{$include /help/_includes/release-notes/2024-10/security-foo.md}}
+{{$include /help/_includes/release-notes/highlights/security-2024-10.md}}
 
 ## 2.4.4-p10
 
@@ -34,11 +46,11 @@ Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerh
 
 ### Högdagrar
 
-{{$include /help/_includes/release-notes/2024-08/security.md}}
+{{$include /help/_includes/release-notes/highlights/security-2024-08.md}}
 
 ### Programfixar som ingår i den här versionen
 
-{{$include /help/_includes/release-notes/2024-08/hotfixes-included.md}}
+{{$include /help/_includes/release-notes/hotfixes/included-2024-08.md}}
 
 ## 2.4.4-p9
 
@@ -48,15 +60,15 @@ Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerh
 
 ### Programfix för CVE-2024-34102
 
-{{$include /help/_includes/release-notes/2024-06/hotfixes-not-included.md}}
+{{$include /help/_includes/release-notes/hotfixes/not-included-2024-06.md}}
 
 ### Plattformsuppgraderingar
 
-* **Stöd för MariaDB 10.5**. Den här korrigeringsversionen är kompatibel med MariaDB version 10.5. Adobe Commerce är fortfarande kompatibelt med MariaDB version 10.4, men Adobe rekommenderar att du endast använder Adobe Commerce 2.4.4-p9 och alla kommande 2.4.4-säkerhetsuppdateringar med MariaDB version 10.5 eftersom MariaDB 10.4-underhållet upphör den 18 juni 2024. <!--AC-11530-->
+* **Stöd för MariaDB 10.5**. Den här korrigeringsversionen är kompatibel med MariaDB version 10.5. Adobe Commerce är fortfarande kompatibelt med MariaDB version 10.4, men Adobe rekommenderar att du använder Adobe Commerce 2.4.4-p9 och alla kommande 2.4.4-säkerhetsuppdateringar endast med MariaDB version 10.5 eftersom MariaDB 10.4-underhållet upphör den 18 juni 2024. <!--AC-11530-->
 
 ### Högdagrar
 
-{{$include /help/_includes/release-notes/2-4-7-security.md}}
+{{$include /help/_includes/release-notes/highlights/2-4-7-security.md}}
 
 ## 2.4.4-p8
 
@@ -132,9 +144,9 @@ Standardbeteendet för GraphQL-frågan [`isEmailAvailable`](https://developer.ad
 
 Plattformsuppgraderingar för den här versionen förbättrar efterlevnaden av de senaste säkerhetsstandarderna.
 
-* **Stöd för lack cache 7.3**. Den här versionen är kompatibel med den senaste versionen av Varnish Cache 7.3. Kompatibiliteten är fortfarande kompatibel med versionerna 6.0.x och 7u.2.x, men Adobe rekommenderar att du endast använder Adobe Commerce 2.4.4-p4 med Varnish Cache version 7.3 eller version 6.0 LTS.
+* **Stöd för lack cache 7.3**. Den här versionen är kompatibel med den senaste versionen av Varnish Cache 7.3. Kompatibiliteten behålls med versionerna 6.0.x och 7u.2.x, men Adobe rekommenderar att du endast använder Adobe Commerce 2.4.4-p4 med Varnish Cache version 7.3 eller version 6.0 LTS.
 
-* **Stöd för RabbitMQ 3.1**. Den här versionen är kompatibel med den senaste versionen av RabbitMQ 3.11. Kompatibiliteten finns kvar med RabbitMQ 3.9 som stöds till och med augusti 2023, men Adobe rekommenderar att du endast använder Adobe Commerce 2.4.4-p4 med RabbitMQ 3.11.
+* **Stöd för KaninMQ 3.11**. Den här versionen är kompatibel med den senaste versionen av RabbitMQ 3.11. Kompatibiliteten kvarstår med RabbitMQ 3.9 som stöds till och med augusti 2023, men Adobe rekommenderar att du bara använder Adobe Commerce 2.4.4-p4 med RabbitMQ 3.11.
 
 * **JavaScript-bibliotek**. Inaktuella JavaScript-bibliotek har uppgraderats till de senaste mindre versionerna eller korrigeringsversionerna, inklusive `moment.js` bibliotek (v2.29.4), `jQuery UI` bibliotek (v1.13.2) och `jQuery` plugin-bibliotek för validering (v1.19.5).
 
@@ -158,7 +170,7 @@ DHL har introducerat schemaversion 6.2 och kommer inom kort att föråldra schem
 
 Säkerhetsutgåvan av Adobe Commerce 2.4.4-p1 innehåller korrigeringar av säkerhetsluckor som har identifierats i tidigare versioner. Den här versionen innehåller även säkerhetsförbättringar som förbättrar efterlevnaden av de senaste säkerhetsstandarderna.
 
-Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Säkerhetsbulletin för Adobe](https://helpx.adobe.com/security/products/magento/apsb22-38.html).t
+Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin](https://helpx.adobe.com/security/products/magento/apsb22-38.html).t
 
 ### Använd `AC-3022.patch` om du vill fortsätta erbjuda DHL som fraktfirma
 

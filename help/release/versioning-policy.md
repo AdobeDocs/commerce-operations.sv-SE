@@ -2,7 +2,7 @@
 title: Versionspolicy
 description: Läs mer om de olika typerna av Adobe Commerce-utgåvor, inklusive smärre utgåvor, korrigeringsfiler, säkerhetskorrigeringar, funktioner, snabbkorrigeringar, enskilda korrigeringsfiler och anpassade korrigeringsfiler.
 exl-id: 61a83de6-6a7b-4a88-8fff-1638b4fe472a
-source-git-commit: b5d120893668f4315e289a204649270db4f7a6bc
+source-git-commit: b63fa9a8b2b59f6e8dfd7003e75c66caf99d5e81
 workflow-type: tm+mt
 source-wordcount: '638'
 ht-degree: 0%
@@ -15,7 +15,7 @@ Adobe Commerce använder [semantisk versionshantering](https://semver.org/) på 
 
 - **STÖRSTA VERSIONEN**—2
 - **MINOR release**—2.4
-- **PATCH version**—2.4.5
+- **PATCH-version**—2.4.5
    - **SÄKERHETSkorrigeringsversion**—2.4.5-p1
       - Säkerhetsfelkorrigering
       - Säkerhetsförbättring
@@ -46,7 +46,7 @@ Följande riktlinjer gäller för korrigeringsversioner:
 
 ### Säkerhetsuppdatering
 
-{{$include /help/_includes/security-patch-release-overview.md}}
+{{$include /help/_includes/release-notes/security-patch-overview.md}}
 
 ## BETA patch release
 
@@ -56,7 +56,7 @@ Beta Releases kan innehålla defekter och tillhandahålls i befintligt skick uta
 
 ## Funktioner, molninfrastruktur och utbyggbarhet
 
-Molninfrastruktur och funktionsreleaser innehåller nya funktioner och funktionsuppdateringar som levereras som fristående tjänster, utöver korrigeringsutgåvor. Exempel är uppdateringar av våra molntjänster och vår infrastruktur, B2B-, SaaS-produkter (katalogtjänst, dataanslutning, Recommendations och Live Search) och utökningsteknik (API Mesh, Integration Starter Kit och Eventing).
+Molninfrastruktur och funktionsreleaser innehåller nya funktioner och funktionsuppdateringar som levereras som fristående tjänster, utöver korrigeringsutgåvor. Exempel är uppdateringar av våra molntjänster och vår infrastruktur, B2B-, SaaS-produkter (katalogtjänst, dataanslutning, produktrekommendationer och Live Search) och utökningsteknik (API Mesh, Integration Starter Kit och Eventing).
 
 ## Hotfix
 
@@ -80,4 +80,4 @@ Innehåller en fristående korrigering som ingår i den senaste säkerhetsuppdat
 
 ## Egen korrigering
 
-Skapas av annan personal än Adobe för att åtgärda ett problem eller ändra Adobe Commerce-koden av olika anledningar. Anpassade korrigeringsfiler levereras via [kvalitetskorrigeringsverktyget](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html).
+Skapas av icke-Adobe-personal för att åtgärda ett problem eller ändra Adobe Commerce-koden av olika anledningar. Anpassade korrigeringsfiler levereras via [kvalitetskorrigeringsverktyget](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html).

@@ -2,7 +2,7 @@
 title: Versionsinformation om säkerhetsuppdateringar för Adobe Commerce 2.4.3
 description: Läs mer om säkerhetsfelkorrigeringar, säkerhetsförbättringar och andra säkerhetsrelaterade uppdateringar som ingår i säkerhetsuppdateringarna för Adobe Commerce version 2.4.3.
 exl-id: 72d343cd-83d7-48ce-976a-e26ba1b8db27
-source-git-commit: 95ea96a566b0579a22b2ba738bd4a4bceef8cd9c
+source-git-commit: b63fa9a8b2b59f6e8dfd7003e75c66caf99d5e81
 workflow-type: tm+mt
 source-wordcount: '931'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Versionsinformation om säkerhetsuppdateringar för Adobe Commerce 2.4.3
 
-{{$include /help/_includes/security-patch-release-notes-intro.md}}
+{{$include /help/_includes/release-notes/security-patch-intro.md}}
 
 ## Adobe Commerce 2.4.3-p3
 
@@ -78,7 +78,7 @@ Den här versionen innehåller följande snabbkorrigering och alla snabbkorriger
 
 **Sessions-ID:n har tagits bort från databasen**. Den här kodändringen kan leda till att ändringar bryts om handlarna har anpassningar eller installerade tillägg som använder de rå sessions-ID:n som lagras i databasen. <!-- MC-40976-->
 
-**Begränsad administratörsåtkomst till mediegalleriets mappar**. Standardbehörigheter i Mediegalleriet tillåter nu endast katalogåtgärder (visa, ladda upp, ta bort och skapa) som tillåts uttryckligen av konfigurationen. Administratörsanvändare har inte längre åtkomst till medieresurser via mediegalleriet som har överförts utanför katalogerna `catalog/category` eller `wysiwyg`. Administratörer som vill komma åt medieresurser måste flytta dem till en uttryckligen tillåten mapp eller justera sina konfigurationsinställningar. Se [Ändra behörigheter för Media Library-mappar](https://developer.adobe.com/commerce/php/tutorials/backend/modify-image-library-permissions/). <!-- B2B-1897-->
+**Begränsad administratörsåtkomst till mediegalleriets mappar**. Standardbehörigheter i Mediegalleriet tillåter nu endast katalogåtgärder (visa, ladda upp, ta bort och skapa) som tillåts uttryckligen av konfigurationen. Administratörsanvändare har inte längre åtkomst till medieresurser via mediegalleriet som har överförts utanför katalogerna `catalog/category` eller `wysiwyg`. Administratörer som vill komma åt medieresurser måste flytta dem till en uttryckligen tillåten mapp eller justera sina konfigurationsinställningar. Se [Ändra behörigheter i mappen Mediebibliotek](https://developer.adobe.com/commerce/php/tutorials/backend/modify-image-library-permissions/). <!-- B2B-1897-->
 
 **Lägre gränser för komplexitet för GraphQL-frågor**. GraphQL största tillåtna komplexitet för frågor har sänkts för att förhindra DOS-attacker. Se [GraphQL säkerhetskonfiguration](https://developer.adobe.com/commerce/webapi/graphql/usage/security-configuration/). <!-- PWA-1700-->
 

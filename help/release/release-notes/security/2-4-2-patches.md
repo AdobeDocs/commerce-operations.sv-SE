@@ -2,7 +2,7 @@
 title: Adobe Commerce 2.4.2 Security Patch Release Notes
 description: Läs mer om säkerhetsfelkorrigeringar, säkerhetsförbättringar och andra säkerhetsrelaterade uppdateringar som ingår i säkerhetsuppdateringarna för Adobe Commerce version 2.4.2.
 exl-id: e6058e96-b810-4a78-8804-15783afef951
-source-git-commit: d532402e2d65a1f34558fc3c283d4291be5b006b
+source-git-commit: b63fa9a8b2b59f6e8dfd7003e75c66caf99d5e81
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Versionsinformation om säkerhetsuppdateringar för Adobe Commerce 2.4.2
 
-{{$include /help/_includes/security-patch-release-notes-intro.md}}
+{{$include /help/_includes/release-notes/security-patch-intro.md}}
 
 ## Adobe Commerce 2.4.2-p2
 

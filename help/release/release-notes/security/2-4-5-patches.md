@@ -2,9 +2,9 @@
 title: Adobe Commerce 2.4.5 Security Patch Release Notes
 description: Läs mer om säkerhetsfelkorrigeringar, säkerhetsförbättringar och andra säkerhetsrelaterade uppdateringar som ingår i säkerhetsuppdateringarna för Adobe Commerce version 2.4.5.
 exl-id: 1b5f6d84-877a-45ea-8ff5-db83e3d360dd
-source-git-commit: 95ea96a566b0579a22b2ba738bd4a4bceef8cd9c
+source-git-commit: 9397740c608e4f0521018d6f6c918ca267197c6c
 workflow-type: tm+mt
-source-wordcount: '1162'
+source-wordcount: '1199'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,19 @@ ht-degree: 0%
 
 # Versionsinformation om säkerhetsuppdateringar för Adobe Commerce 2.4.5
 
-{{$include /help/_includes/security-patch-release-notes-intro.md}}
+{{$include /help/_includes/release-notes/security-patch-intro.md}}
+
+## 2.4.5-p11
+
+Säkerhetsutgåvan av Adobe Commerce 2.4.5-p11 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som identifierats i tidigare versioner av 2.4.5.
+
+Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB25-08](https://helpx.adobe.com/security/products/magento/apsb25-08.html).
+
+{{b2b-patches}}
+
+### Högdagrar
+
+{{$include /help/_includes/release-notes/highlights/security-2025-02.md}}
 
 ## 2.4.5-p10
 
@@ -24,11 +36,11 @@ Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerh
 
 ### Högdagrar
 
-{{$include /help/_includes/release-notes/2024-10/security-foo.md}}
+{{$include /help/_includes/release-notes/highlights/security-2024-10.md}}
 
 ### Programfixar som ingår i den här versionen
 
-{{$include /help/_includes/release-notes/2024-10/hotfixes-included-foo.md}}
+{{$include /help/_includes/release-notes/hotfixes/included-2024-10.md}}
 
 ## 2.4.5-p9
 
@@ -38,11 +50,11 @@ Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerh
 
 ### Högdagrar
 
-{{$include /help/_includes/release-notes/2024-08/security.md}}
+{{$include /help/_includes/release-notes/highlights/security-2024-08.md}}
 
 ### Programfixar som ingår i den här versionen
 
-{{$include /help/_includes/release-notes/2024-08/hotfixes-included.md}}
+{{$include /help/_includes/release-notes/hotfixes/included-2024-08.md}}
 
 ## 2.4.5-p8
 
@@ -52,7 +64,7 @@ Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerh
 
 ### Programfix för CVE-2024-34102
 
-{{$include /help/_includes/release-notes/2024-06/hotfixes-not-included.md}}
+{{$include /help/_includes/release-notes/hotfixes/not-included-2024-06.md}}
 
 ### Plattformsuppgraderingar
 
@@ -60,7 +72,7 @@ Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerh
 
 ### Högdagrar
 
-{{$include /help/_includes/release-notes/2-4-7-security.md}}
+{{$include /help/_includes/release-notes/highlights/2-4-7-security.md}}
 
 ## 2.4.5-p7
 
@@ -120,7 +132,7 @@ Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerh
 
 Säkerhetsutgåvan av Adobe Commerce 2.4.5-p3 innehåller säkerhetsfixar för säkerhetsluckor som har identifierats i tidigare versioner av 2.4.5. Den här versionen innehåller även säkerhetsförbättringar som förbättrar efterlevnaden av de senaste säkerhetsstandarderna.
 
-Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Säkerhetsbulletin för Adobe](https://helpx.adobe.com/security/products/magento/apsb23-35.html).
+Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin](https://helpx.adobe.com/security/products/magento/apsb23-35.html).
 
 ### Programfix för CVE-2022-31160
 
@@ -136,7 +148,7 @@ Plattformsuppgraderingar för den här versionen förbättrar efterlevnaden av d
 
 * **Stöd för lack cache 7.3**. Den här versionen är kompatibel med den senaste versionen av Varnish Cache 7.3. Kompatibiliteten är fortfarande kompatibel med versionerna 6.0.x och 7.2.x, men vi rekommenderar att du bara använder Adobe Commerce 2.4.5-p3 med Varnish Cache version 7.3 eller version 6.0 LTS.
 
-* **Stöd för RabbitMQ 3.1**. Den här versionen är kompatibel med den senaste versionen av RabbitMQ 3.11. Kompatibiliteten är fortfarande med RabbitMQ 3.9, som stöds fram till augusti 2023, men vi rekommenderar att du endast använder Adobe Commerce 2.4.5-p3 med RabbitMQ 3.11.
+* **Stöd för KaninMQ 3.11**. Den här versionen är kompatibel med den senaste versionen av RabbitMQ 3.11. Kompatibiliteten är fortfarande med RabbitMQ 3.9, som stöds fram till augusti 2023, men vi rekommenderar att du endast använder Adobe Commerce 2.4.5-p3 med RabbitMQ 3.11.
 
 * **JavaScript-bibliotek**. Inaktuella JavaScript-bibliotek har uppgraderats till de senaste mindre versionerna eller korrigeringsversionerna, inklusive `moment.js` bibliotek (v2.29.4), `jQuery UI` bibliotek (v1.13.2) och `jQuery` plugin-bibliotek för validering (v1.19.5).
 

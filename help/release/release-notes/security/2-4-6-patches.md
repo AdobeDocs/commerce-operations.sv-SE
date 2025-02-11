@@ -2,9 +2,9 @@
 title: Adobe Commerce 2.4.6 Security Patch Release Notes
 description: Läs mer om säkerhetsfelkorrigeringar, säkerhetsförbättringar och andra säkerhetsrelaterade uppdateringar som ingår i säkerhetsuppdateringarna för Adobe Commerce version 2.4.6.
 exl-id: cde096ac-d192-490d-873a-475996c474ff
-source-git-commit: cb4f388c90902c2fe1df4a5d84841280fa740104
+source-git-commit: 9397740c608e4f0521018d6f6c918ca267197c6c
 workflow-type: tm+mt
-source-wordcount: '1243'
+source-wordcount: '1280'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,19 @@ ht-degree: 0%
 
 # Versionsinformation om säkerhetsuppdateringar för Adobe Commerce 2.4.6
 
-{{$include /help/_includes/security-patch-release-notes-intro.md}}
+{{$include /help/_includes/release-notes/security-patch-intro.md}}
+
+## 2.4.6-p9
+
+Säkerhetsutgåvan av Adobe Commerce 2.4.6-p9 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som identifierats i tidigare versioner av 2.4.6.
+
+Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB25-08](https://helpx.adobe.com/security/products/magento/apsb25-08.html).
+
+{{b2b-patches}}
+
+### Högdagrar
+
+{{$include /help/_includes/release-notes/highlights/security-2025-02.md}}
 
 ## 2.4.6-p8
 
@@ -24,11 +36,11 @@ Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerh
 
 ### Högdagrar
 
-{{$include /help/_includes/release-notes/2024-10/security-foo.md}}
+{{$include /help/_includes/release-notes/highlights/security-2024-10.md}}
 
 ### Programfixar som ingår i den här versionen
 
-{{$include /help/_includes/release-notes/2024-10/hotfixes-included-foo.md}}
+{{$include /help/_includes/release-notes/hotfixes/included-2024-10.md}}
 
 ## 2.4.6-p7
 
@@ -38,11 +50,11 @@ Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerh
 
 ### Högdagrar
 
-{{$include /help/_includes/release-notes/2024-08/security.md}}
+{{$include /help/_includes/release-notes/highlights/security-2024-08.md}}
 
 ### Programfixar som ingår i den här versionen
 
-{{$include /help/_includes/release-notes/2024-08/hotfixes-included.md}}
+{{$include /help/_includes/release-notes/hotfixes/included-2024-08.md}}
 
 ## 2.4.6-p6
 
@@ -54,19 +66,19 @@ För kompatibilitet med Commerce version 2.4.6-p6 måste handlare som har tillä
 
 ### Programfix för CVE-2024-34102
 
-{{$include /help/_includes/release-notes/2024-06/hotfixes-not-included.md}}
+{{$include /help/_includes/release-notes/hotfixes/not-included-2024-06.md}}
 
 För kompatibilitet med Commerce version 2.4.6-p6 måste handlare som har tillägget Adobe Commerce B2B uppgradera till [B2B version 1.4.2-p1](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/release-notes#b2b-v142-p1).
 
 ### Högdagrar
 
-{{$include /help/_includes/release-notes/2-4-7-security.md}}
+{{$include /help/_includes/release-notes/highlights/2-4-7-security.md}}
 
 ## 2.4.6-p5
 
 Säkerhetsutgåvan av Adobe Commerce 2.4.6-p5 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som har identifierats i tidigare versioner av 2.4.6.
 
-Den senaste informationen om dessa korrigeringar finns i [Säkerhetsbulletin APSB24-18](https://helpx.adobe.com/security/products/magento/apsb24-18.html) för Adobe.
+Den senaste informationen om dessa korrigeringar finns i [Adobe säkerhetsbulletin APSB24-18](https://helpx.adobe.com/security/products/magento/apsb24-18.html).
 
 ## 2.4.6-p4
 
@@ -146,9 +158,9 @@ Standardbeteendet för GraphQL-frågan [`isEmailAvailable`](https://developer.ad
 
 Plattformsuppgraderingar för den här versionen förbättrar efterlevnaden av de senaste säkerhetsstandarderna.
 
-* **Stöd för lack cache 7.3**. Den här versionen är kompatibel med den senaste versionen av Varnish Cache 7.3. Kompatibiliteten är fortfarande kompatibel med versionerna 6.0.x och 7.2.x, men Adobe rekommenderas att endast använda Adobe Commerce 2.4.6-p1 med version 7.3 eller version 6.0 av Varnish Cache.
+* **Stöd för lack cache 7.3**. Den här versionen är kompatibel med den senaste versionen av Varnish Cache 7.3. Kompatibiliteten är fortfarande kompatibel med versionerna 6.0.x och 7.2.x, men Adobe rekommenderar att du endast använder Adobe Commerce 2.4.6-p1 med version 7.3 eller 6.0 LTS för Varnish Cache.
 
-* **Stöd för RabbitMQ 3.1**. Den här versionen är kompatibel med den senaste versionen av RabbitMQ 3.11. Kompatibiliteten är fortfarande kompatibel med RabbitMQ 3.9 som stöds till och med augusti 2023, men Adobe rekommenderar att du endast använder Adobe Commerce 2.4.6-p1 med RabbitMQ 3.11.
+* **Stöd för KaninMQ 3.11**. Den här versionen är kompatibel med den senaste versionen av RabbitMQ 3.11. Kompatibiliteten är fortfarande med RabbitMQ 3.9, som stöds till och med augusti 2023, men Adobe rekommenderar att du endast använder Adobe Commerce 2.4.6-p1 med RabbitMQ 3.11.
 
 * **JavaScript-bibliotek**. Inaktuella JavaScript-bibliotek har uppgraderats till de senaste mindre versionerna eller korrigeringsversionerna, inklusive `moment.js` bibliotek (v2.29.4), `jQuery UI` bibliotek (v1.13.2) och `jQuery` plugin-bibliotek för validering (v1.19.5).
 

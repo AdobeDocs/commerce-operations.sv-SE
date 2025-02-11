@@ -2,9 +2,9 @@
 title: Versionsinformation för Adobe Commerce
 description: Läs om var du hittar information om specifika versioner av Adobe Commerce.
 exl-id: f6385e12-5c3d-425f-939c-9dfd7ef6c4f5
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: a2c93cb8481a3d843bc3be186d682f1d5e7974f6
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '275'
 ht-degree: 3%
 
 ---
@@ -48,23 +48,20 @@ Använd följande tabell för att hitta versionsinformation och viktig informati
         <p>Läs om de senaste förbättringarna av innovativa marknadsföringstjänster från Commerce.</p>
           <ul>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-admin/customers/audience-activation.html">Audience Activation</a></li>
-            <li><a href="https://experienceleague.adobe.com/docs/commerce-channels/amazon/release-notes.html">Amazon-Sales Channeler</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/catalog-service/release-notes.html">Katalogtjänst</a></li>
-            <li><a href="https://experienceleague.adobe.com/docs/commerce-channels/channel-manager/release-notes.html">Channel Manager (Walmart Marketplace sales)</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/release-notes.html">Experience Platform Connector</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/release-notes.html">Live Search</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/release-notes.html">Betalningstjänster</a></li>
-            <li><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/product-recommendations/release-notes.html">Recommendations</a></li>
+            <li><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/product-recommendations/release-notes.html">Produktrekommendationer</a></li>
             <li><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html">Services Connector</a></li>
-            <li><a href="https://experienceleague.adobe.com/docs/commerce-merchant-services/store-fulfillment/release-notes.html?lang=en">Lagra uppfyllelse</a></li>
           </ul>
         </td>
       <td><strong>Verktyg</strong>
         <p>Läs om de senaste förbättringarna av verktyg som gör det enklare att hitta och använda Adobe Commerce.</p>
           <ul>
             <li><a href="https://developer.adobe.com/graphql-mesh-gateway/">API Mesh för Adobe App Builder Developer</a></li>
-            <li><a href="https://developer.adobe.com/commerce/events/get-started/release-notes/">Adobe I/O Events for Adobe Commerce</a></li>
-            <li><a href="https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/release-notes/">Administratörsgränssnitt SDK</a></li>
+            <li><a href="https://developer.adobe.com/commerce/events/get-started/release-notes/">Adobe I/O Events för Adobe Commerce</a></li>
+            <li><a href="https://developer.adobe.com/commerce/extensibility/admin-ui-sdk/release-notes/">Admin UI SDK</a></li>
             <li><a href="../../tools/quality-patches-tool/release-notes.md">Verktyget Kvalitetspatchar</a></li>
             <li><a href="../../tools/site-wide-analysis-tool/intro.md">Site-Wide Analysis Tool</a></li>
             <li><a href="../../upgrade/upgrade-compatibility-tool/overview.md">Kompatibilitetsverktyg för uppgradering</a></li>
