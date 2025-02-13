@@ -2,9 +2,9 @@
 title: Beta-versioner
 description: Läs mer om betaversioner av Adobe Commerce och hur du deltar.
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
-source-git-commit: 4643c8392b6d92a2ccbbc2ec5b27d75c112d7521
+source-git-commit: c29602d6f1619c0b32feb48843ec01b350a3ae32
 workflow-type: tm+mt
-source-wordcount: '1097'
+source-wordcount: '873'
 ht-degree: 0%
 
 ---
@@ -54,22 +54,6 @@ De här nya villkoren förbättrar funktionen för filtrering av sökfrågor fö
 
 Mer information om hur du installerar betaversionen av Live Search finns i [Live Search-guiden](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/live-search/install#install-the-live-search-beta).
 
-### Experience Manager Assets Integration för Commerce (Private Beta)
-
-Experience Manager Assets Integration för Commerce möjliggör effektiv hantering och leverans av ett stort antal produktbilder från Experience Manager Assets till Adobe Commerce med låg eller ingen driftansträngning.
-
-Viktiga funktioner:
-
-- Integrering med Plug and play - Tillhandahåll en Adobe-baserad integrering mellan Experience Manager Assets och Adobe Commerce som gör det möjligt för handlare att fokusera på det som är viktigast, med minskade driftskostnader och ökad effektivitet.
-
-- Anpassa produktbilder i stor skala Använd Experience Manager Assets för att generera miljontals produktvarianter för personaliserade Commerce-upplevelser med lättanvända gränssnittsbaserade redigeringsverktyg, generativt innehåll med Adobe Firefly och arbetsflöden för tilldelade resurser för att säkerställa ett enhetligt varumärke. När du är nöjd med materialet kan du smidigt leverera det till dina Commerce-butiker med Experience Manager Assets Integration.
-
-- Enkel introduktion - Förenkla kundintroduktionen med en konfigurerbar synkroniseringsprocess som möjliggör fullständig synkronisering mellan Experience Manager Assets-databasen och Commerce-katalogen.
-
-- Flexibel matchningsstrategi - Integreringen innehåller standardalgoritmer för tillgångsmatchning baserat på SKU:er för produkter som synkroniserar bilder mellan AEM Assets och Commerce, och den kan utökas med Adobe Developer App Builder. Samarbeta med er lösningspartner för att bygga upp en anpassad strategi för tillgångsmatchning utöver integreringen för att få plats med en databasstruktur för resurshantering.
-
-Om du vill delta i betaversionen skickar du en e-postförfrågan till [Shaun McCran](mailto:mccran@adobe.com).
-
 ### IBM Sterling Order Management System Integration (Private Beta)
 
 Integrationsacceleratorn för IBM Sterling Order Management gör det möjligt för Adobe Commerce-kunder att komma igång med avancerade orderhanteringsfunktioner som bygger på IBM Sterling OMS. Med den här integreringen får handlare:
@@ -103,7 +87,7 @@ Varje betaversion av Adobe Commerce Foundation innehåller alla ändringar som l
 
 #### Namngivningskonvention och schema
 
-Adobe släpper normalt betatestningar två gånger per år.
+Adobe släpper betatestningar normalt två gånger per år.
 
 Beta-versionspaket har suffixet `-betaX`. I betaversionspaketen för Adobe Commerce 2.4.7 används till exempel följande namnkonvention:
 
@@ -121,7 +105,7 @@ Mer information finns i [Snabbstart för installation av disposition](../install
 
 #### Ärenderapportering
 
-Adobe tillhandahåller inte Adobe support som standard för betaversioner.
+Adobe tillhandahåller inte Adobe standardsupport för betaversioner.
 
 Följ vårt [regelbundna rapportflöde](https://developer.adobe.com/commerce/contributor/guides/code-contributions/) på [GitHub](https://github.com/magento/magento2) om du vill skicka feedback som gäller betaversioner.
 
