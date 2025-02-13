@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: 183a83346633913b3b013732cbac8676a0756609
+source-git-commit: 329a9413eca2de00451ee694501cca2cf0c57c30
 workflow-type: tm+mt
-source-wordcount: '6981'
+source-wordcount: '6990'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
    - [Flikarna Funktioner](site-wide-analysis-tool/features-tabs.md)
    - [Kontrollpanel](site-wide-analysis-tool/dashboard.md)
    - [Information](site-wide-analysis-tool/information.md)
-   - [Recommendations](site-wide-analysis-tool/recommendations.md)
+   - [Rekommendationer](site-wide-analysis-tool/recommendations.md)
    - [Undantag](site-wide-analysis-tool/exceptions.md)
    - [Tillägg](site-wide-analysis-tool/extensions.md)
    - [Varningar](site-wide-analysis-tool/alerts.md)
@@ -405,7 +405,7 @@ ht-degree: 0%
          - [ACSD-50512: Fel vid uppdatering av startdatum för en hämtningsbar mellanlagringsuppdatering](quality-patches-tool/patches-available-in-qpt/v1-1-33/acsd-50512-error-when-updating-the-start-date-for-a-downloadable-product-staging-update.md)
          - [ACSD-50895: Google Analytics 3 GTM-taggar utlöses inte om Google Analytics 4 GTM inte är konfigurerat](quality-patches-tool/patches-available-in-qpt/v1-1-33/acsd-50895-google-analytics-3-gtm-tags-are-not-fired-if-google-analytics-4-gtm-is-not-configured.md)
          - [ACSD-51471: Administratörsanvändaren kan inte spara schemalagd uppdatering för paketerad produkt](quality-patches-tool/patches-available-in-qpt/v1-1-33/acsd-51471-admin-user-cannot-save-scheduled-update-for-bundled-product.md)
-         - [ACSD-51120: Cachen för förfrågningar från GraphQL GET rensas inte för CMS-sidor som innehåller CMS-block](quality-patches-tool/patches-available-in-qpt/v1-1-33/acsd-51120-graphql-get-requests-cache-not-cleared-for-cms-pages.md)
+         - [ACSD-51120: Cacheminnet för GraphQL GET-begäranden har inte rensats för CMS-sidor som innehåller CMS-block](quality-patches-tool/patches-available-in-qpt/v1-1-33/acsd-51120-graphql-get-requests-cache-not-cleared-for-cms-pages.md)
          - [ACSD-51700: Fel vid växling av butiksvyer på hämtningsbar produktredigeringssida](quality-patches-tool/patches-available-in-qpt/v1-1-33/acsd-51700-downloadable-product-error-when-switching-storeviews.md)
          - [ACSD-51735: Orderartikelstatus är felaktigt inställd på [!UICONTROL Ordered] när produktlager är 0](quality-patches-tool/patches-available-in-qpt/v1-1-33/acsd-51735-order-item-status-incorrectly-set.md)
          - [ACSD-51497: Det går inte att sortera katalogsidan efter ett anpassat attribut av typen Listruta](quality-patches-tool/patches-available-in-qpt/v1-1-33/acsd-51497-cannot-sort-catalog-page-by-custom-attribute-of-dropdown-type.md)
@@ -454,7 +454,7 @@ ht-degree: 0%
          - [ACSD-53176: Produktregeln med ett villkor matchar inte](quality-patches-tool/patches-available-in-qpt/v1-1-36/acsd-53176-product-rule-with-is-one-of-condition-do-not-match.md)
          - [ACSD-47875: Det går inte att lägga till produkten i varukorgen för butiksvyn med lagerhantering](quality-patches-tool/patches-available-in-qpt/v1-1-36/acsd-47875-unable-to-add-product-to-customer-cart-for-store-view-scope-with-inventory-management.md)
          - [ACSD-51666: Fel: &quot;Sessionen har upphört, logga in igen.&quot; efter att du loggat in](quality-patches-tool/patches-available-in-qpt/v1-1-36/acsd-51666-error-session-has-expired-please-login-again.md)
-         - [ACSD-52906: Löser X-Magento-Vary-cookie-problem för inloggad kundcache](quality-patches-tool/patches-available-in-qpt/v1-1-36/acsd-52906-resolving-x-magento-vary-cookie-issue-logged-in-customer-caching.md)
+         - [ACSD-52906: Löser X-Magento-Vary-problem med cookie för inloggad kundcache](quality-patches-tool/patches-available-in-qpt/v1-1-36/acsd-52906-resolving-x-magento-vary-cookie-issue-logged-in-customer-caching.md)
       - v1.1.37 {#v1-1-37}
          - [Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.37](quality-patches-tool/patches-available-in-qpt/v1-1-37/overview.md)
          - [ACSD-52613: Cachen och index uppdateras utan uppdateringar](quality-patches-tool/patches-available-in-qpt/v1-1-37/acsd-52613-cache-and-indexes-are-refreshed-with-no-updates.md)
@@ -614,7 +614,7 @@ ht-degree: 0%
          - [ACSD-59378: Store-level [!DNL URL] återskriver felaktigt uppdaterade under import](quality-patches-tool/patches-available-in-qpt/v1-1-50/acsd-59378-store-level-url-rewrites-incorrectly-updated-during-import.md)
          - [ACSD-46938: Prestandaproblem med DB-utlösare under installation:uppgradering](quality-patches-tool/patches-available-in-qpt/v1-1-50/acsd-46938-fix-for-db-triggers-performance-issue-during-setup-upgrade.md)
          - [ACSD-54887: Kundvagnen raderas efter att kundsessionen har upphört](quality-patches-tool/patches-available-in-qpt/v1-1-50/acsd-54887-customer-shopping-cart-gets-cleared-after-session-expiry.md)
-         - [ACSD-58141: PHPSESSID återskapar begäranden om POST för inloggade kunder om L2 Redis-cache är aktiverat](quality-patches-tool/patches-available-in-qpt/v1-1-50/acsd-58141-phpsessid-regenerates-on-post-requests-for-logged-in-customers.md)
+         - [ACSD-58141: PHPSESSID återskapar POST-begäranden för inloggade kunder om L2 Redis-cache är aktiverat](quality-patches-tool/patches-available-in-qpt/v1-1-50/acsd-58141-phpsessid-regenerates-on-post-requests-for-logged-in-customers.md)
          - [ACSD-59229: Felallokering av kundgruppsdata på grund av ett inaktuellt X-Magento-Vary-värde](quality-patches-tool/patches-available-in-qpt/v1-1-50/acsd-59229-customer-group-segmentation-fix.md)
          - [ACSD-60441: Uppdatering av kunder via V1/customers [!DNL REST] API-slutpunkt ger ett fel](quality-patches-tool/patches-available-in-qpt/v1-1-50/acsd-60441-updating-customers-via-v1-customers-rest-api.md)
          - [ACSD-58352: Returattributetiketter för standardarkivet returneras via  [!DNL GraphQL] API](quality-patches-tool/patches-available-in-qpt/v1-1-50/acsd-58352-return-attribute-labels-for-the-default-store-are-returned-via-graphql-api.md)
@@ -733,6 +733,7 @@ ht-degree: 0%
          - [ACSD-48570: Åtgärdar problem med lösenordslänk för administratörsåterställning med lagringskod i URL](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-48570-fixing-admin-reset-password-link-issue-with-store-card-in-url.md)
          - [ACSD-63299: Specialpriset för en konfigurerbar produkt visas inte i butiken](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63299-special-price-for-a-configurable-product-doesnt-display-on-the-storefront.md)
          - [ACSD-63325: Syntaxfel: Oväntat &lt; EOF >-fel när en tom [!DNL GraphQL] begäran skickades](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63325-syntax-error-when-submitting-graphql-request.md)
+         - [ACSD-63578: SKU tas inte bort om du klickar på ikonen [!UICONTROL Delete] i [!UICONTROL Add to Order by SKU]](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63578-clicking-delete-in-add-to-order-by-sku-doesnot-remove-sku.md)
          - [ACSD-63329: Standardvärden för datum- och tidsfält anges inte när produkter skapas med REST API](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63329-date-and-time-attributes-arent-set-when-creating-products-with-the-rest-api.md)
    - [Leta efter Adobe Commerce-problem med verktyget för kvalitetskorrigeringar](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
 - Referens för kommandoradsverktyg {#cli-reference}
