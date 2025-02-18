@@ -1,7 +1,7 @@
 ---
-source-git-commit: 317a1f5d9a6b1ed4713fd7564f8afce12e519c90
+source-git-commit: 989bcdcb4bbd8f880a3e2c8add280a072998afd8
 workflow-type: tm+mt
-source-wordcount: '1105'
+source-wordcount: '984'
 ht-degree: 0%
 
 ---
@@ -10,6 +10,46 @@ ht-degree: 0%
 ## Nyheter
 
 Den här sidan innehåller de ändringar som har gjorts under de senaste 60 dagarna. Vi utelämnar alla mindre uppdateringar, som kopieringsredigering, från den här listan.
+
+### 14 februari 2025
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-59/overview">beskrivning av de problem som åtgärdats av de patchar som finns i QPT 1.1.59-versionen har lagts till</a></p>
+</td>
+      <td>new-topic</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/8200051f16c7d12d09c1487a4e12258b52d8d805">820005</a> (spara)</td>
+    </tr>
+  </tbody>
+</table>
+
+### 13 februari 2025
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Lade till den <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63578-clicking-delete-in-add-to-order-by-sku-doesnot-remove-sku">detaljerade beskrivningen av problemet som åtgärdats av korrigeringsfilen ACSD-63578 i QPT 1.1.58-utgåvan</a></p>
+</td>
+      <td>new-topic</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/bf22eac2923a78f112a999dbcb6be1bc6f5eb9db">bf22ea</a> (spara)</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 11 februari 2025
 
@@ -447,90 +487,6 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
 </td>
       <td>new-topic</td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/de06ef0133bf57169c80c82ca4bb4cb09671c63b">de06ef</a> (spara)</td>
-    </tr>
-  </tbody>
-</table>
-
-### 20 december 2024
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/overview">beskrivning av de problem som åtgärdats av de patchar som finns i QPT 1.1.57-versionen har lagts till</a></p>
-</td>
-      <td>new-topic</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/d3b5a9b2706d3338c950dfc495188e2038e3c997">d3b5a9</a> (spara)</td>
-    </tr>
-  </tbody>
-</table>
-
-### 19 december 2024
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Lade till den <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-62979-incorrect-store-id-in-the-graphql-header-causes-a-fatal-memory-error">detaljerade beskrivningen av problemet som korrigerades av ACSD-62979-korrigeringen i QPT 1.1.56-utgåvan</a></p>
-</td>
-      <td>new-topic</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/c9b27e2a82954a3874e9847eacc71f0515c99625">c9b27e</a> (spara)</td>
-    </tr>
-    <tr>
-      <td><p>Lade till den <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-62577-storefront-search-performance-optimization">detaljerade beskrivningen av problemet som åtgärdats av korrigeringsfilen ACSD-62577 i QPT 1.1.56 </a></p>
-</td>
-      <td>new-topic</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/929a031257e68711734e9b90b1bd18bc751817c3">929a03</a> (spara)</td>
-    </tr>
-    <tr>
-      <td><p>Lade till den <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-62971-stock-import-error-non-numeric-quantity">detaljerade beskrivningen av problemet som korrigerades av korrigeringen ACSD-62971 i QPT 1.1.56-utgåvan</a></p>
-</td>
-      <td>new-topic</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/8fb92489c1118782fcf4bacd0859e275c7617856">8fb924</a> (spara)</td>
-    </tr>
-    <tr>
-      <td><p>Lade till den <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-56/acsd-62475-fixes-gift-card-merging-issues-in-the-cart">detaljerade beskrivningen av problemet som åtgärdats av korrigeringsfilen ACSD-62475 i QPT 1.1.56 </a></p>
-</td>
-      <td>new-topic</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/c4d223265301f560b0078e832c775c0e2946165e">c4d223</a> (spara)</td>
-    </tr>
-  </tbody>
-</table>
-
-### 18 december 2024
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Lade till den <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-62591-fixes-theme-doesnt-switch">detaljerade beskrivningen av problemet som korrigerades av korrigeringen ACSD-62591 i QPT 1.1.55-utgåvan</a></p>
-</td>
-      <td>new-topic</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/e41bd2f6d7ad2183418942f628d9da3317016cde">e41bd2</a> (spara)</td>
-    </tr>
-    <tr>
-      <td><p>Utökade supportdatum för Adobe Commerce 2.4.4 och 2.4.5 har lagts till i <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/lifecycle-policy">livscykelprincipen</a>.</p>
-</td>
-      <td>större uppdatering</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/ad25af4928619fbf94671d15b1a5f6df30a16cc1">ad25af</a> (spara)</td>
     </tr>
   </tbody>
 </table>
