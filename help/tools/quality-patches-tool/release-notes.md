@@ -2,9 +2,9 @@
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: 24cce88e5daccd8ad50e01b869f2682722cb8052
+source-git-commit: fa23ca7a760f25e6b77b94af15eec7d8a88e880e
 workflow-type: tm+mt
-source-wordcount: '24820'
+source-wordcount: '25023'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,15 @@ ht-degree: 0%
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som har skapats av Community för Magento Open Source finns i [versionsinformationen](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.60 {#v1-1-60}
+
+* **ACSD-63323** (för Adobe Commerce >=2.4.7 &lt;2.4.8) - Korrigerar problemet där alternativet **[!UICONTROL Select All]** inte fungerar när produkter läggs till i en kategori. Dessutom ser det till att sidnumrering och etiketten för antal poster fungerar korrekt när du lägger till produkter i en kategori via popup-rutnätet.
+* **ACSD-63992** (för Adobe Commerce >=2.4.4 &lt;2.4.8) - Korrigerar ett fel där en kundprisregel med en kupong och ett villkor som baseras på en leveransmetod inte kan tillämpas korrekt via Admin-gränssnittet.
+* **ACSD-64111** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet när ett fel inträffar när kapslade villkor för en produktkomponent ställs in i [!DNL Page Builder].
+* **ACSD-64137** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet där sökning efter upphämtningsplatser med zip-kod inte fungerar som den nederländska lokaliseringen.
+* **ACSD-64149** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet där ett kundsegment med ett datumintervallvillkor kan sparas när endast ett av datumen redigeras.
+* Uppdaterade versioner: **MDVA-12304**, **ACSD-45049**, **MDVA-43824**, **ACSD-46192**, **ACSD-50368**, **ACSD-52133**, **ACSD-47657**, **ACSD-51819**, **ACSD-54966-V2**, **}ACSD-55628**, **ACSD-45049**, **ACSD-63242**
 
 ## v1.1.59 {#v1-1-59}
 
