@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: f92cdabf58cf9f95c57312f7d3efb2b2ad098e2e
+source-git-commit: 9c2a1aea2fdadb12998773c324560faf6872bd82
 workflow-type: tm+mt
-source-wordcount: '7055'
+source-wordcount: '7069'
 ht-degree: 0%
 
 ---
@@ -740,6 +740,7 @@ ht-degree: 0%
          - [ACSD-64112: Körning av kron indexer_update_all_views misslyckas när MAGE_INDEXER_THREADS_COUNT har angetts](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-59/acsd-64112-indexer-update-all-views-cron-execution-fails.md)
          - [ACSD-63454: Standardvärdet för attributen Listruta och Flera val sparas inte korrekt i databasen](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-59/acsd-63454-default-value-for-a-dropdown.md)
          - [ACSD-63870: Kunden har inte loggat ut korrekt vid ändring av företagsstatus](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-59/acsd-63870-customer-not-logged-out-properly-during-company-status-change.md)
+         - [ACSD-64212: Beställningen är inte länkad till ett kundkonto som skapats via  [!DNL GraphQL] efter beställning](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-59/acsd-64212-order-is-not-associated-with-a-customer-account.md)
          - [ACSD-63793: Importprocesser påverkar varandra på olika webbläsarflikar](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-59/acsd-63793-import-processes-are-interfering-with-each-other-in-different-browser-tabs.md)
          - [ACSD-63574: Om [!UICONTROL Bundle Product]-lista läggs till i block via  [!DNL Page Builder] uppstår ett fel](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-59/acsd-63574-adding-bundle-product-listing-to-block-via-page-builder-results-in-error.md)
    - [Leta efter Adobe Commerce-problem med verktyget för kvalitetskorrigeringar](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
