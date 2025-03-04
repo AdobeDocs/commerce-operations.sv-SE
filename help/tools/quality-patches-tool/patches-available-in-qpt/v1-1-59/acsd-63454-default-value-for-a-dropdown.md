@@ -3,13 +3,13 @@ title: 'ACSD-63454: Standardvärdet för attributen Listruta och Flera val spara
 description: Använd patchen ACSD-63454 för att åtgärda Adobe Commerce-problemet där standardvärdet för en listruta och flera val inte sparas korrekt i databasen.
 feature: Attributes, Products
 role: Admin, Developer
-source-git-commit: 1c872ebeff05c0c84756d7abd7f43c4652032d3f
+exl-id: fa79a3bb-e615-44cb-8d84-da892f924fd0
+source-git-commit: cb73a5a346ec0e8acd59accf73605e25ef35c3ca
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '401'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-63454: Standardvärdet för attributen [!UICONTROL Dropdown] och [!UICONTROL Multiple Select] sparas inte korrekt i databasen
 
@@ -35,19 +35,19 @@ Standardvärdet för attributen [!UICONTROL Dropdown] och [!UICONTROL Multiple S
 
 <u>Steg som ska återskapas</u>:
 
-1. Logga in på serverdelen, gå till **[!UICONTROL Stores]** > [!UICONTROL Attributes] > **[!UICONTROL Product]**.
+1. Logga in på serverdelen, gå till **[!UICONTROL Stores]** > *[!UICONTROL Attributes]* > **[!UICONTROL Product]**.
 1. Klicka på **[!UICONTROL Add New Attribute]**.
 1. Ange följande på fliken **[!UICONTROL Properties]**:
-   * [!UICONTROL Default Label] = test
-   * [!UICONTROL Catalog Input Type for Store Owner]= [!UICONTROL Multiple Select]
-   * [!UICONTROL Manage Options]: Lägg till 2 alternativ utan att markera **[!UICONTROL Is Default]**.
+   * **[!UICONTROL Default Label]**: *test*
+   * **[!UICONTROL Catalog Input Type for Store Owner]**: *[!UICONTROL Multiple Select]*
+   * **[!UICONTROL Manage Options]**: Lägg till två alternativ utan att markera **[!UICONTROL Is Default]**.
 1. Klicka på **[!UICONTROL Save Attribute]**.
-1. Kontrollera i databasen att kolumnen *default_value* är tom.
+1. Kontrollera i databasen att kolumnen `default_value` är tom.
 
    `select attribute_code, default_value from eav_attribute where attribute_code = 'test';`
 
 1. Gå tillbaka och ange ett av de två alternativen som **[!UICONTROL Is Default]**.
-1. Kontrollera databasen igen för att se till att *default_value* nu innehåller det valda alternativ-ID:t.
+1. Kontrollera databasen igen för att se till att `default_value` nu innehåller det valda alternativ-ID:t.
 1. Gå tillbaka och ändra standardalternativet genom att välja det andra alternativet.
 
 <u>Förväntade resultat</u>:
