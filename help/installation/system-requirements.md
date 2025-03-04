@@ -2,9 +2,9 @@
 title: Systemkrav
 description: Använd den här referensen för att identifiera nödvändiga programvaruberoenden som har testats med Adobe Commerce-utgåvor.
 exl-id: 008c9edc-7d72-403c-847f-0e3b77bbb197
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 63c73a34eb6c61c83f00761e0510108485687596
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '762'
 ht-degree: 0%
 
 ---
@@ -13,11 +13,15 @@ ht-degree: 0%
 
 Nedan sammanfattas programvaruberoenden och tjänster som testats för Adobe Commerce.
 
-Det finns vissa skillnader i beroendet av Commerce på molninfrastrukturen. Tjänstversion och kompatibilitetsstöd för Adobe Commerce i molninfrastruktur bestäms av tjänster som testas och distribueras i molnmiljöer, och skiljer sig ibland från versioner som stöds av Adobe Commerce lokala distributioner. Elasticsearch 7.17 stöds till exempel för Commerce 2.4.4 för anläggningsdistributioner, men OpenSearch 1.2 stöds för Commerce 2.4.4 i molninfrastruktur.
+Det finns vissa skillnader i beroendet av Commerce på molninfrastrukturen. Tjänstversion och kompatibilitetsstöd för Adobe Commerce i molninfrastruktur bestäms av tjänster som testas och distribueras i molnmiljöer, och skiljer sig ibland från versioner som stöds av Adobe Commerce lokala distributioner. Exempel: Elasticsearch 7.17 stöds för Commerce 2.4.4 för anläggningsdistributioner, men OpenSearch 1.2 stöds för Commerce 2.4.4 i molninfrastruktur.
+
+>[!NOTE]
+>
+>Systemkraven gäller endast för lanserade versioner av Adobe Commerce. Versioner för Beta eller tidig åtkomst ingår inte. Läs [versionsinformationen](../release/release-notes/overview.md) om du vill veta mer om de senaste versionerna av Adobe Commerce.
 
 I följande tabeller visas versioner av tredjepartsprogramvaruberoenden som Adobe har testat med specifika Adobe Commerce-utgåvor.
 
-Adobe stöder endast den kombination av systemkrav som beskrivs i följande tabeller. 2.4.5 har till exempel testats fullt ut med MariaDB 10.4. Adobe rekommenderar att du uppgraderar till MariaDB 10.4 innan du uppgraderar till 2.4.5.
+Adobe stöder bara den kombination av systemkrav som beskrivs i följande tabeller. 2.4.5 har till exempel testats fullt ut med MariaDB 10.4. Adobe rekommenderar att du uppgraderar till MariaDB 10.4 innan du uppgraderar till 2.4.5.
 
 >[!BEGINTABS]
 
@@ -121,7 +125,7 @@ MTA (Mail Transfer Agent) eller SMTP-server. Commerce i molninfrastrukturen anv�
 
 ### Minne
 
-Uppgradering av program och tillägg från Commerce Marketplace och andra källor kan kräva upp till 2 GB RAM-minne. Om du använder ett system med mindre än 2 GB RAM skapar du en [utbytesfil](https://support.magento.com/hc/en-us/articles/360032980432). I annat fall kan uppgraderingen misslyckas.
+Uppgradering av program och tillägg från Commerce Marketplace och andra källor kan kräva upp till 2 GB RAM. Om du använder ett system med mindre än 2 GB RAM skapar du en [utbytesfil](https://support.magento.com/hc/en-us/articles/360032980432). I annat fall kan uppgraderingen misslyckas.
 
 ### Operativsystem (Linux x86-64)
 
