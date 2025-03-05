@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: c01df7ef04c5e259d6bd015f8a3105c167b5c26f
+source-git-commit: f59d574087a4eaa33643d6de16e702a19a3606f9
 workflow-type: tm+mt
-source-wordcount: '7083'
+source-wordcount: '7094'
 ht-degree: 0%
 
 ---
@@ -740,6 +740,7 @@ ht-degree: 0%
          - [ACSD-64112: Körning av kron indexer_update_all_views misslyckas när MAGE_INDEXER_THREADS_COUNT har angetts](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-59/acsd-64112-indexer-update-all-views-cron-execution-fails.md)
          - [ACSD-63454: Standardvärdet för attributen Listruta och Flera val sparas inte korrekt i databasen](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-59/acsd-63454-default-value-for-a-dropdown.md)
          - [ACSD-63870: Kunden har inte loggat ut korrekt vid ändring av företagsstatus](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-59/acsd-63870-customer-not-logged-out-properly-during-company-status-change.md)
+         - [ACSD-63469: Kundrabatter med fast belopp tillämpas inte korrekt med flera regler](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-59/acsd-63469-whole-carts-fixed-amount-discount-not-applied-correctly.md)
          - [ACSD-64113: Fel i administratör vid överföring av bild med mindre bredd än höjd via  [!DNL Media Gallery]](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-59/acsd-64113-errors-in-the-admin-when-uploading-images.md)
          - [ACSD-64212: Beställningen är inte länkad till ett kundkonto som skapats via  [!DNL GraphQL] efter beställning](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-59/acsd-64212-order-is-not-associated-with-a-customer-account.md)
          - [ACSD-63793: Importprocesser påverkar varandra på olika webbläsarflikar](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-59/acsd-63793-import-processes-are-interfering-with-each-other-in-different-browser-tabs.md)
