@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: f59d574087a4eaa33643d6de16e702a19a3606f9
+source-git-commit: 2dc974d2887fb725e1854aef2cbdd63616e3846d
 workflow-type: tm+mt
-source-wordcount: '7094'
+source-wordcount: '7108'
 ht-degree: 0%
 
 ---
@@ -735,6 +735,7 @@ ht-degree: 0%
          - [ACSD-63325: Syntaxfel: Oväntat &lt; EOF >-fel när en tom [!DNL GraphQL] begäran skickades](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63325-syntax-error-when-submitting-graphql-request.md)
          - [ACSD-63578: SKU tas inte bort om du klickar på ikonen [!UICONTROL Delete] i [!UICONTROL Add to Order by SKU]](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63578-clicking-delete-in-add-to-order-by-sku-doesnot-remove-sku.md)
          - [ACSD-63329: Standardvärden för datum- och tidsfält anges inte när produkter skapas med REST API](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63329-date-and-time-attributes-arent-set-when-creating-products-with-the-rest-api.md)
+         - [ACSD-63572: temporära tabeller för katalogindexerare rensas inte om indexeringsprocessen avslutas](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63572-catalogrule-indexer-temporary-tables-arent-cleaned-if-the-indexer-process-is-terminated.md)
       - v1.1.59 {#v1-1-59}
          - [Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.59](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-59/overview.md)
          - [ACSD-64112: Körning av kron indexer_update_all_views misslyckas när MAGE_INDEXER_THREADS_COUNT har angetts](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-59/acsd-64112-indexer-update-all-views-cron-execution-fails.md)
