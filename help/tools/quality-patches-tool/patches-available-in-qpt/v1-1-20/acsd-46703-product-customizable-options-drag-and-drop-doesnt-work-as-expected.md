@@ -4,9 +4,9 @@ description: Den här artikeln innehåller en lösning på problemet där dra oc
 feature: Products
 role: Developer
 exl-id: 38b9490a-c9d4-4f8e-b90f-69bf50a6b571
-source-git-commit: a1c5898626fb8419af017a29a009a0a2c069326e
+source-git-commit: deb16062ed1e903655d49d8e835c2358377d63e3
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '375'
 ht-degree: 0%
 
 ---
@@ -53,14 +53,11 @@ Du kan inte flytta något värde till en annan sida med dra och släpp-funktione
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
-* Lokalt för Adobe Commerce eller Magento Open Source: [Verktyg för kvalitetspatchar > Användning](/help/tools/quality-patches-tool/usage.md) i guiden för kvalitetspatchar.
+* Lokal plats för Adobe Commerce eller Magento Open Source: [Verktyg för kvalitetskorrigeringar > Användning](/help/tools/quality-patches-tool/usage.md) i guiden för kvalitetskorrigeringsverktyget.
 * Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 
-Mer information om verktyget för kvalitetskorrigeringar finns i:
+Mer information om [!DNL Quality Patches Tool] finns i:
 
-* [Verktyget för kvalitetskorrigeringar har släppts: ett nytt verktyg för självbetjäning av kvalitetskorrigeringar](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) i kunskapsbasen för support.
-* [Kontrollera om det finns en korrigeringsfil för ditt Adobe Commerce-problem med  [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md) i guiden [!UICONTROL Quality Patches Tool].
-
-Mer information om andra korrigeringsfiler som är tillgängliga i QPT finns i [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) i guiden för verktyget för kvalitetspatchar.
+* [[!DNL Quality Patches Tool]: Ett självbetjäningsverktyg för kvalitetspatchar](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) i verktygshandboken.

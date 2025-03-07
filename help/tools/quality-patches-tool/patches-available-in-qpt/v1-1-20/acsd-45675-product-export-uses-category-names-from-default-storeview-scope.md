@@ -4,9 +4,9 @@ description: Korrigeringen ACSD-45675 åtgärdar ett problem där produktexporte
 feature: Categories, Data Import/Export, Products
 role: Admin
 exl-id: ebe72038-511d-43e1-bd65-e5b468342f05
-source-git-commit: a1c5898626fb8419af017a29a009a0a2c069326e
+source-git-commit: b1f7739688a538b25b738efc337fa81f15a5bac8
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '389'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,4 @@ Använd följande länkar beroende på distributionsmetod för att tillämpa ens
 
 Mer information om [!DNL Quality Patches Tool] finns i:
 
-* [[!DNL Quality Patches Tool] släppt: ett nytt verktyg för självbetjäning av kvalitetspatchar](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) i kunskapsbasen för support.
-* [Kontrollera om det finns en korrigeringsfil för ditt Adobe Commerce-problem med  [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md) i guiden [!UICONTROL Quality Patches Tool].
-
-Mer information om andra korrigeringsfiler som är tillgängliga i [!DNL QPT] finns i [Patchar som är tillgängliga i  [!DNL QPT]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) i guiden för verktyget för kvalitetskorrigeringar.
+* [[!DNL Quality Patches Tool]: Ett självbetjäningsverktyg för kvalitetspatchar](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) i verktygshandboken.

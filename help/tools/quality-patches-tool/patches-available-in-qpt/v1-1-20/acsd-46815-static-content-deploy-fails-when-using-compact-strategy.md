@@ -3,9 +3,10 @@ title: 'ACSD-46815: statisk innehållsdistribution misslyckas med kompakt strate
 description: Använd patchen ACSD-46815 för att åtgärda Adobe Commerce-problemet där statisk innehållsdistribution misslyckas när kompakt strategi används.
 feature: Deploy, Page Content, SCD
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 66941a83-daf8-4bb2-a575-b615e1c5dc7c
+source-git-commit: 94fba368c799f4584e27331e852c0f8abeeabbd6
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
@@ -59,8 +60,4 @@ Använd följande länkar beroende på distributionsmetod för att tillämpa ens
 
 Mer information om [!DNL Quality Patches Tool] finns i:
 
-* [[!DNL Quality Patches Tool] släppt: ett nytt verktyg för självbetjäning av kvalitetspatchar](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) i kunskapsbasen för support.
-* [Kontrollera om det finns en korrigeringsfil för ditt Adobe Commerce-problem med  [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md) i guiden [!UICONTROL Quality Patches Tool].
-
-
-Mer information om andra tillgängliga korrigeringsfiler i QPT finns i [[!DNL Quality Patches Tool]: Söka efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) i [!DNL Quality Patches Tool]-handboken.
+* [[!DNL Quality Patches Tool]: Ett självbetjäningsverktyg för kvalitetspatchar](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) i verktygshandboken.

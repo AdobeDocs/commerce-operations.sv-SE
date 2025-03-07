@@ -4,9 +4,9 @@ description: Korrigeringen ACSD-46869 åtgärdar ett problem där konfigurerbara
 feature: REST, Checkout, Configuration, Orders, Products
 role: Admin
 exl-id: f03d4b24-ac95-406e-8e9d-908149b9207c
-source-git-commit: a1c5898626fb8419af017a29a009a0a2c069326e
+source-git-commit: 470cee19ced38fb90a9565c8bb23e2f9fa97595a
 workflow-type: tm+mt
-source-wordcount: '401'
+source-wordcount: '364'
 ht-degree: 0%
 
 ---
@@ -66,7 +66,4 @@ Använd följande länkar beroende på distributionsmetod för att tillämpa ens
 
 Mer information om [!DNL Quality Patches Tool] finns i:
 
-* [[!DNL Quality Patches Tool] släppt: ett nytt verktyg för självbetjäning av kvalitetspatchar](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) i kunskapsbasen för support.
-* [Kontrollera om det finns en korrigeringsfil för ditt Adobe Commerce-problem med  [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md) i guiden [!UICONTROL Quality Patches Tool].
-
-Mer information om andra korrigeringsfiler som är tillgängliga i [!DNL QPT] finns i [Patchar som är tillgängliga i  [!DNL QPT]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) i guiden för verktyget för kvalitetskorrigeringar.
+* [[!DNL Quality Patches Tool]: Ett självbetjäningsverktyg för kvalitetspatchar](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) i verktygshandboken.
