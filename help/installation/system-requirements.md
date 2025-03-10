@@ -2,9 +2,9 @@
 title: Systemkrav
 description: Använd den här referensen för att identifiera nödvändiga programvaruberoenden som har testats med Adobe Commerce-utgåvor.
 exl-id: 008c9edc-7d72-403c-847f-0e3b77bbb197
-source-git-commit: 63c73a34eb6c61c83f00761e0510108485687596
+source-git-commit: 0d8dcfd7064488787ddd0ff54c82c77f3e4d1cfb
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '760'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Nedan sammanfattas programvaruberoenden och tjänster som testats för Adobe Commerce.
 
-Det finns vissa skillnader i beroendet av Commerce på molninfrastrukturen. Tjänstversion och kompatibilitetsstöd för Adobe Commerce i molninfrastruktur bestäms av tjänster som testas och distribueras i molnmiljöer, och skiljer sig ibland från versioner som stöds av Adobe Commerce lokala distributioner. Exempel: Elasticsearch 7.17 stöds för Commerce 2.4.4 för anläggningsdistributioner, men OpenSearch 1.2 stöds för Commerce 2.4.4 i molninfrastruktur.
+Det finns vissa skillnader i beroendena för Commerce i molnet. Tjänstversion och kompatibilitetsstöd för Adobe Commerce i molnet avgörs av tjänster som testas och distribueras till molnmiljöer, och skiljer sig ibland från versioner som stöds av Adobe Commerce lokala distributioner. Exempel: Elasticsearch 7.17 stöds för Commerce 2.4.4 för anläggningsdistributioner, men OpenSearch 1 stöds för 2.4.4 Adobe Commerce i molnet.
 
 >[!NOTE]
 >
