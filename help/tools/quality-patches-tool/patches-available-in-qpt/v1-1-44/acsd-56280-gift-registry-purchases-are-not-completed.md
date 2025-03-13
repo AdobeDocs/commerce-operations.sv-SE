@@ -1,16 +1,21 @@
 ---
-title: 'ACSD-56280: Gift-registerinköp är inte slutförda'
+title: 'ACSD-56280: Inköp av presentregister har inte slutförts'
 description: Använd patchen ACSD-56280 för att åtgärda Adobe Commerce-problemet där inköp av presentregister inte är slutförda
 feature: Checkout
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: a79f789f-999f-4d11-b7ee-2c065b681efb
+source-git-commit: ab02be3396e68044e9356f89fba6b55aa880056f
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '360'
 ht-degree: 0%
 
 ---
 
 # ACSD-56280: Inköp av presentregister har inte slutförts
+
+>[!NOTE]
+>
+>Den här korrigeringen har ersatts av [ACSD-63283](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63283-resolving-gift-registry-email-and-order-placement-issues-in-adobe-commerce.md).
 
 Korrigeringen ACSD-56280 åtgärdar ett problem där inköp av presentregister inte har slutförts. Den här korrigeringen är tillgänglig när [[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.44 har installerats. Korrigerings-ID är ACSD-56280. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.7.
 
