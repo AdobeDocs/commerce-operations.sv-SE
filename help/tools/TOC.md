@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: 3f2996a41f14d830c8023256c78c9bb85b1718d2
+source-git-commit: a45b8e687d186f7a5ae540037dd3645a510f626a
 workflow-type: tm+mt
-source-wordcount: '7202'
+source-wordcount: '7217'
 ht-degree: 0%
 
 ---
@@ -759,6 +759,8 @@ ht-degree: 0%
          - [ACSD-64212: Beställningen är inte länkad till ett kundkonto som skapats via  [!DNL GraphQL] efter beställning](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-59/acsd-64212-order-is-not-associated-with-a-customer-account.md)
          - [ACSD-63793: Importprocesser påverkar varandra på olika webbläsarflikar](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-59/acsd-63793-import-processes-are-interfering-with-each-other-in-different-browser-tabs.md)
          - [ACSD-63574: Om [!UICONTROL Bundle Product]-lista läggs till i block via  [!DNL Page Builder] uppstår ett fel](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-59/acsd-63574-adding-bundle-product-listing-to-block-via-page-builder-results-in-error.md)
+      - v1.1.60 {#v1-1-60}
+         - [ACSD-63323: Korrigerar funktionen [!UICONTROL Select All] och förbättrar sidnumrering och antal poster i popup-fönstret för produktkategorier](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-60/acsd-63323-resolves-select-all-functionality-and-enhances-pagination-and-record-count-in-product-category-popup.md)
    - [Leta efter Adobe Commerce-problem med verktyget för kvalitetskorrigeringar](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
 - Referens för kommandoradsverktyg {#cli-reference}
    - [Adobe Commerce (lokalt)](reference/commerce-on-premises.md)
