@@ -2,9 +2,9 @@
 title: Beta-versioner
 description: Läs mer om betaversioner av Adobe Commerce och hur du deltar.
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
-source-git-commit: c29602d6f1619c0b32feb48843ec01b350a3ae32
+source-git-commit: e569e8106930882323ab3ab046a3db0ee1da1503
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '975'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,20 @@ Genom att få tidig tillgång till funktioner som Adobe utvecklar kan kunder och
 ## Beta-program
 
 I följande avsnitt finns en lista med aktiva betaprogram.
+
+### Adobe Commerce Optimizer
+
+Adobe Commerce Optimizer förbättrar e-handelsupplevelsen med en högpresterande butik som ökar den organiska trafiken, kundengagemanget och intäkterna.
+
+Med Adobe Commerce Optimizer kan man
+
+- Utvidga och skala katalogen utan att behöva omforma hela e-handelsstacken.
+- Infoga katalogdata från alla källor.
+- Definiera affärskanaler och principer.
+- Skapa personliga sökningar och rekommendationer med hjälp av AI och ML.
+- Se viktig produktdatatillgänglighet, inklusive synkroniseringsstatus och butikshändelsedata för korrekt implementering och felsökning.
+
+[Läs mer](https://experienceleague.adobe.com/docs/commerce/optimizer/overview.html) om Adobe Commerce Optimizer. Om du vill delta i Adobe Commerce Optimizer-programmet för tidig åtkomst skickar du en e-postförfrågan till [commerce-storefront-services@adobe.com](mailto:commerce-storefront-services@adobe.com).
 
 ### Förbättrade sökfunktioner för Live Search (Public Beta)
 
