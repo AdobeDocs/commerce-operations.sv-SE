@@ -2,9 +2,9 @@
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: fa23ca7a760f25e6b77b94af15eec7d8a88e880e
+source-git-commit: 0073f5e1b6de110ff640748457b7c644d71fcbe8
 workflow-type: tm+mt
-source-wordcount: '25023'
+source-wordcount: '25431'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,22 @@ ht-degree: 0%
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som har skapats av Community för Magento Open Source finns i [versionsinformationen](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.61 {#v1-1-61}
+
+* **ACP2E-3689** (för Adobe Commerce och Magento Open Source >=2.4.7 &lt;2.4.8) - Korrigerar flera problem med kategoriträdvisning på djupare nivåer och reflekterar ankarförhållanden/icke-ankarrelationer.
+* **ACP2E-3705** (för Adobe Commerce >=2.4.7 &lt;2.4.8) - Korrigerar ett fel där körningen av `indexer_update_all_views` kron misslyckas när `MAGE_INDEXER_THREADS_COUNT` är inställd.
+* **ACSD-63883** (för Adobe Commerce >=2.4.4 &lt;2.4.7-p4) - Korrigerar problemet där rekvisitionslistan returnerar ett felaktigt `items_count` i GraphQL-svaret.
+* **ACSD-63974** (för Adobe Commerce >=2.4.4 &lt;2.4.8) - Korrigerar problemet där det tar för lång tid att läsa in rekvisitionslistsidan när det finns för många objekt, genom att lägga till en sidnumreringsfunktion i rutnätet för rekvisitionslistan på Storefront, som endast visar delar av poster som är begränsade till antalet poster per sida, i stället för alla poster poster samtidigt.
+* **ACSD-64178** (för Adobe Commerce och Magento Open Source >=2.4.7 &lt;2.4.8) - Korrigerar problemet där redigeringssidan för attributuppsättning läses in långsamt om det finns tusentals produktattribut.
+* **ACSD-64209** (för Adobe Commerce >=2.4.4 &lt;2.4.8) - Korrigerar problemet där cron Scheduler hämtar alla överlåtbara offerter utan att utesluta dem med statusen **[!UICONTROL ordered]**, vilket medför att ett e-postmeddelande eller e-postmeddelande utlöses.
+* **ACSD-64431** (för Adobe Commerce och Magento Open Source >=2.4.7 &lt;2.4.8) - mutationen `placeOrder` som innehåller kupongkodinformationen i begäran genererar inte längre ett internt fel, utan visar i stället att ordern har placerats korrekt.
+* **ACSD-64467** (för Adobe Commerce och Magento Open Source >=2.4.7 &lt;2.4.8) - Korrigerar problemet där WYSIWYG-redigeraren ser tom ut när en kategoribeskrivning har sparats på butiksvynivån.
+* **ACSD-64546** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet där ett generiskt felmeddelande visas i användargränssnittet och ett *Array to string conversion* -undantag sparas i loggarna när UPS-etiketter skapas, vilket säkerställer att det faktiska felet visas i användargränssnittet och att rätt felmeddelande lagras i loggarna.
+* **ACSD-64684** (för Adobe Commerce >=2.4.4 &lt;2.4.8) - Korrigerar problemet där ett valideringsfel inträffar när ett presentkort redigeras och sparas med ett värde som är större än *999* på grund av kommatecken (tusentalsavgränsare) i talet *ett tusen (1 000)*.
+* Uppdaterade versioner: **ACSD-49392**, **ACSD-50368**, **ACSD-51819**, **ACSD-54966-V2**, **ACSD-57003{9** ACSD-62979 **,** ACSD-64112 ****
+* Ersatta korrigeringsfiler: **ACSD-49392**, **ACSD-58739**, **ACSD-62689**, **ACSD-64112**
+* Inaktuella korrigeringsfiler: **ACSD-46192**, **ACSD-52133**
 
 ## v1.1.60 {#v1-1-60}
 
