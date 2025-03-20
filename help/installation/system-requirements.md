@@ -2,9 +2,9 @@
 title: Systemkrav
 description: Använd den här referensen för att identifiera nödvändiga programvaruberoenden som har testats med Adobe Commerce-utgåvor.
 exl-id: 008c9edc-7d72-403c-847f-0e3b77bbb197
-source-git-commit: 0d8dcfd7064488787ddd0ff54c82c77f3e4d1cfb
+source-git-commit: ca0c47cf9882bccbc55aca786f3e6615503662f3
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '759'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ Mer information om molnkonfiguration finns i [PHP-inställningar](https://experi
 
 Du bör verifiera att [PHP OPcache](https://www.php.net/manual/en/intro.opcache.php) har aktiverats av prestandaskäl. OPcache är aktiverat i många PHP-distributioner. Tillägget `opcache` installeras som standard i Commerce i molninfrastrukturen.
 
-Kontrollera att PHP-cachen är installerad för premesis, se [PHP-inställningar](prerequisites/php-settings.md). Mer information om prestandainställningar finns i programvarurekommendationerna för [PHP-inställningar](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/software.html#php-settings) i guiden _Bästa metoder för prestanda_.
+Kontrollera att PHP OPcache är installerat och se [PHP-inställningar](prerequisites/php-settings.md) om du vill veta var du befinner dig. Mer information om prestandainställningar finns i programvarurekommendationerna för [PHP-inställningar](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/software.html#php-settings) i guiden _Bästa metoder för prestanda_.
 
 Om du måste installera OPcache separat, se [dokumentationen för PHP OPcache](https://www.php.net/manual/en/opcache.setup.php).
 
@@ -129,7 +129,9 @@ Uppgradering av program och tillägg från Commerce Marketplace och andra källo
 
 ### Operativsystem (Linux x86-64)
 
-Linux-distributioner, till exempel RedHat Enterprise Linux (RHEL), CentOS, Ubuntu, Debian och liknande. Microsoft Windows och macOS stöds inte.
+Linux-distributioner, till exempel RedHat Enterprise Linux (RHEL), CentOS, Ubuntu, Debian och liknande.
+
+Microsoft Windows och macOS stöds **inte**.
 
 Adobe Commerce kräver följande systemverktyg för vissa åtgärder:
 
