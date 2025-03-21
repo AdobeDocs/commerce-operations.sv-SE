@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: a45b8e687d186f7a5ae540037dd3645a510f626a
+source-git-commit: 4860a9f950849eb2735e02f6b51d1fce61cc3d1b
 workflow-type: tm+mt
-source-wordcount: '7217'
+source-wordcount: '7223'
 ht-degree: 0%
 
 ---
@@ -748,6 +748,7 @@ ht-degree: 0%
          - [ACSD-63325: Syntaxfel: Oväntat &lt; EOF >-fel när en tom [!DNL GraphQL] begäran skickades](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63325-syntax-error-when-submitting-graphql-request.md)
          - [ACSD-63578: SKU tas inte bort om du klickar på ikonen [!UICONTROL Delete] i [!UICONTROL Add to Order by SKU]](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63578-clicking-delete-in-add-to-order-by-sku-doesnot-remove-sku.md)
          - [ACSD-63329: Standardvärden för datum- och tidsfält anges inte när produkter skapas med REST API](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63329-date-and-time-attributes-arent-set-when-creating-products-with-the-rest-api.md)
+         - [MDVA-39305-V3: Inloggningsproblem med aktiverad [!DNL Google reCAPTCHA]](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/mdva-39305-v3-login-issue-with-enabled-google-recaptcha.md)
          - [ACSD-63572: temporära tabeller för katalogindexerare rensas inte om indexeringsprocessen avslutas](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63572-catalogrule-indexer-temporary-tables-arent-cleaned-if-the-indexer-process-is-terminated.md)
       - v1.1.59 {#v1-1-59}
          - [Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.59](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-59/overview.md)
