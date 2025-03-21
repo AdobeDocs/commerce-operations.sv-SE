@@ -1,18 +1,23 @@
 ---
 title: 'MDVA-39305: Inloggningsproblem med aktiverad Google reCAPTCHA'
-description: MDVA-39305-korrigeringen åtgärdar ett problem där registrerade kunder inte kan logga in med aktiverad Google reCAPTCHA. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.1 är installerat. Korrigerings-ID är MDVA-39305. Observera att problemet schemaläggs att åtgärdas i Adobe Commerce version 2.4.4 och 2.4.7.
+description: Använd MDVA-39305-korrigeringen för att åtgärda Adobe Commerce-problemet där registrerade kunder inte kan logga in när Google reCAPTCHA är aktiverat.
 feature: Console
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+exl-id: c40fd84a-73dc-42bd-8cda-58738615fbba
+source-git-commit: 007fcb1308ba2c5b42755ee4c4c2ca598eb0e62e
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '387'
 ht-degree: 0%
 
 ---
 
 # MDVA-39305: Inloggningsproblem med aktiverad Google reCAPTCHA
 
-MDVA-39305-korrigeringen åtgärdar ett problem där registrerade kunder inte kan logga in med aktiverad Google reCAPTCHA. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.1 har installerats. Korrigerings-ID är MDVA-39305. Observera att problemet schemaläggs att åtgärdas i Adobe Commerce version 2.4.4 och 2.4.7.
+>[!NOTE]
+>
+>Den här korrigeringen uppdaterades och det senaste korrigerings-ID:t är MDVA-39305-V3. Den nya korrigeringen skapas för Adobe Commerce version 2.4.4, 2.4.5-p2 och 2.4.7. Mer information finns i patchartikeln [MDVA-39305-V3](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/mdva-39305-v3-login-issue-with-enabled-google-recaptcha) .
+
+MDVA-39305-korrigeringen åtgärdar ett problem där registrerade kunder inte kan logga in när Google reCAPTCHA är aktiverat. Den här korrigeringen är tillgänglig när [[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.1 har installerats. Korrigerings-ID är MDVA-39305. Observera att problemet har åtgärdats i Adobe Commerce version 2.4.4 och 2.4.7.
 
 ## Berörda produkter och versioner
 
