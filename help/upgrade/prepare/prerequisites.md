@@ -2,9 +2,9 @@
 title: Förutsättningar
 description: Förbered ditt Adobe Commerce-projekt för en uppgradering genom att slutföra dessa nödvändiga steg.
 exl-id: f7775900-1d10-4547-8af0-3d1283d9b89e
-source-git-commit: 4c84710da62fbb31214a0de2adc8adbd68880a76
+source-git-commit: d19051467efe7dcf7aedfa7a29460c72d896f5d4
 workflow-type: tm+mt
-source-wordcount: '1612'
+source-wordcount: '1717'
 ht-degree: 0%
 
 ---
@@ -70,13 +70,13 @@ Vissa katalogsökmotorer från tredje part körs ovanpå Adobe Commerce sökmoto
 
 Du måste installera och konfigurera Elasticsearch 7.6 eller senare eller OpenSearch 1.2 innan du uppgraderar till 2.4.0. Adobe stöder inte längre Elasticsearch 2.x, 5.x och 6.x. [Sökmotorkonfigurationen](../../configuration/search/configure-search-engine.md) i _Konfigurationshandboken_ beskriver de åtgärder du måste utföra efter att du har uppgraderat Elasticsearch till en version som stöds.
 
-Mer information om hur du säkerhetskopierar data, identifierar potentiella migreringsproblem och testar uppgraderingar innan du distribuerar till produktionen finns i [Uppgraderar Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html). Beroende på vilken version av Elasticsearch du använder behöver du kanske inte starta om hela klustret.
+Se [Uppgradera Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html) för fullständiga instruktioner om hur du säkerhetskopierar data, identifierar potentiella migreringsproblem och testar uppgraderingar innan du distribuerar till produktionen. Beroende på vilken version av Elasticsearch du har behöver du kanske starta om hela klustret eller inte.
 
 Elasticsearch kräver Java Development Kit (JDK) 1.8 eller senare. Se [Installera Java Software Development Kit (JDK)](../../installation/prerequisites/search-engine/overview.md#install-the-java-software-development-kit-jdk) för att kontrollera vilken version av JDK som är installerad.
 
 #### OpenSearch
 
-OpenSearch är en öppen källkodsgaffel i Elasticsearch 7.10.2 efter Elasticsearch licenschange. I följande versioner av Adobe Commerce finns stöd för OpenSearch:
+OpenSearch är en öppen källkodsgaffel till Elasticsearch 7.10.2 efter Elasticsearch licensändring. I följande versioner av Adobe Commerce finns stöd för OpenSearch:
 
 * 2.4.6 (OpenSearch har en separat modul och inställningar)
 * 2.4.5
@@ -94,7 +94,11 @@ OpenSearch kräver JDK 1.8 eller senare. Se [Installera Java Software Developmen
 
 Stöd för Elasticsearch 8.x infördes i Adobe Commerce 2.4.6. Följande instruktioner visar ett exempel på hur du uppgraderar Elasticsearch från 7.x till 8.x:
 
-1. Uppgradera servern Elasticsearch 7.x till 8.x och kontrollera att den är igång. Se [Elasticsearch-dokumentationen](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html).
+>[!NOTE]
+>
+>I den kommande 2.4.8-versionen behövs inte dessa steg eftersom Elasticsearch 8-modulen ingår som standard och du inte behöver installera den separat.
+
+1. Uppgradera Elasticsearch 7.x-servern till 8.x och se till att den är igång. Se [Elasticsearch-dokumentationen](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html).
 
 1. Aktivera fältet `id_field_data` genom att lägga till följande konfiguration i filen `elasticsearch.yml` och starta om tjänsten Elasticsearch 8.x.
 
@@ -106,13 +110,35 @@ Stöd för Elasticsearch 8.x infördes i Adobe Commerce 2.4.6. Följande instruk
 
    >[!INFO]
    >
-   >För att ge stöd för Elasticsearch 8.x tillåter Adobe Commerce 2.4.6 inte egenskapen `indices.id_field_data` som standard och använder fältet `_id` i egenskapen `docvalue_fields`.
+   >För att ha stöd för Elasticsearch 8.x tillåter inte Adobe Commerce 2.4.6 egenskapen `indices.id_field_data` som standard och använder fältet `_id` i egenskapen `docvalue_fields`.
 
 1. Uppdatera dina Composer-beroenden i Adobe Commerce-projektets rotkatalog för att ta bort modulen `Magento_Elasticsearch7` och installera modulen `Magento_Elasticsearch8`.
 
    ```bash
    composer require magento/module-elasticsearch-8 --update-with-all-dependencies
    ```
+
+   Om du råkar ut för ett beroendefel för `psr/http-message`, klickar du för att expandera följande felsökningsavsnitt:
+
+   +++Felsökning
+
+   Om du stöter på beroendekonflikter när du installerar Elasticsearch 8, särskilt med `psr/http-message`, kan du lösa detta genom att följa de här stegen:
+
+   1. Kräv först modulen Elasticsearch 8 utan att uppdatera andra beroenden:
+
+      ```bash
+      composer require magento/module-elasticsearch-8 --no-update
+      ```
+
+   1. Uppdatera sedan Elasticsearch 8-modulen och `aws/aws-sdk-php`-paketen:
+
+      ```bash
+      composer update magento/module-elasticsearch-8 aws/aws-sdk-php -W
+      ```
+
+   Detta tillvägagångssätt fungerar för 2.4.7-p4 med PHP 8.3. Problemet inträffar eftersom `aws/aws-sdk-php` kräver `psr/http-message >= 2.0`, vilket kan orsaka konflikter. Ovanstående steg hjälper dig att lösa dessa beroendeproblem.
+
++++
 
 1. Uppdatera projektkomponenterna.
 
@@ -136,9 +162,9 @@ Stöd för Elasticsearch 8.x infördes i Adobe Commerce 2.4.6. Följande instruk
 
 #### Nedgradera Elasticsearch
 
-Om du av misstag uppgraderar Elasticsearch på servern eller av någon annan anledning måste du också uppdatera dina Adobe Commerce projektberoenden. Om du till exempel vill nedgradera från Elasticsearch 8.x till 7.x
+Om du av misstag uppgraderar Elasticsearch-versionen på servern eller av någon annan anledning måste du också uppdatera dina Adobe Commerce projektberoenden. Om du till exempel vill nedgradera från Elasticsearch 8.x till 7.x
 
-1. Uppgradera servern Elasticsearch 8.x till 7.x och kontrollera att den är igång. Se [Elasticsearch-dokumentationen](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html).
+1. Uppgradera Elasticsearch 8.x-servern till 7.x och se till att den är igång. Se [Elasticsearch-dokumentationen](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html).
 
 1. Uppdatera dina Composer-beroenden i Adobe Commerce-projektets rotkatalog för att ta bort modulen `Magento_Elasticsearch8` och dess Composer-beroenden och installera modulen `Magento_Elasticsearch7`.
 
@@ -178,7 +204,7 @@ Du måste konvertera formatet för alla databastabeller från `COMPACT` till `DY
 
 Genom att ange gränsen för antalet öppna filer (ulimit) kan du undvika fel vid flera rekursiva anrop av långa frågesträngar eller problem med att använda kommandot `bin/magento setup:rollback`. Det här kommandot är annorlunda för olika UNIX-skal. Mer information om kommandot `ulimit` finns i din individuella variant.
 
-Adobe rekommenderar att du anger [ulimit](https://ss64.com/bash/ulimit.html) för de öppna filerna till `65536` eller mer, men du kan använda ett större värde om det behövs. Du kan ange gränsen på kommandoraden eller göra den till en permanent inställning för användarens skal.
+Adobe rekommenderar att de öppna filerna [ulimit](https://ss64.com/bash/ulimit.html) anges till `65536` eller mer, men du kan använda ett större värde om det behövs. Du kan ange gränsen på kommandoraden eller göra den till en permanent inställning för användarens skal.
 
 Så här anger du gränsen från kommandoraden:
 
