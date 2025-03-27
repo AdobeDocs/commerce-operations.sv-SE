@@ -2,9 +2,9 @@
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: 0073f5e1b6de110ff640748457b7c644d71fcbe8
+source-git-commit: 93c9eb8865aa53ec784d47fd66ca97d1941b4604
 workflow-type: tm+mt
-source-wordcount: '25431'
+source-wordcount: '25682'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,16 @@ ht-degree: 0%
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som har skapats av Community för Magento Open Source finns i [versionsinformationen](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.62 {#v1-1-62}
+
+* **ACSD-63406** (för Adobe Commerce och Magento Open Source >=2.4.4-p9 &lt;2.4.5) || >=2.4.5-p8 &lt;2.4.6 || >=2.4.6-p6 &lt;2.4.8) - Korrigerar problemet där utgångna beständiga citattecken inte rensas av något cron-jobb när `persistent_clear_expired` kron-jobbet körs.
+* **ACSD-63520** (för Adobe Commerce och Magento Open Source >=2.4.7 &lt;2.4.8) - Korrigerar problemet där bilder som läggs till via **[!UICONTROL Configurations]** på adminpanelen inte uppfyller den maximala överföringsstorleksgränsen.
+* **ACSD-64523** (för Adobe Commerce och Magento Open Source >=2.4.7 &lt;2.4.8) - Korrigerar problemet där det var möjligt att skapa nya produkter utan namn genom importprocessen (admin eller API), vilket skulle bryta administratörsgränssnittet och resultera i ogiltiga produkter.
+* **ACSD-64532** (för Adobe Commerce och Magento Open Source >=2.4.6-p2 &lt;2.4.8) - Korrigerar problemet där en ENV-variabel som är inställd på &quot;false&quot; behandlas som en sträng &quot;false&quot; i stället för som booleskt falskt.
+* **ACSD-64592** (för Adobe Commerce >=2.4.4 &lt;2.4.8) - Korrigerar problemet där anspråkslänken från e-postmeddelandet för ett presentkort i icke-standardbutiker alltid omdirigerade presentkortsanspråket till standardwebbplatsen.
+* **ACSD-65164** (för Adobe Commerce och Magento Open Source >=2.4.6 &lt;2.4.8) - Korrigerar problemet där felmeddelandet *Vissa av de valda objektalternativen inte är tillgängliga för tillfället* inträffar när en konfigurerbar produkt sorteras om med ett enda anpassat kryssrutealternativ.
+* **ACSD-64732** (för Adobe Commerce >=2.4.4 &lt;2.4.8) - Korrigerar problemet där styrenheter från tredje part inte cachelagrades korrekt med kundsegment.
 
 ## v1.1.61 {#v1-1-61}
 
