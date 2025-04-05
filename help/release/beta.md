@@ -2,9 +2,9 @@
 title: Beta-versioner
 description: Läs mer om betaversioner av Adobe Commerce och hur du deltar.
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
-source-git-commit: e569e8106930882323ab3ab046a3db0ee1da1503
+source-git-commit: c27867be74dfaa1bcd782a23db27db29fdccc4e3
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '931'
 ht-degree: 0%
 
 ---
@@ -79,15 +79,6 @@ Integrationsacceleratorn för IBM Sterling Order Management gör det möjligt f�
 
 Om du vill delta i betaversionen skickar du en e-postförfrågan till [sbieber@adobe.com](mailto:sbieber@adobe.com).
 
-### Dataanslutning och Audience Activation (offentlig Beta)
-
-Bättre datadelning mellan Adobe Commerce och Adobe Experience Platform för effektivare personaliserade upplevelser. Detta gör att säljarna kan
-
-- Dela Commerce kundprofiler
-- Skapa anpassade attribut
-
-Om du vill delta i betaversionen skickar du en e-postförfrågan till [DataConnection@adobe.com](mailto:DataConnection@adobe.com).
-
 ### Adobe Commerce Foundation (offentlig Beta)
 
 Varje betaversion av Adobe Commerce Foundation innehåller alla ändringar som levererats till Adobe Commerce kärnkod vid det schemalagda releasedatumet, inklusive, men inte begränsat till, följande funktionsområden:
@@ -109,7 +100,6 @@ Beta-versionspaket har suffixet `-betaX`. I betaversionspaketen för Adobe Comme
 - `2.4.7-beta2`
 
 Se [releaseplanen](schedule.md) för en lista över kommande allmänna betaversionsdatum.
-
 
 #### Tillgång till releaser från Beta
 
