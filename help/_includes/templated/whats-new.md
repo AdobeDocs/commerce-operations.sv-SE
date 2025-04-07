@@ -1,7 +1,7 @@
 ---
-source-git-commit: c3ca03b2db6182e693c2fcd8fee765fee65880ea
+source-git-commit: fb08fb139e975d6f8d0837a5370fed531ee97e0f
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '765'
 ht-degree: 0%
 
 ---
@@ -10,6 +10,238 @@ ht-degree: 0%
 ## Nyheter
 
 Den här sidan innehåller de ändringar som har gjorts under de senaste 60 dagarna. Vi utelämnar alla mindre uppdateringar, som kopieringsredigering, från den här listan.
+
+### 4 april 2025
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acp2e-3689-issues-with-category-tree-display-reflect-anchor-non-anchor-relationships">En detaljerad beskrivning av felet som korrigerades av korrigeringen ACP2E-3689 i QPT 1.1.61-utgåvan har lagts till</a></p>
+</td>
+      <td>new-topic</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/cb678a54cb8dcd6e9443ef2c8be4a73b4b901921">cb678a</a> (spara)</td>
+    </tr>
+  </tbody>
+</table>
+
+### 3 april 2025
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Lade till den <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-60/acsd-64111-fixes-issue-where-invalidargumentexceptionclass-does-not-exist-error-occurs-in-vendor-magento-module-rule-model-conditionfactoryphp50-when-setting-nested-conditions-for-a-product-component-in-page-builder">detaljerade beskrivningen av problemet som korrigerades av korrigeringen ACSD-64111 i QPT 1.1.60 </a></p>
+</td>
+      <td>new-topic</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/8e50457a21fa17c59523e28e5ff50b1d4dd0d9f9">8e5045</a> (spara)</td>
+    </tr>
+  </tbody>
+</table>
+
+### 1 april 2025
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>New Relic har lagts till i tabellen <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements">molnsystemkrav</a>.</p>
+</td>
+      <td>teknisk</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/8241f034529ca5be821ed9768fce391c16efacbc">8241f0</a> (spara)</td>
+    </tr>
+    <tr>
+      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/overview">beskrivning av de problem som åtgärdats av de patchar som finns i QPT 1.1.61-versionen har lagts till</a></p>
+</td>
+      <td>new-topic</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/bf9c698e5b0fa81bc2b10e97270d9cbe38ab9c37">bf9c69</a> (spara)</td>
+    </tr>
+  </tbody>
+</table>
+
+### 28 mars 2025
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-60/acsd-63992-admin-ui-cart-rule-shipping-method">Detaljerad beskrivning av problemet som har åtgärdats med korrigeringsfilen ACSD-63992 i QPT 1.1.60</a> har lagts till</p>
+</td>
+      <td>new-topic</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/8d0b38999c1d317098bd20098f042f1a78e8faeb">8d0b38</a> (spara)</td>
+    </tr>
+  </tbody>
+</table>
+
+### 25 mars 2025
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-60/overview">beskrivning av de problem som åtgärdats av de patchar som finns i QPT 1.1.60-versionen har lagts till</a></p>
+</td>
+      <td>new-topic</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/dca8a509796fb6c81e338000f771cc5fe3fea81c">dca8a5</a> (spara)</td>
+    </tr>
+    <tr>
+      <td><p>Ett felsökningsavsnitt har lagts till i instruktionerna för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/prepare/prerequisites#search-engine">förberedelse av sökmotorn</a>.</p>
+<p><i>Gemenskapens bidrag från Jeff-matthews</i></p></td>
+      <td>teknisk</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/pull/149">149</a> (pull-begäran)</td>
+    </tr>
+  </tbody>
+</table>
+
+### 21 mars 2025
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/mdva-39305-v3-login-issue-with-enabled-google-recaptcha">Detaljerad beskrivning av felet som åtgärdats av MDVA-39305-V3-korrigeringen i QPT 1.1.58-versionen </a> har lagts till</p>
+</td>
+      <td>new-topic</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/d7440a2239d2252920576f1f851d27c8f3a6ef5d">d7440a</a> (spara)</td>
+    </tr>
+  </tbody>
+</table>
+
+### 20 mars 2025
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Uppdaterade <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability">tillgänglighetstabellen</a> med den senaste versionen av katalogtjänsten, v1.32.</p>
+</td>
+      <td>teknisk</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/8dea781eaaeb52efad65cbc522bb779b3929c4e6">8dea78</a> (spara)</td>
+    </tr>
+  </tbody>
+</table>
+
+### 10 mars 2025
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Ändrade den version av OpenSearch för Adobe Commerce som stöds i Cloud-projekt i <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements">systemkraven</a> till motsvarande huvudversion för varje versionsrad. Detta är i linje med supportprocessen när kunderna begär uppdateringar av tjänstversionen.</p>
+</td>
+      <td>teknisk</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/e1a681a66014e70d9e41fd98ea0b2bbca1377d9d">e1a681</a> (spara)</td>
+    </tr>
+  </tbody>
+</table>
+
+### 7 mars 2025
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce">Hanterade aviseringar för Adobe Commerce</a> migrerades på grund av migreringen av Commerce kunskapsbas:<br />- <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce-memory-warning-alert">Minnesvarning</a><br />- <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-on-magento-commerce-redis-memory-warning-alert">Redis memory warning</a><br />- <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-on-magento-commerce-redis-memory-critical-alert">Redis memory critical alert</a><br />- <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce-disk-warning-alert">Diskvarning</a><br />- <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce-disk-critical-alert">Diskkritisk varning</a><br />- <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-on-magento-commerce-cpu-critical-alert">CPU Critical alert</a><br /> <a href="https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-memory-critical-alert">- Minneskritisk avisering</a><br />- <a href="https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce-apdex-critical-alert">Avisering om tillämpningskritisk avisering</a><br />- <a href="https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-mariadb-alerts">MariaDB-aviseringar</a><br />- <a href="https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce-cpu-warning-alert">CPU-varning</a><br />- <a href="https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce-apdex-warning-alert">Programvarning</a></p>
+</td>
+      <td>new-topic</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/c265c6348697c5a07f5990a5e2ffeba9d4dfe358">c265c6</a> (spara)</td>
+    </tr>
+  </tbody>
+</table>
+
+### 6 mars 2025
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Lade till den <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63572-catalogrule-indexer-temporary-tables-arent-cleaned-if-the-indexer-process-is-terminated">detaljerade beskrivningen av problemet som åtgärdats av korrigeringsfilen ACSD-63572 i QPT 1.1.58-utgåvan</a></p>
+</td>
+      <td>new-topic</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/862a248bee86d4ceed05b0ce3a3d072c3542d6b3">862a24</a> (spara)</td>
+    </tr>
+  </tbody>
+</table>
+
+### 5 mars 2025
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-59/acsd-63469-whole-carts-fixed-amount-discount-not-applied-correctly">Detaljerad beskrivning av problemet som har åtgärdats med korrigeringsfilen ACSD-63469 i QPT 1.1.59-utgåvan</a> har lagts till.</p>
+</td>
+      <td>new-topic</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/dab020c6b176717a38b5a81a8710217b0feab0eb">dab020</a> (spara)</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 28 februari 2025
 
@@ -231,130 +463,6 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
 </td>
       <td>new-topic</td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/3a86e6771c42c49416cc45321dc77f55c56e7d95">3a86e6</a> (spara)</td>
-    </tr>
-  </tbody>
-</table>
-
-### 31 januari 2025
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63299-special-price-for-a-configurable-product-doesnt-display-on-the-storefront">Detaljerad beskrivning av problemet som har åtgärdats med korrigeringsfilen ACSD-63299 i QPT 1.1.58-utgåvan</a> har lagts till.</p>
-</td>
-      <td>new-topic</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/226813a0d54147f545ef39b5ed5995df1f6c5ba1">226813</a> (spara)</td>
-    </tr>
-  </tbody>
-</table>
-
-### 30 januari 2025
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Lade till den <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63325-syntax-error-when-submitting-graphql-request">detaljerade beskrivningen av problemet som åtgärdats av korrigeringsfilen ACSD-63325 i QPT 1.1.58-utgåvan</a></p>
-</td>
-      <td>new-topic</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/246ae49b1127c6ba74d771bbfe945eef97affab6">246ae4</a> (spara)</td>
-    </tr>
-  </tbody>
-</table>
-
-### 29 januari 2025
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Lade till den <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-59083-fix-base-table-or-view-not-found-errors-during-simultaneous-mview-updates">detaljerade beskrivningen av problemet som åtgärdats med korrigeringsfilen ACSD-59083 i QPT 1.1.57-utgåvan</a></p>
-</td>
-      <td>new-topic</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/78ee64cc19489d5e16c7ab097ac5327db403b1e4">78ee64</a> (spara)</td>
-    </tr>
-    <tr>
-      <td><p>Lade till den <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62951-fixes-missing-items-and-totals-in-credit-memo-emails-sent-via-rest-api">detaljerade beskrivningen av problemet som korrigerades av korrigeringen ACSD-62951 i QPT 1.1.57-utgåvan</a></p>
-</td>
-      <td>new-topic</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/e5d47ed00a2ef491ac2028166d52cb8a99bbd736">e5d47e</a> (spara)</td>
-    </tr>
-  </tbody>
-</table>
-
-### 27 januari 2025
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Lade till den <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-61895-graphql-not-returning-categories-with-allow-permission">detaljerade beskrivningen av problemet som åtgärdats av korrigeringsfilen ACSD-61895 i QPT 1.1.57-utgåvan</a></p>
-</td>
-      <td>new-topic</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/d63e9e5301236cd3c2671b828cb540e756d2da61">d63e9e</a> (spara)</td>
-    </tr>
-    <tr>
-      <td><p>Lade till den <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63182-error-occurs-while-saving-a-product-after-bundle-product-duplication">detaljerade beskrivningen av problemet som åtgärdats av korrigeringsfilen ACSD-63182 i QPT 1.1.58-utgåvan</a></p>
-</td>
-      <td>new-topic</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/e3b6651bc34712b744e2a15940ac1f8513cfcb04">e3b665</a> (spara)</td>
-    </tr>
-  </tbody>
-</table>
-
-### 22 januari 2025
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Lade till den <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62212-forgot-password-email-not-translated-to-store-view-language">detaljerade beskrivningen av problemet som åtgärdats av korrigeringsfilen ACSD-62212 i QPT 1.1.57-utgåvan</a></p>
-</td>
-      <td>new-topic</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/9a00ebde10ad5dd916fd7afeb73e5e6aeec32495">9a00eb</a> (spara)</td>
-    </tr>
-    <tr>
-      <td><p>Lade till den <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-57/acsd-62481-shopping-cart-empty-even-with-persistence-enabled">detaljerade beskrivningen av problemet som korrigerades av korrigeringen ACSD-62481 i QPT 1.1.57-versionen</a></p>
-</td>
-      <td>new-topic</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/94781de6a8ec4e342299da5a64bef1a9a2d14366">94781d</a> (spara)</td>
-    </tr>
-    <tr>
-      <td><p>Lade till den <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-62118-tax-item-table-not-updated-po-method">detaljerade beskrivningen av problemet som åtgärdats av korrigeringsfilen ACSD-62118 i QPT 1.1.58-utgåvan</a></p>
-</td>
-      <td>new-topic</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/7fb220f5a55f6ff40fddf980537262d933f993dc">7fb220</a> (spara)</td>
     </tr>
   </tbody>
 </table>
