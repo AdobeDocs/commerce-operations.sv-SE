@@ -1,7 +1,7 @@
 ---
-source-git-commit: 1ad42acc0d007ef1dee8c6c6f93da9daed1925f8
+source-git-commit: 54757d09eb0f476229e567e43c58dc2130a59ac9
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '602'
 ht-degree: 0%
 
 ---
@@ -9,7 +9,7 @@ ht-degree: 0%
 
 ## 2.4.8
 
-Det datum då stöd för radslut i version 2.4.8 ännu inte har angetts.
+Stöd för version 2.4.8 upphör den 11 april 2028.
 
 <table>
   <thead>
@@ -21,15 +21,9 @@ Det datum då stöd för radslut i version 2.4.8 ännu inte har angetts.
   <tbody>
     <tr>
         <td>
-          <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/2-4-8#highlights-in-v248-beta2">2.4.8-beta2</a>
+          <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/2-4-8">2.4.8</a>
         </td>
-        <td>11 februari 2025</td>
-    </tr>
-    <tr>
-        <td>
-          <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/2-4-8#highlights-in-v248-beta1">2.4.8-beta1</a>
-        </td>
-        <td>oktober  8, 2024</td>
+        <td>April  8, 2025</td>
     </tr><!-- patch_releases -->
   </tbody>
 </table>
@@ -46,6 +40,12 @@ Stöd för version 2.4.7 upphör i april  9, 2027.
     </tr>
   </thead>
   <tbody>
+    <tr>
+        <td>
+          <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/security-patches/2-4-7-patches#p5">2.4.7-p5</a>
+        </td>
+        <td>Den 8 april 2025</td>
+    </tr>
     <tr>
         <td>
           <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/security-patches/2-4-7-patches#p4">2.4.7-p4</a>
@@ -93,6 +93,12 @@ Stöd för version 2.4.6 upphör den 11 augusti 2026.
   <tbody>
     <tr>
         <td>
+          <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/security-patches/2-4-6-patches#p10">2.4.6-p10</a>
+        </td>
+        <td>April  8, 2025</td>
+    </tr>
+    <tr>
+        <td>
           <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/security-patches/2-4-6-patches#p9">2.4.6-p9</a>
         </td>
         <td>11 februari 2025</td>
@@ -119,7 +125,7 @@ Stöd för version 2.4.6 upphör den 11 augusti 2026.
         <td>
           <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/security-patches/2-4-6-patches#p5">2.4.6-p5</a>
         </td>
-        <td>April  9, 2024</td>
+        <td>Den 9 april 2024</td>
     </tr>
     <tr>
         <td>
@@ -131,7 +137,7 @@ Stöd för version 2.4.6 upphör den 11 augusti 2026.
         <td>
           <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/security-patches/2-4-6-patches#p3">2.4.6-p3</a>
         </td>
-        <td>10 oktober 2023</td>
+        <td>Den 10 oktober 2023</td>
     </tr>
     <tr>
         <td>
@@ -166,6 +172,12 @@ Stöd för version 2.4.5 upphör i augusti  9, 2025.
     </tr>
   </thead>
   <tbody>
+    <tr>
+        <td>
+          <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/security-patches/2-4-5-patches#p12">2.4.5-p12</a>
+        </td>
+        <td>April  8, 2025</td>
+    </tr>
     <tr>
         <td>
           <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/security-patches/2-4-5-patches#p11">2.4.5-p11</a>
@@ -230,20 +242,20 @@ Stöd för version 2.4.5 upphör i augusti  9, 2025.
         <td>
           <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/security-patches/2-4-5-patches#p1">2.4.5-p1</a>
         </td>
-        <td>11 oktober 2022</td>
+        <td>Den 11 oktober 2022</td>
     </tr>
     <tr>
         <td>
           <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/2-4-5">2.4.5</a>
         </td>
-        <td>augusti  9, 2022</td>
+        <td>9 augusti 2022</td>
     </tr><!-- patch_releases -->
   </tbody>
 </table>
 
 ## 2.4.4
 
-Stöd för version 2.4.4 upphör den 12 april 2025.
+Stödet för utgivningsraden 2.4.4 upphör den 12 april 2025.
 
 <table>
   <thead>
@@ -255,9 +267,15 @@ Stöd för version 2.4.4 upphör den 12 april 2025.
   <tbody>
     <tr>
         <td>
+          <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/security-patches/2-4-4-patches#p13">2.4.4-p13</a>
+        </td>
+        <td>April  8, 2025</td>
+    </tr>
+    <tr>
+        <td>
           <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/security-patches/2-4-4-patches#p12">2.4.4-p12</a>
         </td>
-        <td>11 februari 2025</td>
+        <td>Den 11 februari 2025</td>
     </tr>
     <tr>
         <td>
@@ -342,7 +360,7 @@ Stöd för versionslinjen 2.4.0-2.4.3 upphörde den 28 november 2022.
   <thead>
     <tr>
       <th>Korrigeringsversion</th>
-      <th>Releasedatum</th>
+      <th>Utgivningsdag</th>
     </tr>
   </thead>
   <tbody>
@@ -356,13 +374,13 @@ Stöd för versionslinjen 2.4.0-2.4.3 upphörde den 28 november 2022.
         <td>
           <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/security-patches/2-4-3-patches#adobe-commerce-243-p2">2.4.3-p2</a>
         </td>
-        <td>12 april 2022</td>
+        <td>Den 12 april 2022</td>
     </tr>
     <tr>
         <td>
           <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/security-patches/2-4-3-patches#p1">2.4.3-p1</a>
         </td>
-        <td>12 oktober 2021</td>
+        <td>oktober 12, 2021</td>
     </tr>
     <tr>
         <td>
@@ -380,13 +398,13 @@ Stöd för versionslinjen 2.4.0-2.4.3 upphörde den 28 november 2022.
         <td>
           2.4.2-p1
         </td>
-        <td>11 maj 2021</td>
+        <td>maj 11, 2021</td>
     </tr>
     <tr>
         <td>
           <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/2-4-2">2.4.2</a>
         </td>
-        <td>Februari  9, 2021</td>
+        <td>Den 9 februari 2021</td>
     </tr>
     <tr>
         <td>
@@ -431,7 +449,7 @@ Stöd för version 2.3 upphörde i september  8, 2022.
         <td>
           2.3.7-p4
         </td>
-        <td>augusti  9, 2022</td>
+        <td>9 augusti 2022</td>
     </tr>
     <tr>
         <td>
@@ -521,26 +539,26 @@ Stöd för version 2.3 upphörde i september  8, 2022.
         <td>
           2.3.2
         </td>
-        <td>25 juni 2019</td>
+        <td>juni 25, 2019</td>
     </tr>
     <tr>
         <td>
           2.3.1
         </td>
-        <td>26 mars 2019</td>
+        <td>mars 26, 2019</td>
     </tr>
     <tr>
         <td>
           2.3.0
         </td>
-        <td>28 november 2018</td>
+        <td>Den 28 november 2018</td>
     </tr><!-- patch_releases -->
   </tbody>
 </table>
 
 ## 2,2
 
-Stöd för version 2.2 upphörde i december  1, 2019.
+Stödet för 2.2-utgåva upphörde den 1 december 2019.
 
 <table>
   <thead>
@@ -566,7 +584,7 @@ Stöd för version 2.2 upphörde i december  1, 2019.
         <td>
           2.2.9
         </td>
-        <td>25 juni 2019</td>
+        <td>juni 25, 2019</td>
     </tr>
     <tr>
         <td>
@@ -707,31 +725,31 @@ Stöd för version 2.1 upphörde den 30 juni 2019.
         <td>
           2.1.7
         </td>
-        <td>31 maj 2017</td>
+        <td>maj 31, 2017</td>
     </tr>
     <tr>
         <td>
           2.1.6
         </td>
-        <td>11 april 2017</td>
+        <td>Den 11 april 2017</td>
     </tr>
     <tr>
         <td>
           2.1.5
         </td>
-        <td>21 februari 2017</td>
+        <td>februari 21, 2017</td>
     </tr>
     <tr>
         <td>
           2.1.4
         </td>
-        <td>Februari  7, 2017</td>
+        <td>februari 7, 2017</td>
     </tr>
     <tr>
         <td>
           2.1.3
         </td>
-        <td>14 december 2016</td>
+        <td>Den 14 december 2016</td>
     </tr>
     <tr>
         <td>
@@ -743,7 +761,7 @@ Stöd för version 2.1 upphörde den 30 juni 2019.
         <td>
           2.1.1
         </td>
-        <td>30 augusti 2016</td>
+        <td>augusti 30, 2016</td>
     </tr>
     <tr>
         <td>
