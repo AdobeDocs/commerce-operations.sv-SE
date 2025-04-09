@@ -2,7 +2,7 @@
 title: Beta-versioner
 description: Läs mer om betaversioner av Adobe Commerce och hur du deltar.
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
-source-git-commit: c27867be74dfaa1bcd782a23db27db29fdccc4e3
+source-git-commit: c523b57270370d87be0f2ab0513f7908bb0a7173
 workflow-type: tm+mt
 source-wordcount: '931'
 ht-degree: 0%
@@ -18,13 +18,13 @@ Adobe Commerce betaprogram är ett sätt för handlare att få tillgång till be
 
 >[!IMPORTANT]
 >
->Beta-releaser kan innehålla defekter och tillhandahålls i befintligt skick utan någon garanti av något slag. Adobe har ingen skyldighet att upprätthålla, korrigera, uppdatera, ändra, modifiera eller på annat sätt ge support (via Adobe Support Services eller på annat sätt) för betaversioner. Kunderna rekommenderas att iaktta försiktighet och att inte på något sätt förlita sig på att betaversionerna och/eller tillhörande dokumentation eller material fungerar korrekt eller fungerar korrekt. Funktioner och API:er i betaversionen kan ändras utan föregående meddelande. Därför är all användning av betaversioner helt och hållet på kundens egen risk.
+>Beta-releaser kan innehålla defekter och tillhandahålls i befintligt skick utan någon garanti av något slag. Adobe har ingen skyldighet att upprätthålla, korrigera, uppdatera, ändra, modifiera eller på annat sätt ge support (via Adobe Support Services eller på annat sätt) för betaversioner. Kunder uppmanas att vara försiktiga och att inte på något sätt förlita sig på att betaversionerna och/eller medföljande dokumentation eller material fungerar eller fungerar korrekt. Funktioner och API:er i betaversion kan ändras utan föregående meddelande. Följaktligen sker all användning av betaversionerna helt på kundens egen risk.
 
-## Fördelar
+## Fördelar med att delta
 
-Genom att få tidig tillgång till funktioner som Adobe utvecklar kan kunder och partners ge feedback, utforma produktutvecklingen och förbereda sig för att använda nya funktioner innan de blir allmänt tillgängliga.
+Att få tidig tillgång till funktioner som Adobe utvecklar ger kunder och partners möjlighet att ge feedback, forma produktutvecklingen och förbereda sig för att införa nya funktioner innan de blir allmänt tillgängliga.
 
-## Beta-program
+## Aktuella betaprogram
 
 I följande avsnitt finns en lista med aktiva betaprogram.
 
@@ -34,8 +34,8 @@ Adobe Commerce Optimizer förbättrar e-handelsupplevelsen med en högpresterand
 
 Med Adobe Commerce Optimizer kan man
 
-- Utvidga och skala katalogen utan att behöva omforma hela e-handelsstacken.
-- Infoga katalogdata från alla källor.
+- Utöka och skala din katalog utan att byta plattform för hela din handelsstack.
+- Mata in katalogdata från valfri källa.
 - Definiera affärskanaler och principer.
 - Skapa personliga sökningar och rekommendationer med hjälp av AI och ML.
 - Se viktig produktdatatillgänglighet, inklusive synkroniseringsstatus och butikshändelsedata för korrekt implementering och felsökning.
@@ -53,20 +53,20 @@ Den här betaversionen stöder tre nya funktioner i [`productSearch`-frågan ](h
 
   Skiktad sökning är tillgänglig för både `startsWith`-sökindexering och `contains`-sökindexering enligt beskrivningen nedan:
 
-- **börjarMed sökindexering** - Sök med `startsWith`-indexering. Den nya funktionen gör att:
+- **startsWith search indexation** - Sök med hjälp av `startsWith` indexering. Med den här nya funktionen kan du:
 
-   - Söker efter produkter där attributvärdet börjar med en viss sträng.
-   - Om du konfigurerar en&quot;slutar med&quot;-sökning kan kunderna söka efter produkter där attributvärdet slutar med en viss sträng. Om du vill aktivera sökningen &quot;slutar med&quot; måste produktattributet vara inverterat och API-anropet ska också vara en omvänd sträng.
+   - Söka efter produkter där attributvärdet börjar med en viss sträng.
+   - Konfigurera en &quot;slutar med&quot;-sökning så att kunder kan söka efter produkter där attributvärdet slutar med en viss sträng. Om du vill aktivera en &quot;slutar med&quot;-sökning måste produktattributet matas in omvänt och API-anropet ska också vara en omvänd sträng.
 
 - **innehåller sökindexering** -Sök efter ett attribut som använder innehåller indexering. Den nya funktionen gör att:
 
    - Söker efter en fråga i en större sträng. Om en kund till exempel söker efter produktnumret &quot;PE-123&quot; i strängen &quot;HAPE-123&quot;.
 
-      - Obs! Den här söktypen skiljer sig från den befintliga [frassökningen](https://developer.adobe.com/commerce/services/graphql/live-search/product-search/#phrase), som utför en automatisk sökning. Om produktattributvärdet till exempel är &quot;utomhusbyxor&quot; returnerar en frassökning ett svar för &quot;out pan&quot;, men returnerar inget svar för &quot;or ants&quot;. En sökning innehåller emellertid ett svar på &quot;eller ants&quot;.
+      - Obs! Den här söktypen skiljer sig från den befintliga [frassökningen](https://developer.adobe.com/commerce/services/graphql/live-search/product-search/#phrase), som utför en automatisk sökning. Om ditt produktattributvärde till exempel är &quot;friluftsbyxor&quot; returnerar en frassökning ett svar för &quot;out pan&quot;, men returnerar inte ett svar för &quot;oor ants&quot;. En contains sökning returnerar dock ett svar för &quot;oor ants&quot;.
 
-De här nya villkoren förbättrar funktionen för filtrering av sökfrågor för att förfina sökresultaten. De här nya villkoren påverkar inte huvudsökfrågan. Om du vill delta i betaversionen skickar du en e-postförfrågan till [commerce-storefront-services](mailto:commerce-storefront-services@adobe.com).
+Dessa nya villkor förbättrar filtreringsmekanismen för sökfrågor för att förfina sökresultaten. Dessa nya villkor påverkar inte huvudsökfrågan. Om du vill delta i betaversionen skickar du en e-postförfrågan till [commerce-storefront-services](mailto:commerce-storefront-services@adobe.com).
 
-Mer information om hur du installerar betaversionen av Live Search finns i [Live Search-guiden](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/live-search/install#install-the-live-search-beta).
+Mer information om hur du installerar betaversionen av Live Search finns i [Live Search-guiden](https://experienceleague.adobe.com/en/docs/commerce/live-search/install#install-the-live-search-beta).
 
 ### IBM Sterling Order Management System Integration (Private Beta)
 
@@ -74,21 +74,21 @@ Integrationsacceleratorn för IBM Sterling Order Management gör det möjligt f�
 
 - Synlighet i realtid av lagernivåer och korrekta leveransdatum för era kunder.
 - Automatiserad anskaffning för beställningar baserat på konfigurerbara regler, så att ni kan optimera ert leveransnätverk och lager.
-- En universell vy över beställningar över flera kanaler från en enda kontrollpanel så att era supportteam kan leverera utomordentliga tjänster och snabbt identifiera och hantera undantag.
-- Ett mallat returhanteringsflöde som förenklar returhanteringen.
+- En universell vy över beställningar i alla kanaler från en enda instrumentpanel så att dina supportteam kan leverera exceptionell service och snabbt identifiera och hantera undantag.
+- Ett mallat returhanteringsflöde för att förenkla returhanteringen.
 
-Om du vill delta i betaversionen skickar du en e-postförfrågan till [sbieber@adobe.com](mailto:sbieber@adobe.com).
+Om du vill delta i den här betaversionen skickar du en e-postförfrågan till [sbieber@adobe.com](mailto:sbieber@adobe.com).
 
-### Adobe Commerce Foundation (offentlig Beta)
+### Adobe Commerce Foundation (offentlig beta)
 
-Varje betaversion av Adobe Commerce Foundation innehåller alla ändringar som levererats till Adobe Commerce kärnkod vid det schemalagda releasedatumet, inklusive, men inte begränsat till, följande funktionsområden:
+Varje betaversion av Adobe Commerce Foundation innehåller alla ändringar som har levererats till Adobe Commerce kärnkod före det schemalagda lanseringsdatumet, inklusive men inte begränsat till följande funktionsområden:
 
 - Senaste säkerhetskorrigeringar
 - Prestandaförbättringar
 - Förbättringar i GraphQL
 - Allmänna felkorrigeringar av kvalitet
 - Bidrag från gemenskapen
-- Ändringar som krävs för kompatibilitet med [Adobe Commerce-tjänster](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/home.html)
+- Ändringar som krävs för att stödja kompatibilitet med [Adobe Commerce-tjänster](https://experienceleague.adobe.com/docs/commerce/user-guides/home.html)
 
 #### Namngivningskonvention och schema
 
@@ -113,4 +113,4 @@ Adobe tillhandahåller inte Adobe standardsupport för betaversioner.
 
 Följ vårt [regelbundna rapportflöde](https://developer.adobe.com/commerce/contributor/guides/code-contributions/) på [GitHub](https://github.com/magento/magento2) om du vill skicka feedback som gäller betaversioner.
 
-Våra interna team övervakar alla kritiska problem som rapporteras mot den senaste betaversionen och prioriterar dem så att de kan lösas före GA-lanseringsdatumet.
+Våra interna team kommer att övervaka alla kritiska problem som rapporteras mot den senaste betaversionen och prioritera dem som ska lösas före GA-lanseringsdatumet.

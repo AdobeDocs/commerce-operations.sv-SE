@@ -1,7 +1,7 @@
 ---
-source-git-commit: 1f8fda87e0d39fdcf2372f72373a0b2ea486d25a
+source-git-commit: ba444c5f74cdeec86c842014d02775faf16b2f50
 workflow-type: tm+mt
-source-wordcount: '1996'
+source-wordcount: '2073'
 ht-degree: 0%
 
 ---
@@ -23,24 +23,27 @@ Adobe Commerce använder Composer för att hantera PHP-paket.
 
 Filen `composer.json` deklarerar paketlistan medan filen `composer.lock` lagrar en fullständig lista över de paket (en fullständig version av varje paket och dess beroenden) som används för att skapa en installation av Adobe Commerce.
 
-Följande referensdokumentation genereras från filen `composer.lock` och omfattar obligatoriska paket som ingår i Adobe Commerce 2.4.7-p1.
+Följande referensdokumentation genereras från filen `composer.lock` och omfattar obligatoriska paket som ingår i Adobe Commerce 2.4.8.
 
 ## Beroenden
 
-`magento/product-enterprise-edition 2.4.7-p1` har följande beroenden:
+`magento/product-enterprise-edition 2.4.8` har följande beroenden:
 
 ```config
-adobe-commerce/extensions-metapackage: ~2.0
+adobe-commerce/extensions-metapackage: 2.0.1
 colinmollenhour/cache-backend-file: ^1.4
 colinmollenhour/cache-backend-redis: ^1.16
 colinmollenhour/credis: ^1.15
-colinmollenhour/php-redis-session-abstract: ~1.5.3
+colinmollenhour/php-redis-session-abstract: ^2.0
 composer/composer: ^2.0, !=2.2.16
-elasticsearch/elasticsearch: ~7.17.0 || ~8.5.0
+duosecurity/duo_api_php: ^1.1
+duosecurity/duo_universal_php: ^1.0
+elasticsearch/elasticsearch: ^8.15
 ext-bcmath: *
 ext-ctype: *
 ext-curl: *
 ext-dom: *
+ext-ftp: *
 ext-gd: *
 ext-hash: *
 ext-iconv: *
@@ -56,169 +59,165 @@ ext-xsl: *
 ext-zip: *
 ezyang/htmlpurifier: ^4.17
 guzzlehttp/guzzle: ^7.5
-laminas/laminas-captcha: ^2.17
+laminas/laminas-captcha: ^2.18
 laminas/laminas-code: ^4.13
-laminas/laminas-db: ^2.19
-laminas/laminas-di: ^3.13
+laminas/laminas-di: ^3.15
 laminas/laminas-escaper: ^2.13
 laminas/laminas-eventmanager: ^3.11
 laminas/laminas-feed: ^2.22
-laminas/laminas-file: ^2.13
 laminas/laminas-filter: ^2.33
 laminas/laminas-http: ^2.15
 laminas/laminas-i18n: ^2.17
-laminas/laminas-mail: ^2.16
-laminas/laminas-mime: ^2.9
 laminas/laminas-modulemanager: ^2.11
 laminas/laminas-mvc: ^3.6
-laminas/laminas-oauth: ^2.6
 laminas/laminas-permissions-acl: ^2.10
-laminas/laminas-server: ^2.16
 laminas/laminas-servicemanager: ^3.16
 laminas/laminas-soap: ^2.10
 laminas/laminas-stdlib: ^3.11
 laminas/laminas-uri: ^2.9
 laminas/laminas-validator: ^2.23
-league/flysystem: ^2.4
-league/flysystem-aws-s3-v3: ^2.4
+league/flysystem: ^3.0
+league/flysystem-aws-s3-v3: ^3.0
 lib-libxml: *
-magento/composer: ^1.10.0-beta1
+magento/composer: ^1.10.1-beta1
 magento/composer-dependency-version-audit-plugin: ^0.1
-magento/framework-foreign-key: 100.4.6
+magento/framework-foreign-key: 100.4.7
 magento/magento-composer-installer: >=0.4.0
-magento/magento2-ee-base: 2.4.7-p1
-magento/module-admin-gws: 100.4.7
-magento/module-admin-gws-configurable-product: 100.4.4
-magento/module-admin-gws-staging: 100.4.4
-magento/module-advanced-catalog: 100.4.4
-magento/module-advanced-checkout: 100.4.7
-magento/module-advanced-rule: 100.4.4
-magento/module-advanced-sales-rule: 100.4.4
-magento/module-application-server: 100.4.0
-magento/module-application-server-new-relic: 100.4.0
-magento/module-application-server-performance-monitor: 100.4.0
-magento/module-application-server-state-monitor: 100.4.0
-magento/module-application-server-state-monitor-graph-ql: 100.4.0
-magento/module-async-order: 100.4.3
-magento/module-async-order-graph-ql: 100.4.2
-magento/module-aws-s3-customer-custom-attributes: 100.4.4
-magento/module-aws-s3-gift-card-import-export: 100.4.4
-magento/module-aws-s3-scheduled-import-export: 100.4.4
-magento/module-banner: 101.2.7
-magento/module-banner-customer-segment: 100.4.5
-magento/module-banner-graph-ql: 100.4.3
-magento/module-banner-staging: 100.4.1
-magento/module-bundle-import-export-staging: 100.4.4
-magento/module-bundle-staging: 100.4.7
-magento/module-catalog-event: 101.1.6
-magento/module-catalog-import-export-staging: 100.4.4
-magento/module-catalog-inventory-staging: 100.4.5
-magento/module-catalog-permissions: 100.4.7
-magento/module-catalog-permissions-graph-ql: 100.4.5
-magento/module-catalog-rule-staging: 100.4.7
-magento/module-catalog-staging: 100.4.7
-magento/module-catalog-staging-graph-ql: 100.4.6
-magento/module-catalog-url-rewrite-staging: 100.4.6-p1
-magento/module-checkout-address-search: 100.4.6
-magento/module-checkout-address-search-gift-registry: 100.4.3
-magento/module-checkout-staging: 100.4.6
-magento/module-cms-staging: 100.4.7
-magento/module-configurable-product-staging: 100.4.6
-magento/module-custom-attribute-management: 100.4.6
-magento/module-customer-balance: 100.4.7
-magento/module-customer-balance-graph-ql: 100.4.4
-magento/module-customer-custom-attributes: 100.4.7
-magento/module-customer-custom-attributes-graph-ql: 100.4.0
-magento/module-customer-finance: 100.4.4
-magento/module-customer-segment: 102.1.7
-magento/module-customer-segment-graph-ql: 100.4.0
-magento/module-deferred-total-calculating: 100.4.2
-magento/module-downloadable-staging: 100.4.6
-magento/module-elasticsearch-catalog-permissions: 100.4.3
-magento/module-elasticsearch-catalog-permissions-graph-ql: 100.4.2
-magento/module-enterprise: 100.4.5
-magento/module-gift-card: 101.3.7
-magento/module-gift-card-account: 101.2.7
-magento/module-gift-card-account-graph-ql: 100.4.5
-magento/module-gift-card-graph-ql: 100.4.7
-magento/module-gift-card-import-export: 100.4.4
-magento/module-gift-card-staging: 100.4.4
-magento/module-gift-message-staging: 100.4.4
-magento/module-gift-registry: 101.2.7
-magento/module-gift-registry-graph-ql: 100.4.3
-magento/module-gift-wrapping: 101.2.6
-magento/module-gift-wrapping-graph-ql: 100.4.4
-magento/module-gift-wrapping-staging: 100.4.4
-magento/module-google-optimizer-staging: 100.4.4
-magento/module-google-tag-manager: 100.4.7
-magento/module-grouped-product-staging: 100.4.5
-magento/module-import-csv: 100.4.1
-magento/module-import-csv-api: 100.4.1
-magento/module-import-json: 100.4.0
-magento/module-import-json-api: 100.4.0
-magento/module-invitation: 100.4.6
-magento/module-layered-navigation-staging: 100.4.4
-magento/module-logging: 101.2.7
-magento/module-login-as-customer-logging: 100.4.7
-magento/module-login-as-customer-website-restriction: 100.4.5
-magento/module-media-content-catalog-staging: 100.4.4
-magento/module-msrp-staging: 100.4.5
-magento/module-multicoupon: 100.4.0
-magento/module-multicoupon-graph-ql: 100.4.0
-magento/module-multicoupon-ui: 100.4.0
-magento/module-multiple-wishlist: 100.4.7
-magento/module-multiple-wishlist-graph-ql: 100.4.3
-magento/module-payment-staging: 100.4.4
-magento/module-persistent-history: 100.4.4
-magento/module-price-permissions: 100.4.3
-magento/module-product-video-staging: 100.4.4
-magento/module-promotion-permissions: 100.4.4
-magento/module-quote-commerce-graph-ql: 100.4.0
-magento/module-quote-gift-card-options: 100.4.4
-magento/module-quote-staging: 100.4.4
-magento/module-reminder: 101.2.6
-magento/module-remote-storage-commerce: 100.4.3
-magento/module-resource-connections: 100.4.4
-magento/module-review-staging: 100.4.4
-magento/module-reward: 101.2.7
-magento/module-reward-graph-ql: 100.4.6
-magento/module-reward-staging: 100.4.4
-magento/module-rma: 101.2.7
-magento/module-rma-graph-ql: 100.4.6-p1
-magento/module-rma-staging: 100.4.4
-magento/module-sales-archive: 101.0.5
-magento/module-sales-rule-staging: 100.4.6
-magento/module-scalable-checkout: 100.4.6
-magento/module-scalable-inventory: 100.4.5
-magento/module-scalable-oms: 100.4.5
-magento/module-scheduled-import-export: 101.2.7
-magento/module-search-staging: 100.4.5
-magento/module-staging: 101.2.7
-magento/module-staging-graph-ql: 100.4.4
-magento/module-support: 101.2.6
-magento/module-swat: 100.4.5
-magento/module-target-rule: 101.2.7
-magento/module-target-rule-graph-ql: 100.4.4
-magento/module-versions-cms: 101.2.7
-magento/module-versions-cms-page-cache: 100.4.3
-magento/module-versions-cms-url-rewrite: 100.4.5
-magento/module-versions-cms-url-rewrite-graph-ql: 100.4.3
-magento/module-visual-merchandiser: 100.4.7
-magento/module-website-restriction: 100.4.6
-magento/module-weee-staging: 100.4.4
-magento/module-wishlist-gift-card: 100.4.3
-magento/module-wishlist-gift-card-graph-ql: 100.4.3
-magento/page-builder-commerce: 1.7.4-p1
-magento/product-community-edition: 2.4.7-p1
-magento/security-package-ee: 1.0.2-p1
-magento/theme-adminhtml-spectrum: 100.4.2
+magento/magento-zf-db: ^3.21
+magento/magento2-ee-base: 2.4.8
+magento/module-admin-gws: 100.4.8
+magento/module-admin-gws-configurable-product: 100.4.5
+magento/module-admin-gws-staging: 100.4.5
+magento/module-advanced-catalog: 100.4.5
+magento/module-advanced-checkout: 100.4.8
+magento/module-advanced-rule: 100.4.5
+magento/module-advanced-sales-rule: 100.4.5
+magento/module-application-server: 100.4.1
+magento/module-application-server-new-relic: 100.4.1
+magento/module-application-server-performance-monitor: 100.4.1
+magento/module-application-server-state-monitor: 100.4.1
+magento/module-application-server-state-monitor-graph-ql: 100.4.1
+magento/module-async-order: 100.4.4
+magento/module-async-order-graph-ql: 100.4.3
+magento/module-aws-s3-customer-custom-attributes: 100.4.5
+magento/module-aws-s3-gift-card-import-export: 100.4.5
+magento/module-aws-s3-scheduled-import-export: 100.4.5
+magento/module-banner: 101.2.8
+magento/module-banner-customer-segment: 100.4.6
+magento/module-banner-graph-ql: 100.4.4
+magento/module-banner-staging: 100.4.2
+magento/module-bundle-import-export-staging: 100.4.5
+magento/module-bundle-staging: 100.4.8
+magento/module-catalog-event: 101.1.7
+magento/module-catalog-import-export-staging: 100.4.5
+magento/module-catalog-inventory-staging: 100.4.6
+magento/module-catalog-permissions: 100.4.8
+magento/module-catalog-permissions-graph-ql: 100.4.6
+magento/module-catalog-rule-staging: 100.4.8
+magento/module-catalog-staging: 100.4.8
+magento/module-catalog-staging-graph-ql: 100.4.7
+magento/module-catalog-url-rewrite-staging: 100.4.7
+magento/module-checkout-address-search: 100.4.7
+magento/module-checkout-address-search-gift-registry: 100.4.4
+magento/module-checkout-staging: 100.4.7
+magento/module-cms-staging: 100.4.8
+magento/module-configurable-product-staging: 100.4.7
+magento/module-custom-attribute-management: 100.4.7
+magento/module-customer-balance: 100.4.8
+magento/module-customer-balance-graph-ql: 100.4.5
+magento/module-customer-custom-attributes: 100.4.8
+magento/module-customer-custom-attributes-graph-ql: 100.4.1
+magento/module-customer-finance: 100.4.5
+magento/module-customer-segment: 102.1.8
+magento/module-customer-segment-graph-ql: 100.4.1
+magento/module-deferred-total-calculating: 100.4.3
+magento/module-downloadable-staging: 100.4.7
+magento/module-elasticsearch-catalog-permissions: 100.4.4
+magento/module-elasticsearch-catalog-permissions-graph-ql: 100.4.3
+magento/module-enterprise: 100.4.6
+magento/module-gift-card: 101.3.8
+magento/module-gift-card-account: 101.2.8
+magento/module-gift-card-account-graph-ql: 100.4.6
+magento/module-gift-card-graph-ql: 100.4.8
+magento/module-gift-card-import-export: 100.4.5
+magento/module-gift-card-staging: 100.4.5
+magento/module-gift-message-staging: 100.4.5
+magento/module-gift-registry: 101.2.8
+magento/module-gift-registry-graph-ql: 100.4.4
+magento/module-gift-wrapping: 101.2.7
+magento/module-gift-wrapping-graph-ql: 100.4.5
+magento/module-gift-wrapping-staging: 100.4.5
+magento/module-google-optimizer-staging: 100.4.5
+magento/module-google-tag-manager: 100.4.8
+magento/module-grouped-product-staging: 100.4.6
+magento/module-import-csv: 100.4.2
+magento/module-import-csv-api: 100.4.2
+magento/module-import-json: 100.4.1
+magento/module-import-json-api: 100.4.1
+magento/module-invitation: 100.4.7
+magento/module-layered-navigation-staging: 100.4.5
+magento/module-logging: 101.2.8
+magento/module-login-as-customer-logging: 100.4.8
+magento/module-login-as-customer-website-restriction: 100.4.6
+magento/module-media-content-catalog-staging: 100.4.5
+magento/module-msrp-staging: 100.4.6
+magento/module-multicoupon: 100.4.1
+magento/module-multicoupon-graph-ql: 100.4.1
+magento/module-multicoupon-ui: 100.4.1
+magento/module-multiple-wishlist: 100.4.8
+magento/module-multiple-wishlist-graph-ql: 100.4.4
+magento/module-payment-staging: 100.4.5
+magento/module-persistent-history: 100.4.5
+magento/module-price-permissions: 100.4.4
+magento/module-product-video-staging: 100.4.5
+magento/module-promotion-permissions: 100.4.5
+magento/module-quote-commerce-graph-ql: 100.4.1
+magento/module-quote-gift-card-options: 100.4.5
+magento/module-quote-staging: 100.4.5
+magento/module-reminder: 101.2.7
+magento/module-remote-storage-commerce: 100.4.4
+magento/module-resource-connections: 100.4.5
+magento/module-review-staging: 100.4.5
+magento/module-reward: 101.2.8
+magento/module-reward-graph-ql: 100.4.7
+magento/module-reward-staging: 100.4.5
+magento/module-rma: 101.2.8
+magento/module-rma-graph-ql: 100.4.7
+magento/module-rma-staging: 100.4.5
+magento/module-sales-archive: 101.0.6
+magento/module-sales-rule-staging: 100.4.7
+magento/module-scalable-checkout: 100.4.7
+magento/module-scalable-inventory: 100.4.6
+magento/module-scalable-oms: 100.4.6
+magento/module-scheduled-import-export: 101.2.8
+magento/module-search-staging: 100.4.6
+magento/module-staging: 101.2.8
+magento/module-staging-graph-ql: 100.4.5
+magento/module-support: 101.2.7
+magento/module-swat: 100.4.6
+magento/module-target-rule: 101.2.8
+magento/module-target-rule-graph-ql: 100.4.5
+magento/module-versions-cms: 101.2.8
+magento/module-versions-cms-page-cache: 100.4.4
+magento/module-versions-cms-url-rewrite: 100.4.6
+magento/module-versions-cms-url-rewrite-graph-ql: 100.4.4
+magento/module-visual-merchandiser: 100.4.8
+magento/module-webapi-rest-gws: 100.4.0
+magento/module-website-restriction: 100.4.7
+magento/module-weee-staging: 100.4.5
+magento/module-wishlist-gift-card: 100.4.4
+magento/module-wishlist-gift-card-graph-ql: 100.4.4
+magento/page-builder-commerce: 1.7.5
+magento/product-community-edition: 2.4.8
+magento/security-package-ee: 1.0.3
+magento/theme-adminhtml-spectrum: 100.4.3
 magento/zend-cache: ^1.16
 magento/zend-db: ^1.16
 magento/zend-pdf: ^1.16
-monolog/monolog: ^2.7
-opensearch-project/opensearch-php: ^1.0 || ^2.0
+monolog/monolog: ^3.6
+opensearch-project/opensearch-php: ^2.3
 pelago/emogrifier: ^7.0
-php: ~8.1.0||~8.2.0||~8.3.0
+php: ~8.2.0||~8.3.0||~8.4.0
 php-amqplib/php-amqplib: ^3.2
 phpseclib/mcrypt_compat: ^2.0
 phpseclib/phpseclib: ^3.0
@@ -226,13 +225,15 @@ psr/log: ^2 || ^3
 ramsey/uuid: ^4.2
 symfony/console: ^6.4
 symfony/intl: ^6.4
+symfony/mailer: ^6.4
+symfony/mime: ^6.4
 symfony/process: ^6.4
 symfony/string: ^6.4
 tedivm/jshrink: ^1.4
 tubalmartin/cssmin: ^4.1
-web-token/jwt-framework: ^3.1
+web-token/jwt-framework: ^3.4
 webonyx/graphql-php: ^15.0
-wikimedia/less.php: ^3.2
+wikimedia/less.php: ^5.0
 ```
 
 ## Tredjepartslicenser
@@ -250,14 +251,7 @@ wikimedia/less.php: ^3.2
   <tbody>
   <tr>
     <td>
-      <a href="https://github.com/elastic/elasticsearch-php.git">elasticsearch/elasticsearch</a>
-    </td>
-    <td>bibliotek</td>
-    <td>PHP-klient för Elasticsearch</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/opensearch-project/opensearch-php.git">opensearch-project/opensearch-php</a>
+      <a href="https://github.com/opensearch-project/opensearch-php.git">opensearch-project / opensearch-php</a>
     </td>
     <td>bibliotek</td>
     <td>PHP-klient för OpenSearch</td>
@@ -296,6 +290,20 @@ wikimedia/less.php: ^3.2
     </td>
     <td>bibliotek</td>
     <td>AWS SDK for PHP - Använd Amazon Web Services i PHP-projekt</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/opentelemetry-php/api.git">Öppen telemetri/API</a>
+    </td>
+    <td>bibliotek</td>
+    <td>API för OpenTelemetry PHP.</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/opentelemetry-php/context.git">öppen telemetri/kontext</a>
+    </td>
+    <td>bibliotek</td>
+    <td>Context implementation for OpenTelemetry PHP.</td>
   </tr>
   <tr>
     <td>
@@ -369,10 +377,17 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/colinmollenhour/php-redis-session-abstract.git">colinblöenhour/php-redis-session-abstract</a>
+      <a href="https://github.com/colinmollenhour/php-redis-session-abstract.git">colinmollenhour/php-redis-session-abstrakt</a>
     </td>
     <td>bibliotek</td>
     <td>En Redis-baserad sessionshanterare med optimistisk låsning</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/duosecurity/duo_universal_php.git">duosecurity/duo_universal_php</a>
+    </td>
+    <td>bibliotek</td>
+    <td>En PHP-implementering av Duo Universal SDK.</td>
   </tr>
   <tr>
     <td>
@@ -380,13 +395,6 @@ wikimedia/less.php: ^3.2
     </td>
     <td>bibliotek</td>
     <td>Ett enkelt bibliotek för kodning och avkodning av JSON Web Tokens (JWT) i PHP. Ska överensstämma med den aktuella specifikationen.</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/google/recaptcha.git">google/recaptcha</a>
-    </td>
-    <td>bibliotek</td>
-    <td>Klientbibliotek för reCAPTCHA, en kostnadsfri tjänst som skyddar webbplatser från skräppost och missbruk.</td>
   </tr>
   <tr>
     <td>
@@ -407,25 +415,11 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/laminas/laminas-config.git">laminas/laminas-config</a>
     </td>
     <td>bibliotek</td>
-    <td>innehåller ett kapslat objektegenskapsbaserat användargränssnitt för åtkomst av konfigurationsdata i programkoden</td>
+    <td>Tillhandahåller ett kapslat objektegenskapsbaserat användargränssnitt för åtkomst till dessa konfigurationsdata i programkod</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-crypt.git">laminas/laminas-crypt</a>
-    </td>
-    <td>bibliotek</td>
-    <td>Kraftfulla krypteringsverktyg och lösenordshash</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-db.git">laminas/laminas-db</a>
-    </td>
-    <td>bibliotek</td>
-    <td>Databasförkortningslager, SQL-förkortning, resultatuppsättningsabstraktion och implementeringar av RowDataGateway och TableDataGateway</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-di.git">laminas/laminas-di</a>
+      <a href="https://github.com/laminas/laminas-di.git">Laminas/Laminas-Di</a>
     </td>
     <td>bibliotek</td>
     <td>Automatisk beroendeinjektion för PSR-11-behållare</td>
@@ -435,7 +429,7 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/laminas/laminas-escaper.git">laminas/laminas-escape</a>
     </td>
     <td>bibliotek</td>
-    <td>Undvik säkert HTML, HTML, JavaScript, CSS och URL:er</td>
+    <td>Undvik säkert HTML, HTML-attribut, JavaScript, CSS och URL:er</td>
   </tr>
   <tr>
     <td>
@@ -450,13 +444,6 @@ wikimedia/less.php: ^3.2
     </td>
     <td>bibliotek</td>
     <td>innehåller funktioner för att skapa och använda RSS- och Atom-flöden</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-file.git">laminas/laminas-file</a>
-    </td>
-    <td>bibliotek</td>
-    <td>Hitta PHP-klassfiler</td>
   </tr>
   <tr>
     <td>
@@ -495,27 +482,6 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/laminas/laminas-mail.git">laminas/laminas-mail</a>
-    </td>
-    <td>bibliotek</td>
-    <td>Ger generaliserad funktionalitet för att sammanställa och skicka både text och MIME-kompatibla e-postmeddelanden i flera delar</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-math.git">laminas/laminas-math</a>
-    </td>
-    <td>bibliotek</td>
-    <td>Skapa kryptografiskt säkra pseudoslumpmässiga siffror och hantera stora heltal</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-mime.git">laminas/laminas-mime</a>
-    </td>
-    <td>bibliotek</td>
-    <td>Skapa och analysera MIME-meddelanden och -delar</td>
-  </tr>
-  <tr>
-    <td>
       <a href="https://github.com/laminas/laminas-modulemanager.git">laminas/laminas-modulemanager</a>
     </td>
     <td>bibliotek</td>
@@ -527,13 +493,6 @@ wikimedia/less.php: ^3.2
     </td>
     <td>bibliotek</td>
     <td>Laminas händelsestyrda MVC-lager, inklusive MVC-program, styrenheter och plugin-program</td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/laminas/laminas-oauth.git">laminas/laminas-oauth</a>
-    </td>
-    <td>bibliotek</td>
-    <td></td>
   </tr>
   <tr>
     <td>
@@ -554,7 +513,7 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/laminas/laminas-router.git">laminas/laminas-router</a>
     </td>
     <td>bibliotek</td>
-    <td>Flexibelt routningssystem för HTTP- och konsolapplikationer</td>
+    <td>Flexibelt routningssystem för HTTP- och konsolprogram</td>
   </tr>
   <tr>
     <td>
@@ -568,7 +527,7 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/laminas/laminas-servicemanager.git">laminas/laminas-servicemanager</a>
     </td>
     <td>bibliotek</td>
-    <td>Behållare för fabriksstyrd beroendeinjektion</td>
+    <td>Fabriksdriven behållare för beroendeinmatning</td>
   </tr>
   <tr>
     <td>
@@ -600,6 +559,13 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/laminas/laminas-translator.git">laminas/laminas-translator</a>
+    </td>
+    <td>bibliotek</td>
+    <td>Gränssnitt för Translator-komponenten av laminas-i18n</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/laminas/laminas-uri.git">laminas/laminas-uri</a>
     </td>
     <td>bibliotek</td>
@@ -621,10 +587,24 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/marc-mabe/php-enum.git">marc-mabe/php-enum</a>
+    </td>
+    <td>bibliotek</td>
+    <td>Enkel och snabb implementering av uppräkningar med inbyggd PHP</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/nikic/PHP-Parser.git">nikic/php-parser</a>
     </td>
     <td>bibliotek</td>
     <td>En PHP-parser skriven i PHP</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/phpfui/recaptcha.git">phpfui/recaptcha</a>
+    </td>
+    <td>bibliotek</td>
+    <td>Klientbibliotek för Google reCAPTCHA för PHP 8.4 och senare</td>
   </tr>
   <tr>
     <td>
@@ -638,12 +618,12 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/tubalmartin/YUI-CSS-compressor-PHP-port.git">tubalmartin/cssmin</a>
     </td>
     <td>bibliotek</td>
-    <td>En PHP-port för YUI CSS-komprimeraren</td>
+    <td>En PHP-port av YUI CSS-kompressorn</td>
   </tr>
   </tbody>
 </table>
 
-### BSD-3-Clause-Modification
+### BSD-3-klausul-Modifiering
 
 <table>
   <thead>
@@ -659,7 +639,7 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/colinmollenhour/Cm_Cache_Backend_Redis.git">colinkvart/hour/cache-backend-redis</a>
     </td>
     <td>magento-module</td>
-    <td>Zend_Cache backend använder Redis med fullständigt stöd för taggar.</td>
+    <td>Zend_Cache serverdelen med Redis med fullständigt stöd för taggar.</td>
   </tr>
   </tbody>
 </table>
@@ -701,7 +681,7 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/ezyang/htmlpurifier.git">ezyang/htmlpurifier</a>
     </td>
     <td>bibliotek</td>
-    <td>Standardkompatibelt HTML-filter skrivet i PHP</td>
+    <td>Standardkompatibelt HTML-filter som skrivits i PHP</td>
   </tr>
   <tr>
     <td>
@@ -729,7 +709,7 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/braintree/braintree_php.git">braintree/braintree_php</a>
     </td>
     <td>bibliotek</td>
-    <td>Braintree PHP-klientbibliotek</td>
+    <td>Braintree PHP Client Library</td>
   </tr>
   <tr>
     <td>
@@ -775,7 +755,7 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/composer/composer.git">disposition/disposition</a>
+      <a href="https://github.com/composer/composer.git">Kompositör/kompositör</a>
     </td>
     <td>bibliotek</td>
     <td>Composer hjälper dig att deklarera, hantera och installera beroenden av PHP-projekt. Det ser till att du har rätt hög överallt.</td>
@@ -785,7 +765,7 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/composer/metadata-minifier.git">disposition/metadata-minifier</a>
     </td>
     <td>bibliotek</td>
-    <td>Liten verktygsbibliotek som hanterar miniatyrbilder och utbyggnad av metadata.</td>
+    <td>Litet verktygsbibliotek som hanterar minifiering och expansion av metadata.</td>
   </tr>
   <tr>
     <td>
@@ -814,6 +794,34 @@ wikimedia/less.php: ^3.2
     </td>
     <td>bibliotek</td>
     <td>Startar om en process utan Xdebug.</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/doctrine/lexer.git">doctrine/lexer</a>
+    </td>
+    <td>bibliotek</td>
+    <td>PHP Doctrine Lexer-parserbibliotek som kan användas i uppifrån och ned, rekursiva fallparametrar.</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/egulias/EmailValidator.git">egulias/email-validator</a>
+    </td>
+    <td>bibliotek</td>
+    <td>Ett bibliotek för validering av e-post mot flera RFC:er</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/elastic/elastic-transport-php.git">elastisk/transport</a>
+    </td>
+    <td>bibliotek</td>
+    <td>PHP-bibliotek för HTTP-transport för elastiska produkter</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/elastic/elasticsearch-php.git">elasticsearch/elasticsearch</a>
+    </td>
+    <td>bibliotek</td>
+    <td>PHP-klient för Elasticsearch</td>
   </tr>
   <tr>
     <td>
@@ -848,7 +856,7 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/guzzle/promises.git">guzzlehttp/promise</a>
     </td>
     <td>bibliotek</td>
-    <td>Bibliotek med löften om pussel</td>
+    <td>Guzzle lovar bibliotek</td>
   </tr>
   <tr>
     <td>
@@ -862,7 +870,7 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/jsonrainbow/json-schema.git">justinrainbow/json-schema</a>
     </td>
     <td>bibliotek</td>
-    <td>Ett bibliotek som validerar ett json-schema.</td>
+    <td>Ett bibliotek för att verifiera ett json-schema.</td>
   </tr>
   <tr>
     <td>
@@ -877,6 +885,13 @@ wikimedia/less.php: ^3.2
     </td>
     <td>bibliotek</td>
     <td>AWS S3-filsystemadapter för flygsystem.</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/thephpleague/flysystem-local.git">Lag/flysystem-local</a>
+    </td>
+    <td>bibliotek</td>
+    <td>Lokal filsystemadapter för flygsystemet.</td>
   </tr>
   <tr>
     <td>
@@ -918,7 +933,28 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/MyIntervals/emogrifier.git">pelago/emogrifier</a>
     </td>
     <td>bibliotek</td>
-    <td>Konverterar CSS-format till textbundna formatattribut i HTML-koden</td>
+    <td>Konverterar CSS-format till infogade formatattribut i din HTML-kod</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/php-http/discovery.git">php-http/discovery</a>
+    </td>
+    <td>comser-plugin</td>
+    <td>Söker efter och installerar implementeringar av PSR-7, PSR-17, PSR-18 och HTTPlug</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/php-http/httplug.git">php-http/httplug</a>
+    </td>
+    <td>bibliotek</td>
+    <td>HTTPlug, HTTP-klientabstraktion för PHP</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/php-http/promise.git">php-http/promise</a>
+    </td>
+    <td>bibliotek</td>
+    <td>Löfte som används för asynkrona HTTP-begäranden</td>
   </tr>
   <tr>
     <td>
@@ -939,7 +975,7 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/PhpGt/PropFunc.git">phpgt/propfunc</a>
     </td>
     <td>bibliotek</td>
-    <td>Egenskapsåtkomst och mutatorfunktioner.</td>
+    <td>Funktioner för egenskapsåtkomst och mutator.</td>
   </tr>
   <tr>
     <td>
@@ -1121,7 +1157,7 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/symfony/deprecation-contracts.git">symfony/deprecation-agreements</a>
     </td>
     <td>bibliotek</td>
-    <td>En allmän funktion och konvention som utlöser meddelanden om borttagning</td>
+    <td>En allmän funktion och konvention för att utlösa utfasningsmeddelanden</td>
   </tr>
   <tr>
     <td>
@@ -1146,14 +1182,14 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/filesystem.git">symfony/filesystem</a>
+      <a href="https://github.com/symfony/filesystem.git">Symfony/Filsystem</a>
     </td>
     <td>bibliotek</td>
     <td>Tillhandahåller grundläggande verktyg för filsystemet</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/finder.git">symfony/finder</a>
+      <a href="https://github.com/symfony/finder.git">Symfony/Finder</a>
     </td>
     <td>bibliotek</td>
     <td>Söker efter filer och kataloger via ett intuitivt flytande gränssnitt</td>
@@ -1195,10 +1231,24 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
+      <a href="https://github.com/symfony/mailer.git">symfony/mailer</a>
+    </td>
+    <td>bibliotek</td>
+    <td>Hjälper dig att skicka e-post</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/symfony/mime.git">symfony/mime</a>
+    </td>
+    <td>bibliotek</td>
+    <td>Tillåter manipulering av MIME-meddelanden</td>
+  </tr>
+  <tr>
+    <td>
       <a href="https://github.com/symfony/polyfill-ctype.git">symfony/polyfill-type</a>
     </td>
     <td>bibliotek</td>
-    <td>Symfonisk polyfyllning för typfunktioner</td>
+    <td>Symfony polyfill för ctype-funktioner</td>
   </tr>
   <tr>
     <td>
@@ -1212,7 +1262,7 @@ wikimedia/less.php: ^3.2
       <a href="https://github.com/symfony/polyfill-intl-idn.git">symfony/polyfill-intl-idn</a>
     </td>
     <td>bibliotek</td>
-    <td>Symfony polyfill for intl's id_to_ascii and id_to_utf8 functions</td>
+    <td>Symfony polyfill för intl:s idn_to_ascii- och idn_to_utf8-funktioner</td>
   </tr>
   <tr>
     <td>
@@ -1230,13 +1280,6 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/polyfill-php72.git">symfony/polyfill-php72</a>
-    </td>
-    <td>bibliotek</td>
-    <td>Symfonisk polyfill backporting vissa PHP 7.2+-funktioner ger lägre PHP-versioner</td>
-  </tr>
-  <tr>
-    <td>
       <a href="https://github.com/symfony/polyfill-php73.git">symfony/polyfill-php73</a>
     </td>
     <td>bibliotek</td>
@@ -1244,10 +1287,10 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/symfony/polyfill-php80.git">symfony/polyfill-php80</a>
+      <a href="https://github.com/symfony/polyfill-php80.git">Symfony/Polyfill-php80</a>
     </td>
     <td>bibliotek</td>
-    <td>Symfonisk polyfill backporting vissa PHP 8.0+-funktioner till lägre PHP-versioner</td>
+    <td>Symfony polyfill bakåtanpassar vissa PHP 8.0+-funktioner till lägre PHP-versioner</td>
   </tr>
   <tr>
     <td>
@@ -1255,6 +1298,13 @@ wikimedia/less.php: ^3.2
     </td>
     <td>bibliotek</td>
     <td>Symfonisk polyfill backporterar vissa PHP 8.1+-funktioner till lägre PHP-versioner</td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/symfony/polyfill-php82.git">symfony/polyfill-php82</a>
+    </td>
+    <td>bibliotek</td>
+    <td>Symfony polyfill bakåtanpassar vissa PHP 8.2+-funktioner till lägre PHP-versioner</td>
   </tr>
   <tr>
     <td>
@@ -1300,17 +1350,17 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/web-token/jwt-framework.git">web-token/jwt-framework</a>
+      <a href="https://github.com/symfony/yaml.git">symfony/yaml</a>
     </td>
-    <td>symfony-bundle</td>
-    <td>JSON Object Signing and Encryption library for PHP and Symfony Bundle.</td>
+    <td>bibliotek</td>
+    <td>Läser in och dumpar YAML-filer</td>
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/webmozarts/assert.git">webmozart/assert</a>
+      <a href="https://github.com/web-token/jwt-framework.git">web-token/jwt-ramverk</a>
     </td>
-    <td>bibliotek</td>
-    <td>Kontroller för att validera metodens indata/utdata med bra felmeddelanden.</td>
+    <td>symfony-bundle</td>
+    <td>JSON Object Signing and Encryption library for PHP and Symfony Bundle.</td>
   </tr>
   <tr>
     <td>
@@ -1342,6 +1392,13 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
+      paypal/module-braintree-present-card
+    </td>
+    <td>magento2-module</td>
+    <td>Ej tillämpligt</td>
+  </tr>
+  <tr>
+    <td>
       paypal/module-braintree-present-card-account
     </td>
     <td>magento2-module</td>
@@ -1349,14 +1406,21 @@ wikimedia/less.php: ^3.2
   </tr>
   <tr>
     <td>
-      paypal/module-braintree-present-wrapping
+      PayPal/modul-braintree- presentinslagning
     </td>
-    <td>magento2-module</td>
+    <td>magento2-modul</td>
     <td>Ej tillämpligt</td>
   </tr>
   <tr>
     <td>
-      paypal/module-braintree-graph-ql
+      PayPal/modul-braintree-graf-ql
+    </td>
+    <td>magento2-modul</td>
+    <td>Ej tillämpligt</td>
+  </tr>
+  <tr>
+    <td>
+      paypal/module-braintree-gain
     </td>
     <td>magento2-module</td>
     <td>Ej tillämpligt</td>

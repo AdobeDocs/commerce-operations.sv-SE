@@ -4,7 +4,7 @@ description: Lär dig hur du på ett säkert sätt hanterar och lagrar betalning
 role: Developer
 feature: Best Practices
 exl-id: 635f38d3-0199-4d96-ba75-9edd0cb94b5c
-source-git-commit: db0fce79b22d409e8d639b959dc5a04693e72659
+source-git-commit: 16feb8ec7ecc88a6ef03a769d45b1a3a2fe88d97
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 0%
@@ -53,4 +53,4 @@ Den rekommenderade metoden för att hantera kortinnehavardata är att tokenisera
 
 ## Ytterligare information
 
-Om du letar efter rekommenderade betalningslösningar från Adobe bör du överväga [Adobe Payment Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/payment-services/overview.html).
+Om du letar efter rekommenderade betalningslösningar från Adobe bör du överväga [Adobe betalningstjänster](https://experienceleague.adobe.com/docs/commerce/payment-services/overview.html).

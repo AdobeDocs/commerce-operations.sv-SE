@@ -2,7 +2,7 @@
 title: Produkttillgänglighet
 description: Läs mer om vilka Adobe Commerce-funktioner som stöds och kontrollera om de är kompatibla med vissa Adobe Commerce-utgåvor.
 exl-id: 7e8e8ac2-a0b9-4023-a813-c0f1293e54c2
-source-git-commit: 56dabc0c35460a8ace6f6be455050f56119d1b16
+source-git-commit: 16feb8ec7ecc88a6ef03a769d45b1a3a2fe88d97
 workflow-type: tm+mt
 source-wordcount: '311'
 ht-degree: 0%
@@ -15,13 +15,13 @@ I följande tabell beskrivs statusen för Adobe Commerce programvarutillgänglig
 
 Tjänster och tillägg testas på den senaste versionen av Commerce när produkterna släpps.
 
-Versioner som stöds har testats fullt ut av Adobe. Hjälp för de versioner som stöds finns på Adobe kundsupport. Äldre versioner kanske fungerar som de ska men stöds inte officiellt.
+Versioner som stöds har testats fullständigt av Adobe. Hjälp för de versioner som stöds finns på Adobe kundsupport. Äldre versioner kanske fungerar som de ska men stöds inte officiellt.
 
 >[!NOTE]
 >
 >Stöd för Adobe Commerce-versioner innefattar även stöd för [tillgängliga säkerhetsuppdateringar](versions.md).
 
-## Adobe-tillägg
+## Adobe Authaged Extensions
 
 De här Adobe Commerce-tilläggen är fristående från Adobe Commerce centrala kodbas. Detta gör att Adobe kan släppa versioner av dessa tillägg inom en mer flexibel tidsram och ge kunderna tidigare tillgång till nya funktioner.
 
@@ -31,13 +31,13 @@ Följande tabell visar versionsstödet för varje tillägg i förhållande till 
 
 ## Commerce Services
 
-[Commerce Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/home.html) är en uppsättning värdbaserade funktioner i Adobe som ger robusta funktioner och snabba svarstider i kombination med din Commerce-instans.
+[Commerce-tjänster](https://experienceleague.adobe.com/docs/commerce/user-guides/home.html) är en uppsättning värdfunktioner från Adobe som ger robusta funktioner och snabba svarstider i kombination med din Commerce-instans.
 
 Handlarna bör använda den senaste versionen av en tjänst för att säkerställa högsta stabilitet och funktionalitet. Dokumentationen beskriver den version som släpps för tillfället.
 
 * Adobe Commerce Services är för närvarande kompatibelt med Commerce 2.4.4 och senare. Handlarna bör använda den senaste versionen av tjänsten.
 * Tjänster anses vara kompatibla med tidigare versioner av Commerce 2.4.x, men stöds inte officiellt.
-* Tjänsterna är inte kompatibla med Commerce 2.3.x, utom för Recommendations 3.3.7 och tidigare.
+* Tjänster är inte kompatibla med Commerce 2.3.x, förutom produktrekommendationerna 3.3.7 och tidigare.
 * Betalningstjänsten är för närvarande kompatibel med Magento Open Source 2.4.4 och senare. Handlarna bör använda den senaste versionen av tjänsten.
 
 Följande tabell visar versionsstödet för varje tjänst i förhållande till Adobe Commerce-versionen.

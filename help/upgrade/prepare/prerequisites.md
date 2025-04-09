@@ -2,9 +2,9 @@
 title: Förutsättningar
 description: Förbered ditt Adobe Commerce-projekt för en uppgradering genom att slutföra dessa nödvändiga steg.
 exl-id: f7775900-1d10-4547-8af0-3d1283d9b89e
-source-git-commit: d19051467efe7dcf7aedfa7a29460c72d896f5d4
+source-git-commit: df185e21f918d32ed5033f5db89815b5fc98074f
 workflow-type: tm+mt
-source-wordcount: '1717'
+source-wordcount: '1866'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Adobe Commerce kräver att Elasticsearch eller OpenSearch är installerat för a
 
 **Om du uppgraderar korrigeringsutgåvor på versionslinjerna 2.3.x eller 2.4.x** kan du [migrera till OpenSearch](opensearch-migration.md) om Elasticsearch 7.x redan är installerat.
 
-Du kan använda kommandoraden eller Admin för att bestämma katalogsökmotorn:
+Du kan använda kommandoraden eller Admin för att ta reda på vilken katalogsökmotor du vill använda:
 
 * Ange kommandot `bin/magento config:show catalog/search/engine`. Kommandot returnerar värdet `mysql`, `elasticsearch` (vilket anger att Elasticsearch 2 har konfigurerats), `elasticsearch5`, `elasticsearch6`, `elasticsearch7` eller ett anpassat värde, vilket anger att du har installerat en sökmotor från tredje part. För tidigare versioner än 2.4.6 använder du värdet `elasticsearch7` för Elasticsearch 7- eller OpenSearch-motorn. Använd värdet `opensearch` för OpenSearch-motorn för version 2.4.6 och senare.
 
@@ -62,6 +62,60 @@ Från och med 2.4 är MySQL inte längre en katalogsökmotor som stöds. Du mås
 
 Vissa katalogsökmotorer från tredje part körs ovanpå Adobe Commerce sökmotor. Kontakta leverantören för att avgöra om du måste uppdatera tillägget.
 
+### MySQL 8.4-ändringar
+
+Adobe har lagt till stöd för MySQL 8.4 i version 2.4.8.
+I det här avsnittet beskrivs viktiga ändringar av MySQL 8.4 som utvecklare bör känna till.
+
+#### Inaktuell nyckel som inte är standard
+
+Användning av icke-unika eller partiella nycklar som sekundärnycklar är inte standard och används inte i MySQL 8.4. Från och med MySQL 8.4.0 måste du uttryckligen aktivera sådana nycklar genom att ange [`restrict_fk_on_non_standard_key`](https://dev.mysql.com/doc/refman/8.4/en/server-system-variables.html#sysvar_restrict_fk_on_non_standard_key) till `OFF` eller genom att starta servern med alternativet `--skip-restrict-fk-on-non-standard-key`.
+
+#### Uppgradera från MySQL 8.0 (eller tidigare versioner) till MySQL 8.4
+
+För att kunna uppgradera MySQL från version 8.0 till version 8.4 måste du följa dessa steg för att:
+
+1. Aktivera underhållsläge:
+
+   ```bash
+   bin/magento maintenance:enable
+   ```
+
+1. Säkerhetskopiera databasen:
+
+   ```bash
+   bin/magento setup:backup --db
+   ```
+
+1. Uppgradera MySQL till version 8.4.
+1. Ange `restrict_fk_on_non_standard_key` som `OFF` i `[mysqld]` i filen `my.cnf`.
+
+   ```bash
+   [mysqld]
+   restrict_fk_on_non_standard_key = OFF 
+   ```
+
+   >[!WARNING]
+   >
+   >Om du inte ändrar värdet för `restrict_fk_on_non_standard_key` till `OFF` får du följande fel under importen:
+   >
+   ```sql
+   > ERROR 6125 (HY000) at line 2164: Failed to add the foreign key constraint. Missing unique key for constraint 'CAT_PRD_FRONTEND_ACTION_PRD_ID_CAT_PRD_ENTT_ENTT_ID' in the referenced table 'catalog_product_entity'
+   >```
+1. Starta om MySQL-servern.
+1. Importera säkerhetskopierade data till MySQL.
+1. Rensa cachen:
+
+   ```bash
+   bin/magento cache:clean
+   ```
+
+1. Inaktivera underhållsläge:
+
+   ```bash
+   bin/magento maintenance:disable
+   ```
+
 #### MariaDB
 
 {{$include /help/_includes/maria-db-config.md}}
@@ -76,7 +130,7 @@ Elasticsearch kräver Java Development Kit (JDK) 1.8 eller senare. Se [Installer
 
 #### OpenSearch
 
-OpenSearch är en öppen källkodsgaffel till Elasticsearch 7.10.2 efter Elasticsearch licensändring. I följande versioner av Adobe Commerce finns stöd för OpenSearch:
+OpenSearch är en öppen källkodsgaffel till Elasticsearch 7.10.2 efter Elasticsearch licensändring. I följande versioner av Adobe Commerce introduceras stöd för OpenSearch:
 
 * 2.4.6 (OpenSearch har en separat modul och inställningar)
 * 2.4.5
@@ -136,11 +190,11 @@ Stöd för Elasticsearch 8.x infördes i Adobe Commerce 2.4.6. Följande instruk
       composer update magento/module-elasticsearch-8 aws/aws-sdk-php -W
       ```
 
-   Detta tillvägagångssätt fungerar för 2.4.7-p4 med PHP 8.3. Problemet inträffar eftersom `aws/aws-sdk-php` kräver `psr/http-message >= 2.0`, vilket kan orsaka konflikter. Ovanstående steg hjälper dig att lösa dessa beroendeproblem.
+   Detta tillvägagångssätt fungerar för 2.4.7-p4 med PHP 8.3. Problemet uppstår eftersom `aws/aws-sdk-php` kräver `psr/http-message >= 2.0`, vilket kan orsaka konflikter. Ovanstående steg hjälper dig att lösa dessa beroendeproblem.
 
 +++
 
-1. Uppdatera projektkomponenterna.
+1. Uppdatera dina projektkomponenter.
 
    ```bash
    bin/magento setup:upgrade
@@ -253,7 +307,7 @@ Resultat som liknar följande ska visas:
 #~ MAGENTO END c5f9e5ed71cceaabc4d4fd9b3e827a2b
 ```
 
-Ett annat symtom på att kron inte körs är följande fel i Admin:
+Ett annat symptom på att cron inte körs är följande fel i Admin:
 
 ![Systemmeddelanden - kron körs inte](../../assets/upgrade-guide/cron-not-running.png)
 

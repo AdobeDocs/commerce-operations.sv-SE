@@ -2,9 +2,9 @@
 title: Adobe Commerce 2.4.6 Security Patch Release Notes
 description: Läs mer om säkerhetsfelkorrigeringar, säkerhetsförbättringar och andra säkerhetsrelaterade uppdateringar som ingår i säkerhetsuppdateringarna för Adobe Commerce version 2.4.6.
 exl-id: cde096ac-d192-490d-873a-475996c474ff
-source-git-commit: 9397740c608e4f0521018d6f6c918ca267197c6c
+source-git-commit: 9bf1c539220d70a8e7fe449e4d91199f23cc23b2
 workflow-type: tm+mt
-source-wordcount: '1280'
+source-wordcount: '1316'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,14 @@ ht-degree: 0%
 # Versionsinformation om säkerhetsuppdateringar för Adobe Commerce 2.4.6
 
 {{$include /help/_includes/release-notes/security-patch-intro.md}}
+
+## 2.4.6-p10
+
+Säkerhetsutgåvan av Adobe Commerce 2.4.6-p10 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som identifierats i tidigare versioner av 2.4.6.
+
+Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB25-26](https://helpx.adobe.com/security/products/magento/apsb25-26.html).
+
+{{b2b-patches}}
 
 ## 2.4.6-p9
 
@@ -113,11 +121,11 @@ Adobe Commerce 2.4.6-p3 innehåller en upplösning för prestandaförsämringen 
 
 ### Kända fel
 
-**Problem**: Adobe Commerce visar ett `wrong checksum`-fel under hämtning från Composer från `repo.magento.com` och pakethämtningen avbryts. Det här problemet kan uppstå vid hämtning av frisläppningspaket som är tillgängliga under betaversionsperioden och orsakas av en ompaketering av `magento/module-page-cache`-paketet.
+**Problem**: Adobe Commerce visar ett fel under hämtningen av Composer från `repo.magento.com`och pakethämtningen `wrong checksum` avbryts. Det här problemet kan uppstå vid hämtning av frisläppningspaket som är tillgängliga under betaversionsperioden och orsakas av en ompaketering av `magento/module-page-cache`-paketet.
 
-**Tillfällig lösning**: Handlare som ser det här felet under hämtningen kan göra följande:
+**Lösning**: Handlare som ser det här felet under nedladdningen kan vidta följande steg:
 
-1) Ta bort katalogen `/vendor` i projektet, om det finns någon.
+1) Ta bort katalogen i projektet, om det `/vendor` finns en sådan.
 2) Kör kommandot `bin/magento composer update magento/module-page-cache`. Det här kommandot uppdaterar bara paketet `page cache`.
 
 Om kontrollsummeproblemet kvarstår tar du bort filen `composer.lock` innan du kör kommandot `bin/magento composer update` igen för att uppdatera varje paket.

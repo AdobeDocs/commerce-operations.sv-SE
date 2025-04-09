@@ -1,22 +1,30 @@
 ---
-title: Adobe Commerce 2.4.5 Security Patch Release Notes
-description: Läs mer om säkerhetsfelkorrigeringar, säkerhetsförbättringar och andra säkerhetsrelaterade uppdateringar som ingår i säkerhetsuppdateringarna för Adobe Commerce version 2.4.5.
+title: Versionsinformation för säkerhetskorrigeringar för Adobe Commerce 2.4.5
+description: Lär dig mer om buggfixar för säkerhet, säkerhetsförbättringar och andra säkerhetsrelaterade uppdateringar som ingår i säkerhetskorrigeringarna för Adobe Commerce version 2.4.5.
 exl-id: 1b5f6d84-877a-45ea-8ff5-db83e3d360dd
-source-git-commit: 9397740c608e4f0521018d6f6c918ca267197c6c
+source-git-commit: 9bf1c539220d70a8e7fe449e4d91199f23cc23b2
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1235'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om säkerhetsuppdateringar för Adobe Commerce 2.4.5
+# Versionsinformation för säkerhetskorrigeringar för Adobe Commerce 2.4.5
 
 {{$include /help/_includes/release-notes/security-patch-intro.md}}
 
+## 2.4.5-p12
+
+Säkerhetsversionen Adobe Commerce 2.4.5-p12 innehåller buggfixar för säkerhetsproblem som identifierats i tidigare versioner av 2.4.5.
+
+Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB25-26](https://helpx.adobe.com/security/products/magento/apsb25-26.html).
+
+{{b2b-patches}}
+
 ## 2.4.5-p11
 
-Säkerhetsutgåvan av Adobe Commerce 2.4.5-p11 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som identifierats i tidigare versioner av 2.4.5.
+Säkerhetsversionen Adobe Commerce 2.4.5-p11 innehåller säkerhetsbuggar för sårbarheter som identifierats i tidigare versioner av 2.4.5.
 
 Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB25-08](https://helpx.adobe.com/security/products/magento/apsb25-08.html).
 
@@ -44,9 +52,9 @@ Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerh
 
 ## 2.4.5-p9
 
-Säkerhetsutgåvan av Adobe Commerce 2.4.5-p9 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som identifierats i tidigare versioner av 2.4.5.
+Säkerhetsversionen Adobe Commerce 2.4.5-p9 innehåller buggfixar för säkerhetsproblem som identifierats i tidigare versioner av 2.4.5.
 
-Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB24-61](https://helpx.adobe.com/security/products/magento/apsb24-61.html).
+Den senaste informationen om säkerhetsbuggar [finns i Adobes säkerhetsbulletin APSB24-61](https://helpx.adobe.com/security/products/magento/apsb24-61.html).
 
 ### Högdagrar
 
@@ -62,27 +70,27 @@ Säkerhetsutgåvan av Adobe Commerce 2.4.5-p8 innehåller säkerhetsfelkorrigeri
 
 Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB24-40](https://helpx.adobe.com/security/products/magento/apsb24-40.html).
 
-### Programfix för CVE-2024-34102
+### Installera snabbkorrigering för CVE-2024-34102
 
 {{$include /help/_includes/release-notes/hotfixes/not-included-2024-06.md}}
 
-### Plattformsuppgraderingar
+### Uppgraderingar av plattformen
 
-* **Stöd för MariaDB 10.5**. Den här korrigeringsversionen är kompatibel med MariaDB version 10.5. Adobe Commerce är fortfarande kompatibelt med MariaDB version 10.4, men Adobe rekommenderar att du använder Adobe Commerce 2.4.5-p8 och alla kommande 2.4.5-säkerhetsuppdateringar endast med MariaDB version 10.5 eftersom MariaDB 10.4-underhållet upphör den 18 juni 2024. <!--AC-11530-->
+* **Stöd för** MariaDB 10.5. Den här korrigeringsversionen introducerar kompatibilitet med MariaDB version 10.5. Adobe Commerce är fortfarande kompatibelt med MariaDB version 10.4, men Adobe rekommenderar att du använder Adobe Commerce 2.4.5-p8 och alla kommande säkerhetskorrigeringar för 2.4.5 endast med MariaDB version 10.5 eftersom underhållet av MariaDB 10.4 upphör den 18 juni 2024. <!--AC-11530-->
 
-### Högdagrar
+### Höjdpunkter
 
 {{$include /help/_includes/release-notes/highlights/2-4-7-security.md}}
 
 ## 2.4.5-p7
 
-Säkerhetsutgåvan av Adobe Commerce 2.4.5-p7 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som har identifierats i tidigare versioner av 2.4.5.
+Säkerhetsversionen Adobe Commerce 2.4.5-p7 innehåller säkerhetsbuggar för sårbarheter som har identifierats i tidigare versioner av 2.4.5.
 
 Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB24-18](https://helpx.adobe.com/security/products/magento/apsb24-18.html).
 
 ## 2.4.5-p6
 
-Säkerhetsutgåvan av Adobe Commerce 2.4.5-p6 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som har identifierats i tidigare versioner av 2.4.5. Den här versionen innehåller även säkerhetsförbättringar som förbättrar efterlevnaden av de senaste säkerhetsstandarderna.
+Säkerhetsversionen Adobe Commerce 2.4.5-p6 innehåller säkerhetsbuggar för sårbarheter som har identifierats i tidigare versioner av 2.4.5. Den här versionen innehåller även säkerhetsförbättringar för att förbättra efterlevnaden av de senaste bästa säkerhetsmetoderna.
 
 Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB24-03](https://helpx.adobe.com/security/products/magento/apsb24-03.html).
 
@@ -93,13 +101,13 @@ Den här versionen innehåller två viktiga säkerhetsförbättringar:
 * **Ändringar av beteendet för icke genererade cachenycklar**:
 
    * Icke genererade cachenycklar för block innehåller nu prefix som skiljer sig från prefix för nycklar som genereras automatiskt. (Icke-genererade cachenycklar är nycklar som ställs in via malldirektiv eller metoderna `setCacheKey` eller `setData`.)
-   * Icke genererade cachenycklar för block får nu bara innehålla bokstäver, siffror, bindestreck (-) och understreck (_). <!-- AC-9831 -->
+   * Icke-genererade cachenycklar för block får nu endast innehålla bokstäver, siffror, bindestreck (-) och understreck (_).  <!-- AC-9831 -->
 
-* **Begränsningar för antalet autogenererade kupongkoder**. Commerce begränsar nu antalet kupongkoder som genereras automatiskt. Standardmaxvärdet är 250 000. Handlare kan använda det nya konfigurationsalternativet **[!UICONTROL Code Quantity Limit]** (**[!UICONTROL Stores]** > **[!UICONTROL Settings:Configuration]** > **[!UICONTROL Customers]** > **[!UICONTROL Promotions]**) för att styra den nya gränsen. <!-- AC-8753 -->
+* **Begränsningar av antalet automatiskt genererade kupongkoder**. Commerce begränsar nu antalet kupongkoder som genereras automatiskt. Standardvärdet är 250 000. Handlare kan använda det nya **[!UICONTROL Code Quantity Limit]** konfigurationsalternativet (**[!UICONTROL Stores]** > **[!UICONTROL Settings:Configuration]** > **[!UICONTROL Customers]** > **[!UICONTROL Promotions]**) för att kontrollera den nya gränsen. <!-- AC-8753 -->
 
 ## 2.4.5-p5
 
-Säkerhetsutgåvan av Adobe Commerce 2.4.5-p5 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som har identifierats i tidigare versioner av 2.4.5. Den här versionen innehåller även säkerhetsförbättringar som förbättrar efterlevnaden av de senaste säkerhetsstandarderna.
+Säkerhetsversionen Adobe Commerce 2.4.5-p5 innehåller säkerhetsbuggar för sårbarheter som har identifierats i tidigare versioner av 2.4.5. Den här versionen innehåller även säkerhetsförbättringar för att förbättra efterlevnaden av de senaste bästa säkerhetsmetoderna.
 
 Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB23-50](https://helpx.adobe.com/security/products/magento/apsb23-50.html).
 
@@ -116,7 +124,7 @@ I den här versionen introduceras en ny konfigurationsinställning för helsides
 1) Ta bort katalogen `/vendor` i projektet, om det finns någon.
 2) Kör kommandot `bin/magento composer update magento/module-page-cache`. Det här kommandot uppdaterar bara paketet `page cache`.
 
-Om kontrollsummeproblemet kvarstår tar du bort filen `composer.lock` innan du kör kommandot `bin/magento composer update` igen för att uppdatera varje paket.
+Om problemet med kontrollsumman kvarstår tar du bort `composer.lock` filen innan du `bin/magento composer update` kör kommandot igen för att uppdatera varje paket.
 
 ## 2.4.5-p4
 
@@ -130,13 +138,13 @@ Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerh
 
 ## 2.4.5-p3
 
-Säkerhetsutgåvan av Adobe Commerce 2.4.5-p3 innehåller säkerhetsfixar för säkerhetsluckor som har identifierats i tidigare versioner av 2.4.5. Den här versionen innehåller även säkerhetsförbättringar som förbättrar efterlevnaden av de senaste säkerhetsstandarderna.
+Säkerhetsversionen Adobe Commerce 2.4.5-p3 innehåller säkerhetskorrigeringar för sårbarheter som har identifierats i tidigare versioner av 2.4.5. Den här versionen innehåller även säkerhetsförbättringar som förbättrar efterlevnaden av de senaste säkerhetsmetoderna.
 
-Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin](https://helpx.adobe.com/security/products/magento/apsb23-35.html).
+Den senaste informationen om korrigeringar av säkerhetsbuggar finns i [Adobes säkerhetsbulletin](https://helpx.adobe.com/security/products/magento/apsb23-35.html).
 
-### Programfix för CVE-2022-31160
+### Installera snabbkorrigering för CVE-2022-31160
 
-`jQuery-UI` biblioteksversion 1.13.1 har ett känt säkerhetsproblem (CVE-2022-31160) som påverkar flera versioner av Adobe Commerce och Magento Open Source. Detta bibliotek är beroende av Adobe Commerce och Magento Open Source 2.4.4, 2.4.5 och 2.4.6. Handlare som kör berörda distributioner bör tillämpa den korrigering som anges i [säkerhetsluckan för användargränssnittsfrågor CVE-2022-31160 för version 2.4.4, 2.4.5 och 2.4.6 ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/jquery-cve-2022-31160-fix-2-4-4-2-4-5-2-4-6) i kunskapsbasartikeln.
+`jQuery-UI` biblioteksversion 1.13.1 har en känd säkerhetsrisk (CVE-2022-31160) som påverkar flera versioner av Adobe Commerce och Magento Open Source. Detta bibliotek är beroende av Adobe Commerce och Magento Open Source 2.4.4, 2.4.5 och 2.4.6. Handlare som kör berörda distributioner bör tillämpa den korrigering som anges i [säkerhetsluckan för användargränssnittsfrågor CVE-2022-31160 för version 2.4.4, 2.4.5 och 2.4.6 ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/jquery-cve-2022-31160-fix-2-4-4-2-4-5-2-4-6) i kunskapsbasartikeln.
 
 ### Högdagrar
 
@@ -154,7 +162,7 @@ Plattformsuppgraderingar för den här versionen förbättrar efterlevnaden av d
 
 ## 2.4.5-p2
 
-Säkerhetsutgåvan av Adobe Commerce 2.4.5-p2 innehåller tre säkerhetskorrigeringar för säkerhetsluckor som har identifierats i tidigare versioner av 2.4.5.
+Säkerhetsversionen Adobe Commerce 2.4.5-p2 innehåller tre säkerhetskorrigeringar för sårbarheter som har identifierats i tidigare versioner av 2.4.5.
 
 Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB23-17](https://helpx.adobe.com/security/products/magento/apsb23-17.html).
 
@@ -164,4 +172,4 @@ Säkerhetsutgåvan av Adobe Commerce 2.4.5-p1 innehåller säkerhetsfelkorrigeri
 
 Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB22-48](https://helpx.adobe.com/security/products/magento/apsb22-48.html).
 
-En av säkerhetsfelkorrigeringarna var att skapa en ny konfigurationsinställning. **Kräv e-postbekräftelse om e-postadressen har ändrats** så att administratörer kan kräva e-postbekräftelse när en Admin-användare ändrar sin e-postadress. <!-- AC-6292-->
+En av säkerhetsbuggfixarna inkluderade skapandet av en ny konfigurationsinställning. Med **konfigurationsinställningen Kräv e-postbekräftelse om e-post har ändrats** kan administratörer kräva e-postbekräftelse när en administratörsanvändare ändrar sin e-postadress. <!-- AC-6292-->

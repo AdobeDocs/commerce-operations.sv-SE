@@ -2,7 +2,7 @@
 title: Frigör schema
 description: Läs mer om när Adobe planerar att tillkännage lanseringen av nya funktioner i Adobe Commerce.
 exl-id: ae1e09cd-966f-44a3-9e4d-b90bb838429d
-source-git-commit: dc493fc044401e33ef40e4e070b5d82977938eb1
+source-git-commit: 16feb8ec7ecc88a6ef03a769d45b1a3a2fe88d97
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 2%
@@ -12,17 +12,17 @@ ht-degree: 2%
 
 # Frigör schema
 
-Adobe strävar hela tiden efter att hitta rätt balans mellan att göra produktuppgraderingar enkla och förutsägbara samtidigt som man levererar förbättringar och nya funktioner till tidiga användare snabbare (se [versionspolicy](versioning-policy.md)). Syftet med denna tidsplan är att ge Adobe datum för när planerar att släppa viktiga nya funktioner.
+Adobe strävar hela tiden efter att hitta rätt balans mellan att göra produktuppgraderingar enkla och förutsägbara samtidigt som man levererar förbättringar och nya funktioner till tidiga användare snabbare (se [versionspolicy](versioning-policy.md)). Syftet med denna tidsplan är att ange datum för när Adobe planerar att släppa viktiga nya funktioner.
 
 ## Funktioner, molninfrastruktur och utbyggbarhet
 
 Nya funktioner, funktionsuppdateringar, molninfrastruktur och utökningsuppdateringar levereras oberoende av korrigeringsversioner och är tillgängliga via externa moduler, tillägg, verktyg eller webbtjänster. Exempel:
 
-- ![Funktionsikon](../assets/icons/feature.svg) [**Funktioner och funktioner**](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/user-guides/release-information/release-notes-all) - Nya funktioner levereras oberoende av korrigeringsfiler. Exempel: [B2B](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/release-notes), katalogtjänst, dataanslutning, Live Search och Product Recommendations.
+- ![Funktionsikon](../assets/icons/feature.svg) [**Funktioner och funktioner**](https://experienceleague.adobe.com/en/docs/commerce/user-guides/release-information/release-notes-all) - Nya funktioner levereras oberoende av korrigeringsfiler. Exempel: [B2B](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/release-notes), katalogtjänst, dataanslutning, Live-sökning och produktrekommendationer.
 
 - ![Infrastrukturikon](../assets/icons/servers.svg) [**Molninfrastruktur**](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite) - Nya funktioner och förbättringar i Adobe Commerce i molninfrastrukturen och i Creative Cloud Tools Suite för Commerce-paket, som distribuerar och hanterar Adobe Commerce-installationer och uppgraderingar på molnplattformen.
 
-- ![Ikon för utbyggbarhet](../assets/icons/brackets.svg) [**Utbyggbarhet**](https://developer.adobe.com/commerce/extensibility/) - Nya utvecklingsverktyg och tjänster för utbyggbarhet som inte har bearbetats levereras oberoende av korrigeringsversioner. Exempel: Integration Starter Kit, Admin UI SDK, Adobe I/O Events för Commerce och API Mesh.
+- ![Ikon för utbyggbarhet](../assets/icons/brackets.svg) [**Utbyggbarhet**](https://developer.adobe.com/commerce/extensibility/) - Nya utvecklingsverktyg och tjänster för utbyggbarhet som inte har bearbetats levereras oberoende av korrigeringsversioner. Exempel: Integration Starter Kit, Admin UI SDK, Adobe I/O Events for Commerce och API Mesh.
 
 I följande lista visas datum för schemalagda funktioner, molninfrastruktur och utökningsmöjligheter (datum kan ändras):
 
@@ -40,7 +40,7 @@ I följande lista visas datum för schemalagda funktioner, molninfrastruktur och
 
 ## Patchar
 
-Adobe släpper också [korrigeringar](versioning-policy.md#patch-release) för varje versionsrad som stöds i Adobe Commerce PHP-huvudprogrammet. Patch-versioner är möjligheter att uppgradera kärnkodbasen för att hålla plattformen säker, tillförlitlig och effektiv.
+Adobe släpper även [korrigeringar](versioning-policy.md#patch-release) för varje versionsrad som stöds i Adobe Commerce PHP-huvudprogrammet. Patch-versioner är möjligheter att uppgradera kärnkodbasen för att hålla plattformen säker, tillförlitlig och effektiv.
 
 Förutom de schemalagda kvalitets-, säkerhets- och betatestarna på den här sidan ger Adobe tillgång till [enskilda korrigeringsfiler](versioning-policy.md#individual-patch) via [kvalitetskorrigeringsverktyget](../tools/quality-patches-tool/usage.md). Med verktyget kan du tillämpa, återställa och visa allmän information om alla enskilda korrigeringsfiler som är tillgängliga för den installerade versionen av Adobe Commerce.
 
