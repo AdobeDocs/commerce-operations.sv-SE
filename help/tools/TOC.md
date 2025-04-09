@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: fd76886406710d98dafa22953950424d2037477a
+source-git-commit: 77f3bb9b766eef3d56fc5d89b29daa9254992220
 workflow-type: tm+mt
-source-wordcount: '7312'
+source-wordcount: '7335'
 ht-degree: 0%
 
 ---
@@ -770,6 +770,8 @@ ht-degree: 0%
          - [Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.61](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/overview.md)
          - [ACP2E-3689: Flera problem med kategoriträdvisning på djupare nivåer och spegling av ankarrelationer/icke-ankarrelationer](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acp2e-3689-issues-with-category-tree-display-reflect-anchor-non-anchor-relationships.md)
          - [ACSD-64178: Sidan [!UICONTROL Edit Attribute Set] läses in långsamt med tusentals produktattribut](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acsd-64178-attribute-set-edit-page-loads-slow-with-thousands-of-attributes.md)
+         - [ACP2E-3705: exekvering av kron indexer_update_all_views misslyckas när MAGE_INDEXER_THREADS_COUNT har angetts](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acp2e-3705-fixes-an-issue-where-the-indexer.md)
+         - [ACSD-64467: WYSIWYG-redigeraren är tom efter att kategoribeskrivningen sparats på butiksvynivå](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acsd-64467-wysiwyg-editor-empty-after-saving-category-description.md)
          - [ACSD-63974: Korrigerar långsam [!UICONTROL Requisition List] inläsningstid med sidnumrering](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acsd-63974-fixes-the-issue-where-the-requisition-list-page-takes-a-long-time.md)
    - [Leta efter Adobe Commerce-problem med verktyget för kvalitetskorrigeringar](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
 - Referens för kommandoradsverktyg {#cli-reference}
