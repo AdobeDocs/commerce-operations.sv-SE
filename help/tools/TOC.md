@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: 1e02a1831639368ba4640231a854d6f5613c60ad
+source-git-commit: fd76886406710d98dafa22953950424d2037477a
 workflow-type: tm+mt
-source-wordcount: '7287'
+source-wordcount: '7312'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
    - [Varningar](site-wide-analysis-tool/alerts.md)
    - [Patchar](site-wide-analysis-tool/patches.md)
 
-- Hanterade aviseringar på Adobe Commerce {#managed-alerts-for-adobe-commerce}
+- Hanterade aviseringar om Adobe Commerce {#managed-alerts-for-adobe-commerce}
    - [Hanterade aviseringar på Adobe Commerce: [!DNL Redis] minneskritisk avisering](/help/tools/managed-alerts-for-adobe-commerce/managed-alerts-on-magento-commerce-redis-memory-critical-alert.md)
    - [Hanterade varningar för Adobe Commerce: Diskvarning](/help/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce-disk-warning-alert.md)
    - [Hanterade aviseringar för Adobe Commerce](/help/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce.md)
@@ -40,7 +40,7 @@ ht-degree: 0%
    - [Hanterade aviseringar på Adobe Commerce: [!DNL MariaDB] aviseringar](/help/tools/managed-alerts-for-adobe-commerce/managed-alerts-on-magento-commerce-mariadb-alerts.md)
    - [Hanterade aviseringar för Adobe Commerce: [!DNL Apdex] varningsmeddelande](/help/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce-apdex-warning-alert.md)
    - [Hanterade varningar för Adobe Commerce: CPU-varningsmeddelanden](/help/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce-cpu-warning-alert.md)
-- Verktyget Kvalitetsuppdateringar {#quality-patches-tool}
+- Verktyget Kvalitetspatchar {#quality-patches-tool}
    - [[!DNL Quality Patches Tool]: Ett självbetjäningsverktyg för korrigeringar av kvalitet](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)
    - [[!DNL Quality Patches Tool]: Sök efter patchar ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
    - [Användning](quality-patches-tool/usage.md)
@@ -766,9 +766,11 @@ ht-degree: 0%
          - [ACSD-6411: Åtgärdar felet InvalidArgumentException: Klassen finns inte när kapslade villkor anges för en produktkomponent i  [!DNL Page Builder]](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-60/acsd-64111-fixes-issue-where-invalidargumentexceptionclass-does-not-exist-error-occurs-in-vendor-magento-module-rule-model-conditionfactoryphp50-when-setting-nested-conditions-for-a-product-component-in-page-builder.md)
          - [ACSD-63992: [!UICONTROL Cart Price Rule] med villkorsfel för kupong och leveransmetod i Admin UI](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-60/acsd-63992-admin-ui-cart-rule-shipping-method.md)
       - v1.1.61 {#v1-1-61}
+         - [ACSD-64546: Allmänt felmeddelande i användargränssnittet och Array till strängkonverteringsundantag när UPS-etiketter skapas](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acsd-64546-generic-error-message-in-ui-and-array-to-string-conversion.md)
          - [Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.61](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/overview.md)
          - [ACP2E-3689: Flera problem med kategoriträdvisning på djupare nivåer och spegling av ankarrelationer/icke-ankarrelationer](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acp2e-3689-issues-with-category-tree-display-reflect-anchor-non-anchor-relationships.md)
          - [ACSD-64178: Sidan [!UICONTROL Edit Attribute Set] läses in långsamt med tusentals produktattribut](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acsd-64178-attribute-set-edit-page-loads-slow-with-thousands-of-attributes.md)
+         - [ACSD-63974: Korrigerar långsam [!UICONTROL Requisition List] inläsningstid med sidnumrering](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acsd-63974-fixes-the-issue-where-the-requisition-list-page-takes-a-long-time.md)
    - [Leta efter Adobe Commerce-problem med verktyget för kvalitetskorrigeringar](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
 - Referens för kommandoradsverktyg {#cli-reference}
    - [Adobe Commerce (lokalt)](reference/commerce-on-premises.md)
@@ -795,7 +797,7 @@ ht-degree: 0%
    - [Fliken Säkerhet](observation-for-adobe-commerce/security-tab.md)
    - [Fliken Infra](observation-for-adobe-commerce/oac-infra.md)
    - [Så här använder du Observation for Adobe Commerce](observation-for-adobe-commerce/how-to-use.md)
-- Datamigreringsverktyget {#data-migration}
+- Datamigreringsverktyg {#data-migration}
    - [Så fungerar migrering](data-migration-tool/how-migration-works.md)
    - [God praxis](data-migration-tool/best-practices.md)
    - [Version som stöds](data-migration-tool/supported-versions.md)
@@ -815,7 +817,7 @@ ht-degree: 0%
       - [Uppföljning](data-migration-tool/migrate-data/follow-up.md)
       - [Data som kräver manuell migrering](data-migration-tool/migrate-data/manual.md)
       - [Steg efter datamigrering](data-migration-tool/migrate-data/post-migration.md)
-   - Resurser {#resources}
+   - Resurs {#resources}
       - [Felsökning](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
       - [Ändra](https://github.com/magento/data-migration-tool/blob/2.4/CHANGELOG.md)
 - [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
