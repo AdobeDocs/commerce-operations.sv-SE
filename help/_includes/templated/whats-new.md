@@ -1,7 +1,7 @@
 ---
-source-git-commit: fb08fb139e975d6f8d0837a5370fed531ee97e0f
+source-git-commit: 1046e6e1f5cc5acee8a8ceb28518207223ab7a1d
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '723'
 ht-degree: 0%
 
 ---
@@ -10,6 +10,26 @@ ht-degree: 0%
 ## Nyheter
 
 Den här sidan innehåller de ändringar som har gjorts under de senaste 60 dagarna. Vi utelämnar alla mindre uppdateringar, som kopieringsredigering, från den här listan.
+
+### 7 april 2025
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Uppdaterade <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/uct">UCT CLI-referensen</a>.</p>
+</td>
+      <td>teknisk</td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/492e669787d4acd46789190b8afcf5b9e60ac6b6">492e66</a> (spara)</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 4 april 2025
 
@@ -423,46 +443,6 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
 </td>
       <td>teknisk</td>
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/8c45d89c610a5b319352d202057d010b0450c848">8c45d8</a> (spara)</td>
-    </tr>
-  </tbody>
-</table>
-
-### 7 februari 2025
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Lade till den <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63090-deleting-product-from-admin-empties-the-shopping-cart">detaljerade beskrivningen av problemet som åtgärdats med korrigeringsfilen ACSD-63090 i QPT 1.1.58-utgåvan</a></p>
-</td>
-      <td>new-topic</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/69881c628311a8306166f0375834898f9b006584">69881c</a> (spara)</td>
-    </tr>
-  </tbody>
-</table>
-
-### 6 februari 2025
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Beskrivning</th>
-      <th>Typ</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Lade till den <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-58/acsd-63329-date-and-time-attributes-arent-set-when-creating-products-with-the-rest-api">detaljerade beskrivningen av problemet som åtgärdats av korrigeringsfilen ACSD-63329 i QPT 1.1.58-utgåvan</a></p>
-</td>
-      <td>new-topic</td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/3a86e6771c42c49416cc45321dc77f55c56e7d95">3a86e6</a> (spara)</td>
     </tr>
   </tbody>
 </table>
