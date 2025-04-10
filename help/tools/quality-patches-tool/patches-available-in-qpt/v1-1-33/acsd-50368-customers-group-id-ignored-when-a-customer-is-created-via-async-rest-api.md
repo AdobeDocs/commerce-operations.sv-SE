@@ -1,16 +1,21 @@
 ---
-title: 'ACSD-50368: Customer group_id is ignore when a customer is created via Async REST API or Async Bulk REST API'
+title: 'ACSD-50368: Kundgrupp_ID ignoreras när en kund skapas via Async REST API eller Async Bulk REST API'
 description: Använd korrigeringsfilen ACSD-50368 för att åtgärda Adobe Commerce-problemet där customer group_id ignoreras när en kund skapas via Async REST API eller Async Bulk REST API.
 feature: REST
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: 1ca78717-2144-4410-a398-764864ee182f
+source-git-commit: 9039635038bee9083fa3ed009e79c76e3655b357
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '413'
 ht-degree: 0%
 
 ---
 
 # ACSD-50368: Kundgrupp_ID ignoreras när en kund skapas via Async REST API eller Async Bulk REST API
+
+>[!NOTE]
+>
+>ACSD-50368-korrigeringen är delvis borttagen eftersom det här problemet åtgärdas med den obligatoriska säkerhetspatchen [APSB25-08](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08) för versioner över 2.4.4.
 
 Korrigeringen ACSD-50368 åtgärdar ett problem där customer group_id ignoreras när en kund skapas via Async REST API eller Async Bulk REST API. Den här korrigeringen är tillgänglig när [[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.33 är installerad. Korrigerings-ID är ACSD-50368. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.7.
 
@@ -22,7 +27,7 @@ Korrigeringen ACSD-50368 åtgärdar ett problem där customer group_id ignoreras
 
 **Kompatibel med Adobe Commerce-versioner:**
 
-* Adobe Commerce (alla distributionsmetoder) 2.4.3 - 2.4.4-p4
+* Adobe Commerce (alla distributionsmetoder) 2.4.3 - 2.4.3-p3
 
 >[!NOTE]
 >
@@ -34,7 +39,7 @@ Kunderna group_id ignoreras när en kund skapas via Async REST API eller Async B
 
 <u>Förutsättningar</u>:
 
-Konfigurera RabbitMQ för att bearbeta köer:
+Konfigurera RabbitMQ för processköer:
 
 ```
 bin/magento setup:config:set --amqp-host=services --amqp-port=5672 --amqp-user=guest --amqp-password=guest 
