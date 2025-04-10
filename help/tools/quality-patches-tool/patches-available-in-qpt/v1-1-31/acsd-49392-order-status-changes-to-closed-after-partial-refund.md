@@ -1,16 +1,21 @@
 ---
-title: "ACSD-49392: Orderstatus ändras till stängd efter partiell återbetalning"
+title: 'ACSD-49392: Orderstatus ändras till stängd efter partiell återbetalning'
 description: Använd patchen ACSD-49392 för att åtgärda Adobe Commerce-problemet där orderstatusen ändras till stängd efter en partiell återbetalning av en paketerad produkt.
 feature: Orders
 role: Admin
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: e12cbf2d-219e-4cb5-a226-6c7ae4929549
+source-git-commit: 67e050b4ceccc3f30bf8cd49125525b2e8d8b0dd
 workflow-type: tm+mt
-source-wordcount: '410'
+source-wordcount: '425'
 ht-degree: 0%
 
 ---
 
 # ACSD-49392: Orderstatus ändras till stängd efter partiell återbetalning
+
+>[!NOTE]
+>
+>Korrigeringen ACSD-49392 ersattes med korrigeringen [ACSD-57003](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-46/acsd-57003-order-status-changed-to-complete-instead-of-processing) för versionerna 2.4.6-p7 till 2.4.6-p10.
 
 Korrigeringen ACSD-49392 åtgärdar ett problem där orderstatusen ändras till stängd efter en partiell återbetalning för en paketerad produkt. Den här korrigeringen är tillgänglig när [!DNL Quality Patches Tool (QPT)] 1.1.31 har installerats. Korrigerings-ID är ACSD-49392. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.7.
 
@@ -22,7 +27,7 @@ Korrigeringen ACSD-49392 åtgärdar ett problem där orderstatusen ändras till 
 
 **Kompatibel med Adobe Commerce-versioner:**
 
-* Adobe Commerce (alla distributionsmetoder) 2.3.7 - 2.3.7-p4 och 2.4.1 - 2.4.6
+* Adobe Commerce (alla distributionsmetoder) 2.3.7 - 2.3.7-p4 och 2.4.1 - 2.4.6-p6
 
 >[!NOTE]
 >
