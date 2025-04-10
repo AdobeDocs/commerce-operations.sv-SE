@@ -1,16 +1,21 @@
 ---
-title: 'ACSD-52133: Kundkontot kan inte sparas efter en uppgradering'
+title: 'ACSD-52133: Kundkonto kan inte sparas efter en uppgradering'
 description: Använd patchen ACSD-52133 för att åtgärda Adobe Commerce-problemet där ett kundkonto inte kan sparas efter en uppgradering.
 feature: Customers, Upgrade
 role: Admin
-source-git-commit: 809defe75d7b218d8085f85ff815472a531040cf
+exl-id: 4a0e6ed8-3e35-40ce-bb49-8ccfcde437a0
+source-git-commit: 82667023bbaa9d725eb52dacb8bd47042bdfe028
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '399'
 ht-degree: 0%
 
 ---
 
 # ACSD-52133: Kundkonto kan inte sparas efter en uppgradering
+
+>[!NOTE]
+>
+>Den här korrigeringen har tagits bort på grund av en konflikt med säkerhetspatchen [APSB25-08](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08).
 
 Korrigeringen ACSD-52133 åtgärdar ett problem där ett kundkonto inte kan sparas efter en uppgradering. Den här korrigeringen är tillgänglig när [!DNL Quality Patches Tool (QPT)] 1.1.35 har installerats. Korrigerings-ID är ACSD-52133. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.7.
 
