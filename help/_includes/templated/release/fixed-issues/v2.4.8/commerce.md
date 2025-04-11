@@ -1,7 +1,7 @@
 ---
-source-git-commit: 3f6776e5dbbf167bbb7b4f831f9a7d4cfbfc0b74
+source-git-commit: 2f8ca1dd3289c1a24e33198c95d38c1a04a507ff
 workflow-type: tm+mt
-source-wordcount: '28398'
+source-wordcount: '28394'
 ht-degree: 0%
 
 ---
@@ -9,15 +9,15 @@ ht-degree: 0%
 
 ## Åtgärdade problem i v2.4.8
 
-Vi har åtgärdat 582-problem i Adobe Commerce 2.4.8-kärnkoden. En deluppsättning av de åtgärdade problemen som ingår i den här versionen beskrivs nedan.
+Vi har åtgärdat 582 problem i Adobe Commerce 2.4.8 Core-koden. En deluppsättning av de åtgärdade problemen som ingår i den här versionen beskrivs nedan.
 
 ### API:er
 
 * _AC-10042_: /V1/operations REST API returnerar fel när parent_txn_id = txn_id
    * _Korrigera anteckning_: Systemet hanterar nu transaktioner för det överordnade och underordnade konceptet korrekt där det överordnade transaktions-ID:t är detsamma som transaktions-ID:t, vilket förhindrar en oändlig loop när en fråga ställs till REST API-slutpunkten för /V1/transaktioner. Tidigare skulle detta scenario resultera i ett allvarligt fel på grund av att den maximala körningstiden överskrids.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/1bafc571>
-* _AC-11878_: [Problem med Graphql-typ] i 2.4.7
-   * _Åtgärdsmeddelande_: Systemet hanterar nu heltalsvärden korrekt i funktionen GetCustomSelectedOptionAttributes när en GraphQL-fråga körs, vilket förhindrar typrelaterade fel. Tidigare resulterade start av en GraphQL-fråga som använde GetCustomSelectedOptionAttributes med ett heltalsargument i ett typfel.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/1bafc571>
+* _AC-11878_: [Graphql] Typproblem i 2.4.7
+   * _Korrigera anteckning_: Systemet hanterar nu heltalsvärden korrekt i funktionen GetCustomSelectedOptionAttributes när en GraphQL-fråga körs, vilket förhindrar typrelaterade fel. Tidigare uppstod ett typfel när en GraphQL-fråga som använde GetCustomSelectedOptionAttributes med ett heltalsargument startades.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38662>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/38663>
 * _AC-3223_: Specialtecken i kategori url_key (när de skapas via REST API)
@@ -25,7 +25,7 @@ Vi har åtgärdat 582-problem i Adobe Commerce 2.4.8-kärnkoden. En deluppsättn
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/35577>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/c699c206>
 * _ACP2E-2703_: REST API visar order från en annan webbplats. 
-   * _Åtgärdsmeddelande_: Systemet har nu stöd för auktoriserad åtkomst för REST API-administratörstoken och Magento_Sales-slutpunkter, vilket säkerställer att REST API endast visar beställningar som administratören har åtkomst till. Tidigare visades beställningar från alla webbplatser i REST-API:t, oavsett vilken webbplats administratörsanvändaren tilldelat.
+   * _Korrigera anteckning_: Systemet stöder nu scopeauktoriserad åtkomst för REST API-administratörstoken och Magento_Sales-slutpunkter, vilket säkerställer att REST API endast visar order som administratören har åtkomst till. Tidigare visades beställningar från alla webbplatser i REST-API:t, oavsett vilken webbplats administratörsanvändaren tilldelat.
 * _ACP2E-2755_: Problem med rest api efter aktivering av 2FA Duo
    * _Korrigera anteckning_: 2FA med Duo-säkerhetsalternativ genererar nu korrekt signatur för Rest API
    * _GitHub-kodbidrag_: <https://github.com/magento/security-package/commit/412fa642>
@@ -40,17 +40,17 @@ Vi har åtgärdat 582-problem i Adobe Commerce 2.4.8-kärnkoden. En deluppsättn
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/9af794a4>
 * _ACP2E-3091_: [Cloud] Skapar kundgruppen Duplicera webbplatsens grupppris i Tier Prices API.
    * _Korrigera anteckning_: Nu går det inte att skapa kundgruppen Duplicera webbplatsens grupppris i .
-Tidigare var det möjligt att skapa kundgruppen Duplicera webbplatsgrupppris i API:et för nivåpriser som inte klarade valideringen i Admin när produkten sparades.
+Tidigare var det möjligt att skapa kundgruppen Duplicera webbplatsens grupppris i Tier Prices API som inte klarade valideringen i Admin när produkten sparades.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/148c3ead>
 * _ACP2E-3130_: Det går inte att lägga till orderkommentar med status via REST API
    * _Korrigera anteckning_: Problemet har lösts genom att ändra orderstatus om det endast är från det aktuella läget. Tidigare respekterade den inte orderstatus och förhindrade ändringar i orderstatus, även om den kom från samma läge.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/93d50f8d>
 * _ACP2E-3236_: Async-åtgärden misslyckas när SKU saknas i nyttolasten
-   * _Åtgärdsmeddelande_: Asynkrona åtgärder och synkroniseringsåtgärder misslyckades tidigare på grund av produktsparfel om SKU saknas i nyttolasten. Efter korrigeringen misslyckas de asynkrona och synkroniserade rest-API:erna för att spara produkten med ett relevant undantagsmeddelande.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/66dea0de>
-* _ACP2E-3376_: [CLOUD] Det går inte att uppdatera baspriserna med REST API (Värdet för &#39;value_id&#39; i &#39;catalog_product_entity_decimal&#39; ökas inte korrekt.)
-   * _Fix note_: Tidigare till denna korrigering, när rest api /rest/default/V1/products/base-prices anropades, ökades inkrement-id felaktigt vilket lämnade ett gap mellan värdena. Efter korrigeringen ökas öknings-ID:t som förväntat, inkrementellt. Även value_id fältområde ökades.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/d50f6b5d>
+   * _Korrigera anteckning_: Async- och sync-åtgärder misslyckades tidigare på grund av produktsparningsfel om sku saknas i nyttolasten. Efter korrigeringen misslyckas åtgärderna för asynkron och synkroniserad produkt för att spara rest-API med relevant undantagsmeddelande.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/66dea0de>
+* _ACP2E-3376_: [CLOUD] Det går inte att uppdatera baspriserna med REST API (värdet för &#39;value_id&#39; i &#39;catalog_product_entity_decimal&#39; ökas inte korrekt.)
+   * _Korrigera anteckning_: Tidigare i den här korrigeringen ökade ökningen av kostnadsöknings-ID när rest api /rest/default/V1/products/base-prices anropades felaktigt så att det fanns ett mellanrum mellan värdena. Efter korrigeringen ökas det stegvisa ID:t stegvis. Fältintervallet value_id har också ökats.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/d50f6b5d>
 * _ACP2E-3460_: Orderartiklar är inte synliga i e-postmeddelanden med kreditnotor för API POST V1/order/:orderId/reserve
    * _Korrigera anteckning_: Tidigare, före den här korrigeringen, fanns det inget rutnät för produktinformation när en kund skapade en kreditnota från en API-begäran som meddelar send_email. När den här korrigeringen har tillämpats skickar kunden en begäran om kreditnota-API och hittar produktartikelinformationen i e-postmeddelandet.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/3f12d152>
@@ -60,8 +60,8 @@ Tidigare var det möjligt att skapa kundgruppen Duplicera webbplatsgrupppris i A
 
 ### API:er, kundvagn och utcheckning
 
-* _ACP2E-3343_: Kritiskt 500-fel: Magento\Framework\Webapi\Exception relaterat till att acceptera HTTP-huvud
-   * _Fix note_: Efter korrigeringen är det inget problem med att ange rubriken &quot;Accept&quot;.
+* _ACP2E-3343_: Kritiskt 500-fel: Magento\Framework\Webapi\Exception relaterat till Acceptera HTTP-huvud
+   * _Korrigera anteckning_: Efter korrigeringen finns det inget problem med att ange rubriken&quot;Godkänn&quot;.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/1366ae5e>
 
 ### API:er, GraphQL
@@ -76,19 +76,19 @@ Tidigare var det möjligt att skapa kundgruppen Duplicera webbplatsgrupppris i A
 
 ### Konto
 
-* _AC-10782_: Formulär för kundadress tillåter slumpmässig kod i namnfälten
-   * _Fix-anteckning_: Systemet validerar nu inmatningen i fälten Förnamn och Efternamn i kundadressformuläret, vilket förhindrar användning av slumpmässig kod. Tidigare tillät systemet att slumpmässig kod användes i dessa fält utan att något fel uppstod.
+* _AC-10782_: Kundadressformuläret tillåter slumpmässig kod i namnfälten
+   * _Korrigera anteckning_: Systemet validerar nu indata i fälten Förnamn och Efternamn i kundadressformuläret, vilket förhindrar att slumpmässig kod används. Tidigare tillät systemet att slumpmässig kod användes i dessa fält utan att något fel uppstod.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38331>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/pull/38345>
-* _AC-10886_: Uppdatering av administratörslösenord.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/38345>
+* _AC-10886_: Uppdatera administratörslösenord.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38352>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/4bca5dfe>
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/4bca5dfe>
 * _AC-10990_: mitt konto lägger till en adress som kraschar när jag sparar
    * _Korrigera anteckning_: Systemet sparar nu kundadresser korrekt även när regionsfältet inte visas, vilket förhindrar en krasch under sparningsprocessen. Tidigare uppstod ett undantagsfel om du försöker lägga till eller redigera en adress utan ett fält som visas.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38406>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/38407>
 * _AC-11718_: Omdirigeringsslinga när URL har versaler
-   * _Fix note_: Systemet konverterar nu automatiskt versaler i URL:er till gemener, vilket förhindrar en omdirigeringsloop när du öppnar hemsidan. Tidigare skulle en omdirigeringsslinga uppstå om det fanns versaler i URL:en för den säkra basen när du försökte komma åt hemsidan.
+   * _Korrigera anteckning_: Systemet konverterar nu automatiskt versaler i URL:er till gemener, vilket förhindrar en omdirigeringsslinga vid åtkomst till hemsidan. Tidigare skulle en omdirigeringsslinga uppstå om det fanns versaler i URL:en för den säkra basen när du försökte komma åt hemsidan.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38538>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/38539>
 * _AC-11755_: middlename(s) har inte sparats för gästkonton
@@ -139,8 +139,8 @@ Tidigare var produkterna som lagts till i jämförelselistan som gästanvändare
 ### Konto, administratörsgränssnitt, B2B
 
 * _ACP2E-3038_: Begränsade administratörsanvändare kan inte alltid se anpassade delade kataloger
-   * _Fix note_: Begränsade adminanvändare kan nu konsekvent visa och hantera kunder och alla delade kataloger som produkterna är tilldelade, förutsatt att de har tillgång till den specifika butiken. Tidigare kunde en begränsad administratörsanvändare med åtkomst till en viss butik inte alltid se alla delade kataloger som produkterna var tilldelade till eller kunde se kunder som inte kunde spara, vilket ledde till inkonsekvenser i systemet.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/7377de59>
+   * _Korrigera anteckning_: Begränsade administratörsanvändare kan nu konsekvent visa och hantera kunder och alla delade kataloger som produkterna är tilldelade till, förutsatt att de har tillgång till den specifika butiken. Tidigare kunde en begränsad administratörsanvändare med åtkomst till en viss butik inte alltid se alla delade kataloger som produkterna var tilldelade eller se kunder som inte kunde spara, vilket ledde till inkonsekvenser i systemet.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/7377de59>
 
 ### Konto, kundvagn och utcheckning
 
@@ -159,9 +159,9 @@ Tidigare var produkterna som lagts till i jämförelselistan som gästanvändare
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/31231>
 * _AC-11588_: Datavalideringen är klar och knappen Importera finns under Importera produkter med beteendet Ersätt
    * _Korrigera anteckning_: Systemet validerar data korrekt och döljer knappen Importera under produktimportprocessen med beteendet Ersätt, vilket förhindrar oavsiktlig ersättning av data. Tidigare validerades data felaktigt och knappen Importera visades, vilket kan leda till inkonsekventa data.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/0574ac23>
-* _AC-12167_: [Buggen] Magento 2.4.7 tillåter inte filändelsen produktfoton med stor bokstav.
-   * _Åtgärdsmeddelande_: Systemet accepterar nu uppladdningar av produktbilder med filändelser med versaler, vilket säkerställer en smidig process för att skapa produkter. Tidigare nekades bilduppladdningar med stora bokstäver, vilket tvingade användare att ändra filändelsen till gemener.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/0574ac23>
+* _AC-12167_: [Fel] Magento 2.4.7 tillåter inte produktfoton med filnamnstillägg i versaler.
+   * _Korrigera anteckning_: Systemet accepterar nu produktavbildningar med filtillägg i versaler, vilket ger en smidig process för att skapa produkter. Tidigare nekades bildöverföringar med filtillägg i versaler, vilket tvingade användarna att ändra filnamnstillägget till gemener.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38831>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/c8f87c25>
 * _AC-12319_: Dold listruta i rutnät med markeringsåtgärd (t.ex. Innehåll > Element > Sidor)
@@ -180,17 +180,17 @@ Tidigare var produkterna som lagts till i jämförelselistan som gästanvändare
 * _AC-13850_: Det finns ingen röd asterisk för obligatoriskt telefonnummerfält
    * _Korrigera anteckning_: Tidigare röd asterisk visades inte för telefonnummer, men  telefonnummer var obligatoriskt. Nu är den röda asterisken lagrad och kan ses som ett obligatoriskt fält på telefonnumret.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/c699c206>
-* _AC-14300_: I Admin När vi försöker ändra ordningen går det inte att klicka på knappen för att skicka beställning. (intermittent)
-* _AC-6975_: [Problem] : Ställ in standardindexerarläget på &quot;schema&quot;
+* _AC-14300_: Det går inte att klicka på knappen Skicka order i Admin när vi försöker ändra ordning. (intermittent)
+* _AC-6975_: [Problem] Ange standardindexeringsläget till &quot;schedule&quot;
    * _Korrigera anteckning_: Alla nya indexerare är som standard i **[!UICONTROL Update by Schedule]**-läge.  Tidigare var standardläget **[!UICONTROL Update on Save]**. Befintliga indexerare påverkas inte. [GitHub-36419](https://github.com/magento/magento2/issues/36419)
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/36419>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/0b410856>
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/0b410856>
 * _AC-7700_: [Utgåva] Ta bort indexerarändringstabeller när mview-prenumerationen avbryts
    * _Korrigera anteckning_: Systemet tar nu automatiskt bort oanvända ändringstabeller när ett index ändras från &quot;uppdatera enligt schema&quot; till &quot;uppdatera vid spara&quot;, vilket markerar indexet som ogiltigt för att säkerställa att inga poster missas. Om du tidigare växlade ett index till&quot;update on save&quot; skulle oanvända ändringsloggtabeller i systemet utelämnas och alla ändrade index markeras som&quot;valid&quot;.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/29789>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/25859>
-* _AC-7962_: Ingen länk till frakt vid betalningar i kassan i mobiltelefonvyn
-   * _Fixnotering_: Systemet ser nu till att kassatitlarna/länkarna &quot;Frakt&quot; och &quot;Granskning och betalningar&quot; alltid är synliga högst upp på sidan i mobilvyn, vilket gör att användare enkelt kan navigera mellan steg och göra nödvändiga korrigeringar. Tidigare var dessa titlar/länkar dolda i mobilvyn, vilket gjorde det svårt för användare att känna till sitt aktuella steg eller gå tillbaka till föregående steg.
+* _AC-7962_: Ingen länk till leverans vid betalning i kassan i mobiltelefonvyn
+   * _Korrigera anteckning_: Systemet ser nu till att utcheckningsrubrikerna/länkarna &quot;Leverans&quot; och &quot;Granska och betalningar&quot; alltid visas ovanpå sidan i mobilvyn, så att användarna enkelt kan navigera mellan stegen och göra nödvändiga korrigeringar. Tidigare var dessa titlar/länkar dolda i mobilvyn, vilket gjorde det svårt för användarna att ta reda på det aktuella steget eller gå tillbaka till tidigare steg.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/36856>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/36982>
 * _AC-8109_: Leveranskommentarer för kundbeställningar som skapas_at returneras i +0-tidszon som inte finns i den butikskonfigurerade tidszonen
@@ -201,7 +201,7 @@ Tidigare var produkterna som lagts till i jämförelselistan som gästanvändare
    * _Korrigera anteckning_: Kommandot `bin/magento i18n:collect-phrases -o` samlar nu in och lägger till nya fraser från JavaScript- och .phtml-filer korrekt, vilket säkerställer att översättningarna återspeglas korrekt i översättningsfilen. Tidigare kunde systemet inte inkludera flerradiga översättningsfraser från JavaScript-filer och fraser från .phtml-filer i översättningsfilen, vilket ledde till ofullständiga eller felaktiga översättningar.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/0c53bbf7>
 * _ACP2E-2687_: Behörighetsproblem för åtkomst till dynamiskt block
-   * _Åtgärdsmeddelande_: Tidigare för begränsad administratör uppstod ett fel när du lade till ett nytt dynamiskt block. Efter att ha implementerat den här korrigeringen kan den begränsade administratören lägga till det dynamiska blocket och redigera blocket utan några fel
+   * _Korrigera anteckning_: Tidigare för begränsad administratör som lade till ett nytt dynamiskt block uppstod ett fel. Efter implementeringen av den här korrigeringsbegränsade administratören kan lägga till det dynamiska blocket och redigera blocket utan fel
 * _ACP2E-2787_: Apostrofen i butiksvyns namn ersätts av &#39;
    * _Korrigera anteckning_: Stödrastrets visningsfilter visar nu apostrofer korrekt
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38395>
@@ -210,7 +210,7 @@ Tidigare var produkterna som lagts till i jämförelselistan som gästanvändare
    * _Korrigera anteckning_: Filverifieringsfelet har uppdaterats till &quot;Filverifieringen misslyckades. Kontrollera inställningarna för bildbearbetning i Store-konfigurationen.&quot; Tidigare var det bara&quot;Filvalidering misslyckades&quot;.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/39d54c2d>
 * _ACP2E-2957_: Galleriet i PageBuilder visar en gammal miniatyrbild i stället för den nyligen överförda bilden
-   * _Åtgärdsmeddelande_: Återskapa förhandsgranskningar av bilder som raderats och laddats upp på nytt med samma namn via mediegalleriet i sidbyggarens innehåll.
+   * _Korrigera anteckning_: Generera om förhandsvisningar av bilder för bilder som har tagits bort och överförts med samma namn via mediegalleriet i sidbyggarinnehållet.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2-page-builder/commit/60140cd2>, <https://github.com/magento/magento2/commit/001e5188>
 * _ACP2E-2978_: Om du sparar produkten av en admin-användare med ett annat rollomfång skrivs befintlig relaterad produktinformation över/tas bort i produkten
    * _Korrigera anteckning_: Tidigare, före korrigeringen, återställdes de relaterade produkterna och blev tomma när den sekundära administratören klickade på knappen Spara utan att ändra i den relaterade produkten. Efter den här korrigeringen klickar den sekundära administratören på knappen Spara och produkten återställs inte och sparas utan fel.
@@ -230,24 +230,24 @@ Tidigare var produkterna som lagts till i jämförelselistan som gästanvändare
 * _ACP2E-3171_: COD är inte tillgängligt för tillåtna specifika länder
    * _Korrigera anteckning_: Nu kan du få kontanter vid leverans i vissa länder när det behövs och   AC-3216 fungerar som förväntat.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/6f4805f8>
-* _ACP2E-3178_: Det går inte att uppdatera status för anpassad beställning
-   * _Fix anteckning_: &#39;
-Vi kan nu uppdatera egenskapade orderstatusar, medan statusen tidigare bara kunde ändras om den aktuella statusen var antingen &quot;bearbetas&quot; eller &quot;bedrägeri&quot;.
+* _ACP2E-3178_: Det går inte att uppdatera status för anpassad skapad order
+   * _Korrigera anteckning_: &#39;
+Vi kan nu uppdatera beställningsstatus som har skapats av användaren, men tidigare gick det bara att ändra status om den aktuella statusen var antingen &quot;bearbetning&quot; eller &quot;bedrägeri&quot;.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38659>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/8459b17d>
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/8459b17d>
 * _ACP2E-3294_: Leveransadressläget uppdateras inte automatiskt
    * _Korrigera anteckning_: Före korrigeringen var leveransadressens region (eller region-id) inte synkroniserad med adressfaktureringsinformationen. Nu uppdateras både leveransadressens region och region-id korrekt när faktureringsadressinformationen ändras.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/581b7ef1>
 * _ACP2E-3364_: Knappen Återställ fungerar inte för Admin-användare för Lägg till/redigera
    * _Korrigera anteckning_: Tidigare fungerade inte knappen Återställ på sidan Lägg till/redigera admin-användare. På panelen Admin under System -> Behörigheter -> Alla användare fungerar nu knappen Återställ korrekt på sidan Lägg till/redigera admin-användare.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/5184c067>
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/5184c067>
 * _ACP2E-3373_: Magento Admin URL-routning för felidentifiering och CORS-fel
    * _Korrigera anteckning_: Om den anpassade administratörsdomänen är en underdomän till huvuddomänen är administratören bara tillgänglig från den konfigurerade underdomänen efter korrigeringen.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/37663>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/3f12d152>
 * _ACP2E-3392_: Bruten validering för &quot;Högsta tillåtna kvantitet i kundvagn&quot;
-   * _Fix note_: Tidigare, när vi satte `Maximum Qty Allowed in Shopping Cart` empty, utlöste det inget undantag, även om ett tomt värde inte accepteras här. När den här korrigeringen har tillämpats kommer det att uppstå undantag om du sätter en tom sträng och det går inte att spara produkten.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/d50f6b5d>
+   * _Korrigera anteckning_: Tidigare när `Maximum Qty Allowed in Shopping Cart` skulle vara tom utlöstes inget undantag, men ett tomt värde accepteras inte här. När den här korrigeringen har tillämpats genereras undantag när en tom sträng skickas och produkten kan inte sparas.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/d50f6b5d>
 * _AVS2E-3408_: [Gränssnittsproblem för förhandsgranskning i Page Builder] Knapparna i Page Builder-kolumnen är inte korrekt placerade
    * _Korrigera anteckning_: Knapparna i Page Builder-kolumnerna är nu korrekt justerade. Tidigare var de feljusterade i Page Builder-kolumnerna.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2-page-builder/commit/1a52ef4c>
@@ -320,14 +320,14 @@ Vi kan nu uppdatera egenskapade orderstatusar, medan statusen tidigare bara kund
 * _ACP2E-3080_: Admin Ordered Products Products Report date range visibility issue.
    * _Korrigera anteckning_: Användaren kan välja valfritt datum från rapporten för beställda produkter. När en tabell har uppdaterats återställs TO-datumet när du väljer FROM-datumet.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/6f4805f8>
-* _ACP2E-3096_: Felaktiga rullhuvuden som gör att newrelic:create:deploy-marker fungerar inte
-   * _Korrigera anteckning_: Systemet formaterar nu krullningshuvuden korrekt, så att kommandot newrelic:create:deploy-marker kan skapa en distributionsmarkör i New Relic. Tidigare kunde felaktiga rullrubriker inte skapa en distributionsmarkör i New Relic.
+* _ACP2E-3096_: Felaktiga rullrubriker gör att `newrelic:create:deploy-marker` inte fungerar
+   * _Korrigera anteckning_: Systemet formaterar nu krullningshuvuden korrekt, så att kommandot `newrelic:create:deploy-marker` kan skapa en distributionsmarkör i New Relic. Tidigare kunde felaktiga rullrubriker inte skapa en distributionsmarkör i New Relic.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/37641>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/6a185204>
 * _ACP2E-3146_: GTM-händelsen addToCart saknas i dataLayer för konfigurerbar produkt med anpassat alternativ
-   * _Åtgärdsmeddelande_: Tidigare utlöstes inte addToCart-händelsen för konfigurerbara produkter. Nu läggs händelsen till korrekt i GTM-dataLayer-variabeln.
-* _ACP2E-3183_: NewRelic-webbläsarövervakning inlineJS-skript orsakar CSP-fel
-   * _Fix note_: NewRelic Browser Monitoring-skript injiceras nu av applikationen istället för APM-agenten för överensstämmelse med CSP (Content Security Policy). Tidigare var NewRelic Browser Monitoring-skript som matades in av APM-agenten inte kompatibla med CSP och gjorde att skripten inte kördes.
+   * _Korrigera anteckning_: Tidigare utlöstes inte händelsen addToCart för konfigurerbara produkter. Händelsen läggs nu till korrekt i GTM-datalagrets variabel.
+* _ACP2E-3183_: NewRelic-webbläsarövervakning av inlineJS-skript orsakar CSP-fel
+   * _Korrigera anteckning_: Skript för övervakning av nya webbläsare har nu injicerats av programmet i stället för APM-agenten för kompatibilitet med CSP (Content Security Policy). Tidigare var de NewRelic Browser Monitoring-skript som injicerades av APM-agenten inte kompatibla med CSP och orsakade att skripten inte kördes.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/66dea0de>
 * _ACP2E-3189_: INSERT-frågor i registret sales_bestsellers_aggregate_day blir långsamma i projekt med stora försäljningsordervolymer
    * _Korrigera anteckning_: Tidigare tog det lång tid att generera en rapport från de bästsäljare som aggregerade den dagliga rapporten för stora mängder placerade order. Nu genereras rapporten i tid.
@@ -390,25 +390,25 @@ Tidigare tillagd produkt i kundvagn resulterade i felet &#39;ingen sådan entite
 
 * _AC-9607_: Det går inte att filtrera företagsstödrastret och sedan försöka exportera stödraster-CSV:n. Undantag genereras
    * _Korrigera anteckning_: Systemet tillåter nu lyckad CSV-export av företagsrutnätsdata på adminpanelen, även när filter som Utgående balans och Företagstyp tillämpas. Om du tidigare tillämpade vissa filter och försökte exportera stödrasterdata skulle det resultera i ett fel och ett undantag genereras.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/44cef3a9>
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/44cef3a9>
 
 ### B2B, GraphQL
 
-* _ACP2E-3391_: [Molnet] kan inte ställa in custom_attributes när företaget skapas via graphql-anropet
-   * _Fix note_: Efter korrigeringen är det möjligt att ställa in attributet &quot;custom_attributes&quot; för företagsadministratören när företaget skapas med hjälp av graphql-begäran.
+* _ACP2E-3391_: [Cloud] Det går inte att ange custom_attributes när ett företag skapas över grafikanropet
+   * _Korrigera anteckning_: Efter korrigeringen kan du ange attributet &quot;custom_attributes&quot; för företagsadministratören när företaget skapas med hjälp av graphql-begäran.
 
 ### Braintree
 
-* _AC-14293_: Knappen för snabbutcheckning för admin är inaktiverad.
+* _AC-14293_: Knappen för administratörsExpress är inaktiverad.
 * _BUNDLE-3367_: Betala via LPM
-   * _Fixeringsmeddelande_: Systemet återger nu lokala betalningsmetoder (LPM) korrekt vid första laddningen, även när en inloggad kunds leverans- och faktureringsadresser inte stämmer överens, vilket säkerställer en smidig utcheckningsprocess. Tidigare kunde en felmatchning mellan en kunds leverans- och faktureringsadresser hindra LPM från att renderas, vilket orsakade potentiella störningar i kassan.
-* _BUNDLE-3368_: Konfigurerbar med virtuell som underordnad produkt
-   * _Fix note_: Systemet tillåter nu expressbetalningsmetoder för konfigurerbara produkter som har en virtuell barnprodukt, vilket säkerställer en smidig kassaprocess. Tidigare var expressbetalningsmetoder inte tillgängliga när en konfigurerbar produkt med en virtuell underordnad produkt lades till i kundvagnen.
-* _BUNDLE-3369_: CVV-verifiering misslyckades
-* _BUNDLE-3370_: Problem med valv via kontoområdet 247
-   * _Åtgärdsmeddelande_: Systemet gör det nu möjligt för kunder att spara ny kort- eller PayPal-kontoinformation på flera webbplatser utan att stöta på auktoriseringsfel. Tidigare kunde kunder inte spara nya betalningsmetoder på olika webbplatser och fick ett auktoriseringsfelmeddelande.
-* _BUNDLE-3371_: Skicka till en adress från ett annat land
-   * _Fix note_: Systemet tillåter nu att transaktioner behandlas utan fel när du skickar till en adress från ett annat land, vilket säkerställer en smidig kassaprocess. Tidigare skulle försök att leverera till en adress från ett annat land resultera i konsolfel, trots att det inte finns några synliga fel på klientsidan.
+   * _Korrigera anteckning_: Systemet återger nu LPM (Local Payment Methods) korrekt vid första inläsningen, även när en inloggad kunds frakt- och faktureringsadresser inte stämmer, vilket ger en smidig utcheckningsprocess. Tidigare var det fel på kundens leverans- och faktureringsadresser som förhindrar LPM-återgivning, vilket kan orsaka störningar vid utcheckningen.
+* _BUNDLE-3368_: Kan konfigureras med virtuell som underordnad produkt
+   * _Korrigera anteckning_: Systemet tillåter nu expressbetalningsmetoder för konfigurerbara produkter som har en virtuell underordnad produkt, vilket ger en smidig utcheckningsprocess. Tidigare var expressbetalningsmetoder inte tillgängliga när en konfigurerbar produkt med en virtuell underordnad produkt lades till i kundvagnen.
+* _BUNDLE-3369_: Fel vid CVV-verifiering
+* _BUNDLE-3370_: Vaulting Via kontoområdet Issues 247
+   * _Åtgärda anteckning_: Nu kan kunder spara ny kortinformation eller PayPal-kontoinformation på flera webbplatser utan att stöta på auktoriseringsfel. Tidigare kunde kunderna inte spara nya betalningsmetoder på olika webbplatser och fick ett felmeddelande om auktorisering.
+* _BUNDLE-3371_: Leverera till en adress från ett annat land
+   * _Korrigera anteckning_: Systemet tillåter nu att transaktioner behandlas utan fel när de skickas till en adress från ett annat land, vilket ger en smidig utcheckningsprocess. Tidigare skulle försök att leverera till en adress från ett annat land resultera i konsolfel, trots att det inte finns några synliga fel på klientsidan.
 * _BUNDLE-3372_: Kreditkort - Teardown-funktion
    * _Korrigera anteckning_: Systemet hanterar nu rippningen av Braintree PayPal-komponenter korrekt när en kund går tillbaka från betalningssidan till leveranssidan, vilket förhindrar fel och säkerställer att PayPal Express-knapparna återges korrekt. Tidigare uppstod ibland ett fel när Braintree PayPal-komponenterna skulle kapas ned när du navigerade tillbaka till leveranssidan från betalningssidan.
 * _BUNDLE-3373_: Leveransåteranrop för PayPal Express
@@ -459,11 +459,11 @@ Tidigare tillagd produkt i kundvagn resulterade i felet &#39;ingen sådan entite
 * _AC-12479_: Kryssrutan Villkor tillåter inte HTML i butiken
    * _Korrigera anteckning_: Systemet har nu stöd för HTML-formatering i kryssrutan &quot;Villkor&quot; i butiken, vilket ger förbättrad anpassning och läsbarhet. Tidigare visades kryssrutetexten i oformaterad text, och eventuella HTML-taggar som användes ignorerades.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/6cfb9b6b>
-* _AC-12541_: Prisregel för kundvagn som skapats för inloggad användare tillämpas felaktigt för användare som inte är inloggad
+* _AC-12541_: En kundprisregel som skapats för inloggad användare tillämpas felaktigt för användare som inte är inloggad
    * _Korrigera anteckning_: Systemet tar nu bort kundprisregeln för inloggade användare korrekt när de loggas ut automatiskt på grund av att cookie-filen har upphört att gälla, vilket säkerställer att rabatten inte tillämpas på användare som inte är inloggade. Tidigare tillämpades kundvagnsprisregeln även när användaren var utloggad, vilket resulterade i att en felaktig rabatt tillämpades på icke-inloggade användare.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38944>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/7d5e3906>
-* _AC-13302_: [Utgåva] [FUNKTION] Prestandaoptimering av stora kundvagnar genom att förhindra...
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/7d5e3906>
+* _AC-13302_: [Utgåva] [FUNKTION] Prestandaoptimering av stora kundvagnar genom att förhindra..
    * _Korrigera anteckning_: Systemet optimerar nu prestanda för stora kundvagnar genom att förhindra dubbla getActions-anrop, vilket ökar hastigheten och effektiviteten i kundvagnsåtgärder. Tidigare anropades funktionen getActions flera gånger för en kundvagn med flera artiklar, vilket saktade ned systemets prestanda.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/39292>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/39290>
@@ -509,7 +509,7 @@ Tidigare tillagd produkt i kundvagn resulterade i felet &#39;ingen sådan entite
    * _Korrigera anteckning_: Systemet sparar nu en ny kundadress endast en gång om beställningen inte kunde skapas, vilket förhindrar att flera identiska adresser skapas i händelse av orderplaceringsfel. Tidigare sparade systemet en ny adress varje gång ett orderplaceringsförsök gjordes, oavsett om ordern skapades eller inte.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/001e5188>, <https://github.com/magento/inventory/commit/2ebcef39>
 * _ACP2E-3004_: Om du ändrar ordningen på kundorder via gästbeställningsformulär blir kundvagnen tom
-   * _Fixnotering_: Tidigare, när kunden gjorde en ny beställning via sidan Beställningar och returer, omdirigerades kunden till inloggningssidan. När den här korrigeringen har tillämpats omdirigeras den registrerade kunden korrekt till sidan Visa kundvagn när han eller hon gör en ny beställning. Flödet fungerar på samma sätt som gästkunder.
+   * _Korrigera anteckning_: Tidigare omdirigerades kunden till inloggningssidan när en ombeställning placerades via sidan Beställningar och returnering. När den här korrigeringen har tillämpats omdirigeras den registrerade kunden korrekt till sidan Visa kundvagn när en ombeställning görs. Flödet fungerar på samma sätt som gästkunder.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/6a185204>
 * _ACP2E-3025_: Administratörsanvändare med begränsade rollresurser kan inte visa varukorgar
    * _Korrigera anteckning_: Tidigare kunde den begränsade administratören inte se den övergivna kundvagnen från adminpanelen för en associerad webbplats. När den här korrigeringen har tillämpats kan administratören se den övergivna kundvagnen på adminpanelen.
@@ -560,9 +560,9 @@ Tidigare tillagd produkt i kundvagn resulterade i felet &#39;ingen sådan entite
    * _Korrigera anteckning_: Datumväljaren visas nu korrekt för alla datumfält när en produkt konfigureras med flera anpassningsbara datumalternativ i processen för att skapa administratörsorder. Tidigare visades datumväljaren bara för det första datumfältet, och återstående fält lämnades utan datumväljare.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/b21e5d91>
 
-### Varukorg och Kassa, Frakt
+### Kundvagn och utcheckning, leverans
 
-* _AC-12119_: Omedelbart köp &quot;billigaste frakt&quot; brutet för konfigurerbara produkter
+* _AC-12119_: Direktköp -&quot;billigaste leveransen&quot; brutet för konfigurerbara produkter
    * _Korrigera anteckning_: Funktionen Direktköp har felaktigt valt det dyrare alternativet för leverans i butik för konfigurerbara produkter i stället för den billigaste metoden med schablonbelopp. Med den här programfixen kan du säkerställa att rätt leveranssätt väljs baserat på det faktiska priset.&quot;
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38811>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/38819>, <https://github.com/magento/magento2/commit/29fe9097>
@@ -582,15 +582,15 @@ Tidigare tillagd produkt i kundvagn resulterade i felet &#39;ingen sådan entite
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38622>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/38623>
 * _AC-11970_: Det går inte att ordna om konfigurerbara produkter med en kryssruta markerad som anpassat alternativ
-   * _Åtgärdsmeddelande_: Systemet bearbetar nu korrekt ombeställning av konfigurerbara produkter med ett enda markerat anpassat kryssrutealternativ, vilket gör det möjligt att skapa varukorgen. Tidigare resulterade försök att beställa om sådana produkter i ett fel och förhindrade att varor lades till i kundvagnen.
+   * _Korrigera anteckning_: Systemet bearbetar nu korrekt omsorteringen av konfigurerbara produkter med ett enda anpassat kryssrutealternativ, vilket gör att korgen kan skapas. Tidigare uppstod ett fel när sådana produkter skulle sorteras om och artiklarna kunde inte läggas till i kundvagnen.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38736>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/1d144bce>
 * _AC-12076_: [Problem] Åtgärda formuleringen för filterobjektet vid navigering i lager
    * _Korrigera anteckning_: Systemet använder nu orden&quot;objekt&quot; och&quot;objekt&quot; korrekt i det lageruppbyggda navigeringsfilterobjektet, vilket gör filterbeskrivningarna tydligare och exaktare. Tidigare användes dessa ord felaktigt, vilket kan skapa förvirring för användare som navigerar i filteralternativen.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38789>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/pull/37852>
-* _AC-12164_: Datum- och tidsformat för anpassat alternativ fungerar inte
-   * _Åtgärdsmeddelande_: Systemet tillämpar nu det konfigurerade datumformatet korrekt på produktanpassade alternativ av typen Datum, vilket säkerställer att datumformatet visas korrekt på frontend. Tidigare återspeglades inte ändringar i konfigurationen av datumformatet i klientdelen för anpassade produktalternativ av typen Datum.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/37852>
+* _AC-12164_: Formatet Datum och tid för det anpassade alternativet fungerar inte
+   * _Korrigera anteckning_: Systemet tillämpar nu korrekt det konfigurerade datumformatet på anpassade produktalternativ av typen Datum, vilket säkerställer att datumformatet visas korrekt på frontsidan. Tidigare speglade inte ändringar i datumformatskonfigurationen på frontend för anpassade produktalternativ av typen Date.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/32990>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/38925>
 * _AC-13068_: Listrutealternativ saknas
@@ -604,13 +604,13 @@ Tidigare tillagd produkt i kundvagn resulterade i felet &#39;ingen sådan entite
    * _Korrigera anteckning_: Systemet accepterar nu ett booleskt värde korrekt när alternativet —no-update används i kommandot sample data:deploy, vilket förhindrar fel under distributionen av exempeldata. Tidigare uppstod ett fel när det här kommandot användes eftersom ett heltalsvärde felaktigt förväntades.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/39344>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/39345>
-* _AC-13355_: [Problem: Åtgärda] användning av EAV-cachetyp
-   * _Fix note_: Systemet använder nu EAV-cachetypen korrekt på alla relevanta platser, vilket säkerställer konsekvent och effektiv datacachelagring. Tidigare användes inte EAV-cachetypen konsekvent, vilket ledde till potentiell ineffektivitet och inkonsekvenser i cachelagringen av data.
+* _AC-13355_: [Problem] Korrigera användningen av EAV-cachetypen
+   * _Korrigera anteckning_: Systemet använder nu EAV-cachetypen korrekt på alla relevanta platser, vilket ger en konsekvent och effektiv datacachelagring. Tidigare användes EAV-cachetypen inte konsekvent, vilket ledde till ineffektivitet och inkonsekvenser i datacachningen.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/32322>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/31264>
-* _AC-13596_: Avancerad katalogsökning med tomma data går till sökresultatsidan[2.4.dev grenen]
-   * _Åtgärdsmeddelande_: Systemet behåller nu användare på sidan Avancerad sökning och visar ett felmeddelande när de försöker utföra en sökning utan att ange några data. Tidigare omdirigerades användarna till sidan Avancerad sökning i katalogen med ett meddelande som uppmanade dem att ändra sin sökning.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/6cfb9b6b>
+* _AC-13596_: Katalogsökning med tomma data går till sökresultatsidan[2.4.dev-grenen]
+   * _Korrigera anteckning_: Systemet behåller nu användare korrekt på sidan Avancerad sökning och visar ett felmeddelande när de försöker utföra en sökning utan att ange några data. Tidigare omdirigeras användare till sidan Avancerad sökning i katalog med ett meddelande som uppmanar dem att ändra sökningen.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/6cfb9b6b>
 * _AC-13622_: [Utgåva] Produktlayout baserad på attribute_set
    * _Korrigera anteckning_: Systemet tillåter nu att produktlayouten justeras baserat på attributuppsättningen, vilket ger ett mer praktiskt och effektivt sätt att hantera produktvisningen i klientbutiken. Tidigare kunde layouten bara justeras av SKU eller efter produkttyper, vilket inte alltid var praktiskt för många produkter eller specifika artiklar.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38790>
@@ -620,28 +620,28 @@ Tidigare tillagd produkt i kundvagn resulterade i felet &#39;ingen sådan entite
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/24718>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/28796>
 * _AC-8297_: [Issue] Använd synlighetsklassen för kategoriproduktindexeraren i stället för hårdkodade värden
-   * _Korrigera anteckning_: Systemet använder nu synlighetsklassen för kategoriproduktindexeraren i stället för hårdkodade värden, vilket förbättrar modulariteten. Tidigare användes hårdkodade värden i kategorin produktindexerare, vilket begränsade flexibilitet och anpassningsförmåga.
+   * _Korrigera anteckning_: Systemet använder nu synlighetsklassen för kategoriproduktindexeraren i stället för hårdkodade värden, vilket förbättrar modulariteten. Tidigare användes hårdkodade värden i kategoriproduktindexeraren, vilket begränsade flexibiliteten och anpassningsbarheten.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/37200>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/37199>
 * _AC-9375_: Valutakoden ändras inte i widgeten Ny produkt
    * _Korrigera anteckning_: Systemet uppdaterar nu valutakoden korrekt i widgeten Ny produkt när valutan ändras i förgrunden, vilket ger en konsekvent valutavisning på hela webbplatsen. Tidigare påverkades inte valutakoden som visades i widgeten Ny produkt om du ändrade valutan i klientdelen.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/37898>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/pull/37899>
-* _ACP2E-2224_: Ordinarie pris visas inte på PLP för konfigurerbar produkt
-   * _Fix-anteckning_: Ordinarie pris visas nu på produktlistningssidor för konfigurerbara produkter som har underordnade produkter med specialpris.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/a4fbf702>
-* _ACP2E-2478_: Lagerinformation visas inte rätt i Visual Merchandising-rutnätet
-   * _Åtgärdsmeddelande_: Lager visas nu enligt vald butik.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/inventory/commit/bdbf97ea>
-* _ACP2E-2621_: Widgetens innehåll uppdateras inte på cms-sidan
-   * _Fixnotering_: Systemet uppdaterar nu widgetinnehållet på en CMS-sida när en produkt ställs in som ny och sparas, vilket säkerställer att sidan visar den uppdaterade produktsamlingen. Tidigare uppdaterades inte sidan för att visa den nya produkten på grund av felaktiga cacheidentiteter som användes för widgeten i cacheminnet.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/f89a447e>
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/37899>
+* _ACP2E-2224_: Normalpriset visas inte på PLP för konfigurerbar produkt
+   * _Korrigera anteckning_: Normalpriset visas nu på produktlistsidor för konfigurerbara produkter som har underordnade produkter med specialpris.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/a4fbf702>
+* _ACP2E-2478_: Stock-information visas inte korrekt på Visual Merchandising-rutnät
+   * _Korrigera anteckning_: Stock visas nu enligt vald butik.
+   * _GitHub-kodbidrag_: <https://github.com/magento/inventory/commit/bdbf97ea>
+* _ACP2E-2621_: Widget-innehåll uppdateras inte på cms-sidan
+   * _Korrigera anteckning_: Systemet uppdaterar nu widgetinnehållet på en CMS-sida när en produkt är inställd som ny och sparad, så att den uppdaterade produktsamlingen visas på sidan. Tidigare uppdaterades inte sidan för att visa den nya produkten på grund av de felaktiga cacheidentiteter som användes för widgeten i cachen.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/f89a447e>
 * _ACP2E-2630_: Problem med att spara avancerade priser på paketprodukter
    * _Korrigera anteckning_: Prestandaförbättring för produktsparande.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/b2286ecf>
 * _ACP2E-2652_: [On-Premise] Indexeringsprocessen är ineffektiv när regler för katalogpris skapas
    * _Korrigera anteckning_: Om du nu sparar katalogprisregel blir indexerare inte ogiltiga, utan indexerar bara om berörda produkter
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/f89a447e>
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/f89a447e>
 * _ACP2E-2679_: Uppdaterar tid för produktattribut av typen Datum och Tid via CSV-import
    * _Korrigera anteckning_: Nu datum- och tidsattribut kommer att ha en tidsdel i exporterade data. Det går också att uppdatera tiden för sådana attribut med import. Om Fältbilaga är aktiverat kommer attributvärden i kolumnen &quot;additional_attributes&quot; att omslutas av dubbla citattecken.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38306>
@@ -651,9 +651,9 @@ Tidigare tillagd produkt i kundvagn resulterade i felet &#39;ingen sådan entite
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/39d54c2d>
 * _ACP2E-2785_: Produktbilden förloras efter att en befintlig schemalagd uppdatering som inte påverkar bilden har tagits bort
    * _Korrigera anteckning_: Produktbilder tas inte bort när mellanlagringsuppdateringen tas bort.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/c8931218>
-* _ACP2E-2799_: [Fel produktpris för molnpaket] när det används med nivåpriser
-   * _Fix-anteckning_: Tidigare vid beräkning av vissa procentuella rabatter avrundade uppåt till 2 decimaler genererade olika slutpriser för kundvagnen och produktlistningssidan/produktinformationssidan. När den här korrigeringen har tillämpats är det slutliga priset för paketprodukten detsamma som på produktinformationssidan, produktlistningssidan och minikundvagnssidan.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/c8931218>
+* _ACP2E-2799_: [Cloud] Fel produktpris för paket när det används med nivåpriser
+   * _Korrigera anteckning_: Tidigare genererades olika slutpriser för kundvagnen och produktlistningssidan/produktinformationssidan när vissa procentuella rabatter avrundade uppåt till 2 decimaler skulle beräknas. När den här korrigeringen har tillämpats är slutpriset för paketprodukten detsamma som på produktinformationssidan, produktlistningssidan och minikundvagnssidan.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38091>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/b2286ecf>
 * _ACP2E-2805_: Katalogkampanjregeln fungerar inte med attributet quantity_and_stock_status
@@ -666,22 +666,22 @@ Tidigare tillagd produkt i kundvagn resulterade i felet &#39;ingen sådan entite
 * _ACP2E-2840_: Det går att ange icke-unika värden via produktimport
    * _Korrigera anteckning_: Systemet använder nu den unika värdebegränsningen för unika produktattribut vid import, vilket förhindrar dubblettvärden för det attributet. Tidigare var det möjligt att ange icke-unika värden för produktattribut som konfigurerats att ha unika värden via produktimport.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38445>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/7e0e5582>
-* _ACP2E-2843_: Produkter på frontend använder lagringsspecifika data när Single-Store Mode är aktiverat
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/7e0e5582>
+* _ACP2E-2843_: Produkter på klientsidan lagrar specifika data när Single-Store-läge är aktiverat
    * _Korrigera anteckning_: Tidigare migrerades inte ändringarna till webbplatsnivå när vi aktiverade läget för en enskild butik för standardbutiksvyn. När den här korrigeringen har tillämpats synkroniseras standardarkivspecifika data med data på webbplatsnivå när läget för en enskild butik aktiveras, och eventuella konflikter för produkter och kategorier kommer att lösas.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/c8931218>
 * _ACP2E-2857_: Det går inte att ange &quot;Default Sort By&quot; i en kategori med det övriga API:t
-   * _Fix note_: Uppdatera korrekt default_sort_by på en kategori via REST / SOAP APi-begäran
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/57a32313>
-* _ACP2E-2871_: [Molnet] Handlaren står inför problem med antal önskelistor
-   * _Åtgärdsmeddelande_: Att lägga till en produkt i önskelistan i en butik ökar inte längre antalet önskelistor i andra butiker som är öppna i samma webbläsare. Tidigare, om båda butikerna laddades i samma webbläsare, skulle antalet önskelistor öka även i den andra butiken.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/3a7c4d17>
+   * _Korrigera anteckning_: Uppdatera korrekt default_sort_by för en kategori via REST/SOAP APi-begäran
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/57a32313>
+* _ACP2E-2871_: [Cloud] Affärsmannen har problem med önskelisteantal
+   * _Korrigera anteckning_: Om du lägger till en produkt i önskelistan i en butik ökar inte längre antalet önskelistor i andra butiker som är öppna i samma webbläsare. Tidigare hade antalet önskelistor ökat även i den andra butiken om båda butikerna lästs in i samma webbläsare.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/3a7c4d17>
 * _ACP2E-2874_: Kategorisidan i förgrunden visar tomma platser när paketprodukten används
    * _Korrigera anteckning_: Paketprodukter som inte kan säljas i den aktuella butikskontexten indexeras inte längre.
    * _GitHub-kodbidrag_: <https://github.com/magento/inventory/commit/bc37ec76>
-* _ACP2E-2888_: [FÖRTYDLIGANDE] Problem med paketproduktsekvenstabell
-   * _Åtgärdsmeddelande_: Posterna i tabellerna för produktsekvenser för paket (sequence_product_bundle_option, sequence_product_bundle_selection) tas nu bort när alternativen för produktpaket tas bort eller alternativ för paketprodukt tas bort.
-Tidigare togs inte posterna i tabellerna för produktsekvenser i paket bort.
+* _ACP2E-2888_: [CLARIFICATION] Problem i produktsekvensregister för paket
+   * _Korrigera anteckning_: Posterna i produktsekvenstabellerna (sequence_product_bundle_option, sequence_product_bundle_selection) tas nu bort när paketprodukten tas bort eller Paketproduktalternativen tas bort.
+Tidigare togs posterna i produktsekvenstabellerna i Bundle inte bort.
 * _ACP2E-2905_: [Cloud] Utfärdande av offert i arkitektur för flera webbplatser
    * _Korrigera anteckning_: Tidigare kunde inte arkitekturen för flera webbplatser med olika valutor och kundgrupper tillämpa rabatter på butiken korrekt. När den här korrigeringen har implementerats kommer flerwebbplatsarkitekturen med olika kundgruppsprisrabatter att gälla för olika butiker.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38506>
@@ -715,7 +715,7 @@ Tidigare togs inte posterna i tabellerna för produktsekvenser i paket bort.
    * _Korrigera anteckning_: Systemet tar nu bort paketalternativen korrekt utan att utlösa ett fel eller få sidan att sluta svara. Om du tidigare försökte ta bort paketalternativen skulle det resultera i felet&quot;Sidan svarar inte&quot; och förhindra att produkten sparas.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/6a185204>
 * _ACP2E-3094_: Kategoribehörigheter i webbläsaren för slut på minne
-   * _Åtgärda:_ Användargränssnittet för kategoribehörigheter har gjorts om för att tillåta återgivning av en stor mängd behörigheter med hjälp av en färdig gränssnittskomponent och sidnumrering. Tidigare kunde kategoribehörigheter få webbläsaren att krascha med en stor mängd behörigheter tilldelade till kategorin.
+   * _Korrigera anteckning_: Gränssnittet för kategoribehörigheter har omdesignats så att det går att återge ett stort antal behörigheter med hjälp av gränssnittskomponent och sidnumrering som inte ingår i rutan. Tidigare kategoribehörigheter kan få webbläsaren att krascha med ett stort antal behörigheter som tilldelats kategorin.
 * _ACP2E-3100_: [Cloud] Bildfilen finns inte i New Relic fellogg
    * _Korrigera anteckning_: Systemet synkroniserar nu anpassade platshållarbilder till lokal lagring så att de återges korrekt när du använder fjärrlagring som AWS S3. Tidigare kunde inte anpassade platshållarbilder återges när fjärrlagring användes, vilket resulterade i en trasig bildvisning och felloggar.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/d1f7dc95>
@@ -727,22 +727,22 @@ Tidigare togs inte posterna i tabellerna för produktsekvenser i paket bort.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/37671>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/b21e5d91>
 * _ACP2E-3136_: [Underkategoriobjekt i molnet] visas inte i widgetredigeringen på administratörens serverdel
-   * _Fixnotering_: Kategoriträdet på den nya widgetsidan bör inte längre ha problem med att ladda kategorier på nivå 5+. Tidigare saknades vissa kategorier vid inläsning av trädet förbi kategori 5 på nivå 5.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/148c3ead>
-* _ACP2E-3198_: [problem med att zooma och flytta i molnet] med två fingrar på den riktiga mobila enheten
-   * _Fix note_: Systemet säkerställer nu konsekvent bildzoomfunktionalitet på mobila enheter, vilket ger en smidig och förutsägbar användarupplevelse. Tidigare var funktionen för bildzoomning inkonsekvent och skulle plötsligt zoomas ut efter en viss punkt när den visades på en mobil enhet.
+   * _Korrigera anteckning_: Kategoriträdet på den nya widgetsidan bör inte längre ha problem med att läsa in kategorierna Nivå 5+. Tidigare saknades vissa kategorier när trädet lästes in efter kategorierna Nivå 5.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/148c3ead>
+* _ACP2E-3198_: [cloud] Problem med zoomning och flyttning med två fingrar på den faktiska mobila enheten
+   * _Korrigera anteckning_: Systemet garanterar nu konsekvent bildzoomning på mobila enheter, vilket ger en smidig och förutsägbar användarupplevelse. Tidigare var funktionen för bildzoomning inkonsekvent och skulle plötsligt zoomas ut efter en viss punkt när den visades på en mobil enhet.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/1366ae5e>
 * _ACP2E-3282_: När vi frigör produkter från den delade katalogen rensas inte önskelisteprodukterna
    * _Korrigera anteckning_: Nu visas inga objekt i önskelistan om en produkt inte är tillgänglig i den delade katalogen. Tidigare visade önskelistsidan felaktigt antalet &quot;1 objekt&quot; även när det inte fanns några objekt i önskelistan.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/5184c067>
-* _ACP2E-3286_: Relaterade produkter Välj alla/Avmarkera alla problem
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/5184c067>
+* _ACP2E-3286_: Samhörande produkter Markera alla/Avmarkera alla problem
    * _Korrigera anteckning_: Tidigare fungerade inte knapparna Markera alla/Avmarkera alla för relaterade produkter korrekt om en produkt valdes manuellt. Efter korrigeringen fungerar knapparna nu konsekvent, även efter det manuella valet, så att alla produkter markeras eller avmarkeras korrekt.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/fd5cf3af>
 * _ACP2E-3336_: [Cloud] Stock-aviseringsöversättning till fel språk
    * _Korrigera anteckning_: När du skickar butiks-/prisaviseringar för en webbplats med flera butiksvyer på olika språk används språket för butiksvyn där aviseringen skapades i e-postmeddelandet.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/a4cf5e62>, <https://github.com/magento/inventory/commit/9f3e63d1>
-* _ACP2E-3350_: Inaktiverade kategorier har inte längre sina namn nedtonade i kategoriträdet
-   * _Fixnotering_: Tidigare var inaktiverade kategorier inte nedtonade i kategoriträdet. Nu visas de med en gråskaleeffekt.
+* _ACP2E-3350_: Namnet på de inaktiverade kategorierna är inte längre nedtonat i kategoriträdet
+   * _Korrigera anteckning_: Tidigare var inaktiverade kategorier inte nedtonade i kategoriträdet. Nu visas de med en gråskaleeffekt.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/d75cff27>
 * _ACP2E-3410_: Inläsning av konfigurerbara redigeringsformulär orsakar timeout och minnesöverbelastning
    * _Korrigera anteckning_: Före korrigeringen konstruerades konfigurerbara produktvariationer baserat på alla möjliga kombinationer av attributalternativ. I de fall där attributen hade många alternativ resulterade detta i en långsam och resurskrävande åtgärd. Nu kan du konstruera produktvariationer utifrån befintliga underordnade produktattribut. Detta resulterar i betydligt färre beräkningar, vilket innebär en förbättrad resursanvändning.
@@ -755,7 +755,7 @@ Tidigare togs inte posterna i tabellerna för produktsekvenser i paket bort.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/078c387e>
 * _ACP2E-3469_: Verifieringsfel utlöstes för alla produkter i gruppen när en har en ogiltig kvantitet
    * _Korrigera anteckning_: Nu utlöses valideringsfelet korrekt för alla produkter i gruppen när en produkt har en ogiltig kvantitet, vilket inte hände tidigare.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/56463d5e>
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/56463d5e>
 * _ACP2E-3513_: [CLOUD] Specialpriset visas inte i den konfigurerbara produkten
    * _Korrigera anmärkning_: Efter korrigeringen påverkas inte visningen av specialpriset för konfigurerbara produkter om du ändrar värdet &quot;Används i produktlista&quot; för specialprisattributet.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/d4de4726>
@@ -768,7 +768,7 @@ Tidigare togs inte posterna i tabellerna för produktsekvenser i paket bort.
 * _ACP2E-3533_: Prestandaproblem i hämtning av lagerkvantitet för grupperade produkter med flera källor
    * _Korrigeringsanteckning_: Redigeringssidan för grupperad produkt och paketprodukt är nu optimerad när tilldelade produkter har ett stort antal lagerkällor.
    * _GitHub-kodbidrag_: <https://github.com/magento/inventory/commit/0208e433>
-* _ACP2E-3641_: Åtgärda https://jira.corp.adobe.com/browse/ACP2E-3389
+* _ACP2E-3641_: Refix https://jira.corp.adobe.com/browse/ACP2E-3389
    * _Korrigera anteckning_: Förbättrade prestanda för administratörskategorisidan vid ett stort antal ankarkategorier
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/982b1c42>
 
@@ -787,28 +787,28 @@ Tidigare togs inte posterna i tabellerna för produktsekvenser i paket bort.
 ### Katalog, Framework
 
 * _AC-9111_: Order get(Shipments|Creditmemos|Invoice)Collection - Samlingen ska inte läsas in
-   * _Åtgärdsmeddelande_: Systemet säkerställer nu att samlingarna för leveranser och kreditnotor inte är förinstallerade när de hämtas från en order, vilket gör att ytterligare filter eller beställningar kan tillämpas på dessa samlingar. Tidigare lästes dessa samlingar in automatiskt, vilket förhindrade ytterligare ändringar.
+   * _Korrigera anteckning_: Systemet ser nu till att samlingarna för försändelser och kreditnotor inte är förinlästa när de hämtas från en order, vilket gör att ytterligare filter eller order kan tillämpas på dessa samlingar. Tidigare lästes dessa samlingar in automatiskt, vilket förhindrar ytterligare ändringar.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/37561>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/37562>
 * _ACP2E-2949_: [Cloud]Uppföljning: Felmatchning i datajämförelse vid kontroll av om data har ändrats
-   * _Korrigera anteckning_: Tidigare anropades objektet save varje gång utan dataändringar (för numeriska datafält, till exempel int/float/double). Den utlöser flaggan _hasDataChanges till true och anropar funktionen save. Den kontrollerar inte heller de flytande talen som är inkapslade med sträng. När den här korrigeringen har tillämpats kommer spara-funktionen endast att anropa om data ändras. Datavärdet för int/float/double-check med värdet som skickas till funktionen och gör strikt typmatchning
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/c8931218>
+   * _Korrigera anteckning_: Tidigare anropades objektet save varje gång utan dataändringar (för numeriska datafält, till exempel int/float/double). Den utlöser flaggan _hasDataChanges till true och anropar funktionen save. Den kontrollerar inte heller de flytande talen som är inkapslade med sträng. När den här korrigeringen har tillämpats anropas funktionen spara bara om data har ändrats. Datavärdet för int/float/double check med värdet som skickas till funktionen och utför strikt typmatchning
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/c8931218>
 
 ### Katalog, GraphQL
 
 * _ACP2E-3090_: Hantera kategorifilter i GraphQL: includeDirectChildrenOnly och category_uid
-   * _Fix-anteckning_: Endast de direkta underordnade kategorierna hämtas vid filtrering efter category_uid.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/93d50f8d>
-* _ACP2E-3166_: [Sortering av Cloud] Graphql-produkter fungerar inte
-   * _Åtgärdsmeddelande_: GraphQl Product sortering efter flera fält när fälten skickas i variabler fungerar nu som förväntat.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/8459b17d>
-* _ACP2E-3312_: Nivåpriser returnerar fel värde i produkternas GraphQL (jämfört med Storefront)
-   * _Fix note_: Efter korrigeringen har produktens nivåpriser som returneras för graphql-begäranden pris per en artikel.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/1366ae5e>
+   * _Korrigera anteckning_: Endast direkt underordnade kategorier hämtas vid filtrering efter category_uid.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/93d50f8d>
+* _ACP2E-3166_: [Cloud] Graphql Product sorting fungerar inte
+   * _Korrigera anteckning_: Produktsortering för GraphQl efter flera fält när fälten skickas i variabler fungerar nu som förväntat.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/8459b17d>
+* _ACP2E-3312_: Tier Prices returnerar fel värde i GraphQL-produkter (jämfört med Storefront)
+   * _Korrigera anteckning_: Efter korrigeringen har produktskiktspriserna som returnerats för grafikförfrågningar priset per ett objekt.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/1366ae5e>
 * _ACP2E-3385_: [CLOUD] B2B: kategoriproblem via GraphQL
-   * _Fix note_: Efter korrigeringen returnerar categories graphql-frågan kategorier med tillåt-behörighet även om rotkategorin inte har tillåt-behörighet.
+   * _Korrigera anteckning_: Efter korrigeringen returnerar kategorifrågan kategorier med tillåten behörighet, även om rotkategorin inte tillåter behörighet.
 
-### Katalog, prissättning, iscensättning och förhandsgranskning
+### Katalog, priser, mellanlagring och förhandsvisning
 
 * _ACP2E-2672_: [Cloud] API-slutpunkten för specialpris returnerar ett fel när ett stort antal produkter uppdateras samtidigt
    * _Korrigera anteckning_: Nu skapas en kampanj för varje datumintervall i stället för flera schemalagda uppdateringar för varje produkt och datumintervall. Dessutom kommer det att stödja samtidiga API-begäranden för snabbare bearbetning av ett stort antal SKU:er.
@@ -833,18 +833,18 @@ Tidigare togs inte posterna i tabellerna för produktsekvenser i paket bort.
    * _Korrigera anteckning_: Tidigare fungerade inte attributet Yes/No med price_* attribute_code med indexering. Efter den här korrigeringen fungerar attributet Yes/No som förväntat.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/ba25af8a>
 * _ACP2E-3053_: [Cloud] Elastiskt sökfel på vissa kategorisidor
-   * _Fix note_: Tidigare, med konfigurationsbiljetten nämnd, när vi sätter pris 0 för flera produkter, kommer det att ge ett undantag på frontend-kategorisidan. Efter denna korrigering tillämpas när flera produktpriser 0 och vi laddar kategorisidan i frontend kommer det inte att kasta något undantag och kommer att ladda kategorisidan framgångsrikt.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/c8931218>
+   * _Korrigera anteckning_: Tidigare, med konfigurationsbiljetten angiven, utlöstes ett undantag på gruppkategorisidan när vi sätter priset 0 för flera produkter. När den här korrigeringen har tillämpats när flera produktpriser 0 och vi läser in kategorisidan direkt genereras inga undantag och kategorisidan läses in korrekt.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/c8931218>
 * _ACP2E-3345_: Typfel uppstod när objektet skapades: Magento\CatalogSearch\Model\Indexer\Fulltext\Interceptor Exception
    * _Korrigera anteckning_: Efter korrigeringen kan en instans av klassen Magento\CatalogSearch\Model\Indexer\Fulltext skapas utan att $data anges.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/1366ae5e>
-* _ACP2E-3521_: [CLOUD-problem] med produkter är inte synliga i frontend efter att ha sparats i Magento Admin
+* _ACP2E-3521_: [CLOUD] Problem med produkter visas inte i Edge efter att de sparats i Magento Admin
    * _Korrigera anteckning_: Efter korrigeringen går det inte att missa konfigurerbara produkter med underordnade produkter med långa namn i butiken.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/1984c61c>
 
 ### Katalog, leverans
 
-* _ACP2E-3195_: Leveransadressen är tom när du beställer en artikel i presentregistret
+* _ACP2E-3195_: Leveransadressen är tom när en order för ett presentregisterobjekt läggs
    * _Korrigera anteckning_: Tidigare genererade en tom adress för presentregisterobjekt för gästanvändare när de returnerades från e-postfunktionen, vilket är felaktigt för att placera en order. När den här korrigeringen har tillämpats kontrollerar presentregistret inloggade användare/gästanvändare och tilldelade adresser om de finns.
 
 ### Cloud
@@ -870,7 +870,7 @@ Tidigare togs inte posterna i tabellerna för produktsekvenser i paket bort.
    * _Korrigera anteckning_: Systemet visar nu banderollbilder som överförts i nyligen skapade mappar i PageBuilder-galleriet korrekt, vilket eliminerar tidigare konsolfel. Före den här korrigeringen var banderollbilderna inte synliga i galleriet om de överfördes till en ny mapp, vilket orsakade ett konsolfel.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/c8f87c25>
 * _AC-12283_: &quot;Riktnummer har inte angetts&quot; efter uppdatering till 2.4.5-p8
-   * _Åtgärdsmeddelande_: Systemet har nu slutfört distributionsprocessen för statiskt innehåll när Magento_CSP-modulen är aktiverad och &quot;dev/js/translate_strategy&quot; är inställt på &quot;embedded&quot;, utan att utlösa felet &quot;Riktnummer har inte angetts&quot;. Tidigare, under dessa förhållanden, misslyckades distributionsprocessen för statiskt innehåll med felet &quot;Riktnummer har inte angetts&quot;.
+   * _Korrigera anteckning_: Systemet slutför nu den statiska innehållsdistributionsprocessen när Magento_CSP-modulen är aktiverad och&quot;dev/js/translate_strategy&quot; är inställd på&quot;embedded&quot;, utan att utlösa felet&quot;Area code not set&quot;. Tidigare misslyckades den statiska innehållsdistributionsprocessen under dessa förhållanden med felet&quot;Ingen riktkod har angetts&quot;.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38845>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/38922>
 * _AC-12692_: Widget-kategoriträdet återges inte korrekt
@@ -891,9 +891,9 @@ Tidigare togs inte posterna i tabellerna för produktsekvenser i paket bort.
    * _Korrigera anteckning_: Wdigets renderas nu korrekt i dynamiska block.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/a12063bd>
 * _ACP2E-2606_: YouTube nocookie url fungerar inte i Page Builder
-   * _Fix note_: Nu tillåter pagebuilder youtube no-cookie url i formulärelementinställningarna för valideringsreglerna. Tidigare fungerade inte youtube-webbadressen utan cookie i pagebuilder.
-* _ACP2E-2693_: [Cloud] Frontend laddas inte på grund av problem i nyhetsbrevsmallen
-   * _Fix note_: Att lägga till block via CMS-sidans innehållsavsnitt leder inte längre till undantag
+   * _Korrigera anteckning_: Nu tillåter PageBuilder URL för youtube no-cookie i formulärelementinställningarna för verifieringsreglerna. Tidigare fungerar inte youtube no-cookie url i pagebuilder.
+* _ACP2E-2693_: [Cloud] Sidslut läses inte in på grund av problem i nyhetsbrevmallen
+   * _Korrigera anteckning_: Om du lägger till block via innehållsavsnittet på CMS-sidan leder detta inte längre till något undantag
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/ea79f7dd>
 * _ACP2E-2836_: ACP2E-2836: [Cloud] Ett undersökningsundantag hittades i loggen: InvalidArgumentException: Klassen finns inte i vendor/magento/module-rule/Model/ConditionFactory.php
    * _Korrigera anteckning_: Om du tar bort ett villkor i innehållsinställningarna för PageBuilder-produkter registreras inte längre ett undantag i loggfilerna. Om du tidigare tog bort ett villkor i innehållsinställningarna för PageBuilder-produkter skulle ett kritiskt undantag registreras i loggarna, trots att inga problem uppstod i förgrunden.
@@ -975,30 +975,30 @@ Tidigare togs inte posterna i tabellerna för produktsekvenser i paket bort.
 ### Ramverk
 
 * _AC-10037_: [Fråga]Oanvänd typkonfiguration i `app/code/Magento/Translation/etc/di.xml`
-   * _Fix note_: Systemet tar nu bort oanvända beroenden i konfigurationen, vilket förbättrar den övergripande kodrenheten och effektiviteten. Tidigare fanns det oanvända beroenden i konfigurationen som inte bidrog till några funktioner.
+   * _Korrigera anteckning_: Systemet tar nu bort oanvända beroenden i konfigurationen, vilket förbättrar den övergripande renheten och effektiviteten i koden. Tidigare fanns det oanvända beroenden i konfigurationen som inte bidrog till någon funktion.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38030>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/pull/38064>
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/38064>
 * _AC-10654_: V1/customers/password endpoint question/issue
    * _Korrigera anteckning_: Systemet följer nu de begränsningar som anges i det hanterings-GUI när begäranden om lösenordsändringar bearbetas via API:t, vilket förhindrar eventuellt missbruk av funktionen för lösenordsåterställning. Tidigare kunde API:t bearbeta begäranden om lösenordsändringar utanför de regler som definierats i det hanterade användargränssnittet, vilket eventuellt skulle möjliggöra en konstant ström av återställda e-postmeddelanden om giltiga e-postmeddelanden var kända.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38238>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/0c53bbf7>
 * _AC-10738_: Varnish-konfigurationen utesluter inte alla marknadsföringsparametrar
-   * _Fix note_: Systemet utesluter nu korrekt alla vanliga marknadsföringsparametrar i Varnish-konfigurationen, vilket säkerställer korrekt spårning och analys. Tidigare har vissa marknadsföringsparametrar som gned_source, srsltid och msclodd inte uteslutits, vilket kan leda till felaktiga datainsamlingar.
+   * _Korrigera anteckning_: Systemet exkluderar nu alla vanliga marknadsföringsparametrar korrekt i lack-konfigurationen, vilket ger korrekt spårning och analys. Tidigare har vissa marknadsföringsparametrar som gned_source, srsltid och msclodd inte uteslutits, vilket kan leda till felaktiga datainsamlingar.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38298>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/39188>
 * _AC-10838_: Indexeringsprocess för katalogsökindexprocessfel
    * _Korrigera anteckning_: Systemet slutför nu kommandot för omindexering utan att stöta på några fel, oavsett vilken libxml-version som kompilerats med PHP. Tidigare resulterade omindexeringskommandot i ett fel av typen&quot;Katalogsökindexprocessfel under indexeringsprocessen&quot; när PHP kompilerades med vissa versioner av libxml.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38254>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/pull/38553>, <https://github.com/magento/magento2/commit/0574ac23>
-* _AC-10941_: Lade till created_at-, status- och grand_total-filter i kundorderfrågan och åtgärdade fel med flera filter
-   * _Åtgärdsmeddelande_: Systemet stöder nu användningen av created_at-, status- och grand_total-filter i kundorderfrågor och har löst ett problem där flera filter inte tillämpades korrekt. Tidigare hade systemet inte stöd för dessa filter och kunde inte tillämpa alla filter när fler än ett användes i en fråga.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/38553>, <https://github.com/magento/magento2/commit/0574ac23>
+* _AC-10941_: Filtren created_at, status och total_total_total har lagts till i kundorderfrågan och flera filterfel har åtgärdats
+   * _Korrigera anteckning_: Systemet stöder nu användningen av filtren created_at, status och total_total i kundorderfrågor och har åtgärdat ett problem där flera filter inte tillämpades korrekt. Tidigare hade systemet inte stöd för dessa filter och kunde inte tillämpa alla filter när mer än ett användes i en fråga.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38392>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/36949>
 * _AC-10991_: Slumpmässigt översvämmas av frågor från relaterade block/merförsäljning/korsförsäljning och prisindexering
    * _Korrigera anteckning_: Systemet optimerar nu frågor från relaterade block, merförsäljning och korsförsäljning, vilket förbättrar prestanda och förhindrar att webbplatsen kraschar på grund av för många frågor. Tidigare kunde systemet bli överbelastat med frågor från de här blocken, vilket gjorde att det gick betydligt långsammare och kunde göra att webbplatsen inte fungerade som den skulle.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/36667>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/pull/38050>
-* _AC-11423_: Undantag: Varning: Försöker komma åt arrayoffset i... -> Calendar.php sedan uppgradering till ICU 74.1 (PHP Intl)
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/38050>
+* _AC-11423_: Undantag: Varning! Försöker få åtkomst till matrisförskjutning i.. -> Calendar.php sedan uppgradering till ICU 74.1 (PHP Intl)
    * _Korrigera anteckning_: Commerce loggar inte längre följande undantag i exception.log när en köpare eller handlare besöker antingen butiken eller administratören: `main.CRITICAL: Exception: Warning: Trying to access array offset on value of type null in /vendor/magento/framework/View/Element/Html/Calendar.php on line 114 in /vendor/magento/framework/App/ErrorHandler.php:62`. [GitHub-38214](https://github.com/magento/magento2/issues/38214)
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38214>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/38364>
@@ -1033,54 +1033,54 @@ Tidigare togs inte posterna i tabellerna för produktsekvenser i paket bort.
 * _AC-11809_: [Problem] Skicka anpassade attribut till den aktuella länken via XML
    * _Korrigera anteckning_: Systemet tillåter nu att anpassade attribut skickas till den aktuella länken via XML, vilket säkerställer att attributen visas korrekt även när länken är den aktuella sidan. Tidigare visades inte anpassade attribut för den aktuella sidlänken eftersom metoden getAttributesHtml() inte används för den aktuella länken.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38500>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/pull/30070>
-* _AC-11819_: Inbyggd FPC-cache är trasig i 2.4.7 för vissa konfigurationer
-   * _Fixnotering_: Systemet cachar nu sidor korrekt när MAGE_RUN_CODE-parametern är inställd, vilket säkerställer optimal prestanda. Tidigare cachecachade inte sidor under dessa förhållanden, vilket ledde till potentiella prestandaproblem.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/30070>
+* _AC-11819_: Inbyggt FPC-cacheminne har brutits i 2.4.7 för vissa konfigurationer
+   * _Korrigera anteckning_: Systemet cachelagrar nu sidor korrekt när parametern MAGE_RUN_CODE har angetts, vilket ger optimala prestanda. Tidigare cachelagrades inte sidor under dessa förhållanden, vilket ledde till potentiella prestandaproblem.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38626>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/pull/38646>, <https://github.com/magento/magento2/commit/0c53bbf7>
-* _AC-11829_: [Problem: Åtgärda] inkonsekvens i undantagshantering mellan utvecklar- och produktionslägen
-   * _Fix note_: Systemet hanterar nu konsekvent undantag mellan utvecklar- och produktionslägen, vilket förhindrar oväntad omdirigering till inloggningssidan när ett undantag utlöses. Tidigare kunde en inkonsekvens i undantagshanteringen orsaka en omdirigering till inloggningssidan i produktionsläge i stället för att visa undantagsmeddelandet.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/38646>, <https://github.com/magento/magento2/commit/0c53bbf7>
+* _AC-11829_: [Problem] Korrigera inkonsekvent hantering av undantag mellan utvecklare och produktionslägen
+   * _Korrigera anteckning_: Systemet hanterar nu konsekvent undantag mellan utvecklare och produktionsläge, vilket förhindrar oväntad omdirigering till inloggningssidan när ett undantag inträffar. Tidigare kunde en inkonsekvens i undantagshanteringen leda till en omdirigering till inloggningssidan i produktionsläge i stället för att visa undantagsmeddelandet.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38639>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/pull/37712>
-* _AC-11852_: Ersätt översättningen av &quot;PayPal konto&quot; i token_list.phtml
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/37712>
+* _AC-11852_: Ersätt översättning av PayPal-konto i token_list.phtml
    * _Korrigera anteckning_: Systemet etiketterar nu avsnittet för tokenanvändbara kontobetalningsmetoder som &quot;Konto&quot; i stället för &quot;PayPal-konto&quot; på sidan Lagrade betalningsmetoder, vilket gör det mer representativt för funktionen. Tidigare hette det här avsnittet särskilt&quot;PayPal Account&quot;, vilket var vilseledande när andra tokenliknande betalningsmetoder lades till.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/35622>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/37959>
 * _AC-11874_: Bakåtkompatibiliteten har förlorats i klassen Magento\Catalog\Model\ProductRepository
    * _Korrigera anteckning_: Klassen ProductRepository behåller nu bakåtkompatibilitet genom att återställa klassen Initialization Helper som den andra parametern, vilket säkerställer att moduler som utökas från den här klassen fungerar som förväntat. Tidigare ledde borttagningen av initieringshjälpen från konstruktorn i klassen ProductRepository till att bakåtkompatibiliteten gick förlorad, vilket tvingade användarna att använda en lösning.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38669>
-* _AC-11905_: [Problem] : Distribuera statiskt innehåll - Typfel
+* _AC-11905_: [Problem] vid distribution av statiskt innehåll - typfel
    * _Korrigera anteckning_: Systemet hanterar nu tomma LESS-filer korrekt under distributionen av statiskt innehåll och visar felmeddelandet&quot;LESS-filen är tom&quot;. Tidigare uppstod ett felaktigt typfel när en tom LESS-fil påträffades under distributionen.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38682>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/38683>
 * _AC-12002_: [Problem] [Visa] Extra utrymme i länk- och skripttagg har tagits bort
    * _Korrigera anteckning_: Systemet ser nu till att det inte finns några extra blanksteg i länk- och skripttaggarna, vilket ger en renare och mer effektiv kod. Tidigare gick det att hitta dubbla mellanslag mellan attribut i link- och script-taggarna.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/32920>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/pull/32919>
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/32919>
 * _AC-12127_: [Utgåva] Undvik en oändlig loop för felkonfiguration
    * _Korrigera anteckning_: Systemet undviker nu en oändlig loop genom att förhindra självrefererande mappning i virtuella typkonfigurationer. Detta garanterar att programmet inte fastnar i en oändlig slinga när ett försök görs att avreferera en självreferensnod. Tidigare, om en virtuell typkonfiguration var självrefererande, skulle det få programmet att snurra oändligt.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38822>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/38794>
 * _AC-12299_: Objekthanteraren används inte för Magento\Csp\Model\Mode\Data\ModeConfigured
-   * _Fix-anteckning_: Systemet använder nu objekthanteraren korrekt när objektet ModeConfigured skapas, vilket gör att plugins kan användas på det här objektet. Tidigare användes inte Object Manager, vilket förhindrade att plugin-program tillämpades på ModeConfigured-objektet.
+   * _Korrigera anteckning_: Systemet använder nu Object Manager korrekt när ModeConfiguring-objektet skapas, vilket tillåter att plugin-program används för det här objektet. Tidigare användes inte Object Manager, vilket förhindrar att plugin-program används i ModeConfiguring-objektet.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38875>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/pull/38886>
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/38886>
 * _AC-12540_: Felaktig dokumentblockkommentar i produktStock och prisaviseringar
-   * _Åtgärdsmeddelande_: Doc block-kommentaren för deleteCustomer-metoden i produktlager- och prisvarningarna har korrigerats för att korrekt återspegla att metoden tar bort alla lagerförda produkt- eller prisvarningar som är kopplade till en viss kund och webbplats, inte kunden från webbplatsen. Tidigare uppgav kommentaren felaktigt att metoden var för att ta bort en kund från webbplatsen.
+   * _Korrigera anteckning_: Dokumentblockkommentaren för metoden deleteCustomer i produktStock- och prisaviseringar har korrigerats för att korrekt återspegla att metoden tar bort alla aktie- eller prisaviseringar som är kopplade till en viss kund och webbplats, inte kunden från webbplatsen. Tidigare hade kommentaren felaktigt angett att metoden var att ta bort en kund från webbplatsen.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38939>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/pull/39001>
-* _AC-12594_: [Problem] : Använd kompilerad konfiguration för genererad data istället för allmän konfiguration
-   * _Åtgärdsmeddelande_: Systemet använder nu den kompilerade konfigurationen för genererad data i stället för den allmänna konfigurationen, vilket minskar nätverksöverföring och omkostnader för data som är beroende av en viss version av koden. Den här ändringen förhindrar att cachen åsidosätts i delade instanser under containerväxling, vilket leder till förbättrad stabilitet och minskad stilleståndstid. Tidigare använde vissa kärnklasser delad konfigurationstyp, vilket kunde leda till åsidosättning av cache eller programavbrott på grund av skillnader i kodversioner över flera servrar.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/39001>
+* _AC-12594_: [Problem] Använd kompilerad konfiguration för genererade data i stället för allmän konfiguration
+   * _Korrigera anteckning_: Systemet använder nu den kompilerade konfigurationen för genererade data i stället för den allmänna konfigurationen, vilket minskar nätverksöverföringen och belastningen på data som är beroende av en viss version av koden. Den här ändringen förhindrar åsidosättning av cache i delade instanser under behållarbyte, vilket leder till förbättrad stabilitet och minskad drifttid. Tidigare använde vissa huvudklasser en delad config-typ, vilket kan leda till att cache-lagring åsidosätts eller att programmet blir driftsavbrott på grund av skillnader i kodversioner mellan flera servrar.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38785>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/29954>
 * _AC-12597_: [Problem] Ta bort referenser till filer från filer som har tagits bort i e1ccdb..
    * _Korrigera anteckning_: Systemet tar nu bort referenser till filer från tidigare borttagna filer, vilket eliminerar fel i webbläsarens konsol och systemloggfilen. Tidigare orsakade dessa referenser fel på grund av att det inte fanns några refererade filer.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38960>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/pull/38951>
-* _AC-12778_: [Problem] Mindre rensning: fixade felaktig användning av sprintf, det tar bara 2 platshållare här och vi...
-   * _Fix note_: Systemet använder nu sprintf-funktionen korrekt med lämpligt antal platshållare, vilket förbättrar kodens renhet och konsekvens. Tidigare användes funktionen sprintf felaktigt med ett extra argument, vilket inte orsakade några större problem men inte var den korrekta användningen.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/38951>
+* _AC-12778_: [Utgåva] Mindre rensning: korrigerad felaktig användning av sprintf, tar bara två platshållare här och w..
+   * _Korrigera anteckning_: Systemet använder nu sprintf-funktionen korrekt med rätt antal platshållare, vilket förbättrar renheten och konsekvensen i koden. Tidigare användes sprintf-funktionen felaktigt med ett extra argument, som inte orsakade några större problem men som inte var korrekt.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/39062>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/pull/38628>
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/38628>
 * _AC-12857_: PHP 8.2.15 har tagit bort FTP-tillägget
    * _Korrigera anteckning_: Systemet inkluderar nu FTP-tillägget som ett beroende i filen Composer.json, vilket säkerställer att CSV-import via FTP kan konfigureras korrekt. Tidigare uppstod ett fel vid försök att konfigurera CSV-import via FTP eftersom FTP-tillägget saknas i PHP-paketet.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/39083>
@@ -1099,23 +1099,23 @@ Tidigare togs inte posterna i tabellerna för produktsekvenser i paket bort.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/36325>
 * _AC-13247_: konfiguration:uppgradering misslyckas med MariaDB 11.4-versionen på grund av förändringar i teckenuppsättning och sortering
 * _AC-13279_: [Problem] Ta bort alla parametrar för marknadsföringsget för att minimera cachen
-   * _Fix note_: Systemet tar nu bort alla marknadsföringsparametrar för att optimera cacheanvändningen, vilket speglar logiken som används när Varnish används. Tidigare kunde dessa parametrar leda till uppblåsthet i cacheminnet och minskad prestanda.
+   * _Korrigera anteckning_: Systemet tar nu bort alla parametrar för marknadsföringsinhämtning för att optimera användningen av cache, och speglar logiken som används när lack används. Tidigare kunde de här parametrarna leda till cachebloggning och försämrade prestanda.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/39266>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/39099>
 * _AC-13345_: [Problem] [PHPDOC] Korrigera dåligt foto Magento\Directory\Model\AllowedCountries::getAllowedcountries()
    * _Korrigera anteckning_: PHPDoc för metoden Allowedcountries::getAllowedcountries() har korrigerats för att ge korrekt information, vilket gör dokumentationen tydligare och mer användbar. Tidigare innehöll PHPDoc för den här metoden felaktig information, vilket kan leda till förväxling eller missbruk av metoden.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/39246>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/39241>
-* _AC-13348_: [Problem] Tar bort viss kod för PHP-versioner som vi inte längre stöder.
-   * _Åtgärdat_: Borttagning av kod för PHP-versioner som inte längre stöds i Magento
+* _AC-13348_: [Utgåva] Tar bort kod för PHP-versioner som vi inte längre stöder.
+   * _Korrigera anteckning_: Ta bort kod för PHP-versioner som inte längre stöds i Magento
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/39361>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/pull/39202>
-* _AC-13417_: Problem]: [Gör ImageMagick Adapter kompatibel med php8 (Implicit konvertering från float till int)
-   * _Fix note_: Systemet säkerställer nu kompatibilitet med PHP8 genom att korrekt hantera flyttal vid beräkning av bilddimensioner, vilket förhindrar eventuella fel på grund av implicit konvertering från float till int. Tidigare kunde beräkningen av bilddimensioner resultera i flyttalsnummer, som när de implicit avrundades skulle orsaka ett fel.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/39202>
+* _AC-13417_: [Problem] Gör ImageMagick-adaptern kompatibel med php8 (implicit konvertering från flyttal till heltal)
+   * _Korrigera anteckning_: Systemet garanterar nu kompatibilitet med PHP8 genom att hantera flyttal korrekt vid beräkning av bilddimensioner, vilket förhindrar fel som beror på implicit konvertering från flyttal till heltal. Tidigare kunde beräkningen av bildens dimensioner resultera i flyttal, som skulle orsaka ett fel om de var implicit avrundade.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/39402>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/pull/37362>
-* _AC-13537_: [Problem] [PHPDOC] Åtgärda dålig phpdoc Magento\Framework\App\Config\ScopeConfigInterface
-   * _Åtgärdsmeddelande_: Den här uppdateringen korrigerar PHPDoc-annoteringarna i Magento\Framework\App\Config\ScopeConfigInterface för att korrekt återspegla typen av $scopeCode-argumentet för metoderna getValue och isSetFlag.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/37362>
+* _AC-13537_: [Problem] [PHPDOC] Korrigera felaktiga foton Magento\Framework\App\Config\ScopeConfigInterface
+   * _Korrigera anteckning_: Den här uppdateringen korrigerar PHPDoc-anteckningarna i Magento\Framework\App\Config\ScopeConfigInterface så att de korrekt återspeglar typen för $scopeCode-argumentet för metoderna getValue och isSetFlag.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/39492>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/39199>
 * _AC-13725_: Magento\Framework\Filesystem\Driver\Http beror på orsaksfrasen OK
@@ -1129,19 +1129,19 @@ Tidigare togs inte posterna i tabellerna för produktsekvenser i paket bort.
    * _Korrigera anteckning_: Systemet använder nu termen &quot;prenumeranter&quot; i JavaScript-filen korrekt, vilket garanterar att de relaterade funktionerna fungerar som de ska. Tidigare har ett typografiskt fel i JavaScript-filen resulterat i felaktig användning av termen &quot;subsctibers&quot;.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/36163>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/36171>
-* _AC-8353_: Problem: [Ta] bort förbjuden `@author` tagg
-   * _Fix note_: Systemet följer nu kodningsstandarder genom att ta bort den förbjudna `@author` taggen från vissa moduler, vilket säkerställer renare och mer standardiserad kod. Tidigare fanns taggen `@author` i vissa moduler, vilket stred mot de etablerade kodningsstandarderna.
+* _AC-8353_: [Issue] Ta bort förbjuden `@author` tagg
+   * _Korrigera anteckning_: Systemet följer nu kodningsstandarder genom att ta bort den förbjudna `@author` -taggen från vissa moduler, vilket ger en renare och mer standardiserad kod. Tidigare fanns taggen `@author` i vissa moduler, vilket stred mot de etablerade kodningsstandarderna.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/37253>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/pull/37003>
-* _AC-8356_: Problem: [Ta] bort förbjuden `@author` tagg från `Magento_Customer` (del 2)
-   * _Fix note_: Systemet följer nu kodningsstandarden genom att ta bort den förbjudna `@author` taggen från vissa moduler, vilket säkerställer renare och mer standardiserad kod. Tidigare fanns taggen `@author` i vissa moduler, vilket stred mot de etablerade kodningsstandarderna.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/37003>
+* _AC-8356_: [Problem] Ta bort ej tillåten `@author` tagg från `Magento_Customer` (del 2)
+   * _Korrigera anteckning_: Systemet följer nu kodningsstandarden genom att ta bort den förbjudna `@author` -taggen från vissa moduler, vilket ger en renare och mer standardiserad kod. Tidigare fanns taggen `@author` i vissa moduler, vilket stred mot de etablerade kodningsstandarderna.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/37250>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/37000>
 * _AC-8659_: Utrymme i syntaxbrytningsregel för redigerarconfig för [{disposition,auth}.json]
    * _Korrigera anteckning_: Systemet tillämpar nu korrekt ett indrag med 4 blanksteg på filerna Composer och auth.json, efter en korrigering av ett syntaxfel i EditorConfig. Tidigare formaterades dessa filer felaktigt med ett indrag med två blanksteg på grund av ett blanksteg i editorconfig-syntaxen.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/37394>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/pull/37395>
-* _AC-8662_: [Problem: Förbättra] loggning av cron-fel
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/37395>
+* _AC-8662_: [Problem] Förbättra felloggningen
    * _Korrigera anteckning_: Systemet hämtar och loggar nu både STDERR och STDOUT för cron-processer, vilket ger värdefull diagnostikinformation i scenarier där kron-processer misslyckas. Tidigare spelades inga felmeddelanden in i cron-processer och STDERR och STDOUT för cron-grupper som körs i separata processer gick förlorade.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/37453>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/32690>
@@ -1175,7 +1175,7 @@ Tidigare togs inte posterna i tabellerna för produktsekvenser i paket bort.
 * _ACP2E-3046_: Det gick inte att hitta ett fel i bastabellen eller vyn när mview-objektet kördes när en DDL-åtgärd utfördes
    * _Korrigera anteckning_: Systemet hanterar nu databasuppdateringsåtgärder korrekt medan mview-uppdateringen körs i bakgrunden, vilket förhindrar förekomsten av fel i bastabellen eller vyn som inte hittades. Tidigare kunde en del databasuppdateringsåtgärder resultera i felet &quot;Bastabell eller vy hittades inte&quot; om mview-uppdateringen kördes samtidigt.
 * _ACP2E-3230_: Det går inte att ändra kolumnlängd via db_schema.xml när det gäller sekundärnycklar
-   * _Fix note_: modifiering av kolumn med sekundärnyckel via deklarativt schema ger nu inte upphov till fel med MariaDB
+   * _Korrigera anteckning_: Om du ändrar en kolumn med en sekundärnyckel via ett deklarativt schema uppstår inga fel med MariaDB
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/581b7ef1>
 * _ACP2E-3361_: Vissa relationsposter sparas i DB när orderposten sparas
    * _Korrigera anteckning_: Innan korrigeringen av onödiga UPDATE-frågor utlöstes, vilket kan påverka prestandan negativt. Efter korrigeringen togs de onödiga UPDATE-frågorna bort.
@@ -1186,8 +1186,8 @@ Tidigare togs inte posterna i tabellerna för produktsekvenser i paket bort.
 * _ACP2E-3387_: [Cloud] Magento: Kömeddelandet har tagits bort
    * _Korrigera anteckning_: Kömeddelanden rensas nu korrekt. Före korrigeringen kunde nya meddelanden ha tagits bort om rensningskömeddelandet kördes samtidigt eftersom SQL-kösystemet användes.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/d50f6b5d>
-* _ACP2E-3537_: Motsvarande cachenyckelposter är inte tillgängliga i cache tags, därför fungerar inte cacherensning korrekt
-   * _Fixa-anteckning_: LUA-läget är nu aktiverat som standard för Redis-cacheskräpinsamlaren för att förhindra konkurrensförhållanden
+* _ACP2E-3537_: Motsvarande cachenyckelposter är inte tillgängliga i cachetaggar, vilket innebär att cacherensning inte fungerar korrekt
+   * _Korrigera anteckning_: LUA-läget är nu aktiverat som standard för skräpinsamlaren i Redis-cachen för att förhindra konkurrensförhållanden
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/a52ff98f>
 * _ACP2E-3681_: MAGENTO_DC_INDEXER_USE_APPLICATION_LOCK-värdet ignoreras
    * _Korrigera anteckning_: Efter korrigeringen behandlas en ENV-variabel som är inställd på &quot;false&quot; som bool false, inte som strängen &quot;false&quot;.
@@ -1214,9 +1214,9 @@ Tidigare togs inte posterna i tabellerna för produktsekvenser i paket bort.
 
 * _AC-11729_: Magento_GraphQl kör rubriker även om rubrikvärdet inte godkänns i valideringen
    * _Korrigera anteckning_: Systemet ser nu till att huvudbearbetningen bara körs en gång och bara om huvudvärdet godkänns i valideringen, förbättrar säkerheten och förhindrar potentiella sårbarheter. Tidigare utfördes rubrikbearbetning även om rubrikvärdet inte godkändes vid valideringen, vilket ledde till potentiella sårbarheter och oväntade beteenden på grund av dubbelbearbetning av rubrikvärden.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/c8f87c25>
-* _AC-8951_: Fysiska presentkortsalternativ har inte rätt sorteringsordning
-   * _Åtgärdat_: Systemet sorterar nu alternativen för fysiska presentkortsprodukter korrekt när de efterfrågas via GraphQL, vilket säkerställer konsekvent återgivning med Luma-temat. Tidigare var sorteringsordningen felaktig enligt luma-temat, vilket ledde till felaktig visning och ordning av alternativ som avsändarens namn, mottagarens namn och belopp.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/c8f87c25>
+* _AC-8951_: Alternativen för fysiskt Giftcard har inte rätt sorteringsordning
+   * _Korrigera anteckning_: Systemet sorterar nu alternativen för fysiska presentkortsprodukter korrekt när de efterfrågas via GraphQL, vilket ger en konsekvent återgivning med Luma-temat. Tidigare var sorteringsordningen felaktig enligt lumatema, vilket ledde till felaktig visning och ordning av alternativ som avsändarnamn, mottagarnamn och belopp.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/1bafc571>
 * _AC-9157_: [GraphQL]-matchningscachen är ogiltig när en mellanlagringsuppdatering skapas/redigeras/flyttas/tas bort
    * _Korrigera anteckning_: Systemet ser nu till att matchningscachen inte blir ogiltig när en mellanlagringsuppdatering skapas, redigeras, flyttas eller tas bort, utan endast när mellanlagringsuppdateringen tillämpas på entiteten. Tidigare ogiltigförklarades cacheminnet för lösaren i förtid, till och med innan mellanlagringsuppdateringen tillämpades, vilket ledde till onödiga cacheminnen.
@@ -1231,21 +1231,21 @@ Tidigare togs inte posterna i tabellerna för produktsekvenser i paket bort.
    * _Korrigera anteckning_: Tidigare sökning med grafikprocessorer med filter för nollpriser returnerade inga resultat alls på grund av ett utlöst undantag. Nu returnerar sökningen det förväntade resultatet.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/c971859e>
 * _ACP2E-2974_: Översättningar för kundreturattribut återspeglas inte i GraphQL API för respektive StoreView
-   * _Åtgärdsmeddelande_: Översättningar för kundreturattribut återspeglas i GraphQL API för respektive StoreView.
+   * _Korrigera anteckning_: Översättningar för kundreturattribut visas i GraphQL API för respektive StoreView.
 Tidigare återspeglas inte kundreturattribut för respektive StoreView i GraphQL API.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/ec7e32a9>
-* _ACP2E-3128_: [Cloud] Broken GraphQL-anrop för getPurchaseOrder med nodcitat
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/ec7e32a9>
+* _ACP2E-3128_: [Cloud] Avbrutet GraphQL-anrop för getPurchaseOrder med nodcitat
    * _Korrigera anteckning_: GraphQL-anropet för inköpsorder kan utföra uppgiften utan att några interna serverfel påträffas.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/6f4805f8>
-* _ACP2E-3184_: [Molnkonfigurerbara] produkter visas inte på produktionsplatsen om produkten inte är aktiverad i &quot;Alla butiksvyer&quot;
+* _ACP2E-3184_: [Konfigurerbara produkter i molnet] visas inte på produktionsplatsen om Produkten inte är aktiverad i Alla butiksvyer
    * _Korrigera anteckning_: Systemet visar nu konfigurerbara produkter på webbplatsen korrekt, även om produkten inte har aktiverats i Alla butiksvyer, men har aktiverats i specifika butiksvyområden.
-Tidigare, om en produkt var inaktiverad i &quot;Alla butiksvyer&quot; och endast aktiverad i specifika butiksvyomfattningar, skulle produktattributen inte visas korrekt i GraphQL-svaret, vilket ledde till att produkten inte visades korrekt.
+Om en produkt tidigare var inaktiverad i&quot;Alla butiksvyer&quot; och endast aktiverad i specifika butiksvyområden, skulle produktattributen inte visas korrekt i GraphQL-svaret, vilket leder till att produkten inte visas korrekt.
    * _GitHub-kodbidrag_: <https://github.com/magento/inventory/commit/3f300077>
 * _ACP2E-3190_: [Cloud] Produktgrafik har fel när samma enkla produkt har tilldelats flera konfigurerbara produkter
-   * _Korrigera anteckning_: Tidigare, med olika konfigurerbara produkter med samma enkla produkt, returnerade grapQL ett fel. Efter att denna korrigering gäller, olika konfigurerbara produkter med samma enkla produkt, grapQL returnerar resultat utan fel.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/148c3ead>
-* _ACP2E-3215_: [Molnproblem] med användarautentisering och åtkomst till token över flera webbplatser i konfiguration av flera platser
-   * _Åtgärdsmeddelande_: GraphQl kundinformation och kundvagnsfrågor i Multi-Site-installationen kontrollerar om kunden på en webbplats som inte är standard existerar.
+   * _Korrigera anteckning_: Tidigare, med olika konfigurerbara produkter med samma enkla produkt, returnerade grapQL ett fel. När den här korrigeringen har tillämpats returnerar grapQL resultat utan fel för olika konfigurerbara produkter med samma enkla produkt.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/148c3ead>
+* _ACP2E-3215_: [Cloud] Problem med användarautentisering och åtkomst med token på flera platser i konfigurationen för flera platser
+   * _Korrigera anteckning_: GraphQl kundinformation och kundvagnsfrågor i installationsprogrammet för flera platser kontrollerar om kunden på en webbplats som inte är standard finns.
 Tidigare arbetade frågan utan att kontrollera att kunden finns på en icke-standardwebbplats i konfigurationen av flera webbplatser.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/581b7ef1>
 * _ACP2E-3253_: GraphQL cart itemsV2 pagination fungerar inte korrekt
@@ -1256,18 +1256,18 @@ Tidigare arbetade frågan utan att kontrollera att kunden finns på en icke-stan
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/fd5cf3af>
 * _AVS2E-3380_: [Önsklisteobjekt för GraphQl] visas via GraphQl men inte i butiken
    * _Korrigera anteckning_: Önskar produkter som inte visas korrekt när de begärs via GraphQL. Nu filtreras önskelisteprodukter baserat på den angivna butikskontexten.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/55615e61>
-* _ACP2E-3404_: [GraphQL] Återställ lösenord e-post inkonsekvens mellan innehåll och ämne/länk
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/55615e61>
+* _ACP2E-3404_: [GraphQL] Återställa inkonsekvent e-postlösenord för innehåll och ämne/länk
    * _Korrigera anteckning_: Problemet har lösts genom att simulera rätt butik där kundens konto är registrerat när begäran om lösenordsåterställning skickas, oavsett webbplatsarkivet.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/5184c067>
 * _ACP2E-3419_: [Cloud] produkter GraphQL-frågan returnerar relaterade produkter som inte är tilldelade till den aktuella webbplatsen
-   * _Fix note_: Tidigare, för graphQL-frågor, visades inte produkter relaterade för flera butiker korrekt för produktfrågor. När den här korrigeringen har tillämpats, för produkter, frågar graphQL flera butiksrelaterade produkter som visas i enlighet med detta.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/078c387e>
-* _ACP2E-3447_: Användning av fel butiks-ID i GraphQL-huvudet orsakar allvarligt minnesfel
-   * _Fix note_: Att skicka fel lagringskod i GraphQL-begäran resulterar inte längre i överdriven minnesförbrukning.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/d50f6b5d>
-* _ACP2E-3467_: [Cloud] 500-svar på tomt Graphql-svar den 2.4.7
-   * _Fix note_: Efter korrigeringen kommer ogiltiga graphql-förfrågningar inte att loggas in i exception.log-filen.
+   * _Korrigera anteckning_: Tidigare visades inte produkter som är relaterade till flera lager korrekt för produktfrågan för graphQL-frågan. När den här korrigeringen har tillämpats visas graphQL-frågor för produkter som är relaterade till flera butiker.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/078c387e>
+* _ACP2E-3447_: Om du använder fel lagrings-ID i GraphQL header uppstår ett allvarligt minnesfel
+   * _Korrigera anteckning_: Om du skickar fel lagringskod i en GraphQL-begäran leder detta inte längre till för stor minnesförbrukning.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/d50f6b5d>
+* _ACP2E-3467_: [Cloud] 500 svar på tomt Graphql-svar på 2.4.7
+   * _Korrigera anteckning_: Efter korrigeringen loggas inte ogiltiga grafikförfrågningar i filen exception.log.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/1984c61c>
 * _ACP2E-3492_: [Cloud] Problem med Graphql API
    * _Åtgärda anteckning_: Innan korrigeringen med Graphql-programservern utfördes returnerades inte den senaste informationen i kundadressbegäran.
@@ -1288,10 +1288,10 @@ Tidigare arbetade frågan utan att kontrollera att kunden finns på en icke-stan
    * _Korrigera anteckning_: Problemet med fältet original_row_total som returnerade felaktiga värden när anpassade alternativ valdes har åtgärdats
 * _LYNX-503_: Miniatyrbilder av grupperade produkter ska visas enligt konfigurationen     .
    * _Åtgärdade problemet_: Problemet med att den grupperade produktminiatyrbilden skulle visas enligt konfigurationsinställningarna har åtgärdats
-* _LYNX-510_: Fel vid fråga selected_options i OrderAddress
-   * _Åtgärdad anteckning_: AttributeSelectedOptions har uppdaterats för att custom_attributesV2 i GraphQL-svaret för orderadressen.
+* _LYNX-510_: Fel vid fråga av selected_options i OrderAddress
+   * _Korrigera anteckning_: AttributeSelectedOptions har uppdaterats till custom_attributesV2 i beställningsadressen för GraphQL svar.
 * _LYNX-512_: original_item_price inkluderar inte rabatter
-   * _Fix note_: Uppdaterad original_item_price för att inkludera rabatter.
+   * _Korrigera anteckning_: Uppdaterade original_item_price för att inkludera rabatter.
 * _LYNX-530_: Meddelandet Inte tillgängligt visar inte tillgänglig lagerkvantitet
    * _Korrigeringsanteckning_: Felmeddelandet och felkoden för mutationen AddProductsToCart har åtgärdats så att den justeras mot meddelandekonfigurationen &quot;ej tillgänglig&quot;
 * _LYNX-532_: Statusen &quot;OUT_OF_STOCK&quot; returneras för Simple med anpassade alternativprodukter med flera alternativ
@@ -1305,15 +1305,15 @@ Tidigare arbetade frågan utan att kontrollera att kunden finns på en icke-stan
 * _LYNX-548_: Felkoder för orderannullering baserat på felmeddelandet
    * _Korrigera anteckning_: Felkoderna för annullering av order baseras nu på det specifika felmeddelandet.
 * _LYNX-581_: Flytta tillbaka cookie-relaterade egenskaper från privat till skyddad
-   * _Åtgärdsmeddelande_: Återställer synligheten för klasskonstruktörens egenskaper Magento\Framework\App\PageCache\Version från privat till skyddad
+   * _Korrigera anteckning_: Återställer synlighet för klasskonstruktoregenskaper från privat till skyddad
 * _LYNX-600_: Öka den högsta standardkomplexiteten för GraphQL-frågor till 1 000
    * _Korrigera anteckning_: Ökade GraphQL-frågans standardkomplexitet från 300 till 1 000.
 * _LYNX-620_: GQL - itemsV2 > Ursprunglig radsumma, priser returneras som 0,00 USD för hämtningsbar produkt med filalternativ som har separata priser.
    * _Korrigera anteckning_: Ett problem har korrigerats där hämtningsbara produkter med alternativ för separat länkköp aktiverade returnerade $0 för artiklarV2 > total ursprunglig radsumma, prisintervall returnerades som $0,00 för produkter med filalternativ med separata priser.
-* _LYNX-711_: Schema för en tabell när den skapas helt ny skiljer sig från när den uppgraderas
-   * _Åtgärdsmeddelande_: Löste ett problem där tillägg av en ny VARCHAR-kolumn i en befintlig tabell orsakade testfel på grund av schemaskillnader mellan nya installationer och uppgraderingar. Metoden modifyColumn() hanterar nu VARCHAR-kolumner korrekt genom att ställa in standardteckenuppsättning och sortering.
-* _LYNX-772_: GraphQl-kompatibilitet för PHP-8.4-versionen
-   * _Korrigera anteckning_: Korrigerade GraphQL-kompatibilitetsproblem med PHP 8.4 för flera matchare, vilket ger smidig funktionalitet. Uppdaterade berörda filer i modulerna CatalogRule, Customer, GiftMessage, GiftCard och GiftWrapping.
+* _LYNX-711_: Schema för en tabell när en ny tabell skapas skiljer sig åt när du uppgraderar
+   * _Korrigeringsanteckning_: Ett problem har korrigerats där ett tillägg av en ny VARCHAR-kolumn till en befintlig tabell orsakade testfel på grund av schemaskillnader mellan nya installationer och uppgraderingar. Metoden modifyColumn() hanterar nu VARCHAR-kolumner korrekt genom att ställa in standardteckenuppsättningen och sorteringen.
+* _LYNX-772_: GraphQl-kompatibilitet för PHP-8.4-version
+   * _Korrigera anteckning_: Korrigerade GraphQL-kompatibilitetsproblem med PHP 8.4 för flera matchare, vilket ger smidig funktionalitet. Uppdaterade filer som påverkas i modulerna CatalogRule, Customer, GiftMessage, GiftCard och GiftWrapping.
 
 ### GraphQL, Inventory / MSI
 
@@ -1367,16 +1367,16 @@ Tidigare tilldelades till administratörsarkivet i stället för deras respektiv
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/3a7c4d17>
 * _ACP2E-2990_: Kundens &quot;created_at&quot;-datum har inte konverterats för att lagra tidszonen vid export
    * _Korrigera anteckning_: Ett datumvärde för kolumnen &#39;created_at&#39; konverteras till rätt datumformat baserat på butikstidszonen i CSV-avsnittet för kundexport.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/3056e9cb>
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/3056e9cb>
 * _ACP2E-3165_: [Cloud] Hämtar fel vid kontroll av data i importdata med CSV
-   * _Fix note_: Det finns inget fel när du kontrollerar data under CSV-import. Tidigare visades felmeddelandet:&quot;Vi kan inte hitta en kund som matchar den här e-postadressen och webbplatskoden i rad(er): 1&quot; när data kontrolleras i importavsnittet med CSV från administratören.
+   * _Korrigera anteckning_: Det finns inget fel när data kontrolleras vid CSV-import. Tidigare visades felmeddelandet:&quot;Vi kan inte hitta en kund som matchar den här e-postadressen och webbplatskoden i rad(er): 1&quot; när data kontrolleras i importavsnittet med CSV från administratören.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/8459b17d>
 * _ACP2E-3172_: Knappen Importera saknas
    * _Korrigera anteckning_: Åtgärda problemet med att knappen Importera saknas efter datakontroller med korrekta och felaktiga poster i CSV-filen. Tidigare visades inte importknappen efter datakontroller med korrekta och felaktiga poster i CSV-filen.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/1819fe73>
 * _ACP2E-3382_: Det går inte att importera den exporterade kundadressen
    * _Korrigera anteckning_: Importen av kundadressen fortsätter som förväntat. Tidigare godkändes inte valideringen av en kundadressimportfil om Dela kundkonton = Global, och det finns två webbplatser där standardwebbplatsen har en lista med begränsade länder och adressen som importeras är till en annan webbplats där tillåtna länder är olika
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/ec7e32a9>
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/ec7e32a9>
 * _ACP2E-3448_: [Cloud] Fel antal i CSV-fil gav inget fel
    * _Korrigera anteckning_: Nu genereras valideringsfel för icke-numeriska värden i kvantitetskolumnen vid import av Stock-källor. Om du importerar Stock-källor med ett icke-numeriskt värde i kvantitetskolumnen hade kvantiteten angetts till 0.
    * _GitHub-kodbidrag_: <https://github.com/magento/inventory/commit/5b21b7af>
@@ -1386,11 +1386,11 @@ Tidigare tilldelades till administratörsarkivet i stället för deras respektiv
 * _ACP2E-3475_: Produktexport orsakar OOM även med minnesgräns på 4G
    * _Korrigera anteckning_: Före den här korrigeringen misslyckades produktexporten om produktattributen hade tusentals alternativvärden även med 4G tillgängligt minne. Efter den här korrigeringen bör produktexporten avsluta exporten av csv-filen.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/1984c61c>
-* _ACP2E-3527_: [Molnimportprocesser] stör varandra
-   * _Åtgärdsmeddelande_: Korrekta meddelanden visas om samma administratörsanvändare utför två eller flera importåtgärder med samma användarsession.
+* _ACP2E-3527_: [Cloud] Import Processes Interfering with Varann
+   * _Korrigera anteckning_: Korrigerade meddelanden visas om samma administratörsanvändare utför två eller flera importåtgärder med samma användarsession.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/d4de4726>
 
-### Import / export, Prestanda
+### Import/export, prestanda
 
 * _ACP2E-3476_: [Cloud] Produktimporttiden har ökat avsevärt
    * _Korrigera anteckning_: Före korrigeringen hade katalogimporten med över 10 000 poster försämrats avsevärt. Efter korrigeringen körs importen av katalogprodukten i rätt tid.
@@ -1399,7 +1399,7 @@ Tidigare tilldelades till administratörsarkivet i stället för deras respektiv
 ### Installera och administrera
 
 * _AC-13242_: Magento-uppgraderingen misslyckas på MariaDB 11.4 + 2.4.8-beta1
-   * _Fix note_: Uppgraderingen bör ske utan några fel.
+   * _Korrigera anteckning_: Uppgraderingen bör utföras utan fel.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/7b336d0a>
 * _ACP2E-2102_: Ingen VCL för export för lack 7-knapp på administratörspanelen
    * _Korrigera anteckning_: Knappen Exportera VCL för lack 7 har lagts till på panelen Admin.
@@ -1415,7 +1415,7 @@ Tidigare tilldelades till administratörsarkivet i stället för deras respektiv
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/0574ac23>
 * _AC-13922_: Det går inte att skapa leverans för orderobjekt med flera källor och skadad SKU
    * _Korrigeringsanteckning_: Tidigare när blanktecken av misstag lades till i sku via databasen, uppstår ett fel på utleveranssidan som nu är fast och automatisk trimning betraktas som ett användarvänligt fel och ingen påverkan hittades. Leveransen skapades därför.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/inventory/commit/c18eb5fa>
+   * _GitHub-kodbidrag_: <https://github.com/magento/inventory/commit/c18eb5fa>
 * _ACP2E-1411_: [Testa] Paketprodukter med 0 lager vid lagerframsidan
    * _Korrigera anteckning_: Paketprodukten visas inte på ytterligare webbplatser som använder extra lager.
 * _ACP2E-2794_: [Cloud] Kritiskt problem med produktlistor med tomma utrymmen
@@ -1451,26 +1451,26 @@ Tidigare tilldelades till administratörsarkivet i stället för deras respektiv
    * _Korrigera anteckning_: Systemet använder nu korrekt det arkiv-ID som är kopplat till en order när orderadressen återges, vilket säkerställer att adresserna formateras korrekt enligt deras respektive butik-ID. Tidigare använde systemet felaktigt det aktuella butiks-ID:t, vilket kunde leda till felaktig adressformatering om flera beställningsmejl från olika butiker behövde skickas.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38412>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/37932>
-* _AC-11690_: Problem med cachelagring av JoinProcessor
-   * _Fix note_: Systemet tillämpar nu JoinProcessor korrekt för varje iteration, även med på varandra följande anrop, vilket säkerställer korrekt datahämtning. Tidigare markerades JoinProcessor felaktigt som redan tillämpad i på varandra följande iterationer, vilket ledde till fel vid datahämtning.
+* _AC-11690_: Cachelagringsproblem med JoinProcessor
+   * _Korrigera anteckning_: Systemet använder nu JoinProcessor korrekt för varje iteration, även med efterföljande anrop, för att säkerställa korrekt datahämtning. Tidigare hade JoinProcessor felaktigt markerats som använd i upprepade iterationer, vilket ledde till fel vid datahämtning.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/27504>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/pull/37550>
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/37550>
 * _AC-11798_: [Utleverans] Leveranspriset skiljer sig åt i utskriven PDF
-   * _Åtgärdsmeddelande_: Systemet visar nu fraktkostnader korrekt i utskrivna PDF-filer enligt inställningarna för momskonfiguration, vilket säkerställer konsekvens mellan visningssidan för försäljningsorderfakturan och den utskrivna fakturan. Tidigare var fraktkostnaden som visades i den utskrivna PDF-filen exklusive moms, oavsett inställningarna för momskonfiguration.
+   * _Korrigera anteckning_: Systemet visar nu leveranspriserna korrekt i utskrivna PDF-filer enligt momskonfigurationsinställningarna, vilket säkerställer konsekvens mellan försäljningsorderfakturavyn och den utskrivna fakturan. Tidigare undantogs moms för det fraktpris som visades i den utskrivna PDF, oavsett momskonfigurationsinställningar.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38608>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/pull/38595>, <https://github.com/magento/magento2/commit/1bafc571>
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/38595>, <https://github.com/magento/magento2/commit/1bafc571>
 * _AC-13839_: Ändra ordning med en borttagen överordnad konfigurerbar produkt
-   * _Fix note_: Nu när du beställer om med den raderade produkten kommer systemet inte att visa ombeställningsknappen för att beställa om
+   * _Korrigera anteckning_: När du nu ändrar ordning på den borttagna produkten visas inte knappen för att ändra ordning i systemet
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/39568>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/pull/39601>
-* _AC-13924_: [Problem] Åtgärda felaktig egenskap \Magento\Sales\Model\Order\Email\Container\Template::$id
-   * _Fix note_: Detta rättar den dåliga phpdoc för \Magento\Sales\Model\Order\Email\Container\Template::$id, faktiskt är $id typ int men i verkligheten är string.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/39601>
+* _AC-13924_: [Problem] Åtgärda felaktigt \Magento\Sales\Model\Order\Email\Container\Template::$id-egenskap
+   * _Korrigera anteckning_: Detta korrigerar det felaktiga fotot för \Magento\Sales\Model\Order\Email\Container\Template::$id, egentligen är $id typen int, men i verkligheten är det en sträng.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/39151>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/39150>
 * _ACP2E-2622_: Det går inte att spara ändringar i telefonnummer i befintlig orderinformation
    * _Åtgärda anteckning_: Nu kan användaren lägga till det internationella prefixet 00 i telefonfältet för orderadress
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38201>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/12e071c3>
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/12e071c3>
 * _ACP2E-2734_: E-postmeddelanden kan inte skickas
    * _Korrigera anteckning_: Systemet innehåller nu ett konfigurationsalternativ för async_sending_try för att ange antalet försök att skicka ett e-postmeddelande innan det stoppas, vilket förbättrar hanteringen av misslyckade e-postmeddelanden när asynkron sändning är aktiverat. Tidigare, om ett e-postmeddelande inte kunde skickas, skulle systemet kontinuerligt försöka skicka om det, vilket resulterar i en oändlig loop med felmeddelanden i systemloggen.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/b2286ecf>
@@ -1485,17 +1485,17 @@ Tidigare tilldelades till administratörsarkivet i stället för deras respektiv
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/6a185204>
 * _ACP2E-3311_: [Cloud] Det går inte att skapa order i en administratör på en butik om endast standardfaktureringsadressen inte har konfigurerats
    * _Korrigera anteckning_: Nu finns ett relevant felmeddelande,&quot;En kund med samma e-postadress finns redan på en associerad webbplats.&quot; visas om en kund inte har en standardfaktureringsadress och försöker skapa en order i en annan butik.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/d75cff27>
-* _ACP2E-3416_: Admin duplicerade förfrågningar om att placera order skickade
-   * _Fixnotering_: Tidigare kunde knappen &quot;Skicka beställning&quot; i adminpanelen klickas på flera gånger eller aktiveras genom att upprepade gånger trycka på &quot;Enter&quot;-tangenten, vilket orsakade dubbletter eller orderinlämningar med fel. Nu kan du förhindra ytterligare åtgärder tills ordern har bearbetats fullständigt, så att bara en order skickas.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/5184c067>
-* _ACP2E-3425_: Admin kan fortfarande beställa även utan betalningsmetod
-   * _Åtgärd:_ Tidigare vald betalningsmetod behålls nu när betalningsmetoden dyker upp igen i listan över tillgängliga betalningar.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/d50f6b5d>
-* _ACP2E-3518_: Artiklar dupliceras efter att vi har skapat en order från Admin på - Mozilla Firefox webbläsare
-   * _Fix note_: Produkter som läggs till med &quot;Lägg till produkter efter SKU&quot; dupliceras inte längre i Firefox när du skapar en order i admin.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/d75cff27>
+* _ACP2E-3416_: Administratörsförfrågningar om dubblettorder har skickats
+   * _Korrigera anteckning_: Tidigare kunde användaren klicka på knappen &quot;Skicka beställning&quot; på administratörspanelen flera gånger eller aktivera den genom att trycka på Retur upprepade gånger, vilket orsakade fel vid dubbletter eller orderöverföringar. Nu kan du förhindra ytterligare åtgärder tills ordern har bearbetats fullständigt, så att bara en order skickas.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/5184c067>
+* _ACP2E-3425_: Administratören kan fortfarande göra beställningar även utan betalningsmetod
+   * _Korrigera anteckning_: Den betalningsmetod som valts tidigare behålls nu när betalningsmetoden visas igen i listan över tillgängliga betalningar.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/d50f6b5d>
+* _ACP2E-3518_: Objekten dupliceras när vi har skapat en beställning från Admin on - webbläsaren Mozilla Firefox
+   * _Korrigera anteckning_: Produkter som lagts till med Lägg till produkter efter SKU dupliceras inte längre i Firefox när en order skapas i en administratör.
 
-### Beställning, Betalningar
+### Order, betalningar
 
 * _ACP2E-3233_: Administratören kan fortfarande göra beställningar även utan betalningsmetod
    * _Korrigera anteckning_: Tidigare kunde handlaren göra beställningar från adminpanelen utan att välja någon betalningsmetod. Nu måste handlaren ha en betalningsmetod för att kunna göra en beställning.
@@ -1543,24 +1543,24 @@ På så sätt får du en konsekvent miniatyrbildsfunktion för grupperade produk
    * _Korrigera anteckning_: Ett problem har åtgärdats där attributet only_x_left_in_stock alltid returnerade 0 för konfigurerbara produkter när det lades till med den överordnade SKU:n med alternativ.
 Korrigeringsinformation:
 ・ Det enda värdet för_x_left_in_stock återspeglar nu korrekt stocken för den valda underordnade varianten i stället för den överordnade SKU:n.
-• Detta säkerställer att lagernivåer visas korrekt för konfigurerbara produktvarianter i varukorgen och på produktsidorna.
-* _LYNX-405_: GraphQL-fel: Filtyp stöds inte i fråga om anpassningsbara alternativ
-   * _Åtgärdat_: Åtgärdade ett problem där GraphQL returnerade ett fel för anpassningsbara alternativ av typen &quot;fil&quot; i kundvagnsartiklar. Frågan returnerar nu korrekt information för alla anpassningsbara alternativtyper, inklusive filbaserade alternativ, utan att orsaka fel.
-* _LYNX-411_: GraphQL-frågan returnerar inte korrekt beräknat ordinarie pris för anpassningsbara produkter
-   * _Åtgärdat_: Åtgärdade ett problem där GraphQL inte returnerade det korrekt beräknade ordinarie priset för anpassningsbara produkter. Frågan inkluderar nu korrekt det beräknade ordinarie priset med anpassningsbara värden som tillämpas (t.ex. 125 USD) i prices egenskapen, vilket återspeglar både baspriset och eventuella ytterligare anpassningskostnader.
+・ På så sätt ser du till att lagernivåerna visas korrekt för konfigurerbara produktvariationer i kundvagnen och på produktsidorna.
+* _LYNX-405_: GraphQL-fel: Filtypen stöds inte i frågan om anpassningsbara alternativ
+   * _Korrigera anteckning_: Ett fel har korrigerats där GraphQL returnerade ett fel för anpassningsbara alternativ av typen &quot;file&quot; i kundvagnsobjekt. Frågan returnerar nu korrekt information för alla anpassningsbara alternativtyper, inklusive filbaserade alternativ, utan att orsaka fel.
+* _LYNX-411_: GraphQL-frågan returnerar inte korrekt beräknat normalpris för anpassningsbara produkter
+   * _Korrigeringsanteckning_: Ett problem har korrigerats där GraphQL inte returnerade korrekt beräknat normalpris för anpassningsbara produkter. Frågan innehåller nu korrekt det beräknade ordinarie priset med anpassningsbara värden (t.ex. $125) i egenskapen prices, som återspeglar både baspriset och eventuella ytterligare anpassningskostnader.
 * _LYNX-412_: AppliedTaxes via EstimatedTotals kvarstår med uppdaterade mutationer
-   * _Åtgärdat_: Åtgärdade ett problem med mutationen EstimatedTotals där tillämpade skatter fanns kvar på en kundvagn även efter uppdatering av region eller postnummer. Mutationen uppdaterar nu de tillämpade skatterna korrekt när du ändrar mellan region- och postnummervärden, vilket säkerställer att endast rätt skatteregel tillämpas baserat på aktuella kundvagnsdata.
-* _LYNX-420_: is_available attribut i CartItemInterface returnerar true även när det säljbara lagret är lägre än kvantiteten av produkten
-   * _Åtgärdad anteckning_: Åtgärdade ett problem där attributet is_available i CartItemInterface felaktigt returnerade true även när det säljbara lagret var lägre än den begärda produktkvantiteten. Fältet is_available returnerar nu korrekt false när produktens kvantitet överstiger det tillgängliga lagret.
+   * _Korrigera anteckning_: Korrigerade ett problem med mutationen EstimatedTotals, där pålagda skatter bestod i en vagn även efter att regionen eller postkoden uppdaterats. Mättnaden uppdaterar nu korrekt de pålagda skatterna när värden mellan region och postnummer ändras, vilket säkerställer att endast rätt momsregel tillämpas baserat på aktuella kundvagnsdata.
+* _LYNX-420_: attributet is_available i CartItemInterface returnerar true även när det säljbara lagret är mindre än produktkvantiteten
+   * _Korrigeringsanteckning_: Ett problem har korrigerats där attributet is_available i CartItemInterface felaktigt returnerade true även om det säljbara lagret var lägre än den begärda produktkvantiteten. Fältet is_available returnerar nu korrekt false när produktens kvantitet överskrider det tillgängliga lagret.
 * _LYNX-421_: Det går inte att lägga till kupong i kundvagn för rabatt endast för frakt
    * _Korrigera anteckning_: Korrigerade ett problem där en kupong inte kunde användas för en vagn för enbart frakt-rabatter. Kupongen tillämpas nu korrekt på fraktbeloppet när en försäljningsregel utan produktvillkor används, vilket säkerställer att den förväntade rabatten tillämpas på leveranskostnaden.
 * _LYNX-425_: Normalpris för produkt med 12 decimaler och fel värde
    * _Korrigera anteckning_: Korrigerade ett fel där GraphQL-sökvägarna regular_price i product.price_range.maximum_price och minimum_price inte matchade katalogpriset när flera skattesatser tillämpades. I Cart Summary visas nu katalogpriset enhetligt för alla momskonfigurationer, vilket ger korrekt enhetspris, beräkning av totalkostnader och rabattkontroller.
 * _LYNX-430_: GraphQL-serverfel i varukorgen med produkt som inte ingår i paketet
-   * _Åtgärdat_: Åtgärdade ett problem där GraphQL returnerade ett internt serverfel vid hämtning av en kundvagn som innehöll en paketerad produkt med en artikel som inte finns i lager, särskilt när frågan inkluderade egenskapen itemsV2. GraphQL returnerar nu korrekt en lista över artiklar med relevanta felmeddelanden som är kopplade till den paketerade produktartikelposten, som förväntat.
+   * _Åtgärdade ett fel_ där GraphQL returnerade ett internt serverfel när en kundvagn som innehåller en paketerad produkt med ett objekt som inte finns i lager hämtades, särskilt när frågan innehöll egenskapen itemsV2. GraphQL returnerar nu korrekt en lista med objekt med relevanta felmeddelanden som är kopplade till den paketerade produktposten, som förväntat.
 * _LYNX-441_: Det går inte att skapa en adress med anpassade attribut
-   * _Åtgärdat_: Åtgärdade ett problem med mutationen createCustomerAddress som förhindrade skapandet av adresser med nödvändiga anpassade attribut. mutationen hanterar nu anpassade adressattribut korrekt när lämplig nyttolast anges.
-* _LYNX-447_: GraphQL-serverfel i kundvagnen med only_x_left_in_stock på den medföljande produkten
+   * _Korrigera anteckning_: Ett problem med mutationen createCustomerAddress som förhindrade att adresser med nödvändiga anpassade attribut skapades. mutationen hanterar nu anpassade adressattribut korrekt när lämplig nyttolast anges.
+* _LYNX-447_: GraphQL-serverfel i kundvagn med endast_x_left_in_stock för paketerad produkt
    * _Åtgärdade ett fel där en kundvagn som innehåller en paketerad produkt med fältet only_x_left_in_stock i GraphQL-frågan hämtades med ett internt serverfel._ GraphQL returnerar nu korrekt ett flyttal eller null för fältet only_x_left_in_stock utan fel.
 * _LYNX-464_: GraphQL-fel vid borttagning av andra produkter med otillräckligt konfigurerbar produkt i kundvagn
    * _Korrigera anteckning_: Ett fel har korrigerats där försök att ta bort produkter som finns i lager från kundvagnen resulterade i ett GraphQL-fel av typen &quot;Begärd kvantitet är inte tillgänglig&quot; om vagnen även innehåller konfigurerbara produkter med otillräckligt lager. Borttagningen fungerar nu som förväntat utan att utlösa fel.
@@ -1571,11 +1571,11 @@ Korrigeringsinformation:
 * _LYNX-619_: updateCustomerEmail - mutationsproblem
    * _Korrigera anteckning_: Ett problem med updateCustomerEmail-mutationen har åtgärdats där kunder utan nödvändiga anpassade attribut (som lagts till efter att kontot skapats) inte kunde uppdatera sin e-post.
 * _LYNX-626_: Mutation setShippingAddressesOnCart genererar fel när pickup_location_code används
-   * _Åtgärdad anteckning_: Åtgärdade ett problem där mutationen setShippingAddressesOnCart returnerade ett fel vid användning av pickup_location_code utan att ange customer_address_id eller adress. Mutationen gör det nu möjligt att ställa in en leveransadress med bara pickup_location_code.
-* _LYNX-627_: CustomerOrder.items_eligible_for_return lista måste överensstämma med orderartiklar
-   * _Fix note_: Lösta inkonsekvenser med returberättigande i beställningar:
-1. Den CustomerOrder.items_eligible_for_return listan stämmer nu överens med de faktiska orderartiklarna.
-2. Fältet OrderItemInterface.eligible_for_return returnerar korrekt false när hela kvantiteten redan har returnerats.
+   * _Korrigeringsanteckning_: Ett problem har korrigerats där mutationen setShippingAddressesOnCart returnerade ett fel när koden pickup_location_code användes utan att kundens_address_id eller adress angavs. Mmutationen gör att det nu går att ange en leveransadress med bara koden pickup_location_code.
+* _LYNX-627_: Listan CustomerOrder.items_eligibility_for_return måste vara konsekvent med orderartiklarna
+   * _Korrigera anteckning_: Löste inkonsekvenser med returberättigande i order:
+1. Listan CustomerOrder.items_eligibility_for_return överensstämmer nu med faktiska orderartiklar.
+2. Fältet OrderItemInterface.eligibility_for_return returnerar korrekt false när hela kvantiteten redan har returnerats.
 3. CustomerOrder.items_eligibility_for_return innehåller nu bara objekt som inte redan håller på att returneras.
 * _LYNX-628_: Lägg till quantity_return_requested-fält
    * _Korrigera anteckning_: Fältet quantity_return_requested har lagts till i OrderItemInterface, så att du kan identifiera den kvantitet av artiklar för vilka en retur har skickats. Detta förbättrar returspårningen tillsammans med det befintliga fältet quantity_returned.
@@ -1642,19 +1642,19 @@ Korrigeringsinformation:
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/39020>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/39040>
 * _AC-13398_: Det går inte att generera gränssnittsmetoden korrekt med den virtuella typen för att konfigurera plugin-programmet i kommandot :di:kompilera
-   * _Fix note_: Systemet genererar nu interceptormetoder korrekt när man använder en virtuell typ för att konfigurera ett plugin, vilket säkerställer konsekventa resultat oavsett om de är förkompilerade eller körtidskompilerade. Tidigare genererade systemet felaktiga resultat när det kompilerades i förväg jämfört med körningskompilering.
+   * _Korrigera anteckning_: Systemet genererar nu korrekt spärrmetoder när en virtuell typ används för att konfigurera ett plugin-program, vilket ger konsekventa resultat oavsett om det är förkompilerat eller körtidskompilerat. Tidigare genererade systemet felaktiga resultat vid förkompilering jämfört med körtidskompilering.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/33980>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/pull/38141>
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/38141>
 * _ACP2E-3441_: Det går inte att hämta filer från datainsamlaren
    * _Korrigera anteckning_: När du hämtar säkerhetskopian visas inte längre en tom sida i stället för att filen hämtas.
 * _AVS2E-3631_: Enhetstester för Adobe Commerce 2.4.7-p3 misslyckas
    * _Korrigera anteckning_: Inga versionsinformation krävs.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/982b1c42>
 
-### Betalning/ Betalningsmetoder, Beställning
+### Betalnings-/betalningsmetoder, beställning
 
-* _AC-13699_: Påvligt betalningsflöde Kreditkortsuppgifter som sparats för senare användning visas inte på sidan för lagrad betalningsmetod
-   * _Fix note_: Tidigare påvligt betalningsflöde Kreditkortsuppgifter som sparats för senare användning visades inte på sidan för lagrad betalningsmetod som nu är fast Kreditkortsuppgifter visas på sidan för lagrad betalningsmetod.
+* _AC-13699_: Information om det pappersbaserade betalningsflödet Kreditkort som sparats för senare bruk visas inte på sidan med den lagrade betalningsmetoden
+   * _Korrigeringsanteckning_: Information om det tidigare pappersbaserade betalningsflödet Kreditkortsinformation som sparats för senare bruk visades inte på den lagrade betalningsmetodsidan, som nu har fast kreditkortsinformation, visas på den lagrade betalningsmetoden.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/96dec499>
 
 ### Betalningar
@@ -1689,23 +1689,23 @@ Korrigeringsinformation:
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38748>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/35580>
 * _AC-12176_: Temakompileringen avbryts när mysql-värden innehåller portinformation
-   * _Korrigera anteckning_: Systemet hanterar nu konfigurationen för MySQL-värden som innehåller portinformation, vilket säkerställer att temat kompileras. Tidigare misslyckades temakompilering om MySQL-värdkonfigurationen i databasanslutningen innehöll portinformation.
+   * _Korrigera anteckning_: Systemet hanterar nu konfigurationen för MySQL-värden som innehåller portinformation, vilket säkerställer att temat kompileras. Tidigare misslyckades temakompileringen om konfigurationen MySQL-värd i databasanslutningen innehöll portinformation.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38799>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/38842>
 * _AC-13471_: Stöd för Symfonys CommandLoaderInterface i Magento CLI
    * _Korrigera anteckning_: Den här ändringen minskar initieringstiden för Magento CLI-appen genom att tillåta fördröjd initiering av kommandon tills de behövs.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/29266>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/pull/29355>
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/29355>
 * _ACP2E-2494_: Prestandaproblem vid inläsning av produktattribut i kundvagnsregler
-   * _Fix note_: Förbättrad frågeprestanda för försäljningsregler - från cirka 150 ms till ensiffriga ms.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/ba25af8a>
+   * _Korrigera anteckning_: Förbättrade frågeprestanda för försäljningsregler - från ca 150 ms till ensiffriga ms.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/ba25af8a>
 * _ACP2E-2673_: Prestanda för partiell prisindexering
-   * _Åtgärdsmeddelande_: Prestanda för partiell prisindexering har förbättrats genom att optimera några av de borttagningsfrågor som används i indexeringsprocessen.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/ba25af8a>
-* _ACP2E-2850_: Beställningen avvisas vid konfiguration med flera butiker när du använder Async-orderbehandling + Regler och villkor
-   * _Åtgärdsmeddelande_: Beställningar som görs från webbplatser som inte är standard med aktiverade villkor behandlas nu.
-Innan de automatiskt avvisades.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/57a32313>
+   * _Korrigera anteckning_: Prestandan för partiell prisindexering har förbättrats genom att några av de borttagningsfrågor som används i indexeringsprocessen har optimerats.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/ba25af8a>
+* _ACP2E-2850_: Beställningen avvisas vid konfiguration av flera butiker när Async-order-bearbetning används + Villkor
+   * _Korrigera anteckning_: Beställningar från icke-standardwebbplatser med aktiverade villkor bearbetas nu.
+Innan de avvisades automatiskt.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/57a32313>
 * _ACP2E-2910_: API-anrop för orderåterställning tar lång tid att köra
    * _Korrigera anteckning_: Systemet kör nu anropet till API:t för orderåterställning inom en rimlig tidsram, vilket förbättrar prestanda när ett stort antal order hämtas. Tidigare tog det lång tid att köra anropet till API:t för orderraster, vilket orsakade fördröjningar när ett stort antal order hämtades.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/001e5188>
@@ -1713,9 +1713,9 @@ Innan de automatiskt avvisades.
 ### Prestanda, marknadsföring
 
 * _ACP2E-2617_: Indexeraren för försäljningsregel slutade köras
-   * _Åtgärdsmeddelande_: Systemet slutför nu indexeraren av försäljningsregeln även med ett stort antal kombinerade filtergrupper, vilket säkerställer att villkoren för kundvagnsregeln tillämpas på kundvagnen som förväntat. Tidigare kunde indexeraren för försäljningsregeln inte slutföras när det fanns ett stort antal kombinerade filtergrupper, vilket ledde till ett felmeddelande och förhindrar att villkoren för kundvagnsregeln tillämpades.
+   * _Korrigera anteckning_: Systemet slutför nu försäljningsregelindexeraren även med ett stort antal kombinerade filtergrupper, vilket säkerställer att kundvagnsregelvillkoren tillämpas som förväntat. Tidigare kunde indexeraren för försäljningsregeln inte slutföras när det fanns ett stort antal kombinerade filtergrupper, vilket ledde till ett felmeddelande och förhindrar att villkoren för kundvagnsregeln tillämpades.
 
-### Prissättning
+### Priser
 
 * _AC-11810_: Pris saknas för Magento2.4.6-p4 Order API Simple Item
    * _Korrigera anteckning_: Systemet visar nu priset på enkla produkter korrekt när det efterfrågas via Order API, vilket ger korrekt datarepresentation. Tidigare visades priset på enkla produkter felaktigt som noll i API-svaret.
@@ -1742,15 +1742,15 @@ Innan de automatiskt avvisades.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38961>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/38940>
 * _AC-13423_: [Problem] Åtgärdat brutet paket och hämtningsbar layout för produktsidor i Magento >= 2.4.7
-   * _Fix note_: Layouten för paket och nedladdningsbara produktsidor har åtgärdats, vilket säkerställer en konsekvent och korrekt visning på alla enheter. Tidigare drabbades dessa sidor av layoutproblem på grund av en omorganisering av blocket för produktinformationsmedia.
+   * _Korrigera anteckning_: Layouten för programpaket och hämtningsbara produktsidor har korrigerats, vilket ger en konsekvent och korrekt visning på alla enheter. Tidigare hade dessa sidor layoutproblem på grund av en omorganisering av produktinformationsmediablocket.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/39403>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/6cfb9b6b>
 * _AC-5969_: AlertProcessor - Argument #2 ($storeId) måste vara av typen int, sträng angiven
-   * _Fix note_: Systemet utlöser nu e-postmeddelanden med produktvarningar korrekt genom att se till att butiksidentifieraren är av rätt datatyp. Tidigare skickades inte e-postmeddelanden med produktaviseringar på grund av ett typmatchningsfel i butiksidentifieraren.
+   * _Korrigera anteckning_: Systemet utlöser nu produktvarningsmeddelanden korrekt genom att se till att butiksidentifieraren har rätt datatyp. Tidigare skickades inga produktvarningsmeddelanden på grund av ett typmatchningsfel i butiksidentifieraren.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/35602>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/0574ac23>
-* _ACP2E-2944_: [Cloud] addFilterToMap-funktionen fungerar inte för vissa kolumner
-   * _Fix note_: Nu kan den anpassade modulen användas i orderrutnätet. Tidigare uppstod fel när du använde en anpassad modul.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/0574ac23>
+* _ACP2E-2944_: [Cloud] funktionen addFilterToMap fungerar inte för vissa kolumner
+   * _Korrigera anteckning_: Nu kan den anpassade modulen användas i orderstödrastret. Tidigare inträffade fel när en anpassad modul användes.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/3a7c4d17>
 * _ACP2E-3471_: [Cloud] Produkter i kategori - Lägg till produkter - Tilldela - Markera alla
    * _Korrigera anteckning_: Användare kan nu markera eller avmarkera produkter med hjälp av växlingsknappen.
@@ -1771,14 +1771,14 @@ Innan de automatiskt avvisades.
 * _ACP2E-3024_: Attributet &quot;Type&quot; saknas på fliken &quot;Products to Match&quot; i relaterade produktregler
    * _Korrigera anteckning_: Attributet &quot;Typ&quot; är nu tillgängligt som ett filteralternativ på fliken &quot;Produkter att matcha&quot; i modulen &quot;Relaterade produktregler&quot;, vilket ger en mer exakt regeldefinition. Tidigare saknades det här attributet på fliken&quot;Produkter att matcha&quot;, vilket begränsar möjligheten att skapa korrekta matchningsvillkor.
 * _ACP2E-3139_: Förs.regel med rabattkvantitetssteg (Buy X)-attribut leder till att andra regler inte tillämpas
-   * _Åtgärd:_ Varukorgsprisregeln upphäver inte tidigare tillämpade regler om kvantiteten av produkten i varukorgen inte är tillräcklig för att regeln ska tillämpas.
+   * _Korrigera anteckning_: I kundvagnsprisregeln avbryts inte tidigare tillämpade regler om kvantiteten av produkten i vagnen inte räcker för att regeln ska tillämpas.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/d01ee51e>
 * _ACP2E-3331_: Prestandaproblem på kundprisregel - modulen Förhandsförsäljningsregel
    * _Korrigeringsanteckning_: Saknade DB-index för AdvancedSalesRule-filter har lagts till
 * _ACP2E-3332_: Utfärda försäljningsregler med fast beloppsrabatt och &quot;maximal mängdrabatt används för&quot;
    * _Korrigera anteckning_: Ett problem med rabatt på kundvagnsregler har korrigerats när rabatt på fast belopp har konfigurerats för en begränsad produktkvantitet är vagnen. Tidigare användes värdet för maximal mängdrabatt till för att beräkna den aktuella artikelns pris i kundvagnen, inte bara för att beräkna regelns rabatt.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/581b7ef1>
-* _ACP2E-3342_: [CLOUD] Magento-uppgradering gjorde att kuponger blev skiftlägeskänsliga
+* _ACP2E-3342_: [CLOUD] Magento-uppgradering orsakade att kuponger blev skiftlägeskänsliga
    * _Korrigera anteckning_: Före korrigeringen var du tvungen att skriva in kupongkoden exakt som den var konfigurerad med hänsyn tagen till versaler eller gemener. Kupongen valideras nu i serverdelen oberoende av koden i versaler eller gemener.
 * _ACP2E-3349_: kundvagnsreglerna &quot;Fast beloppsrabatt för hela kundvagnen&quot;  Åtgärden tillämpar rabatter felaktigt
    * _Korrigera anteckning_: Kupongkoder valideras korrekt oavsett versaler och gemener när de används för att skapa i administrationsområdet. Före validerades inte kupongkoden om den inte matchade det exakta bokstavsfallet för den konfigurerade kundvagnsregelkoden.
@@ -1789,9 +1789,9 @@ Innan de automatiskt avvisades.
 * _ACP2E-3377_: Cart-reglerna &quot;Fast beloppsrabatt för hela kundvagnen&quot; tillämpar rabatter felaktigt när paketprodukter läggs till
    * _Korrigeringsanteckning_: Kundvagnsregler med fast belopp tillämpades inte korrekt för paketprodukter. När man beräknar det totala rabattbeloppet beaktas även underordnade paketprodukter, vilket ger en korrekt rabattberäkning.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/1366ae5e>
-* _ACP2E-3403_: Regler för kundvagnspris Felaktig beräkning av rabatt
-   * _Korrigera anteckning_: Rabatter med fast belopp beräknas nu korrekt. Före korrigeringen summerades inte rabatter med fasta belopp korrekt för paketprodukter.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/0b488dd1>
+* _ACP2E-3403_: Rabatt beräknas inte enligt kundprisreglerna
+   * _Korrigera anteckning_: Rabatter med fast belopp beräknas nu korrekt. Före korrigeringen hade rabatterna inte summerats korrekt för paketprodukterna.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/0b488dd1>
 * _ACP2E-3406_: Kapslade kategorier i regelvillkor visas inte
    * _Korrigera anteckning_: Ett problem har korrigerats när kapslade kategorier under kategori 3 inte visas i marknadsföringsregler för kategorivillkor
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/88660e79>
@@ -1799,19 +1799,19 @@ Innan de automatiskt avvisades.
    * _Korrigera anteckning_: Om du uppdaterar användningen per kupong och användningen per kund i kundvagnsprisregeln kommer det nu att påverka befintliga automatiskt genererade kuponger. Tidigare påverkades endast nya kuponger
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/88660e79>
 * _ACP2E-3456_: Kundprisregeln tar inte hänsyn till överordnad kategori när den använder villkoret &quot;lika med eller större än&quot;.
-   * _Åtgärdat_: Regler för kundvagnspris tar nu hänsyn till överordnad kategori korrekt när den används under avancerade förhållanden
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/93359343>
+   * _Korrigera anteckning_: Kundprisregler hanterar nu den överordnade kategorin korrekt när den används i avancerade villkor
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/93359343>
 * _ACP2E-3463_: Ogiltig rabattberäkning med prioritet
-   * _Korrigeringsanteckning_: I fallet med ett fast belopp som tillämpas för hela kassarabattypen beräknades inte beloppet korrekt för kundvagnsartiklar som redan rabatterats av en tidigare kampanj. Nu är rabatterna ordentligt summerade.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/078c387e>
-* _ACP2E-3472_: [Beräkningen av CLOUD-frakt] tar inte hänsyn till kundvagnsregeln
-   * _Fixnotering_: Före korrigeringen tillämpades inte en kundvagnsregel med regionvillkor konsekvent. Efter korrigeringen tillämpas kundvagnsregler med regionvillkor korrekt.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/d4de4726>
+   * _Korrigeringsanteckning_: I fallet med ett fast belopp som tillämpas för hela kassarabattypen beräknades inte beloppet korrekt för kundvagnsartiklar som redan rabatterats av en tidigare kampanj. Rabatterna summeras.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/078c387e>
+* _ACP2E-3472_: [CLOUD] Leveransberäkningen överväger inte kundvagnsregeln
+   * _Korrigera anteckning_: Före korrigeringen tillämpades inte en vagnsregel med regionsvillkor konsekvent. Efter korrigeringen tillämpas kundvagnsregler med regionvillkor korrekt.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/d4de4726>
 * _AVS2E-3491_: Det gick inte att skapa kundvillkor för kundvagnsregel för faktura.
    * _Korrigera anteckning_: Rabatten på paketprodukt med dynamiskt pris visas nu korrekt i fakturan. Tidigare återspeglades inte rabatten på fakturan.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/3f12d152>
-* _ACP2E-3498_: Felaktigt rabattvärde när flera prisregler för kundvagnen tillämpas samtidigt med rabatterade/specialprissatta produkter
-   * _Åtgärdsmeddelande_: Före korrigeringen tillämpades inte reglerna för fast belopp för hela kundvagnen korrekt om fler än en tillämpades. Nu tillämpas reglerna för rabattvagn med fast belopp korrekt.
+* _ACP2E-3498_: Felaktigt rabattvärde när flera kundprisregler tillämpas samtidigt med rabatterade/specialprissatta produkter
+   * _Korrigeringsanteckning_: Före korrigeringen tillämpades inte fasta belopp för hela kundvagnsregler korrekt om fler än en tillämpades. Nu används rabattreglerna för fast belopp korrekt.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/1984c61c>
 
 ### Returnerar
@@ -1856,7 +1856,7 @@ Administratörsanvändare som tidigare var begränsade kunde se returmenyn och k
 ### Säkerhet
 
 * _AC-11855_: [Problem] Popup-meny för CSP-teckensnittsstöd saknas
-   * _Korrigera anteckning_: Systemet tillåter nu inläsning av teckensnittet https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansBig-Medium.woff&#39; utan att bryta mot direktivet Content Security Policy, vilket säkerställer att popup-menyn Paylater visas korrekt. Tidigare nekades teckensnittet att laddas på grund av ett brott mot direktivet Content Security Policy, vilket orsakade visningsproblem med Paylater Popup.
+   * _Korrigera anteckning_: Systemet tillåter nu inläsning av teckensnittet https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansBig-Medium.woff&#39; utan att bryta mot direktivet Content Security Policy, vilket säkerställer att popup-menyn Paylater visas korrekt. Tidigare nekades teckensnittet att läsas in på grund av en överträdelse av direktivet Content Security Policy, vilket orsakade visningsproblem med popup-menyn Paylater.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38624>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/37401>
 * _AC-12035_: [Problem] Uppdatera js.js DOM-text omtolkad som HTML
@@ -1867,12 +1867,12 @@ Administratörsanvändare som tidigare var begränsade kunde se returmenyn och k
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/7377de59>
 * _ACP2E-3300_: Captcha vid administratörsinloggning kräver inte interaktion för vissa användare
    * _Korrigera anteckning_: ReCaptcha för administratörsinloggning verifieras som förväntat
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/security-package/commit/8f64ab3c>
+   * _GitHub-kodbidrag_: <https://github.com/magento/security-package/commit/8f64ab3c>
 
 ### Leverans
 
 * _AC-10757_: [Problem] Korrigerat stavfel i tracking.phtml - JS-funktioner med namnet &quot;currier&quot; har ändrats till &quot;operator&quot;
-   * _Åtgärdsmeddelande_: Systemet använder nu korrekt termen &quot;carrier&quot; i stället för det felstavade &quot;currier&quot; i JavaScript-hanterarfunktionerna som används i orderspårningsmallen, vilket säkerställer korrekt namngivning av funktioner och kodtydlighet. Tidigare användes den felstavade termen&quot;currier&quot;, vilket kan leda till förvirring och inkonsekvenser i kodbasen.
+   * _Korrigera anteckning_: Systemet använder nu termen &quot;operator&quot; i stället för den felstavade &quot;currier&quot; i de JavaScript-hanterarfunktioner som används i orderspårningsmallen, vilket ger korrekt funktionsnamn och kodklarhet. Tidigare användes den felstavade termen&quot;currier&quot;, vilket kan leda till förvirring och inkonsekvenser i kodbasen.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/34523>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/33414>
 * _AC-11938_: UPS REST &quot;En leverans kan inte ha KGS/IN eller LBS/CM eller OZS/CM som måttenhet&quot;
@@ -1883,18 +1883,18 @@ Administratörsanvändare som tidigare var begränsade kunde se returmenyn och k
 * _AC-13172_: [Problem] Korrigera stavning av variabler för kundadress
    * _Korrigera anteckning_: Systemet stavar nu variabler för kundadresser korrekt och ser till att de visas korrekt i kontoområdet på frontend. Tidigare kunde felaktig stavning av dessa variabler leda till fel vid lokala kodgranskningar.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/32817>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/pull/32815>
-* _ACP2E-2738_: Spårningsfönster visar fel förväntat leveransdatum
-   * _Åtgärdsmeddelande_: Visa korrekt leveransdatum för Fedex Carrier.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/57a32313>
-* _ACP2E-2763_: Tabellpriser visas fortfarande trots att fri frakt tillämpas
-   * _Fix note_: Table Rate fraktmetod visas nu även om gratis frakt blir tillgänglig efter att kupongen har tillämpats
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/b2286ecf>
-* _ACP2E-2765_: MFTF-testet AdminCreatingShippingLabelTest misslyckas på grund av att autentiseringsuppgifter inte har lagts till i Jenkins-miljön
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/32815>
+* _ACP2E-2738_: Spårningsfönstret visar fel förväntat leveransdatum
+   * _Korrigeringsanteckning_: Visa korrekt leveransdatum för fedex-fraktfirma.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/57a32313>
+* _ACP2E-2763_: Tabellhastigheter visas fortfarande även om kostnadsfri leverans används
+   * _Korrigera anteckning_: Leveransmetoden för tabellhastighet visas nu även om Fri frakt blir tillgänglig efter kupongtillämpning
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/b2286ecf>
+* _ACP2E-2765_: MFTF-test AdminCreatingShippingLabelTest misslyckades på grund av att autentiseringsuppgifter inte har lagts till i Jenkins-miljön
    * _Korrigera anteckning_: korrigering för mftf-test
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/ea79f7dd>
 * _ACP2E-3340_: FedEx Track API fungerar inte med REST-autentiseringsuppgifter
-   * _Korrigera anteckning_: Tidigare FedEx-integrering krävde inte ytterligare API-nycklar för spårnings-API. Nu har en ny konfiguration lagts till för att stödja spårnings-API-nycklar.
+   * _Korrigera anteckning_: Tidigare FedEx-integrering krävde inte ytterligare API-nycklar för spårnings-API. Nu har en ny konfiguration lagts till som stöd för API-nycklar för spårning.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/ec7e32a9>
 * _ACP2E-3354_: [Cloud] Förhandlingsfrekvenser för FedEx returneras inte för REST
    * _Korrigera anteckning_: Före korrigeringen har FedEx-kontospecifika frekvenser där de inte skickats på svaret, även via FedEx-dokumentation som de borde ha skickats. Efter korrigeringen skickas de kontospecifika priserna på svaret genom att begäran ändras från vår sida.
@@ -1909,24 +1909,24 @@ Administratörsanvändare som tidigare var begränsade kunde se returmenyn och k
 * _ACP2E-3104_: JS-fel i förhandsvisning av mellanlagring
    * _Korrigera anteckning_: Nu läses filen form-mini-stub.js in utan JS-syntaxfel i utvecklingsverktygen.
 * _ACP2E-3162_: Produktens mellanlagrade innehåll för specialpris kan inte uppdateras
-   * _Fix note_: Systemet gör det nu möjligt att redigera slutdatumet för en prisuppdateringskampanj efter att den har startat, vilket säkerställer att användare kan göra nödvändiga justeringar av sina kampanjer. Tidigare uppstod ett fel när man försökte uppdatera slutdatumet för en aktiv kampanj, vilket hindrade användare från att göra ändringar.
+   * _Korrigera anteckning_: Systemet tillåter nu redigering av slutdatumet för en prisuppdateringskampanj efter att den har startats, vilket säkerställer att användarna kan göra nödvändiga justeringar i sina kampanjer. Tidigare uppstod ett fel när slutdatumet för en aktiv kampanj skulle uppdateras, vilket hindrade användarna från att göra ändringar.
 * _ACP2E-3453_: Det går inte att uppdatera schemalagd uppdatering när unikt kategoriattribut används
-   * _Åtgärdat_: Åtgärdade ett problem där det inte var möjligt att uppdatera en schemalagd uppdatering för en kategori om kategorin hade ett unikt attribut
+   * _Korrigera anteckning_: Ett problem har korrigerats där en schemalagd uppdatering för en kategori inte var möjlig om kategorin hade ett unikt attribut
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/078c387e>
 
 ### Målinriktning
 
-* _AC-9432_: [Problem] Tillåt användning av CIDR-intervall i listan över tillåtna underhåll
+* _AC-9432_: [Utgåva] Tillåt användning av CIDR-intervall i tillåtelselista för underhåll
    * _Korrigera anteckning_: Systemet stöder nu användning av CIDR-intervall i underhållsläget Tillåt IP-lista, vilket möjliggör ett intervall av IP-adresser för att kringgå underhållsläge. Tidigare tillät underhållsläget IP-listan endast tillåtna enskilda IP-adresser att kringgå underhållsläge.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/37943>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/30699>
 
 ### Moms
 
-* _AC-13295_: [Problemfunktion] /marknadsföring av php8.1-konstruktoregenskaper för wee graph ql
-   * _Åtgärdsmeddelande_: Ersätt allmost alla egenskaper med befordran av konstruktoregenskaper i modulen wee graph ql:
+* _AC-13295_: [Problem] Funktion/php8.1 konstruktoregenskap höjdes när graf ql
+   * _Korrigera anteckning_: Ersätt alla egenskaper med en befordran av konstruktoregenskaper i modulen där diagrammet ql visas:
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/39309>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/pull/36975>
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/36975>
 * _ACP2E-3193_: FPT (Fixed Product Tax) fungerar inte med konfigurerbara produkter
    * _Korrigera anteckning_: FPT för konfigurerbara produktvariationer fungerar korrekt.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/ec7e32a9>
@@ -1949,7 +1949,7 @@ Administratörsanvändare som tidigare var begränsade kunde se returmenyn och k
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/9e383b4d>
 * _ACP2E-3334_: [Internt] Fel vid tillämpning av korrigering visas inte under körning eller i loggar
    * _Korrigera anteckning_: -
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/d4de4726>
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/d4de4726>
 * _ACP2E-3458_: [MFTF] StorefrontCheckoutProcessForQuoteWithoutNegotiatedPricesTest
    * _Korrigera anteckning_: Korrigerade MFTF-filer
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/078c387e>
@@ -1972,16 +1972,16 @@ Administratörsanvändare som tidigare var begränsade kunde se returmenyn och k
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38983>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/38972>
 * _AC-12650_: [Problem] att lägga till sourceMap-generering för färre filer i utvecklarläge
-   * _Fix-anteckning_: Systemet genererar nu källkartor för färre filer i utvecklarläge, vilket gör det lättare att identifiera källan till en stil. Tidigare var det svårt att identifiera källan till ett format när man körde systemet i utvecklarläge med mindre kompilering på serversidan.
+   * _Korrigera anteckning_: Systemet genererar nu källkartor för mindre filer i utvecklarläge, vilket gör det enklare att identifiera källan till ett format. Tidigare var det en utmaning att identifiera källan till en stil när systemet kördes i utvecklarläge med mindre kompilering på serversidan.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38982>
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/pull/38977>
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/38977>
 * _AC-1306_: Statiskt innehåll distribueras för inaktiverade moduler
    * _Korrigera anteckning_: Nu utesluts CSS-relaterade till inaktiverade moduler från de slutliga CSS-utdatafilerna, vilket säkerställer att onödiga format inte läses in. Tidigare inkluderades CSS för inaktiverade moduler i de slutliga CSS-utdatafilerna, vilket ledde till inläsning av extra, onödiga format.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/24666>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/32922>
 * _AC-13459_: Inkonsekvent beteende vid sortering utanför lagret med minimalt lagertröskelvärde
-   * _Korrigera anteckning_: Systemet sorterar nu produkter i katalogen korrekt baserat på lagernivåer, enligt det angivna minimikravet för Stock och flyttar objekt utanför lagret till listans nedre del på ett konsekvent sätt. Tidigare var sorteringsbeteendet inkonsekvent, med artiklar som inte alltid visades i rätt ordning baserat på deras lagernivåer, och ändringar i sorteringen kunde inträffa oförutsägbart efter att kategorihierarkin har sparats, uppdaterats eller ändrats.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/47b448e2>
+   * _Korrigera anteckning_: Systemet sorterar nu produkter i katalogen korrekt baserat på lagernivåer, enligt det angivna minimikravet för Stock och flyttar objekt utanför lagret till listans nedre del på ett konsekvent sätt. Tidigare var sorteringsfunktionen inkonsekvent, med objekt som inte alltid visas i rätt ordning baserat på deras lagernivåer, och ändringar i sorteringen kan inträffa oförutsägbart efter att kategorihierarkin har sparats, uppdaterats eller ändrats.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/47b448e2>
 * _AC-13472_: Förslag till förbättrad felrapportering för problem med inläsning av require.js
    * _Korrigera anteckning_: Den här PR-funktionen förbättrar felmeddelandet när en komponent inte kan läsas in med nödvändiga inställningar.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/36761>
@@ -1999,9 +1999,9 @@ Administratörsanvändare som tidigare var begränsade kunde se returmenyn och k
 * _ACP2E-2529_: Undantag vid kontroll av ett presentkortssaldo när Recaptcha är aktiverat
    * _Korrigera anteckning_: Användare kan hämta presentkortssaldo i vyn och redigera kundvagnsskärmen. Tidigare visades inte dessa uppgifter när reCAPTCHA aktiverades.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2-page-builder/commit/4a2795ea>
-* _ACP2E-2729_: [FÖRTYDLIGANDE] Funktionsbegäran ADA-överensstämmelse
-   * _Fix note_: Systemet säkerställer nu ADA-överensstämmelse genom att ta bort CSS-egenskaper som inte stöds och ersätta dem med sådana som stöds i den print.css filen. Tidigare ledde användningen av CSS-egenskaper som inte stöds till problem med webbläsarens kompatibilitet.
-   * _Bidrag till_ GitHub-kod: <https://github.com/magento/magento2/commit/57a32313>
+* _ACP2E-2729_: [CLARIFICATION] Funktionsbegäran ADA-överensstämmelse
+   * _Korrigera anteckning_: Systemet garanterar nu ADA-kompatibilitet genom att ta bort CSS-egenskaper som inte stöds och ersätta dem med de som stöds i filen print.css. Tidigare ledde användningen av CSS-egenskaper som inte stöds till problem med webbläsarkompatibiliteten.
+   * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/57a32313>
 * _ACP2E-3061_: [Cloud] Sammanfusionsbibliotekskod i effect-drop.js i AC 2.4.4-p8
    * _Korrigera anteckning_: Systemet implementerar nu biblioteket effect-drop.js korrekt, vilket garanterar att jQuery-gränssnittseffekterna fungerar som de ska. Tidigare skrevs biblioteket effect-drop.js av misstag över med biblioteket effect-clip.js, vilket kan orsaka problem med jQuery-gränssnittseffekter.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/35b1b1da>
