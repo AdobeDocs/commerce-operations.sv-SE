@@ -3,13 +3,13 @@ title: 'ACP2E-3705: "indexer_update_all_views" kan inte köras när "MAGE_INDEXE
 description: Använd programfixen ACP2E-3705 för att åtgärda Adobe Commerce-problemet där körningen av kron "indexer_update_all_views" misslyckas när "MAGE_INDEXER_THREADS_COUNT" är inställd.
 feature: Catalog Management, B2B
 role: Admin, Developer
-exl-id: 111325fa-8ed5-45f9-9e68-b52f4425d253
-source-git-commit: 7ef772510274bc8681c395656437d64f8b40e70a
+source-git-commit: 4f719c62fdd9fd960548799c9872f73c76997278
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 0%
 
 ---
+
 
 # ACP2E-3705: `indexer_update_all_views` kron körning misslyckas när `MAGE_INDEXER_THREADS_COUNT` anges
 
