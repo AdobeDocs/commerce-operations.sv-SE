@@ -1,7 +1,7 @@
 ---
-source-git-commit: 2f8ca1dd3289c1a24e33198c95d38c1a04a507ff
+source-git-commit: 934fe621356c45bcefd2f84b7d01986b4995b061
 workflow-type: tm+mt
-source-wordcount: '28394'
+source-wordcount: '28390'
 ht-degree: 0%
 
 ---
@@ -99,8 +99,8 @@ Tidigare var det möjligt att skapa kundgruppen Duplicera webbplatsens grupppris
    * _Korrigera anteckning_: Systemet justerar nu sidåtgärdsknapparna korrekt till höger om det klisterlappande huvudet på adminpanelen, vilket förbättrar det professionella utseendet och känslan. Tidigare var dessa knappar felaktigt flytande till vänster om den klibbiga rubriken.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38701>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/44cef3a9>
-* _AC-11999_: dev:di:infofel i magento 2.4.7
-   * _Korrigera anteckning_: Systemet visar nu konstruktorparametrar korrekt när kommandot dev:di:info körs, vilket förhindrar att fel uppstår. Tidigare resulterade körningen av det här kommandot i ett fel på grund av ett typmatchningsfel i argumentet.
+* _AC-11999_: `dev:di:info` fel i magento 2.4.7
+   * _Fix note_: The system now correctly displays constructor parameters when executing the `dev:di:info` command, preventing any errors from occurring. Tidigare resulterade körningen av det här kommandot i ett fel på grund av ett typmatchningsfel i argumentet.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38740>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/0c53bbf7>
 * _AC-13000_: Kryssrutan Logga in som kundanmälan kan inte översättas
@@ -1531,8 +1531,8 @@ Tidigare tilldelades till administratörsarkivet i stället för deras respektiv
 * _LYNX-399_: Platshållarminiatyrbilder returneras när en enkel produkt läggs till i varukorgen i en grupperad produkt
    * _Åtgärdade ett fel_ där en enkel produkt (en del av en grupperad produkt) i vagnen returnerade en platshållarminiatyrbild, även när produkten hade en tilldelad bild.
 Korrigeringsinformation:
-・ Miniatyrbilden av produkten visar nu korrekt den tilldelade bilden om den är tillgänglig.
-・ Miniatyrbildsmarkeringen respekterar administratörskonfigurationen under:
+* Produktminiatyrbilden visar nu den tilldelade bilden korrekt om den är tillgänglig.
+* Miniatyrbildsmarkeringen respekterar administratörskonfigurationen under:
 Stores > Configuration > Sales > Checkout > Shopping Cart > Group Product Image.
 På så sätt får du en konsekvent miniatyrbildsfunktion för grupperade produkter baserat på butiksinställningarna.
 * _LYNX-400_: Kundens anpassade alternativattribut fungerar inte med heltalsvärden
@@ -1542,8 +1542,8 @@ På så sätt får du en konsekvent miniatyrbildsfunktion för grupperade produk
 * _LYNX-403_: only_x_left_in_stock returnerar alltid 0 för konfigurerbara produkter
    * _Korrigera anteckning_: Ett problem har åtgärdats där attributet only_x_left_in_stock alltid returnerade 0 för konfigurerbara produkter när det lades till med den överordnade SKU:n med alternativ.
 Korrigeringsinformation:
-・ Det enda värdet för_x_left_in_stock återspeglar nu korrekt stocken för den valda underordnade varianten i stället för den överordnade SKU:n.
-・ På så sätt ser du till att lagernivåerna visas korrekt för konfigurerbara produktvariationer i kundvagnen och på produktsidorna.
+* Värdet only_x_left_in_stock återger nu korrekt stocken för den valda underordnade varianten i stället för den överordnade SKU:n.
+* På så sätt ser du till att lagernivåerna visas korrekt för konfigurerbara produktvariationer i kundvagnen och på produktsidorna.
 * _LYNX-405_: GraphQL-fel: Filtypen stöds inte i frågan om anpassningsbara alternativ
    * _Korrigera anteckning_: Ett fel har korrigerats där GraphQL returnerade ett fel för anpassningsbara alternativ av typen &quot;file&quot; i kundvagnsobjekt. Frågan returnerar nu korrekt information för alla anpassningsbara alternativtyper, inklusive filbaserade alternativ, utan att orsaka fel.
 * _LYNX-411_: GraphQL-frågan returnerar inte korrekt beräknat normalpris för anpassningsbara produkter
@@ -1551,7 +1551,7 @@ Korrigeringsinformation:
 * _LYNX-412_: AppliedTaxes via EstimatedTotals kvarstår med uppdaterade mutationer
    * _Korrigera anteckning_: Korrigerade ett problem med mutationen EstimatedTotals, där pålagda skatter bestod i en vagn även efter att regionen eller postkoden uppdaterats. Mättnaden uppdaterar nu korrekt de pålagda skatterna när värden mellan region och postnummer ändras, vilket säkerställer att endast rätt momsregel tillämpas baserat på aktuella kundvagnsdata.
 * _LYNX-420_: attributet is_available i CartItemInterface returnerar true även när det säljbara lagret är mindre än produktkvantiteten
-   * _Korrigeringsanteckning_: Ett problem har korrigerats där attributet is_available i CartItemInterface felaktigt returnerade true även om det säljbara lagret var lägre än den begärda produktkvantiteten. Fältet is_available returnerar nu korrekt false när produktens kvantitet överskrider det tillgängliga lagret.
+   * _Korrigeringsanteckning_: Ett problem har korrigerats där attributet is_available i CartItemInterface felaktigt returnerade true även om det säljbara lagret var lägre än den begärda produktkvantiteten. Fältet is_available returnerar nu korrekt false när produktens kvantitet överstiger det tillgängliga lagret.
 * _LYNX-421_: Det går inte att lägga till kupong i kundvagn för rabatt endast för frakt
    * _Korrigera anteckning_: Korrigerade ett problem där en kupong inte kunde användas för en vagn för enbart frakt-rabatter. Kupongen tillämpas nu korrekt på fraktbeloppet när en försäljningsregel utan produktvillkor används, vilket säkerställer att den förväntade rabatten tillämpas på leveranskostnaden.
 * _LYNX-425_: Normalpris för produkt med 12 decimaler och fel värde
@@ -1584,7 +1584,7 @@ Korrigeringsinformation:
 * _LYNX-637_: Storefront-kompatibilitet - Uppdatera logik för att hämta tabellnamn med prefix och andra mindre förbättringar
    * _Korrigera anteckning_: Logiken för att hämta tabellnamnet med prefixet (relaterat till SCP-ändringar) har uppdaterats.
 * _LYNX-643_: Det går inte att spara i adressboken när du använder setBillingAddressOnCart GQL:s fält same_as_shipping
-   * _Korrigera anteckning_: Ett problem har korrigerats där leveransadressen inte sparades i kundens adressbok när GraphQL-mutationen setBillingAddressOnCart användes med värdet true för samma_as_shipping-fält. Leveransadressen lagras som förväntat.
+   * _Korrigera anteckning_: Ett problem har korrigerats där leveransadressen inte sparades i kundens adressbok när mutationen setBillingAddressOnCart för GraphQL användes med samma_as_shipping-fält inställt på true. Leveransadressen lagras som förväntat.
 * _LYNX-650_: Standardisera order_id i mutationer
    * _Korrigera anteckning_: Standardiserade indata för order_id i mutationer och uppdaterade e-postmallen för bekräftelse av orderavslutning så att ett inkrement-ID visas i stället för order-ID.
 * _LYNX-651_: CustomerOrder visar inte orderkommentarerna
