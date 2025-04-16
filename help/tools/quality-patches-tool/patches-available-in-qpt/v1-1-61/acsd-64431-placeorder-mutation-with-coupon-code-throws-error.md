@@ -3,15 +3,15 @@ title: 'ACSD-64431: mutationen"placeOrder" med kupongkod i begäran orsakar ett 
 description: Använd patchen ACSD-64431 för att åtgärda Adobe Commerce-problemet där mutationen"placeOrder" som innehåller kupongkodsinformationen i begäran genererar ett internt serverfel i stället för att beställningen utförs korrekt.
 feature: GraphQL, Orders, Promotions/Events
 role: Admin, Developer
-source-git-commit: 883b9db12308c8832afbf709bc188edab746618f
+exl-id: 13918f3e-842b-4b2e-b2e2-2d8add542a87
+source-git-commit: 43f4055d7c6bf681fde851d5132860ea7b68b677
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '392'
 ht-degree: 0%
 
 ---
 
-
-# ACSD-64431: mutationen&quot;placeOrder&quot; med kupongkod i begäran genererar ett internt fel
+# ACSD-64431: mutationen&quot;placeOrder&quot; med kupongkod i begäran orsakar ett internt serverfel
 
 Korrigeringen ACSD-64431 åtgärdar ett problem där mutationen `placeOrder` som innehåller kupongkodsinformationen i begäran genererar ett internt serverfel i stället för att beställningen kan utföras. Den här korrigeringen är tillgänglig när [[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.61 har installerats. Korrigerings-ID är ACSD-64431. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.8.
 
@@ -341,10 +341,6 @@ Använd följande länkar beroende på distributionsmetod för att tillämpa ens
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
 * Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
-
-## Ytterligare steg krävs efter installationen av korrigeringsfilen
-
-(Det här avsnittet är valfritt. Det kan finnas åtgärder som krävs efter att du har implementerat korrigeringen för att åtgärda problemet.) 
 
 ## Relaterad läsning
 

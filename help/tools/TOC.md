@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: 0960da0b0c1945e899ce092fb938de13e1b5c95c
+source-git-commit: 43f4055d7c6bf681fde851d5132860ea7b68b677
 workflow-type: tm+mt
-source-wordcount: '7422'
+source-wordcount: '7423'
 ht-degree: 0%
 
 ---
@@ -772,7 +772,7 @@ ht-degree: 0%
          - [Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.61](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/overview.md)
          - [ACP2E-3689: Flera problem med kategoriträdvisning på djupare nivåer och spegling av ankarrelationer/icke-ankarrelationer](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acp2e-3689-issues-with-category-tree-display-reflect-anchor-non-anchor-relationships.md)
          - [ACSD-64178: Sidan [!UICONTROL Edit Attribute Set] läses in långsamt med tusentals produktattribut](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acsd-64178-attribute-set-edit-page-loads-slow-with-thousands-of-attributes.md)
-         - [ACSD-64431: mutationen&quot;placeOrder&quot; med kupongkod i begäran genererar ett internt fel](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acsd-64431-placeorder-mutation-with-coupon-code-throws-error.md)
+         - [ACSD-64431: mutationen&quot;placeOrder&quot; med kupongkod i begäran orsakar ett internt serverfel](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acsd-64431-placeorder-mutation-with-coupon-code-throws-error.md)
          - [ACSD-64684: Valideringsfel när ett presentkort med ett värde över 999 sparas på grund av kommatecken i tusen (1 000)](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acsd-64684-validation-error-for-gift-card-value-over-999-due-to-comma-in-one-thousand.md)
          - [ACSD-63883: Korrigerar felaktigt items_count i  [!DNL GraphQL] svar för [!UICONTROL Requisition List]](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acsd-63883-fixes-the-issue-where-the-requisition-list.md)
          - [ACP2E-3705: exekvering av kron indexer_update_all_views misslyckas när MAGE_INDEXER_THREADS_COUNT har angetts](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-61/acp2e-3705-fixes-an-issue-where-the-indexer.md)
