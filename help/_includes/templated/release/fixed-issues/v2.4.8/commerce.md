@@ -1,7 +1,7 @@
 ---
-source-git-commit: 934fe621356c45bcefd2f84b7d01986b4995b061
+source-git-commit: ae8701cf2486ef0a79c96bd264e16b0e7803a8f6
 workflow-type: tm+mt
-source-wordcount: '28390'
+source-wordcount: '28386'
 ht-degree: 0%
 
 ---
@@ -100,7 +100,7 @@ Tidigare var det möjligt att skapa kundgruppen Duplicera webbplatsens grupppris
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38701>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/44cef3a9>
 * _AC-11999_: `dev:di:info` fel i magento 2.4.7
-   * _Fix note_: The system now correctly displays constructor parameters when executing the `dev:di:info` command, preventing any errors from occurring. Tidigare resulterade körningen av det här kommandot i ett fel på grund av ett typmatchningsfel i argumentet.
+   * _Korrigera anteckning_: Systemet visar nu konstruktorparametrar korrekt när kommandot `dev:di:info` körs, vilket förhindrar att fel uppstår. Tidigare resulterade körningen av det här kommandot i ett fel på grund av ett typmatchningsfel i argumentet.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38740>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/0c53bbf7>
 * _AC-13000_: Kryssrutan Logga in som kundanmälan kan inte översättas
@@ -1089,8 +1089,8 @@ Tidigare togs posterna i produktsekvenstabellerna i Bundle inte bort.
    * _Korrigera anteckning_: Systemet refererar nu klasser i moduler korrekt, vilket ger en smidigare åtgärd och förhindrar krascher på grund av klasser som inte finns. Detta inkluderar en bugfix i indexer- och Creditmemo-modulerna och implementeringen av HttpGetActionInterface i klassen PrintAction. Tidigare ledde felaktiga klassreferenser till fel och potentiella systemkrascher, och vissa funktioner, som t.ex. filnamnet för kreditnota PDF-filer och omindexering av lager, fungerade inte som förväntat.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/39126>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/37784>
-* _AC-12964_: Möjlighet att definiera område för DV:di:info CLI-kommando
-   * _Korrigera anteckning_: Nu kan utvecklare definiera ett område för CLI-kommandot dev:di:info, vilket förbättrar utvecklings- och felsökningsprocessen. Tidigare kunde kommandot bara visa information för området GLOBAL.
+* _AC-12964_: Möjlighet att definiera område för CLI-kommandot `dev:di:info`
+   * _Korrigera anteckning_: Nu kan utvecklare definiera ett område för CLI-kommandot `dev:di:info`, vilket förbättrar utvecklings- och felsökningsprocessen. Tidigare kunde kommandot bara visa information för området GLOBAL.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38758>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/38759>
 * _AC-13149_: [Utgåva] Lägg till egenskapen isMultipleFiles i bildformulärmallen
@@ -1545,7 +1545,7 @@ Korrigeringsinformation:
 * Värdet only_x_left_in_stock återger nu korrekt stocken för den valda underordnade varianten i stället för den överordnade SKU:n.
 * På så sätt ser du till att lagernivåerna visas korrekt för konfigurerbara produktvariationer i kundvagnen och på produktsidorna.
 * _LYNX-405_: GraphQL-fel: Filtypen stöds inte i frågan om anpassningsbara alternativ
-   * _Korrigera anteckning_: Ett fel har korrigerats där GraphQL returnerade ett fel för anpassningsbara alternativ av typen &quot;file&quot; i kundvagnsobjekt. Frågan returnerar nu korrekt information för alla anpassningsbara alternativtyper, inklusive filbaserade alternativ, utan att orsaka fel.
+   * _Korrigera anteckning_: Ett fel har korrigerats där GraphQL returnerade ett fel för anpassningsbara alternativ av typen file i kundvagnsobjekt. Frågan returnerar nu korrekt information för alla anpassningsbara alternativtyper, inklusive filbaserade alternativ, utan att orsaka fel.
 * _LYNX-411_: GraphQL-frågan returnerar inte korrekt beräknat normalpris för anpassningsbara produkter
    * _Korrigeringsanteckning_: Ett problem har korrigerats där GraphQL inte returnerade korrekt beräknat normalpris för anpassningsbara produkter. Frågan innehåller nu korrekt det beräknade ordinarie priset med anpassningsbara värden (t.ex. $125) i egenskapen prices, som återspeglar både baspriset och eventuella ytterligare anpassningskostnader.
 * _LYNX-412_: AppliedTaxes via EstimatedTotals kvarstår med uppdaterade mutationer
@@ -1563,9 +1563,9 @@ Korrigeringsinformation:
 * _LYNX-447_: GraphQL-serverfel i kundvagn med endast_x_left_in_stock för paketerad produkt
    * _Åtgärdade ett fel där en kundvagn som innehåller en paketerad produkt med fältet only_x_left_in_stock i GraphQL-frågan hämtades med ett internt serverfel._ GraphQL returnerar nu korrekt ett flyttal eller null för fältet only_x_left_in_stock utan fel.
 * _LYNX-464_: GraphQL-fel vid borttagning av andra produkter med otillräckligt konfigurerbar produkt i kundvagn
-   * _Korrigera anteckning_: Ett fel har korrigerats där försök att ta bort produkter som finns i lager från kundvagnen resulterade i ett GraphQL-fel av typen &quot;Begärd kvantitet är inte tillgänglig&quot; om vagnen även innehåller konfigurerbara produkter med otillräckligt lager. Borttagningen fungerar nu som förväntat utan att utlösa fel.
+   * _Korrigera anteckning_: Ett fel har korrigerats där försök att ta bort produkter i vagnen resulterade i ett GraphQL-fel &quot;Begärd kvantitet är inte tillgänglig&quot; om vagnen även innehöll konfigurerbara produkter med otillräckligt lager. Borttagningen fungerar nu som förväntat utan att utlösa fel.
 * _LYNX-469_: Det går inte att lägga till produkter eftersom SKU:n i mutationen är skiftlägeskänslig
-   * _Korrigeringsanteckning_: Ett problem där mutationen addProductsToCart returnerade felet &quot;PRODUCT_NOT_FOUND&quot; när SKU:er med olika höljen användes har åtgärdats. Mutationen hanterar nu SKU:er som inte är skiftlägeskänsliga, vilket säkerställer konsekvens med katalogtjänstfrågor och PDP-beteende.
+   * _Korrigeringsanteckning_: Ett problem där mutationen addProductsToCart returnerade felet PRODUCT_NOT_FOUND när SKU:er med olika höljen användes har åtgärdats. Mutationen hanterar nu SKU:er som inte är skiftlägeskänsliga, vilket säkerställer konsekvens med katalogtjänstfrågor och PDP-beteende.
 * _LYNX-603_: Product attribute > trademark short form ™ returneras som ™
    * _Korrigera anteckning_: Problem med teckenkodning med produktnamnet för GraphQL API har åtgärdats
 * _LYNX-619_: updateCustomerEmail - mutationsproblem
