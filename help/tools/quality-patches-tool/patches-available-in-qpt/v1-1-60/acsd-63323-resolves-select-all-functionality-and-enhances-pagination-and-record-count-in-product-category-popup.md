@@ -3,17 +3,17 @@ title: 'ACSD-63323: Korrigerar funktionen [!UICONTROL Select All] och förbättr
 description: Använd korrigeringsfilen ACSD-63323 för att åtgärda Adobe Commerce-problemet där alternativet [!UICONTROL Select All] inte fungerar när du lägger till produkter i en kategori. Dessutom ser det till att sidnumrering och etiketten för antal poster fungerar korrekt när du lägger till produkter i en kategori via popup-rutnätet.
 feature: Products
 role: Admin, Developer
-source-git-commit: f3f0cc93adf83b485ca50811adcc561638e3c5c2
+exl-id: 96e318fd-f1dd-4b15-b171-78ae1c8e4e0d
+source-git-commit: d24909ea2571eacafac1ff6b225e87bc40d320bc
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '388'
 ht-degree: 0%
 
 ---
 
-
 # ACSD-63323: Korrigerar funktionen [!UICONTROL Select All] och förbättrar sidnumrering och antal poster i popup-fönstret för produktkategorier
 
-Korrigeringen ACSD-63323 åtgärdar ett problem där alternativet **[!UICONTROL Select All]** inte fungerar när produkter läggs till i en kategori. Dessutom ser det till att sidnumrering och etiketten för antal poster fungerar korrekt när du lägger till produkter i en kategori via popup-rutnätet. Den här korrigeringen är tillgänglig när [[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) har installerats. Korrigerings-ID är ACSD-63323. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.8.
+Korrigeringen ACSD-63323 åtgärdar ett problem där alternativet **[!UICONTROL Select All]** inte fungerar när produkter läggs till i en kategori. Dessutom ser det till att sidnumrering och etiketten för antal poster fungerar korrekt när du lägger till produkter i en kategori via popup-rutnätet. Den här korrigeringen är tillgänglig när [[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.60 har installerats. Korrigerings-ID är ACSD-63323. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.8.
 
 ## Berörda produkter och versioner
 
@@ -68,5 +68,3 @@ Använd följande länkar beroende på distributionsmetod för att tillämpa ens
 Mer information om [!DNL Quality Patches Tool] finns i:
 
 * [[!DNL Quality Patches Tool]: Ett självbetjäningsverktyg för kvalitetspatchar](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) i verktygshandboken.
-
-
