@@ -2,9 +2,9 @@
 title: GraphQL Application Server
 description: Följ dessa anvisningar för att aktivera GraphQL Application Server i din Adobe Commerce-distribution.
 exl-id: 9b223d92-0040-4196-893b-2cf52245ec33
-source-git-commit: c5446f0273705b158297c0a253054742ec95b44e
+source-git-commit: 2f8396a367cbe1191bdf67aec75bd56f64d3fda8
 workflow-type: tm+mt
-source-wordcount: '2082'
+source-wordcount: '2074'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ GraphQL Application Server finns endast för Adobe Commerce. Det finns inte för
 
 >[!NOTE]
 >
->GraphQL Application Server är inte kompatibel med [[!DNL Amazon Simple Storage Service (AWS S3)]](https://aws.amazon.com/s3/). Adobe Commerce-kunder i molninfrastruktur som för närvarande använder [!DNL AWS S3] för [fjärrlagring](../configuration/remote-storage/cloud-support.md) kan inte använda GraphQL Application Server förrän Adobe släpper en snabbkorrigering senare under 2024.
+>GraphQL Application Server är inte kompatibel med [[!DNL Amazon Simple Storage Service (AWS S3)]](https://aws.amazon.com/s3/). Adobe Commerce-kunder i molninfrastruktur som för närvarande använder [!DNL AWS S3] för [fjärrlagring](../configuration/remote-storage/cloud-support.md) kan inte använda GraphQL Application Server.
 
 ## Arkitektur
 
@@ -39,7 +39,7 @@ För att köra GraphQL Application Server krävs följande:
 * Commerce version 2.4.7+
 * PHP 8.2 eller senare
 * Svepande PHP-tillägg v5+ har installerats
-* Tillräckligt RAM och processor baserat på förväntad belastning
+* Tillräckligt RAM och CPU baserat på förväntad belastning
 
 ## Aktivera och distribuera i molninfrastruktur
 
@@ -126,7 +126,7 @@ Utför följande steg innan du distribuerar GraphQL Application Server i Starter
 
 >[!NOTE]
 >
->Se till att alla anpassade inställningar i rotfilen `.magento.app.yaml` migreras korrekt till filen `application-server/.magento/.magento.app.yaml`. När filen `application-server/.magento/.magento.app.yaml` har lagts till i ditt projekt bör du behålla den förutom rotfilen `.magento.app.yaml`. Om du till exempel behöver [konfigurera RabbitMQ-tjänsten](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/service/rabbitmq) eller [hantera webbegenskaper](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/app/properties/web-property) bör du även lägga till samma konfiguration i `application-server/.magento/.magento.app.yaml`.
+>Se till att alla anpassade inställningar i rotfilen `.magento.app.yaml` migreras korrekt till filen `application-server/.magento/.magento.app.yaml`. När filen `application-server/.magento/.magento.app.yaml` har lagts till i ditt projekt bör du behålla den förutom rotfilen `.magento.app.yaml`. Om du till exempel behöver [konfigurera tjänsten RabbitMQ ](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/service/rabbitmq) eller [hantera webbegenskaper](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/app/properties/web-property) bör du även lägga till samma konfiguration i `application-server/.magento/.magento.app.yaml`.
 
 ### Distribuera startprojekt
 
