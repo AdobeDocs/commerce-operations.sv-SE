@@ -3,9 +3,10 @@ title: 'ACSD-51819: Placera flera order med ett enda offert-ID'
 description: Använd patchen ACSD-51819 för att åtgärda Adobe Commerce-problemet där flera beställningar kan göras via samma offert-ID.
 feature: Orders, Checkout
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: dbca8790-d947-4104-bba9-b29abcfc0344
+source-git-commit: 5f22591c499f0f5d349994195731c7c87512f5f0
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '389'
 ht-degree: 0%
 
 ---
@@ -18,11 +19,11 @@ Korrigeringen ACSD-51819 åtgärdar ett problem där flera order kan beställas 
 
 **Korrigeringen har skapats för Adobe Commerce-version:**
 
-* Adobe Commerce (alla distributionsmetoder) 2.4.4-p2
+* Adobe Commerce (alla distributionsmetoder) 2.4.4-p2, 2.4.5-p5, 2.4.6, 2.4.6-p4, 2.4.7-p1
 
 **Kompatibel med Adobe Commerce-versioner:**
 
-* Adobe Commerce (alla distributionsmetoder) 2.4.4 - 2.4.4-p3
+* Adobe Commerce (alla distributionsmetoder) 2.4.4 - 2.4.4-p11, 2.4.5-p3 - 2.4.5-p10, 2.4.6 - 2.4.6-p8, 2.4.7 - 2.4.7-p3
 
 >[!NOTE]
 >
