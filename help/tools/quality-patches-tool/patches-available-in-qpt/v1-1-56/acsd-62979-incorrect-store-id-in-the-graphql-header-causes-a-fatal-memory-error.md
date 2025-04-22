@@ -3,13 +3,13 @@ title: 'ACSD-62979: Felaktigt arkiv-ID i GraphQL-huvudet orsakar ett allvarligt 
 description: Använd korrigeringsfilen ACSD-62979 för att åtgärda Adobe Commerce-problemet där fel lagrings-ID i GraphQL-huvudet orsakar ett allvarligt minnesfel
 feature: GraphQL
 role: Admin, Developer
-source-git-commit: 16875f95ab23559d4e1081b8cfe0374e1394d87d
+exl-id: 832baae1-34b4-4ca8-bfa9-221aa60da67e
+source-git-commit: 187a0056971e6bec324b5cc9d374375bbfb84dd8
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '316'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-62979: Felaktigt arkiv-ID i GraphQL-huvudet orsakar ett allvarligt minnesfel
 
@@ -19,11 +19,11 @@ Korrigeringen ACSD-62979 åtgärdar ett problem där fel lagrings-ID i GraphQL-h
 
 **Korrigeringen har skapats för Adobe Commerce-version:**
 
-* Adobe Commerce (alla distributionsmetoder) 2.4.6-p7, 2.4.6
+* Adobe Commerce (alla distributionsmetoder) 2.4.6, 2.4.6-p7, 2.4.7-p3
 
 **Kompatibel med Adobe Commerce-versioner:**
 
-* Adobe Commerce (alla distributionsmetoder) 2.4.4 - 2.4.6-p8
+* Adobe Commerce (alla distributionsmetoder) 2.4.4 - 2.4.7-p4
 
 >[!NOTE]
 >
@@ -93,4 +93,3 @@ Använd följande länkar beroende på distributionsmetod för att tillämpa ens
 Mer information om [!DNL Quality Patches Tool] finns i:
 
 * [[!DNL Quality Patches Tool]: Ett självbetjäningsverktyg för kvalitetspatchar](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) i verktygshandboken.
-
