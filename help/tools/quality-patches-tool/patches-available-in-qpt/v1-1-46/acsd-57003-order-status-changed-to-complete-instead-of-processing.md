@@ -3,9 +3,10 @@ title: 'ACSD-57003: Orderstatus ändras till *Fullständigt* i stället för att
 description: Använd patchen ACSD-57003 för att åtgärda Adobe Commerce-problemet där orderstatusen ändras till *Complete* i stället för att ändras till *Processing*.
 feature: Orders, Invoices, Shipping/Delivery
 role: Admin, Developer
-source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a
+exl-id: a28ecc35-5c9a-4bba-b0b9-67fbe37ed8c3
+source-git-commit: 128107310416e97edca3b122e97456138d04073f
 workflow-type: tm+mt
-source-wordcount: '362'
+source-wordcount: '366'
 ht-degree: 0%
 
 ---
@@ -18,11 +19,11 @@ ACSD-57003-korrigeringen åtgärdar ett problem där orderstatusen ändras till 
 
 **Korrigeringen har skapats för Adobe Commerce-version:**
 
-* Adobe Commerce (alla distributionsmetoder) 2.4.6-p3
+* Adobe Commerce (alla distributionsmetoder) 2.4.6-p3, 2.4.6-p8, 2.4.7-p3
 
 **Kompatibel med Adobe Commerce-versioner:**
 
-* Adobe Commerce (alla distributionsmetoder) 2.4.6 - 2.4.6-p3
+* Adobe Commerce (alla distributionsmetoder) 2.4.6 - 2.4.6-p9, 2.4.7-p2 - 2.4.7-p4
 
 >[!NOTE]
 >
