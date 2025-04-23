@@ -2,9 +2,9 @@
 title: Lokala installationskrav
 description: Läs mer om vilka programvaruberoenden som krävs för lokala installationer av Adobe Commerce.
 exl-id: dd4694e7-5437-440c-bb67-804ae36149de
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: db2256f5327897a4376a0d038ce697e8f93235af
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '332'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 Innan du installerar Adobe Commerce måste du göra följande:
 
-* Konfigurera en eller flera värdar som uppfyller [systemkraven](../system-requirements.md).
+* Konfigurera en eller flera värdar som uppfyller de [systemkrav](../system-requirements.md) som anges på fliken *Commerce lokalt* .
 * Om du konfigurerar mer än en webbnod med belastningsutjämning konfigurerar och testar du den delen av systemet _innan_ du installerar programmet.
 * Se till att du kan säkerhetskopiera hela systemet vid olika tillfällen under installationen, så att du kan återställa det om det uppstår problem.
 
@@ -66,11 +66,11 @@ Mer information om hur du installerar eller uppgraderar Apache finns i [Apache](
 
 ### PHP
 
-Se [systemkraven](../system-requirements.md) för de versioner av PHP som stöds och [PHP](../system-requirements.md#php-settings) för PHP-kraven.
+Gå till *Commerce lokala*-fliken i [systemkraven](../system-requirements.md) för de versioner av PHP som stöds och [PHP](../system-requirements.md#php-settings) för PHP-krav.
 
 ### MySQL
 
-Kontrollera att du har en kompatibel version av MySQL för den version av Adobe Commerce som du installerar. Mer information om vilka versioner som stöds finns i [Systemkrav](../system-requirements.md).
+Kontrollera att du har en kompatibel version av MySQL för den version av Adobe Commerce som du installerar. Gå till fliken *Lokal* i Commerce i [Systemkrav](../system-requirements.md) för de versioner som stöds.
 
 ```bash
 mysql -u <database root user or database owner name> -p
@@ -110,7 +110,7 @@ Så här verifierar du OpenSearch-installationen:
 curl -XGET '<opensearch-hostname>:<opensearch-port>'
 ```
 
-Så här verifierar du installationen av Elasticsearch:
+Så här verifierar du din Elasticsearch-installation:
 
 ```bash
 curl -XGET '<elasticsearch-hostname>:<elasticsearch-port>'
