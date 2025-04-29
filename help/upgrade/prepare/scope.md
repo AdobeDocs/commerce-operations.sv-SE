@@ -2,7 +2,7 @@
 title: Förstå uppgraderingsomfång
 description: Lär dig mer om bakåtkompatibla ändringar i en release som kan påverka Adobe Commerce anpassade moduler eller tillägg från tredje part.
 exl-id: dab2a14f-dbf0-422e-afb4-642e2220ec7a
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: 9eeb0e3a1c75b25cc70b092d23f02ebfe355d6bd
 workflow-type: tm+mt
 source-wordcount: '897'
 ht-degree: 0%
@@ -17,7 +17,7 @@ Granska [versionsinformationen](https://experienceleague.adobe.com/en/docs/comme
 
 Adobe Commerce-versioner kan innehålla ändringar som är inkompatibla bakåt. Läs igenom vår bakåtkompatibla ändringsdokumentation och se följande:
 
-- **[Större markeringar av ändringar](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/highlights/)** - Ändringar som har stor effekt och som kräver detaljerade förklaringar och specialinstruktioner för att säkerställa att tredjepartsmoduler fortsätter att fungera.
+- **[Större markeringar av ändringar](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/)** - Ändringar som har stor effekt och som kräver detaljerade förklaringar och specialinstruktioner för att säkerställa att tredjepartsmoduler fortsätter att fungera.
 - **[Mindre ändring, referens](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/reference/)** - Referensdokumentation som genererats från kodbasen som beskriver mindre ändringar av klasser, API-medlemskap, databas, beroendeinjektion, gränssnitt, layouter, system och XSD.
 
 ## Tredjepartstillägg
@@ -111,4 +111,4 @@ Vi rekommenderar att du sparar resultaten från varje uppgraderingsprojekt så a
 
 Vi rekommenderar även att du kör verktyget regelbundet när du arbetar med uppgraderingen för att få en överblick över hur arbetet fortskrider. Antalet problem bör minska när du åtgärdar dem. Detta hjälper även teamet att bestämma vilket tillvägagångssätt som passar bäst för att distribuera materialet.
 
-[!DNL Upgrade Compatibility Tool] fortsätter att förbättras och framtida versioner innehåller funktioner som automatiska korrigeringar som hjälper dig att åtgärda problem så snabbt som möjligt. De senaste förbättringarna som släpptes i januari 2022 inkluderar kompatibilitetstester för PHP 8.1 och visualiseringsfunktioner för HTML som hjälper dig att snabbt identifiera områden som kan kräva mer arbete med att uppgradera.
+[!DNL Upgrade Compatibility Tool] fortsätter att förbättras och framtida versioner innehåller funktioner som automatiska korrigeringar som hjälper dig att åtgärda problem så snabbt som möjligt. De senaste förbättringarna som släpptes i januari 2022 inkluderar kompatibilitetstester för PHP 8.1 och HTML-visualiseringsfunktioner som hjälper dig att snabbt identifiera områden som kan kräva mer arbete med att uppgradera.
