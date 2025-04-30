@@ -2,9 +2,9 @@
 title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
-source-git-commit: 93c9eb8865aa53ec784d47fd66ca97d1941b4604
+source-git-commit: db6ccbcf16786c1987f3d84e86582fe048edd2e4
 workflow-type: tm+mt
-source-wordcount: '25682'
+source-wordcount: '25802'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,14 @@ ht-degree: 0%
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som har skapats av Community för Magento Open Source finns i [versionsinformationen](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.63 {#v1-1-63}
+
+* **ACSD-64627** (för Adobe Commerce >=2.4.6-p8 &lt;2.4.8) - Korrigerar problemet där anpassade kundattribut inte kan sparas när användare läggs till eller redigeras i företagsstrukturen.
+* **ACSD-64753** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet där den förvalda butiken i Pickup in Store inte uppdateras när leveransadressen ändras, även om den ligger utanför butikens radie.
+* **ACSD-65195** (för Adobe Commerce >=2.4.4 &lt;2.4.8) - Korrigerar problemet där GraphQL-mutationen `createCompany` genererar ett fel för ett land utan en nödvändig region.
+* **LYNX-839** (för Adobe Commerce 2.4.8) - Tog bort exponering av kundgrupp, segment och kampanjregelinformation via GraphQL.
+* Uppdaterade versioner: **MDVA-12304**, **ACSD-48234**, **ACSD-58054**
 
 ## v1.1.62 {#v1-1-62}
 
