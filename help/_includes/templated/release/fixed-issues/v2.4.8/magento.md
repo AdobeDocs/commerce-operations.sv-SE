@@ -1,7 +1,7 @@
 ---
-source-git-commit: ae8701cf2486ef0a79c96bd264e16b0e7803a8f6
+source-git-commit: c96f5620bbde1b15f6419c482c790517cc8de70c
 workflow-type: tm+mt
-source-wordcount: '26039'
+source-wordcount: '26036'
 ht-degree: 0%
 
 ---
@@ -288,7 +288,7 @@ Tidigare var produkterna som lagts till i jämförelselistan som gästanvändare
 * _AC-9843_: i18n:collect-frases break the translations integrity
    * _Korrigera anteckning_: Kommandot `bin/magento i18n:collect-phrases -o` samlar nu in och lägger till nya fraser från JavaScript- och .phtml-filer korrekt, vilket säkerställer att översättningarna återspeglas korrekt i översättningsfilen. Tidigare kunde systemet inte inkludera flerradiga översättningsfraser från JavaScript-filer och fraser från .phtml-filer i översättningsfilen, vilket ledde till ofullständiga eller felaktiga översättningar.
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/0c53bbf7>
-* _ACP2E-2787_: Apostrofen i butiksvyns namn ersätts av &#39;
+* _ACP2E-2787_: Apostrofen i butiksvyns namn ersätts av &amp;#039;
    * _Korrigera anteckning_: Stödrastrets visningsfilter visar nu apostrofer korrekt
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38395>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/commit/39d54c2d>
@@ -1005,8 +1005,8 @@ Vi kan nu uppdatera beställningsstatus som har skapats av användaren, men tidi
    * _Korrigera anteckning_: PHPDocs för metoden \Magento\Framework\Data\Collection::getItemById har uppdaterats så att null inkluderas som en möjlig returtyp, vilket åtgärdar problem med statiska analysverktyg. Tidigare specificerade metodens PHPDocs inte null som en möjlig returtyp, vilket ledde till varningar eller fel i den statiska analysen när metoden användes i villkorssatser.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38485>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/38439>
-* _AC-11592_: [Utgåva] Tillåt endast giltiga inställningar under konfiguration:di:kompilering
-   * _Korrigera anteckning_: Systemet genererar nu ett fel under kompileringskommandot setup:di:om en inställning skapas för en klass som inte finns eller som är exkluderad, vilket säkerställer att endast giltiga inställningar tillåts. Tidigare misslyckades dessa scenarier utan att någon information om plugin-program som är associerade med de ursprungliga klasserna återges.
+* _AC-11592_: [Problem] Tillåt endast giltiga inställningar under `setup:di:compile`
+   * _Korrigera anteckning_: Systemet genererar nu ett fel under kommandot `setup:di:compile` om en inställning skapas för en klass som inte finns eller är exkluderad, vilket säkerställer att endast giltiga inställningar tillåts. Tidigare misslyckades dessa scenarier utan att någon information om plugin-program som är associerade med de ursprungliga klasserna återges.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/38517>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/33161>
 * _AC-11651_: Magento försöker ändra den skrivskyddade egenskapen i __wakeup-metoden för LoggerProxy
@@ -1537,7 +1537,7 @@ Korrigeringsinformation:
    * _Korrigera anteckning_: Ett fel har korrigerats där försök att ta bort produkter i vagnen resulterade i ett GraphQL-fel &quot;Begärd kvantitet är inte tillgänglig&quot; om vagnen även innehöll konfigurerbara produkter med otillräckligt lager. Borttagningen fungerar nu som förväntat utan att utlösa fel.
 * _LYNX-469_: Det går inte att lägga till produkter eftersom SKU:n i mutationen är skiftlägeskänslig
    * _Korrigeringsanteckning_: Ett problem där mutationen addProductsToCart returnerade felet PRODUCT_NOT_FOUND när SKU:er med olika höljen användes har åtgärdats. Mutationen hanterar nu SKU:er som inte är skiftlägeskänsliga, vilket säkerställer konsekvens med katalogtjänstfrågor och PDP-beteende.
-* _LYNX-603_: Product attribute > trademark short form ™ returneras som ™
+* _LYNX-603_: Produktattribut > varumärke i kort form &amp;trade; returneras som &amp;trade;;
    * _Korrigera anteckning_: Problem med teckenkodning med produktnamnet för GraphQL API har åtgärdats
 * _LYNX-619_: updateCustomerEmail - mutationsproblem
    * _Korrigera anteckning_: Ett problem med updateCustomerEmail-mutationen har åtgärdats där kunder utan nödvändiga anpassade attribut (som lagts till efter att kontot skapats) inte kunde uppdatera sin e-post.
@@ -1591,7 +1591,7 @@ Korrigeringsinformation:
    * _Korrigera anteckning_: Nu läses CSS-filer in asynkront på utcheckningssidor, även när inställningen &#39;dev/css/use_css_critical_path&#39; är aktiverad, vilket säkerställer att sidorna återges med rätt CSS-format. Tidigare förhindrade en begränsad CSP (Content Security Policy) infogad JavaScript från att köras, vilket medförde att CSS-filer inte lästes in som förväntat.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/39020>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/39040>
-* _AC-13398_: Det går inte att generera gränssnittsmetoden korrekt med den virtuella typen för att konfigurera plugin-programmet i kommandot :di:kompilera
+* _AC-13398_: Det går inte att generera gränssnittsmetoden korrekt i kommandot `setup:di:compile` med den virtuella typen för att konfigurera plugin-programmet
    * _Korrigera anteckning_: Systemet genererar nu korrekt spärrmetoder när en virtuell typ används för att konfigurera ett plugin-program, vilket ger konsekventa resultat oavsett om det är förkompilerat eller körtidskompilerat. Tidigare genererade systemet felaktiga resultat vid förkompilering jämfört med körtidskompilering.
    * _GitHub-problem_: <https://github.com/magento/magento2/issues/33980>
    * _GitHub-kodbidrag_: <https://github.com/magento/magento2/pull/38141>
