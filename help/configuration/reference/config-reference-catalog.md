@@ -3,9 +3,9 @@ title: Referens för katalogkonfigurationssökvägar
 description: Se en lista med katalogkonfigurationsvärden.
 feature: Configuration, Catalog Management
 exl-id: 19451443-228e-437d-a3eb-7dc968b9fb0d
-source-git-commit: df8878a3fea19b8f1780b5037273e18b5a3f1373
+source-git-commit: 47bda51cdcab964c37d9f652d467d69d795d8641
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '832'
 ht-degree: 0%
 
 ---
@@ -69,8 +69,8 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lagrar** > Inställnin
 | Aktivera sökförslag | `catalog/search/search_suggestion_enabled` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Antal sökförslag | `catalog/search/search_suggestion_count` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Visa resultatantal för varje förslag | `catalog/search/search_suggestion_count_results_enabled` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
-| Aktivera sökning i Recommendations | `catalog/search/search_recommendations_enabled` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
-| Sök efter Recommendations Count | `catalog/search/search_recommendations_count` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Aktivera sökrekommendationer | `catalog/search/search_recommendations_enabled` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
+| Antal sökrekommendationer | `catalog/search/search_recommendations_count` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Visa resultatantal för varje rekommendation | `catalog/search/search_recommendations_count_results_enabled` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Minimivillkor att matcha | `catalog/search/minimum_should_match` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Generera URL-omskrivningar för kategori/produkt | `catalog/seo/generate_category_product_rewrites` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
@@ -150,6 +150,8 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lagrar** > Inställnin
 {style="table-layout:auto"}
 
 ## Visual Merchandiser paths
+
+[!BADGE Endast PaaS]{type=Informative url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="Gäller endast Adobe Commerce i molnprojekt (Adobe-hanterad PaaS-infrastruktur) och lokala projekt."}
 
 Dessa konfigurationsvärden är tillgängliga i Admin i **Store** > Inställningar > **Konfiguration** > **Katalog** > **Visual Merchandiser**.
 
