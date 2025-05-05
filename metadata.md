@@ -12,9 +12,10 @@ solution: Commerce
 solution-title: Commerce
 topic: Administration, Commerce, Development
 type: Documentation
-source-git-commit: aaca7ead9923b676718f6e371caa797d6c0d412f
+badgePaas: label="Endast PaaS" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="Gäller endast Adobe Commerce i molnprojekt (Adobe-hanterad PaaS-infrastruktur) och lokala projekt."
+source-git-commit: ca842f16660c568d8d690bbcef06777e68ceac2c
 workflow-type: tm+mt
-source-wordcount: '131'
+source-wordcount: '146'
 ht-degree: 0%
 
 ---
@@ -22,7 +23,7 @@ ht-degree: 0%
 
 # Metadata för intern användning
 
-The `metadata.md` -filen innehåller metadata på postnivå som skickas till användarhandboken `TOC.md` filer i svaret. Om du vill ändra metadata.md-innehåll för en användarhandbok gör du det i alla `TOC.md` -fil.
+Filen `metadata.md` innehåller metadata på postnivå som skickas till `TOC.md`-filer i svaret. Om du vill ändra metadata.md-innehåll för en användarhandbok gör du det i en `TOC.md`-fil.
 
 | metadata | vad den gör |
 |--- |--- |
