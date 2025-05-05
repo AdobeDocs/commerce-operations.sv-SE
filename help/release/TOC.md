@@ -57,4 +57,4 @@ ht-degree: 0%
 - Paket {#packages}
    - [Adobe Commerce](packages/adobe-commerce.md)
    - [Magento Open Source](packages/magento-open-source.md)
-- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
+- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=sv-SE)

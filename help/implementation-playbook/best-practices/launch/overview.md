@@ -28,9 +28,9 @@ Följande avsnitt innehåller information om de bästa metoderna för startfasen
 |------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Adobe Security Notification Service](https://www.adobe.com/subscription/adbeSecurityNotifications.html) | Prenumerera på säkerhetsmeddelanden i Adobe. |
 | [Skydda din Commerce-webbplats och infrastruktur](security-best-practices.md) | Skydda Commerce storefront, admin, infrastruktur och data mot obehörig åtkomst och it-attacker genom att skydda säkerhetspositionen i Commerce-installationer. |
-| [Google reCAPTCHA](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/captcha/security-google-recaptcha.html) | Konfigurera Google reCAPTCHA för administratörsåtkomst och olika butiksåtgärder som initierats av registrerade kunder. |
+| [Google reCAPTCHA](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/captcha/security-google-recaptcha.html?lang=sv-SE) | Konfigurera Google reCAPTCHA för administratörsåtkomst och olika butiksåtgärder som initierats av registrerade kunder. |
 | [Konfigurera webbcrawler](robots-txt.md) | Skicka instruktioner om din Adobe Commerce-webbplats till webbcrawler. |
-| [Verifiera säkerhetskonfiguration](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/launch/checklist.html) | Granska checklisteobjekt innan du lanserar en Adobe Commerce-webbplats för molninfrastruktur. |
+| [Verifiera säkerhetskonfiguration](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/launch/checklist.html?lang=sv-SE) | Granska checklisteobjekt innan du lanserar en Adobe Commerce-webbplats för molninfrastruktur. |
 
 ## Prestandaövervakning
 

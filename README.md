@@ -15,13 +15,13 @@ Detta projekt har antagit [Adobe Open Source Code of Conduct](code-of-conduct.md
 
 ## Om dina bidrag till Adobe innehåll
 
-Se [Adobe Docs Contributor Guide](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html).
+Se [Adobe Docs Contributor Guide](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=sv-SE).
 
 Hur du bidrar beror på vem du är och vilken typ av ändringar du vill bidra med:
 
 ### Mindre ändringar
 
-Om du bidrar med mindre uppdateringar kan du besöka artikeln och klicka på feedbackområdet som visas längst ned i artikeln, klicka på **Detaljerade feedbackalternativ** och sedan på **Föreslå en redigering** för att gå till markeringskällfilen på GitHub. Använd GitHub-gränssnittet för att göra uppdateringar. Mer information finns i den allmänna handboken [Adobe Docs Contributor](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html).
+Om du bidrar med mindre uppdateringar kan du besöka artikeln och klicka på feedbackområdet som visas längst ned i artikeln, klicka på **Detaljerade feedbackalternativ** och sedan på **Föreslå en redigering** för att gå till markeringskällfilen på GitHub. Använd GitHub-gränssnittet för att göra uppdateringar. Mer information finns i den allmänna handboken [Adobe Docs Contributor](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=sv-SE).
 
 Mindre korrigeringar och förtydliganden som du lämnar in för dokumentation och kodexempel i den här rapporten omfattas av Adobe användarvillkoren.
 
@@ -43,7 +43,7 @@ Om du är teknikskribent, programchef eller utvecklare för en Adobe Experience 
 
 Deltagare i communityn kan använda GitHub-gränssnittet för grundläggande redigering eller förgrena rapporten för att göra större insatser.
 
-Mer information finns i [Adobe Docs Contributor Guide](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html).
+Mer information finns i [Adobe Docs Contributor Guide](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=sv-SE).
 
 ## Så här använder du kod för att formatera ämnet
 
@@ -62,8 +62,8 @@ För vissa ämnen använder vi datafiler och mallar för att generera publicerat
 Exempel på mallat innehåll är, men är inte begränsade till, följande:
 
 * [Referens för CLI-verktyg](https://experienceleague.adobe.com/docs/commerce-operations/reference/commerce-on-premises.html)
-* [Produkttillgänglighetstabeller](https://experienceleague.adobe.com/docs/commerce-operations/release/product-availability.html)
-* [Systemkravstabeller](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html)
+* [Produkttillgänglighetstabeller](https://experienceleague.adobe.com/docs/commerce-operations/release/product-availability.html?lang=sv-SE)
+* [Systemkravstabeller](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=sv-SE)
 
 ### Generera mallat innehåll
 
@@ -85,8 +85,8 @@ Så här uppdaterar du mallinnehåll:
 
 1. Öppna en datafil i katalogen `/jekyll/_data` i textredigeraren. Exempel:
 
-   * [Produkttillgänglighetstabeller](https://experienceleague.adobe.com/docs/commerce-operations/release/product-availability.html): `/jekyll/_data/product-availability.yml`
-   * [Systemkravstabeller](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html): `/jekyll/_data/system-requirements.yml`
+   * [Produkttillgänglighetstabeller](https://experienceleague.adobe.com/docs/commerce-operations/release/product-availability.html?lang=sv-SE): `/jekyll/_data/product-availability.yml`
+   * [Systemkravstabeller](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=sv-SE): `/jekyll/_data/system-requirements.yml`
 
 1. Använd den befintliga YAML-strukturen för att skapa poster.
 

@@ -78,7 +78,7 @@ Din lokala infrastruktur måste uppfylla följande krav innan du installerar age
 
 ## [!DNL Commerce Services Connector]
 
-Agenten kräver att tillägget [[!DNL Commerce Services Connector]](https://experienceleague.adobe.com/docs/commerce/user-guides/integration-services/saas.html) är installerat på datorn och [konfigurerat](https://experienceleague.adobe.com/docs/commerce/user-guides/integration-services/saas.html) med API-nycklar. Kontrollera att tillägget är installerat genom att köra följande kommando:
+Agenten kräver att tillägget [[!DNL Commerce Services Connector]](https://experienceleague.adobe.com/docs/commerce/user-guides/integration-services/saas.html?lang=sv-SE) är installerat på datorn och [konfigurerat](https://experienceleague.adobe.com/docs/commerce/user-guides/integration-services/saas.html?lang=sv-SE) med API-nycklar. Kontrollera att tillägget är installerat genom att köra följande kommando:
 
 ```bash
 bin/magento module:status Magento_ServicesId
@@ -92,13 +92,13 @@ Om du har installerat tillägget och konfigurerat det med en befintlig API-nycke
 
    >[!NOTE]
    >
-   > Om du har problem med att få åtkomst till ditt konto kan du läsa [Det går inte att logga in på Adobe Commerce support eller molnkontot](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/unable-to-log-in-to-support-or-cloud-project.html) för att få hjälp med felsökning.
+   > Om du har problem med att få åtkomst till ditt konto kan du läsa [Det går inte att logga in på Adobe Commerce support eller molnkontot](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/unable-to-log-in-to-support-or-cloud-project.html?lang=sv-SE) för att få hjälp med felsökning.
 
 1. Klicka på **[!UICONTROL API Portal]**.
 
 1. Klicka på **[!UICONTROL Delete]** bredvid den befintliga API-nyckeln.
 
-1. [Konfigurera](https://experienceleague.adobe.com/docs/commerce/user-guides/integration-services/saas.html) en ny API-nyckel.
+1. [Konfigurera](https://experienceleague.adobe.com/docs/commerce/user-guides/integration-services/saas.html?lang=sv-SE) en ny API-nyckel.
 
 >[!IMPORTANT]
 >
@@ -130,7 +130,7 @@ Om tillägget inte är installerat följer du instruktionerna nedan för att ins
    bin/magento cache:clean
    ```
 
-1. [Konfigurera API-nycklar](https://experienceleague.adobe.com/docs/commerce/user-guides/integration-services/saas.html) för att ansluta tillägget till systemet.
+1. [Konfigurera API-nycklar](https://experienceleague.adobe.com/docs/commerce/user-guides/integration-services/saas.html?lang=sv-SE) för att ansluta tillägget till systemet.
 
 ## Installera agenten
 
@@ -404,7 +404,7 @@ Lös det här felet genom att försöka med följande steg:
 1. Gör en [skriptad installation](#scripted), spara utdata och granska utdata för fel.
 1. Granska den genererade `config.yaml`-filen och kontrollera att sökvägen till din Commerce-instans och PHP är korrekt.
 1. Kontrollera att användaren som kör schemaläggaren finns i Unix-gruppen [för filsystemet](../../installation/prerequisites/file-system/overview.md) eller är samma användare som filsystemets ägare.
-1. Kontrollera att nycklarna för [Commerce Services Connector](https://experienceleague.adobe.com/docs/commerce/user-guides/integration-services/saas.html) är korrekt installerade och försök uppdatera dem för att ansluta tillägget till systemet.
+1. Kontrollera att nycklarna för [Commerce Services Connector](https://experienceleague.adobe.com/docs/commerce/user-guides/integration-services/saas.html?lang=sv-SE) är korrekt installerade och försök uppdatera dem för att ansluta tillägget till systemet.
 1. [Avinstallera](#uninstall) agenten efter att nycklarna har uppdaterats och installera om med [installationsskriptet](#scripted).
 1. Kör schemaläggaren och se om du fortfarande får samma fel.
 1. Om du fortfarande får samma fel kan du öka loggnivån i `config.yaml` för att felsöka och öppna en supportanmälan.

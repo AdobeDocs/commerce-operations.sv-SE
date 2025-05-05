@@ -13,10 +13,10 @@ ht-degree: 0%
 
 Den här aktiviteten kräver att du skapar en rotkategori (och ytterligare kategorier om så önskas) för varje butik. De uppgifter som behandlas i det här avsnittet är ett sätt att konfigurera flera butiker. Mer information finns i följande resurser i användarhandboken för Commerce:
 
-- [Kategorier](https://experienceleague.adobe.com/en/docs/commerce-admin/catalog/categories/categories)
-- [Lägger till webbplatser](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/stores#add-websites)
-- [Lagra URL:er](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls)
-- [Innehåll](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/content-menu)
+- [Kategorier](https://experienceleague.adobe.com/sv/docs/commerce-admin/catalog/categories/categories)
+- [Lägger till webbplatser](https://experienceleague.adobe.com/sv/docs/commerce-admin/stores-sales/site-store/stores#add-websites)
+- [Lagra URL:er](https://experienceleague.adobe.com/sv/docs/commerce-admin/stores-sales/site-store/store-urls)
+- [Innehåll](https://experienceleague.adobe.com/sv/docs/commerce-admin/content-design/content-menu)
 
 >[!INFO]
 >
@@ -34,7 +34,7 @@ Så här skapar du en rotkategori:
 1. I fältet **Kategorinamn** anger du ett unikt namn som identifierar den här kategorin.
 1. Kontrollera att Aktivera kategori är inställt på **Ja**.
 
-   Mer information om de andra alternativen på den här sidan finns i [Rotkategorier](https://experienceleague.adobe.com/en/docs/commerce-admin/catalog/categories/category-root).
+   Mer information om de andra alternativen på den här sidan finns i [Rotkategorier](https://experienceleague.adobe.com/sv/docs/commerce-admin/catalog/categories/category-root).
 
    I bilden nedan visas ett exempel.
 
@@ -131,7 +131,7 @@ Commerce ger dig möjlighet att lägga till butikskoden i webbplatsens bas-URL, 
 
 Detta förhindrar att `index.php` och `.htaccess` kommer ur synk med Commerce-kodbasen vid framtida uppgraderingar.
 
-Se [Commerce användarhandbok](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls).
+Se [Commerce användarhandbok](https://experienceleague.adobe.com/sv/docs/commerce-admin/stores-sales/site-store/store-urls).
 
 Så här lägger du till butikskoden i bas-URL:en:
 

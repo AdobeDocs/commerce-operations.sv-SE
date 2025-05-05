@@ -231,11 +231,11 @@ Catalog Search:                                    Update on Save
 >
 >Se till att ställa in med `realtime` i stället `schedule`för [!DNL Customer Grid] . Den [!DNL Customer Grid] kan endast indexeras om med hjälp av [!UICONTROL Update on Save] alternativet. Det här indexet stöder inte alternativet `Update by Schedule` . Använd följande kommandorad för att ställa in den här indexeraren så att den uppdateras när den sparas: `php bin/magento indexer:set-mode realtime customer_grid`
 >
->Se [Metodtips för indexerarkonfiguration](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/indexer-configuration.html) i implementeringsboken __.
+>Se [Metodtips för indexerarkonfiguration](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/indexer-configuration.html?lang=sv-SE) i implementeringsboken __.
 
 >[!INFO]
 >
->Innan du byter indexerarläge, ställ in din webbplats i [underhållsläge](../../installation/tutorials/maintenance-mode.md) och [inaktivera cron-jobb](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/crons-property.html#disable-cron-jobs). Detta säkerställer att du inte drabbas av databaslås.
+>Innan du byter indexerarläge, ställ in din webbplats i [underhållsläge](../../installation/tutorials/maintenance-mode.md) och [inaktivera cron-jobb](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/crons-property.html?lang=sv-SE#disable-cron-jobs). Detta säkerställer att du inte drabbas av databaslås.
 
 Så här anger du indexerarkonfigurationen:
 

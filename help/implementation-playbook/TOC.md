@@ -68,4 +68,4 @@ ht-degree: 0%
       - [Checklista för uppgradering](best-practices/maintenance/upgrade-checklist.md)
       - [Krav för uppgradering av MariaDB](best-practices/maintenance/mariadb-upgrade.md)
 - [Ordlista](glossary.md)
-- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
+- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=sv-SE)

@@ -19,7 +19,7 @@ I det här avsnittet beskrivs de minimiinställningar som du måste välja för 
 >I version 2.4.4 och 2.4.3-p2 gäller alla fält med etiketten **Elasticsearch** även OpenSearch.
 >När stöd för Elasticsearch 8.x introducerades i version 2.4.6 skapades nya etiketter för att skilja mellan Elasticsearch och OpenSearch-konfigurationer.
 
-Mer information om hur du konfigurerar sökmotorn finns i [användarhandboken](https://experienceleague.adobe.com/docs/commerce-admin/catalog/catalog/search/search-configuration.html).
+Mer information om hur du konfigurerar sökmotorn finns i [användarhandboken](https://experienceleague.adobe.com/docs/commerce-admin/catalog/catalog/search/search-configuration.html?lang=sv-SE).
 
 ## Konfigurera sökmotorn från administratören
 

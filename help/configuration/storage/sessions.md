@@ -41,7 +41,7 @@ Som användare med `root`-behörighet öppnar du `php.ini`-filen och söker efte
 
 ## Hantera sessionsstorlek
 
-Se [Sessionshantering](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-session-management) i _Användarhandboken_.
+Se [Sessionshantering](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/security/security-session-management) i _Användarhandboken_.
 
 ## Konfiguration av skräpinsamling
 

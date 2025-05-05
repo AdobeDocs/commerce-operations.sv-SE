@@ -23,7 +23,7 @@ Efter säkerhetskopiering kan du [återställa](#rollback) senare.
 
 >[!TIP]
 >
->Information om projekt för molninfrastruktur finns i [Ögonblicksbilder och hantering av säkerhetskopiering](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/storage/snapshots) i _molnguiden_.
+>Information om projekt för molninfrastruktur finns i [Ögonblicksbilder och hantering av säkerhetskopiering](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/develop/storage/snapshots) i _molnguiden_.
 
 ## Aktivera säkerhetskopiering
 

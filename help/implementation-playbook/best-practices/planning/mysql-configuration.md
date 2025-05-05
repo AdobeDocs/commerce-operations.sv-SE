@@ -48,7 +48,7 @@ Följ de här riktlinjerna för att förhindra prestandaproblem när du använde
 
 - Om du har anpassade utlösare som skriver data när utlösaren körs, flyttar du den här logiken så att den skriver direkt till granskningstabellerna i stället. Genom att till exempel lägga till ytterligare en fråga i programkoden efter frågan som du vill skapa utlösaren för.
 - Granska befintliga anpassade utlösare och överväg att ta bort dem och skriva direkt till tabellerna från programsidan. Kontrollera om det finns utlösare i databasen med hjälp av [`SHOW TRIGGERS` SQL-sats ](https://dev.mysql.com/doc/refman/8.0/en/show-triggers.html).
-- [Skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?#submit-ticket) om du vill ha mer hjälp, frågor eller funderingar.
+- [Skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE&#submit-ticket) om du vill ha mer hjälp, frågor eller funderingar.
 
 ## Slavanslutningar
 
@@ -62,7 +62,7 @@ Adobe Commerce på molninfrastruktur, endast Pro-arkitektur
 
 ### Konfiguration
 
-I Adobe Commerce i molninfrastrukturen kan du åsidosätta standardkonfigurationen för MYSQL-slavanslutningen genom att ange variabeln [MYSQL_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#mysql_use_slave_connection) . Ange den här variabeln till `true` om du automatiskt vill använda en skrivskyddad anslutning till databasen.
+I Adobe Commerce i molninfrastrukturen kan du åsidosätta standardkonfigurationen för MYSQL-slavanslutningen genom att ange variabeln [MYSQL_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=sv-SE#mysql_use_slave_connection) . Ange den här variabeln till `true` om du automatiskt vill använda en skrivskyddad anslutning till databasen.
 
 **Så här aktiverar du MySQL-slavanslutningen**:
 

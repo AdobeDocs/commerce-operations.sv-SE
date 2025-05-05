@@ -38,7 +38,7 @@ Du kan använda MySQL för att identifiera och lösa frågor som körs länge i 
 Om ditt Adobe Commerce-projekt används i Pro-arkitekturen kan du använda Percona Toolkit för att analysera frågor.
 
 1. Kör kommandot `pt-query-digest --type=slowlog` mot långsamma MySQL-frågeloggar.
-   * Information om var de långsamma frågeloggarna finns i **[!UICONTROL Log locations > Service Logs]**(https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/test/log-locations#service-logs) i utvecklardokumentationen.
+   * Information om var de långsamma frågeloggarna finns i **[!UICONTROL Log locations > Service Logs]**(https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/develop/test/log-locations#service-logs) i utvecklardokumentationen.
    * Se dokumentationen för [Percona Toolkit > pt-query-digest](https://www.percona.com/doc/percona-toolkit/LATEST/pt-query-digest.html#pt-query-digest).
 1. Beroende på vilka problem som hittas kan du åtgärda frågan så att den körs snabbare.
 

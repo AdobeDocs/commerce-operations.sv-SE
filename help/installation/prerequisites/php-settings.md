@@ -19,7 +19,7 @@ I det här avsnittet beskrivs hur du ställer in obligatoriska PHP-alternativ.
 >
 >För den senaste versionen av Adobe Commerce krävs minst PHP 8.1. Se [systemkraven](../system-requirements.md) för alla PHP-versioner som stöds.
 
-Mer information om molnkonfiguration finns i [PHP-inställningar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/php-settings.html) i guiden _Commerce om molninfrastruktur_.
+Mer information om molnkonfiguration finns i [PHP-inställningar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/php-settings.html?lang=sv-SE) i guiden _Commerce om molninfrastruktur_.
 
 ## PHP-processkontroll
 

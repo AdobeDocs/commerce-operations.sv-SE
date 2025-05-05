@@ -46,7 +46,7 @@ opensearch:
     disk: 1024
 ```
 
-Se [Konfigurera tjänster](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/service/services-yaml.html) i guiden _Commerce om molninfrastruktur_.
+Se [Konfigurera tjänster](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/service/services-yaml.html?lang=sv-SE) i guiden _Commerce om molninfrastruktur_.
 
 >[!TAB Commerce lokalt]
 
@@ -58,13 +58,13 @@ Se [Konfigurera tjänster](https://experienceleague.adobe.com/docs/commerce-clou
 
 Det finns särskilda PHP-konfigurationsinställningar, till exempel inställningen `memory_limit`, som kan hjälpa dig att undvika vanliga problem när du använder Adobe Commerce. Se [Nödvändiga PHP-inställningar](prerequisites/php-settings.md).
 
-Mer information om molnkonfiguration finns i [PHP-inställningar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/php-settings.html) i guiden _Commerce om molninfrastruktur_.
+Mer information om molnkonfiguration finns i [PHP-inställningar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/php-settings.html?lang=sv-SE) i guiden _Commerce om molninfrastruktur_.
 
 ### PHP OPcache
 
 Du bör verifiera att [PHP OPcache](https://www.php.net/manual/en/intro.opcache.php) har aktiverats av prestandaskäl. OPcache är aktiverat i många PHP-distributioner. Tillägget `opcache` installeras som standard i Commerce i molninfrastrukturen.
 
-Kontrollera att PHP OPcache är installerat och se [PHP-inställningar](prerequisites/php-settings.md) om du vill veta var du befinner dig. Mer information om prestandainställningar finns i programvarurekommendationerna för [PHP-inställningar](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/software.html#php-settings) i guiden _Bästa metoder för prestanda_.
+Kontrollera att PHP OPcache är installerat och se [PHP-inställningar](prerequisites/php-settings.md) om du vill veta var du befinner dig. Mer information om prestandainställningar finns i programvarurekommendationerna för [PHP-inställningar](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/software.html?lang=sv-SE#php-settings) i guiden _Bästa metoder för prestanda_.
 
 Om du måste installera OPcache separat, se [dokumentationen för PHP OPcache](https://www.php.net/manual/en/opcache.setup.php).
 
@@ -82,7 +82,7 @@ Installationsanvisningarna för [PHP](prerequisites/php-settings.md) innehåller
 
 >[!TIP]
 >
->Information om PHP-tillägg i molninfrastrukturen finns i [Aktivera PHP-tillägg](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/php-settings.html#enable-extensions) i guiden _Commerce om molninfrastruktur_.
+>Information om PHP-tillägg i molninfrastrukturen finns i [Aktivera PHP-tillägg](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/php-settings.html?lang=sv-SE#enable-extensions) i guiden _Commerce om molninfrastruktur_.
 
 >[!BEGINTABS]
 
@@ -121,7 +121,7 @@ Storefront och Admin:
 
 ### E-postserver
 
-MTA (Mail Transfer Agent) eller SMTP-server. Commerce i molninfrastrukturen använder e-posttjänsten [SendGrid](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/sendgrid.html).
+MTA (Mail Transfer Agent) eller SMTP-server. Commerce i molninfrastrukturen använder e-posttjänsten [SendGrid](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/sendgrid.html?lang=sv-SE).
 
 ### Minne
 
@@ -151,14 +151,14 @@ Adobe Commerce kräver följande systemverktyg för vissa åtgärder:
 - Självsignerade SSL-certifikat stöds inte.
 - TLS-krav (Transport Layer Security) - PayPal och `repo.magento.com` kräver båda TLS 1.2 eller senare.
 
-Information om Commerce molninfrastruktur finns i [Snabb konfiguration](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/setup-fastly/fastly-configuration.html) i guiden _Commerce om molninfrastruktur_.
+Information om Commerce molninfrastruktur finns i [Snabb konfiguration](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/setup-fastly/fastly-configuration.html?lang=sv-SE) i guiden _Commerce om molninfrastruktur_.
 
 ### Xdebug
 
 För Adobe Commerce använder du [php_xdebug 2.5.x](https://xdebug.org/download) eller senare (endast utvecklingsmiljöer; kan ha en negativ effekt på prestanda).
 
-Information om Adobe Commerce i molnet finns i [Konfigurera Xdebug](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/test/debug.html) i guiden _Commerce om molninfrastruktur_.
+Information om Adobe Commerce i molnet finns i [Konfigurera Xdebug](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/test/debug.html?lang=sv-SE) i guiden _Commerce om molninfrastruktur_.
 
 >[!NOTE]
 >
->Det finns ett känt fel med `xdebug` som kan påverka Adobe Commerce-installationer eller åtkomst till butiken eller administratören efter installationen. Se [Känt fel som påverkar `xdebug` installation](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/known-issues-that-affect-installation.html) i _Commerce Support Knowledge Base_.
+>Det finns ett känt fel med `xdebug` som kan påverka Adobe Commerce-installationer eller åtkomst till butiken eller administratören efter installationen. Se [Känt fel som påverkar `xdebug` installation](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/known-issues-that-affect-installation.html?lang=sv-SE) i _Commerce Support Knowledge Base_.

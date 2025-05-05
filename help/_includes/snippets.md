@@ -31,7 +31,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->När säkerhetsuppdateringen har installerats måste Adobe Commerce B2B-handlare även uppdatera till den senaste kompatibla versionen av B2B-säkerhetsuppdateringen. Se [Versionsinformation för B2B](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/release-notes).
+>När säkerhetsuppdateringen har installerats måste Adobe Commerce B2B-handlare även uppdatera till den senaste kompatibla versionen av B2B-säkerhetsuppdateringen. Se [Versionsinformation för B2B](https://experienceleague.adobe.com/sv/docs/commerce-admin/b2b/release-notes).
 
 ## Endast Adobe Commerce {#ee-only}
 

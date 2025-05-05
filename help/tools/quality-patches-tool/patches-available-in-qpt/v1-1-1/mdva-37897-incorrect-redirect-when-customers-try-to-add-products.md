@@ -1,6 +1,6 @@
 ---
 title: 'MDVA-37897: Felaktig omdirigering när du lägger till produkter från Senast visade'
-description: MDVA-37897-korrigeringen löser problemet med felaktig omdirigering när användare försöker lägga till produkter med alternativ från widgeten Senast visade. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.1 är installerat. Patch-ID:t är MDVA-37897. Observera att problemet schemaläggs att åtgärdas i Adobe Commerce version 2.4.4.
+description: MDVA-37897-korrigeringen löser problemet med felaktig omdirigering när användare försöker lägga till produkter med alternativ från widgeten Senast visade. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.1 är installerat. Patch-ID:t är MDVA-37897. Observera att problemet schemaläggs att åtgärdas i Adobe Commerce version 2.4.4.
 feature: Products
 role: Admin
 source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # MDVA-37897: Felaktig omdirigering när produkter från Senast visade läggs till
 
-MDVA-37897-korrigeringen löser problemet med felaktig omdirigering när användare försöker lägga till produkter med alternativ från widgeten Senast visade. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.1 har installerats. Patch-ID:t är MDVA-37897. Observera att problemet schemaläggs att åtgärdas i Adobe Commerce version 2.4.4.
+MDVA-37897-korrigeringen löser problemet med felaktig omdirigering när användare försöker lägga till produkter med alternativ från widgeten Senast visade. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.1 har installerats. Patch-ID:t är MDVA-37897. Observera att problemet schemaläggs att åtgärdas i Adobe Commerce version 2.4.4.
 
 ## Berörda produkter och versioner
 
@@ -26,7 +26,7 @@ MDVA-37897-korrigeringen löser problemet med felaktig omdirigering när använd
 
 >[!NOTE]
 >
->Patchen kan bli tillämplig på andra versioner med nya Quality Patches Tool-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Patchen kan bli tillämplig på andra versioner med nya Quality Patches Tool-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -51,14 +51,14 @@ Du omdirigeras till produktlistsidan.
 
 Använd följande länkar beroende på vilken distributionstyp du har när du vill använda enskilda korrigeringsfiler:
 
-* Adobe Commerce lokalt: [Programuppdateringsguide > Tillämpa korrigeringar](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/usage) i vår utvecklardokumentation.
-* Adobe Commerce i vår molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches) i vår utvecklardokumentation.
+* Adobe Commerce lokalt: [Programuppdateringsguide > Tillämpa korrigeringar](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/usage) i vår utvecklardokumentation.
+* Adobe Commerce i vår molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches) i vår utvecklardokumentation.
 
 ## Relaterad läsning
 
 Mer information om kvalitetspatchar för Adobe Commerce finns i:
 
-* [Verktyget för kvalitetskorrigeringar har släppts: ett nytt verktyg för självbetjäning av kvalitetskorrigeringar](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) i kunskapsbasen för support.
+* [Verktyget för kvalitetskorrigeringar har släppts: ett nytt verktyg för självbetjäning av kvalitetskorrigeringar](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) i kunskapsbasen för support.
 * [Kontrollera om det finns en korrigeringsfil för ditt Adobe Commerce-problem med verktyget för kvalitetskorrigeringar ](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md) i [!DNL Quality Patches Tool]-handboken.
 
-Mer information om andra tillgängliga korrigeringsfiler i QPT finns i avsnittet [Patchar i QPT](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html).
+Mer information om andra tillgängliga korrigeringsfiler i QPT finns i avsnittet [Patchar i QPT](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE).

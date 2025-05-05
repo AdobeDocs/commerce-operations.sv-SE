@@ -18,9 +18,9 @@ Adobe strävar hela tiden efter att hitta rätt balans mellan att göra produktu
 
 Nya funktioner, funktionsuppdateringar, molninfrastruktur och utökningsuppdateringar levereras oberoende av korrigeringsversioner och är tillgängliga via externa moduler, tillägg, verktyg eller webbtjänster. Exempel:
 
-- ![Funktionsikon](../assets/icons/feature.svg) [**Funktioner och funktioner**](https://experienceleague.adobe.com/en/docs/commerce/user-guides/release-information/release-notes-all) - Nya funktioner levereras oberoende av korrigeringsfiler. Exempel: [B2B](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/release-notes), katalogtjänst, dataanslutning, Live-sökning och produktrekommendationer.
+- ![Funktionsikon](../assets/icons/feature.svg) [**Funktioner och funktioner**](https://experienceleague.adobe.com/sv/docs/commerce/user-guides/release-information/release-notes-all) - Nya funktioner levereras oberoende av korrigeringsfiler. Exempel: [B2B](https://experienceleague.adobe.com/sv/docs/commerce-admin/b2b/release-notes), katalogtjänst, dataanslutning, Live-sökning och produktrekommendationer.
 
-- ![Infrastrukturikon](../assets/icons/servers.svg) [**Molninfrastruktur**](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite) - Nya funktioner och förbättringar i Adobe Commerce i molninfrastrukturen och i Creative Cloud Tools Suite för Commerce-paket, som distribuerar och hanterar Adobe Commerce-installationer och uppgraderingar på molnplattformen.
+- ![Infrastrukturikon](../assets/icons/servers.svg) [**Molninfrastruktur**](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite) - Nya funktioner och förbättringar i Adobe Commerce i molninfrastrukturen och i Creative Cloud Tools Suite för Commerce-paket, som distribuerar och hanterar Adobe Commerce-installationer och uppgraderingar på molnplattformen.
 
 - ![Ikon för utbyggbarhet](../assets/icons/brackets.svg) [**Utbyggbarhet**](https://developer.adobe.com/commerce/extensibility/) - Nya utvecklingsverktyg och tjänster för utbyggbarhet som inte har bearbetats levereras oberoende av korrigeringsversioner. Exempel: Integration Starter Kit, Admin UI SDK, Adobe I/O Events for Commerce och API Mesh.
 
@@ -36,7 +36,7 @@ I följande lista visas datum för schemalagda funktioner, molninfrastruktur och
 
 >[!NOTE]
 >
->Funktioner, molninfrastruktur och utbyggbara releaser kan variera under året. Adobe släpper dock regelbundet och kontinuerligt förbättringar för dessa områden mellan de datum som anges på den här sidan. Se [Vad är Adobe Commerce?](https://experienceleague.adobe.com/en/docs/commerce-admin/start/about) om du vill veta mer om de senaste funktionerna.
+>Funktioner, molninfrastruktur och utbyggbara releaser kan variera under året. Adobe släpper dock regelbundet och kontinuerligt förbättringar för dessa områden mellan de datum som anges på den här sidan. Se [Vad är Adobe Commerce?](https://experienceleague.adobe.com/sv/docs/commerce-admin/start/about) om du vill veta mer om de senaste funktionerna.
 
 ## Patchar
 
