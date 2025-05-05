@@ -49,7 +49,7 @@ Mer information finns i [Installera på Debian/Ubuntu](https://www.rabbitmq.com/
 
 Mer information finns i [Manuell installation](https://www.erlang-solutions.com/downloads/).
 
-Se versionsmatrisen ](https://www.rabbitmq.com/which-erlang.html) för [[!DNL RabbitMQ]/Erlang för att installera rätt version.
+Se versionsmatrisen [&#128279;](https://www.rabbitmq.com/which-erlang.html) för [!DNL RabbitMQ]/Erlang för att installera rätt version.
 
 ### Installera [!DNL RabbitMQ]
 

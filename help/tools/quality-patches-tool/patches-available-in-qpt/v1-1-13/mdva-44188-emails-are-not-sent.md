@@ -1,6 +1,6 @@
 ---
 title: '''MDVA-44188: E-postmeddelanden skickas inte till ID:n som innehåller ".-"'
-description: MDVA-44188-korrigeringen åtgärdar ett problem där e-post inte skickas till e-post-ID:n som innehåller `.-`. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.13 är installerat. Patch-ID:t är MDVA-44188. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.5.
+description: MDVA-44188-korrigeringen åtgärdar ett problem där e-post inte skickas till e-post-ID:n som innehåller &grave;.-&grave;. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.13 är installerat. Patch-ID:t är MDVA-44188. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.5.
 feature: Communications
 role: Admin
 source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461

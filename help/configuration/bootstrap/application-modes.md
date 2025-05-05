@@ -64,7 +64,7 @@ I utvecklarläge:
 
 Läget _production_ är bäst för distribution av Commerce-programmet till ett produktionssystem. När du har optimerat servermiljön, t.ex. databasen och webbservern, bör du köra distributionsverktyget [för statiska vyfiler](../cli/static-view-file-deployment.md) för att skriva statiska vyfiler till katalogen `pub/static`. Detta förbättrar prestandan genom att tillhandahålla alla nödvändiga statiska filer vid distributionen i stället för att tvinga Commerce-programmet att dynamiskt leta reda på och kopiera (materialisera) statiska filer vid behov under körningen.
 
-Vissa fält, till exempel avsnitten om avancerad systemkonfiguration och utvecklarsystemkonfiguration i Admin, är inte tillgängliga i produktionsläge. Du _kan till exempel inte_ aktivera eller inaktivera cachetyper med Admin. Du kan aktivera och inaktivera cachetyperna _only_ med kommandoraden [3}.](../cli/manage-cache.md#config-cli-subcommands-cache-en)
+Vissa fält, till exempel avsnitten om avancerad systemkonfiguration och utvecklarsystemkonfiguration i Admin, är inte tillgängliga i produktionsläge. Du _kan till exempel inte_ aktivera eller inaktivera cachetyper med Admin. Du kan aktivera och inaktivera cachetyperna _only_ med kommandoraden [3&rbrace;.](../cli/manage-cache.md#config-cli-subcommands-cache-en)
 
 I produktionsläge:
 

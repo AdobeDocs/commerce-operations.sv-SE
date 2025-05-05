@@ -22,7 +22,7 @@ Den första listan genereras automatiskt med hjälp av `bin/magento list` komman
 
 [Använd guiden &quot;Lägg till CLI-kommandon&quot;](https://developer.adobe.com/commerce/php/development/cli-commands/) för att lägga till ett anpassat CLI-kommando.
 
-Du kan anropa `bin/magento` CLI-kommandon med hjälp av genvägar i stället för det fullständiga kommandonamnet. Du kan till exempel ringa `bin/magento setup:upgrade` med , `bin/magento s:up``bin/magento s:upg`. Se [kortkommandosyntax](https://symfony.com/doc/current/components/console/usage.html#shortcut-syntax) för att förstå hur du använder genvägar med alla CLI-kommandon.
+Du kan anropa `bin/magento` CLI-kommandon med hjälp av genvägar i stället för det fullständiga kommandonamnet. Du kan till exempel ringa `bin/magento setup:upgrade` med , `bin/magento s:up` `bin/magento s:upg`. Se [kortkommandosyntax](https://symfony.com/doc/current/components/console/usage.html#shortcut-syntax) för att förstå hur du använder genvägar med alla CLI-kommandon.
 
 Den här referensdokumentationen genereras från programmets källkod. Om du vill ändra dokumentationen bör du öppna en pull-begäran för motsvarande kommando i den relevanta [kodbaslagringsplatsen](https://github.com/magento) . Se [Kodbidrag](https://developer.adobe.com/commerce/contributor/guides/code-contributions/) för mer information.
 

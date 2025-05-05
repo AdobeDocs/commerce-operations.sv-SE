@@ -1,5 +1,5 @@
 ---
-title: '"ACSD-48318: Fel vid kapsling av miljöemulering i "system.log`"'
+title: '"ACSD-48318: Fel vid kapsling av miljöemulering i "system.log&grave;"'
 description: Använd patchen ACSD-48318 för att åtgärda Adobe Commerce-problemet där felmeddelandet *main.ERROR:Environment emulation nesting is not allowed* visas i "system.log" varje gång ett fakturameddelande skickas.
 feature: System, Orders
 role: Admin, Developer

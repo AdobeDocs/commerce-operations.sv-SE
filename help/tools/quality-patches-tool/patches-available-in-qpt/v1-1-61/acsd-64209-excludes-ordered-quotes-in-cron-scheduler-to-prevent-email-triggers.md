@@ -36,7 +36,7 @@ Kronschemaläggaren hämtar alla överlåtbara offerter utan att utesluta dem me
 
 
 1. På sidofältet *Admin* går du till **[!UICONTROL Stores]** > *[!UICONTROL Settings]* > **[!UICONTROL Configuration]** > **[!UICONTROL B2B Features]** och aktiverar Company och B2B Quote.
-1. Ange **[!UICONTROL Default Expiration Period]** till ** i *Admin* > **[!UICONTROL Stores]** > *[!UICONTROL Settings]* > **[!UICONTROL Configuration]** > **[!UICONTROL Sales]** > **[!UICONTROL Quotes]** > **[!UICONTROL General]**.
+1. Ange **[!UICONTROL Default Expiration Period]** till **&#x200B; i *Admin* > &#x200B;** [!UICONTROL Stores] **&#x200B; > *[!UICONTROL Settings]* > &#x200B;** [!UICONTROL Configuration] **&#x200B; > &#x200B;** [!UICONTROL Sales] **&#x200B; > &#x200B;** [!UICONTROL Quotes] **&#x200B; > &#x200B;** [!UICONTROL General]**.
 1. Skapa ett företag, aktivera det och logga in som företagsadministratör.
 1. Lägg en produkt i kundvagnen.
 1. Begär en offert.

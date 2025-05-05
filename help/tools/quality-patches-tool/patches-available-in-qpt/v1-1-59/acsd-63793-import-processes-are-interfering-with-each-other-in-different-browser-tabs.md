@@ -36,7 +36,7 @@ Om du importerar data via administratörsgränssnittet påverkas importen av dat
 <u>Steg som ska återskapas</u>:
 
 1. Gå till **[!UICONTROL System]** > **[!UICONTROL Data Transfer]** > **[!UICONTROL Import]**.
-1. Ange **[!UICONTROL Entity Type]** till *[!UICONTROL Customers and Addresses](en fil)*.
+1. Ange **[!UICONTROL Entity Type]** till *[!UICONTROL Customers and Addresses] (en fil)*.
 1. Ange **[!UICONTROL Import Behavior]** till *[!UICONTROL Add/Update]*.
 1. Välj en giltig fil att importera.
 1. Klicka på knappen **[!UICONTROL Check Data]**.

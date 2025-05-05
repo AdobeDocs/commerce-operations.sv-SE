@@ -1,6 +1,6 @@
 ---
 title: 'ACSD-50367: Kundadressexport fungerar inte med flervalsattribut'
-description: Använd patchen ACSD-50367 för att åtgärda Adobe Commerce-problemet där kundadressexporten inte fungerar när ett flervalsattribut (*`Customer Address`** utan värden skapas.
+description: Använd patchen ACSD-50367 för att åtgärda Adobe Commerce-problemet där kundadressexporten inte fungerar när ett flervalsattribut (*&grave;Customer Address&grave;** utan värden skapas.
 feature: Admin Workspace, Attributes, Data Import/Export, Shipping/Delivery
 role: Admin
 source-git-commit: fe11599dbef283326db029b0312ad290cde0ba0a

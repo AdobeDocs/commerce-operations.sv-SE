@@ -384,7 +384,7 @@ Bildrutan **[!UICONTROL Order transactions (default?)]** söker efter transaktio
 * %Du kan åtgärda det här problemet genom att uppgradera tjänsten Elasticsearch i Magento Cloud-infrastrukturen till version % som ver_err
 * &#39;%klusterhälsostatus har ändrats från \[YELLOW\] till \[RED\] (orsak:%) som &#39;yel_red&#39;
 * &#39;%Inget utrymme återstår på enheten%&#39; som &#39;inget_utrymme&#39;
-* &#39;% misslyckades med att köra [SearchRequest{searchType=%&#39; som &#39;failed_query&#39;
+* &#39;% misslyckades med att köra &lbrack;SearchRequest&lbrace;searchType=%&#39; som &#39;failed_query&#39;
 
 ## [!UICONTROL Cron view]
 
