@@ -1,7 +1,7 @@
 ---
-source-git-commit: 53b2494d848c027e32f1493bbc7a9f204677afaa
+source-git-commit: 5d6d60b99d883f0a83cdcfc1c65c04d2f4ef09b7
 workflow-type: tm+mt
-source-wordcount: '27958'
+source-wordcount: '27937'
 ht-degree: 0%
 
 ---
@@ -192,7 +192,7 @@ Kommandot `bin/magento i18n:collect-phrases -o` samlar nu in och lägger till ny
 * __Behörighetsproblem vid åtkomst till dynamiskt block__
 Tidigare uppstod ett fel när en begränsad administratör skulle lägga till ett nytt dynamiskt block. Efter implementeringen av den här korrigeringsbegränsade administratören kan lägga till det dynamiska blocket och redigera blocket utan fel
   _ACP2E-2687_
-* __Apostrofen i butiksvyns namn ersätts av &#039;__
+* __Apostrofen i butiksvyns namn ersätts av &amp;#039;__
 Filtren för att visa stödrastrets lagringsvy visar nu apostrofer korrekt
   _ACP2E-2787 - [GitHub-problem](https://github.com/magento/magento2/issues/38395) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/39d54c2d)_
 * __Favicon-överföringen kan inte validera ICO-filer__
@@ -1537,7 +1537,7 @@ Ett problem har korrigerats där ett försök att ta bort lageruppbyggda produkt
 * __Det går inte att lägga till produkter på grund av att SKU:n i mutationen är skiftlägeskänslig__
 Ett problem där mutationen addProductsToCart returnerade felet PRODUCT_NOT_FOUND när SKU:er med olika hölje användes har åtgärdats. Mutationen hanterar nu SKU:er som inte är skiftlägeskänsliga, vilket säkerställer konsekvens med katalogtjänstfrågor och PDP-beteende.
   _LYNX-469_
-* __Product attribute > trademark short form&trade; is returned as &trade;__
+* __Product attribute > trademark short form&amp;trade; is returned as &amp;trade;__
 Ett problem med teckenkodning med produktnamnet för GraphQL API har åtgärdats
   _LYNX-603_
 * __updateCustomerEmail - mutationsproblem__
@@ -1638,9 +1638,6 @@ Nu läses CSS-filer in asynkront på utcheckningssidor korrekt, även när inst�
 * __Det går inte att generera spärrmetoden korrekt i `setup:di:compile` command__ om en virtuell typ används för att konfigurera plugin-programmet.
 Systemet genererar nu snittometoder korrekt när en virtuell typ används för att konfigurera ett plugin-program, vilket ger enhetliga resultat oavsett om det är förkompilerat eller körtidskompilerat. Tidigare genererade systemet felaktiga resultat vid förkompilering jämfört med körtidskompilering.
   _AC-13398 - [GitHub-problem](https://github.com/magento/magento2/issues/33980) - [GitHub-kodbidrag](https://github.com/magento/magento2/pull/38141)_
-* __Det går inte att hämta filer från datainsamlaren__
-När du hämtar säkerhetskopian visas inte längre en tom sida i stället för att filen hämtas.
-  _ACP2E-3441_
 * __Adobe Commerce 2.4.7-p3-enhetstester misslyckas__
 Inga versionsinformation krävs.
   _ACP2E-3631 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/982b1c42)_
