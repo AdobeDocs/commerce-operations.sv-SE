@@ -1,5 +1,5 @@
 ---
-source-git-commit: 5d6d60b99d883f0a83cdcfc1c65c04d2f4ef09b7
+source-git-commit: 290e79e329d5809b0cbb756a53ee935af95c86c5
 workflow-type: tm+mt
 source-wordcount: '27937'
 ht-degree: 0%
@@ -9,7 +9,7 @@ ht-degree: 0%
 
 ## Åtgärdade problem i v2.4.8
 
-Vi har åtgärdat 582 problem i Adobe Commerce 2.4.8 Core-koden. En deluppsättning av de åtgärdade problemen som ingår i den här versionen beskrivs nedan.
+Vi har åtgärdat 581 problem i Adobe Commerce 2.4.8 Core-koden. En deluppsättning av de åtgärdade problemen som ingår i den här versionen beskrivs nedan.
 
 ### API:er
 
@@ -192,7 +192,7 @@ Kommandot `bin/magento i18n:collect-phrases -o` samlar nu in och lägger till ny
 * __Behörighetsproblem vid åtkomst till dynamiskt block__
 Tidigare uppstod ett fel när en begränsad administratör skulle lägga till ett nytt dynamiskt block. Efter implementeringen av den här korrigeringsbegränsade administratören kan lägga till det dynamiska blocket och redigera blocket utan fel
   _ACP2E-2687_
-* __Apostrofen i butiksvyns namn ersätts av &#039;__
+* __Apostrofen i butiksvyns namn ersätts av &amp;#039;__
 Filtren för att visa stödrastrets lagringsvy visar nu apostrofer korrekt
   _ACP2E-2787 - [GitHub-problem](https://github.com/magento/magento2/issues/38395) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/39d54c2d)_
 * __Favicon-överföringen kan inte validera ICO-filer__
@@ -1537,7 +1537,7 @@ Ett problem har korrigerats där ett försök att ta bort lageruppbyggda produkt
 * __Det går inte att lägga till produkter på grund av att SKU:n i mutationen är skiftlägeskänslig__
 Ett problem där mutationen addProductsToCart returnerade felet PRODUCT_NOT_FOUND när SKU:er med olika hölje användes har åtgärdats. Mutationen hanterar nu SKU:er som inte är skiftlägeskänsliga, vilket säkerställer konsekvens med katalogtjänstfrågor och PDP-beteende.
   _LYNX-469_
-* __Product attribute > trademark short form&trade; is returned as &trade;__
+* __Product attribute > trademark short form&amp;trade; is returned as &amp;trade;__
 Ett problem med teckenkodning med produktnamnet för GraphQL API har åtgärdats
   _LYNX-603_
 * __updateCustomerEmail - mutationsproblem__
