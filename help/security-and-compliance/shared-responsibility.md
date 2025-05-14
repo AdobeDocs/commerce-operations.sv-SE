@@ -1,8 +1,8 @@
 ---
-title: Delat ansvar, säkerhet och driftsmodell
+title: Delat ansvar, säkerhet och operativ modell
 description: Läs mer om säkerhetsansvar för alla parter som deltar i ditt Adobe Commerce i molninfrastrukturprojekt.
 exl-id: f3cc1685-e469-4e30-b18e-55ce10dd69ce
-source-git-commit: 9d0ab29be70c5638296694f90755fedac41b6a77
+source-git-commit: 4cd71d156ef6833185565180b297ba1b7f42a032
 workflow-type: tm+mt
 source-wordcount: '2791'
 ht-degree: 0%
@@ -15,11 +15,13 @@ Adobe Commerce i molninfrastruktur är en lösning för att tillhandahålla en p
 
 Denna delade modell gör det möjligt för handlare att utforma och implementera en mycket flexibel, anpassningsbar och skalbar lösning som uppfyller deras verksamhetskrav samtidigt som man minimerar det operativa ansvaret och kostnaderna.
 
+>[!VIDEO](https://video.tv.adobe.com/v/3458392/?learn=on&enablevpops)
+
 Adobe ansvarar i allmänhet för följande:
 
 - Utveckla och underhålla säker applikationskod
-- Upprätthållande av plattformens säkerhet
-- Se till att plattformen är SOC 2- och PCI-kompatibel och kompatibel med PCI-kompatibla teknikkomponenter (till exempel PHP och Redis)
+- Upprätthålla plattformens säkerhet
+- Säkerställa att plattformen är SOC 2- och PCI-kompatibel och kompatibel med PCI-kompatibla teknikkomponenter (till exempel PHP, Redis)
 - Svara på säkerhetsfrågor som rör kärnplattformen
 - Samarbeta med leverantörer av molntjänster och CDN-partners för att lösa problem som kan uppstå
 
@@ -32,12 +34,12 @@ Handlarna ansvarar för följande:
 
 ## Adobe ansvarsområden
 
-Adobe ansvarar för säkerheten och tillgängligheten för Adobe Commerce i molninfrastrukturen och för kärnlösningens kod. Dessutom ansvarar Adobe för de åtgärder och mekanismer som krävs för att upprätthålla Adobe Commerce säkerhet när det gäller molninfrastrukturslösningen, inklusive:
+Adobe ansvarar för säkerheten och tillgängligheten för Adobe Commerce i molninfrastrukturen och för kärnlösningens kod. Dessutom ansvarar Adobe för de åtgärder och mekanismer som krävs för att upprätthålla Adobe Commerce säkerhet i molninfrastrukturslösningen, inklusive:
 
 - Tillämpa säkerhetsfunktioner och korrigeringsfiler på servernivå för program som stöds av Adobe Commerce i molninfrastrukturen, som molndatalagring och sökfunktioner
 - Genomföra penetrationstestning och skanning av Adobe Commerce kärnkod i molninfrastrukturkoden
 - Genomföra halvårsvisa granskningar och granskningar av de offentliga molntjänstleverantörernas lösningar för identitets- och åtkomsthantering (IAM) och behörighetshantering (PCI-kompatibilitetskrav)
-- Genomföra halvårsvisa granskningar och revisioner av behöriga användare, inklusive anställda och underleverantörer i Adobe (krav på efterlevnad av PCI)
+- Genomföra halvårsvisa granskningar och revisioner av behöriga användare, inklusive Adobe-anställda och entreprenörer (efterlevnad av PCI-krav)
 - Genomföra årlig testning och dokumentation av funktioner för säkerhetskopiering och återställning
 - Konfigurera server- och perimeterbrandväggar
 - Ansluta och konfigurera Adobe Commerce i molninfrastrukturdatabasen
@@ -84,11 +86,11 @@ Handlaren ansvarar för följande säkerhetsrutiner för sin specifika, anpassad
 - Köra prestandatester på det anpassade programmet
 - Skydda åtkomst till plattformskonton, instansåtkomst och program
 - Testning och kvalitetskontroll av det anpassade programmet
-- Upprätthålla säkerheten för alla system eller nätverk som handlaren ansluter till Adobe Commerce i molninfrastrukturprogram
+- Upprätthålla säkerheten i alla system och nätverk som handlaren ansluter till Adobe Commerce i molninfrastrukturapplikationen
 
-## Cloud Servicens leverantörsansvar
+## Cloud Service Provideransvar
 
-Adobe förlitar sig på väletablerade molntjänsteleverantörer för att vara värd för Adobe Commerce molnserverinfrastruktur i molninfrastrukturen. Dessa leverantörer ansvarar för säkerheten i nätverket, inklusive routning, växling och perimeternätverkssäkerhet via brandväggssystem och system för intrångsdetektering (IDS). Tjänsteleverantörer i molnet ansvarar också för den fysiska säkerheten i datacenter som är värdar för Adobe Commerce på molninfrastrukturslösningen och för datacentrets miljösäkerhet.
+Adobe förlitar sig på väletablerade molntjänsteleverantörer för att vara värd för molnserverinfrastrukturen för Adobe Commerce i molninfrastrukturen. Dessa leverantörer ansvarar för säkerheten i nätverket, inklusive routning, växling och perimeternätverkssäkerhet via brandväggssystem och system för intrångsdetektering (IDS). Tjänsteleverantörer i molnet ansvarar också för den fysiska säkerheten i datacenter som är värdar för Adobe Commerce på molninfrastrukturslösningen och för datacentrets miljösäkerhet.
 
 Molntjänsteleverantörer ansvarar också för:
 
@@ -96,9 +98,9 @@ Molntjänsteleverantörer ansvarar också för:
 - Skydda hypervisorn
 - Skydda datacentret, inklusive både fysisk åtkomst och nätverksåtkomst
 
-## CDN-leverantörens ansvarsområden
+## CDN-leverantörsansvar
 
-Adobe Commerce i molnet-infrastrukturlösningen använder CDN-leverantörer för att påskynda sidinläsningstiden, cachelagra innehåll och omedelbart rensa föråldrat innehåll. Dessa leverantörer ansvarar också för säkerhetsfrågor som har direkt samband med eller påverkar deras CDN samt för att definiera och underhålla CDN WAF-regler.
+Adobe Commerce lösning för molninfrastruktur använder CDN-leverantörer för att snabba upp sidinläsningen, cachelagra innehåll och omedelbart rensa bort föråldrat innehåll. Dessa leverantörer ansvarar också för säkerhetsfrågor som har direkt samband med eller påverkar deras CDN samt för att definiera och underhålla CDN WAF-regler.
 
 ## Sammanfattning av säkerhetsansvar
 
@@ -230,7 +232,7 @@ I följande sammanfattande tabell används RACI-modellen för att visa säkerhet
     <td></td>
   </tr>
   <tr>
-    <td>Konfigurerar källdatabasen<sup>1</sup></td>
+    <td>Konfigurerar källdatabasen <sup>1</sup></td>
     <td>R</td>
     <td>I</td>
     <td></td>
@@ -251,7 +253,7 @@ I följande sammanfattande tabell används RACI-modellen för att visa säkerhet
     <td></td>
   </tr>
   <tr>
-    <td>Distribuera kod i mellanlagring</td>
+    <td>Distribuera kod till mellanlagring</td>
     <td></td>
     <td>R</td>
     <td></td>
@@ -419,14 +421,14 @@ I följande sammanfattande tabell används RACI-modellen för att visa säkerhet
     <td></td>
   </tr>
   <tr>
-    <td>Att bistå Adobe med säkerhetsforskning (programvara)</td>
+    <td>Hjälp Adobe med säkerhetsforskning (programvara)</td>
     <td>R</td>
     <td>C</td>
     <td></td>
     <td></td>
   </tr>
   <tr>
-    <td>Att bistå Adobe med säkerhetsforskning (inskannade dokument/revisioner)</td>
+    <td>Hjälp Adobe med säkerhetsforskning (inskannade dokument/revisioner)</td>
     <td>R</td>
     <td>C</td>
     <td></td>
@@ -503,7 +505,7 @@ I följande sammanfattande tabell används RACI-modellen för att visa säkerhet
     <td></td>
   </tr>
   <tr>
-    <td>Årlig testning och dokumentation av planen för Adobe DR samt säkerhetskopiering och återställning</td>
+    <td>Årstestning och dokumentation av Adobe DR-plan samt säkerhetskopiering och återställning</td>
     <td>R</td>
     <td></td>
     <td></td>
@@ -521,7 +523,7 @@ I följande sammanfattande tabell används RACI-modellen för att visa säkerhet
   <tr>
     <td colspan="5">
       <p><sup><strong>1</strong></sup> Endast om Adobe Commerce i molninfrastrukturdatabasen används som huvuddatabas. Handlaren ansvarar själv för att andra externa arkiv används.</p>
-      <p><sup><strong>2</strong></sup> Adobe ger nivå 1-stöd för problem med CDN-providers.</p>
+      <p><sup><strong>2</strong></sup> Adobe tillhandahåller nivå 1-stöd för problem med CDN-providers.</p>
       <p><sup><strong>3</strong></sup> Handlaren ansvarar för alla Ngnix-kontroller som de konfigurerar för sina program.</p>
       <p><sup><strong>4</strong></sup> För PCI delas kraven på penetrationstestning mellan Adobe och handlaren.</p>
     </td>
@@ -546,7 +548,7 @@ Följande sammanfattande tabeller klargör det operativa ansvaret för Adobe och
 | Publicera uppdateringar och patchar till Adobe Commerce Core | R |     |
 | Filsystemets tillgänglighet och korrigering | R |  |
 | Publicera uppdateringar och patchar till ECE-Tools | R |     |
-| Core Adobe Commerce-programkvalitet | R |     |
+| Adobe Commerce programkvalitet | R |     |
 
 {style="table-layout:auto"}
 
@@ -679,8 +681,8 @@ Handlarna ansvarar för att synkronisera data mellan olika miljöer.
 
 |     | Adobe | Merchant |
 | --- | --- | --- |
-| RabbitMQ-tjänstens tillgänglighet | R |   |
-| Konfiguration av RabbitMQ standardinställningar | R |   |
+| Tillgång till tjänsten RabbitMQ | R |   |
+| Konfiguration av standardinställningar för RabbitMQ | R |   |
 | Kontinuerlig kvalitet och patchning av RabbitMQ | R |   |
 | Skicka en begäran om att få installera en RabbitMQ-version som är kompatibel med den installerade Adobe Commerce-versionen |   | R |
 
@@ -709,7 +711,7 @@ Handlarna ansvarar för att synkronisera data mellan olika miljöer.
 | Kontinuerlig infrastrukturoptimering | R |   |
 | Identifiera och korrigera långsamma frågor |     | R |
 | Skicka en begäran om att få installera en MariaDB-version som är kompatibel med den installerade Adobe Commerce-versionen |     | R |
-| Inställning och underhåll av affärsspecifika regler för datalagring (Adobe principer för datalagring definieras i handelsavtalet) |     | R |
+| Ställa in och underhålla försäljningsspecifika regler för datalagring (Adobe regler för datalagring definieras i försäljningsavtalet) |     | R |
 
 {style="table-layout:auto"}
 
@@ -743,8 +745,8 @@ Handlarna ansvarar för att synkronisera data mellan olika miljöer.
 
 |     | Adobe | Merchant |
 | --- | --- | --- |
-| Elasticsearch är tillgängligt | R |   |
-| Konfiguration av standardinställningar för Elasticsearch | R |   |
+| Elasticsearch | R |   |
+| Konfiguration av Elasticsearch standardinställningar | R |   |
 | Skicka en begäran om att få installera en Elasticsearch-version som är kompatibel med den installerade Adobe Commerce-versionen |  | R |
 
 {style="table-layout:auto"}
@@ -783,19 +785,19 @@ Handlarna ansvarar för att synkronisera data mellan olika miljöer.
 
 |     | Adobe | Merchant |
 | --- | --- | --- |
-| Tillgänglighet för Adobe Commerce Business Intelligence | R |   |
+| Adobe Commerce Business Intelligence-tjänster | R |   |
 | MBI-datasynkroniseringsprocesser | R |   |
 | Identifiera MBI-synkroniseringsproblem | R |   |
-| Konfigurerar MBI-datasynkronisering till Adobe Commerce Cloud Pro, Starter, On Premises eller icke-Adobe Commerce<br> (API, datakvalitet och dataformatering, handelsnätverk,<br>DB-anslutningar både innanför och utanför Adobe Commerce Cloud DB, över datatrösklar) |     | R |
-| Konfigurerar MBI-datasynkronisering till Adobe Commerce Cloud Pro<br> (Adobe Commerce Cloud-databaskonfiguration) | R |   |
+| Konfigurerar MBI-datasynkronisering till Adobe Commerce Cloud Pro, Starter, On Premises eller icke-Adobe Commerce<br> (API, datakvalitet och dataformatering, handlarnätverk,<br>DB-anslutningar både inuti och utanför Adobe Commerce Cloud DB, över datatrösklar) |     | R |
+| Konfigurerar MBI-datasynkronisering till Adobe Commerce Cloud Pro<br> (databaskonfiguration i Adobe Commerce Cloud) | R |   |
 
 {style="table-layout:auto"}
 
-#### Recommendations
+#### Produktrekommendationer
 
 |     | Adobe | Merchant |
 | --- | --- | --- |
-| Tillgång till tjänsten Recommendations Product | R |   |
+| Tillgänglighet för tjänsten Produktrekommendationer | R |   |
 
 {style="table-layout:auto"}
 
@@ -851,8 +853,8 @@ Handlarna ansvarar för att synkronisera data mellan olika miljöer.
 | Konfigurera och underhålla PrivateLink-anslutningar (om de används) med en VPC som ägs av Adobe | R |   |
 | Konfigurera och underhålla PrivateLink-anslutningar (om de används) med en Merchant-ägd VPC |     | R |
 | SSH-tillgänglighet (icke-privat länk) | R |   |
-| Konfiguration av PrivateLink inkommande till Adobe Commerce Cloud tjänstslutpunkt | R |   |
-| Godkännande av PrivateLink inkommande till Adobe Commerce Cloud tjänstslutpunkt |     | R |
+| Konfiguration av PrivateLink inkommande till slutpunkten för Adobe Commerce Cloud-tjänsten | R |   |
+| Godkännande av PrivateLink inkommande till slutpunkten för Adobe Commerce Cloud-tjänsten |     | R |
 | Konfiguration av PrivateLink inkommande till Merchants VPC-tjänstslutpunkt |     | R |
 | Godkännande av PrivateLink inkommande till Merchants VPC-tjänstslutpunkt | R |   |
 | Konfiguration av PrivateLink-integreringar (slutpunkt till konto) |     | R |
@@ -866,7 +868,7 @@ Handlarna ansvarar för att synkronisera data mellan olika miljöer.
 
 |     | Adobe | Merchant |
 | --- | --- | --- |
-| Tillgänglighet till Nginx | R |   |
+| Nginx-tillgänglighet | R |   |
 | Konfiguration av Nginx | R |   |
 | Kontinuerlig kvalitet och patchning av Nginx | R |   |
 
@@ -896,7 +898,7 @@ Handlarna ansvarar för att synkronisera data mellan olika miljöer.
 
 |     | Adobe | Merchant |
 | --- | --- | --- |
-| Tillgänglighet för processorresurser, datacenter, diskutrymme | R |   |
+| Tillgång till CPU-resurser, datacenter, diskutrymme | R |   |
 | Tillgång till och genomförande av överkapacitet eller nöduppgradering | R |   |
 | Begär överkapacitet |     | R |
 | Övervaka vCPU-användning mot begränsningarna | R |   |
