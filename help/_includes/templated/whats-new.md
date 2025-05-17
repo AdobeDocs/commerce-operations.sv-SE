@@ -23,7 +23,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-63/acsd-65195-fixes-the-issue-where-the-graphql-mutation-createcompany">Detaljerad beskrivning av problemet som har åtgärdats med korrigeringsfilen ACSD-65195 i QPT-version 1.1.63</a> har lagts till.</p>
+      <td><p><a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-63/acsd-65195-fixes-the-issue-where-the-graphql-mutation-createcompany">Detaljerad beskrivning av problemet som har åtgärdats med korrigeringsfilen ACSD-65195 i QPT-version 1.1.63</a> har lagts till.</p>
 </td>
       <td>
         Nytt ämne, qpt
@@ -31,7 +31,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/a6a8ad44c339b95b4afcedbd33b84c1d8b3411cc">bekräfta</a></td>
     </tr>
     <tr>
-      <td><p>Korrigeringen </a> för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-62/acsd-64532-env-variable-set-to-string-false-instead-of-boolean-false">ACSD-64532 åtgärdar ett problem där ENV-variabeln som är inställd på false behandlas som en sträng false i stället för som en BOOLEAN FALSE.</p>
+      <td><p>Korrigeringen </a> för <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-62/acsd-64532-env-variable-set-to-string-false-instead-of-boolean-false">ACSD-64532 åtgärdar ett problem där ENV-variabeln som är inställd på false behandlas som en sträng false i stället för som en BOOLEAN FALSE.</p>
 </td>
       <td>
         Nytt ämne, qpt
