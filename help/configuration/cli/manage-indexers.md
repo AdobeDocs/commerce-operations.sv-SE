@@ -1,15 +1,15 @@
 ---
-title: Hantera indexerarna
+title: Hantera indexerare
 description: Se exempel på hur du visar och hanterar Commerce-indexerare.
 exl-id: d2cd1399-231e-4c42-aa0c-c2ed5d7557a0
-source-git-commit: 16feb8ec7ecc88a6ef03a769d45b1a3a2fe88d97
+source-git-commit: 54aef3d7db7b8333721fb56db0ba8f098aea030b
 workflow-type: tm+mt
 source-wordcount: '947'
 ht-degree: 0%
 
 ---
 
-# Hantera indexerarna
+# Hantera indexerare
 
 {{file-system-owner}}
 
@@ -19,7 +19,7 @@ Så här visar du en lista över alla indexerare:
 bin/magento indexer:info
 ```
 
-Listan visas på följande sätt:
+Listan visas enligt följande:
 
 ```
 design_config_grid                       Design Config Grid
@@ -39,7 +39,8 @@ salesrule_rule                           Sales Rule
 ```
 
 >[!NOTE]
-> Adobe Commerce-handlare som använder Live Search, Catalog Service eller Product Recommendations har möjlighet att använda [SaaS-baserad prisindexering](https://experienceleague.adobe.com/docs/commerce/price-indexer/index.html).
+>
+> Adobe Commerce-handlare som använder Live Search, Catalog Service eller Produktrekommendationer har möjlighet att använda [SaaS-baserad prisindexering](https://experienceleague.adobe.com/en/docs/commerce/price-indexer/price-indexing).
 
 ## Visa indexeringsstatus
 
@@ -128,7 +129,7 @@ Du kan köra följande index i parallellt läge:
 
 >[!INFO]
 >
->Parallellisering för katalogsökning, fulltext och kategoriprodukt är aktiverat som standard.
+>Parallellering för fulltext och kategoriprodukt för katalogsökning är aktiverat som standard.
 
 Om du vill använda parallellisering anger du ett av de tillgängliga dimensionslägena för produktprisindexeraren:
 
@@ -137,7 +138,7 @@ Om du vill använda parallellisering anger du ett av de tillgängliga dimensions
 - `customer_group`
 - `website_and_customer_group`
 
-Om du till exempel vill ställa in läget per webbplats:
+Så här anger du till exempel läge per webbplats:
 
 ```bash
 bin/magento indexer:set-dimensions-mode catalog_product_price website
@@ -154,27 +155,27 @@ Eller för att kontrollera det aktuella läget:
 bin/magento indexer:show-dimensions-mode
 ```
 
-Om du vill indexera om i parallellt läge kör du kommandot reindex med hjälp av miljövariabeln `MAGE_INDEXER_THREADS_COUNT`eller lägger till en miljövariabel i `env.php` filen. Den här variabeln anger antalet trådar för omindexeringsbearbetningen.
+Om du vill indexera om i parallellt läge kör du kommandot reindex med miljövariabeln `MAGE_INDEXER_THREADS_COUNT` eller lägger till en miljövariabel i filen `env.php`. Den här variabeln anger antalet trådar för omindexeringsbearbetningen.
 
-Följande kommando kör till exempel indexeraren över `Catalog Search Fulltext` tre trådar:
+Följande kommando kör indexeraren `Catalog Search Fulltext` över tre trådar:
 
 ```bash
 MAGE_INDEXER_THREADS_COUNT=3 php -f bin/magento indexer:reindex catalogsearch_fulltext
 ```
 
-## Återställa indexerare
+## Återställ indexerare
 
-Använd det här kommandot för att ogiltigförklara statusen för alla indexerare eller specifika indexerare.
+Använd det här kommandot om du vill göra alla indexerare eller specifika indexerare ogiltiga.
 
-Alternativ för kommandon:
+Kommandoalternativ:
 
 ```bash
 bin/magento indexer:reset [indexer]
 ```
 
-Var ```[indexer]``` finns en blankstegsavgränsad lista över indexerare. Utelämna `[indexer]` om du vill ogiltigförklara alla indexerare.
+Där ```[indexer]``` är en blankstegsavgränsad lista med indexerare. Uteslut `[indexer]` om du vill göra alla indexerare ogiltiga.
 
-Exempel på resultat:
+Exempelresultat:
 
 ```
 Design Config Grid indexer has been invalidated.
@@ -192,10 +193,10 @@ Catalog Search indexer has been invalidated.
 
 ## Konfigurera indexerare
 
-Använd det här kommandot för att ange följande indexeraralternativ:
+Använd det här kommandot för att ange följande indexeringsalternativ:
 
-- **Uppdatering när du sparar (`realtime`)**: Indexerad data uppdateras när en ändring görs i Admin. (Index för kategoriprodukter indexeras till exempel om efter att produkter har lagts till i en kategori i Admin.)
-- **Uppdatera enligt schema (`schedule`)**: Data indexeras enligt det schema som ställts in av ditt cron-jobb.
+- **Uppdatera vid sparande (`realtime`)**: Indexerade data uppdateras när en ändring görs i administratören. (Exempel: kategoriproduktindexet indexeras om efter att produkterna har lagts till i en kategori i Admin.)
+- **Uppdatera enligt schema (`schedule`)**: Data indexeras enligt det schema som angetts av ditt cron-jobb.
 
 [Läs mer om indexering](https://developer.adobe.com/commerce/php/development/components/indexing/).
 
@@ -207,7 +208,7 @@ Så här visar du den aktuella indexerarkonfigurationen:
 bin/magento indexer:show-mode [indexer]
 ```
 
-Var `[indexer]` finns en blankstegsavgränsad lista över indexerare. Utelämna `[indexer]` om du vill visa alla indexerares lägen. Om du till exempel vill visa läget för alla indexerare:
+Där `[indexer]` är en blankstegsavgränsad lista med indexerare. Uteslut `[indexer]` om du vill visa alla indexeringslägen. Om du till exempel vill visa läget för alla indexerare:
 
 Exempelresultat:
 
@@ -225,17 +226,17 @@ Product Price:                                     Update on Save
 Catalog Search:                                    Update on Save
 ```
 
-### Ange indexerarläge
+### Ange indexeringsläge
 
 >[!IMPORTANT]
 >
->Se till att ställa in med `realtime` i stället `schedule`för [!DNL Customer Grid] . Den [!DNL Customer Grid] kan endast indexeras om med hjälp av [!UICONTROL Update on Save] alternativet. Det här indexet stöder inte alternativet `Update by Schedule` . Använd följande kommandorad för att ställa in den här indexeraren så att den uppdateras när den sparas: `php bin/magento indexer:set-mode realtime customer_grid`
+>Var noga med att ställa in [!DNL Customer Grid] med `realtime` i stället för `schedule`. [!DNL Customer Grid] kan bara indexeras om med alternativet [!UICONTROL Update on Save]. Indexet stöder inte alternativet `Update by Schedule`. Använd följande kommandorad för att ställa in indexeraren så att den uppdateras när den sparas: `php bin/magento indexer:set-mode realtime customer_grid`
 >
->Se [Metodtips för indexerarkonfiguration](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/indexer-configuration.html?lang=sv-SE) i implementeringsboken __.
+>Se [Bästa tillvägagångssätt för indexerarkonfiguration](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/indexer-configuration.html) i _Implementeringsspelningsboken_.
 
 >[!INFO]
 >
->Innan du byter indexerarläge, ställ in din webbplats i [underhållsläge](../../installation/tutorials/maintenance-mode.md) och [inaktivera cron-jobb](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/crons-property.html?lang=sv-SE#disable-cron-jobs). Detta säkerställer att du inte drabbas av databaslås.
+>Innan du växlar mellan indexeringslägen anger du att webbplatsen ska vara i [underhållsläge](../../installation/tutorials/maintenance-mode.md) och [inaktivera cron-jobb](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/crons-property.html#disable-cron-jobs). Detta säkerställer att du inte drabbas av databaslås.
 
 Så här anger du indexerarkonfigurationen:
 
@@ -245,9 +246,9 @@ bin/magento indexer:set-mode {realtime|schedule} [indexer]
 
 Var:
 
-- `realtime`– Ställer in de valda indexerarna som ska uppdateras när de sparas.
-- `schedule`– Ställer in de angivna indexerarna så att de sparas enligt cron-schemat.
-- `indexer`– Är en blankstegsavgränsad lista över indexerare. Utelämna `indexer` om du vill konfigurera alla indexerare på samma sätt.
+- `realtime` - Anger att de valda indexerarna ska uppdateras när de sparas.
+- `schedule` - Anger att angivna indexerare ska sparas enligt cron-schemat.
+- `indexer` - Är en blankstegsavgränsad lista med indexerare. Uteslut `indexer` om du vill konfigurera alla indexerare på samma sätt.
 
 Om du till exempel bara vill ändra indexerare för kategoriprodukter och produktkategorier så att de uppdateras enligt schema anger du:
 
@@ -308,6 +309,6 @@ När en indexerare har statusen `suspended` påverkas i första hand automatisk 
 
 >[!IMPORTANT]
 >
->Om du ändrar en indexerares status till `valid` från `suspended` eller `invalid` måste du vara försiktig. Den här åtgärden kan leda till prestandaförsämring om det finns ackumulerade oindexerade data.
+>Om du ändrar en indexerares status till `valid` från `suspended` eller `invalid` måste du vara försiktig. Den här åtgärden kan leda till prestandaförsämring om det finns samlade oindexerade data.
 >
->Det är viktigt att se till att alla data indexeras korrekt innan du manuellt uppdaterar statusen för att `valid` upprätthålla systemets prestanda och dataintegritet.
+>Det är viktigt att se till att alla data indexeras korrekt innan du manuellt uppdaterar statusen till `valid` för att behålla systemprestanda och dataintegritet.
