@@ -40,7 +40,7 @@ salesrule_rule                           Sales Rule
 
 >[!NOTE]
 >
-> Adobe Commerce-handlare som använder Live Search, Catalog Service eller Produktrekommendationer har möjlighet att använda [SaaS-baserad prisindexering](https://experienceleague.adobe.com/en/docs/commerce/price-indexer/price-indexing).
+> Adobe Commerce-handlare som använder Live Search, Catalog Service eller Produktrekommendationer har möjlighet att använda [SaaS-baserad prisindexering](https://experienceleague.adobe.com/sv/docs/commerce/price-indexer/price-indexing).
 
 ## Visa indexeringsstatus
 
@@ -232,11 +232,11 @@ Catalog Search:                                    Update on Save
 >
 >Var noga med att ställa in [!DNL Customer Grid] med `realtime` i stället för `schedule`. [!DNL Customer Grid] kan bara indexeras om med alternativet [!UICONTROL Update on Save]. Indexet stöder inte alternativet `Update by Schedule`. Använd följande kommandorad för att ställa in indexeraren så att den uppdateras när den sparas: `php bin/magento indexer:set-mode realtime customer_grid`
 >
->Se [Bästa tillvägagångssätt för indexerarkonfiguration](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/indexer-configuration.html) i _Implementeringsspelningsboken_.
+>Se [Bästa tillvägagångssätt för indexerarkonfiguration](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/indexer-configuration.html?lang=sv-SE) i _Implementeringsspelningsboken_.
 
 >[!INFO]
 >
->Innan du växlar mellan indexeringslägen anger du att webbplatsen ska vara i [underhållsläge](../../installation/tutorials/maintenance-mode.md) och [inaktivera cron-jobb](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/crons-property.html#disable-cron-jobs). Detta säkerställer att du inte drabbas av databaslås.
+>Innan du växlar mellan indexeringslägen anger du att webbplatsen ska vara i [underhållsläge](../../installation/tutorials/maintenance-mode.md) och [inaktivera cron-jobb](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/crons-property.html?lang=sv-SE#disable-cron-jobs). Detta säkerställer att du inte drabbas av databaslås.
 
 Så här anger du indexerarkonfigurationen:
 
