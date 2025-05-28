@@ -2,9 +2,9 @@
 title: Frigör schema
 description: Läs mer om när Adobe planerar att tillkännage lanseringen av nya funktioner i Adobe Commerce.
 exl-id: ae1e09cd-966f-44a3-9e4d-b90bb838429d
-source-git-commit: 16feb8ec7ecc88a6ef03a769d45b1a3a2fe88d97
+source-git-commit: 9e3246e81063769e4197f2e786e1e405b4460787
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '511'
 ht-degree: 2%
 
 ---
@@ -18,9 +18,9 @@ Adobe strävar hela tiden efter att hitta rätt balans mellan att göra produktu
 
 Nya funktioner, funktionsuppdateringar, molninfrastruktur och utökningsuppdateringar levereras oberoende av korrigeringsversioner och är tillgängliga via externa moduler, tillägg, verktyg eller webbtjänster. Exempel:
 
-- ![Funktionsikon](../assets/icons/feature.svg) [**Funktioner och funktioner**](https://experienceleague.adobe.com/sv/docs/commerce/user-guides/release-information/release-notes-all) - Nya funktioner levereras oberoende av korrigeringsfiler. Exempel: [B2B](https://experienceleague.adobe.com/sv/docs/commerce-admin/b2b/release-notes), katalogtjänst, dataanslutning, Live-sökning och produktrekommendationer.
+- ![Funktionsikon](../assets/icons/feature.svg) [**Funktioner och funktioner**](https://experienceleague.adobe.com/en/docs/commerce/user-guides/release-information/release-notes-all) - Nya funktioner levereras oberoende av korrigeringsfiler. Exempel: [B2B](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/release-notes), katalogtjänst, dataanslutning, Live-sökning och produktrekommendationer.
 
-- ![Infrastrukturikon](../assets/icons/servers.svg) [**Molninfrastruktur**](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite) - Nya funktioner och förbättringar i Adobe Commerce i molninfrastrukturen och i Creative Cloud Tools Suite för Commerce-paket, som distribuerar och hanterar Adobe Commerce-installationer och uppgraderingar på molnplattformen.
+- ![Infrastrukturikon](../assets/icons/servers.svg) [**Molninfrastruktur**](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/release-notes/cloud-tools-suite) - Nya funktioner och förbättringar i Adobe Commerce i molninfrastrukturen och i Creative Cloud Tools Suite för Commerce-paket, som distribuerar och hanterar Adobe Commerce-installationer och uppgraderingar på molnplattformen.
 
 - ![Ikon för utbyggbarhet](../assets/icons/brackets.svg) [**Utbyggbarhet**](https://developer.adobe.com/commerce/extensibility/) - Nya utvecklingsverktyg och tjänster för utbyggbarhet som inte har bearbetats levereras oberoende av korrigeringsversioner. Exempel: Integration Starter Kit, Admin UI SDK, Adobe I/O Events for Commerce och API Mesh.
 
@@ -36,7 +36,7 @@ I följande lista visas datum för schemalagda funktioner, molninfrastruktur och
 
 >[!NOTE]
 >
->Funktioner, molninfrastruktur och utbyggbara releaser kan variera under året. Adobe släpper dock regelbundet och kontinuerligt förbättringar för dessa områden mellan de datum som anges på den här sidan. Se [Vad är Adobe Commerce?](https://experienceleague.adobe.com/sv/docs/commerce-admin/start/about) om du vill veta mer om de senaste funktionerna.
+>Funktioner, molninfrastruktur och utbyggbara releaser kan variera under året. Adobe släpper dock regelbundet och kontinuerligt förbättringar för dessa områden mellan de datum som anges på den här sidan. Se [Vad är Adobe Commerce?](https://experienceleague.adobe.com/en/docs/commerce-admin/start/about) om du vill veta mer om de senaste funktionerna.
 
 ## Patchar
 
@@ -61,11 +61,11 @@ I följande tabell visas datumen för schemalagda korrigeringar (datum kan ändr
   </tr>
   <tr>
     <td>8 oktober 2024</td>
-    <td><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="beta.md#adobe-commerce-foundation-public-beta">Beta-korrigering</a>: 2.4.8-beta1<br><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="release-notes/security/overview.md">Säkerhetsuppdateringar</a>: 2.4.7-p3, 2.4.6-p8, 2.4.5-p10, 2.4.4-p11</td>
+    <td><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="versioning-policy.md#beta-patch-release">Beta-korrigering</a>: 2.4.8-beta1<br><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="release-notes/security/overview.md">Säkerhetsuppdateringar</a>: 2.4.7-p3, 2.4.6-p8, 2.4.5-p10, 2.4.4-p11</td>
   </tr>
   <tr>
     <td>11 februari 2025</td>
-    <td><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="beta.md#adobe-commerce-foundation-public-beta">Beta patch</a>: 2.4.8-beta2<br><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="release-notes/security/overview.md">Säkerhetsuppdateringar</a>: för 2.4.7, 2.4.6, 2.4.5 och 2.4.4</td>
+    <td><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="versioning-policy.md#beta-patch-release">Beta patch</a>: 2.4.8-beta2<br><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="release-notes/security/overview.md">Säkerhetsuppdateringar</a>: för 2.4.7, 2.4.6, 2.4.5 och 2.4.4</td>
   </tr>
   <tr>
     <tr>
@@ -74,15 +74,15 @@ I följande tabell visas datumen för schemalagda korrigeringar (datum kan ändr
   </tr>
   <tr>
     <td>10 juni 2025</td>
-    <td><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="release-notes/security/overview.md">Säkerhetsuppdateringar</a>: för 2.4.8, 2.4.7, 2.4.6 och 2.4.5</td>
+    <td><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="versioning-policy.md#alpha-patch-release">Alpha patch</a>: 2.4.9-alpha1<br><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="release-notes/security/overview.md">Säkerhetsuppdateringar</a>: för 2.4.8, 2.4.7, 2.4.6 och 2.4.5</td>
   </tr>
   <tr>
     <td>12 augusti 2025</td>
-    <td><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="release-notes/security/overview.md">Säkerhetsuppdateringar</a>: för 2.4.8, 2.4.7, 2.4.6 och 2.4.5</td>
+    <td><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="versioning-policy.md#alpha-patch-release">Alpha patch</a>: 2.4.9-alpha2<br><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="release-notes/security/overview.md">Säkerhetsuppdateringar</a>: för 2.4.8, 2.4.7, 2.4.6 och 2.4.5</td>
   </tr>
   <tr>
     <td>14 oktober 2025</td>
-    <td><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="release-notes/security/overview.md">Säkerhetsuppdateringar</a>: för 2.4.8, 2.4.7 och 2.4.6</td>
+    <td><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="versioning-policy.md#alpha-patch-release">Alpha patch</a>: 2.4.9-alpha3<br><img alt="Ikon för lagningsrelease" src="../assets/icons/file-code.svg"></img> <a href="release-notes/security/overview.md">Säkerhetsuppdateringar</a>: för 2.4.8, 2.4.7 och 2.4.6</td>
   </tr>
 </tbody>
 </table>
