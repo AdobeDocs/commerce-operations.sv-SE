@@ -50,6 +50,7 @@ Kundprisreglerna för produkter som levereras flera gånger gäller inte korrekt
 1. Produkttest 2:
    1. Kategorier: Kategoriprovning 2
    1. Pris: 56,25 $ 
+
       **(Priserna måste vara desamma som visas här för att testet ska fungera korrekt.)**
 
 **Kundprisregel:**
