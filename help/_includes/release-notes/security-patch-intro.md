@@ -18,4 +18,4 @@ Dessa säkerhetsuppdateringar hämtar uppdateringar för att förbättra säkerh
 Läs mer om säkerhetsuppdateringar:
 
 * [Adobe Commerce Security Patch Releases - översikt](/help/release/release-notes/security/overview.md#about-adobe-commerce-security-patch-releases)
-* Instruktioner för hur du hämtar och använder säkerhetsuppdateringar finns i [Så här hämtar och använder du säkerhetsuppdateringar](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/how-to-obtain-and-apply-security-patches) i _Adobe Commerce Knowledgebase_.
+* Instruktioner för hur du hämtar och använder säkerhetsuppdateringar finns i [Så här hämtar och använder du säkerhetsuppdateringar](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/how-to/how-to-obtain-and-apply-security-patches) i _Adobe Commerce Knowledgebase_.
