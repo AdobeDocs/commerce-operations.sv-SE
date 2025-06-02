@@ -77,7 +77,7 @@ ht-degree: 0%
 * **ACSD-64467** (för Adobe Commerce och Magento Open Source >=2.4.7 &lt;2.4.8) - Korrigerar problemet där WYSIWYG-redigeraren ser tom ut när en kategoribeskrivning har sparats på butiksvynivån.
 * **ACSD-64546** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet där ett generiskt felmeddelande visas i användargränssnittet och ett *Array to string conversion* -undantag sparas i loggarna när UPS-etiketter skapas, vilket säkerställer att det faktiska felet visas i användargränssnittet och att rätt felmeddelande lagras i loggarna.
 * **ACSD-64684** (för Adobe Commerce >=2.4.4 &lt;2.4.8) - Korrigerar problemet där ett valideringsfel inträffar när ett presentkort redigeras och sparas med ett värde som är större än *999* på grund av kommatecken (tusentalsavgränsare) i talet *ett tusen (1 000)*.
-* Uppdaterade versioner: **ACSD-49392**, **ACSD-50368**, **ACSD-51819**, **ACSD-54966-V2**, **ACSD-57003{9** ACSD-62979 **,** ACSD-64112 ****
+* Uppdaterade versioner: **ACSD-49392**, **ACSD-50368**, **ACSD-51819**, **ACSD-54966-V2**, **ACSD-57003&lbrace;9** ACSD-62979 **,** ACSD-64112 **&#x200B;**
 * Ersatta korrigeringsfiler: **ACSD-49392**, **ACSD-58739**, **ACSD-62689**, **ACSD-64112**
 * Inaktuella korrigeringsfiler: **ACSD-46192**, **ACSD-52133**
 
@@ -88,7 +88,7 @@ ht-degree: 0%
 * **ACSD-64111** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet när ett fel inträffar när kapslade villkor för en produktkomponent ställs in i [!DNL Page Builder].
 * **ACSD-64137** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet där sökning efter upphämtningsplatser med zip-kod inte fungerar som den nederländska lokaliseringen.
 * **ACSD-64149** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet där ett kundsegment med ett datumintervallvillkor kan sparas när endast ett av datumen redigeras.
-* Uppdaterade versioner: **MDVA-12304**, **ACSD-45049**, **MDVA-43824**, **ACSD-46192**, **ACSD-50368**, **ACSD-52133**, **ACSD-47657**, **ACSD-51819**, **ACSD-54966-V2**, **}ACSD-55628**, **ACSD-45049**, **ACSD-63242**
+* Uppdaterade versioner: **MDVA-12304**, **ACSD-45049**, **MDVA-43824**, **ACSD-46192**, **ACSD-50368**, **ACSD-52133**, **ACSD-47657**, **ACSD-51819**, **ACSD-54966-V2**, **&rbrace;ACSD-55628**, **ACSD-45049**, **ACSD-63242**
 
 ## v1.1.59 {#v1-1-59}
 
@@ -180,7 +180,7 @@ ht-degree: 0%
 * **ACSD-61785** (för Adobe Commerce >=2.4.4 &lt;2.4.8) - Åtgärdar problemet där det inte gick att uppdatera `reward_warning_notification` -attributet via [!DNL GraphQL] mutation- och [!DNL REST API]-anrop, vilket justerar dess beteende med `reward_update_notification`.
 * **ACSD-62591** (för Adobe Commerce och Magento Open Source >=2.4.7 &lt;2.4.8) - Korrigerar problemet där temat inte växlar korrekt när **[!UICONTROL User Agent Rules]** är konfigurerat.
 * **ACSD-62793** (för Adobe Commerce och Magento Open Source >=2.4.7 &lt;2.4.8) - Korrigerar problemet där `datetime` -attribut i exporterade data inte innehåller tidskomponenten. Om **[!UICONTROL Fields Enclosure]** dessutom är *aktiverad* kommer attributvärden i kolumnen `additional_attributes` att omslutas av dubbla citattecken.
-* **ACSD-62332** (för Adobe Commerce >=2.4.6 &lt;2.4.7) - Korrigerar problemet där produktlistfrågan [!DNL GraphQL] var begränsad till `total_count` av 10 000 produkter. Korrigerar problemet där [!DNL Live Search] ställer in den aktuella sidan till ** i stället för sidan ** i sökvillkoren när frågan ställs via [!DNL GraphQL].
+* **ACSD-62332** (för Adobe Commerce >=2.4.6 &lt;2.4.7) - Korrigerar problemet där produktlistfrågan [!DNL GraphQL] var begränsad till `total_count` av 10 000 produkter. Korrigerar problemet där [!DNL Live Search] ställer in den aktuella sidan till **&#x200B; i stället för sidan &#x200B;** i sökvillkoren när frågan ställs via [!DNL GraphQL].
 * Uppdaterade versioner: **ACSD-46581**, **ACSD-49513**, **ACSD-52801**, **ACSD-59514**
 * Ersatta korrigeringsfiler: **ACSD-52801**, **ACSD-55100**
 * Föråldrade korrigeringsfiler: **ACSD-52085**, **ACSD-57854**
