@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!INFO]
 >
->Se [Tillämpa korrigeringsfiler](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html#apply-individual-patches) för instruktioner om hur du använder korrigeringsfiler i dina Adobe Commerce-projekt. Se [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) i programuppdateringshandboken om du vill visa en fullständig lista över släppta korrigeringsfiler.
+>Se [Tillämpa korrigeringsfiler](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html?lang=sv-SE#apply-individual-patches) för instruktioner om hur du använder korrigeringsfiler i dina Adobe Commerce-projekt. Se [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE) i programuppdateringshandboken om du vill visa en fullständig lista över släppta korrigeringsfiler.
 
 >[!INFO]
 >
