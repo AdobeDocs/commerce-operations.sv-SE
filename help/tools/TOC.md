@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: 5ac7d661cacd4bd7ce8c1f336a964854e9ff3cf5
+source-git-commit: 9ee91aac7b4a108150bc8084814aaeeadc6c9809
 workflow-type: tm+mt
-source-wordcount: '7595'
+source-wordcount: '7613'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 0%
    - [Hanterade varningar för Adobe Commerce: CPU-varningsmeddelanden](/help/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce-cpu-warning-alert.md)
 - Verktyget Kvalitetspatchar {#quality-patches-tool}
    - [[!DNL Quality Patches Tool]: Ett självbetjäningsverktyg för korrigeringar av kvalitet](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)
-   - [[!DNL Quality Patches Tool]: Sök efter patchar](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE){target="_blank"}
+   - [[!DNL Quality Patches Tool]: Sök efter patchar ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
    - [Användning](quality-patches-tool/usage.md)
    - [Versionsinformation](quality-patches-tool/release-notes.md)
    - Patchar tillgängliga i verktyget för kvalitetspatchar {#patches-available-in-qpt}
@@ -793,6 +793,7 @@ ht-degree: 0%
          - [ACSD-64753: Det förvalda arkivet i Pickup in Store uppdateras inte när leveransadressen ändras](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-63/pre-selected-store-in-pickup-in-store-doesnt-update-when-shipping-address-changes.md)
       - v1.1.64 {#v1-1-64}
          - [Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.64](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-64/overview.md)
+         - [ACSD-65787: SchemaBuilder kraschar när scheman skapas eller uppdateras på grund av den odefinierade matrisnyckeln &quot;column&quot; i tabelldata](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-64/acsd-65787-schemabuilder-crashes-during-schema-creation-updates-due-to-undefined-array-key-column-in-table-data.md)
          - [ACSD-65223: Manuellt valda villkor och avtal för B2B-inköpsorder resulterar i ett fel](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-64/acsd-65223-manually-selected-terms-and-agreements-for-b2b-purchase-orders-result-in-an-error.md)
          - [AVS2E-3841: Kundprisregler för produkter med flera leveranser gäller inte korrekt när vissa villkor används och fri frakt är aktiverat](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-64/acp2e-3841-cart-price-rules-for-multi-shipping-products-do-not-apply-correctly-when-subselect-conditions-are-used-and-free-shipping-is-enabled.md)
    - [Leta efter Adobe Commerce-problem med verktyget för kvalitetskorrigeringar](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
@@ -842,6 +843,6 @@ ht-degree: 0%
       - [Data som kräver manuell migrering](data-migration-tool/migrate-data/manual.md)
       - [Steg efter datamigrering](data-migration-tool/migrate-data/post-migration.md)
    - Resurs {#resources}
-      - [Felsökning](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html?lang=sv-SE)
+      - [Felsökning](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
       - [Ändra](https://github.com/magento/data-migration-tool/blob/2.4/CHANGELOG.md)
-- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=sv-SE)
+- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
