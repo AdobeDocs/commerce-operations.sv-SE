@@ -2,9 +2,9 @@
 title: env.php reference
 description: Se en lista med värden för filen env.php.
 exl-id: cf02da8f-e0de-4f0e-bab6-67ae02e9166f
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: 3f46ee08bb4edc08775bf986804772b88ca35f45
 workflow-type: tm+mt
-source-wordcount: '693'
+source-wordcount: '944'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Filen `env.php` innehåller följande avsnitt:
 | `downloadable_domains` | Lista över hämtningsbara domäner |
 | `install` | Installationsdatum |
 | `lock` | Lås providerinställningar |
-| `MAGE_MODE` | Programläget [&#128279;](../bootstrap/application-modes.md) |
+| `MAGE_MODE` | Programläget [](../bootstrap/application-modes.md) |
 | `queue` | Inställningar för [Meddelandeköer](../queues/manage-message-queues.md) |
 | `resource` | Mappning av resursnamn till en anslutning |
 | `session` | Sessionslagringsdata |
@@ -146,7 +146,7 @@ Commerce använder en krypteringsnyckel för att skydda lösenord och andra kän
 ]
 ```
 
-Läs mer om [Krypteringsnyckel](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/security/encryption-key) i användarhandboken för _Commerce_.
+Läs mer om [Krypteringsnyckel](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/encryption-key) i användarhandboken för _Commerce_.
 
 ## db
 
@@ -203,7 +203,7 @@ En lista över tillgängliga hämtningsbara domäner i den här noden. Ytterliga
 ]
 ```
 
-Läs mer om [Hämtningsbara domäner](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/cli-reference/commerce-on-premises#downloadabledomainsadd).
+Läs mer om [Hämtningsbara domäner](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises#downloadabledomainsadd).
 
 ## installera
 
@@ -300,3 +300,74 @@ Läs mer i [env-php-config-set](../cli/set-configuration-values.md).
 <!-- Link definitions -->
 
 [message-queue]: https://developer.adobe.com/commerce/php/development/components/message-queues/
+
+
+## Lägg till variabler i filkonfigurationen
+
+Du kan ställa in eller åsidosätta alla konfigurationsalternativ (variabel med värde) med miljövariabler på operativsystemnivå (OS).
+
+Konfigurationen `env.php` lagras i en matris med kapslade nivåer. Om du vill konvertera en kapslad arraysökväg till en sträng för systemmiljövariabler sammanfogar du varje nyckel i sökvägen med två understreck, `__`, överkant och prefix med `MAGENTO_DC_`.
+
+Låt oss till exempel konvertera hanteraren för sessionssparande från konfigurationen `env.php` till en systemvariabel.
+
+```conf
+'session' => [
+  'save' => 'files'
+],
+```
+
+Sammanfogade med `__` och överraderade nycklar blir `SESSION__SAVE`.
+
+Sedan prefixar vi det med `MAGENTO_DC_` för att hämta det resulterande variabelnamnet `MAGENTO_DC_SESSION__SAVE` för operativsystemsmiljön.
+
+```shell
+export MAGENTO_DC_SESSION__SAVE=files
+```
+
+Som ett annat exempel konverterar vi en skalär sökväg för konfigurationsalternativ för `env.php`.
+
+```conf
+'x-frame-options' => 'SAMEORIGIN'
+```
+
+>[!INFO]
+>
+>Variabelnamnet ska översättas, men värdet är skiftlägeskänsligt och ska bevaras som det är dokumenterat.
+
+Det är bara att versalera det och prefix med `MAGENTO_DC_` för att ta emot det slutliga systemmiljövariabelnamnet `MAGENTO_DC_X-FRAME-OPTIONS`.
+
+```shell
+export MAGENTO_DC_X-FRAME-OPTIONS=SAMEORIGIN
+```
+
+>[!INFO]
+>
+>Observera att `env.php`-innehåll kommer att ha prioritet framför operativsystemets miljövariabler.
+
+## Åsidosätt filkonfiguration med variabler
+
+Om du vill åsidosätta de befintliga `env.php`-konfigurationsalternativen med en OS-miljövariabel måste konfigurationens matriselement vara JSON-kodat och anges som ett värde för `MAGENTO_DC__OVERRIDE` OS-variabeln.
+
+Om du behöver åsidosätta flera konfigurationsalternativ måste du montera alla i en enda array före JSON-kodning.
+
+Vi kan till exempel åsidosätta följande `env.php`-konfigurationer:
+
+```conf
+'session' => [
+  'save' => 'files'
+],
+'x-frame-options' => 'SAMEORIGIN'
+```
+
+JSON-kodad text i ovanstående array blir
+`{"session":{"save":"files"},"x-frame-options":"SAMEORIGIN"}`.
+
+Ange det nu som värdet för OS-variabeln `MAGENTO_DC__OVERRIDE`.
+
+```shell
+export MAGENTO_DC__OVERRIDE='{"session":{"save":"files"},"x-frame-options":"SAMEORIGIN"}'
+```
+
+>[!INFO]
+>
+>Kontrollera att den JSON-kodade arrayen är korrekt citerad och/eller escape-konverterad om det behövs, så att operativsystemet inte kan skada den kodade strängen.
