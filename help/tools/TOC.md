@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: f849ae384932f7adab2702ae76f4889777bd8c57
+source-git-commit: 894afdd0d35681daa264e0cc208ce832e8067e7b
 workflow-type: tm+mt
-source-wordcount: '7678'
+source-wordcount: '7694'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 0%
    - [Hanterade varningar för Adobe Commerce: CPU-varningsmeddelanden](/help/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce-cpu-warning-alert.md)
 - Verktyget Kvalitetspatchar {#quality-patches-tool}
    - [[!DNL Quality Patches Tool]: Ett självbetjäningsverktyg för korrigeringar av kvalitet](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)
-   - [[!DNL Quality Patches Tool]: Sök efter patchar](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE){target="_blank"}
+   - [[!DNL Quality Patches Tool]: Sök efter patchar ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
    - [Användning](quality-patches-tool/usage.md)
    - [Versionsinformation](quality-patches-tool/release-notes.md)
    - Patchar tillgängliga i verktyget för kvalitetspatchar {#patches-available-in-qpt}
@@ -793,6 +793,7 @@ ht-degree: 0%
          - [ACSD-64753: Det förvalda arkivet i Pickup in Store uppdateras inte när leveransadressen ändras](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-63/pre-selected-store-in-pickup-in-store-doesnt-update-when-shipping-address-changes.md)
       - v1.1.64 {#v1-1-64}
          - [Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.64](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-64/overview.md)
+         - [ACSD-65684: Det går långsamt att uppgradera Magento_Company i B2B 1.5.2 med över 100 000 poster i company_structure](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-64/acsd-65684-performance-issue-where-upgrading-the-magento-company-module-after-updating-to-b2b-1-5-2-took-an-excessively-long-time-when-processing-a-large-number-of-records-100-000.md)
          - [ACSD-65540: SQL-fel inträffar på grund av att funktionen REGEXP_LIKE saknas i uppdatering av company_structure](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-64/acsd-65540-sql-syntax-error-occurs-due-to-the-absence-of-the-regexp-like-function-when-updating-the-company-structure-table.md)
          - [ACSD-63139: Produktexport misslyckas när produktattribut innehåller tusentals alternativvärden](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-64/acsd-63139-product-export-fails-when-product-attributes-contain-thousands-of-option-values.md)
          - [ACSD-65100: Om du tar bort värdena [!UICONTROL Maximum Width] och [!UICONTROL Maximum Height] i konfigurationen [!UICONTROL Media Gallery Image Optimization] uppstår ett fel](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-64/acsd-65100-removing-the-values-for-maximum-width-and-maximum-height-in-the-media-gallery-image-optimization-configuration-causes-an-error-during-the-image-optimization-process.md)
@@ -848,6 +849,6 @@ ht-degree: 0%
       - [Data som kräver manuell migrering](data-migration-tool/migrate-data/manual.md)
       - [Steg efter datamigrering](data-migration-tool/migrate-data/post-migration.md)
    - Resurs {#resources}
-      - [Felsökning](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html?lang=sv-SE)
+      - [Felsökning](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
       - [Ändra](https://github.com/magento/data-migration-tool/blob/2.4/CHANGELOG.md)
-- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=sv-SE)
+- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
