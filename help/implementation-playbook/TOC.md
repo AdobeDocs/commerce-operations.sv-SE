@@ -2,9 +2,9 @@
 user-guide-title: Implementera spelningsbok
 user-guide-description: Läs om strategier för att planera och implementera en framgångsrik Adobe Commerce-webbplats.
 mini-toc-levels: 3
-source-git-commit: 3f6bf86091885ffa0c557b0c43ce3ff024076a45
+source-git-commit: 8d2dd409741717b534e4aef5e252a614ccb81f4a
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '163'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
    - [Adobe Managed Services](maintenance/adobe-managed-services.md)
 - God praxis {#best-practices}
    - [Ökning](best-practices/phases.md)
-   - Planerar {#planning}
+   - Planering {#planning}
       - [Ökning](best-practices/planning/overview.md)
       - [Kataloghantering](best-practices/planning/catalog-management.md)
       - [Konfiguration av platser, butiker och butiksvy](best-practices/planning/sites-stores-store-views.md)
@@ -28,6 +28,7 @@ ht-degree: 0%
       - [Databaskonfiguration för &#x200B; i molnet](best-practices/planning/database-on-cloud.md)
       - [MySQL-konfiguration](best-practices/planning/mysql-configuration.md)
       - [Redis-tjänstkonfiguration](best-practices/planning/redis-service-configuration.md)
+      - [Valkey service configuration](best-practices/planning/valkey-service-configuration.md)
       - [OPcache-minnesstorlek](best-practices/planning/opcache-memory-size.md)
       - [Cachestorlek för Realpath](best-practices/planning/realpath-cache-size.md)
       - [Tillägg](best-practices/planning/extensions.md)
@@ -68,4 +69,4 @@ ht-degree: 0%
       - [Checklista för uppgradering](best-practices/maintenance/upgrade-checklist.md)
       - [Krav för uppgradering av MariaDB](best-practices/maintenance/mariadb-upgrade.md)
 - [Ordlista](glossary.md)
-- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=sv-SE)
+- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
