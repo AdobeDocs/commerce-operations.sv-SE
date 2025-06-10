@@ -2,10 +2,10 @@
 title: Policy för programvarans livscykel
 description: Läs om viktiga datum för när programvarusupporten för Adobe Commerce upphör.
 exl-id: 9ee4ecc8-d893-412a-a605-5a8606a1b9a9
-source-git-commit: 6ad4d8b3843c029d8f2d3919874d4614d9928f69
+source-git-commit: 5a45f2b0ad2485014abd3b807a5797f9fc82388b
 workflow-type: tm+mt
-source-wordcount: '597'
-ht-degree: 4%
+source-wordcount: '612'
+ht-degree: 3%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 För Adobe Commerce 2.4.4 och senare versioner:
 
-- För att effektivisera Adobe Commerce livscykelpolicy och stödja kundernas verksamhetskritiska behov har Adobe utvidgat supportfönstret till tre år från General Availability (GA)-datumet för Adobe Commerce 2.4.4 och senare. Adobe erbjuder kvalitetskorrigeringar till version 2.4.4 och senare under en treårsperiod. Kunder kan få åtkomst till kvalitetskorrigeringar genom att kontakta [Adobe Commerce Support](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide) eller via självbetjäningen [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE) om deras version fortfarande är berättigad till kvalitetssupport. I följande tabell beskrivs slutdatum för programsupport för Adobe Commerce versionsrader.
+- För att effektivisera Adobe Commerce livscykelpolicy och stödja kundernas verksamhetskritiska behov har Adobe utvidgat supportfönstret till tre år från General Availability (GA)-datumet för Adobe Commerce 2.4.4 och senare. Adobe erbjuder kvalitetskorrigeringar till version 2.4.4 och senare under en treårsperiod. Kunder kan få åtkomst till kvalitetskorrigeringar genom att kontakta [Adobe Commerce Support](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide) eller via självbetjäningen [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) om deras version fortfarande är berättigad till kvalitetssupport. I följande tabell beskrivs slutdatum för programsupport för Adobe Commerce versionsrader.
 
 - Adobe tillhandahåller säkerhetskorrigeringar via en säkerhetsuppdatering under den treåriga supportperioden.
 
@@ -37,12 +37,12 @@ Adobe uppmuntrar kunderna att uppgradera så snart som möjligt. För att ge st�
 ## Programvarusupport upphör
 
 | Frigör | Allmän tillgänglighet | Slutet på den reguljära supporten<sup>1</sup> | Slutet på utökat stöd | Beroende PHP-version | Beroende MariaDB-version |
-|----------------------|----------------------|------------------------------------|-------------------------|-----------------------|------------------------------|
+|----------------------|----------------------|------------------------------------|-------------------------|-----------------------|---------------------------|
 | Adobe Commerce 2.4.8 | 8 april 2025 | 11 april 2028 | Ej tillämpligt | 8.3 och 8.4 | 11,4 |
-| Adobe Commerce 2.4.7 | 9 april 2024 | 9 april 2027 | Ej tillämpligt | 8.2 och 8.3 | 10,6 |
-| Adobe Commerce 2.4.6 | 14 mars 2023 | 11 augusti 2026<sup>2</sup> | Ej tillämpligt | 8.1 och 8.2 | 10,6 |
-| Adobe Commerce 2.4.5 | 9 augusti 2022 | 9 augusti 2025 | 11 augusti 2026 | 8,1 | 10.6<sup>3</sup> |
-| Adobe Commerce 2.4.4 | 12 april 2022 | 12 april 2025 | 14 april 2026 | 8,1 | 10.6<sup>4</sup> |
+| Adobe Commerce 2.4.7 | 9 april 2024 | 9 april 2027 | Ej tillämpligt | 8.2 och 8.3 | 10.11<sup>3</sup> |
+| Adobe Commerce 2.4.6 | 14 mars 2023 | 11 augusti 2026<sup>2</sup> | Ej tillämpligt | 8.1 och 8.2 | 10.11<sup>4</sup> |
+| Adobe Commerce 2.4.5 | 9 augusti 2022 | 9 augusti 2025 | 11 augusti 2026 | 8,1 | 10.6<sup>5</sup> |
+| Adobe Commerce 2.4.4 | 12 april 2022 | 12 april 2025 | 14 april 2026 | 8,1 | 10.6<sup>6</sup> |
 
 {style="table-layout:auto"}
 
@@ -50,8 +50,10 @@ Adobe uppmuntrar kunderna att uppgradera så snart som möjligt. För att ge st�
 >
 >- <sup>1</sup> Stödet för programvarans slut omfattar både slut på kvalitetskorrigeringar och slut på säkerhetskorrigeringar.
 >- <sup>2</sup> Uppdaterad för att justeras mot slutet av det utökade stödet för 2.4.5.
->- <sup>3</sup> Börjar med säkerhetspatchen 2.4.5-p11.
->- <sup>4</sup> Börjar med säkerhetspatchen 2.4.4-p12.
+>- <sup>3</sup> Börjar med säkerhetspatchen 2.4.7-p6.
+>- <sup>4</sup> Börjar med säkerhetspatchen 2.4.6-p11.
+>- <sup>5</sup> Börjar med säkerhetspatchen 2.4.5-p11.
+>- <sup>6</sup> Börjar med säkerhetspatchen 2.4.4-p12.
 >- Se [Princip för programvarans livscykel](https://www.adobe.com/content/dam/cc/en/legal/terms/enterprise/pdfs/Adobe-Commerce-Software-Lifecycle-Policy.pdf).
 
 <table style="table-layout:auto">
