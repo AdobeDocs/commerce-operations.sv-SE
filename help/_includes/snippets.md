@@ -1,7 +1,7 @@
 ---
-source-git-commit: 9eeb0e3a1c75b25cc70b092d23f02ebfe355d6bd
+source-git-commit: 102fee9672c75c94c7d18d47562338f8eff97f11
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '451'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->När säkerhetsuppdateringen har installerats måste Adobe Commerce B2B-handlare även uppdatera till den senaste kompatibla versionen av B2B-säkerhetsuppdateringen. Se [Versionsinformation för B2B](https://experienceleague.adobe.com/sv/docs/commerce-admin/b2b/release-notes).
+>När säkerhetsuppdateringen har installerats måste Adobe Commerce B2B-handlare även uppdatera till den senaste kompatibla versionen av B2B-säkerhetsuppdateringen. Se [Versionsinformation för B2B](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/release-notes).
 
 ## Endast Adobe Commerce {#ee-only}
 
@@ -52,6 +52,12 @@ ht-degree: 0%
 >[!NOTE]
 >
 >Adobe Commerce-versioner kan innehålla ändringar som är inkompatibla bakåt (BIC). Om du vill granska ändringar som är inkompatibla bakåt läser du [BIC-referens](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/reference/). Viktiga bakåtkompatibla problem beskrivs i [BIC-markeringar](https://developer.adobe.com/commerce/php/development/backward-incompatible-changes/). Inte alla releaser innehåller viktiga BIC:er.
+
+## Alpha ansvarsfriskrivning {#alpha}
+
+>[!IMPORTANT]
+>
+>[Alpha](/help/release/versioning-policy.md#alpha-patch-release)-versioner kan vara ofullständiga och innehåller troligtvis fel. De tillhandahålls i befintligt skick utan någon garanti av något slag. Adobe har ingen skyldighet att upprätthålla, korrigera, uppdatera, ändra, modifiera eller på annat sätt ge support (via Adobe Support Services eller på annat sätt) för Alpha. Kunderna bör inte förlita sig på att Alpha-releaser eller tillhörande dokumentation eller material fungerar som de ska. Användningen av Alpha-releaser är helt på kundens egen risk.
 
 ## Beta ansvarsfriskrivning {#beta}
 
