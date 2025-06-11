@@ -3,9 +3,9 @@ title: Adobe Managed Services
 description: Se hur Adobe Managed Services kan hjälpa er att stödja och underhålla er Adobe Commerce-implementering.
 exl-id: b600b0e3-c6fd-4b86-ad2a-a445e599f1bd
 feature: Services
-source-git-commit: c93dd37d6e196a09c9e7f4b376e421ca5886c7e0
+source-git-commit: e5a50707463bb7b36b4285889b10353faf9ba09f
 workflow-type: tm+mt
-source-wordcount: '1181'
+source-wordcount: '1168'
 ht-degree: 0%
 
 ---
@@ -53,8 +53,6 @@ Se tabellen nedan för en mer detaljerad jämförelse av fördelarna med Managed
 | Processkoordinering live | | | |
 | Dedikerad eskaleringshantering | | | |
 | Applikationsövervakning och -hjälp | | | |
-
-Meddela mig om du vill att den här filen ska exporteras till Excel eller något annat format.
 
 ## Roller och ansvarsområden
 
