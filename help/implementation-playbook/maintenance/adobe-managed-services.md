@@ -3,9 +3,9 @@ title: Adobe Managed Services
 description: Se hur Adobe Managed Services kan hjälpa er att stödja och underhålla er Adobe Commerce-implementering.
 exl-id: b600b0e3-c6fd-4b86-ad2a-a445e599f1bd
 feature: Services
-source-git-commit: 94d7a57dcd006251e8eefbdb4ec3a5e140bf43f9
+source-git-commit: c93dd37d6e196a09c9e7f4b376e421ca5886c7e0
 workflow-type: tm+mt
-source-wordcount: '1107'
+source-wordcount: '1181'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Adobe Managed Services tillhandahåller värdbaserade och hanterade program och 
 
 ## Fördelar
 
-![Infografik som visar på fördelarna med Adobe Managed Services](../../assets/playbooks/managed-services-benefits.png)
+![Infografik som visar fördelarna med Adobe Managed Services](../../assets/playbooks/managed-services-benefits.png)
 
 ### Jämförelse av implementeringsalternativ
 
@@ -35,13 +35,30 @@ Adobe Managed Services ger viktiga fördelar jämfört med lokala och icke-hante
    - Ge händelsestöd genom planering, genomförande och övervakning
    - Molnsupport och expertis (proaktiv optimering, rapportering och bästa praxis)
 
-Se följande bild för en mer detaljerad jämförelse av fördelarna med Managed Services:
+Se tabellen nedan för en mer detaljerad jämförelse av fördelarna med Managed Services:
 
-![Infografik som visar en jämförelse mellan Adobe Managed Services och andra Adobe Commerce-implementeringsalternativ ](../../assets/playbooks/managed-services-compare.png)
+| Funktion | Adobe Commerce lokalt | Adobe Commerce i molnet | Adobe Commerce på Managed Services |
+|---------|---------------------------|-------------------------|-----------------------------------|
+| Adobe Enterprise Software | ✓ | ✓ | ✓ |
+| Säker och dedikerad molninfrastruktur | | ✓ | ✓ |
+| Förbättrat mål för incidentservicenivå | | P1: 1 timme | P1: 15 minuter |
+| Övervakning och åtgärder för överkapacitet | | | ✓ |
+| Infrastruktursäkerhet | | | ✓ |
+| Infrastrukturnivå 99,99 % SLA | | | ✓ |
+| Programnivå 99,9 % SLA | | | |
+| Utsedd expertresurs för infrastruktur (Customer Success Engineer) | | | |
+| Planerad händelsehantering | | | |
+| Anpassad platsövervakning och anpassad runbook | | | |
+| Hjälp med driftsättning av uppgraderings- och patchlösningar | | | |
+| Processkoordinering live | | | |
+| Dedikerad eskaleringshantering | | | |
+| Applikationsövervakning och -hjälp | | | |
+
+Meddela mig om du vill att den här filen ska exporteras till Excel eller något annat format.
 
 ## Roller och ansvarsområden
 
-Adobe tillhandahåller en uppsättning tjänster för tillhandahållande, utveckling, staging och produktion av Adobe Commerce på Managed Services-system. För att utvecklingen och driftsättningen av lösningen ska kunna fortsätta så effektivt som möjligt är det viktigt att kunden och partnern förstår och uppfyller sina roller enligt beskrivningen nedan:
+Adobe tillhandahåller en uppsättning tjänster för provisionering, utveckling, staging och produktion av Adobe Commerce i Managed Services-system. För att utvecklingen och driftsättningen av lösningen ska kunna fortsätta så effektivt som möjligt är det viktigt att kunden och partnern förstår och uppfyller sina roller enligt beskrivningen nedan:
 
 <table>
     <thead>
@@ -177,13 +194,13 @@ Adobe tillhandahåller en uppsättning tjänster för tillhandahållande, utveck
             <td>Rådgivare</td>
         </tr>
         <tr>
-            <td>Slutförande av Runbook</td>
+            <td>Runbook - slutförande</td>
             <td>Ägare</td>
             <td>Medarbetare</td>
             <td>Medarbetare</td>
         </tr>
         <tr>
-            <td>Runbook-granskning</td>
+            <td>Runbook Review</td>
             <td></td>
             <td></td>
             <td>Ägare</td>
@@ -372,11 +389,11 @@ Adobe tillhandahåller en uppsättning tjänster för tillhandahållande, utveck
 
 Adobe säkerhetsstack för Managed Services bygger säkerhet på alla nivåer med automatisering och konsekvens för att minska antalet fel. Utvecklings- och verksamhetsteamen ärver automatiskt säkerhetskontroller från olika nivåer i stacken.
 
-Plattformspartners, som Amazon Web Services och Microsoft Azure, säkerställer maximal säkerhetstäckning vid användning av plattformsanpassningar, medan Adobe Managed Services-teamet tillhandahåller centrala säkerhetstjänster som regelefterlevnad, loggning, autentisering, skanning och övervakning samt serversäkerhet och säker programkonfiguration. Mer information finns i [Adobe Commerce Security](https://business.adobe.com/products/magento/secure-ecommerce.html).
+Plattformspartners, som Amazon Web Services och Microsoft Azure, säkerställer maximal säkerhetstäckning vid användning av plattformsanpassningar, medan Adobe Managed Services-teamet tillhandahåller viktiga säkerhetstjänster som regelefterlevnad, loggning, autentisering, skanning och övervakning samt serversäkerhet och säker programkonfiguration. Mer information finns i [Adobe Commerce Security](https://business.adobe.com/products/magento/secure-ecommerce.html).
 
-I följande diagram visas säkerhetsstacken Adobe Managed Services:
+I följande diagram visas Adobe Managed Services säkerhetstekniker:
 
-![Bild som visar säkerhetsstacken Adobe Managed Services](../../assets/playbooks/managed-services-security-stack.svg)
+![Diagram som visar Adobe Managed Services säkerhetsstack](../../assets/playbooks/managed-services-security-stack.svg)
 
 ## Uppgraderingshjälp
 
@@ -384,7 +401,7 @@ Managed Services team har en aktiv roll när det gäller att planera och hjälpa
 
 Managed Services CSE har samarbetat med Adobe Commerce kunder för att genomföra uppgraderingar i stora miljöer. CSE kan hjälpa er att utnyttja expertkunskaperna för att maximera uppgraderingen och samtidigt minimera driftstoppen och minska den totala risken. Dessutom fungerar Managed Services CSE tillsammans med den dedikerade mellanlagringsmiljön för uppgraderingen så att befintliga produktionsprocesser inte påverkas när uppgraderingen valideras.
 
-Adobe tillhandahåller en uppsättning tjänster för provisionering, utveckling, staging och produktion av ditt Managed Services-system. I följande tabell visas en översikt över de roller som varje deltagare spelar i uppgraderingsprocessen:
+Adobe tillhandahåller en uppsättning tjänster för etablering, utveckling, staging och produktion av ditt Managed Services-system. I följande tabell visas en översikt över de roller som varje deltagare spelar i uppgraderingsprocessen:
 
 <table>
 <thead>
@@ -455,7 +472,7 @@ Adobe tillhandahåller en uppsättning tjänster för provisionering, utveckling
     <td>Contributor<br />CSE schemalägger konferensmöte.</td>
   </tr>
   <tr>
-    <td>Post-Launch</td>
+    <td>Efter start</td>
     <td></td>
     <td>Medarbetare</td>
     <td>Medarbetare</td>
