@@ -1,9 +1,10 @@
 ---
 title: 'MDVA-37748: GraphQL-frågan returnerar produkter som inte har tilldelats en delad katalog'
-description: Korrigeringen MDVA-37748 åtgärdar ett problem där en GraphQL-fråga returnerar produkter som inte har tilldelats en delad katalog. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.5 är installerat. Patch-ID:t är MDVA-37748. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.4.
+description: Korrigeringen MDVA-37748 åtgärdar ett problem där en GraphQL-fråga returnerar produkter som inte har tilldelats en delad katalog. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.5 är installerat. Patch-ID:t är MDVA-37748. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.4.
 feature: B2B, GraphQL, Catalog Management, Categories, Products
 role: Admin
-source-git-commit: 1fb76b8d648cbbe2a9f602d2b1a0149f1f4f0e46
+exl-id: 8aa00953-dbf0-4533-9b53-b809bf59ec20
+source-git-commit: 011a6f46f76029eaf67f172b576e58dac9710a3d
 workflow-type: tm+mt
 source-wordcount: '494'
 ht-degree: 0%
@@ -12,7 +13,7 @@ ht-degree: 0%
 
 # MDVA-37748: GraphQL-frågan returnerar produkter som inte har tilldelats en delad katalog
 
-Korrigeringen MDVA-37748 åtgärdar ett problem där en GraphQL-fråga returnerar produkter som inte har tilldelats en delad katalog. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) 1.1.5 har installerats. Patch-ID:t är MDVA-37748. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.4.
+Korrigeringen MDVA-37748 åtgärdar ett problem där en GraphQL-fråga returnerar produkter som inte har tilldelats en delad katalog. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.5 har installerats. Patch-ID:t är MDVA-37748. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.4.
 
 ## Berörda produkter och versioner
 
@@ -26,7 +27,7 @@ Adobe Commerce (alla distributionsmetoder) 2.4.2 - 2.4.2-p2
 
 >[!NOTE]
 >
->Patchen kan bli tillämplig på andra versioner med nya Quality Patches Tool-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Patchen kan bli tillämplig på andra versioner med nya Quality Patches Tool-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -51,14 +52,14 @@ B2B-moduler är installerade.
 
    <pre>
     <code class="language-graphql">
-    mutation &lbrace;
+    mutation {
       generateCustomerToken(
         email: "company.admin@exapmle.test"
         password: "password"
-      ) &lbrace;
+      ) {
         token
-      &rbrace;
-    &rbrace;
+      }
+    }
     </code>
     </pre>
 
@@ -66,29 +67,29 @@ B2B-moduler är installerade.
 
    <pre>
     <code class="language-graphql">
-    &lbrace;
+    {
       products(
           filter: {},
           pageSize: 100,
           currentPage: 1
           sort: {}
-        ) &lbrace;
+        ) {
           total_count
-          page_info &lbrace;
+          page_info {
             page_size
             current_page
-          &rbrace;
-          aggregations &lbrace;
+          }
+          aggregations {
             attribute_code
             count
             label
-            options &lbrace;
+            options {
               label
               value
               count
-            &rbrace;
-          &rbrace;
-          items &lbrace;
+            }
+          }
+          items {
             name
             sku
             created_at
@@ -98,107 +99,107 @@ B2B-moduler är installerade.
             short_description {html}
             url_key
             url_path
-            price_tiers&lbrace;
-              final_price&lbrace;
+            price_tiers{
+              final_price{
                   value
                   currency
-                &rbrace;
-              discount&lbrace;
+                }
+              discount{
                   amount_off
                   percent_off
-                &rbrace;
+                }
               quantity
-            &rbrace;
-            price_range &lbrace;
-             maximum_price &lbrace;
-              regular_price &lbrace;
+            }
+            price_range {
+             maximum_price {
+              regular_price {
                 value
-              &rbrace;
-              final_price &lbrace;
+              }
+              final_price {
                 value
-              &rbrace;
-            &rbrace;
-            minimum_price &lbrace;
-              regular_price &lbrace;
+              }
+            }
+            minimum_price {
+              regular_price {
                 value
-              &rbrace;
-              final_price &lbrace;
+              }
+              final_price {
                value
-              &rbrace;
-            &rbrace;
-          &rbrace;
-          image &lbrace;
+              }
+            }
+          }
+          image {
            url
-          &rbrace;
-          thumbnail &lbrace;
+          }
+          thumbnail {
            url
-          &rbrace;
-          small_image &lbrace;
+          }
+          small_image {
            url
-          &rbrace;
-          media_gallery &lbrace;
+          }
+          media_gallery {
            url
-          &rbrace;
-          ... on ConfigurableProduct &lbrace;
-            configurable_options &lbrace;
+          }
+          ... on ConfigurableProduct {
+            configurable_options {
              id
 
              label
              position
              use_default
              attribute_code
-             values &lbrace;
+             values {
                value_index
                label
-               swatch_data &lbrace;
+               swatch_data {
                  value
-               &rbrace;
-            &rbrace;
+               }
+            }
             product_id
-          &rbrace;
-          variants &lbrace;
-            product &lbrace;
+          }
+          variants {
+            product {
               id
               name
               sku
-              &#x200B;#margin
-              &#x200B;#margin_percentage
-              image &lbrace;
+              #margin
+              #margin_percentage
+              image {
                 url
-              &rbrace;
-              small_image &lbrace;
+              }
+              small_image {
                 url
-              &rbrace;
-              thumbnail &lbrace;
+              }
+              thumbnail {
                 url
-              &rbrace;
-              media_gallery&lbrace;
+              }
+              media_gallery{
                 url
-              &rbrace;
+              }
               attribute_set_id
-              ... on PhysicalProductInterface &lbrace;
+              ... on PhysicalProductInterface {
                 weight
-              &rbrace;
-              price_range &lbrace;
-                minimum_price &lbrace;
-                  regular_price &lbrace;
+              }
+              price_range {
+                minimum_price {
+                  regular_price {
                     value
                     currency
-                  &rbrace;
-                &rbrace;
-              &rbrace;
-            &rbrace;
-            attributes &lbrace;
+                  }
+                }
+              }
+            }
+            attributes {
               label
               code
               value_index
-            &rbrace;
-          &rbrace;
-        &rbrace;
-      &rbrace;
+            }
+          }
+        }
+      }
 
-    &rbrace;
-&rbrace;
+    }
+}
 </code>
 </pre>
 
@@ -212,106 +213,106 @@ Endast &quot;Product 2&quot; returneras, men `total_count` visar två.
 
 <pre>
 <code class="language-graphql">
-&lbrace;
-  "data": &lbrace;
-    "products": &lbrace;
+{
+  "data": {
+    "products": {
       "total_count": 2,
-      "page_info": &lbrace;
+      "page_info": {
         "page_size": 100,
         "current_page": 1
-      &rbrace;,
-      "aggregations": &lbrack;
-        &lbrace;
+      },
+      "aggregations": [
+        {
           "attribute_code": "price",
           "count": 2,
           "label": "Price",
-          "options": &lbrack;
-            &lbrace;
+          "options": [
+            {
               "label": "0-100",
               "value": "0_100",
               "count": 1
-            &rbrace;,
-            &lbrace;
+            },
+            {
               "label": "100-200",
               "value": "100_200",
               "count": 1
-            &rbrace;
-          &rbrack;
-        &rbrace;,
-        &lbrace;
+            }
+          ]
+        },
+        {
           "attribute_code": "category_id",
           "count": 1,
           "label": "Category",
-          "options": &lbrack;
-            &lbrace;
+          "options": [
+            {
               "label": "Cat 1",
               "value": "3",
               "count": 2
-            &rbrace;
-          &rbrack;
-        &rbrace;
-      &rbrack;,
-      "items": &lbrack;
-        &lbrace;
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
           "name": "Product 2",
           "sku": "Product 2",
           "created_at": "2021-05-12 10:51:44",
           "updated_at": "2021-05-12 11:03:24",
           "stock_status": "IN_STOCK",
-          "description": &lbrace;
+          "description": {
             "html": ""
-          &rbrace;,
-          "short_description": &lbrace;
+          },
+          "short_description": {
             "html": ""
-          &rbrace;,
+          },
           "url_key": "product-2",
           "url_path": null,
-          "price_tiers": &lbrack;
-            &lbrace;
-              "final_price": &lbrace;
+          "price_tiers": [
+            {
+              "final_price": {
                 "value": 90,
                 "currency": "USD"
-              &rbrace;,
-              "discount": &lbrace;
+              },
+              "discount": {
                 "amount_off": 10,
                 "percent_off": 10
-              &rbrace;,
+              },
               "quantity": 1
-            &rbrace;
-          &rbrack;,
-          "price_range": &lbrace;
-            "maximum_price": &lbrace;
-              "regular_price": &lbrace;
+            }
+          ],
+          "price_range": {
+            "maximum_price": {
+              "regular_price": {
                 "value": 100
-              &rbrace;,
-              "final_price": &lbrace;
+              },
+              "final_price": {
                 "value": 90
-              &rbrace;
-            &rbrace;,
-            "minimum_price": &lbrace;
-              "regular_price": &lbrace;
+              }
+            },
+            "minimum_price": {
+              "regular_price": {
                 "value": 100
-              &rbrace;,
-              "final_price": &lbrace;
+              },
+              "final_price": {
                 "value": 90
-              &rbrace;
-            &rbrace;
-          &rbrace;,
-          "image": &lbrace;
+              }
+            }
+          },
+          "image": {
             "url": "../pub/static/version1620816308/frontend/Magento/luma/en_US/Magento_Catalog/images/product/placeholder/image.jpg"
-          &rbrace;,
-          "thumbnail": &lbrace;
+          },
+          "thumbnail": {
             "url": "../pub/static/version1620816308/frontend/Magento/luma/en_US/Magento_Catalog/images/product/placeholder/thumbnail.jpg"
-          &rbrace;,
-          "small_image": &lbrace;
+          },
+          "small_image": {
             "url": "../pub/static/version1620816308/frontend/Magento/luma/en_US/Magento_Catalog/images/product/placeholder/small_image.jpg"
-          &rbrace;,
+          },
           "media_gallery": []
-        &rbrace;
-      &rbrack;
-    &rbrace;
-  &rbrace;
-&rbrace;
+        }
+      ]
+    }
+  }
+}
 </code>
 </pre>
 
@@ -320,13 +321,13 @@ Endast &quot;Product 2&quot; returneras, men `total_count` visar två.
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 
 Mer information om verktyget för kvalitetskorrigeringar finns i:
 
-* [Verktyget för kvalitetskorrigeringar har släppts: ett nytt verktyg för självbetjäning av kvalitetskorrigeringar](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/magento-quality-patches-released-new-tool-to-self-serve-quality-patches) i kunskapsbasen för support.
+* [Verktyget för kvalitetskorrigeringar har släppts: ett nytt verktyg för självbetjäning av kvalitetskorrigeringar](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) i kunskapsbasen för support.
 * [Kontrollera om det finns en korrigeringsfil för ditt Adobe Commerce-problem med verktyget för kvalitetskorrigeringar ](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md) i [!DNL Quality Patches Tool]-handboken.
 
-Mer information om andra tillgängliga korrigeringsfiler i QPT finns i avsnittet [Patchar i QPT](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE).
+Mer information om andra tillgängliga korrigeringsfiler i QPT finns i avsnittet [Patchar i QPT](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html).
