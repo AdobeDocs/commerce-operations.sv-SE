@@ -1,6 +1,6 @@
 ---
 title: 'ACSD-50813: Administratören kan inte lägga till paketerade produkter som innehåller ett snedstreck'
-description: Använd patchen ACSD-50813 för att åtgärda prestandaproblemet i Adobe Commerce där administratören inte kan lägga till paketerade produkter som innehåller ett snedstreck (`/`) i SKU:n med funktionen *Lägg till produkter efter SKU* i administratörsbeställningen.
+description: Använd patchen ACSD-50813 för att åtgärda prestandaproblemet i Adobe Commerce där administratören inte kan lägga till paketerade produkter som innehåller ett snedstreck (&grave;/&grave;) i SKU:n med funktionen *Lägg till produkter efter SKU* i administratörsbeställningen.
 exl-id: ff6fa673-bac1-4ef8-a427-60c2f56068f3
 source-git-commit: 011a6f46f76029eaf67f172b576e58dac9710a3d
 workflow-type: tm+mt
