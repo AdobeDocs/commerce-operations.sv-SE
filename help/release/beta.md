@@ -40,7 +40,7 @@ Med Adobe Commerce Optimizer kan man
 - Skapa personliga sökningar och rekommendationer med hjälp av AI och ML.
 - Se viktig produktdatatillgänglighet, inklusive synkroniseringsstatus och butikshändelsedata för korrekt implementering och felsökning.
 
-[Läs mer](https://experienceleague.adobe.com/docs/commerce/optimizer/overview.html) om Adobe Commerce Optimizer. Om du vill veta mer om programmet [!DNL Adobe Commerce Optimizer] för tidig åtkomst fyller du i formuläret [Tidig åtkomst](https://forms.office.com/Pages/ResponsePage.aspx?id=Wht7-jR7h0OUrtLBeN7O4WOxhjY2doZPikS2hIbfmL5UMlhTMTYzVDhPQVFNTUFYUjJHNlRKTE5TWS4u).
+[Läs mer](https://experienceleague.adobe.com/docs/commerce/optimizer/overview.html?lang=sv-SE) om Adobe Commerce Optimizer. Om du vill veta mer om programmet [!DNL Adobe Commerce Optimizer] för tidig åtkomst fyller du i formuläret [Tidig åtkomst](https://forms.office.com/Pages/ResponsePage.aspx?id=Wht7-jR7h0OUrtLBeN7O4WOxhjY2doZPikS2hIbfmL5UMlhTMTYzVDhPQVFNTUFYUjJHNlRKTE5TWS4u).
 
 ### Förbättrade sökfunktioner för Live Search (Public Beta)
 
@@ -66,7 +66,7 @@ Den här betaversionen stöder tre nya funktioner i [`productSearch`-frågan ](h
 
 De här nya villkoren förbättrar funktionen för filtrering av sökfrågor för att förfina sökresultaten. De här nya villkoren påverkar inte huvudsökfrågan. Om du vill delta i betaversionen skickar du en e-postförfrågan till [commerce-storefront-services](mailto:commerce-storefront-services@adobe.com).
 
-Mer information om hur du installerar betaversionen av Live Search finns i [Live Search-guiden](https://experienceleague.adobe.com/en/docs/commerce/live-search/install#install-the-live-search-beta).
+Mer information om hur du installerar betaversionen av Live Search finns i [Live Search-guiden](https://experienceleague.adobe.com/sv/docs/commerce/live-search/install#install-the-live-search-beta).
 
 ### IBM Sterling Order Management System Integration (Private Beta)
 
@@ -88,7 +88,7 @@ Alla Adobe Commerce Foundation alfa- och betaversioner innehåller alla ändring
 - Förbättringar i GraphQL
 - Allmänna felkorrigeringar av kvalitet
 - Bidrag från gemenskapen
-- Ändringar som krävs för kompatibilitet med [Adobe Commerce-tjänster](https://experienceleague.adobe.com/en/docs/commerce/user-guides/home)
+- Ändringar som krävs för kompatibilitet med [Adobe Commerce-tjänster](https://experienceleague.adobe.com/sv/docs/commerce/user-guides/home)
 
 #### Namngivningskonvention och schema
 
