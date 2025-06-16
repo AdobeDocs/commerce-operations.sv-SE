@@ -2,9 +2,9 @@
 title: Beta-versioner
 description: Läs mer om betaversioner av Adobe Commerce och hur du deltar.
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
-source-git-commit: ea4f340540e57b282657a44502d80f1d5c409c6a
+source-git-commit: 1c0dd720df944a5784c850a3f4ea63b8984069f1
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: '963'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Med Adobe Commerce Optimizer kan man
 - Skapa personliga sökningar och rekommendationer med hjälp av AI och ML.
 - Se viktig produktdatatillgänglighet, inklusive synkroniseringsstatus och butikshändelsedata för korrekt implementering och felsökning.
 
-[Läs mer](https://experienceleague.adobe.com/docs/commerce/optimizer/overview.html?lang=sv-SE) om Adobe Commerce Optimizer. Om du vill veta mer om programmet [!DNL Adobe Commerce Optimizer] för tidig åtkomst fyller du i formuläret [Tidig åtkomst](https://forms.office.com/Pages/ResponsePage.aspx?id=Wht7-jR7h0OUrtLBeN7O4WOxhjY2doZPikS2hIbfmL5UMlhTMTYzVDhPQVFNTUFYUjJHNlRKTE5TWS4u).
+[Läs mer](https://experienceleague.adobe.com/docs/commerce/optimizer/overview.html) om Adobe Commerce Optimizer. Om du vill veta mer om programmet [!DNL Adobe Commerce Optimizer] för tidig åtkomst fyller du i formuläret [Tidig åtkomst](https://forms.office.com/Pages/ResponsePage.aspx?id=Wht7-jR7h0OUrtLBeN7O4WOxhjY2doZPikS2hIbfmL5UMlhTMTYzVDhPQVFNTUFYUjJHNlRKTE5TWS4u).
 
 ### Förbättrade sökfunktioner för Live Search (Public Beta)
 
@@ -66,7 +66,7 @@ Den här betaversionen stöder tre nya funktioner i [`productSearch`-frågan ](h
 
 De här nya villkoren förbättrar funktionen för filtrering av sökfrågor för att förfina sökresultaten. De här nya villkoren påverkar inte huvudsökfrågan. Om du vill delta i betaversionen skickar du en e-postförfrågan till [commerce-storefront-services](mailto:commerce-storefront-services@adobe.com).
 
-Mer information om hur du installerar betaversionen av Live Search finns i [Live Search-guiden](https://experienceleague.adobe.com/sv/docs/commerce/live-search/install#install-the-live-search-beta).
+Mer information om hur du installerar betaversionen av Live Search finns i [Live Search-guiden](https://experienceleague.adobe.com/en/docs/commerce/live-search/install#install-the-live-search-beta).
 
 ### IBM Sterling Order Management System Integration (Private Beta)
 
@@ -79,38 +79,43 @@ Integrationsacceleratorn för IBM Sterling Order Management gör det möjligt f�
 
 Om du vill delta i betaversionen skickar du en e-postförfrågan till [sbieber@adobe.com](mailto:sbieber@adobe.com).
 
-### Adobe Commerce Foundation (offentlig Beta)
+### Adobe Commerce Foundation (offentlig Alpha/Beta)
 
-Varje betaversion av Adobe Commerce Foundation innehåller alla ändringar som levererats till Adobe Commerce kärnkod vid det schemalagda releasedatumet, inklusive, men inte begränsat till, följande funktionsområden:
+Alla Adobe Commerce Foundation alfa- och betaversioner innehåller alla ändringar som levereras till Adobe Commerce kärnkod före det planerade releasedatumet, inklusive, men inte begränsat till, följande funktionsområden:
 
 - Senaste säkerhetskorrigeringar
 - Prestandaförbättringar
 - Förbättringar i GraphQL
 - Allmänna felkorrigeringar av kvalitet
 - Bidrag från gemenskapen
-- Ändringar som krävs för kompatibilitet med [Adobe Commerce-tjänster](https://experienceleague.adobe.com/docs/commerce/user-guides/home.html?lang=sv-SE)
+- Ändringar som krävs för kompatibilitet med [Adobe Commerce-tjänster](https://experienceleague.adobe.com/en/docs/commerce/user-guides/home)
 
 #### Namngivningskonvention och schema
 
-Adobe släpper betatestningar normalt två gånger per år.
+Adobe släpper normalt alfa- och betatestningar flera gånger per år.
+
+Alpha-versionspaket har suffixet `-alphaX`. Följande namnkonvention används till exempel i alfabetet för Adobe Commerce 2.4.7:
+
+- `2.4.7-alpha1`
+- `2.4.7-alpha2`
 
 Beta-versionspaket har suffixet `-betaX`. I betaversionspaketen för Adobe Commerce 2.4.7 används till exempel följande namnkonvention:
 
 - `2.4.7-beta1`
 - `2.4.7-beta2`
 
-Se [releaseplanen](schedule.md) för en lista över kommande allmänna betaversionsdatum.
+I [releaseplanen](schedule.md) finns en lista över kommande allmänna alfa- och betaversionsdatum.
 
-#### Tillgång till releaser från Beta
+#### Frigör åtkomst
 
-Adobe Commerce betaversioner distribueras på samma sätt som andra Adobe Commerce-korrigeringsutgåvor: som Composer-metapaket på `https://repo.magento.com`. Källkoden är tillgänglig på [GitHub](https://github.com/magento/magento2).
+Adobe Commerce alfa- och betaversioner distribueras på samma sätt som andra Adobe Commerce-korrigeringsutgåvor: som Composer-metapaket på `https://repo.magento.com`. Källkoden är tillgänglig på [GitHub](https://github.com/magento/magento2).
 
 Mer information finns i [Snabbstart för installation av disposition](../installation/composer.md).
 
 #### Ärenderapportering
 
-Adobe tillhandahåller inte Adobe standardsupport för betaversioner.
+Adobe tillhandahåller inte Adobe standardsupport för alfa- och betaversioner.
 
-Följ vårt [regelbundna rapportflöde](https://developer.adobe.com/commerce/contributor/guides/code-contributions/) på [GitHub](https://github.com/magento/magento2) om du vill skicka feedback som gäller betaversioner.
+Om du vill skicka feedback om alfa- och betaversioner följer du det [regelbundna rapportflödet](https://developer.adobe.com/commerce/contributor/guides/code-contributions/) på [GitHub](https://github.com/magento/magento2).
 
-Våra interna team övervakar alla kritiska problem som rapporteras mot den senaste betaversionen och prioriterar dem så att de kan lösas före GA-lanseringsdatumet.
+Adobe övervakar alla kritiska problem som rapporteras mot den senaste alfa- eller betaversionen och prioriterar dem så att de kan lösas före GA-releasedatum.
