@@ -2,9 +2,9 @@
 title: Inaktivera modulutdata
 description: Lär dig hur du inaktiverar modulutdata.
 exl-id: af556bf5-8454-4d65-8ac8-4a64c108f092
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: fee09845777e23717e618ac57df4158d6b172d4f
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '362'
 ht-degree: 0%
 
 ---
@@ -101,4 +101,7 @@ Det är enklare att inaktivera modulutdata i en enda instans av Commerce efterso
    ```
 
 I det här exemplet har utdata för modulen `Magento_Review` inaktiverats och kunderna kan inte längre granska produkter.
-Om du vill återaktivera utdata anger du värdet till `0`.
+
+### Återaktivera modulutdata
+
+Om du vill återaktivera utdata anger du värdet `0` för modulen eller tar bort raden/modulen från filen `config.php`.
