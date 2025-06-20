@@ -36,7 +36,7 @@ Korrigeringen ACSD-62332 åtgärdar problem där GraphQL-produktlistans fråga �
 
 ## Problem
 
-Produktlistans GraphQL-fråga är begränsad till totalt_antal på 10 000 produkter och där [!DNL Live Search] anger den aktuella sidan till ** i stället för sidan ** i sökvillkoren när den efterfrågas via GraphQL.
+Produktlistans GraphQL-fråga är begränsad till totalt_antal på 10 000 produkter och där [!DNL Live Search] anger den aktuella sidan till **&#x200B; i stället för sidan &#x200B;** i sökvillkoren när den efterfrågas via GraphQL.
 
 ## Tillämpa korrigeringen
 

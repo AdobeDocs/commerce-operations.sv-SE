@@ -30,6 +30,6 @@ QPT v1.1.55 innehåller följande patchar:
 1. **ACSD-61785**: Korrigerar problemet där det inte går att uppdatera attributet `reward_warning_notification` via [!DNL GraphQL] mutation och [!DNL REST API] anrop, vilket anpassar beteendet till `reward_update_notification`.
 1. **ACSD-62591**: Korrigerar problemet där temat inte växlar korrekt när **[!UICONTROL User Agent Rules]** har konfigurerats.
 1. **ACSD-62793**: Korrigerar problemet där `datetime` -attribut i exporterade data inte innehåller tidskomponenten. Om *[!UICONTROL Fields Enclosure]* dessutom är *aktiverad* omges attributvärden i kolumnen `additional_attributes` av citattecken.
-1. **ACSD-62332**: Korrigerar problemet där produktlistans [!DNL GraphQL] -fråga är begränsad till `total_count` av 10 000 produkter. Åtgärdar även problemet där [!DNL Live Search] ställer in den aktuella sidan på ** i stället för sidan ** i sökvillkoren när frågan ställs via [!DNL GraphQL].
+1. **ACSD-62332**: Korrigerar problemet där produktlistans [!DNL GraphQL] -fråga är begränsad till `total_count` av 10 000 produkter. Åtgärdar även problemet där [!DNL Live Search] ställer in den aktuella sidan på **&#x200B; i stället för sidan &#x200B;** i sökvillkoren när frågan ställs via [!DNL GraphQL].
 
 Använd menyn till vänster för att navigera till en viss korrigeringssida.

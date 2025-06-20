@@ -38,9 +38,9 @@ Produktexporten misslyckas när produktattributen innehåller tusentals alternat
 
 1. Installera Adobe Commerce med B2B-modulen.
 1. Importera en stor databassdump med:
-   - ~7 000 produkter
-   - ~450 produktattribut
-   - Vissa attribut har fler än 100 alternativ
+   &#x200B;- ~7 000 produkter
+   &#x200B;- ~450 produktattribut
+   &#x200B;- Vissa attribut har fler än 100 alternativ
 1. Kör följande kommando för att installera cron (om det inte redan är installerat):
 
    ```
