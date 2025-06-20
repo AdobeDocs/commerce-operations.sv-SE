@@ -1,15 +1,16 @@
 ---
-title: "ACSD-61522: E-postadresser i fälten *Förnamn och Efternamn* skickar ogiltiga orderbekräftelser"
+title: 'ACSD-61522: E-postadresser i fälten *Förnamn och Efternamn* skickar ogiltiga orderbekräftelser'
 description: Använd korrigeringsfilen ACSD-61522 för att åtgärda Adobe Commerce-problemet där det går att ange e-postadresser i en gästkunds fält *[!UICONTROL First Name]* och *[!UICONTROL Last Name]*, vilket leder till att ogiltiga orderbekräftelsemeddelanden skickas.
 feature: Checkout, Customers
 role: Admin, Developer
-source-git-commit: d56f4fda007c1499bdba82ac3db9ac5ea1d34b0e
+exl-id: e1ed7a57-4054-44db-bc17-9b9056096fce
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '361'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-61522: E-postadresser i fälten *Förnamn och Efternamn* skickar ogiltiga orderbekräftelser
 
@@ -27,7 +28,7 @@ Korrigeringen ACSD-61522 åtgärdar ett problem där det går att ange e-postadr
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -58,7 +59,7 @@ E-postadresser kan inte användas i fälten *[!UICONTROL First Name]* och *[!UIC
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 

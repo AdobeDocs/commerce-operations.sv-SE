@@ -3,7 +3,9 @@ title: 'Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.50'
 description: I det här underavsnittet finns en detaljerad beskrivning av de problem som åtgärdats av de korrigeringar som finns i  [!DNL Quality Patches Tool] (QPT) v1.1.50.
 feature: Tools and External Services
 role: Admin, Developer
-source-git-commit: d722ba5ba25ffc03d87b9eddeb2830353124055d
+exl-id: 4e136531-6bd4-4294-9a5a-66d19eb136db
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '388'
 ht-degree: 0%
@@ -21,7 +23,7 @@ QPT v1.1.50 innehåller följande patchar:
 1. **ACSD-46938**: Korrigerar problemet med prestandan hos DB-utlösare som återskapas under `setup:upgrade`.
 1. **ACSD-48210**: Korrigerar problemet där uppdateringen av attributet *[!UICONTROL website scope]* i en viss butiksvy åsidosätter attributvärdena i det globala omfånget.
 1. **ACSD-54887**: Korrigerar problemet där kundvagnen raderas efter att kundsessionen har upphört och *[!UICONTROL Persistent Shopping Cart]* är aktiverat.
-1. **ACSD-58141**: Korrigerar problemet där `PHPSESSID` återskapar begäranden på POSTEN i butiksområdet för en inloggad kund om [!UICONTROL L2 Redis cache] är aktiverad och kunden uppdateras från Admin.
+1. **ACSD-58141**: Korrigerar problemet där `PHPSESSID` återskapar POST-begäranden i butiksområdet för en inloggad kund om [!UICONTROL L2 Redis cache] är aktiverad och kunden uppdateras från Admin.
 1. **ACSD-58352**: Korrigerar problemet där returattributetiketter för standardbutiksvyn returneras via GraphQL API när en icke-standardbutiksvy anges i begärandehuvudet.
 1. **ACSD-58442**: Korrigerar problemet där enheter med bredden *768px* behandlas som mobila, vilket gör att menyn och huvudet läses in i mobilvyn i stället för i skrivbordsversionen.
 1. **ACSD-58790**: Korrigerar funktionen *nypa till zoom* på produktinformationssidans bilder i mobilvyn på [!DNL Chrome].

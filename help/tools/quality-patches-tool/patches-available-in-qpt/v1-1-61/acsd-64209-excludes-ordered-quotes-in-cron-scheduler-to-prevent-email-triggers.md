@@ -3,7 +3,9 @@ title: 'ACSD-64209: Kronschemaläggaren hämtar överlåtbara offerter utan att 
 description: Använd korrigeringsfilen ACSD-64209 för att åtgärda Adobe Commerce-problemet där cron Scheduler hämtar alla överlåtbara offerter utan att utesluta dem med statusen [!UICONTROL Ordered], vilket medför att ett e-postmeddelande eller e-postmeddelande utlöses.
 feature:  B2B, Communications
 role: Admin, Developer
-source-git-commit: 6fbe987dca81065071b611bfe0bfd0cb7baf1938
+exl-id: 51ba0edc-ad0c-4e32-acd7-2337a62bff53
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '415'
 ht-degree: 0%
@@ -26,7 +28,7 @@ Korrigeringen ACSD-64209 åtgärdar ett problem där cron Scheduler hämtar alla
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -36,7 +38,7 @@ Kronschemaläggaren hämtar alla överlåtbara offerter utan att utesluta dem me
 
 
 1. På sidofältet *Admin* går du till **[!UICONTROL Stores]** > *[!UICONTROL Settings]* > **[!UICONTROL Configuration]** > **[!UICONTROL B2B Features]** och aktiverar Company och B2B Quote.
-1. Ange **[!UICONTROL Default Expiration Period]** till **&#x200B; i *Admin* > &#x200B;** [!UICONTROL Stores] **&#x200B; > *[!UICONTROL Settings]* > &#x200B;** [!UICONTROL Configuration] **&#x200B; > &#x200B;** [!UICONTROL Sales] **&#x200B; > &#x200B;** [!UICONTROL Quotes] **&#x200B; > &#x200B;** [!UICONTROL General]**.
+1. Ange **[!UICONTROL Default Expiration Period]** till ** i *Admin* > **[!UICONTROL Stores]** > *[!UICONTROL Settings]* > **[!UICONTROL Configuration]** > **[!UICONTROL Sales]** > **[!UICONTROL Quotes]** > **[!UICONTROL General]**.
 1. Skapa ett företag, aktivera det och logga in som företagsadministratör.
 1. Lägg en produkt i kundvagnen.
 1. Begär en offert.
@@ -61,7 +63,7 @@ Ett e-postmeddelande, *offerten, upphör snart*, skickas.
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 

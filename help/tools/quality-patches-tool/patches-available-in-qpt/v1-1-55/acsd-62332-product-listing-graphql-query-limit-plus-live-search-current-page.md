@@ -3,7 +3,9 @@ title: 'ACSD-62332: Produktlista GraphQL-fråga begränsad till 10 000 produkter
 description: Använd patchen ACSD-62332 för att åtgärda Adobe Commerce-problem där GraphQL-frågan är begränsad till totalt 10 000 produkter och där  [!DNL Live Search] anger den aktuella sidan till *1* istället för sidan *2* i sökvillkoren när den efterfrågas via GraphQL.
 feature: GraphQL, Products, Search
 role: Admin, Developer
-source-git-commit: 276fe6ca8d1166a8f4254aca5d49cbb4b1aa607b
+exl-id: 3623a337-32e9-468b-a82b-6a7f7fa943c9
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '353'
 ht-degree: 0%
@@ -30,18 +32,18 @@ Korrigeringen ACSD-62332 åtgärdar problem där GraphQL-produktlistans fråga �
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
-Produktlistans GraphQL-fråga är begränsad till totalt_antal på 10 000 produkter och där [!DNL Live Search] anger den aktuella sidan till **&#x200B; i stället för sidan &#x200B;** i sökvillkoren när den efterfrågas via GraphQL.
+Produktlistans GraphQL-fråga är begränsad till totalt_antal på 10 000 produkter och där [!DNL Live Search] anger den aktuella sidan till ** i stället för sidan ** i sökvillkoren när den efterfrågas via GraphQL.
 
 ## Tillämpa korrigeringen
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 
 ## Relaterad läsning

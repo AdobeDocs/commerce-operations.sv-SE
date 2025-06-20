@@ -1,15 +1,16 @@
 ---
-title: 'ACSD-63325: Syntaxfel: Oväntat <EOF>-fel när en tom [!DNL GraphQL] begäran skickades'
+title: 'ACSD-63325: Syntaxfel: Oväntad &lt;EOF&gt fel när en tom [!DNL GraphQL] begäran skickades'
 description: Använd korrigeringen ACSD-63325 för att åtgärda Adobe Commerce-problemet där ett syntaxfel inträffar när en tom [!DNL GraphQL] begäran skickas.
 feature: GraphQL
 Role: Admin, Developer
-source-git-commit: 805ab7fb001cda112ce1298f0221fb22b6494b47
+exl-id: a83a8c5f-a43a-4733-a601-7b92656e5325
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '297'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-63325: Syntaxfel: Oväntat &lt; EOF >-fel när tom [!DNL GraphQL]-begäran skickades
 
@@ -27,7 +28,7 @@ Korrigeringen ACSD-63325 åtgärdar ett fel där ett syntaxfel: Oväntat &lt; EO
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -62,7 +63,7 @@ HTTP/1.1 500 Internal Server Error
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce i molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches) i Commerce i guiden för molninfrastruktur.
+* Adobe Commerce i molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches) i Commerce i guiden för molninfrastruktur.
 
 ## Relaterad läsning
 

@@ -3,13 +3,14 @@ title: 'ACSD-63870: Kunden har inte loggat ut korrekt vid ändring av företagss
 description: Använd patchen ACSD-63870 för att åtgärda Adobe Commerce-problemet där en företagskund inte är korrekt utloggad när företagets status ändras under en aktiv kundsession.
 feature: Customers, B2B, Companies
 role: Admin, Developer
-source-git-commit: 3544eaef7812524a098e851ac8a2c140f33f7668
+exl-id: 4488f3cb-bb34-491e-8821-c2e98ff69429
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '376'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-63870: Kunden har inte loggat ut korrekt vid ändring av företagsstatus
 
@@ -27,7 +28,7 @@ Korrigeringen ACSD-63870 löser problemet där en företagskund inte är korrekt
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -62,7 +63,7 @@ Kunden har loggats ut.
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Ytterligare steg krävs efter installationen av korrigeringsfilen
 
@@ -73,4 +74,3 @@ Använd följande länkar beroende på distributionsmetod för att tillämpa ens
 Mer information om [!DNL Quality Patches Tool] finns i:
 
 * [[!DNL Quality Patches Tool]: Ett självbetjäningsverktyg för kvalitetspatchar](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) i verktygshandboken.
-

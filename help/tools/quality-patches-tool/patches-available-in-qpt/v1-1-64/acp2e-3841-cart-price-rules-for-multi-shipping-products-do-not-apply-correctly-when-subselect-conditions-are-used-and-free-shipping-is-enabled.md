@@ -3,13 +3,14 @@ title: 'AVS2E-3841: Kundprisregler för produkter med flera leveranser gäller i
 description: Använd programfixen ACP2E-3841 för att åtgärda Adobe Commerce-problemet där kundprisreglerna för produkter som levereras flera gånger inte gäller korrekt när delvalsvillkoren används och fri frakt är aktiverat.
 feature: Shopping Cart, Price Rules
 role: Admin, Developer
-source-git-commit: 1abb32109d5ca4a90cdd1d210d1fae6a728699fd
+exl-id: 73979b71-9b15-4a4b-a1c9-37d3213c177f
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 0%
 
 ---
-
 
 # AVS2E-3841: Kundprisregler för produkter med flera leveranser gäller inte korrekt när vissa villkor används och fri frakt är aktiverat
 
@@ -27,7 +28,7 @@ Programfixen ACP2E-3841 åtgärdar ett problem där kundvagnsregler för produkt
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -50,7 +51,6 @@ Kundprisreglerna för produkter som levereras flera gånger gäller inte korrekt
 1. Produkttest 2:
    1. Kategorier: Kategoriprovning 2
    1. Pris: 56,25 $ 
-
       **(Priserna måste vara desamma som visas här för att testet ska fungera korrekt.)**
 
 **Kundprisregel:**
@@ -103,7 +103,7 @@ Inga fel.
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 

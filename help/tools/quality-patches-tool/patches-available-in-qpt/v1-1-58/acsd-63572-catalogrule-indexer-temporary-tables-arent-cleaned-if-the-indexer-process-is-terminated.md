@@ -3,13 +3,14 @@ title: 'ACSD-63572: Tillfälliga register för indexering av katalog rensas inte
 description: Använd korrigeringsfilen ACSD-63572 för att åtgärda Adobe Commerce-problemet där indexerartabellerna inte rensas när processen avslutades på grund av en systemuppgradering eller ett stopp i [!UICONTROL CLI].
 feature: System
 Role: Admin, Developers
-source-git-commit: 588a543a8c0bfb8067f81e7131d0a53e5cdc340a
+exl-id: 1cab7058-ca20-4d43-bfca-9b0e3ad35f42
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '341'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-63572: `catalogrule` temporära indexerartabeller rensas inte om indexerarprocessen avslutas
 
@@ -27,7 +28,7 @@ Korrigeringen ACSD-63572 åtgärdar ett problem där temporära indexerartabelle
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -60,7 +61,7 @@ De gamla temporära tabellerna tas inte bort.
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 

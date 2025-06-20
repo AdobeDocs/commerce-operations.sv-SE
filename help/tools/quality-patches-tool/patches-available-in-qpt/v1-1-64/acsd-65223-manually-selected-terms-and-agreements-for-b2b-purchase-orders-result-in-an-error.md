@@ -3,13 +3,14 @@ title: 'ACSD-65223: Manuellt valda villkor och avtal för B2B-inköpsorder resul
 description: Använd korrigeringsfilen ACSD-65223 för att åtgärda Adobe Commerce-problemet där beställningar som skapats med [!UICONTROL Purchase Orders] inte kan slutföras med onlinebetalningsmetoder som kreditkort när villkor krävs för utcheckning.
 feature: B2B, Purchase Orders
 role: Admin, Developer
-source-git-commit: 57c0cb63f1e2c7b12d11b759eddf0d21b5db78b2
+exl-id: 5a5d0774-3801-4688-86bd-58a390394cc0
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '440'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-65223: Manuellt valda villkor och avtal för B2B-inköpsorder resulterar i ett fel
 
@@ -27,7 +28,7 @@ Korrigeringen ACSD-65223 åtgärdar ett problem där beställningar som skapats 
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -65,7 +66,7 @@ Du kan inte göra en beställning med en onlinebetalningsmetod på godkända ink
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 

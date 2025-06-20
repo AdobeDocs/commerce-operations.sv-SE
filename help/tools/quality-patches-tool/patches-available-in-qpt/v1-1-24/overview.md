@@ -3,7 +3,9 @@ title: 'Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.24'
 description: I det här underavsnittet finns en detaljerad beskrivning av de problem som åtgärdats av de korrigeringar som finns i  [!DNL Quality Patches Tool] (QPT) v1.1.24.
 feature: Tools and External Services
 role: Admin
-source-git-commit: 7f17f1b286f635b8f65ac877e9de5f1d1a6a6461
+exl-id: 7f88a28b-f166-4c5b-8d69-239c57cc4001
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '288'
 ht-degree: 0%
@@ -21,7 +23,7 @@ QPT v1.1.24 innehåller följande patchar:
 1. **ACSD-46770**: Korrigerar problemet där e-postmeddelanden om administratörsorder skickas, även när *bekräftelsen av e-postorder* inte är markerad.
 1. **ACSD-46865**: Korrigerar problemet där stödrastret [!UICONTROL Shipment and Credit Memo] inte fylls i när asynkron indexering är aktiverat.
 1. **ACSD-47004**: Korrigerar problemet där moms inte tillämpas på en faktureringsadress utan moms-ID.
-1. **ACSD-47079**: Korrigerar problemet där sammansatta produkter (bundle, grouped och configurable) inte uppdateras när delproduktens lagerstatus ändras via REST API-POSTEN /rest/V1/lager/source-items.
+1. **ACSD-47079**: Korrigerar problemet där sammansatta produkter (bundle, grouped och configurable) inte uppdateras när delproduktens lagerstatus ändras via REST API POST /rest/V1/lager/source-items.
 1. **ACSD-47137**: Förbättrar inläsningshastigheten för bildgalleriet när mappen för pub/media är mycket stor.
 1. **ACSD-47336**: Korrigeringar *Något gick fel.*-fel när meddelanden i Commerce Admin stängs av.
 1. **ACSD-47559**: Korrigerar problemet där e-postmallen för förhandsgranskning inte är helt synlig.

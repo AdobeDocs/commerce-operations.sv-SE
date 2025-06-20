@@ -3,9 +3,11 @@ title: 'Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.55'
 description: I det här underavsnittet finns en detaljerad beskrivning av de problem som åtgärdats av de korrigeringar som finns i  [!DNL Quality Patches Tool] (QPT) v1.1.55.
 feature: Tools and External Services
 role: Admin, Developer
-source-git-commit: 97b52220f3b254ee17705a22137693abc6008c72
+exl-id: a4895d1b-e8d0-458e-81c8-4b892c116de6
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '396'
 ht-degree: 0%
 
 ---
@@ -28,6 +30,6 @@ QPT v1.1.55 innehåller följande patchar:
 1. **ACSD-61785**: Korrigerar problemet där det inte går att uppdatera attributet `reward_warning_notification` via [!DNL GraphQL] mutation och [!DNL REST API] anrop, vilket anpassar beteendet till `reward_update_notification`.
 1. **ACSD-62591**: Korrigerar problemet där temat inte växlar korrekt när **[!UICONTROL User Agent Rules]** har konfigurerats.
 1. **ACSD-62793**: Korrigerar problemet där `datetime` -attribut i exporterade data inte innehåller tidskomponenten. Om *[!UICONTROL Fields Enclosure]* dessutom är *aktiverad* omges attributvärden i kolumnen `additional_attributes` av citattecken.
-1. **ACSD-62332**: Korrigerar problemet där produktlistans [!DNL GraphQL] -fråga är begränsad till `total_count` av 10 000 produkter. Åtgärdar även problemet där [!DNL Live Search] ställer in den aktuella sidan på **&#x200B; i stället för sidan &#x200B;** i sökvillkoren när frågan ställs via [!DNL GraphQL].
+1. **ACSD-62332**: Korrigerar problemet där produktlistans [!DNL GraphQL] -fråga är begränsad till `total_count` av 10 000 produkter. Åtgärdar även problemet där [!DNL Live Search] ställer in den aktuella sidan på ** i stället för sidan ** i sökvillkoren när frågan ställs via [!DNL GraphQL].
 
 Använd menyn till vänster för att navigera till en viss korrigeringssida.

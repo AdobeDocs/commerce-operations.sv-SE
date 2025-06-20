@@ -3,7 +3,9 @@ title: 'Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.48'
 description: I det här underavsnittet finns en detaljerad beskrivning av de problem som åtgärdats av de korrigeringar som finns i  [!DNL Quality Patches Tool] (QPT) v1.1.48.
 feature: Tools and External Services
 role: Admin, Developer
-source-git-commit: d722ba5ba25ffc03d87b9eddeb2830353124055d
+exl-id: 250c88e9-1422-4af5-a0f0-32b15d9ab078
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 0%
@@ -28,4 +30,3 @@ QPT v1.1.48 innehåller följande patchar:
 1. **ACSD-58008**: Korrigerar problemet där en schemalagd uppdatering tar bort den tidigare versionen av det mellanlagrade objektet om inget slutdatum anges.
 
 Använd menyn till vänster för att navigera till en viss korrigeringssida.
-

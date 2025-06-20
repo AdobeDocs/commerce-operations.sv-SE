@@ -3,13 +3,14 @@ title: 'ACSD-64137: Sökning efter upphämtningsplatser med hjälp av zip-kod fu
 description: Använd korrigeringsfilen ACSD-64137 för att åtgärda problemet där sökning efter upphämtningsplatser med hjälp av postnummer inte fungerar som den ska för holländska lokaliseringen.
 feature: Shipping/Delivery
 role: Admin, Developer
-source-git-commit: 4947133daaffb919aeba986c8a6b88ecb2e1b943
+exl-id: 86c28b6d-6584-4caf-bd35-13e0c1bdcf1d
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-64137: Sökning efter upphämtningsplatser med hjälp av zip-kod fungerar inte korrekt för holländsk lokalisering
 
@@ -27,7 +28,7 @@ Korrigeringen ACSD-64137 åtgärdar ett problem där sökning efter upphämtning
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -65,7 +66,7 @@ ZIP-kodsökningen för Nederländerna visar inte några resultat på utcheckning
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 
 ## Relaterad läsning

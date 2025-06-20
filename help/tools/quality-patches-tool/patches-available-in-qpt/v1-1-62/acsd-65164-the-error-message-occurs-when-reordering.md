@@ -3,13 +3,14 @@ title: 'ACSD-65164: Felmeddelande när konfigurerbar produkt ordnas om med ett a
 description: Använd patchen ACSD-65164 för att åtgärda Adobe Commerce-problemet där felmeddelandet *Vissa av de valda alternativen inte är tillgängliga* inträffar när en konfigurerbar produkt med ett enda anpassat kryssrutealternativ sorteras.
 feature: Products, Orders
 role: Admin, Developer
-source-git-commit: 89f70222e59fc0f7309af184ba01e69ec2ea3d3d
+exl-id: 22b72d24-4852-45ba-ac98-df9565f94539
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-65164: Felmeddelande när konfigurerbar produkt ordnas om med ett anpassat kryssrutealternativ valt
 
@@ -27,7 +28,7 @@ Korrigeringen ACSD-65164 åtgärdar ett problem där felmeddelandet *Vissa av de
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -59,7 +60,7 @@ Ett felmeddelande visas:
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 

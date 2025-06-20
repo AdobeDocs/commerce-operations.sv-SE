@@ -3,13 +3,14 @@ title: 'ACSD-62793: Datetime-attribut i exporterar saknade tidskomponenter. Om *
 description: Använd patchen ACSD-62793 för att åtgärda Adobe Commerce-problemet där datetime-attribut i exporterade data saknar tidskomponenten. Om **[!UICONTROL Fields Enclosure]** är aktiverat omges attributvärdena i kolumnen *additional_attributes* av dubbla citattecken.
 feature: Attributes, Data Import/Export, Catalog Service
 role: Admin, Developer
-source-git-commit: 1645006f142c902ac729a99502f59b6d42266691
+exl-id: 340dcc84-dcb8-40ed-b2ab-2d950d1dd1ca
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-62793: Datetime-attribut i exporterar saknade tidskomponenter. Om **[!UICONTROL Fields Enclosure]** är aktiverat omges attributvärden av citattecken
 
@@ -27,7 +28,7 @@ Korrigeringen för ACSD-62793 åtgärdar ett problem där attribut för datum/ti
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -57,7 +58,7 @@ Endast datumdelen exporteras och importeras.
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 
 ## Relaterad läsning

@@ -3,13 +3,14 @@ title: 'ACSD-65540: SQL-fel inträffar på grund av att funktionen REGEXP_LIKE s
 description: Använd patchen ACSD-65540 för att åtgärda Adobe Commerce-problemet där SQL-fel inträffar på grund av att funktionen REGEXP_LIKE saknas i uppdateringen company_structure.
 feature: B2B
 role: Admin, Developer
-source-git-commit: 105bc9bd1b234a7cc582f072f4ede03b82cc81bc
+type: Troubleshooting
+exl-id: a3e60742-60d4-41e3-93c3-506cc5a1c4a3
+source-git-commit: b1912bbc5aabd36067563326ee5c6bb84e14441d
 workflow-type: tm+mt
 source-wordcount: '259'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-65540: SQL-fel inträffar på grund av att funktionen `REGEXP_LIKE` saknas i `company_structure`-uppdateringar
 
@@ -27,7 +28,7 @@ Korrigeringen ACSD-65540 åtgärdar ett problem där SQL-fel inträffar på grun
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -57,7 +58,7 @@ Unable to apply data patch Magento\Company\Setup\Patch\Data\SetCompanyForStructu
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 

@@ -3,7 +3,9 @@ title: 'ACSD-61534: Det går inte att ställa in designkonfigurationen med bin/m
 description: Använd patchen ACSD-61534 för att åtgärda Adobe Commerce-problemet där designkonfigurationen inte kan ställas in med kommandot "bin/magento config:set" och låsta värden kan ändras genom formulärhantering.
 feature: Configuration
 role: Admin, Developer
-source-git-commit: ef00c05593ad319caab8bb9e0f5090959786513f
+exl-id: 5bba3f05-e017-42b2-8a89-5471afb84ff3
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '376'
 ht-degree: 0%
@@ -26,7 +28,7 @@ Adobe Commerce (alla distributionsmetoder) 2.4.7 - 2.4.7-p3
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -39,7 +41,7 @@ Det går inte att ange designkonfigurationen med kommandot `bin/magento config:s
 1. Gå till **[!UICONTROL Content]** > **[!UICONTROL Design]** > **[!UICONTROL Configuration]**.
 1. Klicka på **[!UICONTROL Edit]** nära **[!UICONTROL Global/Main website]** på den andra raden.
 1. Redigera tema för en butiksvy.
-1. Öppna HTML i huvudet.
+1. Öppna HTML.
 1. Aktivera det inaktiverade fältet **[!UICONTROL Scripts and Style Sheets]** med utvecklarverktygen.
 1. Ändra värdet och spara det.
 
@@ -56,7 +58,7 @@ Tabellen `core_config_data` innehåller ett uppdaterat värde för `design/head/
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 

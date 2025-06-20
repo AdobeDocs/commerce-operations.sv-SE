@@ -3,7 +3,9 @@ title: 'Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.34'
 description: I det här underavsnittet finns en detaljerad beskrivning av de problem som åtgärdats av de korrigeringar som finns i  [!DNL Quality Patches Tool] (QPT) v1.1.34.
 feature: Tools and External Services
 role: Admin
-source-git-commit: 49ac8ad1f174546fcc0454645b2480a40ead2924
+exl-id: d6cc3161-802c-4a1a-95b1-1eb85715643b
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '283'
 ht-degree: 0%

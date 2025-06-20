@@ -3,13 +3,14 @@ title: 'ACP2E-3705: "indexer_update_all_views" kan inte köras när "MAGE_INDEXE
 description: Använd programfixen ACP2E-3705 för att åtgärda Adobe Commerce-problemet där körningen av kron "indexer_update_all_views" misslyckas när "MAGE_INDEXER_THREADS_COUNT" är inställd.
 feature: Catalog Management, B2B
 role: Admin, Developer
-source-git-commit: 4f719c62fdd9fd960548799c9872f73c76997278
+exl-id: 111325fa-8ed5-45f9-9e68-b52f4425d253
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 0%
 
 ---
-
 
 # ACP2E-3705: `indexer_update_all_views` kron körning misslyckas när `MAGE_INDEXER_THREADS_COUNT` anges
 
@@ -31,7 +32,7 @@ Korrigeringen ACP2E-3705 åtgärdar ett problem där körningen av kron `indexer
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 

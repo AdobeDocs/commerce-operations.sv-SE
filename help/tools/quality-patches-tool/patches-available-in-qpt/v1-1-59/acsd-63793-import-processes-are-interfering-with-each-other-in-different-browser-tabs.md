@@ -3,13 +3,14 @@ title: 'ACSD-63793: Importprocesser påverkar varandra på olika webbläsarflika
 description: Använd patchen ACSD-63793 för att åtgärda Adobe Commerce-problemet där importprocesserna stör varandra på olika webbläsarflikar.
 feature: Data Import/Export
 role: Admin, Developer
-source-git-commit: 60ad8dff5a3f26d0eab536d8824cb6579cb88a5a
+exl-id: f6bed4c4-5ea2-47e7-97fa-d7717470297f
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-63793: Importprocesser påverkar varandra på olika webbläsarflikar
 
@@ -27,7 +28,7 @@ Korrigeringen ACSD-63793 åtgärdar ett problem där importprocesserna stör var
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -36,7 +37,7 @@ Om du importerar data via administratörsgränssnittet påverkas importen av dat
 <u>Steg som ska återskapas</u>:
 
 1. Gå till **[!UICONTROL System]** > **[!UICONTROL Data Transfer]** > **[!UICONTROL Import]**.
-1. Ange **[!UICONTROL Entity Type]** till *[!UICONTROL Customers and Addresses] (en fil)*.
+1. Ange **[!UICONTROL Entity Type]** till *[!UICONTROL Customers and Addresses](en fil)*.
 1. Ange **[!UICONTROL Import Behavior]** till *[!UICONTROL Add/Update]*.
 1. Välj en giltig fil att importera.
 1. Klicka på knappen **[!UICONTROL Check Data]**.
@@ -58,7 +59,7 @@ Importen slutförs och rapportfilen är tillgänglig för hämtning. Det indiker
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 

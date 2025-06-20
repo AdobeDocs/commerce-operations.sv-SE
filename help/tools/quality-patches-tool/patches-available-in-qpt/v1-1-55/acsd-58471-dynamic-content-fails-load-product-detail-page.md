@@ -1,10 +1,11 @@
 ---
-title: 'ACSD-58471: Dynamiskt innehåll kan inte läsas in på produktinformationssidan när de associerade katalogprisreglerna var schemalagda'
+title: 'ACSD-58471: Dynamiskt innehåll läses inte in på produktinformationssidan när de associerade katalogprisreglerna var schemalagda'
 description: Använd patchen ACSD-58471 för att åtgärda Adobe Commerce-problemet där dynamiskt innehåll inte kan läsas in på produktinformationssidan när de tillhörande katalogprisreglerna var schemalagda.
 feature: Catalog Management
 role: Admin, Developer
 exl-id: 6ff68b74-67fc-400c-aa79-a1274fd19708
-source-git-commit: 28390659fe180180c9b2c8d16239008a1f8a510b
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 0%
@@ -25,7 +26,7 @@ Korrigeringen ACSD-58471 löser problemet där dynamiskt innehåll inte kan läs
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -55,7 +56,7 @@ Dynamiskt innehåll läses inte in.
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 
 ## Relaterad läsning

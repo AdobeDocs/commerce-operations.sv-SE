@@ -3,13 +3,14 @@ title: 'ACSD-60811: Korrigerar begränsning av uppdatering av orderstatus till a
 description: Använd patchen ACSD-60811 för att åtgärda Adobe Commerce-problemet där det bara går att uppdatera orderstatus med anpassade värden eller kommentarer om den aktuella statusen är "bearbetning" eller "bedrägeri".
 feature: Orders, Admin Workspace
 role: Admin, Developer
-source-git-commit: 099c4d25978aebe1eefbdcd4c3317b804da456b8
+exl-id: 6d5391b3-7014-4d0a-b4ab-799f0733bbca
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '375'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-60811: Korrigerar begränsning av uppdatering av orderstatus till anpassade värden
 
@@ -27,7 +28,7 @@ Korrigeringen ACSD-60811 åtgärdar ett problem där det endast är möjligt att
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -52,7 +53,7 @@ Orderstatusen är densamma när en ny orderstatus väljs och skickas.
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 

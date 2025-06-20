@@ -3,13 +3,14 @@ title: 'ACSD-64546: Allmänt felmeddelande i användargränssnittet och konverte
 description: Använd patchen ACSD-64546 för att åtgärda Adobe Commerce-problemet där ett generiskt felmeddelande visas i användargränssnittet och när undantag för strängkonvertering loggas när UPS-etiketter skapas. Korrigeringen ser till att rätt fel visas i användargränssnittet och loggarna.
 feature: Shipping/Delivery
 role: Admin, Developer
-source-git-commit: f50da09cec35b3a72208f17b6832e3068de9c874
+exl-id: 458371bc-4afe-4675-b090-5797e05c5b88
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-64546: Allmänt felmeddelande i användargränssnittet och *undantag för konvertering från matris till sträng* när UPS-etiketter skapas
 
@@ -25,7 +26,7 @@ Korrigeringen ACSD-64546 åtgärdar ett problem där ett generiskt felmeddelande
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 

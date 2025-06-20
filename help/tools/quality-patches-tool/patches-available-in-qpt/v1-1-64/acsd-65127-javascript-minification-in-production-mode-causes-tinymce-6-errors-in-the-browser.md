@@ -3,13 +3,14 @@ title: 'ACSD-65127: JavaScript-miniatyrer i produktionsläge orsakar  [!DNL Tiny
 description: Använd korrigeringsfilen ACSD-65127 för att åtgärda Adobe Commerce-problemet där aktivering av JavaScript-miniatyr i produktionsläge orsakade  [!DNL TinyMCE] 6 att fel genererades i webbläsarkonsolen, vilket påverkade funktionaliteten och användarupplevelsen.
 feature: Page Builder, Page Content
 role: Admin, Developer
-source-git-commit: c5b27b79dd2dc7f9b39e629756d3d5d01e019710
+exl-id: c878d5a4-8059-4bfc-93a8-0a9606e866fc
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '333'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-65127: JavaScript-miniatyrer i produktionsläge orsakar [!DNL TinyMCE] 6 fel i webbläsaren
 
@@ -27,7 +28,7 @@ Korrigeringen ACSD-65127 åtgärdar ett problem där aktivering av JavaScript-mi
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du paketet `magento/quality-patches` till den senaste versionen och kontrollerar kompatibiliteten på sidan [[!DNL Quality Patches Tool]: Sök efter korrigeringar](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du paketet `magento/quality-patches` till den senaste versionen och kontrollerar kompatibiliteten på sidan [[!DNL Quality Patches Tool]: Sök efter korrigeringar](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -64,7 +65,7 @@ Inga JS-fel i webbläsarkonsolen.
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 

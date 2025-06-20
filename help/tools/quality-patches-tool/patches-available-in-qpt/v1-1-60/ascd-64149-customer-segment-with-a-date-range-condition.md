@@ -3,13 +3,14 @@ title: 'ACSD-64149: Kundsegment med villkoret [!UICONTROL Date range] kan sparas
 description: Använd patchen ACSD-64149 för att åtgärda Adobe Commerce-problemet där kundsegment med ett **[!UICONTROL Date range]**-villkor kan sparas när endast ett av datumen redigeras.
 feature: Customers, Admin Workspace
 role: Admin, Developer
-source-git-commit: c1c5256aee44ce65e9339cf3985e53f710fc7c8a
+exl-id: 5423bbd3-75e9-4137-b2d5-3a0ceb3384ad
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-64149: Kundsegment med villkoret [!UICONTROL Date range] kan sparas när endast ett datum har redigerats
 
@@ -27,7 +28,7 @@ Korrigeringen ACSD-64149 åtgärdar ett problem där ett kundsegment med ett dat
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 

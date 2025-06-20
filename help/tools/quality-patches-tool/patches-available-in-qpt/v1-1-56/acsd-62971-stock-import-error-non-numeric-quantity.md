@@ -3,13 +3,14 @@ title: 'ACSD-62971: Import av Stock-källor med icke-numeriska kvantitetsvärden
 description: Använd patchen ACSD-62971 för att korrigera Adobe Commerce-problemet, där import av Stock-källor med icke-numeriska värden i kolumnen 'quantity' resulterar i att kvantiteten ställs in på 0.
 feature: Data Import/Export, Inventory
 role: Admin, Developer
-source-git-commit: 5b54c0681b699303fff1bb058d434b6eb8b750b0
+exl-id: ece23153-4932-4ac5-b46e-49327a8e84a1
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '341'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-62971: Import av Stock-källor med icke-numeriska kvantitetsvärden resulterar i att kvantiteten ställs in på 0
 
@@ -27,7 +28,7 @@ Korrigeringen ACSD-62971 åtgärdar ett problem där import av Stock-källor med
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -56,11 +57,10 @@ Kvantiteten för enkel produkt har blivit 0 och produkten uppdateras som [!UICON
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 
 Mer information om [!DNL Quality Patches Tool] finns i:
 
 * [[!DNL Quality Patches Tool]: Ett självbetjäningsverktyg för kvalitetspatchar](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) i verktygshandboken.
-

@@ -3,13 +3,14 @@ title: 'ACSD-65787: SchemaBuilder kraschar när scheman skapas eller uppdateras 
 description: Använd patchen ACSD-65787 för att åtgärda Adobe Commerce-problemet där klassen SchemaBuilder kraschar när scheman skapas eller uppdateras på grund av en odefinierad matrisnyckel,"column", vid bearbetning av tabelldata.
 feature: Backend Development, Deploy
 role: Admin, Developer
-source-git-commit: 34bd56dc0486d2cbf6b242154570497f6c33bb55
+exl-id: c01d1799-13fe-4657-a480-698efbe45a30
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-65787: `SchemaBuilder` kraschar när schema skapas eller uppdateras på grund av den odefinierade matrisnyckeln &quot;column&quot; i tabelldata
 
@@ -27,7 +28,7 @@ Korrigeringen ACSD-65787 åtgärdar ett problem där klassen `SchemaBuilder` kra
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -56,7 +57,7 @@ Error "Warning: Undefined array key "column" in SchemaBuilder.php on line 90
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 

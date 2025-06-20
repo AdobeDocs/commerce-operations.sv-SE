@@ -3,13 +3,14 @@ title: 'ACSD-65202: På sidan Mitt konto visas inte senaste beställningar från
 description: Använd patchen ACSD-65202 för att åtgärda Adobe Commerce-problemet där sidan Mitt konto inte visar de senaste beställningarna från andra butiksvyer i samma butik.
 feature: Orders, User Account
 role: Admin, Developer
-source-git-commit: 0af6ab4ef15e8aa56354886b341b70a080662eae
+type: Troubleshooting
+exl-id: 031f12f2-1b70-4cbc-92a0-8eb561e34067
+source-git-commit: b1912bbc5aabd36067563326ee5c6bb84e14441d
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-65202: Sidan [!UICONTROL My Account] visar inte senaste beställningar från andra butiksvyer
 
@@ -27,7 +28,7 @@ Korrigeringen ACSD-65202 åtgärdar ett problem där sidan **[!UICONTROL My Acco
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -60,7 +61,7 @@ Beteendet är inkonsekvent. Beställningar visas inte i den andra butiksvyn.
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 

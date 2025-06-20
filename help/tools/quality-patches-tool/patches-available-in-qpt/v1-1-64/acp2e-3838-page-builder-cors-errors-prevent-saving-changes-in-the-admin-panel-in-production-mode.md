@@ -3,13 +3,14 @@ title: 'ACP2E-3838: [!DNL Page Builder] CORS-fel förhindrar att ändringar spar
 description: Använd korrigeringsfilen ACP2E-3838 för att åtgärda Adobe Commerce-problemet där  [!DNL Page Builder] CORS-fel förhindrar att ändringar sparas i administrationspanelen i produktionsläge.
 feature: Page Builder, Page Content, Admin Workspace
 role: Admin, Developer
-source-git-commit: 1b9c721c8200f38b6ce5d1b4de87b1f10e07e8d2
+exl-id: 0d590c0e-e21c-4553-a0a3-9332e22796f3
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '342'
 ht-degree: 0%
 
 ---
-
 
 # ACP2E-3838: [!DNL Page Builder] CORS-fel förhindrar att ändringar sparas i administrationspanelen i produktionsläge
 
@@ -27,7 +28,7 @@ Korrigeringen för ACP2E-3838 åtgärdar ett problem där [!DNL Page Builder] CO
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -56,7 +57,7 @@ Sidinnehållet bör sparas utan fel.
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 

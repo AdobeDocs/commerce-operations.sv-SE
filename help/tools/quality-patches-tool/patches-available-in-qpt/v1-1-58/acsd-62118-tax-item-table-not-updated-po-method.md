@@ -3,13 +3,14 @@ title: 'ACSD-62118: Tabellen "sales_order_tax_item" har inte uppdaterats fullst�
 description: Använd patchen ACSD-62118 för att åtgärda Adobe Commerce-problemet där tabellen "sales_order_tax_item" inte uppdateras fullständigt när B2B-beställningar placeras med metoden [!UICONTROL Purchase Order].
 feature: Purchase Orders, B2B
 role: Admin, Developer
-source-git-commit: 5812b90fe07a084a1d3487784d0f36a2b7958286
+exl-id: 8ace73ad-f5a5-47ab-aca7-62c818775d2f
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-62118: Tabellen `sales_order_tax_item` har inte uppdaterats fullständigt för B2B-order som placerats med metoden [!UICONTROL Purchase Order]
 
@@ -27,7 +28,7 @@ Korrigeringen ACSD-62118 åtgärdar ett problem där tabellen `sales_order_tax_i
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -57,7 +58,7 @@ När B2B-order placeras med metoden *[!UICONTROL Purchase Order]* uppdateras int
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 

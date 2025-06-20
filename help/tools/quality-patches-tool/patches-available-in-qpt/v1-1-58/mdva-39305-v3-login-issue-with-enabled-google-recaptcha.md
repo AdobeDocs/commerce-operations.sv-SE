@@ -4,7 +4,8 @@ description: Använd MDVA-39305-V3-korrigeringen för att åtgärda Adobe Commer
 feature: Console
 role: Admin
 exl-id: 63e880aa-9a2e-4c34-9ead-20bfc5204f2c
-source-git-commit: 011a6f46f76029eaf67f172b576e58dac9710a3d
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 0%
@@ -19,7 +20,7 @@ ht-degree: 0%
 
 MDVA-39305-V3-korrigeringen åtgärdar ett problem där registrerade kunder inte kan logga in när [!DNL Google reCAPTCHA] är aktiverat. Den här korrigeringen åtgärdar också problemet där ett formulär kan skickas innan [!DNL Google reCAPTCHA] har lästs in helt. Dessutom åtgärdas felet *Anrop till medlemsfunktionen isDisabled() på null* när block används på icke-standardplatser på en CMS-sida.
 
-Den här korrigeringen lades till i [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.48. Den uppdaterades i QPT 1.1.58-versionen för att inkludera nya Adobe Commerce 2.4.7-2.4.7-p4. Patch-ID:t är MDVA-39305-V3. Observera att problemet har åtgärdats i Adobe Commerce version 2.4.4, 2.4.5-p2 och 2.4.7.
+Den här korrigeringen lades till i [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.48. Den uppdaterades i QPT 1.1.58-versionen för att inkludera nya Adobe Commerce 2.4.7-2.4.7-p4. Patch-ID:t är MDVA-39305-V3. Observera att problemet har åtgärdats i Adobe Commerce version 2.4.4, 2.4.5-p2 och 2.4.7.
 
 ## Berörda produkter och versioner
 
@@ -33,7 +34,7 @@ Den här korrigeringen lades till i [QPT-verktyget (Quality Patches Tool)](https
 
 >[!NOTE]
 >
->Patchen kan bli tillämplig på andra versioner med nya Quality Patches Tool-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Patchen kan bli tillämplig på andra versioner med nya Quality Patches Tool-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -85,7 +86,7 @@ Ett 500-fel inträffar på sidan i butiken.
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 

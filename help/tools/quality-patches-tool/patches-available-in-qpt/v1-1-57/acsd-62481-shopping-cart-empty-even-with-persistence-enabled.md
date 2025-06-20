@@ -3,13 +3,14 @@ title: 'ACSD-62481: Kundvagnen är tom även om [!UICONTROL Persistence] är akt
 description: Använd patchen ACSD-62481 för att åtgärda problemet med Adobe Commerce där funktionen för beständig kundvagn inte fungerar när du använder popup-fönstret för inloggning vid utcheckning.
 feature: Shopping Cart, Checkout
 role: Admin, Developer
-source-git-commit: 27a98c42f2c514b3dd1a2f59c140b60b7ac26592
+exl-id: 79fb3161-f56e-45f3-9933-cf95703f1554
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-62481: Kundvagnen är tom även om *[!UICONTROL Persistence]* är aktiverat
 
@@ -27,7 +28,7 @@ Korrigeringen ACSD-62481 åtgärdar ett problem där funktionen för beständig 
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 

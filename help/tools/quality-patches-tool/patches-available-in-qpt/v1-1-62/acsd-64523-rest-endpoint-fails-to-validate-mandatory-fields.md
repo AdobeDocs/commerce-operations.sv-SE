@@ -1,15 +1,16 @@
 ---
 title: 'ACSD-64523: REST-slutpunkten kan inte validera obligatoriska fält'
-description: Använd patchen ACSD-64523 för att åtgärda problemet där REST-slutpunkten &grave;[V1/import/csv]&grave; inte validerar obligatoriska fält, vilket gör det möjligt att skapa produkter utan att tillhandahålla obligatoriska fält.
+description: Använd patchen ACSD-64523 för att åtgärda problemet där REST-slutpunkten `[V1/import/csv]` inte validerar obligatoriska fält, vilket gör det möjligt att skapa produkter utan att tillhandahålla obligatoriska fält.
 feature: REST, Products, Admin Workspace
 role: Admin, Developer
-source-git-commit: 4bf9a5eb2e423f5981ee9234be57230a6dff3913
+exl-id: 21aecd6d-06e4-4f2b-904a-27487ba74968
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-64523: REST-slutpunkten kan inte validera obligatoriska fält
 
@@ -27,7 +28,7 @@ Korrigeringen ACSD-64523 åtgärdar ett problem där REST-slutpunkten [V1/import
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -91,7 +92,7 @@ Produkten sparades utan att produktnamnet angavs, vilket är ett obligatoriskt a
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 

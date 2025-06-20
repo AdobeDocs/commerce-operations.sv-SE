@@ -3,13 +3,14 @@ title: 'ACSD-63329: Datum- och tidsattribut anges inte när produkter skapas med
 description: Använd patchen ACSD-63329 för att åtgärda Adobe Commerce-problemet där standardvärden inte har angetts för datum- och tidsfälten när du skapar produkter med REST API.
 feature: REST
 Role: Admin, Developers
-source-git-commit: a7d719399425016da26c1065725a377bb82795f4
+exl-id: d8e7917b-07a5-465b-944b-fd6168dea63c
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '376'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-63329: Standardvärden för datum- och tidsfält anges inte när produkter skapas med REST API
 
@@ -27,7 +28,7 @@ Korrigeringen ACSD-63329 åtgärdar ett problem där standardvärden inte har an
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -37,7 +38,7 @@ Standardvärden har inte angetts för datum- och tidsfälten när produkter skap
 
 1. Skapa ett **[!UICONTROL Product]**-attribut, ställ in standardvärdet på `12/31/2020` och ställ in **[!UICONTROL Catalog Input Type for Store Owner]** på ***[!UICONTROL Date]*** eller ***[!UICONTROL Date and Time]***.
 1. Skapa ett annat texttypsattribut och ange standardvärdet till ***test value***.
-1. Skapa en ny produkt med en REST API-POST-förfrågan till `/rest/all/V1/products/`.
+1. Skapa en ny produkt med en REST API POST-begäran till `/rest/all/V1/products/`.
 
    ```
        {
@@ -74,7 +75,7 @@ Standardvärdet sparas för attributet **[!UICONTROL Text]**, men inte för attr
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 

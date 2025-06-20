@@ -4,7 +4,8 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 exl-id: 3e252a71-f35f-4046-9353-169060451ffe
-source-git-commit: fc5c790108a3c62d4591631128743259824c4c6b
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 0%
@@ -20,7 +21,7 @@ QPT v1.1.57 innehåller följande patchar:
 1. **ACSD-57570**: Korrigerar problemet där en begränsad administratörsanvändare med åtkomst till en viss butik inte alltid kan se alla delade kataloger som produkterna är tilldelade till eller kan se kunder som inte kan spara, vilket leder till inkonsekvenser i systemet.
 1. **ACSD-58325**: Korrigerar problemet där knappen [!UICONTROL Import] är tillgänglig även efter ett valideringsfel.
 1. **ACSD-59083**: Korrigerar problemet där vissa databasuppdateringsåtgärder resulterar i felet _Bastabell eller vy hittades inte_ om [!DNL mview]-uppdateringen körs samtidigt.
-1. **ACSD-61622**: Korrigerar problemet där [!DNL FedEx] kontospecifika frekvenser saknas i svaret. ACSD-61622 ersätter den korrigering som beskrivs i [[!DNL FedEx] migrering av integrering av leveransmetoder från [!DNL SOAP] till [!DNL RESTful API]](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/fedex-shipping-method-integration-migration-soap-restful-api).
+1. **ACSD-61622**: Korrigerar problemet där [!DNL FedEx] kontospecifika frekvenser saknas i svaret. ACSD-61622 ersätter den korrigering som beskrivs i [[!DNL FedEx] migrering av integrering av leveransmetoder från [!DNL SOAP] till [!DNL RESTful API]](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/fedex-shipping-method-integration-migration-soap-restful-api).
 1. **ACSD-61895**: Korrigerar problemet där kategorifrågan [!DNL GraphQL] returnerar kategorier med behörigheten *allow* även om rotkategorin inte har behörigheten *allow* .
 1. **ACSD-62212**: Korrigerar problemet där e-postinnehållet i [!UICONTROL Forgot Password] inte översätts till butiksvyns språk.
 1. **ACSD-62481**: Korrigerar problemet där kundens kundvagn blir tom även om [!UICONTROL Persistence] är aktiverat.

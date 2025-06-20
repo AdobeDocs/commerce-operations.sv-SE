@@ -3,7 +3,9 @@ title: 'Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.58'
 description: I det här underavsnittet finns en detaljerad beskrivning av de problem som åtgärdats av de korrigeringar som finns i  [!DNL Quality Patches Tool] (QPT) v1.1.58.
 feature: Tools and External Services
 role: Admin, Developer
-source-git-commit: f8473bbdedef26b291547d828e47a9ba08a5d142
+exl-id: 61bf8b82-f897-41f6-8524-5aa74c6440f1
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 0%
@@ -29,4 +31,3 @@ QPT v1.1.58 innehåller följande patchar:
 1. **ACSD-63578**: Korrigerar felet där **[!UICONTROL Delete]**-knappen i **[!UICONTROL Add to Order by SKU]** i [!UICONTROL Admin] inte tar bort [!DNL SKU] när du klickar på knappen .
 
 Använd menyn till vänster för att navigera till en viss korrigeringssida.
-

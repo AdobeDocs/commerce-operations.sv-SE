@@ -3,13 +3,14 @@ title: 'ACSD-63520: Bilder som överförs via konfiguration för bildöverförin
 description: Använd patchen ACSD-63520 för att åtgärda Adobe Commerce-problemet där bilder som överförts via konfigurationen för bildöverföring på Admin-panelen inte följer de konfigurerade maxgränserna för överföringsstorlek.
 feature: Media, Products
 role: Admin, Developer
-source-git-commit: 987d335f03d552763f75adb73890787abf235e66
+exl-id: 5132bfa9-813a-4623-8e02-a8801f6396e8
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '365'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-63520: Bilder som överförts via [!UICONTROL Image Upload Configuration] överskrider de konfigurerade storleksgränserna
 
@@ -25,7 +26,7 @@ Korrigeringen ACSD-63520 åtgärdar ett problem där bilder som överförts via 
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din [!DNL Adobe Commerce]-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din [!DNL Adobe Commerce]-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -65,7 +66,7 @@ Storleken på bilderna ändras inte och de konfigurerade storleksgränserna för
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 Mer information om [!DNL Quality Patches Tool] finns i:
 

@@ -3,13 +3,14 @@ title: 'ACSD-62952: Presentregisterdatumet visas felaktigt på butiken'
 description: Använd patchen ACSD-62952 för att åtgärda Adobe Commerce-problemet där gift-registerdatumet visas felaktigt i butiken.
 feature: Gift, Storefront
 role: Admin, Developer
-source-git-commit: 1fad4ecf1bab1df7a106ca12fe0431f19b65fb68
+exl-id: c11e95ab-775d-4aa7-828b-29ec52685d47
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '331'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-62952: Presentregisterdatumet visas felaktigt på butiken
 
@@ -27,7 +28,7 @@ Korrigeringen ACSD-62952 åtgärdar ett problem där gift-registrets datum inte 
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -62,4 +63,3 @@ Använd följande länkar beroende på distributionsmetod för att tillämpa ens
 Mer information om [!DNL Quality Patches Tool] finns i:
 
 * [[!DNL Quality Patches Tool]: Ett självbetjäningsverktyg för kvalitetspatchar](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) i verktygshandboken.
-

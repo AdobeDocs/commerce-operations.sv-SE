@@ -1,10 +1,11 @@
 ---
 title: 'MDVA-33606: Användarna får felmeddelanden när CMS-sidor sparas som tilldelats hierarkin'
-description: MDVA-33606-korrigeringen åtgärdar ett problem där användaren får felet *Unikt villkorsfel påträffades* när en CMS-sida som tilldelats hierarkiträdet sparas. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.3 är installerat. Korrigerings-ID är MDVA-33606. Observera att problemet har åtgärdats i Adobe Commerce 2.4.3.
+description: MDVA-33606-korrigeringen åtgärdar ett problem där användaren får felet *Unikt villkorsfel påträffades* när en CMS-sida som tilldelats hierarkiträdet sparas. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.3 är installerat. Korrigerings-ID är MDVA-33606. Observera att problemet har åtgärdats i Adobe Commerce 2.4.3.
 feature: CMS
 role: Admin
 exl-id: 19aaa13f-7ee6-49bc-b1d9-c288dc93b951
-source-git-commit: 011a6f46f76029eaf67f172b576e58dac9710a3d
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 0%
@@ -13,7 +14,7 @@ ht-degree: 0%
 
 # MDVA-33606: Användarna får felmeddelanden när CMS-sidor sparas som tilldelats hierarkin
 
-MDVA-33606-korrigeringen löser problemet där användaren får felet *Unik överträdelse av begränsningen* när en CMS-sida som tilldelats hierarkiträdet sparas. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.3 har installerats. Korrigerings-ID är MDVA-33606. Observera att problemet har åtgärdats i Adobe Commerce 2.4.3.
+MDVA-33606-korrigeringen löser problemet där användaren får felet *Unik överträdelse av begränsningen* när en CMS-sida som tilldelats hierarkiträdet sparas. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.3 har installerats. Korrigerings-ID är MDVA-33606. Observera att problemet har åtgärdats i Adobe Commerce 2.4.3.
 
 ## Berörda produkter och versioner
 
@@ -27,7 +28,7 @@ MDVA-33606-korrigeringen löser problemet där användaren får felet *Unik öve
 
 >[!NOTE]
 >
->Patchen kan bli tillämplig på andra versioner med nya Quality Patches Tool-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Patchen kan bli tillämplig på andra versioner med nya Quality Patches Tool-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -63,13 +64,13 @@ Du får följande fel: *Unik överträdelse hittades*.
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 
 Mer information om verktyget för kvalitetskorrigeringar finns i:
 
-* [Verktyget för kvalitetskorrigeringar har släppts: ett nytt verktyg för självbetjäning av kvalitetskorrigeringar](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches).
+* [Verktyget för kvalitetskorrigeringar har släppts: ett nytt verktyg för självbetjäning av kvalitetskorrigeringar](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches).
 * [Kontrollera om det finns en korrigeringsfil för ditt Adobe Commerce-problem med verktyget för kvalitetskorrigeringar](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md).
 
 Mer information om andra tillgängliga korrigeringsfiler i QPT finns i avsnittet [Patchar i QPT](https://support.magento.com/hc/en-us/sections/360010506631-Patches-available-in-MQP-tool-).

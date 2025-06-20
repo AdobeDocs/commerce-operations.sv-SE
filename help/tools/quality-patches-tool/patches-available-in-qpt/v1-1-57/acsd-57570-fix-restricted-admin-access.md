@@ -3,13 +3,14 @@ title: 'ACSD-57570: Korrigera begränsad administratörsanvändaråtkomst till d
 description: Använd patchen ACSD-57570 för att åtgärda Adobe Commerce-problemet där en begränsad administratörsanvändare med åtkomst till en viss butik inte konsekvent kan visa alla delade kataloger som tilldelats produkter eller spara kundinformation, vilket leder till inkonsekvenser i systemet.
 feature: B2B, Companies, Roles/Permissions
 role: Admin, Developer
-source-git-commit: 6147a028e2ce783809b5c2c32c65784611d03f0e
+exl-id: 3eeaf1f1-0338-459f-99ec-53764f3f12db
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-57570: Korrigera begränsad administratörsanvändaråtkomst till delade kataloger
 
@@ -27,7 +28,7 @@ Korrigeringen ACSD-57570 åtgärdar ett problem där en begränsad administratö
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -68,7 +69,7 @@ Om du bara skapar ytterligare en webbplats-, butik- och butiksvy kan den begrän
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 

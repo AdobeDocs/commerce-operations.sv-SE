@@ -3,13 +3,14 @@ title: 'ACP2E-3689: Flera problem med kategoriträdvisning på djupare nivåer o
 description: Använd programfixen ACP2E-3689 för att åtgärda Adobe Commerce-problemet med kategoriträdvisning på mer än djup, fyra kapslingar och spegelvända fästpunktsrelationer.
 feature: Categories, Page Content
 role: Admin, Developer
-source-git-commit: af8b7b44274b828b3f60f92fd78f9f3d3983abb8
+exl-id: 8d3c484f-3f8d-4fc1-8b31-e850cb34341c
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '355'
 ht-degree: 0%
 
 ---
-
 
 # ACP2E-3689: Flera problem med kategoriträdvisning på djupare nivåer och spegling av ankarpunkt/icke-ankarrelationer
 
@@ -31,7 +32,7 @@ Programrättningen ACP2E-3689 åtgärdar flera problem med kategoriträdvisning 
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -57,7 +58,7 @@ Endast de första nivåerna (&lt;4) i kategoriträdet är tillgängliga.
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 

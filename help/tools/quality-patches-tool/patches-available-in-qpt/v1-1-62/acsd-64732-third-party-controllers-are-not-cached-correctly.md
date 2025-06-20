@@ -3,13 +3,14 @@ title: 'ACSD-64732: Externa styrenheter cachelagras inte korrekt med kundsegment
 description: Använd patchen ACSD-64732 för att åtgärda Adobe Commerce-problemet där externa styrenheter inte cachas korrekt med kundsegment.
 feature: Cache
 role: Admin, Developer
-source-git-commit: 047de42098f711036f1f5252d2cbc4a329ebbfb2
+exl-id: 378e5a96-06dd-4796-9e45-a67cf539fcce
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '303'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-64732: Externa styrenheter cachelagras inte korrekt med kundsegment
 
@@ -27,7 +28,7 @@ Korrigeringen ACSD-64732 åtgärdar ett problem där styrenheter från tredje pa
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 

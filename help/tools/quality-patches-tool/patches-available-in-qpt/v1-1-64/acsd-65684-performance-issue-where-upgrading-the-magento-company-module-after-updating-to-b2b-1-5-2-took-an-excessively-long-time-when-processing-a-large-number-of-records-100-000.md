@@ -3,13 +3,14 @@ title: 'ACSD-65684: Det går långsamt att uppgradera Magento_Company i B2B 1.5.
 description: Använd patchen ACSD-65684 för att åtgärda Adobe Commerce-problemet där det tar för lång tid att uppgradera Magento_Company-modulen i B2B 1.5.2 på grund av att ett stort antal poster bearbetas (~100 000+) i tabellen company_structure.
 feature: B2B
 role: Admin, Developer
-source-git-commit: dbf1bf3483aa7e52f5d1c950ab82f504c44fc989
+type: Troubleshooting
+exl-id: 1b45ebe4-4fb4-4fb5-b107-a2d44ec784e0
+source-git-commit: b1912bbc5aabd36067563326ee5c6bb84e14441d
 workflow-type: tm+mt
 source-wordcount: '335'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-65684: Uppgradering av `Magento_Company` i [!DNL B2B] 1.5.2 är långsamt med över 100 000 poster i `company_structure`
 
@@ -27,7 +28,7 @@ Korrigeringen ACSD-65684 åtgärdar ett prestandaproblem där det tar för lång
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -58,7 +59,7 @@ Det tar för lång tid för `setup:upgrade` att slutföra.
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 

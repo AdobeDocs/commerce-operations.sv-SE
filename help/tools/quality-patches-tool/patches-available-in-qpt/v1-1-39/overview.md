@@ -3,7 +3,9 @@ title: 'Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.39'
 description: I det här underavsnittet finns en detaljerad beskrivning av de problem som åtgärdats av de korrigeringar som finns i  [!DNL Quality Patches Tool] (QPT) v1.1.39.
 feature: Tools and External Services
 role: Admin, Developer
-source-git-commit: d722ba5ba25ffc03d87b9eddeb2830353124055d
+exl-id: 6116f566-2ff8-4148-ab60-cec65f9b7a6f
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 0%
@@ -26,6 +28,6 @@ QPT v1.1.39 innehåller följande patchar:
 1. **ACSD-54776**: Korrigerar problemet där avmarkerade *[!UICONTROL Use Default Value]* och icke-standardvärden för produktfält inte sparas för den andra webbplatsen, butiken och butiksvyn.
 1. **ACSD-53998**: Korrigerar problemet där en **[!UICONTROL Dynamic Block]** baserad på en **[!UICONTROL Customer Segment]** inte fungerar korrekt efter utloggning från ett kundkonto.
 1. **ACSD-53204**: Korrigeringar *Produkten kan inte sparas.*-fel vid samtidig begäran om att lägga till bilder i produktgalleriet med slutpunkten `rest/V1/products/<sku>/media`.
-1. **ACSD-47657**: En cachelagringsmekanism för AWS-autentiseringsuppgifter har lagts till. En autentiseringsprovider använder nu cacheminnet i Magento för att cachelagra autentiseringsuppgifter som hämtats från AWS för EC2-konfiguration.
+1. **ACSD-47657**: En cachelagringsmekanism för AWS-autentiseringsuppgifter har lagts till. En leverantör av autentiseringsuppgifter använder nu Magento-cachen för att cachelagra autentiseringsuppgifter som hämtats från AWS för EC2-konfiguration.
 
 Använd menyn till vänster för att navigera till en viss korrigeringssida.

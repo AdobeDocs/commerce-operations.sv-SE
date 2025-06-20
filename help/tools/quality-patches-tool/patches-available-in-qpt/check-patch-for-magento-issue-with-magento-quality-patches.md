@@ -3,7 +3,9 @@ title: Leta efter Adobe Commerce-problem med verktyget för kvalitetskorrigering
 description: I den här artikeln finns en översikt över QPT (Quality Patches Tool) och länkar till resurser som förklarar hur verktyget används.
 feature: Tools and External Services
 role: Admin
-source-git-commit: 6f311fc4c20caca8b98d4c3c06642e5f61dc614f
+exl-id: 4d651c3c-95ad-4b53-bf77-92758acb795d
+type: Troubleshooting
+source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
 workflow-type: tm+mt
 source-wordcount: '359'
 ht-degree: 0%
@@ -37,11 +39,11 @@ Verktyget är avsett att göra det möjligt för dig att använda korrigeringsfi
 
 >[!NOTE]
 >
->QPT är endast till för kvalitetspatchar. Säkerhetsuppdateringar finns i [Magento Security Center](https://experienceleague.adobe.com/sv/docs/commerce-operations/release/notes/overview).
+>QPT är endast till för kvalitetspatchar. Säkerhetsuppdateringar finns i [Magento Security Center](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/overview).
 
 ## Patchar tillgängliga i verktyget för kvalitetspatchar
 
-Se [Verktyget för kvalitetskorrigeringar](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE) i utvecklardokumentationen för en lista över tillgängliga korrigeringsfiler.
+Se [Verktyget för kvalitetskorrigeringar](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) i utvecklardokumentationen för en lista över tillgängliga korrigeringsfiler.
 
 ## Installera och använda verktyget för kvalitetspatchar
 
@@ -49,13 +51,13 @@ Installations- och användningskommandona skiljer sig åt för Adobe Commerce lo
 
 ### Installera och använda QPT för Adobe Commerce lokalt
 
-Mer information om hur du installerar och använder QPT för att tillämpa och återställa korrigeringsfiler finns i [Programuppdateringsguiden > Lappa](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/usage) i utvecklardokumentationen.
+Mer information om hur du installerar och använder QPT för att tillämpa och återställa korrigeringsfiler finns i [Programuppdateringsguiden > Lappa](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/usage) i utvecklardokumentationen.
 
 ### Installera och använda QPT för Adobe Commerce i molninfrastrukturen
 
-Mer information om hur du installerar och använder QPT för att tillämpa och återställa korrigeringsfiler på Adobe Commerce i molninfrastrukturen finns i [Cloud for Adobe Commerce > Tillämpa korrigeringsfiler](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches) i utvecklardokumentationen.
+Mer information om hur du installerar och använder QPT för att tillämpa och återställa korrigeringsfiler på Adobe Commerce i molninfrastrukturen finns i [Cloud for Adobe Commerce > Tillämpa korrigeringsfiler](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches) i utvecklardokumentationen.
 
 ## Relaterad läsning
 
-* [Versionsinformation för verktyget Kvalitetspatchar](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/release-notes) i utvecklardokumentationen.
-* [Använda dispositionskorrigeringar från Adobe](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/how-to/how-to-apply-a-composer-patch-provided-by-magento) i kunskapsbasen för support.
+* [Versionsinformation för verktyget Kvalitetspatchar](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/release-notes) i utvecklardokumentationen.
+* [Använda dispositionskorrigeringar från Adobe](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/how-to-apply-a-composer-patch-provided-by-magento) i kunskapsbasen för support.
