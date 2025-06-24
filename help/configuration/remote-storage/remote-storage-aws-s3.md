@@ -3,9 +3,9 @@ title: Konfigurera AWS S3-bucket för fjärrlagring
 description: Konfigurera ditt Commerce-projekt för att använda AWS S3-lagringstjänsten för fjärrlagring.
 feature: Configuration, Storage
 exl-id: e8aeade8-2ec4-4844-bd6c-ab9489d10436
-source-git-commit: af45ac46afffeef5cd613628b2a98864fd7da69b
+source-git-commit: 3f45b61a2f4fd6db161c66182212f3aff5900e26
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '328'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->Adobe avråder starkt från att använda offentliga fickor eftersom detta utgör en allvarlig säkerhetsrisk.
+>Adobe avråder starkt från att använda publika fickor eftersom detta utgör en allvarlig säkerhetsrisk.
 
 **Så här aktiverar du fjärrlagring med AWS S3-adaptern**:
 
@@ -43,6 +43,10 @@ ht-degree: 0%
    ```
 
 ## Konfigurera Nginx
+
+>[!NOTE]
+>
+>Den här metoden gäller inte för Adobe Commerce i molninfrastrukturprojekt. Nginx kan inte konfigureras på Adobe Commerce i molninfrastruktur. Mer information finns i [molnspecifik dokumentation](cloud-support.md).
 
 Nginx kräver ytterligare konfiguration för att utföra autentisering med direktivet `proxy_pass`. Lägg till följande proxyinformation i filen `nginx.conf`:
 
