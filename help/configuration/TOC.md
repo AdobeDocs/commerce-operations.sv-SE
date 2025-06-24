@@ -2,9 +2,9 @@
 user-guide-title: Konfigurationshandbok
 user-guide-description: Konfigurera Adobe Commerce programfunktioner och -tjänster.
 feature: Configuration
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 1850301e0b7f1abbc54613209940dd63d16ef145
 workflow-type: tm+mt
-source-wordcount: '354'
+source-wordcount: '367'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 # Konfigurationshandbok {#configuration-guide}
 
 + [Ökning](overview.md)
-+ Allmän konfiguration {#setup}
++ Allmänna inställningar {#setup}
    + [Programinitiering och bootstrap](bootstrap/initialization.md)
    + [Programlägen](bootstrap/application-modes.md)
    + [Bootstrap-parametrar](bootstrap/set-parameters.md)
@@ -41,7 +41,11 @@ ht-degree: 0%
       + [Konfigurera Redis](cache/config-redis.md)
       + [Använd Redis för standardcache](cache/redis-pg-cache.md)
       + [Använd Redis för sessionslagring](cache/redis-session.md)
-   + Avvikelse {#varnish}
+   + Valkey {#valkey}
+      + [Konfigurera Valkey](cache/config-valkey.md)
+      + [Använd Valkey för standardcache](cache/valkey-pg-cache.md)
+      + [Använd Valkey för sessionslagring](cache/valkey-session.md)
+   + Varnish {#varnish}
       + [Finska - översikt](cache/config-varnish.md)
       + [Installera lack](cache/config-varnish-install.md)
    + [Webbserver](cache/config-varnish-server.md)
@@ -96,7 +100,7 @@ ht-degree: 0%
    + [Tjänster](reference/config-reference-services.md)
    + [Känsliga och systemspecifika inställningar](reference/config-reference-sens.md)
    + [Åsidosätt konfigurationsinställningar](reference/override-config-settings.md)
-+ Kronijobb {#crons}
++ Kronjobb {#crons}
    + [Kronjobb och grupper](cron/custom-cron.md)
    + [Anpassa crons-referens](cron/custom-cron-reference.md)
    + [Konfigurera ett anpassat cron-jobb](cron/custom-cron-tutorial.md)
@@ -146,4 +150,4 @@ ht-degree: 0%
       + [Verifiera delad databas](storage/multi-master-verify.md)
       + [Databasreplikering](storage/multi-master-replication.md)
       + [Återgå till en databas](storage/revert-split-database.md)
-+ [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=sv-SE)
++ [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

@@ -3,9 +3,10 @@ title: Bästa tillvägagångssätt för konfiguration av Valkey-tjänster
 description: Lär dig hur du förbättrar cachelagringsprestanda med den utökade Valkey-cacheimplementeringen för Adobe Commerce.
 role: Developer, Admin
 feature: Best Practices, Cache
-source-git-commit: 107b5bb19c3375be64c216bd89feb8410e2fc2bd
+exl-id: ca1598b0-07c6-4338-aed1-f2ba05375197
+source-git-commit: 1ab977bf2b30c2851609f0bfcc636978e974f07a
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '672'
 ht-degree: 0%
 
 ---
@@ -24,13 +25,13 @@ stage:
     VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
 ```
 
-Om du vill se miljökonfiguration för molninfrastruktur läser du [`VALKEY_BACKEND`](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_backend) i _Commerce on Cloud Infrastructure Guide_.
+Om du vill se miljökonfiguration för molninfrastruktur läser du [`VALKEY_BACKEND`](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_backend) i _Commerce on Cloud Infrastructure Guide_.
 
-Lokala installationer finns i [Konfigurera cache-lagring för Valkey-sidor](../../../configuration/cache/redis-pg-cache.md#configure-redis-page-caching) i _konfigurationshandboken_.
+Lokala installationer finns i [Konfigurera cache-lagring för Valkey-sidor](../../../configuration/cache/valkey-pg-cache.md#configure-page-caching) i _konfigurationshandboken_.
 
 >[!NOTE]
 >
->Kontrollera att du använder den senaste versionen av paketet `ece-tools`. Om inte, [uppgradera till den senaste versionen](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/update-package). Du kan kontrollera vilken version som är installerad i din lokala miljö med hjälp av CLI-kommandot `composer show magento/ece-tools`.
+>Kontrollera att du använder den senaste versionen av paketet `ece-tools`. Om inte, [uppgradera till den senaste versionen](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/update-package). Du kan kontrollera vilken version som är installerad i din lokala miljö med hjälp av CLI-kommandot `composer show magento/ece-tools`.
 
 ### L2-cacheminnets storlek (Adobe Commerce Cloud)
 
@@ -86,11 +87,11 @@ stage:
 
 Mer information finns i [VALKEY_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy.html#valkey_use_slave_connection) i _Commerce on Cloud Infrastructure Guide_.
 
-För Adobe Commerce lokala installationer konfigurerar du den nya Valkey-cacheimplementeringen med kommandona `bin/magento:setup`. Mer information finns i [Använd valnyckel för standardcache](../../../configuration/cache/redis-pg-cache.md#configure-redis-page-caching) i _Konfigurationshandboken_.
+För Adobe Commerce lokala installationer konfigurerar du den nya Valkey-cacheimplementeringen med kommandona `bin/magento:setup`. Mer information finns i [Använd valnyckel för standardcache](../../../configuration/cache/valkey-pg-cache.md#configure-page-caching) i _Konfigurationshandboken_.
 
 >[!WARNING]
 >
->Konfigurera _inte_ en Valkey-slavanslutning för molninfrastrukturprojekt med en [skalad/delad arkitektur](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture). Detta orsakar Redis-anslutningsfel. Mer information finns i [Redis-konfigurationsguiden](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy.html#redis_use_slave_connection) i guiden _Commerce om molninfrastruktur_.
+>Konfigurera _inte_ en Valkey-slavanslutning för molninfrastrukturprojekt med en [skalad/delad arkitektur](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture). Detta orsakar anslutningsfel för Valkey. Mer information finns i [Riktlinjerna för värdekonfiguration](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_use_slave_connection) i guiden _Commerce om molninfrastruktur_.
 
 ## Förinläsningsnycklar
 
@@ -113,7 +114,7 @@ stage:
               - '061_SYSTEM_DEFAULT:hash'
 ```
 
-Lokala installationer finns i [Förinläsningsfunktionen Valkey](../../../configuration/cache/redis-pg-cache.md#redis-preload-feature) i _Konfigurationshandboken_.
+Lokala installationer finns i [Förinläsningsfunktionen Valkey](../../../configuration/cache/valkey-pg-cache.md#valkey-preload-feature) i _Konfigurationshandboken_.
 
 ## Aktivera inaktuell cache
 
@@ -152,7 +153,7 @@ stage:
 
 >[!NOTE]
 >
->I det föregående exemplet är cachen `full_page` inte relevant för Adobe Commerce i molninfrastrukturprojekt, eftersom de använder [Fast](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/cdn/fastly).
+>I det föregående exemplet är cachen `full_page` inte relevant för Adobe Commerce i molninfrastrukturprojekt, eftersom de använder [Fast](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly).
 
 Information om hur du konfigurerar lokala installationer finns i [Inaktuella cachealternativ](../../../configuration/cache/level-two-cache.md#stale-cache-options) i _Konfigurationshandboken_.
 
@@ -172,7 +173,7 @@ W:   - Installing colinmollenhour/php-redis-session-abstract (v1.4.5): Extractin
 
 ## Cachekomprimering
 
-Om du använder mer än 6 GB Valkey `maxmemory` kan du använda cachekomprimering för att minska det utrymme som används av nycklarna. Tänk på att det finns en kompromiss med prestanda på klientsidan. Om du har extra processorer föreslår Adobe att du aktiverar dem. Se [Använd Redis för sessionslagring](../../../configuration/cache/redis-session.md) i _Konfigurationshandboken_.
+Om du använder mer än 6 GB Valkey `maxmemory` kan du använda cachekomprimering för att minska det utrymme som används av nycklarna. Tänk på att det finns en kompromiss med prestanda på klientsidan. Om du har extra processorer föreslår Adobe att du aktiverar dem. Se [Använd Valkey för sessionslagring](../../../configuration/cache/valkey-session.md) i _Konfigurationshandboken_.
 
 ```yaml
 stage:
@@ -188,8 +189,3 @@ stage:
             compress_threshold: 20480     # do not compress files smaller than this value
             compression_lib: 'gzip'       # snappy and lzf for performance, gzip for high compression (~70%)
 ```
-
-## Ytterligare information
-
-- [Redis Page Cache](../../../configuration/cache/redis-pg-cache.md)
-- [Använd Redis för sessionslagring](../../../configuration/cache/redis-session.md)
