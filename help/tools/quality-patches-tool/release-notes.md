@@ -3,9 +3,9 @@ title: Versionsinformation
 description: Läs mer om vilka korrigeringsfiler som finns för Adobe Commerce och vilka problem de löser.
 exl-id: 22262555-f5ea-49ad-98ad-ea8428ef66d5
 type: Troubleshooting
-source-git-commit: fe1bec27cb9aa420fd71a0542edd5f82492e17aa
+source-git-commit: c14532e7390a3c123a4f673fca2211bfea9bcaa1
 workflow-type: tm+mt
-source-wordcount: '26682'
+source-wordcount: '26993'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,25 @@ ht-degree: 0%
 
 >[!INFO]
 >
->Se [Tillämpa korrigeringsfiler](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html?lang=sv-SE#apply-individual-patches) för instruktioner om hur du använder korrigeringsfiler i dina Adobe Commerce-projekt. Se [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE) i programuppdateringshandboken om du vill visa en fullständig lista över släppta korrigeringsfiler.
+>Se [Tillämpa korrigeringsfiler](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/usage.html#apply-individual-patches) för instruktioner om hur du använder korrigeringsfiler i dina Adobe Commerce-projekt. Se [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) i programuppdateringshandboken om du vill visa en fullständig lista över släppta korrigeringsfiler.
 
 >[!INFO]
 >
 >Mer information om [!DNL quality patches] som har skapats av Community för Magento Open Source finns i [versionsinformationen](https://github.com/magento/quality-patches/blob/master/community-release-notes.md).
+
+## v1.1.67 {#v1-1-67}
+
+* **ACSD-65935** (för Adobe Commerce >=2.4.4 &lt;2.4.8) - Korrigerar problemet där `customerOrders` GraphQL-frågan returnerade ett internt serverfel när en produkt togs bort.
+* **ACSD-66049** (för Adobe Commerce och Magento Open Source >=2.4.5-p3 &lt;2.4.6) || >=2.4.7 &lt;2.4.9) - Korrigerar problemet där icke-engelska butiker visar felaktigt pris på grund av ICU-biblioteksversionen.
+* **ACSD-66084** (för Adobe Commerce och Magento Open Source >=2.4.5 &lt;2.4.9) - Korrigerar problemet där `row_total_incl_tax` returneras som ett nästan noll restvärde i order-API-svaret i stället för 0,00 för fullständigt rabatterade objekt.
+* **ACSD-66118** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.9) - Korrigerar problemet där [!UICONTROL Design Configuration] -inställningarna rensas när lagringsvykoden uppdateras om konfigurationscachen inte uppdateras.
+* **ACSD-66139** (för Adobe Commerce >=2.4.7 &lt;2.4.8) - Korrigerar problemet där GraphQL anropar en order för en ej existerande eller inaktiv kundvagn returnerade en *UNDEFINED* -felkod.
+* **ACSD-66301** (för Adobe Commerce och Magento Open Source >=2.4.6-p9 &lt;2.4.7 || >=2.4.7-p4 &lt;2.4.8) - Korrigerar problemet där förflyttning av produkter från en order tillbaka till kundvagnen i Admin resulterar i kvantitetsmatchningsfel.
+* **ACSD-66434** (för Adobe Commerce >=2.4.6-p8 &lt;2.4.9) - Korrigerar problemet där kund-ID saknades i GraphQL-företagsfrågor.
+* **ACSD-66441** (för Adobe Commerce och Magento Open Source >=2.4.5 &lt;2.4.8) - Korrigerar problemet där butiken visar felaktiga indexdata i lagerstyrd navigering när konfigurerbara produkter indexeras för en konfiguration med flera lager.
+* **AC-14984** (för Adobe Commerce och Magento Open Source >=2.4.6-p10 &lt;2.4.7) || >=2.4.8 &lt;2.4.9) - Korrigerar felet *Ogiltig bildrutetyp 21* på RabbitMQ SSL-anslutningen.
+* **AC-14985** (för Adobe Commerce och Magento Open Source >=2.4.8 &lt;2.4.9) - Korrigerar problemet där e-post inte skickas när den externa `smtp`-servern med TLS aktiverat används.
+* Uppdaterade versioner: **MDVA-12304**, **ACSD-47920**, **ACSD-56447**, **ACSD-61845**, **ACSD-6418**
 
 ## v1.1.66 {#v1-1-66}
 
@@ -91,7 +105,7 @@ ht-degree: 0%
 * **ACSD-64467** (för Adobe Commerce och Magento Open Source >=2.4.7 &lt;2.4.8) - Korrigerar problemet där WYSIWYG-redigeraren ser tom ut när en kategoribeskrivning har sparats på butiksvynivån.
 * **ACSD-64546** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet där ett generiskt felmeddelande visas i användargränssnittet och ett *Array to string conversion* -undantag sparas i loggarna när UPS-etiketter skapas, vilket säkerställer att det faktiska felet visas i användargränssnittet och att rätt felmeddelande lagras i loggarna.
 * **ACSD-64684** (för Adobe Commerce >=2.4.4 &lt;2.4.8) - Korrigerar problemet där ett valideringsfel inträffar när ett presentkort redigeras och sparas med ett värde som är större än *999* på grund av kommatecken (tusentalsavgränsare) i talet *ett tusen (1 000)*.
-* Uppdaterade versioner: **ACSD-49392**, **ACSD-50368**, **ACSD-51819**, **ACSD-54966-V2**, **ACSD-57003&lbrace;9** ACSD-62979 **,** ACSD-64112 **&#x200B;**
+* Uppdaterade versioner: **ACSD-49392**, **ACSD-50368**, **ACSD-51819**, **ACSD-54966-V2**, **ACSD-57003{9** ACSD-62979 **,** ACSD-64112 ****
 * Ersatta korrigeringsfiler: **ACSD-49392**, **ACSD-58739**, **ACSD-62689**, **ACSD-64112**
 * Inaktuella korrigeringsfiler: **ACSD-46192**, **ACSD-52133**
 
@@ -102,7 +116,7 @@ ht-degree: 0%
 * **ACSD-64111** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet när ett fel inträffar när kapslade villkor för en produktkomponent ställs in i [!DNL Page Builder].
 * **ACSD-64137** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet där sökning efter upphämtningsplatser med zip-kod inte fungerar som den nederländska lokaliseringen.
 * **ACSD-64149** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet där ett kundsegment med ett datumintervallvillkor kan sparas när endast ett av datumen redigeras.
-* Uppdaterade versioner: **MDVA-12304**, **ACSD-45049**, **MDVA-43824**, **ACSD-46192**, **ACSD-50368**, **ACSD-52133**, **ACSD-47657**, **ACSD-51819**, **ACSD-54966-V2**, **&rbrace;ACSD-55628**, **ACSD-45049**, **ACSD-63242**
+* Uppdaterade versioner: **MDVA-12304**, **ACSD-45049**, **MDVA-43824**, **ACSD-46192**, **ACSD-50368**, **ACSD-52133**, **ACSD-47657**, **ACSD-51819**, **ACSD-54966-V2**, **}ACSD-55628**, **ACSD-45049**, **ACSD-63242**
 
 ## v1.1.59 {#v1-1-59}
 
@@ -194,7 +208,7 @@ ht-degree: 0%
 * **ACSD-61785** (för Adobe Commerce >=2.4.4 &lt;2.4.8) - Åtgärdar problemet där det inte gick att uppdatera `reward_warning_notification` -attributet via [!DNL GraphQL] mutation- och [!DNL REST API]-anrop, vilket justerar dess beteende med `reward_update_notification`.
 * **ACSD-62591** (för Adobe Commerce och Magento Open Source >=2.4.7 &lt;2.4.8) - Korrigerar problemet där temat inte växlar korrekt när **[!UICONTROL User Agent Rules]** är konfigurerat.
 * **ACSD-62793** (för Adobe Commerce och Magento Open Source >=2.4.7 &lt;2.4.8) - Korrigerar problemet där `datetime` -attribut i exporterade data inte innehåller tidskomponenten. Om **[!UICONTROL Fields Enclosure]** dessutom är *aktiverad* kommer attributvärden i kolumnen `additional_attributes` att omslutas av dubbla citattecken.
-* **ACSD-62332** (för Adobe Commerce >=2.4.6 &lt;2.4.7) - Korrigerar problemet där produktlistfrågan [!DNL GraphQL] var begränsad till `total_count` av 10 000 produkter. Korrigerar problemet där [!DNL Live Search] ställer in den aktuella sidan till **&#x200B; i stället för sidan &#x200B;** i sökvillkoren när frågan ställs via [!DNL GraphQL].
+* **ACSD-62332** (för Adobe Commerce >=2.4.6 &lt;2.4.7) - Korrigerar problemet där produktlistfrågan [!DNL GraphQL] var begränsad till `total_count` av 10 000 produkter. Korrigerar problemet där [!DNL Live Search] ställer in den aktuella sidan till ** i stället för sidan ** i sökvillkoren när frågan ställs via [!DNL GraphQL].
 * Uppdaterade versioner: **ACSD-46581**, **ACSD-49513**, **ACSD-52801**, **ACSD-59514**
 * Ersatta korrigeringsfiler: **ACSD-52801**, **ACSD-55100**
 * Föråldrade korrigeringsfiler: **ACSD-52085**, **ACSD-57854**
