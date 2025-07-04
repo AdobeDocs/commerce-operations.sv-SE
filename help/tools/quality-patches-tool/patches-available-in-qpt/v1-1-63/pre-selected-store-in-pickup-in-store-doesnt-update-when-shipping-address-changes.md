@@ -1,13 +1,13 @@
 ---
-title: Den i förväg valda butiken i Pickup in Store uppdateras inte när leveransadressen ändras
+title: 'ACSD-64753: Det förvalda arkivet i Pickup in Store uppdateras inte när leveransadressen ändras'
 description: Använd patchen ACSD-64753 för att åtgärda Adobe Commerce-problemet där den förvalda butiken inte uppdaterades när en ny leveransadress angavs utanför den valda butikens serviceradie.
 feature: Inventory
 role: Admin, Developer
 exl-id: 4efc99d6-88a3-43f9-88d4-dedb9d8a269e
 type: Troubleshooting
-source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
+source-git-commit: 036c1b81d9ec8f55f002446a8ea6078c6f8014d9
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '442'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Korrigeringen ACSD-64753 åtgärdar ett problem där den valda butiken inte uppd
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -67,7 +67,7 @@ Illinois-källan kan plockas och kunden kan gå vidare till kassan.
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 
