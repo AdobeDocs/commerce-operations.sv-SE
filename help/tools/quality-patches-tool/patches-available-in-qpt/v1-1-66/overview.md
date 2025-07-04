@@ -3,9 +3,10 @@ title: 'Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.66'
 description: I det här underavsnittet finns en detaljerad beskrivning av de problem som åtgärdats av de korrigeringar som finns i  [!DNL Quality Patches Tool] (QPT) v1.1.66.
 feature: Tools and External Services
 role: Admin, Developer
-source-git-commit: 04a8de460c3d75d4438b0a460cd4edf50f4726f6
+exl-id: b5b80bfa-a52c-466b-b95c-23590e850aed
+source-git-commit: 31a6b8296681a8f8aa23aa941c0637510b330cdc
 workflow-type: tm+mt
-source-wordcount: '197'
+source-wordcount: '192'
 ht-degree: 0%
 
 ---
@@ -15,7 +16,7 @@ ht-degree: 0%
 Detta underavsnitt innehåller en detaljerad beskrivning av de problem som åtgärdats av de korrigeringar som är tillgängliga i [!DNL Quality Patches Tool] (QPT) v1.1.66.
 
 QPT v1.1.66 innehåller följande patchar:
-1. **ACP2E-3789**: Uppdaterar en produkt via `WebAPI` duplicerade mediefiler när ett medie-ID angavs.
+1. **ACP2E-3789**: Mediefiler dupliceras vid produktuppdatering via WebAPI.
 1. **ACP2E-3918**: Utcheckningen misslyckades för inloggade företagskunder som använder butiksupphämtning utan standardfaktureringsadress.
 1. **ACSD-65750**: GraphQL-frågan &quot;route&quot; returnerade produkter i fel ordning i Page Builder-produkters innehållstyper.
 1. **ACSD-65775**: REST API-ordningsinformationen returnerade felaktiga `base_row_total` - och `row_total`-värden när flera kvantiteter av samma objekt beställdes.
