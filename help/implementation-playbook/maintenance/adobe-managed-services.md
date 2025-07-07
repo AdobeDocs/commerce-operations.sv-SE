@@ -3,9 +3,9 @@ title: Adobe Managed Services
 description: Se hur Adobe Managed Services kan hjälpa er att stödja och underhålla er Adobe Commerce-implementering.
 exl-id: b600b0e3-c6fd-4b86-ad2a-a445e599f1bd
 feature: Services
-source-git-commit: e5a50707463bb7b36b4285889b10353faf9ba09f
+source-git-commit: 486e789787c9c08b27b4aae8e601680138956b88
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1171'
 ht-degree: 0%
 
 ---
@@ -39,20 +39,21 @@ Se tabellen nedan för en mer detaljerad jämförelse av fördelarna med Managed
 
 | Funktion | Adobe Commerce lokalt | Adobe Commerce i molnet | Adobe Commerce på Managed Services |
 |---------|---------------------------|-------------------------|-----------------------------------|
-| Adobe Enterprise Software | ✓ | ✓ | ✓ |
-| Säker och dedikerad molninfrastruktur | | ✓ | ✓ |
-| Förbättrat mål för incidentservicenivå | | P1: 1 timme | P1: 15 minuter |
-| Övervakning och åtgärder för överkapacitet | | | ✓ |
-| Infrastruktursäkerhet | | | ✓ |
-| Infrastrukturnivå 99,99 % SLA | | | ✓ |
-| Programnivå 99,9 % SLA | | | |
-| Utsedd expertresurs för infrastruktur (Customer Success Engineer) | | | |
-| Planerad händelsehantering | | | |
-| Anpassad platsövervakning och anpassad runbook | | | |
-| Hjälp med driftsättning av uppgraderings- och patchlösningar | | | |
-| Processkoordinering live | | | |
-| Dedikerad eskaleringshantering | | | |
-| Applikationsövervakning och -hjälp | | | |
+| Adobe företagsprogram | ✓ | ✓ | ✓ |
+| Adobe Developer App Builder | | ✓ | ✓ |
+| Säker och dedikerad molninfrastruktur | | ✓ P1: 1 timme | ✓ P1: 15 minuter |
+| Förbättrat mål för incidentservicenivå | | ✓ | ✓ |
+| Övervakning och åtgärder avseende överkapacitet | | ✓ | ✓ |
+| Infrastruktursäkerhet | | ✓ | ✓ |
+| Infrastrukturnivå 99,99 % SLA | | ✓ | ✓ |
+| Programnivå 99,9 % SLA | | | ✓ |
+| Utsedd expertresurs för infrastruktur (Customer Success Engineer) | | | ✓ |
+| Planerad händelsehantering | | | ✓ |
+| Anpassad platsövervakning och anpassad runbook | | | ✓ |
+| Hjälp med driftsättning av uppgraderingar och patchar | | | ✓ |
+| Processkoordinering live | | | ✓ |
+| Dedikerad eskaleringshantering | | | ✓ |
+| Applikationsövervakning och -hjälp | | | ✓ |
 
 ## Roller och ansvarsområden
 
