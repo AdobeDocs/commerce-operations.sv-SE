@@ -2,9 +2,9 @@
 title: GraphQL Application Server
 description: Följ dessa anvisningar för att aktivera GraphQL Application Server i din Adobe Commerce-distribution.
 exl-id: 9b223d92-0040-4196-893b-2cf52245ec33
-source-git-commit: 2f8396a367cbe1191bdf67aec75bd56f64d3fda8
+source-git-commit: 8427460cd11169ffe7dd2d4ba0cc1fdaea513702
 workflow-type: tm+mt
-source-wordcount: '2074'
+source-wordcount: '2184'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Med Commerce GraphQL Application Server kan Adobe Commerce upprätthålla status bland Commerce GraphQL API-begäranden. GraphQL Application Server, som bygger på svullningstillägget, fungerar som en process med arbetstrådar som hanterar bearbetningen av begäranden. Genom att bevara ett startläge för ett program bland GraphQL API-begäranden förbättrar GraphQL Application Server hanteringen av begäranden och produktens övergripande prestanda. API-förfrågningar blir betydligt effektivare.
 
-GraphQL Application Server finns endast för Adobe Commerce. Det finns inte för Magento Open Source. För Cloud Pro-projekt måste du [skicka in en Adobe Commerce Support](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)-biljett för att aktivera GraphQL Application Server.
+GraphQL Application Server finns endast för Adobe Commerce. Det finns inte för Magento Open Source. För Cloud Pro-projekt måste du [skicka in en Adobe Commerce Support](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)-biljett för att aktivera GraphQL Application Server.
 
 >[!NOTE]
 >
@@ -112,29 +112,154 @@ Utför följande steg innan du distribuerar GraphQL Application Server i Starter
        upstream: "application-server:http"
    ```
 
+1. Avkommentera avsnittet `files` i filen `.magento/services.yaml`.
+
+   ```yaml
+   files:
+       type: network-storage:2.0
+       disk: 5120
+   ```
+
+1. Avkommentera `TEMPORARY SHARED MOUNTS`-delen av monteringskonfigurationen i `.magento.app.yaml`-filen.
+
+   ```yaml
+   "var_shared":
+       source: "service"
+       service: "files"
+       source_path: "var"
+   "app/etc_shared":
+       source: "service"
+       service: "files"
+       source_path: "etc"
+   "pub/media_shared":
+       source: "service"
+       service: "files"
+       source_path: "media"
+   "pub/static_shared":
+       source: "service"
+       service: "files"
+       source_path: "static"
+   ```
+
 1. Lägg till uppdaterade filer i Git-indexet:
 
    ```bash
-   git add -f .magento/routes.yaml application-server/.magento/*
+   git add -f .magento.app.yaml .magento/routes.yaml .magento/services.yaml application-server/.magento/*
    ```
 
-1. Genomför ändringarna:
+1. Genomför dina ändringar och skicka dem för att aktivera en distribution:
 
    ```bash
-   git commit -m "AppServer Enabled"
+   git commit -m "Enabling AppServer: initial changes"
+   git push
+   ```
+
+1. Använd SSH för att logga in i fjärrmolnmiljön (_inte_ appen `application-server` ):
+
+   ```bash
+   magento-cloud ssh -p <project-ID> -e <environment-ID>
+   ```
+
+1. Synkronisera data från de lokala monteringarna till de delade mängderna:
+
+   ```bash
+   rsync -avz var/* var_shared/
+   rsync -avz app/etc/* app/etc_shared/
+   rsync -avz pub/media/* pub/media_shared/
+   rsync -avz pub/static/* pub/static_shared/
+   ```
+
+1. Kommentera `DEFAULT MOUNTS` och `TEMPORARY SHARED MOUNTS` delar av monteringskonfigurationen i filen `.magento.app.yaml`.
+
+   ```yaml
+   #"var": "shared:files/var"
+   #"app/etc": "shared:files/etc"
+   #"pub/media": "shared:files/media"
+   #"pub/static": "shared:files/static"
+   
+   #"var_shared":
+   #    source: "service"
+   #    service: "files"
+   #    source_path: "var"
+   #"app/etc_shared":
+   #    source: "service"
+   #    service: "files"
+   #    source_path: "etc"
+   #"pub/media_shared":
+   #    source: "service"
+   #    service: "files"
+   #    source_path: "media"
+   #"pub/static_shared":
+   #    source: "service"
+   #    service: "files"
+   #    source_path: "static"
+   ```
+
+1. Avkommentera `OLD LOCAL MOUNTS` och `SHARED MOUNTS` delar av monteringskonfigurationen i `.magento.app.yaml`-filen.
+
+   ```yaml
+   "var_old": "shared:files/var"
+   "app/etc_old": "shared:files/etc"
+   "pub/media_old": "shared:files/media"
+   "pub/static_old": "shared:files/static"
+   
+   "var":
+       source: "service"
+       service: "files"
+       source_path: "var"
+   "app/etc":
+       source: "service"
+       service: "files"
+       source_path: "etc"
+   "pub/media":
+       source: "service"
+       service: "files"
+       source_path: "media"
+   "pub/static":
+       source: "service"
+       service: "files"
+       source_path: "static"
+   ```
+
+1. Lägg till den uppdaterade filen i Git-indexet, implementera ändringar och skicka för att aktivera en distribution:
+
+   ```bash
+   git add -f .magento.app.yaml
+   git commit -m "Enabling AppServer: switch mounts"
+   git push
+   ```
+
+1. Kontrollera att filer från `*_old` kataloger finns i de faktiska katalogerna.
+
+1. Rensa gamla lokala berg:
+
+   ```bash
+   rm -rf var_old/*
+   rm -rf app/etc_old/*
+   rm -rf pub/media_old/*
+   rm -rf pub/static_old/*
+   ```
+
+1. Kommentera den `OLD LOCAL MOUNTS` delen av monteringskonfigurationen i filen `.magento.app.yaml`.
+
+   ```yaml
+   #"var_old": "shared:files/var"
+   #"app/etc_old": "shared:files/etc"
+   #"pub/media_old": "shared:files/media"
+   #"pub/static_old": "shared:files/static"
+   ```
+
+1. Lägg till den uppdaterade filen i Git-indexet, implementera ändringar och skicka för att aktivera en distribution:
+
+   ```bash
+   git add -f .magento.app.yaml
+   git commit -m "Enabling AppServer: finish"
+   git push
    ```
 
 >[!NOTE]
 >
->Se till att alla anpassade inställningar i rotfilen `.magento.app.yaml` migreras korrekt till filen `application-server/.magento/.magento.app.yaml`. När filen `application-server/.magento/.magento.app.yaml` har lagts till i ditt projekt bör du behålla den förutom rotfilen `.magento.app.yaml`. Om du till exempel behöver [konfigurera tjänsten RabbitMQ ](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/configure/service/rabbitmq) eller [hantera webbegenskaper](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/configure/app/properties/web-property) bör du även lägga till samma konfiguration i `application-server/.magento/.magento.app.yaml`.
-
-### Distribuera startprojekt
-
-När du har slutfört aktiveringen [steps](#before-you-begin-a-cloud-starter-deployment) skickar du ändringar till Git-databasen för att distribuera GraphQL Application Server:
-
-```bash
-git push
-```
+>Se till att alla anpassade inställningar i rotfilen `.magento.app.yaml` migreras korrekt till filen `application-server/.magento/.magento.app.yaml`. När filen `application-server/.magento/.magento.app.yaml` har lagts till i ditt projekt bör du behålla den förutom rotfilen `.magento.app.yaml`. Om du till exempel behöver [konfigurera tjänsten RabbitMQ ](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/service/rabbitmq) eller [hantera webbegenskaper](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/app/properties/web-property) bör du även lägga till samma konfiguration i `application-server/.magento/.magento.app.yaml`.
 
 ### Verifiera aktivering i molnprojekt
 
