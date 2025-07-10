@@ -4,9 +4,9 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 exl-id: b5b80bfa-a52c-466b-b95c-23590e850aed
-source-git-commit: 31a6b8296681a8f8aa23aa941c0637510b330cdc
+source-git-commit: f24e6b4cc973247cb176b7e6b10cc9c61e1c16c2
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ QPT v1.1.66 innehåller följande patchar:
 1. **ACP2E-3789**: Mediefiler dupliceras vid produktuppdatering via WebAPI.
 1. **ACP2E-3918**: Utcheckningen misslyckades för inloggade företagskunder som använder butiksupphämtning utan standardfaktureringsadress.
 1. **ACSD-65750**: GraphQL-frågan &quot;route&quot; returnerade produkter i fel ordning i Page Builder-produkters innehållstyper.
-1. **ACSD-65775**: REST API-ordningsinformationen returnerade felaktiga `base_row_total` - och `row_total`-värden när flera kvantiteter av samma objekt beställdes.
+1. **ACSD-65775**: Felaktiga `base_row_total` - och `row_total`-värden i REST API-ordningsinformation för flera kvantiteter.
 1. **ACSD-65777**: Fältet &quot;types&quot; saknas för produktbildtyper i GraphQL-begäran `MediaGallery`.
 1. **ACSD-65848**: Kategorier i administratören läses in mycket långsamt.
 1. **ACSD-65913**: OpenSearch genererade en `illegal_argument_exception` för kategorier med produkter med samma pris.
