@@ -78,11 +78,11 @@ Leveranssteget börjar läsas in och dirigeras om till **[!UICONTROL Pick In Sto
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
-* Lokalt Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool]** > Användning]**(/help/tools/quality-patches-tool/usage.md) i handboken för[!DNL Quality Patches Tool]**.
+* Lokalt Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] **&#x200B; > Användning]**(/help/tools/quality-patches-tool/usage.md) i handboken för[!DNL Quality Patches Tool]**.
 * Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar]**(https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 
 Mer information om [!DNL Quality Patches Tool]** finns i:
 
-* [[!DNL Quality Patches Tool]**: Ett självbetjäningsverktyg för korrigeringar av kvalitet]**(/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) i verktygshandboken.
+* [[!DNL Quality Patches Tool]&#x200B;**: Ett självbetjäningsverktyg för korrigeringar av kvalitet]**(/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) i verktygshandboken.
