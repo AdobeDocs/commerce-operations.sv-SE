@@ -4,9 +4,9 @@ description: Underhåll och optimera webbplatsens prestanda genom att följa ved
 role: Admin, User
 feature: Best Practices
 exl-id: b35806f9-4bc6-407e-bedd-5ce3f09c1b9f
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: 29168544e3a33b874b104f308bd53cb475ac2638
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '320'
 ht-degree: 0%
 
 ---
@@ -35,15 +35,18 @@ Att ha en stor butik med flera administratörer som arbetar i bakgrunden eller h
 Så här maximerar du webbplatsens prestanda:
 
 - Granska indexkonfigurationen.
-- Ställ in indexerarna på _[!UICONTROL Update on Schedule]_&#x200B;för stora webbplatser och webbplatser med frekventa uppdateringar och stor trafik. Se [Indexhantering](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/tools/index-management#change-the-index-mode).
+- Ställ in indexerarna på _[!UICONTROL Update on Schedule]_för stora webbplatser och webbplatser med frekventa uppdateringar och stor trafik. Se [Indexhantering](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/index-management#change-the-index-mode).
 - Följ de [bästa metoderna](../../../performance/configuration.md) för prestanda när du hanterar index.
 
 >[!IMPORTANT]
 >
->[!DNL Customer Grid] kan bara indexeras om med alternativet [!UICONTROL Update on Save]. Indexet stöder inte alternativet `Update by Schedule`.
+>Indexerarens [!DNL Customer Grid]-beteende ändrades i 2.4.8:
+>
+>- **Före 2.4.8**: [!DNL Customer Grid]-indexeraren kan bara indexeras om med alternativet [!UICONTROL Update on Save] och stöder inte alternativet [!UICONTROL Update by Schedule].
+>- **2.4.8 och senare**: [!DNL Customer Grid]-indexeraren har stöd för både [!UICONTROL Update on Save]- och [!UICONTROL Update by Schedule]-lägen, och standardvärdet är [!UICONTROL Update by Schedule].
 
 ## Ytterligare information
 
 - [Indexhantering för administratörer](../../../configuration/cli/manage-indexers.md#configure-indexers)
-- [Indexhantering med Magento CLI](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html?lang=sv-SE)
+- [Indexhantering med Magento CLI](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html)
 - [Indexeringsöversikt för utvecklare](https://developer.adobe.com/commerce/php/development/components/indexing/)
