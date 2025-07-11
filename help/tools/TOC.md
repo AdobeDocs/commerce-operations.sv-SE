@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: f24e6b4cc973247cb176b7e6b10cc9c61e1c16c2
+source-git-commit: ec7907a22a00f5c398c8ddc39d56c05c4bcbe175
 workflow-type: tm+mt
-source-wordcount: '7802'
+source-wordcount: '7817'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 0%
    - [Hanterade varningar för Adobe Commerce: CPU-varningsmeddelanden](/help/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce-cpu-warning-alert.md)
 - Verktyget Kvalitetspatchar {#quality-patches-tool}
    - [[!DNL Quality Patches Tool]: Ett självbetjäningsverktyg för korrigeringar av kvalitet](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)
-   - [[!DNL Quality Patches Tool]: Sök efter patchar](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE){target="_blank"}
+   - [[!DNL Quality Patches Tool]: Sök efter patchar ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
    - [Användning](quality-patches-tool/usage.md)
    - [Versionsinformation](quality-patches-tool/release-notes.md)
    - Patchar tillgängliga i verktyget för kvalitetspatchar {#patches-available-in-qpt}
@@ -804,6 +804,7 @@ ht-degree: 0%
          - [AVS2E-3841: Kundprisregler för produkter med flera leveranser gäller inte korrekt när vissa villkor används och fri frakt är aktiverat](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-64/acp2e-3841-cart-price-rules-for-multi-shipping-products-do-not-apply-correctly-when-subselect-conditions-are-used-and-free-shipping-is-enabled.md)
       - v1.1.65 {#v1-1-65}
          - [Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.65](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-65/overview.md)
+         - [ACSD-64118: Begäran om samtidig produktsparande för samma produkt orsakar inkonsekventa data och dubblettposter](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-65/acsd-64118-concurrent-product-save-requests-for-same-product-cause-data-inconsistency-and-duplicate-entries.md)
          - [ACSD-65254: E-postmeddelande skickas inte efter uppdatering av kundens e-post via updateCustomerEmail [!DNL GraphQL] mutation](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-65/acsd-65254-email-notification-not-sent-after-updating-customer-email-via-updatecustomeremail-graphql-mutation.md)
          - [ACSD-64813: Det tar lång tid att frigöra kategorier i  [!DNL B2B] delad katalog via REST API](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-65/acsd-64813-unassigning-categories-in-b2b-shared-catalog-via-rest-api-is-slow.md)
          - [ACSD-65822: Paketet och konfigurerbara produktkvantiteter visas inte korrekt i [!UICONTROL Shopping Cart]](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-65/acsd-65822-bundle-and-configurable-product-quantities-not-reflected-correctly-in-shopping-cart.md)
@@ -861,6 +862,6 @@ ht-degree: 0%
       - [Data som kräver manuell migrering](data-migration-tool/migrate-data/manual.md)
       - [Steg efter datamigrering](data-migration-tool/migrate-data/post-migration.md)
    - Resurs {#resources}
-      - [Felsökning](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html?lang=sv-SE)
+      - [Felsökning](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
       - [Ändra](https://github.com/magento/data-migration-tool/blob/2.4/CHANGELOG.md)
-- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=sv-SE)
+- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
