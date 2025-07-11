@@ -35,7 +35,7 @@ Att ha en stor butik med flera administratörer som arbetar i bakgrunden eller h
 Så här maximerar du webbplatsens prestanda:
 
 - Granska indexkonfigurationen.
-- Ställ in indexerarna på _[!UICONTROL Update on Schedule]_för stora webbplatser och webbplatser med frekventa uppdateringar och stor trafik. Se [Indexhantering](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/index-management#change-the-index-mode).
+- Ställ in indexerarna på _[!UICONTROL Update on Schedule]_&#x200B;för stora webbplatser och webbplatser med frekventa uppdateringar och stor trafik. Se [Indexhantering](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/index-management#change-the-index-mode).
 - Följ de [bästa metoderna](../../../performance/configuration.md) för prestanda när du hanterar index.
 
 >[!IMPORTANT]
