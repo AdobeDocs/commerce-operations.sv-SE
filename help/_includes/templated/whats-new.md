@@ -23,7 +23,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-66/acsd-65775-incorrect-order-detail-values-in-rest-api-order-details-for-multiple-quantities">Detaljerad beskrivning av problemet som har åtgärdats med korrigeringsfilen ACSD-65775 i QPT 1.1.66-utgåvan</a> har lagts till.</p>
+      <td><p><a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-66/acsd-65775-incorrect-order-detail-values-in-rest-api-order-details-for-multiple-quantities">Detaljerad beskrivning av problemet som har åtgärdats med korrigeringsfilen ACSD-65775 i QPT 1.1.66-utgåvan</a> har lagts till.</p>
 </td>
       <td>
         Nytt ämne, qpt
