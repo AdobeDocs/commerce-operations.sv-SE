@@ -3,9 +3,9 @@ title: Konfigurera AWS S3-bucket för fjärrlagring
 description: Konfigurera ditt Commerce-projekt för att använda AWS S3-lagringstjänsten för fjärrlagring.
 feature: Configuration, Storage
 exl-id: e8aeade8-2ec4-4844-bd6c-ab9489d10436
-source-git-commit: 3f45b61a2f4fd6db161c66182212f3aff5900e26
+source-git-commit: 3690043019d70ad15332f757158937a7d5305043
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '382'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,8 @@ ht-degree: 0%
 >[!WARNING]
 >
 >Adobe avråder starkt från att använda publika fickor eftersom detta utgör en allvarlig säkerhetsrisk.
+>
+>När man använder en kundtillhandahållen S3-bucket för medielagring ansvarar inte Adobe för, och ger ingen support för, eventuella problem, dataförluster eller avbrott i samband med konfiguration, hantering eller drift av S3-bucket. Kunden ansvarar själv för all felsökning och underhåll av S3-bucket.
 
 **Så här aktiverar du fjärrlagring med AWS S3-adaptern**:
 
