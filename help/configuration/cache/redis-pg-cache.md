@@ -3,9 +3,9 @@ title: Använd Redis för standardcache
 description: Lär dig konfigurera Redis som standardcache för Adobe Commerce.
 feature: Configuration, Cache
 exl-id: 8c097cfc-85d0-4e96-b56e-284fde40d459
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 2c489f2655e6fb067de1730355df6cd3683ea562
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1126'
 ht-degree: 0%
 
 ---
@@ -36,6 +36,8 @@ Med följande parametrar:
 | `cache-backend-redis-port` | port | Redis-serverlyssningsport | `6379` |
 | `cache-backend-redis-db` | databas | Krävs om du använder Redis för både standardcache och helsidescache. Du måste ange databasnumret för en av cacherna. I det andra cacheminnet används 0 som standard.<br><br>**Viktigt**: Om du använder Redis för mer än en typ av cachelagring måste databasnumren vara olika. Vi rekommenderar att du tilldelar standardvärdet för cachningsdatabasen till 0, sidcachningsdatabasnumret till 1 och sessionslagringsdatabasnumret till 2. | `0` |
 | `cache-backend-redis-password` | lösenord | När du konfigurerar ett Redis-lösenord aktiveras en av de inbyggda säkerhetsfunktionerna: kommandot `auth`, som kräver att klienterna autentiseras för att få åtkomst till databasen. Lösenordet har konfigurerats direkt i Redis konfigurationsfil: `/etc/redis/redis.conf` | |
+| `--cache-backend-redis-use-lua` | use_lua | Aktivera eller inaktivera LUA. <br><br>**LUA**: Med Lua kan vi köra en del av programlogiken i Redis, vilket förbättrar prestanda och säkerställer datakonsekvens genom dess atomära körning. | `0` |
+| `--cache-backend-redis-use-lua-on-gc` | use_lua_on_gc | Aktivera eller inaktivera LUA för skräpinsamling. <br><br>**LUA**: Med Lua kan vi köra en del av programlogiken i Redis, vilket förbättrar prestanda och säkerställer datakonsekvens genom dess atomära körning. | `1` |
 
 ### Exempel, kommando
 
