@@ -4,9 +4,9 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 exl-id: b5b80bfa-a52c-466b-b95c-23590e850aed
-source-git-commit: f24e6b4cc973247cb176b7e6b10cc9c61e1c16c2
+source-git-commit: a7cbe756f73211e4cc400ea27e357e99aa39605c
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '185'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ QPT v1.1.66 innehåller följande patchar:
 1. **ACSD-65775**: Felaktiga `base_row_total` - och `row_total`-värden i REST API-ordningsinformation för flera kvantiteter.
 1. **ACSD-65777**: Fältet &quot;types&quot; saknas för produktbildtyper i GraphQL-begäran `MediaGallery`.
 1. **ACSD-65848**: Kategorier i administratören läses in mycket långsamt.
-1. **ACSD-65913**: OpenSearch genererade en `illegal_argument_exception` för kategorier med produkter med samma pris.
+1. **ACSD-65913**: [!DNL OpenSearch] returnerar `illegal_argument_exception` för kategorier med produkter med samma pris.
 1. **ACSD-66041**: Postnummer för Irland (IE) kunde inte sökas efter upphämtningsplatser eftersom CountryID saknas.
 1. **ACSD-66212**: Korrigerar problemet där import av en kund-CSV-fil två gånger orsakade fel på den andra och efterföljande försök.
 
