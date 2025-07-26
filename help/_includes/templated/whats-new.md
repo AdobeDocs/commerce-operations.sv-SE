@@ -23,7 +23,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-66/acsd-65777-types-field-was-missing-for-product-image-types-in-the-mediagallery-graphql-request">Detaljerad beskrivning av problemet som har åtgärdats med korrigeringsfilen ACSD-65777 i QPT 1.1.66 </a> har lagts till.</p>
+      <td><p><a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-66/acsd-65777-types-field-was-missing-for-product-image-types-in-the-mediagallery-graphql-request">Detaljerad beskrivning av problemet som har åtgärdats med korrigeringsfilen ACSD-65777 i QPT 1.1.66 </a> har lagts till.</p>
 </td>
       <td>
         Nytt ämne, qpt
