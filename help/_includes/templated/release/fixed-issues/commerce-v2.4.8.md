@@ -1,5 +1,5 @@
 ---
-source-git-commit: 92907752d92cd7f4a81377a5239dfded10fe3655
+source-git-commit: 1f377ab6e4dcdd2d350366f3889b8befd233474b
 workflow-type: tm+mt
 source-wordcount: '27924'
 ht-degree: 0%
@@ -337,7 +337,7 @@ Tidigare uppstod ett fel när en begränsad administratör skulle lägga till et
 
 _ACP2E-2687_
 
-#### Apostrof i butiksvyns namn ska ersättas med &#039;
+#### Apostrof i butiksvyns namn ska ersättas med &amp;#039;
 
 Filtren för att visa stödrastrets lagringsvy visar nu apostrofer korrekt
 
@@ -1971,7 +1971,7 @@ Systemet följer nu kodningsstandarden genom att ta bort den förbjudna taggen `
 
 _AC-8356 - [GitHub-problem](https://github.com/magento/magento2/issues/37250) - [GitHub-kodbidrag](https://github.com/magento/magento2/pull/37000)_
 
-#### Utrymme i syntaxbrytningsregel för redigerarconfig för `[&lbrace;composer,auth&rbrace;.json]`
+#### Utrymme i syntaxbrytningsregel för redigerarconfig för `[{composer,auth}.json]`
 
 Systemet tillämpar nu indrag med 4 blanksteg korrekt på Composer- och auth.json-filer, efter en korrigering av ett syntaxfel i EditorConfig. Tidigare formaterades dessa filer felaktigt med ett indrag med två blanksteg på grund av ett blanksteg i editorconfig-syntaxen.
 
@@ -2127,7 +2127,7 @@ Problemet har korrigerats efter att kontrollen tillämpats när en produktsökni
 
 _ACP2E-2653 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/12e071c3)_
 
-#### GraphQL Products-anropet som innehåller prisfiltret `&lbrace;from:&quot;0&quot;&rbrace;` returnerar inget resultat
+#### GraphQL Products-anropet som innehåller prisfiltret `{from:&quot;0&quot;}` returnerar inget resultat
 
 Tidigare sökning med grafikprocessorer med filter för nollpriser returnerade inga resultat alls på grund av ett utlöst undantag. Nu returnerar sökningen det förväntade resultatet.
 
@@ -2706,8 +2706,8 @@ _LYNX-395_
 
 Ett problem har korrigerats där en enkel produkt (en del av en grupperad produkt) i kundvagnen returnerade en platshållarminiatyrbild, även när produkten hade en tilldelad bild.
 Korrigeringsinformation:
-* Produktminiatyrbilden visar nu den tilldelade bilden korrekt om den är tillgänglig.
-* Miniatyrbildsmarkeringen respekterar administratörskonfigurationen under:
+- Produktminiatyrbilden visar nu den tilldelade bilden korrekt om den är tillgänglig.
+- Miniatyrbildsmarkeringen respekterar administratörskonfigurationen under:
 Stores > Configuration > Sales > Checkout > Shopping Cart > Group Product Image.
 På så sätt får du en konsekvent miniatyrbildsfunktion för grupperade produkter baserat på butiksinställningarna.
 
@@ -2729,8 +2729,8 @@ _LYNX-402_
 
 Löste ett problem där attributet only_x_left_in_stock alltid returnerade 0 för konfigurerbara produkter när det lades till med den överordnade SKU:n med alternativ.
 Korrigeringsinformation:
-* Värdet only_x_left_in_stock återger nu korrekt stocken för den valda underordnade varianten i stället för den överordnade SKU:n.
-* På så sätt ser du till att lagernivåerna visas korrekt för konfigurerbara produktvariationer i kundvagnen och på produktsidorna.
+- Värdet only_x_left_in_stock återger nu korrekt stocken för den valda underordnade varianten i stället för den överordnade SKU:n.
+- På så sätt ser du till att lagernivåerna visas korrekt för konfigurerbara produktvariationer i kundvagnen och på produktsidorna.
 
 _LYNX-403_
 
@@ -2800,7 +2800,7 @@ Ett problem där mutationen addProductsToCart returnerade felet PRODUCT_NOT_FOUN
 
 _LYNX-469_
 
-#### Product attribute > trademark short form &trade; is returned as &trade;
+#### Product attribute > trademark short form &amp;trade; is returned as &amp;trade;
 
 Ett problem med teckenkodning med produktnamnet för GraphQL API har åtgärdats
 
