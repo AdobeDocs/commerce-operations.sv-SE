@@ -2,9 +2,9 @@
 title: Delat ansvar, säkerhet och operativ modell
 description: Läs mer om säkerhetsansvar för alla parter som deltar i ditt Adobe Commerce i molninfrastrukturprojekt.
 exl-id: f3cc1685-e469-4e30-b18e-55ce10dd69ce
-source-git-commit: 4cd71d156ef6833185565180b297ba1b7f42a032
+source-git-commit: fcaf6ff1dce1c1a5084307cd366ca58d71a8f4e4
 workflow-type: tm+mt
-source-wordcount: '2791'
+source-wordcount: '2850'
 ht-degree: 0%
 
 ---
@@ -798,6 +798,28 @@ Handlarna ansvarar för att synkronisera data mellan olika miljöer.
 |     | Adobe | Merchant |
 | --- | --- | --- |
 | Tillgänglighet för tjänsten Produktrekommendationer | R |   |
+
+{style="table-layout:auto"}
+
+#### Live Search
+
+|     | Adobe | Merchant |
+| --- | --- | --- |
+| Live Search-tjänstens tillgänglighet | R |   |
+
+{style="table-layout:auto"}
+
+#### Kvaliteten på butikshändelser (datainsamling) som stöder produktrekommendationer och livesökningar
+
+|     | Adobe | Merchant |
+| --- | --- | --- |
+| Kärntema (Luma) | R |   |
+| Eget tema |  | R |
+| PWA implementering | R |   |
+| Anpassad implementering av PWA |  | R |
+| Core AEM EDS implementation (Commerce Boilerplate) | R |   |
+| Anpassad implementering av AEM EDS |  | R |
+| Andra anpassade butiksimplementeringar |  | R |
 
 {style="table-layout:auto"}
 
