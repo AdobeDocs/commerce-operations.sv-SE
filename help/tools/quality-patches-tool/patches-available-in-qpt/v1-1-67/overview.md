@@ -3,7 +3,8 @@ title: 'Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.67'
 description: I det här underavsnittet finns en detaljerad beskrivning av de problem som åtgärdats av de korrigeringar som finns i  [!DNL Quality Patches Tool] (QPT) v1.1.67.
 feature: Tools and External Services
 role: Admin, Developer
-source-git-commit: d98a00793b011bf4d9e9348df10b91f0e17ebbd5
+exl-id: 47f6b57d-b945-4e77-8630-2df709a3469e
+source-git-commit: 7fd88da04ca147829aa5aa7f90d05d8760ff0f3d
 workflow-type: tm+mt
 source-wordcount: '191'
 ht-degree: 0%
@@ -23,7 +24,7 @@ QPT v1.1.67 innehåller följande patchar:
 1. **ACSD-66118**: Om du uppdaterar lagringsvykoden rensas designkonfigurationsinställningarna om konfigurationscachen inte uppdateras.
 1. **ACSD-66139**: GraphQL returnerar UNDEFINED-fel för obefintlig eller inaktiv vagn under orderplacering.
 1. **ACSD-66301**: Om du flyttar produkter från en beställning tillbaka till kundvagnen i Admin blir antalet felaktiga.
-1. **ACSD-66434**: Kund-ID saknas i GraphQL-företagsfrågor.
+1. **[ACSD-66434](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-67/acsd-66434-customer-id-missing-from-company-graphql-queries.md)**: Kund-ID saknas i GraphQL-företagsfrågor.
 1. **ACSD-66441**: Felaktiga indexdata i lagerstyrd navigering för konfigurerbara produkter i flerlagringsinställningar.
 
 Använd menyn till vänster för att navigera till en viss korrigeringssida.
