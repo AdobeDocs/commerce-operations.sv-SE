@@ -3,9 +3,10 @@ title: 'Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.68'
 description: I det här underavsnittet finns en detaljerad beskrivning av de problem som åtgärdats av de korrigeringar som finns i  [!DNL Quality Patches Tool] (QPT) v1.1.68.
 feature: Tools and External Services
 role: Admin, Developer
-source-git-commit: 515064fc03f37eb97a4d392328041c340880cb22
+exl-id: 74094036-cb1b-419f-b287-ca24d351a448
+source-git-commit: 0a7fdb3e5a7cb2c61ba54af78fadb524a570e20f
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '283'
 ht-degree: 0%
 
 ---
@@ -22,7 +23,7 @@ QPT v1.1.68 innehåller följande patchar:
 1. **ACSD-66072**: Relaterade produkter returneras inte via GraphQL på produktinformationssidan på grund av ett internt serverfel när [!UICONTROL Related Products Rule] har konfigurerats.
 1. **ACSD-66082**: Det går inte att uppdatera en produkts färgrutebild genom produktimport.
 1. **ACSD-66179**: Om du avbryter en faktura med betalningstypen &quot;Inte hämtning&quot; resulterar det i en 404-felsida.
-1. **ACSD-66233**: Administratörsanvändare kunde inte lägga till produkter i kategorier eftersom popup-fönstret Lägg till produkt inte lästes in.
+1. **ACSD-66233**: Administratörer kan inte lägga till produkter på grund av att produktlistan inte svarar.
 1. **ACSD-66506**: Ett serverdelsfel uppstod när tidigare tilldelade produkter i en delad katalog togs bort och nya tilldelades.
 1. **ACSD-66865**: Om du sparar katalogprisregler blir indexerare ogiltiga och det finns ett alternativ till att indexera om endast berörda produkter.
 1. **ACSD-66889**: Fel vid omindexering av lager i CLI.
