@@ -4,9 +4,9 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 exl-id: 74094036-cb1b-419f-b287-ca24d351a448
-source-git-commit: 0a7fdb3e5a7cb2c61ba54af78fadb524a570e20f
+source-git-commit: 47c8541c228f9ed3795c93b67b8ff85cbd4bd555
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '285'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ QPT v1.1.68 innehåller följande patchar:
 1. **ACSD-62415**: Adobe Commerce backend läser in kategorier mycket långsamt.
 1. **ACSD-65938**: Presentkortsmeddelanden skickades även när det inte gick att skapa fakturan.
 1. **ACSD-66072**: Relaterade produkter returneras inte via GraphQL på produktinformationssidan på grund av ett internt serverfel när [!UICONTROL Related Products Rule] har konfigurerats.
-1. **ACSD-66082**: Det går inte att uppdatera en produkts färgrutebild genom produktimport.
+1. **ACSD-66082**: Det går inte att uppdatera färgrutebilden för en produkt via produktimport.
 1. **ACSD-66179**: Om du avbryter en faktura med betalningstypen &quot;Inte hämtning&quot; resulterar det i en 404-felsida.
 1. **ACSD-66233**: Administratörer kan inte lägga till produkter på grund av att produktlistan inte svarar.
 1. **ACSD-66506**: Ett serverdelsfel uppstod när tidigare tilldelade produkter i en delad katalog togs bort och nya tilldelades.
