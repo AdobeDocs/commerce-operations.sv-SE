@@ -4,13 +4,13 @@ description: Använd patchen ACSD-66049 för att åtgärda Adobe Commerce-proble
 feature: Products
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 39e0b972dfa41f74f3c19e61d8fc1188d5c93f7c
+exl-id: e667d462-87f6-4db5-bf3f-3213edac2f09
+source-git-commit: da11e8bd5c4937ec2a7e548ce487797b83f8fd27
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '338'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-66049: Icke-engelska butiker visar felaktigt pris på grund av ICU-biblioteksversionen
 
@@ -28,7 +28,7 @@ Korrigeringen ACSD-66049 åtgärdar ett problem där icke-engelska butiker visar
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -39,7 +39,7 @@ Icke-engelska butiker visar felaktiga priser när äldre PHP ICU-biblioteksversi
 1. Kontrollera ICU-version:
    * Anslut till servern via SSH och kör kommandot: `php -a`
    * Ange: `echo INTL_ICU_VERSION;`
-1. Gå till **[!UICONTROL Stores]** > **[!UICONTROL Configuration]** > **[!UICONTROL General]** > **[!UICONTROL Locale]** > **[!UICONTROL Locale Options]**. **[!UICONTROL Configure Locale]** = *[UICONTOL Hebrew (Israel)]*.
+1. Gå till **[!UICONTROL Stores]** > **[!UICONTROL Configuration]** > **[!UICONTROL General]** > **[!UICONTROL Locale]** > **[!UICONTROL Locale Options]**. **[!UICONTROL Configure Locale]** = *[!UICONTROL Hebrew (Israel)]*.
 1. Skapa en produkt med pris = 100.
 1. Visa produktsidan i butiken.
 
@@ -50,14 +50,13 @@ Det visade priset är inte 0.
 <u>Faktiska resultat</u>:
 
 Efter att kort ha visat sig vara 100 uppdateras priset omedelbart till 0.
-(Problemet påverkar PHP ICU-biblioteksversionerna 63.1 till 74.1.)
 
 ## Tillämpa korrigeringen
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 
