@@ -2,9 +2,10 @@
 title: Konfigurera Valkey
 description: Få en översikt över Valkey-funktionerna och starta Valkey-konfigurationen.
 feature: Configuration, Cache
-source-git-commit: 1850301e0b7f1abbc54613209940dd63d16ef145
+exl-id: 12dbc171-3df6-4413-869b-a3450b5647b4
+source-git-commit: b2cf71bfda3e5db8e27eb28d764cf99216454e33
 workflow-type: tm+mt
-source-wordcount: '337'
+source-wordcount: '341'
 ht-degree: 0%
 
 ---
@@ -19,7 +20,7 @@ Viktiga funktioner:
 
 ## Install Valkey
 
-Information om hur du installerar och konfigurerar Valkey-programvara finns i följande resurser:
+Information om hur du installerar och konfigurerar Valkey-programmet finns i följande resurser:
 
 - [Hämta Valkey-sida](https://valkey.io/download/)
 - [Nyckelsnabbstart](https://valkey.io/topics/quickstart/)
@@ -27,7 +28,7 @@ Information om hur du installerar och konfigurerar Valkey-programvara finns i f�
 
 ## Konfigurera Valkey-konfiguration
 
-Beroende på installationen kan du vanligtvis hitta din Valkey-konfiguration i antingen `/etc/valkey/valkey.conf` eller `/etc/valkey/<port>.conf`.
+Beroende på installationen kan du vanligtvis hitta din Valkey-konfiguration i antingen filen `/etc/valkey/valkey.conf` eller filen `/etc/valkey/<port>.conf`.
 
 För att optimera Valkey-instansen efter dina behov kan du få bästa resultat genom att använda en dedikerad instans för varje session, Commerce-cache och FPC.
 
