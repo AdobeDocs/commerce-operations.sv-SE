@@ -1,18 +1,18 @@
 ---
-title: 'ACSD-66084: "row_total_incl_tax" returnerar ett restvärde nära noll i stället för 0,00 för fullt rabatterade artiklar i order-API-svaret'
+title: 'ACSD-66084: "row_total_incl_tax" returnerar nära noll i stället för 0,00 för fullt rabatterade artiklar i order-API'
 description: Använd patchen ACSD-66084 för att åtgärda Adobe Commerce-problemet där "row_total_incl_tax" returnerade ett restvärde nära noll istället för 0,00 för fullt rabatterade objekt i order-API-svaret.
 feature: Orders, REST, Taxes, Payments, Checkout
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 01f7059e53590c4ff6602c41eb980ac7c141af33
+exl-id: 421c6fe6-b6b1-4f33-acb6-fbd4306bcc4c
+source-git-commit: 951738a4c671ed6fcc47b2a928d2110c78763d26
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '447'
 ht-degree: 0%
 
 ---
 
-
-# ACSD-66084: `row_total_incl_tax` returnerar ett restvärde nära noll i stället för 0,00 för fullständigt rabatterade objekt i order-API-svaret
+# ACSD-66084: `row_total_incl_tax` returnerar nästan noll i stället för 0,00 för fullständigt rabatterade objekt i order-API
 
 Korrigeringen ACSD-66084 åtgärdar ett problem där `row_total_incl_tax` returneras som ett nästan noll restvärde i order-API-svaret i stället för 0,00 för fullständigt rabatterade artiklar. Den här korrigeringen är tillgänglig när [[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.67 har installerats. Korrigerings-ID är ACSD-66084. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.9.
 
@@ -28,7 +28,7 @@ Korrigeringen ACSD-66084 åtgärdar ett problem där `row_total_incl_tax` return
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -61,7 +61,7 @@ Korrigeringen ACSD-66084 åtgärdar ett problem där `row_total_incl_tax` return
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 
