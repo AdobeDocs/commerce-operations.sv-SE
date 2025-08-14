@@ -2,9 +2,9 @@
 title: env.php reference
 description: Se en lista med värden för filen env.php.
 exl-id: cf02da8f-e0de-4f0e-bab6-67ae02e9166f
-source-git-commit: 3f46ee08bb4edc08775bf986804772b88ca35f45
+source-git-commit: 26fac37405ad635f297b65415517451d5149e50f
 workflow-type: tm+mt
-source-wordcount: '944'
+source-wordcount: '1008'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Filen `env.php` innehåller följande avsnitt:
 | `downloadable_domains` | Lista över hämtningsbara domäner |
 | `install` | Installationsdatum |
 | `lock` | Lås providerinställningar |
-| `MAGE_MODE` | Programläget [&#128279;](../bootstrap/application-modes.md) |
+| `MAGE_MODE` | Programläget [](../bootstrap/application-modes.md) |
 | `queue` | Inställningar för [Meddelandeköer](../queues/manage-message-queues.md) |
 | `resource` | Mappning av resursnamn till en anslutning |
 | `session` | Sessionslagringsdata |
@@ -146,7 +146,7 @@ Commerce använder en krypteringsnyckel för att skydda lösenord och andra kän
 ]
 ```
 
-Läs mer om [Krypteringsnyckel](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/security/encryption-key) i användarhandboken för _Commerce_.
+Läs mer om [Krypteringsnyckel](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/encryption-key) i användarhandboken för _Commerce_.
 
 ## db
 
@@ -203,7 +203,7 @@ En lista över tillgängliga hämtningsbara domäner i den här noden. Ytterliga
 ]
 ```
 
-Läs mer om [Hämtningsbara domäner](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/cli-reference/commerce-on-premises#downloadabledomainsadd).
+Läs mer om [Hämtningsbara domäner](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises#downloadabledomainsadd).
 
 ## installera
 
@@ -347,6 +347,12 @@ export MAGENTO_DC_X-FRAME-OPTIONS=SAMEORIGIN
 ## Åsidosätt filkonfiguration med variabler
 
 Om du vill åsidosätta de befintliga `env.php`-konfigurationsalternativen med en OS-miljövariabel måste konfigurationens matriselement vara JSON-kodat och anges som ett värde för `MAGENTO_DC__OVERRIDE` OS-variabeln.
+
+När `MAGENTO_DC__OVERRIDE` har angetts åsidosätter Commerce-ramverket motsvarande värden i `env.php`-filen och läser konfigurationen direkt från systemvariabeln. Värdena i filen `env.php` förblir oförändrade men ignoreras för de åsidosatta konfigurationsavsnitten.
+
+>[!IMPORTANT]
+>
+>Variabeln `MAGENTO_DC__OVERRIDE` åsidosätter fullständigt de angivna konfigurationsavsnitten i filen `env.php`. Det här beteendet skiljer sig från enskilda `MAGENTO_DC_`-variabler, som har lägre prioritet än värdena i filen `env.php`.
 
 Om du behöver åsidosätta flera konfigurationsalternativ måste du montera alla i en enda array före JSON-kodning.
 
