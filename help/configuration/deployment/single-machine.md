@@ -22,7 +22,7 @@ I det här avsnittet finns anvisningar om hur du distribuerar uppdateringar till
 >[!WARNING]
 >
 >Den här guiden gäller inte om du använde `git clone` för att installera Commerce.
->Deltagande utvecklare bör använda [den här handboken][install] för att uppdatera sin Commerce-installation.
+>>Deltagande utvecklare bör använda [den här handboken][install] för att uppdatera sin Commerce-installation.
 
 ## Distributionssteg
 

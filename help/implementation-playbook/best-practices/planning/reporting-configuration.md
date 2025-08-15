@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Bästa tillvägagångssätt för rapportkonfiguration
 
-Om ditt företag inte behöver funktioner för rapportering eller dynamiska kundsegment inaktiverar du funktionen [Rapporter](https://experienceleague.adobe.com/sv/docs/commerce-admin/config/general/reports) för att förbättra butikens prestanda.
+Om ditt företag inte behöver funktioner för rapportering eller dynamiska kundsegment inaktiverar du funktionen [Rapporter](https://experienceleague.adobe.com/en/docs/commerce-admin/config/general/reports) för att förbättra butikens prestanda.
 
 ## Berörda produkter och versioner
 
@@ -32,5 +32,5 @@ Om du inte använder Rapporter eller dynamiska kundsegment inaktiverar du rappor
 
 ## Ytterligare information
 
-- [Generera rapporter i Adobe Commerce](https://experienceleague.adobe.com/sv/docs/commerce-admin/start/reporting/reports-menu)
-- [Kundens dynamiska segment](https://experienceleague.adobe.com/sv/docs/commerce-admin/customers/segments/customer-segments)
+- [Generera rapporter i Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-admin/start/reporting/reports-menu)
+- [Kundens dynamiska segment](https://experienceleague.adobe.com/en/docs/commerce-admin/customers/segments/customer-segments)

@@ -1,6 +1,6 @@
 ---
 user-guide-title: Sammanfattningar av Adobe Commerce-evenemang
-user-guide-description: Granska en sammanfattning av Adobe Commerce-innehåll från Adobe-event.
+user-guide-description: Se en sammanfattning av Adobe Commerce-material från Adobe event.
 hide: true
 source-git-commit: 7a42eb716abbd588051288cd6a288408925d8bba
 workflow-type: tm+mt

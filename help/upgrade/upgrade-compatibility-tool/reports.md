@@ -4,7 +4,7 @@ description: Följ de här stegen för att köra  [!DNL Upgrade Compatibility To
 exl-id: a2272339-46d6-443b-bd53-286b72f13d4e
 source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '583'
 ht-degree: 0%
 
 ---
@@ -81,9 +81,9 @@ Där argumenten är följande:
 >
 > Standardsökvägen för utdatamappen är `var/output/[TIME]-results.json`.
 
-## HTML rapport
+## HTML - rapport
 
-Du kan hämta HTML-rapporten när du kör verktyget i ett kommandoradsgränssnitt eller via [!DNL Site-Wide Analysis Tool]. Rapporten från HTML innehåller också följande:
+Du kan hämta HTML-rapporten när du kör verktyget i ett kommandoradsgränssnitt eller via [!DNL Site-Wide Analysis Tool]. HTML rapport innehåller även följande:
 
 - En lista med identifierade problem.
 - En sammanfattning av analysen.
@@ -102,7 +102,7 @@ Det finns en listruta i det övre högra hörnet där du kan välja en annan niv
 >
 > Problemen med lägre problemnivå har tagits bort, men du får ett meddelande så att du alltid är medveten om de identifierade problemen per modul.
 
-HTML-betänkandet innehåller även fyra olika diagram:
+HTML-rapporten innehåller även fyra olika diagram:
 
 - **Moduler efter allvarlighetsgrad för utgåva**: Visar allvarlighetsgrad fördelad på moduler.
 - **Filer efter allvarlighetsgrad för problem**: Visar allvarlighetsgrad för fildistribution.
@@ -113,13 +113,13 @@ Med dessa diagram kan du identifiera de moduler som är mest komprometterade och
 
 ![HTML-rapport - diagram](../../assets/upgrade-guide/uct-html-diagrams.png)
 
-HTML-rapportdiagrammen uppdateras också i enlighet med detta, med det enda undantaget för `Modules with relative sizes and issues` som genereras med `min-issue-level` som ursprungligen konfigurerats.
+HTML rapportdiagram uppdateras också i enlighet med detta, med det enda undantaget `Modules with relative sizes and issues` som genereras med `min-issue-level` som ursprungligen konfigurerats.
 
 Om du vill se olika resultat för diagrammet `Modules with relative sizes and issues` måste du köra kommandot igen och ange ett annat värde för alternativet `--min-issue-level`.
 
-![HTML-rapport - Bubbeldiagram ](../../assets/upgrade-guide/uct-html-filtered-diagrams.png)
+![HTML-rapport - Bubbeldiagramdiagram](../../assets/upgrade-guide/uct-html-filtered-diagrams.png)
 
-Så här exporterar du HTML-rapporten till en annan utdatamapp:
+Så här exporterar du den här HTML-rapporten till en annan utdatamapp:
 
 ```bash
 bin/uct upgrade:check <dir> --html-output-path[=HTML-OUTPUT-PATH]

@@ -16,12 +16,12 @@ I det här avsnittet finns anvisningar om hur du installerar som är cachelagrad
 
 >[!INFO]
 >
->Adobe rekommenderar att du använder den cachelagrade versionen 3.0.5 eller senare.
+>Adobe rekommenderar att du använder cachelagrad version 3.0.5 eller senare.
 
 Eftersom PHP inte har inbyggt stöd för memcache måste du installera ett tillägg för PHP för att kunna använda det. Det finns två PHP-tillägg tillgängliga och det är viktigt att avkoda vilka som ska användas:
 
 - `memcache` (_no d_) - ett äldre men populärt tillägg som inte underhålls regelbundet.
-Tillägget `memcache` för närvarande _fungerar inte_ med PHP 7. Mer information om memcache[&#128279;](https://www.php.net/manual/en/book.memcache.php) finns i PHP-dokumentationen.
+Tillägget `memcache` för närvarande _fungerar inte_ med PHP 7. Mer information om memcache[ finns i ](https://www.php.net/manual/en/book.memcache.php)PHP-dokumentationen.
 
   Det exakta namnet är `php5-memcache` för Ubuntu.
 
@@ -63,9 +63,9 @@ Tillägget `memcache` för närvarande _fungerar inte_ med PHP 7. Mer informatio
 
 1. Fortsätt med nästa avsnitt.
 
-## Kontrollera att det finns anslutna arbeten innan du installerar Magento
+## Kontrollera att det finns anslutna verk innan du installerar Magento
 
-Adobe rekommenderar att du testar cachelagrade data för att kontrollera att de fungerar innan du installerar Commerce. Det tar bara några minuter och kan förenkla felsökningen senare.
+Adobe rekommenderar att du testar cachelagrade filer för att kontrollera att de fungerar innan du installerar Commerce. Det tar bara några minuter och kan förenkla felsökningen senare.
 
 ### Verifiera att cachelagrade data känns igen av webbservern
 

@@ -16,7 +16,7 @@ I det här avsnittet diskuteras grunderna i hur du använder Varnish som acceler
 
 ## Finska renar
 
-Enligt [lack-dokumentation](https://www.varnish-cache.org/docs/trunk/users-guide/purging.html) är&quot;En *tömning* vad som händer när du plockar ut ett objekt från cachen och tar bort det tillsammans med dess varianter.&quot; En finsk tömning liknar ett rent cachekommando (eller klicka på **Rensa Magento-cache** i Admin).
+Enligt [lack-dokumentation](https://www.varnish-cache.org/docs/trunk/users-guide/purging.html) är&quot;En *tömning* vad som händer när du plockar ut ett objekt från cachen och tar bort det tillsammans med dess varianter.&quot; En rensning av lack påminner om ett rensningskommando för cache (eller klicka på **Rensa Magento-cache** i Admin).
 
 Faktum är att när du rensar, tömmer eller uppdaterar Commerce-cachen så töms även varnish.
 
@@ -42,7 +42,7 @@ När du har installerat och konfigurerat lack för att arbeta med Commerce kan f
 
 ## Konfigurera Commerce att rensa bort lack
 
-Commerce tömmer Varnish-värdar efter att du har konfigurerat Varnish-värdar med kommandot [`magento setup:config:set`](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/cli-reference/commerce-on-premises#setupconfigset).
+Commerce tömmer Varnish-värdar efter att du har konfigurerat Varnish-värdar med kommandot [`magento setup:config:set`](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises#setupconfigset).
 
 Du kan använda den valfria parametern `--http-cache-hosts` för att ange en kommaavgränsad lista med Varnish-värdar och avlyssningsportar. Konfigurera alla varniska värdar, oavsett om du har en eller flera. (Separera inte värdar med ett blanksteg.)
 
@@ -56,6 +56,6 @@ bin/magento setup:config:set --http-cache-hosts=192.0.2.100,192.0.2.155:6081
 
 Du kan sedan rensa varnish-värdar när du uppdaterar Commerce-cachen (kallas även *rensning* av cachen) i Admin eller via kommandoraden.
 
-Om du vill uppdatera cacheminnet med Admin klickar du på **[!UICONTROL SYSTEM]** > Verktyg > **Cachehantering** och sedan på **Rensa cacheminnet i Magento** överst på sidan. (Du kan också uppdatera enskilda cachetyper.)
+Om du vill uppdatera cacheminnet med Admin klickar du på **[!UICONTROL SYSTEM]** > Verktyg > **Cachehantering** och sedan på **Rensa Magento-cachen** överst på sidan. (Du kan också uppdatera enskilda cachetyper.)
 
 Om du vill uppdatera cachen med kommandoraden använder du vanligtvis kommandot [`magento cache:clean <type>`](../cli/manage-cache.md#clean-and-flush-cache-types) som [filsystemsägare](../../installation/prerequisites/file-system/overview.md).

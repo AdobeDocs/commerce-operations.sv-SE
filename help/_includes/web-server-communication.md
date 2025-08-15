@@ -7,7 +7,7 @@ ht-degree: 0%
 ---
 # Säker webbserverkommunikation
 
-I det här avsnittet beskrivs ett exempel på hur du säkrar kommunikationen mellan webbservern och sökmotorn (Elasticsearch eller OpenSearch) med en kombination av TLS-kryptering och [grundläggande HTTP-autentisering](https://datatracker.ietf.org/doc/html/rfc2617). Du kan även konfigurera andra typer av autentisering. Vi tillhandahåller referenser för den informationen.
+I det här avsnittet beskrivs ett exempel på hur du säkrar kommunikationen mellan webbservern och sökmotorn (Elasticsearch eller OpenSearch) med en kombination av TLS-kryptering (Transport Layer Security) och [grundläggande HTTP-autentisering](https://datatracker.ietf.org/doc/html/rfc2617). Du kan även konfigurera andra typer av autentisering. Vi tillhandahåller referenser för den informationen.
 
 (En äldre term, Secure Sockets Layer (SSL), används ofta som synonymer med TLS. I det här avsnittet hänvisar vi till *TLS*.)
 
@@ -15,7 +15,7 @@ I det här avsnittet beskrivs ett exempel på hur du säkrar kommunikationen mel
 >
 >Om inget annat anges måste alla kommandon i det här avsnittet anges som en användare med `root`-behörighet.
 
-## Recommendations
+## Rekommendationer
 
 Vi rekommenderar följande:
 

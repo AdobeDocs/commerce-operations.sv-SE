@@ -110,7 +110,7 @@ Se [Ange en mask](../../installation/next-steps/set-umask.md) i _installationsha
 
 Om du använder en egen server (inklusive en värdleverantörs privata serverkonfiguration) finns det två användare:
 
-- Webbserveranvändaren **1&rbrace;, som kör Admin och storefront.**
+- Webbserveranvändaren **1}, som kör Admin och storefront.**
 
   I Linux-system finns vanligtvis inget gränssnitt för den här användaren. Du kan inte logga in på Commerce-servern som, eller växla till, webbserveranvändaren.
 

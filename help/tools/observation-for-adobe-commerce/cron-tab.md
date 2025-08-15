@@ -1,5 +1,5 @@
 ---
-title: Fliken  [!DNL Cron]
+title: 'Fliken  [!DNL Cron] '
 description: Lär dig mer om fliken  [!DNL Cron] i [!DNL Observation for Adobe Commerce].
 exl-id: 66f5ffd6-4118-4534-b2d6-09c7a30e5e13
 feature: Configuration, Observability

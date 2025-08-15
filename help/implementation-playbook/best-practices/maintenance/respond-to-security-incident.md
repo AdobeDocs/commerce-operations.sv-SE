@@ -18,7 +18,7 @@ Om du följer dessa standarder kan du förhindra obehörig åtkomst och skadliga
 
 >[!TIP]
 >
->Adobe har upptäckt att de flesta säkerhetsincidenter inträffar när hotskådespelare drar nytta av befintliga, ej patchade säkerhetsluckor, dåliga lösenord och svaga ägar- och behörighetsinställningar i Commerce program- och infrastrukturkonfiguration. Minimera antalet säkerhetstillbud genom att granska och följa de bästa säkerhetsrutinerna för Adobe när du konfigurerar, konfigurerar och uppdaterar Adobe Commerce-installationer. Se [Skydda din Commerce-webbplats och infrastruktur](../launch/security-best-practices.md).
+>Adobe har upptäckt att de flesta säkerhetsincidenter inträffar när hotskådespelare drar nytta av befintliga, ej patchade säkerhetsluckor, dåliga lösenord och svaga ägar- och behörighetsinställningar i Commerce program- och infrastrukturkonfiguration. Minimera antalet säkerhetstillbud genom att granska och följa Adobe säkerhetsrutiner när du installerar, konfigurerar och uppdaterar Adobe Commerce-installationer. Se [Skydda din Commerce-webbplats och infrastruktur](../launch/security-best-practices.md).
 
 
 ## Berörda produkter och versioner
@@ -55,7 +55,7 @@ I den olyckliga händelse att sajten inte fungerar är följande viktiga rekomme
 
    - Under vissa omständigheter kan det vara tillrådligt att svepa och installera om allt eller skapa en ny instans om det är en virtuell värdtjänst. Skadlig kod kan döljas på en plats som inte misstänks, bara i väntan på att återställas.
 
-   - Ta bort alla onödiga filer. Installera sedan om nödvändiga filer från en känd, ren källa. Du kan till exempel installera om med hjälp av filer från versionskontrollsystemet eller från de ursprungliga distributionsfilerna från Adobe.
+   - Ta bort alla onödiga filer. Installera sedan om nödvändiga filer från en känd, ren källa. Du kan till exempel installera om med filer från versionskontrollsystemet eller från de ursprungliga distributionsfilerna från Adobe.
 
    - Återställ alla autentiseringsuppgifter, inklusive databas-, filåtkomst-, betalnings- och leveransintegreringar, webbtjänster och administratörsinloggning. Återställ även alla integrerings- och API-nycklar och konton som kan användas för att attackera systemet.
 
@@ -63,7 +63,7 @@ I den olyckliga händelse att sajten inte fungerar är följande viktiga rekomme
 
 Det första steget i incidentanalysen är att samla in så många fakta som möjligt, så snabbt du kan. Genom att samla in information kring incidenten kan det bli lättare att fastställa den potentiella orsaken till incidenten. Adobe Commerce tillhandahåller verktygen nedan som kan underlätta incidentanalysen.
 
-- [Granska administratörsåtgärdsloggar](https://experienceleague.adobe.com/docs/commerce-admin/systems/action-logs/action-log-report.html?lang=sv-SE).
+- [Granska administratörsåtgärdsloggar](https://experienceleague.adobe.com/docs/commerce-admin/systems/action-logs/action-log-report.html).
 
   Rapporten Åtgärdsloggar innehåller en detaljerad beskrivning av alla administratörsåtgärder som har aktiverats för loggning. Varje post är tidstämplad och registrerar användarens IP-adress och namn. Logginformationen innehåller administratörsanvändardata och relaterade ändringar som gjordes under åtgärden.
 
@@ -73,9 +73,9 @@ Det första steget i incidentanalysen är att samla in så många fakta som möj
 
   Använd fliken **Säkerhet** i verktyget för att få en tydlig bild av potentiella säkerhetsproblem som hjälper till att identifiera rotorsaker och se till att webbplatserna fungerar optimalt.
 
-- Analysera loggar med [New Relic-loggar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/new-relic-service.html?lang=sv-SE)
+- Analysera loggar med [New Relic-loggar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/new-relic-service.html)
 
-  Adobe Commerce i molninfrastrukturproprojekt innehåller tjänsten [New Relic Logs](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/log-management.html?lang=sv-SE). Tjänsten är förkonfigurerad för att samla alla loggdata från dina miljö för förproduktion och produktion och visa dem på en central kontrollpanel för logghantering där du kan söka efter och visualisera aggregerade data.
+  Adobe Commerce i molninfrastrukturproprojekt innehåller tjänsten [New Relic Logs](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/log-management.html). Tjänsten är förkonfigurerad för att samla alla loggdata från dina miljö för förproduktion och produktion och visa dem på en central kontrollpanel för logghantering där du kan söka efter och visualisera aggregerade data.
 
   För andra Commerce-projekt kan du konfigurera och använda tjänsten [New Relic Logs](https://docs.newrelic.com/docs/logs/get-started/get-started-log-management/) för att utföra följande uppgifter:
    - Använd [New Relic-frågor](https://docs.newrelic.com/docs/logs/new-relic-logs/ui-data/query-syntax-logs) för att söka efter aggregerade loggdata.
@@ -89,17 +89,17 @@ Fortsätt att noga övervaka webbplatsen efter incidenten eftersom många webbpl
 
 ### Granska administratörens användarkonton
 
-- [Granska administratörsanvändaråtkomst](https://experienceleague.adobe.com/docs/commerce-admin/systems/user-accounts/permissions-users-all.html?lang=sv-SE) - Ta bort gamla, oanvända eller misstänkta konton och rotera lösenord för alla administratörsanvändare.
+- [Granska administratörsanvändaråtkomst](https://experienceleague.adobe.com/docs/commerce-admin/systems/user-accounts/permissions-users-all.html) - Ta bort gamla, oanvända eller misstänkta konton och rotera lösenord för alla administratörsanvändare.
 
-- [Granska säkerhetsinställningarna för administratörer](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-admin.html?lang=sv-SE) - Verifiera att säkerhetsinställningarna för administratörer följer god säkerhetspraxis.
+- [Granska säkerhetsinställningarna för administratörer](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-admin.html) - Verifiera att säkerhetsinställningarna för administratörer följer god säkerhetspraxis.
 
-- [Granska användarkonton för Adobe Commerce i molninfrastrukturprojekt](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/user-access.html?lang=sv-SE) - Ta bort gamla, oanvända eller misstänkta konton och rotera lösenord för alla användare i molnprojektadministratören. Kontrollera att kontosäkerhetsinställningarna är korrekt konfigurerade.
+- [Granska användarkonton för Adobe Commerce i molninfrastrukturprojekt](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/user-access.html) - Ta bort gamla, oanvända eller misstänkta konton och rotera lösenord för alla användare i molnprojektadministratören. Kontrollera att kontosäkerhetsinställningarna är korrekt konfigurerade.
 
-- [Granska SSH-nycklar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/secure-connections.html?lang=sv-SE) för Adobe Commerce i molninfrastruktur - Granska, ta bort och rotera SSH-nycklar.
+- [Granska SSH-nycklar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/secure-connections.html) för Adobe Commerce i molninfrastruktur - Granska, ta bort och rotera SSH-nycklar.
 
 ### Granskningskod
 
-- Gå till konfigurationen [HTML för sidhuvud och sidfot](https://experienceleague.adobe.com/docs/commerce-admin/content-design/design/page-setup.html?lang=sv-SE) i Admin i alla omfångsnivåer, inklusive `website` och `store view`. Ta bort okänd JavaScript-kod från skript och formatmallar samt olika HTML-inställningar. Behåll endast identifierad kod som spårningsfragment.
+- Granska konfigurationen [HTML Header and Footer](https://experienceleague.adobe.com/docs/commerce-admin/content-design/design/page-setup.html) på alla omfångsnivåer, inklusive `website` och `store view` från Admin. Ta bort okänd JavaScript-kod från skript och formatmallar samt olika HTML-inställningar. Behåll endast identifierad kod som spårningsfragment.
 
 - Jämför den aktuella produktionskodbasen med kodbasen som lagras i Version Control System (VCS).
 

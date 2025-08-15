@@ -17,4 +17,4 @@ Adobe Commerce kunder och partners kan även få tillgång till [Adobe Commerce 
 
 >[!NOTE]
 >
->Adobe Commerce 2.4.6 är den senaste utgåvan som Beta Program stöder. Från och med juni 2023 kommer Adobe att publicera betaversioner för Adobe Commerce. En lista med allmänna betaversionsdatum finns i [lanseringsschemat](../../release/schedule.md).
+>Adobe Commerce 2.4.6 är den senaste utgåvan som Beta Program stöder. Från och med juni 2023 kommer Adobe att släppa offentliga betaversioner för Adobe Commerce. En lista med allmänna betaversionsdatum finns i [lanseringsschemat](../../release/schedule.md).

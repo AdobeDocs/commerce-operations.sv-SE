@@ -1,5 +1,5 @@
 ---
-title: Migreringssteg för Post-data
+title: Steg efter datamigrering
 description: Lär dig hur du gör efter att du har använt  [!DNL Data Migration Tool]  för att migrera data från Magento 1 till Magento 2.
 exl-id: 00171c41-ccea-4ebe-8958-becb9aa09973
 topic: Commerce, Migration
@@ -10,9 +10,9 @@ ht-degree: 0%
 
 ---
 
-# Migreringssteg för Post-data
+# Steg efter datamigrering
 
-Utför följande uppgifter när du är klar med migreringen och har testat din nya Magento 2-plats grundligt:
+Utför följande uppgifter när du är klar med migreringen och har testat din nya Magento 2-webbplats noggrant:
 
 * Placera Magento 1 i underhållsläge och stoppa alla administratörsaktiviteter permanent
 

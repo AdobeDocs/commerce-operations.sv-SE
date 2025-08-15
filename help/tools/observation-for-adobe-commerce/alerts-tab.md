@@ -18,13 +18,13 @@ Fliken [!UICONTROL Alerts] innehåller en rad varningar, bland annat öppna och 
 
 ![Öppna kritiska aviseringar](../../assets/tools/observation-for-adobe-commerce/alerts-tab-1.jpg)
 
-Bildrutan **[!UICONTROL Open Alert Details]** visar antalet öppna kritiska aviseringar under den valda tidsramen. Varningarna kommer att innehålla varningar som skapats av Adobe samt alla varningar som skapats av partnern eller handlaren.
+Bildrutan **[!UICONTROL Open Alert Details]** visar antalet öppna kritiska aviseringar under den valda tidsramen. Varningarna kommer att innehålla varningar som skapats av Adobe och alla som skapats av partnern eller handlaren.
 
 ## [!UICONTROL Closed Critical Alerts]
 
 ![Stängda kritiska aviseringar](../../assets/tools/observation-for-adobe-commerce/alerts-tab-2.jpg)
 
-Bildrutan **[!UICONTROL Closed Critical Alerts]** visar antalet stängda kritiska aviseringar under den valda tidsramen. Varningarna kommer att innehålla varningar som skapats av Adobe samt alla varningar som skapats av partnern eller handlaren.
+Bildrutan **[!UICONTROL Closed Critical Alerts]** visar antalet stängda kritiska aviseringar under den valda tidsramen. Varningarna kommer att innehålla varningar som skapats av Adobe och alla som skapats av partnern eller handlaren.
 
 ## [!UICONTROL Critical Alert Details]
 

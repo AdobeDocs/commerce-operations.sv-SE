@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Fliken [!UICONTROL CDN]
 
-På den här fliken finns information som fokuseras på [!DNL content delivery network (CDN)]. För Adobe Commerce Cloud är det här [!DNL Fastly]-tjänsten.
+På den här fliken finns information som fokuseras på [!DNL content delivery network (CDN)]. I Adobe Commerce Cloud är det här [!DNL Fastly]-tjänsten.
 
 ## [!UICONTROL HIT rate]
 

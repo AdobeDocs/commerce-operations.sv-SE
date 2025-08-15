@@ -21,7 +21,7 @@ Det här biblioteket innehåller en uppsättning funktioner för att skapa förf
 
 >[!NOTE]
 >
->Om [läget för cookie-begränsning](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-cookie-law.html?lang=sv-SE) är aktiverat samlar Commerce inte in beteendedata förrän kunden godkänner det. Om [!UICONTROL **läget för cookie-begränsning**] är inaktiverat samlar Commerce in beteendedata som standard.
+>Om [läget för cookie-begränsning](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-cookie-law.html) är aktiverat samlar Commerce inte in beteendedata förrän kunden godkänner det. Om [!UICONTROL **läget för cookie-begränsning**] är inaktiverat samlar Commerce in beteendedata som standard.
 
 ## Installation
 

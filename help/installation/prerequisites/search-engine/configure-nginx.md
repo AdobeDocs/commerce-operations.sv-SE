@@ -18,7 +18,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Stöd för OpenSearch lades till i 2.4.4. OpenSearch är en kompatibel gaffel för Elasticsearch. Mer information finns i [Migrera Elasticsearch till OpenSearch](../../../upgrade/prepare/opensearch-migration.md).
+>Stöd för OpenSearch lades till i 2.4.4. OpenSearch är en kompatibel del av Elasticsearch. Mer information finns i [Migrera Elasticsearch till OpenSearch](../../../upgrade/prepare/opensearch-migration.md).
 
 I det här avsnittet beskrivs hur du konfigurerar nginx som en *osäker* -proxy så att Adobe Commerce kan använda en sökmotor som körs på den här servern. I det här avsnittet beskrivs inte konfigurering av grundläggande HTTP-autentisering. Det beskrivs i [Säker kommunikation med nginx](#secure-communication-with-nginx).
 
@@ -100,7 +100,7 @@ Mer information finns i följande avsnitt:
 
 ### Skapa ett lösenord
 
-Vi rekommenderar att du använder Apache `htpasswd`-kommandot för att koda lösenord för en användare som har åtkomst till Elasticsearch eller OpenSearch (som heter `magento_elasticsearch` i det här exemplet).
+Vi rekommenderar att du använder Apache `htpasswd`-kommandot för att koda lösenord för en användare med åtkomst till Elasticsearch eller OpenSearch (som heter `magento_elasticsearch` i det här exemplet).
 
 Skapa ett lösenord:
 

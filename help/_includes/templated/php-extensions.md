@@ -5,9 +5,9 @@ source-wordcount: '9'
 ht-degree: 0%
 
 ---
-# PHP extensions
+# PHP-tillägg
 
-Adobe Commerce requires:
+Adobe Commerce kräver:
 
 - `ext-bcmath`
 - `ext-ctype`
@@ -38,7 +38,7 @@ Adobe Commerce requires:
 - `ext-zlib`
 - `lib-libxml`
 
-Magento Open Source requires:
+Magento Open Source kräver:
 
 - `ext-bcmath`
 - `ext-ctype`

@@ -5,7 +5,7 @@ feature: Configuration, Cache
 exl-id: 0504c6fd-188e-46eb-be8e-968238571f4e
 source-git-commit: ba3c656566af47f16f58f476d7bc9f4781bb0234
 workflow-type: tm+mt
-source-wordcount: '423'
+source-wordcount: '421'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ Om du vill minska nätverksbandbredden till Redis sparar du cachedata lokalt på
 - Kontrollera cachedataversionen och se till att den senaste cachen lagras lokalt
 - Överför den senaste cachen från fjärrdatorn till den lokala datorn
 
-Commerce lagrar den hash-kodade dataversionen i Redis, med suffixet &#39;:hash&#39; efter den vanliga nyckeln. Om det finns ett föråldrat lokalt cacheminne överförs data till den lokala datorn med ett cacheminne.
+Commerce lagrar den hash-kodade dataversionen i Redis, med suffixet :hash som läggs till i den vanliga nyckeln. Om det finns ett föråldrat lokalt cacheminne överförs data till den lokala datorn med ett cacheminne.
 
 >[!INFO]
 >
->För Adobe Commerce i molninfrastruktur kan du använda [distribuera variabler](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=sv-SE#redis_backend) för L2-cachekonfiguration.
+>För Adobe Commerce i molninfrastruktur kan du använda [distribuera variabler](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_backend) för L2-cachekonfiguration.
 
 ## Konfigurationsexempel
 
@@ -72,7 +72,7 @@ Var:
 
 Adobe rekommenderar att Redis används för fjärrcachelagring (`\Magento\Framework\Cache\Backend\Redis`) och `Cm_Cache_Backend_File` för lokal cachelagring av data i delat minne, med: `'local_backend_options' => ['cache_dir' => '/dev/shm/']`
 
-Adobe rekommenderar att du använder funktionen [`cache preload`](redis-pg-cache.md#redis-preload-feature) eftersom den drastiskt minskar trycket på Redis. Glöm inte att lägga till suffixet &#39;:hash&#39; för förinläsningsnycklar.
+Adobe rekommenderar att du använder funktionen [`cache preload`](redis-pg-cache.md#redis-preload-feature) eftersom den drastiskt minskar trycket på Redis. Glöm inte att lägga till suffixet :hash för förinläsningsnycklar.
 
 ## Alternativ för inaktuell cache
 

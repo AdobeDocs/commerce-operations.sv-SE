@@ -1,5 +1,5 @@
 ---
-title: Fliken  [!DNL Infra]
+title: 'Fliken  [!DNL Infra] '
 description: Fliken  [!DNL Infra] isolerar problem och orsaker till infrastrukturproblem.
 exl-id: 45f24177-3264-4848-99bc-951be32c1f7b
 feature: Configuration, Observability

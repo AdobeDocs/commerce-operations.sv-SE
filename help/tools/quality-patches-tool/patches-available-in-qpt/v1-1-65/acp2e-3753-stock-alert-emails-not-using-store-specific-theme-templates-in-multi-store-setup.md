@@ -3,13 +3,13 @@ title: 'ACP2E-3753: Stock-varningsmeddelanden som inte använder butiksspecifika
 description: Använd programfixen ACP2E-3753 för att åtgärda Adobe Commerce-problemet där produktvarningsmeddelanden i en konfiguration för flera butiker alltid skickas med standardtemat, oavsett butiks- eller temakonfiguration.
 feature: Themes, Personalization
 role: Admin, Developer
-source-git-commit: 6af6dc5d4880cc0cb80c443cab98cfb562949101
+exl-id: ad44ffdd-f122-4119-83e3-1816951b662c
+source-git-commit: 2089fed83a207f9d0211273652ea320d2590f8d5
 workflow-type: tm+mt
 source-wordcount: '379'
 ht-degree: 0%
 
 ---
-
 
 # ACP2E-3753: Stock-varningsmeddelanden som inte använder butiksspecifika temamallar vid konfiguration av flera butiker
 
@@ -27,7 +27,7 @@ Programfixen ACP2E-3753 åtgärdar ett problem där produktvarningsmeddelanden i
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -61,7 +61,7 @@ E-postmeddelandena innehåller inte de mallar som angetts för respektive webbpl
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 

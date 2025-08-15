@@ -12,11 +12,11 @@ ht-degree: 0%
 
 # Konfigurera fjärrlagring för Commerce i molninfrastruktur
 
-Från och med paketet `ece-tools` 2002.1.5 kan du använda en miljövariabel för att aktivera modulen Fjärrlagring. Fjärrlagringsmodulen har dock _begränsat_ stöd för Adobe Commerce i molninfrastrukturen. Adobe kan inte felsöka nätverkskorttjänsten från tredje part helt.
+Från och med paketet `ece-tools` 2002.1.5 kan du använda en miljövariabel för att aktivera modulen Fjärrlagring. Fjärrlagringsmodulen har dock _begränsat_ stöd för Adobe Commerce i molninfrastrukturen. Adobe kan inte felsöka nätverkskortstjänsten från tredje part.
 
 ## Miljövariabel
 
-Variabeln `REMOTE_STORAGE` används under [distributionsfasen](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/process.html?lang=sv-SE) i ett molninfrastrukturprojekt.
+Variabeln `REMOTE_STORAGE` används under [distributionsfasen](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/process.html) i ett molninfrastrukturprojekt.
 
 ### `REMOTE_STORAGE`
 
@@ -40,7 +40,7 @@ stage:
 
 ### Ange variabel med CLI i molnet
 
-Ange variabeln `REMOTE_STORAGE` som en [miljönivåvariabel](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/variable-levels.html?lang=sv-SE) så att filer inte delas mellan produktions-, mellanlagrings- och integreringsmiljöer. Genom att ställa in variablerna på miljönivå får du endast flexibilitet att använda fjärrlagring i vissa miljöer, till exempel genom att utesluta användning av fjärrlagring i integreringsmiljön.
+Ange variabeln `REMOTE_STORAGE` som en [miljönivåvariabel](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/variable-levels.html) så att filer inte delas mellan produktions-, mellanlagrings- och integreringsmiljöer. Genom att ställa in variablerna på miljönivå får du endast flexibilitet att använda fjärrlagring i vissa miljöer, till exempel genom att utesluta användning av fjärrlagring i integreringsmiljön.
 
 **Så här lägger du till fjärrlagringsvariabeln med molnet-CLI**:
 
@@ -75,11 +75,11 @@ Du kan också använda Project Web Interface för att lägga till variabeln i l�
 
 1. Klicka på ikonen **Konfigurera miljö** .
 
-1. Klicka på fliken **Variabler** i vyn _Konfigurera miljö_ .
+1. Klicka på fliken _Variabler_ i vyn **Konfigurera miljö** .
 
 1. Klicka på **Lägg till variabel**.
 
-1. Ange `REMOTE_STORAGE` i fältet _Namn_
+1. Ange _i fältet_ Namn`REMOTE_STORAGE`
 
 1. Lägg till JSON-konfigurationen i fältet _Värde_.
 
@@ -89,7 +89,7 @@ Du kan också använda Project Web Interface för att lägga till variabeln i l�
 
 ### Använd valfri autentisering
 
-`key` och `secret` är valfria. När du skapar variabeln kan du dölja `key` och `secret` genom att välja alternativet `sensitive`. Med den här inställningen syns inte värdena i webbgränssnittet. Se [Variabel synlighet](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/variable-levels.html?lang=sv-SE#visibility) i guiden _Commerce om molninfrastruktur_.
+`key` och `secret` är valfria. När du skapar variabeln kan du dölja `key` och `secret` genom att välja alternativet `sensitive`. Med den här inställningen syns inte värdena i webbgränssnittet. Se [Variabel synlighet](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/variable-levels.html#visibility) i guiden _Commerce om molninfrastruktur_.
 
 Om du vill använda en annan autentiseringsmetod utelämnar du `key` och `secret` från JSON-konfigurationen. Konfigurera den alternativa autentiseringsmetoden och verifiera att servern är auktoriserad för S3-bucket.
 
@@ -111,7 +111,7 @@ bin/magento remote-storage:sync
 
 Om du väljer att använda fjärrlagringslösningen med ett Adobe Commerce-projekt för molninfrastruktur kan du använda [Amazon S3](https://docs.fastly.com/en/guides/amazon-s3) i _Snabbt_ -dokumentationen för att se till att snabbbildsoptimering fungerar med AWS S3.
 
-Förbered dig med dina [snabbuppgifter](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/setup-fastly/fastly-configuration.html?lang=sv-SE#get-fastly-credentials). I Pro-projekt kan du använda SSH för att ansluta till servern och hämta snabbinloggningsuppgifterna från filen `/mnt/shared/fastly_tokens.txt`. För mellanlagrings- och produktionsmiljöer finns unika autentiseringsuppgifter. Du måste hämta autentiseringsuppgifterna för varje miljö.
+Förbered dig med dina [snabbuppgifter](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/setup-fastly/fastly-configuration.html#get-fastly-credentials). I Pro-projekt kan du använda SSH för att ansluta till servern och hämta snabbinloggningsuppgifterna från filen `/mnt/shared/fastly_tokens.txt`. För mellanlagrings- och produktionsmiljöer finns unika autentiseringsuppgifter. Du måste hämta autentiseringsuppgifterna för varje miljö.
 
 Fortsätt konfigurera fjärrlagring för molnprojekt med följande uppgifter:
 

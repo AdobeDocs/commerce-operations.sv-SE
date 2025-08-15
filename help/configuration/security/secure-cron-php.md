@@ -161,7 +161,7 @@ Commerce innehåller ett optimerat exempel på en ny konfigurationsfil. Vi rekom
    }
    ```
 
-1. Starta om nginx:
+&#x200B;1. Starta om nginx:
 
 ```bash
 systemctl restart nginx
@@ -259,7 +259,7 @@ Du kan köra cron när som helst, till exempel under utvecklingen, med en webbl�
 Om du använder en Apache-webbserver måste du ta bort begränsningen från filen `.htaccess` innan du kan köra cron i en webbläsare:
 
 1. Logga in på din Commerce-server som användare med behörighet att skriva till Commerce filsystem.
-1. Öppna något av följande i en textredigerare (beroende på vad du skriver på Magento):
+1. Öppna något av följande i en textredigerare (beroende på vilken startpunkt du har angett för Magento):
 
    ```text
    <magento_root>/pub/.htaccess

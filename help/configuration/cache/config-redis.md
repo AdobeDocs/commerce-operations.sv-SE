@@ -33,7 +33,7 @@ Beroende på installationen kan du oftast hitta din Redis-konfiguration i någon
 
 För att optimera Redis-instansen efter dina behov får du bäst resultat genom att använda en dedikerad instans för varje session, Commerce cache och FPC.
 
-För sessioner rekommenderar Adobe att du aktiverar beständighet för kopiering av Redis-data till disken med något av följande beständiga alternativ: vanliga ögonblicksbilder av Redis Database Backup (RDB) eller beständiga AOF-beständiga loggar (Append Only Database Backup).
+För sessioner rekommenderar Adobe att du aktiverar beständighet för kopiering av Redis-data till disk med något av följande beständiga alternativ: vanliga ögonblicksbilder av Redis Database Backup (RDB) eller beständiga AOF-beständiga loggar (Append Only File).
 
 - **Redis Database Backup** (RDB)-ögonblicksbilder lagrar hela databasen i en dumpfil efter en given tidpunkt, när ett minsta antal nycklar har ändrats sedan den senaste sparningen. Använd inställningen `save` i filen `redis.conf` för att konfigurera den här inställningen.
 

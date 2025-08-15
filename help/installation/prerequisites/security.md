@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe har ingen rekommendation om SELinux; du kan använda det för ökad säkerhet om du vill. Om du använder SELinux måste du konfigurera det korrekt, annars kan Adobe Commerce fungera oförutsägbart. Om du väljer att använda SELinux bör du kontakta en resurs som [CentOS wiki](https://wiki.centos.org/HowTos/SELinux) för att konfigurera regler för att aktivera kommunikation.
+>Adobe rekommenderar inte SELinux; du kan använda det för ökad säkerhet om du vill. Om du använder SELinux måste du konfigurera det korrekt, annars kan Adobe Commerce fungera oförutsägbart. Om du väljer att använda SELinux bör du kontakta en resurs som [CentOS wiki](https://wiki.centos.org/HowTos/SELinux) för att konfigurera regler för att aktivera kommunikation.
 
 ## Förslag om installation med Apache
 
@@ -65,7 +65,7 @@ Så här aktiverar du Apache för att initiera en anslutning till en annan värd
 
 ## Öppnar portar i brandväggen
 
-Beroende på dina säkerhetskrav kan du behöva öppna port 80 och andra portar i brandväggen. På grund av den känsliga nätverkssäkerheten rekommenderar Adobe starkt att du rådfrågar IT-avdelningen innan du fortsätter. Nedan följer några förslag på referenser:
+Beroende på dina säkerhetskrav kan du behöva öppna port 80 och andra portar i brandväggen. På grund av att nätverkssäkerheten är känslig rekommenderar Adobe att du rådfrågar din IT-avdelning innan du fortsätter. Nedan följer några förslag på referenser:
 
 * Ubuntu: [Ubuntu-dokumentationssida](https://help.ubuntu.com/community/IptablesHowTo)
 * CentOS: [CentOS How-to](https://wiki.centos.org/HowTos%282f%29Network%282f%29IPTables.html).

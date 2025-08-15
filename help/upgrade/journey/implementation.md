@@ -17,7 +17,7 @@ Uppgraderingsimplementeringen består av fem faser:
 - Utveckling och kvalitetssäkring
 - UAT (User accept testing) och förberedelse för att starta
 - Starta
-- Post-lansering
+- Efter start
 
 ## Uppgraderingsanalys
 
@@ -25,7 +25,7 @@ Analys är enligt andra ord den viktigaste delen i uppgraderingsprocessen. En v�
 
 Här följer några punkter som du kanske vill ta med i en grundlig analys:
 
-- **Omfattningen av målversionen** - Dokumentation om [Experience League](../../release/release-notes/overview.md) och information från partnerreleasemedelswebbinarier innehåller all information du behöver veta om måluppgraderingen.
+- **Omfattningen av målversionen** - Dokumentation om [Experience League](../../release/release-notes/overview.md) och information från partnerreleasemwebinarier innehåller all information som du måste känna till om måluppgraderingen.
 
 - **[!DNL Upgrade Compatibility Tool]resultat** - Det här verktyget gör en uppgradering snabbare och enklare genom att jämföra den aktuella koden med målversionens kod och skapa en rapport över alla problem som behöver åtgärdas. Se [[!DNL Upgrade Compatibility Tool]](../upgrade-compatibility-tool/overview.md). Bland huvuduppgifterna i rapporten finns:
 
@@ -84,8 +84,8 @@ Följ er kommunikationsplan och se till att alla intressenter är medvetna om up
 
 Till sist kan du diskutera med teamet för att ta reda på vad de lärt sig och fallgropar. Med det här perspektivet kan du förbättra processen nästa gång.
 
-## Post-Launch
+## Efter start
 
 När webbplatsen har startats bör du kontrollera dina analysdata, Google Search Console och andra resurser så att du kan vara säker på att inga oväntade problem uppstår och att allt fungerar som förväntat.
 
-Det är alltid en bra idé att hålla ett öga på prestanda med väldesignade övervakningsverktyg. Det finns många verktyg och verktyg för att övervaka webbplatsens prestanda, så se till att du väljer ett som passar bra ihop med din organisation. Vi rekommenderar att Adobe Commerce-kunder som använder vårt molninfrastrukturhanteringssystem utnyttjar tjänster som [New Relic](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/new-relic-service.html?lang=sv-SE) för att övervaka webbplatsens prestanda.
+Det är alltid en bra idé att hålla ett öga på prestanda med väldesignade övervakningsverktyg. Det finns många verktyg och verktyg för att övervaka webbplatsens prestanda, så se till att du väljer ett som passar bra ihop med din organisation. Vi rekommenderar att Adobe Commerce-kunder som använder vårt molninfrastrukturhanteringssystem utnyttjar tjänster som [New Relic](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/new-relic-service.html) för att övervaka webbplatsens prestanda.

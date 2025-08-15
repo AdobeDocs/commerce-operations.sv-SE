@@ -1,6 +1,6 @@
 ---
 title: 'MDVA-43348: Fel i GraphQL-begäran med presentkort'
-description: Korrigeringen MDVA-43348 åtgärdar ett fel där en GraphQL-begäran med presentkort visar ett fel om "present_card_options" innehåller "uid". Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.12 är installerat. Korrigerings-ID är MDVA-43348. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.5.
+description: Korrigeringen MDVA-43348 åtgärdar ett fel där en GraphQL-begäran med presentkort visar ett fel om "present_card_options" innehåller "uid". Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.12 är installerat. Korrigerings-ID är MDVA-43348. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.5.
 feature: Gift, GraphQL
 role: Admin
 exl-id: 94cb939a-fad2-4f01-a641-d8d5b656d931
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # MDVA-43348: Fel i GraphQL-begäran med presentkort
 
-MDVA-43348-korrigeringen åtgärdar ett problem där en GraphQL-begäran med presentkort visar ett fel om `gift_card_options` innehåller &quot;uid&quot;. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.12 är installerat. Korrigerings-ID är MDVA-43348. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.5.
+MDVA-43348-korrigeringen åtgärdar ett problem där en GraphQL-begäran med presentkort visar ett fel om `gift_card_options` innehåller &quot;uid&quot;. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.12 är installerat. Korrigerings-ID är MDVA-43348. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.5.
 
 ## Berörda produkter och versioner
 
@@ -28,7 +28,7 @@ MDVA-43348-korrigeringen åtgärdar ett problem där en GraphQL-begäran med pre
 
 >[!NOTE]
 >
->Patchen kan bli tillämplig på andra versioner med nya Quality Patches Tool-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Patchen kan bli tillämplig på andra versioner med nya Quality Patches Tool-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -42,12 +42,12 @@ Ett fel visas om present_card_options innehåller &quot;uid&quot;.
 
 <pre>
 <code class="language-graphql">
-query getProductOptionsForProductPage_bypassFastly($urlKey: String!) &lbrace;
-  products(filter: { url_key: { eq: $urlKey } }) &lbrace;
-    items &lbrace;
+query getProductOptionsForProductPage_bypassFastly($urlKey: String!) {
+  products(filter: { url_key: { eq: $urlKey } }) {
+    items {
       id
       url_key
-      ... on GiftCardProduct &lbrace;
+      ... on GiftCardProduct {
         allow_open_amount
         open_amount_min
         open_amount_max
@@ -56,15 +56,15 @@ query getProductOptionsForProductPage_bypassFastly($urlKey: String!) &lbrace;
         lifetime
         allow_message
         message_max_length
-        gift_card_options &lbrace;
+        gift_card_options {
           uid
           title
           required
-        &rbrace;
-      &rbrace;
-    &rbrace;
-  &rbrace;
-&rbrace;
+        }
+      }
+    }
+  }
+}
 </code>
 </pre>
 
@@ -78,118 +78,118 @@ Följande fel inträffar vid begäran om presentkortsdata:
 
 <pre>
 <code class="language-graphql">
-&lbrace;
-  "errors": &lbrack;
-    &lbrace;
+{
+  "errors": [
+    {
       "debugMessage": "Cannot return null for non-nullable field \"CustomizableFieldOption.uid\".",
       "message": "Internal server error",
-      "extensions": &lbrace;
+      "extensions": {
         "category": "internal"
-      &rbrace;,
-      "locations": &lbrack;
-        &lbrace;
+      },
+      "locations": [
+        {
           "line": 16,
           "column": 1
-        &rbrace;
-      &rbrack;,
-      "path": &lbrack;
+        }
+      ],
+      "path": [
         "products",
         "items",
         0,
         "gift_card_options",
         0,
         "uid"
-      &rbrack;
-    &rbrace;,
-    &lbrace;
+      ]
+    },
+    {
       "debugMessage": "Cannot return null for non-nullable field \"CustomizableFieldOption.uid\".",
       "message": "Internal server error",
-      "extensions": &lbrace;
+      "extensions": {
         "category": "internal"
-      &rbrace;,
-      "locations": &lbrack;
-        &lbrace;
+      },
+      "locations": [
+        {
           "line": 16,
           "column": 1
-        &rbrace;
-      &rbrack;,
-      "path": &lbrack;
+        }
+      ],
+      "path": [
         "products",
         "items",
         0,
         "gift_card_options",
         1,
         "uid"
-      &rbrack;
-    &rbrace;,
-    &lbrace;
+      ]
+    },
+    {
       "debugMessage": "Cannot return null for non-nullable field \"CustomizableFieldOption.uid\".",
       "message": "Internal server error",
-      "extensions": &lbrace;
+      "extensions": {
         "category": "internal"
-      &rbrace;,
-      "locations": &lbrack;
-        &lbrace;
+      },
+      "locations": [
+        {
           "line": 16,
           "column": 1
-        &rbrace;
-      &rbrack;,
-      "path": &lbrack;
+        }
+      ],
+      "path": [
         "products",
         "items",
         0,
         "gift_card_options",
         2,
         "uid"
-      &rbrack;
-    &rbrace;,
-    &lbrace;
+      ]
+    },
+    {
       "debugMessage": "Cannot return null for non-nullable field \"CustomizableFieldOption.uid\".",
       "message": "Internal server error",
-      "extensions": &lbrace;
+      "extensions": {
         "category": "internal"
-      &rbrace;,
-      "locations": &lbrack;
-        &lbrace;
+      },
+      "locations": [
+        {
           "line": 16,
           "column": 1
-        &rbrace;
-      &rbrack;,
-      "path": &lbrack;
+        }
+      ],
+      "path": [
         "products",
         "items",
         0,
         "gift_card_options",
         3,
         "uid"
-      &rbrack;
-    &rbrace;,
-    &lbrace;
+      ]
+    },
+    {
       "debugMessage": "Cannot return null for non-nullable field \"CustomizableFieldOption.uid\".",
       "message": "Internal server error",
-      "extensions": &lbrace;
+      "extensions": {
         "category": "internal"
-      &rbrace;,
-      "locations": &lbrack;
-        &lbrace;
+      },
+      "locations": [
+        {
           "line": 16,
           "column": 1
-        &rbrace;
-      &rbrack;,
-      "path": &lbrack;
+        }
+      ],
+      "path": [
         "products",
         "items",
         0,
         "gift_card_options",
         4,
         "uid"
-      &rbrack;
-    &rbrace;
-  &rbrack;,
-  "data": &lbrace;
-    "products": &lbrace;
-      "items": &lbrack;
-        &lbrace;
+      ]
+    }
+  ],
+  "data": {
+    "products": {
+      "items": [
+        {
           "id": 2,
           "url_key": "gitf-card",
           "allow_open_amount": false,
@@ -200,18 +200,18 @@ Följande fel inträffar vid begäran om presentkortsdata:
           "lifetime": 0,
           "allow_message": true,
           "message_max_length": 255,
-          "gift_card_options": &lbrack;
+          "gift_card_options": [
             null,
             null,
             null,
             null,
             null
-          &rbrack;
-        &rbrace;
-      &rbrack;
-    &rbrace;
-  &rbrace;
-&rbrace;
+          ]
+        }
+      ]
+    }
+  }
+}
 </code>
 </pre>
 
@@ -220,13 +220,13 @@ Följande fel inträffar vid begäran om presentkortsdata:
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 
 Mer information om verktyget för kvalitetskorrigeringar finns i:
 
-* [Verktyget för kvalitetskorrigeringar har släppts: ett nytt verktyg för självbetjäning av kvalitetskorrigeringar](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) i kunskapsbasen för support.
+* [Verktyget för kvalitetskorrigeringar har släppts: ett nytt verktyg för självbetjäning av kvalitetskorrigeringar](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) i kunskapsbasen för support.
 * [Kontrollera om det finns en korrigeringsfil för ditt Adobe Commerce-problem med verktyget för kvalitetskorrigeringar ](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md) i [!DNL Quality Patches Tool]-handboken.
 
-Mer information om andra tillgängliga korrigeringsfiler i QPT finns i [[!DNL Quality Patches Tool]: Söka efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE) i [!DNL Quality Patches Tool]-handboken.
+Mer information om andra tillgängliga korrigeringsfiler i QPT finns i [[!DNL Quality Patches Tool]: Söka efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) i [!DNL Quality Patches Tool]-handboken.

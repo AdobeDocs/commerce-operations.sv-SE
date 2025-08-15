@@ -145,7 +145,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lagrar** > Inställnin
 | Sökväg till Solr-server | `catalog/search/solr_server_path` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) | | ![Sys-specific](/help/assets/configuration/cloud-env.png) | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 | Värdnamn för Elasticsearch Server | `catalog/search/elasticsearch_server_hostname` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | | ![Sys-specific](/help/assets/configuration/cloud-env.png) | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 | Elasticsearch Server-port | `catalog/search/elasticsearch_server_port` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | | ![Sys-specific](/help/assets/configuration/cloud-env.png) | ![Känslig](/help/assets/configuration/cloud-sens.png) |
-| Elasticsearch-indexprefix | `catalog/search/elasticsearch_index_prefix` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | | ![Sys-specific](/help/assets/configuration/cloud-env.png) | ![Känslig](/help/assets/configuration/cloud-sens.png) |
+| Elasticsearch Index Prefix | `catalog/search/elasticsearch_index_prefix` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | | ![Sys-specific](/help/assets/configuration/cloud-env.png) | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 | Aktivera Elasticsearch HTTP-autentisering | `catalog/search/elasticsearch_enable_auth` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | | ![Sys-specific](/help/assets/configuration/cloud-env.png) |
 | Elasticsearch HTTP-användarnamn | `catalog/search/elasticsearch_username` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | | ![Sys-specific](/help/assets/configuration/cloud-env.png) |
 | Elasticsearch HTTP-lösenord | `catalog/search/elasticsearch_password` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | | ![Sys-specific](/help/assets/configuration/cloud-env.png) |
@@ -464,7 +464,7 @@ I det här avsnittet visas variabelnamn och konfigurationssökvägar som är til
 
 {style="table-layout:auto"}
 
-### systemspecifika sökvägar som är känsliga för Braintree
+### Braintree-känsliga och systemspecifika sökvägar
 
 | Namn | Konfigurationssökväg | Endast Commerce? | Krypterad? | Systemspecifik? | Känslig? |
 |--------------|--------------|--------------|--------------|--------------|--------------|

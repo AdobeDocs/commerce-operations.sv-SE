@@ -316,7 +316,7 @@ Generera en CSV-fil på ungefär samma sätt som i föregående exempel, men i s
 
 [Översättningar - översikt]: https://developer.adobe.com/commerce/frontend-core/guide/translations/
 [översättningsordlista]: https://developer.adobe.com/commerce/frontend-core/guide/translations/#translation-dictionaries
-[konfigurerar översättningarna]: https://experienceleague.adobe.com/sv/docs/commerce-admin/stores-sales/site-store/store-localize
+[konfigurerar översättningarna]: https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-localize
 [Läs mer om språkpaket]: https://developer.adobe.com/commerce/frontend-core/guide/translations/#language-packages
 [ISO 639-1]: https://www.iso.org/iso-639-language-codes.html
 [ISO 3166]: https://www.iso.org/iso-3166-country-codes.html

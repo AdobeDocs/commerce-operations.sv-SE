@@ -24,7 +24,7 @@ Bildrutan **[!UICONTROL PHP active process details]** visar PHP-processerna, ink
 
 ![PHP-processinläsning](../../assets/tools/php-process-load.jpg)
 
-Bildrutan **[!UICONTROL PHP process load (# of PHP processes and % of CPU load)]** visar processorbelastningen från PHP-FPM-processer under den valda tidsramen.
+Bildrutan **[!UICONTROL PHP process load (# of PHP processes and % of CPU load)]** visar CPU-inläsningen från PHP-FPM-processer under den valda tidsramen.
 
 ## [!UICONTROL PHP Memory detail]
 
@@ -34,9 +34,9 @@ Bildrutan **[!UICONTROL PHP Memory detail]** visar minnesanvändningen för PHP-
 
 ## [!UICONTROL PHP CPU Utilization]
 
-![PHP-processoranvändning](../../assets/tools/php-cpu-utilization.jpg)
+![PHP CPU-användning](../../assets/tools/php-cpu-utilization.jpg)
 
-Bildrutan **[!UICONTROL PHP CPU Utilization]** visar processoranvändningen i procent för PHP-processer under den valda tidsramen.
+Bildrutan **[!UICONTROL PHP CPU Utilization]** visar CPU procentuella utnyttjande av PHP-processer under den valda tidsramen.
 
 ## [!UICONTROL PHP Process states]
 

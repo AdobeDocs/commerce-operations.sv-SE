@@ -18,7 +18,7 @@ I det här avsnittet beskrivs de effektivaste strategierna för att undersöka o
 
 >[!NOTE]
 >
->Recommendations och exempel inspireras av processer som ObjectSource följer i verkliga kundrelationer för att leverera högpresterande Adobe Commerce-sajter i stor skala.
+>Rekommendationer och exempel inspireras av processer som Object Source följer i verkliga kundrelationer för att leverera högpresterande Adobe Commerce-sajter i stor skala.
 
 ## Berörda produkter och versioner
 
@@ -39,9 +39,9 @@ Ett verktyg som du kan använda för stresstestning är GTmetrix. Mät platsens 
 
 Läs mer om hur du förbereder Commerce-projekt för högtrafikperioder:
 
-- [Semesterberedskap](https://experienceleague.adobe.com/docs/events/commerce-intelligence-webinar-recordings/2021/holiday-readiness.html?lang=sv-SE)
-- [Kundanalys under helgdagar](https://experienceleague.adobe.com/docs/commerce-business-intelligence/mbi/analyze/performance/holiday-season-perf.html?lang=sv-SE)
-- [Ökning av överkapacitet](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/2021-holiday-surge-capacity-requests-for-magento-commerce-cloud.html?lang=sv-SE)
+- [Semesterberedskap](https://experienceleague.adobe.com/docs/events/commerce-intelligence-webinar-recordings/2021/holiday-readiness.html)
+- [Kundanalys under helgdagar](https://experienceleague.adobe.com/docs/commerce-business-intelligence/mbi/analyze/performance/holiday-season-perf.html)
+- [Ökning av överkapacitet](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/2021-holiday-surge-capacity-requests-for-magento-commerce-cloud.html)
 
 ### Belastningstestning
 
@@ -51,16 +51,16 @@ Använd GTmetrix för att simulera tung trafik och analysera webbplatsens presta
 
 Läs mer om hur du testar Adobe Commerce-projekt:
 
-- [Testvägledning](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/test/guidance.html?lang=sv-SE) (molninfrastruktur)
+- [Testvägledning](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/test/guidance.html) (molninfrastruktur)
 - [Programtestning](https://developer.adobe.com/commerce/testing/guide/)
 
 ### Identifiera och åtgärda prestandaproblem
 
-Åtgärda prestandaproblem genom att använda olika verktyg som New Relic och Observation for Adobe Commerce för att upptäcka flaskhalsar och optimera Commerce webbplatser effektivt. [New Relic](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/new-relic-service.html?lang=sv-SE) ingår i Adobe Commerce i molninfrastrukturen och [Observation för Adobe Commerce](/help/tools/observation-for-adobe-commerce/intro.md) ingår för både molnbaserade och lokala distributioner.
+Åtgärda prestandaproblem genom att använda olika verktyg som New Relic och Observation for Adobe Commerce för att upptäcka flaskhalsar och optimera Commerce webbplatser effektivt. [New Relic](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/new-relic-service.html) ingår i Adobe Commerce i molninfrastrukturen och [Observation för Adobe Commerce](/help/tools/observation-for-adobe-commerce/intro.md) ingår för både molnbaserade och lokala distributioner.
 
 Använd de här verktygen för att analysera webbplatsens prestanda och identifiera prestandaproblem i samband med:
 
-- Processorintensiva funktioner
+- CPU-intensiva funktioner
 - Konfiguration av cachehantering för frågor och backend-åtgärder
 - API-anrop från tredje part
 - Kronplanering
@@ -69,7 +69,7 @@ Du kan till exempel noggrant granska transaktioner med fokus på produktinformat
 
 Läs mer om hur du hanterar prestanda för webbplatser:
 
-- [Prestandaövervakning](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/performance.html?lang=sv-SE) (molninfrastruktur)
+- [Prestandaövervakning](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/performance.html) (molninfrastruktur)
 - [Bästa praxis för konfiguration](/help/performance/configuration.md)
 - [Observation för Adobe Commerce](/help/tools/observation-for-adobe-commerce/intro.md)
 
@@ -81,7 +81,7 @@ Att åtgärda prestandaproblem i MySQL genom att implementera databasklustring o
 
 Webbplatser med hög trafik har ofta flaskhalsar i databasen, som främst orsakas av att man förlitar sig på en enda MySQL-server. Du kan ta itu med dessa flaskhalsar genom att implementera databasklustring, en distribuerad arkitektur som förbättrar prestanda och garanterar hög tillgänglighet.
 
-Databasklustring minimerar effekten av databasrelaterade problem under trafiktoppar genom att aktivera flera webbnoder för anslutning till flera MySQL-servrar. Använd verktyg som Galera Cluster för att konfigurera databasklustring för Commerce-webbplatser. Galerakluster ingår i [Adobe Commerce-projekt som distribueras i molninfrastrukturen](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/architecture/pro-architecture).
+Databasklustring minimerar effekten av databasrelaterade problem under trafiktoppar genom att aktivera flera webbnoder för anslutning till flera MySQL-servrar. Använd verktyg som Galera Cluster för att konfigurera databasklustring för Commerce-webbplatser. Galerakluster ingår i [Adobe Commerce-projekt som distribueras i molninfrastrukturen](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/architecture/pro-architecture).
 
 #### Optimera MySQL-frågor
 
@@ -93,10 +93,10 @@ För att optimera prestanda för MySQL-servern och minimera flaskhalsar är det 
 
 Läs mer om hur du konfigurerar och optimerar MySQL:
 
-- [Metodtips för databaskonfiguration](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/database-on-cloud.html?lang=sv-SE)
-- [Långsam replikering för Galera DB-replikering](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/galera-db-slow-replication.html?lang=sv-SE)
+- [Metodtips för databaskonfiguration](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/database-on-cloud.html)
+- [Långsam replikering för Galera DB-replikering](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/galera-db-slow-replication.html)
 - [Allmänna riktlinjer för MySQL](/help/installation/prerequisites/database/mysql.md)
-- [MySQL-frågecachning](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/mysql-query-cache.html?lang=sv-SE)
+- [MySQL-frågecachning](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/mysql-query-cache.html)
 
 ## Hantera cron-jobb effektivt: prestanda och timing
 
@@ -110,7 +110,7 @@ Du kan också använda Observation for Adobe Commerce för att visa kronrelatera
 
 Läs mer om Adobe Commerce cron-implementering:
 
-- [Kron (schemalagda aktiviteter)](https://experienceleague.adobe.com/docs/commerce-admin/systems/tools/cron.html?lang=sv-SE) i _användarhandboken för Commerce Admin Systems_
-- [Programkonfiguration - crons-egenskap](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/crons-property.html?lang=sv-SE) (molninfrastruktur)
-- [Konfigurera och kör kroner](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/crons-property.html?lang=sv-SE) (lokalt)
-- [Observation för Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-operations/tools/observation-for-adobe-commerce/intro.html?lang=sv-SE) (Se flikarna [!UICONTROL Cron] och [!UICONTROL MySQL].)
+- [Kron (schemalagda aktiviteter)](https://experienceleague.adobe.com/docs/commerce-admin/systems/tools/cron.html) i _användarhandboken för Commerce Admin Systems_
+- [Programkonfiguration - crons-egenskap](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/crons-property.html) (molninfrastruktur)
+- [Konfigurera och kör kroner](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/properties/crons-property.html) (lokalt)
+- [Observation för Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-operations/tools/observation-for-adobe-commerce/intro.html) (Se flikarna [!UICONTROL Cron] och [!UICONTROL MySQL].)

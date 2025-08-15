@@ -29,7 +29,7 @@ Plats
 
 >[!NOTE]
 >
->Du kan inte aktivera eller inaktivera moduler direkt i molnprojekt. Du måste köra dessa kommandon lokalt och sedan skicka ändringarna till filen `app/etc/config.php` för en miljö. Se [Projektarbetsflöde för Pro: Arbetsflöde för distribution](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow.html?lang=sv-SE#deployment-workflow).
+>Du kan inte aktivera eller inaktivera moduler direkt i molnprojekt. Du måste köra dessa kommandon lokalt och sedan skicka ändringarna till filen `app/etc/config.php` för en miljö. Se [Projektarbetsflöde för Pro: Arbetsflöde för distribution](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow.html#deployment-workflow).
 
 ## Aktivera modul, inaktivera
 
@@ -78,7 +78,7 @@ bin/magento cache:clean
 
 ## Aktivera och inaktivera moduler
 
-Med Adobe Commerce kan du aktivera eller inaktivera tillgängliga moduler, dvs. alla moduler som tillhandahålls av Adobe eller alla tredjepartsmoduler som är tillgängliga.
+Med Adobe Commerce kan du aktivera eller inaktivera tillgängliga moduler, dvs. alla Adobe-moduler eller tredjepartsmoduler som är tillgängliga.
 
 Vissa moduler är beroende av andra moduler. I så fall kanske du inte kan aktivera eller inaktivera en modul eftersom den är beroende av andra moduler.
 

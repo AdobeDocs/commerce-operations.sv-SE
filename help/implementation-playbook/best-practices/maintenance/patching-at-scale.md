@@ -18,7 +18,7 @@ Om du hanterar flera Adobe Commerce-installationer kan [patchning](../../../upgr
 
 >[!NOTE]
 >
->Följande innehåll publicerades ursprungligen i [Distribuera Adobe Commerce-korrigeringar på Scale](https://blog.developer.adobe.com/distributing-adobe-commerce-patches-at-scale-137412e05a20) i bloggen Adobe Tech. Den har ändrats så att den fokuserar på steg och kodexempel för implementering av en centraliserad patchningsstrategi. Se det ursprungliga inlägget för mer information om de olika typer av korrigeringar som beskrivs här.
+>Följande innehåll publicerades ursprungligen i [Distribuera Adobe Commerce-korrigeringar vid skalförändring](https://blog.developer.adobe.com/distributing-adobe-commerce-patches-at-scale-137412e05a20) i Adobe Tech Blog. Den har ändrats så att den fokuserar på steg och kodexempel för implementering av en centraliserad patchningsstrategi. Se det ursprungliga inlägget för mer information om de olika typer av korrigeringar som beskrivs här.
 
 ## Berörda produkter och versioner
 
@@ -33,8 +33,8 @@ Eftersom det finns många olika typer av patchar och många sätt att tillämpa 
 
 1. **Säkerhetsuppdateringar** är en del av den statiska kodbasen i en Adobe Commerce-version.
 1. **Composer-korrigeringar** till `composer install` och `composer update` plugin-program som [cweagans/Composer-patches](https://packagist.org/packages/cweagans/composer-patches).
-1. Alla **nödvändiga korrigeringsfiler** ingår i [Cloud Patches for Commerce](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-patches.html?lang=sv-SE)-paketet.
-1. Markerade **kvalitetspatchar** som ingår i [[!DNL [Quality Patches Tool]]](../../../tools/quality-patches-tool/usage.md).
+1. Alla **nödvändiga korrigeringsfiler** ingår i [Cloud Patches for Commerce](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-patches.html)-paketet.
+1. Markerade **kvalitetspatchar** som ingår i [!DNL [Quality Patches Tool]](../../../tools/quality-patches-tool/usage.md).
 1. **Anpassade korrigeringsfiler** och Adobe Commerce Support-korrigeringsfiler i katalogen `/m2-hotfixes` i alfabetisk ordning efter korrigeringsnamn.
 
    >[!IMPORTANT]
@@ -148,7 +148,7 @@ Så här skapar du komponentpaketet `centralized-patcher`:
    ```
 
 
-Attributet `quality-patches` i föregående kodexempel innehåller två korrigeringar från [hela korrigeringslistan](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE) som exempel.  Dessa kvalitetsuppdateringar installeras i alla projekt som kräver paketet `centralized-patcher` med kommandot `vendor/bin/magento-patches apply`.
+Attributet `quality-patches` i föregående kodexempel innehåller två korrigeringar från [hela korrigeringslistan](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) som exempel.  Dessa kvalitetsuppdateringar installeras i alla projekt som kräver paketet `centralized-patcher` med kommandot `vendor/bin/magento-patches apply`.
 
 I testsyfte kan du skapa en exempelkorrigering (`/m2-hotfixes/EXAMPLE-PATCH_2.4.6.patch`).
 
@@ -365,7 +365,7 @@ Precis som med Adobe Commerce i molninfrastrukturen förutsätter den här artik
 
 På så sätt kan ni centralt hantera alla patchar för alla era installationer och bättre garantera säkerheten och stabiliteten i era Adobe Commerce-butiker. Använd följande metoder för att kontrollera korrigeringsstatus:
 
-- [Molninfrastrukturprojekt](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE#view-available-patches-and-status)
+- [Molninfrastrukturprojekt](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html#view-available-patches-and-status)
 - [Lokala projekt](../../../tools/quality-patches-tool/usage.md#view-individual-patches)
 
 ## Exempel på koder

@@ -28,7 +28,7 @@ Kontrollera tillstånd för miljöresurser:
 
    * Adobe Commerce i molninfrastrukturen tillhandahåller [!DNL Managed alerts]. Du kan klicka på länken i sidhuvudet för att se [!DNL Support Knowledge Base] artiklar som hjälper dig att avgöra vilka åtgärder du ska vidta för specifika aviseringar.
 
-* Granska **[!UICONTROL CPU % by host]**-bildrutan: Om den har hög processoranvändning kontrollerar du artikeln [!DNL Support Knowledge Base] i bildrutans rubrik. Kontrollera också att import/export eller säkerhetskopiering av databaser inte sker under trafiktoppar.
+* Granska **[!UICONTROL CPU % by host]**-bildrutan: Om den har hög användning av CPU bör du kontrollera [!DNL Support Knowledge Base]-artikeln i bildrutans sidhuvud. Kontrollera också att import/export eller säkerhetskopiering av databaser inte sker under trafiktoppar.
 
 * Kontrollera **[!UICONTROL Web Traffic volume compared to one week ago]**-bildrutan: Om trafiken är mycket högre än föregående vecka under samma period, kan den förklaras (t.ex. en försäljningskampanj eller nya produkter som har marknadsförts)?
    * Om det inte går att förklara en trafikökning tittar du på den genomsnittliga svarstiden (millisekunder) för produktionsmiljön. Bidrar den högre trafiken till en annan svarstid än vad som är normalt? Expandera tidsramen för att se om det är en avvikelse.
@@ -38,7 +38,7 @@ Kontrollera tillstånd för miljöresurser:
 
 * Fliken **[!UICONTROL IP Frequency]** identifierar begärandefrekvens från IP-adresser som görs mot de ursprungliga servrarna (vilket innebär att begäran inte kunde hanteras från [!DNL Fastly] eftersom 74 den inte cachelagrades).
 
-   * Kontrollera bildrutan **[!UICONTROL Fastly Cache]** för eventuella [!DNL Fastly]-relaterade problem och välj felaspekten för att se hur många begäranden som är fel. De kan tyda på ett serverdelsfel om de sammanfaller med icke-webbexport.
+   * Kontrollera bildrutan [!DNL Fastly] för eventuella **[!UICONTROL Fastly Cache]**-relaterade problem och välj felaspekten för att se hur många begäranden som är fel. De kan tyda på ett serverdelsfel om de sammanfaller med icke-webbexport.
    * Om inläsningen inte verkar bero på webbtrafik kan det finnas fel eller en kombination av icke-webbförfrågningar, som långsamma frågor eller [!DNL crons].
 
 * Kontrollera bildrutan **[!UICONTROL Database Errors]** för att se om det finns fel som kan sammanfalla med tidslinjen för problem/problem.

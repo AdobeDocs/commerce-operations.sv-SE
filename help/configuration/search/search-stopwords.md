@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Vanligtvis är _stoppord_ vanliga ord som sökmotorer filtrerar ut efter att ha bearbetat text. När diskutrymmet och minnet ursprungligen var extremt begränsat innebar varje kilobyte som sparades en avsevärd prestandaförbättring. Därför har sökmotorer fått prestandavinster genom att ignorera vissa ord och hålla indexet litet.
 
-Trots att vi har mer lagringsutrymme idag är prestanda fortfarande viktigt. Elasticsearch och OpenSearch använder, precis som andra sökmotorer, fortfarande stoppord för att förbättra prestandan.
+Trots att vi har mer lagringsutrymme idag är prestanda fortfarande viktigt. Elasticsearch och OpenSearch använder, precis som andra sökmotorer, stoppord för att förbättra prestandan.
 
 Du måste hantera dina stoppord med hjälp av CSV-filer som finns i katalogen `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords` eller `<magento_root>/app/code/Magento/Elasticsearch/etc/stopwords/`, beroende på hur du har installerat Commerce.
 
@@ -102,7 +102,7 @@ I det här avsnittet beskrivs hur du kan ändra standardkatalogen för stoppord 
 - `<magento_root>/vendor/magento/module-elasticsearch/etc/stopwords`
 - `<magento_root>/app/code/Magento/Elasticsearch/etc/stopwords/`
 
-Platsen beror på hur du har installerat Commerce. Om du klonade GitHub-databasen Magento 2 är sökvägen under `app/code`. Om du installerade ett komprimerat arkiv eller ett metapaket är sökvägen under `vendor`.
+Platsen beror på hur du har installerat Commerce. Om du klonade Magento 2 GitHub-databasen ligger sökvägen under `app/code`. Om du installerade ett komprimerat arkiv eller ett metapaket är sökvägen under `vendor`.
 
 **Så här ändrar du katalogen**:
 

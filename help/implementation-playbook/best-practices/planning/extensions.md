@@ -36,5 +36,5 @@ Adobe Commerce tredjepartstillägg (moduler) kan orsaka olika problem som kan p�
 
 - [Bästa tillvägagångssätt för planering av uppgraderingar](../../../upgrade/prepare/best-practices.md)
 - Använda tillägg från tredje part med Adobe Commerce i molninfrastrukturen
-   - [Teknik och krav - Utveckling och testning](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/develop/overview#cloud-req-devtest)
-   - [Varför ska du testa fullständigt i Integrering och mellanlagring?](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/launch/overview#why-test-fully-in-integration-staging-and-production)
+   - [Teknik och krav - Utveckling och testning](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/overview#cloud-req-devtest)
+   - [Varför ska du testa fullständigt i Integrering och mellanlagring?](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/launch/overview#why-test-fully-in-integration-staging-and-production)

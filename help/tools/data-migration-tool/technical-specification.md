@@ -1,6 +1,6 @@
 ---
 title: '[!DNL Data Migration Tool] teknisk specifikation'
-description: Lär dig mer om implementeringsinformationen för  [!DNL Data Migration Tool]  och hur du kan utöka när du överför data mellan Magento 1 och Magento 2.
+description: Lär dig mer om implementeringsinformationen för  [!DNL Data Migration Tool]  och hur du utökar när du överför data mellan Magento 1 och Magento 2.
 exl-id: fec3ac3a-dd67-4533-a29f-db917f54d606
 topic: Commerce, Migration
 source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
@@ -162,7 +162,7 @@ Konfigurationsfilen har följande struktur:
 
 * options - list of parameters. Innehåller både obligatoriska (map_file, settings_map_file, bulk_size) och valfria (custom_option, resource_adapter_class_name, prefix_source, prefix_dest, log_file) parametrar
 
-Ändra prefixalternativet om Magento installerades med prefix i databastabeller. Den kan ställas in för databaserna Magento 1 och Magento 2. Använd konfigurationsalternativen &quot;source_prefix&quot; och &quot;dest_prefix&quot; i enlighet därmed.
+Ändra prefixalternativet om Magento har installerats med prefix i databastabeller. Den kan ställas in för Magento 1- och Magento 2-databaser. Använd konfigurationsalternativen &quot;source_prefix&quot; och &quot;dest_prefix&quot; i enlighet därmed.
 
 Konfigurationsdata är tillgängliga med klassen `\Migration\Config`.
 
@@ -181,9 +181,9 @@ Konfigurationsdata är tillgängliga med klassen `\Migration\Config`.
 | Dokument | Fält | Obligatoriskt? |
 |---|---|---|
 | `name` | Databasnamn för Magento 1-servern. | ja |
-| `host` | Magento 1-serverns värdadress (IP). | ja |
+| `host` | Värdserverns IP-adress. | ja |
 | `port` | Portnummer för Magento 1-servern. | no |
-| `user` | Användarnamn för databasservern Magento 1. | ja |
+| `user` | Användarnamn för Magento 1-databasservern. | ja |
 | `password` | Lösenord för Magento 1-databasservern. | ja |
 | `ssl_ca` | Sökväg till filen för SSL-certifikatutfärdare. | no |
 | `ssl_cert` | Sökväg till SSL-certifikatfil. | no |
@@ -194,9 +194,9 @@ Konfigurationsdata är tillgängliga med klassen `\Migration\Config`.
 | Dokument | Fält | Obligatoriskt? |
 |---|---|---|
 | `name` | Databasnamn för Magento 2-servern. | ja |
-| `host` | Magento 2-serverns värdadress (IP). | ja |
+| `host` | Värdserverns IP-adress. | ja |
 | `port` | Portnummer för Magento 2-servern. | no |
-| `user` | Användarnamn för databasservern Magento 2. | ja |
+| `user` | Användarnamn för Magento 2-databasservern. | ja |
 | `password` | Lösenord för Magento 2-databasservern. | ja |
 | `ssl_ca` | Sökväg till filen för SSL-certifikatutfärdare. | no |
 | `ssl_cert` | Sökväg till SSL-certifikatfil. | no |
@@ -279,11 +279,11 @@ $this->progress->finish();
 
 ### Integritetskontroll
 
-Varje steg måste kontrollera att strukturen för datakällan (Magento 1 som standard) och strukturen för datamålet (Magento 2) är kompatibel. Annars visas ett fel med enheter som inte är kompatibla. Om fälten har olika datatyper (samma fält har decimaldatatyp i Magento 1 och heltal i Magento 2) visas ett varningsmeddelande (förutom när det fanns med i kartfilen).
+Varje steg måste kontrollera att strukturen för datakällan (Magento 1 som standard) och strukturen för datamålet (Magento 2) är kompatibla. Annars visas ett fel med enheter som inte är kompatibla. Om fälten har olika datatyper (samma fält har en decimaldatatyp i Magento 1 och ett heltal i Magento 2) visas ett varningsmeddelande (förutom när det fanns med i kartfilen).
 
 ### Dataöverföring
 
-Om integritetskontrollen skickas körs data. Om fel uppstår går återställningen tillbaka till det tidigare läget för Magento 2. Om en stegklass implementerar gränssnittet `RollbackInterface` körs återställningsmetoden när ett fel uppstår.
+Om integritetskontrollen skickas körs data. Om fel uppstår går återställningen tillbaka till det tidigare läget i Magento 2. Om en stegklass implementerar gränssnittet `RollbackInterface` körs återställningsmetoden när ett fel uppstår.
 
 ### Volymkontroll
 
@@ -335,7 +335,7 @@ All butikskonfiguration sparar data i tabellen core_config_data i databasen. fil
 
 Under noden `<key>` finns det regler som fungerar med kolumnen path i tabellen `core_config_data`. `<ignore>`-regler hindrar verktyget från att överföra vissa inställningar. Jokertecken kan användas i den här noden. Alla andra inställningar som inte finns med i noden `<ignore>` migreras. Om sökvägen till en inställning har ändrats i Magento 2 bör den läggas till i noden `//key/rename`, där den gamla sökvägen anges i noden `//key/rename/path` och den nya sökvägen anges i noden `//key/rename/to`.
 
-Under noden `<value>` finns det regler som fungerar med kolumnen &#39;value&#39; i tabellen `core_config_data`. Dessa regler syftar till att omforma inställningsvärdet med hanterare (klasser som implementerar `Migration\Handler\HandlerInterface`) och anpassa det för Magento 2.
+Under noden `<value>` finns det regler som fungerar med kolumnen &#39;value&#39; i tabellen `core_config_data`. Dessa regler syftar till att omforma inställningsvärden av hanterare (klasser som implementerar `Migration\Handler\HandlerInterface`) och anpassa dem för Magento 2.
 
 ### Datamigreringsläge
 
@@ -343,7 +343,7 @@ I det här läget migreras merparten av data. Före datamigrering körs integrit
 
 #### Kartsteg
 
-Kartsteget används för att överföra större delen av data från Magento 1 till Magento 2. Det här steget läser instruktioner från filen map.xml (finns i katalogen `etc/`). I filen beskrivs skillnaderna mellan datastrukturerna för källan (Magento 1) och målet (Magento 2). Om Magento 1 innehåller tabeller eller fält som tillhör ett tillägg som inte finns i Magento 2, kan dessa enheter placeras här för att ignorera dem via Mappa steg. Annars visas ett felmeddelande.
+Kartsteget ansvarar för att överföra merparten av data från Magento 1 till Magento 2. Det här steget läser instruktioner från filen map.xml (finns i katalogen `etc/`). Filen beskriver skillnader mellan datastrukturer för källan (Magento 1) och målet (Magento 2). Om Magento 1 innehåller tabeller eller fält som tillhör ett tillägg som inte finns i Magento 2, kan de här entiteterna placeras här för att ignorera dem i Kartsteg. Annars visas ett felmeddelande.
 
 Kartfilen har nästa format:
 
@@ -435,7 +435,7 @@ Om du vill ignorera dokument med liknande delar (`document_name_1`, `document_na
 
 #### Omskrivningssteg för URL
 
-Det här steget är komplext eftersom det finns många olika algoritmer som utvecklats i Magento 1 som inte är kompatibla med Magento 2. För olika versioner av Magento 1 kan det finnas olika algoritmer. I mappen Step/UrlRewrite finns det därför klasser som utvecklats för vissa versioner av Magento och Migration\Step\UrlRewrite\Version191to2000 är en av dem. Den kan överföra data från Magento 1.9.1 till Magento 2.
+Det här steget är komplext eftersom det finns många olika algoritmer som utvecklats i Magento 1 som inte är kompatibla med Magento 2. För olika versioner av Magento 1 kan det finnas olika algoritmer. I mappen Step/UrlRewrite finns det klasser som utvecklats för vissa versioner av Magento och Migration\Step\UrlRewrite\Version191to2000 är en av dem. Den kan överföra data från Magento 1.9.1 till Magento 2.
 
 #### EAV-steg
 
@@ -453,11 +453,11 @@ Några av tabellerna som bearbetas i steget:
 
 ### Delta-migreringsläge
 
-Efter huvudmigreringen kunde ytterligare data ha lagts till i Magento 1-databasen (till exempel av kunder på storefront). För att spåra dessa data anger verktyget databasutlösarna för tabeller i början av migreringsprocessen. Mer information finns i [Migrera data som skapats av tillägg från tredje part](migrate-data/delta.md#migrate-data-created-by-third-party-extensions).
+Efter huvudmigreringen kunde ytterligare data ha lagts till i Magento 1-databasen (t.ex. av kunder på butiken). För att spåra dessa data anger verktyget databasutlösarna för tabeller i början av migreringsprocessen. Mer information finns i [Migrera data som skapats av tillägg från tredje part](migrate-data/delta.md#migrate-data-created-by-third-party-extensions).
 
 ## Datakällor
 
-Det finns många klasser i resursmappen för att nå datakällorna för Magento 1 och Magento 2 och arbeta med data för dem (markera, uppdatera, infoga, ta bort). Migration\ResourceModel\Source and Migration\ResourceModel\Destination är huvudklasser. Alla migreringssteg använder den för att hantera data. Dessa data finns i klasser som Migration\ResourceModel\Document, Migration\ResourceModel\Record, Migration\ResourceModel\Structure osv.
+Det finns många klasser i resursmappen för att nå datakällorna i Magento 1 och Magento 2 och arbeta med data för dem (markera, uppdatera, infoga, ta bort). Migration\ResourceModel\Source and Migration\ResourceModel\Destination är huvudklasser. Alla migreringssteg använder den för att hantera data. Dessa data finns i klasser som Migration\ResourceModel\Document, Migration\ResourceModel\Record, Migration\ResourceModel\Structure osv.
 
 Här följer ett klassdiagram över dessa klasser:
 
@@ -465,7 +465,7 @@ Här följer ett klassdiagram över dessa klasser:
 
 ## Loggning
 
-För att implementera utdata från migreringsprocessen och kontrollera alla möjliga nivåer tillämpas PSR-loggare, som används i Magento. Klassen `\Migration\Logger\Logger` implementerades för att tillhandahålla loggningsfunktioner. För att använda loggningsfunktionen ska du injicera den via en konstruktorberoendeinjektion.
+För att implementera utdata från migreringsprocessen och kontrollera alla möjliga nivåer används PSR-loggaren, som används i Magento. Klassen `\Migration\Logger\Logger` implementerades för att tillhandahålla loggningsfunktioner. För att använda loggningsfunktionen ska du injicera den via en konstruktorberoendeinjektion.
 
 ```php
 class SomeClass
@@ -496,7 +496,7 @@ Det finns en möjlighet att anpassa var logginformation ska skrivas. Du kan gör
 
 * FileHandler: skriver meddelanden till loggfilen som har angetts i konfigurationsalternativet &quot;log_file&quot;
 
-Det går även att implementera ytterligare hanterare. Det finns en uppsättning hanterare i ramverket Magento. Exempel på hur du lägger till hanterare i loggaren:
+Det går även att implementera ytterligare hanterare. Det finns en uppsättning hanterare i Magento Framework. Exempel på hur du lägger till hanterare i loggaren:
 
 ```php
 // $this->consoleHandler is the object of Migration\Logger\ConsoleHandler class

@@ -85,7 +85,7 @@ För `sales_flat_order` skapar till exempel [!DNL Data Migration Tool]:
 
 >[!NOTE]
 >
->[!DNL Data Migration Tool] sparar det aktuella förloppet när det körs. Om fel eller en användaråtgärd hindrar det från att köras, återupptar verktyget förloppet vid det senast fungerande tillståndet. Använd argumentet `--reset` om du vill tvinga [!DNL Data Migration Tool] att köras från början. I så fall rekommenderar vi att du återställer databassdumpen Magento 2 för att förhindra att tidigare migrerade data dupliceras.
+>[!DNL Data Migration Tool] sparar det aktuella förloppet när det körs. Om fel eller en användaråtgärd hindrar det från att köras, återupptar verktyget förloppet vid det senast fungerande tillståndet. Använd argumentet [!DNL Data Migration Tool] om du vill tvinga `--reset` att köras från början. I så fall rekommenderar vi att du återställer Magento 2-databasdumpen för att förhindra att tidigare migrerade data dupliceras.
 
 
 ## Möjliga konsekvensfel

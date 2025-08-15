@@ -76,7 +76,7 @@ Så här skapar du en konfigurationstyp:
    </config>
    ```
 
-   - Den första typnoden anger Reader filnamn, associerade klasserna `Converter` och `SchemaLocator`.
+   - Den första typnoden anger Reader filnamn, associerade klasser `Converter` och `SchemaLocator`.
    - Sedan kopplar den virtuella typnoden `pdfConfigDataStorage` läsarklassen till en instans av [Magento\Framework\Config\Data](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Config/Data.php).
    - Slutligen kopplar den sista typnoden den den virtuella typen för config data till klassen [Magento\Sales\Model\Order\Pdf\Config](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Sales/Model/Order/Pdf/Config.php), som används för att läsa värden i dessa [pdf.xml](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Sales/etc/pdf.xml) -filer.
 
@@ -115,7 +115,7 @@ class Reader extends Filesystem
 
 >[!INFO]
 >
->Om du föredrar att skapa en egen version av läsaren kan du göra det genom att implementera `\Magento\Framework\Config\ReaderInterface`. Se [Magento_Analytics, konfigurationsläsare](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Analytics/ReportXml/Config/Reader.php)
+>Om du föredrar att skapa en egen version av läsaren kan du göra det genom att implementera `\Magento\Framework\Config\ReaderInterface`. Se [Konfigurationsläsaren Magento_Analytics](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Analytics/ReportXml/Config/Reader.php)
 
 När du har definierat läsaren kan du använda den för att samla in, sammanfoga, validera och konvertera konfigurationsfilerna till en intern arrayrepresentation.
 

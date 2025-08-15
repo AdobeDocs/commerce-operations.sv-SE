@@ -50,42 +50,42 @@ I den här bildrutan visas indexnamnet och antalet indexfärger. Om du bläddrar
 
 ## [!UICONTROL Elasticsearch index information]
 
-![Elasticsearch-indexinformation](../../assets/tools/elasticsearch-tab-elasticsearch-index-information-image-1.jpg)
+![Elasticsearch indexinformation](../../assets/tools/elasticsearch-tab-elasticsearch-index-information-image-1.jpg)
 
 Tabellen **[!UICONTROL Elasticsearch index information]** visar indexnamnet, vilken nod det är på, antalet indexerade dokument, indexhälsan och indexstorleken i MB vid en viss tidpunkt.
 
 ## [!UICONTROL Elasticsearch process CPU %]
 
-![Processprocessor för Elasticsearch](../../assets/tools/elasticsearch-process-cpu.jpg)
+![Elasticsearch bearbetar CPU](../../assets/tools/elasticsearch-process-cpu.jpg)
 
-Bildrutan **[!UICONTROL Elasticsearch process CPU %]** visar processens CPU i procent för [!DNL Elasticsearch]-processen under den valda tidsramen.
+I bildrutan **[!UICONTROL Elasticsearch process CPU %]** visas processen CPU percent med processen [!DNL Elasticsearch] under den valda tidsramen.
 
 ## [!UICONTROL Elasticsearch Memory garbage collection]
 
-![Elasticsearch-minnesskräp](../../assets/tools/elasticsearch-memory-garbage.jpg)
+![Elasticsearch Memory skräp](../../assets/tools/elasticsearch-memory-garbage.jpg)
 
 [!DNL Elasticsearch] är en Java-process. Om det inte finns tillräckligt med tilldelat minne initieras skräpinsamlingen för att frigöra minne. Om skräpinsamlingen är vanlig är det en indikation på att det kan finnas för många index eller kort för det tilldelade minnet. Det kan finnas en möjlighet att rensa upp index och delningar eller så behöver [!DNL Elasticsearch] mer minne.
 
 ## [!UICONTROL Elasticsearch Index information]
 
-![Elasticsearch-indexinformation](../../assets/tools/elasticsearch-index-information-2.jpg)
+![Elasticsearch Index Information](../../assets/tools/elasticsearch-index-information-2.jpg)
 
 När index skapas och uppdateras kan indexets hälsa ändras.
 
 ## [!UICONTROL Elasticsearch Index Size]
 
-![Indexstorlek för Elasticsearch](../../assets/tools/elasticsearch-index-size.jpg)
+![Elasticsearch Index-storlek](../../assets/tools/elasticsearch-index-size.jpg)
 
 Bildrutan **[!UICONTROL Elasticsearch Index Size]** anger indexnamnet och storleken över den markerade tidsramen. Det kan tyda på problem med hur en webbplats indexeras.
 
 ## [!UICONTROL Elasticsearch Errors]
 
-![Fel i Elasticsearch](../../assets/tools/elasticsearch-tab-elasticsearch-errors.jpg)
+![Elasticsearch-fel](../../assets/tools/elasticsearch-tab-elasticsearch-errors.jpg)
 
 Bildrutan **[!UICONTROL Elasticsearch Errors]** innehåller fel med [!DNL Elasticsearch] som att utrymmet tar slut, att statusen Gul växlar till Röd, att alla kort inte fungerar, att det finns parameterproblem med sökningar, versionsfel och att alla noder inte är tillgängliga.
 
 ## [!UICONTROL Elasticsearch Unassigned Shards]:
 
-![Elasticsearch ej tilldelade kort](../../assets/tools/elasticsearch-unassigned-shards.jpg)
+![Ej tilldelade Elasticsearch-kort](../../assets/tools/elasticsearch-unassigned-shards.jpg)
 
 Ej tilldelade kort gör att ett kluster går från grönt till gult.

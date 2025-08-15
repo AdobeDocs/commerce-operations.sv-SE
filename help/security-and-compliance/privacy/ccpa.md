@@ -26,7 +26,7 @@ CCPA ger konsumenterna följande nya rättigheter:
 
 ## CCPA-kompatibilitet
 
-Utvecklingen och genomförandet av en CCPA-efterlevnadsplan kräver en samordnad insats. Vi uppmuntrar handlarna att sätta ihop ett funktionsövergripande team och följa den färdplan som beskrivs i [CCPA Compliance Guide](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-ccpa.html?lang=sv-SE) för att se till att deras företag följer reglerna. Som utvecklare kan du bli inbjuden att delta som intressent med tonvikt på steg 2 till 5 i processen. Mer information finns i [CCPA-kompatibilitetshandboken](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-ccpa.html?lang=sv-SE).
+Utvecklingen och genomförandet av en CCPA-efterlevnadsplan kräver en samordnad insats. Vi uppmuntrar handlarna att sätta ihop ett funktionsövergripande team och följa den färdplan som beskrivs i [CCPA Compliance Guide](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-ccpa.html) för att se till att deras företag följer reglerna. Som utvecklare kan du bli inbjuden att delta som intressent med tonvikt på steg 2 till 5 i processen. Mer information finns i [CCPA-kompatibilitetshandboken](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-ccpa.html).
 
 1. Samla ihop ett funktionsövergripande team för att hantera kompatibiliteten med CCPA.
 

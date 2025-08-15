@@ -61,4 +61,4 @@ Eftersom Commerce lagrar alla hash-versioner av lösenord som används tillsamma
 
 ## Implementering
 
-Klassen `\Magento\Framework\Encryption\Encryptor` ansvarar för generering och verifiering av lösenordshash. Kommandot [`bin/magento customer:hash:upgrade`](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/cli-reference/commerce-on-premises#customerhashupgrade) uppgraderar en hash för kundlösenordet till den senaste hash-algoritmen.
+Klassen `\Magento\Framework\Encryption\Encryptor` ansvarar för generering och verifiering av lösenordshash. Kommandot [`bin/magento customer:hash:upgrade`](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises#customerhashupgrade) uppgraderar en hash för kundlösenordet till den senaste hash-algoritmen.

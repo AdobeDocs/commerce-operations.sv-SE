@@ -1,6 +1,6 @@
 ---
 title: Kundens personuppgifter (version 1.x)
-description: Läs mer om dataflöde och databastypsmappningar för kundinformation i Magento 1.x.
+description: Läs mer om dataflöde och databastappningar för kundinformation i Magento 1.x.
 exl-id: 8b01418d-8ca1-48fc-9577-a324ed3109d1
 source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
 workflow-type: tm+mt
@@ -50,7 +50,7 @@ Commerce läser in kundinformation när en handlare tittar på flera olika typer
 
 ## Databasenheter
 
-Magento 1 lagrar kundinformation i kundregister, säljregister och andra databastabeller.
+Magento 1 lagrar kundinformation i kund-, sälj- och andra databastabeller.
 
 ### Kunddata
 

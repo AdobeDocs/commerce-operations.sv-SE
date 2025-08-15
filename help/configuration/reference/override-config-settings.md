@@ -17,7 +17,7 @@ Du kan åsidosätta värdet för konfigurationsinställningen _any_ med hjälp a
 
 >[!TIP]
 >
->Ta en titt på ämnet [Konfigurera miljöer](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-intro.html?lang=sv-SE) i guiden _Commerce om molninfrastruktur_.
+>Ta en titt på ämnet [Konfigurera miljöer](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-intro.html) i guiden _Commerce om molninfrastruktur_.
 
 ## Miljövariabler
 
@@ -62,8 +62,8 @@ Det allmänna formatet för systeminställningens variabelnamn följer:
   Mer information om omfång finns i:
 
    - [Steg 1: Hitta omfångsvärdet för webbplatsen eller butiksvyn](#step-1-find-the-website-or-store-view-scope-value)
-   - [Commerce User Guide topic on scope](https://experienceleague.adobe.com/sv/docs/commerce-admin/start/setup/websites-stores-views#scope-settings)
-   - [Snabbreferens för omfång](https://experienceleague.adobe.com/sv/docs/commerce-admin/config/scope-change#scope-quick-reference)
+   - [Commerce User Guide topic on scope](https://experienceleague.adobe.com/en/docs/commerce-admin/start/setup/websites-stores-views#scope-settings)
+   - [Snabbreferens för omfång](https://experienceleague.adobe.com/en/docs/commerce-admin/config/scope-change#scope-quick-reference)
 
 `<SYSTEM__VARIABLE__NAME>` är konfigurationssökvägen med två understreck i stället för `/`. Mer information finns i [Steg 2: Ange systemvariabler](#step-2-set-global-website-or-store-view-variables).
 
@@ -196,8 +196,8 @@ I följande tabell visas några exempelvariabler.
 
 | Beskrivning | Sökväg i Admin (utelämnar **Lagrar** > **Inställningar** > **Konfiguration**) | Variabelnamn |
 |--------------|--------------|----------------------|
-| Värdnamn för Elasticsearch-server | Katalog > **Katalog**, **värdnamn för Elasticsearch-server** | `<SCOPE>__CATALOG__SEARCH__ELASTICSEARCH_SERVER_HOSTNAME` |
-| Elasticsearch serverport | Katalog > **Katalog**, **Elasticsearch-serverport** | `<SCOPE>__CATALOG__SEARCH__ELASTICSEARCH_SERVER_PORT` |
+| Elasticsearch servervärdnamn | Katalog > **Katalog**, **värdnamn för Elasticsearch-server** | `<SCOPE>__CATALOG__SEARCH__ELASTICSEARCH_SERVER_HOSTNAME` |
+| Elasticsearch serverport | Katalog > **Katalog**, **Elasticsearch Server-port** | `<SCOPE>__CATALOG__SEARCH__ELASTICSEARCH_SERVER_PORT` |
 | Leveranslands ursprung | Försäljning > **Leveransinställningar** | `<SCOPE>__SHIPPING__ORIGIN__COUNTRY_ID` |
 | URL för anpassad administratör | Avancerat > **Admin** | `<SCOPE>__ADMIN__URL__CUSTOM` |
 | Anpassad administratörssökväg | Avancerat > **Admin** | `<SCOPE>__ADMIN__URL__CUSTOM_PATH` |
@@ -206,9 +206,9 @@ I följande tabell visas några exempelvariabler.
 
 I det här avsnittet visas hur du söker efter värden för vissa exempelvariabler.
 
-### Värdnamn för Elasticsearch-server
+### Elasticsearch servervärdnamn
 
-Så här hittar du variabelnamnet för global minification i HTML:
+Så här hittar du variabelnamnet för den globala HTML-miniatyrbilden:
 
 1. Bestäm omfattningen.
 
@@ -224,7 +224,7 @@ Så här hittar du variabelnamnet för ursprungsland:
 
 1. Bestäm omfattningen.
 
-   Hitta omfånget i [databasen](#find-a-website-or-store-view-scope-in-the-database) enligt beskrivningen i steg 1: Hitta omfångsvärdet för webbplatsen eller butiksvyn. (Du kan också hitta värdet i Admin enligt tabellen [i steg 2: Ange globala variabler, webbplatsvariabler eller butiksvyvariabler ](#step-2-set-global-website-or-store-view-variables.)
+   Hitta omfånget i [databasen](#find-a-website-or-store-view-scope-in-the-database) enligt beskrivningen i steg 1: Hitta omfångsvärdet för webbplatsen eller butiksvyn. (Du kan också hitta värdet i Admin enligt tabellen [i steg 2: Ange globala variabler, webbplatsvariabler eller butiksvyvariabler ]&#x200B;(#step-2-set-global-website-or-store-view-variables.)
 
    Omfånget kan till exempel vara `CONFIG__WEBSITES__DEFAULT`.
 
@@ -253,6 +253,6 @@ Ett steg-för-steg-exempel visas i [Ange konfigurationsvärden med hjälp av mil
 >
 >- Om du vill använda värden som du anger i `$_ENV`-arrayen måste du ange `variables_order = "EGPCS"`(Environment, Get, Post, Cookie och Server) i `php.ini`-filen. Mer information finns i [PHP-dokumentation](https://www.php.net/manual/en/ini.core.php).
 >
->- Om du försöker åsidosätta konfigurationsinställningarna med [Project Web Interface](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html?lang=sv-SE#configure-the-project) för Adobe Commerce i molninfrastruktur måste du lägga till variabelnamnet som `env:`. Exempel:
+>- Om du försöker åsidosätta konfigurationsinställningarna med [Project Web Interface](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html#configure-the-project) för Adobe Commerce i molninfrastruktur måste du lägga till variabelnamnet som `env:`. Exempel:
 >
 >![Exempel på miljövariabel](../../assets/configuration/cloud-console-envvariable.png)

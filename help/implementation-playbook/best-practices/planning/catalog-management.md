@@ -100,7 +100,7 @@ Ta bort oanvända produktattributuppsättningar med MySQL.
 
 #### Granska konfigurationen av attributuppsättning
 
-1. [Anslut till platsdatabasen](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/configure/service/mysql#connect-to-the-database).
+1. [Anslut till platsdatabasen](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/service/mysql#connect-to-the-database).
 
 1. Hitta antalet attributuppsättningar med MySQL
 
@@ -179,7 +179,7 @@ För många produkter per sida kan påverka prestanda.
 
 Om du har för många produkter i en kategori kan du uppdatera katalogkonfigurationen för storefront så att alternativet **Tillåt alla produkter per sida** inaktiveras.
 
-När du har inaktiverat det här alternativet använder Adobe Commerce sidnumreringskontrollerna för att hantera antalet produkter som visas i butikskomponenter. Instruktioner finns i [Konfigurera sidnumreringskontroller](https://experienceleague.adobe.com/docs/commerce-admin/catalog/catalog/navigation/navigation-product-listings.html?lang=sv-SE#configure-the-pagination-controls).
+När du har inaktiverat det här alternativet använder Adobe Commerce sidnumreringskontrollerna för att hantera antalet produkter som visas i butikskomponenter. Instruktioner finns i [Konfigurera sidnumreringskontroller](https://experienceleague.adobe.com/docs/commerce-admin/catalog/catalog/navigation/navigation-product-listings.html#configure-the-pagination-controls).
 
 ## Produkt-SKU-gränser
 

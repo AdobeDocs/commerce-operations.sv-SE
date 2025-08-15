@@ -12,17 +12,17 @@ ht-degree: 0%
 
 # Migreringsöversikt
 
-Innan du startar migreringen ska du stoppa alla kron-jobb i Magento 1.
+Stoppa alla Magento 1-seriejobb innan du startar migreringen.
 
 Följ följande allmänna regler för en lyckad migrering under migreringsprocessen:
 
-1. **Gör inte** ändringar i Magento 1-administratören, förutom för orderhantering (leverans, fakturering och kreditnotor)
+1. **Gör inte** ändringar i Magento 1 Admin, förutom för orderhantering (leverans, fakturering och kreditnotor)
 1. **Ändra inte** kod
 1. **Gör inte** ändringar i Magento 2 Admin och storefront
 
 >[!TIP]
 >
->Alla åtgärder i Magento 1-butiken är tillåtna.
+>Alla åtgärder i Magento 1 Store är tillåtna.
 
 ## Kör [!DNL Data Migration Tool]
 

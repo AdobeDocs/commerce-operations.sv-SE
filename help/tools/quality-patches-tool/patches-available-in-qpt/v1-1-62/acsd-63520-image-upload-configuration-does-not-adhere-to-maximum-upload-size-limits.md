@@ -26,7 +26,7 @@ Korrigeringen ACSD-63520 åtgärdar ett problem där bilder som överförts via 
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din [!DNL Adobe Commerce]-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din [!DNL Adobe Commerce]-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -48,7 +48,7 @@ Bilder som överförs via [!UICONTROL Images Upload Configuration] på panelen [
    1. Lägg till **[!UICONTROL Product Name]**, **[!UICONTROL SKU]** och **[!UICONTROL Price]**.
    1. Klicka på **[!UICONTROL Create Configurations]**, markera **[!UICONTROL Attributes]** och klicka på **[!UICONTROL Next]**.
    1. Välj storlekar (S, M, L, XL) och klicka på **[!UICONTROL Next]**.
-   1. Välj **[!UICONTROL Apply single set of images to all SKUs]** under **[!UICONTROL Images]**.
+   1. Välj **[!UICONTROL Images]** under **[!UICONTROL Apply single set of images to all SKUs]**.
    1. Ladda upp en bild (minst 1 024 × 1 024) och klicka på **[!UICONTROL Next]**.
    1. Klicka på **[!UICONTROL Generate Product]**.
 1. Klicka på **[!UICONTROL Save]**.
@@ -66,7 +66,7 @@ Storleken på bilderna ändras inte och de konfigurerade storleksgränserna för
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 Mer information om [!DNL Quality Patches Tool] finns i:
 

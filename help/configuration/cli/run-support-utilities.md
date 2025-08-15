@@ -15,7 +15,7 @@ ht-degree: 0%
 
 {{file-system-owner}}
 
-Med Adobe Commerce supportverktyg, som även kallas [datainsamlaren](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/tools/support#data-collector), kan användare samla in felsökningsinformation om ditt system som kan användas av vårt supportteam.
+Med Adobe Commerce supportverktyg, som även kallas [datainsamlaren](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/support#data-collector), kan användare samla in felsökningsinformation om ditt system som kan användas av vårt supportteam.
 
 Adobe Commerce använder dessa säkerhetskopior, som också kallas _dumpar_, för att analysera problem som kräver åtkomst till din kod. Ett typiskt scenario följer:
 

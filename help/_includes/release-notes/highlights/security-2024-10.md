@@ -9,7 +9,7 @@ ht-degree: 0%
 
 Den här versionen innehåller följande högdagrar:
 
-* **TinyMCE-uppgradering** - [WYSIWYG-redigeraren](https://experienceleague.adobe.com/sv/docs/commerce-admin/content-design/wysiwyg/editor) i Admin använder nu den senaste versionen av TinyMCE-beroendet (7.3-&#x200B;).
+* **TinyMCE-uppgradering** - [WYSIWYG-redigeraren](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/wysiwyg/editor) i Admin använder nu den senaste versionen av TinyMCE-beroendet (7.3-&#x200B;).
 
    * TinyMCE 7.3 ger en förbättrad användarupplevelse, bättre samarbete och ökad effektivitet. TinyMCE 5 har tagits bort från versionslinjen 2.4.8. &#x200B;
 

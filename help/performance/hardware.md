@@ -1,5 +1,5 @@
 ---
-title: Maskinvarubaserad Recommendations
+title: Maskinvarurekommendationer
 description: Granska en lista över rekommenderad maskinvara för optimala prestanda vid driftsättning av Adobe Commerce.
 feature: Best Practices, Install
 exl-id: ab548c4b-6f56-4409-a4ed-5c959939e04b
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## CPU
 
-[!DNL Commerce] webbnoder hanterar alla begäranden som inte cachelagras eller som inte kan cachelagras via programmet. En CPU-kärna kan betjäna cirka två (ibland upp till fyra) [!DNL Commerce]-begäranden effektivt. Använd följande ekvation för att avgöra hur många webbnoder/kärnor du behöver för att bearbeta alla inkommande begäranden utan att placera dem i kö:
+[!DNL Commerce] webbnoder hanterar alla begäranden som inte cachelagras eller som inte kan cachelagras via programmet. En CPU-kärna kan effektivt hantera cirka två (ibland upp till fyra) [!DNL Commerce]-begäranden. Använd följande ekvation för att avgöra hur många webbnoder/kärnor du behöver för att bearbeta alla inkommande begäranden utan att placera dem i kö:
 
 ```
 N[Cores] = (N[Expected Requests] / 2) + N [Expected Cron Processes]

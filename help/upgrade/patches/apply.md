@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Du kan använda patchar på något av följande sätt:
 
-- [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE){target="_blank"}
+- [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
 - [Kommandorad](../patches/apply.md#command-line)
 - [Disposition](../patches/apply.md#composer)
 
@@ -26,7 +26,7 @@ Du kan använda patchar på något av följande sätt:
 
 >[!IMPORTANT]
 >
->Använd [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE){target="_blank"} om du vill tillämpa officiella kvalitetspatchar. Utför alltid omfattande testning innan du distribuerar någon anpassad patch.
+>Använd [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"} om du vill tillämpa officiella kvalitetspatchar. Utför alltid omfattande testning innan du distribuerar någon anpassad patch.
 
 Så här använder du en anpassad korrigering med Composer:
 

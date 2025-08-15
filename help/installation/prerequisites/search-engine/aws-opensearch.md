@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # AWS OpenSearch
 
-Adobe Commerce 2.4.5 stöder användning av Amazon OpenSearch-tjänstkluster. Tjänsten efterträder Amazon Elasticsearch. I det här avsnittet beskrivs hur du konfigurerar Commerce att använda AWS OpenSearch och hur du migrerar data från en lokal Elasticsearch- eller OpenSearch-instans till ett AWS OpenSearch-kluster.
+Adobe Commerce 2.4.5 stöder användning av Amazon OpenSearch-tjänstkluster. Den här tjänsten efterträder Amazon Elasticsearch Service. I det här avsnittet beskrivs hur du konfigurerar Commerce att använda AWS OpenSearch och hur du migrerar data från en lokal Elasticsearch- eller OpenSearch-instans till ett AWS OpenSearch-kluster.
 
 ## Skapa en AWS OpenSearch-tjänstdomän
 
@@ -28,7 +28,7 @@ För mindre installationer rekommenderar vi att du skapar index direkt på AWS-i
 * Det går snabbt att återskapa indexen.
 * Versionsinkompatibiliteter kan förekomma mellan den gamla instansen och AWS-instansen, och dessa kan undvikas genom att man bygger direkt på AWS-instansen.
 
-Större installationer kan överväga att migrera sina dataindex från den befintliga instansen till AWS. Även om detta kan minska driftstoppen finns det fortfarande en liten risk för inkompatibilitetsproblem på grund av olika versioner mellan den gamla Elasticsearch-servern och AWS.
+Större installationer kan överväga att migrera sina dataindex från den befintliga instansen till AWS. Även om detta kan minska driftstoppen finns det fortfarande en liten risk för inkompatibilitetsproblem på grund av att versionerna skiljer sig åt mellan den gamla Elasticsearch-servern och AWS.
 
 Index behöver inte migreras eftersom de enkelt kan återskapas på AWS-instansen.
 När du migrerar dataindex måste du dock se till att versionerna av Elasticsearch/OpenSearch är kompatibla.

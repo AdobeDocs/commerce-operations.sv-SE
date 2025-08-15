@@ -32,7 +32,7 @@ Om du är en utvecklare som bidrar läser du [Installera genom att klona databas
 
 >[!WARNING]
 >
->Installera inte exempeldata om programmet är inställt för [produktionsläge](../../configuration/bootstrap/application-modes.md#production-mode). Växla till [utvecklarläge](../../configuration/bootstrap/application-modes.md#developer-mode) först. Det gick inte att installera exempeldata i produktionsläget [&#128279;](https://support.magento.com/hc/en-us/articles/360033824571#symptom-production-mode-trouble-samp-prod-).
+>Installera inte exempeldata om programmet är inställt för [produktionsläge](../../configuration/bootstrap/application-modes.md#production-mode). Växla till [utvecklarläge](../../configuration/bootstrap/application-modes.md#developer-mode) först. Det gick inte att installera exempeldata i produktionsläget [](https://support.magento.com/hc/en-us/articles/360033824571#symptom-production-mode-trouble-samp-prod-).
 
 Om du vill installera exempeldata med kommandoraden anger du följande kommando som filsystemsägare i katalogen `<app_root>`:
 

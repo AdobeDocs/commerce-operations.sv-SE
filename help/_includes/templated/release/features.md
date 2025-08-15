@@ -45,7 +45,7 @@ https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#template
       <td>+</td>
     </tr>
     <tr>
-      <td>Produkt-Recommendations från Adobe Sensei (B2C &amp; B2B)</td>
+      <td>Produktrekommendationer från Adobe Sensei (B2C &amp; B2B)</td>
       <td></td>
       <td></td>
       <td></td>
@@ -289,7 +289,7 @@ https://github.com/AdobeDocs/commerce-operations.en/blob/main/README.md#template
       <td>+</td>
     </tr>
     <tr>
-      <td>Adobe I/O Events for Adobe Commerce</td>
+      <td>Adobe I/O Events för Adobe Commerce</td>
       <td></td>
       <td></td>
       <td></td>

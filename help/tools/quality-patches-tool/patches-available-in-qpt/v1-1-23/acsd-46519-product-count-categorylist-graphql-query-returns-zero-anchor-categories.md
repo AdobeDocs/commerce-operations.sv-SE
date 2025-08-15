@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # ACSD-46519: [!UICONTROL product_count] i [!UICONTROL categoryList] [!DNL GraphQL] -frågan returnerar 0 för ankarkategorier
 
-Korrigeringen ACSD-46519 löser problemet där frågan [!UICONTROL product_count] i [!UICONTROL categoryList] [!DNL GraphQL] returnerar 0 för ankarkategorier. Den här korrigeringen är tillgänglig när [[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.23 har installerats. Korrigerings-ID är ACSD-46519. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.6.
+Korrigeringen ACSD-46519 löser problemet där frågan [!UICONTROL product_count] i [!UICONTROL categoryList] [!DNL GraphQL] returnerar 0 för ankarkategorier. Den här korrigeringen är tillgänglig när [[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.23 har installerats. Korrigerings-ID är ACSD-46519. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.6.
 
 ## Berörda produkter och versioner
 
@@ -26,7 +26,7 @@ Korrigeringen ACSD-46519 löser problemet där frågan [!UICONTROL product_count
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -37,34 +37,34 @@ När metoden [!UICONTROL categoryList] [!DNL GraphQL] används för att hämta u
 1. Använd följande [!DNL GraphQL]-begäran för att hämta kategorihierarkin med [!UICONTROL product_count]:
 
 <pre><code>
-&lbrace;
-  categoryList(filters: { ids: { eq: "2" } }) &lbrace;
+{
+  categoryList(filters: { ids: { eq: "2" } }) {
     id
     name
     product_count
     level
-    children &lbrace;
+    children {
       name
       product_count
       level
-      children &lbrace;
+      children {
         name
         product_count
         level
-        children &lbrace;
+        children {
           name
           product_count
           level
-          children &lbrace;
+          children {
             name
             product_count
             level
-          &rbrace;
-        &rbrace;
-      &rbrace;
-    &rbrace;
-  &rbrace;
-&rbrace;
+          }
+        }
+      }
+    }
+  }
+}
 </code></pre>
 
 <u>Förväntade resultat</u>:
@@ -76,46 +76,46 @@ Om den överordnade kategorin är en förankrad kategori ska [!UICONTROL product
 Om den överordnade kategorin är en förankrad kategori visas produkterna som 0 för kategori 2 och nedåt.
 
 <pre><code>
-&lbrace;
-    "data": &lbrace;
-        "categoryList": &lbrack;
-            &lbrace;
+{
+    "data": {
+        "categoryList": [
+            {
                 "id": 2,
                 "name": "Default Category",
                 "product_count": 186,
                 "level": 1,
-                "children": &lbrack;
-                    &lbrace;
+                "children": [
+                    {
                         "name": "What's New",
                         "product_count": 0,
                         "level": 2,
                         "children": []
-                    &rbrace;,
-                    &lbrace;
+                    },
+                    {
                         "name": "Women",
                         "product_count": 0,
                         "level": 2,
-                        "children": &lbrack;
-                            &lbrace;
+                        "children": [
+                            {
                                 "name": "Tops",
                                 "product_count": 0,
                                 "level": 3,
                                 "children": []
-                            &rbrace;,
-                            &lbrace;
+                            },
+                            {
                                 "name": "Bottoms",
                                 "product_count": 0,
                                 "level": 3,
                                 "children": []
-                            &rbrace;
-                        &rbrack;
-                    &rbrace;,
+                            }
+                        ]
+                    },
                     ...
-                &rbrack;
-            &rbrace;
-        &rbrack;
-    &rbrace;
-&rbrace;
+                ]
+            }
+        ]
+    }
+}
 </code></pre>
 
 ## Tillämpa korrigeringen
@@ -123,14 +123,14 @@ Om den överordnade kategorin är en förankrad kategori visas produkterna som 0
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 
 Mer information om [!DNL Quality Patches Tool] finns i:
 
-* [[!DNL Quality Patches Tool] släppt: ett nytt verktyg för självbetjäning av kvalitetspatchar](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) i kunskapsbasen för support.
+* [[!DNL Quality Patches Tool] släppt: ett nytt verktyg för självbetjäning av kvalitetspatchar](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) i kunskapsbasen för support.
 * [Kontrollera om det finns en korrigeringsfil för ditt Adobe Commerce-problem med  [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md) i guiden [!UICONTROL Quality Patches Tool].
 
 
-Mer information om andra tillgängliga korrigeringsfiler i QPT finns i [[!DNL Quality Patches Tool]: Söka efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE) i [!DNL Quality Patches Tool]-handboken.
+Mer information om andra tillgängliga korrigeringsfiler i QPT finns i [[!DNL Quality Patches Tool]: Söka efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) i [!DNL Quality Patches Tool]-handboken.

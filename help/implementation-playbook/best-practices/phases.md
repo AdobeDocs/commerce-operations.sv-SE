@@ -12,7 +12,7 @@ ht-degree: 7%
 
 # Bästa praxis för implementering
 
-Det finns många sätt att implementera ett Adobe Commerce-projekt. De bästa metoderna i detta avsnitt beskriver hur Adobe förväntar sig att kunder och partner implementerar specifika användningsfall. Rekommendationerna är utformade för att hjälpa till att förebygga vanliga problem och potentiella problem i samband med platskonfiguration och anpassning, driftsättning, åtgärder, prestanda och uppgraderingar.
+Det finns många sätt att implementera ett Adobe Commerce-projekt. De bästa sätten som ges i detta avsnitt beskriver hur Adobe förväntar sig att kunder och partners implementerar specifika användningsfall. Rekommendationerna är utformade för att hjälpa till att förebygga vanliga problem och potentiella problem i samband med platskonfiguration och anpassning, driftsättning, åtgärder, prestanda och uppgraderingar.
 
 Dessa metodtips är ordnade efter implementeringsfas så att du kan hitta rekommendationer som gäller ditt användningsfall.
 

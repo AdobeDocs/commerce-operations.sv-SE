@@ -45,7 +45,7 @@ Den innehåller känsliga och systemspecifika inställningar för enskilda milj�
 
 ## Känsliga eller systemspecifika inställningar
 
-Använd kommandot [`bin/magento config:sensitive:set`](set-configuration-values.md#set-values) om du vill ange de känsliga inställningar som skrivits till `env.php`.
+Använd kommandot `env.php` om du vill ange de känsliga inställningar som skrivits till [`bin/magento config:sensitive:set`](set-configuration-values.md#set-values).
 
 Konfigurationsvärden anges som antingen känsliga eller systemspecifika genom att referera till [`Magento\Config\Model\Config\TypePool`](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Config/Model/Config/TypePool.php) i modulens [`di.xml`](https://developer.adobe.com/commerce/php/development/configuration/sensitive-environment-settings/#how-to-specify-values-as-sensitive-or-system-specific)-fil.
 

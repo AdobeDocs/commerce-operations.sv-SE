@@ -31,7 +31,7 @@ Följande tabell visar versionsstödet för varje tillägg i förhållande till 
 
 ## Commerce Services
 
-[Commerce-tjänster](https://experienceleague.adobe.com/docs/commerce/user-guides/home.html?lang=sv-SE) är en uppsättning värdfunktioner från Adobe som ger robusta funktioner och snabba svarstider i kombination med din Commerce-instans.
+[Commerce-tjänster](https://experienceleague.adobe.com/docs/commerce/user-guides/home.html) är en uppsättning värdfunktioner från Adobe som ger robusta funktioner och snabba svarstider i kombination med din Commerce-instans.
 
 Handlarna bör använda den senaste versionen av en tjänst för att säkerställa högsta stabilitet och funktionalitet. Dokumentationen beskriver den version som släpps för tillfället.
 

@@ -15,7 +15,7 @@ ht-degree: 0%
 
 I det här avsnittet finns de bästa rekommendationerna för att snabba upp och förenkla din migrering samt riktlinjer för hur lång tid det kan ta.
 
-* **Använd en kopia av databasen från en Magento 1-instans** när du utför migreringstestning. Använd inte produktionsinstansen för din Magento 1-databas.
+* **Använd en kopia av databasen från en Magento 1-instans** när du utför migreringstestning. Använd inte produktionsinstansen för Magento 1 store-databasen.
 
 * **Ta bort inaktuella och redundanta data** från Magento 1-databasen före migreringen.
 

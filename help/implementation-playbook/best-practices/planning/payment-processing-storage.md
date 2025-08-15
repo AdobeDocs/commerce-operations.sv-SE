@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Bästa metoder för betalningshantering och lagring
 
-En av de viktigaste principerna för att upprätthålla [PCI-kompatibilitet](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/payments/compliance-pci.html?lang=sv-SE) är att ha en strategi för att hantera och lagra kreditkortsbetalningar korrekt.
+En av de viktigaste principerna för att upprätthålla [PCI-kompatibilitet](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/payments/compliance-pci.html) är att ha en strategi för att hantera och lagra kreditkortsbetalningar korrekt.
 
 Det är **strängt förbjudet** att lagra kortinnehavardata i Adobe Commerce, vilket kan vara ett brott mot dina skyldigheter som handlare enligt PCI-DSS (Payment Card Industry Data Security Standard). Mer information om modellen för delat ansvar och riktlinjer för affärsförpliktelser finns i [Adobe Commerce Shared Responsibility Model Guide](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-commerce-shared-responsibilities-guide.pdf) på Adobe Trust Center.
 
@@ -53,4 +53,4 @@ Den rekommenderade metoden för att hantera kortinnehavardata är att tokenisera
 
 ## Ytterligare information
 
-Om du letar efter rekommenderade betalningslösningar från Adobe bör du överväga [Adobe betalningstjänster](https://experienceleague.adobe.com/docs/commerce/payment-services/overview.html?lang=sv-SE).
+Om du letar efter rekommenderade betalningslösningar från Adobe bör du överväga [Adobe betalningstjänster](https://experienceleague.adobe.com/docs/commerce/payment-services/overview.html).

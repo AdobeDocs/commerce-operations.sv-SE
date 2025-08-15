@@ -26,7 +26,7 @@ composer install --no-dev
 
 ## Instruktioner för förprocessberoende injektion
 
-När du förbearbetar och kompilerar instruktioner för beroendeinjicering (DI), Magento:
+När du förbearbetar och kompilerar instruktioner för beroendeinjicering (DI):
 
 * Läser och bearbetar alla aktuella konfigurationer
 * Analyserar beroenden mellan klasser

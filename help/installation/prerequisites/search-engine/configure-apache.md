@@ -18,7 +18,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Stöd för OpenSearch lades till i 2.4.4. OpenSearch är en kompatibel gaffel för Elasticsearch. Mer information finns i [Migrera Elasticsearch till OpenSearch](../../../upgrade/prepare/opensearch-migration.md).
+>Stöd för OpenSearch lades till i 2.4.4. OpenSearch är en kompatibel del av Elasticsearch. Mer information finns i [Migrera Elasticsearch till OpenSearch](../../../upgrade/prepare/opensearch-migration.md).
 
 I det här avsnittet beskrivs hur du konfigurerar Apache som en *osäker* -proxy så att Adobe Commerce kan använda en sökmotor som körs på den här servern. I det här avsnittet beskrivs inte konfigurering av grundläggande HTTP-autentisering. Det beskrivs i [Säker kommunikation med Apache](#secure-communication-with-apache).
 

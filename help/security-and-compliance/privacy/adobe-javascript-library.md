@@ -15,7 +15,7 @@ ht-degree: 0%
 
 <!-- TODO: Remove hide metadata when the library has been integrated with Commerce. -->
 
-JavaScript-biblioteket [Adobe Integritet](https://experienceleague.adobe.com/docs/experience-platform/privacy/js-library.html?lang=sv-SE) är en uppsättning verktyg som hjälper dig att skapa en process för att komma åt och ta bort privata data.
+[Adobe JavaScript-bibliotek för sekretess](https://experienceleague.adobe.com/docs/experience-platform/privacy/js-library.html) är en uppsättning verktyg som hjälper dig att skapa en process för att komma åt och ta bort privata data.
 
 Adobe Commerce dataspårningstjänster kan lagra privat information som är tillämplig på sekretessbestämmelser, som [General Data Protection Regulation (GDPR)](gdpr.md) och [California Consumer Privacy Act (CCPA)](ccpa.md).
 
@@ -43,7 +43,7 @@ JS-biblioteket för Adobe Privacy innehåller olika funktioner för att hantera 
 `retrieveThenRemoveIdentities()`
 : Den här funktionen liknar `removeIdentities()` eftersom den hämtar en array med identiteter och tar bort dem från webbläsaren.
 
-Mer information och exempel på hur du använder dessa funktioner finns i [den officiella biblioteksdokumentationen](https://experienceleague.adobe.com/docs/experience-platform/privacy/js-library.html?lang=sv-SE).
+Mer information och exempel på hur du använder dessa funktioner finns i [den officiella biblioteksdokumentationen](https://experienceleague.adobe.com/docs/experience-platform/privacy/js-library.html).
 
 ### Initiering
 
@@ -54,4 +54,4 @@ var adobePrivacy = new AdobePrivacy({});
 ```
 
 Konstruktorn accepterar ett konfigurationsobjekt med parametrar under instansieringen.
-En lista med de här konfigurationsparametrarna finns i [den officiella biblioteksdokumentationen](https://experienceleague.adobe.com/docs/experience-platform/privacy/js-library.html?lang=sv-SE).
+En lista med de här konfigurationsparametrarna finns i [den officiella biblioteksdokumentationen](https://experienceleague.adobe.com/docs/experience-platform/privacy/js-library.html).

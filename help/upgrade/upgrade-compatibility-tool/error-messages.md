@@ -61,7 +61,7 @@ Allvarliga fel uppstår när den anpassade koden refererar till entiteter som in
 | 5002 | Den inledande PHP-taggen måste vara det första innehållet i filen | Kontrollera att filen inte innehåller något innehåll före PHP-öppningstaggen. |
 | 5003 | Funktionen har tagits bort | Använd en ersättning som föreslås i felmeddelandet. Om meddelandet inte föreslår någon ersättning behövs en noggrann granskning för att välja en alternativ funktion eller implementering. |
 | 5005 | PHP-syntaxfel | Koden måste uppdateras för att uppfylla PHP-syntaxstandarderna. |
-| 5072 | Möjlig överträdelse av designen Magento 2. Identifierade en typisk Magento 1.x-konstruktion | Uppdatera konstruktionen enligt Magento 2-standarden. |
+| 5072 | Möjlig överträdelse av Magento 2. Identifierade en typisk Magento 1.x-konstruktion | Uppdatera byggbranschen enligt Magento 2-standarderna. |
 | 5076 | Det går inte att använda i namnutrymmet eftersom det är reserverat sedan PHP 7 | Ersätt det reserverade ordet i namnutrymmet med ett icke-reserverat nyckelord. |
 | 5077 | Det går inte att använda som klassnamn eftersom det är reserverat sedan PHP 7 | Ersätt det reserverade klassnamnet med ett icke-reserverat namn. |
 

@@ -16,7 +16,7 @@ I det här avsnittet beskrivs de åtgärder du bör vidta för att hantera kompl
 
 >[!TIP]
 >
->Rekommendationerna bygger på bästa praxis som stöds av belägg för dess effekt och effektivitet från partner, handlare, experter från Adobe och communityn.
+>Rekommendationerna bygger på bästa praxis som stöds av belägg för dess effekt och effektivitet från partner, handlare, Adobe experter och communityn.
 
 ## Vad påverkar en uppgradering?
 
@@ -47,17 +47,17 @@ Från det att du börjar arbeta med ett projekt bör du fundera över hur framti
 
 Börja använda Adobe Commerce Extensibility-plattformen om du inte redan har gjort det. Plattformen gör det möjligt att effektivt anpassa processer, integrera system och driftsätta nya funktioner samtidigt som SaaS-liknande uppgraderingsmöjligheter bibehålls. Funktionerna är:
 
-- **UI-utökningsbarhet**. Utöka och utveckla din butiksfront oberoende av din backend- och mellanvara med [PWA Studio](https://developer.adobe.com/commerce/pwa-studio/).
+- **UI-utökningsbarhet**. Utöka och utveckla din butiksverksamhet oberoende av din backend- och mellanvara med [PWA Studio](https://developer.adobe.com/commerce/pwa-studio/).
 
 - **API-utökningsbarhet**. Använd [GraphQL](https://developer.adobe.com/commerce/webapi/graphql/index.html) för att utöka webb-API-lagret genom att utveckla diagramdatamodellen och köra lambda-funktioner direkt från diagramlagret.
 
-- **Adobe I/O mellanvara och tjänster**. Anslut dina system till Adobe Commerce med Adobe mellanvara och en uppsättning appanslutningar som är byggda på [Adobe I/O](https://www.adobe.io/). Dessutom kan ni utöka era kärnplattformsfunktioner genom att skriva över standardbeteendet med er egen affärslogik som fungerar på Adobe I/O.
+- **Adobe I/O mellanvara och tjänster**. Anslut dina system med Adobe Commerce via Adobe mellanvara och en uppsättning appanslutningar som är byggda på [Adobe I/O](https://www.adobe.io/). Dessutom kan ni utöka era kärnplattformsfunktioner genom att skriva över standardbeteendet med er egen affärslogik som fungerar i Adobe I/O.
 
 ### Planera uppgraderingar
 
 När vi ständigt utökar möjligheterna i Adobe Commerce är det viktigt att du utvecklar den senaste versionen och definierar en uppgraderingsstrategi i dina projektplaner. På så sätt kan ni vara säkra, kompatibla och uppdaterade med de senaste förbättringarna som gör att ni kan öka försäljningen snabbare, arbeta effektivare och ligga steget före konkurrenterna nu och i framtiden.
 
-För att hjälpa dig att planera och budgetera för uppgraderingar bör du övervaka vårt [releaseschema](https://experienceleague.adobe.com/sv/docs/commerce-operations/release/planning/schedule). Planera uppgraderingsuppgifter i teamets eftersläpning i förväg. Målet är att slutföra arbetet med GA.
+För att hjälpa dig att planera och budgetera för uppgraderingar bör du övervaka vårt [releaseschema](https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/schedule). Planera uppgraderingsuppgifter i teamets eftersläpning i förväg. Målet är att slutföra arbetet med GA.
 
 - Använd förhandsversionen för att lära dig mer om varje ny release. Förhandsversionen är den allmänna tillgänglighetskoden som är tillgänglig för Adobe Commerce handlare och alla partners två veckor före den allmänna tillgängligheten. Om du har flera butiker använder du förhandsversionen i din basbutik och kontrollerar att dina anpassade moduler och teman är kompatibla med den.
 
@@ -73,7 +73,7 @@ Uppgraderingar bör göras regelbundet och inom en fördefinierad budget. Vi rek
 
 Utvärdera det arbete som ska utföras för uppgradering:
 
-- Granska [versionsinformationen](https://experienceleague.adobe.com/sv/docs/commerce-operations/release/notes/overview) för att förstå den nya versionens omfång och effekt.
+- Granska [versionsinformationen](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/overview) för att förstå den nya versionens omfång och effekt.
 
 - Använd [[!DNL Upgrade Compatibility Tool]](../upgrade-compatibility-tool/overview.md) för att identifiera potentiella problem som måste åtgärdas i din anpassade kod innan du försöker uppgradera till en senare version.
 

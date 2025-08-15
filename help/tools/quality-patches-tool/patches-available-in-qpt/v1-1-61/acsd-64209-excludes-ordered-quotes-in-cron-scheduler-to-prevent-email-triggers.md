@@ -28,7 +28,7 @@ Korrigeringen ACSD-64209 åtgärdar ett problem där cron Scheduler hämtar alla
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -38,11 +38,11 @@ Kronschemaläggaren hämtar alla överlåtbara offerter utan att utesluta dem me
 
 
 1. På sidofältet *Admin* går du till **[!UICONTROL Stores]** > *[!UICONTROL Settings]* > **[!UICONTROL Configuration]** > **[!UICONTROL B2B Features]** och aktiverar Company och B2B Quote.
-1. Ange **[!UICONTROL Default Expiration Period]** till **&#x200B; i *Admin* > &#x200B;** [!UICONTROL Stores] **&#x200B; > *[!UICONTROL Settings]* > &#x200B;** [!UICONTROL Configuration] **&#x200B; > &#x200B;** [!UICONTROL Sales] **&#x200B; > &#x200B;** [!UICONTROL Quotes] **&#x200B; > &#x200B;** [!UICONTROL General]**.
+1. Ange **[!UICONTROL Default Expiration Period]** till ** i *Admin* > **[!UICONTROL Stores]** > *[!UICONTROL Settings]* > **[!UICONTROL Configuration]** > **[!UICONTROL Sales]** > **[!UICONTROL Quotes]** > **[!UICONTROL General]**.
 1. Skapa ett företag, aktivera det och logga in som företagsadministratör.
 1. Lägg en produkt i kundvagnen.
 1. Begär en offert.
-1. Gå till **[!UICONTROL Sales]** > **[!UICONTROL Quotes]** på sidofältet *Admin*.
+1. Gå till *>* på sidofältet **[!UICONTROL Sales]** Admin **[!UICONTROL Quotes]**.
 1. Markera den skapade offerten och klicka på **[!UICONTROL Send]** för att skicka tillbaka offerten till köparen.
 1. Logga in som företagsadministratör i butiken.
 1. Markera offerten och klicka på **[!UICONTROL Proceed to checkout]** för att slutföra köpet.
@@ -63,7 +63,7 @@ Ett e-postmeddelande, *offerten, upphör snart*, skickas.
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 

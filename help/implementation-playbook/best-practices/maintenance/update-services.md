@@ -23,13 +23,13 @@ Adobe Commerce i molninfrastruktur 2.4.x och senare
 
 Uppgradera de tjänster och komponenter som används av Adobe Commerce innan de når eller är i närheten av sista giltighetsdatum. Detta bidrar till att hålla jämna steg med PCI-kompatibiliteten och minska säkerhetsproblemen.
 
-Kunder som har Starter-planer kan själva tjäna på uppgraderingar av tjänster. Mer information om hur du gör detta finns i [Ändra tjänstversion](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/configure/service/services-yaml#change-service-version).
+Kunder som har Starter-planer kan själva tjäna på uppgraderingar av tjänster. Mer information om hur du gör detta finns i [Ändra tjänstversion](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/service/services-yaml#change-service-version).
 
-Kunder som har Pro-planer kan bara självbetjäna tjänstuppgraderingar i sin [integreringsmiljö](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html?lang=sv-SE). Om du vill uppgradera tjänster på Production måste du [skicka in en supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) och begära uppgraderingen.
+Kunder som har Pro-planer kan bara självbetjäna tjänstuppgraderingar i sin [integreringsmiljö](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html). Om du vill uppgradera tjänster på Production måste du [skicka in en supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) och begära uppgraderingen.
 
 >[!WARNING]
 >
->Tjänsteuppgraderingar kan inte föras över till en produktionsmiljö utan att man inom 48 timmar varskor till Adobe infrastrukturteam. Detta är nödvändigt för att Adobe ska kunna säkerställa att en tekniker för infrastruktursupport är tillgänglig för att uppdatera din konfiguration inom en viss tidsperiod och med minimala driftavbrott i din produktionsmiljö. Adobe rekommenderar att du använder underhållsläge när du uppgraderar din webbplats.
+>Tjänsteuppgraderingar kan inte flyttas över till en produktionsmiljö utan att Adobe infrastrukturteam får 48 arbetstimmar i förväg. Detta är nödvändigt för att Adobe ska kunna säkerställa att en tekniker för infrastruktursupport är tillgänglig för att uppdatera din konfiguration inom en viss tidsperiod och med minimala driftavbrott i produktionsmiljön. Adobe rekommenderar att du använder underhållsläge när du uppgraderar din webbplats.
 
 Du kan visa en lista över tjänstversioner och slutdatum i följande fil: [https://github.com/magento/ece-tools/blob/develop/config/eol.yaml](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml).
 

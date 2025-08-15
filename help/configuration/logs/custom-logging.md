@@ -24,7 +24,7 @@ Adobe rekommenderar att centraliserad programloggning används av följande skä
 
   >[!INFO]
   >
-  >Adobe rekommenderar eller stöder inte någon särskild loggningslösning.
+  >Adobe rekommenderar eller stöder inte någon specifik loggningslösning.
 
 ## PSR-3-kompatibilitet
 

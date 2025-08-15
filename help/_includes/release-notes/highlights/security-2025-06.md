@@ -23,6 +23,6 @@ Den här versionen innehåller följande högdagrar:
 
 >[!BEGINSHADEBOX]
 
-Korrigeringen för CVE-2025-47110 finns även som en isolerad korrigeringsfil. Mer information finns i [kunskapsbasartikeln](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-50).
+Korrigeringen för CVE-2025-47110 finns även som en isolerad korrigeringsfil. Mer information finns i [kunskapsbasartikeln](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-50).
 
 >[!ENDSHADEBOX]

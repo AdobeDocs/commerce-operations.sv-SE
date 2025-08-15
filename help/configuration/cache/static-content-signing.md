@@ -33,11 +33,11 @@ http://magento2.com/pub/static/version1475604434/frontend/Magento/luma/en_US/ima
 När du kör kommandot [`setup:static-content:deploy`](../cli/static-view-file-deployment.md) för att distribuera statiskt innehåll ändrar Commerce automatiskt distributionsversionen.
 Detta ändrar URL:en för de statiska filerna och tvingar webbläsaren att läsa in den nya versionen av filerna.
 
-Commerce aktiverar den här funktionen som standard, och Adobe rekommenderar att funktionen är aktiverad för att förhindra problem som rör webbläsare som kan hantera gamla statiska resurser.
+Commerce aktiverar den här funktionen som standard, och Adobe rekommenderar att funktionen är aktiverad för att förhindra problem som rör webbläsare som använder gamla statiska resurser.
 
-Konfigurationen för signering av statiskt innehåll finns i [**[!UICONTROL Stores]**> Inställningar > Konfiguration >**[!UICONTROL Advanced]**>**[!UICONTROL Developer]**>**[!UICONTROL Static Files Settings]**](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/tools/developer-tools#static-file-signatures).
+Konfigurationen för signering av statiskt innehåll finns i [**[!UICONTROL Stores]**> Inställningar > Konfiguration >**[!UICONTROL Advanced]**>**[!UICONTROL Developer]**>**[!UICONTROL Static Files Settings]**](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/developer-tools#static-file-signatures).
 
-- **Endast lokal**: Den här konfigurationen är tillgänglig om din plats **inte** är i [produktionsläge](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html?lang=sv-SE#production-mode).
+- **Endast lokal**: Den här konfigurationen är tillgänglig om din plats **inte** är i [produktionsläge](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html#production-mode).
 - **Cloud**: Den här konfigurationen är dold eftersom produktionsläget används strikt. Du måste därför använda kommandoraden som visas nedan.
 
 ![Inställningar för statiska filer](../../assets/configuration/static-files-settings.png)

@@ -6,7 +6,7 @@ badge: label="Bidragen av David Lambauer" type="Informative" url="https://github
 exl-id: a6c5de6c-e8da-4eca-bbfb-592904b2c53f
 source-git-commit: e231a27d70e29b01c872b0655168e31f590d4876
 workflow-type: tm+mt
-source-wordcount: '2708'
+source-wordcount: '2709'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ I följande kodutdrag visas hur du skapar en ny flik med exempeldata.
 </config>
 ```
 
-Ovanstående kodutdrag skapar en ny flik med identifieraren `A_UNIQUE_ID`. När attributet `translate` definieras och refererar till etiketten, kan `label`-noden översättas. Under återgivningsprocessen kommer CSS-klassen `a-custom-css-class-to-style-this-tab` att användas på elementet HTML som skapades för den här fliken.
+Ovanstående kodutdrag skapar en ny flik med identifieraren `A_UNIQUE_ID`. När attributet `translate` definieras och refererar till etiketten, kan `label`-noden översättas. Under återgivningsprocessen kommer CSS-klassen `a-custom-css-class-to-style-this-tab` att tillämpas på det HTML-element som skapades för den här fliken.
 `sortOrder`-attributet med värdet `10` definierar tabbens position i listan över alla flikar när de återges.
 
 ## Avsnitt
@@ -176,7 +176,7 @@ En `<group>`-tagg kan ha följande underordnade taggar:
 | `help_url` | Kan inte utökas. Se nedan. | `typeUrl` |
 | `more_url` | Kan inte utökas. Se nedan. | `typeUrl` |
 | `demo_link` | Kan inte utökas. Se nedan. | `typeUrl` |
-| `comment` | Lägger till en kommentar under gruppetiketten. Genom att använda `<![CDATA[//]]>` HTML kan du använda det. | `string` |
+| `comment` | Lägger till en kommentar under gruppetiketten. Genom att använda `<![CDATA[//]]>` kan HTML användas. | `string` |
 | `hide_in_single_store_mode` | Anger om gruppen ska vara synlig i läget för en enskild butik. `1` döljer gruppen. `0` visar gruppen. | `int` |
 | `field` | Definiera ett eller flera fält som ska vara tillgängliga under gruppen. | `field` |
 | `group` | Definiera en eller flera undergrupper. | `unbounded` |
@@ -248,8 +248,8 @@ En `<field>`-tagg kan ha följande värden för attributet `type=""`:
 | `select` | Normal listruta, kan behöva en anpassad `source_model`. Används även för `Yes/No` markeringar. Se `Magento\Search\Model\Adminhtml\System\Config\Source\Engine` för ett exempel. |
 | `multiselect` | Som `select`, men flera alternativ är giltiga. |
 | `button` | En knapp som utlöser en omedelbar händelse. Kräver en anpassad front end-modell för att definiera knapptexten och åtgärden. Se `Magento\ScheduledImportExport\Block\Adminhtml\System\Config\Clean` för ett exempel. |
-| `obscure` | Ett textfält med värdet krypterat och visat som `**&#x200B;**`. Värdet visas inte om du ändrar typen med&quot;Inspect Element&quot; i webbläsaren. |
-| `password` | Precis som `obscure`, förutom att det dolda värdet inte är krypterat, så visas värdet om du tvingar en ändring av typen med Inspect Element i webbläsaren. |
+| `obscure` | Ett textfält med värdet krypterat och visat som `****`. Värdet visas inte om du ändrar typen med alternativet Inspektera element i webbläsaren. |
+| `password` | Precis som `obscure`, förutom att det dolda värdet inte är krypterat, så visas värdet om du tvingar en ändring av typen med alternativet Inspektera element i webbläsaren. |
 | `file` | Tillåter att en fil överförs för bearbetning. |
 | `label` | Visar en etikett i stället för ett redigerbart fält. Använd den här typen när ett fält bara kan redigeras i specifika omfång, till exempel enbart butiksvynivå. |
 | `time` | Kontroll för att ange tid med tre listrutor - timme, minut och sekund. |
@@ -279,7 +279,7 @@ En `<field>`-tagg kan ha följande underordnade taggar:
 | Nod | Beskrivning | Typ |
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|
 | `label` | Definierar den etikett som visas i förgrunden. | `string` |
-| `comment` | Lägger till en kommentar under fältetiketten. Genom att använda `<![CDATA[//]]>` HTML kan du använda det. | `string` |
+| `comment` | Lägger till en kommentar under fältetiketten. Genom att använda `<![CDATA[//]]>` kan HTML användas. | `string` |
 | `tooltip` | Ett annat möjligt klientelement som kan användas för att beskriva fältets betydelse. Visas som en liten ikon bredvid fältet. | `string` |
 | `hint` | Visar ytterligare information. Endast tillgänglig med specifik `frontend_model`. | `string` |
 | `frontend_class` | Lägger till en definierad CSS-klass i det återgivna avsnittets HTML-element. | `string` |
@@ -392,8 +392,8 @@ Följande valideringsregler är tillgängliga:
 | `phoneUK` | Tillåter ett (UK) telefonnummer. |
 | `phoneUS` | Tillåter ett (US) telefonnummer. |
 | `required-entry` | Tillåter inte ett tomt värde (motsvarande validering som `validate-no-empty`).<br>Meddelande om verifieringsfel:&quot;Detta är ett obligatoriskt fält.&quot; |
-| `time` | Tillåter en giltig tid i 24-timmarsformat, mellan 00:00 och 23:59. Till exempel `15`, `15:05` eller `15:05:48`. |
-| `time12h` | Tillåter en giltig tid i 12-timmarsformat, mellan 12:00 och 11:59:59:00. Till exempel `3 am`, `11:30 pm`, `02:15:00 pm`. |
+| `time` | Tillåter en giltig tid i 24-timmarsformat, mellan 0:00 och 23:59. Till exempel `15`, `15:05` eller `15:05:48`. |
+| `time12h` | Tillåter en giltig tid i 12-timmarsformat, mellan 12:00 och 11:59:59 pm. Till exempel `3 am`, `11:30 pm`, `02:15:00 pm`. |
 | `validate-admin-password` | Tillåter 7 eller fler tecken med både numeriska och alfabetiska tecken. |
 | `validate-alphanum-with-spaces` | Tillåter användning av bokstäver (a-z eller A-Z), siffror (0-9) eller mellanslag. |
 | `validate-clean-url` | Tillåter en giltig URL. Till exempel `https://www.example.com` eller `www.example.com`. |

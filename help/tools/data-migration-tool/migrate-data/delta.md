@@ -1,6 +1,6 @@
 ---
 title: Migrera ändringar
-description: Lär dig hur du migrerar endast data som har ändrats sedan din senaste datamigrering för Magento 1 med  [!DNL Data Migration Tool].
+description: Lär dig hur du migrerar endast data som har ändrats sedan din senaste datamigrering av Magento 1 med  [!DNL Data Migration Tool].
 exl-id: c300c567-77d3-4c25-8b28-a7ae4ab0092e
 topic: Commerce, Migration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
@@ -53,7 +53,7 @@ Var:
 
 ## Migrera data som skapats av tillägg från tredje part
 
-I `Delta`-läget migrerar [!DNL Data Migration Tool] endast data som skapats av Magento egna moduler och ansvarar inte för koden eller tilläggen som skapats av tredjepartsutvecklare. Om dessa tillägg skapade data i storefront-databasen och handlaren vill ha dessa data i Magento 2, ska konfigurationsfilerna för [!DNL Data Migration Tool] skapas och ändras i enlighet med detta.
+I `Delta`-läget migrerar [!DNL Data Migration Tool] data som bara har skapats av Magento egna moduler och ansvarar inte för koden eller tilläggen som skapats av tredjepartsutvecklare. Om dessa tillägg skapade data i butiksdatabasen och handlaren vill ha dessa data i Magento 2, ska konfigurationsfilerna för [!DNL Data Migration Tool] skapas och ändras i enlighet med detta.
 
 Om ett tillägg har egna tabeller, och du behöver spåra ändringar för deltamigrering, gör du så här:
 

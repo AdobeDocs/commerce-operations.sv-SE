@@ -32,7 +32,7 @@ Följande bild visar en grundläggande vy av lack i din Commerce topologi.
 
 ![Grundläggande lack-diagram](../../assets/configuration/varnish-basic.png)
 
-I föregående bild resulterar användarens HTTP-begäran över Internet i många begäranden om CSS, HTML, JavaScript och bilder (kallas tillsammans _resurser_). Finska sitter framför webbservern och proxiderar dessa begäranden till webbservern.
+I föregående bild resulterar användarens HTTP-begäran över Internet i många begäranden om CSS, HTML, JavaScript och bilder (kallas tillsammans för _resurser_). Finska sitter framför webbservern och proxiderar dessa begäranden till webbservern.
 
 Efterhand som webbservern returnerar resurser lagras cachelagrade resurser i svenska. Efterföljande förfrågningar om dessa resurser besvaras av Varnish (vilket innebär att förfrågningarna inte når webbservern). Finska returnerar cachelagrat innehåll extremt snabbt. Resultatet blir snabbare svarstider för att skicka tillbaka innehållet till användarna och ett reducerat antal förfrågningar som måste uppfyllas av Commerce.
 
@@ -90,7 +90,7 @@ Vi känner till följande problem med Varnish:
 
 Cachelagring i lack fungerar med Commerce:
 
-- [`nginx.conf.sample`](https://github.com/magento/magento2/blob/2.4/nginx.conf.sample) från GitHub-databasen Magento 2
+- [`nginx.conf.sample`](https://github.com/magento/magento2/blob/2.4/nginx.conf.sample) från Magento 2 GitHub-databasen
 - `.htaccess` distribuerad konfigurationsfil för Apache som tillhandahålls med Commerce
 - `default.vcl`-konfiguration för lack genererad med [Admin](../cache/configure-varnish-commerce.md)
 

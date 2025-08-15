@@ -18,7 +18,7 @@ Adobe använder [Composer](https://getcomposer.org/) för att hantera Adobe Comm
 - Återanvänd bibliotek från tredje part utan att paketera dem med källkod
 - Minska antalet tilläggskonflikter och kompatibilitetsproblem genom att använda en komponentbaserad arkitektur med robust beroendehantering
 - Ansluta till standarden [PHP-Framework Interoperability Group (FIG)](https://www.php-fig.org/)
-- Paketera Magento Open Source med andra komponenter
+- Paketera om Magento Open Source med andra komponenter
 - Använda Adobe Commerce i produktionsmiljö
 
 >[!NOTE]
@@ -93,7 +93,7 @@ Så här hämtar du Adobe Commerce metapaket:
 
    >[!NOTE]
    >
-   > Om du använder en Composer `[auth.json](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/develop/authentication-keys)`-fil eller en systemvariabel som konfigurerats med dina Commerce-autentiseringsnycklar uppmanas du inte att ange autentiseringsnycklar.
+   > Om du använder en Composer `[auth.json](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/authentication-keys)`-fil eller en systemvariabel som konfigurerats med dina Commerce-autentiseringsnycklar uppmanas du inte att ange autentiseringsnycklar.
 
    Om du stöter på fel, till exempel `Could not find package...` eller `...no matching package found`, kontrollerar du att det inte finns några stavfel i kommandot. Om du fortfarande råkar ut för fel kanske du inte har behörighet att ladda ned Adobe Commerce. Kontakta [Adobe Commerce Support](https://support.magento.com/hc/en-us) om du behöver hjälp.
 

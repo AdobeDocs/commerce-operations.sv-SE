@@ -4,7 +4,7 @@ description: Lär dig mer om avancerade installationsscenarier för Adobe Commer
 exl-id: e16e750a-e068-4a63-8ad9-62043e2a8231
 source-git-commit: 79c8a15fb9686dd26d73805e9d0fd18bb987770d
 workflow-type: tm+mt
-source-wordcount: '2314'
+source-wordcount: '2313'
 ht-degree: 0%
 
 ---
@@ -119,7 +119,7 @@ Följande alternativ anger användarinformation och autentiseringsuppgifter för
 
 Du kan skapa Admin-användaren under eller efter installationen. Om du skapar användaren under installationen krävs alla autentiseringsuppgifter för administratörer. Se [Exempel på lokala värdinstallationer](#sample-localhost-installations).
 
-Följande tabeller innehåller många men inte alla tillgängliga installationsparametrar. En fullständig lista finns i [Kommandoradsverktygshandboken](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/cli-reference/commerce-on-premises).
+Följande tabeller innehåller många men inte alla tillgängliga installationsparametrar. En fullständig lista finns i [Kommandoradsverktygshandboken](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises).
 
 | Namn | Värde | Obligatoriskt? |
 |--- |--- |--- |
@@ -135,7 +135,7 @@ Följande tabeller innehåller många men inte alla tillgängliga installationsp
 |--- |--- |--- |
 | `--base-url` | Bas-URL som används för att komma åt din administratör och butiker i något av följande format: <br><br>`http[s]://<host or ip>/<your install dir>/`.<br><br>**Obs!** Schemat (http:// eller https://) och ett avslutande snedstreck krävs båda.<br><br>`<your install dir>` är den dokumentberoende sökvägen där Adobe Commerce-programvaran ska installeras. Beroende på hur du konfigurerar webbservern och de virtuella värdarna kan sökvägen vara magento2 eller tom.<br><br>Använd antingen `http://127.0.0.1/<your install dir>/` eller `http://127.0.0.1/<your install dir>/` för att få åtkomst till Adobe Commerce eller MagenAdobe Commerce.<br><br>- `{{base_url}}` som representerar en bas-URL som definieras av en virtuell värdinställning eller av en virtualiseringsmiljö som Docker. Om du till exempel konfigurerar en virtuell värd med värdnamnet `magento.example.com` kan du installera programvaran med `--base-url={{base_url}}` och få åtkomst till administratören med en URL som `http://magento.example.com/admin`. | Ja |
 | `--backend-frontname` | URI (Uniform Resource Identifier) för åtkomst till administratören. Du kan utelämna den här parametern så att programmet kan generera en slumpmässig URI med följande mönster: <code>admin_jkhgdfq</code>.<br><br>Vi rekommenderar en slumpmässig URI av säkerhetsskäl. En slumpmässig URI är svårare för hackare eller skadlig programvara att utnyttja.<br><br>URI:n visas i slutet av installationen. Du kan visa det senare när som helst med kommandot `bin/magento info:adminuri`.<br><br>Om du väljer att ange ett värde rekommenderar vi att du inte använder ett vanligt ord som admin, serverdel. Admin-URI kan bara innehålla alfanumeriska värden och understreck (`_`). | Nej |
-| `--db-host` | Använd något av följande:<br><br>- Databasserverns kvalificerade värdnamn eller IP-adress.<br><br>- `localhost` (standard) eller `127.0.0.1` om databasservern finns på samma värd som webbservern.localhost betyder att MySQL-klientbiblioteket använder UNIX-socketar för att ansluta till databasen. `127.0.0.1` gör att klientbiblioteket använder TCP-protokollet. Mer information om socketar finns i [PHP SUB_MYSQL-dokumentationen](https://www.php.net/manual/en/ref.pdo-mysql.php).<br><br>**Obs!** Du kan välja att ange databasserverporten i dess värdnamn som www.example.com:9000 | Ja |
+| `--db-host` | Använd något av följande:<br><br>- Databasserverns kvalificerade värdnamn eller IP-adress.<br><br>- `localhost` (standard) eller `127.0.0.1` om databasservern finns på samma värd som webbservern.localhost betyder att MySQL-klientbiblioteket använder UNIX-socketar för att ansluta till databasen. `127.0.0.1` gör att klientbiblioteket använder TCP-protokollet. Mer information om socketar finns i [PHP SUB_MYSQL-dokumentationen](https://www.php.net/manual/en/ref.pdo-mysql.php).<br><br>**Obs!** Du kan välja att ange databasserverporten i dess värdnamn, till exempel www.example.com:9000 | Ja |
 | `--db-name` | Namnet på den databasinstans där du vill installera databastabellerna.<br><br>Standardvärdet är `magento2`. | Ja |
 | `--db-user` | Användarnamn för databasinstansens ägare.<br><br>Standardvärdet är `root`. | Ja |
 | `--db-password` | Lösenord för databasinstansens ägare. | Ja |
@@ -164,7 +164,7 @@ Följande tabeller innehåller många men inte alla tillgängliga installationsp
 | `--search-engine` | Den version av Elasticsearch eller OpenSearch som ska användas som sökmotor. Standardvärdet är `elasticsearch7`. Elasticsearch 5 har tagits bort och rekommenderas inte. | Nej |
 | `--elasticsearch-host` | Värdnamnet eller IP-adressen där Elasticsearch körs. Standardvärdet är `localhost`. | Nej |
 | `--elasticsearch-port` | Elasticsearch-porten för inkommande HTTP-begäranden. Standardvärdet är `9200`. | Nej |
-| `--elasticsearch-index-prefix` | Ett prefix som identifierar sökindexet för Elasticsearch. Standardvärdet är `magento2`. | Nej |
+| `--elasticsearch-index-prefix` | Ett prefix som identifierar Elasticsearch sökindex. Standardvärdet är `magento2`. | Nej |
 | `--elasticsearch-timeout` | Antalet sekunder innan systemet timeout. Standardvärdet är `15`. | Nej |
 | `--elasticsearch-enable-auth` | Aktiverar autentisering på Elasticsearch-servern. Standardvärdet är `false`. | Nej |
 | `--elasticsearch-username` | Användar-ID för autentisering till Elasticsearch-servern. | Nej, om inte autentisering är aktiverat |

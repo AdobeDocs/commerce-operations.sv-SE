@@ -33,5 +33,5 @@ I följande diagram visas de faser och aktiviteter som skulle ingå i ett lyckat
 Att hitta rätt supportmodell för ert företag för att fortsätta förbättra och optimera er plattform - och handelspraxis som helhet - är ett viktigt steg när det gäller att behålla allt det hårda arbete som utfördes under implementeringsprocessen. Med en omfattande och kontinuerlig supportplan på plats kan e-handelsplatsen hålla jämna steg med kundernas förväntningar och ni kan fortsätta att nå era mål.
 
 När du driftsätter Adobe Commerce är det viktigt att tänka på vad du ska inkludera i din underhålls- och supportstrategi.
-Expertsupport ingår i en Adobe Commerce-licens. Mer information om Expert Support och Adobe Support Plans finns i [Adobe Support Plans](https://business.adobe.com/customers/consulting-services/premier-support.html).
-Förutom Adobe Support-planer finns det även äldre supportvillkor för Magento. Om du vill veta vilka supporttjänster som är tillämpliga på dig kan du hänvisa till ditt avtal och se vilket supportavtal du har eller prata med ditt kontoteam på Adobe.
+Expertsupport ingår i en Adobe Commerce-licens. Mer information om expertsupport och Adobe supportavtal finns i [Adobe supportavtal](https://business.adobe.com/customers/consulting-services/premier-support.html).
+Förutom Adobe supportavtal finns det även gamla supportvillkor för Magento. Om du vill veta vilka supporttjänster som är tillämpliga på dig kan du hänvisa till ditt avtal och se vilket supportavtal du har eller prata med ditt Adobe-kontoteam.

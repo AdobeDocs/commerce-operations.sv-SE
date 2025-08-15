@@ -38,7 +38,7 @@ ht-degree: 0%
    - [Valfri programvara](prerequisites/optional-software.md)
 - [Snabbstart](composer.md)
 - [Avancerad installation](advanced.md)
-- Post-installationssteg {#next-steps}
+- Steg efter installation {#next-steps}
    - [Verifiera installationen](next-steps/verify.md)
    - [Konfigurera programmet](next-steps/configuration.md)
    - [Ange en mask (valfritt)](next-steps/set-umask.md)
@@ -47,7 +47,7 @@ ht-degree: 0%
       - [Hämta Composer-paket](sample-data/composer-packages.md)
       - [Klona Git-databaser](sample-data/git-repositories.md)
       - [Ta bort eller uppdatera moduler](sample-data/remove-or-update.md)
-- Tutorials {#tutorials}
+- Självstudiekurser {#tutorials}
    - [Säkerhetskopiera och återställa filsystemet, mediet och databasen](tutorials/backup.md)
    - [Kontrollera databasstatus](tutorials/database-status.md)
    - [Konfigurera beteende för meddelandekonsument](tutorials/message-consumers.md)
@@ -67,4 +67,4 @@ ht-degree: 0%
    - [Avinstallera eller installera om Commerce](tutorials/uninstall.md)
    - [Avinstallera teman](tutorials/themes.md)
    - [Uppgradera databasschemat](tutorials/database-upgrade.md)
-- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=sv-SE)
+- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

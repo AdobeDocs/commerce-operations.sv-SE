@@ -65,7 +65,7 @@ Mer information finns i följande:
 >
 >* Startmiljöer har ingen loggrotation.
 >
->* Du kan inte konfigurera loggrotation i Pro Integration-miljöer. Du måste implementera en anpassad lösning/skript och [konfigurera ditt cron](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/configure/app/properties/crons-property) så att skriptet körs efter behov.
+>* Du kan inte konfigurera loggrotation i Pro Integration-miljöer. Du måste implementera en anpassad lösning/skript och [konfigurera ditt cron](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/crons-property) så att skriptet körs efter behov.
 
 ### Ställ in iptables-regler för att möjliggöra för olika tjänster att kommunicera
 

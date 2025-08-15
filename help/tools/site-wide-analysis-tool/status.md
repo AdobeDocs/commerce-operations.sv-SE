@@ -19,4 +19,4 @@ Följande statusinformation visas på sidans översta nivå på skärmen [!DNL S
 
 **[!UICONTROL Health Index Bar]**: Den mäter den övergripande webbplatshälsan från 0 till 100, där noll är värst och 100 är perfekt hälsa. Det beräknas utifrån den kvantitet och prioritetsviktskoefficient som används för aktiva rekommendationer.
 
-**[!UICONTROL Download Recommendations Report]**: Recommendations Report innehåller personaliserade rekommendationer som kan användas i ditt projekt. Du kan hämta en PDF-rapport genom att klicka på det här avsnittet.
+**[!UICONTROL Download Recommendations Report]**: Rekommendationsrapporten innehåller anpassade rekommendationer som kan användas i ditt projekt. Du kan hämta en PDF-rapport genom att klicka på det här avsnittet.

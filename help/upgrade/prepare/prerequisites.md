@@ -33,7 +33,7 @@ Se till att du har uppdaterat alla systemkrav och beroenden i din miljö. Se PHP
 
 >[!NOTE]
 >
->För Adobe Commerce i molnbaserade infrastrukturproprojekt måste du skapa en [supportbiljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att kunna installera eller uppdatera tjänster i mellanlagrings- och produktionsmiljöer. Ange de tjänständringar som krävs och inkludera dina uppdaterade `.magento.app.yaml`- och `services.yaml`-filer och PHP-version i biljetten. Det kan ta upp till 48 timmar för molninfrastrukturteamet att uppdatera ditt projekt. Se [Program och tjänster som stöds](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/cloud-architecture.html?lang=sv-SE#supported-software-and-services).
+>För Adobe Commerce i molnbaserade infrastrukturproprojekt måste du skapa en [supportbiljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att kunna installera eller uppdatera tjänster i mellanlagrings- och produktionsmiljöer. Ange de tjänständringar som krävs och inkludera dina uppdaterade `.magento.app.yaml`- och `services.yaml`-filer och PHP-version i biljetten. Det kan ta upp till 48 timmar för molninfrastrukturteamet att uppdatera ditt projekt. Se [Program och tjänster som stöds](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/cloud-architecture.html#supported-software-and-services).
 
 ## Kontrollera att en sökmotor som stöds är installerad
 
@@ -43,7 +43,7 @@ Adobe Commerce kräver att Elasticsearch eller OpenSearch är installerat för a
 
 **Om du uppgraderar korrigeringsutgåvor på versionslinjerna 2.3.x eller 2.4.x** kan du [migrera till OpenSearch](opensearch-migration.md) om Elasticsearch 7.x redan är installerat.
 
-Du kan använda kommandoraden eller Admin för att ta reda på vilken katalogsökmotor du vill använda:
+Du kan använda kommandoraden eller Admin för att bestämma katalogsökmotorn:
 
 * Ange kommandot `bin/magento config:show catalog/search/engine`. Kommandot returnerar värdet `mysql`, `elasticsearch` (vilket anger att Elasticsearch 2 har konfigurerats), `elasticsearch5`, `elasticsearch6`, `elasticsearch7` eller ett anpassat värde, vilket anger att du har installerat en sökmotor från tredje part. För tidigare versioner än 2.4.6 använder du värdet `elasticsearch7` för Elasticsearch 7- eller OpenSearch-motorn. Använd värdet `opensearch` för OpenSearch-motorn för version 2.4.6 och senare.
 
@@ -99,7 +99,7 @@ För att kunna uppgradera MySQL från version 8.0 till version 8.4 måste du fö
    >
    >Om du inte ändrar värdet för `restrict_fk_on_non_standard_key` till `OFF` får du följande fel under importen:
    >
-   >```sql
+   ```sql
    > ERROR 6125 (HY000) at line 2164: Failed to add the foreign key constraint. Missing unique key for constraint 'CAT_PRD_FRONTEND_ACTION_PRD_ID_CAT_PRD_ENTT_ENTT_ID' in the referenced table 'catalog_product_entity'
    >```
 1. Starta om MySQL-servern.
@@ -130,7 +130,7 @@ Elasticsearch kräver Java Development Kit (JDK) 1.8 eller senare. Se [Installer
 
 #### OpenSearch
 
-OpenSearch är en öppen källkodsgaffel till Elasticsearch 7.10.2 efter Elasticsearch licensändring. I följande versioner av Adobe Commerce introduceras stöd för OpenSearch:
+OpenSearch är en öppen källkodsgaffel till Elasticsearch 7.10.2 efter Elasticsearch licensändring. I följande versioner av Adobe Commerce finns stöd för OpenSearch:
 
 * 2.4.6 (OpenSearch har en separat modul och inställningar)
 * 2.4.5
@@ -190,11 +190,11 @@ Stöd för Elasticsearch 8.x infördes i Adobe Commerce 2.4.6. Följande instruk
       composer update magento/module-elasticsearch-8 aws/aws-sdk-php -W
       ```
 
-   Detta tillvägagångssätt fungerar för 2.4.7-p4 med PHP 8.3. Problemet uppstår eftersom `aws/aws-sdk-php` kräver `psr/http-message >= 2.0`, vilket kan orsaka konflikter. Ovanstående steg hjälper dig att lösa dessa beroendeproblem.
+   Detta tillvägagångssätt fungerar för 2.4.7-p4 med PHP 8.3. Problemet inträffar eftersom `aws/aws-sdk-php` kräver `psr/http-message >= 2.0`, vilket kan orsaka konflikter. Ovanstående steg hjälper dig att lösa dessa beroendeproblem.
 
    +++
 
-1. Uppdatera dina projektkomponenter.
+1. Uppdatera projektkomponenterna.
 
    ```bash
    bin/magento setup:upgrade
@@ -307,7 +307,7 @@ Resultat som liknar följande ska visas:
 #~ MAGENTO END c5f9e5ed71cceaabc4d4fd9b3e827a2b
 ```
 
-Ett annat symptom på att cron inte körs är följande fel i Admin:
+Ett annat symtom på att kron inte körs är följande fel i Admin:
 
 ![Systemmeddelanden - kron körs inte](../../assets/upgrade-guide/cron-not-running.png)
 

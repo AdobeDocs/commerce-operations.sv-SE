@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Det finns verktyg som är relaterade till [!DNL Upgrade Compatibility Tool], som kan användas för liknande resultat, eller som kan utlösa en körning av [!DNL Upgrade Compatibility Tool].
 
-- **[!DNL Security scanner]**: Ger Adobe Commerce-kunder realtidsinsikter om butikens säkerhetsstatus genom att proaktivt identifiera skadlig kod och meddela dem om deras butik är komprometterad. Mer information finns i [[!DNL Security scan] användarhandboken](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/security/security-scan).
+- **[!DNL Security scanner]**: Ger Adobe Commerce-kunder realtidsinsikter om butikens säkerhetsstatus genom att proaktivt identifiera skadlig kod och meddela dem om deras butik är komprometterad. Mer information finns i [[!DNL Security scan] användarhandboken](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan).
 
 - **[!DNL Site-Wide Analysis Tool]**: Ett proaktivt självbetjäningsverktyg och en central lagringsplats som innehåller detaljerade systeminsikter och rekommendationer för att säkerställa säkerheten och användbarheten för din Adobe Commerce-installation. Den ger prestandaövervakning, rapporter och råd i realtid dygnet runt alla dagar för att identifiera potentiella problem och ge bättre insyn i webbplatsens hälsa, säkerhet och programkonfigurationer. Mer information finns i [[!DNL Site-Wide Analysis Tool] handboken](../../tools/site-wide-analysis-tool/intro.md).
 
@@ -23,6 +23,6 @@ Det finns verktyg som är relaterade till [!DNL Upgrade Compatibility Tool], som
 
   >[!WARNING]
   >
-  >[!DNL AmpersandHQ] är inte ett Adobe officiellt verktyg.
+  >[!DNL AmpersandHQ] är inte ett officiellt Adobe-verktyg.
 
-- **[!DNL Quality Patches Tool]**: Ett kommandoradsverktyg som levererar kvalitetspatchar för Adobe Commerce. Mer information finns i [[!DNL Quality patches tool] användarhandboken](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE){target="_blank"}.
+- **[!DNL Quality Patches Tool]**: Ett kommandoradsverktyg som levererar kvalitetspatchar för Adobe Commerce. Mer information finns i [[!DNL Quality patches tool] användarhandboken](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}.

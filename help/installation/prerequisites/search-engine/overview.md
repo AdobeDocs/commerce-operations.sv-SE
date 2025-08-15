@@ -16,7 +16,7 @@ Från och med Adobe Commerce 2.4 måste alla installationer vara konfigurerade a
 
 >[!NOTE]
 >
->Stöd för OpenSearch lades till i 2.4.4. OpenSearch är en kompatibel gaffel för Elasticsearch. Alla instruktioner för att konfigurera Elasticsearch 7 gäller för OpenSearch. [Migrera från Elasticsearch till OpenSearch](../../../upgrade/prepare/opensearch-migration.md) ger vägledning om hur du går över till OpenSearch.
+>Stöd för OpenSearch lades till i 2.4.4. OpenSearch är en kompatibel del av Elasticsearch. Alla instruktioner för att konfigurera Elasticsearch 7 gäller för OpenSearch. [Migrera från Elasticsearch till OpenSearch](../../../upgrade/prepare/opensearch-migration.md) ger vägledning om hur du går över till OpenSearch.
 
 ## Version som stöds
 
@@ -41,7 +41,7 @@ I bilden ovan visas:
 
 * Commerce-programmet och sökmotorn installeras på olika värdar.
 
-  Körning på separata värdar kräver att proxering fungerar. (Att klustra sökmotorn ligger utanför den här handbokens omfång, men du hittar mer information i [Elasticsearch klusterdokumentationen](https://www.elastic.co/guide/en/elasticsearch/guide/current/distributed-cluster.html).)
+  Körning på separata värdar kräver att proxering fungerar. (Att klustra sökmotorn ligger utanför den här handbokens räckvidd, men du hittar mer information i [Elasticsearch klusterdokumentation](https://www.elastic.co/guide/en/elasticsearch/guide/current/distributed-cluster.html).)
 
 * Varje värd har en egen webbserver. Webbservrarna behöver inte vara samma.
 
@@ -63,7 +63,7 @@ Sökbegäranden behandlas på följande sätt:
 
 1. Sökmotorn bearbetar begäran.
 
-1. Kommunikationen returneras längs samma väg, och webbservern Elasticsearch fungerar som en säker omvänd proxy.
+1. Kommunikationen returneras på samma väg, och Elasticsearch webbserver fungerar som en säker omvänd proxy.
 
 ## Förutsättningar
 
@@ -128,13 +128,13 @@ apt-get -y update
 apt-get install -y openjdk-8-jdk
 ```
 
-Andra alternativ finns i [Oraclets dokumentation](https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html).
+Andra alternativ finns i [Oracle-dokumentation](https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html).
 
 ### Installera sökmotorn
 
 Följ [Installera Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html) eller [Installera och konfigurera OpenSearch](https://opensearch.org/docs/latest/opensearch/install/index/) för de plattformsspecifika stegen.
 
-Kontrollera att Elasticsearch fungerar genom att ange följande kommando på den server som programmet körs på:
+Kontrollera att Elasticsearch fungerar genom att ange följande kommando på servern som programmet körs på:
 
 ```bash
 curl -XGET '<host>:9200/_cat/health?v&pretty'
@@ -159,7 +159,7 @@ curl -XGET https://<host>:9200/_cat/plugins?v -u 'admin:admin' --insecure
 
 ## Uppgraderar Elasticsearch
 
-Mer information om hur du säkerhetskopierar data, identifierar potentiella migreringsproblem och testar uppgraderingar innan du distribuerar till produktionen finns i [Uppgraderar Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html). Beroende på vilken version av Elasticsearch du använder behöver du kanske inte starta om hela klustret.
+Se [Uppgradera Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html) för fullständiga instruktioner om hur du säkerhetskopierar data, identifierar potentiella migreringsproblem och testar uppgraderingar innan du distribuerar till produktionen. Beroende på vilken version av Elasticsearch du har behöver du kanske starta om hela klustret eller inte.
 
 Elasticsearch kräver JDK 1.8 eller senare. Se [Installera Java Software Development Kit](#install-the-java-software-development-kit) för att kontrollera vilken version av JDK som är installerad.
 

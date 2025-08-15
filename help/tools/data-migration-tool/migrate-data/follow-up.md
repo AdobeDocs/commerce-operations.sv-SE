@@ -26,7 +26,7 @@ Alla grupppriser konverteras automatiskt till nivåpriser under migreringen.
 
 ### Ny numrering för försäljningsenheter
 
-Referensnummer för beställningar, fakturor, leveranser, kreditnotor och RMA-migrering i befintligt skick. Efter migreringen gäller de nya nummertilldelningsreglerna för Magento 2. Numreringen för de nya försäljningsenheterna är annorlunda.
+Referensnummer för beställningar, fakturor, leveranser, kreditnotor och RMA-migrering i befintligt skick. Efter migreringen gäller de nya reglerna för nummertilldelning i Magento 2. Numreringen för de nya försäljningsenheterna är annorlunda.
 
 ## Steg
 
@@ -38,9 +38,9 @@ Efter migreringen måste kundsegment sparas om från adminpanelen för att de sk
 
 Verktyget migrerar inte tidszonsinställningar, så du måste konfigurera tidszonen manuellt efter migreringen på **Lagrar** > **Konfiguration** > **Språkalternativ** > **Tidszon**.
 
-Som standard lagrar Magento tidsdata i UTC-0-zonen i databasen och visar dem enligt de aktuella tidszonsinställningarna. Om tidsdata redan har sparats i databasen i en annan zon än UTC-0, måste du konvertera den befintliga tiden till UTC-0 med `\Migration\Handler\Timezone`-hanteraren för [!DNL Data Migration Tool].
+Som standard lagrar Magento tidsdata i UTC-0-zonen i databasen och visar dem enligt de aktuella tidszonsinställningarna. Om tidsdata redan har sparats i databasen i en annan zon än UTC-0, måste du konvertera den befintliga tiden till UTC-0 med [!DNL Data Migration Tool]-hanteraren för `\Migration\Handler\Timezone`.
 
-I följande exempel har Magento 1 felaktigt sparat tid i UTC-7-zonen i databasen (till exempel på grund av ett felaktigt tillägg från tredje part). Följ de här stegen för att konvertera skapandetiden för kundkontot till UTC-0-zonen när du migrerar:
+I följande exempel har Magento 1 sparat tid felaktigt i UTC-7-zonen i databasen (till exempel på grund av ett felaktigt tillägg från tredje part). Följ de här stegen för att konvertera skapandetiden för kundkontot till UTC-0-zonen när du migrerar:
 
 1. Kopiera konfigurationsfilen `map-customer.xml.dist` från lämplig katalog för [!DNL Data Migration Tool] (`<your Magento 2 install dir>/vendor/magento/data-migration-tool/etc/<migration edition>`) till filen `<your Magento 2 install dir>/app/code/Vendor/Migration/etc/<migration edition>/map-customer.xml`.
 

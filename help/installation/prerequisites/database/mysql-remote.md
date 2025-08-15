@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Ibland kanske du vill lagra databasen på en separat server i stället för att köra databasservern och webbservern på samma dator.
 
-Adobe har tillhandahållit ett sätt att ansluta till en MySQL-server på en annan dator. Från och med Adobe Commerce 2.4.3 kan du även konfigurera programmet så att det använder en Amazon Web Services (AWS) Aurora-databas utan kodändringar.
+Adobe erbjuder ett sätt att ansluta till en MySQL-server på en annan dator. Från och med Adobe Commerce 2.4.3 kan du även konfigurera programmet så att det använder en Amazon Web Services (AWS) Aurora-databas utan kodändringar.
 
 Aurora är en högpresterande, helt kompatibel MySQL-server som finns på AWS.
 
@@ -21,7 +21,7 @@ Aurora är en högpresterande, helt kompatibel MySQL-server som finns på AWS.
 
 Att använda Aurora som databas är lika enkelt som att ange databasen i den vanliga Adobe Commerce-konfigurationen med hjälp av standarddatabaskopplingen.
 
-Använd Aurora-informationen i fälten `db-` när du kör `bin/magento setup:install`:
+Använd Aurora-informationen i fälten `bin/magento setup:install` när du kör `db-`:
 
 ```bash
 bin/magento setup:install ... --db-host='database-aurora.us-east-1.rds.amazonaws.com' --db-name='magento2' --db-user='username' --db-password='password' ...

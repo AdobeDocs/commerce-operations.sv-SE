@@ -30,12 +30,12 @@ I det här avsnittet beskrivs hur du migrerar mediefiler manuellt.
 
 >[!WARNING]
 >
->Databasmedielagringsmetoden används inte i Magento 2.4.3.
+>Databasens medialagringsmetod används inte i Magento 2.4.3.
 
 
 Det här avsnittet gäller *endast* om du lagrar mediefiler i Magento-databasen. Det här steget bör utföras före [migrering av data](data.md):
 
-1. Logga in som administratör på administratörspanelen för Magento 1.
+1. Logga in som administratör på Magento 1 Admin Panel.
 
 1. Klicka på **System** > **Konfiguration** > AVANCERAT > **System**.
 
@@ -45,19 +45,19 @@ Det här avsnittet gäller *endast* om du lagrar mediefiler i Magento-databasen.
 
 1. Klicka på **Synkronisera**.
 
-Upprepa sedan samma steg på administratörspanelen i Magento 2.
+Upprepa sedan samma steg på administrationspanelen i Magento 2.
 
 ### Mediefiler i filsystemet
 
 Alla mediefiler (bilder för produkter, kategorier, WYSIWYG-redigeraren och så vidare) ska kopieras manuellt från `<your Magento 1 install dir>/media` till `<your Magento 2 install dir>/pub/media`.
 
-Kopiera *inte* `.htaccess`-filerna som finns i mappen Magento 1 `media` . Magento 2 har en egen `.htaccess` som ska bevaras.
+Kopiera *inte* filerna `.htaccess` som finns i mappen Magento 1 `media` . Magento 2 har en egen `.htaccess` som ska bevaras.
 
 ## Layout för butiker
 
 * Design i filer (CSS, JS, mallar, XML-layouter) ändrade plats och format
 
-* Layoutuppdateringar sparas i databasen. Placerad via Magento 1-administratör på CMS-sidor, CMS-widgetar, kategorisidor och produktsidor
+* Layoutuppdateringar sparas i databasen. Placerad via Magento 1 Admin på CMS Pages, CMS Widgets, Category Pages och Product Pages
 
 ## ACL-listor (Access Control Lists)
 

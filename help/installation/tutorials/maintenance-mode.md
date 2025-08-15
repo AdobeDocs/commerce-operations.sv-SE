@@ -4,7 +4,7 @@ description: Följ de här stegen för att anpassa vad kunderna ser när Adobe C
 exl-id: 5d9f1493-e771-47b4-b906-3771026cf07a
 source-git-commit: a5dbefda6b77d993756143ef0e7270425f824c44
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '531'
 ht-degree: 0%
 
 ---
@@ -86,7 +86,7 @@ Om du vill konfigurera flera arkiv, där vart och ett har olika layout och lokal
 
 I följande exempel använder vi en `503`-typfelsmallfil som kräver lokaliserat innehåll.
 
-Konstruktorn för klassen `Error_Processor` accepterar en `skin` GET-parameter för att ändra layouten:
+Konstruktorn för klassen `Error_Processor` accepterar en `skin` GET-parameter för att ändra layout:
 
 ```php
 if (isset($_GET['skin'])) {

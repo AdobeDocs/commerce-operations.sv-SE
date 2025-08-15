@@ -20,7 +20,7 @@ Du kan använda Adobe Commerce cachehanteringssystem för att förbättra presta
 >[!NOTE]
 >
 >
->Administratörer för företagswebbplatser kan hantera cacheminnet från administratören med hjälp av verktyget Cachehanteringssystem. Se [Cachehantering](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/tools/cache-management) i _handboken för administratörssystem_.
+>Administratörer för företagswebbplatser kan hantera cacheminnet från administratören med hjälp av verktyget Cachehanteringssystem. Se [Cachehantering](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management) i _handboken för administratörssystem_.
 
 
 ## Visa cachestatus
@@ -59,7 +59,7 @@ Current status:
 
 >[!TIP]
 >
->En detaljerad beskrivning av de standardcachetyper som stöds av Adobe Commerce finns i [Caches](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/tools/cache-management#caches) i _Admin Systems Guide_.
+>En detaljerad beskrivning av de standardcachetyper som stöds av Adobe Commerce finns i [Caches](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management#caches) i _Admin Systems Guide_.
 
 
 ## Aktivera eller inaktivera cachetyper

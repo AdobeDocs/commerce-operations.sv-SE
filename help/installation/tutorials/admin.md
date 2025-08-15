@@ -15,7 +15,7 @@ ht-degree: 0%
 Innan du kan använda det här kommandot måste du göra följande:
 
 - [Skapa distributionskonfigurationen](deployment.md)
-- [Aktivera minst modulerna Magento_Authorization och Magento_User](manage-modules.md)
+- [Aktivera minst Magento_Authorization och Magento_User-modulerna](manage-modules.md)
 - Skapa databasschemat
 
 >[!NOTE]

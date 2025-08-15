@@ -25,7 +25,7 @@ Med rubriken `X-Frame-Options` kan du ange om en webbläsare får återge en sid
 
 >[!WARNING]
 >
->Av säkerhetsskäl rekommenderar Adobe starkt att du inte kör Commerce storefront i en bildruta.
+>Av säkerhetsskäl rekommenderar Adobe starkt att du inte kör Commerce Store i en bildruta.
 
 ## Implementera `X-Frame-Options`
 

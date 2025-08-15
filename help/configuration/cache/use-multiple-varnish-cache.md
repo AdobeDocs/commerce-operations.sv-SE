@@ -32,6 +32,6 @@ bin/magento setup:config:set --http-cache-hosts=192.0.2.100,192.0.2.155:8080
 
 Du kan sedan rensa alla lack-värdar när du uppdaterar Commerce-cachen (kallas även _rensning_ av cachen) i Admin eller via kommandoraden.
 
-Om du vill uppdatera cacheminnet med Admin klickar du på **SYSTEM** > Verktyg > **Cachehantering** och sedan på **Rensa cacheminnet i Magento** överst på sidan. (Du kan också uppdatera enskilda cachetyper.)
+Om du vill uppdatera cacheminnet med Admin klickar du på **SYSTEM** > Verktyg > **Cachehantering** och sedan på **Rensa Magento-cacheminnet** överst på sidan. (Du kan också uppdatera enskilda cachetyper.)
 
 Om du vill uppdatera cachen för flera Varnish-instanser från klippet använder du kommandot [`magento cache:clean <type>`](../cli/manage-cache.md#clean-and-flush-cache-types) som [filsystemsägare](../../installation/prerequisites/file-system/overview.md).

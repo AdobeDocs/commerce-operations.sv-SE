@@ -67,7 +67,7 @@ Det här avsnittet är utformat för att hjälpa dig att avgöra om du ska anvä
     <td>
       <ul>
         <li><strong>Standardmetod för att hantera kod för en konfiguration med flera instanser</strong></li>
-        <li>När Adobe underhåller kodbasen eller så är gruppen som underhåller Composer bekant med den</li>
+        <li>När Adobe underhåller kodbasen eller så är de som håller reda på Composer välkända</li>
       </ul>
     </td>
   </tr>

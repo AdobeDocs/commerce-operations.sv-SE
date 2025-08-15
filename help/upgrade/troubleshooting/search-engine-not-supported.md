@@ -43,13 +43,13 @@ Felet inträffar om det returnerade värdet är `mysql`, `elasticsearch` eller `
 >composer require-commerce magento/product-community-edition=<version>
 >```
 >
->Där `<version>` är den version av Magento som du använde **före** uppgraderingen. Exempel: `2.3.5`.
+>Där `<version>` är den version av Magento som du körde **före** uppgraderingen. Exempel: `2.3.5`.
 
 Följ riktlinjerna som beskrivs i följande avsnitt för att återställa efter ett inkonsekvent tillstånd.
 
 ## Om sökmotorn är `mysql`
 
-Före 2.4 var MySQL standardkatalogsökmotorn, men MySQL stöds inte längre i den här kapaciteten. Nu måste du installera och konfigurera Elasticsearch eller OpenSearch som sökmotor innan du uppgraderar till 2.4.
+Före 2.4 var MySQL standardkatalogsökmotorn, men MySQL stöds inte längre i den här kapaciteten. Nu måste du installera och konfigurera Elasticsearch eller OpenSearch som sökmotor innan du uppgraderar till version 2.4.
 
 Använd följande resurser för att hjälpa dig igenom den här processen:
 
@@ -66,7 +66,7 @@ Värdet `elasticsearch` anger att din äldre version av Adobe Commerce är konfi
 
 Du måste utföra följande åtgärder innan du uppgraderar till 2.4:
 
-1. Uppdatera till en version av Elasticsearch som stöds av Commerce. Mer information om hur du säkerhetskopierar data, identifierar potentiella migreringsproblem och testar uppgraderingar innan du distribuerar till produktionen finns i [Uppgraderar Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html). Beroende på vilken version av Elasticsearch du använder behöver du kanske inte starta om hela klustret.
+1. Uppdatera till en version av Elasticsearch som stöds av Commerce. Se [Uppgradera Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html) för fullständiga instruktioner om hur du säkerhetskopierar data, identifierar potentiella migreringsproblem och testar uppgraderingar innan du distribuerar till produktionen. Beroende på vilken version av Elasticsearch du har behöver du kanske starta om hela klustret eller inte.
 
    >[!NOTE]
    >

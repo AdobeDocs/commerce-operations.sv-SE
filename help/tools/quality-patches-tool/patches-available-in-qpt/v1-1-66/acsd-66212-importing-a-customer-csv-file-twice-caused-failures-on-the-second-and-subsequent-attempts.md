@@ -3,13 +3,13 @@ title: 'ACSD-66212: Vid import av CSV-kundfil två gånger uppstod fel vid andra
 description: Använd patchen ACSD-66212 för att åtgärda Adobe Commerce-problemet där import av en CSV-kundfil orsakade fel på den andra och efterföljande försök två gånger.
 feature: Data Import/Export, Customers
 role: Admin, Developer
-source-git-commit: 97a5979a189e43b737c44cfe7a65025effae711c
+exl-id: ae41f341-6ca3-405e-877a-35bdc3bc5623
+source-git-commit: 5a36d0f0aaa9b7cf0ed30f0da8efac241523cf6b
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-66212: Vid import av CSV-kundfil två gånger uppstod fel vid andra och efterföljande försök
 
@@ -27,7 +27,7 @@ Korrigeringen ACSD-66212 åtgärdar ett problem där import av en CSV-kundfil tv
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -55,7 +55,7 @@ Additional data: <div class="messages"><div class="message message-error error">
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 

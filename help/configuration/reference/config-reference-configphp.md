@@ -124,6 +124,6 @@ Läs mer om [Teman].
 
 <!-- link definitions -->
 
-[Moduler]: https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/create-module.html?lang=sv-SE
-[scopes]: https://experienceleague.adobe.com/docs/commerce-admin/start/setup/websites-stores-views.html?lang=sv-SE#scope-settings
+[Moduler]: https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/create-module.html
+[scopes]: https://experienceleague.adobe.com/docs/commerce-admin/start/setup/websites-stores-views.html#scope-settings
 [Teman]: https://developer.adobe.com/commerce/frontend-core/guide/themes/create-storefront/

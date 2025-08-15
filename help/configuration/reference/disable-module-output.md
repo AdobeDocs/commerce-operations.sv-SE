@@ -32,7 +32,7 @@ Inaktiveringen av utdata utförs i följande klasser:
 
 Så här inaktiverar du modulutdata i pipeline-distributionen eller någon annan distribution, med flera instanser av Commerce-programmet:
 
-1. Redigera `config.xml`-filen för modulen `Backend`.
+1. Redigera `Backend`-filen för modulen `config.xml`.
 1. Exportera konfigurationsändringarna.
 
 ### Redigera `Backend`-modulfilen `config.xml`

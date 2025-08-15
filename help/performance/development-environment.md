@@ -1,5 +1,5 @@
 ---
-title: Development Environment Recommendations
+title: Rekommendationer för utvecklingsmiljö
 description: Lär dig mer om prestandarekommendationer för att konfigurera din lokala Adobe Commerce-utvecklingsmiljö.
 exl-id: f57396c0-86be-4933-8066-eb51c42fb9e4
 source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
@@ -31,7 +31,7 @@ I utvecklingsläget ska du inte köra kommandon för kompilering, kodgenerering 
   bin/magento setup:di:compile
   ```
 
-  I utvecklingsläget utför Magento genereringen on-demand, du behöver inte köra den. Om du har ändrat en signatur för en klass och behöver återskapa dess automatiskt genererade `factories/proxies/interceptors` tar du bort dessa klasser eller mappen _generated_.
+  I utvecklingsläget utför Magento generering on-demand - du behöver inte köra det. Om du har ändrat en signatur för en klass och behöver återskapa dess automatiskt genererade `factories/proxies/interceptors` tar du bort dessa klasser eller mappen _generated_.
 
 * `setup:static-content:deploy` distribuerar statiskt innehåll för en butik.
 

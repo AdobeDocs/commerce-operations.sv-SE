@@ -58,7 +58,7 @@ I vissa fall kanske du vill kompilera koden innan du installerar Commerce-progra
    Generated code and dependency injection configuration successfully.
    ```
 
-Mer information om hur du kompilerar kod utan databas finns i [Distribuera statiska vyfiler utan att installera Magento](../cli/static-view-file-deployment.md).
+Information om hur du kompilerar kod utan databas finns i [Distribuera statiska vyfiler utan att installera Magento](../cli/static-view-file-deployment.md).
 
 <!-- link definitions -->
 

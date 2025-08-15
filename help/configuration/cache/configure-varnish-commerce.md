@@ -16,7 +16,7 @@ Så här konfigurerar du Commerce att använda engelska:
 
 1. Logga in på administratören som administratör.
 1. Klicka på **[!UICONTROL Stores]** > Inställningar > **Konfiguration** > **Avancerat** > **System** > **Fullsidescache**.
-1. Klicka på **Varnish Caching** i listan **[!UICONTROL Caching Application]**.
+1. Klicka på **[!UICONTROL Caching Application]** Varnish Caching **i listan**.
 1. Ange ett värde i fältet **[!UICONTROL TTL for public content]**.
 1. Expandera **[!UICONTROL Varnish Configuration]** och ange följande information:
 
@@ -62,7 +62,7 @@ Så här exporterar du en lack-konfigurationsfil från administratören:
    cp <download_directory>/default.vcl /etc/varnish/default.vcl
    ```
 
-1. Adobe rekommenderar att du öppnar `default.vcl` och ändrar värdet för `acl purge` till IP-adressen för värden i Valnish. (Du kan ange flera värdar på separata rader eller också kan du använda CIDR-notation.)
+1. Adobe rekommenderar att du öppnar `default.vcl` och ändrar värdet för `acl purge` till IP-adressen för värden i England. (Du kan ange flera värdar på separata rader eller också kan du använda CIDR-notation.)
 
    Exempel:
 

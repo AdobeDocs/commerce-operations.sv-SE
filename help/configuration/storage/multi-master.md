@@ -38,7 +38,7 @@ Följande bild visar hur den här funktionen fungerar.
 
 ![Adobe Commerce använder olika databaser för att lagra tabeller](../../assets/configuration/split-db-diagram-ee.png)
 
-I Magento Open Source används bara en malldatabas.
+I Magento Open Source används endast en masterdatabas.
 
 Adobe Commerce använder tre huvuddatabaser och ett konfigurerbart antal slavdatabaser för replikering. Adobe Commerce har ett enda gränssnitt för databasanslutningar, vilket ger bättre prestanda och skalbarhet.
 

@@ -3,13 +3,13 @@ title: Support och underhåll efter lansering
 description: Säkerställ optimala prestanda och säkerhet i din Adobe Commerce-butik med vår omfattande support och våra bästa rutiner för underhåll efter lanseringen.
 role: Admin, User, Developer
 feature: Best Practices
-source-git-commit: bcb45d53aba4a73a5730989e9bf29ccba6e9bf35
+exl-id: f02a13ca-c851-4508-a2bd-e5bc196a330c
+source-git-commit: 60444d3ef7208d12af3f06af6e3cab2cae93700b
 workflow-type: tm+mt
 source-wordcount: '2116'
 ht-degree: 0%
 
 ---
-
 
 # Support och underhåll efter lanseringen av Adobe Commerce
 
@@ -35,7 +35,7 @@ Support och underhåll efter lanseringen är avgörande för att din Adobe Comme
 
   >[!TIP]
   >
-  >Se [prestandaövervakning](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/monitor/performance) i _molnguiden_.
+  >Se [prestandaövervakning](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/monitor/performance) i _molnguiden_.
 
 
 - **Optimera databasprestanda**: Så här optimerar du databasprestanda i Adobe Commerce Cloud:
@@ -54,11 +54,11 @@ Support och underhåll efter lanseringen är avgörande för att din Adobe Comme
 
    - **Utnyttja New Relic för övervakning**: Adobe Commerce erbjuder New Relic för att övervaka prestanda snabbt och andra mätvärden för testnings- och produktionsmiljöer. Det här verktyget ger insikter om serverhälsa, CDN-cachning och nätverksbegäranden över tid, vilket hjälper till att identifiera mönster och optimera CDN-inställningar.
 
-   - **Loggar snabbt analyser**: För Adobe Commerce Cloud Pro-projekt kan du använda New Relic Logs för att granska och analysera Fast CDN- och WAF-loggdata för att spåra prestandatrender, säkerhetshändelser och diagnostisera fel eller fördröjningsproblem.
+   - **Loggar snabbt analyser**: För Adobe Commerce Cloud Pro-projekt kan du använda New Relic Logs för att granska och analysera data från Fast CDN- och WAF-loggar för att spåra prestandatrender, säkerhetshändelser och diagnostisera fel eller fördröjningsproblem.
 
    - **Använd cURL-kommandon**: Kör cURL-kommandon med snabbspecifika rubriker för att kontrollera platsens cachestatus. Nyckelsvarshuvuden omfattar `X-Cache` (HIT/MISS), `Fastly-Module-Enabled`, `Fastly-Magento-VCL-Uploaded` och `Cache-Control` för att verifiera cachelagring och modulstatus. Adobe innehåller exempel på cURL-kommandon för både testnings- och produktionsmiljöer.
 
-   - **Kontrollera rubrikinformation**: Inspect-rubriker som `Cache-Control`, `Pragma` och `X-Magento-Tags` för att bekräfta rätt cachelagring och tagghantering för cachelagrat innehåll. Korrekta rubrikvärden anger om cachelagringskonfigurationer används effektivt i CDN.
+   - **Kontrollera rubrikinformation**: Kontrollera rubriker som `Cache-Control`, `Pragma` och `X-Magento-Tags` för att bekräfta lämpliga cachelagringsfunktioner och tagghantering för cachelagrat innehåll. Korrekta rubrikvärden anger om cachelagringskonfigurationer används effektivt i CDN.
 
    - **Snabbt felsökning och testning**: Använd Snabbas felsökningsfunktion för att identifiera och felsöka problem med HIT- och MISS-frekvenser för cache, cachelagringslogik eller felaktiga rubriksvar, som kan peka på konfigurationsproblem eller felpassning med förväntade cachelagringsregler.
 
@@ -66,15 +66,15 @@ Dessa övervakningssteg hjälper till att upprätthålla optimala CDN-prestanda 
 
 >[!TIP]
 >
->Se [Översikt över snabba tjänster](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/cdn/fastly) i _molnguiden_.
+>Se [Översikt över snabba tjänster](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/cdn/fastly) i _molnguiden_.
 
 #### Regelbunden säkerhetsövervakning
 
-För att upprätthålla regelbunden säkerhetsövervakning i Adobe Commerce Cloud rekommenderar Adobe ett mångfacetterat tillvägagångssätt som innefattar kontinuerlig skanning, loggning och proaktiva säkerhetsrutiner. Här följer några viktiga åtgärder för att säkerställa kontinuerlig säkerhet:
+Adobe rekommenderar ett mångfacetterat tillvägagångssätt som innefattar kontinuerlig skanning, loggning och proaktiva säkerhetsrutiner för att upprätthålla regelbunden säkerhetsövervakning i Adobe Commerce Cloud. Här följer några viktiga åtgärder för att säkerställa kontinuerlig säkerhet:
 
-- **Säkerhetssökning**: Använd Adobe Security Scan-verktyget för att övervaka kända säkerhetsluckor och skadlig kod på Commerce webbplatser. Det här verktyget ger varningar om potentiella säkerhetsrisker och efterlevnadsproblem.
+- **Säkerhetssökning**: Använd Adobe säkerhetssökningsverktyg för att övervaka kända säkerhetsluckor och skadlig kod på Commerce webbplatser. Det här verktyget ger varningar om potentiella säkerhetsrisker och efterlevnadsproblem.
 
-- **Regelbundet korrigerings- och uppdateringsunderhåll**: Använd Adobe säkerhetspatchar och uppdateringar så fort de blir tillgängliga. Uppgradera till den senaste Adobe Commerce-versionen och få de senaste versionerna av skydd mot hot.
+- **Regelbundet korrigerings- och uppdateringsunderhåll**: Använd Adobe säkerhetsuppdateringar och uppdateringar när de blir tillgängliga. Uppgradera till den senaste Adobe Commerce-versionen och få de senaste versionerna av skydd mot hot.
 
 - **Gransknings- och loggövervakning**: Använd verktyg som New Relic Logs (tillgängligt för Pro-projekt) för att centralisera och analysera säkerhetsloggar från både testnings- och produktionsmiljöer och förbättra synligheten för potentiella säkerhetsproblem och överträdelser.
 
@@ -86,11 +86,11 @@ För att upprätthålla regelbunden säkerhetsövervakning i Adobe Commerce Clou
 
 >[!TIP]
 >
->Se [Säkerhet](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/security/security) i _handboken för administratörssystem_.
+>Se [Säkerhet](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security) i _handboken för administratörssystem_.
 
 #### Felloggning och övervakning
 
-För att övervaka felloggning i Adobe Commerce Cloud har Adobe flera verktyg och rutiner för effektiv felsökning och prestandahantering:
+För att övervaka felloggning i Adobe Commerce Cloud tillhandahåller Adobe flera verktyg och rutiner för effektiv felsökning och prestandahantering:
 
 - **Loggaggning med New Relic**: New Relic samlar in och centraliserar loggar från Adobe Commerce-program, inklusive loggar relaterade till infrastruktur, CDN och WAF. Med den här konfigurationen kan du effektivt spåra fel, skapa kontrollpaneler och frågeloggar för att få djupare insikter om programmets prestanda och problem. Med åtkomst till New Relic Logs kan du söka och filtrera loggar med hjälp av olika attribut för att snabbt diagnostisera problem.
 
@@ -102,7 +102,7 @@ För att övervaka felloggning i Adobe Commerce Cloud har Adobe flera verktyg oc
 
 >[!TIP]
 >
->Mer information om loggnings- och felspårningsrutiner i Adobe Commerce Cloud finns i [New Relic logghantering](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/monitor/new-relic/log-management) och [undantagsövervakning](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/site-wide-analysis-tool/exceptions).
+>Mer information om loggnings- och felspårningsrutiner i Adobe Commerce Cloud finns i [New Relic logghantering](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/monitor/new-relic/log-management) och [undantagsövervakning](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/site-wide-analysis-tool/exceptions).
 
 ### Säkerhet och uppdateringar
 
@@ -110,33 +110,33 @@ För att övervaka felloggning i Adobe Commerce Cloud har Adobe flera verktyg oc
 
 Här följer några viktiga metoder för att övervaka säkerhetsuppdateringar och uppdateringar:
 
-- **Prenumerera på Adobe Commerce säkerhetsvarningar**: Håll dig informerad om säkerhetsproblem genom att [registrera dig för meddelanden från Adobe](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/security/security).
+- **Prenumerera på Adobe Commerce säkerhetsvarningar**: Håll dig informerad om säkerhetsproblem genom att [registrera dig för meddelanden från Adobe](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security).
 
-- **Kontrollera versionsinformation**: [Granska regelbundet versionsinformation för säkerhetsuppdateringar](https://experienceleague.adobe.com/sv/docs/commerce-operations/release/notes/security-patches/overview) som är taggade med&quot;-pN&quot; för versioner (t.ex. 2.3.5-p1) och innehåller viktiga korrigeringar och förbättringar.
+- **Kontrollera versionsinformation**: [Granska regelbundet versionsinformation för säkerhetsuppdateringar](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/security-patches/overview) som är taggade med&quot;-pN&quot; för versioner (t.ex. 2.3.5-p1) och innehåller viktiga korrigeringar och förbättringar.
 
 - **Använd säkerhetsuppdateringar omedelbart**: Använd säkerhetsuppdateringar så snart de är tillgängliga. Detta inkluderar uppdatering till de senaste versionerna eller användning av specifika korrigeringsfiler.
 
-- **Använd molnpatchar**: För Adobe Commerce Cloud kan säkerhetsuppdateringar paketeras i molnverktygsuppsättningen. Uppgradera programsviten eller Commerce-versionen för att få dessa korrigeringar.
+- **Använd molnpatchar**: För Adobe Commerce Cloud kan säkerhetsuppdateringar paketeras i Cloud Tools Suite. Uppgradera programsviten eller Commerce-versionen för att få dessa korrigeringar.
 
-- **Automatisk korrigeringshantering**: Överväg att använda verktyg som centraliserad korrigeringsfil för att [hantera och tillämpa korrigeringsfiler i flera butiker automatiskt](https://experienceleague.adobe.com/sv/docs/commerce-operations/implementation-playbook/best-practices/maintenance/patching-at-scale).
+- **Automatisk korrigeringshantering**: Överväg att använda verktyg som centraliserad korrigeringsfil för att [hantera och tillämpa korrigeringsfiler i flera butiker automatiskt](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/maintenance/patching-at-scale).
 
 >[!TIP]
 >
->Mer information och steg-för-steg-anvisningar om hur du tillämpar korrigeringar och upprätthåller säkerheten finns i [Versionsinformation för säkerhetspatchar](../../../release/release-notes/security/overview.md) och [Använda säkerhetspatchar](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/how-to/how-to-obtain-and-apply-security-patches). Du bör även granska [Site-Wide Analysis Tool](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/site-wide-analysis-tool/access)-rapporter.
+>Mer information och steg-för-steg-anvisningar om hur du tillämpar korrigeringar och upprätthåller säkerheten finns i [Versionsinformation för säkerhetspatchar](../../../release/release-notes/security/overview.md) och [Använda säkerhetspatchar](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/how-to-obtain-and-apply-security-patches). Du bör även granska [Site-Wide Analysis Tool](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/site-wide-analysis-tool/access)-rapporter.
 
 #### PCI-kompatibilitet
 
-Följ de här huvudrutinerna för att säkerställa PCI-kompatibilitet i Adobe Commerce Cloud:
+Följ de här huvudrutinerna för att se till att PCI-kompatibilitet upprätthålls i Adobe Commerce Cloud:
 
-- **Protect-kortinnehavardata**: Lagra aldrig kortinnehavardata i Adobe Commerce. Om lagring krävs kan du skydda den med krypterade och tokeniserade metoder.
+- **Skydda information om kortinnehavare**: Lagra aldrig data om kortinnehavare i Adobe Commerce. Om lagring krävs kan du skydda den med krypterade och tokeniserade metoder.
 
 - **Använd säkra överföringsprotokoll**: Överför alltid betalningsdata via säkra protokoll som TLS, med kryptering och korrekt nyckelhantering.
 
-- **Utnyttja brandväggen för webbprogram (WAF)**: Den snabbstyrda WAF-tjänsten uppfyller PCI DSS 6.6-kraven och skyddar mot vanliga säkerhetsluckor genom att blockera skadlig trafik innan den når din plats. Se mer information [här](https://experienceleague.adobe.com/sv/docs/commerce-operations/implementation-playbook/best-practices/planning/payment-processing-storage) och [här](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/cdn/fastly-waf-service).
+- **Utnyttja brandväggen för webbprogram (WAF)**: Den snabbstyrda WAF-tjänsten uppfyller PCI DSS 6.6-kraven och skyddar mot vanliga säkerhetsluckor genom att blockera skadlig trafik innan den når din plats. Se mer information [här](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/payment-processing-storage) och [här](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/cdn/fastly-waf-service).
 
-- **Begränsa åtkomst**: Se till att endast auktoriserad personal har tillgång till känsliga betalningsdata och [använd åtkomstkontroll för att minska risken för exponering](https://experienceleague.adobe.com/sv/docs/commerce-operations/implementation-playbook/best-practices/planning/payment-processing-storage).
+- **Begränsa åtkomst**: Se till att endast auktoriserad personal har tillgång till känsliga betalningsdata och [använd åtkomstkontroll för att minska risken för exponering](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/payment-processing-storage).
 
-- **Regelbunden säkerhetssökning**: Utför vanliga PCI ASV-skanningar och [övervaka din miljö](https://experienceleague.adobe.com/sv/docs/commerce-operations/security-and-compliance/shared-responsibility) för att åtgärda potentiella sårbarheter.
+- **Regelbunden säkerhetssökning**: Utför vanliga PCI ASV-skanningar och [övervaka din miljö](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/shared-responsibility) för att åtgärda potentiella sårbarheter.
 
 >[!TIP]
 >
@@ -188,7 +188,7 @@ Följ de här huvudrutinerna för att säkerställa PCI-kompatibilitet i Adobe C
 
 #### Marknadsintegrering
 
-- **E-postkampanjer**: Skapa automatiska e-postmarknadsföringsflöden för välkomstmeddelanden, övergivna kundvagnsmeddelanden och uppföljningar efter köp. Plattformar som Adobe Marketo, Mailchimp och Klaviyo kan integreras väl med Adobe Commerce.
+- **E-postkampanjer**: Skapa automatiska e-postmarknadsföringsflöden för välkomstmeddelanden, övergivna kundvagnsmeddelanden och uppföljningar efter köp. Plattformar som Adobe Marketo, Mailchimp eller Klaviyo kan integreras väl med Adobe Commerce.
 
 - **Integrering av sociala medier och annonser**: Integrera med plattformar som Facebook, Instagram och Google Ads för att köra riktade kampanjer och spåra resultatet.
 
@@ -202,13 +202,13 @@ Följ de här huvudrutinerna för att säkerställa PCI-kompatibilitet i Adobe C
 
 - **Automatisk skalning för trafikhantering**:
 
-   - Adobe Commerce Cloud stöder automatisk skalning för att dynamiskt justera serverresurser (till exempel webbnoder) baserat på trafikkrav i realtid, vilket säkerställer att din butik kan hantera stora besökarvolymer utan manuell inblandning. Se [autoskalning](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/architecture/autoscaling) i _molnguiden_.
+   - Adobe Commerce Cloud stöder automatisk skalning för att dynamiskt justera serverresurser (till exempel webbnoder) baserat på trafikkrav i realtid, vilket säkerställer att din butik kan hantera stora besöksvolymer utan manuell inblandning. Se [autoskalning](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/architecture/autoscaling) i _molnguiden_.
 
-   - Webb- och tjänstenivåer kan skalas oberoende av varandra och lägga till fler webnoder för ökad trafik och skalning av databaser eller servicanoder för backend-prestanda under perioder med hög belastning. Se [skalad arkitektur](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/architecture/scaled-architecture) i _molnguiden_.
+   - Webb- och tjänstenivåer kan skalas oberoende av varandra och lägga till fler webnoder för ökad trafik och skalning av databaser eller servicanoder för backend-prestanda under perioder med hög belastning. Se [skalad arkitektur](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/architecture/scaled-architecture) i _molnguiden_.
 
 - **Prestandaövervakning**:
 
-   - Använd **New Relic** för att övervaka prestandamått i realtid (t.ex. CPU-användning, trafiknivåer) och göra nödvändiga justeringar.
+   - Använd **New Relic** för att övervaka prestandamått i realtid (t.ex. CPU användning, trafiknivåer) och göra nödvändiga justeringar.
 
    - Testa prestanda i testmiljöer före skalning för att undvika produktionsproblem.
 
@@ -230,13 +230,13 @@ Följ de här huvudrutinerna för att säkerställa PCI-kompatibilitet i Adobe C
 
 ### Rapportering och analys
 
-- **Adobe Commerce Intelligence:** Commerce Intelligence, en kärnfunktion i Adobe Commerce, ger insikter om god praxis i flera datakällor, så att handlare kan fatta vetenskapliga, datadrivna beslut och vidta tydliga och välgrundade åtgärder. Se [_Commerce Intelligence användarhandbok_](https://experienceleague.adobe.com/sv/docs/commerce-business-intelligence/mbi/getting-started).
+- **Adobe Commerce Intelligence:** Commerce Intelligence, en kärnfunktion i Adobe Commerce, ger insikter om god praxis i flera datakällor, så att handlare kan fatta vetenskapliga, datadrivna beslut och vidta tydliga och välgrundade åtgärder. Se [_Commerce Intelligence användarhandbok_](https://experienceleague.adobe.com/en/docs/commerce-business-intelligence/mbi/getting-started).
 
 - **Adobe Analytics:** Adobe Analytics erbjuder en kraftfull lösning för att spåra, analysera och optimera onlinebutikens prestanda. Adobe Analytics hjälper e-handelsföretag att få djupare insikter i kundbeteende, produktresultat, konverteringsgrader och andra viktiga mätvärden, vilket möjliggör datadrivet beslutsfattande.
 
 - **Google Analytics:** Använd Google Analytics för att spåra kundbeteende, trafikkällor och konverteringsgrader.
 
-- **Fler Commerce Intelligence-verktyg:** Adobe Commerce innehåller avancerad rapportering. Den här funktionen ger dig tillgång till en uppsättning dynamiska rapporter som baseras på dina produkt-, order- och kunddata, med en anpassad kontrollpanel som är anpassad efter ditt företags behov. Mer information finns i [avancerad rapportering](https://experienceleague.adobe.com/sv/docs/commerce-admin/start/reporting/business-intelligence#advanced-reporting) i _användarhandboken för administratörer_.
+- **Fler Commerce Intelligence-verktyg:** Adobe Commerce innehåller avancerad rapportering. Den här funktionen ger dig tillgång till en uppsättning dynamiska rapporter som baseras på dina produkt-, order- och kunddata, med en anpassad kontrollpanel som är anpassad efter ditt företags behov. Mer information finns i [avancerad rapportering](https://experienceleague.adobe.com/en/docs/commerce-admin/start/reporting/business-intelligence#advanced-reporting) i _användarhandboken för administratörer_.
 
 ### Slutsats
 

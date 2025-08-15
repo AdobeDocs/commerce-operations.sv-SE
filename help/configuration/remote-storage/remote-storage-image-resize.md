@@ -28,7 +28,7 @@ Om du vill ändra storlek på bilder på serversidan måste du konfigurera Adobe
 
 **Så här konfigurerar du Commerce för storleksändring av serversidesbild**:
 
-1. Klicka på **[!UICONTROL Stores]** > **[!UICONTROL Settings]** > **[!UICONTROL Configuration]** > **[!UICONTROL General]** > **[!UICONTROL Web]** på panelen _Admin_.
+1. Klicka på _>_ > **[!UICONTROL Stores]** > **[!UICONTROL Settings]** > **[!UICONTROL Configuration]** på panelen **[!UICONTROL General]** Admin **[!UICONTROL Web]**.
 
 1. Expandera **[!UICONTROL Url options]** i den högra rutan.
 

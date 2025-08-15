@@ -31,7 +31,7 @@ Kritiska åtgärder leder till cachelagring av ogiltiga och omindexerade åtgär
 
 ## Ytterligare information
 
-- [Bästa tillvägagångssätt för cachelagring](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/tools/cache-management#best-practices-for-caching)
+- [Bästa tillvägagångssätt för cachelagring](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management#best-practices-for-caching)
 - [Privat innehåll: Invalidera privat innehåll](https://developer.adobe.com/commerce/php/development/cache/page/private-content/#invalidate-private-content)
 - [Maskinvarurekommendationer: Caches](../../../performance/hardware.md#caches)
 - [Avancerad konfiguration: Konfigurera Redis](../../../performance/advanced-setup.md#set-up-redis)

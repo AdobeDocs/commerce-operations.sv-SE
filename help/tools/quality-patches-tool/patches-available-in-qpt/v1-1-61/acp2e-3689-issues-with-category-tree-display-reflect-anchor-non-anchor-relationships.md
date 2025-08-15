@@ -32,7 +32,7 @@ Programrättningen ACP2E-3689 åtgärdar flera problem med kategoriträdvisning 
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -43,7 +43,7 @@ Kategoriträdet på djupare nivåer (4+) visas inte korrekt och visar ankarfäst
 1. Ställ in ett kategoriträd med kapslade kategorier på mer än 4 nivåer.
 1. Expandera kategoriträdet i Admin som visas på olika platser:
    1. Konfigurera en [!UICONTROL Related Products Rule] och ange ett villkor baserat på kategorier.
-   1. Skapa en widget och välj [!UICONTROL Anchor categories] i [!UICONTROL Layout Updates].
+   1. Skapa en widget och välj [!UICONTROL Layout Updates] i [!UICONTROL Anchor categories].
 
 <u>Förväntade resultat</u>:
 
@@ -58,7 +58,7 @@ Endast de första nivåerna (&lt;4) i kategoriträdet är tillgängliga.
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 

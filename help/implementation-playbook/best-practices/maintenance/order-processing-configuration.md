@@ -17,7 +17,7 @@ När ordervolymen ökar på dina Commerce-sajter kan du optimera utcheckningspre
 
 - **[!UICONTROL Asynchronous indexing]** - Aktivera det här alternativet för att förhindra databaslås och långsam bearbetning som kan inträffa när ett stort antal order placeras samtidigt.
 - **[!UICONTROL Asynchronous email notifications]** - Aktivera det här alternativet om du vill öka utcheckningsprestanda genom att skicka utcheckning och beställa e-postmeddelanden med angivna intervall i stället för att skicka dem direkt.
-- **[!UICONTROL Enable Archiving]** - Aktivera det här alternativet om du vill förbättra prestanda för beställningar, fakturor, leveranser och kreditnotor, och hålla arbetsytan fri från onödig information så att du kan fokusera på den aktuella verksamheten. Se [Aktivera arkivering](https://experienceleague.adobe.com/sv/docs/commerce-admin/stores-sales/order-management/orders/order-archive).
+- **[!UICONTROL Enable Archiving]** - Aktivera det här alternativet om du vill förbättra prestanda för beställningar, fakturor, leveranser och kreditnotor, och hålla arbetsytan fri från onödig information så att du kan fokusera på den aktuella verksamheten. Se [Aktivera arkivering](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/order-management/orders/order-archive).
 
 ## Berörda produkter och versioner
 
@@ -30,7 +30,7 @@ När ordervolymen ökar på dina Commerce-sajter kan du optimera utcheckningspre
 
 Vilka steg som ska aktiveras för asynkron orderbearbetning beror på distributionsläget:
 
-- För Adobe Commerce i molninfrastruktur och lokala platser i produktionsläge använder du följande Magento CLI-kommando för att aktivera asynkron indexering:
+- För Adobe Commerce i molninfrastruktur och lokala webbplatser i produktionsläge använder du följande Magento CLI-kommando för att aktivera asynkron indexering:
 
   ```php
   php bin/magento config:set dev/grid/async_indexing 1
@@ -38,7 +38,7 @@ Vilka steg som ska aktiveras för asynkron orderbearbetning beror på distributi
 
 - För Adobe Commerce lokala webbplatser i standardläge eller produktionsläge aktiverar du asynkron indexering genom att uppdatera konfigurationen för stödrasterinställningar i Admin.
 
-  Se [Aktivera schemalagda stödrasteruppdateringar och omindexering](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/order-management/orders/order-scheduled-operations.html?lang=sv-SE#enable-scheduled-grid-updates-and-reindexing)
+  Se [Aktivera schemalagda stödrasteruppdateringar och omindexering](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/order-management/orders/order-scheduled-operations.html#enable-scheduled-grid-updates-and-reindexing)
 
   >[!WARNING]
   >

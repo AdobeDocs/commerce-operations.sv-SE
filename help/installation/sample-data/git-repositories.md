@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Klona exempeldata i Git-databaser
 
-I det här avsnittet beskrivs hur du klonar och lägger till exempeldata om du klonade GitHub-databasen i Magento Open Source. Den här metoden är endast avsedd för utvecklare som bidrar till utvecklingen (det vill säga utvecklare som tänker bidra till kodbasen Magento Open Source).
+I det här avsnittet beskrivs hur du klonar och lägger till exempeldata om du klonade Magento Open Source GitHub-databasen. Den här metoden är endast avsedd för utvecklare (d.v.s. utvecklare som tänker bidra till Magento Open Source-kodbas).
 
 Om du inte är en bidragsgivare väljer du ett av de andra alternativen som visas i innehållsförteckningen till vänster på sidan.
 
@@ -71,7 +71,7 @@ Så här klonar du GitHub-databasen med exempeldata med SSH-protokollet:
 
    Exempel:
 
-   Om du använde `2.4-develop`-grenen i Magento Open Source GitHub-databasen bör Sample Data-grenen vara `2.4-develop`.
+   Om du har använt grenen `2.4-develop` i Magento Open Source GitHub-databasen bör grenen Sample Data vara `2.4-develop`.
 
    Om du vill checka ut rätt gren kör du följande kommando från exempeldatalagrets rotkatalog (förutsatt att du behöver `2.4-develop`-grenen):
 
@@ -125,7 +125,7 @@ Så här klonar du GitHub-databasen med exempeldata med HTTPS-protokollet:
 
    Exempel:
 
-   Om du använde `2.4-develop`-grenen i Magento Open Source GitHub-databasen bör Sample Data-grenen vara `2.4-develop`.
+   Om du har använt grenen `2.4-develop` i Magento Open Source GitHub-databasen bör grenen Sample Data vara `2.4-develop`.
 
    Om du vill checka ut rätt gren kör du följande kommando från exempeldatalagrets rotkatalog (förutsatt att du behöver `2.4-develop`-grenen):
 

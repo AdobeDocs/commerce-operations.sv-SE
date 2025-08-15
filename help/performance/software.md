@@ -1,5 +1,5 @@
 ---
-title: Software Recommendations
+title: Programvarurekommendationer
 description: Granska en lista över rekommenderade program för optimala prestanda för Adobe Commerce-distributioner.
 feature: Best Practices, Install
 exl-id: b091a733-7655-4e91-a988-93271872c5d5
@@ -151,7 +151,7 @@ opcache.validate_timestamps=0
 opcache.enable_cli=1
 ```
 
-När du finjusterar minnestilldelningen för opcache bör du ta hänsyn till storleken på Magento-kodbasen och alla dina tillägg. Magento prestandateam använder värdena i det föregående exemplet för testning eftersom det ger tillräckligt med utrymme i opcache för det genomsnittliga antalet installerade tillägg.
+När du finjusterar minnestilldelningen för opcache bör du ta hänsyn till storleken på Magento kodbas och alla tillägg. Magento prestandateam använder värdena i det föregående exemplet för testning eftersom det ger tillräckligt med utrymme i opcache för det genomsnittliga antalet installerade tillägg.
 
 Om du har en dator med lite minne och du inte har många tillägg eller anpassningar installerade kan du använda följande inställningar för att få ett liknande resultat:
 

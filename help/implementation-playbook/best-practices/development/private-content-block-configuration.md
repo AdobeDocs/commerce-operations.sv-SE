@@ -26,9 +26,9 @@ I stället för att använda variabeln `_isScopePrivate` för privat innehåll s
 
 ## Potentiell inverkan på prestanda
 
-Webbplatser med privata innehållsblock som innehåller variablerna `_isScopePrivate` utlöser AJAX förfrågningar om att hämta samma data för varje kundförfrågan. Detta ökar svarstiden och använder ytterligare resurser som kan användas för att hantera mer affärskritiska butiksåtgärder som kundregistrering, kundvagnsuppdateringar, orderinlämning och betalningstransaktioner.
+Webbplatser med privata innehållsblock som innehåller variablerna `_isScopePrivate` utlöser AJAX-begäranden om att hämta samma data för varje kundbegäran. Detta ökar svarstiden och använder ytterligare resurser som kan användas för att hantera mer affärskritiska butiksåtgärder som kundregistrering, kundvagnsuppdateringar, orderinlämning och betalningstransaktioner.
 
 ## Ytterligare information
 
 - [Privat innehåll](../../../performance/configuration.md#client-side-optimization-settings)
-- [Hög genomströmning AJAX begäranden orsakar dålig prestanda](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/high-throughput-ajax-requests-cause-poor-performance.html?lang=sv-SE)
+- [Högt dataflöde AJAX-begäranden orsakar dålig prestanda](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/high-throughput-ajax-requests-cause-poor-performance.html)

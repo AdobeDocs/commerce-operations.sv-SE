@@ -62,7 +62,7 @@ Så här anger du standardinställningar för nationella inställningar och vikt
 1. Expandera **Lagra information** i den högra rutan.
 1. Om det behövs avmarkerar du kryssrutan **Använd standard** bredvid fälten **Momsnummer** och **Butiksnamn**.
 1. Ange ett tal i fältet (till exempel `12345`).
-1. Ange ett värde (till exempel `My Store`) i fältet **Butiksnamn**.
+1. Ange ett värde (till exempel **) i fältet** Butiksnamn`My Store`.
 1. Klicka på **Spara konfiguration**.
 1. Klicka på **Kontakter** under Allmänt i den vänstra navigeringen.
 1. Expandera **E-postalternativ** i den högra rutan.

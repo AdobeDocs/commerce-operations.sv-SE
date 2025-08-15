@@ -19,7 +19,7 @@ I det här avsnittet beskrivs hur du ställer in obligatoriska PHP-alternativ.
 >
 >För den senaste versionen av Adobe Commerce krävs minst PHP 8.1. Se [systemkraven](../system-requirements.md) för alla PHP-versioner som stöds.
 
-Mer information om molnkonfiguration finns i [PHP-inställningar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/php-settings.html?lang=sv-SE) i guiden _Commerce om molninfrastruktur_.
+Mer information om molnkonfiguration finns i [PHP-inställningar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/php-settings.html) i guiden _Commerce om molninfrastruktur_.
 
 ## PHP-processkontroll
 
@@ -92,13 +92,13 @@ PHP Warning:  date(): It is not safe to rely on the system's timezone settings. 
 
 - Aktivera [`opcache.save_comments`](https://www.php.net/manual/en/opcache.configuration.php#ini.opcache.save-comments), vilket krävs för Adobe Commerce 2.1 och senare.
 
-  Adobe rekommenderar att du aktiverar [PHP OPcache](https://www.php.net/manual/en/book.opcache.php) av prestandaskäl. OPcache är aktiverat i många PHP-distributioner.
+  Adobe rekommenderar att [PHP OPcache](https://www.php.net/manual/en/book.opcache.php) aktiveras av prestandaskäl. OPcache är aktiverat i många PHP-distributioner.
 
   I Adobe Commerce 2.1 och senare används PHP-kodkommentarer för kodgenerering.
 
 >[!NOTE]
 >
->För att undvika problem under installation och uppgradering rekommenderar Adobe starkt att du använder samma PHP-inställningar för både PHP-kommandoradskonfigurationen och PHP-webbserverns plugin-konfiguration. Mer information finns i nästa avsnitt.
+>För att undvika problem under installation och uppgradering rekommenderar Adobe att du använder samma PHP-inställningar både på PHP-kommandoradskonfigurationen och på PHP-webbserverns plugin-konfiguration. Mer information finns i nästa avsnitt.
 
 ## Sök efter PHP-konfigurationsfiler
 

@@ -1,5 +1,5 @@
 ---
-title: Fliken  [!DNL QuickView]
+title: 'Fliken  [!DNL QuickView] '
 description: Fliken  [!DNL QuickView] förklarar de olika varningstyper som du kan se, inklusive de som ligger på låg diskutrymme och serveranvändning.
 exl-id: 34405f9b-30de-4fab-acca-64a8e308ca90
 feature: Configuration, Observability
@@ -28,6 +28,6 @@ Bildrutan **[!UICONTROL Upsize / Downsize by node]** visar upp- och nedstorlekar
 
 ## [!UICONTROL CPU Utilization]
 
-![Processoranvändning](../../assets/tools/observation-for-adobe-commerce/quickview_cpu.jpg)
+![CPU-användning](../../assets/tools/observation-for-adobe-commerce/quickview_cpu.jpg)
 
-Bildrutan **[!UICONTROL CPU Utilization]** visar processoranvändning efter noder över den valda tidsramen.
+Bildrutan **[!UICONTROL CPU Utilization]** visar CPU-användning i noder under den valda tidsramen.

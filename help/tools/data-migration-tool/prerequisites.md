@@ -1,6 +1,6 @@
 ---
-title: '[!DNL Data Migration Tool] förutsättningar'
-description: Lär dig vad du behöver göra innan du börjar använda  [!DNL Data Migration Tool]  för att överföra data mellan Magento 1 och Magento 2.
+title: Krav för [!DNL Data Migration Tool]
+description: Lär dig vad du behöver göra innan du börjar använda  [!DNL Data Migration Tool] för att överföra data mellan Magento 1 och Magento 2.
 exl-id: 42dfa1ca-41ed-453d-a3e4-41ff36817ca3
 topic: Commerce, Migration
 source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 Kontrollera att följande krav är uppfyllda innan du startar migreringen.
 
-## Magento 2-systemet
+## MAGENTO 2
 
-* Konfigurera systemet Magento 2 så att det uppfyller [systemkraven](../../installation/system-requirements.md).
+* Konfigurera ditt Magento 2-system så att det uppfyller [systemkraven](../../installation/system-requirements.md).
 
   Använd en topologi och design som åtminstone matchar ditt befintliga Magento 1-system.
 
@@ -24,7 +24,7 @@ Kontrollera att följande krav är uppfyllda innan du startar migreringen.
 
 ## Cron
 
-Starta inte seriejobb för Magento 2.
+Starta inte Magento 2 cron-jobb.
 
 ## Databas
 
@@ -34,16 +34,16 @@ Starta inte seriejobb för Magento 2.
 
   Öppna portar i brandväggen så att migreringsverktyget kan kommunicera med databaserna.
 
-* Se till att dina MySQL-konton har alla behörigheter som krävs för att komma åt Magento-databaser.
+* Kontrollera att dina MySQL-konton har alla behörigheter som krävs för att komma åt Magento-databaser.
 
-Om binär loggning är aktiverat för din Magento 1-databas anger du den globala [`log_bin_trust_function_creators`](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_log_bin_trust_function_creators) MySQL-systemvariabeln till `1` eller tilldelar [SUPER-privilegiet](https://dev.mysql.com/doc/refman/5.7/en/privileges-provided.html#priv_super) till ditt konto.
+Om binär loggning är aktiverat för din Magento 1-databas anger du den globala [`log_bin_trust_function_creators`](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_log_bin_trust_function_creators) MySQL-systemvariabeln till `1` eller tilldelar ditt konto [SUPER-behörighet](https://dev.mysql.com/doc/refman/5.7/en/privileges-provided.html#priv_super).
 
-* Vi rekommenderar inte att du skapar nya entiteter (produkter, kategorier och attribut) i din Magento 2-butik före migrering eftersom [!DNL Data Migration Tool] skriver över sådana nya entiteter med de gamla från Magento 1.
+* Vi rekommenderar inte att du skapar nya entiteter (produkter, kategorier och attribut) i Magento 2 Store före migreringen eftersom [!DNL Data Migration Tool] skriver över sådana nya entiteter med de gamla från Magento 1.
 
 ## Tillägg
 
-Migrera tilläggskoden Magento 1 till Magento 2.
+Migrera Magento 1-tilläggskod till Magento 2.
 
-Om du vill hitta de senaste tilläggsversionerna går du till [[!DNL [Commerce Marketplace]]](https://marketplace.magento.com/) eller kontaktar din tilläggsleverantör.
+Om du vill hitta de senaste tilläggsversionerna går du till [!DNL [Commerce Marketplace]](https://marketplace.magento.com/) eller kontaktar din tilläggsleverantör.
 
-Du kan också använda [[!DNL [Code Migration Tool]]](https://github.com/magento-commerce/code-migration/blob/develop/README.md).
+Du kan också använda [!DNL [Code Migration Tool]](https://github.com/magento-commerce/code-migration/blob/develop/README.md).

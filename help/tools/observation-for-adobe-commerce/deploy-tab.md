@@ -79,7 +79,7 @@ Bildrutan **[!UICONTROL Deploy Log Detail]** visar sammanfattningsinformation f�
 
 ## [!UICONTROL Post Deploy Log Detail]
 
-![Information om Post distributionslogg](../../assets/tools/observation-for-adobe-commerce/deploy-tab-4.jpg)
+![Loggdetaljer efter distribution](../../assets/tools/observation-for-adobe-commerce/deploy-tab-4.jpg)
 
 Bildrutan **[!UICONTROL Post Deploy Log Detail]** visar logginformation som har inträffat efter distributionen under den valda tidsramen. Den här bildrutan fokuserar på särskilda loggmeddelanden som innehåller följande strängar:
 

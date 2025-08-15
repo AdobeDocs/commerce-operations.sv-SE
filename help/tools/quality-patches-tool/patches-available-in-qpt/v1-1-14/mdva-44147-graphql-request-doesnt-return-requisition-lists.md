@@ -1,6 +1,6 @@
 ---
 title: 'MDVA-44147: [!DNL GraphQL] begäran returnerar inte [!UICONTROL Requisition Lists]'
-description: MDVA-44147-korrigeringen åtgärdar ett problem där  [!DNL GraphQL] begäran inte returnerar [!UICONTROL Requisition Lists]. Den här korrigeringen är tillgänglig när [[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.14 har installerats. Korrigerings-ID är MDVA-44147. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.5.
+description: MDVA-44147-korrigeringen åtgärdar ett problem där  [!DNL GraphQL] begäran inte returnerar [!UICONTROL Requisition Lists]. Den här korrigeringen är tillgänglig när [[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.14 har installerats. Korrigerings-ID är MDVA-44147. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.5.
 feature: B2B, GraphQL
 role: Admin
 exl-id: 534c4e45-6521-45c0-ae4e-c60b754f432f
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # MDVA-44147: [!DNL GraphQL]-begäran returnerar inte [!UICONTROL Requisition Lists]
 
-MDVA-44147-korrigeringen åtgärdar ett problem där [!DNL GraphQL]-begäran inte returnerar [!UICONTROL Requisition Lists]. Den här korrigeringen är tillgänglig när [[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.14 har installerats. Korrigerings-ID är MDVA-44147. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.5.
+MDVA-44147-korrigeringen åtgärdar ett problem där [!DNL GraphQL]-begäran inte returnerar [!UICONTROL Requisition Lists]. Den här korrigeringen är tillgänglig när [[!DNL Quality Patches Tool (QPT)]](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.14 har installerats. Korrigerings-ID är MDVA-44147. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.5.
 
 ## Berörda produkter och versioner
 
@@ -28,7 +28,7 @@ MDVA-44147-korrigeringen åtgärdar ett problem där [!DNL GraphQL]-begäran int
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -37,19 +37,19 @@ MDVA-44147-korrigeringen åtgärdar ett problem där [!DNL GraphQL]-begäran int
 <u>Steg som ska återskapas</u>:
 
 1. Gå till **Store** > **Inställningar** > **Konfiguration** > **Allmänt** > **B2B-funktioner** och aktivera **[!UICONTROL Requisition List]**.
-1. Logga in som kund och lägg till en produkt i [[!UICONTROL Requisition List]](https://experienceleague.adobe.com/sv/docs/commerce-admin/b2b/requisition-lists/requisition-lists).
+1. Logga in som kund och lägg till en produkt i [[!UICONTROL Requisition List]](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/requisition-lists/requisition-lists).
 1. Skapa en [[!UICONTROL Customer Token]](https://developer.adobe.com/commerce/webapi/graphql/schema/customer/mutations/generate-token/).
 
    <pre>
     <code class="language-graphql">
-    mutation &lbrace;
+    mutation {
       generateCustomerToken(
         email: "test@gmail.com"
         password: "xxxxxxxx"
-        ) &lbrace;
+        ) {
           token
-        &rbrace;
-      &rbrace;
+        }
+      }
       </code>
       </pre>
 
@@ -59,33 +59,33 @@ MDVA-44147-korrigeringen åtgärdar ett problem där [!DNL GraphQL]-begäran int
 
    <pre>
     <code class="language-graphql">
-    query &lbrace;
-      customer &lbrace;
+    query {
+      customer {
         requisition_lists(
           pageSize: 20
-          ) &lbrace;
-            items &lbrace;
+          ) {
+            items {
               uid
               name
               description
-              items(pageSize: 20) &lbrace;
-                items &lbrace;
+              items(pageSize: 20) {
+                items {
                   uid
-                  product &lbrace;
+                  product {
                     uid
                     name
                     sku
                     __typename
-                  &rbrace;
+                  }
                   quantity
-                &rbrace;
+                }
                 total_pages
-              &rbrace;
-            &rbrace;
+              }
+            }
             total_count
-          &rbrace;
-        &rbrace;
-      &rbrace;
+          }
+        }
+      }
       </code>
       </pre>
 
@@ -93,37 +93,37 @@ MDVA-44147-korrigeringen åtgärdar ett problem där [!DNL GraphQL]-begäran int
 
    <pre>
     <code class="language-graphql">
-    &lbrace;
-      "data": &lbrace;
-        "customer": &lbrace;
-          "requisition_lists": &lbrace;
-            "items": &lbrack;
-            &lbrace;
+    {
+      "data": {
+        "customer": {
+          "requisition_lists": {
+            "items": [
+            {
               "uid": "MQ==",
               "name": "Name",
               "description": "Description",
-              "items": &lbrace;
-                "items": &lbrack;
-                &lbrace;
+              "items": {
+                "items": [
+                {
                   "uid": "MQ==",
-                  "product": &lbrace;
+                  "product": {
                     "uid": "MQ==",
                     "name": "Simple 01",
                     "sku": "s00001",
                     "__typename": "SimpleProduct"
-                    &rbrace;,
+                    },
                     "quantity": 1
-                  &rbrace;
-                  &rbrack;,
+                  }
+                  ],
                   "total_pages": 1
-                &rbrace;
-              &rbrace;
-              &rbrack;,
+                }
+              }
+              ],
               "total_count": 1
-            &rbrace;
-          &rbrace;
-        &rbrace;
-      &rbrace;
+            }
+          }
+        }
+      }
       </code>
       </pre>
 
@@ -131,38 +131,38 @@ MDVA-44147-korrigeringen åtgärdar ett problem där [!DNL GraphQL]-begäran int
 
    <pre>
     <code class="language-graphql">
-    query &lbrace;
-      customer &lbrace;
+    query {
+      customer {
         requisition_lists(
           pageSize: 20,
-          filter: &lbrace;
-            uids: &lbrace;
+          filter: {
+            uids: {
               eq: "MQ=="
-            &rbrace;
-          &rbrace;
-          ) &lbrace;
-            items &lbrace;
+            }
+          }
+          ) {
+            items {
               uid
               name
               description
-              items(pageSize: 20) &lbrace;
-                items &lbrace;
+              items(pageSize: 20) {
+                items {
                   uid
-                  product &lbrace;
+                  product {
                     uid
                     name
                     sku
                     __typename
-                  &rbrace;
+                  }
                   quantity
-                &rbrace;
+                }
                 total_pages
-              &rbrace;
-            &rbrace;
+              }
+            }
             total_count
-          &rbrace;
-        &rbrace;
-      &rbrace;
+          }
+        }
+      }
       </code>
       </pre>
 
@@ -179,13 +179,13 @@ Nollresultat returneras.
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 
 Mer information om [!DNL Quality Patches Tool] finns i:
 
-* [[!DNL Quality Patches Tool] släppt: ett nytt verktyg för självbetjäning av kvalitetspatchar](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) i kunskapsbasen för support.
+* [[!DNL Quality Patches Tool] släppt: ett nytt verktyg för självbetjäning av kvalitetspatchar](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) i kunskapsbasen för support.
 * [Kontrollera om det finns en patch för ditt Adobe Commerce-problem med hjälp av  [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md) i guiden [!DNL Quality Patches Tool].
 
-Mer information om andra korrigeringsfiler som är tillgängliga i [!DNL QPT] finns i [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE) i [!DNL Quality Patches Tool]-handboken.
+Mer information om andra korrigeringsfiler som är tillgängliga i [!DNL QPT] finns i [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) i [!DNL Quality Patches Tool]-handboken.

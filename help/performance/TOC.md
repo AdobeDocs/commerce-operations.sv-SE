@@ -25,4 +25,4 @@ ht-degree: 0%
    - [Avancerad konfiguration](advanced-setup.md)
    - [Avancerad [!DNL JavaScript] paketering](advanced-js-bundling.md)
    - [GraphQL Application Server](application-server.md)
-- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=sv-SE)
+- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

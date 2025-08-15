@@ -76,7 +76,7 @@ Målet med [!DNL JavaScript]-paketeringen är att minska antalet och storleken p
 
 Ett sätt att uppnå detta är att definiera era paket efter sidtyp. Du kan kategorisera sidorna för [!DNL Commerce] i flera sidtyper, bland annat Kategori, Produkt, CMS, Kund, Kund och Kassa. Varje sida som kategoriseras i någon av dessa sidtyper har olika beroenden för RequireJS-modulen. När du paketerar dina RequireJS-moduler per sidtyp får du bara ett handtag som täcker alla sidors beroenden i din butik.
 
-Du kan till exempel få ett paket med de beroenden som är gemensamma för alla sidor, ett paket med endast CMS, ett paket med endast katalog, ett annat paket med enbart sökning och ett paket med utcheckningssidor.
+Du kan till exempel få ett paket med de beroenden som är gemensamma för alla sidor, ett paket som bara innehåller CMS, ett paket som endast innehåller katalogsidor, ett annat paket som bara innehåller söksidor och ett paket som innehåller utcheckningssidor.
 
 Du kan också skapa paket utifrån syfte: för gemensamma funktioner, produktrelaterade funktioner, leveransfunktioner, utcheckningsfunktioner, skatter och formulärvalideringar. Det är upp till dig och butikens struktur att definiera era paket. Ni kanske märker att vissa paketeringsstrategier kommer att fungera bättre än andra.
 
@@ -176,7 +176,7 @@ Du kan hämta alla [!DNL RequireJS]-modulberoenden från din butiks sidtyper gen
 
 #### Så här använder du [!DNL PhantomJS]:
 
-Skapa en ny fil med namnet `deps.js` i rotkatalogen [!DNL Commerce] och kopiera den i koden nedan. Den här koden använder [!DNL [!DNL PhantomJS]] för att öppna en sida och vänta på att webbläsaren ska läsa in alla sidresurser. Därefter genereras alla [!DNL RequireJS]-beroenden för en viss sida.
+Skapa en ny fil med namnet [!DNL Commerce] i rotkatalogen `deps.js` och kopiera den i koden nedan. Den här koden använder [!DNL [!DNL PhantomJS]] för att öppna en sida och vänta på att webbläsaren ska läsa in alla sidresurser. Därefter genereras alla [!DNL RequireJS]-beroenden för en viss sida.
 
 ```javascript
 "use strict";
@@ -380,7 +380,7 @@ I det här exemplet återanvänds `mage/bootstrap`- och `requirejs/require`-resu
 
 Stegen nedan beskriver den grundläggande processen för att generera mer effektiva [!DNL Commerce]-paket. Du kan automatisera den här processen hur du vill, men du måste fortfarande använda `nodejs` och `r.js` för att generera dina paket. Och om dina teman har [!DNL JavaScript]-relaterade anpassningar och inte kan återanvända samma `build.js`-fil kan du behöva skapa flera `build.js` konfigurationer per tema.
 
-#### 1. Generera statiska butiksplatser
+#### &#x200B;1. Generera statiska butiksplatser
 
 Kör det statiska distributionskommandot innan du genererar paket:
 
@@ -397,7 +397,7 @@ Det här kommandot genererar statiska butiksdistributioner för varje tema och s
 
 Om du vill generera paket för alla butiksteman och språkområden upprepar du stegen nedan för varje butikstema och språkområde.
 
-#### 2. Flytta det statiska innehållet till en tillfällig katalog
+#### &#x200B;2. Flytta det statiska innehållet till en tillfällig katalog
 
 Först måste du flytta det statiska innehållet från målkatalogen till en tillfällig katalog eftersom RequireJS ersätter allt innehåll i målkatalogen.
 
@@ -411,7 +411,7 @@ Exempel:
 mv pub/static/frontend/Magento/luma/en_US pub/static/frontend/Magento/luma/en_US_tmp
 ```
 
-#### 3. Kör optimeraren för r.js
+#### &#x200B;3. Kör optimeraren för r.js
 
 Kör sedan r.js-optimeraren på filen `build.js` från rotkatalogen för [!DNL Commerce]. Sökvägar till alla kataloger och filer är relativa till arbetskatalogen.
 
@@ -438,7 +438,7 @@ drwxr-xr-x 70 root root    4096 Mar 28 11:24 ../
 -rw-r--r--  1 root root   74233 Mar 28 11:24 shipping.js
 ```
 
-#### 4. Konfigurera RequireJS att använda paket.
+#### &#x200B;4. Konfigurera RequireJS att använda paket.
 
 Om du vill få RequireJS att använda dina paket lägger du till ett `onModuleBundleComplete`-återanrop efter `modules`-noden i filen `build.js`:
 
@@ -474,7 +474,7 @@ require.config({});
 }
 ```
 
-#### 5. Kör kommandot för distribution igen
+#### &#x200B;5. Kör kommandot för distribution igen
 
 Kör följande kommando för att distribuera:
 
@@ -497,7 +497,7 @@ require.config({
 >
 >När du konfigurerar paket ska du se till att du placerar `requirejs.config()`-anropen i den ordning som du vill att de ska köras, eftersom anropen körs i den ordning som de visas.
 
-#### 6. Testa resultaten
+#### &#x200B;6. Testa resultaten
 
 Lägg märke till att webbläsaren läser in olika beroenden och paket när sidan har lästs in. Här är till exempel resultatet för profilen Långsam 3G:
 
@@ -505,7 +505,7 @@ Lägg märke till att webbläsaren läser in olika beroenden och paket när sida
 
 Sidinläsningstiden för en tom hemsida är nu dubbelt så snabb som om det ursprungliga [!DNL Commerce]-paketet används. Men vi kan göra ännu bättre.
 
-#### 7. Optimera paketen
+#### &#x200B;7. Optimera paketen
 
 Även om de gzippas är [!DNL JavaScript]-filerna fortfarande stora. Minimera dem med RequireJS, som använder en förstärkare för att minimera [!DNL JavaScript] till bra resultat.
 

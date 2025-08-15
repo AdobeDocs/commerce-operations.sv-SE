@@ -41,5 +41,5 @@ Webbplatser och butiker är multipler för katalogdata, så om du har många web
 
 ## Ytterligare information
 
-- [Om webbplatser, butiker och butiksvyer](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/configure-store/best-practices)
-- [Konfigurera flera webbplatser eller butiker](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites)
+- [Om webbplatser, butiker och butiksvyer](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure-store/best-practices)
+- [Konfigurera flera webbplatser eller butiker](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites)

@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Om du vill använda [!DNL New Relic Observation for Adobe Commerce]-nördleten måste du ha tillgång till [!DNL New Relic].
 
-[New Relic-kontohantering](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/monitor/new-relic/account-management)
+[New Relic-kontohantering](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/new-relic/account-management)
 
 Välj sedan menyalternativet Apps på hemsidan [!DNL New Relic].
 

@@ -122,7 +122,7 @@ Se följande diagram:
 
 ![Objektdiagram](../../../assets/playbooks/bisect2.png)
 
-Det finns flera sätt att se på hur man gör en beskärning, men Adobe rekommenderar att du följer den här ordningen:
+Det finns flera sätt att se på hur man gör en keying, men Adobe rekommenderar att du följer den här ordningen:
 
 - Profilera efter ämne
 - Skeva efter implementering

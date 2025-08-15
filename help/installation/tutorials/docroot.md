@@ -62,7 +62,7 @@ För att slutföra den här självstudiekursen behöver du tillgång till en fun
 >
 >Mer information finns i [Förutsättningar](../prerequisites/overview.md) och [Installationshandboken](../overview.md).
 
-## 1. Redigera serverkonfigurationen
+## &#x200B;1. Redigera serverkonfigurationen
 
 Namnet på och platsen för den virtuella värdfilen beror på vilken version av Apache du kör. I det här exemplet visas namnet och platsen för den virtuella värdfilen på Apache v2.4.
 
@@ -96,7 +96,7 @@ Namnet på och platsen för den virtuella värdfilen beror på vilken version av
    systemctl restart apache2
    ```
 
-## 2. Uppdatera din bas-URL
+## &#x200B;2. Uppdatera din bas-URL
 
 Om du lade till ett katalognamn till serverns värdnamn eller IP-adress för att skapa bas-URL:en när du installerade programmet (till exempel `http://192.168.33.10/magento2`) måste du ta bort den.
 
@@ -122,7 +122,7 @@ Om du lade till ett katalognamn till serverns värdnamn eller IP-adress för att
    UPDATE core_config_data SET value='http://192.168.33.10' WHERE path='web/unsecure/base_url';
    ```
 
-## 3. Uppdatera filen env.php.
+## &#x200B;3. Uppdatera filen env.php.
 
 Lägg till följande nod i filen `env.php`.
 
@@ -134,7 +134,7 @@ Lägg till följande nod i filen `env.php`.
 
 Mer information finns i referensen [env.php](../../configuration/reference/config-reference-envphp.md).
 
-## 4. Växlingslägen
+## &#x200B;4. Växlingslägen
 
 [Programlägen](../../configuration/bootstrap/application-modes.md), som innehåller `production` och `developer`, är utformade för att förbättra säkerheten och underlätta utvecklingen. Som namnen tyder på bör du växla till läget `developer` när du utökar eller anpassar programmet och växla till läget `production` när du kör i en live-miljö.
 
@@ -164,7 +164,7 @@ Att växla mellan lägen är ett viktigt steg när du vill verifiera att serverk
 
 1. Uppdatera webbläsaren och kontrollera att butiken visas korrekt.
 
-## 5. Verifiera butiken
+## &#x200B;5. Verifiera butiken
 
 Gå till butiken i en webbläsare och kontrollera att allt fungerar.
 

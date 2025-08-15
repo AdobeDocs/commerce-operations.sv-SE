@@ -1,6 +1,6 @@
 ---
 title: Installera  [!DNL Data Migration Tool]
-description: Lär dig hur du installerar  [!DNL Data Migration Tool]  för att överföra data mellan Magento 1 och Magento 2.
+description: Lär dig hur du installerar  [!DNL Data Migration Tool] för överföring av data mellan Magento 1 och Magento 2.
 exl-id: 5f57067b-3ce8-4b51-b9ae-f60ae089c4ba
 topic: Commerce, Migration
 feature: Configuration, Install
@@ -29,7 +29,7 @@ Använd någon av följande metoder för att verifiera din version av Magento:
 
 ### Metapaket för disposition
 
-Om du hämtade Magento med Composer-metapaketet anger du följande kommando:
+Om du hämtade Magento-programmet med ett Composer-metapaket anger du följande kommando:
 
 ```bash
 php <magento_root>/bin/magento --version
@@ -37,7 +37,7 @@ php <magento_root>/bin/magento --version
 
 ### GitHub-databas
 
-Om du klonade GitHub-databasen Magento 2 anger du följande kommandon:
+Om du klonade Magento 2 GitHub-databasen anger du följande kommandon:
 
 ```bash
 cd <your Magento 2 clone directory>
@@ -66,11 +66,11 @@ Du kan installera [!DNL Data Migration Tool] från:
 Kontrollera att du har:
 
 - Slutförde alla aktiviteter som nämns i avsnittet [Förhandsvillkor](prerequisites.md)
-- [Verifierade version](install.md#check-your-version) av programvaran Magento 2
+- [Verifierade version](install.md#check-your-version) av Magento 2
 
 ### Installera från `repo.magento.com`
 
-Om du vill installera [!DNL Data Migration Tool] måste du uppdatera `composer.json` i Magento-rotinstallationskatalogen för att ange platsen för [!DNL Data Migration Tool]-paketet.
+Om du vill installera [!DNL Data Migration Tool] måste du uppdatera `composer.json` i Magento rotinstallationskatalog för att ange platsen för [!DNL Data Migration Tool]-paketet.
 
 1. Logga in på programservern som, eller växla till, ägare av [filsystemet](../../installation/prerequisites/file-system/overview.md).
 1. Byt till programmets rotkatalog.
@@ -84,7 +84,7 @@ Om du vill installera [!DNL Data Migration Tool] måste du uppdatera `composer.j
    composer require magento/data-migration-tool:<version>
    ```
 
-   Där `<version>` måste matcha versionen av kodbasen Magento 2.
+   Där `<version>` måste matcha versionen av Magento 2-kodbasen.
 
    För version 2.2.0 anger du:
 
@@ -114,7 +114,7 @@ Om du har klonat GitHub-databasen följer du stegen nedan för att installera [!
    composer require magento/data-migration-tool:<version>
    ```
 
-   där `<version>` måste matcha versionen av kodbasen Magento 2.
+   där `<version>` måste matcha versionen av Magento 2-kodbasen.
 
    För version 2.2.0 anger du:
 

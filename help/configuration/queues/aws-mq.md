@@ -65,7 +65,7 @@ async.V1.inventory.bulk-product-source-unassign.POST
 async.V1.inventory.bulk-product-source-transfer.POST
 ```
 
-Standardkonfigurationen för `InventoryCatalog` publicerar inte meddelanden till [!DNL RabbitMQ]. Standardbeteendet är att utföra åtgärden i samma användartråd. Aktivera `cataloginventory/bulk_operations/async` om du vill att `InventoryCatalog` ska publicera meddelanden. Gå till **Lager** > Konfiguration > **Katalog** > **Inventering** > Admin - gruppåtgärder och ange `Run asynchronously` till **Ja** från administratören.
+Standardkonfigurationen för `InventoryCatalog` publicerar inte meddelanden till [!DNL RabbitMQ]. Standardbeteendet är att utföra åtgärden i samma användartråd. Aktivera `InventoryCatalog` om du vill att `cataloginventory/bulk_operations/async` ska publicera meddelanden. Gå till **Lager** > Konfiguration > **Katalog** > **Inventering** > Admin - gruppåtgärder och ange `Run asynchronously` till **Ja** från administratören.
 
 ## Testar meddelandekön
 

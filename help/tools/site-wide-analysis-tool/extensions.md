@@ -31,4 +31,4 @@ Fliken [!DNL Extensions] i [!DNL Site-Wide Analysis Tool] innehåller informatio
 
 * Om du inte kan hålla din tredje part [!DNL extensions] uppdaterad till sina senaste versioner bör du använda en annan [!DNL extensions].
 
-* Du kan undvika potentiella problem genom att hämta/köpa från tredje part [!DNL extensions] från en betrodd källa, som [Commerce Marketplace](https://marketplace.magento.com/extensions.html).
+* Du kan undvika potentiella problem genom att hämta/köpa [!DNL extensions] från en betrodd källa, som [Commerce Marketplace](https://marketplace.magento.com/extensions.html).

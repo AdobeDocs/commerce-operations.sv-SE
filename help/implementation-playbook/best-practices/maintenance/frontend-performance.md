@@ -37,5 +37,5 @@ Så här kontrollerar du hur din webbplatsbutik fungerar i förväg:
 ## Ytterligare information
 
 - [Indexhantering för administratörer](../../../configuration/cli/manage-indexers.md#configure-indexers)
-- [Indexhantering med CLI](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html?lang=sv-SE)
+- [Indexhantering med CLI](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html)
 - [Indexeringsöversikt för utvecklare](https://developer.adobe.com/commerce/php/development/components/indexing/)

@@ -4,7 +4,7 @@ description: Se ett exempel på hur du ändrar inställningar i ett utvecklingss
 exl-id: c980ec01-ca2d-43db-b68d-8e9435e07e6a
 source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '464'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ Så här anger du tidszon- och viktenheter i utvecklingssystemet:
 
    ![Ange språkinställningar i utvecklingssystemet](../../assets/configuration/split-deploy-set-locale.png)
 
-1. Klicka på **GMT+00:00 (UTC)** i listan **Tidszon**.
+1. Klicka på **GMT+0** (UTC)**i listan :00Tidszon**.
 1. Avmarkera kryssrutan **Använd systemvärde** intill fältet **Viktenhet**.
 1. Klicka på **kgs** i listan **Viktenhet**.
 1. Klicka på **Spara konfiguration**.

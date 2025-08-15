@@ -68,7 +68,7 @@ I följande tabell förklaras det här kommandots parametrar och värden.
 | `--no-less` | Distribuera inte LESS-filer. | Nej |
 | `--no-images` | Distribuera inte bilder. | Nej |
 | `--no-fonts` | Distribuera inte teckensnittsfiler. | Nej |
-| `--no-html` | Distribuera inte HTML-filer. | Nej |
+| `--no-html` | Installera inte HTML-filer. | Nej |
 | `--no-misc` | Distribuera inte andra typer av filer: MD, JBF, CSV, JSON, TXT, HTC, SWF | Nej |
 | `--no-html-minify` | Minimera inte HTML-filer. | Nej |
 | `-s <quick\|standard\|compact>` | Definiera distributionsstrategin. Använd endast dessa alternativ om du har fler än en lokal plats.<ul><li>Använd [snabbstrategin](static-view-file-strategy.md#quick-strategy) för att minimera distributionstiden. Detta är standardkommandoalternativet om det inte anges.</li><li>Använd [standardstrategin](static-view-file-strategy.md#standard-strategy) för att distribuera alla statiska vyfiler för alla paket.</li><li>Använd [kompakt strategi](static-view-file-strategy.md#compact-strategy) för att spara diskutrymme på servern.</li></ul> | Nej |
@@ -83,7 +83,7 @@ I följande tabell förklaras det här kommandots parametrar och värden.
 
 Här följer några exempelkommandon.
 
-### Utesluta ett tema och HTML-miniatyr
+### Exkludera ett tema och HTML-miniatyr
 
 Följande kommando distribuerar statiskt innehåll för amerikansk engelska (`en_US`), exkluderar Luma-temat som ingår i Commerce och minierar inte HTML-filer.
 
@@ -170,7 +170,7 @@ ERROR: You need to install the Commerce application before running this utility.
 
 Gör så här:
 
-1. Installera Commerce-programmet med kommandoraden [&#128279;](../../installation/composer.md).
+1. Installera Commerce-programmet med kommandoraden [](../../installation/composer.md).
 1. Logga in på programservern som, eller [växla till](../../installation/prerequisites/file-system/overview.md), ägare av filsystemet.
 1. Ta bort innehållet i katalogen `<app_root>/pub/static`, förutom i filen `.htaccess`. Ta inte bort filen.
 1. Distribuera statiska vyfiler: `bin/magento setup:static-content:deploy`

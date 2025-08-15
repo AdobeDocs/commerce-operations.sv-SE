@@ -27,4 +27,4 @@ Använd sidan [!UICONTROL Exceptions] om du vill visa loggfilsfel/undantag för 
 
 ## God praxis
 
-Övervaka sidan [!DNL Site-Wide Analysis Tool’s] [!UICONTROL Exceptions] för att se vilka undantag som inträffar. Mer information finns i [Visa och hantera loggar](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/develop/test/log-locations) i utvecklardokumentationen.
+Övervaka sidan [!DNL Site-Wide Analysis Tool’s] [!UICONTROL Exceptions] för att se vilka undantag som inträffar. Mer information finns i [Visa och hantera loggar](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/test/log-locations) i utvecklardokumentationen.

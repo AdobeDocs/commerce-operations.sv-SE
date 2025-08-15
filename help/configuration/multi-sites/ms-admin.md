@@ -13,10 +13,10 @@ ht-degree: 0%
 
 Den här aktiviteten kräver att du skapar en rotkategori (och ytterligare kategorier om så önskas) för varje butik. De uppgifter som behandlas i det här avsnittet är ett sätt att konfigurera flera butiker. Mer information finns i följande resurser i användarhandboken för Commerce:
 
-- [Kategorier](https://experienceleague.adobe.com/sv/docs/commerce-admin/catalog/categories/categories)
-- [Lägger till webbplatser](https://experienceleague.adobe.com/sv/docs/commerce-admin/stores-sales/site-store/stores#add-websites)
-- [Lagra URL:er](https://experienceleague.adobe.com/sv/docs/commerce-admin/stores-sales/site-store/store-urls)
-- [Innehåll](https://experienceleague.adobe.com/sv/docs/commerce-admin/content-design/content-menu)
+- [Kategorier](https://experienceleague.adobe.com/en/docs/commerce-admin/catalog/categories/categories)
+- [Lägger till webbplatser](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/stores#add-websites)
+- [Lagra URL:er](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls)
+- [Innehåll](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/content-menu)
 
 >[!INFO]
 >
@@ -34,7 +34,7 @@ Så här skapar du en rotkategori:
 1. I fältet **Kategorinamn** anger du ett unikt namn som identifierar den här kategorin.
 1. Kontrollera att Aktivera kategori är inställt på **Ja**.
 
-   Mer information om de andra alternativen på den här sidan finns i [Rotkategorier](https://experienceleague.adobe.com/sv/docs/commerce-admin/catalog/categories/category-root).
+   Mer information om de andra alternativen på den här sidan finns i [Rotkategorier](https://experienceleague.adobe.com/en/docs/commerce-admin/catalog/categories/category-root).
 
    I bilden nedan visas ett exempel.
 
@@ -49,7 +49,7 @@ Så här skapar du en webbplats:
 
 1. Logga in på administratören som en användare som har behörighet att skapa webbplatser, butiker och butiksvyer.
 1. Klicka på **Lagrar** > **Inställningar** > **Alla butiker**.
-1. Klicka på **Skapa webbplats** på sidan _Lagrar_.
+1. Klicka på _Skapa webbplats_ på sidan **Lagrar**.
 
    - **Namn** - Ange ett namn som identifierar webbplatsen.
    - **Kod** - Ange en unik kod. Om du till exempel har en fransk butik kan du ange `french`
@@ -66,8 +66,8 @@ Så här skapar du en webbplats:
 
 Så här skapar du en butik:
 
-1. Klicka på **Lagrar** > **Inställningar** > **Alla butiker** på panelen _Admin_.
-1. Klicka på **Skapa butik** på sidan _Lager_.
+1. Klicka på _Lagrar_ > **Inställningar** > **Alla butiker** på panelen **Admin**.
+1. Klicka på _Skapa butik_ på sidan **Lager**.
 
    - **Webbplats** - Klicka på namnet på webbplatsen som du vill associera den här butiken med.
    - **Namn** - Ange ett namn som identifierar arkivet.
@@ -85,7 +85,7 @@ Så här skapar du en butik:
 
 Så här skapar du en butiksvy:
 
-1. Klicka på **Lagrar** > **Inställningar** > **Alla butiker** på panelen _Admin_.
+1. Klicka på _Lagrar_ > **Inställningar** > **Alla butiker** på panelen **Admin**.
 1. Klicka på **Skapa butiksvy** på sidan Lager.
 
    - **Butik** - Klicka på namnet på den butik som butiksvyn ska associeras med.
@@ -106,7 +106,7 @@ Om du vill komma åt en webbplats med en unik URL som `http://french.magento.mg`
 
 Så här ändrar du webbplatsens bas-URL:
 
-1. Klicka på **Lagrar** > **Inställningar** > **Konfiguration** > **Allmänt** > **Webb** på panelen _Admin_.
+1. Klicka på _Lagrar_ > **Inställningar** > **Konfiguration** > **Allmänt** > **Webb** på panelen **Admin**.
 1. I listan **Butiksvy** högst upp på sidan klickar du på namnet på en av dina webbplatser som på bilden nedan.
 
    ![Välj ett scope](../../assets/configuration/multi-site-scope.png)
@@ -131,18 +131,18 @@ Commerce ger dig möjlighet att lägga till butikskoden i webbplatsens bas-URL, 
 
 Detta förhindrar att `index.php` och `.htaccess` kommer ur synk med Commerce-kodbasen vid framtida uppgraderingar.
 
-Se [Commerce användarhandbok](https://experienceleague.adobe.com/sv/docs/commerce-admin/stores-sales/site-store/store-urls).
+Se [Commerce användarhandbok](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls).
 
 Så här lägger du till butikskoden i bas-URL:en:
 
-1. Klicka på **Lagrar** > **Inställningar** > **Konfiguration** > **Allmänt** > **Webb** på panelen _Admin_.
+1. Klicka på _Lagrar_ > **Inställningar** > **Konfiguration** > **Allmänt** > **Webb** på panelen **Admin**.
 1. I listan **Butiksvy** överst på sidan klickar du på **Standardkonfiguration** enligt bilden nedan.
 
    ![Välj standardkonfigurationsomfånget](../../assets/configuration/multi-site-default.png)
 
 1. Expandera **URL-alternativ** i den högra rutan.
 1. Avmarkera kryssrutan **Använd systemvärde** intill _Lägg till lagringskod till URL:er_.
-1. Klicka på **Ja** i listan _Lägg till butikskod i URL_.
+1. Klicka på _Ja_ i listan **Lägg till butikskod i URL**.
 
    ![Lägg till butikskoden i butiksbas-URL:en](../../assets/configuration/multi-site-add-store-url.png)
 
@@ -155,9 +155,9 @@ Du måste utföra det här steget sist eftersom du inte längre har tillgång ti
 
 Så här ändrar du bas-URL:en för butiksvyn:
 
-1. Klicka på **Lagrar** > **Inställningar** > **Konfiguration** > **Allmänt** > **Webb** på panelen _Admin_.
+1. Klicka på _Lagrar_ > **Inställningar** > **Konfiguration** > **Allmänt** > **Webb** på panelen **Admin**.
 
-1. Klicka på **Standardkonfiguration** i listan _Butiksvy_ överst på sidan.
+1. Klicka på _Standardkonfiguration_ i listan **Butiksvy** överst på sidan.
 
    ![Välj standardkonfigurationsomfånget](../../assets/configuration/multi-site-default.png)
 

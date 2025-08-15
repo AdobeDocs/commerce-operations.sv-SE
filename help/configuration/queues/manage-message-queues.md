@@ -35,7 +35,7 @@ I följande exempel visas `crontab`-konfigurationen för konsumenter som kör:
 >
 >Den kan konfigureras i Admin Stores > Settings > Configuration > Advanced > System > Cron configuration options for group: customers.
 >
->Mer information om hur du använder `cron` med Commerce finns i [Konfigurera och kör cron](../cli/configure-cron-jobs.md).
+>Mer information om hur du använder [ med Commerce finns i ](../cli/configure-cron-jobs.md)Konfigurera och kör cron`cron`.
 
 Du kan också använda en processhanterare som [Supervisor](https://supervisord.readthedocs.io/en/latest/) för att övervaka processernas status. Hanteraren kan använda kommandoraden för att starta om processerna efter behov.
 
@@ -49,7 +49,7 @@ Du kan också använda en processhanterare som [Supervisor](https://supervisord.
 
 >[!INFO]
 >
->Om din Adobe Commerce-butik finns på molnplattformen använder du [`CRON_CONSUMERS_RUNNER`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=sv-SE#cron_consumers_runner) för att konfigurera `consumers_runner` cron-jobbet.
+>Om din Adobe Commerce-butik finns på molnplattformen använder du [`CRON_CONSUMERS_RUNNER`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#cron_consumers_runner) för att konfigurera `consumers_runner` cron-jobbet.
 
 ### Specifik konfiguration
 
@@ -82,6 +82,6 @@ Redigera filen `/app/etc/env.php` om du vill konfigurera cron-jobbet `consumers_
 
   >[!INFO]
   >
-  >Om din Adobe Commerce-butik finns på molnplattformen använder du [`CONSUMERS_WAIT_FOR_MAX_MESSAGES`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=sv-SE#consumers_wait_for_max_messages) för att konfigurera hur konsumenter ska bearbeta meddelanden från meddelandekön.
+  >Om din Adobe Commerce-butik finns på molnplattformen använder du [`CONSUMERS_WAIT_FOR_MAX_MESSAGES`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#consumers_wait_for_max_messages) för att konfigurera hur konsumenter ska bearbeta meddelanden från meddelandekön.
 
 Se [Starta meddelandekökonsumenter](../cli/start-message-queues.md).

@@ -28,7 +28,7 @@ Korrigeringen ACSD-62952 åtgärdar ett problem där gift-registrets datum inte 
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -37,7 +37,7 @@ Händelsedatumet som visas i butiken för ett delat presentationsregister visas 
 <u>Steg som ska återskapas</u>:
 
 1. Logga in som kund på frontend.
-1. Klicka på **[!UICONTROL Gift Registry]** på kontrollpanelen [!UICONTROL My Account].
+1. Klicka på [!UICONTROL My Account] på kontrollpanelen **[!UICONTROL Gift Registry]**.
 1. Om det inte finns något befintligt register skapar du ett och anger ett datum.
 1. Lägg alla artiklar i vagnen.
 1. Klicka på **[!UICONTROL Add all items to Gift Registry]** på kundvagnssidan.

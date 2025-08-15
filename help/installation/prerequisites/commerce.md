@@ -15,7 +15,7 @@ Du är bland de 240 000 handlare världen över som litar på vår e-handelsprog
 
 ## Så här skaffar du programmet
 
-Kontrollera tillgängligheten av spännande nya funktioner och releaser och se hur du kan få dem på vår [produkttillgänglighetssida](https://experienceleague.adobe.com/sv/docs/commerce-operations/release/product-availability).
+Kontrollera tillgängligheten av spännande nya funktioner och releaser och se hur du kan få dem på vår [produkttillgänglighetssida](https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability).
 
 Se följande tabell för att komma igång med installationen av Adobe Commerce.
 
@@ -39,7 +39,7 @@ Se följande tabell för att komma igång med installationen av Adobe Commerce.
     </tr>
     <tr>
         <td><p>Medverkande utvecklare</p></td>
-        <td><p>Bidrar till kodbasen Magento Open Source, filer buggar och anpassar programmet. Mycket tekniskt, har en egen utvecklingsserver, förstår Composer och GitHub.</p>
+        <td><p>Bidrar till Magento Open Source-kodbas, sparar filer och anpassar programmet. Mycket tekniskt, har en egen utvecklingsserver, förstår Composer och GitHub.</p>
             <p>Du <em>kan inte</em> använda programmet i en produktionsmiljö.</p>
       <p>Du måste uppgradera med kommandona <a href="../../upgrade/developer/git-installs.md">Composer och Git</a>.</p></td>
         <td><ol><li>Klonar GitHub-databasen.</li>

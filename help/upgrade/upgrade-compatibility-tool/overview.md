@@ -25,7 +25,7 @@ Du kan använda [!DNL Upgrade Compatibility Tool] via:
 
 - Som ett fristående [kommandoradsverktyg ](../upgrade-compatibility-tool/run.md). En fullständig lista över tillgängliga kommandon finns i [`bin/uct`-referensen](../../tools/reference/uct.md).
 - Integrerar [!DNL Upgrade Compatibility Tool] med [[!DNL Site-Wide Analysis Tool]](../upgrade-compatibility-tool/integrate-analysis-tool.md).
-- En körningskonfiguration i plugin-programmet [Magento PHPStorm](../upgrade-compatibility-tool/run-configuration-phpstorm-plugin.md).
+- En körningskonfiguration i [Magento PHPStorm-plugin](../upgrade-compatibility-tool/run-configuration-phpstorm-plugin.md).
 
 ## Arbetsflöde
 
@@ -43,7 +43,7 @@ Titta på den här videon om du vill veta mer om [!DNL Upgrade Compatibility Too
 
 Om du behöver information eller har frågor som inte ingår i den här handboken använder du följande resurser:
 
-Kontakta oss på Engineering Slack channel [#upgrade-compatibility-tool](https://magentocommeng.slack.com/archives/C019Y143U9F) för att få kontakt med [!DNL Upgrade Compatibility Tool]-teamet. Vi vill gärna få synpunkter, problem och förslag som hjälper oss att förbättra verktyget.
+Kontakta oss på Slack-kanalen [!DNL Upgrade Compatibility Tool]#upgrade-compatibility-tool[ för att få kontakt med ](https://magentocommeng.slack.com/archives/C019Y143U9F)-teamet. Vi vill gärna få synpunkter, problem och förslag som hjälper oss att förbättra verktyget.
 
 [!DNL Upgrade Compatibility Tool] använder regler som definierats i våra [kodningsstandarder](https://developer.adobe.com/commerce/php/coding-standards/) för att se till att ditt projekt följer Adobe Commerce bästa praxis och för att hjälpa dig att förbättra och utöka [!DNL Upgrade Compatibility Tool].
 
@@ -54,6 +54,6 @@ Mer information om att bidra med kodningsstandarder finns i avsnittet [Contribut
 Se följande resurser som hjälper dig att förstå Adobe Commerce uppgraderingar:
 
 - [Uppgraderingsguiden](../overview.md) ger en översikt över den typiska uppgraderingsresan för Adobe Commerce och de bästa metoderna att följa under den resan.
-- Sidan [Kommande versioner](https://experienceleague.adobe.com/sv/docs/commerce-operations/release/planning/schedule) innehåller datum för schemalagda och kommande versioner.
+- Sidan [Kommande versioner](https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/schedule) innehåller datum för schemalagda och kommande versioner.
 - Sidan [Community-resurser](https://developer.adobe.com/commerce/contributor/community/) är till för att starta diskussioner eller hitta mer information.
 - Gå till sidan för [relaterade verktyg](../upgrade-compatibility-tool/related-tools.md) för att se om det finns användbara verktyg på den vanliga uppgraderingsresan.

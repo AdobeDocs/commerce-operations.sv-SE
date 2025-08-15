@@ -31,5 +31,5 @@ Teknisk information finns i dataflödesdiagram och mappningar av databasentitete
 
 Mer information om hur Adobe Commerce hjälper handlare att följa GDPR finns i:
 
-- [GDPR-kompatibilitet](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-gdpr.html?lang=sv-SE)
+- [GDPR-kompatibilitet](https://experienceleague.adobe.com/docs/commerce-admin/start/compliance/privacy/compliance-gdpr.html)
 - [Adobe Commerce är redo för GDPR](https://business.adobe.com/privacy/general-data-protection-regulation.html)

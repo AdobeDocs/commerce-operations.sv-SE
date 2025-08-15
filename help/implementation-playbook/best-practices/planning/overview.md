@@ -46,7 +46,7 @@ Följande avsnitt innehåller information om god praxis för planeringsfasen.
     <td>Åtgärda och förhindra de fem vanligaste konfigurationsproblemen för Adobe Commerce webbplatser.</td>
   </tr>
   <tr>
-    <td><a href="https://experienceleague.adobe.com/docs/commerce-admin/systems/tools/cache-management.html?lang=sv-SE">Cachning</a></td>
+    <td><a href="https://experienceleague.adobe.com/docs/commerce-admin/systems/tools/cache-management.html">Cachning</a></td>
     <td>Använd verktygen för cachehantering för att förbättra platsens prestanda.</td>
   </tr>
   <tr>
@@ -76,11 +76,11 @@ Följande avsnitt innehåller information om god praxis för planeringsfasen.
     <td colspan="2"><em>Tjänstkonfiguration</em></td>
   </tr>
   <tr>
-    <td><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/setup-fastly/fastly-configuration.html?lang=sv-SE">Konfigurera snabbt</a></td>
+    <td><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/setup-fastly/fastly-configuration.html">Konfigurera snabbt</a></td>
     <td>Konfigurera snabbtjänster för ditt Adobe Commerce i molninfrastrukturprojekt.</td>
   </tr>
   <tr>
-    <td><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic.html?lang=sv-SE">Konfigurera meddelandekanaler för New Relic</a></td>
+    <td><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic.html">Konfigurera meddelandekanaler för New Relic</a></td>
     <td>Få tillgång till din New Relic-kontrollpanel och analysera data från din Adobe Commerce i molninfrastrukturprojekt.</td>
   </tr>
   <tr>
@@ -115,7 +115,7 @@ Följande avsnitt innehåller information om god praxis för planeringsfasen.
 
 | Bästa praxis | Beskrivning |
 |--------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| [Partnereskaleringar](partner-escalation.md) | Förbered dig för att eskalera ett partnerproblem med ett Adobe-kontoteam eller lär dig hur du undviker eskalering. |
+| [Partnereskaleringar](partner-escalation.md) | Förbered dig för eskalering av ett partnerproblem med ett Adobe-kontoteam eller lär dig hur du undviker eskalering. |
 | [Betalningslagringsbearbetning](payment-processing-storage.md) | Bearbeta och lagra betalningsinformation på ett säkert sätt. |
 
 ## Försäljning och marknadsföring

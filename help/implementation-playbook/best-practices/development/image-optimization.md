@@ -28,13 +28,13 @@ Innan du överför bilder till dina Commerce-sajter bör du optimera och komprim
 
 - PNG-formatet ger bilder i mindre storlek för bilder med stora enfärgade områden.
 
-- JPEG-formatet ger bilder med mindre storlek för alla andra bildtyper. Använd den högsta komprimeringen (utan märkbar försämring). Det är vanligtvis 60 till 80 procent.
+- JPEG-formatet ger mindre bilder för alla andra bildtyper. Använd den högsta komprimeringen (utan märkbar försämring). Det är vanligtvis 60 till 80 procent.
 
 ## Aktivera och konfigurera snabb bildoptimering
 
-När du har konfigurerat tjänsten Snabbt för ditt Adobe Commerce Cloud-projekt kan du läsa [Snabbt bildoptimering](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/cdn/fastly-image-optimization) för instruktioner om hur du aktiverar och konfigurerar bildoptimering.
+När du har konfigurerat tjänsten Snabbt för ditt Adobe Commerce Cloud-projekt kan du läsa [Snabbt bildoptimering](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/cdn/fastly-image-optimization) för instruktioner om hur du aktiverar och konfigurerar bildoptimering.
 
 ## Ytterligare information
 
-- [Konfigurera snabbt](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/cdn/setup-fastly/fastly-configuration)
-- [Dåligt optimerade bilder kan leda till prestandaproblem](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/file-storage-low-specific-page-loads-are-slow.html?lang=sv-SE)
+- [Konfigurera snabbt](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/cdn/setup-fastly/fastly-configuration)
+- [Dåligt optimerade bilder kan leda till prestandaproblem](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/file-storage-low-specific-page-loads-are-slow.html)

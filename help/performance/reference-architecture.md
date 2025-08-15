@@ -13,7 +13,7 @@ ht-degree: 0%
 
 I det här avsnittet beskrivs en allmän rekommenderad konfiguration för Adobe Commerce-instanser med vanliga servrar som är fysiskt värdbaserade i ett datacenter (inte virtualiserade) där resurser inte delas med andra användare. Din värdleverantör, särskilt om den är specialiserad på Commerce högpresterande värdtjänster, kan rekommendera en annan konfiguration som är lika eller mer effektiv för dina behov.
 
-Information om Adobe Commerce i molninfrastrukturmiljöer finns i [Startarkitektur](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/architecture/starter-architecture).
+Information om Adobe Commerce i molninfrastrukturmiljöer finns i [Startarkitektur](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/architecture/starter-architecture).
 
 ## [!DNL Commerce] referensarkitekturdiagram
 
@@ -64,7 +64,7 @@ I följande avsnitt ges rekommendationer och överväganden för varje avsnitt i
 
 ### Rekommenderad referensarkitektur för [!DNL Varnish]
 
-Magento har stöd för flera cachelagringsmotorer för helsidesdata (Arkiv, Memcache, Redis, [!DNL Varnish]) som finns i paketet, tillsammans med utökad täckning via tillägg. [!DNL Varnish] är den rekommenderade helsidescachemotorn.  [!DNL Commerce] stöder många olika [!DNL Varnish]-konfigurationer.
+Magento har stöd för flera cachelagringsmotorer för hela sidor (Arkiv, Memcache, Redis, [!DNL Varnish]) som finns i paketet, tillsammans med utökad täckning via tillägg. [!DNL Varnish] är den rekommenderade helsidescachemotorn.  [!DNL Commerce] stöder många olika [!DNL Varnish]-konfigurationer.
 
 För webbplatser som inte kräver hög tillgänglighet rekommenderar vi att du använder en enkel [!DNL Varnish]-konfiguration med Nginx SSL-avslutning.
 

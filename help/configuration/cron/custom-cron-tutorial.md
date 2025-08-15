@@ -210,7 +210,7 @@ Så här kontrollerar du cron:
 1. Kör SQL-frågan `SELECT * from cron_schedule WHERE job_code like '%custom%'` enligt följande:
 
    1. Ange `mysql -u magento -p`
-   1. Ange `use magento;` vid uppmaningen `mysql>`
+   1. Ange `mysql>` vid uppmaningen `use magento;`
    1. Ange `SELECT * from cron_schedule WHERE job_code like '%custom%';`
 
       Resultatet ska vara som följer:

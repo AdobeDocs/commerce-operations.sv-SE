@@ -12,14 +12,14 @@ ht-degree: 0%
 
 # Sökmotorkonfiguration
 
-I det här avsnittet beskrivs de minimiinställningar som du måste välja för att testa Elasticsearch eller OpenSearch med lokala distributioner av Adobe Commerce.
+I det här avsnittet beskrivs minimiinställningarna som du måste välja för att testa Elasticsearch eller OpenSearch med lokala distributioner av Adobe Commerce.
 
 >[!TIP]
 >
 >I version 2.4.4 och 2.4.3-p2 gäller alla fält med etiketten **Elasticsearch** även OpenSearch.
->När stöd för Elasticsearch 8.x introducerades i version 2.4.6 skapades nya etiketter för att skilja mellan Elasticsearch och OpenSearch-konfigurationer.
+>>När stöd för Elasticsearch 8.x introducerades i version 2.4.6 skapades nya etiketter för att skilja mellan Elasticsearch- och OpenSearch-konfigurationer.
 
-Mer information om hur du konfigurerar sökmotorn finns i [användarhandboken](https://experienceleague.adobe.com/docs/commerce-admin/catalog/catalog/search/search-configuration.html?lang=sv-SE).
+Mer information om hur du konfigurerar sökmotorn finns i [användarhandboken](https://experienceleague.adobe.com/docs/commerce-admin/catalog/catalog/search/search-configuration.html).
 
 ## Konfigurera sökmotorn från administratören
 
@@ -41,7 +41,7 @@ Så här konfigurerar du systemet att använda Elasticsearch eller OpenSearch:
    | **[!UICONTROL Server Port]** | Ange webbserverproxyporten. Standardvärdet är 9200<br>Adobe Commerce i molninfrastrukturen: Få det här värdet från ditt integreringssystem. |
    | **[!UICONTROL Index Prefix]** | Ange indexprefixet för sökmotorn. Om du använder en enda instans för mer än en Commerce-installation (mellanlagrings- och produktionsmiljöer) måste du ange ett unikt prefix för varje installation. I annat fall kan du använda standardprefixet magento2. |
    | **[!UICONTROL Enable HTTP Auth]** | Klicka bara på **[!UICONTROL Yes]** om du har aktiverat autentisering för sökmotorservern. Ange i så fall ett användarnamn och lösenord i de angivna fälten. |
-   | **[!UICONTROL Server Timeout]** | Ange hur lång tid (i sekunder) som du vill vänta när du försöker upprätta en anslutning till Elasticsearch eller OpenSearch-servern. |
+   | **[!UICONTROL Server Timeout]** | Ange hur lång tid (i sekunder) som du vill vänta när du försöker upprätta en anslutning till Elasticsearch- eller OpenSearch-servern. |
 
 1. Klicka på **[!UICONTROL Test Connection]**.
 
@@ -62,7 +62,7 @@ Prova i så fall följande:
 
 - Kontrollera att sökmotorservern körs.
 - Om servern finns på en annan värd än Commerce loggar du in på Commerce-servern och pingar sökmotorvärden. Lös problem med nätverksanslutningen och testa anslutningen igen.
-- Undersök kommandofönstret där du startade Elasticsearch eller OpenSearch för stackspår och undantag. Du måste lösa dem innan du fortsätter. Kontrollera särskilt att du har startat sökmotorn som en användare med `root`-behörighet.
+- Undersök det kommandofönster där du startade Elasticsearch eller OpenSearch för stackspår och undantag. Du måste lösa dem innan du fortsätter. Kontrollera särskilt att du har startat sökmotorn som en användare med `root`-behörighet.
 - Kontrollera att både [UNIX-brandväggen och SELinux](../../installation/prerequisites/search-engine/overview.md#firewall-and-selinux) är inaktiverade, eller konfigurera regler så att sökmotorn och Commerce kan kommunicera med varandra.
 - Verifiera värdet för fältet **[!UICONTROL Server Hostname]**. Kontrollera att servern är tillgänglig. Du kan testa serverns IP-adress i stället.
 - Använd kommandot `netstat -an | grep <listen-port>` för att verifiera att porten som anges i fältet **[!UICONTROL Server Port]** inte används av en annan process.
@@ -87,7 +87,7 @@ Så här uppdaterar du cachen med hjälp av administratören:
 
 1. Klicka på **[!UICONTROL System]** > **[!UICONTROL Cache Management]** i Admin.
 1. Markera kryssrutan bredvid **[!UICONTROL Page Cache]**.
-1. Klicka på **Uppdatera** i listan **[!UICONTROL Actions]** i det övre högra hörnet.
+1. Klicka på **[!UICONTROL Actions]** Uppdatera **i listan** i det övre högra hörnet.
 
    ![cachehantering](../../assets/configuration/refresh-cache.png)
 

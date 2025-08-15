@@ -4,7 +4,7 @@ description: Skapa en anpassad sida för underhållsläge som kunderna ser i din
 exl-id: 77e6d82d-5cc6-4d14-8b5c-1d2108f27b29
 source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '379'
 ht-degree: 0%
 
 ---
@@ -66,7 +66,7 @@ Så här omdirigerar du trafik till en anpassad underhållssida:
 1. Uppdatera Apache-konfigurationen så här:
 
    - Omdirigera all trafik till underhållssidan
-   - Tillåtslista vissa IP-adresser så att en administratör kan uppgradera Magento.
+   - Tillåtslista vissa IP-adresser så att administratören kan uppgradera Magento.
 
    Följande exempel tillåtslista 192.0.2.110.
 
@@ -107,7 +107,7 @@ Så här omdirigerar du trafik till en anpassad underhållssida:
 1. Använd ett textredigeringsprogram för att öppna konfigurationsfilen nginx som innehåller serverblocket.
 1. Lägg till följande i serverblocket (`server` visas endast för tydlighet. Lägg inte till ett andra serverblock).
 
-   Följande tillåtslista IP-adressen 192.0.2.110 och 192.0.2.115 för på ett system där Magento är installerat i `/var/www/html/magento2`:
+   Följande tillåtslista IP-adressen 192.0.2.110 och 192.0.2.115 i ett system där Magento är installerat i `/var/www/html/magento2`:
 
    ```conf
    server {

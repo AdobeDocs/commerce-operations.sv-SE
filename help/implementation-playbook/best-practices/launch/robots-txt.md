@@ -35,7 +35,7 @@ Ett Adobe Commerce-standardprojekt innehåller en hierarki som innehåller en we
 
 Följ dessa metodtips när du konfigurerar `robots.txt`- och `sitemap.xml`-filer för butiker med en plats:
 
-- Kontrollera att ditt projekt använder [`ece-tools`](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/release-notes/ece-tools-package) version 2002.0.12 eller senare.
+- Kontrollera att ditt projekt använder [`ece-tools`](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/release-notes/ece-tools-package) version 2002.0.12 eller senare.
 - Använd administratörsprogrammet för att lägga till innehåll i filen `robots.txt`.
 
   >[!TIP]
@@ -64,12 +64,12 @@ Följ dessa metodtips när du konfigurerar `robots.txt`- och `sitemap.xml`-filer
 
 >[!INFO]
 >
->Mer information finns i [Lägg till webbplatskarta och sökrobotar](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/configure-store/robots-sitemap).
+>Mer information finns i [Lägg till webbplatskarta och sökrobotar](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure-store/robots-sitemap).
 
 
 ### Lagringsplatser för flera platser
 
-Du kan konfigurera och köra flera butiker med en enda implementering av Adobe Commerce i molninfrastrukturen. Se [Konfigurera flera webbplatser eller butiker](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites).
+Du kan konfigurera och köra flera butiker med en enda implementering av Adobe Commerce i molninfrastrukturen. Se [Konfigurera flera webbplatser eller butiker](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites).
 
 Samma metodtips för att konfigurera `robots.txt`- och `sitemap.xml`-filer för [butiker med en plats](#single-site-storefronts) gäller för flera platslager med två viktiga skillnader:
 
@@ -93,7 +93,7 @@ Samma metodtips för att konfigurera `robots.txt`- och `sitemap.xml`-filer för 
 
 ## Adobe Commerce lokalt
 
-Använd administratörsprogrammet för att konfigurera `robots.txt`- och `sitemap.xml`-filerna så att de inte kan skanna och indexera onödigt innehåll (se [Sökmotorrotfiler](https://experienceleague.adobe.com/docs/commerce-admin/marketing/seo/seo-overview.html?lang=sv-SE#search-engine-robots)).
+Använd administratörsprogrammet för att konfigurera `robots.txt`- och `sitemap.xml`-filerna så att de inte kan skanna och indexera onödigt innehåll (se [Sökmotorrotfiler](https://experienceleague.adobe.com/docs/commerce-admin/marketing/seo/seo-overview.html#search-engine-robots)).
 
 >[!TIP]
 >
@@ -103,15 +103,15 @@ Använd administratörsprogrammet för att konfigurera `robots.txt`- och `sitema
 
 Visa inte din administratörssökväg i din `robots.txt`-fil. Att ha administratörssökvägen exponerad är en sårbarhet för webbplatshackning och potentiell förlust av data. Ta bort administratörssökvägen från filen `robots.txt`.
 
-Anvisningar om hur du redigerar filen `robots.txt` och tar bort alla poster i administratörssökvägen finns i [Marknadsföringsanvändarhandbok > SEO och sökning > Sökmotorrobotar](https://experienceleague.adobe.com/docs/commerce-admin/marketing/seo/seo-overview.html?lang=sv-SE#search-engine-robots).
+Anvisningar om hur du redigerar filen `robots.txt` och tar bort alla poster i administratörssökvägen finns i [Marknadsföringsanvändarhandbok > SEO och sökning > Sökmotorrobotar](https://experienceleague.adobe.com/docs/commerce-admin/marketing/seo/seo-overview.html#search-engine-robots).
 
 >[!TIP]
 >
->Om du behöver hjälp kan du [skicka in en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket).
+>Om du behöver hjälp kan du [skicka in en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket).
 
 ## Ytterligare information
 
-- [Om webbplatser, butiker och butiksvyer](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/configure-store/best-practices)
-- [Lägger till webbplatser](https://experienceleague.adobe.com/sv/docs/commerce-admin/stores-sales/site-store/stores#add-websites)
-- [Använd Snabbt för att blockera skadlig trafik för dina Adobe Commerce-webbplatser](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/cdn/custom-vcl-snippets/fastly-vcl-blocking)
-- [robots.txt ger ett 404-fel i Adobe Commerce i molninfrastruktur 2.3.x](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/robots.txt-gives-404-error-magento-commerce-cloud-2.3.x.html?lang=sv-SE)
+- [Om webbplatser, butiker och butiksvyer](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure-store/best-practices)
+- [Lägger till webbplatser](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/stores#add-websites)
+- [Använd Snabbt för att blockera skadlig trafik för dina Adobe Commerce-webbplatser](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/cdn/custom-vcl-snippets/fastly-vcl-blocking)
+- [robots.txt ger ett 404-fel i Adobe Commerce i molninfrastruktur 2.3.x](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/robots.txt-gives-404-error-magento-commerce-cloud-2.3.x.html)

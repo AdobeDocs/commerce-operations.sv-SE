@@ -19,7 +19,7 @@ Följande åtgärder implementeras i [pub/index.php][index] för att köra Comme
 - Skapa en programinstans i Commerce: [\Magento\Framework\AppInterface][app-face]
 - Kör Commerce
 
-## Bootstrap run logic
+## Bootstrap körningslogik
 
 [Bootstrap-objektet][bootinitial] använder följande algoritm för att köra Commerce-programmet:
 

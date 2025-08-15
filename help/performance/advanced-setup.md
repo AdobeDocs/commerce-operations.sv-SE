@@ -92,14 +92,14 @@ bin/magento setup:db-schema:add-slave
 
 Det här kommandot utför konfigurationsändringar men konfigurerar inte själva replikeringen. Detta bör göras manuellt.
 
-När huvuddatabasen har delats upp och slave-databaser har angetts, reglerar [!DNL Commerce] automatiskt anslutningar till en viss databas och fattar beslut baserat på typen av begäran (POST, PUT, GET osv.) och dataresursen. Om [!DNL Commerce] eller dess tillägg utför skrivåtgärder på en GET-begäran växlar systemet automatiskt anslutningen från slav till huvuddatabasen. Det fungerar på samma sätt med masterdatabaser: så snart du arbetar med en utcheckningsrelaterad tabell dirigeras alla frågor om till en viss databas. Under tiden kommer alla katalogrelaterade frågor att gå till huvuddatabasen.
+När huvuddatabasen har delats upp och slave-databaser har ställts in, reglerar [!DNL Commerce] automatiskt anslutningar till en viss databas och fattar beslut baserat på typen av begäran (POST, PUT, GET osv.) och dataresursen. Om [!DNL Commerce] eller dess tillägg utför skrivåtgärder på en GET-begäran växlar systemet automatiskt anslutningen från slav till huvuddatabasen. Det fungerar på samma sätt med masterdatabaser: så snart du arbetar med en utcheckningsrelaterad tabell dirigeras alla frågor om till en viss databas. Under tiden kommer alla katalogrelaterade frågor att gå till huvuddatabasen.
 
 Mer information om konfiguration och fördelarna med flera masterkonfigurationer/slavkonfigurationer finns i
 [Lösningen för delad databasprestanda](../configuration/storage/multi-master.md).
 
 ## Hantera mediematerial
 
-Magento har ingen specifik integrering för att leverera mediematerial. Alla vanliga metoder kan användas tillsammans i Magento.
+Magento erbjuder ingen specifik integrering för att leverera mediematerial. Alla vanliga metoder kan användas tillsammans i Magento.
 
 Det enklaste sättet att visa mediainnehåll är att leverera och cachelagra det på en [!DNL Varnish]-server. Det här tillvägagångssättet förutsätter antingen ett delat filsystem för lagring av mediainnehåll eller en dedikerad server som pekar på [!DNL Varnish].
 

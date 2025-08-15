@@ -1,6 +1,6 @@
 ---
 title: 'MDVA-40830: Butikskrediter som tillämpas flera gånger under beställningen'
-description: MDVA-40830-korrigeringen åtgärdar ett problem där butikskrediten tillämpas flera gånger under orderplaceringen. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.11 är installerat. Korrigerings-ID är MDVA-40830. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.5.
+description: MDVA-40830-korrigeringen åtgärdar ett problem där butikskrediten tillämpas flera gånger under orderplaceringen. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.11 är installerat. Korrigerings-ID är MDVA-40830. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.5.
 feature: Orders, Returns
 role: Admin
 exl-id: 4ee952c8-2736-47b2-84f6-a7a0556608dd
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # MDVA-40830: Butikskrediter som tillämpas flera gånger under beställningen
 
-MDVA-40830-korrigeringen åtgärdar ett problem där butikskrediten tillämpas flera gånger under orderplaceringen. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.11 är installerat. Korrigerings-ID är MDVA-40830. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.5.
+MDVA-40830-korrigeringen åtgärdar ett problem där butikskrediten tillämpas flera gånger under orderplaceringen. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.11 är installerat. Korrigerings-ID är MDVA-40830. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.5.
 
 ## Berörda produkter och versioner
 
@@ -28,7 +28,7 @@ MDVA-40830-korrigeringen åtgärdar ett problem där butikskrediten tillämpas f
 
 >[!NOTE]
 >
->Patchen kan bli tillämplig på andra versioner med nya Quality Patches Tool-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Patchen kan bli tillämplig på andra versioner med nya Quality Patches Tool-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -44,30 +44,30 @@ Butikskrediten tillämpas flera gånger under orderplaceringen.
 
 <pre>
 <code class="language-graphql">
-mutation &lbrace;
+mutation {
   applyStoreCreditToCart(
     input: { cart_id: "%cartId%" }
-  ) &lbrace;
-    cart &lbrace;
-      prices &lbrace;
-        grand_total &lbrace;
+  ) {
+    cart {
+      prices {
+        grand_total {
           currency
           value
-        &rbrace;
-      &rbrace;
-      applied_store_credit &lbrace;
-        applied_balance &lbrace;
+        }
+      }
+      applied_store_credit {
+        applied_balance {
           currency
           value
-        &rbrace;
-        current_balance &lbrace;
+        }
+        current_balance {
           currency
           value
-        &rbrace;
-      &rbrace;
-    &rbrace;
-  &rbrace;
-&rbrace;
+        }
+      }
+    }
+  }
+}
 </code>
 </pre>
 
@@ -84,13 +84,13 @@ Värdet för applied_store_credit används två gånger, vilket påverkar både 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 
 Mer information om verktyget för kvalitetskorrigeringar finns i:
 
-* [Verktyget för kvalitetskorrigeringar har släppts: ett nytt verktyg för självbetjäning av kvalitetskorrigeringar](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) i kunskapsbasen för support.
+* [Verktyget för kvalitetskorrigeringar har släppts: ett nytt verktyg för självbetjäning av kvalitetskorrigeringar](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) i kunskapsbasen för support.
 * [Kontrollera om det finns en korrigeringsfil för ditt Adobe Commerce-problem med verktyget för kvalitetskorrigeringar ](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md) i [!DNL Quality Patches Tool]-handboken.
 
-Mer information om andra tillgängliga korrigeringsfiler i QPT finns i [[!DNL Quality Patches Tool]: Söka efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE) i [!DNL Quality Patches Tool]-handboken.
+Mer information om andra tillgängliga korrigeringsfiler i QPT finns i [[!DNL Quality Patches Tool]: Söka efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) i [!DNL Quality Patches Tool]-handboken.

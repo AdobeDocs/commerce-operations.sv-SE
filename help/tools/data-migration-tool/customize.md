@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Ibland skiljer sig dataformatet och strukturen som skapas av [extensions](https://marketplace.magento.com/extensions.html) eller anpassad kod mellan Magento 1 och Magento 2. Använd tilläggspunkter i [!DNL Data Migration Tool] för att migrera dessa data. Om dataformatet och strukturen är desamma kan verktyget automatiskt migrera data utan att användaren behöver göra något.
 
-Under migreringen skannar och jämför [Kartsteget](technical-specification.md#map-step) alla Magento 1- och Magento 2-tabeller, inklusive de som skapats med tillägg. Om tabellerna är desamma migreras data automatiskt. Om tabellerna skiljer sig åt avslutas verktyget och användaren meddelas om detta.
+Under migreringen skannar och jämför [Kartsteget](technical-specification.md#map-step) alla Magento 1- och Magento 2-tabeller, inklusive de som skapats av tillägg. Om tabellerna är desamma migreras data automatiskt. Om tabellerna skiljer sig åt avslutas verktyget och användaren meddelas om detta.
 
 >[!NOTE]
 >
@@ -76,13 +76,13 @@ I följande exempel visas ett exempel på hur du använder både mappningsregler
    - Fältet `summary` har bytt namn till `title`, så data migreras till det nya fältet.
    - Fältet `priority` togs bort och finns inte längre i Magento 2.
    - Data i fältet `body` har ändrat format och bör bearbetas av den anpassade hanteraren: `\Migration\Handler\GreatBlog\NewFormat`.
-- En ny klassificeringsfunktion har utvecklats för tillägget&quot;GreatBlog&quot; i Magento 2.
+- En ny klassificeringsfunktion har utvecklats för tillägget GreatBlog i Magento 2.
    - En ny `great_blog_rating`-tabell skapades.
    - Ett nytt `great_blog_post.rating`-fält skapades.
 
 ### Utöka mappningen i andra steg
 
-Andra steg har stöd för mappning, som [EAV Step](technical-specification.md#eav-step) och Customer Attributes Step. Med de här stegen migreras en fördefinierad lista med Magento-tabeller. Anta till exempel att tillägget GreatBlog har ett extra fält i tabellen `eav_attribute` och att namnet har ändrats i Magento 2. Eftersom tabellen bearbetas av [EAV-steget](technical-specification.md#eav-step) bör mappningsregler skrivas för filen `map-eav.xml`. Filerna `map.xml` och `map-eav.xml` använder samma `map.xsd`-schema, så mappningsreglerna är desamma.
+Andra steg har stöd för mappning, som [EAV Step](technical-specification.md#eav-step) och Customer Attributes Step. De här stegen migrerar en fördefinierad lista med Magento-tabeller. Anta till exempel att tillägget GreatBlog har ett extra fält i tabellen `eav_attribute` och att namnet har ändrats i Magento 2. Eftersom tabellen bearbetas av [EAV-steget](technical-specification.md#eav-step) bör mappningsregler skrivas för filen `map-eav.xml`. Filerna `map.xml` och `map-eav.xml` använder samma `map.xsd`-schema, så mappningsreglerna är desamma.
 
 ## Större förändringar i dataformat och struktur
 
@@ -98,7 +98,7 @@ Skapa ett anpassat steg för större ändringar av dataformat och struktur.
 
 ### Skapa ett eget steg
 
-Anta att tillägget har en tabell i Magento 1, men att det har fått två tabeller i Magento 2, med samma&quot;GreatBlog&quot;-exempel.
+Anta att tillägget har en tabell i Magento 1, men att det har fått en ny utformning så att den har två tabeller i Magento 2, med samma exempel &quot;GreatBlog&quot;.
 
 I Magento 1 fanns en enda `greatblog_post`-tabell:
 
@@ -122,7 +122,7 @@ I Magento 2 introducerades en ny tabell för taggarna `greatblog_post_tags`:
 | sort_order | SMALLINT |
 ```
 
-Tabellen Magento 2 `greatblog_post` ser nu ut så här:
+Magento 2 `greatblog_post`-tabellen ser nu ut så här:
 
 ```text
 | Field     | Type     |
@@ -406,7 +406,7 @@ class Delta extends \Migration\App\Step\AbstractDelta
 }
 ```
 
-Efter den anpassade stegimplementeringen som anges i exemplen hämtar systemet data från den enda Magento 1-tabellen,
+Efter den anpassade stegimplementeringen i exemplen hämtar systemet data från den enda Magento 1-tabellen,
 bearbeta den med klassen `Vendor\Migration\Step\GreatBlog\Data` och lagra data i två Magento 2-tabeller. Nya och ändrade poster levereras vid deltamigrering med klassen `Vendor\Migration\Step\GreatBlog\Delta`.
 
 ## Otillåtna tilläggsmetoder

@@ -104,7 +104,7 @@ Inställningar är ett bra sätt att ändra kod och bör bara användas när and
 
 ### Observer
 
-En observatör är en händelseavlyssnare som finns i många program, plattformar, bibliotek och kodningsspråk. Konceptet är inte unikt för Adobe Commerce. Observatörer har bakats in i plattformen sedan Magento 1-dagarna och anses vara ett primärt val när det gäller att ändra kärnkod och tredjepartskod. 
+En observatör är en händelseavlyssnare som finns i många program, plattformar, bibliotek och kodningsspråk. Konceptet är inte unikt för Adobe Commerce. Observatörer har bakats in i plattformen sedan Magento 1-tiden och anses vara ett primärt val för att ändra kärnkod och tredjepartskod. 
 
 Huvudkodbasen och eventuella tredjepartsmoduler kan skicka en händelse på en vald plats i koden. Observatören, som deklareras i en `events.xml`-fil och lyssnar efter den skickade händelsen efter namn, kan arbeta på en global nivå eller begränsas till ett Adobe Commerce-område, till exempel `frontend`, `adminhtml`, `graphql`, `webapi_rest` och `crontab`.
 

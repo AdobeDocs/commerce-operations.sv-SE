@@ -5,7 +5,7 @@ feature: Configuration, Cache, Install, Logs
 exl-id: b31179ef-3c0e-4a6b-a118-d3be1830ba4e
 source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '737'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ Så här konfigurerar du engelska minimalt:
 
 1. Ersätt värdet för `.port` med webbserverns lyssningsport (8080 i det här exemplet).
 
-   Exempel: Apache installeras på värd 192.0.2.55 och Apache lyssnar på port 8080:
+   Exempel: Apache är installerat på värden 192.0.2.55 och Apache lyssnar på port 8080:
 
    ```conf
    backend default {
@@ -234,7 +234,7 @@ En lång lista med svarshuvuden visas i kommandotolken. Leta efter rubriker som 
 
 Om rubriker som dessa _inte_ visas stoppar du Varnish, kontrollerar `default.vcl` och försöker igen.
 
-### Titta på sidhuvuden för svar från HTML
+### Titta på HTML svarsrubriker
 
 Det finns flera sätt att titta på svarshuvuden, bland annat med hjälp av ett webbläsarplugin-program eller en webbläsarkontroll.
 

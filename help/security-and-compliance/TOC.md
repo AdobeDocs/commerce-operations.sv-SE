@@ -23,4 +23,4 @@ ht-degree: 0%
 - Referens {#reference}
    - [Kundpersonuppgifter (version 2.x)](privacy/data-m2.md)
    - [Kundpersonuppgifter (version 1.x)](privacy/data-m1.md)
-- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=sv-SE)
+- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

@@ -18,7 +18,7 @@ Fliken [!UICONTROL Summary] i [!DNL Observation for Adobe Commerce] är avsedd a
 
 ![Transaktionsöversikt](../../assets/tools/transaction-overview.jpg)
 
-### [Vad är en transaktion?](https://docs.newrelic.com/docs/apm/transactions/intro-transactions/transactions-new-relic-apm/#:%7E:text=transactions%20are%20reported.-,What%20is%20a%20transaction%3F,work%20in%20a%20software%20application.&amp;text=For%20APM%2C%20it%20will%20Ofta,when%20the%20response%20is%20sent)
+### [Vad är en transaktion?](https://docs.newrelic.com/docs/apm/transactions/intro-transactions/transactions-new-relic-apm/#:%7E:text=transactions%20are%20reported.-,What%20is%20a%20transaction%3F,work%20in%20a%20software%20application.&text=For%20APM%2C%20it%20will%20Ofta,when%20the%20response%20is%20sent)
 
 &quot;Vid [!DNL New Relic] definieras en transaktion som en logisk arbetsenhet i ett programvaruprogram. Det avser i synnerhet funktionsanrop och metodanrop som utgör den aktuella arbetsenheten. Det avser ofta en webbtransaktion, som representerar en aktivitet som inträffar när programmet tar emot en webbförfrågan när svaret skickas.&quot;
 
@@ -56,9 +56,9 @@ Bildrutan **[!UICONTROL Swap memory free in bytes]** visar, per nod, mängden SW
 
 ## [!UICONTROL CPU % by host]
 
-![Processor i procent av värd](../../assets/tools/cpu-percent-by-host.jpg)
+![CPU percent by host](../../assets/tools/cpu-percent-by-host.jpg)
 
-Sammanställningen av alla miljöer och noder visas i bildrutan **[!UICONTROL CPU % by host]**. Du bör avmarkera icke-produktionsmiljöer. Observera även alla instanser där alla noder för produktionsmiljön inte finns. Mer tips om hög processoranvändning finns i [Felsöka prestanda med New Relic på Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html?lang=sv-SE).
+Sammanställningen av alla miljöer och noder visas i bildrutan **[!UICONTROL CPU % by host]**. Du bör avmarkera icke-produktionsmiljöer. Observera även alla instanser där alla noder för produktionsmiljön inte finns. Mer tips om hur CPU används finns i [Felsöka prestanda med New Relic på Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html).
 
 ## [!UICONTROL Alerts during timeframe]
 
@@ -68,9 +68,9 @@ Sammanställningen av alla miljöer och noder visas i bildrutan **[!UICONTROL CP
 
 ## [!UICONTROL CPU Usage]
 
-![CPU-användning](../../assets/tools/cpu-usage.jpg)
+![Användning i CPU](../../assets/tools/cpu-usage.jpg)
 
-Om **[!UICONTROL CPU Usage]**-bildrutan är tom är det en indikation på att infrastrukturprogrammet för [!DNL New Relic] inte är aktiverat. Om din webbplats finns på Starter visas inte den här informationen. Om din webbplats är på Pro kan du öppna en [supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE) och aktivera [!DNL New Relic Infrastructure] för din webbplats.
+Om **[!UICONTROL CPU Usage]**-bildrutan är tom är det en indikation på att infrastrukturprogrammet för [!DNL New Relic] inte är aktiverat. Om din webbplats finns på Starter visas inte den här informationen. Om din webbplats är på Pro kan du öppna en [supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html) och aktivera [!DNL New Relic Infrastructure] för din webbplats.
 
 ## [!UICONTROL Average Response Time]
 
@@ -116,7 +116,7 @@ Bildrutan **[!UICONTROL Deployment Log Entries]** visar antalet distribuerings- 
 * &#39;%OBS: kommandot Generate slutfördes%&#39;) som &#39;gen_compl&#39;
 * %OBS: Distributionen slutfördes%) som deploy_compl
 * &#39;%OBS! Påbörjar efterdistribution.%) som start_pdeploy
-* %OBS! Post-distributionen är klar%) som pdeploy
+* &#39;%OBS! Efterdistributionen är klar%&#39;) som &#39;pdeploy&#39;
 * %deploy-complete%) som cl_deploy_compl
 
 ## [!UICONTROL IP Frequency]
@@ -366,7 +366,7 @@ Bildrutan **[!UICONTROL Order transactions (default?)]** söker efter transaktio
 
 ![indexinformation för elasticsearch](../../assets/tools/elasticsearch-tab-elasticsearch-index-information-image-1.jpg)
 
-**[Statusen Elasticsearch:](https://www.elastic.co/guide/en/elasticsearch/reference/current/cluster-health.html)**
+**[Elasticsearch-status:](https://www.elastic.co/guide/en/elasticsearch/reference/current/cluster-health.html)**
 
 * Grön: Alla skuggningar tilldelas.
 * Gult: Alla primära kort tilldelas, men en eller flera replikeringskort är inte tilldelade. Om en nod i klustret misslyckas kan vissa data vara otillgängliga tills den noden har reparerats.
@@ -380,11 +380,11 @@ Bildrutan **[!UICONTROL Order transactions (default?)]** söker efter transaktio
 
 * &#39;%all shards failed%&#39; as &#39;all_shards_failed&#39;
 * &#39;%NoNodesAvailableException%&#39; som &#39;no_alive_nodes&#39;
-* &#39;%PHP Allvarligt fel: Ohanterat fel: Felaktiga parametrar för Elasticsearch%&#39; som &#39;fel_param&#39;
-* %Du kan åtgärda det här problemet genom att uppgradera tjänsten Elasticsearch i Magento Cloud-infrastrukturen till version % som ver_err
+* &#39;%PHP Allvarligt fel: Ohanterat fel: Fel parametrar för Elasticsearch%&#39; som &#39;fel_param&#39;
+* %Du kan åtgärda problemet genom att uppgradera Elasticsearch-tjänsten i din Magento Cloud-infrastruktur till version % som ver_err
 * &#39;%klusterhälsostatus har ändrats från \[YELLOW\] till \[RED\] (orsak:%) som &#39;yel_red&#39;
 * &#39;%Inget utrymme återstår på enheten%&#39; som &#39;inget_utrymme&#39;
-* &#39;% misslyckades med att köra &lbrack;SearchRequest&lbrace;searchType=%&#39; som &#39;failed_query&#39;
+* &#39;% misslyckades med att köra [SearchRequest{searchType=%&#39; som &#39;failed_query&#39;
 
 ## [!UICONTROL Cron view]
 

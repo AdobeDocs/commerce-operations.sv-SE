@@ -106,7 +106,7 @@ Innan du migrerar några data måste du skapa en Magento 2-modul.
 
 1. I filen `config.xml` måste du ange åtkomstinformation till M1- och M2-databaser och krypteringsnyckel.
 
-1. Om din M1-butik har anpassade ändringar bör du mappa resten av konfigurationsfilerna till dina anpassningar för Magento 1-butiken. Se [Arbeta med konfigurations- och mappningsfiler](#migration-config).
+1. Om din M1-butik har anpassade ändringar bör du mappa resten av konfigurationsfilerna till dina Magento 1-butiksanpassningar. Se [Arbeta med konfigurations- och mappningsfiler](#migration-config).
 
 ### Konfigurera migrering i mappen `vendor`
 
@@ -144,7 +144,7 @@ Så här konfigurerar du [!DNL Data Migration Tool] för migrering:
    </options>
    ```
 
-   Taggen &lt;crypt_key> måste innehålla ett värde. Du kan hitta den inuti taggen `<key>`, som finns i app/etc/local.xml-filen på Magento 1-instansen.
+   Taggen &lt;crypt_key> måste innehålla ett värde. Du hittar den i taggen `<key>`, som finns i app/etc/local.xml-filen på din Magento 1-instans.
 
    Valfria parametrar:
 
@@ -190,7 +190,7 @@ Exempel:
 
 ## Arbeta med konfigurations- och mappningsfiler
 
-[!DNL Data Migration Tool] använder *mappningsfiler* för att du ska kunna utföra anpassad databasmappning mellan Magento 1- och Magento 2-databaser, inklusive:
+[!DNL Data Migration Tool] använder *mappningsfiler* för att du ska kunna utföra anpassad databasmappning mellan dina Magento 1- och Magento 2-databaser, inklusive:
 
 * Ändra tabellnamn
 
@@ -218,7 +218,7 @@ Katalogerna `<Magento 2 dir>/vendor/magento/data-migration-tool/etc` och `<Magen
 
 | Mappningsfilnamn | Beskrivning |
 | --- | --- |
-| `class-map.xml.dist` | Ordlista för klassmappningar mellan Magento 1 och Magento 2 |
+| `class-map.xml.dist` | Lexikon för klassmappningar mellan Magento 1 och Magento 2 |
 | `config.xml.dist` | Huvudkonfigurationsfil som anger databaskonfigurationer för Magento 1 och Magento 2, stegkonfiguration och länkar till mappningsfiler |
 | *Endast Adobe Commerce*. `customer-attr-document-groups.xml.dist` | Lista med tabeller som används i steget för anpassade kundattribut. |
 | *Endast Adobe Commerce*. `customer-attr-map.xml.dist` | Mappningsfil som används i steget Anpassade kundattribut. |
