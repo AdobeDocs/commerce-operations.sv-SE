@@ -36,7 +36,7 @@ bin/magento config:set system/backup/functionality_enabled 1
 >[!WARNING]
 >
 >**Meddelande om borttagning:**
->>Säkerhetskopieringsfunktionen är borttagen från och med 2.1.16, 2.2.7 och 2.3.0. Vi rekommenderar att du undersöker ytterligare säkerhetskopieringstekniker och binära säkerhetskopieringsverktyg (som Percona XtraBackup).
+>&#x200B;>Säkerhetskopieringsfunktionen är borttagen från och med 2.1.16, 2.2.7 och 2.3.0. Vi rekommenderar att du undersöker ytterligare säkerhetskopieringstekniker och binära säkerhetskopieringsverktyg (som Percona XtraBackup).
 
 ## Ange gräns för öppna filer
 

@@ -7,7 +7,7 @@ ht-degree: 0%
 ---
 # God praxis: Arbetsflöde för att skapa innehåll
 
-Det här dokumentet beskriver användararbetsflödet för att begära ändringar eller tillägg av *[Best Practices](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/phases.html* -innehållet i *Adobe Commerce Implementation Playbook*.
+Det här dokumentet beskriver användararbetsflödet för att begära ändringar eller tillägg av *[Best Practices] (https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/phases.html* -innehållet i *Adobe Commerce Implementation Playbook*.
 
 ## Vem kan skapa en förfrågan?
 

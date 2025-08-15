@@ -34,7 +34,7 @@ Eftersom det finns många olika typer av patchar och många sätt att tillämpa 
 1. **Säkerhetsuppdateringar** är en del av den statiska kodbasen i en Adobe Commerce-version.
 1. **Composer-korrigeringar** till `composer install` och `composer update` plugin-program som [cweagans/Composer-patches](https://packagist.org/packages/cweagans/composer-patches).
 1. Alla **nödvändiga korrigeringsfiler** ingår i [Cloud Patches for Commerce](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/release-notes/cloud-patches.html)-paketet.
-1. Markerade **kvalitetspatchar** som ingår i [!DNL [Quality Patches Tool]](../../../tools/quality-patches-tool/usage.md).
+1. Markerade **kvalitetspatchar** som ingår i [[!DNL [Quality Patches Tool]]](../../../tools/quality-patches-tool/usage.md).
 1. **Anpassade korrigeringsfiler** och Adobe Commerce Support-korrigeringsfiler i katalogen `/m2-hotfixes` i alfabetisk ordning efter korrigeringsnamn.
 
    >[!IMPORTANT]

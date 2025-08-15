@@ -1,6 +1,6 @@
 ---
 title: 'ACSD-64523: REST-slutpunkten kan inte validera obligatoriska fält'
-description: Använd patchen ACSD-64523 för att åtgärda problemet där REST-slutpunkten `[V1/import/csv]` inte validerar obligatoriska fält, vilket gör det möjligt att skapa produkter utan att tillhandahålla obligatoriska fält.
+description: Använd patchen ACSD-64523 för att åtgärda problemet där REST-slutpunkten &grave;[V1/import/csv]&grave; inte validerar obligatoriska fält, vilket gör det möjligt att skapa produkter utan att tillhandahålla obligatoriska fält.
 feature: REST, Products, Admin Workspace
 role: Admin, Developer
 exl-id: 21aecd6d-06e4-4f2b-904a-27487ba74968
