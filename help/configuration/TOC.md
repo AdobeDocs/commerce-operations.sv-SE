@@ -150,4 +150,4 @@ ht-degree: 0%
       + [Verifiera delad databas](storage/multi-master-verify.md)
       + [Databasreplikering](storage/multi-master-replication.md)
       + [Återgå till en databas](storage/revert-split-database.md)
-+ [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
++ [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=sv-SE)

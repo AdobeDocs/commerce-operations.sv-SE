@@ -42,7 +42,7 @@ Följande avsnitt innehåller information om bästa praxis för utvecklingsfasen
 
 | Bästa praxis | Beskrivning |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| [Skapar och distribuerar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/best-practices.html){target="_blank"} | Beskriver de bästa sätten att skapa och distribuera Adobe Commerce-faser i molninfrastrukturprojekt |
+| [Skapar och distribuerar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/deploy/best-practices.html?lang=sv-SE){target="_blank"} | Beskriver de bästa sätten att skapa och distribuera Adobe Commerce-faser i molninfrastrukturprojekt |
 | Felsökning | Systematisk och effektiv felsökning av Adobe Commerce-ramverket |
 | [Statisk innehållsdistribution](static-content-deployment.md) | Undvik problem med statiskt innehåll som inte visas i butiken |
 | [Felsökning](troubleshooting.md) | Felsöka vanliga problem med Adobe Commerce-implementering |

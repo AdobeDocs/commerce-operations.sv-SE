@@ -26,29 +26,29 @@ Följande arkitekturdiagram visar dataflödet mellan Adobe Commerce och alla Ado
 
 ## Molngrund
 
-[Adobe Commerce i molninfrastrukturen](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/overview) är grunden för din Commerce-implementering. Den ger en [säker](../../security-and-compliance/shared-responsibility.md) automatiserad värdplattform med en självbetjäningsmetod för att bygga, distribuera, övervaka och hantera ditt Commerce-program i en molnbaserad miljö.
+[Adobe Commerce i molninfrastrukturen](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/overview) är grunden för din Commerce-implementering. Den ger en [säker](../../security-and-compliance/shared-responsibility.md) automatiserad värdplattform med en självbetjäningsmetod för att bygga, distribuera, övervaka och hantera ditt Commerce-program i en molnbaserad miljö.
 
 Se följande tekniska information om molnbasen:
 
-- [**Skalad arkitektur**](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/architecture/scaled-architecture) - Automatiskt justerad kapacitet för att upprätthålla stabila, förutsägbara prestanda
-- [**Flera miljöer**](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/architecture/pro-architecture) - Företablerat med PHP, MySQL (MariaDB), Redis, RabbitMQ och sökmotortekniker som stöds för att utveckla, testa och distribuera din webbplats
-- [**Konfigurationshantering**](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/overview) - Konfigurationsfiler för anpassningsbar miljö och kommandoradsgränssnitt (CLI) för att hantera programinställningar, vägar, skapa och distribuera åtgärder och meddelanden.
-- [**Git-baserat arbetsflöde**](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow) - Bygg och distribuera automatiskt efter push-kodändringar för snabb utveckling och kontinuerlig driftsättning
-- [**Inbyggd observerbarhet**](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/monitor/performance) - Verktyg som kombinerar loggdata från flera källor för att hjälpa dig att hantera webbplatsens prestanda och diagnostisera problem
+- [**Skalad arkitektur**](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/architecture/scaled-architecture) - Automatiskt justerad kapacitet för att upprätthålla stabila, förutsägbara prestanda
+- [**Flera miljöer**](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/architecture/pro-architecture) - Företablerat med PHP, MySQL (MariaDB), Redis, RabbitMQ och sökmotortekniker som stöds för att utveckla, testa och distribuera din webbplats
+- [**Konfigurationshantering**](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/configure/overview) - Konfigurationsfiler för anpassningsbar miljö och kommandoradsgränssnitt (CLI) för att hantera programinställningar, vägar, skapa och distribuera åtgärder och meddelanden.
+- [**Git-baserat arbetsflöde**](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow) - Bygg och distribuera automatiskt efter push-kodändringar för snabb utveckling och kontinuerlig driftsättning
+- [**Inbyggd observerbarhet**](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/monitor/performance) - Verktyg som kombinerar loggdata från flera källor för att hjälpa dig att hantera webbplatsens prestanda och diagnostisera problem
 - [**Omfattande API-täckning**](https://developer.adobe.com/commerce/webapi/get-started/)—[GraphQL](https://developer.adobe.com/commerce/webapi/graphql/) och [REST](https://developer.adobe.com/commerce/webapi/rest) API:er för integrering av Commerce kärnprogram med tredjepartssystem och utökade Commerce-funktioner
 
 ## Integrering med Experience Cloud
 
-Adobe Commerce integreras med alla Experience Cloud lösningar för att leverera [personaliserade e-handelsupplevelser i stor skala](https://experienceleague.adobe.com/en/docs/commerce-admin/customers/customers-menu/personalize-scale#customers-menu).
+Adobe Commerce integreras med alla Experience Cloud lösningar för att leverera [personaliserade e-handelsupplevelser i stor skala](https://experienceleague.adobe.com/sv/docs/commerce-admin/customers/customers-menu/personalize-scale#customers-menu).
 
-[Dataanslutning](https://experienceleague.adobe.com/en/docs/commerce/data-connection/overview) låser upp insikter om kundernas köpbeteende så att ni kan skapa personaliserade shoppingupplevelser i alla kanaler med andra Adobe Digital Experience-produkter.
+[Dataanslutning](https://experienceleague.adobe.com/sv/docs/commerce/data-connection/overview) låser upp insikter om kundernas köpbeteende så att ni kan skapa personaliserade shoppingupplevelser i alla kanaler med andra Adobe Digital Experience-produkter.
 
 >[!NOTE]
 >
 >Mer information finns i följande källor:
 >
->- [Digital Experience-utkast](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/overview) för mer teknisk information.
->- Se [Anpassa kundupplevelsen](https://experienceleague.adobe.com/en/docs/events/the-skill-exchange-recordings/commerce/aug2024/personalization).
+>- [Digital Experience-utkast](https://experienceleague.adobe.com/sv/docs/blueprints-learn/architecture/overview) för mer teknisk information.
+>- Se [Anpassa kundupplevelsen](https://experienceleague.adobe.com/sv/docs/events/the-skill-exchange-recordings/commerce/aug2024/personalization).
 
 
 ## Integrering med tredjepartssystem
@@ -70,20 +70,20 @@ Adobe tillhandahåller följande utvecklingsverktyg för att bygga integreringar
 
 >[!NOTE]
 >
->Se [Den moderna metoden: Effektiv utökningsbarhet i Adobe Commerce](https://experienceleague.adobe.com/en/docs/events/the-skill-exchange-recordings/commerce/aug2024/extensibility).
+>Se [Den moderna metoden: Effektiv utökningsbarhet i Adobe Commerce](https://experienceleague.adobe.com/sv/docs/events/the-skill-exchange-recordings/commerce/aug2024/extensibility).
 
 ## Tjänster för butikstjänster
 
 Adobe erbjuder en mängd intelligenta, sammanställningsbara tjänster för att hjälpa er att uppnå era affärsmål. Dessa tjänster tillhandahåller även API:er som är viktiga för att optimera prestanda i stor skala.
 
-- [Livesökning](https://experienceleague.adobe.com/en/docs/commerce/live-search/overview) - Få smartare, snabbare och relevanta resultat för kunderna med det här AI-baserade sökverktyget.
-- [Produktrekommendationer](https://experienceleague.adobe.com/en/docs/commerce/product-recommendations/overview) - Lägg till AI-baserade rekommendationer baserat på kundbeteende, populära trender, produktlikhet med mera.
-- [Katalogtjänst](https://experienceleague.adobe.com/en/docs/commerce/catalog-service/guide-overview) - Ge dina kunder en optimerad produktupplevelse samtidigt som du förbättrar prestanda, skalbarhet och ökar antalet konverteringar.
-- [Betalningstjänster](https://experienceleague.adobe.com/en/docs/commerce/payment-services/guide-overview) - Öka kundnöjdheten genom att erbjuda olika betalningsmetoder, inklusive räntefria betalningar, och en enda vy över betalningshantering, order och fakturor.
+- [Livesökning](https://experienceleague.adobe.com/sv/docs/commerce/live-search/overview) - Få smartare, snabbare och relevanta resultat för kunderna med det här AI-baserade sökverktyget.
+- [Produktrekommendationer](https://experienceleague.adobe.com/sv/docs/commerce/product-recommendations/overview) - Lägg till AI-baserade rekommendationer baserat på kundbeteende, populära trender, produktlikhet med mera.
+- [Katalogtjänst](https://experienceleague.adobe.com/sv/docs/commerce/catalog-service/guide-overview) - Ge dina kunder en optimerad produktupplevelse samtidigt som du förbättrar prestanda, skalbarhet och ökar antalet konverteringar.
+- [Betalningstjänster](https://experienceleague.adobe.com/sv/docs/commerce/payment-services/guide-overview) - Öka kundnöjdheten genom att erbjuda olika betalningsmetoder, inklusive räntefria betalningar, och en enda vy över betalningshantering, order och fakturor.
 
 ## Headless storefront
 
 Headless commerce is API-first commerce. Adobe Commerce är helt headless med en frikopplad arkitektur som ger alla e-handelstjänster och data via ett GraphQL API-lager. Med den här arkitekturen kan teamen utveckla sina gränser oberoende av huvudapplikationen, vilket gör det enkelt att snabbt skapa och testa nya kontaktytor med ny teknik.
 
-Adobe erbjuder en modern, headless storefront-teknik som innehåller samma fördelar och funktioner som [Edge Delivery Services](https://www.aem.live/home) med dokumentbaserad redigering, en arkitektur som sätter prestanda först och som har färdiga inbyggda experiment. Den utnyttjar skalan och prestandan hos Adobe Commerce [storefront-tjänster](#storefront-services) och flexibiliteten och bekvämligheten hos [drop-in-komponenter](https://experienceleague.adobe.com/developer/commerce/storefront/) för att leverera e-handelsfunktioner.
+Adobe erbjuder en modern, headless storefront-teknik som innehåller samma fördelar och funktioner som [Edge Delivery Services](https://www.aem.live/home) med dokumentbaserad redigering, en arkitektur som sätter prestanda först och som har färdiga inbyggda experiment. Den utnyttjar skalan och prestandan hos Adobe Commerce [storefront-tjänster](#storefront-services) och flexibiliteten och bekvämligheten hos [drop-in-komponenter](https://experienceleague.adobe.com/developer/commerce/storefront/?lang=sv-SE) för att leverera e-handelsfunktioner.
 

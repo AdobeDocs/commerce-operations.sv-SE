@@ -17,7 +17,7 @@ Vi antar att:
 
   Ytterligare uppgifter kan behövas för att distribuera flera webbplatser i en värdmiljö. Kontakta din värdleverantör för mer information.
 
-  Ytterligare uppgifter krävs för att konfigurera Adobe Commerce i molninfrastrukturen. När du har slutfört de uppgifter som beskrivs i det här avsnittet kan du läsa [Konfigurera flera webbplatser eller butiker](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html) i _guiden för Commerce om molninfrastruktur_.
+  Ytterligare uppgifter krävs för att konfigurera Adobe Commerce i molninfrastrukturen. När du har slutfört de uppgifter som beskrivs i det här avsnittet kan du läsa [Konfigurera flera webbplatser eller butiker](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html?lang=sv-SE) i _guiden för Commerce om molninfrastruktur_.
 
 - Du godkänner flera domäner i en virtuell värdfil eller använder en virtuell värd per webbplats. Konfigurationsfilerna för den virtuella värden finns i `/etc/nginx/sites-available`.
 - Du använder `nginx.conf.sample` som tillhandahålls av Commerce med endast de ändringar som beskrivs i den här självstudiekursen.
@@ -280,7 +280,7 @@ Om du inte har ställt in DNS för butikernas URL:er måste du lägga till en st
 >[!INFO]
 >
 >- Ytterligare uppgifter kan behövas för att distribuera flera webbplatser i en värdmiljö. Kontakta din värdleverantör för mer information.
->- Ytterligare uppgifter krävs för att konfigurera Adobe Commerce för molninfrastruktur. Se [Konfigurera flera molnwebbplatser eller molnbutiker](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html) i _Commerce för molninfrastruktur_.
+>- Ytterligare uppgifter krävs för att konfigurera Adobe Commerce för molninfrastruktur. Se [Konfigurera flera molnwebbplatser eller molnbutiker](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/multiple-sites.html?lang=sv-SE) i _Commerce för molninfrastruktur_.
 
 ### Felsökning
 

@@ -54,4 +54,4 @@ ht-degree: 0%
 - Resurs {#resources}
    - [Rekommenderad läsning](resources/recommended-reading.md)
    - [Modernisera plattformen med Adobe Commerce](resources/recommended-upgrade-paths.md)
-- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
+- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=sv-SE)

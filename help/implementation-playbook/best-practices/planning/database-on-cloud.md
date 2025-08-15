@@ -59,9 +59,9 @@ Kör följande kommando för att avgöra vilken sökmotor som används för när
 
 Konfigurationsanvisningar finns i Utvecklarhandbok för Adobe Commerce i molnet:
 
-- [Konfigurera OpenSearch-tjänsten](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/service/opensearch)
+- [Konfigurera OpenSearch-tjänsten](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/configure/service/opensearch)
 
-- [Konfigurera Elasticsearch-tjänsten](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/service/elasticsearch)
+- [Konfigurera Elasticsearch-tjänsten](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/configure/service/elasticsearch)
 
 ## Undvik anpassade utlösare
 
@@ -76,14 +76,14 @@ Mer information om alternativ till att använda anpassade utlösare finns i [MyS
 
 ## Uppgradera [!DNL ECE-Tools] till version 2002.0.21 eller senare {#ece-tools-version}
 
-För att undvika potentiella problem med kroniska lås uppgraderar du ECE-Tools till version 2002.0.21 eller senare. Instruktioner finns i [Uppdatera `ece-tools` version ](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/update-package) i utvecklardokumentationen.
+För att undvika potentiella problem med kroniska lås uppgraderar du ECE-Tools till version 2002.0.21 eller senare. Instruktioner finns i [Uppdatera `ece-tools` version ](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/update-package) i utvecklardokumentationen.
 
 ## Växla indexeringsläge på ett säkert sätt
 
 <!--This best practice might belong in the Maintenance phase. Database lock prevention might be consolidated under a single heading-->
 
 När du växlar indexerare genereras [!DNL data definition language] (DDL)-satser för att skapa utlösare som kan orsaka databaslås. Du kan förhindra det här problemet genom att försätta webbplatsen i underhållsläge och inaktivera cron-jobb innan du ändrar konfigurationen.
-Instruktioner finns i [Konfigurera indexerare](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html#configure-indexers-1) i *Konfigurationshandboken för Adobe Commerce*.
+Instruktioner finns i [Konfigurera indexerare](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/manage-indexers.html?lang=sv-SE#configure-indexers-1) i *Konfigurationshandboken för Adobe Commerce*.
 
 ## Kör inte DDL-satser i produktionen
 
@@ -95,7 +95,7 @@ Om du behöver köra en DDL-sats placerar du webbplatsen i underhållsläge och 
 
 Aktivera arkivering av order från administratören för att minska utrymmet som krävs för försäljningstabeller när orderdata växer. Arkivering sparar diskutrymme för MySQL och förbättrar utcheckningsprestanda.
 
-Se [Aktivera arkivering](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/order-management/orders/order-archive.html) i dokumentationen för Adobe Commerce Merchant.
+Se [Aktivera arkivering](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/order-management/orders/order-archive.html?lang=sv-SE) i dokumentationen för Adobe Commerce Merchant.
 
 ## Ytterligare information
 

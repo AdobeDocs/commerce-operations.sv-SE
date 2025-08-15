@@ -20,7 +20,7 @@ Tilläggen omfattar:
 - Teman (ändra utseende och känsla för din butik och administratör)
 - Språkpaket (lokalisera butiken och administratören)
 
-I det här avsnittet beskrivs hur du använder kommandoradsgränssnittet för att hantera tillägg från tredje part som du köper från Commerce Marketplace för _lokala_-projekt. Information om projekt för molninfrastruktur finns i [Hantera tillägg](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure-store/extensions).
+I det här avsnittet beskrivs hur du använder kommandoradsgränssnittet för att hantera tillägg från tredje part som du köper från Commerce Marketplace för _lokala_-projekt. Information om projekt för molninfrastruktur finns i [Hantera tillägg](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/configure-store/extensions).
 
 Du kan använda samma procedur för att installera _valfritt_-tillägg. Allt du behöver är tilläggets Composer-namn och version. Om du vill hitta den öppnar du tilläggets `composer.json`-fil och noterar värdena för `"name"` och `"version"`.
 

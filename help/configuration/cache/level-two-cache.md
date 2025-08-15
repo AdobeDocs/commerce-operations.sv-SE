@@ -23,7 +23,7 @@ Commerce lagrar den hash-kodade dataversionen i Redis, med suffixet :hash som l�
 
 >[!INFO]
 >
->För Adobe Commerce i molninfrastruktur kan du använda [distribuera variabler](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_backend) för L2-cachekonfiguration.
+>För Adobe Commerce i molninfrastruktur kan du använda [distribuera variabler](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=sv-SE#redis_backend) för L2-cachekonfiguration.
 
 ## Konfigurationsexempel
 

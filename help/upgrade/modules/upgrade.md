@@ -47,7 +47,7 @@ Så här uppdaterar eller uppgraderar du en modul eller ett tillägg:
 
 ## VBE (Leverantör bundled extensions)
 
-Adobe tog bort alla [VBE](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/modules/upgrade) i 2.4.4. Leverantörer fortsätter att ha stöd för dessa tillägg på Adobe Commerce Marketplace.
+Adobe tog bort alla [VBE](https://experienceleague.adobe.com/sv/docs/commerce-operations/upgrade-guide/modules/upgrade) i 2.4.4. Leverantörer fortsätter att ha stöd för dessa tillägg på Adobe Commerce Marketplace.
 
 Om du vill fortsätta använda dessa tillägg med Adobe Commerce 2.4.4 och senare måste du uppdatera motsvarande paketberoenden i `composer.json`-filen _innan_ uppgraderar till 2.4.4. Kontakta leverantören för det paketnamn och den version som ska användas.
 

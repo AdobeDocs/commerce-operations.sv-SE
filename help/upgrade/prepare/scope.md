@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Förstå omfattningen av uppgraderingen
 
-Granska [versionsinformationen](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/overview) för att förstå omfattningen av en release, inklusive förbättringar, felkorrigeringar och kända problem som kan påverka externa och anpassade moduler.
+Granska [versionsinformationen](https://experienceleague.adobe.com/sv/docs/commerce-operations/release/notes/overview) för att förstå omfattningen av en release, inklusive förbättringar, felkorrigeringar och kända problem som kan påverka externa och anpassade moduler.
 
 ## Bakåtkompatibla ändringar
 
@@ -26,7 +26,7 @@ Adobe Commerce Marketplace nya kompatibilitetsprincip säkerställer att _alla_ 
 
 ## Anpassade moduler
 
-Alla anpassade moduler ska kontrolleras mot målversionen som du vill uppgradera till. Det här är den mest tids- och resursintensiva uppgraderingsprocessen. När du utvärderar dina anpassade moduler måste du leta efter bakåtkompatibla ändringar och vara medveten om nya metoder, som till exempel att kontrollenheten har kopplats ned. Du kan läsa mer om detta i [versionsinformationen](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/overview). Se även till att du följer [bästa praxis](https://developer.adobe.com/commerce/php/best-practices/extensions/) för modulutveckling.
+Alla anpassade moduler ska kontrolleras mot målversionen som du vill uppgradera till. Det här är den mest tids- och resursintensiva uppgraderingsprocessen. När du utvärderar dina anpassade moduler måste du leta efter bakåtkompatibla ändringar och vara medveten om nya metoder, som till exempel att kontrollenheten har kopplats ned. Du kan läsa mer om detta i [versionsinformationen](https://experienceleague.adobe.com/sv/docs/commerce-operations/release/notes/overview). Se även till att du följer [bästa praxis](https://developer.adobe.com/commerce/php/best-practices/extensions/) för modulutveckling.
 
 ## [!DNL Upgrade Compatibility Tool]
 

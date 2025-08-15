@@ -13,7 +13,7 @@ ht-degree: 0%
 
 I det här avsnittet beskrivs en allmän rekommenderad konfiguration för Adobe Commerce-instanser med vanliga servrar som är fysiskt värdbaserade i ett datacenter (inte virtualiserade) där resurser inte delas med andra användare. Din värdleverantör, särskilt om den är specialiserad på Commerce högpresterande värdtjänster, kan rekommendera en annan konfiguration som är lika eller mer effektiv för dina behov.
 
-Information om Adobe Commerce i molninfrastrukturmiljöer finns i [Startarkitektur](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/architecture/starter-architecture).
+Information om Adobe Commerce i molninfrastrukturmiljöer finns i [Startarkitektur](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/architecture/starter-architecture).
 
 ## [!DNL Commerce] referensarkitekturdiagram
 

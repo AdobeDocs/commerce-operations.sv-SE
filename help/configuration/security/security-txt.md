@@ -15,7 +15,7 @@ ht-degree: 0%
 
 När forskare upptäcker säkerhetsluckor saknas ofta lämpliga rapporteringskanaler. Därför rapporteras inte vissa sårbarheter. Syftet med filen `security.txt` [filformat](https://datatracker.ietf.org/doc/html/draft-foudil-securitytxt-09) är att ge säkerhetsforskare den information de kan använda för att rapportera sina upptäckter.
 
-Handläggarna kan ange sin kontaktinformation för [säkerhetsproblemrapportering](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-issue-reporting) från Commerce _Admin_. För utvecklare innehåller modulen `Magento_Securitytxt` följande funktioner:
+Handläggarna kan ange sin kontaktinformation för [säkerhetsproblemrapportering](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/security/security-issue-reporting) från Commerce _Admin_. För utvecklare innehåller modulen `Magento_Securitytxt` följande funktioner:
 
 - Tillåter att säkerhetskonfigurationer sparas från _administratören_.
 - Innehåller en router som matchar programåtgärdsklassen för begäranden till filerna `.well-known/security.txt` och `.well-known/security.txt.sig`.

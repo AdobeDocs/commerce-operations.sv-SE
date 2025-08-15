@@ -14,11 +14,11 @@ ht-degree: 0%
 # Hanterade aviseringar för Adobe Commerce
 
 
-Vi har konfigurerat viktiga instrumentpaneler och aviseringar som hjälper dig att förstå när din webbplats når kritisk lagring och [!DNL Apdex] nivåer (användarnas tillfredsställelse med svarstid för program och tjänster). Detta kan hjälpa dig att vidta åtgärder innan du märker att svarstiderna tar lång tid eller att ett driftstopp inträffar. Du kan felsöka varningarna med artiklarna nedan. Innan du kan använda varningarna måste du först konfigurera meddelandekanaler. Se [[!DNL New Relic] Konfigurera meddelandekanaler](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/new-relic/new-relic-service) i Commerce on Cloud Guide.
+Vi har konfigurerat viktiga instrumentpaneler och aviseringar som hjälper dig att förstå när din webbplats når kritisk lagring och [!DNL Apdex] nivåer (användarnas tillfredsställelse med svarstid för program och tjänster). Detta kan hjälpa dig att vidta åtgärder innan du märker att svarstiderna tar lång tid eller att ett driftstopp inträffar. Du kan felsöka varningarna med artiklarna nedan. Innan du kan använda varningarna måste du först konfigurera meddelandekanaler. Se [[!DNL New Relic] Konfigurera meddelandekanaler](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/monitor/new-relic/new-relic-service) i Commerce on Cloud Guide.
 
 >[!NOTE]
 >
->Om hanterade aviseringar för Adobe Commerce-aviseringsprincipen inte är tillgängliga kan det bero på att det här kontot nyligen har skapats eller att [!DNL New Relic] nyligen har konfigurerats. En process körs varje tisdag för att lägga till varningsprincipen till dessa konton. Varningspolicyn bör vara tillgänglig dagen efter att nästa process har körts. Om principen fortfarande saknas [skickar du en supportförfrågan](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) från Adobe Commerce och inkluderar ditt projekt-ID.
+>Om hanterade aviseringar för Adobe Commerce-aviseringsprincipen inte är tillgängliga kan det bero på att det här kontot nyligen har skapats eller att [!DNL New Relic] nyligen har konfigurerats. En process körs varje tisdag för att lägga till varningsprincipen till dessa konton. Varningspolicyn bör vara tillgänglig dagen efter att nästa process har körts. Om principen fortfarande saknas [skickar du en supportförfrågan](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) från Adobe Commerce och inkluderar ditt projekt-ID.
 
 I tabellen nedan finns länkar till KB-artiklar med felsökningssteg för dessa aviseringar:
 

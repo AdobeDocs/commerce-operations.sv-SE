@@ -29,7 +29,7 @@ Plats
 
 >[!NOTE]
 >
->Du kan inte aktivera eller inaktivera moduler direkt i molnprojekt. Du måste köra dessa kommandon lokalt och sedan skicka ändringarna till filen `app/etc/config.php` för en miljö. Se [Projektarbetsflöde för Pro: Arbetsflöde för distribution](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow.html#deployment-workflow).
+>Du kan inte aktivera eller inaktivera moduler direkt i molnprojekt. Du måste köra dessa kommandon lokalt och sedan skicka ändringarna till filen `app/etc/config.php` för en miljö. Se [Projektarbetsflöde för Pro: Arbetsflöde för distribution](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow.html?lang=sv-SE#deployment-workflow).
 
 ## Aktivera modul, inaktivera
 

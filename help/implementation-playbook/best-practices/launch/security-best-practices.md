@@ -18,7 +18,7 @@ Att skapa och underhålla en säker miljö för Adobe Commerce-projekt som körs
 
 >[!NOTE]
 >
->Mer information om roller och ansvar för att skydda och underhålla Adobe Commerce-projekt i molninfrastrukturen finns i [Delad ansvarsmodell](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/shared-responsibility#security-responsibilities-chart)) i _Adobe Commerce Security and Compliance Guide_.
+>Mer information om roller och ansvar för att skydda och underhålla Adobe Commerce-projekt i molninfrastrukturen finns i [Delad ansvarsmodell](https://experienceleague.adobe.com/sv/docs/commerce-operations/security-and-compliance/shared-responsibility#security-responsibilities-chart)) i _Adobe Commerce Security and Compliance Guide_.
 
 [Alla versioner som stöds](../../../release/versions.md) av:
 
@@ -31,21 +31,21 @@ Adobe anser att följande rekommendationer har högsta prioritet för alla kunde
 
 ![Checklista](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **Aktivera tvåfaktorautentisering för administratören och alla SSH-anslutningar**
 
-- [Säkerhet för Commerce Admin](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/2fa/security-two-factor-authentication.html)
+- [Säkerhet för Commerce Admin](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/2fa/security-two-factor-authentication.html?lang=sv-SE)
 
-- [Säkra SSH-anslutningar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/multi-factor-authentication.html) (molninfrastruktur)
+- [Säkra SSH-anslutningar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/multi-factor-authentication.html?lang=sv-SE) (molninfrastruktur)
 
 När MFA är aktiverat i ett projekt måste alla Adobe Commerce på molninfrastrukturkonton med SSH-åtkomst följa ett autentiseringsarbetsflöde. Det här arbetsflödet kräver antingen en tvåfaktorsautentiseringskod (2FA) eller en API-token och ett SSH-certifikat för att komma åt miljön.
 
 ![Checklista](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **Skydda administratören**
 
-- [Konfigurera en icke-standard-admin-URL](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html#use-a-custom-admin-url) i stället för att använda standardvärdet `admin` eller en vanlig term som `backend`. Den här konfigurationen minskar exponeringen för skript som försöker få obehörig åtkomst till din plats.
+- [Konfigurera en icke-standard-admin-URL](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html?lang=sv-SE#use-a-custom-admin-url) i stället för att använda standardvärdet `admin` eller en vanlig term som `backend`. Den här konfigurationen minskar exponeringen för skript som försöker få obehörig åtkomst till din plats.
 
-- [Konfigurera avancerade säkerhetsinställningar](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-admin.html) - Lägg till en hemlig nyckel till URL:er, ange att lösenord ska vara skiftlägeskänsliga och begränsa administratörens sessionslängd, tidsintervall för lösenordsanvändning och antalet inloggningsförsök som tillåts innan ett administratörskonto låses. Om du vill öka säkerheten konfigurerar du längden på tangentbordsinaktivitet innan den aktuella sessionen förfaller och kräver att användarnamnet och lösenordet är skiftlägeskänsliga.
+- [Konfigurera avancerade säkerhetsinställningar](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-admin.html?lang=sv-SE) - Lägg till en hemlig nyckel till URL:er, ange att lösenord ska vara skiftlägeskänsliga och begränsa administratörens sessionslängd, tidsintervall för lösenordsanvändning och antalet inloggningsförsök som tillåts innan ett administratörskonto låses. Om du vill öka säkerheten konfigurerar du längden på tangentbordsinaktivitet innan den aktuella sessionen förfaller och kräver att användarnamnet och lösenordet är skiftlägeskänsliga.
 
-- [Aktivera ReCAPTCHA](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/captcha/security-google-recaptcha.html) om du vill skydda administratören från automatiska attacker med råstyrka.
+- [Aktivera ReCAPTCHA](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/captcha/security-google-recaptcha.html?lang=sv-SE) om du vill skydda administratören från automatiska attacker med råstyrka.
 
-- Följ principen om lägsta behörighet när du tilldelar [administratörsbehörigheter](https://experienceleague.adobe.com/docs/commerce-admin/systems/user-accounts/permissions.html) till roller och roller till administratörsanvändarkonton.
+- Följ principen om lägsta behörighet när du tilldelar [administratörsbehörigheter](https://experienceleague.adobe.com/docs/commerce-admin/systems/user-accounts/permissions.html?lang=sv-SE) till roller och roller till administratörsanvändarkonton.
 
 ![Checklista](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **Uppgradera till den senaste utgåvan av Adobe Commerce**
 
@@ -55,11 +55,11 @@ Håll koden uppdaterad genom att [uppgradera ditt Commerce-projekt till den sena
 
 Använd [konfigurationshantering](../../../configuration/cli/set-configuration-values.md) för att låsa kritiska konfigurationsvärden.
 
-Kommandona `lock config` och `lock env` CLI konfigurerar miljövariabler så att de inte kan uppdateras från administratören. Kommandot skriver värdet till filen `<Commerce base dir>/app/etc/env.php`. (Information om Commerce i molninfrastrukturprojekt finns i [Lagra konfigurationshantering](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/store-settings.html#sensitive-data).)
+Kommandona `lock config` och `lock env` CLI konfigurerar miljövariabler så att de inte kan uppdateras från administratören. Kommandot skriver värdet till filen `<Commerce base dir>/app/etc/env.php`. (Information om Commerce i molninfrastrukturprojekt finns i [Lagra konfigurationshantering](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/store-settings.html?lang=sv-SE#sensitive-data).)
 
 ![Checklista](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **Kör säkerhetssökningar**
 
-Använd [Commerce-tjänsten för säkerhetssökning](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-scan.html) för att övervaka alla Adobe Commerce-webbplatser för kända säkerhetsrisker och skadlig kod, och registrera dig för att få korrigeringsuppdateringar och säkerhetsmeddelanden.
+Använd [Commerce-tjänsten för säkerhetssökning](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-scan.html?lang=sv-SE) för att övervaka alla Adobe Commerce-webbplatser för kända säkerhetsrisker och skadlig kod, och registrera dig för att få korrigeringsuppdateringar och säkerhetsmeddelanden.
 
 ## Säkerställ säkerheten för tillägg och anpassad kod
 
@@ -109,9 +109,9 @@ Som en del av en katastrofåterställningsplan rekommenderar Adobe starkt att ku
 
 **Adobe Commerce har distribuerats i molninfrastruktur**
 
-- [Säkerhetskopiering och katastrofåterställning](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-architecture.html#backup-and-disaster-recovery)
+- [Säkerhetskopiering och katastrofåterställning](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-architecture.html?lang=sv-SE#backup-and-disaster-recovery)
 
-- [Lagra konfigurationshantering för Adobe Commerce i molninfrastruktur](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/store-settings.html)
+- [Lagra konfigurationshantering för Adobe Commerce i molninfrastruktur](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/store-settings.html?lang=sv-SE)
 
 **Adobe Commerce har distribuerats lokalt**
 
@@ -129,9 +129,9 @@ I det här avsnittet sammanfattas de effektivaste strategierna för underhåll a
 
 ![Checklista](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **Använd en brandvägg för webbprogram** - Analysera trafik och upptäcka misstänkta mönster, t.ex. kreditkortsinformation som skickas till en okänd IP-adress med hjälp av en Brandvägg för webbprogram.
 
-Adobe Commerce-installationer som distribueras i molninfrastruktur kan använda inbyggda WAF-tjänster som är tillgängliga med [Snabb integrering av tjänster](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/fastly.html)
+Adobe Commerce-installationer som distribueras i molninfrastruktur kan använda inbyggda WAF-tjänster som är tillgängliga med [Snabb integrering av tjänster](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/fastly.html?lang=sv-SE)
 
-![Checklista](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **Konfigurera avancerade säkerhetsinställningar för lösenord** - Konfigurera starka lösenord och ändra dem minst var 90:e dag, vilket rekommenderas av PCI-datasäkerhetsstandarden i avsnitt 8.2.4. Se [Konfigurera säkerhetsinställningar för administratörer](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-admin.html).
+![Checklista](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **Konfigurera avancerade säkerhetsinställningar för lösenord** - Konfigurera starka lösenord och ändra dem minst var 90:e dag, vilket rekommenderas av PCI-datasäkerhetsstandarden i avsnitt 8.2.4. Se [Konfigurera säkerhetsinställningar för administratörer](https://experienceleague.adobe.com/docs/commerce-admin/systems/security/security-admin.html?lang=sv-SE).
 
 ![Checklista](/help/assets/icons/Smock_CheckmarkCircleOutline_18_N.svg) **Använd HTTPS** - Om Commerce-webbplatsen nyligen har implementerats startar du hela webbplatsen med HTTPS. Google använder inte bara HTTPS som rangordningsfaktor, utan många användare överväger inte ens att köpa från en webbplats om den inte är skyddad med HTTPS.
 
@@ -178,7 +178,7 @@ Brute force-attacker för lösenordsgissning kan leda till obehörig administrat
 
 - Kontrollera åtkomsten till Commerce webbplats genom att konfigurera en åtkomstkontrollista som endast tillåter åtkomst för användare som kommer från en viss IP-adress eller ett visst nätverk.
 
-  Du kan använda en snabb Edge ACL med ett anpassat VCL-kodfragment för att filtrera inkommande begäranden och tillåta åtkomst via IP-adress. Se [Anpassad VCL för att tillåta begäranden](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html).
+  Du kan använda en snabb Edge ACL med ett anpassat VCL-kodfragment för att filtrera inkommande begäranden och tillåta åtkomst via IP-adress. Se [Anpassad VCL för att tillåta begäranden](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html?lang=sv-SE).
 
 
   >[!TIP]

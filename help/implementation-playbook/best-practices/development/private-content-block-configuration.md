@@ -31,4 +31,4 @@ Webbplatser med privata innehållsblock som innehåller variablerna `_isScopePri
 ## Ytterligare information
 
 - [Privat innehåll](../../../performance/configuration.md#client-side-optimization-settings)
-- [Högt dataflöde AJAX-begäranden orsakar dålig prestanda](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/high-throughput-ajax-requests-cause-poor-performance.html)
+- [Högt dataflöde AJAX-begäranden orsakar dålig prestanda](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/high-throughput-ajax-requests-cause-poor-performance.html?lang=sv-SE)

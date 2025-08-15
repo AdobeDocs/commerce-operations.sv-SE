@@ -17,4 +17,4 @@ Säkerhetsuppdateringar kan även innehålla kompatibilitetsrelaterade ändringa
 
 Varje säkerhetsuppdatering baseras på den tidigare fullständiga patchversionen. Den innehåller kvalitets- och säkerhetskorrigeringar från tidigare korrigeringsversioner och säkerhetskorrigeringar som skapats mellan den tidigare fullständiga korrigeringsversionen och säkerhetsuppdateringen.
 
-Instruktioner om hur du hämtar och använder säkerhetsuppdateringar finns i [Så här hämtar och använder du säkerhetsuppdateringar](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/how-to-obtain-and-apply-security-patches) i _Adobe Commerce Knowledgebase_.
+Instruktioner om hur du hämtar och använder säkerhetsuppdateringar finns i [Så här hämtar och använder du säkerhetsuppdateringar](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/how-to/how-to-obtain-and-apply-security-patches) i _Adobe Commerce Knowledgebase_.

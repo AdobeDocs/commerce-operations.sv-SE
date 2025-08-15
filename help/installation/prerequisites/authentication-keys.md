@@ -17,10 +17,10 @@ För åtkomsträttigheter till Adobe Commerce-paket måste du använda nycklar s
 
 >[!TIP]
 >
->Om du stöter på [fel](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-commerce-cloud-repo-could-not-be-accessed-403-forbidden-or-404-not-found-error-when-deploying.html) kanske du inte har åtkomstbehörighet till paketet, eller så har åtkomstbehörigheten gått ut på grund av en utestående faktura på ditt konto.
+>Om du stöter på [fel](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-commerce-cloud-repo-could-not-be-accessed-403-forbidden-or-404-not-found-error-when-deploying.html?lang=sv-SE) kanske du inte har åtkomstbehörighet till paketet, eller så har åtkomstbehörigheten gått ut på grund av en utestående faktura på ditt konto.
 >
 >* Om du är primär kontaktperson för kontot kontrollerar du att det inte finns någon utestående faktura på kontot.
->* Om nycklarna som tillhandahålls av den primära kontakten inte fungerar och det inte finns några utestående fakturor på kontot kontaktar den primära kontakten [Adobe Commerce support](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att få hjälp.
+>* Om nycklarna som tillhandahålls av den primära kontakten inte fungerar och det inte finns några utestående fakturor på kontot kontaktar den primära kontakten [Adobe Commerce support](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att få hjälp.
 
 Skapa autentiseringsnycklar:
 

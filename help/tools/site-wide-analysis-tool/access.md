@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Du kan komma åt [!DNL Site-Wide Analysis Tool]-instrumentpanelen från butikens [!UICONTROL Admin Panel].
 
-Tjänsten [!DNL Site-Wide Analysis Tool] är tillgänglig i [produktionsläge](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/developer-tools#operation-modes) för [!UICONTROL Admin]-användare med behörighet att komma åt användarens [rollresurser](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/user-accounts/permissions-user-roles).
+Tjänsten [!DNL Site-Wide Analysis Tool] är tillgänglig i [produktionsläge](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/tools/developer-tools#operation-modes) för [!UICONTROL Admin]-användare med behörighet att komma åt användarens [rollresurser](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/user-accounts/permissions-user-roles).
 
 >[!NOTE]
 >
@@ -26,13 +26,13 @@ Tjänsten [!DNL Site-Wide Analysis Tool] är tillgänglig i [produktionsläge](h
 >[!NOTE]
 >
 >Ditt konto bör ha rätt till **[!DNL Support Permissions]** för att få åtkomst till [!DNL Site-Wide Analysis Tool Dashboard].
->&#x200B;>Mer information finns i [Dela ett [!DNL Commerce] konto](https://experienceleague.adobe.com/docs/commerce-admin/start/commerce-account/commerce-account-share.html) i användarhandboken.
+>&#x200B;>Mer information finns i [Dela ett [!DNL Commerce] konto](https://experienceleague.adobe.com/docs/commerce-admin/start/commerce-account/commerce-account-share.html?lang=sv-SE) i användarhandboken.
 
 ## Loggar in på [!DNL Site-Wide Analysis Tool Dashboard] från din butiks [!UICONTROL Admin Panel]
 
 ### Steg 1: Verifiera behörigheter
 
-Kontrollera att användarkontot [!UICONTROL Admin] har behörighet att komma åt [!DNL Site-Wide Analysis Tool] via sin [tilldelade användarroll](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/user-accounts/permissions-user-roles).
+Kontrollera att användarkontot [!UICONTROL Admin] har behörighet att komma åt [!DNL Site-Wide Analysis Tool] via sin [tilldelade användarroll](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/user-accounts/permissions-user-roles).
 
 >[!IMPORTANT]
 >
@@ -51,7 +51,7 @@ Gör följande för den anpassade rollen som behöver [!DNL Site-Wide Analysis T
 
 >[!NOTE]
 >
->Om du har verifierat att användarkontot har behörighet att komma åt [!DNL Site-Wide Analysis Tool] och användaren får ett 403-fel när han/hon försöker komma åt verktyget från [!UICONTROL Admin], kan HTTP-åtkomstkontrollen vara aktiverad för din instans av Adobe Commerce i molninfrastrukturen. Instrumentpanelen [!DNL Site-Wide Analysis Tool] stöds INTE om du har aktiverat HTTP-autentisering. Mer information om hur du löser det här problemet finns i [supportartikeln](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/403-errors-when-accessing-site-wide-analysis-tool-on-magento).
+>Om du har verifierat att användarkontot har behörighet att komma åt [!DNL Site-Wide Analysis Tool] och användaren får ett 403-fel när han/hon försöker komma åt verktyget från [!UICONTROL Admin], kan HTTP-åtkomstkontrollen vara aktiverad för din instans av Adobe Commerce i molninfrastrukturen. Instrumentpanelen [!DNL Site-Wide Analysis Tool] stöds INTE om du har aktiverat HTTP-autentisering. Mer information om hur du löser det här problemet finns i [supportartikeln](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/403-errors-when-accessing-site-wide-analysis-tool-on-magento).
 
 ### Steg 2: Åtkomst [!DNL Site-Wide Analysis Tool]
 

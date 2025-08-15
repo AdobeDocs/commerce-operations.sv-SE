@@ -27,7 +27,7 @@ Allokera minst **2 GB** minne för PHP-modulen [OPcache](https://www.php.net/man
 ## Ytterligare information
 
 * [Bästa praxis för prestanda - PHP-inställningar](../../../performance/software.md#php-settings)
-* [Konfigurera PHP-alternativ](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/app/configure-app-yaml)
+* [Konfigurera PHP-alternativ](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/configure/app/configure-app-yaml)
 * [Bästa databaspraxis för Adobe Commerce om molninfrastruktur](database-on-cloud.md)
 * [De vanligaste databasproblemen i Adobe Commerce om molninfrastruktur](../maintenance/resolve-database-performance-issues.md)
 * [Indexerare&quot;Update On Schedule&quot; optimerar Adobe Commerce prestanda](../maintenance/indexer-configuration.md)

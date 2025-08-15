@@ -15,7 +15,7 @@ Du är bland de 240 000 handlare världen över som litar på vår e-handelsprog
 
 ## Så här skaffar du programmet
 
-Kontrollera tillgängligheten av spännande nya funktioner och releaser och se hur du kan få dem på vår [produkttillgänglighetssida](https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability).
+Kontrollera tillgängligheten av spännande nya funktioner och releaser och se hur du kan få dem på vår [produkttillgänglighetssida](https://experienceleague.adobe.com/sv/docs/commerce-operations/release/product-availability).
 
 Se följande tabell för att komma igång med installationen av Adobe Commerce.
 

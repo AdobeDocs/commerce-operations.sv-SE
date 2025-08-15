@@ -59,6 +59,6 @@ _AC-13258_
 
 ### Säkerhet
 
-Den senaste informationen om säkerhetsfelkorrigeringar finns i [Adobe säkerhetsbulletin APSB25-50](https://helpx.adobe.com/security/products/magento/apsb25-50.html).
+Den senaste informationen om säkerhetsfelkorrigeringar finns i [Adobe säkerhetsbulletin APSB25-50](https://helpx.adobe.com/se/security/products/magento/apsb25-50.html).
 
 {{$include /help/_includes/release-notes/highlights/security-2025-06.md}}

@@ -40,7 +40,7 @@ Varje utvecklingsfas ska ha en motsvarande gren i Git för att spåra kodändrin
 
 >[!TIP]
 >
->Adobe Commerce i molninfrastrukturprojekt innehåller specifika grenar som motsvarar olika miljöer. Se [Pro-projektarbetsflödet](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow.html) och [Startprojektarbetsflödet](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/starter-develop-deploy-workflow.html) i _molnhandboken_.
+>Adobe Commerce i molninfrastrukturprojekt innehåller specifika grenar som motsvarar olika miljöer. Se [Pro-projektarbetsflödet](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow.html?lang=sv-SE) och [Startprojektarbetsflödet](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/starter-develop-deploy-workflow.html?lang=sv-SE) i _molnhandboken_.
 
 ## Avdelningsstrategier
 
