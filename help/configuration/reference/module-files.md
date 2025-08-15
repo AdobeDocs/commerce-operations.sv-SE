@@ -2,7 +2,7 @@
 title: Modulkonfigurationsfiler
 description: Lär dig hur du anpassar en modul med hjälp av konfigurationstyper.
 exl-id: 87433c28-8e3d-43d0-b77e-3ff9a680af5f
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: 80d7a7f2592e547ef70f2fac63c25be0cce9365d
 workflow-type: tm+mt
 source-wordcount: '1252'
 ht-degree: 0%
@@ -81,7 +81,7 @@ I följande tabell visas varje konfigurationstyp och det konfigurationsobjekt f�
 | --- | --- | --- | --- |
 | `address_formats.xml` | Deklaration om adressformat | primär, global | [\Magento\Customer\Model\Address\Config](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Customer/Model/Address/Config.php) |
 | `acl.xml` | [Åtkomstkontrollista](https://developer.adobe.com/commerce/webapi/get-started/authentication/#relationship-between-aclxml-and-webapixml) | global | [\Magento\Framework\Acl\AclResource\Provider](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Acl/AclResource/Provider.php) |
-| `analytics.xml` | [Avancerad rapportering]https://developer.adobe.com/commerce/php/development/advanced-reporting/data-collection/) | primär, global | [\Magento\Analytics\Model\Config\Reader](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Analytics/Model/Config/Reader.php) |
+| `analytics.xml` | [Avancerad rapportering](https://developer.adobe.com/commerce/php/development/advanced-reporting/data-collection/) | primär, global | [\Magento\Analytics\Model\Config\Reader](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Analytics/Model/Config/Reader.php) |
 | `cache.xml` | Cachetypdeklaration | primär, global | [\Magento\Framework\Cache\Config\Data](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Cache/Config/Data.php) |
 | `catalog_attributes.xml` | Katalogattributskonfiguration | global | [\Magento\Catalog\Model\Attribute\Config\Data](https://github.com/magento/magento2/blob/2.4/app/code/Magento/Catalog/Model/Attribute/Config/Data.php) |
 | `config.php` och `env.php` | [Distributionskonfiguration](../reference/deployment-files.md) | Dessa filer kan läsas/skrivas av den interna konfigurationsprocessorn. | Har inget objekt, kan inte anpassas |
