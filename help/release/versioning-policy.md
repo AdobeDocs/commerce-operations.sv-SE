@@ -2,9 +2,9 @@
 title: Versionspolicy
 description: Läs mer om de olika versionerna av Adobe Commerce.
 exl-id: 61a83de6-6a7b-4a88-8fff-1638b4fe472a
-source-git-commit: 0ea8c2bfffe81d27547c0330abdd75fc078542cf
+source-git-commit: f7b22089bcf88f6c881b0cbd4d7f77d795d9071b
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '810'
 ht-degree: 0%
 
 ---
@@ -88,8 +88,10 @@ Enskilda korrigeringsfiler innehåller korrigeringar av låg kvalitet för ett s
 
 ## Isolerad patch
 
-Isolerade patcharInnehåller en fristående korrigering som ingår i den senaste patchen med endast säkerhet eller en kommande säkerhetskorrigering som släpps separat för snabbare implementering.
+Isolerade korrigeringsfiler är säkerhetskorrigeringar som har släppts oberoende av en fullständig säkerhetsuppdatering, vilket ger en snabbare implementering. Varje enskild korrigering åtgärdar ett specifikt säkerhetsproblem och ingår antingen i den senaste eller en kommande fullständig säkerhetsuppdatering. Information om problemet finns i den relaterade säkerhetsbulletinen, som är länkad till en KB-artikel (Knowledge Base) med korrigeringsinformation, hur korrigeringen ska tillämpas och ytterligare information.
+
+Gå till [Säkerhetscenter](https://helpx.adobe.com/security/products/magento.html) för att hitta de senaste säkerhetsuppdateringarna för Adobe Commerce.
 
 ## Egen korrigering
 
-Skapas av icke-Adobe-personal för att åtgärda ett problem eller ändra Adobe Commerce-koden av olika anledningar. Anpassade korrigeringsfiler levereras via [kvalitetskorrigeringsverktyget](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/usage).
+Skapas av icke-Adobe-personal för att åtgärda ett problem eller ändra Adobe Commerce-koden av olika anledningar. Anpassade korrigeringsfiler levereras via [kvalitetskorrigeringsverktyget](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/usage).
