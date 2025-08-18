@@ -4,9 +4,9 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 exl-id: 74094036-cb1b-419f-b287-ca24d351a448
-source-git-commit: 47c8541c228f9ed3795c93b67b8ff85cbd4bd555
+source-git-commit: 937acc659427b788b8af778f5ea826eacccdc70e
 workflow-type: tm+mt
-source-wordcount: '285'
+source-wordcount: '284'
 ht-degree: 0%
 
 ---
@@ -29,6 +29,6 @@ QPT v1.1.68 innehåller följande patchar:
 1. **ACSD-66889**: Fel vid omindexering av lager i CLI.
 1. **ACSD-66963**: mutationen EstiateTotals returnerar null för rabatter när en rabattkod används i en kundvagn med virtuella produkter.
 1. **ACSD-66965**: Utskriftsalternativet på sidan med rekvisitionslistan orsakar ett fel.
-1. **ACSD-67039**: Kundposter sparades inte på grund av valideringen av systemattributet rp_token.
+1. **ACSD-67039**: Kundposter sparades inte på grund av valideringen av systemattributet `rp_token`.
 
 Använd menyn till vänster för att navigera till en viss korrigeringssida.
