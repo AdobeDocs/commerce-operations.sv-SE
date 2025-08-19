@@ -4,9 +4,9 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 exl-id: 39af00ed-3559-462e-9627-e32d6e7c71a8
-source-git-commit: a59d05b93e1ada3416562625ce864b7bda94ee8e
+source-git-commit: 0dd91496c3117a424c71382e18b9689fff016ada
 workflow-type: tm+mt
-source-wordcount: '266'
+source-wordcount: '267'
 ht-degree: 0%
 
 ---
@@ -20,13 +20,13 @@ QPT v1.1.69 innehåller följande patchar:
 1. **ACP2E-3731**: Produktexporter med synligheten **[!UICONTROL Catalog, Search]** innehåller poster från andra butiksvyer.
 1. **ACP2E-3767**: Det senaste paketalternativet visas igen när du har sparat en paketprodukt.
 1. **ACP2E-3964**: Konfigurerbara underordnade produkter med video som inte listas via REST API.
-1. **ACP2E-3977**: **[!UICONTROL Cap Reward Points Balance At]** kan inte lämnas tom.
+1. **ACP2E-3977**: [!UICONTROL Cap Reward Points Balance At]-fältet får inte vara tomt.
 1. **ACP2E-4050**: Kundprisreglerna misslyckas vid multileverans med paketprodukter och fri frakt.
 1. **ACSD-56226**: READ-frågor returnerar inaktuella data med `synchronous_replication` aktiverat.
 1. **ACSD-57477**: Bearbetning av försäljningsregel gör att prestanda försämras vid kundvagnsrelaterade begäranden.
 1. **ACSD-58108**: Om det saknas ett kopplingstabellnamn uppstår SQL-fel i det anpassade modultillägget för stödraster.
 1. **ACSD-65983**: Ett fel uppstod när paketerade produktofferter konfigurerades om i Admin.
-1. **ACSD-66149**: IPN-hanteraren returnerar 500 för typer som inte stöds.
+1. **[ACSD-66149](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-69/acsd-66149-ipn-handler-returns-500-for-unsupported-types.md)**: IPN-hanteraren returnerar 500 för typer som inte stöds.
 1. **ACSD-66153**: Sidan returnerar 500 på grund av att en felaktig layoutstruktur cachelagrades.
 1. **ACSD-66302**: Önsklisteobjekt filtrerade efter butiks-ID i stället för webbplats.
 1. **ACSD-66311**: Företagsrutnät läses in långsamt för begränsade administratörer.
