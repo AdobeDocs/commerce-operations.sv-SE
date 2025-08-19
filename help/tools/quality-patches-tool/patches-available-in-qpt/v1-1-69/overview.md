@@ -4,7 +4,7 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 exl-id: 39af00ed-3559-462e-9627-e32d6e7c71a8
-source-git-commit: 0dd91496c3117a424c71382e18b9689fff016ada
+source-git-commit: c701c9ff7385821b771af2d19920ead192e4410a
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 0%
@@ -26,7 +26,7 @@ QPT v1.1.69 innehåller följande patchar:
 1. **ACSD-57477**: Bearbetning av försäljningsregel gör att prestanda försämras vid kundvagnsrelaterade begäranden.
 1. **ACSD-58108**: Om det saknas ett kopplingstabellnamn uppstår SQL-fel i det anpassade modultillägget för stödraster.
 1. **ACSD-65983**: Ett fel uppstod när paketerade produktofferter konfigurerades om i Admin.
-1. **[ACSD-66149](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-69/acsd-66149-ipn-handler-returns-500-for-unsupported-types.md)**: IPN-hanteraren returnerar 500 för typer som inte stöds.
+1. **ACSD-66149**: IPN-hanteraren returnerar 500 för typer som inte stöds.
 1. **ACSD-66153**: Sidan returnerar 500 på grund av att en felaktig layoutstruktur cachelagrades.
 1. **ACSD-66302**: Önsklisteobjekt filtrerade efter butiks-ID i stället för webbplats.
 1. **ACSD-66311**: Företagsrutnät läses in långsamt för begränsade administratörer.
