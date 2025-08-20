@@ -3,17 +3,18 @@ title: 'ACSD-66149: IPN-hanteraren returnerar *500* för typer som inte stöds'
 description: Använd patchen ACSD-66149 för att åtgärda Adobe Commerce-problemet där IPN-hanteraren inte ignorerar IPN-typer som inte stöds eller är okända, vilket gör att problemet inte loggas, avbryter processen och returnerar även 500-fel.
 feature: Payments
 role: Admin, Developer
-source-git-commit: 81e8bf62c026023f71d52c219357bd7911275f69
+type: Troubleshooting
+exl-id: d4794e24-1b6b-4bb5-b54c-9a248fa5f3bd
+source-git-commit: cf0f5992c7b2a51b270a4a1a81fd50305a92759c
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '364'
 ht-degree: 0%
 
 ---
 
-
 # ACSD-66149: IPN-hanteraren returnerar *500* för typer som inte stöds
 
-Korrigeringen ACSD-66149 åtgärdar ett problem där IPN-hanteraren (Instant Payment Notification) returnerar ett *500*-fel för IPN-typer som inte stöds eller som är okända. Den här korrigeringen är tillgänglig när [[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.69 har installerats. Korrigerings-ID är ACSD-66149. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.9.
+Korrigeringsfilen ACSD-66149 åtgärdar ett problem där IPN-hanteraren (Instant Payment Notification) returnerar ett 500-fel för IPN-typer som inte stöds eller är okända. Den här korrigeringen är tillgänglig när [[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.69 har installerats. Korrigerings-ID är ACSD-66149. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.9.
 
 ## Berörda produkter och versioner
 
@@ -27,7 +28,7 @@ Korrigeringen ACSD-66149 åtgärdar ett problem där IPN-hanteraren (Instant Pay
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -56,7 +57,7 @@ Programmet genererar många *500*-fel under bearbetning av felaktiga IPN:er och 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool]
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i guiden för Commerce om molninfrastruktur
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i guiden för Commerce om molninfrastruktur
 
 ## Relaterad läsning
 

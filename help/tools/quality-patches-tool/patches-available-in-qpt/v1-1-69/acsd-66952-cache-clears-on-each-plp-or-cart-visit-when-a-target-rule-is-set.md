@@ -3,17 +3,18 @@ title: 'ACSD-66952: Cacheminnet rensas vid varje PLP- eller kundvagnsbesök när
 description: Använd korrigeringsfilen ACSD-66952 för att åtgärda Adobe Commerce-problemet där cache rensades vid varje PLP- eller kundvagnsbesök, vilket orsakade onödig prestandaförsämring när en målregel angavs.
 feature: Shopping Cart, Cache, Price Rules
 role: Admin, Developer
-source-git-commit: 1aec8de86696ffc9ecb13100e6ffa1f912b281fb
+type: Troubleshooting
+exl-id: abff5761-bcf1-4cfc-b5d9-6a7e1ca907e7
+source-git-commit: cf0f5992c7b2a51b270a4a1a81fd50305a92759c
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '368'
 ht-degree: 0%
 
 ---
 
-
 # ACSD-66952: Cacheminnet rensas vid varje PLP- eller kundvagnsbesök när en målregel anges
 
-Korrigeringen ACSD-66952 åtgärdar ett problem där cache rensas på varje PLP- eller kundvagnsbesök, vilket orsakar prestandaförluster när en målregel ställs in. Den här korrigeringen är tillgänglig när [[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.69 har installerats. Korrigerings-ID är ACSD-66952. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.9.
+Korrigeringen ACSD-66952 åtgärdar ett problem där cachen rensas på varje PLP- eller kundvagnsbesök, vilket orsakar prestandaförluster när en målregel ställs in. Den här korrigeringen är tillgänglig när [[!DNL Quality Patches Tool (QPT)]](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md) 1.1.69 har installerats. Korrigerings-ID är ACSD-66952. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.9.
 
 ## Berörda produkter och versioner
 
@@ -27,7 +28,7 @@ Korrigeringen ACSD-66952 åtgärdar ett problem där cache rensas på varje PLP-
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -62,7 +63,7 @@ Cachetaggar blir ogiltiga.
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool]
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i guiden för Commerce om molninfrastruktur
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i guiden för Commerce om molninfrastruktur
 
 ## Relaterad läsning
 
