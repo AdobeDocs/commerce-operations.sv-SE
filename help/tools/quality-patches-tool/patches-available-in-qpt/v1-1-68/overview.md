@@ -4,9 +4,9 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 exl-id: 74094036-cb1b-419f-b287-ca24d351a448
-source-git-commit: 937acc659427b788b8af778f5ea826eacccdc70e
+source-git-commit: ba4154c109c64d3e45e6de8dc8ffd9bb9741e5b2
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '282'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ QPT v1.1.68 innehåller följande patchar:
 1. **ACSD-66179**: Om du avbryter en faktura med betalningstypen &quot;Inte hämtning&quot; resulterar det i en 404-felsida.
 1. **ACSD-66233**: Administratörer kan inte lägga till produkter på grund av att produktlistan inte svarar.
 1. **ACSD-66506**: Ett serverdelsfel uppstod när tidigare tilldelade produkter i en delad katalog togs bort och nya tilldelades.
-1. **ACSD-66865**: Om du sparar katalogprisregler blir indexerare ogiltiga och det finns ett alternativ till att indexera om endast berörda produkter.
+1. **ACSD-66865**: Om du sparar en **[!UICONTROL Catalog Price Rule]** blir indexerare ogiltiga och du kan välja att indexera om endast berörda produkter.
 1. **ACSD-66889**: Fel vid omindexering av lager i CLI.
 1. **ACSD-66963**: mutationen EstiateTotals returnerar null för rabatter när en rabattkod används i en kundvagn med virtuella produkter.
 1. **ACSD-66965**: Utskriftsalternativet på sidan med rekvisitionslistan orsakar ett fel.
