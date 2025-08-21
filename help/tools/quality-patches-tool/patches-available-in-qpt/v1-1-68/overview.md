@@ -4,7 +4,7 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 exl-id: 74094036-cb1b-419f-b287-ca24d351a448
-source-git-commit: fa5164f3118ec51e4562f7ae5073781307452bc4
+source-git-commit: 53768b017845d0ea8033ebd7651421877ed36a55
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Detta underavsnitt innehåller en detaljerad beskrivning av de problem som åtg�
 QPT v1.1.68 innehåller följande patchar:
 1. **ACSD-58131**: Om det fanns en bild på 0 byte i mediegalleriet kunde inte alla bilder i katalogen visas eller markeras.
 1. **ACSD-62146**: Den valda faktureringsadressen försvinner på betalningssidan när adresssökning är aktiverad och&quot;Antal kundadresser gräns&quot; är 1.
-1. **ACSD-62415**: Adobe Commerce backend läser in kategorier mycket långsamt.
+1. **[ACSD-62415](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-68/acsd-62415-adobe-commerce-backend-loads-categories-very-slowly.md)**: Adobe Commerce backend läser in kategorier mycket långsamt.
 1. **ACSD-65938**: Presentkortsmeddelanden skickades även när det inte gick att skapa fakturan.
 1. **ACSD-66072**: Relaterade produkter returneras inte via GraphQL på produktinformationssidan på grund av ett internt serverfel när [!UICONTROL Related Products Rule] har konfigurerats.
 1. **ACSD-66082**: Det går inte att uppdatera färgrutebilden för en produkt via produktimport.
