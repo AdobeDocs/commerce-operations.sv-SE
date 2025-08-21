@@ -4,7 +4,7 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 exl-id: 39af00ed-3559-462e-9627-e32d6e7c71a8
-source-git-commit: 29f09e0ee426f9b58a98fdd512d7c1ac3fca2425
+source-git-commit: 564004a106d69f4b7ff6f85563209433799d36f1
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 0%
@@ -17,7 +17,7 @@ Detta underavsnitt innehåller en detaljerad beskrivning av de problem som åtg�
 
 QPT v1.1.69 innehåller följande patchar:
 1. **AC-15223**: Storefront-sidan visar cachelagrat innehåll efter växling av butiker.
-1. **ACP2E-3731**: Produktexporter med synligheten **[!UICONTROL Catalog, Search]** innehåller poster från andra butiksvyer.
+1. **ACP2E-3731**: Produktexporter med synligheten *[!UICONTROL Catalog, Search]* innehåller poster från andra butiksvyer.
 1. **ACP2E-3767**: Det senaste paketalternativet visas igen när du har sparat en paketprodukt.
 1. **ACP2E-3964**: Konfigurerbara underordnade produkter med video som inte listas via REST API.
 1. **ACP2E-3977**: [!UICONTROL Cap Reward Points Balance At]-fältet får inte vara tomt.
