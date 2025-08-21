@@ -4,9 +4,9 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 exl-id: 74094036-cb1b-419f-b287-ca24d351a448
-source-git-commit: ba4154c109c64d3e45e6de8dc8ffd9bb9741e5b2
+source-git-commit: fa5164f3118ec51e4562f7ae5073781307452bc4
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '279'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,8 @@ QPT v1.1.68 innehåller följande patchar:
 1. **ACSD-66865**: Om du sparar en **[!UICONTROL Catalog Price Rule]** blir indexerare ogiltiga och du kan välja att indexera om endast berörda produkter.
 1. **ACSD-66889**: Fel vid omindexering av lager i CLI.
 1. **ACSD-66963**: mutationen EstiateTotals returnerar null för rabatter när en rabattkod används i en kundvagn med virtuella produkter.
-1. **ACSD-66965**: Utskriftsalternativet på sidan med rekvisitionslistan orsakar ett fel.
+1. **ACSD-66965**: **[!UICONTROL Print]** alternativet på **[!UICONTROL Requisition List]**-sidan orsakar ett fel.
 1. **ACSD-67039**: Kundposter sparades inte på grund av valideringen av systemattributet `rp_token`.
+
 
 Använd menyn till vänster för att navigera till en viss korrigeringssida.
