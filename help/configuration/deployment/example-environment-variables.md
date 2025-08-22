@@ -2,7 +2,7 @@
 title: Exempel med miljövariabler
 description: Se ett exempel på hur du ställer in delade, systemspecifika och känsliga värden i utvecklingssystemet med hjälp av systemvariabler.
 exl-id: 98438674-e7f8-4143-9a76-3cc8bf0a73dc
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
 workflow-type: tm+mt
 source-wordcount: '1089'
 ht-degree: 0%
@@ -197,3 +197,5 @@ I det här avsnittet beskrivs hur du kan verifiera konfigurationsinställningarn
    Värdet i fältet **Standarddomän för e-post** visas enligt följande. Detta är en systemspecifik inställning.
 
    ![Kontrollera inställningarna i produktionssystemet](../../assets/configuration/split-default-domain.png)
+
+<!-- Last updated from includes: 2024-07-18 15:50:54 -->

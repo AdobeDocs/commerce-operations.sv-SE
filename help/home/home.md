@@ -2,7 +2,7 @@
 title: Handböcker - startsida
 description: Bläddra bland index över systemadministration och produktdokumentation för Adobe Commerce.
 exl-id: 45ec4948-338f-4276-8a70-d0db720322d9
-source-git-commit: 5a2aae6a2f3b1353457f003460d230db2b57abdd
+source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 0%
@@ -101,3 +101,5 @@ Använd den här följande uppsättningen guider för att lära dig mer om syste
 </table>
 
 {{$include /help/_includes/templated/whats-new.md}}
+
+<!-- Last updated from includes: 2025-08-22 13:46:00 -->

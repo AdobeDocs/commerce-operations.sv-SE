@@ -4,7 +4,7 @@ description: Läs om de effektivaste strategierna för kodhantering i utveckling
 feature: Best Practices
 role: Developer
 exl-id: 0bff4c7a-1082-4b3e-b19c-bc8ad529b131
-source-git-commit: ee7551374aa6d4ad462dd64ee3d05b934b43ce45
+source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
 workflow-type: tm+mt
 source-wordcount: '659'
 ht-degree: 0%
@@ -115,3 +115,5 @@ Det här avsnittet är utformat för att hjälpa dig att avgöra om du ska anvä
 1. **Börja med Git och gå sedan till Composer**
 
    Välj en metod för kodhantering i början av projektet. Att byta från Git till Composer eller tvärtom, med pågående utveckling är besvärligt och kan leda till kodförlust och eller förlust av revisionshistorik.
+
+<!-- Last updated from includes: 2023-08-23 15:56:59 -->

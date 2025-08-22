@@ -3,7 +3,7 @@ title: Hämta exempeldatapaket för disposition
 description: Följ de här stegen för att installera exempeldata för Adobe Commerce med Composer PHP Package Manager.
 feature: Install, Deploy
 exl-id: 735591af-a152-4476-9fa6-e31c4bab3ba8
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
 workflow-type: tm+mt
 source-wordcount: '286'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Om du är en utvecklare som bidrar läser du [Installera genom att klona databas
 
 >[!WARNING]
 >
->Installera inte exempeldata om programmet är inställt för [produktionsläge](../../configuration/bootstrap/application-modes.md#production-mode). Växla till [utvecklarläge](../../configuration/bootstrap/application-modes.md#developer-mode) först. Det gick inte att installera exempeldata i produktionsläget [&#128279;](https://support.magento.com/hc/en-us/articles/360033824571#symptom-production-mode-trouble-samp-prod-).
+>Installera inte exempeldata om programmet är inställt för [produktionsläge](../../configuration/bootstrap/application-modes.md#production-mode). Växla till [utvecklarläge](../../configuration/bootstrap/application-modes.md#developer-mode) först. Det gick inte att installera exempeldata i produktionsläget [](https://support.magento.com/hc/en-us/articles/360033824571#symptom-production-mode-trouble-samp-prod-).
 
 Om du vill installera exempeldata med kommandoraden anger du följande kommando som filsystemsägare i katalogen `<app_root>`:
 
@@ -65,3 +65,5 @@ Om felet visas ändrar du till programinstallationskatalogen och kör `composer 
 ## Slutför installationen av exempeldata
 
 {{$include /help/_includes/sample-data-complete.md}}
+
+<!-- Last updated from includes: 2022-09-08 11:33:05 -->

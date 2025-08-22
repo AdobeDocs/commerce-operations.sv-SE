@@ -2,7 +2,7 @@
 title: Exempel med en delad konfiguration
 description: Se ett exempel på hur du ändrar inställningar i ett utvecklingssystem med en delad konfigurationsfil.
 exl-id: c980ec01-ca2d-43db-b68d-8e9435e07e6a
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 0%
@@ -89,3 +89,5 @@ Det sista steget i processen är att uppdatera produktionssystemet från källko
 >[!INFO]
 >
 >Om du vill ändra en inställning som är låst i Admin använder du kommandot [`magento config:set --lock` ](../cli/set-configuration-values.md).
+
+<!-- Last updated from includes: 2024-07-18 15:50:54 -->

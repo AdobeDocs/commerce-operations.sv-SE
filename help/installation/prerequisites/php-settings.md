@@ -3,7 +3,7 @@ title: PHP-inställningar
 description: Följ de här stegen för att installera nödvändiga PHP-tillägg och konfigurera PHP-inställningar för lokala installationer av Adobe Commerce.
 feature: Install, Configuration
 exl-id: 84064442-7053-42ab-a8a6-9b313e5efc78
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
 workflow-type: tm+mt
 source-wordcount: '751'
 ht-degree: 0%
@@ -19,7 +19,7 @@ I det här avsnittet beskrivs hur du ställer in obligatoriska PHP-alternativ.
 >
 >För den senaste versionen av Adobe Commerce krävs minst PHP 8.1. Se [systemkraven](../system-requirements.md) för alla PHP-versioner som stöds.
 
-Mer information om molnkonfiguration finns i [PHP-inställningar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/php-settings.html?lang=sv-SE) i guiden _Commerce om molninfrastruktur_.
+Mer information om molnkonfiguration finns i [PHP-inställningar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/php-settings.html) i guiden _Commerce om molninfrastruktur_.
 
 ## PHP-processkontroll
 
@@ -210,3 +210,5 @@ Se följande Adobe Commerce supportartiklar för hjälp med felsökning av PHP-p
 - [PHP-krypteringstillägget har inte installerats korrekt](https://support.magento.com/hc/en-us/articles/360034280132-PHP-mcrypt-extension-not-installed-properly-)
 - [Problem med beredskapskontroll av PHP-version](https://support.magento.com/hc/en-us/articles/360033546411)
 - [Vanliga PHP-allvarliga fel och lösningar](https://support.magento.com/hc/en-us/articles/360030568432)
+
+<!-- Last updated from includes: 2025-04-04 22:27:22 -->

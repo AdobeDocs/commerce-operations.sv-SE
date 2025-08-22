@@ -2,7 +2,7 @@
 title: Klona exempeldata i Git-databaser
 description: Följ de här stegen för att installera exempeldata för Adobe Commerce genom att klona Git-databaser.
 exl-id: 748eee30-2821-457d-9c1c-62ede8bc0510
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
 workflow-type: tm+mt
 source-wordcount: '733'
 ht-degree: 0%
@@ -195,3 +195,5 @@ Så här anger du behörigheter och ägarskap för filsystemet i exempeldatabase
 ## Slutför installationen av exempeldata
 
 {{$include /help/_includes/sample-data-complete.md}}
+
+<!-- Last updated from includes: 2022-09-08 11:33:05 -->

@@ -3,7 +3,7 @@ title: Konfigurera Apache för sökmotorn
 description: Följ de här stegen för att konfigurera en sökmotor med webbservern Apache för lokala installationer av Adobe Commerce.
 feature: Install, Search
 exl-id: b35c95a7-0c00-48e5-b37d-7c9e17feebec
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
 workflow-type: tm+mt
 source-wordcount: '643'
 ht-degree: 0%
@@ -210,3 +210,5 @@ I det här avsnittet beskrivs hur du anger vilka som får åtkomst till Apache-s
 #### Verifiera
 
 {{$include /help/_includes/verify-secure-communication.md}}
+
+<!-- Last updated from includes: 2024-07-18 15:50:54 -->

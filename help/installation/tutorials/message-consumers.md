@@ -2,7 +2,7 @@
 title: Konfigurera meddelandeanvändare
 description: Följ de här stegen för att konfigurera beteendet för användare av Adobe Commerce meddelandekö.
 exl-id: df292301-f4bd-49df-a241-7467c35bf1d8
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
 workflow-type: tm+mt
 source-wordcount: '65'
 ht-degree: 0%
@@ -27,3 +27,5 @@ bin/magento setup:config:set [--<parameter_name>=<value>, ...]
 ### Parameterbeskrivningar
 
 {{$include /help/_includes/cli-consumers.md}}
+
+<!-- Last updated from includes: 2022-09-12 09:38:25 -->
