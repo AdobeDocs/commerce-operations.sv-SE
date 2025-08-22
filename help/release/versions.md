@@ -23,7 +23,7 @@ Adobe erbjuder ett års support utan extra kostnad för Adobe Commerce-kunder me
 >[!NOTE]
 >
 >- Adobe rekommenderar att du installerar eller uppgraderar Adobe Commerce till den senaste säkerhetsuppdateringen som är tillgänglig för varje release.
->- Andra säkerhetsuppdateringar finns i [Säkerhetsuppdateringar för Magento/Adobe Commerce](https://helpx.adobe.com/security/products/magento.html).
+>- Andra säkerhetsuppdateringar finns i [Säkerhetsuppdateringar för Magento/Adobe Commerce](https://helpx.adobe.com/se/security/products/magento.html).
 >- Information om priser finns i [Adobe Commerce-priser](https://business.adobe.com/products/magento/pricing.html).
 
 {{$include /help/_includes/templated/release/core-releases.md}}

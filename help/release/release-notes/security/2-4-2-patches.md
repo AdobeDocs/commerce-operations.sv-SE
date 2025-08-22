@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Säkerhetsutgåvan av Adobe Commerce 2.4.2-p2 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som har identifierats i tidigare versioner av 2.4.2.
 
-Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB21-64](https://helpx.adobe.com/security/products/magento/apsb21-64.html).
+Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB21-64](https://helpx.adobe.com/se/security/products/magento/apsb21-64.html).
 
 ## Använd `AC-3022.patch` om du vill fortsätta erbjuda DHL som fraktfirma
 
