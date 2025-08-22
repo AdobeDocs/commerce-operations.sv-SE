@@ -4,13 +4,13 @@ description: Använd patchen ACSD-66139 för att åtgärda Adobe Commerce-proble
 feature: GraphQL
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 16d95ae0d58dfdc88a5fab725a37d353d3ee5c96
+exl-id: 5a1a94ca-f274-4098-8b44-d3f1a0ea65a1
+source-git-commit: 8681dd706e614f86bbee36c182b47491ec707196
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '353'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-66139: GraphQL-beställningen misslyckas med UNDEFINED-fel för inaktiv kundvagn
 
@@ -28,7 +28,7 @@ Korrigeringsfilen ACSD-66139 åtgärdar ett problem där GraphQL returnerar felk
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du paketet `magento/quality-patches` till ikonen Senaste och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du paketet `magento/quality-patches` till ikonen Senaste och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -42,10 +42,11 @@ GraphQL returnerar en *UNDEFINED*-felkod i stället för en specifik felkod när
 "Could not find a cart with ID ""%masked_cart_id""","Oh noo, we have an UNDEFINED issue, see!",module,Magento_QuoteGraphQl
 ```
 
-1. Skapa en butiksvy på Admin-panelen. Gå till **[!UICONTROL Stores]** > *[!UICONTROL Settings]* > **[!UICONTROL All Stores]**. Klicka på **[!UICONTROL Create Store View]** och ange koden **[!UICONTROL Code]** för `test`.
+1. Gå till **[!UICONTROL Stores]** > **[!UICONTROL Settings]** > **[!UICONTROL All Stores]** > **[!UICONTROL Create Store View]** på Admin-panelen för att skapa en butiksvy.
+1. Ange **[!UICONTROL Code]** som *test*.
 1. Tilldela språket `german` till den nya butiksvyn.
 1. Kör `setup:upgrade` och `setup:static-content:deploy -f`.
-1. Kör följande GraphQL-fråga med rubriken Store:test:
+1. Kör följande GraphQL-fråga med rubriken `Store:test`:
 
 ```
 mutation {
@@ -123,7 +124,7 @@ Korrekt felsvar:
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 
