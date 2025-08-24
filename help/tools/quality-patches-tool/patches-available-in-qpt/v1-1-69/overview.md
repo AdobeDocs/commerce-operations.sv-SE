@@ -4,9 +4,9 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 exl-id: 39af00ed-3559-462e-9627-e32d6e7c71a8
-source-git-commit: 564004a106d69f4b7ff6f85563209433799d36f1
+source-git-commit: eb64190e0c3f9c0dd0690b0174c7a24798f96366
 workflow-type: tm+mt
-source-wordcount: '267'
+source-wordcount: '265'
 ht-degree: 0%
 
 ---
@@ -33,6 +33,6 @@ QPT v1.1.69 innehåller följande patchar:
 1. **ACSD-66404**: Cron-jobbet kan inte rensa ändringsloggtabeller på grund av [!DNL Galera Cluster] transaktionsstorleksbegränsningar.
 1. **ACSD-66952**: Cacheminnet rensas på varje PLP- eller kundvagnsbesök när en målregel har angetts.
 1. **ACSD-67264**: Paketlayouter och nedladdningsbara produktsidlayouter är olika på olika enheter.
-1. **ACSD-67347**: Orderfel vid användning av specialteckenkuponger och fillåsning.
+1. **ACSD-67347**: Beställningen misslyckas och det går inte att låsa när kupongkoder används.
 
 Använd menyn till vänster för att navigera till en viss korrigeringssida.
