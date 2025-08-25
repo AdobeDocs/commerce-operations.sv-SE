@@ -82,31 +82,31 @@ Korrigeringen ACSD-66963 åtgärdar ett problem där `estimateTotals` returnerar
 Rabattinformation ingår för kundvagnar som endast innehåller virtuella produkter.
 
     &quot;
-    {
-    &quot;data&quot;: {
-    &quot;estimsummor&quot;: {
-    &quot;kundvagn&quot;: {
-    &quot;priser&quot;: {
-    &quot;rabatter&quot;: [
-    {
-    &quot;belopp&quot;: {
+    &lbrace;
+    &quot;data&quot;: &lbrace;
+    &quot;estimsummor&quot;: &lbrace;
+    &quot;kundvagn&quot;: &lbrace;
+    &quot;priser&quot;: &lbrace;
+    &quot;rabatter&quot;: &lbrack;
+    &lbrace;
+    &quot;belopp&quot;: &lbrace;
     &quot;värde&quot;: 100.5,
     &quot;valuta&quot;: &quot;USD&quot;
-    },
+    &rbrace;,
      
     &quot;label&quot;: &quot;A second rabatt code for testing&quot;,
-    &quot;coupon&quot;: {
+    &quot;coupon&quot;: &lbrace;
     &quot;code&quot;: &quot;z3r0c00l&quot;
-    },
+    &rbrace;,
     &quot;applied_to&quot;: &quot;ITEM&quot;,
     &quot;type&quot;: null
     
-    ]
-    } 
-    }
+    &rbrack;
+    &rbrace; 
+    &rbrace;
     ,
     &quot;extensions&quot;: {}
-    }
+    &rbrace;
     &quot;
 
 <u>Faktiska resultat</u>:
@@ -114,20 +114,21 @@ Rabattinformation ingår för kundvagnar som endast innehåller virtuella produk
 Rabattinformationen returneras som *null* för kundvagnar med endast virtuella produkter.
 
     &quot;
-    {
+    &lbrace;
     &quot;data&quot;: 
     &quot;estimsummor&quot;: 
     &quot;kundvagn&quot;: 
     &quot;priser&quot;: 
     &quot;rabatter&quot;: null
-    }
-    }
-    }
+    &rbrace;
+    &rbrace;
+    &rbrace;
     ,
     &quot;tillägg&quot;: {}
-    }
+    &rbrace;
     &quot;
- 15}
+ 15&rbrace;
+
 ## Tillämpa korrigeringen
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
