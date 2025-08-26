@@ -4,9 +4,9 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 exl-id: 39af00ed-3559-462e-9627-e32d6e7c71a8
-source-git-commit: eb64190e0c3f9c0dd0690b0174c7a24798f96366
+source-git-commit: 7a2d626092b19852287c48dc3da1fcc766237212
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,8 @@ QPT v1.1.69 innehåller följande patchar:
 1. **ACP2E-3731**: Produktexporter med synligheten *[!UICONTROL Catalog, Search]* innehåller poster från andra butiksvyer.
 1. **ACP2E-3767**: Det senaste paketalternativet visas igen när du har sparat en paketprodukt.
 1. **ACP2E-3964**: Konfigurerbara underordnade produkter med video som inte listas via REST API.
+1. **ACP2E-3977**: **[!UICONTROL Cap Reward Points Balance At]** kan inte lämnas tom.
+1. **ACP2E-4050**: **[!UICONTROL Free Shipping]** används inte vid utcheckning av flera adresser.
 1. **ACP2E-3977**: [!UICONTROL Cap Reward Points Balance At]-fältet får inte vara tomt.
 1. **ACP2E-4050**: Kundprisreglerna misslyckas vid multileverans med paketprodukter och fri frakt.
 1. **ACSD-56226**: READ-frågor returnerar inaktuella data med `synchronous_replication` aktiverat.
