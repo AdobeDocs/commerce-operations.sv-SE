@@ -4,9 +4,9 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 exl-id: 74094036-cb1b-419f-b287-ca24d351a448
-source-git-commit: 674aa68a0f7ecf30481a6d4f33b119d295c51a6b
+source-git-commit: 9dd2ea9464a8e0fb9e45fea44e17d2ded0193ba9
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '352'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 Detta underavsnitt innehåller en detaljerad beskrivning av de problem som åtgärdats av de korrigeringar som är tillgängliga i [!DNL Quality Patches Tool] (QPT) v1.1.68.
 
 QPT v1.1.68 innehåller följande patchar:
-1. **ACSD-58131**: Om det fanns en bild på 0 byte i mediegalleriet kunde inte alla bilder i katalogen visas eller markeras.
+1. **ACSD-58131** Gammalt mediegalleri kan inte läsa in bilder på grund av en bildfil på 0 byte.
 1. **ACSD-62146**: Den valda faktureringsadressen försvinner på betalningssidan när adresssökning är aktiverad och&quot;Antal kundadresser gräns&quot; är 1.
 1. **[ACSD-62415](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-68/acsd-62415-adobe-commerce-backend-loads-categories-very-slowly.md)**: Adobe Commerce backend läser in kategorier mycket långsamt.
 1. **ACSD-65938**: Presentkortsmeddelanden skickades även när det inte gick att skapa fakturan.
