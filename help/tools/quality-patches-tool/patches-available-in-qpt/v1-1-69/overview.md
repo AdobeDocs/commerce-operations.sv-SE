@@ -4,7 +4,7 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 exl-id: 39af00ed-3559-462e-9627-e32d6e7c71a8
-source-git-commit: 7a2d626092b19852287c48dc3da1fcc766237212
+source-git-commit: e72c99bbb5e82cd2dc77e33b7d17dfe8955e945a
 workflow-type: tm+mt
 source-wordcount: '278'
 ht-degree: 0%
@@ -26,7 +26,7 @@ QPT v1.1.69 innehåller följande patchar:
 1. **ACP2E-4050**: Kundprisreglerna misslyckas vid multileverans med paketprodukter och fri frakt.
 1. **ACSD-56226**: READ-frågor returnerar inaktuella data med `synchronous_replication` aktiverat.
 1. **ACSD-57477**: Bearbetning av försäljningsregel gör att prestanda försämras vid kundvagnsrelaterade begäranden.
-1. **ACSD-58108**: Om det saknas ett kopplingstabellnamn uppstår SQL-fel i det anpassade modultillägget för stödraster.
+1. **[ACSD-58108](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-69/acsd-58108-missing-join-table-name-causes-sql-errors-in-order-grid-custom-module-extension.md)**: Om det saknas ett kopplingstabellnamn uppstår SQL-fel i det anpassade modultillägget för stödraster.
 1. **ACSD-65983**: Ett fel uppstod när paketerade produktofferter konfigurerades om i Admin.
 1. **ACSD-66149**: IPN-hanteraren returnerar 500 för typer som inte stöds.
 1. **ACSD-66153**: Sidan returnerar 500-fel på grund av cachelagrad felaktig layoutstruktur.
