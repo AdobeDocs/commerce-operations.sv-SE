@@ -36,12 +36,12 @@ Det saknade namnet på kopplingstabellen i den ursprungliga hämtningstabellen o
 
 <u>Steg som ska återskapas</u>:
 
-01. Installera en 2.4-framkallningsinstans.
-02. Skapa en ny order.
-03. Installera en anpassad modul med ett SQL-tillägg.
-04. Navigera till **[!UICONTROL Admin]** > **[!UICONTROL Sales]** > **[!UICONTROL Orders]**.
-05. Använd filtret **[!UICONTROL Purchase Date]** och vänta på resultatet.
-06. Använd filtret **[!UICONTROL Product SKU]**.
+&#x200B;01. Installera en 2.4-framkallningsinstans.
+&#x200B;02. Skapa en ny order.
+&#x200B;03. Installera en anpassad modul med ett SQL-tillägg.
+&#x200B;04. Navigera till **[!UICONTROL Admin]** > **[!UICONTROL Sales]** > **[!UICONTROL Orders]**.
+&#x200B;05. Använd filtret **[!UICONTROL Purchase Date]** och vänta på resultatet.
+&#x200B;06. Använd filtret **[!UICONTROL Product SKU]**.
 
 <u>Förväntade resultat</u>:
 
