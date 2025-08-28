@@ -1,5 +1,5 @@
 ---
-source-git-commit: 305989a5620d858c474c75115849338f565d4730
+source-git-commit: ff21c497db7dd2aab90ded90fb3bba853e3c20f6
 workflow-type: tm+mt
 source-wordcount: '965'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 
 <!-- The template to render with above values -->
-**Version**: 3.0.23
+**Version**: 3.0.24
 
 Referensen innehåller nio kommandon som är tillgängliga via kommandoradsverktyget `bin/uct`.
 Den inledande listan genereras automatiskt med kommandot `bin/uct list` på Adobe Commerce.
