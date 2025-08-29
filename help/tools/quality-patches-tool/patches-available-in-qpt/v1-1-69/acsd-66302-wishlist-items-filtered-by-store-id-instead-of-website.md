@@ -4,13 +4,13 @@ description: Använd patchen ACSD-66302 för att åtgärda Adobe Commerce-proble
 feature: GraphQL
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 7f9a13a9a8cc666c8aa9d964da8aaff01913d35f
+exl-id: c1a9eadc-0321-4f5c-ba82-533286a1f24f
+source-git-commit: bec27df19ce5d34be063dce3de74ffe253c3e8f4
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-66302: Önsklisteobjekt filtrerade efter butiks-ID i stället för efter webbplats
 
@@ -28,7 +28,7 @@ Korrigeringen ACSD-66302 åtgärdar ett problem där önskelisteobjekt filtreras
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -48,27 +48,27 @@ Korrigeringen ACSD-66302 åtgärdar ett problem där önskelisteobjekt filtreras
 1. Bekräfta att produkten fortfarande visas i önskelistan (korrekt beteende).
 1. Kör följande [!DNL GraphQL]-fråga:
 
-```
-{
-  customer {
-    wishlists {
-      id
-      name
-      items_count
-      items_v2 {
-        items {
-          id
-          product {
-            uid
-            name
-            sku
-          }
-        }
-      }
-    }
-  }
-}
-```
+   ```
+   {
+     customer {
+       wishlists {
+         id
+         name
+         items_count
+         items_v2 {
+           items {
+             id
+             product {
+               uid
+               name
+               sku
+             }
+           }
+         }
+       }
+     }
+   }
+   ```
 
 1. Utför frågan på standardbutiken - produkten visas som förväntat.
 1. Utför samma fråga i testbutiken - produkten visas inte.
@@ -86,7 +86,7 @@ Produkten försvinner från önskelistan när butiksvyer växlas.
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 
