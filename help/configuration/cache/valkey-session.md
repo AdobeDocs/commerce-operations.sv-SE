@@ -3,9 +3,9 @@ title: Använd Valkey för sessionslagring
 description: Lär dig hur du konfigurerar Valkey för sessionslagring.
 feature: Configuration, Cache
 exl-id: 986ddb5c-8fc5-4210-8a41-a29e3a7625b7
-source-git-commit: bc0274074c0254f649af2f9e2b288017ac82ce9b
+source-git-commit: dea0ad57a8c4525be9bc442708bdd2495f28d72d
 workflow-type: tm+mt
-source-wordcount: '664'
+source-wordcount: '795'
 ht-degree: 1%
 
 ---
@@ -28,6 +28,15 @@ bin/magento setup:config:set --session-save=valkey --session-save-valkey-<parame
 - `--session-save=valkey` aktiverar Valkey-sessionslagring. Om den här funktionen redan är aktiverad utelämnar du den här parametern.
 
 - `--session-save-valkey-<parameter_name>=<parameter_value>` är en lista över parameter-/värdepar som konfigurerar sessionslagring:
+
+
+>[!NOTE]
+>
+>Från och med **Adobe Commerce 2.4.9-alpha2** har **Valkey** officiellt ersatt Redis i CLI-verktygen på grund av ändrade licensalternativ. Valkey är en gaffel till Redis och har nästan identiska funktioner. För **version 2.4.8 och tidigare** är de CLI-kommandon som används för att konfigurera Valkey desamma som för Redis, vilket ger sömlös bakåtkompatibilitet och förenklar migrering eller stöd för dubbla miljöer. I följande exempel visas det Valkey-specifika kommandot.
+
+```bash
+bin/magento setup:config:set --session-save=redis --session-save-redis-<parameter_name>=<parameter_value>...
+```
 
 | Kommandoradsparameter | Parameternamn | Betydelse | Standardvärde |
 |----------------------------------------------|--- |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--- |
@@ -60,6 +69,14 @@ I följande exempel anges Valkey som sessionsdatalager, värden ställs in på `
 
 ```bash
 bin/magento setup:config:set --session-save=valkey --session-save-valkey-host=127.0.0.1 --session-save-valkey-log-level=4 --session-save-valkey-db=2
+```
+
+>[!NOTE]
+>
+>Från och med **Adobe Commerce 2.4.9** har **Valkey** officiellt ersatt Redis i CLI-verktygen på grund av licensändringar. Valkey är en gaffel till Redis och har nästan identiska funktioner. För **version 2.4.8 och tidigare** är de CLI-kommandon som används för att konfigurera Valkey desamma som för Redis, vilket ger sömlös bakåtkompatibilitet och förenklar migrering eller stöd för dubbla miljöer. I följande exempel visas det Valkey-specifika kommandot.
+
+```bash
+bin/magento setup:config:set --session-save=redis --session-save-redis-host=127.0.0.1 --session-save-redis-log-level=4 --session-save-redis-db=2
 ```
 
 ### Resultat
