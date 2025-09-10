@@ -31,7 +31,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->När säkerhetsuppdateringen har installerats måste Adobe Commerce B2B-handlare även uppdatera till den senaste kompatibla versionen av B2B-säkerhetsuppdateringen. Se [Versionsinformation för B2B](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/release-notes).
+>När säkerhetsuppdateringen har installerats måste Adobe Commerce B2B-handlare även uppdatera till den senaste kompatibla versionen av B2B-säkerhetsuppdateringen. Se [Versionsinformation för B2B](https://experienceleague.adobe.com/sv/docs/commerce-admin/b2b/release-notes).
 
 ## Endast Adobe Commerce {#ee-only}
 
@@ -85,4 +85,4 @@ Innan du kan köra indexerare i parallellt läge måste du aktivera stöd för p
 
 >[!IMPORTANT]
 >
->Adobe har inte stöd för att tillämpa officiella, Adobe-tillhandahållna patchar med den här metoden. Använd följande metod på egen risk. Använd [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"} om du vill tillämpa officiella korrigeringar. Utför alltid omfattande testning innan du distribuerar någon anpassad patch.
+>Adobe har inte stöd för att tillämpa officiella, Adobe-tillhandahållna patchar med den här metoden. Använd följande metod på egen risk. Använd [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE){target="_blank"} om du vill tillämpa officiella korrigeringar. Utför alltid omfattande testning innan du distribuerar någon anpassad patch.
