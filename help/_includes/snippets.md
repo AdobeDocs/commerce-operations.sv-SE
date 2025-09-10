@@ -1,7 +1,7 @@
 ---
-source-git-commit: 102fee9672c75c94c7d18d47562338f8eff97f11
+source-git-commit: c8a20ad1b0b57724f389cfa5c63f6ae542758c2b
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '488'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->När säkerhetsuppdateringen har installerats måste Adobe Commerce B2B-handlare även uppdatera till den senaste kompatibla versionen av B2B-säkerhetsuppdateringen. Se [Versionsinformation för B2B](https://experienceleague.adobe.com/sv/docs/commerce-admin/b2b/release-notes).
+>När säkerhetsuppdateringen har installerats måste Adobe Commerce B2B-handlare även uppdatera till den senaste kompatibla versionen av B2B-säkerhetsuppdateringen. Se [Versionsinformation för B2B](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/release-notes).
 
 ## Endast Adobe Commerce {#ee-only}
 
@@ -80,3 +80,9 @@ ht-degree: 0%
 ## PHP-processkontroll {#php-process-control}
 
 Innan du kan köra indexerare i parallellt läge måste du aktivera stöd för processkontroll (`pcntl`) i PHP. Se [Installation](https://www.php.net/manual/en/pcntl.installation.php) i PHP-dokumentationen.
+
+## Egna patchar {#custom-patches-disclaimer}
+
+>[!IMPORTANT]
+>
+>Adobe har inte stöd för att tillämpa officiella, Adobe-tillhandahållna patchar med den här metoden. Använd följande metod på egen risk. Använd [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"} om du vill tillämpa officiella korrigeringar. Utför alltid omfattande testning innan du distribuerar någon anpassad patch.

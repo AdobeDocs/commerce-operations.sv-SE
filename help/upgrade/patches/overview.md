@@ -2,7 +2,7 @@
 title: Så här fungerar korrigeringar
 description: Lär dig mer om de olika typerna av patchar för Adobe Commerce och hur de fungerar.
 exl-id: d7072ed4-7d51-41fe-881a-aae3b2000b55
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: c8a20ad1b0b57724f389cfa5c63f6ae542758c2b
 workflow-type: tm+mt
 source-wordcount: '533'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Du hittar snabbkorrigeringar i [Säkerhetscenter](https://magento.com/security/p
 
 Enskilda korrigeringsfiler innehåller korrigeringar av låg kvalitet för ett specifikt problem. Dessa korrigeringar tillämpas på den senaste delversionen som stöds (till exempel 2.4.x), men kan saknas i den tidigare delversionen som stöds (till exempel 2.3.x). Adobe släpper enskilda patchar efter behov.
 
-Använd [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE){target="_blank"} för att tillämpa enskilda korrigeringar.
+Använd [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"} för att tillämpa enskilda korrigeringar.
 
 >[!NOTE]
 >
@@ -51,7 +51,9 @@ Använd [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/c
 
 ## Egna patchar
 
-Ibland tar det ett tag för Adobe Engineering Team att inkludera en felkorrigering som gjorts på GitHub i en Adobe Commerce Composer-version. Under tiden kan du skapa en patch från GitHub och använda plugin-programmet [`cweagans/composer-patches`](https://github.com/cweagans/composer-patches/) för att tillämpa den på din Composer-baserade installation.
+Ibland kan det ta en stund för Adobe Engineering Team att inkludera en felkorrigering som gjorts på GitHub i en officiell Adobe Commerce-version. Under tiden kan du skapa en patch från GitHub och använda plugin-programmet [`cweagans/composer-patches`](https://github.com/cweagans/composer-patches/) för att tillämpa den på din Composer-baserade installation.
+
+{{custom-patches-disclaimer}}
 
 Använd [kommandoraden](apply.md#command-line) eller [disposition](apply.md#composer) för att använda anpassade korrigeringsfiler.
 
@@ -90,10 +92,10 @@ index c8a6fef58d31..7d01c195791e 100644
 
 Du kan använda patchar på något av följande sätt:
 
-- [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE){target="_blank"}
+- [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
 - [Kommandorad](/help/upgrade/patches/apply.md#command-line)
 - [Disposition](/help/upgrade/patches/apply.md#composer)
 
 >[!NOTE]
 >
->Information om hur du tillämpar en korrigering på ett Adobe Commerce-infrastrukturprojekt finns i [Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i _Commerce på molnet_.
+>Information om hur du tillämpar en korrigering på ett Adobe Commerce-infrastrukturprojekt finns i [Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i _Commerce på molnet_.

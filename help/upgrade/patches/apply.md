@@ -2,9 +2,9 @@
 title: Tillämpa korrigeringar
 description: Lär dig mer om metoderna för att använda korrigeringsfiler i ett Adobe Commerce-projekt.
 exl-id: 1d5d81ad-0115-4575-adfd-dde7c2826d85
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: c8a20ad1b0b57724f389cfa5c63f6ae542758c2b
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '312'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Du kan använda patchar på något av följande sätt:
 
-- [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE){target="_blank"}
+- [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
 - [Kommandorad](../patches/apply.md#command-line)
 - [Disposition](../patches/apply.md#composer)
 
@@ -24,9 +24,7 @@ Du kan använda patchar på något av följande sätt:
 
 ## Disposition
 
->[!IMPORTANT]
->
->Använd [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE){target="_blank"} om du vill tillämpa officiella kvalitetspatchar. Utför alltid omfattande testning innan du distribuerar någon anpassad patch.
+{{custom-patches-disclaimer}}
 
 Så här använder du en anpassad korrigering med Composer:
 
