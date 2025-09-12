@@ -54,7 +54,7 @@ I programvara är det en användarroll med fullständig administratörsbehörigh
 I Adobe Commerce har administratörsanvändare fullständig behörighet och tillgång till alla funktioner, alternativ och funktioner i Admin.
 De kan också skapa användare och roller.
 
-Läs mer: [Lägga till användare](https://experienceleague.adobe.com/docs/commerce-admin/systems/user-accounts/permissions-users-all.html)
+Läs mer: [Lägga till användare](https://experienceleague.adobe.com/docs/commerce-admin/systems/user-accounts/permissions-users-all.html?lang=sv-SE)
 
 _Termattribut :_
 
@@ -70,7 +70,7 @@ Det lösenordsskyddade back office i din butik där beställningar, kataloger, i
 Användare har tillgång till administrationsområdet för att hantera butiken, inklusive produkter, order, leveranser, CMS-innehåll, design av butiken, kundinformation osv.
 Administratörsanvändare har en associerad roll med behörigheter som styr åtkomst till funktioner, alternativ och funktioner.
 
-Läs mer: [Adobe Commerce användarhandbok](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html)
+Läs mer: [Adobe Commerce användarhandbok](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html?lang=sv-SE)
 
 _Termattribut :_
 
@@ -84,7 +84,7 @@ _substantiv_
 
 ADMIN-variabler är projektmiljövariabler som åsidosätter konfigurationsinställningarna för administratörskontot för åtkomst till administratörsgränssnittet.
 
-Läs mer: [ADMIN-variabler](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-admin.html)
+Läs mer: [ADMIN-variabler](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-admin.html?lang=sv-SE)
 
 _Termattribut :_
 
@@ -96,7 +96,7 @@ _substantiv_
 
 Det interna områdesnamn som tilldelats administratören.
 
-Läs mer: [Adobe Commerce användarhandbok](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html)
+Läs mer: [Adobe Commerce användarhandbok](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html?lang=sv-SE)
 
 _Termattribut :_
 
@@ -190,7 +190,7 @@ Affärsfronten innehåller en valutaväljare för flera godkända valutor för e
 Valutasymboler visas i produktpriser och försäljningsdokument som order och fakturor.
 Du kan anpassa valutasymbolerna efter behov och ange hur priset ska visas separat för varje butik eller vy.
 
-Läs mer: [Valuta](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/currency/currency.html)
+Läs mer: [Valuta](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/currency/currency.html?lang=sv-SE)
 
 _Termattribut :_
 
@@ -212,13 +212,13 @@ _Termattribut :_
 _substantiv_
 
 En enhet för sidutdata som återger visst distinkt innehåll - information, användargränssnittselement - allt som är visuellt påtagligt för slutanvändaren.
-[Block](https://experienceleague.adobe.com/docs/commerce-admin/content-design/elements/blocks/blocks.html) implementeras och tillhandahålls av moduler.
+[Block](https://experienceleague.adobe.com/docs/commerce-admin/content-design/elements/blocks/blocks.html?lang=sv-SE) implementeras och tillhandahålls av moduler.
 Blocken använder mallar för att generera HTML.
 Exempel på block är en kategorilista, en minikundvagn, produkttaggar och produktlista.
 
-[Dynamiska block](https://experienceleague.adobe.com/docs/commerce-admin/content-design/elements/dynamic-blocks/dynamic-blocks.html) tillhandahåller innehåll baserat på logik, till exempel prisregler.
+[Dynamiska block](https://experienceleague.adobe.com/docs/commerce-admin/content-design/elements/dynamic-blocks/dynamic-blocks.html?lang=sv-SE) tillhandahåller innehåll baserat på logik, till exempel prisregler.
 
-Page Builder utökas när [block](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/add-content/block.html) och [dynamiska block](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/add-content/dynamic-block.html) skapas.
+Page Builder utökas när [block](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/add-content/block.html?lang=sv-SE) och [dynamiska block](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/add-content/dynamic-block.html?lang=sv-SE) skapas.
 
 _Termattribut :_
 
@@ -248,7 +248,7 @@ _adjektiv_
 
 Ett detaljhandelsföretag med en permanent fysisk plats, till skillnad från företag som fungerar praktiskt taget eller enbart via internet.
 
-För [Inventory management](https://experienceleague.adobe.com/docs/commerce-admin/inventory/sources/sources-manage.html) och [Order Management](#oms) är den här butiken en källa för att spåra produktkvantiteter, leveransorder och stöd för upphämtning i butik.
+För [Inventory management](https://experienceleague.adobe.com/docs/commerce-admin/inventory/sources/sources-manage.html?lang=sv-SE) och [Order Management](#oms) är den här butiken en källa för att spåra produktkvantiteter, leveransorder och stöd för upphämtning i butik.
 
 _Termattribut :_
 
@@ -274,7 +274,7 @@ _substantiv_
 Gör att kunderna kan sätta ihop en egen, anpassningsbar produkt av olika alternativ och konfigurationer.
 Varje objekt i paketet är antingen en separat enkel eller virtuell produkt.
 
-Läs mer: [Konfigurerbara produkter](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/types/product-create-configurable.html)
+Läs mer: [Konfigurerbara produkter](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/types/product-create-configurable.html?lang=sv-SE)
 
 _Termattribut :_
 
@@ -448,7 +448,7 @@ _substantiv_
 
 Molnvariabler är miljövariabler som är specifika för Adobe Commerce i molninfrastrukturen och använder prefixet **`MAGENTO_CLOUD`**.
 
-Läs mer: [Cloud-variabler](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-cloud.html)
+Läs mer: [Cloud-variabler](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-cloud.html?lang=sv-SE)
 
 _Termattribut :_
 
@@ -458,7 +458,7 @@ _Termattribut :_
 
 _substantiv_
 
-En särskild variant av [block](https://experienceleague.adobe.com/docs/commerce-admin/content-design/elements/blocks/blocks.html) som bara kan skapas i Admin och som inte kan refereras via layoutfiler.
+En särskild variant av [block](https://experienceleague.adobe.com/docs/commerce-admin/content-design/elements/blocks/blocks.html?lang=sv-SE) som bara kan skapas i Admin och som inte kan refereras via layoutfiler.
 
 _Termattribut :_
 
@@ -619,7 +619,7 @@ _substantiv_
 
 En distributionsnyckel är den offentliga nyckeln för ditt projekt SSH och ger skrivskyddad eller skrivskyddad (om den är aktiverad) åtkomst till en Git-databas.
 
-Läs mer: [Säkra anslutningar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/secure-connections.html)
+Läs mer: [Säkra anslutningar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/secure-connections.html?lang=sv-SE)
 
 _Termattribut :_
 
@@ -688,7 +688,7 @@ _substantiv_
 
 En uppsättning skript och verktyg som är utformade för att hantera och driftsätta Commerce-programmet. Det här paketet förenklar många Adobe Commerce-processer för molninfrastruktur, bland annat distribution till en Docker-miljö, hantering av kroner, verifiering av projektkonfiguration och användning av Adobe-korrigeringsfiler.
 
-Läs mer: [ece-tools-paket](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/package-overview.html)
+Läs mer: [ece-tools-paket](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/package-overview.html?lang=sv-SE)
 
 _Termattribut :_
 
@@ -978,7 +978,7 @@ _substantiv_
 MAGEID är vanligtvis faktureringskontakten på Adobe Commerce-kontot (och är kanske inte projektägare till Adobe Commerce i molninfrastrukturprojekt).
 För åtkomstbehörighet till Adobe Commerce och Adobe Commerce för molninfrastrukturpaket måste du använda åtkomstnycklar som är kopplade till ett MAGEID som har beviljats åtkomst till dessa paket.
 
-Läs mer: [Hämta dina autentiseringsnycklar](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html)
+Läs mer: [Hämta dina autentiseringsnycklar](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html?lang=sv-SE)
 
 _Termattribut :_
 
@@ -989,7 +989,7 @@ _Termattribut :_
 _substantiv_
 
 I marknadsförings- och detaljhandelsledet läggs en procentandel till kostnaden för en artikel för att fastställa detaljhandelspriset.
-[Konfigurera markering](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/settings/settings-advanced-custom-options.html), eller markering, för en produkt med anpassningsbara alternativ.
+[Konfigurera markering](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/settings/settings-advanced-custom-options.html?lang=sv-SE), eller markering, för en produkt med anpassningsbara alternativ.
 
 Under utvecklingen är det ett datorspråk som styr bearbetning, presentation och formatering av text.
 Taggar för kod är kodfragment som lägger till funktioner eller innehåll på en CMS-sida eller ett-block.
@@ -1087,7 +1087,7 @@ _substantiv_
 
 Insvepning är en säkerhetsfunktion som gör det möjligt för Adobe Commerce på molninfrastrukturen att blockera all trafik som inte är snabb för att förhindra DDoS-attacker genom att gå till molninfrastrukturen (ursprung).
 
-Läs mer: [Insvepning med snabbt ursprung](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html)
+Läs mer: [Insvepning med snabbt ursprung](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html?lang=sv-SE)
 
 _Termattribut :_
 
@@ -1105,7 +1105,7 @@ Dessa kontroller kallas även&quot;innehållstyper&quot;.
 Merchants kan designa layouter och sidor utan kodningsupplevelse.
 Utvecklare kan utöka Page Builder med stöd för tillägg.
 
-Läs mer: [Användarhandbok för Page Builder](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/introduction.html), [DevDocs för Page Builder](https://developer.adobe.com/commerce/frontend-core/page-builder/)
+Läs mer: [Användarhandbok för Page Builder](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/introduction.html?lang=sv-SE), [DevDocs för Page Builder](https://developer.adobe.com/commerce/frontend-core/page-builder/)
 
 _Termattribut :_
 
@@ -1397,8 +1397,8 @@ i åtkomstwebbadresserna för din Commerce-instans eller från instansinformatio
 
 Läs mer:
 
-[Adobe Commerce as a Cloud Service Basics](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/getting-started#adobe-commerce-as-a-cloud-service-basics)
-[Adobe Commerce Optimizer Getting Started](https://experienceleague.adobe.com/en/docs/commerce/optimizer/get-started#manage-instances)
+[Adobe Commerce as a Cloud Service Basics](https://experienceleague.adobe.com/sv/docs/commerce/cloud-service/getting-started#adobe-commerce-as-a-cloud-service-basics)
+[Adobe Commerce Optimizer Getting Started](https://experienceleague.adobe.com/sv/docs/commerce/optimizer/get-started#manage-instances)
 
 _Termattribut :_
 
@@ -1435,7 +1435,7 @@ Målen för UI-komponentsystemet är följande:
 * Uppdatera komponentdata med AJAX
 * Vi presenterar en ny DSL för att skapa ovanstående objekt
 
-Läs mer: [Guiden för gränssnittskomponenter](https://developer.adobe.com/commerce/frontend-core/ui-components/), [Page Builder](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/introduction.html)
+Läs mer: [Guiden för gränssnittskomponenter](https://developer.adobe.com/commerce/frontend-core/ui-components/), [Page Builder](https://experienceleague.adobe.com/docs/commerce-admin/page-builder/introduction.html?lang=sv-SE)
 
 _Termattribut :_
 
@@ -1474,7 +1474,7 @@ Leverantörstillverkad kod som utökar eller anpassar Commerce beteende och fung
 VBE-programmen testas grundligt och ingår i alla versioner av Adobe Commerce som stöds.
 Ett VBE kan innehålla moduler, teman och språkpaket.
 
-Mer information finns i avsnittet [Leverantörspaket ](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/modules/upgrade.html).
+Mer information finns i avsnittet [Leverantörspaket ](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/modules/upgrade.html?lang=sv-SE).
 
 _Termattribut :_
 
@@ -1540,7 +1540,7 @@ _Termattribut :_
 
 _substantiv_
 
-En [widget](https://experienceleague.adobe.com/docs/commerce-admin/content-design/elements/widgets/widgets.html) är ett förberett kodfragment som kan användas för att placera block, länkar och dynamiskt innehåll på specifika platser på butikssidor.
+En [widget](https://experienceleague.adobe.com/docs/commerce-admin/content-design/elements/widgets/widgets.html?lang=sv-SE) är ett förberett kodfragment som kan användas för att placera block, länkar och dynamiskt innehåll på specifika platser på butikssidor.
 Ni kan använda widgetar för att skapa landningssidor för marknadsföringskampanjer, visa kampanjinnehåll på specifika platser i hela butiken.
 Du kan också använda widgetar för att lägga till interaktiva element och åtgärdsblock för externa granskningssystem, videochatt, röstformulär och prenumerationsformulär, eller för att tillhandahålla navigeringselement för taggmoln och bildreglage.
 
