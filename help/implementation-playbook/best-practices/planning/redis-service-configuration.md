@@ -4,9 +4,9 @@ description: Lär dig hur du förbättrar cachelagringsprestanda med den utökad
 role: Developer, Admin
 feature: Best Practices, Cache
 exl-id: 8b3c9167-d2fa-4894-af45-6924eb983487
-source-git-commit: bbebb414ae3b8c255e17b1f3673a6c4b7c6f23b2
+source-git-commit: 9dc17a7ec44d9c146fdc2ec48e128beacc298299
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '1142'
 ht-degree: 0%
 
 ---
@@ -30,13 +30,13 @@ stage:
     REDIS_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
 ```
 
-Om du vill se miljökonfiguration för molninfrastruktur läser du [`REDIS_BACKEND`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=sv-SE#redis_backend) i _Commerce on Cloud Infrastructure Guide_.
+Om du vill se miljökonfiguration för molninfrastruktur läser du [`REDIS_BACKEND`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_backend) i _Commerce on Cloud Infrastructure Guide_.
 
 Information om lokala installationer finns i [Konfigurera Redis-sidcache](../../../configuration/cache/redis-pg-cache.md#configure-redis-page-caching) i _konfigurationshandboken_.
 
 >[!NOTE]
 >
->Kontrollera att du använder den senaste versionen av paketet `ece-tools`. Om inte, [uppgradera till den senaste versionen](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/update-package.html?lang=sv-SE). Du kan kontrollera vilken version som är installerad i din lokala miljö med hjälp av CLI-kommandot `composer show magento/ece-tools`.
+>Kontrollera att du använder den senaste versionen av paketet `ece-tools`. Om inte, [uppgradera till den senaste versionen](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/update-package.html). Du kan kontrollera vilken version som är installerad i din lokala miljö med hjälp av CLI-kommandot `composer show magento/ece-tools`.
 
 
 ### L2-cacheminnets storlek (Adobe Commerce Cloud)
@@ -91,13 +91,13 @@ stage:
     REDIS_USE_SLAVE_CONNECTION: true
 ```
 
-Se [REDIS_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=sv-SE#redis_use_slave_connection) i _Commerce on Cloud Infrastructure Guide_.
+Se [REDIS_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_use_slave_connection) i _Commerce on Cloud Infrastructure Guide_.
 
 För Adobe Commerce lokala installationer konfigurerar du den nya Redis-cacheimplementeringen med kommandona `bin/magento:setup`. Se [Använd Redis för standardcache](../../../configuration/cache/redis-pg-cache.md#configure-redis-page-caching) i _Konfigurationshandboken_.
 
 >[!WARNING]
 >
->Konfigurera _inte_ en Redis-slavanslutning för molninfrastrukturprojekt med en [skalad/delad arkitektur](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/scaled-architecture.html?lang=sv-SE). Detta orsakar Redis-anslutningsfel. Se [Redis-konfigurationsvägledning](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=sv-SE#redis_use_slave_connection) i guiden _Commerce om molninfrastruktur_.
+>Konfigurera _inte_ en Redis-slavanslutning för molninfrastrukturprojekt med en [skalad/delad arkitektur](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/scaled-architecture.html). Detta orsakar Redis-anslutningsfel. Se [Redis-konfigurationsvägledning](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_use_slave_connection) i guiden _Commerce om molninfrastruktur_.
 
 ## Förinläsningsnycklar
 
@@ -124,42 +124,49 @@ Lokala installationer finns i [Redis-förinläsningsfunktionen](../../../configu
 
 ## Aktivera inaktuell cache
 
-Minska väntetiderna för lås och förbättra prestanda - särskilt när du hanterar många block- och cachenycklar - genom att använda ett föråldrat cacheminne när du genererar ett nytt cacheminne parallellt. Aktivera inaktuell cache och definiera cachetyper i konfigurationsfilen `.magento.env.yaml`:
+Minska väntetiderna för lås och förbättra prestanda - särskilt när du hanterar många block- och cachenycklar - genom att använda ett föråldrat cacheminne när du genererar ett nytt cacheminne parallellt. Aktivera inaktuell cache och definiera cachetyper i konfigurationsfilen `config.php` (endast molnet):
 
-```yaml
-stage:
-  deploy:
-    REDIS_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
-    CACHE_CONFIGURATION:
-      _merge: true
-      default:
-        backend_options:
-          use_stale_cache: false
-      stale_cache_enabled:
-        backend_options:
-          use_stale_cache: true
-      type:
-        default:
-          frontend: "default"
-        layout:
-          frontend: "stale_cache_enabled"
-        block_html:
-          frontend: "stale_cache_enabled"
-        reflection:
-          frontend: "stale_cache_enabled"
-        config_integration:
-          frontend: "stale_cache_enabled"
-        config_integration_api:
-          frontend: "stale_cache_enabled"
-        full_page:
-          frontend: "stale_cache_enabled"
-        translate:
-          frontend: "stale_cache_enabled"
+```php
+'cache' => [
+        'frontend' => [
+            'stale_cache_enabled' => [
+                'backend' => '\\Magento\\Framework\\Cache\\Backend\\RemoteSynchronizedCache',
+                'backend_options' => [
+                    'remote_backend' => '\\Magento\\Framework\\Cache\\Backend\\Redis',
+                    'remote_backend_options' => [
+                        'persistent' => 0,
+                        'server' => 'localhost',
+                        'database' => '4',
+                        'port' => '6370',
+                        'password' => ''
+                    ],
+                    'local_backend' => 'Cm_Cache_Backend_File',
+                    'local_backend_options' => [
+                        'cache_dir' => '/dev/shm/'
+                    ],
+                    'use_stale_cache' => true,
+                ],
+                'frontend_options' => [
+                    'write_control' => false,
+                ],
+            ]
+        ],
+        'type' => [
+            'default' => ['frontend' => 'default'],
+            'layout' => ['frontend' => 'stale_cache_enabled'],
+            'block_html' => ['frontend' => 'stale_cache_enabled'],
+            'reflection' => ['frontend' => 'stale_cache_enabled'],
+            'config_integration' => ['frontend' => 'stale_cache_enabled'],
+            'config_integration_api' => ['frontend' => 'stale_cache_enabled'],
+            'full_page' => ['frontend' => 'stale_cache_enabled'],
+            'translate' => ['frontend' => 'stale_cache_enabled']
+        ],
+    ]
 ```
 
 >[!NOTE]
 >
->I det föregående exemplet är cachen `full_page` inte relevant för Adobe Commerce i molninfrastrukturprojekt, eftersom de använder [Fast](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/cdn/fastly).
+>I det föregående exemplet är cachen `full_page` inte relevant för Adobe Commerce i molninfrastrukturprojekt, eftersom de använder [Fast](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/cdn/fastly).
 
 Information om hur du konfigurerar lokala installationer finns i [Inaktuella cachealternativ](../../../configuration/cache/level-two-cache.md#stale-cache-options) i _Konfigurationshandboken_.
 
@@ -200,7 +207,7 @@ Genom att separera Redis-cachen från Redis-sessionen kan du hantera cachen och 
        rabbitmq: "rabbitmq:rabbitmq"
    ```
 
-1. Skicka en [Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att begära etablering av en ny Redis-instans som är dedikerad till sessioner i produktions- och mellanlagringsmiljöer. Inkludera de uppdaterade konfigurationsfilerna för `.magento/services.yaml` och `.magento.app.yaml`. Detta orsakar inga driftavbrott, men en distribution krävs för att aktivera den nya tjänsten.
+1. Skicka en [Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att begära etablering av en ny Redis-instans som är dedikerad till sessioner i produktions- och mellanlagringsmiljöer. Inkludera de uppdaterade konfigurationsfilerna för `.magento/services.yaml` och `.magento.app.yaml`. Detta orsakar inga driftavbrott, men en distribution krävs för att aktivera den nya tjänsten.
 
 1. Kontrollera att den nya instansen körs och notera portnumret.
 
@@ -222,7 +229,6 @@ Genom att separera Redis-cachen från Redis-sessionen kan du hantera cachen och 
    SESSION_CONFIGURATION:
      _merge: true
      redis:
-       port: 6374 # check the port in $MAGENTO_CLOUD_RELATIONSHIPS and put it here (by default, you can delete this line!!)
        timeout: 5
        disable_locking: 1
        bot_first_lifetime: 60
@@ -237,7 +243,7 @@ Genom att separera Redis-cachen från Redis-sessionen kan du hantera cachen och 
    redis-cli -h 127.0.0.1 -p 6374 -n 0 FLUSHDB
    ```
 
-Under distributionen bör du se följande rader i [bygg- och distributionsloggen](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/test/log-locations.html?lang=sv-SE#build-and-deploy-logs):
+Under distributionen bör du se följande rader i [bygg- och distributionsloggen](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/test/log-locations.html#build-and-deploy-logs):
 
 ```
 W:   - Downloading colinmollenhour/credis (1.11.1)
@@ -269,6 +275,67 @@ stage:
             compress_threshold: 20480     # don't compress files smaller than this value
             compression_lib: 'gzip'       # snappy and lzf for performance, gzip for high compression (~69%)
 ```
+
+## Aktivera asynkron Redis-frigivning (lazyfree)
+
+Om du vill aktivera `lazyfree` på Adobe Commerce i molninfrastrukturen skickar du en [Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) med en begäran om att följande Redis-konfiguration ska användas på din eller dina miljöer:
+
+```
+lazyfree-lazy-eviction yes
+lazyfree-lazy-expire yes
+lazyfree-lazy-server-del yes
+replica-lazy-flush yes
+lazyfree-lazy-user-del yes
+```
+
+När lazyfree är aktiverat avlastar Redis minnesåtergivningen till bakgrundstrådar för borttagningar, förfallotider, serverinitierade borttagningar, användarborttagningar och tömningar av replikdatauppsättningar. Detta minskar blockeringen av huvudtråden och kan minska fördröjningen för förfrågningar.
+
+>[!NOTE]
+>
+>Alternativet `lazyfree-lazy-user-del yes` gör att kommandot `DEL` beter sig som `UNLINK`, som omedelbart bryter länken till tangenterna och frigör deras minne asynkront.
+
+>[!WARNING]
+>
+>Eftersom frigöring sker i bakgrunden, kommer minne som används av borttagna/utgångna/vräknade tangenter att allokeras tills bakgrundstrådarna slutför arbetet. Om Redis redan har ett starkt minnestryck bör du testa försiktigt och överväga att minska minnestrycket först (till exempel inaktivera blockcache för specifika fall och separera cache- och sessionsinstanser från Redis enligt beskrivningen ovan).
+
+## Aktivera Redis-flertrådig I/O
+
+Om du vill aktivera Redis I/O-trådning på Adobe Commerce i molninfrastrukturen skickar du en [Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) med en begäran om konfigurationen nedan. Detta kan förbättra genomströmningen genom att avlasta socketläsningar/-skrivningar och kommandoparsning från huvudtråden, till priset av högre CPU-användning. Validera under inläsning och övervaka dina värdar.
+
+```
+io-threads-do-reads yes
+io-threads 8 # choose a value lower than the number of CPU cores (check with nproc), then tune under load
+```
+
+>[!NOTE]
+>
+>I/O-trådar fungerar parallellt med klientens I/O och endast parsing. Redis-kommandokörning förblir entrådad.
+
+>[!WARNING]
+>
+>Att aktivera I/O-trådar kan öka CPU användning och är inte till någon nytta för alla arbetsbelastningar. Börja med ett konservativt värde och ett riktmärke. Om fördröjningen ökar eller CPU mättas minskar du `io-threads` eller inaktiverar läsningar i I/O-trådar.
+
+## Öka tidsåtgången och antalet försök för Redis-klienten
+
+Öka cacheklientens tolerans mot övergående mättnad genom att justera backend-alternativen i `.magento.env.yaml`:
+
+```yaml
+stage:
+  deploy:
+    CACHE_CONFIGURATION:
+      _merge: true
+      frontend:
+        default:
+          backend_options:
+            read_timeout: 10
+            connect_retries: 5
+```
+
+De här inställningarna ökar klienttoleransen för överbelastning på Redis genom att förlänga svarstidsfönstret och försöka ansluta igen. Detta kan minska intermittenta `cannot connect to localhost:6370`- och lästimeoutfel under korta toppar.
+
+>[!NOTE]
+>
+>De är inte en korrigering för beständig överlagring.
 
 ## Ytterligare information
 
