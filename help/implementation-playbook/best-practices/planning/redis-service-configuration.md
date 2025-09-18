@@ -30,13 +30,13 @@ stage:
     REDIS_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
 ```
 
-Om du vill se miljökonfiguration för molninfrastruktur läser du [`REDIS_BACKEND`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_backend) i _Commerce on Cloud Infrastructure Guide_.
+Om du vill se miljökonfiguration för molninfrastruktur läser du [`REDIS_BACKEND`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=sv-SE#redis_backend) i _Commerce on Cloud Infrastructure Guide_.
 
 Information om lokala installationer finns i [Konfigurera Redis-sidcache](../../../configuration/cache/redis-pg-cache.md#configure-redis-page-caching) i _konfigurationshandboken_.
 
 >[!NOTE]
 >
->Kontrollera att du använder den senaste versionen av paketet `ece-tools`. Om inte, [uppgradera till den senaste versionen](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/update-package.html). Du kan kontrollera vilken version som är installerad i din lokala miljö med hjälp av CLI-kommandot `composer show magento/ece-tools`.
+>Kontrollera att du använder den senaste versionen av paketet `ece-tools`. Om inte, [uppgradera till den senaste versionen](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/update-package.html?lang=sv-SE). Du kan kontrollera vilken version som är installerad i din lokala miljö med hjälp av CLI-kommandot `composer show magento/ece-tools`.
 
 
 ### L2-cacheminnets storlek (Adobe Commerce Cloud)
@@ -91,13 +91,13 @@ stage:
     REDIS_USE_SLAVE_CONNECTION: true
 ```
 
-Se [REDIS_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_use_slave_connection) i _Commerce on Cloud Infrastructure Guide_.
+Se [REDIS_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=sv-SE#redis_use_slave_connection) i _Commerce on Cloud Infrastructure Guide_.
 
 För Adobe Commerce lokala installationer konfigurerar du den nya Redis-cacheimplementeringen med kommandona `bin/magento:setup`. Se [Använd Redis för standardcache](../../../configuration/cache/redis-pg-cache.md#configure-redis-page-caching) i _Konfigurationshandboken_.
 
 >[!WARNING]
 >
->Konfigurera _inte_ en Redis-slavanslutning för molninfrastrukturprojekt med en [skalad/delad arkitektur](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/scaled-architecture.html). Detta orsakar Redis-anslutningsfel. Se [Redis-konfigurationsvägledning](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_use_slave_connection) i guiden _Commerce om molninfrastruktur_.
+>Konfigurera _inte_ en Redis-slavanslutning för molninfrastrukturprojekt med en [skalad/delad arkitektur](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/scaled-architecture.html?lang=sv-SE). Detta orsakar Redis-anslutningsfel. Se [Redis-konfigurationsvägledning](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=sv-SE#redis_use_slave_connection) i guiden _Commerce om molninfrastruktur_.
 
 ## Förinläsningsnycklar
 
@@ -166,7 +166,7 @@ Minska väntetiderna för lås och förbättra prestanda - särskilt när du han
 
 >[!NOTE]
 >
->I det föregående exemplet är cachen `full_page` inte relevant för Adobe Commerce i molninfrastrukturprojekt, eftersom de använder [Fast](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/cdn/fastly).
+>I det föregående exemplet är cachen `full_page` inte relevant för Adobe Commerce i molninfrastrukturprojekt, eftersom de använder [Fast](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/cdn/fastly).
 
 Information om hur du konfigurerar lokala installationer finns i [Inaktuella cachealternativ](../../../configuration/cache/level-two-cache.md#stale-cache-options) i _Konfigurationshandboken_.
 
@@ -207,7 +207,7 @@ Genom att separera Redis-cachen från Redis-sessionen kan du hantera cachen och 
        rabbitmq: "rabbitmq:rabbitmq"
    ```
 
-1. Skicka en [Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att begära etablering av en ny Redis-instans som är dedikerad till sessioner i produktions- och mellanlagringsmiljöer. Inkludera de uppdaterade konfigurationsfilerna för `.magento/services.yaml` och `.magento.app.yaml`. Detta orsakar inga driftavbrott, men en distribution krävs för att aktivera den nya tjänsten.
+1. Skicka en [Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att begära etablering av en ny Redis-instans som är dedikerad till sessioner i produktions- och mellanlagringsmiljöer. Inkludera de uppdaterade konfigurationsfilerna för `.magento/services.yaml` och `.magento.app.yaml`. Detta orsakar inga driftavbrott, men en distribution krävs för att aktivera den nya tjänsten.
 
 1. Kontrollera att den nya instansen körs och notera portnumret.
 
@@ -243,7 +243,7 @@ Genom att separera Redis-cachen från Redis-sessionen kan du hantera cachen och 
    redis-cli -h 127.0.0.1 -p 6374 -n 0 FLUSHDB
    ```
 
-Under distributionen bör du se följande rader i [bygg- och distributionsloggen](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/test/log-locations.html#build-and-deploy-logs):
+Under distributionen bör du se följande rader i [bygg- och distributionsloggen](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/test/log-locations.html?lang=sv-SE#build-and-deploy-logs):
 
 ```
 W:   - Downloading colinmollenhour/credis (1.11.1)
@@ -278,7 +278,7 @@ stage:
 
 ## Aktivera asynkron Redis-frigivning (lazyfree)
 
-Om du vill aktivera `lazyfree` på Adobe Commerce i molninfrastrukturen skickar du en [Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) med en begäran om att följande Redis-konfiguration ska användas på din eller dina miljöer:
+Om du vill aktivera `lazyfree` på Adobe Commerce i molninfrastrukturen skickar du en [Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) med en begäran om att följande Redis-konfiguration ska användas på din eller dina miljöer:
 
 ```
 lazyfree-lazy-eviction yes
@@ -300,7 +300,7 @@ När lazyfree är aktiverat avlastar Redis minnesåtergivningen till bakgrundstr
 
 ## Aktivera Redis-flertrådig I/O
 
-Om du vill aktivera Redis I/O-trådning på Adobe Commerce i molninfrastrukturen skickar du en [Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) med en begäran om konfigurationen nedan. Detta kan förbättra genomströmningen genom att avlasta socketläsningar/-skrivningar och kommandoparsning från huvudtråden, till priset av högre CPU-användning. Validera under inläsning och övervaka dina värdar.
+Om du vill aktivera Redis I/O-trådning på Adobe Commerce i molninfrastrukturen skickar du en [Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) med en begäran om konfigurationen nedan. Detta kan förbättra genomströmningen genom att avlasta socketläsningar/-skrivningar och kommandoparsning från huvudtråden, till priset av högre CPU-användning. Validera under inläsning och övervaka dina värdar.
 
 ```
 io-threads-do-reads yes
