@@ -2,10 +2,10 @@
 title: Lokal installationsöversikt
 description: Förstå installationsprocessen för lokal driftsättning av Adobe Commerce.
 exl-id: a9f5b241-d05d-462c-8c7f-479a264c988f
-source-git-commit: 7cc77a204d2a3c0773e6a0ab60e57e6e35f12091
+source-git-commit: 9ad18dac76f171ad0f90330e1a1347baa056403b
 workflow-type: tm+mt
-source-wordcount: '329'
-ht-degree: 3%
+source-wordcount: '502'
+ht-degree: 2%
 
 ---
 
@@ -14,13 +14,30 @@ ht-degree: 3%
 
 På den här sidan finns en översikt över hur du installerar Adobe Commerce på din egen infrastruktur. Installationsprocessen innebär att du konfigurerar servermiljön, skaffar den programvara och de autentiseringsuppgifter som krävs samt kör installationskommandot.
 
-Du kan installera Adobe Commerce på cirka 30 till 60 minuter. Den tid som krävs för att konfigurera servermiljön innan installationen varierar dock beroende på din erfarenhet och vilken teknik du väljer.
+Du kan installera Adobe Commerce lokalt på cirka 30 till 60 minuter. Den tid som krävs för att konfigurera servermiljön innan installationen varierar dock beroende på din erfarenhet och vilken teknik du väljer.
 
 >[!TIP]
 >
 >Du bör ha mellanliggande tekniska kunskaper och serveråtkomst för att kunna fortsätta.
 
-Installationen skapar en fullt fungerande Adobe Commerce-butik med både en [kundriktad butik](https://experienceleague.adobe.com/sv/docs/commerce-admin/start/storefront/storefront) och en [administrativ panel](https://experienceleague.adobe.com/sv/docs/commerce-admin/start/admin/admin). Du måste ha dina databasinloggningsuppgifter, domäninformation och autentiseringsnycklar klara innan du kan påbörja processen.
+Installationen skapar en fullt fungerande Adobe Commerce-butik med både en [kundriktad butik](https://experienceleague.adobe.com/en/docs/commerce-admin/start/storefront/storefront) och en [administrativ panel](https://experienceleague.adobe.com/en/docs/commerce-admin/start/admin/admin). Du måste ha dina databasinloggningsuppgifter, domäninformation och autentiseringsnycklar klara innan du kan påbörja processen.
+
+## Handläggaransvar
+
+Med Adobe Commerce lokalt kan du vara värd för och hantera din egen infrastruktur, inklusive servrar, värdmiljöer och systemunderhåll. Adobe ger särskilt stöd för Commerce centrala program:
+
+- Tillgång till produktuppdateringar och korrigeringar
+- Säkerhetsuppdateringar för att åtgärda säkerhetsluckor
+- Omfattande dokumentation som hjälper dig att hantera och optimera din egen lösning
+
+Ni har full kontroll över er miljö, vilket ger större anpassning och flexibilitet, men ni ansvarar för att säkerställa infrastrukturens prestanda, säkerhet och skalbarhet. Du ansvarar till exempel för följande:
+
+- Utformning, implementering, konfiguration, underhåll, felsökning och prestandatestning för alla Adobe Commerce på lokala system.
+   - Servrar, operativsystem, databaser, [!DNL PHP], sökning, cachelagring, helsidescache och leveransnätverk för innehåll. Vanliga teman kan omfatta (men inte begränsat till) [!DNL Nginx/Apache], [!DNL PHP], [!DNL MySQL/MariaDB], [!DNL Redis], [!DNL Elasticsearch/OpenSearch], [!DNL RabbitMQ], [!DNL Varnish], [!DNL DNS], [!DNL SSL/TLS certificates] och alla [!DNL CDN] som används.
+- Kapacitetsplanering, automatisk skalning, klustring, säkerhetskopiering, katastrofåterställning
+- Alla produkt- och kunddata, design, konfiguration och installation, program- och databasunderhåll, koddistribution, versionsuppgraderingar och korrigeringsprogram
+- Övervakning och varningar via APM/loggning/varningar (till exempel [!DNL New Relic], [!DNL Datadog], [!DNL ELK])
+- Säkerhetsuppdatering för operativsystem, [!DNL PHP], databas, maskinvaruhärdning och uppdateringar
 
 ## Arbetsflöde
 
