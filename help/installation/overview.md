@@ -20,7 +20,7 @@ Du kan installera Adobe Commerce lokalt på cirka 30 till 60 minuter. Den tid so
 >
 >Du bör ha mellanliggande tekniska kunskaper och serveråtkomst för att kunna fortsätta.
 
-Installationen skapar en fullt fungerande Adobe Commerce-butik med både en [kundriktad butik](https://experienceleague.adobe.com/en/docs/commerce-admin/start/storefront/storefront) och en [administrativ panel](https://experienceleague.adobe.com/en/docs/commerce-admin/start/admin/admin). Du måste ha dina databasinloggningsuppgifter, domäninformation och autentiseringsnycklar klara innan du kan påbörja processen.
+Installationen skapar en fullt fungerande Adobe Commerce-butik med både en [kundriktad butik](https://experienceleague.adobe.com/sv/docs/commerce-admin/start/storefront/storefront) och en [administrativ panel](https://experienceleague.adobe.com/sv/docs/commerce-admin/start/admin/admin). Du måste ha dina databasinloggningsuppgifter, domäninformation och autentiseringsnycklar klara innan du kan påbörja processen.
 
 ## Handläggaransvar
 
