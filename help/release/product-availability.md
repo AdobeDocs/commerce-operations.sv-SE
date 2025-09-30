@@ -2,7 +2,7 @@
 title: Produkttillgänglighet
 description: Läs mer om vilka Adobe Commerce-funktioner som stöds och kontrollera om de är kompatibla med vissa Adobe Commerce-utgåvor.
 exl-id: 7e8e8ac2-a0b9-4023-a813-c0f1293e54c2
-source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
+source-git-commit: d18a5d3b0723202328afe445ab1ba4673fa5f9b7
 workflow-type: tm+mt
 source-wordcount: '311'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Följande tabell visar versionsstödet för varje tillägg i förhållande till 
 
 ## Commerce Services
 
-[Commerce-tjänster](https://experienceleague.adobe.com/docs/commerce/user-guides/home.html?lang=sv-SE) är en uppsättning värdfunktioner från Adobe som ger robusta funktioner och snabba svarstider i kombination med din Commerce-instans.
+[Commerce-tjänster](https://experienceleague.adobe.com/docs/commerce/user-guides/home.html) är en uppsättning värdfunktioner från Adobe som ger robusta funktioner och snabba svarstider i kombination med din Commerce-instans.
 
 Handlarna bör använda den senaste versionen av en tjänst för att säkerställa högsta stabilitet och funktionalitet. Dokumentationen beskriver den version som släpps för tillfället.
 
@@ -44,4 +44,4 @@ Följande tabell visar versionsstödet för varje tjänst i förhållande till A
 
 {{$include /help/_includes/templated/product-availability-services.md}}
 
-<!-- Last updated from includes: 2025-08-06 12:51:01 -->
+<!-- Last updated from includes: 2025-09-23 12:01:22 -->
