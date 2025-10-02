@@ -57,11 +57,11 @@ Börja använda Adobe Commerce Extensibility-plattformen om du inte redan har gj
 
 När vi ständigt utökar möjligheterna i Adobe Commerce är det viktigt att du utvecklar den senaste versionen och definierar en uppgraderingsstrategi i dina projektplaner. På så sätt kan ni vara säkra, kompatibla och uppdaterade med de senaste förbättringarna som gör att ni kan öka försäljningen snabbare, arbeta effektivare och ligga steget före konkurrenterna nu och i framtiden.
 
-För att hjälpa dig att planera och budgetera för uppgraderingar bör du övervaka vårt [releaseschema](https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/schedule). Planera uppgraderingsuppgifter i teamets eftersläpning i förväg. Målet är att slutföra arbetet med GA.
+För att hjälpa dig att planera och budgetera för uppgraderingar bör du övervaka vårt [releaseschema](https://experienceleague.adobe.com/sv/docs/commerce-operations/release/planning/schedule). Planera uppgraderingsuppgifter i teamets eftersläpning i förväg. Målet är att slutföra arbetet med GA.
 
 - Använd förhandsversionen för att lära dig mer om varje ny release. Förhandsversionen är den allmänna tillgänglighetskoden som är tillgänglig för Adobe Commerce handlare och alla partners två veckor före den allmänna tillgängligheten. Om du har flera butiker använder du förhandsversionen i din basbutik och kontrollerar att dina anpassade moduler och teman är kompatibla med den.
 
-- Kontrollera checklistan för [Upgrade Plan](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/maintenance/upgrade-checklist) för Adobe Commerce om du vill ha hjälp med att planera uppgraderingen.
+- Kontrollera checklistan för [Upgrade Plan](https://experienceleague.adobe.com/sv/docs/commerce-operations/implementation-playbook/best-practices/maintenance/upgrade-checklist) för Adobe Commerce om du vill ha hjälp med att planera uppgraderingen.
 
 - Planera för uppgraderingar i början av året. Du måste boka en budget och resurser för att slutföra varje uppgradering. Kom ihåg att uppgraderingen kan variera avsevärt mellan olika projekt. Använd era upplevelser och kunskaper för att göra en så korrekt plan som möjligt.
 
@@ -73,7 +73,7 @@ Uppgraderingar bör göras regelbundet och inom en fördefinierad budget. Vi rek
 
 Utvärdera det arbete som ska utföras för uppgradering:
 
-- Granska [versionsinformationen](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/overview) för att förstå den nya versionens omfång och effekt.
+- Granska [versionsinformationen](https://experienceleague.adobe.com/sv/docs/commerce-operations/release/notes/overview) för att förstå den nya versionens omfång och effekt.
 
 - Använd [[!DNL Upgrade Compatibility Tool]](../upgrade-compatibility-tool/overview.md) för att identifiera potentiella problem som måste åtgärdas i din anpassade kod innan du försöker uppgradera till en senare version.
 
