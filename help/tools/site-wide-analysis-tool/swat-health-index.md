@@ -1,9 +1,9 @@
 ---
 title: Förstå hälsoindexpoäng och rekommendationer för SWAT
 description: Lär dig vad hälsoindexet för verktyget för webbplatsanalys innebär för din Adobe Commerce-webbplats. Upptäck hur ni tolkar poängen och använder rekommendationer effektivt.
-source-git-commit: e39e0229538bb245fbe744ebfd642572fc2dc790
+source-git-commit: d9b598e9399c26c8fb7c52e9f211029689343ce9
 workflow-type: tm+mt
-source-wordcount: '331'
+source-wordcount: '330'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 När du hämtar **[!DNL Recommendations Report]** från SWAT Dashboard innehåller PDF ett **[!DNL Site Wide Analysis Tool Health Index]**-poängvärde i avsnittet **Introduktion**:
 
-![Hälsoindexpoäng för hela analysverktyget för webbplatsen i den genererade rekommendationsrapporten](https://git.corp.adobe.com/AdobeDocs/commerce-operations.en/assets/38345/cf56a076-e5a8-488d-927d-a3989966a089)
+![Hälsoindexpoäng för hela analysverktyget för webbplatsen i den genererade rekommendationsrapporten](/help/assets/tools/swat-health-index-scroe.png)
 
 Med SWAT-hälsoindexet kan du övervaka och förbättra den övergripande hälsan på din Adobe Commerce-webbplats. Detta är ett vägledningsverktyg, inte ett absolut mått på godkänt eller ej godkänt.
 
