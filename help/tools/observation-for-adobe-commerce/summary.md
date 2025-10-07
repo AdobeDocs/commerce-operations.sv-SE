@@ -58,7 +58,7 @@ Bildrutan **[!UICONTROL Swap memory free in bytes]** visar, per nod, mängden SW
 
 ![CPU percent by host](../../assets/tools/cpu-percent-by-host.jpg)
 
-Sammanställningen av alla miljöer och noder visas i bildrutan **[!UICONTROL CPU % by host]**. Du bör avmarkera icke-produktionsmiljöer. Observera även alla instanser där alla noder för produktionsmiljön inte finns. Mer tips om hur CPU används finns i [Felsöka prestanda med New Relic på Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html).
+Sammanställningen av alla miljöer och noder visas i bildrutan **[!UICONTROL CPU % by host]**. Du bör avmarkera icke-produktionsmiljöer. Observera även alla instanser där alla noder för produktionsmiljön inte finns. Mer tips om hur CPU används finns i [Felsöka prestanda med New Relic på Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html?lang=sv-SE).
 
 ## [!UICONTROL Alerts during timeframe]
 
@@ -70,7 +70,7 @@ Sammanställningen av alla miljöer och noder visas i bildrutan **[!UICONTROL CP
 
 ![Användning i CPU](../../assets/tools/cpu-usage.jpg)
 
-Om **[!UICONTROL CPU Usage]**-bildrutan är tom är det en indikation på att infrastrukturprogrammet för [!DNL New Relic] inte är aktiverat. Om din webbplats finns på Starter visas inte den här informationen. Om din webbplats är på Pro kan du öppna en [supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html) och aktivera [!DNL New Relic Infrastructure] för din webbplats.
+Om **[!UICONTROL CPU Usage]**-bildrutan är tom är det en indikation på att infrastrukturprogrammet för [!DNL New Relic] inte är aktiverat. Om din webbplats finns på Starter visas inte den här informationen. Om din webbplats är på Pro kan du öppna en [supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE) och aktivera [!DNL New Relic Infrastructure] för din webbplats.
 
 ## [!UICONTROL Average Response Time]
 

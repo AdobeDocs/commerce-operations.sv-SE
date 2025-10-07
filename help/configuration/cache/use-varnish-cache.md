@@ -42,7 +42,7 @@ När du har installerat och konfigurerat lack för att arbeta med Commerce kan f
 
 ## Konfigurera Commerce att rensa bort lack
 
-Commerce tömmer Varnish-värdar efter att du har konfigurerat Varnish-värdar med kommandot [`magento setup:config:set`](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises#setupconfigset).
+Commerce tömmer Varnish-värdar efter att du har konfigurerat Varnish-värdar med kommandot [`magento setup:config:set`](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/cli-reference/commerce-on-premises#setupconfigset).
 
 Du kan använda den valfria parametern `--http-cache-hosts` för att ange en kommaavgränsad lista med Varnish-värdar och avlyssningsportar. Konfigurera alla varniska värdar, oavsett om du har en eller flera. (Separera inte värdar med ett blanksteg.)
 

@@ -25,8 +25,8 @@ Guiden _Konfiguration_ innehåller referensmaterial och begränsad vägledning f
 
 ## Konfiguration av Commerce Admin
 
-Det finns motsvarande ämnen i [Commerce användarhandbok](https://experienceleague.adobe.com/en/docs/commerce-admin/config/guide-overview) som kan hjälpa dig att förstå fältbeskrivningar för alla konfigurationsinställningar i Commerce Admin.
+Det finns motsvarande ämnen i [Commerce användarhandbok](https://experienceleague.adobe.com/sv/docs/commerce-admin/config/guide-overview) som kan hjälpa dig att förstå fältbeskrivningar för alla konfigurationsinställningar i Commerce Admin.
 
 ## Molnkonfiguration
 
-[!DNL Commerce on cloud infrastructure] använder en [uppsättning konfigurationsfiler](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/overview.html) för att uppdatera Commerce programfunktioner och tjänster i värdmiljöer. På grund av Adobe molnbaserade miljöers unika karaktär bör du alltid läsa [molnhandboken](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/overview.html) för ytterligare konfigurationskrav.
+[!DNL Commerce on cloud infrastructure] använder en [uppsättning konfigurationsfiler](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/overview.html?lang=sv-SE) för att uppdatera Commerce programfunktioner och tjänster i värdmiljöer. På grund av Adobe molnbaserade miljöers unika karaktär bör du alltid läsa [molnhandboken](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/overview.html?lang=sv-SE) för ytterligare konfigurationskrav.

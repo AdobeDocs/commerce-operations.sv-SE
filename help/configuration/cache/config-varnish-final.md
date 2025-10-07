@@ -83,4 +83,4 @@ Kontrollera att katalogen `<magento_root>/var/page_cache` är tom:
 
 >[!TIP]
 >
->Om 503-fel (Backend Fetch Failed) inträffar, se [Felsökning 503-fel (tjänsten är inte tillgänglig)](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshooting-503-errors.html) i _Adobe Commerce Help Center_.
+>Om 503-fel (Backend Fetch Failed) inträffar, se [Felsökning 503-fel (tjänsten är inte tillgänglig)](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshooting-503-errors.html?lang=sv-SE) i _Adobe Commerce Help Center_.

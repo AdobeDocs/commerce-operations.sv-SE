@@ -51,7 +51,7 @@ Filen `config.php` innehåller en lista med installerade moduler. Adobe Commerce
 Exempel:
 
 - Avinstallera komponenter: [`bin/magento setup:uninstall`](../../installation/tutorials/uninstall-modules.md)
-- Kontrollera komponenternas status: [`bin/magento module:status`](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises#modulestatus)
+- Kontrollera komponenternas status: [`bin/magento module:status`](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/cli-reference/commerce-on-premises#modulestatus)
 - Aktivera eller inaktivera komponenter: [`bin/magento module:disable`](../../installation/tutorials/manage-modules.md), [`bin/magento module:enable`](../../installation/tutorials/manage-modules.md).
 
 > _config.php_

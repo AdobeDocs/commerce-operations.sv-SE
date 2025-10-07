@@ -21,5 +21,5 @@ Commerce-programmet innehåller följande cron-grupper:
 - `index`, som uppdaterar [indexerare](../cli/manage-indexers.md)
 - `consumers`, som kör meddelandekön [containers](../cli/start-message-queues.md)
 - Dessa ämnen finns endast i Adobe Commerce
-   - `staging`, som kör [Mellanlagringsrelaterade](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/staging/content-staging) uppgifter
+   - `staging`, som kör [Mellanlagringsrelaterade](https://experienceleague.adobe.com/sv/docs/commerce-admin/content-design/staging/content-staging) uppgifter
    - `catalog_event`, som kör aktiviteter för mål- och kundvagnsregler
