@@ -1,10 +1,10 @@
 ---
 title: Avancerad lokal installation
-description: Lär dig mer om avancerade installationsscenarier för Adobe Commerce för infrastruktur som du äger.
+description: Lär dig mer om avancerade installationsscenarier för Adobe Commerce lokala distributioner. Upptäck komplexa konfigurationer och anpassade konfigureringsalternativ.
 exl-id: e16e750a-e068-4a63-8ad9-62043e2a8231
-source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '2313'
+source-wordcount: '2317'
 ht-degree: 0%
 
 ---
@@ -119,7 +119,7 @@ Följande alternativ anger användarinformation och autentiseringsuppgifter för
 
 Du kan skapa Admin-användaren under eller efter installationen. Om du skapar användaren under installationen krävs alla autentiseringsuppgifter för administratörer. Se [Exempel på lokala värdinstallationer](#sample-localhost-installations).
 
-Följande tabeller innehåller många men inte alla tillgängliga installationsparametrar. En fullständig lista finns i [Kommandoradsverktygshandboken](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/cli-reference/commerce-on-premises).
+Följande tabeller innehåller många men inte alla tillgängliga installationsparametrar. En fullständig lista finns i [Kommandoradsverktygshandboken](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises).
 
 | Namn | Värde | Obligatoriskt? |
 |--- |--- |--- |

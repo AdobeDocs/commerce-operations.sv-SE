@@ -1,12 +1,12 @@
 ---
 title: Implementera spelningsbok
-description: Läs om de effektivaste strategierna för planering, utveckling, lansering och underhåll av ditt Adobe Commerce-projekt.
+description: Lär dig mer om de effektivaste strategierna för planering, utveckling, lansering och underhåll av ditt Adobe Commerce-projekt. Upptäck metoder för lyckad implementering i alla projekttyper.
 exl-id: 2f82c68c-60c7-4a62-837b-492afc06e0db
 feature: Best Practices, Cloud, Integration
-source-git-commit: 581a7dbcc19c31df80e03cb9f321a6adb5fa1a73
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '251'
-ht-degree: 5%
+source-wordcount: '259'
+ht-degree: 0%
 
 ---
 

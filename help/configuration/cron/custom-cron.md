@@ -1,10 +1,10 @@
 ---
 title: Kronjobb
-description: Lär dig mer om cron-grupper och hur du skapar ett anpassat cron-jobb.
+description: Lär dig mer om cron-grupper och hur du skapar anpassade cron-jobb i Adobe Commerce. Upptäck schemalagda aktivitetsinställningar och konfiguration av kundgrupp.
 exl-id: a9d83af7-9979-4653-adc9-30ffeb13a5ce
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '155'
+source-wordcount: '167'
 ht-degree: 0%
 
 ---
@@ -21,5 +21,5 @@ Commerce-programmet innehåller följande cron-grupper:
 - `index`, som uppdaterar [indexerare](../cli/manage-indexers.md)
 - `consumers`, som kör meddelandekön [containers](../cli/start-message-queues.md)
 - Dessa ämnen finns endast i Adobe Commerce
-   - `staging`, som kör [Mellanlagringsrelaterade](https://experienceleague.adobe.com/sv/docs/commerce-admin/content-design/staging/content-staging) uppgifter
+   - `staging`, som kör [Mellanlagringsrelaterade](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/staging/content-staging) uppgifter
    - `catalog_event`, som kör aktiviteter för mål- och kundvagnsregler

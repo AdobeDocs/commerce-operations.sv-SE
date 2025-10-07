@@ -1,11 +1,11 @@
 ---
 title: Cache för statiskt innehåll
-description: Få en förståelse för hur man signerar statiskt innehåll och hur man aktiverar eller inaktiverar funktionen.
+description: Läs om signering av statisk innehållscache och prestandaoptimering i Adobe Commerce. Lär dig hur du aktiverar, inaktiverar och konfigurerar cachelagringsfunktioner.
 feature: Configuration, Cache, SCD
 exl-id: b54ceea2-b3a1-4dbb-ba87-743f2af0d2fb
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '468'
 ht-degree: 0%
 
 ---
@@ -35,9 +35,9 @@ Detta ändrar URL:en för de statiska filerna och tvingar webbläsaren att läsa
 
 Commerce aktiverar den här funktionen som standard, och Adobe rekommenderar att funktionen är aktiverad för att förhindra problem som rör webbläsare som använder gamla statiska resurser.
 
-Konfigurationen för signering av statiskt innehåll finns i [**[!UICONTROL Stores]**> Inställningar > Konfiguration >**[!UICONTROL Advanced]**>**[!UICONTROL Developer]**>**[!UICONTROL Static Files Settings]**](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/tools/developer-tools#static-file-signatures).
+Konfigurationen för signering av statiskt innehåll finns i [**[!UICONTROL Stores]**> Inställningar > Konfiguration >**[!UICONTROL Advanced]**>**[!UICONTROL Developer]**>**[!UICONTROL Static Files Settings]**](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/developer-tools#static-file-signatures).
 
-- **Endast lokal**: Den här konfigurationen är tillgänglig om din plats **inte** är i [produktionsläge](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html?lang=sv-SE#production-mode).
+- **Endast lokal**: Den här konfigurationen är tillgänglig om din plats **inte** är i [produktionsläge](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html#production-mode).
 - **Cloud**: Den här konfigurationen är dold eftersom produktionsläget används strikt. Du måste därför använda kommandoraden som visas nedan.
 
 ![Inställningar för statiska filer](../../assets/configuration/static-files-settings.png)

@@ -1,10 +1,10 @@
 ---
 title: Hantera cachen
-description: Hantera cachetyper och visa cachestatus från kommandoraden med Commerce CLI
+description: Lär dig hur du hanterar cachetyper och visar cachestatus med Adobe Commerce CLI-kommandon. Upptäck hantering och optimering av cacheminnen.
 exl-id: bbd76c00-727b-412e-a8e5-1e013a83a29a
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '618'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Du kan använda Adobe Commerce cachehanteringssystem för att förbättra presta
 >[!NOTE]
 >
 >
->Administratörer för företagswebbplatser kan hantera cacheminnet från administratören med hjälp av verktyget Cachehanteringssystem. Se [Cachehantering](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/tools/cache-management) i _handboken för administratörssystem_.
+>Commerce webbplatsadministratörer kan hantera cacheminnet från administratören med hjälp av verktyget Cachehanteringssystem. Se [Cachehantering](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management) i _handboken för administratörssystem_.
 
 
 ## Visa cachestatus
@@ -59,7 +59,7 @@ Current status:
 
 >[!TIP]
 >
->En detaljerad beskrivning av de standardcachetyper som stöds av Adobe Commerce finns i [Caches](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/tools/cache-management#caches) i _Admin Systems Guide_.
+>En detaljerad beskrivning av de standardcachetyper som stöds av Adobe Commerce finns i [Caches](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management#caches) i _Admin Systems Guide_.
 
 
 ## Aktivera eller inaktivera cachetyper

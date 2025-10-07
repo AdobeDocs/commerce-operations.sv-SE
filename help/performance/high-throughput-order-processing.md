@@ -1,11 +1,11 @@
 ---
 title: Bästa praxis för utcheckning av prestanda
-description: Lär dig hur du optimerar resultatet för utcheckningsupplevelser på din Adobe Commerce webbplats.
+description: Läs mer om de bästa sätten att arbeta med utcheckningsprestanda i Adobe Commerce. Upptäck riktlinjer och optimeringsstrategier för implementering.
 feature: Best Practices, Orders
 exl-id: dc2d0399-0d7f-42d8-a6cf-ce126e0b052d
-source-git-commit: ee7551374aa6d4ad462dd64ee3d05b934b43ce45
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '1121'
+source-wordcount: '1122'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Bästa praxis för utcheckning av prestanda
 
-Processen [Checka ut](https://experienceleague.adobe.com/sv/docs/commerce-admin/stores-sales/point-of-purchase/checkout/checkout-process) i Adobe Commerce är en viktig del av butiksupplevelsen. Den bygger på de inbyggda funktionerna [cart](https://experienceleague.adobe.com/sv/docs/commerce-admin/start/storefront/storefront#shopping-cart) och [checkout](https://experienceleague.adobe.com/sv/docs/commerce-admin/start/storefront/storefront#checkout-page) .
+Processen [Checka ut](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/point-of-purchase/checkout/checkout-process) i Adobe Commerce är en viktig del av butiksupplevelsen. Den bygger på de inbyggda funktionerna [cart](https://experienceleague.adobe.com/en/docs/commerce-admin/start/storefront/storefront#shopping-cart) och [checkout](https://experienceleague.adobe.com/en/docs/commerce-admin/start/storefront/storefront#checkout-page) .
 
 Prestanda är avgörande när det gäller att upprätthålla en bra användarupplevelse. Du kan optimera utcheckningsprestanda genom att konfigurera följande alternativ för **bearbetning av order med hög genomströmning**:
 
@@ -174,13 +174,13 @@ Den globala inställningen _Aktivera lager vid kundvagnsbeläggning_ avgör om e
 
 När alternativet är inaktiverat görs ingen lagerkontroll när en produkt läggs till i kundvagnen. Om inventeringskontrollen hoppas över kan vissa scenarier utanför lagret ge upphov till andra typer av fel. En lagerkontroll _alltid_ utförs vid orderplaceringssteget, även när den är inaktiverad.
 
-**Aktivera inläsning av kundvagn för lagerkontroll** är aktiverat (inställt på Ja) som standard. Om du vill inaktivera lagerkontrollen när vagnen läses in anger du **[!UICONTROL Enable Inventory Check On Cart Load]** till `No` i administratörsgränssnittet **Lagrar** > **Konfiguration** > **Katalog** > **Lager** > **Stock-alternativ** . Se [Konfigurera globala alternativ](https://experienceleague.adobe.com/sv/docs/commerce-admin/inventory/configuration/global-options) och [Kataloginventering](https://experienceleague.adobe.com/sv/docs/commerce-admin/inventory/guide-overview) i _användarhandboken_.
+**Aktivera inläsning av kundvagn för lagerkontroll** är aktiverat (inställt på Ja) som standard. Om du vill inaktivera lagerkontrollen när vagnen läses in anger du **[!UICONTROL Enable Inventory Check On Cart Load]** till `No` i administratörsgränssnittet **Lagrar** > **Konfiguration** > **Katalog** > **Lager** > **Stock-alternativ** . Se [Konfigurera globala alternativ](https://experienceleague.adobe.com/en/docs/commerce-admin/inventory/configuration/global-options) och [Kataloginventering](https://experienceleague.adobe.com/en/docs/commerce-admin/inventory/guide-overview) i _användarhandboken_.
 
 ## Belastningsutjämning
 
 Du kan hjälpa till att balansera inläsningen mellan olika noder genom att aktivera sekundära anslutningar för MySQL-databasen och Redis-instansen.
 
-Adobe Commerce kan läsa flera databaser eller Redis-instanser asynkront. Om du använder Commerce i en molninfrastruktur kan du konfigurera de sekundära anslutningarna genom att redigera värdena [MYSQL_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy#mysql_use_slave_connection) och [REDIS_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy#redis_use_slave_connection) i filen `.magento.env.yaml` . Endast en nod behöver hantera läs- och skrivtrafik, så om variablerna anges till `true` skapas en sekundär anslutning för skrivskyddad trafik. Ange värdena till `false` om du vill ta bort en befintlig skrivskyddad anslutningsmatris från filen `env.php`.
+Adobe Commerce kan läsa flera databaser eller Redis-instanser asynkront. Om du använder Commerce i en molninfrastruktur kan du konfigurera de sekundära anslutningarna genom att redigera värdena [MYSQL_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy#mysql_use_slave_connection) och [REDIS_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy#redis_use_slave_connection) i filen `.magento.env.yaml` . Endast en nod behöver hantera läs- och skrivtrafik, så om variablerna anges till `true` skapas en sekundär anslutning för skrivskyddad trafik. Ange värdena till `false` om du vill ta bort en befintlig skrivskyddad anslutningsmatris från filen `env.php`.
 
 Exempel på filen `.magento.env.yaml`:
 

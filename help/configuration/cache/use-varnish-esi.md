@@ -1,12 +1,12 @@
 ---
 title: Varnish ESI block
-description: Lär dig mer om Edge Side Includes och hur du kan använda dem för att bädda in webbsidor.
+description: Lär dig mer om varnish Edge Side Includes (ESI) och hur du bäddar in webbsidor för Adobe Commerce. Identifiera implementering och optimering av ESI-block.
 badge: label="Medverkad av Konstantin G." type="Informative" url="https://github.com/goivvy" tooltip="Konstantin G."
 feature: Configuration, Cache
 exl-id: 7dccafa5-df79-4690-be5c-ff774c66bb2a
-source-git-commit: a2bd4139aac1044e7e5ca8fcf2114b7f7e9e9b68
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '129'
+source-wordcount: '136'
 ht-degree: 0%
 
 ---

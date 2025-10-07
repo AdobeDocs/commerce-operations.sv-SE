@@ -1,10 +1,10 @@
 ---
 title: Ange konfigurationsvärden
-description: Lär dig hur du anger konfigurationsvärden och ändrar värden som är låsta i Admin.
+description: Lär dig hur du anger konfigurationsvärden och ändrar låsta administratörsvärden i Adobe Commerce. Upptäck avancerade konfigurationskommandon och -tekniker.
 exl-id: 1dc2412d-50b3-41fb-ab22-3eccbb086302
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '1038'
+source-wordcount: '1043'
 ht-degree: 0%
 
 ---
@@ -221,7 +221,7 @@ där
 
 >[!INFO]
 >
->Kommandot `bin/magento config:show` visar värdena för alla [krypterade värden](../reference/config-reference-sens.md) som en serie asterisker: `**&#x200B;**&#x200B;**`.
+>Kommandot `bin/magento config:show` visar värdena för alla [krypterade värden](../reference/config-reference-sens.md) som en serie asterisker: `******`.
 
 ### Exempel
 

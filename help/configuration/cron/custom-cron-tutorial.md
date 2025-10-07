@@ -1,10 +1,10 @@
 ---
 title: Konfigurera ett anpassat cron-jobb och en cron-grupp (självstudiekurs)
-description: Använd den här stegvisa självstudiekursen för att skapa ett anpassat cron-jobb.
+description: Lär dig hur du skapar anpassade kundjobb med den här stegvisa självstudiekursen för Adobe Commerce. Upptäck modulinställningar och konfiguration av kundgrupp.
 exl-id: d8efcafc-3ae1-4c2d-a8ad-4a806fb48932
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '809'
+source-wordcount: '820'
 ht-degree: 0%
 
 ---

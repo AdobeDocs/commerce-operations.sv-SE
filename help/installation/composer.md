@@ -1,10 +1,10 @@
 ---
 title: Snabbstart av lokal installation
-description: Följ de här stegen för att installera Adobe Commerce på en infrastruktur som du äger.
+description: Lär dig hur du installerar Adobe Commerce på din egen infrastruktur med Composer. Upptäck snabbstartssteg och konfigurationskrav.
 exl-id: a93476e8-2b30-461a-91df-e73eb1a14d3c
-source-git-commit: 60db3da9154e76032c88d687b6b6e22d7b81f9ae
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '957'
+source-wordcount: '964'
 ht-degree: 0%
 
 ---
@@ -93,7 +93,7 @@ Så här hämtar du Adobe Commerce metapaket:
 
    >[!NOTE]
    >
-   > Om du använder en Composer `[auth.json](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/develop/authentication-keys)`-fil eller en systemvariabel som konfigurerats med dina Commerce-autentiseringsnycklar uppmanas du inte att ange autentiseringsnycklar.
+   > Om du använder en Composer `[auth.json](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/authentication-keys)`-fil eller en systemvariabel som konfigurerats med dina Commerce-autentiseringsnycklar uppmanas du inte att ange autentiseringsnycklar.
 
    Om du stöter på fel, till exempel `Could not find package...` eller `...no matching package found`, kontrollerar du att det inte finns några stavfel i kommandot. Om du fortfarande råkar ut för fel kanske du inte har behörighet att ladda ned Adobe Commerce. Kontakta [Adobe Commerce Support](https://support.magento.com/hc/en-us) om du behöver hjälp.
 

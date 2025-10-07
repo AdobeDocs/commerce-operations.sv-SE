@@ -1,10 +1,10 @@
 ---
 title: Gemensamma kommandon
-description: Se ett urval av vanliga Commerce CLI-kommandon och -användning.
+description: Läs mer om vanliga Adobe Commerce CLI-kommandon och exempel på hur de används. Upptäck viktiga kommandoradsverktyg för utveckling och administration.
 exl-id: d35a1dd9-10b3-4364-b6f4-b1e259a04e3d
-source-git-commit: 3d0e6d6517e28a32816bfe2b328edfba97523740
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '251'
 ht-degree: 0%
 
 ---

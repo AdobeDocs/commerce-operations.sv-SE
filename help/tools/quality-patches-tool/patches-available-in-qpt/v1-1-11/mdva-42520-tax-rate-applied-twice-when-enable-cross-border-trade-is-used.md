@@ -1,20 +1,20 @@
 ---
 title: 'MDVA-42520: Skattesats som tillämpas två gånger när"Aktivera gränsöverskridande handel" används'
-description: MDVA-42520-korrigeringen åtgärdar ett problem där skattesatsen tillämpas två gånger när **Enable Cross Border Trade** används. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.11 är installerat. Korrigerings-ID är MDVA-42520. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.5.
+description: MDVA-42520-korrigeringen åtgärdar ett problem där skattesatsen tillämpas två gånger när **Enable Cross Border Trade** används. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.11 är installerat. Korrigerings-ID är MDVA-42520. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.5.
 feature: Catalog Management, Orders, Taxes
 role: Admin
 exl-id: 34c101fd-3a47-4877-8a41-ccaeaa010969
 type: Troubleshooting
-source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
+source-git-commit: 4caabd1578e56b74600441c9c779b7b2dfd06987
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '501'
 ht-degree: 0%
 
 ---
 
 # MDVA-42520: Skattesats som tillämpas två gånger när&quot;Aktivera gränsöverskridande handel&quot; används
 
-Korrigeringen MDVA-42520 åtgärdar ett problem där momssatsen tillämpas två gånger när **Aktivera gränsöverskridande handel** används. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.11 är installerat. Korrigerings-ID är MDVA-42520. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.5.
+Korrigeringen MDVA-42520 åtgärdar ett problem där momssatsen tillämpas två gånger när **Aktivera gränsöverskridande handel** används. Den här korrigeringen är tillgänglig när [QPT-verktyget (Quality Patches Tool)](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) 1.1.11 är installerat. Korrigerings-ID är MDVA-42520. Observera att problemet är planerat att åtgärdas i Adobe Commerce 2.4.5.
 
 ## Berörda produkter och versioner
 
@@ -28,7 +28,7 @@ Korrigeringen MDVA-42520 åtgärdar ett problem där momssatsen tillämpas två 
 
 >[!NOTE]
 >
->Patchen kan bli tillämplig på andra versioner med nya Quality Patches Tool-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Patchen kan bli tillämplig på andra versioner med nya Quality Patches Tool-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -39,7 +39,7 @@ Skattesatsen tillämpas två gånger när **Aktivera gränsöverskridande handel
 1. Aktivera **Företag**, **Delad katalog** och **Citat**
 1. Konfigurera moms enligt skärmbilden. Se till att du aktiverar **Gränsöverskridande handel**.
 
-   ![skatteinställningar](/help/assets/tools/tax_settings_1.png){width="700"}
+   ![Sidan med skattekonfigurationsinställningar med alternativ för gränsöverskridande handel och tariffberäkningar](/help/assets/tools/tax_settings_1.png){width="700"}
 
 1. Skapa en skattesats för Tyskland (10 %).
 1. Skapa en momsregel för att tillämpa momssatsen.
@@ -63,13 +63,13 @@ Offertdelsumma (inklusive skatt) och totalsumma för offert (inklusive skatt) = 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
 * Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 
 Mer information om verktyget för kvalitetskorrigeringar finns i:
 
-* [Verktyget för kvalitetskorrigeringar har släppts: ett nytt verktyg för självbetjäning av kvalitetskorrigeringar](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) i kunskapsbasen för support.
+* [Verktyget för kvalitetskorrigeringar har släppts: ett nytt verktyg för självbetjäning av kvalitetskorrigeringar](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches) i kunskapsbasen för support.
 * [Kontrollera om det finns en korrigeringsfil för ditt Adobe Commerce-problem med verktyget för kvalitetskorrigeringar ](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md) i [!DNL Quality Patches Tool]-handboken.
 
-Mer information om andra tillgängliga korrigeringsfiler i QPT finns i [[!DNL Quality Patches Tool]: Söka efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE) i [!DNL Quality Patches Tool]-handboken.
+Mer information om andra tillgängliga korrigeringsfiler i QPT finns i [[!DNL Quality Patches Tool]: Söka efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) i [!DNL Quality Patches Tool]-handboken.

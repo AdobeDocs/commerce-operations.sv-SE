@@ -1,10 +1,10 @@
 ---
 title: Översättningsordlistor och språkpaket
-description: Lär dig hur du genererar översättningsordlistor och bygger språkpaket.
+description: Lär dig hur du genererar översättningsordlistor och bygger språkpaket för Adobe Commerce. Upptäck lokalisering och flerspråkig lagringskonfiguration.
 exl-id: dd27ccdd-158d-40a6-a2e2-563857820ae9
-source-git-commit: 4116d0983edc797ce42d24e711fb5ecdbf8fdec9
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '1432'
+source-wordcount: '1441'
 ht-degree: 0%
 
 ---
@@ -316,7 +316,7 @@ Generera en CSV-fil på ungefär samma sätt som i föregående exempel, men i s
 
 [Översättningar - översikt]: https://developer.adobe.com/commerce/frontend-core/guide/translations/
 [översättningsordlista]: https://developer.adobe.com/commerce/frontend-core/guide/translations/#translation-dictionaries
-[konfigurerar översättningarna]: https://experienceleague.adobe.com/sv/docs/commerce-admin/stores-sales/site-store/store-localize
+[konfigurerar översättningarna]: https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-localize
 [Läs mer om språkpaket]: https://developer.adobe.com/commerce/frontend-core/guide/translations/#language-packages
 [ISO 639-1]: https://www.iso.org/iso-639-language-codes.html
 [ISO 3166]: https://www.iso.org/iso-3166-country-codes.html

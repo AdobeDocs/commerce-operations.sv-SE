@@ -5,9 +5,9 @@ feature: Support, Tools and External Services
 role: Admin
 exl-id: e67e5823-d878-4efc-90af-c7bb8c59d654
 type: Troubleshooting
-source-git-commit: 7fdb02a6d89d50ea593c5fd99d78101f89198424
+source-git-commit: 4caabd1578e56b74600441c9c779b7b2dfd06987
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '387'
 ht-degree: 0%
 
 ---
@@ -33,18 +33,18 @@ Du kan:
 
 Här är ett exempel på statustabellen som du kan hämta för att visa tillgängliga korrigeringar:
 
-![Magento_patches_list](/help/assets/tools/status_table.png)
+![Statustabell för kvalitetspatchar som visar tillgängliga korrigeringar och deras installationsstatus](/help/assets/tools/status_table.png)
 
 Verktyget är avsett att göra det möjligt för dig att använda korrigeringsfiler för problem som du kan uppleva hos Adobe Commerce, eller att enkelt tillämpa korrigeringsfiler som Adobe Commerce support föreslår.
 
 >[!NOTE]
 >
->QPT är endast till för kvalitetspatchar. Säkerhetsuppdateringar finns i [versionsinformationen för Adobe Commerce och Magento Open Source](https://experienceleague.adobe.com/docs/commerce-operations/release/notes/overview.html?lang=sv-SE).
+>QPT är endast till för kvalitetspatchar. Säkerhetsuppdateringar finns i [versionsinformationen för Adobe Commerce och Magento Open Source](https://experienceleague.adobe.com/docs/commerce-operations/release/notes/overview.html).
 
 ## Patchar tillgängliga i [!DNL Quality Patches Tool]
 
 I det här avsnittet av Adobe Commerce Support Knowledge Base hittar du detaljerade beskrivningar av de problem som åtgärdats med QPT-korrigeringar, grupperade efter QPT-version.
-Du kan också se en lista över tillgängliga QPT-korrigeringar och filtrera efter komponent med hjälp av den dynamiskt genererade tabellen på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE) i vår kunskapsbas för support.
+Du kan också se en lista över tillgängliga QPT-korrigeringar och filtrera efter komponent med hjälp av den dynamiskt genererade tabellen på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) i vår kunskapsbas för support.
 
 ## Så här installerar och använder du [!DNL Quality Patches Tool]
 
@@ -56,8 +56,8 @@ Mer information om hur du installerar och använder QPT för att tillämpa och �
 
 ### Installera och använda QPT för Adobe Commerce i molninfrastrukturen
 
-Mer information om hur du installerar och använder QPT för att tillämpa och återställa korrigeringsfiler på Adobe Commerce i molninfrastrukturen finns i [Commerce i molninfrastrukturguiden > Tillämpa korrigeringsfiler](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i utvecklardokumentationen.
+Mer information om hur du installerar och använder QPT för att tillämpa och återställa korrigeringsfiler på Adobe Commerce i molninfrastrukturen finns i [Commerce i molninfrastrukturguiden > Tillämpa korrigeringsfiler](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i utvecklardokumentationen.
 
 ## Relaterad läsning
 
-* [[!DNL Quality Patches Tool] versionsinformation](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html?lang=sv-SE) i utvecklardokumentationen.
+* [[!DNL Quality Patches Tool] versionsinformation](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html) i utvecklardokumentationen.

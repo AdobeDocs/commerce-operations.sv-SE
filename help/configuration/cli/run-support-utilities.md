@@ -1,10 +1,10 @@
 ---
 title: Kör supportverktygen
-description: Felsök ditt Commerce-projekt med det inbyggda supportverktyget.
+description: Lär dig hur du kör supportverktyg för att felsöka ditt Adobe Commerce-projekt. Upptäck inbyggda verktyg för diagnostik och support.
 exl-id: 021b795f-e00d-43b5-9cbb-5b57a4795be7
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '470'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 {{file-system-owner}}
 
-Med Adobe Commerce supportverktyg, som även kallas [datainsamlaren](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/tools/support#data-collector), kan användare samla in felsökningsinformation om ditt system som kan användas av vårt supportteam.
+Med Adobe Commerce supportverktyg, som även kallas [datainsamlaren](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/support#data-collector), kan användare samla in felsökningsinformation om ditt system som kan användas av vårt supportteam.
 
 Adobe Commerce använder dessa säkerhetskopior, som också kallas _dumpar_, för att analysera problem som kräver åtkomst till din kod. Ett typiskt scenario följer:
 

@@ -1,11 +1,11 @@
 ---
 title: Frigör schema
-description: Läs mer om när Adobe planerar att tillkännage lanseringen av nya funktioner i Adobe Commerce.
+description: Läs när Adobe planerar att lansera nya funktioner och releaser för Adobe Commerce. Upptäck kommande scheman och leveranstider för nya patchar för bättre planering.
 exl-id: ae1e09cd-966f-44a3-9e4d-b90bb838429d
-source-git-commit: b908b468f0b8abe8bb7904b9c4a626201dc919bc
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '483'
-ht-degree: 2%
+source-wordcount: '493'
+ht-degree: 0%
 
 ---
 
@@ -18,9 +18,9 @@ Adobe strävar hela tiden efter att hitta rätt balans mellan att göra produktu
 
 Nya funktioner, funktionsuppdateringar, molninfrastruktur och utökningsuppdateringar levereras oberoende av korrigeringsversioner och är tillgängliga via externa moduler, tillägg, verktyg eller webbtjänster. Exempel:
 
-- ![Funktionsikon](../assets/icons/feature.svg) [**Funktioner och funktioner**](https://experienceleague.adobe.com/sv/docs/commerce/user-guides/release-information/release-notes-all) - Nya funktioner levereras oberoende av korrigeringsfiler. Exempel: [B2B](https://experienceleague.adobe.com/sv/docs/commerce-admin/b2b/release-notes), katalogtjänst, dataanslutning, Live-sökning och produktrekommendationer.
+- ![Funktionsikon](../assets/icons/feature.svg) [**Funktioner och funktioner**](https://experienceleague.adobe.com/en/docs/commerce/user-guides/release-information/release-notes-all) - Nya funktioner levereras oberoende av korrigeringsfiler. Exempel: [B2B](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/release-notes), katalogtjänst, dataanslutning, Live-sökning och produktrekommendationer.
 
-- ![Infrastrukturikon](../assets/icons/servers.svg) [**Molninfrastruktur**](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite) - Nya funktioner och förbättringar i Adobe Commerce i molninfrastrukturen och i Creative Cloud Tools Suite för Commerce-paket, som distribuerar och hanterar Adobe Commerce-installationer och uppgraderingar på molnplattformen.
+- ![Infrastrukturikon](../assets/icons/servers.svg) [**Molninfrastruktur**](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite) - Nya funktioner och förbättringar i Adobe Commerce i molninfrastrukturen och i Creative Cloud Tools Suite för Commerce-paket, som distribuerar och hanterar Adobe Commerce-installationer och uppgraderingar på molnplattformen.
 
 - ![Ikon för utbyggbarhet](../assets/icons/brackets.svg) [**Utbyggbarhet**](https://developer.adobe.com/commerce/extensibility/) - Nya utvecklingsverktyg och tjänster för utbyggbarhet som inte har bearbetats levereras oberoende av korrigeringsversioner. Exempel: Integration Starter Kit, Admin UI SDK, Adobe I/O Events for Commerce och API Mesh.
 

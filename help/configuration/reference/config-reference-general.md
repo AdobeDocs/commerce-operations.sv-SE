@@ -1,11 +1,11 @@
 ---
 title: Allmän referens för konfigurationssökvägar
-description: Se en lista med allmänna och avancerade konfigurationsvärden.
+description: Läs mer om allmänna och avancerade konfigurationssökvägar och -värden för Adobe Commerce. Upptäck alternativ för system, säkerhet och administrativ konfiguration.
 feature: Configuration, Observability, Roles/Permissions, System
 exl-id: 3c557746-5182-4929-aebf-5b6fe76f0d8f
-source-git-commit: 16e9396f19693436dfc7bdac78d84624a78f0c21
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '971'
 ht-degree: 0%
 
 ---

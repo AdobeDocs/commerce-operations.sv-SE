@@ -1,12 +1,12 @@
 ---
 title: system.xml, referens
-description: Läs om hur systemets XML-fil hanterar Commerce programkonfiguration.
+description: Lär dig hur filen system.xml hanterar Adobe Commerce programkonfiguration. Upptäck systemkonfigurationshantering, XML-struktur och implementeringstekniker.
 feature: Configuration, System
 badge: label="Bidragen av David Lambauer" type="Informative" url="https://github.com/DavidLambauer" tooltip="David Lambauer"
 exl-id: a6c5de6c-e8da-4eca-bbfb-592904b2c53f
-source-git-commit: e231a27d70e29b01c872b0655168e31f590d4876
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '2709'
+source-wordcount: '2717'
 ht-degree: 0%
 
 ---
@@ -248,7 +248,7 @@ En `<field>`-tagg kan ha följande värden för attributet `type=""`:
 | `select` | Normal listruta, kan behöva en anpassad `source_model`. Används även för `Yes/No` markeringar. Se `Magento\Search\Model\Adminhtml\System\Config\Source\Engine` för ett exempel. |
 | `multiselect` | Som `select`, men flera alternativ är giltiga. |
 | `button` | En knapp som utlöser en omedelbar händelse. Kräver en anpassad front end-modell för att definiera knapptexten och åtgärden. Se `Magento\ScheduledImportExport\Block\Adminhtml\System\Config\Clean` för ett exempel. |
-| `obscure` | Ett textfält med värdet krypterat och visat som `**&#x200B;**`. Värdet visas inte om du ändrar typen med alternativet Inspektera element i webbläsaren. |
+| `obscure` | Ett textfält med värdet krypterat och visat som `****`. Värdet visas inte om du ändrar typen med alternativet Inspektera element i webbläsaren. |
 | `password` | Precis som `obscure`, förutom att det dolda värdet inte är krypterat, så visas värdet om du tvingar en ändring av typen med alternativet Inspektera element i webbläsaren. |
 | `file` | Tillåter att en fil överförs för bearbetning. |
 | `label` | Visar en etikett i stället för ett redigerbart fält. Använd den här typen när ett fält bara kan redigeras i specifika omfång, till exempel enbart butiksvynivå. |

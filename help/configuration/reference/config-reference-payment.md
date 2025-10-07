@@ -1,11 +1,11 @@
 ---
 title: Referens för sökvägar för betalningskonfiguration
-description: Se en lista över konfigurerbara värden för betalningsmetoder.
+description: Lär dig mer om sökvägar för betalningskonfiguration och metodvärden i Adobe Commerce Admin. Upptäck konfigurationsalternativ för PayPal, kreditkort och betalgateway.
 feature: Configuration, Payments
 exl-id: f3e356aa-7262-4d99-9ed4-d77cbd93708c
-source-git-commit: 16e9396f19693436dfc7bdac78d84624a78f0c21
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '4100'
+source-wordcount: '4113'
 ht-degree: 0%
 
 ---

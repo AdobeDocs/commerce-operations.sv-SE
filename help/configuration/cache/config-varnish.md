@@ -1,11 +1,11 @@
 ---
 title: Konfigurera och använda engelska
-description: Förstå hur lack lagrar filer och förbättrar HTTP-trafiken.
+description: Lär dig hur du konfigurerar och använder lack-cachning för Adobe Commerce. Upptäck HTTP-acceleration, fillagring och prestandaoptimeringstekniker.
 feature: Configuration, Cache
 exl-id: 57614878-e349-43bb-b22b-1aa321907be1
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '1049'
+source-wordcount: '1060'
 ht-degree: 0%
 
 ---

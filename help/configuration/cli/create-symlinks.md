@@ -1,10 +1,10 @@
 ---
 title: Skapa länkar till LESS-filer
-description: Lär dig hur du skapar länkar till LESS-filer.
+description: Lär dig hur du skapar länkar till LESS-filer för Adobe Commerce-utveckling. Upptäck länkningen av formatmallar och optimeringen av utvecklingsarbetsflödet.
 exl-id: 58a6123a-28b4-445b-b3f9-f524233ac127
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '161'
+source-wordcount: '172'
 ht-degree: 0%
 
 ---

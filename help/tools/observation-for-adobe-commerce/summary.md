@@ -3,9 +3,9 @@ title: Fliken [!UICONTROL Summary]
 description: Läs mer om fliken [!UICONTROL Summary] i  [!DNL Observation for Adobe Commerce].
 exl-id: b07ed898-a211-4353-a1d4-1b71d4898b93
 feature: Configuration, Observability
-source-git-commit: 790089c178570ee69f33cc04b17800db5563741e
+source-git-commit: 4caabd1578e56b74600441c9c779b7b2dfd06987
 workflow-type: tm+mt
-source-wordcount: '2462'
+source-wordcount: '2494'
 ht-degree: 0%
 
 ---
@@ -32,19 +32,19 @@ Om du tittar på bildrutan **[!UICONTROL Transaction Overview]** ovan fanns det 
 
 ## [!UICONTROL 404 page errors frame]
 
-![404 sidfelsbildruta](../../assets/tools/404-page-errors.jpg)
+![404-felövervakningspanelen visar att sidan inte kunde hittas över tid](../../assets/tools/404-page-errors.jpg)
 
 Bildrutan **[!UICONTROL 404 page errors]** visar [ URI ](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier) och antalet 404 sidfel för en vald tidsram.
 
 ## [!UICONTROL % of Storage Free frame]
 
-![procent av lagringsfri bildruta](../../assets/tools/percent-of-storage-free.jpg)
+![Diagram över lagringsutnyttjande som visar tillgängligt diskutrymme i procent](../../assets/tools/percent-of-storage-free.jpg)
 
 Bildrutan **[!UICONTROL % of Storage Free]** visar den genomsnittliga procentandelen ledigt lagringsutrymme över alla noder i klustret. Om du till exempel har ett kluster med tre noder visas \&lt;monteringspunkt\>, \&lt;miljönamn\> i bildrutan. Den här bildrutan kan vara bedräglig om det finns en varians över tre noder. Ett exempel på en varians skulle vara om den `/data/mysql`-monteringspunkten var fri från ett annat värde i det tre nodklustret. Det finns en bildruta på fliken [!UICONTROL MySQL] som facetterar monteringspunkterna efter nodnamn för att mer exakt se vad lagringsutrymmet `/data/mysql` på varje nod faktiskt är.
 
 ## [!UICONTROL % of system memory that is free frame]
 
-![procent av det lediga systemminnet ](../../assets/tools/percent-of-system-memory-that-is-free.jpg)
+![Diagram över minnesanvändning för system som visar tillgänglig RAM-procent](../../assets/tools/percent-of-system-memory-that-is-free.jpg)
 
 **% av systemminnet som är ledigt** bildruta visar, per nod, mängden systemminne som är ledigt på varje nod.
 
@@ -58,11 +58,11 @@ Bildrutan **[!UICONTROL Swap memory free in bytes]** visar, per nod, mängden SW
 
 ![CPU percent by host](../../assets/tools/cpu-percent-by-host.jpg)
 
-Sammanställningen av alla miljöer och noder visas i bildrutan **[!UICONTROL CPU % by host]**. Du bör avmarkera icke-produktionsmiljöer. Observera även alla instanser där alla noder för produktionsmiljön inte finns. Mer tips om hur CPU används finns i [Felsöka prestanda med New Relic på Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html?lang=sv-SE).
+Sammanställningen av alla miljöer och noder visas i bildrutan **[!UICONTROL CPU % by host]**. Du bör avmarkera icke-produktionsmiljöer. Observera även alla instanser där alla noder för produktionsmiljön inte finns. Mer tips om hur CPU används finns i [Felsöka prestanda med New Relic på Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html).
 
 ## [!UICONTROL Alerts during timeframe]
 
-![varningar under tidsramen](../../assets/tools/alerts-during-timeframe.jpg)
+![Kontrollpanelen för varningsmeddelanden visar incidenter under den valda tidsperioden](../../assets/tools/alerts-during-timeframe.jpg)
 
 **[!UICONTROL Alerts during timeframe]** visar alla aviseringar, inklusive [!UICONTROL Managed Alerts] som lagts till av Adobe Commerce support.
 
@@ -70,7 +70,7 @@ Sammanställningen av alla miljöer och noder visas i bildrutan **[!UICONTROL CP
 
 ![Användning i CPU](../../assets/tools/cpu-usage.jpg)
 
-Om **[!UICONTROL CPU Usage]**-bildrutan är tom är det en indikation på att infrastrukturprogrammet för [!DNL New Relic] inte är aktiverat. Om din webbplats finns på Starter visas inte den här informationen. Om din webbplats är på Pro kan du öppna en [supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE) och aktivera [!DNL New Relic Infrastructure] för din webbplats.
+Om **[!UICONTROL CPU Usage]**-bildrutan är tom är det en indikation på att infrastrukturprogrammet för [!DNL New Relic] inte är aktiverat. Om din webbplats finns på Starter visas inte den här informationen. Om din webbplats är på Pro kan du öppna en [supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html) och aktivera [!DNL New Relic Infrastructure] för din webbplats.
 
 ## [!UICONTROL Average Response Time]
 
@@ -139,7 +139,7 @@ Bildrutan **[!UICONTROL API Calls by IP]** hjälper till att identifiera tung tr
 
 ## [!UICONTROL API Calls by IP, details by URL]
 
-![api-anrop via IP-information via url](../../assets/tools/api-calls-by-ip-details-by-url.jpg)
+![Analys av API-begäran visar anrop grupperade efter IP-adress och URL för slutpunkt](../../assets/tools/api-calls-by-ip-details-by-url.jpg)
 
 Bildrutan **[!UICONTROL API Calls by IP, details by URL]** innehåller information om mycket trafik mot API:erna och information om de URL:er som gör förfrågningarna.
 
@@ -332,13 +332,13 @@ Bildrutan **[!UICONTROL Fastly Cache]** visar en sammanställd vy över cachesta
 
 ## [!UICONTROL Page Rendering]
 
-![sidåtergivning](../../assets/tools/page-rendering.jpg)
+![Mätvärden för sidprestanda som visar tidsanalys för återgivning](../../assets/tools/page-rendering.jpg)
 
 Bildrutan **[!UICONTROL Page Rendering]** visar den aktuella veckans genomsnittliga återgivningstid från sidvykällan [!DNL New Relic] jämfört med föregående vecka under samma tidsperiod.
 
 ## [!UICONTROL Page loading detail]
 
-![sidinläsningsdetalj](../../assets/tools/page-loading-detail.png)
+![Detaljerad sidinläsningsprestandafördelning som visar inläsningskomponenter](../../assets/tools/page-loading-detail.png)
 
 Bildrutan **[!UICONTROL Page loading detail]** beskriver sidan som läser in händelser. Den beskriver innebörden av dessa aspekter. Här är frågan som körs för den här bildrutan:
 
@@ -384,7 +384,7 @@ Bildrutan **[!UICONTROL Order transactions (default?)]** söker efter transaktio
 * %Du kan åtgärda problemet genom att uppgradera Elasticsearch-tjänsten i din Magento Cloud-infrastruktur till version % som ver_err
 * &#39;%klusterhälsostatus har ändrats från \[YELLOW\] till \[RED\] (orsak:%) som &#39;yel_red&#39;
 * &#39;%Inget utrymme återstår på enheten%&#39; som &#39;inget_utrymme&#39;
-* &#39;% misslyckades med att köra &lbrack;SearchRequest&lbrace;searchType=%&#39; som &#39;failed_query&#39;
+* &#39;% misslyckades med att köra [SearchRequest{searchType=%&#39; som &#39;failed_query&#39;
 
 ## [!UICONTROL Cron view]
 

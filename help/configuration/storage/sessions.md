@@ -1,11 +1,11 @@
 ---
 title: Sessionslagringsplats
-description: Lär dig var sessionsfilerna lagras.
+description: Läs mer om lagringsplatser för sessioner och filhantering i Adobe Commerce. Upptäck lagringslogik och konfigurationsalternativ.
 feature: Configuration, Storage
 exl-id: 43cab98a-5b68-492e-b891-8db4cc99184e
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '267'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Som användare med `root`-behörighet öppnar du `php.ini`-filen och söker efte
 
 ## Hantera sessionsstorlek
 
-Se [Sessionshantering](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/security/security-session-management) i _Användarhandboken_.
+Se [Sessionshantering](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-session-management) i _Användarhandboken_.
 
 ## Konfiguration av skräpinsamling
 

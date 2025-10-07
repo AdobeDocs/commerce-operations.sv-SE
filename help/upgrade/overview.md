@@ -1,11 +1,11 @@
 ---
 title: Översikt över uppgraderingsprocessen
-description: Förstå hur du kan skydda din butik och få en effektiv verksamhet genom att uppgradera ditt Adobe Commerce-projekt.
+description: Se hur du kan skydda din butik och arbeta effektivt genom att uppgradera ditt Adobe Commerce-projekt. Upptäck de bästa sätten att planera och genomföra uppgraderingar.
 exl-id: 40bd97ca-6648-40d4-9c61-7d159391976a
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '895'
-ht-degree: 1%
+source-wordcount: '901'
+ht-degree: 0%
 
 ---
 

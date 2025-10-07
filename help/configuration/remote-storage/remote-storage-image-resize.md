@@ -3,9 +3,9 @@ title: Konfigurera storleksändring av bilder för fjärrlagring
 description: Optimera diskresurserna genom att konfigurera storleksändring av bilder på serversidan.
 feature: Configuration, Storage
 exl-id: 51c2b9b3-0f5f-4868-9191-911d5df341ec
-source-git-commit: af45ac46afffeef5cd613628b2a98864fd7da69b
+source-git-commit: 4caabd1578e56b74600441c9c779b7b2dfd06987
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '247'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ Som standard har Adobe Commerce stöd för storleksändring av bilder på progra
 
 I följande diagram visas hur Nginx hämtar, ändrar storlek på och lagrar bilder i cachen. Storleksändringen bestäms av de parametrar som finns i URL-adressen, till exempel höjd och bredd.
 
-![ändra storlek på bild](../../assets/configuration/remote-storage-nginx-image-resize.png)
+![Nginx-konfiguration för storleksändring av fjärrlagringsavbildning med inställningar för serverblock](../../assets/configuration/remote-storage-nginx-image-resize.png)
 
 >[!TIP]
 >

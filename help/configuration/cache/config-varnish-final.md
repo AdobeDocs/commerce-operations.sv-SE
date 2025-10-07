@@ -1,11 +1,11 @@
 ---
 title: Slutlig verifiering
-description: Kontrollera att din lack-konfiguration är korrekt konfigurerad för att fungera med Adobe Commerce-programmet.
+description: Lär dig hur du slutverifierar din lack-konfiguration med Adobe Commerce. Upptäck testningssteg och felsökningstekniker.
 feature: Configuration, Cache
 exl-id: 01f28c93-75cd-4969-9142-b8dac0aa2adb
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '348'
 ht-degree: 0%
 
 ---
@@ -83,4 +83,4 @@ Kontrollera att katalogen `<magento_root>/var/page_cache` är tom:
 
 >[!TIP]
 >
->Om 503-fel (Backend Fetch Failed) inträffar, se [Felsökning 503-fel (tjänsten är inte tillgänglig)](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshooting-503-errors.html?lang=sv-SE) i _Adobe Commerce Help Center_.
+>Om 503-fel (Backend Fetch Failed) inträffar, se [Felsökning 503-fel (tjänsten är inte tillgänglig)](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshooting-503-errors.html) i _Adobe Commerce Help Center_.

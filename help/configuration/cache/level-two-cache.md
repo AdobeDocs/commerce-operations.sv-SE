@@ -1,11 +1,11 @@
 ---
 title: L2-cachekonfiguration
-description: Lär dig att konfigurera L2-cachen.
+description: Lär dig hur du konfigurerar L2-cache för prestandaoptimering i Adobe Commerce. Upptäck installationssteg och tekniker för reducering av nätverkstrafiken.
 feature: Configuration, Cache
 exl-id: 0504c6fd-188e-46eb-be8e-968238571f4e
-source-git-commit: ba3c656566af47f16f58f476d7bc9f4781bb0234
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '421'
+source-wordcount: '434'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Commerce lagrar den hash-kodade dataversionen i Redis, med suffixet :hash som l�
 
 >[!INFO]
 >
->För Adobe Commerce i molninfrastruktur kan du använda [distribuera variabler](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=sv-SE#redis_backend) för L2-cachekonfiguration.
+>För Adobe Commerce i molninfrastruktur kan du använda [distribuera variabler](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_backend) för L2-cachekonfiguration.
 
 ## Konfigurationsexempel
 

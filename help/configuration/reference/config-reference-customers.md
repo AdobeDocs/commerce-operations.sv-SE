@@ -1,11 +1,11 @@
 ---
 title: Referens för kundkonfigurationssökvägar
-description: Se en lista över kundkonfigurationsvärden.
+description: Läs mer om sökvägar och värden för kundkonfiguration i inställningarna för Adobe Commerce Admin. Upptäck nyhetsbrev, kontohantering och alternativ för kundservice.
 feature: Configuration, Customers
 exl-id: a0571423-6fbd-4cfc-9797-a13c0c24bb53
-source-git-commit: 16e9396f19693436dfc7bdac78d84624a78f0c21
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '896'
 ht-degree: 0%
 
 ---

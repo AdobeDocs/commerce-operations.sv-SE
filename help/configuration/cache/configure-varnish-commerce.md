@@ -1,11 +1,11 @@
 ---
 title: Konfigurera lack för Commerce
-description: Lär dig hur du uppdaterar och hanterar din konfigurationsfil för lack för Commerce-programmet.
+description: Lär dig hur du konfigurerar engelska specifikt för Adobe Commerce-program. Upptäck filuppdateringar och hanteringstekniker för konfiguration.
 feature: Configuration, Cache, SCD
 exl-id: 6c007ff9-493f-4df2-b7b4-438b41fd7e37
-source-git-commit: 602a1ef82fcb8d30ff027db0fe0aacb981c7e08e
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '400'
 ht-degree: 0%
 
 ---

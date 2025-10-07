@@ -1,11 +1,11 @@
 ---
 title: Översikt över konfigurationsguiden
-description: Läs mer om alla konfigurerbara funktioner och tjänster för ditt Adobe Commerce-program.
+description: Läs om konfigurerbara funktioner och tjänster för ditt Adobe Commerce-program. Lär dig hur du hanterar driftsättning, cachelagring, säkerhet och andra viktiga inställningar.
 exl-id: c4997792-5a47-4ae5-903a-7e5d7235e42e
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '144'
-ht-degree: 9%
+source-wordcount: '153'
+ht-degree: 0%
 
 ---
 
@@ -25,8 +25,8 @@ Guiden _Konfiguration_ innehåller referensmaterial och begränsad vägledning f
 
 ## Konfiguration av Commerce Admin
 
-Det finns motsvarande ämnen i [Commerce användarhandbok](https://experienceleague.adobe.com/sv/docs/commerce-admin/config/guide-overview) som kan hjälpa dig att förstå fältbeskrivningar för alla konfigurationsinställningar i Commerce Admin.
+Det finns motsvarande ämnen i [Commerce användarhandbok](https://experienceleague.adobe.com/en/docs/commerce-admin/config/guide-overview) som kan hjälpa dig att förstå fältbeskrivningar för alla konfigurationsinställningar i Commerce Admin.
 
 ## Molnkonfiguration
 
-[!DNL Commerce on cloud infrastructure] använder en [uppsättning konfigurationsfiler](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/overview.html?lang=sv-SE) för att uppdatera Commerce programfunktioner och tjänster i värdmiljöer. På grund av Adobe molnbaserade miljöers unika karaktär bör du alltid läsa [molnhandboken](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/overview.html?lang=sv-SE) för ytterligare konfigurationskrav.
+[!DNL Commerce on cloud infrastructure] använder en [uppsättning konfigurationsfiler](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/overview.html) för att uppdatera Commerce programfunktioner och tjänster i värdmiljöer. På grund av Adobe molnbaserade miljöers unika karaktär bör du alltid läsa [molnhandboken](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/overview.html) för ytterligare konfigurationskrav.

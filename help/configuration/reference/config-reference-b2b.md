@@ -1,11 +1,11 @@
 ---
 title: Referens för konfigurationssökvägar för B2B-tillägg
-description: Se en lista över B2B-relaterade konfigurationsvärden.
+description: Läs mer om konfigurationssökvägar och värden för B2B-tillägg för Adobe Commerce. Upptäck företag-, betalnings-, offert- och B2B-specifika konfigureringsalternativ.
 feature: Configuration, B2B, Companies, Payments, Quotes
 exl-id: 3414dea1-17c9-4462-8b8a-51a6045b0bc9
-source-git-commit: 16e9396f19693436dfc7bdac78d84624a78f0c21
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '849'
 ht-degree: 0%
 
 ---

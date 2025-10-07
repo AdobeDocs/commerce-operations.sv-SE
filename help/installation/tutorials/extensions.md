@@ -2,9 +2,9 @@
 title: Hantera tillägg från tredje part
 description: Följ de här stegen för att installera, aktivera, uppgradera och avinstallera ett Adobe Commerce-tillägg.
 exl-id: b564662a-2e5f-4fa9-bae1-ca7498478fa9
-source-git-commit: f057cf082eeab1e34957e284817c6b93517de21b
+source-git-commit: 4caabd1578e56b74600441c9c779b7b2dfd06987
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '805'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Tilläggen omfattar:
 - Teman (ändra utseende och känsla för din butik och administratör)
 - Språkpaket (lokalisera butiken och administratören)
 
-I det här avsnittet beskrivs hur du använder kommandoradsgränssnittet för att hantera tillägg från tredje part som du köper från Commerce Marketplace för _lokala_-projekt. Information om projekt för molninfrastruktur finns i [Hantera tillägg](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/configure-store/extensions).
+I det här avsnittet beskrivs hur du använder kommandoradsgränssnittet för att hantera tillägg från tredje part som du köper från Commerce Marketplace för _lokala_-projekt. Information om projekt för molninfrastruktur finns i [Hantera tillägg](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure-store/extensions).
 
 Du kan använda samma procedur för att installera _valfritt_-tillägg. Allt du behöver är tilläggets Composer-namn och version. Om du vill hitta den öppnar du tilläggets `composer.json`-fil och noterar värdena för `"name"` och `"version"`.
 
@@ -72,7 +72,7 @@ Så här hämtar du tilläggets dispositionsnamn och version från Commerce Mark
 
 1. Hitta det tillägg som du vill installera och notera komponentnamnet och versionen.
 
-   ![Teknisk information visar tilläggets disposition](../../assets/installation/marketplace-extension-technical-details.png)
+   ![Teknisk tilläggsinformation som visar Composer-paketnamnet för installationen](../../assets/installation/marketplace-extension-technical-details.png)
 
 >[!TIP]
 >

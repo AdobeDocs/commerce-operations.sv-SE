@@ -1,10 +1,10 @@
 ---
 title: config.php-referens
-description: Se en lista med värden i filen config.php.
+description: Lär dig mer om filvärdena och avsnitten för config.php för Adobe Commerce-konfiguration. Upptäck metodtips för moduler, omfattningar, systeminställningar och driftsättning.
 exl-id: 9b355d6d-ea66-480b-ad96-0ea9e7e61844
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '158'
 ht-degree: 0%
 
 ---
@@ -124,6 +124,6 @@ Läs mer om [Teman].
 
 <!-- link definitions -->
 
-[Moduler]: https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/create-module.html?lang=sv-SE
-[scopes]: https://experienceleague.adobe.com/docs/commerce-admin/start/setup/websites-stores-views.html?lang=sv-SE#scope-settings
+[Moduler]: https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/create-module.html
+[scopes]: https://experienceleague.adobe.com/docs/commerce-admin/start/setup/websites-stores-views.html#scope-settings
 [Teman]: https://developer.adobe.com/commerce/frontend-core/guide/themes/create-storefront/

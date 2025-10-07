@@ -1,10 +1,10 @@
 ---
 title: Beroenderapporter
-description: Skapa rapporter som visar summorna för modul-, cirkulär- och ramverksberoenden.
+description: Lär dig hur du skapar beroenderapporter som visar modulär-, cirkulär- och ramverksberoenden i Adobe Commerce. Upptäck analys- och rapporteringsverktyg.
 exl-id: b7a32fe1-71c5-495f-8276-242503fb50ae
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '240'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---

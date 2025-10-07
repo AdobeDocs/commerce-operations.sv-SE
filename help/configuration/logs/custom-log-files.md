@@ -1,12 +1,12 @@
 ---
 title: Skriv till anpassad loggfil
-description: Lär dig hur du ställer in anpassade loggfiler.
+description: Lär dig hur du skapar och konfigurerar anpassade loggfiler i Adobe Commerce. Identifiera logghanterare och anpassad loggningsimplementering.
 feature: Configuration, Logs
 badge: label="Medverkad av Atwix" type="Informative" url="https://www.atwix.com/" tooltip="Atwix"
 exl-id: 875f45e7-30c9-4b1b-afe9-d1a8d51ccdf0
-source-git-commit: 991bd5fb34a2ffe61aa194ec46e2b04b4ce5b3e7
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '321'
 ht-degree: 0%
 
 ---

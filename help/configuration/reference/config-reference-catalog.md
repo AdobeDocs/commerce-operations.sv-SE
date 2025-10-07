@@ -1,11 +1,11 @@
 ---
 title: Referens för katalogkonfigurationssökvägar
-description: Se en lista med katalogkonfigurationsvärden.
+description: Läs mer om sökvägar och värden för katalogkonfiguration i inställningarna för Adobe Commerce Admin. Upptäck konfigurationsalternativ för produkt-, kategori- och kataloghantering.
 feature: Configuration, Catalog Management
 exl-id: 19451443-228e-437d-a3eb-7dc968b9fb0d
-source-git-commit: 47bda51cdcab964c37d9f652d467d69d795d8641
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '845'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lagrar** > Inställnin
 | Använd kategorisökväg för produkt-URL:er | `catalog/seo/product_use_categories` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Skapa permanent omdirigering för URL:er om URL-nyckeln har ändrats | `catalog/seo/save_rewrites_history` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Sidtitelavgränsare | `catalog/seo/title_separator` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Använd metataggen för kanoniska länkar för kategorier | `catalog/seo/category_canonical_tag` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
+| Använd Meta-taggen Canonical Link för kategorier | `catalog/seo/category_canonical_tag` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Använd metataggen för kanoniska länkar för produkter | `catalog/seo/product_canonical_tag` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
 | Aktivera | `catalog/magento_catalogpermissions/enabled` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
 | Tillåt bläddringskategori | `catalog/magento_catalogpermissions/grant_catalog_category_view` | ![Endast Commerce](/help/assets/configuration/cloud-ee.png) |
@@ -151,7 +151,7 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lagrar** > Inställnin
 
 ## Visual Merchandiser paths
 
-[!BADGE Endast PaaS]{type=Informative url="https://experienceleague.adobe.com/sv/docs/commerce/user-guides/product-solutions" tooltip="Gäller endast Adobe Commerce i molnprojekt (Adobe-hanterad PaaS-infrastruktur) och lokala projekt."}
+[!BADGE Endast PaaS]{type=Informative url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="Gäller endast Adobe Commerce i molnprojekt (Adobe-hanterad PaaS-infrastruktur) och lokala projekt."}
 
 Dessa konfigurationsvärden är tillgängliga i Admin i **Store** > Inställningar > **Konfiguration** > **Katalog** > **Visual Merchandiser**.
 

@@ -1,10 +1,10 @@
 ---
 title: .gitignore-referens
-description: Se hur du lägger till en fil som ingår i ignoreringslistan.
+description: Lär dig hur du lägger till filer i .gitignore-listan för Adobe Commerce-projekt. Upptäck de bästa sätten att hantera versionskontroll och exkludera filer.
 exl-id: 7c53b50a-7bdf-433b-bebb-0129f792a1a4
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '51'
+source-wordcount: '60'
 ht-degree: 0%
 
 ---

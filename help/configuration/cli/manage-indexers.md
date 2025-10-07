@@ -1,10 +1,10 @@
 ---
 title: Hantera indexerare
-description: Se exempel på hur du visar och hanterar Commerce-indexerare.
+description: Lär dig hur du visar och hanterar Adobe Commerce-indexerare med kommandoradsverktyg. Upptäck indexeringskommandon, statuskontroll och omindexeringstekniker.
 exl-id: d2cd1399-231e-4c42-aa0c-c2ed5d7557a0
-source-git-commit: ceefb9371dd0a85046cc5bfc0ddc72144d649608
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '974'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ store_data_exporter                      Stores Feed
 
 >[!NOTE]
 >
-> Adobe Commerce-handlare som använder Live Search, Catalog Service eller Produktrekommendationer har möjlighet att använda [SaaS-baserad prisindexering](https://experienceleague.adobe.com/sv/docs/commerce/price-indexer/price-indexing).
+> Adobe Commerce-handlare som använder Live Search, Catalog Service eller Produktrekommendationer har möjlighet att använda [SaaS-baserad prisindexering](https://experienceleague.adobe.com/en/docs/commerce/price-indexer/price-indexing).
 
 ## Visa indexeringsstatus
 
@@ -269,11 +269,11 @@ Stores Feed:                                       Update by Schedule
 >
 >- **2.4.8 och senare**: [!DNL Customer Grid]-indexeraren har stöd för både [!UICONTROL Update on Save]- och [!UICONTROL Update by Schedule]-lägen, och standardvärdet är [!UICONTROL Update by Schedule].
 >
->Se [Bästa tillvägagångssätt för indexerarkonfiguration](https://experienceleague.adobe.com/sv/docs/commerce-operations/implementation-playbook/best-practices/maintenance/indexer-configuration) i _Implementeringsspelningsboken_.
+>Se [Bästa tillvägagångssätt för indexerarkonfiguration](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/maintenance/indexer-configuration) i _Implementeringsspelningsboken_.
 
 >[!INFO]
 >
->Innan du växlar mellan indexeringslägen anger du att webbplatsen ska vara i [underhållsläge](../../installation/tutorials/maintenance-mode.md) och [inaktivera cron-jobb](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/configure/app/properties/crons-property). Detta garanterar att du inte får några databaslås.
+>Innan du växlar mellan indexeringslägen anger du att webbplatsen ska vara i [underhållsläge](../../installation/tutorials/maintenance-mode.md) och [inaktivera cron-jobb](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/crons-property). Detta garanterar att du inte får några databaslås.
 
 Så här anger du indexerarkonfigurationen:
 

@@ -1,10 +1,10 @@
 ---
 title: Distribuera statiska vyfiler
-description: Lär dig skriva statiska filer i Commerce filsystem i produktionsläge.
+description: Lär dig hur du distribuerar statiska vyfiler till Adobe Commerce filsystem i produktionsläge. Upptäck driftsättningskommandon och optimeringstekniker.
 exl-id: 51954738-b999-4982-954b-70f7a70c5a17
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
 workflow-type: tm+mt
-source-wordcount: '1124'
+source-wordcount: '1133'
 ht-degree: 0%
 
 ---
@@ -170,7 +170,7 @@ ERROR: You need to install the Commerce application before running this utility.
 
 Gör så här:
 
-1. Installera Commerce-programmet med kommandoraden [&#128279;](../../installation/composer.md).
+1. Installera Commerce-programmet med kommandoraden [](../../installation/composer.md).
 1. Logga in på programservern som, eller [växla till](../../installation/prerequisites/file-system/overview.md), ägare av filsystemet.
 1. Ta bort innehållet i katalogen `<app_root>/pub/static`, förutom i filen `.htaccess`. Ta inte bort filen.
 1. Distribuera statiska vyfiler: `bin/magento setup:static-content:deploy`
