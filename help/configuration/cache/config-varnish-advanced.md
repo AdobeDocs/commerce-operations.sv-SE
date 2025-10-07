@@ -101,7 +101,7 @@ När du har kompilerat om kan du installera modulen för det smarta läget. I al
    sudo make install
    ```
 
-Mer information om hur du installerar modulen för det smarta läget finns i [Samling med engelska ](https://github.com/varnish/varnish-modules).
+Mer information om hur du installerar modulen för det smarta läget finns i [Samling med engelska &#x200B;](https://github.com/varnish/varnish-modules).
 
 ### Exempel på VCL-fil
 

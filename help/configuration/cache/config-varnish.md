@@ -114,7 +114,7 @@ I det här avsnittet används en webbläsarkontroll för att visa hur resurser l
 
 I bilden nedan visas ett exempel med en webbläsarkontroll:
 
-![Första gången en begäran görs för ett cachelagrat objekt skickas den till webbläsaren ](../../assets/configuration/varnish-apache-first-visit.png)
+![Första gången en begäran görs för ett cachelagrat objekt skickas den till webbläsaren &#x200B;](../../assets/configuration/varnish-apache-first-visit.png)
 
 I exemplet ovan visas en begäran för huvudsidan för butiken (`m2_ce_my`). CSS- och JavaScript-resurser cachelagras i klientwebbläsaren.
 

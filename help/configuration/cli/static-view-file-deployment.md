@@ -170,7 +170,7 @@ ERROR: You need to install the Commerce application before running this utility.
 
 Gör så här:
 
-1. Installera Commerce-programmet med kommandoraden [](../../installation/composer.md).
+1. Installera Commerce-programmet med kommandoraden [&#128279;](../../installation/composer.md).
 1. Logga in på programservern som, eller [växla till](../../installation/prerequisites/file-system/overview.md), ägare av filsystemet.
 1. Ta bort innehållet i katalogen `<app_root>/pub/static`, förutom i filen `.htaccess`. Ta inte bort filen.
 1. Distribuera statiska vyfiler: `bin/magento setup:static-content:deploy`

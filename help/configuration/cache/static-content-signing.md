@@ -14,7 +14,7 @@ ht-degree: 0%
 
 För att förbättra prestandan anger Commerce `Expires` rubriker för statiska resurser, till exempel bilder, JavaScript och CSS-filer.
 Om du anger rubriken `Expires` för en statisk resurs anger webbläsaren att resursen ska cachelagras på den URL:en och att den cachelagrade versionen ska användas tills den upphör att gälla.
-Det här är en vanlig [bästa ](https://developer.yahoo.com/performance/rules.html#expires=)-metod för cachelagring av statiska resurser.
+Det här är en vanlig [bästa &#x200B;](https://developer.yahoo.com/performance/rules.html#expires=)-metod för cachelagring av statiska resurser.
 
 När webbläsaren cachelagrar en statisk resurs och resursändringarna på servern måste du rensa webbläsarens cache så att den kan hämta den nya versionen.
 Manuell rensning av webbläsarens cache fungerar om du är webbplatsadministratör, men det här är inte en lämplig begäran om att användarna ska kunna hämta nya versioner av en statisk resurs.

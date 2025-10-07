@@ -26,7 +26,7 @@ Tjänsten [!DNL Site-Wide Analysis Tool] är tillgänglig i [produktionsläge](h
 >[!NOTE]
 >
 >Ditt konto bör ha rätt till **[!DNL Support Permissions]** för att få åtkomst till [!DNL Site-Wide Analysis Tool Dashboard].
->>Mer information finns i [Dela ett [!DNL Commerce] konto](https://experienceleague.adobe.com/docs/commerce-admin/start/commerce-account/commerce-account-share.html) i användarhandboken.
+>&#x200B;>Mer information finns i [Dela ett [!DNL Commerce] konto](https://experienceleague.adobe.com/docs/commerce-admin/start/commerce-account/commerce-account-share.html) i användarhandboken.
 
 ## Loggar in på [!DNL Site-Wide Analysis Tool Dashboard] från din butiks [!UICONTROL Admin Panel]
 

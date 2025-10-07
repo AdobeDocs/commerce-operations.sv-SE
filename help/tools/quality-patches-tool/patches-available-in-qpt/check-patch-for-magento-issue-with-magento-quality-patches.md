@@ -23,7 +23,7 @@ I den här artikeln finns en översikt över QPT (Quality Patches Tool) och län
 
 ## Vad är verktyget för kvalitetspatchar?
 
-[QPT-verktyget ](https://github.com/magento/quality-patches) (Quality Patches Tool) är enskilda korrigeringsfiler som utvecklats av Adobe och Magento Open Source-communityn.
+[QPT-verktyget &#x200B;](https://github.com/magento/quality-patches) (Quality Patches Tool) är enskilda korrigeringsfiler som utvecklats av Adobe och Magento Open Source-communityn.
 
 Du kan:
 

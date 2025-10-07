@@ -67,7 +67,7 @@ Modulen `ApplicationServer` (`Magento/ApplicationServer/`) aktiverar GraphQL App
 
 När Application Server-funktionen har aktiverats i ditt Pro-projekt utför du följande steg innan du distribuerar GraphQL Application Server:
 
-1. Distribuera Adobe Commerce i molninfrastrukturen med hjälp av molnmallen från grenen [ 2.4.7-appserver](https://github.com/magento/magento-cloud/tree/2.4.7-appserver).
+1. Distribuera Adobe Commerce i molninfrastrukturen med hjälp av molnmallen från grenen [&#x200B; 2.4.7-appserver](https://github.com/magento/magento-cloud/tree/2.4.7-appserver).
 1. Kontrollera att alla dina Commerce-anpassningar och tillägg är [kompatibla](https://developer.adobe.com/commerce/php/development/components/app-server/) med GraphQL Application Server.
 1. Klona ditt Commerce Cloud-projekt.
 1. Justera inställningarna i filen application-server/nginx.conf.sample om det behövs.
@@ -113,7 +113,7 @@ git push
 
 Utför följande steg innan du distribuerar GraphQL Application Server i Starter-projekt:
 
-1. Distribuera Adobe Commerce i molninfrastrukturen med hjälp av molnmallen från grenen [ 2.4.7-appserver](https://github.com/magento/magento-cloud/tree/2.4.7-appserver).
+1. Distribuera Adobe Commerce i molninfrastrukturen med hjälp av molnmallen från grenen [&#x200B; 2.4.7-appserver](https://github.com/magento/magento-cloud/tree/2.4.7-appserver).
 1. Kontrollera att alla Commerce-anpassningar och tillägg är kompatibla med GraphQL Application Server.
 1. Bekräfta att miljövariabeln `CRYPT_KEY` är inställd för din instans. Du kan kontrollera den här variabelns status på molnkonsolen.
 1. Klona ditt Commerce Cloud-projekt.
@@ -273,7 +273,7 @@ Utför följande steg innan du distribuerar GraphQL Application Server i Starter
 
 >[!NOTE]
 >
->Se till att alla anpassade inställningar i rotfilen `.magento.app.yaml` migreras korrekt till filen `application-server/.magento/.magento.app.yaml`. När filen `application-server/.magento/.magento.app.yaml` har lagts till i ditt projekt bör du behålla den förutom rotfilen `.magento.app.yaml`. Om du till exempel behöver [konfigurera tjänsten RabbitMQ ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq) eller [hantera webbegenskaper](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property) bör du även lägga till samma konfiguration i `application-server/.magento/.magento.app.yaml`.
+>Se till att alla anpassade inställningar i rotfilen `.magento.app.yaml` migreras korrekt till filen `application-server/.magento/.magento.app.yaml`. När filen `application-server/.magento/.magento.app.yaml` har lagts till i ditt projekt bör du behålla den förutom rotfilen `.magento.app.yaml`. Om du till exempel behöver [konfigurera tjänsten RabbitMQ &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq) eller [hantera webbegenskaper](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property) bör du även lägga till samma konfiguration i `application-server/.magento/.magento.app.yaml`.
 
 ### Verifiera aktivering i molnprojekt
 

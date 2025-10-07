@@ -21,7 +21,7 @@ I det här avsnittet finns anvisningar om hur du installerar cachelagrade CentOS
 Eftersom PHP inte har inbyggt stöd för memcache måste du installera ett tillägg för PHP för att kunna använda det. Det finns två PHP-tillägg tillgängliga och det är viktigt att avkoda vilka som ska användas:
 
 - `memcache` (_no d_) - ett äldre men populärt tillägg som inte underhålls regelbundet.
-Tillägget `memcache` för närvarande _fungerar inte_ med PHP 7. Mer information om memcache[ finns i ](https://www.php.net/manual/en/book.memcache.php)PHP-dokumentationen.
+Tillägget `memcache` för närvarande _fungerar inte_ med PHP 7. Mer information om memcache[&#x200B; finns i &#x200B;](https://www.php.net/manual/en/book.memcache.php)PHP-dokumentationen.
 
   Det exakta namnet är `php-pecl-memcache` för CentOS.
 

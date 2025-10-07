@@ -58,7 +58,7 @@ Bildrutan **[!UICONTROL Redis used memory]** visar nodanvändningen för minne i
 
 ![Gör om ändringar sedan den senaste databasen sparades](../../assets/tools/observation-for-adobe-commerce/redis-tab-8.jpg)
 
-[!DNL Redis] är en minnesplats och sparar informationen i lagringsutrymmet. Bildrutan **[!UICONTROL Redis changes since last db save]** anger antalet minnesändringar som har gjorts sedan den senaste databasen sparades i lagringen. Mer information om [-beständighet finns i ](https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/)Redis-beständighet[!DNL Redis's].
+[!DNL Redis] är en minnesplats och sparar informationen i lagringsutrymmet. Bildrutan **[!UICONTROL Redis changes since last db save]** anger antalet minnesändringar som har gjorts sedan den senaste databasen sparades i lagringen. Mer information om [-beständighet finns i &#x200B;](https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/)Redis-beständighet[!DNL Redis's].
 
 ## [!UICONTROL Redis synchronization from Log]
 

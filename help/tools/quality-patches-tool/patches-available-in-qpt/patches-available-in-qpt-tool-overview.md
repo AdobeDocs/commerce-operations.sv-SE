@@ -44,7 +44,7 @@ Verktyget är avsett att göra det möjligt för dig att använda korrigeringsfi
 ## Patchar tillgängliga i [!DNL Quality Patches Tool]
 
 I det här avsnittet av Adobe Commerce Support Knowledge Base hittar du detaljerade beskrivningar av de problem som åtgärdats med QPT-korrigeringar, grupperade efter QPT-version.
-Du kan också se en lista över tillgängliga QPT-korrigeringar och filtrera efter komponent med hjälp av den dynamiskt genererade tabellen på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) i vår kunskapsbas för support.
+Du kan också se en lista över tillgängliga QPT-korrigeringar och filtrera efter komponent med hjälp av den dynamiskt genererade tabellen på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler &#x200B;](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) i vår kunskapsbas för support.
 
 ## Så här installerar och använder du [!DNL Quality Patches Tool]
 

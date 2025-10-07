@@ -14,7 +14,7 @@ ht-degree: 0%
 
 _Det här är tillgängligt för instanser där B2B för Adobe Commerce är installerat._
 
-I det här avsnittet visas konfigurationssökvägar för Commerce Enterprise B2B-tillägg. [`magento app:config:dump`-kommandot ](../cli/export-configuration.md) skriver dessa värden till den delade konfigurationsfilen `app/etc/config.php` som ska finnas i källkontrollen.
+I det här avsnittet visas konfigurationssökvägar för Commerce Enterprise B2B-tillägg. [`magento app:config:dump`-kommandot &#x200B;](../cli/export-configuration.md) skriver dessa värden till den delade konfigurationsfilen `app/etc/config.php` som ska finnas i källkontrollen.
 
 >[!INFO]
 >

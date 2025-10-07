@@ -248,7 +248,7 @@ En `<field>`-tagg kan ha följande värden för attributet `type=""`:
 | `select` | Normal listruta, kan behöva en anpassad `source_model`. Används även för `Yes/No` markeringar. Se `Magento\Search\Model\Adminhtml\System\Config\Source\Engine` för ett exempel. |
 | `multiselect` | Som `select`, men flera alternativ är giltiga. |
 | `button` | En knapp som utlöser en omedelbar händelse. Kräver en anpassad front end-modell för att definiera knapptexten och åtgärden. Se `Magento\ScheduledImportExport\Block\Adminhtml\System\Config\Clean` för ett exempel. |
-| `obscure` | Ett textfält med värdet krypterat och visat som `****`. Värdet visas inte om du ändrar typen med alternativet Inspektera element i webbläsaren. |
+| `obscure` | Ett textfält med värdet krypterat och visat som `**&#x200B;**`. Värdet visas inte om du ändrar typen med alternativet Inspektera element i webbläsaren. |
 | `password` | Precis som `obscure`, förutom att det dolda värdet inte är krypterat, så visas värdet om du tvingar en ändring av typen med alternativet Inspektera element i webbläsaren. |
 | `file` | Tillåter att en fil överförs för bearbetning. |
 | `label` | Visar en etikett i stället för ett redigerbart fält. Använd den här typen när ett fält bara kan redigeras i specifika omfång, till exempel enbart butiksvynivå. |

@@ -14,8 +14,8 @@ ht-degree: 0%
 
 I det här avsnittet visas konfigurationssökvägar för systemspecifika och känsliga inställningar:
 
-- [`magento app:config:dump`-kommandot ](../cli/export-configuration.md) skriver systemspecifika inställningar till den systemspecifika konfigurationsfilen, `app/etc/env.php`, som _inte_ ska finnas i källkontrollen. Den skriver även delad konfiguration för alla Commerce-instanser till `app/etc/config.php`, den här filen _bör_ finnas i källkontrollen.
-- Kommandot [`magento config:sensitive:set` ](../cli/set-configuration-values.md) skriver känsliga inställningar till `app/etc/env.php`.
+- [`magento app:config:dump`-kommandot &#x200B;](../cli/export-configuration.md) skriver systemspecifika inställningar till den systemspecifika konfigurationsfilen, `app/etc/env.php`, som _inte_ ska finnas i källkontrollen. Den skriver även delad konfiguration för alla Commerce-instanser till `app/etc/config.php`, den här filen _bör_ finnas i källkontrollen.
+- Kommandot [`magento config:sensitive:set` &#x200B;](../cli/set-configuration-values.md) skriver känsliga inställningar till `app/etc/env.php`.
 
   Du kan också ange känsliga värden med hjälp av konfigurationsvariabler som beskrivs i [Använd miljövariabler för att åsidosätta konfigurationsinställningarna](../reference/override-config-settings.md#environment-variables).
 
