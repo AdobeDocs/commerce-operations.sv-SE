@@ -17,8 +17,8 @@ Säkerhetsuppdateringar kan även innehålla kompatibilitetsrelaterade ändringa
 
 Varje säkerhetsuppdatering baseras på den tidigare fullständiga patchversionen. Den innehåller kvalitets- och säkerhetskorrigeringar från tidigare korrigeringsversioner och säkerhetskorrigeringar som skapats mellan den tidigare fullständiga korrigeringsversionen och säkerhetsuppdateringen.
 
-Instruktioner om hur du hämtar och använder säkerhetsuppdateringar finns i [Så här hämtar och använder du säkerhetsuppdateringar](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/how-to-obtain-and-apply-security-patches) i _Adobe Commerce Knowledgebase_.
+Instruktioner om hur du hämtar och använder säkerhetsuppdateringar finns i [Så här hämtar och använder du säkerhetsuppdateringar](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/how-to/how-to-obtain-and-apply-security-patches) i _Adobe Commerce Knowledgebase_.
 
 >[!NOTE]
 >
->Utökade säkerhetsuppdateringar för 2.4.4 och 2.4.5 är bara tillgängliga för Adobe Commerce-kunder och inte för Magento Open Source kodbas. Se [Utökad support](https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/lifecycle-policy#extended-support).
+>Utökade säkerhetsuppdateringar för 2.4.4 och 2.4.5 är bara tillgängliga för Adobe Commerce-kunder och inte för Magento Open Source kodbas. Se [Utökad support](https://experienceleague.adobe.com/sv/docs/commerce-operations/release/planning/lifecycle-policy#extended-support).
