@@ -35,7 +35,7 @@ I följande exempel visas `crontab`-konfigurationen för konsumenter som kör:
 >
 >Den kan konfigureras i Admin Stores > Settings > Configuration > Advanced > System > Cron configuration options for group: customers.
 >
->Mer information om hur du använder [ med Commerce finns i ](../cli/configure-cron-jobs.md)Konfigurera och kör cron`cron`.
+>Mer information om hur du använder [&#x200B; med Commerce finns i &#x200B;](../cli/configure-cron-jobs.md)Konfigurera och kör cron`cron`.
 
 Du kan också använda en processhanterare som [Supervisor](https://supervisord.readthedocs.io/en/latest/) för att övervaka processernas status. Hanteraren kan använda kommandoraden för att starta om processerna efter behov.
 
