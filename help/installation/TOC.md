@@ -69,4 +69,4 @@ ht-degree: 0%
    - [Avinstallera eller installera om Commerce](tutorials/uninstall.md)
    - [Avinstallera teman](tutorials/themes.md)
    - [Uppgradera databasschemat](tutorials/database-upgrade.md)
-- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
+- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=sv-SE)

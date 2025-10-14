@@ -81,10 +81,10 @@ Enskilda korrigeringsfiler innehåller korrigeringar av låg kvalitet för ett s
 
 Isolerade korrigeringsfiler är icke-kumulativa säkerhetskorrigeringar som har släppts oberoende av en fullständig säkerhetskorrigering för att möjliggöra en snabbare implementering. Varje enskild säkerhetskorrigering åtgärdar ett specifikt säkerhetsproblem och ingår antingen i den senaste eller i en kommande fullständig säkerhetskorrigering. Information om problemet finns i den relaterade säkerhetsbulletinen, som länkar till en KB-artikel (Knowledge Base) med korrigeringsinformation, hur korrigeringen ska tillämpas och ytterligare information.
 
-Gå till [Säkerhetscenter](https://helpx.adobe.com/security/products/magento.html) för att hitta de senaste säkerhetsuppdateringarna för Adobe Commerce.
+Gå till [Säkerhetscenter](https://helpx.adobe.com/se/security/products/magento.html) för att hitta de senaste säkerhetsuppdateringarna för Adobe Commerce.
 
 ## Egen korrigering
 
-Skapas av icke-Adobe-personal för att åtgärda ett problem eller ändra Adobe Commerce-koden av olika anledningar. Anpassade korrigeringsfiler levereras via [kvalitetskorrigeringsverktyget](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/usage).
+Skapas av icke-Adobe-personal för att åtgärda ett problem eller ändra Adobe Commerce-koden av olika anledningar. Anpassade korrigeringsfiler levereras via [kvalitetskorrigeringsverktyget](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/usage).
 
 <!-- Last updated from includes: 2025-05-28 16:37:31 -->
