@@ -34,7 +34,7 @@ Om du tittar på bildrutan **[!UICONTROL Transaction Overview]** ovan fanns det 
 
 ![404-felövervakningspanelen visar att sidan inte kunde hittas över tid](../../assets/tools/404-page-errors.jpg)
 
-Bildrutan **[!UICONTROL 404 page errors]** visar [ URI ](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier) och antalet 404 sidfel för en vald tidsram.
+Bildrutan **[!UICONTROL 404 page errors]** visar [&#x200B; URI &#x200B;](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier) och antalet 404 sidfel för en vald tidsram.
 
 ## [!UICONTROL % of Storage Free frame]
 
@@ -50,7 +50,7 @@ Bildrutan **[!UICONTROL % of Storage Free]** visar den genomsnittliga procentand
 
 ## [!UICONTROL Swap memory free in bytes]
 
-![frigör minne i byte ](../../assets/tools/swap-memory-free-in-bytes.jpg)
+![frigör minne i byte &#x200B;](../../assets/tools/swap-memory-free-in-bytes.jpg)
 
 Bildrutan **[!UICONTROL Swap memory free in bytes]** visar, per nod, mängden SWAP-minne som är ledigt på noden.
 
@@ -384,7 +384,7 @@ Bildrutan **[!UICONTROL Order transactions (default?)]** söker efter transaktio
 * %Du kan åtgärda problemet genom att uppgradera Elasticsearch-tjänsten i din Magento Cloud-infrastruktur till version % som ver_err
 * &#39;%klusterhälsostatus har ändrats från \[YELLOW\] till \[RED\] (orsak:%) som &#39;yel_red&#39;
 * &#39;%Inget utrymme återstår på enheten%&#39; som &#39;inget_utrymme&#39;
-* &#39;% misslyckades med att köra [SearchRequest{searchType=%&#39; som &#39;failed_query&#39;
+* &#39;% misslyckades med att köra &lbrack;SearchRequest&lbrace;searchType=%&#39; som &#39;failed_query&#39;
 
 ## [!UICONTROL Cron view]
 
