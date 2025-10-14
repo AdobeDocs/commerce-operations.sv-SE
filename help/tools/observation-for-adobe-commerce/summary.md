@@ -3,7 +3,7 @@ title: Fliken [!UICONTROL Summary]
 description: Läs mer om fliken [!UICONTROL Summary] i  [!DNL Observation for Adobe Commerce].
 exl-id: b07ed898-a211-4353-a1d4-1b71d4898b93
 feature: Configuration, Observability
-source-git-commit: 4caabd1578e56b74600441c9c779b7b2dfd06987
+source-git-commit: 5a0455b61824cb1946e29dba3ff7bfd9d225b110
 workflow-type: tm+mt
 source-wordcount: '2494'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Om du tittar på bildrutan **[!UICONTROL Transaction Overview]** ovan fanns det 
 
 ![404-felövervakningspanelen visar att sidan inte kunde hittas över tid](../../assets/tools/404-page-errors.jpg)
 
-Bildrutan **[!UICONTROL 404 page errors]** visar [&#x200B; URI &#x200B;](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier) och antalet 404 sidfel för en vald tidsram.
+Bildrutan **[!UICONTROL 404 page errors]** visar [ URI ](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier) och antalet 404 sidfel för en vald tidsram.
 
 ## [!UICONTROL % of Storage Free frame]
 
@@ -50,7 +50,7 @@ Bildrutan **[!UICONTROL % of Storage Free]** visar den genomsnittliga procentand
 
 ## [!UICONTROL Swap memory free in bytes]
 
-![frigör minne i byte &#x200B;](../../assets/tools/swap-memory-free-in-bytes.jpg)
+![frigör minne i byte ](../../assets/tools/swap-memory-free-in-bytes.jpg)
 
 Bildrutan **[!UICONTROL Swap memory free in bytes]** visar, per nod, mängden SWAP-minne som är ledigt på noden.
 
@@ -58,7 +58,7 @@ Bildrutan **[!UICONTROL Swap memory free in bytes]** visar, per nod, mängden SW
 
 ![CPU percent by host](../../assets/tools/cpu-percent-by-host.jpg)
 
-Sammanställningen av alla miljöer och noder visas i bildrutan **[!UICONTROL CPU % by host]**. Du bör avmarkera icke-produktionsmiljöer. Observera även alla instanser där alla noder för produktionsmiljön inte finns. Mer tips om hur CPU används finns i [Felsöka prestanda med New Relic på Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html?lang=sv-SE).
+Sammanställningen av alla miljöer och noder visas i bildrutan **[!UICONTROL CPU % by host]**. Du bör avmarkera icke-produktionsmiljöer. Observera även alla instanser där alla noder för produktionsmiljön inte finns. Mer tips om hur CPU används finns i [Felsöka prestanda med New Relic på Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html).
 
 ## [!UICONTROL Alerts during timeframe]
 
@@ -70,7 +70,7 @@ Sammanställningen av alla miljöer och noder visas i bildrutan **[!UICONTROL CP
 
 ![Användning i CPU](../../assets/tools/cpu-usage.jpg)
 
-Om **[!UICONTROL CPU Usage]**-bildrutan är tom är det en indikation på att infrastrukturprogrammet för [!DNL New Relic] inte är aktiverat. Om din webbplats finns på Starter visas inte den här informationen. Om din webbplats är på Pro kan du öppna en [supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE) och aktivera [!DNL New Relic Infrastructure] för din webbplats.
+Om **[!UICONTROL CPU Usage]**-bildrutan är tom är det en indikation på att infrastrukturprogrammet för [!DNL New Relic] inte är aktiverat. Om din webbplats finns på Starter visas inte den här informationen. Om din webbplats är på Pro kan du öppna en [supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html) och aktivera [!DNL New Relic Infrastructure] för din webbplats.
 
 ## [!UICONTROL Average Response Time]
 
@@ -257,7 +257,7 @@ Bildrutan **[!UICONTROL Database mysql-slow.log]** utför ett antal poster i [my
 
 ![Återställer synkronisering från logg](../../assets/tools/redis-synchronization-from-log.jpg)
 
-[[!DNL Redis]](https://redis.io/docs/about/) är ett datastrukturarkiv med öppen källkod (BSD-licensierad) i minnet som används som databas, cache och meddelandehanterare. Den kan utföra databas- och sessionscachning om den är konfigurerad. Bildrutan **[!UICONTROL Redis synchronization from Log]** fokuserar på [[!DNL Redis] synkronisering](https://redis.io/docs/latest/operate/oss_and_stack/management/replication/). Ju större [!DNL Redis]-datauppsättning, desto mer troligt blir det att det blir problem med synkroniseringen (fler data att synkronisera).
+[[!DNL Redis]](https://redis.io/about/) är ett datastrukturarkiv med öppen källkod (BSD-licensierad) i minnet som används som databas, cache och meddelandehanterare. Den kan utföra databas- och sessionscachning om den är konfigurerad. Bildrutan **[!UICONTROL Redis synchronization from Log]** fokuserar på [[!DNL Redis] synkronisering](https://redis.io/docs/latest/operate/oss_and_stack/management/replication/). Ju större [!DNL Redis]-datauppsättning, desto mer troligt blir det att det blir problem med synkroniseringen (fler data att synkronisera).
 
 **[!DNL Redis]fel och meddelanden:**
 
@@ -384,7 +384,7 @@ Bildrutan **[!UICONTROL Order transactions (default?)]** söker efter transaktio
 * %Du kan åtgärda problemet genom att uppgradera Elasticsearch-tjänsten i din Magento Cloud-infrastruktur till version % som ver_err
 * &#39;%klusterhälsostatus har ändrats från \[YELLOW\] till \[RED\] (orsak:%) som &#39;yel_red&#39;
 * &#39;%Inget utrymme återstår på enheten%&#39; som &#39;inget_utrymme&#39;
-* &#39;% misslyckades med att köra &lbrack;SearchRequest&lbrace;searchType=%&#39; som &#39;failed_query&#39;
+* &#39;% misslyckades med att köra [SearchRequest{searchType=%&#39; som &#39;failed_query&#39;
 
 ## [!UICONTROL Cron view]
 
