@@ -2,9 +2,9 @@
 title: Beta-versioner
 description: Läs mer om betaversioner av Adobe Commerce och hur du deltar.
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
-source-git-commit: 879160b11fe4840eb3af97c64f080deb5f002827
+source-git-commit: d467ada97a81d64dff358bc83acd489f69ba0677
 workflow-type: tm+mt
-source-wordcount: '862'
+source-wordcount: '1021'
 ht-degree: 0%
 
 ---
@@ -28,9 +28,32 @@ Genom att få tidig tillgång till funktioner som Adobe utvecklar kan kunder och
 
 I följande avsnitt finns en lista med aktiva betaprogram.
 
+### Patcheringstjänst för molnautomatisering (Private Beta)
+
+[Tjänsten ](../tools/caps-tool/intro.md) Creative Cloud Automation Patching automatiserar processen för att tillämpa isolerade säkerhetspatchar i [Adobe Commerce på molninfrastrukturen](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview) -miljöer.
+
+I oktober 2025 kommer betaversionen av Cloud Automation Patching Service att läggas till på kontrollpanelen för [Site-Wide Analysis-verktyget](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/site-wide-analysis-tool/dashboard). Den här tjänsten stöder Commerce projektadministratörer med ett smidigt arbetsflöde för patchning som innefattar:
+
+- Automatiserad installation av korrigeringsfiler
+- Återställning
+- Verifiering efter distribution.
+
+Tjänsten säkerställer att du kan upprätthålla säkra, stabila och uppdaterade miljöer med minimal manuell insats och risk.
+
+Betaversionen innehåller följande funktioner:
+
+- **Automatisera installation av korrigeringsfiler**: Förenkla och automatisera processen att åtgärda kritiska säkerhetsluckor i olika miljöer.
+- **Minimera risken**: Förhindra webbplatsavbrott med hälsokontroll och återställningsfunktioner efter distributionen.
+
+>[!NOTE]
+>
+>Eftersom tjänsten Cloud Automation Patching automatiskt tillämpar isolerade säkerhetspatchar måste du ha rollen [Contributor eller Project Admin](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/project/user-access) för att kunna använda den.
+
+Om du vill delta i den här betaversionen fyller du i och skickar [Cloud Automation Patching Service - Beta Sign-formulär](https://forms.office.com/r/3Wfxj5nPdB).
+
 ### Förbättrade sökfunktioner för Live Search (Public Beta)
 
-Den här betaversionen stöder tre nya funktioner i [`productSearch`-frågan ](https://developer.adobe.com/commerce/services/graphql/live-search/product-search/):
+Den här betaversionen stöder tre nya funktioner i [`productSearch`-frågan ](https://developer.adobe.com/commerce/webapi/graphql/schema/live-search/queries/product-search/):
 
 - **Skiktad sökning** - Sök i ett annat söksammanhang - Med den här funktionen kan du utföra upp till två söklager för dina sökfrågor. Exempel:
 
@@ -48,11 +71,13 @@ Den här betaversionen stöder tre nya funktioner i [`productSearch`-frågan ](h
 
    - Söker efter en fråga i en större sträng. Om en kund till exempel söker efter produktnumret &quot;PE-123&quot; i strängen &quot;HAPE-123&quot;.
 
-      - Obs! Den här söktypen skiljer sig från den befintliga [frassökningen](https://developer.adobe.com/commerce/services/graphql/live-search/product-search/#phrase), som utför en automatisk sökning. Om produktattributvärdet till exempel är &quot;utomhusbyxor&quot; returnerar en frassökning ett svar för &quot;out pan&quot;, men returnerar inget svar för &quot;or ants&quot;. En sökning innehåller emellertid ett svar på &quot;eller ants&quot;.
+     >[!NOTE]
+     >
+     >Den här söktypen skiljer sig från den befintliga [frassökningen](https://developer.adobe.com/commerce/webapi/graphql/schema/live-search/queries/product-search/), som utför en automatisk sökning. Om produktattributvärdet till exempel är &quot;utomhusbyxor&quot; returnerar en frassökning ett svar för &quot;out pan&quot;, men returnerar inget svar för &quot;or ants&quot;. En sökning innehåller emellertid ett svar på &quot;eller ants&quot;.
 
 De här nya villkoren förbättrar funktionen för filtrering av sökfrågor för att förfina sökresultaten. De här nya villkoren påverkar inte huvudsökfrågan. Om du vill delta i betaversionen skickar du en e-postförfrågan till [commerce-storefront-services](mailto:commerce-storefront-services@adobe.com).
 
-Mer information om hur du installerar betaversionen av Live Search finns i [Live Search-guiden](https://experienceleague.adobe.com/sv/docs/commerce/live-search/install#install-the-live-search-beta).
+Mer information om hur du installerar betaversionen av Live Search finns i [Live Search-guiden](https://experienceleague.adobe.com/en/docs/commerce/live-search/install#install-the-live-search-beta).
 
 ### IBM Sterling Order Management System Integration (Private Beta)
 
@@ -74,7 +99,7 @@ Alla Adobe Commerce Foundation alfa- och betaversioner innehåller alla ändring
 - Förbättringar i GraphQL
 - Allmänna felkorrigeringar av kvalitet
 - Bidrag från gemenskapen
-- Ändringar som krävs för kompatibilitet med [Adobe Commerce-tjänster](https://experienceleague.adobe.com/sv/docs/commerce/user-guides/home)
+- Ändringar som krävs för kompatibilitet med [Adobe Commerce-tjänster](https://experienceleague.adobe.com/en/docs/commerce/user-guides/home)
 
 #### Namngivningskonvention och schema
 

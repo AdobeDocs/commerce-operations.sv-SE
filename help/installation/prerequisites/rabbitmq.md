@@ -1,15 +1,15 @@
 ---
-title: Message Broker
+title: Message Broker (RabbitMQ)
 description: Följ de här stegen för att installera och konfigurera nödvändig meddelandehanterare (till exempel  [!DNL RabbitMQ]) för lokala installationer av Adobe Commerce.
 exl-id: ae6200d6-540f-46b3-92ba-7df7f6bb6fae
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 73faaa2a3b9ce773e9a381d103735403966f568b
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '546'
 ht-degree: 0%
 
 ---
 
-# Message Broker
+# Message Broker (RabbitMQ)
 
 Adobe Commerce använder meddelandehanteraren [!DNL RabbitMQ] med öppen källkod. Det erbjuder ett tillförlitligt, skalbart och portabelt meddelandesystem med hög tillgänglighet.
 

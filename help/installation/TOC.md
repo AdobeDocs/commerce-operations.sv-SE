@@ -2,9 +2,9 @@
 user-guide-title: Installationshandbok
 user-guide-description: Lär dig hur du installerar Adobe Commerce för lokala distributioner.
 feature: Install
-source-git-commit: 8d0d8f9822b88f2dd8cbae8f6d7e3cdb14cc4848
+source-git-commit: 73faaa2a3b9ce773e9a381d103735403966f568b
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '173'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,9 @@ ht-degree: 0%
       - [Konfigurera Nginx](prerequisites/search-engine/configure-nginx.md)
       - [Konfigurera Apache](prerequisites/search-engine/configure-apache.md)
    - [PHP](prerequisites/php-settings.md)
-   - [Message Broker](prerequisites/rabbitmq.md)
+   - Meddelandeförmedlare {#message-brokers}
+      - [Kanin MQ](prerequisites/rabbitmq.md)
+      - [Aktiv MQ](prerequisites/activemq.md)
    - [Säkerhet](prerequisites/security.md)
    - [Autentiseringsnycklar](prerequisites/authentication-keys.md)
    - [Adobe Commerce](prerequisites/commerce.md)
@@ -67,4 +69,4 @@ ht-degree: 0%
    - [Avinstallera eller installera om Commerce](tutorials/uninstall.md)
    - [Avinstallera teman](tutorials/themes.md)
    - [Uppgradera databasschemat](tutorials/database-upgrade.md)
-- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=sv-SE)
+- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

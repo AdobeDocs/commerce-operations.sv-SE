@@ -2,9 +2,9 @@
 title: env.php reference
 description: Läs mer om konfigurationsvärden och avsnitt för filen env.php i Adobe Commerce. Upptäck miljöinställningar och konfigurationsalternativ.
 exl-id: cf02da8f-e0de-4f0e-bab6-67ae02e9166f
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: cb89f0c0a576cf6cd8b53a4ade12c21106e2cdf3
 workflow-type: tm+mt
-source-wordcount: '1016'
+source-wordcount: '1033'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Filen `env.php` innehåller följande avsnitt:
 | `downloadable_domains` | Lista över hämtningsbara domäner |
 | `install` | Installationsdatum |
 | `lock` | Lås providerinställningar |
-| `MAGE_MODE` | Programläget [&#128279;](../bootstrap/application-modes.md) |
+| `MAGE_MODE` | Programläget [](../bootstrap/application-modes.md) |
 | `queue` | Inställningar för [Meddelandeköer](../queues/manage-message-queues.md) |
 | `resource` | Mappning av resursnamn till en anslutning |
 | `session` | Sessionslagringsdata |
@@ -146,7 +146,7 @@ Commerce använder en krypteringsnyckel för att skydda lösenord och andra kän
 ]
 ```
 
-Läs mer om [Krypteringsnyckel](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/security/encryption-key) i användarhandboken för _Commerce_.
+Läs mer om [Krypteringsnyckel](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/encryption-key) i användarhandboken för _Commerce_.
 
 ## db
 
@@ -172,11 +172,19 @@ Alla databaskonfigurationer är tillgängliga i den här noden.
 
 ## default_connection
 
-Definierar standardanslutningen för meddelandeköer. Värdet kan vara `db`, `amqp` eller ett anpassat kösystem som `redismq`. Om du anger något annat värde än `db` måste meddelandeköprogrammet först installeras och konfigureras. Annars kommer meddelanden inte att behandlas korrekt.
+Definierar standardanslutningen för meddelandeköer. Värdet kan vara `db`, `amqp`, `stomp` eller ett anpassat kösystem som `redismq`. Om du anger något annat värde än `db` måste meddelandeköprogrammet först installeras och konfigureras. Annars kommer meddelanden inte att behandlas korrekt.
 
 ```conf
 'queue' => [
     'default_connection' => 'amqp'
+]
+```
+
+För STOMP (ActiveMQ Artemis):
+
+```conf
+'queue' => [
+    'default_connection' => 'stomp'
 ]
 ```
 
@@ -203,7 +211,7 @@ En lista över tillgängliga hämtningsbara domäner i den här noden. Ytterliga
 ]
 ```
 
-Läs mer om [Hämtningsbara domäner](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/cli-reference/commerce-on-premises#downloadabledomainsadd).
+Läs mer om [Hämtningsbara domäner](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises#downloadabledomainsadd).
 
 ## installera
 
@@ -233,13 +241,13 @@ Läs mer om [programlägen](../cli/set-mode.md).
 
 ## kö
 
-Meddelandekökonfigurationer är tillgängliga i den här noden.
+Meddelandekökonfigurationer är tillgängliga i den här noden. Du kan konfigurera RabbitMQ (AMQP) eller ActiveMQ Artemis (STOMP) som meddelandehanterare.
 
 ```conf
 'queue' => [
   'topics' => [
-    'customer.created' => [publisher="default-rabitmq"],
-    'order.created' => [publisher="default-rabitmq"],
+    'customer.created' => [publisher="default-broker"],
+    'order.created' => [publisher="default-broker"],
   ]
 ]
 ```

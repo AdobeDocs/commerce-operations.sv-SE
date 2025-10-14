@@ -2,9 +2,9 @@
 title: GraphQL Application Server
 description: Läs mer om graphql-programserver i Adobe Commerce. Upptäck riktlinjer och optimeringsstrategier för implementering.
 exl-id: 9b223d92-0040-4196-893b-2cf52245ec33
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: cb89f0c0a576cf6cd8b53a4ade12c21106e2cdf3
 workflow-type: tm+mt
-source-wordcount: '2212'
+source-wordcount: '2360'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Med Commerce GraphQL Application Server kan Adobe Commerce upprätthålla status bland Commerce GraphQL API-begäranden. GraphQL Application Server, som bygger på svullningstillägget, fungerar som en process med arbetstrådar som hanterar bearbetningen av begäranden. Genom att bevara ett startläge för ett program bland GraphQL API-begäranden förbättrar GraphQL Application Server hanteringen av begäranden och produktens övergripande prestanda. API-förfrågningar blir betydligt effektivare.
 
-GraphQL Application Server finns endast för Adobe Commerce. Det finns inte för Magento Open Source. För Cloud Pro-projekt måste du [skicka in en Adobe Commerce Support](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)-biljett för att aktivera GraphQL Application Server.
+GraphQL Application Server finns endast för Adobe Commerce. Det finns inte för Magento Open Source. För Cloud Pro-projekt måste du [skicka in en Adobe Commerce Support](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)-biljett för att aktivera GraphQL Application Server.
 
 >[!NOTE]
 >
@@ -43,7 +43,7 @@ För att köra GraphQL Application Server krävs följande:
 
 ### Molnprojekt
 
-Adobe Commerce i molninfrastrukturprojekt innehåller svullnadstillägget som standard. Du kan [aktivera](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions) den i egenskapen `runtime` för filen `.magento.app.yaml`. Exempel:
+Adobe Commerce i molninfrastrukturprojekt innehåller svullnadstillägget som standard. Du kan [aktivera](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions) den i egenskapen `runtime` för filen `.magento.app.yaml`. Exempel:
 
 ```yaml
 runtime:
@@ -67,7 +67,7 @@ Modulen `ApplicationServer` (`Magento/ApplicationServer/`) aktiverar GraphQL App
 
 När Application Server-funktionen har aktiverats i ditt Pro-projekt utför du följande steg innan du distribuerar GraphQL Application Server:
 
-1. Distribuera Adobe Commerce i molninfrastrukturen med hjälp av molnmallen från grenen [&#x200B; 2.4.7-appserver](https://github.com/magento/magento-cloud/tree/2.4.7-appserver).
+1. Distribuera Adobe Commerce i molninfrastrukturen med hjälp av molnmallen från grenen [ 2.4.7-appserver](https://github.com/magento/magento-cloud/tree/2.4.7-appserver).
 1. Kontrollera att alla dina Commerce-anpassningar och tillägg är [kompatibla](https://developer.adobe.com/commerce/php/development/components/app-server/) med GraphQL Application Server.
 1. Klona ditt Commerce Cloud-projekt.
 1. Justera inställningarna i filen application-server/nginx.conf.sample om det behövs.
@@ -113,7 +113,7 @@ git push
 
 Utför följande steg innan du distribuerar GraphQL Application Server i Starter-projekt:
 
-1. Distribuera Adobe Commerce i molninfrastrukturen med hjälp av molnmallen från grenen [&#x200B; 2.4.7-appserver](https://github.com/magento/magento-cloud/tree/2.4.7-appserver).
+1. Distribuera Adobe Commerce i molninfrastrukturen med hjälp av molnmallen från grenen [ 2.4.7-appserver](https://github.com/magento/magento-cloud/tree/2.4.7-appserver).
 1. Kontrollera att alla Commerce-anpassningar och tillägg är kompatibla med GraphQL Application Server.
 1. Bekräfta att miljövariabeln `CRYPT_KEY` är inställd för din instans. Du kan kontrollera den här variabelns status på molnkonsolen.
 1. Klona ditt Commerce Cloud-projekt.
@@ -273,7 +273,7 @@ Utför följande steg innan du distribuerar GraphQL Application Server i Starter
 
 >[!NOTE]
 >
->Se till att alla anpassade inställningar i rotfilen `.magento.app.yaml` migreras korrekt till filen `application-server/.magento/.magento.app.yaml`. När filen `application-server/.magento/.magento.app.yaml` har lagts till i ditt projekt bör du behålla den förutom rotfilen `.magento.app.yaml`. Om du till exempel behöver [konfigurera tjänsten RabbitMQ &#x200B;](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq) eller [hantera webbegenskaper](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property) bör du även lägga till samma konfiguration i `application-server/.magento/.magento.app.yaml`.
+>Se till att alla anpassade inställningar i rotfilen `.magento.app.yaml` migreras korrekt till filen `application-server/.magento/.magento.app.yaml`. När filen `application-server/.magento/.magento.app.yaml` har lagts till i ditt projekt bör du behålla den förutom rotfilen `.magento.app.yaml`. Om du till exempel behöver [konfigurera tjänsten RabbitMQ ](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq) eller [hantera webbegenskaper](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property) bör du även lägga till samma konfiguration i `application-server/.magento/.magento.app.yaml`.
 
 ### Verifiera aktivering i molnprojekt
 
@@ -537,3 +537,30 @@ De här filerna kan inspekteras med alla verktyg som du använder för att visa 
 >[!NOTE]
 >
 >`--state-monitor` är inte kompatibel med PHP-versionerna `8.3.0` - `8.3.4` på grund av ett fel i PHP-skräpinsamlaren. Om du använder PHP 8.3 måste du uppgradera till `8.3.5` eller senare för att kunna använda den här funktionen.
+
+## Konfigurerar alternativHeaders för IP-identifiering för klient
+
+Som standard har GraphQL Application Server stöd för en standardkonfiguration för huvudet `x-forwarded-for` som definieras i filen `app/etc/di.xml` vilket möjliggör korrekt hämtning av klientens IP-adress i vanliga proxy- och CDN-miljöer.
+
+Om du behöver stöd för ytterligare eller anpassade rubriker (till exempel `x-client-ip`, `fastly-client-ip` eller `x-real-ip`) kan du utöka eller åsidosätta argumentet `alternativeHeaders` i `app/etc/di.xml`-filen. Detta är bara nödvändigt om din miljö använder andra huvuden än `x-forwarded-for` för att skicka klientens IP-adress.
+
+Om du till exempel vill lägga till stöd för andra rubriker uppdaterar du `app/etc/di.xml` enligt följande:
+
+```xml
+<type name="Magento\Framework\HTTP\PhpEnvironment\RemoteAddress">
+    <arguments>
+        <argument name="alternativeHeaders" xsi:type="array">
+            <item name="x-client-ip" xsi:type="string">HTTP_X_CLIENT_IP</item>
+            <item name="fastly-client-ip" xsi:type="string">HTTP_FASTLY_CLIENT_IP</item>
+            <item name="x-real-ip" xsi:type="string">HTTP_X_REAL_IP</item>
+            <item name="x-forwarded-for" xsi:type="string">HTTP_X_FORWARDED_FOR</item>
+        </argument>
+    </arguments>
+</type>
+```
+
+Du kan lägga till, ta bort eller ordna om rubrikerna efter behov för att se till att IP-adressen för klienten hämtas från rätt källa för konfigurationen.
+
+>[!NOTE]
+>
+>Om du använder Adobe Commerce Cloud med den snabba CDN-modulen hanteras den här konfigurationen automatiskt och inga manuella ändringar krävs. Manuell konfiguration krävs bara för anpassade CDN-, proxy- eller icke-standard-rubrikinställningar.

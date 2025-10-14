@@ -2,16 +2,16 @@
 title: Hantera meddelandeköer
 description: Lär dig hur du hanterar meddelandeköer från kommandoraden för Adobe Commerce.
 exl-id: 619e5df1-39cb-49b6-b636-618b12682d32
-source-git-commit: 8dce1f1e961ec02d7783a7423a51a7d4567dce79
+source-git-commit: 47525e8d8379061b254bfa90ab46e27a1ee2f524
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '427'
 ht-degree: 0%
 
 ---
 
 # Hantera meddelandeköer
 
-Du kan hantera meddelandeköer från kommandoraden med hjälp av cron-jobb eller en extern processhanterare för att se till att konsumenterna hämtar meddelanden.
+Du kan hantera meddelandeköer från kommandoraden med hjälp av cron-jobb eller en extern processhanterare för att se till att konsumenterna hämtar meddelanden. Detta gäller alla meddelandeförmedlare som stöds, inklusive RabbitMQ (AMQP), Apache ActiveMQ Artemis (STOMP) och MySQL-adapter.
 
 ## Processhantering
 
@@ -49,7 +49,7 @@ Du kan också använda en processhanterare som [Supervisor](https://supervisord.
 
 >[!INFO]
 >
->Om din Adobe Commerce-butik finns på molnplattformen använder du [`CRON_CONSUMERS_RUNNER`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=sv-SE#cron_consumers_runner) för att konfigurera `consumers_runner` cron-jobbet.
+>Om din Adobe Commerce-butik finns på molnplattformen använder du [`CRON_CONSUMERS_RUNNER`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#cron_consumers_runner) för att konfigurera `consumers_runner` cron-jobbet.
 
 ### Specifik konfiguration
 
@@ -78,10 +78,14 @@ Redigera filen `/app/etc/env.php` om du vill konfigurera cron-jobbet `consumers_
 
   >[!INFO]
   >
-  >Du bör inte köra flera användare på en MySQL-styrd kö. Mer information finns i [Ändra meddelandekö från MySQL till AMQP](https://developer.adobe.com/commerce/php/development/components/message-queues/#change-message-queue-from-mysql-to-amqp).
+  >Du bör inte köra flera användare på en MySQL-styrd kö. Mer information om hur du byter till AMQP (RabbitMQ) eller STOMP (ActiveMQ Artemis) finns i [Ändra meddelandekö från MySQL till externa mäklare](https://developer.adobe.com/commerce/php/development/components/message-queues/#change-message-queue-from-mysql-to-external-brokers).
 
   >[!INFO]
   >
-  >Om din Adobe Commerce-butik finns på molnplattformen använder du [`CONSUMERS_WAIT_FOR_MAX_MESSAGES`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=sv-SE#consumers_wait_for_max_messages) för att konfigurera hur konsumenter ska bearbeta meddelanden från meddelandekön.
+  >Om din Adobe Commerce-butik finns på molnplattformen använder du [`CONSUMERS_WAIT_FOR_MAX_MESSAGES`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#consumers_wait_for_max_messages) för att konfigurera hur konsumenter ska bearbeta meddelanden från meddelandekön.
+
+  >[!NOTE]
+  >
+  >ActiveMQ Artemis (STOMP) introducerades i Adobe Commerce 2.4.6 och senare.
 
 Se [Starta meddelandekökonsumenter](../cli/start-message-queues.md).

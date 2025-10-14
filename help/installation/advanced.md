@@ -2,9 +2,9 @@
 title: Avancerad lokal installation
 description: Lär dig mer om avancerade installationsscenarier för Adobe Commerce lokala distributioner. Upptäck komplexa konfigurationer och anpassade konfigureringsalternativ.
 exl-id: e16e750a-e068-4a63-8ad9-62043e2a8231
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: cb89f0c0a576cf6cd8b53a4ade12c21106e2cdf3
 workflow-type: tm+mt
-source-wordcount: '2317'
+source-wordcount: '2485'
 ht-degree: 0%
 
 ---
@@ -119,7 +119,7 @@ Följande alternativ anger användarinformation och autentiseringsuppgifter för
 
 Du kan skapa Admin-användaren under eller efter installationen. Om du skapar användaren under installationen krävs alla autentiseringsuppgifter för administratörer. Se [Exempel på lokala värdinstallationer](#sample-localhost-installations).
 
-Följande tabeller innehåller många men inte alla tillgängliga installationsparametrar. En fullständig lista finns i [Kommandoradsverktygshandboken](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/cli-reference/commerce-on-premises).
+Följande tabeller innehåller många men inte alla tillgängliga installationsparametrar. En fullständig lista finns i [Kommandoradsverktygshandboken](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises).
 
 | Namn | Värde | Obligatoriskt? |
 |--- |--- |--- |
@@ -187,6 +187,21 @@ Konfigurationsalternativ för **[!DNL RabbitMQ]:**
 | `--amqp-password` | Lösenordet för att ansluta till [!DNL RabbitMQ]. Använd inte standardlösenordet `guest`. | Nej |
 | `--amqp-virtualhost` | Det virtuella värdsystemet för anslutning till [!DNL RabbitMQ]. Standardvärdet är `/`. | Nej |
 | `--amqp-ssl` | Anger om anslutningen till [!DNL RabbitMQ] ska upprättas. Standardvärdet är `false`. Mer information om hur du konfigurerar SSL för [!DNL RabbitMQ] finns i [!DNL RabbitMQ]. | Nej |
+| `--consumers-wait-for-messages` | Ska konsumenterna vänta på ett meddelande från kön? 1 - Ja, 0 - Nej | Nej |
+
+**Konfigurationsalternativ för ActiveMQ-objekt:**
+
+>[!NOTE]
+>
+>ActiveMQ Artemis introducerades i Adobe Commerce 2.4.6 och senare.
+
+| Namn | Värde | Obligatoriskt? |
+|--- |--- |--- |
+| `--stomp-host` | Använd inte alternativen för `--stomp` om du inte redan har konfigurerat en installation av ActiveMQ Artemis. Mer information om hur du installerar och konfigurerar ActiveMQ Artemis finns i Installera ActiveMQ Artemis.<br><br>Värdnamnet där ActiveMQ Artemis är installerat. | Nej |
+| `--stomp-port` | Den port som ska användas för att ansluta till ActiveMQ Artemis. Standardvärdet är 61613. | Nej |
+| `--stomp-user` | Användarnamnet för anslutning till ActiveMQ Artemis. Använd inte standardanvändaren `artemis`. | Nej |
+| `--stomp-password` | Lösenordet för anslutning till ActiveMQ Artemis. Använd inte standardlösenordet `artemis`. | Nej |
+| `--stomp-ssl` | Anger om ActiveMQ Artemis ska anslutas med SSL. Standardvärdet är `false`. Mer information om hur du konfigurerar SSL för ActiveMQ Artemis finns i ActiveMQ Artemis. | Nej |
 | `--consumers-wait-for-messages` | Ska konsumenterna vänta på ett meddelande från kön? 1 - Ja, 0 - Nej | Nej |
 
 **Lås konfigurationsalternativ:**
@@ -283,7 +298,7 @@ For security, remove write permissions from these directories: '/var/www/html/ma
 ```
 
 Efter installationen kan du skapa en administratörsanvändare med kommandot `admin:user:create`:
-[&#x200B; Skapa eller redigera en administratör &#x200B;](tutorials/admin.md#create-or-edit-an-administrator)
+[ Skapa eller redigera en administratör ](tutorials/admin.md#create-or-edit-an-administrator)
 
 #### Exempel 3 - Installera med ytterligare alternativ
 
@@ -336,5 +351,24 @@ For security, remove write permissions from these directories: '/var/www/html/ma
 [SUCCESS]: Magento installation complete.
 [SUCCESS]: Admin Panel URI: /admin_puu71q
 ```
+
+#### Exempel 4 - Installera med ActiveMQ Artemis
+
+I följande exempel visas hur du installerar Adobe Commerce med ActiveMQ Artemis som meddelandehanterare:
+
+```bash
+bin/magento setup:install --base-url=http://127.0.0.1/magento2/ \
+--db-host=localhost --db-name=magento --db-user=magento --db-password=magento \
+--admin-firstname=Magento --admin-lastname=User --admin-email=user@example.com \
+--admin-user=admin --admin-password=admin123 --language=en_US \
+--currency=USD --timezone=America/Chicago --use-rewrites=1 \
+--search-engine=opensearch --opensearch-host=os-host.example.com \
+--opensearch-port=9200 --stomp-host=localhost --stomp-port=61613 \
+--stomp-user=artemis --stomp-password=artemis
+```
+
+>[!NOTE]
+>
+>ActiveMQ Artemis-installation kräver Adobe Commerce 2.4.6 eller senare.
 
 <!-- Last updated from includes: 2024-04-16 09:42:31 -->
