@@ -23,7 +23,7 @@ Handboken är avsedd för administratörer och programvaruutvecklare i Adobe Com
 
 Du kan använda [!DNL Upgrade Compatibility Tool] via:
 
-- Som ett fristående [kommandoradsverktyg ](../upgrade-compatibility-tool/run.md). En fullständig lista över tillgängliga kommandon finns i [`bin/uct`-referensen](../../tools/reference/uct.md).
+- Som ett fristående [kommandoradsverktyg &#x200B;](../upgrade-compatibility-tool/run.md). En fullständig lista över tillgängliga kommandon finns i [`bin/uct`-referensen](../../tools/reference/uct.md).
 - Integrerar [!DNL Upgrade Compatibility Tool] med [[!DNL Site-Wide Analysis Tool]](../upgrade-compatibility-tool/integrate-analysis-tool.md).
 - En körningskonfiguration i [Magento PHPStorm-plugin](../upgrade-compatibility-tool/run-configuration-phpstorm-plugin.md).
 
@@ -31,7 +31,7 @@ Du kan använda [!DNL Upgrade Compatibility Tool] via:
 
 I följande diagram visas möjliga arbetsflöden när [!DNL Upgrade Compatibility Tool] körs:
 
-![[!DNL Upgrade Compatibility Tool] Diagram ](../../assets/upgrade-guide/uct-diagram-v5.png)
+![[!DNL Upgrade Compatibility Tool] Diagram &#x200B;](../../assets/upgrade-guide/uct-diagram-v5.png)
 
 ## [!DNL Upgrade Compatibility Tool] demo
 
@@ -43,7 +43,7 @@ Titta på den här videon om du vill veta mer om [!DNL Upgrade Compatibility Too
 
 Om du behöver information eller har frågor som inte ingår i den här handboken använder du följande resurser:
 
-Kontakta oss på Slack-kanalen [!DNL Upgrade Compatibility Tool]#upgrade-compatibility-tool[ för att få kontakt med ](https://magentocommeng.slack.com/archives/C019Y143U9F)-teamet. Vi vill gärna få synpunkter, problem och förslag som hjälper oss att förbättra verktyget.
+Kontakta oss på Slack-kanalen [!DNL Upgrade Compatibility Tool]#upgrade-compatibility-tool[&#x200B; för att få kontakt med &#x200B;](https://magentocommeng.slack.com/archives/C019Y143U9F)-teamet. Vi vill gärna få synpunkter, problem och förslag som hjälper oss att förbättra verktyget.
 
 [!DNL Upgrade Compatibility Tool] använder regler som definierats i våra [kodningsstandarder](https://developer.adobe.com/commerce/php/coding-standards/) för att se till att ditt projekt följer Adobe Commerce bästa praxis och för att hjälpa dig att förbättra och utöka [!DNL Upgrade Compatibility Tool].
 

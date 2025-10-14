@@ -41,7 +41,7 @@ Bildrutan **[!UICONTROL [!DNL RabbitMQ] Infrastructure events]** innehåller inf
 
 ## [!UICONTROL [!DNL RabbitMQ] service start/stop signals]
 
-![[!DNL RabbitMQ] start-/stoppsignaler för tjänst ](../../assets/tools/observation-for-adobe-commerce/rabbitmq-tab-2.jpeg)
+![[!DNL RabbitMQ] start-/stoppsignaler för tjänst &#x200B;](../../assets/tools/observation-for-adobe-commerce/rabbitmq-tab-2.jpeg)
 
 I den här bildrutan visas [!DNL RabbitMQ] start-/stoppsignaler för tjänsten som inträffade under den valda tidsbildrutan:
 
@@ -94,19 +94,19 @@ Diagrammet **[!UICONTROL [!DNL RabbitMQ] Queue Consumption MB]** visar antalet b
 
 ## [!UICONTROL [!DNL RabbitMQ] Published Messages by Queue]
 
-![[!DNL RabbitMQ] Publicerade meddelanden per kö ](../../assets/tools/observation-for-adobe-commerce/rabbitmq-tab-8.jpeg)
+![[!DNL RabbitMQ] Publicerade meddelanden per kö &#x200B;](../../assets/tools/observation-for-adobe-commerce/rabbitmq-tab-8.jpeg)
 
 Diagrammet **[!UICONTROL [!DNL RabbitMQ] Published Messages by Queue]** visar antalet byte som används av varje [!DNL RabbitMQ]-kö under den valda tidsramen.
 
 ## [!UICONTROL [!DNL RabbitMQ] Published Message Throughput by Queue]
 
-![[!DNL RabbitMQ] Publicerat meddelandegenomflöde efter kö ](../../assets/tools/observation-for-adobe-commerce/rabbitmq-tab-9.jpeg)
+![[!DNL RabbitMQ] Publicerat meddelandegenomflöde efter kö &#x200B;](../../assets/tools/observation-for-adobe-commerce/rabbitmq-tab-9.jpeg)
 
 Diagrammet **[!UICONTROL [!DNL RabbitMQ] Published Message Throughput by Queue]** visar det genomsnittliga antalet publicerade meddelanden per sekund för varje [!DNL RabbitMQ]-kö under den valda tidsramen.
 
 ## [!UICONTROL [!DNL RabbitMQ] Total Message Throughput by Queue]
 
-![[!DNL RabbitMQ] Totalt meddelandegenomflöde per kö ](../../assets/tools/observation-for-adobe-commerce/rabbitmq-tab-10.jpeg)
+![[!DNL RabbitMQ] Totalt meddelandegenomflöde per kö &#x200B;](../../assets/tools/observation-for-adobe-commerce/rabbitmq-tab-10.jpeg)
 
 Diagrammet **[!UICONTROL [!DNL RabbitMQ] Total Message Throughput by Queue]** visar det genomsnittliga totala antalet meddelanden per sekund för varje [!DNL RabbitMQ]-kö under den valda tidsramen.
 

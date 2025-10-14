@@ -29,7 +29,7 @@ När du har granskat systemkraven måste du uppfylla följande krav innan du upp
 
 [Systemkraven](../../installation/system-requirements.md) beskriver exakt vilka versioner av tredjepartsprogram som har testats med Adobe Commerce-versioner.
 
-Se till att du har uppdaterat alla systemkrav och beroenden i din miljö. Se PHP [ 7.4](https://www.php.net/manual/en/migration74.php), PHP [ 8.0](https://www.php.net/manual/en/migration80.php), PHP [ 8.1](https://www.php.net/manual/en/migration81.php) och [nödvändiga PHP-inställningar](../../installation/prerequisites/php-settings.md#php-settings).
+Se till att du har uppdaterat alla systemkrav och beroenden i din miljö. Se PHP [&#x200B; 7.4](https://www.php.net/manual/en/migration74.php), PHP [&#x200B; 8.0](https://www.php.net/manual/en/migration80.php), PHP [&#x200B; 8.1](https://www.php.net/manual/en/migration81.php) och [nödvändiga PHP-inställningar](../../installation/prerequisites/php-settings.md#php-settings).
 
 >[!NOTE]
 >
@@ -358,7 +358,7 @@ Så här anger du miljövariabeln:
 
 Av säkerhetsskäl kräver Adobe Commerce vissa behörigheter i filsystemet. Behörigheter skiljer sig från _[ägarskap](../../upgrade/prepare/prerequisites.md#verify-file-system-permissions)_. Ägarskapet avgör vem som kan utföra åtgärder i filsystemet. Behörigheterna avgör vad användaren kan göra.
 
-Kataloger i filsystemet måste vara skrivbara av [filsystemets ägargrupp ](../../installation/prerequisites/file-system/overview.md).
+Kataloger i filsystemet måste vara skrivbara av [filsystemets ägargrupp &#x200B;](../../installation/prerequisites/file-system/overview.md).
 
 Om du vill verifiera att filsystembehörigheterna är korrekt loggar du antingen in på programservern eller använder värdtjänstleverantörens filhanterarprogram.
 

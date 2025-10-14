@@ -1474,7 +1474,7 @@ Leverantörstillverkad kod som utökar eller anpassar Commerce beteende och fung
 VBE-programmen testas grundligt och ingår i alla versioner av Adobe Commerce som stöds.
 Ett VBE kan innehålla moduler, teman och språkpaket.
 
-Mer information finns i avsnittet [Leverantörspaket ](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/modules/upgrade.html?lang=sv-SE).
+Mer information finns i avsnittet [Leverantörspaket &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/modules/upgrade.html?lang=sv-SE).
 
 _Termattribut :_
 

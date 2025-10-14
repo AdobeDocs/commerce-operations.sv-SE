@@ -28,7 +28,7 @@ Efter installationen rekommenderar vi följande:
 
 * Kontrollera att din filägarskap och dina behörigheter är [korrekt](../prerequisites/file-system/configure-permissions.md)
 * Vi rekommenderar starkt att [ändrar standardadministratörs-URI](../tutorials/admin-uri.md) från `admin` till något annat
-* Kontrollera att [`X-Frame-Option` HTTP-huvudet ](../../configuration/security/xframe-options.md) är korrekt inställt.
+* Kontrollera att [`X-Frame-Option` HTTP-huvudet &#x200B;](../../configuration/security/xframe-options.md) är korrekt inställt.
 * Vidta försiktighetsåtgärder mot serveröverskridande skriptning (XSS) genom att [skydda dina mallar](https://developer.adobe.com/commerce/php/development/security/cross-site-scripting/)
 
 Om du har installerat genom att [klona GitHub-databasen](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/) kontrollerar du att du bara inkluderar de filer och mappar som krävs för produktionsmiljön när du distribuerar programmet. Filer och mappar som inte behövs kan medföra säkerhetsrisker.
@@ -57,7 +57,7 @@ Mer information finns i följande:
 
 * [HowTo: The ultimate log rotate command tutorial with ten ten examples](https://www.thegeekstuff.com/2010/07/logrotate-examples)
 * [Stackutbyte](https://unix.stackexchange.com/questions/85662/how-to-properly-automatically-manually-rotate-log-files-for-production-rails-app)
-* [`logrotate` huvudsida ](https://linuxconfig.org/logrotate-8-manual-page)
+* [`logrotate` huvudsida &#x200B;](https://linuxconfig.org/logrotate-8-manual-page)
 
 >[!AVAILABILITY]
 >

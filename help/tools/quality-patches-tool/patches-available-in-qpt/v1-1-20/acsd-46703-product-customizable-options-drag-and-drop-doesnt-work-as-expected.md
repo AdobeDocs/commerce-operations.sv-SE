@@ -28,7 +28,7 @@ Korrigeringen ACSD-46703 åtgärdar ett problem där de anpassningsbara alternat
 
 >[!NOTE]
 >
->Korrigeringen kan komma att gälla för andra versioner med nya [kvalitetskorrigeringsverktyg]. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan komma att gälla för andra versioner med nya [kvalitetskorrigeringsverktyg]. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler &#x200B;](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 

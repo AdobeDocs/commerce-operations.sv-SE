@@ -88,6 +88,6 @@ Det sista steget i processen är att uppdatera produktionssystemet från källko
 
 >[!INFO]
 >
->Om du vill ändra en inställning som är låst i Admin använder du kommandot [`magento config:set --lock` ](../cli/set-configuration-values.md).
+>Om du vill ändra en inställning som är låst i Admin använder du kommandot [`magento config:set --lock` &#x200B;](../cli/set-configuration-values.md).
 
 <!-- Last updated from includes: 2024-07-18 15:50:54 -->

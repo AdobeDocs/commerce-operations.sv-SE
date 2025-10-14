@@ -64,7 +64,7 @@ Inga JS-fel i webbläsarkonsolen.
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
-* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
+* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning &#x200B;](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
 * Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning

@@ -55,7 +55,7 @@ Den känsliga konfigurationen lagras också i `app/etc/env.php`.
 Du kan hantera den känsliga konfigurationen på något av följande sätt:
 
 - Miljövariabler
-- Spara den känsliga konfigurationen i `env.php` i produktionssystemet med hjälp av kommandot [`magento config:set:sensitive` ](../cli/set-configuration-values.md)
+- Spara den känsliga konfigurationen i `env.php` i produktionssystemet med hjälp av kommandot [`magento config:set:sensitive` &#x200B;](../cli/set-configuration-values.md)
 
 ### Konfigurationsinställningarna är låsta i administratören
 
@@ -88,7 +88,7 @@ Admin visar följande beteende i produktionsläge:
 
 ## Installera och ta bort cron
 
-I version 2.2 för första gången hjälper vi dig att konfigurera ditt cron-jobb genom att ange [`magento cron:install`-kommandot ](../cli/configure-cron-jobs.md). Det här kommandot anger en crontab som användaren som kör kommandot.
+I version 2.2 för första gången hjälper vi dig att konfigurera ditt cron-jobb genom att ange [`magento cron:install`-kommandot &#x200B;](../cli/configure-cron-jobs.md). Det här kommandot anger en crontab som användaren som kör kommandot.
 
 Du kan även ta bort crontab med kommandot `magento cron:remove`.
 

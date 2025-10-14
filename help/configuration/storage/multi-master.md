@@ -64,7 +64,7 @@ Det innebär även att du kan:
 
   Adobe rekommenderar att du konfigurerar delade databaser så snart som möjligt efter att du har installerat Commerce.
 
-- [Konfigurera ](multi-master-manual.md) den delade databaslösningen manuellt.
+- [Konfigurera &#x200B;](multi-master-manual.md) den delade databaslösningen manuellt.
 
   Du måste utföra den här uppgiften om du redan har installerade komponenter eller om Commerce redan är i produktion. (_Uppdatera inte_ ett produktionssystem, uppdatera uppdateringarna i ett utvecklingssystem och synkronisera ändringarna när du har testat dem.)
 

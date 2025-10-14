@@ -48,7 +48,7 @@ Du kan även inaktivera eller ta bort autentiseringsnycklar. Du kan till exempel
 
 Om du vill hämta Adobe Commerce-versioner med SSH måste du generera en åtkomsttoken för nedladdning. Så här skapar du en token:
 
-1. Logga in på ditt [magento.com ](https://account.magento.com/customer/account/login).
+1. Logga in på ditt [magento.com &#x200B;](https://account.magento.com/customer/account/login).
 1. Klicka på **Mitt konto** överst på sidan.
 1. Klicka på **Kontoinställningar** > **Hämtar åtkomsttoken**.
 

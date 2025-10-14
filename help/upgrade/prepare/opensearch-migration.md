@@ -28,6 +28,6 @@ Stegen för att migrera till OpenSearch är enkla och följer i stort sett stege
 
 1. [Installera OpenSearch](https://opensearch.org/docs/latest/opensearch/install/important-settings/).
 
-1. [Konfigurera sökmotorn ](../../configuration/search/configure-search-engine.md) och utför relaterade åtgärder, till exempel tömning av cachen och omindexering av katalogsökindexet.
+1. [Konfigurera sökmotorn &#x200B;](../../configuration/search/configure-search-engine.md) och utför relaterade åtgärder, till exempel tömning av cachen och omindexering av katalogsökindexet.
 
 Inga ytterligare ändringar av konfigurationsvärdet behövs.

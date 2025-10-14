@@ -16,7 +16,7 @@ Använd följande tabell för att hitta versionsinformation och viktig informati
 
 >[!TIP]
 >
->- Om du inte har använt Adobe Commerce tidigare läser du [företagsarkitekturen](../../implementation-playbook/architecture/enterprise-blueprint.md) och [ om Adobe Commerce](https://experienceleague.adobe.com/sv/docs/commerce-admin/start/about) för att få information om hur du kommer igång.
+>- Om du inte har använt Adobe Commerce tidigare läser du [företagsarkitekturen](../../implementation-playbook/architecture/enterprise-blueprint.md) och [&#x200B; om Adobe Commerce](https://experienceleague.adobe.com/sv/docs/commerce-admin/start/about) för att få information om hur du kommer igång.
 >- Mer information om uppgraderingar finns i [rekommenderad läsning](../../upgrade/resources/recommended-reading.md).
 
 <table>

@@ -44,7 +44,7 @@ Adobe Commerce använder serverskrivningar och `.htaccess` för att tillhandahå
    a2enmod rewrite
    ```
 
-1. Om du vill att programmet ska kunna använda den distribuerade konfigurationsfilen `.htaccess` läser du riktlinjerna i [ Apache 2.4-dokumentationen](https://httpd.apache.org/docs/current/mod/mod_rewrite.html).
+1. Om du vill att programmet ska kunna använda den distribuerade konfigurationsfilen `.htaccess` läser du riktlinjerna i [&#x200B; Apache 2.4-dokumentationen](https://httpd.apache.org/docs/current/mod/mod_rewrite.html).
 
    >[!TIP]
    >
@@ -307,7 +307,7 @@ Om du stöter på 403 Otillåtna fel när du försöker få åtkomst till webbpl
 
 ### Lösning av 403 Otillåtna fel för Apache 2.4
 
-Använd något av [direktiven ](https://httpd.apache.org/docs/2.4/howto/access.html) som krävs om du vill att webbplatsbesökare ska kunna komma åt din webbplats.
+Använd något av [direktiven &#x200B;](https://httpd.apache.org/docs/2.4/howto/access.html) som krävs om du vill att webbplatsbesökare ska kunna komma åt din webbplats.
 
 Exempel:
 

@@ -60,7 +60,7 @@ Värdet uppdateras enligt ändringarna.
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
-* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tools] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden för kvalitetspatchar.
+* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tools] > Användning &#x200B;](/help/tools/quality-patches-tool/usage.md) i guiden för kvalitetspatchar.
 * Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning

@@ -28,7 +28,7 @@ Korrigeringen ACSD-49849 åtgärdar ett problem där en kunds e-post ersätts me
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler &#x200B;](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -39,7 +39,7 @@ En kunds e-postadress ersätts med ett [!DNL PayPal's]-e-postmeddelande när en 
 1. Gå till **[!UICONTROL Configuration]** > **[!UICONTROL Sales]** > **[!UICONTROL Payments]**.
 1. Aktivera och konfigurera [!DNL PayPal Express] och ange **[!UICONTROL Payment Action]** = **[!UICONTROL Sale]**.
 1. Gå till **[!UICONTROL Catalog]** > **[!UICONTROL Products]** och skapa en enkel produkt.
-1. Slutför utcheckningen av gästen med GraphQL. Mer information finns i [GraphQL självstudiekurs ](https://developer.adobe.com/commerce/webapi/graphql/tutorials/checkout/) i Adobe Commerce Developer Documentation.
+1. Slutför utcheckningen av gästen med GraphQL. Mer information finns i [GraphQL självstudiekurs &#x200B;](https://developer.adobe.com/commerce/webapi/graphql/tutorials/checkout/) i Adobe Commerce Developer Documentation.
 1. Använd [!DNL PayPal Express] som betalningsmetod.
 1. Observera det e-postmeddelande du använde i det steg där du [konfigurerade e-postmeddelandet för kundvagnen](https://developer.adobe.com/commerce/webapi/graphql/tutorials/checkout/set-email-address/) i Adobe Commerce Developer Documentation.
 1. När beställningen är genomförd går du till Adobe Commerce Admin och kontrollerar e-postmeddelandet i den ordning som har skapats.
@@ -56,7 +56,7 @@ E-postadressen som angavs vid utcheckningen åsidosätts av e-postinställningen
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
-* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
+* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning &#x200B;](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
 * Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
@@ -67,4 +67,4 @@ Mer information om [!DNL Quality Patches Tool] finns i:
 * [Kontrollera om det finns en korrigeringsfil för ditt Adobe Commerce-problem med  [!DNL Quality Patches Tool]](/help/tools/quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md) i guiden [!UICONTROL Quality Patches Tool].
 
 
-Mer information om andra tillgängliga korrigeringsfiler i QPT finns i [[!DNL Quality Patches Tool]: Söka efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE) i [!DNL Quality Patches Tool]-handboken.
+Mer information om andra tillgängliga korrigeringsfiler i QPT finns i [[!DNL Quality Patches Tool]: Söka efter korrigeringsfiler &#x200B;](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE) i [!DNL Quality Patches Tool]-handboken.

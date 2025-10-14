@@ -76,6 +76,6 @@ Vi erbjuder ett sätt att synkronisera konfigurationen av dina system:
 >
 >Dessa nya metoder för att hantera konfigurationen är valfria. Du behöver inte göra det, men vi rekommenderar starkt att du använder dem.
 
-Oftast går det inte att redigera de konfigurationsalternativ som du anger i den delade, systemspecifika eller känsliga konfigurationen i Admin. På så sätt blir inställningarna enhetliga i alla system. (Du kan också använda kommandot [`magento config:set` ](../cli/set-configuration-values.md) utan alternativet `--lock` för att konfigurera inställningar som kan redigeras i administratören.)
+Oftast går det inte att redigera de konfigurationsalternativ som du anger i den delade, systemspecifika eller känsliga konfigurationen i Admin. På så sätt blir inställningarna enhetliga i alla system. (Du kan också använda kommandot [`magento config:set` &#x200B;](../cli/set-configuration-values.md) utan alternativet `--lock` för att konfigurera inställningar som kan redigeras i administratören.)
 
 Varje konfigurationsalternativ för Commerce har en unik _konfigurationssökväg_. Om du vill ange ett värde för ett konfigurationsalternativ kan du antingen använda ett CLI-kommando eller en miljövariabel för att ange värdet för den konfigurationssökvägen på ett specifikt system.

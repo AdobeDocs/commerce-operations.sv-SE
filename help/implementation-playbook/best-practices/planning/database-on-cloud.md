@@ -76,7 +76,7 @@ Mer information om alternativ till att använda anpassade utlösare finns i [MyS
 
 ## Uppgradera [!DNL ECE-Tools] till version 2002.0.21 eller senare {#ece-tools-version}
 
-För att undvika potentiella problem med kroniska lås uppgraderar du ECE-Tools till version 2002.0.21 eller senare. Instruktioner finns i [Uppdatera `ece-tools` version ](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/update-package) i utvecklardokumentationen.
+För att undvika potentiella problem med kroniska lås uppgraderar du ECE-Tools till version 2002.0.21 eller senare. Instruktioner finns i [Uppdatera `ece-tools` version &#x200B;](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/update-package) i utvecklardokumentationen.
 
 ## Växla indexeringsläge på ett säkert sätt
 

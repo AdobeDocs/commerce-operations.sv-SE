@@ -68,7 +68,7 @@ Om det finns en rad fel på IP-adresser under platsinstallationer eller driftavb
 
 ## [!UICONTROL Table - IPs that do not identify as bots]
 
-![Tabell - IP-adresser som inte identifieras som bottar med HTTP-statusfel under den valda tidsperioden Hur man blockerar starttrafiken på snabbnivå ELLER hanterar robotar genom filen robots.txt Best practices for Adobe Commerce robots.txt ](../../assets/tools/observation-for-adobe-commerce/ips-http-errors.png)
+![Tabell - IP-adresser som inte identifieras som bottar med HTTP-statusfel under den valda tidsperioden Hur man blockerar starttrafiken på snabbnivå ELLER hanterar robotar genom filen robots.txt Best practices for Adobe Commerce robots.txt &#x200B;](../../assets/tools/observation-for-adobe-commerce/ips-http-errors.png)
 
 Tabellen **[!UICONTROL Table - IPs that do not identify as bots with HTTP status errors during selected time period How to block bot traffic on Fastly level OR manage bots through your robots.txt file Best practices for Adobe Commerce robots.txt]** visar IP-begäranden med icke-200 http-statuskoder som INTE är självidentifierande som [!DNL bots] i fältet för användaragent för begäran. Dessa IP-adresser kan vara skadliga IP-adresser, särskilt om antalet är högt för den valda tidsperioden.
 
@@ -82,7 +82,7 @@ När IP-adresser genererar en hög frekvens av fel, fråga vad gör de? Tabellen
 
 ## [!UICONTROL Show 5XX status distribution]
 
-![Visa 5XX-statusdistribution över IP-adresser (de 200 högsta adresserna) Så här blockerar du starttrafiken på snabbnivå ELLER hanterar robotar via robots.txt-filen Bästa tillvägagångssätt för Adobe Commerce robots.txt ](../../assets/tools/observation-for-adobe-commerce/5xx-status.png)
+![Visa 5XX-statusdistribution över IP-adresser (de 200 högsta adresserna) Så här blockerar du starttrafiken på snabbnivå ELLER hanterar robotar via robots.txt-filen Bästa tillvägagångssätt för Adobe Commerce robots.txt &#x200B;](../../assets/tools/observation-for-adobe-commerce/5xx-status.png)
 
 Bildrutan **[!UICONTROL Show 5XX status distribution across IP addresses (top 200 addresses) How to block bot traffic on Fastly level OR manage bots through your robots.txt file Best practices for Adobe Commerce robots.txt]** är kraftfull. Den visar de IP-adresser som har 5XX http-statuskoder under den valda tidsperioden. Om en IP-adress gör stora mängder förfrågningar och platsen påverkas till den punkt där den inte kan hantera trafiken, har de IP-adresser som gör den högsta frekvensen av förfrågningar vanligtvis den högsta antalet fel. 5XX http-statuskoder indikerar vanligtvis en webbplats som har svårt att svara på förfrågningar.
 
@@ -132,13 +132,13 @@ Bildrutan **[!UICONTROL Graph - Top 250 Bot Names and IP addresses during select
 
 ## [!UICONTROL Blocked Bot name / IP addresses (in Fastly)]
 
-![Blockerat startnamn/IP-adresser (i snabb takt) under den valda tidsperioden. I det här diagrammet visas både trafik- och IP-adresser som returnerades som 403 (ej tillåten) HTTP-statuskod ](../../assets/tools/observation-for-adobe-commerce/blocked-bot-name-ip-addresses-403-code2.png)
+![Blockerat startnamn/IP-adresser (i snabb takt) under den valda tidsperioden. I det här diagrammet visas både trafik- och IP-adresser som returnerades som 403 (ej tillåten) HTTP-statuskod &#x200B;](../../assets/tools/observation-for-adobe-commerce/blocked-bot-name-ip-addresses-403-code2.png)
 
 Bildrutan **[!UICONTROL Blocked Bot name / IP addresses (in Fastly) during selected time period. This graph displays bot traffic and IPs that were returned a 403 Forbidden HTTP Status code]** visar robotnamnet och IP-adresserna som är blockerade. I det här diagrammet ser du hur alla begäranden blockeras i [!DNL Fastly].
 
 ## [!UICONTROL Blocked non-Bot name / IP addresses (in Fastly)]
 
-![Blockerade namn/IP-adresser (i snabb ordning) som inte hör till kontoret under den valda tidsperioden. I det här diagrammet visas icke-robottrafik och IP-adresser som returnerades som 403 Otillåten HTTP-statuskod ](../../assets/tools/observation-for-adobe-commerce/blocked-non-bot-name-ip-addresses.png)
+![Blockerade namn/IP-adresser (i snabb ordning) som inte hör till kontoret under den valda tidsperioden. I det här diagrammet visas icke-robottrafik och IP-adresser som returnerades som 403 Otillåten HTTP-statuskod &#x200B;](../../assets/tools/observation-for-adobe-commerce/blocked-non-bot-name-ip-addresses.png)
 
 Bildrutan **[!UICONTROL Blocked non-Bot name / IP addresses (in Fastly) during selected time period graph displays non-bot traffic and IPs that were returned a 403 Forbidden HTTP Status code]** visar IP-adresser som inte identifieras som en [!DNL bot] som har blockerats via [!DNL Fastly].
 

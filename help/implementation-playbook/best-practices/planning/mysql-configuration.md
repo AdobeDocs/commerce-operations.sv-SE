@@ -47,7 +47,7 @@ Denna extra kostnad kan påverka webbplatsens prestanda negativt om många utlö
 Följ de här riktlinjerna för att förhindra prestandaproblem när du använder utlösare:
 
 - Om du har anpassade utlösare som skriver data när utlösaren körs, flyttar du den här logiken så att den skriver direkt till granskningstabellerna i stället. Genom att till exempel lägga till ytterligare en fråga i programkoden efter frågan som du vill skapa utlösaren för.
-- Granska befintliga anpassade utlösare och överväg att ta bort dem och skriva direkt till tabellerna från programsidan. Kontrollera om det finns utlösare i databasen med hjälp av [`SHOW TRIGGERS` SQL-sats ](https://dev.mysql.com/doc/refman/8.0/en/show-triggers.html).
+- Granska befintliga anpassade utlösare och överväg att ta bort dem och skriva direkt till tabellerna från programsidan. Kontrollera om det finns utlösare i databasen med hjälp av [`SHOW TRIGGERS` SQL-sats &#x200B;](https://dev.mysql.com/doc/refman/8.0/en/show-triggers.html).
 - [Skicka en Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE&#submit-ticket) om du vill ha mer hjälp, frågor eller funderingar.
 
 ## Slavanslutningar
