@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Adobe Commerce 2.4.4-p16 är en utökad säkerhetsrelease med säkerhetsfelkorrigeringar för säkerhetsluckor som upptäckts i tidigare versioner av 2.4.4. Det finns endast för Adobe Commerce-kunder.
 
-Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB25-94](https://helpx.adobe.com/security/products/magento/apsb25-94.html).
+Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB25-94](https://helpx.adobe.com/se/security/products/magento/apsb25-94.html).
 
 {{b2b-patches}}
 

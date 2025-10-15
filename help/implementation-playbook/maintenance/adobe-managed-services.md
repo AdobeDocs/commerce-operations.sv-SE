@@ -388,7 +388,7 @@ Adobe tillhandahåller en uppsättning tjänster för provisionering, utveckling
 
 Adobe säkerhetsstack för Managed Services bygger säkerhet på alla nivåer med automatisering och konsekvens för att minska antalet fel. Utvecklings- och verksamhetsteamen ärver automatiskt säkerhetskontroller från olika nivåer i stacken.
 
-Plattformspartners, som Amazon Web Services och Microsoft Azure, säkerställer maximal säkerhetstäckning vid användning av plattformsanpassningar, medan Adobe Managed Services-teamet tillhandahåller viktiga säkerhetstjänster som regelefterlevnad, loggning, autentisering, skanning och övervakning samt serversäkerhet och säker programkonfiguration. Mer information finns i [Adobe Commerce Security](https://business.adobe.com/products/magento/secure-ecommerce.html).
+Plattformspartners, som Amazon Web Services och Microsoft Azure, säkerställer maximal säkerhetstäckning vid användning av plattformsanpassningar, medan Adobe Managed Services-teamet tillhandahåller viktiga säkerhetstjänster som regelefterlevnad, loggning, autentisering, skanning och övervakning samt serversäkerhet och säker programkonfiguration. Mer information finns i [Adobe Commerce Security](https://business.adobe.com/se/products/magento/secure-ecommerce.html).
 
 I följande diagram visas Adobe Managed Services säkerhetstekniker:
 
