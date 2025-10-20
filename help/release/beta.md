@@ -2,9 +2,9 @@
 title: Beta-versioner
 description: Läs mer om betaversioner av Adobe Commerce och hur du deltar.
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
-source-git-commit: a15422e4e135eba01931172960dfb0a6b359cde8
+source-git-commit: 17397fe91806c22272e426d615b11fd383602798
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '887'
 ht-degree: 0%
 
 ---
@@ -28,11 +28,24 @@ Genom att få tidig tillgång till funktioner som Adobe utvecklar kan kunder och
 
 I följande avsnitt finns en lista med aktiva betaprogram.
 
+### Semantisk sökning: smartare, sammanhangsberoende shoppingupplevelser (privat beta)
+
+Semantisk sökning är en teknik för e-handelssökning som förstår *innebörden* bakom en kunders fråga, inte bara de exakta orden. Till skillnad från traditionell nyckelordsbaserad sökning, som ofta misslyckas när frågor innehåller okända eller felstavade termer, tolkar denna AI-baserade metod avsikter med att använda naturlig språkbearbetning och sammanhang för att leverera mer relevanta resultat.
+
+Den här tekniken åtgärdar en stor begränsning i traditionell sökning: nollresultatsidor som inträffar när kunderna använder ord som inte finns i katalogen. Med hjälp av AI-baserade tekniker mappas användarfrågor och produktdata till ett delat semantiskt utrymme. Systemet känner till exempel igen att &quot;löpskor&quot; och &quot;joggingskor&quot; avser samma typ av produkt, vilket möjliggör:
+
+- Synonymegenkänning
+- Sammanhangsberoende relevans
+- Intelligent hantering av vaga, felstavade eller sammansatta frågor
+- Förståelse av naturligt, konversationsspråk
+
+Om du vill begära en inbjudan till betaprogrammet skickar du ett e-postmeddelande till [commerce-storefront-services@adobe.com](mailto:commerce-storefront-services@adobe.com). Adobe-teamet kommer att följa nästa steg och uppfyller behörighetskraven.
+
 ### Patcheringstjänst för molnautomatisering (Private Beta)
 
-[Tjänsten &#x200B;](../tools/caps-tool/intro.md) Creative Cloud Automation Patching automatiserar processen för att tillämpa isolerade säkerhetspatchar i [Adobe Commerce på molninfrastrukturen](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/overview) -miljöer.
+[Tjänsten ](../tools/caps-tool/intro.md) Creative Cloud Automation Patching automatiserar processen för att tillämpa isolerade säkerhetspatchar i [Adobe Commerce på molninfrastrukturen](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview) -miljöer.
 
-I oktober 2025 kommer betaversionen av Cloud Automation Patching Service att läggas till på kontrollpanelen för [Site-Wide Analysis-verktyget](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/site-wide-analysis-tool/dashboard). Den här tjänsten stöder Commerce projektadministratörer med ett smidigt arbetsflöde för patchning som innefattar:
+I oktober 2025 kommer betaversionen av Cloud Automation Patching Service att läggas till på kontrollpanelen för [Site-Wide Analysis-verktyget](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/site-wide-analysis-tool/dashboard). Den här tjänsten stöder Commerce projektadministratörer med ett smidigt arbetsflöde för patchning som innefattar:
 
 - Automatiserad installation av korrigeringsfiler
 - Återställning
@@ -47,7 +60,7 @@ Betaversionen innehåller följande funktioner:
 
 >[!NOTE]
 >
->Eftersom tjänsten Cloud Automation Patching automatiskt tillämpar isolerade säkerhetspatchar måste du ha rollen [Contributor eller Project Admin](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/project/user-access) för att kunna använda den.
+>Eftersom tjänsten Cloud Automation Patching automatiskt tillämpar isolerade säkerhetspatchar måste du ha rollen [Contributor eller Project Admin](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/project/user-access) för att kunna använda den.
 
 Om du vill delta i den här betaversionen fyller du i och skickar [Cloud Automation Patching Service - Beta Sign-formulär](https://forms.office.com/r/3Wfxj5nPdB).
 
@@ -71,7 +84,7 @@ Alla Adobe Commerce Foundation alfa- och betaversioner innehåller alla ändring
 - Förbättringar i GraphQL
 - Allmänna felkorrigeringar av kvalitet
 - Bidrag från gemenskapen
-- Ändringar som krävs för kompatibilitet med [Adobe Commerce-tjänster](https://experienceleague.adobe.com/sv/docs/commerce/user-guides/home)
+- Ändringar som krävs för kompatibilitet med [Adobe Commerce-tjänster](https://experienceleague.adobe.com/en/docs/commerce/user-guides/home)
 
 #### Namngivningskonvention och schema
 
