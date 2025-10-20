@@ -1,5 +1,5 @@
 ---
-source-git-commit: bfad68a46b9b1a79a702f04efd39129decda1a1c
+source-git-commit: c71367c553dce66c146540389461f36eaa529bfc
 workflow-type: tm+mt
 source-wordcount: '645'
 ht-degree: 0%
@@ -93,17 +93,20 @@ _AC-14610_
 #### Migrera USPS-integrering från gamla webbverktyg-API:er till nya RESTful USPS API:er
 
 För att uppfylla USPS-annonser om att äldre API:er för webbverktyg har upphört att gälla den 25 januari 2026 migreras Adobe Commerce USPS-integreringen till de nya RESTful USPS API:erna.
+
 Viktiga förbättringar:
-- Stöd för dubbla API:er: Administratörsanvändare kan nu välja mellan det äldre API:t för webbverktyg och det nya RESTful USPS API:t via konfigurationsinställningar.
-- Autentiseringsuppgradering: Implementerad OAuth 2.0 för säker API-åtkomst.
-- Förbättrat dataformat: Gå över från XML till JSON för tydligare och effektivare kommunikation.
-- Nya administratörsfält:
-URL för gateway REST (baserat på läge: Utveckling eller Live)
-Klient-ID och hemlighet
-Kontotyp, kontonummer
-CRID, MID, Mailer Identification Code
-AES/ITN för internationella transporter
-REST-specifika tillåtna leveransmetoder
+
+* Stöd för dubbla API:er: Administratörsanvändare kan nu välja mellan det äldre API:t för webbverktyg och det nya RESTful USPS API:t via konfigurationsinställningar.
+* Autentiseringsuppgradering: Implementerad OAuth 2.0 för säker API-åtkomst.
+* Förbättrat dataformat: Gå över från XML till JSON för tydligare och effektivare kommunikation.
+* Nya administratörsfält:
+   * URL för gateway REST (baserat på läge: Utveckling eller Live)
+   * Klient-ID och hemlighet
+   * Kontotyp, kontonummer
+   * CRID, MID, Mailer Identification Code
+   * AES/ITN för internationella transporter
+   * REST-specifika tillåtna leveransmetoder
+
 Denna migrering säkerställer att Adobe Commerce följer USPS-standarderna, förbättrar systemets tillförlitlighet och framtida korrekturleveranser för handlare.
 
 _AC-13257_
