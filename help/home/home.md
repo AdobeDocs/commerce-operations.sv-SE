@@ -2,7 +2,7 @@
 title: Handböcker - startsida
 description: Läs om Adobe Commerce systemadministration och driftskoncept. Bläddra bland omfattande guider för planering, konfigurering och underhåll av Commerce-driftsättningen.
 exl-id: 45ec4948-338f-4276-8a70-d0db720322d9
-source-git-commit: 4cf6f81ce43ddcccf20db12b8735f29a151d420d
+source-git-commit: 5b0229d73dc7b8ad53750102e99447bb15baa84d
 workflow-type: tm+mt
 source-wordcount: '171'
 ht-degree: 0%
@@ -102,4 +102,4 @@ Använd den här följande uppsättningen guider för att lära dig mer om syste
 
 {{$include /help/_includes/templated/whats-new.md}}
 
-<!-- Last updated from includes: 2025-10-17 20:53:47 -->
+<!-- Last updated from includes: 2025-10-21 15:52:35 -->
