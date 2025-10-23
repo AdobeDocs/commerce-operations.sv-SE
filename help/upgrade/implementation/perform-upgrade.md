@@ -19,7 +19,7 @@ Du kan uppgradera _lokala_-distributioner av Adobe Commerce-programmet från kom
 
 >[!NOTE]
 >
->- Information om projekt för molninfrastruktur finns i [Uppgradera Commerce-version](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/commerce-version.html) i molnhandboken.
+>- Information om projekt för molninfrastruktur finns i [Uppgradera Commerce-version](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/commerce-version.html?lang=sv-SE) i molnhandboken.
 >- Använd inte den här metoden för att uppgradera om du klonade GitHub-databasen. Se [Uppgradera en Git-baserad installation](../developer/git-installs.md).
 
 Följande instruktioner visar hur du uppgraderar med Composer-pakethanteraren. Adobe Commerce 2.4.2 har nu stöd för Composer 2. Om du försöker uppgradera från &lt;2.4.1 måste du först uppgradera till en version som är kompatibel med Composer 2 (t.ex. 2.4.2) med Composer 1 _innan_ du uppgraderar till Composer 2 för >2.4.2. Dessutom måste du köra en [version](../../installation/system-requirements.md) av PHP som stöds.
