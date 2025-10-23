@@ -1,7 +1,7 @@
 ---
-source-git-commit: c71367c553dce66c146540389461f36eaa529bfc
+source-git-commit: 4cf6f81ce43ddcccf20db12b8735f29a151d420d
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '647'
 ht-degree: 0%
 
 ---
@@ -101,7 +101,7 @@ Viktiga förbättringar:
 * Förbättrat dataformat: Gå över från XML till JSON för tydligare och effektivare kommunikation.
 * Nya administratörsfält:
    * URL för gateway REST (baserat på läge: Utveckling eller Live)
-   * Klient-ID och hemlighet
+   * Klient-ID &amp;stämpel;stämpel;hemlighet
    * Kontotyp, kontonummer
    * CRID, MID, Mailer Identification Code
    * AES/ITN för internationella transporter
