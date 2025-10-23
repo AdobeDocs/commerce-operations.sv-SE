@@ -35,8 +35,8 @@ Du måste slutföra uppgraderingskraven för [uppgraderingen](../prepare/prerequ
 >[!IMPORTANT]
 >
 >Adobe Commerce version 2.4.6-p13 innehåller inte paketet `magento/inventory-composer-installer` som krävs för smidig uppgradering från äldre mindre versioner med bakåtkompatibla ändringar.<br>
->>Om du uppgraderar från 2.3 till 2.4.6-p13 kör du följande kommando för att installera paketet `magento/inventory-composer-installer` innan du uppgraderar:
->>`composer require magento/inventory-composer-installer`
+>&#x200B;>Om du uppgraderar från 2.3 till 2.4.6-p13 kör du följande kommando för att installera paketet `magento/inventory-composer-installer` innan du uppgraderar:
+>&#x200B;>`composer require magento/inventory-composer-installer`
 
 ## Hantera paket
 
