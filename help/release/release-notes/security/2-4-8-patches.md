@@ -2,9 +2,9 @@
 title: Adobe Commerce 2.4.8 Security Patch Release Notes
 description: Läs mer om säkerhetsfelkorrigeringar, säkerhetsförbättringar och andra säkerhetsrelaterade uppdateringar som ingår i säkerhetsuppdateringarna för Adobe Commerce version 2.4.7.
 exl-id: 5f8866ed-9215-4b2e-9c77-b2d474f6c1f9
-source-git-commit: 4cf6f81ce43ddcccf20db12b8735f29a151d420d
+source-git-commit: e625670e741c0669050ab758d4f87c5ca06fe3df
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '366'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Säkerhetsutgåvan av Adobe Commerce 2.4.8-p3 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som identifierats i tidigare versioner av 2.4.8.
 
-Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB25-94](https://helpx.adobe.com/se/security/products/magento/apsb25-94.html).
+Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB25-94](https://helpx.adobe.com/security/products/magento/apsb25-94.html).
 
 {{b2b-patches}}
 
@@ -29,15 +29,21 @@ Den här versionen innehåller följande högdagrar:
 
 * Åtgärda problem med AVS2E-3874: REST API-svaret för orderdetaljer innehåller nu korrekta värden för attributen `base_row_total` och `row_total` om flera objekt beställdes.
 
-* Korrigera för -AC-15446: Korrigerade ett fel i `Magento\Framework\Mail\EmailMessage` där `getBodyText()` försökte anropa en `getTextBody()`-metod som inte finns på `Symfony\Component\Mime\Message`, vilket säkerställer kompatibilitet med Magento 2.4.8-p2 och `magento/framework` 103.0.8-p2.
+* Korrigering för AC-15446: Korrigerade ett fel i `Magento\Framework\Mail\EmailMessage` där `getBodyText()` försökte anropa en `getTextBody()`-metod som inte finns på `Symfony\Component\Mime\Message`, vilket säkerställer kompatibilitet med Magento 2.4.8-p2 och `magento/framework` 103.0.8-p2.
 
 {{oct-2025-backports}}
+
+### Kända fel
+
+#### Utcheckningssidan kan inte läsa in static.min.js och mixins.min.js
+
+{{checkout-page-fails-to-load-static-min-js-and-mixins-min-js}}
 
 ## 2.4.8-p2
 
 Säkerhetsutgåvan av Adobe Commerce 2.4.8-p2 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som identifierats i tidigare versioner av 2.4.8.
 
-Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB25-71](https://helpx.adobe.com/se/security/products/magento/apsb25-71.html).
+Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB25-71](https://helpx.adobe.com/security/products/magento/apsb25-71.html).
 
 {{b2b-patches}}
 
@@ -45,7 +51,7 @@ Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerh
 
 Säkerhetsutgåvan av Adobe Commerce 2.4.8-p1 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som identifierats i tidigare versioner av 2.4.8.
 
-Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB25-50](https://helpx.adobe.com/se/security/products/magento/apsb25-50.html).
+Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB25-50](https://helpx.adobe.com/security/products/magento/apsb25-50.html).
 
 {{b2b-patches}}
 
@@ -69,7 +75,7 @@ Den här versionen innehåller följande högdagrar:
 
 >[!BEGINSHADEBOX]
 
-Korrigeringarna för CVE-2025-47110 och VULN-31547 finns också tillgängliga som en isolerad korrigering. Mer information finns i [kunskapsbasartikeln](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-50).
+Korrigeringarna för CVE-2025-47110 och VULN-31547 finns också tillgängliga som en isolerad korrigering. Mer information finns i [kunskapsbasartikeln](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-50).
 
 >[!ENDSHADEBOX]
 
