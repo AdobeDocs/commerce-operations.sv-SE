@@ -1,5 +1,5 @@
 ---
-source-git-commit: 151272eed6c4bb2e1c2e5138a5c8a3a7e7bd8fe6
+source-git-commit: ae571a9e7ca1234644a3bc9beade447009c58a3d
 workflow-type: tm+mt
 source-wordcount: '6079'
 ht-degree: 0%
@@ -41,9 +41,9 @@ Ett problem med sidnumrering i API:t för lagerexportlagersaldo där total_count
 
 _ACP2E-4086 - [GitHub-kodbidrag](https://github.com/magento/inventory/commit/5632fb5e)_
 
-#### Attacker kan använda POST-begäran med REST API och skicka RCE-nyttolast
+#### Valideringsproblem med anpassade alternativ-ID:n i REST API:er för kundvagnsobjekt
 
-REST API:er V1/gästcarts/&lt;cartId>/items/ and V1/carts/mine/items/ validerar nu &quot;product_options.extension_attributes.custom_options.*.option_id&quot; om du vill vara ett giltigt option_id i artikelvagnsartikeln SKU. Tidigare bearbetades och sparades ett sådant alternativ i databasen utan validering.
+REST API:er V1/gästcarts/&lt;cartId>/items/ and V1/carts/mine/items/ validerar nu &quot;product_options.extension_attributes.custom_options.*.option_id&quot; för att säkerställa att den refererar till ett giltigt option_id för artikelvagnsartikeln SKU. Tidigare bearbetades och sparades den här parametern i databasen utan validering.
 
 _ACP2E-4138 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/a1c57b2e)_
 
