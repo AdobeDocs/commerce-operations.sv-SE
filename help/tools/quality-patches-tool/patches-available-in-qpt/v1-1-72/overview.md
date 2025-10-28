@@ -4,9 +4,9 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 4a3060235a4d22764cbb231aca7c1f835d357906
+source-git-commit: 3493a89d40e3dee377be715e71e2f977a3afd382
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '280'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ QPT v1.1.72 innehåller följande patchar:
 1. **[ACSD-67696](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-67696.md)**: `media_gallery` poster returneras inte i produktnoden för kundvagnen i GraphQL efter en cachetömning.
 1. **ACSD-67946**: I kundvagnsuppdateringar visas dubbla felbanderoller.
 1. **ACSD-68011**: Icke-befintliga SKU:er som tilldelats till den delade katalogen via /V1/sharedCatalog/:id/assignProducts API.
-1. **ACSD-68118**: `customerCart` GraphQL-frågan returnerar produktattributvärden som inte återspeglar butikshuvudet, vilket orsakar inkonsekvent lokalisering.
+1. **ACSD-68118**: `customerCart` [!DNL GraphQL] -frågan returnerar felaktiga produktattributvärden för butiksvyn.
 1. **ACSD-68092**: Alternativ för paketprodukter går förlorade efter flera sparningar på grund av felaktig synkronisering mellan schemalagda uppdateringar och basproduktdata.
 1. **ACSD-67424**: `updated_at` värdet i `GET /carts/search` [!DNL REST] API-svaret matchar inte värdet som visas i **[!UICONTROL Admin panel]** när Negotiable Quotes används.
 1. **ACSD-67187**: Administratörsanvändare som är begränsade till icke-standardwebbplatser kan se felet *&quot;*Skapa minst en offentlig delad katalog för att fortsätta* och kan inte komma åt knappen **[!UICONTROL Add New Company]** i företagsrutnätet.
