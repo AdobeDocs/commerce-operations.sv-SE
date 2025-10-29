@@ -4,9 +4,9 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 87f2d57e60ca74e2c90107a0d38517049802c89e
+source-git-commit: 4e2c22626701e342920c8f60caff56af23712306
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '284'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Detta underavsnitt innehåller en detaljerad beskrivning av de problem som åtg�
 QPT v1.1.72 innehåller följande patchar:
 1. **ACSD-68040**: Söksidan i klientdelen blir långsammare på [!DNL MariaDB] 10.6 med stor historik.
 1. **ACSD-67941**: GraphQL-begäranden med okända filternamn orsakar PHP-undantagsloggar.
-1. **ACSD-68064**: Om schemalagda uppdateringar skapas dubblettposter i miljöer med ett stort antal kapslade kategorier.
+1. **ACSD-68064**: Dubblettposter skapas under schemalagda uppdateringar i miljöer med djupt kapslade kategorier.
 1. **ACSD-66807**: `report_viewed_product_index`-tabellen visar ett felaktigt antal produktsidesvisningar.
 1. **ACSD-67383**: Inloggning som kund med två företagsadministratörskonton i samma session orsakar ett *Ingen sådan entitet med cartId*-fel.
 1. **ACSD-67518**: Avancerad rapportering genererar duplicerade rubrikrader när radantalet överskrider batchstorleken.
