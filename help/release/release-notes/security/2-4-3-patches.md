@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Säkerhetsutgåvan av Adobe Commerce 2.4.3-p3 innehåller säkerhetsfixar för säkerhetsluckor som har identifierats i tidigare versioner av 2.4.3. Den här versionen innehåller även säkerhetsförbättringar som förbättrar efterlevnaden av de senaste säkerhetsstandarderna.
 
-Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB22-38](https://helpx.adobe.com/security/products/magento/apsb22-38.html).
+Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB22-38](https://helpx.adobe.com/se/security/products/magento/apsb22-38.html).
 
 ### Använd AC-3022.patch för att fortsätta erbjuda DHL som fraktfirma
 
@@ -35,7 +35,7 @@ DHL har introducerat schemaversion 6.2 och kommer inom kort att föråldra schem
 
 Säkerhetsutgåvan av Adobe Commerce 2.4.3-p2 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som har identifierats i tidigare versioner. Den här versionen innehåller även säkerhetsförbättringar som förbättrar efterlevnaden av de senaste säkerhetsstandarderna.
 
-Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB22-13](https://helpx.adobe.com/security/products/magento/apsb22-13.html).  Korrigeringsversionen åtgärdar också den säkerhetslucka som åtgärdats av `MDVA-43395_EE_2.4.3-p1_COMPOSER_v1.patch.zip`, `MDVA-43443_EE_2.4.3-p1_COMPOSER_v1.patch.zip`, `MDVA-43395_EE_2.4.3-p1_COMPOSER_v1.patch` och `MDVA-43443_EE_2.4.3-p1_COMPOSER_v1.patch`.
+Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB22-13](https://helpx.adobe.com/se/security/products/magento/apsb22-13.html).  Korrigeringsversionen åtgärdar också den säkerhetslucka som åtgärdats av `MDVA-43395_EE_2.4.3-p1_COMPOSER_v1.patch.zip`, `MDVA-43443_EE_2.4.3-p1_COMPOSER_v1.patch.zip`, `MDVA-43395_EE_2.4.3-p1_COMPOSER_v1.patch` och `MDVA-43443_EE_2.4.3-p1_COMPOSER_v1.patch`.
 
 
 ### Använd AC-3022.patch för att fortsätta erbjuda DHL som fraktfirma
@@ -46,7 +46,7 @@ DHL har introducerat schemaversion 6.2 och kommer inom kort att föråldra schem
 
 * Användning av variabla e-postmeddelanden har ersatts i 2.3.4 som en del av en säkerhetsriskreducering till förmån för en mer strikt variabelsyntax. Detta beteende har i den här versionen helt tagits bort som en fortsättning på den riskreduceringen.
 
-  Det innebär att e-post- och nyhetsbrevmallar som fungerade i tidigare versioner kanske inte fungerar som de ska när du uppgraderar till Adobe Commerce 2.4.3-p2. De mallar som påverkas är bland annat adminåsidosättningar, teman, underordnade teman och mallar från anpassade moduler eller tillägg från tredje part. Distributionen kan fortfarande påverkas även om du har använt verktyget [Kompatibilitet för uppgradering](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/overview.html?lang=en) för att korrigera inaktuella användningar. Information om möjliga effekter och riktlinjer för migrering av aktuella mallar finns i [Migrera anpassade e-postmallar](https://developer.adobe.com/commerce/frontend-core/guide/templates/email-migration/).
+  Det innebär att e-post- och nyhetsbrevmallar som fungerade i tidigare versioner kanske inte fungerar som de ska när du uppgraderar till Adobe Commerce 2.4.3-p2. De mallar som påverkas är bland annat adminåsidosättningar, teman, underordnade teman och mallar från anpassade moduler eller tillägg från tredje part. Distributionen kan fortfarande påverkas även om du har använt verktyget [Kompatibilitet för uppgradering](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/overview.html?lang=sv-SE) för att korrigera inaktuella användningar. Information om möjliga effekter och riktlinjer för migrering av aktuella mallar finns i [Migrera anpassade e-postmallar](https://developer.adobe.com/commerce/frontend-core/guide/templates/email-migration/).
 
 * OAuth-åtkomsttokens och token för lösenordsåterställning krypteras nu när de lagras i databasen. <!-- AC-520 1323-->
 
@@ -64,7 +64,7 @@ DHL har introducerat schemaversion 6.2 och kommer inom kort att föråldra schem
 Säkerhetsutgåvan av Adobe Commerce 2.4.3-p1 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som har identifierats i den tidigare utgåvan (Adobe Commerce 2.4.3 och Magento Open Source 2.4.3). Den här versionen innehåller även säkerhetsförbättringar som förbättrar efterlevnaden av de senaste säkerhetsstandarderna.
 
 
-Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB21-86](https://helpx.adobe.com/security/products/magento/apsb21-86.html). Korrigeringsversionen innehåller även felkorrigeringar för leverantörsutvecklade tillägg för [Braintree](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/payments/braintree.html), [Klarna](https://marketplace.magento.com/klarna-m2-klarna.html) och [Vertex](https://marketplace.magento.com/vertexinc-vertex-tax-module.html) .
+Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB21-86](https://helpx.adobe.com/se/security/products/magento/apsb21-86.html). Korrigeringsversionen innehåller även felkorrigeringar för leverantörsutvecklade tillägg för [Braintree](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/payments/braintree.html?lang=sv-SE), [Klarna](https://marketplace.magento.com/klarna-m2-klarna.html) och [Vertex](https://marketplace.magento.com/vertexinc-vertex-tax-module.html) .
 
 ### Använd AC-3022.patch för att fortsätta erbjuda DHL som fraktfirma
 
