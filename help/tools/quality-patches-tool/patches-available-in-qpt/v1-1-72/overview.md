@@ -4,9 +4,9 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 3493a89d40e3dee377be715e71e2f977a3afd382
+source-git-commit: 87f2d57e60ca74e2c90107a0d38517049802c89e
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '288'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,7 @@ QPT v1.1.72 innehåller följande patchar:
 1. **ACSD-67383**: Inloggning som kund med två företagsadministratörskonton i samma session orsakar ett *Ingen sådan entitet med cartId*-fel.
 1. **ACSD-67518**: Avancerad rapportering genererar duplicerade rubrikrader när radantalet överskrider batchstorleken.
 1. **ACSD-67639**: Det går inte att skapa en kreditnota för paketprodukter med **[!UICONTROL Dynamic Price]** inställt på *No*.
+1. **ACSD-67946**: I kundvagnsuppdateringen visas dubbla felbanderoller.
 1. **[ACSD-67696](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-67696.md)**: `media_gallery` poster returneras inte i produktnoden för kundvagnen i GraphQL efter en cachetömning.
 1. **ACSD-67946**: I kundvagnsuppdateringar visas dubbla felbanderoller.
 1. **ACSD-68011**: Icke-befintliga SKU:er som tilldelats till den delade katalogen via /V1/sharedCatalog/:id/assignProducts API.
