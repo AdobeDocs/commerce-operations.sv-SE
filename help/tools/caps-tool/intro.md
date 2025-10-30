@@ -53,7 +53,7 @@ Den här guiden är utformad för Adobe Commerce Cloud-handlare och -partners so
 
 Lär dig mer om Adobe Cloud Automated Patching Service och hur det här verktyget hjälper användarna att snabbt hitta och använda säkerhetsuppdateringar. I följande video visas hur du kommer åt den via SWAT-kontrollpanelen, väljer projekt och miljö samt lägger till korrigeringsfiler med ett enda klick.
 
->[!VIDEO](https://video.tv.adobe.com/v/3476247/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3476251/?captions=swe&learn=on&enablevpops)
 
 ## Vanliga användningsområden
 
