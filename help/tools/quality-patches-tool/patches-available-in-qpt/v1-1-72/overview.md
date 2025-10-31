@@ -4,9 +4,9 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 4e2c22626701e342920c8f60caff56af23712306
+source-git-commit: 43696165e24e39e25007b5864f8b0c3d0bcb92c2
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '280'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ QPT v1.1.72 innehåller följande patchar:
 1. **ACSD-67941**: GraphQL-begäranden med okända filternamn orsakar PHP-undantagsloggar.
 1. **ACSD-68064**: Dubblettposter skapas under schemalagda uppdateringar i miljöer med djupt kapslade kategorier.
 1. **ACSD-66807**: `report_viewed_product_index`-tabellen visar ett felaktigt antal produktsidesvisningar.
-1. **ACSD-67383**: Inloggning som kund med två företagsadministratörskonton i samma session orsakar ett *Ingen sådan entitet med cartId*-fel.
+1. **ACSD-67383**: Fel vid inloggning som kund med två företagsadministratörskonton i samma session.
 1. **ACSD-67518**: Avancerad rapportering genererar duplicerade rubrikrader när radantalet överskrider batchstorleken.
 1. **ACSD-67639**: Det går inte att skapa en kreditnota för paketprodukter med **[!UICONTROL Dynamic Price]** inställt på *No*.
 1. **ACSD-67946**: I kundvagnsuppdateringen visas dubbla felbanderoller.
