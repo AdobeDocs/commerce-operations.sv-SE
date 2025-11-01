@@ -23,7 +23,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>En detaljerad beskrivning av QPT 1.1.72-korrigeringen för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-67424">ACSD-67424 har lagts till: Värdet Updated_at i GET /carts/search REST API-svaret matchar inte värdet som visas på Admin Panel när Negotiable Quotes används </a>.</p>
+      <td><p>En detaljerad beskrivning av QPT 1.1.72-korrigeringen för <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-67424">ACSD-67424 har lagts till: Värdet Updated_at i GET /carts/search REST API-svaret matchar inte värdet som visas på Admin Panel när Negotiable Quotes används </a>.</p>
 </td>
       <td>
         Nytt ämne, qpt
@@ -31,7 +31,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/b8967a4cc8006fc5fa4319f7ffd6d8c7f3edf3d1">bekräfta</a></td>
     </tr>
     <tr>
-      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.72 för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-67383">ACSD-67383 har lagts till: Inloggning som kund med två företagsadministratörskonton i samma session orsakar felet"Ingen sådan entitet med cartId" </a>.</p>
+      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.72 för <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-67383">ACSD-67383 har lagts till: Inloggning som kund med två företagsadministratörskonton i samma session orsakar felet"Ingen sådan entitet med cartId" </a>.</p>
 </td>
       <td>
         Nytt ämne, qpt
@@ -53,7 +53,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-73/overview">Översikt: QPT (Quality Patches Tool) v1.1.73</a> har lagts till.</p>
+      <td><p><a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-73/overview">Översikt: QPT (Quality Patches Tool) v1.1.73</a> har lagts till.</p>
 </td>
       <td>
         Nytt ämne, qpt
@@ -75,7 +75,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.72 har lagts till för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-68064">ACSD-68064: Om schemalagda uppdateringar skapas dubblettposter i miljöer med ett stort antal kapslade kategorier </a>.</p>
+      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.72 har lagts till för <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-68064">ACSD-68064: Om schemalagda uppdateringar skapas dubblettposter i miljöer med ett stort antal kapslade kategorier </a>.</p>
 </td>
       <td>
         Nytt ämne, qpt
@@ -83,7 +83,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/b8d4046ce9ea0d085cc11f5631d04a8b3adb3239">bekräfta</a></td>
     </tr>
     <tr>
-      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.72 för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-67946">ACSD-67946 har lagts till: Uppdateringar av kundvagnen visar dubbla felbanderoller</a>.</p>
+      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.72 för <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-67946">ACSD-67946 har lagts till: Uppdateringar av kundvagnen visar dubbla felbanderoller</a>.</p>
 </td>
       <td>
         Nytt ämne, qpt
@@ -113,7 +113,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.72 för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-68040">ACSD-68040 har lagts till: Prestandaförsämringar för Edge-söksidor på MariaDB 10.6 och 11.4 med många historikbegäranden</a>.</p>
+      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.72 för <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-68040">ACSD-68040 har lagts till: Prestandaförsämringar för Edge-söksidor på MariaDB 10.6 och 11.4 med många historikbegäranden</a>.</p>
 </td>
       <td>
         Nytt ämne, qpt
@@ -121,7 +121,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/6dff1447a89c083fb8bd867281d20462cc843baa">bekräfta</a></td>
     </tr>
     <tr>
-      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.72 för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-68118">ACSD-68118 har lagts till: GraphQL-frågan för CustomerCart returnerar produktattributvärden som inte återspeglar arkivhuvudet, vilket orsakar inkonsekvent lokalisering</a>.</p>
+      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.72 för <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-68118">ACSD-68118 har lagts till: GraphQL-frågan för CustomerCart returnerar produktattributvärden som inte återspeglar arkivhuvudet, vilket orsakar inkonsekvent lokalisering</a>.</p>
 </td>
       <td>
         Nytt ämne, qpt
@@ -129,7 +129,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/7dec696f3d87d91902a166314199cf3b6c161f85">bekräfta</a></td>
     </tr>
     <tr>
-      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.72 för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-66807">ACSD-66807 har lagts till: Tabellen Report_displayed_product_index visar ett felaktigt antal produktsidesvisningar</a>.</p>
+      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.72 för <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-66807">ACSD-66807 har lagts till: Tabellen Report_displayed_product_index visar ett felaktigt antal produktsidesvisningar</a>.</p>
 </td>
       <td>
         Nytt ämne, qpt
@@ -151,7 +151,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.72 för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-67639">ACSD-67639 har lagts till: Det går inte att skapa en kreditnota för paketprodukter med det dynamiska priset inställt på Nej</a>.</p>
+      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.72 för <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-67639">ACSD-67639 har lagts till: Det går inte att skapa en kreditnota för paketprodukter med det dynamiska priset inställt på Nej</a>.</p>
 </td>
       <td>
         Nytt ämne, qpt
