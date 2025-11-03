@@ -796,7 +796,7 @@ Handlarna ansvarar för att synkronisera data mellan olika miljöer.
 >
 >Handlarna måste använda den senaste versionen av Live Search, produktrekommendationer och betaltjänster för att säkerställa högsta stabilitet, funktionalitet och rätt till support.
 >Adobe har inte stöd för gamla versioner och en uppgradering säkerställer att du kan dra nytta av de senaste förbättringarna och felkorrigeringarna.
->Mer information om vilka versioner som stöds finns i [Produkttillgänglighetsmatrisen för Commerce Services](https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability#commerce-services).
+>Mer information om vilka versioner som stöds finns i [Produkttillgänglighetsmatrisen för Commerce Services](https://experienceleague.adobe.com/sv/docs/commerce-operations/release/product-availability#commerce-services).
 
 #### Produktrekommendationer
 
