@@ -2,9 +2,9 @@
 title: Delat ansvar, säkerhet och operativ modell
 description: Läs mer om säkerhetsansvar för alla parter som deltar i ditt Adobe Commerce i molninfrastrukturprojekt.
 exl-id: f3cc1685-e469-4e30-b18e-55ce10dd69ce
-source-git-commit: fcaf6ff1dce1c1a5084307cd366ca58d71a8f4e4
+source-git-commit: aac78fc95b86951f352a636eef33e0b79b22a183
 workflow-type: tm+mt
-source-wordcount: '2850'
+source-wordcount: '2939'
 ht-degree: 0%
 
 ---
@@ -745,9 +745,9 @@ Handlarna ansvarar för att synkronisera data mellan olika miljöer.
 
 |     | Adobe | Merchant |
 | --- | --- | --- |
-| Elasticsearch | R |   |
-| Konfiguration av Elasticsearch standardinställningar | R |   |
-| Skicka en begäran om att få installera en Elasticsearch-version som är kompatibel med den installerade Adobe Commerce-versionen |  | R |
+| Elasticsearch eller OpenSearch | R |   |
+| Konfiguration av Elasticsearch- eller OpenSearch-standardinställningar | R |   |
+| Skicka en begäran om att få installera en Elasticsearch- eller OpenSearch-version som är kompatibel med den installerade Adobe Commerce-versionen |  | R |
 
 {style="table-layout:auto"}
 
@@ -793,11 +793,17 @@ Handlarna ansvarar för att synkronisera data mellan olika miljöer.
 
 {style="table-layout:auto"}
 
+>
+>Handlarna måste använda den senaste versionen av Live Search, produktrekommendationer och betaltjänster för att säkerställa högsta stabilitet, funktionalitet och rätt till support.
+>Adobe har inte stöd för gamla versioner och en uppgradering säkerställer att du kan dra nytta av de senaste förbättringarna och felkorrigeringarna.
+>Mer information om vilka versioner som stöds finns i [Produkttillgänglighetsmatrisen för Commerce Services](https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability#commerce-services).
+
 #### Produktrekommendationer
 
 |     | Adobe | Merchant |
 | --- | --- | --- |
 | Tillgänglighet för tjänsten Produktrekommendationer | R |   |
+| Uppgraderar produktrekommendationsmoduler |   | R |
 
 {style="table-layout:auto"}
 
@@ -806,6 +812,7 @@ Handlarna ansvarar för att synkronisera data mellan olika miljöer.
 |     | Adobe | Merchant |
 | --- | --- | --- |
 | Live Search-tjänstens tillgänglighet | R |   |
+| Uppgraderar Live Search-moduler |   | R |
 
 {style="table-layout:auto"}
 
@@ -820,6 +827,15 @@ Handlarna ansvarar för att synkronisera data mellan olika miljöer.
 | Core AEM EDS implementation (Commerce Boilerplate) | R |   |
 | Anpassad implementering av AEM EDS |  | R |
 | Andra anpassade butiksimplementeringar |  | R |
+
+{style="table-layout:auto"}
+
+#### Betalningstjänster
+
+|     | Adobe | Merchant |
+| --- | --- | --- |
+| Tillgänglighet för betalningstjänsten | R |   |
+| Uppgraderar betalningsmoduler |   | R |
 
 {style="table-layout:auto"}
 
