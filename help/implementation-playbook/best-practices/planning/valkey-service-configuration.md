@@ -25,13 +25,13 @@ stage:
     VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
 ```
 
-Om du vill se miljökonfiguration för molninfrastruktur läser du [`VALKEY_BACKEND`](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_backend) i _Commerce on Cloud Infrastructure Guide_.
+Om du vill se miljökonfiguration för molninfrastruktur läser du [`VALKEY_BACKEND`](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_backend) i _Commerce on Cloud Infrastructure Guide_.
 
 Lokala installationer finns i [Konfigurera cache-lagring för Valkey-sidor](../../../configuration/cache/valkey-pg-cache.md#configure-page-caching) i _konfigurationshandboken_.
 
 >[!NOTE]
 >
->Kontrollera att du använder den senaste versionen av paketet `ece-tools`. Om inte, [uppgradera till den senaste versionen](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/update-package). Du kan kontrollera vilken version som är installerad i din lokala miljö med hjälp av CLI-kommandot `composer show magento/ece-tools`.
+>Kontrollera att du använder den senaste versionen av paketet `ece-tools`. Om inte, [uppgradera till den senaste versionen](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/update-package). Du kan kontrollera vilken version som är installerad i din lokala miljö med hjälp av CLI-kommandot `composer show magento/ece-tools`.
 
 ### L2-cacheminnets storlek (Adobe Commerce Cloud)
 
@@ -85,13 +85,13 @@ stage:
     VALKEY_USE_SLAVE_CONNECTION: true
 ```
 
-Mer information finns i [VALKEY_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_use_slave_connection) i _Commerce on Cloud Infrastructure Guide_.
+Mer information finns i [VALKEY_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_use_slave_connection) i _Commerce on Cloud Infrastructure Guide_.
 
 För Adobe Commerce lokala installationer konfigurerar du den nya Valkey-cacheimplementeringen med kommandona `bin/magento:setup`. Mer information finns i [Använd valnyckel för standardcache](../../../configuration/cache/valkey-pg-cache.md#configure-page-caching) i _Konfigurationshandboken_.
 
 >[!WARNING]
 >
->Konfigurera _inte_ en Valkey-slavanslutning för molninfrastrukturprojekt med en [skalad/delad arkitektur](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture). Detta orsakar anslutningsfel för Valkey. Mer information finns i [Riktlinjerna för värdekonfiguration](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_use_slave_connection) i guiden _Commerce om molninfrastruktur_.
+>Konfigurera _inte_ en Valkey-slavanslutning för molninfrastrukturprojekt med en [skalad/delad arkitektur](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/architecture/scaled-architecture). Detta orsakar anslutningsfel för Valkey. Mer information finns i [Riktlinjerna för värdekonfiguration](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_use_slave_connection) i guiden _Commerce om molninfrastruktur_.
 
 ## Förinläsningsnycklar
 
@@ -153,11 +153,11 @@ stage:
 
 >[!NOTE]
 >
->I det föregående exemplet är cachen `full_page` inte relevant för Adobe Commerce i molninfrastrukturprojekt, eftersom de använder [Fast](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly).
+>I det föregående exemplet är cachen `full_page` inte relevant för Adobe Commerce i molninfrastrukturprojekt, eftersom de använder [Fast](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/cdn/fastly).
 
 Information om hur du konfigurerar lokala installationer finns i [Inaktuella cachealternativ](../../../configuration/cache/level-two-cache.md#stale-cache-options) i _Konfigurationshandboken_.
 
-Under distributionen bör du se följande rader i [bygg- och distributionsloggen](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/test/log-locations#build-and-deploy-logs):
+Under distributionen bör du se följande rader i [bygg- och distributionsloggen](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/develop/test/log-locations#build-and-deploy-logs):
 
 ```
 W:   - Downloading colinmollenhour/credis (1.11.1)
