@@ -3,9 +3,9 @@ user-guide-title: Uppgraderingshandbok
 user-guide-description: Lär dig varför det är så viktigt att uppgradera ditt Adobe Commerce-program och hur du kan planera och genomföra en uppgradering.
 feature: Upgrade
 topic: Administration, Commerce, Development, Upgrade
-source-git-commit: ee69fcec4986fc85f93e336dc654a9bfff486d8b
+source-git-commit: 4616cc6990921b531483213f2904a24b483fb7ac
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '144'
 ht-degree: 0%
 
 ---
@@ -24,6 +24,7 @@ ht-degree: 0%
    - [Granska plattformsändringar](prepare/platform-changes.md)
    - [Krav för fullständig uppgradering](prepare/prerequisites.md)
    - [Migrera från Elasticsearch till OpenSearch](prepare/opensearch-migration.md)
+   - [Migrera från RabbitMQ till ActiveMQ](prepare/activemq-migration.md)
    - [Förstå uppgraderingsomfång](prepare/scope.md)
 - Implementering {#implementation}
    - [Uppgradera](implementation/perform-upgrade.md)
@@ -54,4 +55,4 @@ ht-degree: 0%
 - Resurs {#resources}
    - [Rekommenderad läsning](resources/recommended-reading.md)
    - [Modernisera plattformen med Adobe Commerce](resources/recommended-upgrade-paths.md)
-- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=sv-SE)
+- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
