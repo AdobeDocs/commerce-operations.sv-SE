@@ -2,9 +2,9 @@
 title: Skaffa Adobe Commerce
 description: Lär dig hur du laddar ned Adobe Commerce.
 exl-id: 7a769d5b-5397-4572-8db5-7602068e6aad
-source-git-commit: 987d65b52437fbd21f41600bb5741b3cc43d01f3
+source-git-commit: 0659c19e24e90ca4e3a7ac1c04914bda82b766dd
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '414'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,13 @@ Du är bland de 240 000 handlare världen över som litar på vår e-handelsprog
 
 ## Så här skaffar du programmet
 
-Kontrollera tillgängligheten av spännande nya funktioner och releaser och se hur du kan få dem på vår [produkttillgänglighetssida](https://experienceleague.adobe.com/sv/docs/commerce-operations/release/product-availability).
+Kontrollera tillgängligheten och kompatibiliteten för tillägg som skapats av Adobe och Commerce Services för Adobe Commerce och Magento Open Source på [produkttillgänglighetssidan](https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability).
+
+>[!NOTE]
+>
+>Adobe Commerce-kodebaser distribueras nu exklusivt via Composer på grund av policyändringar. Använd Composer för att hämta någon av de listade Adobe Commerce-versionerna eftersom kodbasen inte längre är tillgänglig i hämtningsavsnittet.
+>
+>Mer information finns i [Kan inte komma åt faktureringsinstruktionen och hämta kodbas på Adobe Commerce i molninfrastruktur](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-26611)
 
 Se följande tabell för att komma igång med installationen av Adobe Commerce.
 
