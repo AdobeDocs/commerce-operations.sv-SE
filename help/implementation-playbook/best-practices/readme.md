@@ -18,7 +18,7 @@ Adobe accepterar förfrågningar från både interna och externa intressenter, i
 
 ## Hur skapar jag en förfrågan?
 
-**Interna intressenter** kan skicka begäranden genom att öppna ett Jira-problem i COMDOX-projektet. **Externa intressenter** kan skicka begäranden genom att öppna ett [GitHub-problem](https://github.com/AdobeDocs/commerce-operations.en/issues/new/choose) i den här databasen.
+**Interna intressenter** kan skicka begäranden genom att öppna ett Jira-problem i COMDOX-projektet. **Externa intressenter** kan skicka begäranden genom att öppna ett [GitHub-problem](https://github.com/AdobeDocs/commerce-operations.sv-SE/issues/new/choose) i den här databasen.
 
 Du kan skicka in följande typer av förfrågningar:
 
@@ -29,7 +29,7 @@ Du kan skicka in följande typer av förfrågningar:
 ## Vilken är den övergripande processen?
 
 
-**Skapa en Jira-biljett eller ett Jira-problem** - Interna intressenter skapar en Jira-biljett i COMDOX-projektet. Externa intressenter skickar in ett GitHub-problem. Inkludera fullständig information i Jira- eller [GitHub-utgåvan](https://github.com/AdobeDocs/commerce-operations.en/issues/new/choose) för att hjälpa teamet att förstå kontexten och prioritera begäran.
+**Skapa en Jira-biljett eller ett Jira-problem** - Interna intressenter skapar en Jira-biljett i COMDOX-projektet. Externa intressenter skickar in ett GitHub-problem. Inkludera fullständig information i Jira- eller [GitHub-utgåvan](https://github.com/AdobeDocs/commerce-operations.sv-SE/issues/new/choose) för att hjälpa teamet att förstå kontexten och prioritera begäran.
 
 **Adobe projektteam utvärderar och prioriterar begäran** - teamet övervakar regelbundet begäranden för att fastställa prioritet och utvärdera de begärda ändringarna för att kunna inkludera dem i Implementeringens spelningsboksmetodtips. Teamet kan till exempel fastställa att istället för att skapa ett nytt avsnitt om bästa praxis ska det begärda innehållet läggas till i den befintliga produktdokumentationen på Experience League- eller Adobe Developer-webbplatsen.
 

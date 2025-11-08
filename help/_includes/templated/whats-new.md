@@ -614,7 +614,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
       <td>
         Viktig uppdatering
       </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/pull/161">pull-förfrågan</a></td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.sv-SE/pull/161">pull-förfrågan</a></td>
     </tr>
   </tbody>
 </table>
