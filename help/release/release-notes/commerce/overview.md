@@ -17,4 +17,4 @@ Läs om de senaste förbättringarna i Adobe Commerce, inklusive förbättringar
 
 {{bics}}
 
-Använd Composer för att uppdatera din Commerce-installation till den senaste versionen och dra nytta av nya funktioner, prestandaförbättringar och säkerhetspatchar. Detaljerade uppgraderingsinstruktioner finns i [uppgraderingsguiden för Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/overview.html).
+Använd Composer för att uppdatera din Commerce-installation till den senaste versionen och dra nytta av nya funktioner, prestandaförbättringar och säkerhetspatchar. Detaljerade uppgraderingsinstruktioner finns i [uppgraderingsguiden för Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/overview.html?lang=sv-SE).
