@@ -3,9 +3,9 @@ title: Aktivera loggning
 description: Lär dig hur du aktiverar och inaktiverar olika typer av loggning i Adobe Commerce. Upptäck teknik för loggningskonfiguration och hantering.
 feature: Configuration, Logs
 exl-id: 78b0416a-5bad-42a9-a918-603600e98928
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: aff705cefcd4de38d17cad41628bc8dbd6d630cb
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '352'
 ht-degree: 0%
 
 ---
@@ -54,6 +54,23 @@ Som standard skriver Commerce till felsökningsloggen (`<install_directory>/var/
 
 Som standard skriver Commerce databasaktivitetsloggar till filen `<install-dir>/var/debug/db.log`.
 
+### Sökloggningslagringsplats
+
+När databasloggning är aktiverat lagrar Commerce frågeloggar på följande plats:
+
+- **Frågoggfil**: `<install-directory>/var/debug/db.log`
+- **Loggkatalog**: `<install-directory>/var/debug/`
+
+Frågeloggen innehåller:
+- SQL-frågor som körs av programmet
+- Frågekörningstider
+- Frågeparametrar och bindningar
+- Databasanslutningsinformation
+
+>[!NOTE]
+>
+>Frågeloggfilen kan snabbt bli stor i trafikmiljöer. Övervaka diskutrymmet och överväg att implementera loggrotation eller att regelbundet rensa frågeloggfilen.
+
 ### Aktivera databasloggning
 
 1. Använd kommandot `dev:query-log` för att aktivera eller inaktivera databasloggning.
@@ -71,6 +88,24 @@ Som standard skriver Commerce databasaktivitetsloggar till filen `<install-dir>/
    ```bash
    bin/magento cache:flush
    ```
+
+### Visa frågeloggar
+
+Du kan visa frågeloggarna med standardkommandon för filvisning:
+
+```bash
+# View the entire query log
+cat var/debug/db.log
+
+# View the last 100 lines of the query log
+tail -n 100 var/debug/db.log
+
+# Monitor the query log in real-time
+tail -f var/debug/db.log
+
+# Search for specific queries
+grep "SELECT" var/debug/db.log
+```
 
 ## Cron-loggning
 
