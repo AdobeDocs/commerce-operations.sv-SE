@@ -3,7 +3,7 @@ title: Använd Valkey för standardcache
 description: Lär dig hur du konfigurerar Valkey som standardcache för Adobe Commerce. Upptäck kommandoradskonfiguration, konfigurationsalternativ och valideringstekniker.
 feature: Configuration, Cache
 exl-id: d0baa2a6-8aa8-4f3f-9edf-102d621430e0
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: e9f1bef9f97a0e1d738f1221758f1b9a0a238da1
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 0%
@@ -34,7 +34,7 @@ bin/magento setup:config:set --cache-backend=valkey --cache-backend-valkey-<para
 >Från och med **Adobe Commerce 2.4.9-alpha2** har **Valkey** officiellt ersatt Redis i CLI-verktygen på grund av ändrade licensalternativ. Valkey är en gaffel till Redis och har nästan identiska funktioner. För **version 2.4.8 och tidigare** är de CLI-kommandon som används för att konfigurera Valkey desamma som för Redis, vilket ger sömlös bakåtkompatibilitet och förenklar migrering eller stöd för dubbla miljöer. I följande exempel visas det Valkey-specifika kommandot.
 
 ```bash
-bin/magento setup:config:set --cache-backend=redis --cache-backend-valkey-<parameter>=<value>...
+bin/magento setup:config:set --cache-backend=valkey --cache-backend-valkey-<parameter>=<value>...
 ```
 
 | Kommandoradsparameter | Värde | Betydelse | Standardvärde |
@@ -272,7 +272,7 @@ Exempel på sidcachning:
 ### Valkey ping-kommando
 
 ```bash
-redis-cli ping
+valkey-cli ping
 ```
 
 Det förväntade svaret är: `PONG`
