@@ -1,7 +1,7 @@
 ---
-source-git-commit: e625670e741c0669050ab758d4f87c5ca06fe3df
+source-git-commit: 1e3508e2e8e99d686dfa692415e2b4b41e8b80e8
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '726'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->När säkerhetsuppdateringen har installerats måste Adobe Commerce B2B-handlare även uppdatera till den senaste kompatibla versionen av B2B-säkerhetsuppdateringen. Se [Versionsinformation för B2B](https://experienceleague.adobe.com/sv/docs/commerce-admin/b2b/release-notes).
+>När säkerhetsuppdateringen har installerats måste Adobe Commerce B2B-handlare även uppdatera till den senaste kompatibla versionen av B2B-säkerhetsuppdateringen. Se [Versionsinformation för B2B](https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/release-notes).
 
 ## Endast Adobe Commerce {#ee-only}
 
@@ -85,7 +85,7 @@ Innan du kan köra indexerare i parallellt läge måste du aktivera stöd för p
 
 >[!IMPORTANT]
 >
->Adobe har inte stöd för att tillämpa officiella, Adobe-tillhandahållna patchar med den här metoden. Använd följande metod på egen risk. Använd [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE){target="_blank"} om du vill tillämpa officiella korrigeringar. Utför alltid omfattande testning innan du distribuerar någon anpassad patch.
+>Adobe har inte stöd för att tillämpa officiella, Adobe-tillhandahållna patchar med den här metoden. Använd följande metod på egen risk. Använd [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"} om du vill tillämpa officiella korrigeringar. Utför alltid omfattande testning innan du distribuerar någon anpassad patch.
 
 ## Oktober 2025 backports för säkerhetsuppdatering {#oct-2025-backports}
 
@@ -99,7 +99,7 @@ Innan du kan köra indexerare i parallellt läge måste du aktivera stöd för p
 
 * **Stöd för ActiveMQ Artemis STOMP-protokoll för Apache har lagts till**
 
-  Stöd för ActiveMQ Artemis-meddelandehanterare med öppen källkod har lagts till via STOMP (Simple Text Oriented Messaging Protocol). Det är ett tillförlitligt och skalbart meddelandesystem som ger flexibilitet för STOMP-baserade integreringar. Se [Apache ActiveMQ Artemis](https://experienceleague.adobe.com/sv/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework#apache-activemq-artemis-stomp) i *Commerce Configuration Guide*.
+  Stöd för ActiveMQ Artemis-meddelandehanterare med öppen källkod har lagts till via STOMP (Simple Text Oriented Messaging Protocol). Det är ett tillförlitligt och skalbart meddelandesystem som ger flexibilitet för STOMP-baserade integreringar. Se [Apache ActiveMQ Artemis](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework#apache-activemq-artemis-stomp) i *Commerce Configuration Guide*.
 
 ## Utcheckningssidan kan inte läsa in static.min.js och mixins.min.js {#checkout-page-fails-to-load-static-min-js-and-mixins-min-js}
 
@@ -116,4 +116,4 @@ Efter de senaste ändringarna av CSP/SRI läses inte den utcheckade sidan in sta
 
 **Programfix**:
 
-En programfix som åtgärdar detta problem kommer att släppas så snart som möjligt. Övervaka sidan med versionsinformation för att se om det finns uppdateringar.
+En snabbkorrigering är tillgänglig. Se [Utcheckningen misslyckas när JS-miniatyr och paketering är aktiverat](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27997) i kunskapsbasen för korrigeringsinformation.
