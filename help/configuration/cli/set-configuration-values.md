@@ -2,9 +2,9 @@
 title: Ange konfigurationsvärden
 description: Lär dig hur du anger konfigurationsvärden och ändrar låsta administratörsvärden i Adobe Commerce. Upptäck avancerade konfigurationskommandon och -tekniker.
 exl-id: 1dc2412d-50b3-41fb-ab22-3eccbb086302
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 2672c696d672ad72bef7537570ed630bc33c41b4
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1101'
 ht-degree: 0%
 
 ---
@@ -124,25 +124,25 @@ bin/magento config:set [--scope="..."] [--scope-code="..."] [-le | --lock-env] [
 **Så här anger du känsliga konfigurationsvärden**:
 
 ```bash
-bin/magento config:sensitive:set [--scope="..."] [--scope-code="..."] path value
+bin/magento config:sensitive:set [--scope="..."] [--scope-code="..."] path
 ```
 
 I följande tabell beskrivs kommandoparametrarna för `set`:
 
 | Parameter | Beskrivning |
-| --- | --- |
+| --- |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `--scope` | Konfigurationens omfattning. Möjliga värden är `default`, `website` eller `store`. Standardvärdet är `default`. |
 | `--scope-code` | Konfigurationens omfattningskod (webbplatskod eller butiksvykod) |
 | `-e or --lock-env` | Låser värdet så att det inte kan redigeras i administratören eller ändrar en inställning som redan är låst i Admin. Kommandot skriver värdet till filen `<Commerce base dir>/app/etc/env.php`. |
 | `-c or --lock-config` | Låser värdet så att det inte kan redigeras i administratören eller ändrar en inställning som redan är låst i Admin. Kommandot skriver värdet till filen `<Commerce base dir>/app/etc/config.php`. Alternativet `--lock-config` skriver över `--lock-env` om du anger båda alternativen. |
 | `path` | _Krävs_. Konfigurationssökvägen |
-| `value` | _Krävs_. Konfigurationens värde |
+| `value` | _Krävs_. Konfigurationens värde. Även om det kan skickas som ett separat argument i ett CLI-kommando rekommenderar Adobe att du inte anger det i det ursprungliga kommandot. Kör i stället kommandot utan värdet och ange sedan värdet när du uppmanas till det. Med den här metoden går det inte att skriva känsliga åtkomstvärden till base_history, vilket är det säkraste sättet att ställa in konfigurationen. |
 
 >[!INFO]
 >
 >Från och med Commerce 2.2.4 ersätter alternativen `--lock-env` och `--lock-config` alternativet `--lock`.
 >
->Om du använder alternativet `--lock-env` eller `--lock-config` för att ange eller ändra ett värde måste du använda kommandot [`bin/magento app:config:import` &#x200B;](../cli/import-configuration.md) för att importera inställningen innan du får åtkomst till Admin eller storeFront.
+>Om du använder alternativet `--lock-env` eller `--lock-config` för att ange eller ändra ett värde måste du använda kommandot [`bin/magento app:config:import` ](../cli/import-configuration.md) för att importera inställningen innan du får åtkomst till Admin eller storeFront.
 
 Om du anger en felaktig konfigurationssökväg returnerar kommandot ett fel
 
@@ -221,7 +221,7 @@ där
 
 >[!INFO]
 >
->Kommandot `bin/magento config:show` visar värdena för alla [krypterade värden](../reference/config-reference-sens.md) som en serie asterisker: `**&#x200B;**&#x200B;**`.
+>Kommandot `bin/magento config:show` visar värdena för alla [krypterade värden](../reference/config-reference-sens.md) som en serie asterisker: `******`.
 
 ### Exempel
 
