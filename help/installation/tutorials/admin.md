@@ -3,9 +3,9 @@ title: Skapa, redigera eller låsa upp ett administratörskonto
 description: Följ de här stegen för att hantera administratörskontot för ditt Adobe Commerce Admin-program.
 feature: Install, User Account
 exl-id: d87871a1-717d-4662-b84d-98a018518286
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: aaed7dba7d11085eb8e2793cefffb8c8b082e750
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '320'
 ht-degree: 0%
 
 ---
@@ -39,12 +39,12 @@ bin/magento admin:user:create [--<parameter_name>=<value>, ...]
 Där följande tabell definierar parametrar och värden:
 
 | Namn | Värde | Obligatoriskt? |
-|--- |--- |--- |
+|--- |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--- |
 | `--admin-firstname` | Administratörsanvändarens förnamn. | Ja |
 | `--admin-lastname` | Administratörsanvändarens efternamn. | Ja |
 | `--admin-email` | Administratörsanvändarens e-postadress. | Ja |
 | `--admin-user` | Administratörsanvändarnamn. | Ja |
-| `--admin-password` | Administratörslösenord. Lösenordet måste innehålla minst 7 tecken och innehålla minst en bokstav och minst ett numeriskt tecken. <br><br>Vi rekommenderar ett längre och mer komplext lösenord. Om lösenordssträngen innehåller specialtecken som kräver literal tolkning (t.ex. omvända snedstreck eller blanksteg) måste du omsluta lösenordet med enkla citattecken. | Ja |
+| `--admin-password` | Administratörslösenord. Lösenordet måste innehålla minst 12 tecken och måste innehålla minst ett alfabetiskt tecken och minst ett numeriskt tecken. <br><br>Adobe rekommenderar att du anger ett längre, mer komplext lösenord. Om lösenordssträngen innehåller specialtecken som kräver literal tolkning (t.ex. omvända snedstreck eller blanksteg) måste du omsluta lösenordet med enkla citattecken. | Ja |
 | `--magento-init-params` | Lägg till i valfritt kommando för att anpassa parametrar för programinitiering<br/><br/>Till exempel: `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache` | Nej |
 
 Exempel på användning:
