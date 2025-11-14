@@ -2,9 +2,9 @@
 title: Ange konfigurationsvärden
 description: Lär dig hur du anger konfigurationsvärden och ändrar låsta administratörsvärden i Adobe Commerce. Upptäck avancerade konfigurationskommandon och -tekniker.
 exl-id: 1dc2412d-50b3-41fb-ab22-3eccbb086302
-source-git-commit: 2672c696d672ad72bef7537570ed630bc33c41b4
+source-git-commit: 5e2d11330d3334df36ba8b3d176fbe2d8bfe0486
 workflow-type: tm+mt
-source-wordcount: '1101'
+source-wordcount: '1116'
 ht-degree: 0%
 
 ---
@@ -140,9 +140,7 @@ I följande tabell beskrivs kommandoparametrarna för `set`:
 
 >[!INFO]
 >
->Från och med Commerce 2.2.4 ersätter alternativen `--lock-env` och `--lock-config` alternativet `--lock`.
->
->Om du använder alternativet `--lock-env` eller `--lock-config` för att ange eller ändra ett värde måste du använda kommandot [`bin/magento app:config:import` &#x200B;](../cli/import-configuration.md) för att importera inställningen innan du får åtkomst till Admin eller storeFront.
+>Från och med Commerce 2.2.4 ersätter alternativen `--lock-env` och `--lock-config` alternativet `--lock`. Om du använder något av dessa alternativ skrivs värdet direkt till filen `app/etc/env.php` eller `app/etc/config.php` och blir skrivskyddat i Admin. Om du vill importera konfigurationsändringar från de här filerna till databasen kör du kommandot `bin/magento app:config:import`, till exempel efter att du har redigerat eller omdistribuerat filerna manuellt.
 
 Om du anger en felaktig konfigurationssökväg returnerar kommandot ett fel
 
@@ -191,7 +189,7 @@ Du kan använda alternativet `--lock-env` för att ange konfigurationsvärden om
 
 >[!INFO]
 >
->Filen `env.php` är systemspecifik. Du bör inte överföra den till ett annat system. Du kan använda den för att skriva över konfigurationsvärden från databasen. Du kan t.ex. ta en databasdump från ett annat system och skriva över `base_url` och andra värden så att du inte behöver ändra databasen.
+>Filen `env.php` är systemspecifik. Överför den inte till ett annat system. Du kan använda den för att skriva över konfigurationsvärden från databasen. Du kan t.ex. ta en databasdump från ett annat system och skriva över `base_url` och andra värden så att du inte behöver ändra databasen.
 
 Om du använder alternativet `--lock-config` på följande sätt sparas konfigurationsvärdet i `<Commerce base dir>/app/etc/config.php`. Fältet för redigering av det här värdet i Admin är inaktiverat.
 
@@ -221,7 +219,7 @@ där
 
 >[!INFO]
 >
->Kommandot `bin/magento config:show` visar värdena för alla [krypterade värden](../reference/config-reference-sens.md) som en serie asterisker: `**&#x200B;**&#x200B;**`.
+>Kommandot `bin/magento config:show` visar värdena för alla [krypterade värden](../reference/config-reference-sens.md) som en serie asterisker: `******`.
 
 ### Exempel
 
