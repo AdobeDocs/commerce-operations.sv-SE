@@ -4,9 +4,9 @@ description: Lär dig hur du sammanfogar och minimerar CSS- och JavaScript-filer
 role: Developer
 feature: Best Practices
 exl-id: ff0bc407-b563-418b-9d6a-7c1dc8f235df
-source-git-commit: 79c8a15fb9686dd26d73805e9d0fd18bb987770d
+source-git-commit: 19f874130645fcabe3178a37ec6dedcf75b93afa
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '430'
 ht-degree: 0%
 
 ---
@@ -89,9 +89,19 @@ Du kan även aktivera Adobe Commerce inbyggda paketering (grundläggande paketer
 php -f bin/magento config:set dev/js/enable_js_bundling 1
 ```
 
+## Skjut upp icke-kritiska huvudskript
+
+Skjut automatiskt upp icke-kritiska JavaScript-skript som läses in i head-avsnittet genom att aktivera den här inställningen: [!UICONTROL **Lagrar** > **Inställningar** > **Konfiguration** > **Avancerat** > **Utvecklare** > **JavaScript-inställningar**].
+
+Du kan även aktivera den här flaggan från kommandoraden:
+
+```bash
+php -f bin/magento config:set dev/js/defer_non_critical 1
+```
+
 ## Ytterligare information
 
 - [Optimeringsinställningar på klientsidan](../../../performance/configuration.md#client-side-optimization-settings)
-- [Användarhandbok: Optimera resursfiler](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/tools/developer-tools#optimizing-resource-files)
+- [Användarhandbok: Optimera resursfiler](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/developer-tools#optimizing-resource-files)
 - [Utvecklarhandbok för Fornend: CSS-sammanslagning, miniatyr- och webbplatsprestanda](https://developer.adobe.com/commerce/frontend-core/guide/css/#css-merging-minification-and-performance)
 - [Avancerad JavaScript-paketering](../../../performance/advanced-js-bundling.md)
