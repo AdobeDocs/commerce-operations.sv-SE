@@ -4,9 +4,9 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: a604879f63b1cfcf8f21fec53e69984bff0c66d4
+source-git-commit: ae994d8185516dabf88b682a33f1775c0d636515
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '185'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ QPT v1.1.73 innehåller följande patchar:
 1. **ACSD-67908**: Korrigerade ett problem där JS-filer inte kunde sammanfogas korrekt i flerlagringsinställningar.
 1. **ACSD-68190**: Korrigerat problemet där rabatter inte gäller, tillämpade rabatter inte visas korrekt i svaret på kundvagnen i GraphQL och rabatter som inte är kupongrabatter tas bort när kupongrabatt tas bort.
 1. **ACSD-68206**: Felet korrigerades när GraphQL Application Server användes med funktionen **[!UICONTROL Rate Limiting]** med PHP-tillägget [!DNL Redis] installerat.
-1. **ACSD-68356**: Korrigerade ett fel där en GraphQL-kundvagnsfråga returnerade ett felaktigt rabattbelopp för virtuella offerter.
+1. **ACSD-68356**: [!DNL GraphQL] kundvagnsfrågan returnerar felaktigt rabattbelopp för virtuella offerter.
 1. **ACSD-68391**: Korrigerade problemet där kategorirelaterade behörigheter inte tillämpades korrekt i **[!UICONTROL Quick Order]** och **[!UICONTROL Requisition Lists]**.
 1. **ACSD-68400**: Korrigerade ett fel där den virtuella presentkortskvantiteten inte återspeglades korrekt i **[!UICONTROL Inventory reservation table]**.
 
