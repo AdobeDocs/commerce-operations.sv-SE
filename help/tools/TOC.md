@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: 378ddf15d4291eed11b42b3d765428be6e224575
+source-git-commit: 3103c03c7cde04d1fffd16254ff8969851305b47
 workflow-type: tm+mt
-source-wordcount: '8956'
+source-wordcount: '8975'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 0%
    - [Hanterade varningar för Adobe Commerce: CPU-varningsmeddelanden](/help/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce-cpu-warning-alert.md)
 - Verktyget Kvalitetspatchar {#quality-patches-tool}
    - [[!DNL Quality Patches Tool]: Ett självbetjäningsverktyg för korrigeringar av kvalitet](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)
-   - [[!DNL Quality Patches Tool]: Sök efter patchar](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE){target="_blank"}
+   - [[!DNL Quality Patches Tool]: Sök efter patchar ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
    - [Användning](quality-patches-tool/usage.md)
    - [Versionsinformation](quality-patches-tool/release-notes.md)
    - Patchar tillgängliga i verktyget för kvalitetspatchar {#patches-available-in-qpt}
@@ -915,6 +915,8 @@ ht-degree: 0%
          - [ACSD-67696: Media_gallery-poster returneras inte i produktnoden för kundvagnen för GraphQL efter en cachetömning](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-67696.md)
       - v1.1.73 {#v1-1-73}
          - [Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.73](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-73/overview.md)
+         - [ACSD-68391: Kategorirelaterade behörigheter tillämpas inte i [!UICONTROL Quick Order] och [!UICONTROL Requisition Lists]](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-73/acsd-68391.md)
+         - [ACSD-67908: JavaScript-filer kan inte sammanfogas korrekt i flerbutiksinställningar](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-73/acsd-67908.md)
          - [ACSD-68206: [!DNL GraphQL] servern misslyckas med hastighetsbegränsning och PHP Redis-tillägg](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-73/acsd-68206.md)
          - [ACSD-67171: Sessionen  [!DNL B2B] som upphörde vid utcheckning omdirigeras till sidan Åtkomst nekad i stället för inloggning](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-73/acsd-67171.md)
          - [ACSD-68400: Det virtuella presentkortets kvantitet återspeglas inte korrekt i lagerreservationsregistret](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-73/acsd-68400.md)
@@ -943,7 +945,7 @@ ht-degree: 0%
    - [Fliken Varningar](observation-for-adobe-commerce/alerts-tab.md)
    - [Fliken WAF](observation-for-adobe-commerce/waf-tab.md)
    - [CDN-fliken](observation-for-adobe-commerce/cdn-tab.md)
-   - [Fliken  [!DNL RabbitMQ] &#x200B;](observation-for-adobe-commerce/rabbitmq-tab.md)
+   - [Fliken  [!DNL RabbitMQ] ](observation-for-adobe-commerce/rabbitmq-tab.md)
    - [Fliken Kron](observation-for-adobe-commerce/cron-tab.md)
    - [Fliken Indexering](observation-for-adobe-commerce/indexing-tab.md)
    - [Fliken QuickView](observation-for-adobe-commerce/oac-quickview-tab.md)
@@ -971,6 +973,6 @@ ht-degree: 0%
       - [Data som kräver manuell migrering](data-migration-tool/migrate-data/manual.md)
       - [Steg efter datamigrering](data-migration-tool/migrate-data/post-migration.md)
    - Resurs {#resources}
-      - [Felsökning](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html?lang=sv-SE)
+      - [Felsökning](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
       - [Ändra](https://github.com/magento/data-migration-tool/blob/2.4/CHANGELOG.md)
-- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=sv-SE)
+- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
