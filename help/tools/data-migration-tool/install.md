@@ -50,7 +50,7 @@ git branch
 Om du för närvarande befinner dig i grenen `develop` måste du ändra till en [släppt gren](https://developer.adobe.com/commerce/contributor/guides/install/change-version) innan du fortsätter.
 
 Om du inte har installerat Adobe Commerce än [installerar du det nu](../../installation/prerequisites/commerce.md).
-Om du klonar GitHub-databasen kontrollerar du att du har checkat ut en versionstagg enligt beskrivningen i [(Contributor) klona GitHub-databasen ](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository).
+Om du klonar GitHub-databasen kontrollerar du att du har checkat ut en versionstagg enligt beskrivningen i [(Contributor) klona GitHub-databasen &#x200B;](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository).
 
 ## Sök efter släppta versioner av [!DNL Data Migration Tool]
 

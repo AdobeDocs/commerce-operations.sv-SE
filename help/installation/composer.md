@@ -35,7 +35,7 @@ Innan du fortsätter måste du göra följande:
 
 ## Logga in som ägare av filsystemet
 
-Läs mer om ägarskap, behörigheter och filsystemets ägare i [Översikt över ägarskap och behörigheter ](prerequisites/file-system/overview.md).
+Läs mer om ägarskap, behörigheter och filsystemets ägare i [Översikt över ägarskap och behörigheter &#x200B;](prerequisites/file-system/overview.md).
 
 Så här byter du till filsystemets ägare:
 
