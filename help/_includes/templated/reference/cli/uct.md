@@ -1,5 +1,5 @@
 ---
-source-git-commit: 92685411a41cb03f1ac9408b0cef2fe83b4a2a16
+source-git-commit: 84a20012a81278cc95587ec14281b05330261687
 workflow-type: tm+mt
 source-wordcount: '993'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Läs mer om verktyget i [Översikt](/help/upgrade/upgrade-compatibility-tool/ove
 >
 >Kommandot `composer update` fungerar inte för att uppgradera det här verktyget. Du måste [hämta och installera den senaste versionen](/help/upgrade/upgrade-compatibility-tool/run.md).
 
-Den här referensdokumentationen genereras från programmets källkod. Om du vill ändra dokumentationen bör du öppna en pull-begäran för motsvarande kommando i den relevanta [koddatabasen](https://github.com/magento). Mer information finns i [Kodbidrag](https://developer.adobe.com/commerce/contributor/guides/code-contributions/).
+Den här referensdokumentationen genereras från programmets källkod. Om du vill ändra dokumentationen bör du öppna en pull-begäran för motsvarande kommando i den relevanta [koddatabasen](https://github.com/magento). Mer information finns i [Kodbidrag](https://developer.adobe.com/commerce/contributor/guides/code-contributions).
 
 ### Globala alternativ
 

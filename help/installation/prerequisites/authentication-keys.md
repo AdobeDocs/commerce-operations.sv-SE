@@ -2,9 +2,9 @@
 title: Hämta dina autentiseringsnycklar
 description: Följ de här stegen för att hämta inloggningsuppgifter för att komma åt Adobe Commerce Composer-paket på repo.magento.com.
 exl-id: 7ec2a410-d81f-476a-bf6a-f3c61982a734
-source-git-commit: fc63ca58cd2ff7c5ec597751980a39bfbe68aa5f
+source-git-commit: 84a20012a81278cc95587ec14281b05330261687
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '479'
 ht-degree: 0%
 
 ---
@@ -17,10 +17,10 @@ För åtkomsträttigheter till Adobe Commerce-paket måste du använda nycklar s
 
 >[!TIP]
 >
->Om du stöter på [fel](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-commerce-cloud-repo-could-not-be-accessed-403-forbidden-or-404-not-found-error-when-deploying.html?lang=sv-SE) kanske du inte har åtkomstbehörighet till paketet, eller så har åtkomstbehörigheten gått ut på grund av en utestående faktura på ditt konto.
+>Om du stöter på [fel](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-commerce-cloud-repo-could-not-be-accessed-403-forbidden-or-404-not-found-error-when-deploying.html) eller inte ser avsnittet [!UICONTROL Access Keys] på Marketplace-fliken kanske du inte har behörighet att komma åt paketet, eller så har åtkomsträttigheterna gått ut på grund av en utestående faktura på ditt konto.
 >
 >* Om du är primär kontaktperson för kontot kontrollerar du att det inte finns någon utestående faktura på kontot.
->* Om nycklarna som tillhandahålls av den primära kontakten inte fungerar och det inte finns några utestående fakturor på kontot kontaktar den primära kontakten [Adobe Commerce support](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att få hjälp.
+>* Om nycklarna som tillhandahålls av den primära kontakten inte fungerar och det inte finns några utestående fakturor på kontot kontaktar den primära kontakten [Adobe Commerce support](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att få hjälp.
 
 Skapa autentiseringsnycklar:
 
@@ -48,7 +48,7 @@ Du kan även inaktivera eller ta bort autentiseringsnycklar. Du kan till exempel
 
 Om du vill hämta Adobe Commerce-versioner med SSH måste du generera en åtkomsttoken för nedladdning. Så här skapar du en token:
 
-1. Logga in på ditt [magento.com &#x200B;](https://account.magento.com/customer/account/login).
+1. Logga in på ditt [magento.com ](https://account.magento.com/customer/account/login).
 1. Klicka på **Mitt konto** överst på sidan.
 1. Klicka på **Kontoinställningar** > **Hämtar åtkomsttoken**.
 
@@ -67,5 +67,5 @@ curl -k https://MAGEID:TOKEN@www.magentocommerce.com/products/downloads/info/hel
 Använd dina autentiseringsnycklar för att:
 
 * [Hämta metapaketet (integratörer, paketerare)](../composer.md)
-* [Klona GitHub-databasen](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/) (endast bidragande utvecklare)
+* [Klona GitHub-databasen](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository) (endast bidragande utvecklare)
 * [Uppgradera och hantera moduler](../../upgrade/modules/upgrade.md)

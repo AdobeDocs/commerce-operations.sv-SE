@@ -5,7 +5,7 @@ role: Developer, Architect
 feature: Best Practices
 last-substantial-update: 2022-11-15T00:00:00Z
 exl-id: 9e7adaaa-b165-4293-aa98-5dc4b8c23022
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: d40de2f05147e6c58c15cd3cd59275cc91283162
 workflow-type: tm+mt
 source-wordcount: '1420'
 ht-degree: 0%
@@ -54,7 +54,7 @@ Två exempel på lagringsplatser är databastabeller och [!DNL Redis]. Det vikti
 
 Som utvecklare är det viktigt att alltid överväga att använda verktyg utanför din [!DNL Adobe Commerce]-miljö, till exempel GraphQL-nät och Adobe App Builder. De här verktygen kan hjälpa dig att behålla åtkomsten till data men påverkar inte centrala e-handelsprogrammet eller dess underliggande databastabeller. Med den här metoden kan du visa data via ett API. Sedan lägger du till en datakälla i din App Builder-konfiguration. Med GraphQL Mesh kan du kombinera dessa datakällor och skapa ett enda svar som nämns i [äldre data](#legacy-data).
 
-Mer information om GraphQL-nät finns i [GraphQL Mesh Gateway](https://developer.adobe.com/graphql-mesh-gateway/){target="_blank"}. Mer information om Adobe App Builder finns i [Introduktion till App Builder](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/introduction-app-builder.html?lang=sv-SE){target="_blank"}.
+Mer information om GraphQL-nät finns i [GraphQL Mesh Gateway](https://developer.adobe.com/graphql-mesh-gateway/){target="_blank"}. Mer information om Adobe App Builder finns i [Introduktion till App Builder](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/introduction-app-builder.html){target="_blank"}.
 
 ## Ändra en bastabell eller tredjepartstabell
 
@@ -73,7 +73,7 @@ Adobe rekommenderar att du följer de här stegen när du lägger till en kolumn
 
    Till exempel: `app/code/YourCompany/Customer`
 
-1. Skapa lämpliga filer för att aktivera modulen (se [Skapa en modul](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/create-module.html?lang=sv-SE){target="_blank"}).
+1. Skapa lämpliga filer för att aktivera modulen (se [Skapa en modul](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/create-module.html){target="_blank"}).
 
 1. Skapa en fil med namnet `db_schema.xml` i mappen `etc` och gör önskade ändringar.
 

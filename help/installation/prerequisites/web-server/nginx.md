@@ -2,7 +2,7 @@
 title: Nginx
 description: Följ de här stegen för att installera och konfigurera Nginx-webbservern för lokala installationer av Adobe Commerce.
 exl-id: 041ddb9d-868e-4021-9388-1c9ea11bfd8f
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 84a20012a81278cc95587ec14281b05330261687
 workflow-type: tm+mt
 source-wordcount: '1110'
 ht-degree: 0%
@@ -85,7 +85,7 @@ Det finns flera sätt att ladda ned Adobe Commerce:
 
 * [Hämta Composer-metapaketet](../../composer.md)
 
-* [Klona Git-databasen](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)
+* [Klona Git-databasen](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository)
 
 I det här exemplet visas en Composer-baserad installation med kommandoraden.
 
@@ -364,7 +364,7 @@ Det finns flera sätt att ladda ned Adobe Commerce:
 
 * [Hämta Composer-metapaketet](../../composer.md)
 
-* [Klona Git-databasen](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)
+* [Klona Git-databasen](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository)
 
 I det här exemplet visas en Composer-baserad installation med kommandoraden.
 

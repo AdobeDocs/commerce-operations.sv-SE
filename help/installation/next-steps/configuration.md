@@ -3,7 +3,7 @@ title: Konfigurera programmet
 description: Lär dig mer om den konfiguration efter installation som krävs för Adobe Commerce lokala distributioner.
 feature: Install, Configuration
 exl-id: b1808664-10ec-4147-8251-a99f8b58f4be
-source-git-commit: a7c98879e027948fc887e28d4baa5fb04214ca95
+source-git-commit: 84a20012a81278cc95587ec14281b05330261687
 workflow-type: tm+mt
 source-wordcount: '713'
 ht-degree: 0%
@@ -28,10 +28,10 @@ Efter installationen rekommenderar vi följande:
 
 * Kontrollera att din filägarskap och dina behörigheter är [korrekt](../prerequisites/file-system/configure-permissions.md)
 * Vi rekommenderar starkt att [ändrar standardadministratörs-URI](../tutorials/admin-uri.md) från `admin` till något annat
-* Kontrollera att [`X-Frame-Option` HTTP-huvudet &#x200B;](../../configuration/security/xframe-options.md) är korrekt inställt.
-* Vidta försiktighetsåtgärder mot serveröverskridande skriptning (XSS) genom att [skydda dina mallar](https://developer.adobe.com/commerce/php/development/security/cross-site-scripting/)
+* Kontrollera att [`X-Frame-Option` HTTP-huvudet ](../../configuration/security/xframe-options.md) är korrekt inställt.
+* Vidta försiktighetsåtgärder mot serveröverskridande skriptning (XSS) genom att [skydda dina mallar](https://developer.adobe.com/commerce/php/development/security/cross-site-scripting)
 
-Om du har installerat genom att [klona GitHub-databasen](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/) kontrollerar du att du bara inkluderar de filer och mappar som krävs för produktionsmiljön när du distribuerar programmet. Filer och mappar som inte behövs kan medföra säkerhetsrisker.
+Om du har installerat genom att [klona GitHub-databasen](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository) kontrollerar du att du bara inkluderar de filer och mappar som krävs för produktionsmiljön när du distribuerar programmet. Filer och mappar som inte behövs kan medföra säkerhetsrisker.
 
 ## Aktivera omskrivning av Apache-servern
 
@@ -57,7 +57,7 @@ Mer information finns i följande:
 
 * [HowTo: The ultimate log rotate command tutorial with ten ten examples](https://www.thegeekstuff.com/2010/07/logrotate-examples)
 * [Stackutbyte](https://unix.stackexchange.com/questions/85662/how-to-properly-automatically-manually-rotate-log-files-for-production-rails-app)
-* [`logrotate` huvudsida &#x200B;](https://linuxconfig.org/logrotate-8-manual-page)
+* [`logrotate` huvudsida ](https://linuxconfig.org/logrotate-8-manual-page)
 
 >[!AVAILABILITY]
 >
@@ -65,7 +65,7 @@ Mer information finns i följande:
 >
 >* Startmiljöer har ingen loggrotation.
 >
->* Du kan inte konfigurera loggrotation i Pro Integration-miljöer. Du måste implementera en anpassad lösning/skript och [konfigurera ditt cron](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/configure/app/properties/crons-property) så att skriptet körs efter behov.
+>* Du kan inte konfigurera loggrotation i Pro Integration-miljöer. Du måste implementera en anpassad lösning/skript och [konfigurera ditt cron](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/crons-property) så att skriptet körs efter behov.
 
 ### Ställ in iptables-regler för att möjliggöra för olika tjänster att kommunicera
 

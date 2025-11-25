@@ -3,7 +3,7 @@ title: Felsökningsguide för [!DNL Cloud Automation Patching Service (CAPS)]
 description: Felsöka vanliga problem och felmeddelanden i  [!DNL Cloud Automation Patching Service (CAPS)]
 hide: true
 hidefromtoc: true
-source-git-commit: eff8c0ae9e1d9db6b46ba7cfbb915685ab5b194d
+source-git-commit: 84a20012a81278cc95587ec14281b05330261687
 workflow-type: tm+mt
 source-wordcount: '946'
 ht-degree: 0%
@@ -218,8 +218,8 @@ Mer detaljerad teknisk information:
 
 ### Relaterade ämnen
 
-* [Adobe Commerce Cloud-dokumentation](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/overview.html)
-* [Adobe Commerce installationshandbok](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/overview.html)
+* [Adobe Commerce Cloud-dokumentation](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/overview)
+* [Adobe Commerce installationshandbok](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/overview)
 * [Introduktion till CAPS](intro.md)
 * [Åtkomst](access.md)
 * [Arbetsflöde](workflow.md)

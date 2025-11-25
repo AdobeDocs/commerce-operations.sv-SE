@@ -4,7 +4,7 @@ description: Lär dig hur du använder verktyget Korrigeringsfiler för kvalitet
 exl-id: f9ad37e9-2d0f-4bc8-a98b-6d60b6f56d42
 feature: Configuration, Install
 type: Troubleshooting
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 84a20012a81278cc95587ec14281b05330261687
 workflow-type: tm+mt
 source-wordcount: '863'
 ht-degree: 0%
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 [[!DNL Quality Patches Tool]](https://github.com/magento/quality-patches) innehåller enskilda korrigeringsfiler som utvecklats av Adobe och Magento Open Source-communityn. Med den kan du tillämpa, återställa och visa allmän information om alla enskilda korrigeringsfiler som är tillgängliga för den installerade versionen av Adobe Commerce. Du kan använda korrigeringsfiler i Adobe Commerce-projekt oavsett vem som har utvecklat korrigeringsfilen. Du kan till exempel använda en korrigering som utvecklats av communityn på Adobe Commerce-projekt.
 
-Titta på den här [tekniska videon](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/tools/quality-patch-tool.html?lang=sv-SE) och lär dig hur du använder verktyget för kvalitetskorrigeringar för Adobe Commerce.
+Titta på den här [tekniska videon](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/tools/quality-patch-tool.html) och lär dig hur du använder verktyget för kvalitetskorrigeringar för Adobe Commerce.
 
 >[!INFO]
 >
->Se [Tillämpa enskilda korrigeringsfiler](#apply-individual-patches) för instruktioner om hur du använder korrigeringsfiler i dina Adobe Commerce-projekt. Se [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE) om du vill visa en fullständig lista över släppta korrigeringsfiler.
+>Se [Tillämpa enskilda korrigeringsfiler](#apply-individual-patches) för instruktioner om hur du använder korrigeringsfiler i dina Adobe Commerce-projekt. Se [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html) om du vill visa en fullständig lista över släppta korrigeringsfiler.
 
 >[!WARNING]
 >
@@ -62,7 +62,7 @@ Adobe Commerce 2.3.5
 Statustabellen innehåller:
 
 - **Typ**:
-   - `Optional` - Alla korrigeringar från [!DNL Quality Patches Tool] och [&#x200B; Commerce on Cloud Infrastructure Guide > Apply patches](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) är valfria för Adobe Commerce-installationer.
+   - `Optional` - Alla korrigeringar från [!DNL Quality Patches Tool] och [ Commerce on Cloud Infrastructure Guide > Apply patches](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) är valfria för Adobe Commerce-installationer.
    - `Deprecated` - Adobe har ersatt den enskilda korrigeringen. Om du har använt korrigeringen rekommenderar vi att du återställer den. Återställningsåtgärden tar även bort korrigeringen från statustabellen.
 
 - **Status**:
@@ -83,7 +83,7 @@ Statustabellen innehåller:
 
 >[!WARNING]
 >
->Det är bäst att testa alla korrigeringsfiler i en staging- eller utvecklingsmiljö innan de distribueras till produktionen. Vi rekommenderar även att du säkerhetskopierar dina data innan du använder en patch. Se [Säkerhetskopiera och återställa filsystemet, mediet och databasen](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/backup.html?lang=sv-SE).
+>Det är bäst att testa alla korrigeringsfiler i en staging- eller utvecklingsmiljö innan de distribueras till produktionen. Vi rekommenderar även att du säkerhetskopierar dina data innan du använder en patch. Se [Säkerhetskopiera och återställa filsystemet, mediet och databasen](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/backup.html).
 
 Om du vill tillämpa en enda korrigering kör du följande kommando där `MAGETWO-XXXX` är det korrigerings-ID som anges i statustabellen:
 
@@ -111,7 +111,7 @@ Du måste rensa cacheminnet när du har tillämpat korrigeringar för att se än
 
 >[!WARNING]
 >
->Det är bäst att testa alla korrigeringsfiler i en staging- eller utvecklingsmiljö innan de distribueras till produktionen. Vi rekommenderar även att du säkerhetskopierar dina data innan du använder en patch. Se [Säkerhetskopiera och återställa filsystemet, mediet och databasen](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/backup.html?lang=sv-SE).
+>Det är bäst att testa alla korrigeringsfiler i en staging- eller utvecklingsmiljö innan de distribueras till produktionen. Vi rekommenderar även att du säkerhetskopierar dina data innan du använder en patch. Se [Säkerhetskopiera och återställa filsystemet, mediet och databasen](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/backup.html).
 
 Om du vill återställa en enskild korrigering kör du följande kommando där `MAGETWO-XXXX` är det korrigerings-ID som anges i statustabellen:
 

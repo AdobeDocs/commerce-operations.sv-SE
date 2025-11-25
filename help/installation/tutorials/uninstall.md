@@ -2,7 +2,7 @@
 title: Avinstallera eller installera om Adobe Commerce
 description: Följ de här stegen för att avinstallera och installera om lokala installationer av Adobe Commerce.
 exl-id: fbaeee2c-8da0-4c89-a6d1-882a65014520
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 84a20012a81278cc95587ec14281b05330261687
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 0%
@@ -24,8 +24,8 @@ Så här uppdaterar du programmet:
 
 Hur du installerar om programmet från kommandoraden beror på din roll:
 
-* Om du installerade programmet från ett arkiv eller om du använde &#39;Composer-create-project&#39; läser du [Uppdatera installationsberoenden](https://developer.adobe.com/commerce/contributor/guides/install/update-dependencies/).
-* Om du är en utvecklare som bidrar (det vill säga du började använda `git clone`) kan du läsa [Uppdatera installationsberoenden](https://developer.adobe.com/commerce/contributor/guides/install/update-dependencies/).
+* Om du installerade programmet från ett arkiv eller om du använde &#39;Composer-create-project&#39; läser du [Uppdatera installationsberoenden](https://developer.adobe.com/commerce/contributor/guides/install/update-dependencies).
+* Om du är en utvecklare som bidrar (det vill säga du började använda `git clone`) kan du läsa [Uppdatera installationsberoenden](https://developer.adobe.com/commerce/contributor/guides/install/update-dependencies).
 
 ## Avinstallera programmet
 

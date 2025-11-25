@@ -3,7 +3,7 @@ title: Konfigurera Redis
 description: Lär dig hur du konfigurerar Redis-cachning för Adobe Commerce prestandaoptimering. Upptäck de bästa metoderna för funktioner, konfiguration och konfiguration.
 feature: Configuration, Cache
 exl-id: e037c382-334a-4096-a417-a25fdb61a9ce
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 84a20012a81278cc95587ec14281b05330261687
 workflow-type: tm+mt
 source-wordcount: '380'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Redis-funktioner:
 Det går inte att installera och konfigurera Redis-programmet i den här guiden. Konsultresurser som:
 
 - [Hämta Redis-sida](https://redis.io/download)
-- [Redis-snabbstart](https://redis.io/docs/getting-started/)
+- [Redis-snabbstart](https://redis.io/docs/latest/)
 - [DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-redis)
 - [Redis-dokumentationssida](https://redis.io/docs)
 

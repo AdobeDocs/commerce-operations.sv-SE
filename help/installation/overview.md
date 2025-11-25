@@ -2,7 +2,7 @@
 title: Lokal installationsöversikt
 description: Läs om installationsprocessen för Adobe Commerce lokalt. Upptäck serverkrav, konfigurationssteg och bästa praxis för driftsättning.
 exl-id: a9f5b241-d05d-462c-8c7f-479a264c988f
-source-git-commit: 062267b8b06e41d89f704144e640fc1254952532
+source-git-commit: 84a20012a81278cc95587ec14281b05330261687
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 0%
@@ -20,7 +20,7 @@ Du kan installera Adobe Commerce lokalt på cirka 30 till 60 minuter. Den tid so
 >
 >Du bör ha mellanliggande tekniska kunskaper och serveråtkomst för att kunna fortsätta.
 
-Installationen skapar en fullt fungerande Adobe Commerce-butik med både en [kundriktad butik](https://experienceleague.adobe.com/sv/docs/commerce-admin/start/storefront/storefront) och en [administrativ panel](https://experienceleague.adobe.com/sv/docs/commerce-admin/start/admin/admin). Du måste ha dina databasinloggningsuppgifter, domäninformation och autentiseringsnycklar klara innan du kan påbörja processen.
+Installationen skapar en fullt fungerande Adobe Commerce-butik med både en [kundriktad butik](https://experienceleague.adobe.com/en/docs/commerce-admin/start/storefront/storefront) och en [administrativ panel](https://experienceleague.adobe.com/en/docs/commerce-admin/start/admin/admin). Du måste ha dina databasinloggningsuppgifter, domäninformation och autentiseringsnycklar klara innan du kan påbörja processen.
 
 ## Handläggaransvar
 
@@ -57,7 +57,7 @@ Generera nya [autentiseringsnycklar](prerequisites/authentication-keys.md) (elle
 
 Hämta med [Composer](prerequisites/commerce.md) (rekommenderas) eller klona från GitHub för utvecklingsbidrag.
 
-Om du vill bidra till Magento Open Source-kodbasen eller anpassa programmet [klonar](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/) GitHub-databasen. Den här metoden kräver att du känner till både GitHub och Composer.
+Om du vill bidra till Magento Open Source-kodbasen eller anpassa programmet [klonar](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository) GitHub-databasen. Den här metoden kräver att du känner till både GitHub och Composer.
 
 ### Installera programmet
 

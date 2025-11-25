@@ -2,7 +2,7 @@
 title: Installera Adobe Commerce
 description: Följ de här stegen för att installera Adobe Commerce på en infrastruktur som du äger.
 exl-id: 25f3c56e-0654-4f8b-a69d-f4152f68aca3
-source-git-commit: 47525e8d8379061b254bfa90ab46e27a1ee2f524
+source-git-commit: 84a20012a81278cc95587ec14281b05330261687
 workflow-type: tm+mt
 source-wordcount: '2261'
 ht-degree: 0%
@@ -57,7 +57,7 @@ Du kan köra följande kommandon för att hitta värden för vissa obligatoriska
 
 >[!NOTE]
 >
->Om ett fel visas när du kör dessa kommandon kontrollerar du att du har uppdaterat installationsberoenden enligt beskrivningen i [Uppdatera installationsberoenden](https://developer.adobe.com/commerce/contributor/guides/install/update-dependencies/).
+>Om ett fel visas när du kör dessa kommandon kontrollerar du att du har uppdaterat installationsberoenden enligt beskrivningen i [Uppdatera installationsberoenden](https://developer.adobe.com/commerce/contributor/guides/install/update-dependencies).
 
 ## Installera från kommandoraden
 
@@ -264,7 +264,7 @@ For security, remove write permissions from these directories: '/var/www/html/ma
 ```
 
 Efter installationen kan du skapa en administratörsanvändare med kommandot `admin:user:create`:
-[&#x200B; Skapa eller redigera en administratör &#x200B;](admin.md#create-or-edit-an-administrator)
+[ Skapa eller redigera en administratör ](admin.md#create-or-edit-an-administrator)
 
 #### Exempel 3 - Installera med ytterligare alternativ
 

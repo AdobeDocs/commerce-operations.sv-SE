@@ -1,7 +1,7 @@
 ---
 title: Message Broker (ActiveMQ Artemis)
 description: Följ de här stegen för att installera och konfigurera Apache ActiveMQ Artemis meddelandebroker för lokala installationer av Adobe Commerce.
-source-git-commit: 46816b42ea30cb6c5f5ce59752cc00c38d221610
+source-git-commit: aee02c258acaeb7a248e10b867017ef8f72b544d
 workflow-type: tm+mt
 source-wordcount: '902'
 ht-degree: 0%
@@ -15,7 +15,7 @@ Adobe Commerce stöder även ActiveMQ Artemis-meddelandehanterare med öppen kä
 
 >[!NOTE]
 >
->ActiveMQ Artemis introducerades i Adobe Commerce 2.4.6 och senare. Mer information om hur du installerar ActiveMQ-artemis i Adobe Commerce i molninfrastrukturprojekt finns i [Konfigurera ActiveMQ-tjänsten](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/activemqsee) i *Commerce on Cloud Guide*.
+>ActiveMQ Artemis introducerades i Adobe Commerce 2.4.6 och senare. Mer information om hur du installerar ActiveMQ-artemis i Adobe Commerce i molninfrastrukturprojekt finns i [Konfigurera ActiveMQ-tjänsten](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/activemq) i *Commerce on Cloud Guide*.
 
 Meddelandeköer är en asynkron kommunikationsmekanism där avsändaren och mottagaren av ett meddelande inte kontaktar varandra. De behöver inte heller kommunicera med meddelandekön samtidigt. När en avsändare placerar ett meddelande i en kö lagras det tills mottagaren tar emot det.
 

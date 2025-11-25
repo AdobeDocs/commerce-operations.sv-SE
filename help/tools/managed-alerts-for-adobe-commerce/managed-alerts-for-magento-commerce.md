@@ -4,9 +4,9 @@ description: Om du använder en Adobe Commerce-plan på Cloud Infrastructure Pro
 feature: Observability, Support, Tools and External Services
 role: Admin
 exl-id: 3fc4b07f-4e27-4833-97a9-cf9741ae5648
-source-git-commit: 18c8e466bf15957b73cd3cddda8ff078ebeb23b0
+source-git-commit: 4560e7d000ad8333c3089b8b5e8ffd25f5d31b67
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '542'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 # Hanterade aviseringar för Adobe Commerce
 
 
-Vi har konfigurerat viktiga instrumentpaneler och aviseringar som hjälper dig att förstå när din webbplats når kritisk lagring och [!DNL Apdex] nivåer (användarnas tillfredsställelse med svarstid för program och tjänster). Detta kan hjälpa dig att vidta åtgärder innan du märker att svarstiderna tar lång tid eller att ett driftstopp inträffar. Du kan felsöka varningarna med artiklarna nedan. Innan du kan använda varningarna måste du först konfigurera meddelandekanaler. Se [[!DNL New Relic] Konfigurera meddelandekanaler](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/monitor/new-relic/new-relic-service) i Commerce on Cloud Guide.
+Vi har konfigurerat viktiga instrumentpaneler och aviseringar som hjälper dig att förstå när din webbplats når kritisk lagring och [!DNL Apdex] nivåer (användarnas tillfredsställelse med svarstid för program och tjänster). Detta kan hjälpa dig att vidta åtgärder innan du märker att svarstiderna tar lång tid eller att ett driftstopp inträffar. Du kan felsöka varningarna med artiklarna nedan. Innan du kan använda varningarna måste du först konfigurera meddelandekanaler. Se [[!DNL New Relic] Konfigurera meddelandekanaler](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/new-relic/new-relic-service) i Commerce on Cloud Guide.
 
 >[!NOTE]
 >
->Om hanterade aviseringar för Adobe Commerce-aviseringsprincipen inte är tillgängliga kan det bero på att det här kontot nyligen har skapats eller att [!DNL New Relic] nyligen har konfigurerats. En process körs varje tisdag för att lägga till varningsprincipen till dessa konton. Varningspolicyn bör vara tillgänglig dagen efter att nästa process har körts. Om principen fortfarande saknas [skickar du en supportförfrågan](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) från Adobe Commerce och inkluderar ditt projekt-ID.
+>Om hanterade aviseringar för Adobe Commerce-aviseringsprincipen inte är tillgängliga kan det bero på att det här kontot nyligen har skapats eller att [!DNL New Relic] nyligen har konfigurerats. En process körs varje tisdag för att lägga till varningsprincipen till dessa konton. Varningspolicyn bör vara tillgänglig dagen efter att nästa process har körts. Om principen fortfarande saknas [skickar du en supportförfrågan](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) från Adobe Commerce och inkluderar ditt projekt-ID.
 
 I tabellen nedan finns länkar till KB-artiklar med felsökningssteg för dessa aviseringar:
 
@@ -51,3 +51,7 @@ I tabellen nedan finns länkar till KB-artiklar med felsökningssteg för dessa 
 | Varning och kritisk |     |        |      |       | ✅ |              | [Hanterade aviseringar på Adobe Commerce: MariaDB-aviseringar](managed-alerts-on-magento-commerce-mariadb-alerts.md) |
 | Varning |     |        |      |       |         | ✅ | [Hanterade aviseringar på Adobe Commerce: [!DNL Redis] minnesvarning](managed-alerts-on-magento-commerce-redis-memory-warning-alert.md) |
 | Kritisk |     |        |      |       |         | ✅ | [Hanterade aviseringar på Adobe Commerce: [!DNL Redis] minneskritisk avisering](managed-alerts-on-magento-commerce-redis-memory-critical-alert.md) |
+
+## Granska tröskelvärden för hanterade aviseringar
+
+Du kan granska de tröskelvärden som konfigurerats för hanterade aviseringar från ditt New Relic-konto. Instruktioner finns i [Övervaka prestanda med hanterade aviseringar](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/new-relic/investigate/investigate-performance#monitor-performance-with-managed-alerts).

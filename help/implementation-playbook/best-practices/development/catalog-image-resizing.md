@@ -4,7 +4,7 @@ description: Lär dig hur du förhindrar prestandaförsämringar innan du lanser
 feature: Best Practices
 role: Developer
 exl-id: 591b1a62-bdba-4301-858a-77620ee657a9
-source-git-commit: 823498f041a6d12cfdedd6757499d62ac2aced3d
+source-git-commit: 84a20012a81278cc95587ec14281b05330261687
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 0%
@@ -116,5 +116,5 @@ Om du besöker en URL för bildcache genereras alla bildstorlekar i bakgrunden o
 
 >[!NOTE]
 >
->- Adobe Commerce i molninfrastrukturprojekt kan avlasta storleksändringen av produktbilder till tjänsten Snabbt. Se [Djupbildoptimering](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/fastly-image-optimization.html?lang=sv-SE#deep-image-optimization) i _molnguiden_.
->- Om du använder fjärrlagringsmodulen kan du också försöka med att avlasta bildens storlek så att den ändras till nginx. Se [Konfigurera storleksändring av bilder för fjärrlagring](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/storage/remote-storage/remote-storage-image-resize.html?lang=sv-SE) i _Konfigurationshandboken_.
+>- Adobe Commerce i molninfrastrukturprojekt kan avlasta storleksändringen av produktbilder till tjänsten Snabbt. Se [Djupbildoptimering](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/fastly-image-optimization.html#deep-image-optimization) i _molnguiden_.
+>- Om du använder fjärrlagringsmodulen kan du också försöka med att avlasta bildens storlek så att den ändras till nginx. Se [Konfigurera storleksändring av bilder för fjärrlagring](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/storage/remote-storage/remote-storage-image-resize.html) i _Konfigurationshandboken_.

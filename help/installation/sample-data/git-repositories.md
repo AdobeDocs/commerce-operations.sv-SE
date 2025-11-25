@@ -2,7 +2,7 @@
 title: Klona exempeldata i Git-databaser
 description: Följ de här stegen för att installera exempeldata för Adobe Commerce genom att klona Git-databaser.
 exl-id: 748eee30-2821-457d-9c1c-62ede8bc0510
-source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
+source-git-commit: 84a20012a81278cc95587ec14281b05330261687
 workflow-type: tm+mt
 source-wordcount: '733'
 ht-degree: 0%
@@ -18,11 +18,11 @@ Om du inte är en bidragsgivare väljer du ett av de andra alternativen som visa
 Utvecklare som deltar kan använda den här metoden för att installera exempeldata *endast* om följande är sant:
 
 * Du använder Magento Open Source
-* Du [klonade GitHub-databasen](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)
+* Du [klonade GitHub-databasen](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository)
 
 >[!WARNING]
 >
->Du kan använda exempeldata med antingen grenen `develop` (mer aktuell) eller en släppt gren (till exempel `2.4` (mer stabil)). Vi rekommenderar att du använder en frisläppt gren eftersom den är stabilare. Om du bidrar med kod till databasen och du behöver den senaste koden använder du grenen `develop`. Oavsett vilken gren du väljer måste du [klona](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/) motsvarande gren i Magento Open Source GitHub-databasen. Exempeldata för grenen `develop` kan till exempel användas *endast* med grenen Magento Open Source `develop`.
+>Du kan använda exempeldata med antingen grenen `develop` (mer aktuell) eller en släppt gren (till exempel `2.4` (mer stabil)). Vi rekommenderar att du använder en frisläppt gren eftersom den är stabilare. Om du bidrar med kod till databasen och du behöver den senaste koden använder du grenen `develop`. Oavsett vilken gren du väljer måste du [klona](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository) motsvarande gren i Magento Open Source GitHub-databasen. Exempeldata för grenen `develop` kan till exempel användas *endast* med grenen Magento Open Source `develop`.
 
 ## Klona exempeldatabasen
 

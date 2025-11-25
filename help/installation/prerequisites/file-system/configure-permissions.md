@@ -2,7 +2,7 @@
 title: Konfigurera filägarskap och behörigheter
 description: Följ de här stegen för att konfigurera filsystembehörigheter för lokala installationer av Adobe Commerce.
 exl-id: 2410ee4f-978c-4b71-b3f6-0c042f9f4dc4
-source-git-commit: ddf988826c29b4ebf054a4d4fb5f4c285662ef4e
+source-git-commit: 84a20012a81278cc95587ec14281b05330261687
 workflow-type: tm+mt
 source-wordcount: '981'
 ht-degree: 0%
@@ -58,7 +58,7 @@ Så här anger du behörigheter innan du installerar programmet:
 1. Om du inte redan har gjort det ska du skaffa programmet på något av följande sätt:
 
    * [Metapaket för disposition](../../composer.md)
-   * [Klona databasen (endast bidragsutvecklare)](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)
+   * [Klona databasen (endast bidragsutvecklare)](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository)
 
 1. [Installera programmet](../../advanced.md) när du har angett ägarskap och behörigheter för filsystemet
 
@@ -192,7 +192,7 @@ Starta om webbservern för att slutföra åtgärden:
 Om du inte redan har gjort det ska du skaffa programmet på något av följande sätt:
 
 * [Metapaket för disposition](../../composer.md)
-* [Klona databasen (endast bidragsutvecklare)](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/)
+* [Klona databasen (endast bidragsutvecklare)](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository)
 
 ### Ange ägarskap och behörigheter för den delade gruppen
 
