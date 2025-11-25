@@ -116,5 +116,5 @@ Om du besöker en URL för bildcache genereras alla bildstorlekar i bakgrunden o
 
 >[!NOTE]
 >
->- Adobe Commerce i molninfrastrukturprojekt kan avlasta storleksändringen av produktbilder till tjänsten Snabbt. Se [Djupbildoptimering](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/fastly-image-optimization.html#deep-image-optimization) i _molnguiden_.
->- Om du använder fjärrlagringsmodulen kan du också försöka med att avlasta bildens storlek så att den ändras till nginx. Se [Konfigurera storleksändring av bilder för fjärrlagring](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/storage/remote-storage/remote-storage-image-resize.html) i _Konfigurationshandboken_.
+>- Adobe Commerce i molninfrastrukturprojekt kan avlasta storleksändringen av produktbilder till tjänsten Snabbt. Se [Djupbildoptimering](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/fastly-image-optimization.html?lang=sv-SE#deep-image-optimization) i _molnguiden_.
+>- Om du använder fjärrlagringsmodulen kan du också försöka med att avlasta bildens storlek så att den ändras till nginx. Se [Konfigurera storleksändring av bilder för fjärrlagring](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/storage/remote-storage/remote-storage-image-resize.html?lang=sv-SE) i _Konfigurationshandboken_.

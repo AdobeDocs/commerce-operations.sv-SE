@@ -218,8 +218,8 @@ Mer detaljerad teknisk information:
 
 ### Relaterade ämnen
 
-* [Adobe Commerce Cloud-dokumentation](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/overview)
-* [Adobe Commerce installationshandbok](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/overview)
+* [Adobe Commerce Cloud-dokumentation](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/overview)
+* [Adobe Commerce installationshandbok](https://experienceleague.adobe.com/sv/docs/commerce-operations/installation-guide/overview)
 * [Introduktion till CAPS](intro.md)
 * [Åtkomst](access.md)
 * [Arbetsflöde](workflow.md)

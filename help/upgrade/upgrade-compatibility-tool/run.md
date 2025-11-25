@@ -29,7 +29,7 @@ chmod +x ./uct/bin/uct
 
 [!DNL Upgrade Compatibility Tool] är ett verktyg som kontrollerar en Adobe Commerce-anpassad instans mot en viss version genom att analysera alla installerade moduler. Den returnerar en lista med allvarliga problem, fel och varningar som måste åtgärdas innan du uppgraderar till den senaste versionen av Adobe Commerce.
 
-Se den här [videosjälvstudien](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/upgrade/upgrade-compatibility-tool-overview.html) (06:02) om du vill veta mer om [!DNL Upgrade Compatibility Tool].
+Se den här [videosjälvstudien](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/upgrade/upgrade-compatibility-tool-overview.html?lang=sv-SE) (06:02) om du vill veta mer om [!DNL Upgrade Compatibility Tool].
 
 Tillgängliga kommandon för [!DNL Upgrade Compatibility Tool] i ett kommandoradsgränssnitt:
 
@@ -146,7 +146,7 @@ Tillgängliga alternativ för kommandot `core:code:changes`:
 
 >[!NOTE]
 >
-> Det är en god vana att hålla anpassad kod utanför kärnkoden. Mer information om bästa praxis för uppgradering finns i Adobe Commerce 2.4 [uppgraderingsguiden](https://experienceleague.adobe.com/docs/commerce-operations/assets/adobe-commerce-2-4-upgrade-guide.pdf) .
+> Det är en god vana att hålla anpassad kod utanför kärnkoden. Mer information om bästa praxis för uppgradering finns i Adobe Commerce 2.4 [uppgraderingsguiden](https://experienceleague.adobe.com/docs/commerce-operations/assets/adobe-commerce-2-4-upgrade-guide.pdf?lang=sv-SE) .
 
 ### Vanilla-installation
 
@@ -259,8 +259,8 @@ Detta returnerar specifika alternativ som kan köras för kommandot `upgrade:che
 
 - Undvik två moduler med samma namn.
 - Följ Adobe Commerce [kodningsstandarder](https://developer.adobe.com/commerce/php/coding-standards).
-- Adobe Commerce 2.4 [Uppgraderingsguide](https://experienceleague.adobe.com/docs/commerce-operations/assets/adobe-commerce-2-4-upgrade-guide.pdf) bästa praxis.
-- Kör [!DNL Upgrade Compatibility Tool] från [[!DNL Site-Wide Analysis Tool]](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool.html) för [Adobe Commerce i molninfrastrukturprojekt](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html){target=_blank}.
+- Adobe Commerce 2.4 [Uppgraderingsguide](https://experienceleague.adobe.com/docs/commerce-operations/assets/adobe-commerce-2-4-upgrade-guide.pdf?lang=sv-SE) bästa praxis.
+- Kör [!DNL Upgrade Compatibility Tool] från [[!DNL Site-Wide Analysis Tool]](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool.html?lang=sv-SE) för [Adobe Commerce i molninfrastrukturprojekt](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/project/overview.html?lang=sv-SE){target=_blank}.
 
 ## Optimera resultatet
 
