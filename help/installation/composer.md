@@ -2,7 +2,7 @@
 title: Snabbstart av lokal installation
 description: Lär dig hur du installerar Adobe Commerce på din egen infrastruktur med Composer. Upptäck snabbstartssteg och konfigurationskrav.
 exl-id: a93476e8-2b30-461a-91df-e73eb1a14d3c
-source-git-commit: 84a20012a81278cc95587ec14281b05330261687
+source-git-commit: 0532977ff0aeb5d221b1901d73a374cadf95f83b
 workflow-type: tm+mt
 source-wordcount: '964'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Adobe använder [Composer](https://getcomposer.org/) för att hantera Adobe Comm
 
 >[!NOTE]
 >
->Utvecklare som bidrar till Magento Open Source bör använda installationsmetoden [git-baserad](https://developer.adobe.com/commerce/contributor/guides/install) .
+>Utvecklare som bidrar till Magento Open Source bör använda installationsmetoden [git-baserad](https://developer.adobe.com/commerce/contributor/guides/install/) .
 
 ## Förutsättningar
 
@@ -35,7 +35,7 @@ Innan du fortsätter måste du göra följande:
 
 ## Logga in som ägare av filsystemet
 
-Läs mer om ägarskap, behörigheter och filsystemets ägare i [Översikt över ägarskap och behörigheter &#x200B;](prerequisites/file-system/overview.md).
+Läs mer om ägarskap, behörigheter och filsystemets ägare i [Översikt över ägarskap och behörigheter ](prerequisites/file-system/overview.md).
 
 Så här byter du till filsystemets ägare:
 
@@ -93,7 +93,7 @@ Så här hämtar du Adobe Commerce metapaket:
 
    >[!NOTE]
    >
-   > Om du använder en Composer `[auth.json](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/develop/authentication-keys)`-fil eller en systemvariabel som konfigurerats med dina Commerce-autentiseringsnycklar uppmanas du inte att ange autentiseringsnycklar.
+   > Om du använder en Composer `[auth.json](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/develop/authentication-keys)`-fil eller en systemvariabel som konfigurerats med dina Commerce-autentiseringsnycklar uppmanas du inte att ange autentiseringsnycklar.
 
    Om du stöter på fel, till exempel `Could not find package...` eller `...no matching package found`, kontrollerar du att det inte finns några stavfel i kommandot. Om du fortfarande råkar ut för fel kanske du inte har behörighet att ladda ned Adobe Commerce. Kontakta [Adobe Commerce Support](https://support.magento.com/hc/en-us) om du behöver hjälp.
 

@@ -2,7 +2,7 @@
 title: Förutsättningar
 description: Förbered ditt Adobe Commerce-projekt för en uppgradering genom att slutföra dessa nödvändiga steg.
 exl-id: f7775900-1d10-4547-8af0-3d1283d9b89e
-source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
+source-git-commit: 2d17da1f8cbda1462839ad2fa3ea569833443827
 workflow-type: tm+mt
 source-wordcount: '1866'
 ht-degree: 0%
@@ -29,11 +29,11 @@ När du har granskat systemkraven måste du uppfylla följande krav innan du upp
 
 [Systemkraven](../../installation/system-requirements.md) beskriver exakt vilka versioner av tredjepartsprogram som har testats med Adobe Commerce-versioner.
 
-Se till att du har uppdaterat alla systemkrav och beroenden i din miljö. Se PHP [&#x200B; 7.4](https://www.php.net/manual/en/migration74.php), PHP [&#x200B; 8.0](https://www.php.net/manual/en/migration80.php), PHP [&#x200B; 8.1](https://www.php.net/manual/en/migration81.php) och [nödvändiga PHP-inställningar](../../installation/prerequisites/php-settings.md#php-settings).
+Se till att du har uppdaterat alla systemkrav och beroenden i din miljö. Se PHP [ 7.4](https://www.php.net/manual/en/migration74.php), PHP [ 8.0](https://www.php.net/manual/en/migration80.php), PHP [ 8.1](https://www.php.net/manual/en/migration81.php) och [nödvändiga PHP-inställningar](../../installation/prerequisites/php-settings.md#php-settings).
 
 >[!NOTE]
 >
->För Adobe Commerce i molnbaserade infrastrukturproprojekt måste du skapa en [supportbiljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att kunna installera eller uppdatera tjänster i mellanlagrings- och produktionsmiljöer. Ange de tjänständringar som krävs och inkludera dina uppdaterade `.magento.app.yaml`- och `services.yaml`-filer och PHP-version i biljetten. Det kan ta upp till 48 timmar för molninfrastrukturteamet att uppdatera ditt projekt. Se [Program och tjänster som stöds](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/cloud-architecture.html?lang=sv-SE#supported-software-and-services).
+>För Adobe Commerce i molnbaserade infrastrukturproprojekt måste du skapa en [supportbiljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) för att kunna installera eller uppdatera tjänster i mellanlagrings- och produktionsmiljöer. Ange de tjänständringar som krävs och inkludera dina uppdaterade `.magento.app.yaml`- och `services.yaml`-filer och PHP-version i biljetten. Det kan ta upp till 48 timmar för molninfrastrukturteamet att uppdatera ditt projekt. Se [Program och tjänster som stöds](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/cloud-architecture.html#supported-software-and-services).
 
 ## Kontrollera att en sökmotor som stöds är installerad
 
@@ -99,7 +99,7 @@ För att kunna uppgradera MySQL från version 8.0 till version 8.4 måste du fö
    >
    >Om du inte ändrar värdet för `restrict_fk_on_non_standard_key` till `OFF` får du följande fel under importen:
    >
-   >```sql
+   ```sql
    > ERROR 6125 (HY000) at line 2164: Failed to add the foreign key constraint. Missing unique key for constraint 'CAT_PRD_FRONTEND_ACTION_PRD_ID_CAT_PRD_ENTT_ENTT_ID' in the referenced table 'catalog_product_entity'
    >```
 1. Starta om MySQL-servern.
@@ -358,7 +358,7 @@ Så här anger du miljövariabeln:
 
 Av säkerhetsskäl kräver Adobe Commerce vissa behörigheter i filsystemet. Behörigheter skiljer sig från _[ägarskap](../../upgrade/prepare/prerequisites.md#verify-file-system-permissions)_. Ägarskapet avgör vem som kan utföra åtgärder i filsystemet. Behörigheterna avgör vad användaren kan göra.
 
-Kataloger i filsystemet måste vara skrivbara av [filsystemets ägargrupp &#x200B;](../../installation/prerequisites/file-system/overview.md).
+Kataloger i filsystemet måste vara skrivbara av [filsystemets ägargrupp ](../../installation/prerequisites/file-system/overview.md).
 
 Om du vill verifiera att filsystembehörigheterna är korrekt loggar du antingen in på programservern eller använder värdtjänstleverantörens filhanterarprogram.
 
@@ -445,4 +445,4 @@ Installera plugin-programmet:
    composer update
    ```
 
-<!-- Last updated from includes: 2024-02-12 09:51:27 -->
+<!-- Last updated from includes: 2025-11-25 11:39:51 -->

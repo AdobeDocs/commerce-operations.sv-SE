@@ -2,7 +2,7 @@
 title: Avancerad lokal installation
 description: Lär dig mer om avancerade installationsscenarier för Adobe Commerce lokala distributioner. Upptäck komplexa konfigurationer och anpassade konfigureringsalternativ.
 exl-id: e16e750a-e068-4a63-8ad9-62043e2a8231
-source-git-commit: 84a20012a81278cc95587ec14281b05330261687
+source-git-commit: 937db2209ec4122c611a857796f043523a0acb29
 workflow-type: tm+mt
 source-wordcount: '2485'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->Förlorad? Behöver du hjälp? Prova våra [snabbinstallationsguider](composer.md) eller [Contributor installerar](https://developer.adobe.com/commerce/contributor/guides/install).
+>Förlorad? Behöver du hjälp? Prova våra [snabbinstallationsguider](composer.md) eller [Contributor installerar](https://developer.adobe.com/commerce/contributor/guides/install/).
 
 >[!NOTE]
 >
@@ -119,7 +119,7 @@ Följande alternativ anger användarinformation och autentiseringsuppgifter för
 
 Du kan skapa Admin-användaren under eller efter installationen. Om du skapar användaren under installationen krävs alla autentiseringsuppgifter för administratörer. Se [Exempel på lokala värdinstallationer](#sample-localhost-installations).
 
-Följande tabeller innehåller många men inte alla tillgängliga installationsparametrar. En fullständig lista finns i [Kommandoradsverktygshandboken](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/cli-reference/commerce-on-premises).
+Följande tabeller innehåller många men inte alla tillgängliga installationsparametrar. En fullständig lista finns i [Kommandoradsverktygshandboken](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises).
 
 | Namn | Värde | Obligatoriskt? |
 |--- |--- |--- |
@@ -298,7 +298,7 @@ For security, remove write permissions from these directories: '/var/www/html/ma
 ```
 
 Efter installationen kan du skapa en administratörsanvändare med kommandot `admin:user:create`:
-[&#x200B; Skapa eller redigera en administratör &#x200B;](tutorials/admin.md#create-or-edit-an-administrator)
+[ Skapa eller redigera en administratör ](tutorials/admin.md#create-or-edit-an-administrator)
 
 #### Exempel 3 - Installera med ytterligare alternativ
 
