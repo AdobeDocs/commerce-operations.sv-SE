@@ -119,7 +119,7 @@ Följande alternativ anger användarinformation och autentiseringsuppgifter för
 
 Du kan skapa Admin-användaren under eller efter installationen. Om du skapar användaren under installationen krävs alla autentiseringsuppgifter för administratörer. Se [Exempel på lokala värdinstallationer](#sample-localhost-installations).
 
-Följande tabeller innehåller många men inte alla tillgängliga installationsparametrar. En fullständig lista finns i [Kommandoradsverktygshandboken](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises).
+Följande tabeller innehåller många men inte alla tillgängliga installationsparametrar. En fullständig lista finns i [Kommandoradsverktygshandboken](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/cli-reference/commerce-on-premises).
 
 | Namn | Värde | Obligatoriskt? |
 |--- |--- |--- |
