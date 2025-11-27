@@ -1,5 +1,5 @@
 ---
-source-git-commit: 84a20012a81278cc95587ec14281b05330261687
+source-git-commit: 48dfdd81992a82bf984c3e7b0f30f8e5a69ee735
 workflow-type: tm+mt
 source-wordcount: '8232'
 ht-degree: 0%
@@ -20,11 +20,13 @@ Den inledande listan genereras automatiskt med kommandot `bin/magento list` på 
 
 ## Allmänt
 
-Använd guiden [&quot;Lägg till CLI-kommandon&quot;](https://developer.adobe.com/commerce/php/development/cli-commands) för att lägga till ett eget CLI-kommando.
+Använd guiden [&quot;Lägg till CLI-kommandon&quot;](https://developer.adobe.com/commerce/php/development/cli-commands/) för att lägga till ett eget CLI-kommando.
 
 Du kan anropa `bin/magento` CLI-kommandon med kortkommandon i stället för det fullständiga kommandonamnet. Du kan till exempel anropa `bin/magento setup:upgrade` med `bin/magento s:up`, `bin/magento s:upg`. Se [genvägssyntax](https://symfony.com/doc/current/components/console/usage.html#shortcut-syntax) om du vill veta hur du använder genvägar med ett CLI-kommando.
 
-Den här referensdokumentationen genereras från programmets källkod. Om du vill ändra dokumentationen bör du öppna en pull-begäran för motsvarande kommando i den relevanta [koddatabasen](https://github.com/magento). Mer information finns i [Kodbidrag](https://developer.adobe.com/commerce/contributor/guides/code-contributions).
+Den här referensdokumentationen genereras från programmets källkod. Om du vill ändra dokumentationen bör du öppna
+en pull-begäran för motsvarande kommando i den relevanta [koddatabasen](https://github.com/magento). Se
+[Kodbidrag](https://developer.adobe.com/commerce/contributor/guides/code-contributions/) om du vill ha mer information.
 
 ### Globala alternativ
 
