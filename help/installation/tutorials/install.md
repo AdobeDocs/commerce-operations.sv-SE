@@ -2,7 +2,7 @@
 title: Installera Adobe Commerce
 description: Följ de här stegen för att installera Adobe Commerce på en infrastruktur som du äger.
 exl-id: 25f3c56e-0654-4f8b-a69d-f4152f68aca3
-source-git-commit: 84a20012a81278cc95587ec14281b05330261687
+source-git-commit: 7610a5843b526a765dd35188722b7be8e6051049
 workflow-type: tm+mt
 source-wordcount: '2261'
 ht-degree: 0%
@@ -148,7 +148,7 @@ Konfigurationsalternativ för **[!DNL RabbitMQ]:**
 
 >[!NOTE]
 >
->ActiveMQ Artemis introducerades i Adobe Commerce 2.4.6 och senare.
+>ActiveMQ Artemis introducerades i Adobe Commerce 2.4.5 och senare.
 
 | Namn | Värde | Obligatoriskt? |
 |--- |--- |--- |
@@ -264,7 +264,7 @@ For security, remove write permissions from these directories: '/var/www/html/ma
 ```
 
 Efter installationen kan du skapa en administratörsanvändare med kommandot `admin:user:create`:
-[&#x200B; Skapa eller redigera en administratör &#x200B;](admin.md#create-or-edit-an-administrator)
+[ Skapa eller redigera en administratör ](admin.md#create-or-edit-an-administrator)
 
 #### Exempel 3 - Installera med ytterligare alternativ
 
@@ -335,7 +335,7 @@ magento setup:install --base-url=http://127.0.0.1/magento2/ \
 
 >[!NOTE]
 >
->ActiveMQ Artemis-installation kräver Adobe Commerce 2.4.6 eller senare.
+>ActiveMQ Artemis-installation kräver Adobe Commerce 2.4.5 eller senare.
 
 >[!TIP]
 >

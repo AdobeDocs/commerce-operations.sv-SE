@@ -2,7 +2,7 @@
 title: Hantera meddelandeköer
 description: Lär dig hur du hanterar meddelandeköer från kommandoraden för Adobe Commerce.
 exl-id: 619e5df1-39cb-49b6-b636-618b12682d32
-source-git-commit: 47525e8d8379061b254bfa90ab46e27a1ee2f524
+source-git-commit: 7610a5843b526a765dd35188722b7be8e6051049
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 0%
@@ -35,7 +35,7 @@ I följande exempel visas `crontab`-konfigurationen för konsumenter som kör:
 >
 >Den kan konfigureras i Admin Stores > Settings > Configuration > Advanced > System > Cron configuration options for group: customers.
 >
->Mer information om hur du använder [&#x200B; med Commerce finns i &#x200B;](../cli/configure-cron-jobs.md)Konfigurera och kör cron`cron`.
+>Mer information om hur du använder [ med Commerce finns i ](../cli/configure-cron-jobs.md)Konfigurera och kör cron`cron`.
 
 Du kan också använda en processhanterare som [Supervisor](https://supervisord.readthedocs.io/en/latest/) för att övervaka processernas status. Hanteraren kan använda kommandoraden för att starta om processerna efter behov.
 
@@ -49,7 +49,7 @@ Du kan också använda en processhanterare som [Supervisor](https://supervisord.
 
 >[!INFO]
 >
->Om din Adobe Commerce-butik finns på molnplattformen använder du [`CRON_CONSUMERS_RUNNER`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=sv-SE#cron_consumers_runner) för att konfigurera `consumers_runner` cron-jobbet.
+>Om din Adobe Commerce-butik finns på molnplattformen använder du [`CRON_CONSUMERS_RUNNER`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#cron_consumers_runner) för att konfigurera `consumers_runner` cron-jobbet.
 
 ### Specifik konfiguration
 
@@ -82,10 +82,10 @@ Redigera filen `/app/etc/env.php` om du vill konfigurera cron-jobbet `consumers_
 
   >[!INFO]
   >
-  >Om din Adobe Commerce-butik finns på molnplattformen använder du [`CONSUMERS_WAIT_FOR_MAX_MESSAGES`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=sv-SE#consumers_wait_for_max_messages) för att konfigurera hur konsumenter ska bearbeta meddelanden från meddelandekön.
+  >Om din Adobe Commerce-butik finns på molnplattformen använder du [`CONSUMERS_WAIT_FOR_MAX_MESSAGES`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#consumers_wait_for_max_messages) för att konfigurera hur konsumenter ska bearbeta meddelanden från meddelandekön.
 
   >[!NOTE]
   >
-  >ActiveMQ Artemis (STOMP) introducerades i Adobe Commerce 2.4.6 och senare.
+  >ActiveMQ Artemis (STOMP) introducerades i Adobe Commerce 2.4.5 och senare.
 
 Se [Starta meddelandekökonsumenter](../cli/start-message-queues.md).

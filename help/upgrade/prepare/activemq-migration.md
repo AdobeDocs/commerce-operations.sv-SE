@@ -2,9 +2,9 @@
 title: Migrera från RabbitMQ till ActiveMQ
 description: Läs om hur du ersätter meddelandeköhanteraren som används för lokala installationer av Adobe Commerce.
 feature: Services, Configuration
-source-git-commit: 8f57a4fa7744f4647ab96d0fcfae08b8eb4927c6
+source-git-commit: 7610a5843b526a765dd35188722b7be8e6051049
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '649'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ActiveMQ (Apache ActiveMQ Artemis) är en meddelandeförmedlare med höga prestanda och flera protokoll som erbjuder ett alternativ till RabbitMQ för hantering av meddelandeköer i Adobe Commerce.
 
-Från och med 2.4.8-p3, 2.4.7-p8 och 2.4.6-p13 stöder Adobe Commerce ActiveMQ som meddelandeköhanterare. Detta ger ytterligare flexibilitet för lokala installationer att välja mellan RabbitMQ och ActiveMQ baserat på deras infrastrukturkrav och expertis.
+Från och med 2.4.8-p3, 2.4.7-p8, 2.4.6-p13 och 2.4.5-p16 stöder Adobe Commerce ActiveMQ som meddelandeköansvarig. Detta ger ytterligare flexibilitet för lokala installationer att välja mellan RabbitMQ och ActiveMQ baserat på deras infrastrukturkrav och expertis.
 
 ## Innan du börjar
 
