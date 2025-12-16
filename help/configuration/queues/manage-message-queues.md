@@ -49,7 +49,7 @@ Du kan också använda en processhanterare som [Supervisor](https://supervisord.
 
 >[!INFO]
 >
->Om din Adobe Commerce-butik finns på molnplattformen använder du [`CRON_CONSUMERS_RUNNER`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#cron_consumers_runner) för att konfigurera `consumers_runner` cron-jobbet.
+>Om din Adobe Commerce-butik finns på molnplattformen använder du [`CRON_CONSUMERS_RUNNER`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=sv-SE#cron_consumers_runner) för att konfigurera `consumers_runner` cron-jobbet.
 
 ### Specifik konfiguration
 
@@ -82,7 +82,7 @@ Redigera filen `/app/etc/env.php` om du vill konfigurera cron-jobbet `consumers_
 
   >[!INFO]
   >
-  >Om din Adobe Commerce-butik finns på molnplattformen använder du [`CONSUMERS_WAIT_FOR_MAX_MESSAGES`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#consumers_wait_for_max_messages) för att konfigurera hur konsumenter ska bearbeta meddelanden från meddelandekön.
+  >Om din Adobe Commerce-butik finns på molnplattformen använder du [`CONSUMERS_WAIT_FOR_MAX_MESSAGES`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=sv-SE#consumers_wait_for_max_messages) för att konfigurera hur konsumenter ska bearbeta meddelanden från meddelandekön.
 
   >[!NOTE]
   >
