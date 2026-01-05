@@ -23,12 +23,12 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>Mer information om <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/configuration-management/set-configuration-values">Ange konfigurationsvärden</a>.</p>
+      <td><p>Mer information om <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/configuration-guide/cli/configuration-management/set-configuration-values">Ange konfigurationsvärden</a>.</p>
 </td>
       <td>
         God praxis
       </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/pull/147">pull-förfrågan</a></td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.sv-SE/pull/147">pull-förfrågan</a></td>
     </tr>
   </tbody>
 </table>
@@ -45,12 +45,12 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>CLI-kommandot <code class="language-plaintext highlighter-rouge">bin/magento setup:config:set</code> i <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cache/valkey/valkey-pg-cache#configure-valkey-default-caching">Konfigurera standardcachelagring för Valkey</a> har uppdaterats för att ange rätt värde för parametern <code class="language-plaintext highlighter-rouge">cache-backend</code>.</p>
+      <td><p>CLI-kommandot <code class="language-plaintext highlighter-rouge">bin/magento setup:config:set</code> i <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/configuration-guide/cache/valkey/valkey-pg-cache#configure-valkey-default-caching">Konfigurera standardcachelagring för Valkey</a> har uppdaterats för att ange rätt värde för parametern <code class="language-plaintext highlighter-rouge">cache-backend</code>.</p>
 </td>
       <td>
         God praxis
       </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/pull/159">pull-förfrågan</a></td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.sv-SE/pull/159">pull-förfrågan</a></td>
     </tr>
   </tbody>
 </table>
