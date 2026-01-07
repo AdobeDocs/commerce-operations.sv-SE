@@ -2,9 +2,9 @@
 user-guide-title: Konfigurationshandbok
 user-guide-description: Konfigurera Adobe Commerce programfunktioner och -tjänster.
 feature: Configuration
-source-git-commit: 1850301e0b7f1abbc54613209940dd63d16ef145
+source-git-commit: d86b9eb07a9da6dc93234f8a02103c543bbead68
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '372'
 ht-degree: 0%
 
 ---
@@ -41,6 +41,7 @@ ht-degree: 0%
       + [Konfigurera Redis](cache/config-redis.md)
       + [Använd Redis för standardcache](cache/redis-pg-cache.md)
       + [Använd Redis för sessionslagring](cache/redis-session.md)
+      + [Konfigurera ElastiCache för EC2-instanser](cache/redis-elasticache-for-ec2.md)
    + Valkey {#valkey}
       + [Konfigurera Valkey](cache/config-valkey.md)
       + [Använd Valkey för standardcache](cache/valkey-pg-cache.md)
@@ -150,4 +151,4 @@ ht-degree: 0%
       + [Verifiera delad databas](storage/multi-master-verify.md)
       + [Databasreplikering](storage/multi-master-replication.md)
       + [Återgå till en databas](storage/revert-split-database.md)
-+ [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=sv-SE)
++ [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)

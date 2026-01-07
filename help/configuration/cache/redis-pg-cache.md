@@ -3,9 +3,9 @@ title: Använd Redis för standardcache
 description: Lär dig hur du konfigurerar Redis som standardcache för Adobe Commerce. Upptäck kommandoradskonfiguration, konfigurationsalternativ och valideringstekniker.
 feature: Configuration, Cache
 exl-id: 8c097cfc-85d0-4e96-b56e-284fde40d459
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: ee4a873a73e8fd747e7d4c8e157327fab1074cc9
 workflow-type: tm+mt
-source-wordcount: '1135'
+source-wordcount: '890'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 0%
 Commerce tillhandahåller kommandoradsalternativ för att konfigurera Redis-sidan och standardcachning. Du kan konfigurera cachelagring genom att redigera filen `<Commerce-install-dir>app/etc/env.php`, men du bör använda kommandoraden, särskilt för inledande konfigurationer. Kommandoraden ger validering och säkerställer att konfigurationen är syntaktiskt korrekt.
 
 Du måste [installera Redis](config-redis.md#install-redis) innan du kan fortsätta.
+
+>[!NOTE]
+>
+>För Commerce-instanser som finns på EC2 kan du använda AWS ElastiCache i stället för en lokal Redis-instans. Se [Konfigurera elasticache för EC2-instanser](redis-elasticache-for-ec2.md).
 
 ## Konfigurera standardcachning för Redis
 
@@ -76,9 +80,9 @@ I följande exempel aktiveras Redis sidcache-lagring, värddatorn ställs in på
 bin/magento setup:config:set --page-cache=redis --page-cache-redis-server=127.0.0.1 --page-cache-redis-db=1
 ```
 
-## Resultat
+## Granska konfigurationen av Commerce-miljön
 
-Som ett resultat av de två exempelkommandona lägger Commerce till rader som liknar följande i `<Commerce-install-dir>app/etc/env.php`:
+Kör kommandona för att konfigurera Redis-cachelagring, uppdaterar Commerce-miljökonfigurationen (`<Commerce-install-dir>app/etc/env.php`):
 
 ```php
 'cache' => [
@@ -104,93 +108,11 @@ Som ett resultat av de två exempelkommandona lägger Commerce till rader som li
 ],
 ```
 
-## Använda AWS ElastiCache med din EC2-instans
+## Konfigurera ytterligare cachealternativ
 
-Från och med Commerce 2.4.3 kan instanser som finns på Amazon EC2 använda en AWS ElastiCache i stället för en lokal Redis-instans.
+I det här avsnittet beskrivs hur du aktiverar valfria konfigurationsinställningar som är inaktiverade som standard.
 
->[!WARNING]
->
->Det här avsnittet fungerar bara för Commerce-instanser som körs på Amazon EC2 VPC. Det fungerar inte för lokala anläggningar.
-
-### Konfigurera ett Redis-kluster
-
-När [du har konfigurerat ett Redis-kluster på AWS](https://aws.amazon.com/getting-started/hands-on/setting-up-a-redis-cluster-with-amazon-elasticache/) konfigurerar du EC2-instansen att använda ElastiCache.
-
-1. [Skapa ett ElastiCache-kluster](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/set-up.html) i samma region och VPC för EC2-instansen.
-1. Kontrollera anslutningen.
-
-   - Öppna en SSH-anslutning till din EC2-instans
-   - Installera Redis-klienten på EC2-instansen:
-
-     ```bash
-     sudo apt-get install redis
-     ```
-
-   - Lägg till en inkommande regel i EC2-säkerhetsgruppen: Typ `- Custom TCP, port - 6379, Source - 0.0.0.0/0`
-   - Lägg till en inkommande regel i säkerhetsgruppen för kluster i ElastiCache: typ `- Custom TCP, port - 6379, Source - 0.0.0.0/0`
-   - Anslut till Redis CLI:
-
-     ```bash
-     redis-cli -h <ElastiCache Primary Endpoint host> -p <ElastiCache Primary Endpoint port>
-     ```
-
-### Konfigurera Commerce att använda klustret
-
-Commerce har stöd för flera typer av cachelagringskonfigurationer. Vanligtvis är cachelagringskonfigurationerna uppdelade mellan klientdel och serverdel. Cachelagring för klientdel klassificeras som `default`, som används för alla cachetyper. Du kan anpassa eller dela upp i cacheminnen på lägre nivå för att få bättre prestanda. En vanlig Redis-konfiguration separerar standardcachen och sidcachen till sin egen Redis-databas (RDB).
-
-Kör `setup`-kommandon för att ange Redis-slutpunkter.
-
-Så här konfigurerar du Commerce för Redis som standardcachelagring:
-
-```bash
-bin/magento setup:config:set --cache-backend=redis --cache-backend-redis-server=<ElastiCache Primary Endpoint host> --cache-backend-redis-port=<ElastiCache Primary Endpoint port> --cache-backend-redis-db=0
-```
-
-Så här konfigurerar du Commerce för Redis-sidcache:
-
-```bash
-bin/magento setup:config:set --page-cache=redis --page-cache-redis-server=<ElastiCache Primary Endpoint host> --page-cache-redis-port=<ElastiCache Primary Endpoint port> --page-cache-redis-db=1
-```
-
-Så här konfigurerar du Commerce att använda Redis för sessionslagring:
-
-```bash
-bin/magento setup:config:set --session-save=redis --session-save-redis-host=<ElastiCache Primary Endpoint host> --session-save-redis-port=<ElastiCache Primary Endpoint port> --session-save-redis-log-level=4 --session-save-redis-db=2
-```
-
-### Verifiera anslutningen
-
-**Så här verifierar du att Commerce pratar med ElastiCache**:
-
-1. Öppna en SSH-anslutning till Commerce EC2-instansen.
-1. Starta Redis-skärmen.
-
-   ```bash
-   redis-cli -h <ElastiCache-Primary-Endpoint-host> -p <ElastiCache-Primary-Endpoint-port> monitor
-   ```
-
-1. Öppna en sida i användargränssnittet för Commerce.
-1. Verifiera [cacheutdata](#verify-redis-connection) i terminalen.
-
-## Ny Redis-cacheimplementering
-
-Från och med Commerce 2.3.5 rekommenderas att den utökade Redis-cacheimplementeringen används: `\Magento\Framework\Cache\Backend\Redis`.
-
-```php
-'cache' => [
-    'frontend' => [
-        'default' => [
-            'backend' => '\\Magento\\Framework\\Cache\\Backend\\Redis',
-            'backend_options' => [
-                'server' => '127.0.0.1',
-                'database' => '0',
-                'port' => '6379'
-            ],
-        ],
-],
-```
-
-## Förinläsningsfunktion för Redis
+### Förinläsningsfunktion för Redis
 
 Eftersom Commerce lagrar konfigurationsdata i Redis-cachen kan vi förinläsa data som återanvänds mellan sidorna. Analysera data som överförs från Redis till Commerce för att hitta nycklar som måste läsas in i förväg. Vi föreslår att data som läses in på varje sida läses in i förväg, till exempel `SYSTEM_DEFAULT`, `EAV_ENTITY_TYPES`, `DB_IS_UP_TO_DATE`.
 
@@ -235,10 +157,11 @@ Om du använder förinläsningsfunktionen med L2-cachen ska du inte glömma att 
 ],
 ```
 
-## Parallell generering
+### Parallell generering
 
-Från och med version 2.4.0 introducerade vi alternativet `allow_parallel_generation` för användare som inte vill vänta på lås.
-Det är inaktiverat som standard och vi rekommenderar att du inaktiverar det tills du har för många konfigurationer och/eller block.
+Eliminera väntan på lås genom att aktivera alternativet `allow_parallel_generation`.
+
+Det här alternativet är inaktiverat som standard och Adobe rekommenderar att du inaktiverar det tills du har ett stort antal konfigurationer eller block.
 
 **Så här aktiverar du parallell generering**:
 
@@ -246,7 +169,7 @@ Det är inaktiverat som standard och vi rekommenderar att du inaktiverar det til
 bin/magento setup:config:set --allow-parallel-generation
 ```
 
-Eftersom det är en flagga kan du inte inaktivera den med ett kommando. Du måste ange konfigurationsvärdet manuellt till `false`:
+Eftersom det här alternativet är en flagga kan du inte inaktivera det med ett kommando. Du måste ange konfigurationsvärdet manuellt till `false`:
 
 ```php
     'cache' => [
@@ -271,7 +194,7 @@ Eftersom det är en flagga kan du inte inaktivera den med ett kommando. Du måst
     ],
 ```
 
-## Bekräfta Redis-anslutning
+## Kontrollera Redis-anslutningen
 
 Om du vill verifiera att Redis och Commerce fungerar tillsammans loggar du in på servern som kör Redis, öppnar en terminal och använder kommandot Redis monitor eller ping.
 
