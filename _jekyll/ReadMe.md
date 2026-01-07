@@ -1,7 +1,7 @@
 ---
-source-git-commit: 9994f486c38df4c0dc2ff477c48f3e8f3259aa9f
+source-git-commit: 4589c405bab743001e967a9825d578ee1a03c216
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '672'
 ht-degree: 0%
 
 ---
@@ -83,6 +83,32 @@ Skapar en Azure-regionskarta. Indatafilen ska placeras i `_jekyll/tmp/azure-regi
 ```sh
 rake azure_regions
 ```
+
+### `get_released_versions`
+
+Hämtar de senaste 10 versionerna från databasen `magento/magento2`. Kräver att [GitHub CLI](https://cli.github.com/) installeras och autentiseras.
+
+**Användning:**
+
+```sh
+rake get_released_versions
+```
+
+**Utdata:** Genererar `tmp/core-release.txt` med versionstaggnamn och datum.
+
+### `first_merge_date`
+
+Hämtar datumet för den första sammanfogningen till en angiven gren. Kräver att [GitHub CLI](https://cli.github.com/) installeras och autentiseras.
+
+**Användning:**
+
+```sh
+rake first_merge_date base=develop
+```
+
+**Argument:**
+
+- `base` (obligatoriskt): Målgrennamnet som ska kontrolleras för sammanslagningar.
 
 ### `includes:maintain_relationships`
 
@@ -215,7 +241,8 @@ Huvudinnehållsfiler använder följande syntax för att inkludera andra filer:
 ## Förutsättningar
 
 - Ruby och Bundler är installerade.
-- Nödvändiga pärlor specificerade i filen Gemfile.
+- Nödvändiga pärmar har angetts i Gemfile (huvudberoenden anges av `adobe-comdox-exl-rake-tasks`).
+- [GitHub CLI](https://cli.github.com/) för `get_released_versions`- och `first_merge_date`-aktiviteterna.
 - Python, [PyGMT](https://www.pygmt.org/latest/install.html) och [pdf2svg](https://formulae.brew.sh/formula/pdf2svg) för aktiviteten `azure_regions`.
 
 ## Inställningar
