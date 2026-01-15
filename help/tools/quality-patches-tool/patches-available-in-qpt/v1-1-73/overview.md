@@ -4,9 +4,9 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 3103c03c7cde04d1fffd16254ff8969851305b47
+source-git-commit: 291262109cacaae5b4a749e50d1f7c8fa910b538
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,9 @@ ht-degree: 0%
 Detta underavsnitt innehåller en detaljerad beskrivning av de problem som åtgärdats av de korrigeringar som finns i [!DNL Quality Patches Tool] (QPT) v1.1.73.
 
 QPT v1.1.73 innehåller följande patchar:
+1. **ACSD-67171**: Korrigerade ett problem där B2B-användare kunde se en sida med nekad åtkomst när sessionen upphörde eller togs bort vid utcheckningen.
+1. **ACSD-67908**: Korrigerade ett problem där JS-filer inte kunde sammanfogas korrekt i flerlagringsinställningar.
+1. **[ACSD-68190](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-73/acsd-68190.md)**: Korrigerat problemet där rabatter inte gäller, tillämpade rabatter inte visas korrekt i svaret på kundvagnen i GraphQL och rabatter som inte är kupongrabatter tas bort när kupongrabatt tas bort.
 1. **ACSD-67908**: JavaScript-filer kan inte sammanfogas korrekt i flerlagringsinställningar
 1. **ACSD-67171**: Sessionen [!DNL B2B] har upphört att gälla under utcheckningsomdirigeringar till sidan Åtkomst nekad i stället för inloggning
 1. **ACSD-68190**: Korrigerat problemet där rabatter inte gäller, tillämpade rabatter inte visas korrekt i svaret på kundvagnen i GraphQL och rabatter som inte är kupongrabatter tas bort när kupongrabatt tas bort.
