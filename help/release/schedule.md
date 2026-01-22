@@ -2,9 +2,9 @@
 title: Schema för patchrelease
 description: Läs när Adobe planerar att släppa nya patchar och säkerhetskorrigeringar för Adobe Commerce.
 exl-id: ae1e09cd-966f-44a3-9e4d-b90bb838429d
-source-git-commit: f4601034e3e988b3058946b263ec5e8da41fce16
+source-git-commit: ee39af1beb8df93b179c2e5dee3942b3f367e51a
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '337'
 ht-degree: 0%
 
 ---
@@ -18,11 +18,11 @@ Syftet med schemat är att ange datum när Adobe planerar att meddela att [korri
 
 >[!NOTE]
 >
->Mer information om nya funktioner, molninfrastruktur och utökningsmöjligheter finns i [versionsdokumentationen för Adobe Commerce Services](https://experienceleague.adobe.com/sv/docs/commerce/user-guides/release-information/release-notes-all).
+>Mer information om nya funktioner, molninfrastruktur och utökningsmöjligheter finns i [versionsdokumentationen för Adobe Commerce Services](https://experienceleague.adobe.com/en/docs/commerce/user-guides/release-information/release-notes-all).
 
 Förutom de schemalagda kvalitets-, säkerhets- och betatestarna på den här sidan ger Adobe tillgång till [enskilda korrigeringsfiler](versioning-policy.md#individual-patch) via [kvalitetskorrigeringsverktyget](../tools/quality-patches-tool/usage.md). Med verktyget kan du tillämpa, återställa och visa allmän information om alla enskilda korrigeringsfiler som är tillgängliga för den installerade versionen av Adobe Commerce.
 
-Från och med januari 2026 kommer Adobe Commerce att övergå till ett månadsschema för publicering av korrigeringar med följande strategi:
+Adobe Commerce följer ett månadsschema för patch-releaser med följande strategi:
 
 - **Isolerade säkerhetskorrigeringar** - Individuella, icke-kumulativa [säkerhetskorrigeringar](versioning-policy.md#isolated-patch) kan släppas månadsvis och innehålla säkerhetskorrigeringar för alla [supportade](lifecycle-policy.md) versionsrader (inklusive reguljär och utökad support).
 
@@ -37,3 +37,16 @@ Mer information finns i följande bild:
 <!-- The SVG source for the following image is located here: /help/assets/release/release-calendar.drawio.svg -->
 
 ![Versionskalender för Adobe Commerce 2026](../assets/release/release-calendar.drawio.png)
+
+
+## Utgivningsmeddelandekanaler
+
+Adobe meddelar sina kunder om nya patchar via följande kanaler:
+
+- [Adobe säkerhetsbulletiner och -anvisningar](https://helpx.adobe.com/security/security-bulletin.html#magento)
+- E-post
+- Varningar i produkten
+
+>[!NOTE]
+>
+> Releasedatum för varje mindre version, korrigeringsfil och säkerhetsrelease samt datum för slutet av den vanliga supporten finns i [Releaserade versioner](https://experienceleague.adobe.com/en/docs/commerce-operations/release/versions).
