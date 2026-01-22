@@ -18,7 +18,7 @@ Syftet med schemat är att ange datum när Adobe planerar att meddela att [korri
 
 >[!NOTE]
 >
->Mer information om nya funktioner, molninfrastruktur och utökningsmöjligheter finns i [versionsdokumentationen för Adobe Commerce Services](https://experienceleague.adobe.com/en/docs/commerce/user-guides/release-information/release-notes-all).
+>Mer information om nya funktioner, molninfrastruktur och utökningsmöjligheter finns i [versionsdokumentationen för Adobe Commerce Services](https://experienceleague.adobe.com/sv/docs/commerce/user-guides/release-information/release-notes-all).
 
 Förutom de schemalagda kvalitets-, säkerhets- och betatestarna på den här sidan ger Adobe tillgång till [enskilda korrigeringsfiler](versioning-policy.md#individual-patch) via [kvalitetskorrigeringsverktyget](../tools/quality-patches-tool/usage.md). Med verktyget kan du tillämpa, återställa och visa allmän information om alla enskilda korrigeringsfiler som är tillgängliga för den installerade versionen av Adobe Commerce.
 
@@ -43,10 +43,10 @@ Mer information finns i följande bild:
 
 Adobe meddelar sina kunder om nya patchar via följande kanaler:
 
-- [Adobe säkerhetsbulletiner och -anvisningar](https://helpx.adobe.com/security/security-bulletin.html#magento)
+- [Adobe säkerhetsbulletiner och -anvisningar](https://helpx.adobe.com/se/security/security-bulletin.html#magento)
 - E-post
 - Varningar i produkten
 
 >[!NOTE]
 >
-> Releasedatum för varje mindre version, korrigeringsfil och säkerhetsrelease samt datum för slutet av den vanliga supporten finns i [Releaserade versioner](https://experienceleague.adobe.com/en/docs/commerce-operations/release/versions).
+> Releasedatum för varje mindre version, korrigeringsfil och säkerhetsrelease samt datum för slutet av den vanliga supporten finns i [Releaserade versioner](https://experienceleague.adobe.com/sv/docs/commerce-operations/release/versions).
