@@ -34,7 +34,7 @@ Innehåller en array med moduler och deras lägen. Om modulen är aktiverad är 
 ]
 ```
 
-Läs mer om [Moduler](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/create-module.html).
+Läs mer om [Moduler](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/create-module.html?lang=sv-SE).
 
 ## omfattningar
 
@@ -82,7 +82,7 @@ Innehåller en array med scopets konfigurationsvärden. Den har följande delnod
 ]
 ```
 
-Läs mer om [Commerce-scope](https://experienceleague.adobe.com/docs/commerce-admin/start/setup/websites-stores-views.html#scope-settings).
+Läs mer om [Commerce-scope](https://experienceleague.adobe.com/docs/commerce-admin/start/setup/websites-stores-views.html?lang=sv-SE#scope-settings).
 
 ## system
 

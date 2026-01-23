@@ -35,7 +35,7 @@ Så här genererar du ordlistan och börjar översättningen:
 
 1. Du kan paketera översättningsordlistorna i ett språkpaket och skicka paketet till Commerce Store-administratören.
 
-1. I Admin konfigurerar lagringsadministratören [översättningarna](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-localize).
+1. I Admin konfigurerar lagringsadministratören [översättningarna](https://experienceleague.adobe.com/sv/docs/commerce-admin/stores-sales/site-store/store-localize).
 
 Kommandoalternativ:
 

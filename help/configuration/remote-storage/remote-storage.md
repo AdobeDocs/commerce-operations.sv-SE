@@ -30,7 +30,7 @@ Om du aktiverar fjärrlagring kan det påverka din etablerade utvecklingsuppleve
 
 >[!INFO]
 >
->- Fjärrlagring finns endast för Commerce version 2.4.2 och senare. Se versionsinformationen för [2.4.2](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/magento-open-source/2-4-2).
+>- Fjärrlagring finns endast för Commerce version 2.4.2 och senare. Se versionsinformationen för [2.4.2](https://experienceleague.adobe.com/sv/docs/commerce-operations/release/notes/magento-open-source/2-4-2).
 >
 >- Fjärrlagringsmodulen har _begränsat_ stöd för Adobe Commerce i molninfrastrukturen. Adobe kan inte felsöka nätverkskortstjänsten från tredje part. Mer information om hur du implementerar fjärrlagring för molnprojekt finns i [Konfigurera fjärrlagring för Commerce i molninfrastruktur](cloud-support.md) .
 
@@ -91,5 +91,5 @@ När du har aktiverat fjärrlagring för ett specifikt kort kan du använda CLI 
 
 >[!INFO]
 >
->Synkroniseringskommandot migrerar bara filer i katalogen `pub/media`, _inte_ import-/exportfilerna i katalogen `var`. Se [Schemalagd import/export](https://experienceleague.adobe.com/docs/commerce-admin/systems/data-transfer/data-scheduled-import-export.html) i användarhandboken för _Commerce 2.4_.
+>Synkroniseringskommandot migrerar bara filer i katalogen `pub/media`, _inte_ import-/exportfilerna i katalogen `var`. Se [Schemalagd import/export](https://experienceleague.adobe.com/docs/commerce-admin/systems/data-transfer/data-scheduled-import-export.html?lang=sv-SE) i användarhandboken för _Commerce 2.4_.
 
