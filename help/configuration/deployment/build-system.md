@@ -3,9 +3,9 @@ title: Skapa systeminställningar
 description: Lär dig hur du driftsätter Commerce i ett byggsystem.
 feature: Configuration, Build, Deploy
 exl-id: f6daf5c6-6d12-46b0-b775-76791bacea53
-source-git-commit: dcc283b901917e3681863370516771763ae87462
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '365'
 ht-degree: 0%
 
 ---
@@ -67,11 +67,11 @@ Så här installerar du Composer:
    mv composer.phar /usr/local/bin/composer
    ```
 
-Ytterligare installationsalternativ finns i [Installationsdokumentationen för Composer][composer].
+Ytterligare installationsalternativ finns i [Installationsdokumentationen för Composer](https://getcomposer.org/download/).
 
 ### Installera PHP
 
-Installera PHP på [CentOS] eller [Ubuntu].
+Installera PHP på [CentOS](https://wiki.centos.org/HowTos/php7) eller [Ubuntu](https://help.ubuntu.com/lts/serverguide/php.html).
 
 ### Konfigurera byggsystemet
 
@@ -134,8 +134,3 @@ Så här konfigurerar du byggsystemet:
 
    `<mode>` krävs. Det kan vara antingen `default` eller `developer`.
 
-<!-- Link Definitions -->
-
-[CentOS]: https://wiki.centos.org/HowTos/php7
-[composer]: https://getcomposer.org/download/
-[Ubuntu]: https://help.ubuntu.com/lts/serverguide/php.html

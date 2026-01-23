@@ -3,7 +3,7 @@ title: Driftsättning av en dator
 description: Lär dig hur du distribuerar uppdateringar till Commerce på en produktionsserver med kommandoraden.
 feature: Configuration, Deploy
 exl-id: ca73309c-7584-4506-99de-dd933651eeb6
-source-git-commit: 84a20012a81278cc95587ec14281b05330261687
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 1%
@@ -22,7 +22,7 @@ I det här avsnittet finns anvisningar om hur du distribuerar uppdateringar till
 >[!WARNING]
 >
 >Den här guiden gäller inte om du använde `git clone` för att installera Commerce.
->Deltagande utvecklare bör använda [den här handboken][install] för att uppdatera sin Commerce-installation.
+>Deltagande utvecklare bör använda [den här handboken](https://developer.adobe.com/commerce/contributor/guides/install/update-dependencies) för att uppdatera sin Commerce-installation.
 
 ## Distributionssteg
 
@@ -91,6 +91,3 @@ I det här avsnittet finns anvisningar om hur du distribuerar uppdateringar till
    bin/magento maintenance:disable
    ```
 
-<!-- link definitions -->
-
-[install]: https://developer.adobe.com/commerce/contributor/guides/install/update-dependencies

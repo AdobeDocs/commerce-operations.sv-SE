@@ -2,16 +2,16 @@
 title: Konfigurera ett anpassat cron-jobb och en cron-grupp (självstudiekurs)
 description: Lär dig hur du skapar anpassade kundjobb med den här stegvisa självstudiekursen för Adobe Commerce. Upptäck modulinställningar och konfiguration av kundgrupp.
 exl-id: d8efcafc-3ae1-4c2d-a8ad-4a806fb48932
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '821'
 ht-degree: 0%
 
 ---
 
 # Konfigurera ett anpassat cron-jobb
 
-Den här stegvisa självstudiekursen visar hur du skapar ett anpassat cron-jobb och eventuellt en cron-grupp i en exempelmodul. Du kan använda en modul som du redan har eller så kan du använda en exempelmodul från [`magento2-samples`-databasen ][samples].
+Den här stegvisa självstudiekursen visar hur du skapar ett anpassat cron-jobb och eventuellt en cron-grupp i en exempelmodul. Du kan använda en modul som du redan har eller så kan du använda en exempelmodul från [`magento2-samples`-databasen ](https://github.com/magento/magento2-samples).
 
 Om du kör cron-jobbet läggs en rad till i tabellen `cron_schedule` med namnet på cron-jobbet `custom_cron`.
 
@@ -33,13 +33,13 @@ Om du redan har en exempelmodul kan du använda den. Hoppa över det här steget
 
 1. Logga in på din Commerce-server som, eller växla till, ägare av [filsystemet](../../installation/prerequisites/file-system/overview.md).
 1. Byt till en katalog som inte finns i programroten för Commerce (till exempel din arbetskatalog).
-1. Klona [`magento2-samples`-databasen ][samples].
+1. Klona [`magento2-samples`-databasen ](https://github.com/magento/magento2-samples).
 
    ```bash
    git clone git@github.com:magento/magento2-samples.git
    ```
 
-   Om kommandot misslyckas med felet `Permission denied (publickey).` måste du [lägga till den offentliga SSH-nyckeln på GitHub.com][git-ssh].
+   Om kommandot misslyckas med felet `Permission denied (publickey).` måste du [lägga till den offentliga SSH-nyckeln på GitHub.com](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).
 
 1. Skapa en katalog dit exempelkoden ska kopieras:
 
@@ -303,7 +303,3 @@ Så här verifierar du din anpassade cron-grupp:
 
    ![Din anpassade cron-grupp](../../assets/configuration/cron-group.png)
 
-<!-- link definitions -->
-
-[git-ssh]: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
-[samples]: https://github.com/magento/magento2-samples

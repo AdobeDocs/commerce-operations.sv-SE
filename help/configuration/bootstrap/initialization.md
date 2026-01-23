@@ -3,28 +3,28 @@ title: Programinitiering och bootstrap
 description: Läs om initiering och bootstrap-logik för Commerce.
 feature: Configuration, Install, Media
 exl-id: 46d1ffc0-7870-4dd1-beec-0a9ff858ab62
-source-git-commit: 403a5937561d82b02fd126c95af3f70b0ded0747
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '804'
 ht-degree: 0%
 
 ---
 
 # Översikt över initiering och bootstrap
 
-Följande åtgärder implementeras i [pub/index.php][index] för att köra Commerce-programmet:
+Följande åtgärder implementeras i [pub/index.php](https://github.com/magento/magento2/tree/2.4.8/pub/index.php) för att köra Commerce-programmet:
 
-- Inkludera [app/bootstrap.php][bootinitial], som utför viktiga initieringsrutiner som felhantering, initiering av automatisk inläsare, inställning av profileringsalternativ och inställning av standardtidszon.
-- Skapa en instans av [\Magento\Framework\App\Bootstrap.php][bootstrap] <!-- It requires initialization parameters to be specified in constructor. Normally, the $_SERVER super-global variable is supposed to be passed there. -->
-- Skapa en programinstans i Commerce: [\Magento\Framework\AppInterface][app-face]
+- Inkludera filen [app/bootstrap.php](https://github.com/magento/magento2/blob/2.4.8/app/bootstrap.php) för den Commerce-version som är distribuerad till din miljö. Den här filen utför viktiga initieringsrutiner som felhantering, initiering av autoladdaren, inställning av profileringsalternativ och inställning av standardtidszon.
+- Skapa en instans av [\Magento\Framework\App\Bootstrap.php](https://github.com/magento/magento2/tree/2.4.8/lib/internal/Magento/Framework/App/Bootstrap.php) <!-- It requires initialization parameters to be specified in constructor. Normally, the $_SERVER super-global variable is supposed to be passed there. -->
+- Skapa en programinstans i Commerce: [\Magento\Framework\AppInterface](https://github.com/magento/magento2/tree/2.4.8/lib/internal/Magento/Framework/AppInterface.php)
 - Kör Commerce
 
 ## Bootstrap körningslogik
 
-[Bootstrap-objektet][bootinitial] använder följande algoritm för att köra Commerce-programmet:
+[Bootstrap-objektet](https://github.com/magento/magento2/tree/2.4.8/app/bootstrap.php) använder följande algoritm för att köra Commerce-programmet:
 
 1. Initierar felhanteraren.
-1. Skapar [objekthanteraren][object] och grundläggande delade tjänster som används överallt och som påverkas av miljön. Miljöparametrarna injiceras korrekt i dessa objekt.
+1. Skapar [objekthanteraren](https://github.com/magento/magento2/tree/2.4.8/lib/internal/Magento/Framework/ObjectManager) och grundläggande delade tjänster som används överallt och som påverkas av miljön. Miljöparametrarna injiceras korrekt i dessa objekt.
 1. Kontrollerar att underhållsläget _inte_ är aktiverat, annars avslutas underhållsläget.
 1. Kontrollerar att Commerce-programmet är installerat, annars avslutas det.
 1. Startar Commerce.
@@ -71,7 +71,7 @@ Vi har följande startpunktsprogram (d.v.s. program som definieras av Commerce o
 
 ### HTTP-startpunkt
 
-[\Magento\Framework\App\Http][http] fungerar så här:
+[\Magento\Framework\App\Http](https://github.com/magento/magento2/tree/2.4.8/lib/internal/Magento/Framework/App/Http) fungerar så här:
 
 1. Bestämmer [programområdet](https://developer.adobe.com/commerce/php/architecture/modules/areas/).
 1. Startar frontkontrollenheten och routningssystemen för att hitta och köra en kontrollenhetsåtgärd.
@@ -89,7 +89,7 @@ Vi har följande startpunktsprogram (d.v.s. program som definieras av Commerce o
 
 ### Statisk resursinmatningspunkt
 
-[\Magento\Framework\App\StaticResource][static-resource] är ett program för att hämta statiska resurser (till exempel CSS, JavaScript och bilder). Den skjuter upp alla åtgärder med en statisk resurs tills resursen begärs.
+[\Magento\Framework\App\StaticResource](https://github.com/magento/magento2/tree/2.4.8/lib/internal/Magento/Framework/App/StaticResource.php) är ett program för att hämta statiska resurser (till exempel CSS, JavaScript och bilder). Den skjuter upp alla åtgärder med en statisk resurs tills resursen begärs.
 
 >[!INFO]
 >
@@ -105,17 +105,7 @@ När begäran omdirigeras till startpunkten, tolkar Commerce-programmet den beg�
 
 ### Startpunkt för medieresurs
 
-[Magento\MediaStorage\App\Media][media] hämtar medieresurser (d.v.s. alla filer som överförts till medielagring) från databasen. Den används när databasen har konfigurerats som en medielagring.
+[Magento\MediaStorage\App\Media](https://github.com/magento/magento2/tree/2.4.8/app/code/Magento/MediaStorage/App/Media.php) hämtar medieresurser (d.v.s. alla filer som överförts till medielagring) från databasen. Den används när databasen har konfigurerats som en medielagring.
 
 `\Magento\Core\App\Media` försöker hitta mediefilen i den konfigurerade databaslagringen och skriva den i katalogen `pub/static` och sedan returnera innehållet. Vid fel returneras HTTP 404-statuskoden (Hittades inte) i huvudet utan innehåll.
 
-<!-- Link Definitions -->
-
-[app-face]: https://github.com/magento/magento2/tree/2.4/lib/internal/Magento/Framework/AppInterface.php
-[bootinitial]: https://github.com/magento/magento2/tree/2.4/app/bootstrap.php
-[bootstrap]: https://github.com/magento/magento2/tree/2.4/lib/internal/Magento/Framework/App/Bootstrap.php
-[http]: https://github.com/magento/magento2/tree/2.4/lib/internal/Magento/Framework/App/Http
-[index]: https://github.com/magento/magento2/tree/2.4/pub/index.php
-[media]: https://github.com/magento/magento2/tree/2.4/app/code/Magento/MediaStorage/App/Media.php
-[object]: https://github.com/magento/magento2/tree/2.4/lib/internal/Magento/Framework/ObjectManager
-[static-resource]: https://github.com/magento/magento2/tree/2.4/lib/internal/Magento/Framework/App/StaticResource.php

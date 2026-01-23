@@ -3,16 +3,16 @@ title: Konfigurera och använda engelska
 description: Lär dig hur du konfigurerar och använder lack-cachning för Adobe Commerce. Upptäck HTTP-acceleration, fillagring och prestandaoptimeringstekniker.
 feature: Configuration, Cache
 exl-id: 57614878-e349-43bb-b22b-1aa321907be1
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1042'
 ht-degree: 0%
 
 ---
 
 # Konfigurera lack
 
-[Avvikande cacheminne] är en webbprogramaccelerator med öppen källkod (kallas även _HTTP-accelerator_ eller _cachelagring av HTTP-proxy_). I Finish lagras (eller cachelagrar) filer eller fragment av filer i minnet, vilket gör att Varnish kan minska svarstiden och bandbreddsanvändningen för framtida, likvärdiga begäranden. Till skillnad från webbservrar som Apache och nginx har Varnish utformats för att endast användas med HTTP-protokollet.
+[Avvikande cacheminne](https://varnish-cache.org) är en webbprogramaccelerator med öppen källkod (kallas även _HTTP-accelerator_ eller _cachelagring av HTTP-proxy_). I Finish lagras (eller cachelagrar) filer eller fragment av filer i minnet, vilket gör att Varnish kan minska svarstiden och bandbreddsanvändningen för framtida, likvärdiga begäranden. Till skillnad från webbservrar som Apache och nginx har Varnish utformats för att endast användas med HTTP-protokollet.
 
 [Systemkrav](../../installation/system-requirements.md) visar vilka versioner av engelska som stöds.
 
@@ -22,9 +22,9 @@ ht-degree: 0%
 
 Mer information om lack finns i:
 
-- [Den stora svartvita bilden]
-- [Alternativ för avslutad start]
-- [Prestanda för lack och webbplats]
+- [Den stora svartvita bilden](https://www.varnish-cache.org/docs/trunk/users-guide/intro.html)
+- [Alternativ för avslutad start](https://www.varnish-cache.org/docs/trunk/reference/varnishd.html#ref-varnishd-options)
+- [Prestanda för lack och webbplats](https://www.varnish-cache.org/docs/trunk/users-guide/performance.html#users-performance)
 
 ## Topologidiagram för lack
 
@@ -61,7 +61,7 @@ Processen kan sammanfattas enligt följande:
 
 Vi känner till följande problem med Varnish:
 
-- [lack stöder inte SSL]
+- [lack stöder inte SSL](https://www.varnish-cache.org/docs/3.0/phk/ssl.html)
 
   Alternativt kan du använda SSL-avslutning eller en SSL-avslutningsproxy.
 
@@ -114,7 +114,7 @@ I det här avsnittet används en webbläsarkontroll för att visa hur resurser l
 
 I bilden nedan visas ett exempel med en webbläsarkontroll:
 
-![Första gången en begäran görs för ett cachelagrat objekt skickas den till webbläsaren &#x200B;](../../assets/configuration/varnish-apache-first-visit.png)
+![Första gången en begäran görs för ett cachelagrat objekt skickas den till webbläsaren ](../../assets/configuration/varnish-apache-first-visit.png)
 
 I exemplet ovan visas en begäran för huvudsidan för butiken (`m2_ce_my`). CSS- och JavaScript-resurser cachelagras i klientwebbläsaren.
 
@@ -146,10 +146,3 @@ Dessutom returneras statiska resurser med en HTTP-statuskod på 304 (inte ändra
 
 Om innehållet ändras på servern hämtar klienten den statiska resursen med en HTTP 200-statuskod (OK) och en ny ETag.
 
-<!-- Link Definitions -->
-
-[The Big Varnish Picture]: https://www.varnish-cache.org/docs/trunk/users-guide/intro.html
-[Finska cache]: https://varnish-cache.org
-[Alternativ för avslutning av lack]: https://www.varnish-cache.org/docs/trunk/reference/varnishd.html#ref-varnishd-options
-[Prestanda för lack och webbplatser]: https://www.varnish-cache.org/docs/trunk/users-guide/performance.html#users-performance
-[Varnish stöder inte SSL]: https://www.varnish-cache.org/docs/3.0/phk/ssl.html

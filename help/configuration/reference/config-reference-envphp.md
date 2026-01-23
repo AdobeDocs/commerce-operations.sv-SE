@@ -2,7 +2,7 @@
 title: env.php reference
 description: Läs mer om konfigurationsvärden och avsnitt för filen env.php i Adobe Commerce. Upptäck miljöinställningar och konfigurationsalternativ.
 exl-id: cf02da8f-e0de-4f0e-bab6-67ae02e9166f
-source-git-commit: cb89f0c0a576cf6cd8b53a4ade12c21106e2cdf3
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
 source-wordcount: '1033'
 ht-degree: 0%
@@ -27,12 +27,12 @@ Filen `env.php` innehåller följande avsnitt:
 | `downloadable_domains` | Lista över hämtningsbara domäner |
 | `install` | Installationsdatum |
 | `lock` | Lås providerinställningar |
-| `MAGE_MODE` | Programläget [&#128279;](../bootstrap/application-modes.md) |
+| `MAGE_MODE` | Programläget [](../bootstrap/application-modes.md) |
 | `queue` | Inställningar för [Meddelandeköer](../queues/manage-message-queues.md) |
 | `resource` | Mappning av resursnamn till en anslutning |
 | `session` | Sessionslagringsdata |
 | `system` | Inaktiverar fältet för redigering i administratören |
-| `x-frame-options` | Inställning för [x-frame-options][x-frame-options] |
+| `x-frame-options` | Inställning för [x-frame-options](../security/xframe-options.md) |
 
 ## serverdel
 
@@ -146,7 +146,7 @@ Commerce använder en krypteringsnyckel för att skydda lösenord och andra kän
 ]
 ```
 
-Läs mer om [Krypteringsnyckel](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/security/encryption-key) i användarhandboken för _Commerce_.
+Läs mer om [Krypteringsnyckel](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/encryption-key) i användarhandboken för _Commerce_.
 
 ## db
 
@@ -211,7 +211,7 @@ En lista över tillgängliga hämtningsbara domäner i den här noden. Ytterliga
 ]
 ```
 
-Läs mer om [Hämtningsbara domäner](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/cli-reference/commerce-on-premises#downloadabledomainsadd).
+Läs mer om [Hämtningsbara domäner](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/cli-reference/commerce-on-premises#downloadabledomainsadd).
 
 ## installera
 
@@ -252,7 +252,7 @@ Meddelandekökonfigurationer är tillgängliga i den här noden. Du kan konfigur
 ]
 ```
 
-Läs mer om [Meddelandekö][message-queue].
+Läs mer om [Meddelandekö](https://developer.adobe.com/commerce/php/development/components/message-queues/).
 
 ## resurs
 
@@ -305,9 +305,6 @@ Med den här noden låser Commerce konfigurationsvärdena i filen `env.php` och 
 
 Läs mer i [env-php-config-set](../cli/set-configuration-values.md).
 
-<!-- Link definitions -->
-
-[message-queue]: https://developer.adobe.com/commerce/php/development/components/message-queues/
 
 
 ## Lägg till variabler i filkonfigurationen

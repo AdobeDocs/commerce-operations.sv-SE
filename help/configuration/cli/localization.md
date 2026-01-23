@@ -2,9 +2,9 @@
 title: Översättningsordlistor och språkpaket
 description: Lär dig hur du genererar översättningsordlistor och bygger språkpaket för Adobe Commerce. Upptäck lokalisering och flerspråkig lagringskonfiguration.
 exl-id: dd27ccdd-158d-40a6-a2e2-563857820ae9
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '1414'
 ht-degree: 0%
 
 ---
@@ -18,11 +18,11 @@ Med Commerce-översättningar kan ni anpassa och lokalisera er butik för flera 
 - **Översättningsordlistor**, som är ett praktiskt sätt att anpassa eller översätta _vissa_ ord och fraser, till exempel för en anpassad modul eller ett anpassat tema.
 - **Språkpaket** som gör att du kan översätta _några eller alla_ ord och fraser i Commerce-programmet.
 
-Se [Översättningar - översikt].
+Se [Översättningar - översikt](https://developer.adobe.com/commerce/frontend-core/guide/translations/).
 
 ## Generera en översättningsordlista
 
-Du kan generera en [översättningsordlista] om du vill anpassa befintliga strängar, översätta ord och fraser i en anpassad modul, lokalisera ett tema eller skapa språkpaket.
+Du kan generera en [översättningsordlista](https://developer.adobe.com/commerce/frontend-core/guide/translations/#translation-dictionaries) om du vill anpassa befintliga strängar, översätta ord och fraser i en anpassad modul, lokalisera ett tema eller skapa språkpaket.
 
 Om du vill börja översätta använder du ett kommando för att generera en CSV-ordlistefil med en insamlad lista över alla befintliga fraser och ord.
 
@@ -35,7 +35,7 @@ Så här genererar du ordlistan och börjar översättningen:
 
 1. Du kan paketera översättningsordlistorna i ett språkpaket och skicka paketet till Commerce Store-administratören.
 
-1. I Admin konfigurerar lagringsadministratören [översättningarna].
+1. I Admin konfigurerar lagringsadministratören [översättningarna](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-localize).
 
 Kommandoalternativ:
 
@@ -85,14 +85,14 @@ Ett exempel på översättning av en fras:
 
 ## Skapa ett språkpaket
 
-I motsats till en översättningsordlista kan du översätta några eller alla ord och fraser i Commerce-programmet med hjälp av ett språkpaket. Du kan översätta en viss komponent - som en modul eller ett tema - med hjälp av ett översättningslexikon. [Läs mer om språkpaket].
+I motsats till en översättningsordlista kan du översätta några eller alla ord och fraser i Commerce-programmet med hjälp av ett språkpaket. Du kan översätta en viss komponent - som en modul eller ett tema - med hjälp av ett översättningslexikon. [Läs mer om språkpaket](https://developer.adobe.com/commerce/frontend-core/guide/translations/#language-packages).
 
 I det här avsnittet beskrivs hur du skapar ett språkpaket som skriver CSV-filer till moduler och teman. Om du vill skapa ett språkpaket måste du utföra de uppgifter som beskrivs i följande avsnitt:
 
 1. [Samla in och översätta ord och fraser](#generate-a-translation-dictionary). (Parametern `--magento` krävs.)
 1. [Kör språkpaketkommandot](#run-the-language-package-command).
 1. [Skapa kataloger och filer](#create-directories-and-files).
-1. (Valfritt.) [Konfigurera flera paket för ett språk &#x200B;](#configure-multiple-packages-for-a-language).
+1. (Valfritt.) [Konfigurera flera paket för ett språk ](#configure-multiple-packages-for-a-language).
 
 ### Kör språkpaketkommandot
 
@@ -107,7 +107,7 @@ I följande tabell förklaras parametrarna och värdena för språkpaketkommando
 | Parameter | Värde | Obligatoriskt? |
 |--- |--- |--- |
 | `<source>` | Absolut filsystemsökväg och filnamn för en CSV-fil som innehåller den kombinerade översättningsordlistan och metainformation som krävs för att brytas ned till ett språkpaket.<br><br>Använd [`bin/magento i18n:collect-phrases`](#config-cli-subcommands-xlate-dict-dict) för att skapa CSV-filen och skapa sedan språkpaketet enligt beskrivningen i [Skapa kataloger och filer](#m2devgde-xlate-files). | Ja |
-| `<locale>` | [ISO 639-1] (språk) och [ISO 3166] (land)-identifierare för språk som används som filnamn för alla resulterande CSV-filer. Exempel: `de_DE`, `pt_PT`, `pt_BR`. | Ja |
+| `<locale>` | [ISO 639-1](https://www.iso.org/iso-639-language-codes.html) (språk) och [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) (land)-identifierare för språk som används som filnamn för alla resulterande CSV-filer. Exempel: `de_DE`, `pt_PT`, `pt_BR`. | Ja |
 | `-m --mode` | Om det finns en målfil anger om det befintliga språkpaketet ska ersättas eller om det ska sammanfogas med det nya språkpaketet. Sammanfogning åsidosätter befintliga fraser och lägger till nya.<br><br>Värden: sammanfoga eller ersätt (standard). | Nej |
 | `-d --allow-duplicates` | Inkludera det här alternativet om du vill tillåta dubbletter i språkpaketet. Annars misslyckas kommandot med ett fel om samma fras påträffas i flera poster med olika översättningar. | Nej |
 
@@ -117,12 +117,12 @@ Språkpaket finns i en katalog under `app/i18n/<VendorName>` i Commerce-filsyste
 
 - Nödvändiga licensfiler
 - `composer.json`
-- `registration.php` som [registrerar] språkpaketet
+- `registration.php` som [registrerar](https://developer.adobe.com/commerce/php/development/build/component-registration/) språkpaketet
 - [`language.xml`](#language-package-languagexml) metainformationsfil
 
 >[!INFO]
 >
->Du måste gemena hela banan. Se till exempel [`de_de`].
+>Du måste gemena hela banan. Se till exempel [`de_de`](https://github.com/magento/magento2/blob/2.4/app/i18n/Magento/de_DE/registration.php).
 
 Så här skapar du dessa filer:
 
@@ -131,8 +131,8 @@ Så här skapar du dessa filer:
    Commerce språkpaket finns till exempel i `app/i18n/magento`
 
 1. Lägg till nödvändiga licensfiler.
-1. Lägg till [`composer.json`] som anger beroenden för ditt språkpaket.
-1. Registrera språkpaketet med [`registration.php`]
+1. Lägg till [`composer.json`](https://developer.adobe.com/commerce/php/development/build/composer-integration/) som anger beroenden för ditt språkpaket.
+1. Registrera språkpaketet med [`registration.php`](https://developer.adobe.com/commerce/php/development/build/component-registration/)
 1. Lägg till `language.xml` metainformationsfil enligt beskrivningen i nästa avsnitt.
 
 #### Språk.xml
@@ -195,7 +195,7 @@ Om Commerce-programmet inte kan hitta ord eller fras i paketet `en_GB` söker de
 1. `<vendorname>/en_ca_package`
 1. `<vendorname>/en_us_package`
 
-Om du anger alla arv mellan språkpaketen kan det leda till att cirkulära arvskedjor skapas. Använd [Magento\Test\Integrity\App\Language\CircularDependencyTest] för att hitta och åtgärda sådana kedjor.
+Om du anger alla arv mellan språkpaketen kan det leda till att cirkulära arvskedjor skapas. Använd [Magento\Test\Integrity\App\Language\CircularDependencyTest](https://github.com/magento/magento2/blob/2.4/dev/tests/static/testsuite/Magento/Test/Integrity/App/Language/CircularDependencyTest.php) för att hitta och åtgärda sådana kedjor.
 
 ### Konfigurera flera paket för ett språk
 
@@ -312,16 +312,3 @@ Generera en CSV-fil på ungefär samma sätt som i föregående exempel, men i s
    </language>
    ```
 
-<!-- link definitions -->
-
-[Översättningar - översikt]: https://developer.adobe.com/commerce/frontend-core/guide/translations/
-[översättningsordlista]: https://developer.adobe.com/commerce/frontend-core/guide/translations/#translation-dictionaries
-[konfigurerar översättningarna]: https://experienceleague.adobe.com/sv/docs/commerce-admin/stores-sales/site-store/store-localize
-[Läs mer om språkpaket]: https://developer.adobe.com/commerce/frontend-core/guide/translations/#language-packages
-[ISO 639-1]: https://www.iso.org/iso-639-language-codes.html
-[ISO 3166]: https://www.iso.org/iso-3166-country-codes.html
-[register]: https://developer.adobe.com/commerce/php/development/build/component-registration/
-[&quot;de_de&quot;]: https://github.com/magento/magento2/blob/2.4/app/i18n/Magento/de_DE/registration.php
-[`Composer.json`]: https://developer.adobe.com/commerce/php/development/build/composer-integration/
-[&quot;registration.php&quot;]: https://developer.adobe.com/commerce/php/development/build/component-registration/
-[Magento\Test\Integrity\App\Language\CircularDependencyTest]: https://github.com/magento/magento2/blob/2.4/dev/tests/static/testsuite/Magento/Test/Integrity/App/Language/CircularDependencyTest.php

@@ -2,7 +2,7 @@
 title: Anpassa sökvägar för baskatalog
 description: Använd variabeln MAGE_DIRS för att ange en array med absoluta sökvägar.
 exl-id: ee8e1a3a-f1d4-412c-8767-16447113f0cd
-source-git-commit: 4116d0983edc797ce42d24e711fb5ecdbf8fdec9
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 0%
@@ -15,7 +15,7 @@ Miljövariabeln `MAGE_DIRS` gör att du kan ange anpassade baskatalogsökvägar 
 
 ## Ange MAGE_DIRS
 
-Ange en associativ array där nycklarna är konstanter från [\\Magento\\App\\Filesystem\\DirectoryList][directory-list] och värdena är absoluta sökvägar för kataloger eller deras URL-sökvägar.
+Ange en associativ array där nycklarna är konstanter från [\\Magento\\App\\Filesystem\\DirectoryList](https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/App/Filesystem/DirectoryList.php) och värdena är absoluta sökvägar för kataloger eller deras URL-sökvägar.
 
 Du kan ange `MAGE_DIRS` på något av följande sätt:
 
@@ -50,6 +50,3 @@ Du kan ange `MAGE_DIRS` på något av följande sätt:
 
 I det föregående exemplet ställs sökvägarna för katalogerna `[cache]` och `[media]` in på `/mnt/nfs/cache` respektive `/mnt/nfs/media`.
 
-<!-- link definitions -->
-
-[directory-list]: https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/App/Filesystem/DirectoryList.php

@@ -2,9 +2,9 @@
 title: Ändra öknings-ID
 description: Ändra ID för ökning för en Commerce-databasenhet.
 exl-id: 039fc34c-d9cf-42f4-af5d-16a26a3e8171
-source-git-commit: 2a45fe77d5a6fac089ae2c55d0ad047064dd07b0
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '365'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Du kan behöva ändra ID:t för ökning för nya DB-entiteter i följande fall:
 
 >[!INFO]
 >
->Du kan också åtgärda problemet med betalningsgateway för PayPal genom att tillåta flera betalningar per faktura-ID i PayPals Inställningar för betalningsmottagning. Se [PayPal-gateway avvisade begäran - dubblettfakturaproblem](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/payments/paypal-gateway-rejected-request-duplicate-invoice-issue.html?lang=sv-SE) i _kunskapsbasen_.
+>Du kan också åtgärda problemet med betalningsgateway för PayPal genom att tillåta flera betalningar per faktura-ID i PayPals Inställningar för betalningsmottagning. Se [PayPal-gateway avvisade begäran - dubblettfakturaproblem](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/payments/paypal-gateway-rejected-request-duplicate-invoice-issue.html) i _kunskapsbasen_.
 
 ## Krav på steg
 
@@ -70,10 +70,5 @@ Nästa order som placeras i butiken med `ID=1` får ID:t #100002000.
 Innan vi kör `ALTER TABLE`-frågan på en produktionsmiljö i Adobe Commerce i molninfrastrukturen rekommenderar vi att du utför följande steg:
 
 - Testa hela proceduren för att ändra tilläggs-ID i mellanlagringsmiljön
-- [Skapa en DB-säkerhetskopia] för att återställa din Production DB om fel uppstår
+- [Skapa en DB-säkerhetskopia](https://support.magento.com/hc/en-us/articles/360003254334) för att återställa din Production DB om fel uppstår
 
-<!-- Link Definitions -->
-
-[PayPal gateway rejected request - duplicate invoice issue]: https://support.magento.com/hc/en-us/articles/115002457473
-[Skapa en DB-säkerhetskopia]: https://support.magento.com/hc/en-us/articles/360003254334
-[alla versioner som stöds]

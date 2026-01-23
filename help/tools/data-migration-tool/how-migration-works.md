@@ -3,7 +3,7 @@ title: Så fungerar datamigrering
 description: Läs om datamigreringsprocessen mellan Magento 1 och Magento 2, inklusive terminologi, arbetsflödesdiagram och steg.
 exl-id: 821492dc-ee5b-4c4a-9479-680ee8c5756d
 topic: Commerce, Migration
-source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
 source-wordcount: '781'
 ht-degree: 0%
@@ -77,7 +77,7 @@ Vi har utvecklat **Magento 2[!DNL Data Migration Tool]** som hjälper dig att ef
 
 ### Tillägg och anpassad kod
 
-Vi har arbetat hårt med utvecklingscommunityn för att hjälpa dig använda dina Magento 1-tillägg i Magento 2. Nu kan vi presentera [Commerce Marketplace](https://marketplace.magento.com/), där du kan hämta eller köpa de senaste versionerna av dina favorittillägg.
+Vi har arbetat hårt med utvecklingscommunityn för att hjälpa dig använda dina Magento 1-tillägg i Magento 2. Nu kan vi presentera [Commerce Marketplace](https://commercemarketplace.adobe.com//), där du kan hämta eller köpa de senaste versionerna av dina favorittillägg.
 
 Mer information om hur du utvecklar tillägg för Magento 2 finns i [PHP Developer Guide](https://developer.adobe.com/commerce/php/development/).
 

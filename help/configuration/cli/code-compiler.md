@@ -2,7 +2,7 @@
 title: Kodkompilator
 description: Lär dig hur du kör Adobe Commerce-kodkompilatorn från kommandoraden. Upptäck kompileringsprocesser och optimeringstekniker.
 exl-id: 08dbf808-ea79-4956-a0bc-f464bb80eee7
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Kodkompileringen innehåller följande (ingen särskild ordning):
 - Databasgenerering av kod (genererad kod för API:er)
 - Generering av servicedataattribut (genererade tilläggsklasser för dataobjekt)
 
-Du hittar klasser för kodkompilering i namnutrymmet [\Magento\Setup\Module\Di\App\Task\Operation][operation].
+Du hittar klasser för kodkompilering i namnutrymmet [\Magento\Setup\Module\Di\App\Task\Operation](https://github.com/magento/magento2/blob/2.4.8/setup/src/Magento/Setup/Module/Di/App/Task/Operation).
 
 Så här kör du single-tenant-kompilatorn:
 
@@ -60,6 +60,3 @@ I vissa fall kanske du vill kompilera koden innan du installerar Commerce-progra
 
 Information om hur du kompilerar kod utan databas finns i [Distribuera statiska vyfiler utan att installera Magento](../cli/static-view-file-deployment.md).
 
-<!-- link definitions -->
-
-[operation]: https://github.com/magento/magento2/blob/2.4/setup/src/Magento/Setup/Module/Di/App/Task/Operation

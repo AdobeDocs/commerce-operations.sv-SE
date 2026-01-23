@@ -2,7 +2,7 @@
 title: Aktivera profilering
 description: Läs mer om hur du aktiverar MAGE-profilering för användning med analysverktygen.
 exl-id: a46289ed-16dc-4a72-84ff-85fe825dac11
-source-git-commit: 95ffff39d82cc9027fa633dffedf15193040802d
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
 source-wordcount: '373'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Med Commerce profilering kan man
 
   Du bör vara särskilt intresserad av listan över _oanvända beroenden_, som är objekt som skapades eftersom de begärdes i en konstruktor, men som aldrig användes (det vill säga ingen av deras metoder anropades). Därför går processortid och minne som använts för att skapa dessa beroenden förlorade.
 
-Commerce tillhandahåller basfunktionerna i [`Magento\Framework\Profiler`][profiler].
+Commerce tillhandahåller basfunktionerna i [`Magento\Framework\Profiler`](https://github.com/magento/magento2/blob/2.4.8/lib/internal/Magento/Framework/Profiler.php).
 
 Du kan aktivera och konfigurera profileraren med hjälp av en MAGE_PROFILER-variabel eller kommandoraden.
 
@@ -37,8 +37,8 @@ Du kan ange värdet för `MAGE_PROFILER` på något av de sätt som beskrivs i [
 
   Du kan använda något av följande värden för att aktivera en specifik profilerare:
 
-   - `csvfile` som använder [`Magento\Framework\Profiler\Driver\Standard\Output\Csvfile`][csvfile]
-   - Alla andra värden (förutom `2`), inklusive ett tomt värde som använder [`Magento\Framework\Profiler\Driver\Standard\Output\Html`][html]
+   - `csvfile` som använder [`Magento\Framework\Profiler\Driver\Standard\Output\Csvfile`](https://github.com/magento/magento2/blob/2.4.8/lib/internal/Magento/Framework/Profiler/Driver/Standard/Output/Csvfile.php)
+   - Alla andra värden (utom `2`), inklusive ett tomt värde som använder [`Magento\Framework\Profiler\Driver\Standard\Output\Html`](https://github.com/magento/magento2/blob/2.4.8/lib/internal/Magento/Framework/Profiler/Driver/Standard/Output/Html.php)
 
 - `2` om du vill aktivera beroendediagram.
 
@@ -81,8 +81,3 @@ Använd variabelalternativet om du vill aktivera beroendediagram.
    bin/magento dev:profiler:disable
    ```
 
-<!-- link definitions -->
-
-[csvfile]: https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Profiler/Driver/Standard/Output/Csvfile.php
-[html]: https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Profiler/Driver/Standard/Output/Html.php
-[profiler]: https://github.com/magento/magento2/blob/2.4/lib/internal/Magento/Framework/Profiler.php

@@ -2,9 +2,9 @@
 title: Ange värdet för bootstrap-parametrar
 description: Lär dig hur du ställer in bootstrap-parametrar för Commerce.
 exl-id: 4e1e4e5e-e1bc-49a5-8a2a-2e6b91ca9175
-source-git-commit: ca8dc855e0598d2c3d43afae2e055aa27035a09b
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '559'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ Du kan till exempel använda systemmiljövariabeln `MAGE_PROFILER` för att ange
 MAGE_PROFILER={firebug|csv|<custom value>}
 ```
 
-Ange variabeln med ett gränssnittsspecifikt kommando. Eftersom skal har olika syntax bör du läsa en referens som [unix.stackexchange.com][unix-stackx].
+Ange variabeln med ett gränssnittsspecifikt kommando. Eftersom skal har olika syntax bör du läsa en referens som [unix.stackexchange.com](https://unix.stackexchange.com/questions/117467/how-to-permanently-set-environmental-variables).
 
 Exempel på Bash-skal för CentOS:
 
@@ -57,7 +57,7 @@ I det här avsnittet beskrivs hur du anger läge för antingen Apache eller Ngin
 
 ### Nginx-inställning
 
-Se [Nginx-exempelkonfigurationen] på _GitHub_.
+Se [Nginx-exempelkonfigurationen](https://github.com/magento/magento2/blob/2.4/nginx.conf.sample#L16) på _GitHub_.
 
 ### Apache.htaccess-inställning
 
@@ -92,7 +92,7 @@ Du kan ändra `.htaccess` på följande platser, beroende på startpunkten till 
 
 Apache-webbservern stöder inställning av programläge med `mod_env` direktiv.
 
-Apache `mod_env`-direktivet skiljer sig något åt i [Apache version 2.2] och [Apache version 2.4].
+Apache `mod_env`-direktivet skiljer sig något åt i [Apache version 2.2](https://httpd.apache.org/docs/2.2/mod/mod_env.html#setenv) och [Apache version 2.4](https://httpd.apache.org/docs/2.4/mod/mod_env.html#setenv).
 
 De procedurer som följer visar hur du ställer in programläget i en virtuell Apache-värd. Det här är inte det enda sättet att använda `mod_env`-direktiv. Mer information finns i Apache-dokumentationen.
 
@@ -166,9 +166,3 @@ De procedurer som följer visar hur du ställer in programläget i en virtuell A
    - Ubuntu: `service apache2 restart`
    - CentOS: `service httpd restart`
 
-<!-- link definitions -->
-
-[Apache version 2.2]: https://httpd.apache.org/docs/2.2/mod/mod_env.html#setenv
-[Apache version 2.4]: https://httpd.apache.org/docs/2.4/mod/mod_env.html#setenv
-[Nginx-exempelkonfiguration]: https://github.com/magento/magento2/blob/2.4/nginx.conf.sample#L16
-[unix-stackx]: https://unix.stackexchange.com/questions/117467/how-to-permanently-set-environmental-variables

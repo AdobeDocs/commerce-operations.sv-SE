@@ -2,7 +2,7 @@
 title: Översikt över uppgraderingsprocessen
 description: Se hur du kan skydda din butik och arbeta effektivt genom att uppgradera ditt Adobe Commerce-projekt. Upptäck de bästa sätten att planera och genomföra uppgraderingar.
 exl-id: 40bd97ca-6648-40d4-9c61-7d159391976a
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 0%
@@ -54,7 +54,7 @@ Att fördröja eller fördröja uppgraderingen av plattformen beror ofta på den
 
 Det kan verka kontraintuitivt, men att utföra regelbundna plattformsuppdateringar kräver mindre insatser totalt sett än att göra ovanliga uppdateringar på grund av den samlade tekniska skuld som uppstår till följd av försening. Adobe arbetade nyligen tillsammans med en partner som har en återförsäljare som brukade göra uppgraderingar sällan och inkonsekvent (årligen eller längre). Genom att förändra hur de närmar sig uppgraderingar och följa ett regelbundet uppgraderingssätt som rekommenderas av Adobe under en tolvmånadersperiod kunde partnern spara kunden fyra veckors kumulativ utvecklingstid, arbetsinsats och därmed sammanhängande kostnader. Dessa kostnader kan sedan omdirigeras till initiativ som främjar tillväxt.
 
-När uppdateringarna utförs regelbundet blir ändringarna stegvisa och motsvarande uppgraderingsarbete speglar detta. När plattformsuppdateringar fördröjs under en längre period kan de bli mer involverade. Dessutom kan tillägg som du använder från [Adobe Commerce Marketplace](https://marketplace.magento.com/) och andra tredjepartsintegreringar också påverkas. Slutligen förlängs den tid det tar att undersöka, planera och genomföra en försenad uppgradering, vilket ger oundvikliga kostnader.
+När uppdateringarna utförs regelbundet blir ändringarna stegvisa och motsvarande uppgraderingsarbete speglar detta. När plattformsuppdateringar fördröjs under en längre period kan de bli mer involverade. Dessutom kan tillägg som du använder från [Adobe Commerce Marketplace](https://commercemarketplace.adobe.com//) och andra tredjepartsintegreringar också påverkas. Slutligen förlängs den tid det tar att undersöka, planera och genomföra en försenad uppgradering, vilket ger oundvikliga kostnader.
 
 Några av de allmänna faktorer som påverkar graden av arbete med att uppgradera ditt projekt är bland annat:
 

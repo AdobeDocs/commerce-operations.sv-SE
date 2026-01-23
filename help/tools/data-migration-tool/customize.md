@@ -3,7 +3,7 @@ title: Anpassa  [!DNL Data Migration Tool]
 description: Lär dig hur du anpassar  [!DNL Data Migration Tool]  för att överföra data som har skapats med tillägg mellan Magento 1 och Magento 2.
 exl-id: a5c1575f-9d77-416e-91fe-a82905ef2e1c
 topic: Commerce, Migration
-source-git-commit: e83e2359377f03506178c28f8b30993c172282c7
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
 source-wordcount: '836'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Konfigurera [!DNL Data Migration Tool]
 
-Ibland skiljer sig dataformatet och strukturen som skapas av [extensions](https://marketplace.magento.com/extensions.html) eller anpassad kod mellan Magento 1 och Magento 2. Använd tilläggspunkter i [!DNL Data Migration Tool] för att migrera dessa data. Om dataformatet och strukturen är desamma kan verktyget automatiskt migrera data utan att användaren behöver göra något.
+Ibland skiljer sig dataformatet och strukturen som skapas av [extensions](https://commercemarketplace.adobe.com//extensions.html) eller anpassad kod mellan Magento 1 och Magento 2. Använd tilläggspunkter i [!DNL Data Migration Tool] för att migrera dessa data. Om dataformatet och strukturen är desamma kan verktyget automatiskt migrera data utan att användaren behöver göra något.
 
 Under migreringen skannar och jämför [Kartsteget](technical-specification.md#map-step) alla Magento 1- och Magento 2-tabeller, inklusive de som skapats av tillägg. Om tabellerna är desamma migreras data automatiskt. Om tabellerna skiljer sig åt avslutas verktyget och användaren meddelas om detta.
 

@@ -2,9 +2,9 @@
 title: config.php-referens
 description: Lär dig mer om filvärdena och avsnitten för config.php för Adobe Commerce-konfiguration. Upptäck metodtips för moduler, omfattningar, systeminställningar och driftsättning.
 exl-id: 9b355d6d-ea66-480b-ad96-0ea9e7e61844
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
-source-wordcount: '158'
+source-wordcount: '156'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Innehåller en array med moduler och deras lägen. Om modulen är aktiverad är 
 ]
 ```
 
-Läs mer om [Moduler].
+Läs mer om [Moduler](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/create-module.html).
 
 ## omfattningar
 
@@ -82,7 +82,7 @@ Innehåller en array med scopets konfigurationsvärden. Den har följande delnod
 ]
 ```
 
-Läs mer om [Commerce-scope][scopes].
+Läs mer om [Commerce-scope](https://experienceleague.adobe.com/docs/commerce-admin/start/setup/websites-stores-views.html#scope-settings).
 
 ## system
 
@@ -120,10 +120,5 @@ Innehåller en array med värden för temakonfiguration.
 ]
 ```
 
-Läs mer om [Teman].
+Läs mer om [Teman](https://developer.adobe.com/commerce/frontend-core/guide/themes/create-storefront/).
 
-<!-- link definitions -->
-
-[Moduler]: https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/create-module.html?lang=sv-SE
-[scopes]: https://experienceleague.adobe.com/docs/commerce-admin/start/setup/websites-stores-views.html?lang=sv-SE#scope-settings
-[Teman]: https://developer.adobe.com/commerce/frontend-core/guide/themes/create-storefront/

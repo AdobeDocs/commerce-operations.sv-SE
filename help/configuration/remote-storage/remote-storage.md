@@ -3,7 +3,7 @@ title: Konfigurera fjärrlagring
 description: Lär dig hur du konfigurerar modulen Fjärrlagring för det lokala Commerce-programmet.
 feature: Configuration, Storage
 exl-id: 0428f889-46b0-44c9-8bd9-98c1be797011
-source-git-commit: 4caabd1578e56b74600441c9c779b7b2dfd06987
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
 source-wordcount: '521'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Om du aktiverar fjärrlagring kan det påverka din etablerade utvecklingsuppleve
 
 >[!INFO]
 >
->- Fjärrlagring finns endast för Commerce version 2.4.2 och senare. Se versionsinformationen för [2.4.2](https://experienceleague.adobe.com/sv/docs/commerce-operations/release/notes/magento-open-source/2-4-2).
+>- Fjärrlagring finns endast för Commerce version 2.4.2 och senare. Se versionsinformationen för [2.4.2](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/magento-open-source/2-4-2).
 >
 >- Fjärrlagringsmodulen har _begränsat_ stöd för Adobe Commerce i molninfrastrukturen. Adobe kan inte felsöka nätverkskortstjänsten från tredje part. Mer information om hur du implementerar fjärrlagring för molnprojekt finns i [Konfigurera fjärrlagring för Commerce i molninfrastruktur](cloud-support.md) .
 
@@ -38,7 +38,7 @@ Om du aktiverar fjärrlagring kan det påverka din etablerade utvecklingsuppleve
 
 ## Alternativ för fjärrlagring
 
-Du kan konfigurera fjärrlagring med alternativet `remote-storage` med kommandot [`setup` CLI &#x200B;](../../installation/tutorials/deployment.md). Alternativet `remote-storage` har följande syntax:
+Du kan konfigurera fjärrlagring med alternativet `remote-storage` med kommandot [`setup` CLI ](../../installation/tutorials/deployment.md). Alternativet `remote-storage` har följande syntax:
 
 ```text
 --remote-storage-<parameter-name>="<parameter-value>"
@@ -91,8 +91,5 @@ När du har aktiverat fjärrlagring för ett specifikt kort kan du använda CLI 
 
 >[!INFO]
 >
->Synkroniseringskommandot migrerar bara filer i katalogen `pub/media`, _inte_ import-/exportfilerna i katalogen `var`. Se [Schemalagd import/export](https://experienceleague.adobe.com/docs/commerce-admin/systems/data-transfer/data-scheduled-import-export.html?lang=sv-SE) i användarhandboken för _Commerce 2.4_.
+>Synkroniseringskommandot migrerar bara filer i katalogen `pub/media`, _inte_ import-/exportfilerna i katalogen `var`. Se [Schemalagd import/export](https://experienceleague.adobe.com/docs/commerce-admin/systems/data-transfer/data-scheduled-import-export.html) i användarhandboken för _Commerce 2.4_.
 
-<!-- link definitions -->
-
-[import-export]: https://docs.magento.com/user-guide/system/data-scheduled-import-export.html

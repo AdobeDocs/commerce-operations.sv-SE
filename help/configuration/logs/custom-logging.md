@@ -3,9 +3,9 @@ title: Anpassad loggning
 description: Lär dig hur du undersöker fel med anpassad loggning.
 feature: Configuration, Logs
 exl-id: 6c94ebcf-70df-4818-a17b-32512eba516d
-source-git-commit: 991bd5fb34a2ffe61aa194ec46e2b04b4ce5b3e7
+source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '390'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Adobe rekommenderar att centraliserad programloggning används av följande skä
 
 - Den gör att loggar kan lagras på en annan server än programservern och minskar I/O-diskåtgärder, vilket förenklar stödet för programservern.
 
-- Den gör bearbetningen av loggdata mer effektiv med hjälp av specialverktyg, som [Logstash], [Logplex] eller [fluentd], utan att påverka en produktionsserver.
+- Den gör bearbetningen av loggdata mer effektiv med hjälp av specialverktyg, som [Logstash](https://www.elastic.co/products/logstash), [Logplex](https://devcenter.heroku.com/articles/logplex) eller [fluentd](https://www.fluentd.org/), utan att påverka en produktionsserver.
 
   >[!INFO]
   >
@@ -28,13 +28,13 @@ Adobe rekommenderar att centraliserad programloggning används av följande skä
 
 ## PSR-3-kompatibilitet
 
-[PSR-3-standarden][laminas] definierar ett vanligt PHP-gränssnitt för loggning av bibliotek. Det främsta målet för PSR-3 är att tillåta bibliotek att ta emot ett `Psr\Log\LoggerInterface`-objekt och skriva loggar till det på ett enkelt och universellt sätt.
+[PSR-3-standarden](https://docs.laminas.dev/laminas-log/) definierar ett vanligt PHP-gränssnitt för loggning av bibliotek. Det främsta målet för PSR-3 är att tillåta bibliotek att ta emot ett `Psr\Log\LoggerInterface`-objekt och skriva loggar till det på ett enkelt och universellt sätt.
 
 Detta gör att implementeringen enkelt kan ersättas utan att du behöver oroa dig för att en sådan ersättning kan bryta programkoden. Det garanterar också att en anpassad komponent fungerar även när loggimplementeringen ändras i en framtida version av systemet.
 
 ## Monolog
 
-Commerce 2 uppfyller PSR-3-standarden. Som standard använder Commerce [Monolog]. Monolog har implementerats som en inställning för `Psr\Log\LoggerInterface` i Commerce-programmet [`di.xml`][di].
+Commerce 2 uppfyller PSR-3-standarden. Som standard använder Commerce [Monolog](https://github.com/Seldaek/monolog). Monolog har implementerats som en inställning för `Psr\Log\LoggerInterface` i Commerce-programmet [`di.xml`](https://github.com/magento/magento2/blob/2.4/app/etc/di.xml#L9).
 
 Monolog är en populär PHP-loggningslösning med ett stort antal hanterare som gör att du kan skapa avancerade loggningsstrategier. Här följer en sammanfattning av hur Monolog fungerar.
 
@@ -52,11 +52,3 @@ Loggmeddelanden kan behandlas på många olika sätt. Du kan till exempel lagra 
 
 Andra kanaler kan ha en annan uppsättning hanterare och logik.
 
-<!-- link definitions -->
-
-[di]: https://github.com/magento/magento2/blob/2.4/app/etc/di.xml#L9
-[fluentd]: https://www.fluentd.org/
-[laminas]: https://docs.laminas.dev/laminas-log/
-[Logplex]: https://devcenter.heroku.com/articles/logplex
-[Logstash]: https://www.elastic.co/products/logstash
-[Monolog]: https://github.com/Seldaek/monolog
