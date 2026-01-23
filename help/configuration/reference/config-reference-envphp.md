@@ -27,7 +27,7 @@ Filen `env.php` innehåller följande avsnitt:
 | `downloadable_domains` | Lista över hämtningsbara domäner |
 | `install` | Installationsdatum |
 | `lock` | Lås providerinställningar |
-| `MAGE_MODE` | Programläget [](../bootstrap/application-modes.md) |
+| `MAGE_MODE` | Programläget [&#128279;](../bootstrap/application-modes.md) |
 | `queue` | Inställningar för [Meddelandeköer](../queues/manage-message-queues.md) |
 | `resource` | Mappning av resursnamn till en anslutning |
 | `session` | Sessionslagringsdata |

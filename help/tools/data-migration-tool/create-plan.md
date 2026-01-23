@@ -34,7 +34,7 @@ Migrering är ett bra tillfälle att göra allvarliga ändringar och förbereda 
 
 * Installera Magento 2 (med alla moduler i den här versionen) och [!DNL Data Migration Tool] på ett system som uppfyller [systemkraven](../../installation/system-requirements.md)
 
-* Anpassa [!DNL Data Migration Tool]-koden om du vill hoppa över vissa data (som CMS-sidor, försäljningsregler) eller konvertera anpassningar under migreringen. Läs [!DNL Data Migration Tool]Tekniska specifikationer[ för ](technical-specification.md) om du vill veta mer om hur migreringen fungerar
+* Anpassa [!DNL Data Migration Tool]-koden om du vill hoppa över vissa data (som CMS-sidor, försäljningsregler) eller konvertera anpassningar under migreringen. Läs [!DNL Data Migration Tool]Tekniska specifikationer[&#x200B; för &#x200B;](technical-specification.md) om du vill veta mer om hur migreringen fungerar
 
 ## Steg 3: Torr körning
 

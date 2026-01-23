@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Konfigurera ett anpassat cron-jobb
 
-Den här stegvisa självstudiekursen visar hur du skapar ett anpassat cron-jobb och eventuellt en cron-grupp i en exempelmodul. Du kan använda en modul som du redan har eller så kan du använda en exempelmodul från [`magento2-samples`-databasen ](https://github.com/magento/magento2-samples).
+Den här stegvisa självstudiekursen visar hur du skapar ett anpassat cron-jobb och eventuellt en cron-grupp i en exempelmodul. Du kan använda en modul som du redan har eller så kan du använda en exempelmodul från [`magento2-samples`-databasen &#x200B;](https://github.com/magento/magento2-samples).
 
 Om du kör cron-jobbet läggs en rad till i tabellen `cron_schedule` med namnet på cron-jobbet `custom_cron`.
 
@@ -33,7 +33,7 @@ Om du redan har en exempelmodul kan du använda den. Hoppa över det här steget
 
 1. Logga in på din Commerce-server som, eller växla till, ägare av [filsystemet](../../installation/prerequisites/file-system/overview.md).
 1. Byt till en katalog som inte finns i programroten för Commerce (till exempel din arbetskatalog).
-1. Klona [`magento2-samples`-databasen ](https://github.com/magento/magento2-samples).
+1. Klona [`magento2-samples`-databasen &#x200B;](https://github.com/magento/magento2-samples).
 
    ```bash
    git clone git@github.com:magento/magento2-samples.git

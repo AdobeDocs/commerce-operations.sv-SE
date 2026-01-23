@@ -92,7 +92,7 @@ I det här avsnittet beskrivs hur du skapar ett språkpaket som skriver CSV-file
 1. [Samla in och översätta ord och fraser](#generate-a-translation-dictionary). (Parametern `--magento` krävs.)
 1. [Kör språkpaketkommandot](#run-the-language-package-command).
 1. [Skapa kataloger och filer](#create-directories-and-files).
-1. (Valfritt.) [Konfigurera flera paket för ett språk ](#configure-multiple-packages-for-a-language).
+1. (Valfritt.) [Konfigurera flera paket för ett språk &#x200B;](#configure-multiple-packages-for-a-language).
 
 ### Kör språkpaketkommandot
 

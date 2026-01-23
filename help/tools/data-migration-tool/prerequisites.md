@@ -44,6 +44,6 @@ Om binär loggning är aktiverat för din Magento 1-databas anger du den globala
 
 Migrera Magento 1-tilläggskod till Magento 2.
 
-Om du vill hitta de senaste tilläggsversionerna går du till [!DNL [Commerce Marketplace]](https://commercemarketplace.adobe.com//) eller kontaktar din tilläggsleverantör.
+Om du vill hitta de senaste tilläggsversionerna går du till [[!DNL [Commerce Marketplace]]](https://commercemarketplace.adobe.com//) eller kontaktar din tilläggsleverantör.
 
-Du kan också använda [!DNL [Code Migration Tool]](https://github.com/magento-commerce/code-migration/blob/develop/README.md).
+Du kan också använda [[!DNL [Code Migration Tool]]](https://github.com/magento-commerce/code-migration/blob/develop/README.md).

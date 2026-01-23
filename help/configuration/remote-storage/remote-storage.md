@@ -38,7 +38,7 @@ Om du aktiverar fjärrlagring kan det påverka din etablerade utvecklingsuppleve
 
 ## Alternativ för fjärrlagring
 
-Du kan konfigurera fjärrlagring med alternativet `remote-storage` med kommandot [`setup` CLI ](../../installation/tutorials/deployment.md). Alternativet `remote-storage` har följande syntax:
+Du kan konfigurera fjärrlagring med alternativet `remote-storage` med kommandot [`setup` CLI &#x200B;](../../installation/tutorials/deployment.md). Alternativet `remote-storage` har följande syntax:
 
 ```text
 --remote-storage-<parameter-name>="<parameter-value>"

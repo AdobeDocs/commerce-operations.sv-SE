@@ -73,7 +73,7 @@ location ~* \.(ico|jpg|jpeg|png|gif|svg|js|css|swf|eot|ttf|otf|woff|woff2)$ {
 
 ### Autentisering
 
-Om du använder åtkomstnycklar och hemliga nycklar i stället för [AWS IAM](https://aws.amazon.com/iam/) -roller måste du inkludera [`ngx_aws_auth` Nginx-modulen ](https://github.com/anomalizer/ngx_aws_auth).
+Om du använder åtkomstnycklar och hemliga nycklar i stället för [AWS IAM](https://aws.amazon.com/iam/) -roller måste du inkludera [`ngx_aws_auth` Nginx-modulen &#x200B;](https://github.com/anomalizer/ngx_aws_auth).
 
 ### Behörigheter
 
