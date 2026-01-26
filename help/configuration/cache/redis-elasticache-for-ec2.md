@@ -2,7 +2,7 @@
 title: Konfigurera Redis med AWS ElastiCache
 description: Läs om hur du använder AWS ElastiCache i stället för en lokal Redis-instans för Commerce-instanser som finns på EC2. Upptäck kommandoradskonfiguration, konfigurationsalternativ och valideringstekniker.
 feature: Configuration, Cache
-source-git-commit: 908796587e78b80d699354c0506ca948d0f37518
+source-git-commit: b66479ee1350d92c1d59212283222e5068c263a6
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 0%
@@ -20,7 +20,7 @@ Från och med Commerce 2.4.3 kan instanser som finns på Amazon EC2 använda en 
 
 ## Förutsättningar
 
-- **Skapa ett serverlöst Redis OSS-cacheminne** - Skapa Redis-cacheminnet i samma region och VPC för EC2-instansen från AWS Management Console. Instruktioner finns i [dokumentationen för AWS Elasticache]&#x200B;(https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/GettingStarted.serverless-redis.step1.html.
+- **Skapa ett serverlöst Redis OSS-cacheminne** - Skapa Redis-cacheminnet i samma region och VPC för EC2-instansen från AWS Management Console. Instruktioner finns i [dokumentationen för AWS Elasticache](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/GettingStarted.serverless-redis.step1.html).
 
 - **Verifiera anslutningen till din EC2 Commerce-instans**
 
