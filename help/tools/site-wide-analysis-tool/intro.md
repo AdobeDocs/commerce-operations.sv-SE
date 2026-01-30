@@ -25,7 +25,7 @@ Den här guiden ger en helhetsöversikt över [!DNL Site-Wide Analysis Tool]. De
 >
 >När du har tillämpat en rekommendation kan det ta några dagar innan den har uppdaterats på kontrollpanelen för analysverktyget för hela webbplatsen eller i den genererade rapporten.
 >
->[!DNL Site-Wide Analysis Tool] rapporterar om data på systemnivå. Rapporter om Adobe Commerce produkter, försäljning, marknadsföring och andra affärsprogramdata finns i [Adobe Commerce Reports](https://experienceleague.adobe.com/en/docs/commerce-admin/start/reporting/reports-menu).
+>[!DNL Site-Wide Analysis Tool] rapporterar om data på systemnivå. Rapporter om Adobe Commerce produkter, försäljning, marknadsföring och andra affärsprogramdata finns i [Adobe Commerce Reports](https://experienceleague.adobe.com/sv/docs/commerce-admin/start/reporting/reports-menu).
 
 ![Kontrollpanel för hela webbplatsanalysverktyget](../../assets/tools/swat-dashboard.png){zoomable="yes"}
 
@@ -37,17 +37,17 @@ Se den här [introduktionsvideon](https://www.youtube.com/watch?v=KW2R8ki_RG4) o
    - Visar den övergripande hälsan i systemet med meddelanden om identifierade problem och specifika rekommendationer efter prioritet.<br>
 Den innehåller också ett historiskt diagram som visar hur webbplatsens hälsa förändras över tid.
    - Visar **[!UICONTROL Security Center Widget]** som innehåller länkar till följande resurser:
-      - [Tech [!DNL Stack] Versionskompatibilitet med [!DNL end of life (EOL)]](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements)
-      - [Adobe säkerhetsbulletin](https://helpx.adobe.com/security/security-bulletin.html)
-      - [Rekommendationer från  [!DNL Security Scan Tool]](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan)
-      - [[!DNL Site-Wide Analysis Tool] Rekommendationer för bästa praxis för säkerhet](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/site-wide-analysis-tool/recommendations)
+      - [Tech [!DNL Stack] Versionskompatibilitet med [!DNL end of life (EOL)]](https://experienceleague.adobe.com/sv/docs/commerce-operations/installation-guide/system-requirements)
+      - [Adobe säkerhetsbulletin](https://helpx.adobe.com/se/security/security-bulletin.html)
+      - [Rekommendationer från  [!DNL Security Scan Tool]](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/security/security-scan)
+      - [[!DNL Site-Wide Analysis Tool] Rekommendationer för bästa praxis för säkerhet](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/site-wide-analysis-tool/recommendations)
 
 - **Information** - Tillhandahåller kundens kontaktinformation och en sammanfattning av aktuella biljetter med detaljerad information om varje installerad Adobe Commerce-produkt.
 
 - **Rekommendationer** - Tillhandahåller ett [hälsoindexspår för SWAT](#swat-health-index.md) för att spåra webbplatsens hälsa och visar rekommendationer baserade på bästa praxis för att hantera problem som upptäcks på din webbplats:
    - För ändringar som kräver en infrastrukturuppdatering skickar du en supportförfrågan.
    - Gör ändringarna själv för ändringar som kräver en programuppdatering.
-   - Om du vill göra ändringar som kräver manuell åtgärd, t.ex. en [koddistribution](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow), ber du systemadministratören eller utvecklarna om hjälp.
+   - Om du vill göra ändringar som kräver manuell åtgärd, t.ex. en [koddistribution](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow), ber du systemadministratören eller utvecklarna om hjälp.
 
 - **Undantag** - Visar en lista över fel som uppstått i programmet och som orsakas av onormala förhållanden utan felhanterare.
 
@@ -60,13 +60,13 @@ Den innehåller också ett historiskt diagram som visar hur webbplatsens hälsa 
 Se viktiga insikter om er webbplats på ett och samma ställe. [!DNL Site-Wide Analysis Tool] ger dig direktåtkomst till och information från [!UICONTROL Security Center Widget], [!DNL Upgrade Compatibility Tool] och [!DNL Managed Alerts].
 
 - **[!UICONTROL Security Center Widget]** - Visar säkerhetsinsikter för din webbplats.<br>
-Säkerhetsinformationen innehåller [&#x200B; Tech [!DNL Stack] Versionsefterlevnad med  [!DNL end of life (EOL)]](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirement), [Adobe Security Bulletin](https://helpx.adobe.com/security/security-bulletin.html), [Recommendations from the [!DNL Security Scan Tool]](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan), and [[!DNL Site-Wide Analysis Tool] Best Practice Security Recommendations](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/site-wide-analysis-tool/recommendations) .
+Säkerhetsinformationen innehåller [&#x200B; Tech [!DNL Stack] Versionsefterlevnad med  [!DNL end of life (EOL)]](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirement), [Adobe Security Bulletin](https://helpx.adobe.com/se/security/security-bulletin.html), [Recommendations from the [!DNL Security Scan Tool]](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/security/security-scan), and [[!DNL Site-Wide Analysis Tool] Best Practice Security Recommendations](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/site-wide-analysis-tool/recommendations) .
 
-  [[!DNL Security Scan Tool]](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan) förser Adobe Commerce- och Magento Open-Source-kunder med realtidsinsikter om butikens säkerhetsställning genom att proaktivt identifiera skadlig kod och varna dem om deras butik äventyras.
+  [[!DNL Security Scan Tool]](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/security/security-scan) förser Adobe Commerce- och Magento Open-Source-kunder med realtidsinsikter om butikens säkerhetsställning genom att proaktivt identifiera skadlig kod och varna dem om deras butik äventyras.
 
 - **[[!DNL Upgrade Compatibility Tool]](../../upgrade/upgrade-compatibility-tool/overview.md)** - Kontrollerar din Adobe Commerce-instans mot uppgraderingsversionen och flaggar viktiga problem, fel och varningar som ska åtgärdas innan uppgraderingen. Att åtgärda dessa problem effektiviserar uppgraderingsprocessen.&quot;
 
-- **[[!DNL Managed Alerts]](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce)** - Övervaka nyckelvärden (CPU, programprestanda, disk, minne och databashälsa) och tillhandahåller tydliga felsökningssteg som hjälper handlare att ligga steget före och undvika driftavbrott.
+- **[[!DNL Managed Alerts]](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce)** - Övervaka nyckelvärden (CPU, programprestanda, disk, minne och databashälsa) och tillhandahåller tydliga felsökningssteg som hjälper handlare att ligga steget före och undvika driftavbrott.
 
 ## Vem är den här guiden till?
 
