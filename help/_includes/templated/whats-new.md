@@ -23,7 +23,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.75 för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/acsd-68615">ACSD-68615 har lagts till: CLI för lagerreservationskompensation visade ett undantag om den bearbetade kombinationen hade ett order-ID som saknades </a>.</p>
+      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.75 för <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/acsd-68615">ACSD-68615 har lagts till: CLI för lagerreservationskompensation visade ett undantag om den bearbetade kombinationen hade ett order-ID som saknades </a>.</p>
 </td>
       <td>
         Nytt ämne, qpt
