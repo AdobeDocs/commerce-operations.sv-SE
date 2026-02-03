@@ -1,5 +1,5 @@
 ---
-source-git-commit: 48dfdd81992a82bf984c3e7b0f30f8e5a69ee735
+source-git-commit: 937e883e74d3a0b32a25dbdf3db0347398ef6ba3
 workflow-type: tm+mt
 source-wordcount: '8232'
 ht-degree: 0%
@@ -24,9 +24,7 @@ Använd guiden [&quot;Lägg till CLI-kommandon&quot;](https://developer.adobe.co
 
 Du kan anropa `bin/magento` CLI-kommandon med kortkommandon i stället för det fullständiga kommandonamnet. Du kan till exempel anropa `bin/magento setup:upgrade` med `bin/magento s:up`, `bin/magento s:upg`. Se [genvägssyntax](https://symfony.com/doc/current/components/console/usage.html#shortcut-syntax) om du vill veta hur du använder genvägar med ett CLI-kommando.
 
-Den här referensdokumentationen genereras från programmets källkod. Om du vill ändra dokumentationen bör du öppna
-en pull-begäran för motsvarande kommando i den relevanta [koddatabasen](https://github.com/magento). Se
-[Kodbidrag](https://developer.adobe.com/commerce/contributor/guides/code-contributions/) om du vill ha mer information.
+Den här referensdokumentationen genereras från programmets källkod. Om du vill ändra dokumentationen bör du öppna en pull-begäran för motsvarande kommando i den relevanta [koddatabasen](https://github.com/magento). Mer information finns i [Kodbidrag](https://developer.adobe.com/commerce/contributor/guides/code-contributions/).
 
 ### Globala alternativ
 
