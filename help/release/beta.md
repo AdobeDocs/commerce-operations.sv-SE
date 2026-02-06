@@ -2,9 +2,9 @@
 title: Beta-versioner
 description: Läs mer om betaversioner av Adobe Commerce och hur du deltar.
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
-source-git-commit: 937e883e74d3a0b32a25dbdf3db0347398ef6ba3
+source-git-commit: c5d43d79679a1036f207313464f2a43bc197a3b5
 workflow-type: tm+mt
-source-wordcount: '887'
+source-wordcount: '935'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,10 @@ Genom att få tidig tillgång till funktioner som Adobe utvecklar kan kunder och
 
 I följande avsnitt finns en lista med aktiva betaprogram.
 
+### Databaslagring för App Builder (offentlig Beta)
+
+[Databaslagring för App Builder](https://developer.adobe.com/app-builder/docs/guides/app_builder_guides/storage/database) är en ny hanterad, dokumentliknande datalager som är inbyggd i Adobe Developer App Builder och som ger dina Commerce-appar beständig, frågningsbar lagring för strukturerade JSON-data. Alla kunder med en App Builder-licens kan använda den här funktionen.
+
 ### Semantisk sökning: smartare, sammanhangsberoende shoppingupplevelser (privat beta)
 
 Semantisk sökning är en teknik för e-handelssökning som förstår *innebörden* bakom en kunders fråga, inte bara de exakta orden. Till skillnad från traditionell nyckelordsbaserad sökning, som ofta misslyckas när frågor innehåller okända eller felstavade termer, tolkar denna AI-baserade metod avsikter med att använda naturlig språkbearbetning och sammanhang för att leverera mer relevanta resultat.
@@ -43,9 +47,9 @@ Om du vill begära en inbjudan till betaprogrammet skickar du ett e-postmeddelan
 
 ### Patcheringstjänst för molnautomatisering (Private Beta)
 
-[Tjänsten &#x200B;](../tools/caps-tool/intro.md) Creative Cloud Automation Patching automatiserar processen för att tillämpa isolerade säkerhetspatchar i [Adobe Commerce på molninfrastrukturen](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/overview) -miljöer.
+[Tjänsten ](../tools/caps-tool/intro.md) Creative Cloud Automation Patching automatiserar processen för att tillämpa isolerade säkerhetspatchar i [Adobe Commerce på molninfrastrukturen](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview) -miljöer.
 
-I oktober 2025 kommer betaversionen av Cloud Automation Patching Service att läggas till på kontrollpanelen för [Site-Wide Analysis-verktyget](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/site-wide-analysis-tool/dashboard). Den här tjänsten stöder Commerce projektadministratörer med ett smidigt arbetsflöde för patchning som innefattar:
+I oktober 2025 kommer betaversionen av Cloud Automation Patching Service att läggas till på kontrollpanelen för [Site-Wide Analysis-verktyget](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/site-wide-analysis-tool/dashboard). Den här tjänsten stöder Commerce projektadministratörer med ett smidigt arbetsflöde för patchning som innefattar:
 
 - Automatiserad installation av korrigeringsfiler
 - Återställning
@@ -60,7 +64,7 @@ Betaversionen innehåller följande funktioner:
 
 >[!NOTE]
 >
->Eftersom tjänsten Cloud Automation Patching automatiskt tillämpar isolerade säkerhetspatchar måste du ha rollen [Contributor eller Project Admin](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/project/user-access) för att kunna använda den.
+>Eftersom tjänsten Cloud Automation Patching automatiskt tillämpar isolerade säkerhetspatchar måste du ha rollen [Contributor eller Project Admin](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/project/user-access) för att kunna använda den.
 
 Om du vill delta i den här betaversionen fyller du i och skickar [Cloud Automation Patching Service - Beta Sign-formulär](https://forms.office.com/r/3Wfxj5nPdB).
 
@@ -84,7 +88,7 @@ Alla Adobe Commerce Foundation alfa- och betaversioner innehåller alla ändring
 - Förbättringar i GraphQL
 - Allmänna felkorrigeringar av kvalitet
 - Bidrag från gemenskapen
-- Ändringar som krävs för kompatibilitet med [Adobe Commerce-tjänster](https://experienceleague.adobe.com/sv/docs/commerce/user-guides/home)
+- Ändringar som krävs för kompatibilitet med [Adobe Commerce-tjänster](https://experienceleague.adobe.com/en/docs/commerce/user-guides/home)
 
 #### Namngivningskonvention och schema
 
