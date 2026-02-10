@@ -4,9 +4,9 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 291262109cacaae5b4a749e50d1f7c8fa910b538
+source-git-commit: ef05d55e98557cb02e7d2ffb3a5c54a36be666b8
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '244'
 ht-degree: 0%
 
 ---
@@ -26,5 +26,5 @@ QPT v1.1.73 innehåller följande patchar:
 1. **ACSD-68206**: Felet korrigerades när GraphQL Application Server användes med funktionen **[!UICONTROL Rate Limiting]** med PHP-tillägget [!DNL Redis] installerat.
 1. **ACSD-68391**: Kategorirelaterade behörigheter tillämpas inte i **[!UICONTROL Quick Order]** och **[!UICONTROL Requisition Lists]**.
 1. **ACSD-68356**: [!DNL GraphQL] kundvagnsfrågan returnerar felaktigt rabattbelopp för virtuella offerter.
-1. **ACSD-68400**: Kvantiteten för det virtuella presentkortet visas inte korrekt i **[!UICONTROL Inventory reservation table]**.
+1. **ACSD-68400**: Kvantiteten för virtuellt presentkort återspeglas inte korrekt i lagerreservationstabellen.
 Använd menyn till vänster för att navigera till en viss korrigeringssida.
