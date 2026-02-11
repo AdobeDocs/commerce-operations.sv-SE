@@ -4,9 +4,9 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: d952deb1c82ce0d99c3e13909cfc18b7a48034c3
+source-git-commit: 588320e7221f492cd8c3f50e4175eadf4d1b7cfe
 workflow-type: tm+mt
-source-wordcount: '308'
+source-wordcount: '299'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ QPT v1.1.75 innehåller följande patchar:
 1. **ACSD-68451**: Korrigerar ett fel för flera webbplatser där en företagsadministratör loggar in på en webbplats, skapar ett icke-relaterat företag på en annan webbplats men är felaktigt länkat till det icke-närstående företaget.
 1. **ACSD-68490**: **[!UICONTROL Add New Attribute]**-knapp som är synlig för en begränsad administratör när en konfigurerbar produkt skapas.
 1. **ACSD-68517**: Korrigerar ett formuläröverföringsfel på sidorna för katalog- och katalogsökning.
-1. **ACSD-68573**: Korrigerar problemet där kategoribehörigheter inte tillämpades korrekt på kundens önskelisteobjekt. Efter korrigeringen visas önskelisteobjekten korrekt och sidnumreras både på webben och i GraphQL.
+1. **ACSD-68573**: Kategoribehörigheter tillämpades inte på kundens önskelisteobjekt, vilket orsakade felaktig visning och sidnumrering på webbutiken och i [!DNL GraphQL].
 1. **ACSD-68615**: Korrigerar problemet där CLI för kompensation för lagerreservation visade ett undantag om den bearbetade kombinationen saknade order-ID.
 1. **ACSD-68793**: Korrigerar ett fel där giltiga produkter nekades felaktigt när de tilldelades till en delad katalog.
 1. **ACSD-68925**: Korrigerar ett fel där svar för GraphQL-begäranden nu justeras mot GraphQL över HTTP-specifikationer. En 4XX-svarskod returneras när begäran inte kan tolkas, inte är auktoriserad eller stöter på ett allmänt problem om begäran tolkas.
