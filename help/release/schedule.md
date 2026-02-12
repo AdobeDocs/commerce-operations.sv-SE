@@ -2,9 +2,9 @@
 title: Schema för patchrelease
 description: Läs när Adobe planerar att släppa nya patchar och säkerhetskorrigeringar för Adobe Commerce.
 exl-id: ae1e09cd-966f-44a3-9e4d-b90bb838429d
-source-git-commit: 1c32f1e506cd3caefacbb250821da087e34c34ea
+source-git-commit: 8ee6404271170b19ff27a3ab64711061505494b3
 workflow-type: tm+mt
-source-wordcount: '337'
+source-wordcount: '336'
 ht-degree: 0%
 
 ---
@@ -18,13 +18,13 @@ Syftet med schemat är att ange datum när Adobe planerar att meddela att [korri
 
 >[!NOTE]
 >
->Mer information om nya funktioner, molninfrastruktur och utökningsmöjligheter finns i [versionsdokumentationen för Adobe Commerce Services](https://experienceleague.adobe.com/sv/docs/commerce/user-guides/release-information/release-notes-all).
+>Mer information om nya funktioner, molninfrastruktur och utökningsmöjligheter finns i [versionsdokumentationen för Adobe Commerce Services](https://experienceleague.adobe.com/en/docs/commerce/user-guides/release-information/release-notes-all).
 
 Förutom de schemalagda kvalitets-, säkerhets- och betatestarna på den här sidan ger Adobe tillgång till [enskilda korrigeringsfiler](versioning-policy.md#individual-patch) via [kvalitetskorrigeringsverktyget](../tools/quality-patches-tool/usage.md). Med verktyget kan du tillämpa, återställa och visa allmän information om alla enskilda korrigeringsfiler som är tillgängliga för den installerade versionen av Adobe Commerce.
 
-Adobe Commerce följer ett månadsschema för patch-releaser med följande strategi:
+Adobe Commerce patch-releaser släpps baserat på följande riktlinjer:
 
-- **Isolerade säkerhetskorrigeringar** - Individuella, icke-kumulativa [säkerhetskorrigeringar](versioning-policy.md#isolated-patch) kan släppas månadsvis och innehålla säkerhetskorrigeringar för alla [supportade](lifecycle-policy.md) versionsrader (inklusive reguljär och utökad support).
+- **Isolerade säkerhetskorrigeringar** - Individuella, icke-kumulativa [säkerhetskorrigeringar](versioning-policy.md#isolated-patch) släpps efter behov och innehåller säkerhetskorrigeringar för alla [supportade](lifecycle-policy.md) versionsrader (inklusive reguljär och utökad support).
 
 - **Säkerhetsuppdateringar** - [Säkerhetsuppdateringar](versioning-policy.md#security-patch-release) släpps årligen (maj) för alla [supportade](lifecycle-policy.md) versionsrader. Dessa korrigeringar innehåller alla tidigare släppta isolerade säkerhetskorrigeringar. Adobe kan släppa ytterligare säkerhetsuppdateringar i november om det behövs, men det är inte säkert.
 
@@ -43,10 +43,10 @@ Mer information finns i följande bild:
 
 Adobe meddelar sina kunder om nya patchar via följande kanaler:
 
-- [Adobe säkerhetsbulletiner och -anvisningar](https://helpx.adobe.com/se/security/security-bulletin.html#magento)
+- [Adobe säkerhetsbulletiner och -anvisningar](https://helpx.adobe.com/security/security-bulletin.html#magento)
 - E-post
 - Varningar i produkten
 
 >[!NOTE]
 >
-> Releasedatum för varje mindre version, korrigeringsfil och säkerhetsrelease samt datum för slutet av den vanliga supporten finns i [Releaserade versioner](https://experienceleague.adobe.com/sv/docs/commerce-operations/release/versions).
+> Releasedatum för varje mindre version, korrigeringsfil och säkerhetsrelease samt datum för slutet av den vanliga supporten finns i [Releaserade versioner](https://experienceleague.adobe.com/en/docs/commerce-operations/release/versions).
