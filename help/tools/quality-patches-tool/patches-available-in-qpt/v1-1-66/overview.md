@@ -4,7 +4,7 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 exl-id: b5b80bfa-a52c-466b-b95c-23590e850aed
-source-git-commit: 8e7cec268cf4d0022cf5037f5effcaa8a13b55ca
+source-git-commit: ac3f3b37b5c5705722b411f92be0ba21c6155449
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 0%
@@ -16,6 +16,7 @@ ht-degree: 0%
 Detta underavsnitt innehåller en detaljerad beskrivning av de problem som åtgärdats av de korrigeringar som är tillgängliga i [!DNL Quality Patches Tool] (QPT) v1.1.66.
 
 QPT v1.1.66 innehåller följande patchar:
+
 1. **ACP2E-3918**: Utcheckningsfel för företagskunder som använder upphämtning i butik.
 1. **ACP2E-3789**: Mediefiler dupliceras vid produktuppdatering via WebAPI.
 1. **ACSD-65750**: GraphQL-frågan &quot;route&quot; returnerade produkter i fel ordning i Page Builder-produkters innehållstyper.

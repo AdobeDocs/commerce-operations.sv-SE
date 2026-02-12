@@ -4,9 +4,9 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 exl-id: 74094036-cb1b-419f-b287-ca24d351a448
-source-git-commit: 9dd2ea9464a8e0fb9e45fea44e17d2ded0193ba9
+source-git-commit: ac3f3b37b5c5705722b411f92be0ba21c6155449
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '275'
 ht-degree: 0%
 
 ---
@@ -16,26 +16,21 @@ ht-degree: 0%
 Detta underavsnitt innehåller en detaljerad beskrivning av de problem som åtgärdats av de korrigeringar som är tillgängliga i [!DNL Quality Patches Tool] (QPT) v1.1.68.
 
 QPT v1.1.68 innehåller följande patchar:
+
 1. **ACSD-58131** Gammalt mediegalleri kan inte läsa in bilder på grund av en bildfil på 0 byte.
 1. **ACSD-62146**: Den valda faktureringsadressen försvinner på betalningssidan när adresssökning är aktiverad och&quot;Antal kundadresser gräns&quot; är 1.
-1. **[ACSD-62415](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-68/acsd-62415-adobe-commerce-backend-loads-categories-very-slowly.md)**: Adobe Commerce backend läser in kategorier mycket långsamt.
+1. **ACSD-62415**: Adobe Commerce backend läser in kategorier mycket långsamt.
 1. **ACSD-65938**: Presentkortsmeddelanden skickades även när det inte gick att skapa fakturan.
 1. **ACSD-66072**: Relaterade produkter returneras inte via GraphQL på produktinformationssidan på grund av ett internt serverfel när [!UICONTROL Related Products Rule] har konfigurerats.
 1. **ACSD-66082**: Det går inte att uppdatera färgrutebilden för en produkt via produktimport.
 1. **ACSD-66179**: Om du avbryter en faktura med betalningstypen &quot;Inte hämtning&quot; resulterar det i en 404-felsida.
-1. **ACSD-66233**: Administratörsanvändare kunde inte lägga till produkter i kategorier eftersom popup-fönstret Lägg till produkt inte lästes in.
+1. **ACSD-66233**: Administratörsanvändare kunde inte lägga till produkter i kategorier eftersom [!UICONTROL Add Product] popup inte lästes in.
 1. **ACSD-66506**: Ett backend-fel inträffar efter att delade katalogprodukter har tagits bort och omtilldelats.
-1. **ACSD-66865**: Om du sparar katalogprisregler blir indexerare ogiltiga och det finns ett alternativ till att indexera om endast berörda produkter.
-1. **ACSD-66233**: Administratörer kan inte lägga till produkter på grund av att produktlistan inte svarar.
-1. **ACSD-66506**: Ett serverdelsfel uppstod när tidigare tilldelade produkter i en delad katalog togs bort och nya tilldelades.
 1. **ACSD-66865**: Om du sparar en **[!UICONTROL Catalog Price Rule]** blir indexerare ogiltiga och du kan välja att indexera om endast berörda produkter.
 1. **ACSD-66889**: Fel vid omindexering av lager i CLI.
-1. **ACSD-66963**: `estimateTotals` mutation returnerar null för rabatter på virtuella produkter.
+1. **ACSD-66963**: `estimateTotals` mutation returnerar *null* för rabatter när en rabattkod används i en kundvagn med virtuella produkter.
 1. **ACSD-66965**: Utskriftsalternativet på sidan med rekvisitionslistan orsakar ett fel.
-1. **ACSD-67039**: Kundposter sparades inte på grund av valideringen av systemattributet rp_token.
-1. **ACSD-66963**: mutationen EstiateTotals returnerar null för rabatter när en rabattkod används i en kundvagn med virtuella produkter.
 1. **ACSD-66965**: **[!UICONTROL Print]** alternativet på **[!UICONTROL Requisition List]**-sidan orsakar ett fel.
 1. **ACSD-67039**: Kundposter sparades inte på grund av valideringen av systemattributet `rp_token`.
-
 
 Använd menyn till vänster för att navigera till en viss korrigeringssida.

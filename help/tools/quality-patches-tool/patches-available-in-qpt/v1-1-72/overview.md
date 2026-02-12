@@ -4,9 +4,9 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 43696165e24e39e25007b5864f8b0c3d0bcb92c2
+source-git-commit: ac3f3b37b5c5705722b411f92be0ba21c6155449
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '272'
 ht-degree: 0%
 
 ---
@@ -16,20 +16,21 @@ ht-degree: 0%
 Detta underavsnitt innehåller en detaljerad beskrivning av de problem som åtgärdats av de korrigeringar som finns i [!DNL Quality Patches Tool] (QPT) v1.1.72.
 
 QPT v1.1.72 innehåller följande patchar:
-1. **ACSD-68040**: Söksidan i klientdelen blir långsammare på [!DNL MariaDB] 10.6 med stor historik.
-1. **ACSD-67941**: GraphQL-begäranden med okända filternamn orsakar PHP-undantagsloggar.
-1. **ACSD-68064**: Dubblettposter skapas under schemalagda uppdateringar i miljöer med djupt kapslade kategorier.
+
 1. **ACSD-66807**: `report_viewed_product_index`-tabellen visar ett felaktigt antal produktsidesvisningar.
+1. **ACSD-67187**: Administratörsanvändare som är begränsade till icke-standardwebbplatser kan se felet *&quot;*Skapa minst en offentlig delad katalog för att fortsätta* och kan inte komma åt knappen **[!UICONTROL Add New Company]** i företagsrutnätet.
 1. **ACSD-67383**: Fel vid inloggning som kund med två företagsadministratörskonton i samma session.
+1. **ACSD-67424**: `updated_at` värdet i `GET /carts/search` [!DNL REST] API-svaret matchar inte värdet som visas i **[!UICONTROL Admin panel]** när Negotiable Quotes används.
 1. **ACSD-67518**: Avancerad rapportering genererar duplicerade rubrikrader när radantalet överskrider batchstorleken.
 1. **ACSD-67639**: Det går inte att skapa en kreditnota för paketprodukter med **[!UICONTROL Dynamic Price]** inställt på *No*.
+1. **ACSD-67696**: `media_gallery` poster returneras inte i produktnoden för kundvagnen i GraphQL efter en cachetömning.
+1. **ACSD-67941**: GraphQL-begäranden med okända filternamn orsakar PHP-undantagsloggar.
 1. **ACSD-67946**: I kundvagnsuppdateringen visas dubbla felbanderoller.
-1. **[ACSD-67696](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-67696.md)**: `media_gallery` poster returneras inte i produktnoden för kundvagnen i GraphQL efter en cachetömning.
-1. **ACSD-67946**: I kundvagnsuppdateringar visas dubbla felbanderoller.
 1. **ACSD-68011**: Icke-befintliga SKU:er som tilldelats till den delade katalogen via /V1/sharedCatalog/:id/assignProducts API.
-1. **ACSD-68118**: `customerCart` [!DNL GraphQL] -frågan returnerar felaktiga produktattributvärden för butiksvyn.
+1. **ACSD-68040**: Söksidan i klientdelen blir långsammare på [!DNL MariaDB] 10.6 med stor historik.
+1. **ACSD-68064**: Dubblettposter skapas under schemalagda uppdateringar i miljöer med djupt kapslade kategorier.
 1. **ACSD-68092**: Alternativ för paketprodukter går förlorade efter flera sparningar på grund av felaktig synkronisering mellan schemalagda uppdateringar och basproduktdata.
-1. **ACSD-67424**: `updated_at` värdet i `GET /carts/search` [!DNL REST] API-svaret matchar inte värdet som visas i **[!UICONTROL Admin panel]** när Negotiable Quotes används.
-1. **ACSD-67187**: Administratörsanvändare som är begränsade till icke-standardwebbplatser kan se felet *&quot;*Skapa minst en offentlig delad katalog för att fortsätta* och kan inte komma åt knappen **[!UICONTROL Add New Company]** i företagsrutnätet.
+1. **ACSD-68118**: `customerCart` [!DNL GraphQL] -frågan returnerar felaktiga produktattributvärden för butiksvyn.
+
 
 Använd menyn till vänster för att navigera till en viss korrigeringssida.
