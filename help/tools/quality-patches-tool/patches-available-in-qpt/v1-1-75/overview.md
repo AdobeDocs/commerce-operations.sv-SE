@@ -4,9 +4,9 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 6c107bbdddd733d4d2f8f5b710fceac664ad608f
+source-git-commit: f230c5fe7a2678f091dfff559c21bdb0d349b062
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '264'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Detta underavsnitt innehåller en detaljerad beskrivning av de problem som åtg�
 
 QPT v1.1.75 innehåller följande patchar:
 1. **ACSD-68289**: Korrigerar ett fel där fulltextsökning nu returnerar matchande produkter om det lägsta matchningsvillkoret uppfylls för alla sökbara fält tillsammans, i stället för att villkoret måste uppfyllas av ett enskilt fält.
-1. **ACSD-68359**: Korrigerar ett fel där det inte längre går att välja en butik vid utcheckning med **[!UICONTROL Pick in Store]** på grund av långa URL:er när många produkter finns i vagnen. Tidigare utlöste detta ett 414-fel som orsakats av alltför långa URL:er som genererats under en butiksförsäljning.
+1. **ACSD-68359**: Fel *414* har åtgärdats när **[!UICONTROL Pick in Store]** väljs med stora kundvagnar.
 1. **ACSD-68451**: Korrigerar ett fel för flera webbplatser där en företagsadministratör loggar in på en webbplats, skapar ett icke-relaterat företag på en annan webbplats men är felaktigt länkat till det icke-närstående företaget.
 1. **ACSD-68517**: Korrigerar ett formuläröverföringsfel på **[!UICONTROL Catalog]**- och **[!UICONTROL Catalog Search]**-sidor.
 1. **ACSD-68490**: **[!UICONTROL Add New Attribute]**-knapp som är synlig för en begränsad administratör när en konfigurerbar produkt skapas.
