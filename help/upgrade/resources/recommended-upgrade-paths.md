@@ -20,7 +20,7 @@ En e-handelsimplementering är en utveckling - den är aldrig riktigt färdig. F
 - Bättre upplevelser och verktyg för utvecklare
 - Möjlighet till djupare integrering med andra Adobe Experience Cloud-program
 
-För att ge våra handlare större flexibilitet vid planering av uppgraderingar uppdaterade vi nyligen Adobe Commerce [release schedule](../../release/schedule.md), förlängde 2.3 End of Support (EOS) och meddelade nya utökade supportalternativ för utvalda versioner av vår programvara. Mer information om de här uppdateringarna finns i [Utökat stöd för Adobe Commerce](https://business.adobe.com/blog/the-latest/adobe-announces-expanded-support).
+För att ge våra handlare större flexibilitet vid planering av uppgraderingar uppdaterade vi nyligen Adobe Commerce [release schedule](../../release/schedule.md), förlängde 2.3 End of Support (EOS) och meddelade nya utökade supportalternativ för utvalda versioner av vår programvara. Mer information om de här uppdateringarna finns i [Utökat stöd för Adobe Commerce](https://business.adobe.com/se/blog/the-latest/adobe-announces-expanded-support).
 
 Följande uppgraderingsalternativ rekommenderas av Adobe Commerce för att hålla webbplatsen säker och effektiv när du uppgraderar till en av de senaste versionerna.
 

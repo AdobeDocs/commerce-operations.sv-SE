@@ -23,7 +23,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.75 för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/acsd-68517">ACSD-68517 har lagts till: Korrigerar ett formuläröverföringsfel på sidorna för katalog- och katalogsökning </a>.</p>
+      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.75 för <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/acsd-68517">ACSD-68517 har lagts till: Korrigerar ett formuläröverföringsfel på sidorna för katalog- och katalogsökning </a>.</p>
 </td>
       <td>
         Nytt ämne, qpt
@@ -53,7 +53,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/8ee6404271170b19ff27a3ab64711061505494b3">bekräfta</a></td>
     </tr>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/overview">Översikt: QPT (Quality Patches Tool) v1.1.76</a> har lagts till.</p>
+      <td><p><a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/overview">Översikt: QPT (Quality Patches Tool) v1.1.76</a> har lagts till.</p>
 </td>
       <td>
         Nytt ämne, qpt

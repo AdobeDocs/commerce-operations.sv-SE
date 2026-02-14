@@ -71,7 +71,7 @@ Följande avsnitt innehåller information om bästa praxis för underhållsfasen
 | Bästa praxis | Beskrivning |
 |-------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | [Granska klientprestanda](frontend-performance.md) | Identifiera och åtgärda problem som negativt påverkar webbplatsens prestanda genom att använda verktyg för webbprestanda. |
-| [Klar, uppsättning, underhåll](https://business.adobe.com/blog/basics/ready-set-maintain) | Tips för att underhålla dina Adobe Commerce-sajter för att maximera affärsvärdet och drifttiden. |
+| [Klar, uppsättning, underhåll](https://business.adobe.com/se/blog/basics/ready-set-maintain) | Tips för att underhålla dina Adobe Commerce-sajter för att maximera affärsvärdet och drifttiden. |
 | [Använd  [!DNL Site-Wide Analysis Tool]](../../../tools/site-wide-analysis-tool/intro.md#integrations-with-other-adobe-commerce-support-tools) | Se viktiga insikter om Adobe Commerce webbplats på ett och samma ställe. |
 | [Övervaka prestanda, diskutrymme och loggar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/performance.html?lang=sv-SE) | Använd New Relic för att övervaka viktiga prestandainsikter om Adobe Commerce på molninfrastruktursajten. |
 | [Svara på säkerhetsincidenter](respond-to-security-incident.md) | Använd New Relic för att övervaka viktiga prestandainsikter om Adobe Commerce på molninfrastruktursajten. |

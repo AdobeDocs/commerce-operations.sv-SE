@@ -42,7 +42,7 @@ Följande avsnitt innehåller information om god praxis för planeringsfasen.
     <td>Konfigurera webbplatser, butiker och butiksvyer för att maximera webbplatsens prestanda.</td>
   </tr>
   <tr>
-    <td><a href="https://business.adobe.com/blog/how-to/the-usual-suspects-5-configuration-issues-to-maximize-your-peak-sales">Vanliga konfigurationsproblem</a></td>
+    <td><a href="https://business.adobe.com/se/blog/how-to/the-usual-suspects-5-configuration-issues-to-maximize-your-peak-sales">Vanliga konfigurationsproblem</a></td>
     <td>Åtgärda och förhindra de fem vanligaste konfigurationsproblemen för Adobe Commerce webbplatser.</td>
   </tr>
   <tr>

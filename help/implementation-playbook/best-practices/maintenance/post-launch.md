@@ -226,7 +226,7 @@ Följ de här huvudrutinerna för att se till att PCI-kompatibilitet upprätthå
 
 >[!TIP]
 >
->Detaljerad vägledning finns i [bästa praxis för underhåll](overview.md), [personalisering](https://business.adobe.com/blog/the-latest/adobe-commerce-continues-investment-in-composable-development-tools-and-ai-powered-personalization) och [funktionsutveckling](https://business.adobe.com/blog/the-latest/adobe-commerce-continues-investment-in-composable-development-tools-and-ai-powered-personalization).
+>Detaljerad vägledning finns i [bästa praxis för underhåll](overview.md), [personalisering](https://business.adobe.com/se/blog/the-latest/adobe-commerce-continues-investment-in-composable-development-tools-and-ai-powered-personalization) och [funktionsutveckling](https://business.adobe.com/se/blog/the-latest/adobe-commerce-continues-investment-in-composable-development-tools-and-ai-powered-personalization).
 
 ### Rapportering och analys
 
