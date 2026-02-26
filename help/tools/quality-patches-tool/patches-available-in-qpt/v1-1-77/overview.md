@@ -4,7 +4,7 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 4ee77d46bb32afcfd7fd12cfbc4a5111c247bed4
+source-git-commit: ba9d41179fe253634b9de3e3711c19b6fe797a69
 workflow-type: tm+mt
 source-wordcount: '191'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Detta underavsnitt innehåller en detaljerad beskrivning av de problem som åtg�
 QPT v1.1.77 innehåller följande patchar:
 
 1. **ACSD-63687**: Felaktiga priser visas på grund av [!DNL Redis] cacherensningsproblem.
-1. **ACSD-68341**: Flera `X‑Magento‑Vary` cookie-uppdateringar inträffar vid PDP-inläsning.
+1. **[ACSD-68341](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68341.md)**: Flera `X‑Magento‑Vary` cookie-uppdateringar inträffar vid PDP-inläsning.
 1. **ACSD-68537**: Utcheckningsprestanda försämras för många kundsegment.
 1. **ACSD-68664**: Det finns fel i den schemalagda uppdateringsförhandsgranskningen på anpassade lagringsdomäner.
 1. **ACSD-68759**: Fel vid skapande av kundkonto på arabiska språk när födelsedatum visas.
