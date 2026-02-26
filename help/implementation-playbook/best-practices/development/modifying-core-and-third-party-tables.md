@@ -5,9 +5,9 @@ role: Developer, Architect
 feature: Best Practices
 last-substantial-update: 2022-11-15T00:00:00Z
 exl-id: 9e7adaaa-b165-4293-aa98-5dc4b8c23022
-source-git-commit: d40de2f05147e6c58c15cd3cd59275cc91283162
+source-git-commit: a1357a85dc447c8a0f2d48ea4de1c6cf076a5de5
 workflow-type: tm+mt
-source-wordcount: '1420'
+source-wordcount: '1509'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ Två exempel på lagringsplatser är databastabeller och [!DNL Redis]. Det vikti
 
 Som utvecklare är det viktigt att alltid överväga att använda verktyg utanför din [!DNL Adobe Commerce]-miljö, till exempel GraphQL-nät och Adobe App Builder. De här verktygen kan hjälpa dig att behålla åtkomsten till data men påverkar inte centrala e-handelsprogrammet eller dess underliggande databastabeller. Med den här metoden kan du visa data via ett API. Sedan lägger du till en datakälla i din App Builder-konfiguration. Med GraphQL Mesh kan du kombinera dessa datakällor och skapa ett enda svar som nämns i [äldre data](#legacy-data).
 
-Mer information om GraphQL-nät finns i [GraphQL Mesh Gateway](https://developer.adobe.com/graphql-mesh-gateway/){target="_blank"}. Mer information om Adobe App Builder finns i [Introduktion till App Builder](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/introduction-app-builder.html?lang=sv-SE){target="_blank"}.
+Mer information om GraphQL-nät finns i [GraphQL Mesh Gateway](https://developer.adobe.com/graphql-mesh-gateway/){target="_blank"}. Mer information om Adobe App Builder finns i [Introduktion till App Builder](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/introduction-app-builder.html){target="_blank"}.
 
 ## Ändra en bastabell eller tredjepartstabell
 
@@ -73,7 +73,7 @@ Adobe rekommenderar att du följer de här stegen när du lägger till en kolumn
 
    Till exempel: `app/code/YourCompany/Customer`
 
-1. Skapa lämpliga filer för att aktivera modulen (se [Skapa en modul](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/create-module.html?lang=sv-SE){target="_blank"}).
+1. Skapa lämpliga filer för att aktivera modulen (se [Skapa en modul](https://experienceleague.adobe.com/docs/commerce-learn/tutorials/backend-development/create-module.html){target="_blank"}).
 
 1. Skapa en fil med namnet `db_schema.xml` i mappen `etc` och gör önskade ändringar.
 
@@ -152,3 +152,18 @@ MariaDB [magento]> SELECT DISTINCT TABLE_NAME FROM INFORMATION_SCHEMA.COLUMNS WH
 +------------------------+
 10 rows in set (0.020 sec)
 ```
+
+## Söka efter stora MySQL-tabeller
+
+Om du vill identifiera de stora tabellerna ansluter du till databasen enligt beskrivningen i artikeln [Anslut till databasen](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/configure/service/mysql#connect-to-the-database) och kör följande kommando. Använd `project_id` för produktionsmiljön. Använd `[project_id]_stg`, `[project_id]_stg2` för mellanlagringsmiljöer.
+
+```sql
+SELECT TABLE_NAME AS `Table`,
+  ROUND((DATA_LENGTH + INDEX_LENGTH) / 1024 / 1024) AS `Size (MB)`
+FROM information_schema.TABLES
+WHERE TABLE_SCHEMA = "<project_id>"
+ORDER BY (DATA_LENGTH + INDEX_LENGTH) DESC
+LIMIT 10;
+```
+
+Då visas de tio största tabellerna. Om du behöver se fler tabeller ökar du `LIMIT`-talet. Utan gräns visas alla tabeller (över 100). Den visar också storleken på varje tabell. Du kan granska listan och identifiera vilka tabeller som behöver åtgärdas utifrån storlek.
