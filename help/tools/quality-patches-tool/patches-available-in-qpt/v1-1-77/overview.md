@@ -4,9 +4,9 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: cb5efec8e323dbe49fe38a4cf2977718b28c835f
+source-git-commit: f7205d2558f79798cf25c7c51326eae9fcfa8d19
 workflow-type: tm+mt
-source-wordcount: '193'
+source-wordcount: '195'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,6 @@ QPT v1.1.77 innehåller följande patchar:
 1. **ACSD-69237**: `sales_*_async_insert` cron-jobb bearbetar bara 100 poster per körning.
 1. **[ACSD-69311](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-69311.md)**: Korrigerar felaktig momsberäkning i kreditnotor efter partiella återbetalningar från fakturor.
 1. **ACSD-69351**: Presentkortssaldon och utgångsdatum visas på felaktiga webbplatser.
-1. **ACSD-69494**: Async-återbetalningsbegäranden med `is_online` utlöser inte onlineåterbetalningar.
+1. **[ACSD-69494](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-69494.md)**: Korrigerar asynkrona återbetalningsbegäranden med `is_online` utlöser inte onlineåterbetalningar.
 
 Använd menyn till vänster för att navigera till en viss korrigeringssida.
