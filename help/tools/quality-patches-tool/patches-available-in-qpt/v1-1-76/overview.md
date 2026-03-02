@@ -4,9 +4,9 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: aeda6ddd9bac7e5f81329d9bd05ab8957ef2fb76
+source-git-commit: 27356acfca4b9e640478010579b0f419749930d3
 workflow-type: tm+mt
-source-wordcount: '472'
+source-wordcount: '481'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ QPT v1.1.76 innehåller följande patchar:
 1. **ACSD-69319**: Korrigerar ett fel där paketpriser inte indexerades korrekt när underordnade produkter lagrades under anpassade källor.
 1. **ACSD-69325**: Korrigerar ett fel där ändring av SKU-skiftläget gör att produkten inte finns i lager på butiken.
 1. **ACSD-69331**: Korrigerar ett fel där innehållsskapare i mediegalleriet inte kunde skapa mappar med bara behörigheten `create_folder`. Efter korrigeringen kan de skapa mappar som förväntat.
-1. **ACSD-69333**: Korrigerar ett fel där SKU-ändringar var tillåtna för produkter med en aktiv schemalagd uppdatering. Efter korrigeringen tillåts inte SKU-ändringar under aktiva uppdateringar. Sparningar misslyckas med ett tydligt fel och fältet admin-SKU är inaktiverat. Detta förhindrar MSI.
+1. **[ACSD-69333](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69333.md)**: Korrigerar ett fel där SKU-ändringar var tillåtna för produkter med en aktiv schemalagd uppdatering. Efter korrigeringen tillåts inte SKU-ändringar under aktiva uppdateringar. Sparningar misslyckas med ett tydligt fel och fältet admin-SKU är inaktiverat. Detta förhindrar inkonsekvenser i MSI-inventeringen som orsakas av SKU-ändringar under mellanlagringsåterställningar.
 1. **ACSD-69541**: Korrigerar ett fel där det inte gick att redigera produktkvantiteten i varukorgen via GraphQL om du reducerade en produkts kvantitet i administratören till mindre än vad som redan finns i en varukorg.
 
 Använd menyn till vänster för att navigera till en viss korrigeringssida.
