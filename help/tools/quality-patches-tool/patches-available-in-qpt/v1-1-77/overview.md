@@ -4,9 +4,9 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: da3647e87926e35309a138a9d9aff4dbf44a5334
+source-git-commit: 0e76a5bbc2d44dc8c7d77cb764e9376e5c4aa69f
 workflow-type: tm+mt
-source-wordcount: '197'
+source-wordcount: '199'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ QPT v1.1.77 innehåller följande patchar:
 1. **ACSD-68537**: Utcheckningsprestanda försämras för många kundsegment.
 1. **[ACSD-68664](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68664.md)**: Det finns fel i den schemalagda uppdateringsförhandsgranskningen på anpassade lagringsdomäner.
 1. **ACSD-68759**: Fel vid skapande av kundkonto på arabiska språk när födelsedatum visas.
-1. **ACSD-68892**: Inkonsekvent [!DNL Fastly] cachelagring av cachelagrade sidor.
+1. **[ACSD-68892](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68892.md)**: Korrigerar ett inkonsekvent [!DNL Fastly] cachelagringsbeteende för cachelagrade sidor.
 1. **ACSD-69016**: Specialpriset gäller inte för webbplatser med olika tidszoner.
 1. **ACSD-69020**: Konfigurerbara produkter visas i [!UICONTROL Page Builder] karuseller när underordnade produkter matchar filter.
 1. **ACSD-69237**: `sales_*_async_insert` cron-jobb bearbetar bara 100 poster per körning.
