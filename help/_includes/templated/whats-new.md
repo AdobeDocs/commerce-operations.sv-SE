@@ -1,7 +1,7 @@
 ---
-source-git-commit: 33cfe4844224ca4789849c3046e188ee60e704f3
+source-git-commit: 8da93e06da766532d496b6c288fa4724834c5051
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '1158'
 ht-degree: 1%
 
 ---
@@ -10,6 +10,150 @@ ht-degree: 1%
 ## Nyheter
 
 Den här sidan innehåller de ändringar som har gjorts under de senaste 60 dagarna. Vi utelämnar alla mindre uppdateringar, som kopieringsredigering, från den här listan.
+
+### 6 mars 2026
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>En detaljerad beskrivning av QPT 1.1.76-korrigeringen för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69308">ACSD-69308 har lagts till: Katalogprisreglerna tillämpades inte när <code class="language-plaintext highlighter-rouge">special_price</code> bara angavs på webbplatsnivå (inte vid Alla butiksvyer). Efter korrigeringen tillämpas katalogprisreglerna korrekt genom att kontrollera webbplatsens standardbutik först</a>.</p>
+</td>
+      <td>
+        Nytt ämne, qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/db07a5d6f991ff36536a4365ee88fa25062dbe43">bekräfta</a></td>
+    </tr>
+    <tr>
+      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.76 för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69541">ACSD-69541 har lagts till: Om du minskar en produkts kvantitet i administratören till mindre än vad som redan finns i en kundvagn går det inte att redigera produktkvantiteten i varukorgen via GraphQL</a>.</p>
+</td>
+      <td>
+        Nytt ämne, qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/b2b801b88aee7fc6c275be3fb32a2e75bbe6f20d">bekräfta</a></td>
+    </tr>
+    <tr>
+      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.77 för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-69020">ACSD-69020 har lagts till: Konfigurerbara produkter visas i Page Builder-karuseller när underordnade produkter matchar filter</a>.</p>
+</td>
+      <td>
+        Nytt ämne, qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/5ce526100a22243b91f75b8a52690e529b64b152">bekräfta</a></td>
+    </tr>
+    <tr>
+      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.76 för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69325">ACSD-69325 har lagts till: Om du ändrar SKU-skiftläget visades produkten vara i lager utanför lagret </a>.</p>
+</td>
+      <td>
+        Nytt ämne, qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/bceda2e729082e0dc81f7eb81838ca5c5049342d">bekräfta</a></td>
+    </tr>
+    <tr>
+      <td><p>Uppdaterade <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/beta">Beta-releaser</a> med två nya allmänna betaprogram: Marknadsföringsregler globalt och per katalogvy samt Produktrekommendationer globalt och per katalogvy.</p>
+</td>
+      <td>
+        Viktig uppdatering
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/5533640a3f0f648162ebfc3609eb4e35fd32f6d7">bekräfta</a></td>
+    </tr>
+  </tbody>
+</table>
+
+### 5 mars 2026
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.76 för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69129">ACSD-69129 har lagts till: Prisuppdateringen för REST API-nivå misslyckas efter att standardbaswebbplatsen har tagits bort och den sekundära webbplatsen används som standard</a>.</p>
+</td>
+      <td>
+        Nytt ämne, qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/06d33e9ed08e079365ac6ae6087e4bdf30bbf45e">bekräfta</a></td>
+    </tr>
+    <tr>
+      <td><p>En detaljerad beskrivning av QPT 1.1.76-korrigeringen för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-68410">ACSD-68410 har lagts till: Den köpbara offertutcheckningen innehåller oönskade kundvagnsartiklar</a>.</p>
+</td>
+      <td>
+        Nytt ämne, qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/123a0b7c2335fd27d6c8fabbb8a6520af2ac0c76">bekräfta</a></td>
+    </tr>
+    <tr>
+      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.77 för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68892">ACSD-68892 har lagts till: Inkonsekvent cachelagring av cachelagrade sidor på snabbnivå </a>.</p>
+</td>
+      <td>
+        Nytt ämne, qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/d727bea23f1a60b597bb795948eb924e76e869a5">bekräfta</a></td>
+    </tr>
+  </tbody>
+</table>
+
+### 3 mars 2026
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.77 för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-63687">ACSD-63687 har lagts till: Felaktiga priser visas på grund av problem med rensning av Redis-cache</a>.</p>
+</td>
+      <td>
+        Nytt ämne, qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/e8a9b37a61119e7604461c83f135a282b15a93ef">bekräfta</a></td>
+    </tr>
+    <tr>
+      <td><p>En detaljerad beskrivning av QPT 1.1.77-korrigeringen för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68664">ACSD-68664 har lagts till: Den schemalagda uppdateringsförhandsgranskningen innehåller fel på anpassade lagringsdomäner</a>.</p>
+</td>
+      <td>
+        Nytt ämne, qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/d0a57180c224fc7d1eba3e4e5b87a87ddb11d88c">bekräfta</a></td>
+    </tr>
+  </tbody>
+</table>
+
+### 2 mars 2026
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Beskrivning</th>
+      <th>Typ</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>En detaljerad beskrivning av QPT 1.1.76-korrigeringen för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69333">ACSD-69333 har lagts till: SKU-ändringar tillåts för produkter med en aktiv schemalagd uppdatering</a>.</p>
+</td>
+      <td>
+        Nytt ämne, qpt
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/b9ea11e00223a3c4a4cd5be1eca1a3175074124c">bekräfta</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 27 februari 2026
 
@@ -23,7 +167,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.77 för <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-69311">ACSD-69311 har lagts till: Felaktig momsberäkning i kreditnotor efter partiella återbetalningar från fakturor </a>.</p>
+      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.77 för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-69311">ACSD-69311 har lagts till: Felaktig momsberäkning i kreditnotor efter partiella återbetalningar från fakturor </a>.</p>
 </td>
       <td>
         Nytt ämne, qpt
@@ -31,7 +175,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/c6d81e7aeb4e2b4d2d5a140e9bf7b8c8ba5f5deb">bekräfta</a></td>
     </tr>
     <tr>
-      <td><p>En detaljerad beskrivning av QPT 1.1.77-korrigeringen för <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-69494">ACSD-69494 har lagts till: Async-återbetalningsbegäranden med is_online utlöser inte onlineåterbetalningar</a>.</p>
+      <td><p>En detaljerad beskrivning av QPT 1.1.77-korrigeringen för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-69494">ACSD-69494 har lagts till: Async-återbetalningsbegäranden med is_online utlöser inte onlineåterbetalningar</a>.</p>
 </td>
       <td>
         Nytt ämne, qpt
@@ -39,7 +183,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/29a5f90122336bde78ed00e778b43b7c56549eef">bekräfta</a></td>
     </tr>
     <tr>
-      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.77 för <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68537">ACSD-68537 har lagts till: Utcheckningsprestandan försämras med många kundsegment</a>.</p>
+      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.77 för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68537">ACSD-68537 har lagts till: Utcheckningsprestandan försämras med många kundsegment</a>.</p>
 </td>
       <td>
         Nytt ämne, qpt
@@ -61,7 +205,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>En detaljerad beskrivning av QPT 1.1.77-korrigeringen för <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68341">ACSD-68341 har lagts till: Flera X-Magento-Vary-cookie-uppdateringar inträffar vid PDP-inläsning</a>.</p>
+      <td><p>En detaljerad beskrivning av QPT 1.1.77-korrigeringen för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68341">ACSD-68341 har lagts till: Flera X-Magento-Vary-cookie-uppdateringar inträffar vid PDP-inläsning</a>.</p>
 </td>
       <td>
         Nytt ämne, qpt
@@ -83,7 +227,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/overview">Översikt: QPT (Quality Patches Tool) v1.1.77</a> har lagts till.</p>
+      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/overview">Översikt: QPT (Quality Patches Tool) v1.1.77</a> har lagts till.</p>
 </td>
       <td>
         Nytt ämne, qpt
@@ -105,7 +249,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>En detaljerad beskrivning av QPT 1.1.75-korrigeringen för <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/acsd-68359">ACSD-68359 har lagts till: Korrigerar 414-fel när du väljer Plocka i Store med stora kundvagnar</a>.</p>
+      <td><p>En detaljerad beskrivning av QPT 1.1.75-korrigeringen för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/acsd-68359">ACSD-68359 har lagts till: Korrigerar 414-fel när du väljer Plocka i Store med stora kundvagnar</a>.</p>
 </td>
       <td>
         Nytt ämne, qpt
@@ -127,7 +271,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.75 för <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/acsd-68517">ACSD-68517 har lagts till: Korrigerar ett formuläröverföringsfel på sidorna för katalog- och katalogsökning </a>.</p>
+      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.75 för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/acsd-68517">ACSD-68517 har lagts till: Korrigerar ett formuläröverföringsfel på sidorna för katalog- och katalogsökning </a>.</p>
 </td>
       <td>
         Nytt ämne, qpt
@@ -149,7 +293,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>Uppdaterade <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/release/planning/schedule">schemat för uppdatering</a> för att förtydliga riktlinjer och tidslinje för den aktuella versionen.</p>
+      <td><p>Uppdaterade <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/schedule">schemat för uppdatering</a> för att förtydliga riktlinjer och tidslinje för den aktuella versionen.</p>
 </td>
       <td>
         Teknik, feedback
@@ -157,7 +301,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/8ee6404271170b19ff27a3ab64711061505494b3">bekräfta</a></td>
     </tr>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/overview">Översikt: QPT (Quality Patches Tool) v1.1.76</a> har lagts till.</p>
+      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/overview">Översikt: QPT (Quality Patches Tool) v1.1.76</a> har lagts till.</p>
 </td>
       <td>
         Nytt ämne, qpt
@@ -179,7 +323,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.75 för <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/acsd-68573">ACSD-68573 har lagts till: Kategoribehörigheterna tillämpades inte korrekt på kundens önskelisteobjekt. Efter korrigeringen visas önskelisteobjekt korrekt och sidnumreras både på webben och i GraphQL</a>.</p>
+      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.75 för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/acsd-68573">ACSD-68573 har lagts till: Kategoribehörigheterna tillämpades inte korrekt på kundens önskelisteobjekt. Efter korrigeringen visas önskelisteobjekt korrekt och sidnumreras både på webben och i GraphQL</a>.</p>
 </td>
       <td>
         Nytt ämne, qpt
@@ -187,7 +331,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/19e5faea683395375efefe6fc57e0897392ef354">bekräfta</a></td>
     </tr>
     <tr>
-      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.75 för <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/acsd-68793">ACSD-68793 har lagts till: Giltiga produkter nekades felaktigt när de tilldelades till en delad katalog </a>.</p>
+      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.75 för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/acsd-68793">ACSD-68793 har lagts till: Giltiga produkter nekades felaktigt när de tilldelades till en delad katalog </a>.</p>
 </td>
       <td>
         Nytt ämne, qpt
@@ -209,7 +353,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>En detaljerad beskrivning av QPT 1.1.75-korrigeringen för <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/acsd-68925">ACSD-68925 har lagts till: Svaren för GraphQL-begäranden justeras nu efter GraphQL över HTTP-specifikationerna. En 4XX-svarskod returneras när begäran inte kan tolkas, inte är auktoriserad eller stöter på ett allmänt problem. Om begäran har tolkats: </a>.</p>
+      <td><p>En detaljerad beskrivning av QPT 1.1.75-korrigeringen för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/acsd-68925">ACSD-68925 har lagts till: Svaren för GraphQL-begäranden justeras nu efter GraphQL över HTTP-specifikationerna. En 4XX-svarskod returneras när begäran inte kan tolkas, inte är auktoriserad eller stöter på ett allmänt problem. Om begäran har tolkats: </a>.</p>
 </td>
       <td>
         Nytt ämne, qpt
@@ -217,7 +361,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/210a5038743bec986807d7dff5db31d74670461e">bekräfta</a></td>
     </tr>
     <tr>
-      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.75 för <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/acsd-68289">ACSD-68289 har lagts till: Fulltextsökning returnerar nu matchande produkter om det minsta matchningsvillkoret uppfylls i alla sökbara fält tillsammans, i stället för att villkoret måste uppfyllas av ett enskilt fält</a>.</p>
+      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.75 för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/acsd-68289">ACSD-68289 har lagts till: Fulltextsökning returnerar nu matchande produkter om det minsta matchningsvillkoret uppfylls i alla sökbara fält tillsammans, i stället för att villkoret måste uppfyllas av ett enskilt fält</a>.</p>
 </td>
       <td>
         Nytt ämne, qpt
@@ -239,7 +383,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.75 för <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/acsd-68451">ACSD-68451 har lagts till: Korrigerar ett fel för flera webbplatser där en företagsadministratör loggar in på en webbplats, skapar ett icke-relaterat företag på en annan webbplats, men är felaktigt länkat till det icke-närstående företaget</a>.</p>
+      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.75 för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/acsd-68451">ACSD-68451 har lagts till: Korrigerar ett fel för flera webbplatser där en företagsadministratör loggar in på en webbplats, skapar ett icke-relaterat företag på en annan webbplats, men är felaktigt länkat till det icke-närstående företaget</a>.</p>
 </td>
       <td>
         Nytt ämne, qpt
@@ -247,7 +391,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/74e1ed73b9574903f12fa27c2f1198a823c80651">bekräfta</a></td>
     </tr>
     <tr>
-      <td><p>Lagring av databaser har lagts till för App Builder (offentlig Beta) i <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/release/beta">Beta-utgåvor</a>.</p>
+      <td><p>Lagring av databaser har lagts till för App Builder (offentlig Beta) i <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/beta">Beta-utgåvor</a>.</p>
 </td>
       <td>
         Viktig uppdatering
@@ -269,7 +413,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.75 för <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/acsd-68615">ACSD-68615 har lagts till: CLI för lagerreservationskompensation visade ett undantag om den bearbetade kombinationen hade ett order-ID som saknades </a>.</p>
+      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.75 för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/acsd-68615">ACSD-68615 har lagts till: CLI för lagerreservationskompensation visade ett undantag om den bearbetade kombinationen hade ett order-ID som saknades </a>.</p>
 </td>
       <td>
         Nytt ämne, qpt
@@ -277,7 +421,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/c73feb1bb1d8e11220482f5ea51fa4427ecee201">bekräfta</a></td>
     </tr>
     <tr>
-      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.75 för <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/acsd-68490">ACSD-68490 har lagts till: Knappen"Lägg till nytt attribut" visas för en begränsad administratörsanvändare när en konfigurerbar produkt skapas</a>.</p>
+      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.75 för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/acsd-68490">ACSD-68490 har lagts till: Knappen"Lägg till nytt attribut" visas för en begränsad administratörsanvändare när en konfigurerbar produkt skapas</a>.</p>
 </td>
       <td>
         Nytt ämne, qpt
@@ -299,7 +443,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/overview">Översikt: QPT (Quality Patches Tool) v1.1.75</a> har lagts till.</p>
+      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/overview">Översikt: QPT (Quality Patches Tool) v1.1.75</a> har lagts till.</p>
 </td>
       <td>
         Nytt ämne, qpt
@@ -321,7 +465,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>Uppdaterade <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/release/planning/schedule">Commerce Patch-releaseschemat</a> för att återspegla 2026 års releaseplaner.</p>
+      <td><p>Uppdaterade <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/schedule">Commerce Patch-releaseschemat</a> för att återspegla 2026 års releaseplaner.</p>
 </td>
       <td>
         Teknik, feedback
@@ -351,7 +495,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/d45a1ea4357f3f14c5d6133225f0d74dee84c9a9">bekräfta</a></td>
     </tr>
     <tr>
-      <td><p>Uppdaterat Composer-beroende i <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/installation-guide/system-requirements">Systemkrav</a>:<br />- För grundversionerna 2.4.4-2.4.6 (bas och korrigeringar): uppdaterad till v2.2.26.<br />- För 2.4.7+ (bas- och korrigeringsfiler, inklusive 2.4.8 och 2.4.9-alfa-versioner): uppdaterat till v2.9.3.</p>
+      <td><p>Uppdaterat Composer-beroende i <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements">Systemkrav</a>:<br />- För grundversionerna 2.4.4-2.4.6 (bas och korrigeringar): uppdaterad till v2.2.26.<br />- För 2.4.7+ (bas- och korrigeringsfiler, inklusive 2.4.8 och 2.4.9-alfa-versioner): uppdaterat till v2.9.3.</p>
 </td>
       <td>
         Teknisk
@@ -373,7 +517,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p><a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-67/acsd-65935-customerorders-graphql-query-returned-an-internal-server-error-when-a-product-was-deleted">Detaljerad beskrivning av problemet som har åtgärdats med korrigeringsfilen ACSD-65935 i QPT 1.1.67-utgåvan</a> har lagts till.</p>
+      <td><p><a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-67/acsd-65935-customerorders-graphql-query-returned-an-internal-server-error-when-a-product-was-deleted">Detaljerad beskrivning av problemet som har åtgärdats med korrigeringsfilen ACSD-65935 i QPT 1.1.67-utgåvan</a> har lagts till.</p>
 </td>
       <td>
         Nytt ämne, qpt
@@ -381,7 +525,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/8921d17196230f97b6f940621e8236c5d85e1b9f">bekräfta</a></td>
     </tr>
     <tr>
-      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.73 för <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-73/acsd-68190">ACSD-68190 har lagts till: Rabatterna gäller inte, de tillämpade rabatterna visas inte korrekt i svaret på kundvagnen i GraphQL och rabatter som inte är kupongrabatter tas bort när kupongrabatt tas bort</a>.</p>
+      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.73 för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-73/acsd-68190">ACSD-68190 har lagts till: Rabatterna gäller inte, de tillämpade rabatterna visas inte korrekt i svaret på kundvagnen i GraphQL och rabatter som inte är kupongrabatter tas bort när kupongrabatt tas bort</a>.</p>
 </td>
       <td>
         Nytt ämne, qpt
@@ -403,7 +547,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>Composer 2.9 har lagts till som en version som stöds för Adobe Commerce 2.4.9, 2.4.8 och 2.4.7 i <a href="https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=sv-SE">Systemkraven</a> -dokumentationen.</p>
+      <td><p>Composer 2.9 har lagts till som en version som stöds för Adobe Commerce 2.4.9, 2.4.8 och 2.4.7 i <a href="https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html">Systemkraven</a> -dokumentationen.</p>
 </td>
       <td>
         Teknisk
