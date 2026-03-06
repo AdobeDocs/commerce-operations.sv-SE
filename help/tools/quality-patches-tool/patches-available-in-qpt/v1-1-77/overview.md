@@ -4,9 +4,9 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 0e76a5bbc2d44dc8c7d77cb764e9376e5c4aa69f
+source-git-commit: 7dd35627836160bf1e892ea920a21ddd107642ad
 workflow-type: tm+mt
-source-wordcount: '199'
+source-wordcount: '205'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ QPT v1.1.77 innehåller följande patchar:
 1. **ACSD-68759**: Fel vid skapande av kundkonto på arabiska språk när födelsedatum visas.
 1. **[ACSD-68892](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68892.md)**: Korrigerar ett inkonsekvent [!DNL Fastly] cachelagringsbeteende för cachelagrade sidor.
 1. **ACSD-69016**: Specialpriset gäller inte för webbplatser med olika tidszoner.
-1. **ACSD-69020**: Konfigurerbara produkter visas i [!UICONTROL Page Builder] karuseller när underordnade produkter matchar filter.
+1. **[ACSD-69020](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-69020.md)**: Korrigerar ett fel där konfigurerbara produkter visas i [!DNL Page Builder] produktserier när underordnade produkter matchar filtreringsvillkoren.
 1. **ACSD-69237**: `sales_*_async_insert` cron-jobb bearbetar bara 100 poster per körning.
 1. **ACSD-69311**: Korrigerar felaktig momsberäkning i kreditnotor efter partiella återbetalningar från fakturor.
 1. **ACSD-69351**: Presentkortssaldon och utgångsdatum visas på felaktiga webbplatser.
