@@ -4,7 +4,7 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 3196580876eaa90e79d98f0cd14cbccc841d0524
+source-git-commit: 59ae7d5e05395f123ad139bea4e022b26d310f1f
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 0%
@@ -26,7 +26,7 @@ QPT v1.1.76 innehåller följande patchar:
 1. **ACSD-69261**: Korrigerar ett problem där en kundprisregelkupong som konfigurerats för engångsbruk per kund återanvändes flera gånger på grund av felaktig hantering av attributet `times_used` i scenarier med partiell faktura och återstående kvantitetsåterkallning.
 1. **ACSD-69308**: Korrigerar ett fel där katalogprisreglerna inte tillämpades när `special_price` bara angavs på webbplatsnivå (inte på **[!UICONTROL All Store Views]**). Efter korrigeringen tillämpas katalogprisreglerna korrekt genom att kontrollera webbplatsens standardbutik först.
 1. **ACSD-69319**: Korrigerar ett fel där paketpriser inte indexerades korrekt när underordnade produkter lagrades under anpassade källor.
-1. **ACSD-69325**: Korrigerar ett fel där ändring av SKU-skiftläget gör att produkten inte finns i lager på butiken.
+1. **[ACSD-69325](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69325.md)**: Korrigerar ett fel där ändring av SKU-skiftläget gör att produkten inte finns i lager på butiken.
 1. **ACSD-69331**: Korrigerar ett fel där innehållsskapare i mediegalleriet inte kunde skapa mappar med bara behörigheten `create_folder`. Efter korrigeringen kan de skapa mappar som förväntat.
 1. **[ACSD-69333](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69333.md)**: Korrigerar ett fel där SKU-ändringar var tillåtna för produkter med en aktiv schemalagd uppdatering. Efter korrigeringen tillåts inte SKU-ändringar under aktiva uppdateringar. Sparningar misslyckas med ett tydligt fel och fältet admin-SKU är inaktiverat. Detta förhindrar inkonsekvenser i MSI-inventeringen som orsakas av SKU-ändringar under mellanlagringsåterställningar.
 1. **ACSD-69541**: Korrigerar ett fel där det inte gick att redigera produktkvantiteten i varukorgen via GraphQL om du reducerade en produkts kvantitet i administratören till mindre än vad som redan finns i en varukorg.
