@@ -2,9 +2,11 @@
 title: Beta-versioner
 description: Läs mer om betaversioner av Adobe Commerce och hur du deltar.
 exl-id: 662cb061-995f-4e09-a2ef-9e607cc0000b
-source-git-commit: c5d43d79679a1036f207313464f2a43bc197a3b5
+badgePaas: label="PaaS" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="Gäller endast Adobe Commerce i molnprojekt (Adobe-hanterad PaaS-infrastruktur) och lokala projekt."
+badgeSaas: label="SaaS" type="Positive" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="Gäller endast Adobe Commerce as a Cloud Service- och Adobe Commerce Optimizer-projekt (SaaS-infrastruktur som hanteras av Adobe)."
+source-git-commit: 6024fafd5cbe04455f29c4f5ae74fb4d7eda20d7
 workflow-type: tm+mt
-source-wordcount: '935'
+source-wordcount: '1395'
 ht-degree: 0%
 
 ---
@@ -18,7 +20,8 @@ Adobe Commerce betaprogram är ett sätt för handlare att få tillgång till be
 
 >[!IMPORTANT]
 >
->Beta-releaser kan innehålla defekter och tillhandahålls i befintligt skick utan någon garanti av något slag. Adobe har ingen skyldighet att upprätthålla, korrigera, uppdatera, ändra, modifiera eller på annat sätt ge support (via Adobe Support Services eller på annat sätt) för betaversioner. Kunderna rekommenderas att iaktta försiktighet och att inte på något sätt förlita sig på att betaversionerna och/eller tillhörande dokumentation eller material fungerar korrekt eller fungerar korrekt. Funktioner och API:er i betaversionen kan ändras utan föregående meddelande. Därför är all användning av betaversioner helt och hållet på kundens egen risk.
+>**Juridisk ansvarsfriskrivning**<br/>
+>Beta-releaser innehåller prereleasefunktioner och kod som kan innehålla defekter och som tillhandahålls i befintligt skick utan garantier av något slag. Adobe avgör själva om betaversioner ska vara tillgängliga eller inte. Adobe har ingen skyldighet att upprätthålla, korrigera, uppdatera, ändra, ändra, ge support (via Adobe Support Services eller på annat sätt) eller leverera sådana betaversioner vid ett visst datum. Om en betaversion blir allmänt tillgänglig kan den bli föremål för ytterligare villkor, inklusive gällande avgifter. Beta-releaser kan ändras utan föregående meddelande, inklusive att de upphör. Kunderna rekommenderas att iaktta försiktighet och inte på något sätt förlita sig på att betaversionerna fungerar oavbrutet eller felfritt eller fungerar som de ska.  Därför är all användning av betaversioner helt och hållet på kundens egen risk.
 
 ## Fördelar
 
@@ -28,11 +31,59 @@ Genom att få tidig tillgång till funktioner som Adobe utvecklar kan kunder och
 
 I följande avsnitt finns en lista med aktiva betaprogram.
 
+### Marknadsföringsregler globalt och per katalogvy (offentliga Beta)
+
+[!BADGE Endast SaaS]{type=Positive url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="Gäller endast Adobe Commerce as a Cloud Service- och Adobe Commerce Optimizer-projekt (SaaS-infrastruktur som hanteras av Adobe)."}
+
+Adobe Commerce Optimizer introducerar möjligheten att definiera försäljningsregler med flexibelt omfång, så att handlare kan tillämpa regler i alla katalogvyer eller omfång på dem i en viss katalogvy. Denna funktion förenklar hanteringen av försäljningsregler för handlare som driver flera butiker, varumärken eller språk. Med katalogvyspecifika regler kan handlare skräddarsy sökresultat och försäljningslogik för enskilda kanaler när de behöver lokaliserade eller varumärkesspecifika upplevelser. Om det finns katalogvyspecifika regler åsidosätter de den globala regeln för den vyn, vilket ger exakt kontroll samtidigt som effektiv konfigurationshantering bibehålls.
+
+**Viktiga fördelar**
+
+- Definiera försäljningsregler globalt för alla katalogvyer.
+- Åsidosätt regler för specifika katalogvyer när lokaliserade upplevelser krävs.
+- Minska antalet konfigurationsdubbletter i alla butiker.
+- Förbättra skalbarheten för implementeringar av flerspråkig och flerspråkig e-handel.
+
+Denna funktion förbättrar flexibiliteten och effektiviteten i försäljningen, vilket hjälper handlarna att leverera mer relevanta produktupptäckt i stor skala. Mer information finns i [försäljningsregler](https://experienceleague.adobe.com/en/docs/commerce/optimizer/merchandising/rules/add).
+
+>[!NOTE]
+>
+>Beta deltagare måste återskapa alla befintliga försäljningsregler för att kunna dra nytta av den nya katalogvyns omfång.
+
+Om du vill dela med dig av dina synpunkter när du använder den här betafunktionen skickar du ett e-postmeddelande till [commerce-storefront-services@adobe.com](mailto:commerce-storefront-services@adobe.com).
+
+### Produktrekommendationer globalt och per katalogvy (offentlig Beta)
+
+[!BADGE Endast SaaS]{type=Positive url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="Gäller endast Adobe Commerce as a Cloud Service- och Adobe Commerce Optimizer-projekt (SaaS-infrastruktur som hanteras av Adobe)."}
+
+Adobe Commerce Optimizer har förbättrat kontrollen över produktrekommendationskonfigurationen, vilket gör det möjligt för handlare att definiera rekommendationsenheter globalt i alla katalogvyer eller specifikt för enskilda katalogvyer.
+
+Den här funktionen förenklar rekommendationshantering för företag som har flera butiker, varumärken, regioner eller språk. Marknadsförare kan skapa en rekommendationsenhet en gång globalt och den gäller för alla katalogvyer, vilket säkerställer enhetliga strategier för produktupptäckt i alla kanaler. Samtidigt gör katalogvisningsspecifika rekommendationsenheter det möjligt för handlare att skräddarsy upplevelser för särskilda butiker vid behov.
+
+Storefront-interaktionshändelser och rekommendationsmått spåras på katalogvynivå, vilket ger mer korrekta insikter i kundbeteenden i olika butiker.
+
+**Viktiga fördelar**
+
+- Konfigurera produktrekommendationsenheter globalt för alla katalogvyer.
+- Skapa katalogvyspecifika rekommendationer för lokaliserade butiksupplevelser.
+- Minska antalet dubbletter i flera varumärken eller flerspråkiga butiker.
+- Få exaktare insikter med mätvärden och händelser som spåras av katalogvyn.
+
+Den här förbättringen hjälper handlare att leverera mer relevanta produktsökningsupplevelser samtidigt som det blir enklare att hantera rekommendationer i komplexa handelsmiljöer. Mer information finns i [rekommendationer](https://experienceleague.adobe.com/en/docs/commerce/optimizer/manage-results/recommendation-performance)
+
+>[!NOTE]
+>
+>Beta deltagare måste återskapa alla befintliga rekommendationsenheter för att kunna dra nytta av det nya katalogvisningsomfånget.
+
+Om du vill dela med dig av dina synpunkter när du använder den här betafunktionen skickar du ett e-postmeddelande till [commerce-storefront-services@adobe.com](mailto:commerce-storefront-services@adobe.com).
+
 ### Databaslagring för App Builder (offentlig Beta)
 
 [Databaslagring för App Builder](https://developer.adobe.com/app-builder/docs/guides/app_builder_guides/storage/database) är en ny hanterad, dokumentliknande datalager som är inbyggd i Adobe Developer App Builder och som ger dina Commerce-appar beständig, frågningsbar lagring för strukturerade JSON-data. Alla kunder med en App Builder-licens kan använda den här funktionen.
 
-### Semantisk sökning: smartare, sammanhangsberoende shoppingupplevelser (privat beta)
+### Semantisk sökning: smartare, sammanhangsberoende shoppingupplevelser (Private Beta)
+
+[!BADGE Endast SaaS]{type=Positive url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="Gäller endast Adobe Commerce as a Cloud Service- och Adobe Commerce Optimizer-projekt (SaaS-infrastruktur som hanteras av Adobe)."}
 
 Semantisk sökning är en teknik för e-handelssökning som förstår *innebörden* bakom en kunders fråga, inte bara de exakta orden. Till skillnad från traditionell nyckelordsbaserad sökning, som ofta misslyckas när frågor innehåller okända eller felstavade termer, tolkar denna AI-baserade metod avsikter med att använda naturlig språkbearbetning och sammanhang för att leverera mer relevanta resultat.
 
@@ -47,9 +98,11 @@ Om du vill begära en inbjudan till betaprogrammet skickar du ett e-postmeddelan
 
 ### Patcheringstjänst för molnautomatisering (Private Beta)
 
-[Tjänsten &#x200B;](../tools/caps-tool/intro.md) Creative Cloud Automation Patching automatiserar processen för att tillämpa isolerade säkerhetspatchar i [Adobe Commerce på molninfrastrukturen](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/overview) -miljöer.
+[!BADGE Endast PaaS]{type=Informative url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="Gäller endast Adobe Commerce i molnprojekt (Adobe-hanterad PaaS-infrastruktur) och lokala projekt."}
 
-I oktober 2025 kommer betaversionen av Cloud Automation Patching Service att läggas till på kontrollpanelen för [Site-Wide Analysis-verktyget](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/site-wide-analysis-tool/dashboard). Den här tjänsten stöder Commerce projektadministratörer med ett smidigt arbetsflöde för patchning som innefattar:
+[Tjänsten ](../tools/caps-tool/intro.md) Creative Cloud Automation Patching automatiserar processen för att tillämpa isolerade säkerhetspatchar i [Adobe Commerce på molninfrastrukturen](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview) -miljöer.
+
+I oktober 2025 kommer betaversionen av Cloud Automation Patching Service att läggas till på kontrollpanelen för [Site-Wide Analysis-verktyget](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/site-wide-analysis-tool/dashboard). Den här tjänsten stöder Commerce projektadministratörer med ett smidigt arbetsflöde för patchning som innefattar:
 
 - Automatiserad installation av korrigeringsfiler
 - Återställning
@@ -64,22 +117,13 @@ Betaversionen innehåller följande funktioner:
 
 >[!NOTE]
 >
->Eftersom tjänsten Cloud Automation Patching automatiskt tillämpar isolerade säkerhetspatchar måste du ha rollen [Contributor eller Project Admin](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/project/user-access) för att kunna använda den.
+>Eftersom tjänsten Cloud Automation Patching automatiskt tillämpar isolerade säkerhetspatchar måste du ha rollen [Contributor eller Project Admin](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/project/user-access) för att kunna använda den.
 
 Om du vill delta i den här betaversionen fyller du i och skickar [Cloud Automation Patching Service - Beta Sign-formulär](https://forms.office.com/r/3Wfxj5nPdB).
 
-### IBM Sterling Order Management System Integration (Private Beta)
-
-Integrationsacceleratorn för IBM Sterling Order Management gör det möjligt för Adobe Commerce-kunder att komma igång med avancerade orderhanteringsfunktioner som bygger på IBM Sterling OMS. Med den här integreringen får handlare:
-
-- Synlighet i realtid av lagernivåer och korrekta leveransdatum för era kunder.
-- Automatiserad anskaffning för beställningar baserat på konfigurerbara regler, så att ni kan optimera ert leveransnätverk och lager.
-- En universell vy över beställningar över flera kanaler från en enda kontrollpanel så att era supportteam kan leverera utomordentliga tjänster och snabbt identifiera och hantera undantag.
-- Ett mallat returhanteringsflöde som förenklar returhanteringen.
-
-Om du vill delta i betaversionen skickar du en e-postförfrågan till [sbieber@adobe.com](mailto:sbieber@adobe.com).
-
 ### Adobe Commerce Foundation (offentlig Alpha/Beta)
+
+[!BADGE Endast PaaS]{type=Informative url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="Gäller endast Adobe Commerce i molnprojekt (Adobe-hanterad PaaS-infrastruktur) och lokala projekt."}
 
 Alla Adobe Commerce Foundation alfa- och betaversioner innehåller alla ändringar som levererats till Adobe Commerce kärnkod vid det schemalagda releasedatumet, inklusive, men inte begränsat till, följande funktionsområden:
 
@@ -88,7 +132,7 @@ Alla Adobe Commerce Foundation alfa- och betaversioner innehåller alla ändring
 - Förbättringar i GraphQL
 - Allmänna felkorrigeringar av kvalitet
 - Bidrag från gemenskapen
-- Ändringar som krävs för kompatibilitet med [Adobe Commerce-tjänster](https://experienceleague.adobe.com/sv/docs/commerce/user-guides/home)
+- Ändringar som krävs för kompatibilitet med [Adobe Commerce-tjänster](https://experienceleague.adobe.com/en/docs/commerce/user-guides/home)
 
 #### Namngivningskonvention och schema
 
