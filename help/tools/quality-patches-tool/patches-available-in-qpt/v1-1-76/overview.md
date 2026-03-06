@@ -4,9 +4,9 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 59ae7d5e05395f123ad139bea4e022b26d310f1f
+source-git-commit: 9d24eeeeedc02e2e086560b5f18baa4a1a61b972
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '480'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ QPT v1.1.76 innehåller följande patchar:
 1. **ACSD-69319**: Korrigerar ett fel där paketpriser inte indexerades korrekt när underordnade produkter lagrades under anpassade källor.
 1. **[ACSD-69325](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69325.md)**: Korrigerar ett fel där ändring av SKU-skiftläget gör att produkten inte finns i lager på butiken.
 1. **ACSD-69331**: Korrigerar ett fel där innehållsskapare i mediegalleriet inte kunde skapa mappar med bara behörigheten `create_folder`. Efter korrigeringen kan de skapa mappar som förväntat.
+1. **[ACSD-69541](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69541.md)**: Korrigerar ett fel där en minskning av en produkts kvantitet i [!UICONTROL Admin] till mindre än den tidigare kvantiteten i en kundvagn stoppade möjligheten att redigera produktkvantiteten i kundvagnen via GraphQL.
 1. **[ACSD-69333](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69333.md)**: Korrigerar ett fel där SKU-ändringar var tillåtna för produkter med en aktiv schemalagd uppdatering. Efter korrigeringen tillåts inte SKU-ändringar under aktiva uppdateringar. Sparningar misslyckas med ett tydligt fel och fältet admin-SKU är inaktiverat. Detta förhindrar inkonsekvenser i MSI-inventeringen som orsakas av SKU-ändringar under mellanlagringsåterställningar.
-1. **ACSD-69541**: Korrigerar ett fel där det inte gick att redigera produktkvantiteten i varukorgen via GraphQL om du reducerade en produkts kvantitet i administratören till mindre än vad som redan finns i en varukorg.
 
 Använd menyn till vänster för att navigera till en viss korrigeringssida.
