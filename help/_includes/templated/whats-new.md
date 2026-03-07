@@ -23,7 +23,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
   </thead>
   <tbody>
     <tr>
-      <td><p>En detaljerad beskrivning av QPT 1.1.76-korrigeringen för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69308">ACSD-69308 har lagts till: Katalogprisreglerna tillämpades inte när <code class="language-plaintext highlighter-rouge">special_price</code> bara angavs på webbplatsnivå (inte vid Alla butiksvyer). Efter korrigeringen tillämpas katalogprisreglerna korrekt genom att kontrollera webbplatsens standardbutik först</a>.</p>
+      <td><p>En detaljerad beskrivning av QPT 1.1.76-korrigeringen för <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69308">ACSD-69308 har lagts till: Katalogprisreglerna tillämpades inte när <code class="language-plaintext highlighter-rouge">special_price</code> bara angavs på webbplatsnivå (inte vid Alla butiksvyer). Efter korrigeringen tillämpas katalogprisreglerna korrekt genom att kontrollera webbplatsens standardbutik först</a>.</p>
 </td>
       <td>
         Nytt ämne, qpt
@@ -31,7 +31,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/db07a5d6f991ff36536a4365ee88fa25062dbe43">bekräfta</a></td>
     </tr>
     <tr>
-      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.76 för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69541">ACSD-69541 har lagts till: Om du minskar en produkts kvantitet i administratören till mindre än vad som redan finns i en kundvagn går det inte att redigera produktkvantiteten i varukorgen via GraphQL</a>.</p>
+      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.76 för <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69541">ACSD-69541 har lagts till: Om du minskar en produkts kvantitet i administratören till mindre än vad som redan finns i en kundvagn går det inte att redigera produktkvantiteten i varukorgen via GraphQL</a>.</p>
 </td>
       <td>
         Nytt ämne, qpt
@@ -39,7 +39,7 @@ Den här sidan innehåller de ändringar som har gjorts under de senaste 60 daga
       <td><a href="https://github.com/AdobeDocs/commerce-operations.en/commit/b2b801b88aee7fc6c275be3fb32a2e75bbe6f20d">bekräfta</a></td>
     </tr>
     <tr>
-      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.77 för <a href="https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-69020">ACSD-69020 har lagts till: Konfigurerbara produkter visas i Page Builder-karuseller när underordnade produkter matchar filter</a>.</p>
+      <td><p>En detaljerad beskrivning av korrigeringen för QPT 1.1.77 för <a href="https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-69020">ACSD-69020 har lagts till: Konfigurerbara produkter visas i Page Builder-karuseller när underordnade produkter matchar filter</a>.</p>
 </td>
       <td>
         Nytt ämne, qpt
