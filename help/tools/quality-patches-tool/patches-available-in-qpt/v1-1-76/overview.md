@@ -4,7 +4,7 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 9b73f6e893a2d68029237407fa525e4d001960e9
+source-git-commit: 8eac0cdbf303e307b7734845c09c9d652d901d7b
 workflow-type: tm+mt
 source-wordcount: '465'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 Detta underavsnitt innehåller en detaljerad beskrivning av de problem som åtgärdats av de korrigeringar som finns i [!DNL Quality Patches Tool] (QPT) v1.1.76.
 
 QPT v1.1.76 innehåller följande patchar:
-1. **ACSD-67091**: Korrigerar det maximala skrivstorleksfelet för att säkerställa att katalogregelns produktindex rensas genom att implementera två raderingsstrategier som baseras på datavolym.
+1. **[ACSD-67091](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-67091.md)**: Korrigerar det maximala skrivstorleksfelet för att säkerställa att katalogregelns produktindex rensas genom att implementera två raderingsstrategier som baseras på datavolym.
 1. **ACSD-67370**: Korrigerar flera problem där felaktiga priser visades för paketprodukter på PDP/PLP och kundvagnssidan för butiker med flera valutor.
 1. **[ACSD-68410](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-68410.md)**: Korrigerar ett problem där en order för en överlåtbar offert felaktigt lägger till eller sammanfogar ytterligare kundvagnsrader i offerten. Produkterna läggs nu korrekt till i kundvagnen efter att du lämnat det sista steget i utcheckningen av en överlåtbar offert.
 1. **ACSD-69086**: Korrigerar problemet där cron-jobbet inte kan rensa ändringstabeller, vilket orsakar [!DNL Galera Cluster] krascher när stora mängder data hanteras.
