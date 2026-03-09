@@ -4,9 +4,9 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 8eac0cdbf303e307b7734845c09c9d652d901d7b
+source-git-commit: 535934d92c0bd8a0d029c2c9a6c06be161db266f
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '537'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,8 @@ QPT v1.1.76 innehåller följande patchar:
 1. **ACSD-69115**: Korrigerar ett fel där kundvagnsfel inte visades för administratörsanvändaren vid hantering av kundvagnen för en kund som tilldelats en icke-standardwebbplats.
 1. **[ACSD-69129](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69129.md)**: Korrigerar ett fel där borttagning av standardbaswebbplatsen och användning av den sekundära webbplatsen som standard resulterar i ett fel när nivåpriset för den sekundära webbplatsen skulle uppdateras via [!DNL REST] API.
 1. **ACSD-69203**: Korrigerar ett fel där widgeten **[!UICONTROL Products List]** returnerar felaktiga resultat när flera kategorier listades i kategorivillkoret.
+1. **[ACSD-69261](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69261.md)**: Korrigerar ett problem där en kundprisregelkupong som konfigurerats för engångsbruk per kund återanvändes flera gånger på grund av felaktig hantering av attributet `times_used` i scenarier med partiell faktura och återstående kvantitetsåterkallning.
+1. **ACSD-69308**: Korrigerar ett fel där katalogprisreglerna inte tillämpades när `special_price` bara angavs på webbplatsnivå (inte på **[!UICONTROL All Store Views]**). Efter korrigeringen tillämpas katalogprisreglerna korrekt genom att kontrollera webbplatsens standardbutik först.
 1. **ACSD-69261**: Korrigerar ett problem där en kundprisregelkupong som konfigurerats för engångsbruk per kund återanvändes flera gånger på grund av felaktig hantering av attributet `times_used` i scenarier med partiell faktura och återstående kvantitetsåterkallning.
 1. **[ACSD-69308](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69308.md)**: Korrigerar ett fel där katalogprisreglerna inte tillämpades när `special_price` bara angavs på webbplatsnivå (inte på **[!UICONTROL All Store Views]**).
 1. **ACSD-69319**: Korrigerar ett fel där paketpriser inte indexerades korrekt när underordnade produkter lagrades under anpassade källor.
