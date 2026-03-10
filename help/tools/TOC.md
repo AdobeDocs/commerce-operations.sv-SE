@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: 535934d92c0bd8a0d029c2c9a6c06be161db266f
+source-git-commit: 1a3b311c807730372a46083bea725d3a8ada0a4c
 workflow-type: tm+mt
-source-wordcount: '9354'
+source-wordcount: '9389'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 0%
    - [Hanterade varningar för Adobe Commerce: CPU-varningsmeddelanden](/help/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce-cpu-warning-alert.md)
 - Verktyget Kvalitetspatchar {#quality-patches-tool}
    - [[!DNL Quality Patches Tool]: Ett självbetjäningsverktyg för korrigeringar av kvalitet](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)
-   - [[!DNL Quality Patches Tool]: Sök efter patchar](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE){target="_blank"}
+   - [[!DNL Quality Patches Tool]: Sök efter patchar ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
    - [Användning](quality-patches-tool/usage.md)
    - [Versionsinformation](quality-patches-tool/release-notes.md)
    - Patchar tillgängliga i verktyget för kvalitetspatchar {#patches-available-in-qpt}
@@ -942,6 +942,7 @@ ht-degree: 0%
          - [ACSD-68490: Knappen [!UICONTROL Add New Attribute] som är synlig för en begränsad administratör när en konfigurerbar produkt skapas](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-75/acsd-68490.md)
       - v1.1.76 {#v1-1-76}
          - [Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.76](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/overview.md)
+         - [ACSD-67370: Felaktiga priser visades för paketprodukter på PDP/PLP och kundvagnssidan för butiker med flera valutor](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-67370.md)
          - [ACSD-69261: Kupong för engångspris återanvänds på grund av felaktig hantering av time_used i partiella faktura- och annulleringsflöden](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69261.md)
          - [ACSD-67091: Det går inte att rensa katalogregelns produktindex på grund av den maximala skrivstorleken vid stora borttagningar](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-67091.md)
          - [ACSD-69308: Katalogprisregler gäller inte när&quot;special_price&quot; har angetts på webbplatsnivå](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69308.md)
@@ -952,6 +953,7 @@ ht-degree: 0%
          - [ACSD-6933: SKU-ändringar tillåts för produkter med en aktiv schemalagd uppdatering](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-76/acsd-69333.md)
       - v1.1.77 {#v1-1-77}
          - [Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.77](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/overview.md)
+         - [ACSD-69351: Presentkortssaldon och utgångsdatum visas på felaktiga webbplatser](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-69351.md)
          - [ACSD-69020: Konfigurerbara produkter visas i  [!DNL Page Builder] karuseller när underordnade produkter matchar filter](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-69020.md)
          - [ACSD-68892: Inkonsekvent  [!DNL Fastly] cachningsbeteende för cachelagrade sidor](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68892.md)
          - [ACSD-68664: Den schemalagda uppdateringsförhandsgranskningen innehåller fel på anpassade lagringsdomäner](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68664.md)
@@ -963,6 +965,7 @@ ht-degree: 0%
    - [Leta efter Adobe Commerce-problem med verktyget för kvalitetskorrigeringar](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
 - Referens för kommandoradsverktyg {#cli-reference}
    - [Adobe Commerce (lokalt)](reference/commerce-on-premises.md)
+   - [Adobe Commerce Beta (lokalt)](reference/commerce-on-premises-beta.md)
    - [Kompatibilitetsverktyg för uppgradering](reference/uct.md)
 - Observation för Adobe Commerce {#observation-for-adobe-commerce}
    - [Introduktion](observation-for-adobe-commerce/intro.md)
@@ -979,7 +982,7 @@ ht-degree: 0%
    - [Fliken Varningar](observation-for-adobe-commerce/alerts-tab.md)
    - [Fliken WAF](observation-for-adobe-commerce/waf-tab.md)
    - [CDN-fliken](observation-for-adobe-commerce/cdn-tab.md)
-   - [Fliken  [!DNL RabbitMQ] &#x200B;](observation-for-adobe-commerce/rabbitmq-tab.md)
+   - [Fliken  [!DNL RabbitMQ] ](observation-for-adobe-commerce/rabbitmq-tab.md)
    - [Fliken Kron](observation-for-adobe-commerce/cron-tab.md)
    - [Fliken Indexering](observation-for-adobe-commerce/indexing-tab.md)
    - [Fliken QuickView](observation-for-adobe-commerce/oac-quickview-tab.md)
@@ -1007,6 +1010,6 @@ ht-degree: 0%
       - [Data som kräver manuell migrering](data-migration-tool/migrate-data/manual.md)
       - [Steg efter datamigrering](data-migration-tool/migrate-data/post-migration.md)
    - Resurs {#resources}
-      - [Felsökning](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html?lang=sv-SE)
+      - [Felsökning](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
       - [Ändra](https://github.com/magento/data-migration-tool/blob/2.4/CHANGELOG.md)
-- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=sv-SE)
+- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
