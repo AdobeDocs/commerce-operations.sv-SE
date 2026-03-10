@@ -1,7 +1,7 @@
 ---
-source-git-commit: 56974b4ada65c21ce1303e4b93bd8acb9fe41b28
+source-git-commit: 65a9bd667d434f1deae69798696f66998e6024a0
 workflow-type: tm+mt
-source-wordcount: '991'
+source-wordcount: '952'
 ht-degree: 0%
 
 ---
@@ -26,12 +26,6 @@ _ACP2E-4358 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/f7bb
 Som en del av den kontinuerliga säkerhetsgranskningen utvärderade vi den senaste större releasen av det gemensamma teknikramverket för att säkerställa framtida kompatibilitet och upprätthålla starka säkerhetsstandarder. Den här versionen har ingen effekt på befintliga funktioner.
 
 _AC-13209 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/2bac8114) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/09b36ebb) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/33b81f28)_
-
-#### [Del 2] - Uppdatera alla js-bibliotek och npm-beroende med den senaste tillgängliga versionen
-
-Stödet för dispositionsversionen var endast upp till dispositionsversion 2.2.x. Nu har stödet även utökats till version 2.4.x.
-
-_AC-13792 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/19844aa0)_
 
 #### Ersätt carlos-mg89/oauth med inbyggda PHP-funktioner
 
