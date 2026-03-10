@@ -4,9 +4,9 @@ description: I det här underavsnittet finns en detaljerad beskrivning av de pro
 feature: Tools and External Services
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 7dd35627836160bf1e892ea920a21ddd107642ad
+source-git-commit: 5ad8f9ce930ca8484c355561f8bfa2f19dba3e9c
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '221'
 ht-degree: 0%
 
 ---
@@ -26,8 +26,9 @@ QPT v1.1.77 innehåller följande patchar:
 1. **ACSD-69016**: Specialpriset gäller inte för webbplatser med olika tidszoner.
 1. **[ACSD-69020](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-69020.md)**: Korrigerar ett fel där konfigurerbara produkter visas i [!DNL Page Builder] produktserier när underordnade produkter matchar filtreringsvillkoren.
 1. **ACSD-69237**: `sales_*_async_insert` cron-jobb bearbetar bara 100 poster per körning.
+1. **ACSD-69351**: Korrigerar problemet där presentkortssaldon och utgångsdatum visas på felaktiga webbplatser.
 1. **ACSD-69311**: Korrigerar felaktig momsberäkning i kreditnotor efter partiella återbetalningar från fakturor.
-1. **ACSD-69351**: Presentkortssaldon och utgångsdatum visas på felaktiga webbplatser.
+1. **ACSD-69494**: Korrigerar asynkrona återbetalningsbegäranden med `is_online` utlöser inte onlineåterbetalningar.
 1. **[ACSD-69494](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-69494.md)**: Korrigerar asynkrona återbetalningsbegäranden med `is_online` utlöser inte onlineåterbetalningar.
 
 Använd menyn till vänster för att navigera till en viss korrigeringssida.
