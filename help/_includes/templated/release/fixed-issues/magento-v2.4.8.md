@@ -1,7 +1,7 @@
 ---
-source-git-commit: 1f377ab6e4dcdd2d350366f3889b8befd233474b
+source-git-commit: 4f2ca409bbad8b399e61577484a6e0d5a549d5c3
 workflow-type: tm+mt
-source-wordcount: '25720'
+source-wordcount: '25717'
 ht-degree: 0%
 
 ---
@@ -470,7 +470,7 @@ Kommandot `bin/magento i18n:collect-phrases -o` samlar nu in och lägger till ny
 
 _AC-9843 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/0c53bbf7)_
 
-#### Apostrof i butiksvyns namn ska ersättas med &#039;
+#### Apostrofens namn i butiksvyn ersätts med &#39;
 
 Filtren för att visa stödrastrets lagringsvy visar nu apostrofer korrekt
 
@@ -1878,7 +1878,7 @@ Systemet följer nu kodningsstandarden genom att ta bort den förbjudna taggen `
 
 _AC-8356 - [GitHub-problem](https://github.com/magento/magento2/issues/37250) - [GitHub-kodbidrag](https://github.com/magento/magento2/pull/37000)_
 
-#### Utrymme i syntaxbrytningsregel för redigerarconfig för `[&lbrace;composer,auth&rbrace;.json]`
+#### Utrymme i syntaxbrytningsregel för redigerarconfig för `[{composer,auth}.json]`
 
 Systemet tillämpar nu indrag med 4 blanksteg korrekt på Composer- och auth.json-filer, efter en korrigering av ett syntaxfel i EditorConfig. Tidigare formaterades dessa filer felaktigt med ett indrag med två blanksteg på grund av ett blanksteg i editorconfig-syntaxen.
 
@@ -2022,7 +2022,7 @@ Problemet har korrigerats efter att kontrollen tillämpats när en produktsökni
 
 _ACP2E-2653 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/12e071c3)_
 
-#### GraphQL Products-anropet som innehåller prisfiltret `&lbrace;from:&quot;0&quot;&rbrace;` returnerar inget resultat
+#### GraphQL Products-anropet som innehåller prisfiltret `{from:"0"}` returnerar inget resultat
 
 Tidigare sökning med grafikprocessorer med filter för nollpriser returnerade inga resultat alls på grund av ett utlöst undantag. Nu returnerar sökningen det förväntade resultatet.
 
@@ -2641,7 +2641,7 @@ Ett problem där mutationen addProductsToCart returnerade felet PRODUCT_NOT_FOUN
 
 _LYNX-469_
 
-#### Product attribute > trademark short form &trade; is returned as &trade;
+#### Product attribute > trademark short form ™ returned as ™
 
 Ett problem med teckenkodning med produktnamnet för GraphQL API har åtgärdats
 

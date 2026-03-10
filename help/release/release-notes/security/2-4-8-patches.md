@@ -2,9 +2,9 @@
 title: Adobe Commerce 2.4.8 Security Patch Release Notes
 description: Läs mer om säkerhetsfelkorrigeringar, säkerhetsförbättringar och andra säkerhetsrelaterade uppdateringar som ingår i säkerhetsuppdateringarna för Adobe Commerce version 2.4.7.
 exl-id: 5f8866ed-9215-4b2e-9c77-b2d474f6c1f9
-source-git-commit: e625670e741c0669050ab758d4f87c5ca06fe3df
+source-git-commit: a1a8e9192dbdccbc758be972612f8a8828202299
 workflow-type: tm+mt
-source-wordcount: '366'
+source-wordcount: '461'
 ht-degree: 0%
 
 ---
@@ -13,11 +13,29 @@ ht-degree: 0%
 
 {{$include /help/_includes/release-notes/security-patch-intro.md}}
 
+## 2.4.8-p4
+
+Säkerhetsutgåvan av Adobe Commerce 2.4.8-p4 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som identifierats i tidigare versioner av 2.4.8.
+
+{{b2b-patches}}
+
+### Högdagrar
+
+Den här versionen innehåller följande högdagrar:
+
+#### MyDHL REST API support for DHL shipping integration
+
+Integreringen av DHL-leverans stöder nu även MyDHL REST API:er utöver den befintliga XML-integreringen med DHL Express. Uppdateringen är anpassad efter DHL:s aktuella API-stack och förbereder borttagning av de äldre XML-API:erna.
+
+#### Lägg till kompatibilitet med den senaste Composer-versionen
+
+Adobe Commerce 2.4.8 har uppdaterats med stöd för Composer 2.9.x och är fortfarande kompatibelt med Composer 2.2 LTS.
+
 ## 2.4.8-p3
 
 Säkerhetsutgåvan av Adobe Commerce 2.4.8-p3 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som identifierats i tidigare versioner av 2.4.8.
 
-Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB25-94](https://helpx.adobe.com/se/security/products/magento/apsb25-94.html).
+Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB25-94](https://helpx.adobe.com/security/products/magento/apsb25-94.html).
 
 {{b2b-patches}}
 
@@ -43,7 +61,7 @@ Den här versionen innehåller följande högdagrar:
 
 Säkerhetsutgåvan av Adobe Commerce 2.4.8-p2 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som identifierats i tidigare versioner av 2.4.8.
 
-Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB25-71](https://helpx.adobe.com/se/security/products/magento/apsb25-71.html).
+Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB25-71](https://helpx.adobe.com/security/products/magento/apsb25-71.html).
 
 {{b2b-patches}}
 
@@ -51,7 +69,7 @@ Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerh
 
 Säkerhetsutgåvan av Adobe Commerce 2.4.8-p1 innehåller säkerhetsfelkorrigeringar för säkerhetsluckor som identifierats i tidigare versioner av 2.4.8.
 
-Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB25-50](https://helpx.adobe.com/se/security/products/magento/apsb25-50.html).
+Den senaste informationen om säkerhetsfelkorrigeringarna finns i [Adobe säkerhetsbulletin APSB25-50](https://helpx.adobe.com/security/products/magento/apsb25-50.html).
 
 {{b2b-patches}}
 
@@ -75,8 +93,8 @@ Den här versionen innehåller följande högdagrar:
 
 >[!BEGINSHADEBOX]
 
-Korrigeringarna för CVE-2025-47110 och VULN-31547 finns också tillgängliga som en isolerad korrigering. Mer information finns i [kunskapsbasartikeln](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-50).
+Korrigeringarna för CVE-2025-47110 och VULN-31547 finns också tillgängliga som en isolerad korrigering. Mer information finns i [kunskapsbasartikeln](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-50).
 
 >[!ENDSHADEBOX]
 
-<!-- Last updated from includes: 2025-10-22 11:16:25 -->
+<!-- Last updated from includes: 2026-02-20 15:30:03 -->
