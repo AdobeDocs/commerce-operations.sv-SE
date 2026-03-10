@@ -3487,7 +3487,7 @@ _ACP2E-4226_
 
 #### Det går inte att navigera mellan webbplatser i förhandsversionen av schemauppdateringen
 
-Före den här korrigeringen bryts förhandsgranskningen av den schemalagda uppdateringen när innehåll för butiker med anpassade domäner förhandsgranskas. Efter den här korrigeringen kan anpassade butiksdomäner förhandsgranskas som de är och navigeras i förhandsvisningsbildrutan. Korrigeringen omfattar produkter, kategorier, CMS-sidor och CMS-block, och stöder navigeringslänkar med `{{store url}}`-taggar enligt [Adobe Commerce Variables and Markup Tags &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/variables/markup-tags).
+Före den här korrigeringen bryts förhandsgranskningen av den schemalagda uppdateringen när innehåll för butiker med anpassade domäner förhandsgranskas. Efter den här korrigeringen kan anpassade butiksdomäner förhandsgranskas som de är och navigeras i förhandsvisningsbildrutan. Korrigeringen omfattar produkter, kategorier, CMS-sidor och CMS-block, och stöder navigeringslänkar med `{{store url}}`-taggar enligt [Adobe Commerce Variables and Markup Tags &#x200B;](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/variables/markup-tags).
 
 _ACP2E-4308 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/0a3b7032)_
 
