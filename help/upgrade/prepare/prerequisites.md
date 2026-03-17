@@ -99,7 +99,7 @@ För att kunna uppgradera MySQL från version 8.0 till version 8.4 måste du fö
    >
    >Om du inte ändrar värdet för `restrict_fk_on_non_standard_key` till `OFF` får du följande fel under importen:
    >
-   ```sql
+   >```sql
    > ERROR 6125 (HY000) at line 2164: Failed to add the foreign key constraint. Missing unique key for constraint 'CAT_PRD_FRONTEND_ACTION_PRD_ID_CAT_PRD_ENTT_ENTT_ID' in the referenced table 'catalog_product_entity'
    >```
 1. Starta om MySQL-servern.
@@ -358,7 +358,7 @@ Så här anger du miljövariabeln:
 
 Av säkerhetsskäl kräver Adobe Commerce vissa behörigheter i filsystemet. Behörigheter skiljer sig från _[ägarskap](../../upgrade/prepare/prerequisites.md#verify-file-system-permissions)_. Ägarskapet avgör vem som kan utföra åtgärder i filsystemet. Behörigheterna avgör vad användaren kan göra.
 
-Kataloger i filsystemet måste vara skrivbara av [filsystemets ägargrupp ](../../installation/prerequisites/file-system/overview.md).
+Kataloger i filsystemet måste vara skrivbara av [filsystemets ägargrupp &#x200B;](../../installation/prerequisites/file-system/overview.md).
 
 Om du vill verifiera att filsystembehörigheterna är korrekt loggar du antingen in på programservern eller använder värdtjänstleverantörens filhanterarprogram.
 
