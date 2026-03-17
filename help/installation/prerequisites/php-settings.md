@@ -19,7 +19,7 @@ I det här avsnittet beskrivs hur du ställer in obligatoriska PHP-alternativ.
 >
 >Vilka PHP-versioner som stöds varierar beroende på Adobe Commerce. Se [systemkraven](../system-requirements.md) för den exakta PHP-versionen som stöds av den version du installerar.
 
-Mer information om molnkonfiguration finns i [PHP-inställningar](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings) i guiden _Commerce om molninfrastruktur_.
+Mer information om molnkonfiguration finns i [PHP-inställningar](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/configure/app/php-settings) i guiden _Commerce om molninfrastruktur_.
 
 ## PHP-processkontroll
 
@@ -206,9 +206,9 @@ Så här anger du `opcache.ini` alternativ:
 Se följande Adobe Commerce supportartiklar för hjälp med felsökning av PHP-problem:
 
 - [PHP-versionsfel eller 404-fel vid åtkomst till Adobe Commerce i en webbläsare](https://support.magento.com/hc/en-us/articles/360033117152-PHP-version-error-or-404-error-when-accessing-Magento-in-browser)
-- [PHP-inställningsfel](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/php-settings-errors)
-- [PHP-krypteringstillägget har inte installerats korrekt](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/php-mcrypt-extension-not-installed-properly)
-- [Problem med beredskapskontroll av PHP-version](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/cron-readiness-check-issues)
-- [Vanliga PHP-allvarliga fel och lösningar](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/common-php-fatal-errors-and-solutions)
+- [PHP-inställningsfel](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/php-settings-errors)
+- [PHP-krypteringstillägget har inte installerats korrekt](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/php-mcrypt-extension-not-installed-properly)
+- [Problem med beredskapskontroll av PHP-version](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/cron-readiness-check-issues)
+- [Vanliga PHP-allvarliga fel och lösningar](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/common-php-fatal-errors-and-solutions)
 
 <!-- Last updated from includes: 2025-04-04 22:27:22 -->
