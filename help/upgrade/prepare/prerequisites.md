@@ -2,9 +2,9 @@
 title: Förutsättningar
 description: Förbered ditt Adobe Commerce-projekt för en uppgradering genom att slutföra dessa nödvändiga steg.
 exl-id: f7775900-1d10-4547-8af0-3d1283d9b89e
-source-git-commit: 2d17da1f8cbda1462839ad2fa3ea569833443827
+source-git-commit: 766226dc998aafe54bc84d77cabee6fb0a969e6c
 workflow-type: tm+mt
-source-wordcount: '1866'
+source-wordcount: '1865'
 ht-degree: 0%
 
 ---
@@ -29,11 +29,11 @@ När du har granskat systemkraven måste du uppfylla följande krav innan du upp
 
 [Systemkraven](../../installation/system-requirements.md) beskriver exakt vilka versioner av tredjepartsprogram som har testats med Adobe Commerce-versioner.
 
-Se till att du har uppdaterat alla systemkrav och beroenden i din miljö. Se PHP [&#x200B; 7.4](https://www.php.net/manual/en/migration74.php), PHP [&#x200B; 8.0](https://www.php.net/manual/en/migration80.php), PHP [&#x200B; 8.1](https://www.php.net/manual/en/migration81.php) och [nödvändiga PHP-inställningar](../../installation/prerequisites/php-settings.md#php-settings).
+Se till att du har uppdaterat alla systemkrav och beroenden i din miljö. Granska [PHP-migreringstilläggen](https://www.php.net/manual/en/appendices.php) för din PHP-målversion och de [nödvändiga PHP-inställningarna](../../installation/prerequisites/php-settings.md#php-settings).
 
 >[!NOTE]
 >
->För Adobe Commerce i molnbaserade infrastrukturproprojekt måste du skapa en [supportbiljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) för att kunna installera eller uppdatera tjänster i mellanlagrings- och produktionsmiljöer. Ange de tjänständringar som krävs och inkludera dina uppdaterade `.magento.app.yaml`- och `services.yaml`-filer och PHP-version i biljetten. Det kan ta upp till 48 timmar för molninfrastrukturteamet att uppdatera ditt projekt. Se [Program och tjänster som stöds](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/architecture/cloud-architecture.html?lang=sv-SE#supported-software-and-services).
+>För Adobe Commerce i molnbaserade infrastrukturproprojekt måste du skapa en [supportbiljett](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) för att kunna installera eller uppdatera tjänster i mellanlagrings- och produktionsmiljöer. Ange de tjänständringar som krävs och inkludera dina uppdaterade `.magento.app.yaml`- och `services.yaml`-filer och PHP-version i biljetten. Det kan ta upp till 48 timmar för molninfrastrukturteamet att uppdatera ditt projekt. Se [Program och tjänster som stöds](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/cloud-architecture#supported-software-and-services).
 
 ## Kontrollera att en sökmotor som stöds är installerad
 
@@ -56,7 +56,7 @@ I följande avsnitt beskrivs vilka åtgärder du måste vidta innan du uppgrader
 Från och med 2.4 är MySQL inte längre en katalogsökmotor som stöds. Du måste installera och konfigurera Elasticsearch eller OpenSearch innan du uppgraderar. Använd följande resurser för att hjälpa dig igenom den här processen:
 
 * [Installera och konfigurera Elasticsearch](../../configuration/search/overview-search.md)
-* [Installerar Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)
+* [Installerar Elasticsearch](https://www.elastic.co/docs/deploy-manage/deploy/self-managed/installing-elasticsearch)
 * Konfigurera [nginx](../../installation/prerequisites/search-engine/configure-nginx.md) eller [Apache](../../installation/prerequisites/search-engine/configure-apache.md) så att det fungerar med sökmotorn
 * [Konfigurera Commerce att använda Elasticsearch](../../configuration/search/configure-search-engine.md) och indexera om
 
@@ -99,7 +99,7 @@ För att kunna uppgradera MySQL från version 8.0 till version 8.4 måste du fö
    >
    >Om du inte ändrar värdet för `restrict_fk_on_non_standard_key` till `OFF` får du följande fel under importen:
    >
-   >```sql
+   ```sql
    > ERROR 6125 (HY000) at line 2164: Failed to add the foreign key constraint. Missing unique key for constraint 'CAT_PRD_FRONTEND_ACTION_PRD_ID_CAT_PRD_ENTT_ENTT_ID' in the referenced table 'catalog_product_entity'
    >```
 1. Starta om MySQL-servern.
@@ -124,9 +124,9 @@ För att kunna uppgradera MySQL från version 8.0 till version 8.4 måste du fö
 
 Du måste installera och konfigurera Elasticsearch 7.6 eller senare eller OpenSearch 1.2 innan du uppgraderar till 2.4.0. Adobe stöder inte längre Elasticsearch 2.x, 5.x och 6.x. [Sökmotorkonfigurationen](../../configuration/search/configure-search-engine.md) i _Konfigurationshandboken_ beskriver de åtgärder du måste utföra efter att du har uppgraderat Elasticsearch till en version som stöds.
 
-Se [Uppgradera Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html) för fullständiga instruktioner om hur du säkerhetskopierar data, identifierar potentiella migreringsproblem och testar uppgraderingar innan du distribuerar till produktionen. Beroende på vilken version av Elasticsearch du har behöver du kanske starta om hela klustret eller inte.
+Se [Uppgradera Elasticsearch](https://www.elastic.co/docs/deploy-manage/upgrade/deployment-or-cluster) för fullständiga instruktioner om hur du säkerhetskopierar data, identifierar potentiella migreringsproblem och testar uppgraderingar innan du distribuerar till produktionen. Beroende på vilken version av Elasticsearch du har behöver du kanske starta om hela klustret eller inte.
 
-Elasticsearch kräver Java Development Kit (JDK) 1.8 eller senare. Se [Installera Java Software Development Kit (JDK)](../../installation/prerequisites/search-engine/overview.md#install-the-java-software-development-kit-jdk) för att kontrollera vilken version av JDK som är installerad.
+Elasticsearch kräver Java Development Kit (JDK) 1.8 eller senare. Se [Installera Java Software Development Kit (JDK)](../../installation/prerequisites/search-engine/overview.md#install-the-java-software-development-kit) för att kontrollera vilken version av JDK som är installerad.
 
 #### OpenSearch
 
@@ -140,7 +140,7 @@ OpenSearch är en öppen källkodsgaffel till Elasticsearch 7.10.2 efter Elastic
 
 Du kan [migrera från Elasticsearch till OpenSearch](opensearch-migration.md) endast om du uppgraderar till en version av Adobe Commerce som listas ovan (eller senare).
 
-OpenSearch kräver JDK 1.8 eller senare. Se [Installera Java Software Development Kit (JDK)](../../installation/prerequisites/search-engine/overview.md#install-the-java-software-development-kit-jdk) för att kontrollera vilken version av JDK som är installerad.
+OpenSearch kräver JDK 1.8 eller senare. Se [Installera Java Software Development Kit (JDK)](../../installation/prerequisites/search-engine/overview.md#install-the-java-software-development-kit) för att kontrollera vilken version av JDK som är installerad.
 
 [Sökmotorkonfigurationen](../../configuration/search/configure-search-engine.md) beskriver de uppgifter du måste utföra efter att du har ändrat sökmotorer.
 
@@ -150,9 +150,9 @@ Stöd för Elasticsearch 8.x infördes i Adobe Commerce 2.4.6. Följande instruk
 
 >[!NOTE]
 >
->I den kommande 2.4.8-versionen behövs inte dessa steg eftersom Elasticsearch 8-modulen ingår som standard och du inte behöver installera den separat.
+>Dessa steg gäller endast Adobe Commerce 2.4.6 och 2.4.7. Adobe Commerce 2.4.8 och senare stöder inte längre Elasticsearch. Använd OpenSearch i stället.
 
-1. Uppgradera Elasticsearch 7.x-servern till 8.x och se till att den är igång. Se [Elasticsearch-dokumentationen](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html).
+1. Uppgradera Elasticsearch 7.x-servern till 8.x och se till att den är igång. Se [Elasticsearch-dokumentationen](https://www.elastic.co/docs/deploy-manage/deploy/self-managed/installing-elasticsearch).
 
 1. Aktivera fältet `id_field_data` genom att lägga till följande konfiguration i filen `elasticsearch.yml` och starta om tjänsten Elasticsearch 8.x.
 
@@ -218,7 +218,7 @@ Stöd för Elasticsearch 8.x infördes i Adobe Commerce 2.4.6. Följande instruk
 
 Om du av misstag uppgraderar Elasticsearch-versionen på servern eller av någon annan anledning måste du också uppdatera dina Adobe Commerce projektberoenden. Om du till exempel vill nedgradera från Elasticsearch 8.x till 7.x
 
-1. Uppgradera Elasticsearch 8.x-servern till 7.x och se till att den är igång. Se [Elasticsearch-dokumentationen](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html).
+1. Uppgradera Elasticsearch 8.x-servern till 7.x och se till att den är igång. Se [Elasticsearch-dokumentationen](https://www.elastic.co/docs/deploy-manage/deploy/self-managed/installing-elasticsearch).
 
 1. Uppdatera dina Composer-beroenden i Adobe Commerce-projektets rotkatalog för att ta bort modulen `Magento_Elasticsearch8` och dess Composer-beroenden och installera modulen `Magento_Elasticsearch7`.
 
@@ -258,7 +258,7 @@ Du måste konvertera formatet för alla databastabeller från `COMPACT` till `DY
 
 Genom att ange gränsen för antalet öppna filer (ulimit) kan du undvika fel vid flera rekursiva anrop av långa frågesträngar eller problem med att använda kommandot `bin/magento setup:rollback`. Det här kommandot är annorlunda för olika UNIX-skal. Mer information om kommandot `ulimit` finns i din individuella variant.
 
-Adobe rekommenderar att de öppna filerna [ulimit](https://ss64.com/bash/ulimit.html) anges till `65536` eller mer, men du kan använda ett större värde om det behövs. Du kan ange gränsen på kommandoraden eller göra den till en permanent inställning för användarens skal.
+Adobe rekommenderar att de öppna filerna [ulimit](https://www.gnu.org/software/bash/manual/html_node/Bash-Builtins.html#index-ulimit) anges till `65536` eller mer, men du kan använda ett större värde om det behövs. Du kan ange gränsen på kommandoraden eller göra den till en permanent inställning för användarens skal.
 
 Så här anger du gränsen från kommandoraden:
 
@@ -358,7 +358,7 @@ Så här anger du miljövariabeln:
 
 Av säkerhetsskäl kräver Adobe Commerce vissa behörigheter i filsystemet. Behörigheter skiljer sig från _[ägarskap](../../upgrade/prepare/prerequisites.md#verify-file-system-permissions)_. Ägarskapet avgör vem som kan utföra åtgärder i filsystemet. Behörigheterna avgör vad användaren kan göra.
 
-Kataloger i filsystemet måste vara skrivbara av [filsystemets ägargrupp &#x200B;](../../installation/prerequisites/file-system/overview.md).
+Kataloger i filsystemet måste vara skrivbara av [filsystemets ägargrupp ](../../installation/prerequisites/file-system/overview.md).
 
 Om du vill verifiera att filsystembehörigheterna är korrekt loggar du antingen in på programservern eller använder värdtjänstleverantörens filhanterarprogram.
 

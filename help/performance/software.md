@@ -3,9 +3,9 @@ title: Programvarurekommendationer
 description: Läs mer om programvarukrav och rekommendationer för Adobe Commerce. Upptäck vilka versioner och konfigurationer som stöds och de effektivaste strategierna för produktion.
 feature: Best Practices, Install
 exl-id: b091a733-7655-4e91-a988-93271872c5d5
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 766226dc998aafe54bc84d77cabee6fb0a969e6c
 workflow-type: tm+mt
-source-wordcount: '1396'
+source-wordcount: '1390'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 Följande programvara krävs för produktionsinstanser av [!DNL Commerce]:
 
 * [PHP](../installation/system-requirements.md)
-* Nginx och [PHP-FPM](https://php-fpm.org/)
+* Nginx och [PHP-FPM](https://www.php.net/manual/en/install.fpm.php)
 * [[!DNL MySQL]](../installation/prerequisites/database/mysql.md)
 * [[!DNL Elasticsearch] eller OpenSearch](../installation/prerequisites/search-engine/overview.md)
 
@@ -47,7 +47,7 @@ net.core.somaxconn = 1024
 
 ## PHP
 
-Magento stöder fullt ut PHP 7.3 och 7.4. Det finns flera faktorer att ta hänsyn till när PHP konfigureras för att få maximal hastighet och effektivitet vid behandling av begäranden.
+Använd en PHP-version som stöds av den version av Adobe Commerce som du installerar, enligt listan i [systemkraven](../installation/system-requirements.md). Det finns flera faktorer att ta hänsyn till när PHP konfigureras för att få maximal hastighet och effektivitet vid behandling av begäranden.
 
 ### PHP-tillägg
 
@@ -141,7 +141,7 @@ realpath_cache_ttl=7200
 
 #### ByteCode
 
-Om du vill få ut maximal hastighet av [!DNL Commerce] på PHP 7 måste du aktivera OpCache-modulen och konfigurera den korrekt. De här inställningarna rekommenderas för modulen:
+Om du vill få ut maximal hastighet av [!DNL Commerce] måste du aktivera OpCache-modulen och konfigurera den korrekt. De här inställningarna rekommenderas för modulen:
 
 ```text
 opcache.memory_consumption=512
@@ -184,15 +184,14 @@ Du bör också konfigurera antalet trådar för bearbetning av indatabegäran en
 
 | Webbserver | Attributnamn | Plats | Relaterad information |
 |--- | --- | --- | ---|
-| Nginx | `worker_connections` | `/etc/nginx/nginx.conf` (Debian) | [NGINX-justering för prestanda](https://www.nginx.com/blog/tuning-nginx/) |
-| Apache 2.2 | `MaxClients` | `/etc/httpd/conf/httpd.conf` (CentOS) | [Prestandajustering för Apache](https://httpd.apache.org/docs/2.2/misc/perf-tuning.html) |
+| Nginx | `worker_connections` | `/etc/nginx/nginx.conf` (Debian) | [NGINX-justering för prestanda](https://www.f5.com/company/blog/nginx/tuning-nginx) |
 | Apache 2.4 | `MaxRequestWorkers` | `/etc/httpd/conf/httpd.conf` (CentOS) | [Gemensamma direktiv för Apache MPM](https://httpd.apache.org/docs/2.4/mod/mpm_common.html#maxrequestworkers) |
 
 ## [!DNL MySQL]
 
 Det här dokumentet innehåller inga detaljerade [!DNL MySQL] justeringsanvisningar eftersom varje butik och miljö är olika, men vi kan göra några allmänna rekommendationer.
 
-Det har gjorts många förbättringar i [!DNL MySQL] 5.7.9 Vi är säkra på att [!DNL MySQL] distribueras med bra standardinställningar. De viktigaste inställningarna är:
+De senaste [!DNL MySQL]-versionerna innehåller många prestandaförbättringar och [!DNL MySQL] distribueras vanligtvis med bra standardinställningar. De viktigaste inställningarna är:
 
 | Parameter | Standard | Beskrivning |
 |--- | --- | ---|
@@ -207,7 +206,7 @@ Magento rekommenderar att du använder [!DNL Varnish] som helsidescache-server f
 
 Installera [!DNL Varnish] på en separat server framför webbskiktet. Den ska acceptera alla inkommande begäranden och tillhandahålla cachelagrade sidkopior. För att [!DNL Varnish] ska kunna fungera effektivt med skyddade sidor kan en SSL-termineringsproxy placeras framför [!DNL Varnish]. Nginx kan användas för detta ändamål.
 
-[!DNL Commerce] distribuerar en exempelkonfigurationsfil för [!DNL Varnish] (version 4 och 5) som innehåller alla rekommenderade inställningar för prestanda. Bland de viktigaste prestandaaspekterna finns följande:
+[!DNL Commerce] distribuerar exempelkonfigurationsfiler för [!DNL Varnish] versioner som stöds och som innehåller alla rekommenderade inställningar för prestanda. Bland de viktigaste prestandaaspekterna finns följande:
 
 * **Hälsokontroll vid serverdel** avfrågar servern [!DNL Commerce] för att avgöra om den svarar i tid.
 * I **Respitläge** kan du instruera [!DNL Varnish] att behålla ett objekt i cachen efter TTL-perioden (Time to Live) och att hantera det här inaktuella innehållet om [!DNL Commerce] inte är felfritt eller om det inte har hämtats färskt innehåll än.
@@ -221,7 +220,7 @@ I allmänhet rekommenderar vi att du lagrar dina resurser (bilder, JS, CSS osv.)
 
 Om din plats inte kräver att du distribuerar ett stort antal språkområden och dina servrar finns i samma region som de flesta av dina kunder, kan du få betydande prestandavinster till en lägre kostnad genom att lagra dina resurser i [!DNL Varnish] i stället för att använda ett CDN.
 
-Om du vill lagra dina resurser i [!DNL Varnish] lägger du till följande VCL-poster i `default.vcl`-filen som genereras av [!DNL Commerce] för [!DNL Varnish] 5.
+Om du vill lagra dina resurser i [!DNL Varnish] lägger du till följande VCL-poster i `default.vcl`-filen som genererats av [!DNL Commerce].
 
 Lägg till följande i slutet av programsatsen `if` för PURGE-begäranden i underrutinen `vcl_recv`:
 

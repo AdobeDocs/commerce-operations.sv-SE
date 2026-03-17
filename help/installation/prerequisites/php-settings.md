@@ -3,9 +3,9 @@ title: PHP-inställningar
 description: Följ de här stegen för att installera nödvändiga PHP-tillägg och konfigurera PHP-inställningar för lokala installationer av Adobe Commerce.
 feature: Install, Configuration
 exl-id: 84064442-7053-42ab-a8a6-9b313e5efc78
-source-git-commit: 55512521254c49511100a557a4b00cf3ebee0311
+source-git-commit: 766226dc998aafe54bc84d77cabee6fb0a969e6c
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '757'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,9 @@ I det här avsnittet beskrivs hur du ställer in obligatoriska PHP-alternativ.
 
 >[!NOTE]
 >
->För den senaste versionen av Adobe Commerce krävs minst PHP 8.1. Se [systemkraven](../system-requirements.md) för alla PHP-versioner som stöds.
+>Vilka PHP-versioner som stöds varierar beroende på Adobe Commerce. Se [systemkraven](../system-requirements.md) för den exakta PHP-versionen som stöds av den version du installerar.
 
-Mer information om molnkonfiguration finns i [PHP-inställningar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/app/php-settings.html?lang=sv-SE) i guiden _Commerce om molninfrastruktur_.
+Mer information om molnkonfiguration finns i [PHP-inställningar](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings) i guiden _Commerce om molninfrastruktur_.
 
 ## PHP-processkontroll
 
@@ -36,10 +36,10 @@ php -v
 Om PHP är installerat visas ett meddelande som liknar följande:
 
 ```
-PHP 8.1.2-1ubuntu2.14 (cli) (built: Aug 18 2023 11:41:11) (NTS)
+PHP <supported-version> (cli) (built: <build-date>) (NTS)
 Copyright (c) The PHP Group
-Zend Engine v4.1.2, Copyright (c) Zend Technologies
-    with Zend OPcache v8.1.2-1ubuntu2.14, Copyright (c), by Zend Technologies
+Zend Engine v<matching-version>, Copyright (c) Zend Technologies
+    with Zend OPcache v<matching-version>, Copyright (c), by Zend Technologies
 ```
 
 Om PHP inte är installerat (eller kräver en uppgradering) installerar du det genom att följa instruktionerna för din Linux-distribution.
@@ -65,7 +65,7 @@ Så här verifierar du installerade tillägg:
 
 >[!WARNING]
 >
->Om du använder PHP 7.4.20 anger du `pcre.jit=0` i `php.ini`-filen. Det här kommer runt en PHP [bug](https://bugs.php.net/bug.php?id=81101) som förhindrar att CSS läses in.
+>Om du felsöker en äldre miljö som påverkas av PHP [bug 81101](https://bugs.php.net/bug.php?id=81101) anger du `pcre.jit=0` i `php.ini`-filen som en lösning på problemet där CSS inte läses in.
 
 - Ställ in systemtidszonen för PHP, annars kanske fel som följande visas under installationen och tidsrelaterade åtgärder som kron inte fungerar:
 
@@ -106,7 +106,7 @@ I det här avsnittet beskrivs hur du hittar de konfigurationsfiler som behövs f
 
 ### Sök efter konfigurationsfilen `php.ini`
 
-Om du vill hitta webbserverkonfigurationen kör du en [`phpinfo.php`-fil &#x200B;](optional-software.md#create-phpinfophp) i webbläsaren och söker efter `Loaded Configuration File` enligt följande:
+Om du vill hitta webbserverkonfigurationen kör du en [`phpinfo.php`-fil ](optional-software.md#create-phpinfophp) i webbläsaren och söker efter `Loaded Configuration File` enligt följande:
 
 ![PHP-informationssida](../../assets/installation/config_phpini-webserver.png)
 
@@ -138,7 +138,7 @@ Använd följande riktlinjer för att hitta den:
   sudo find / -name 'opcache.ini'
   ```
 
-- nginx-webbserver med PHP-FPM: `/etc/php/8.1/fpm/php.ini`
+- nginx-webbserver med PHP-FPM: `/etc/php/<supported-php-version>/fpm/php.ini`
 
 Om du har fler än en `opcache.ini` ändrar du alla.
 
@@ -190,7 +190,7 @@ Så här anger du `opcache.ini` alternativ:
 
    - `opcache.ini` (CentOS)
    - `php.ini` (Ubuntu)
-   - `/etc/php/8.1/fpm/php.ini` (nginx-webbserver (CentOS eller Ubuntu))
+   - `/etc/php/<supported-php-version>/fpm/php.ini` (nginx-webbserver (CentOS eller Ubuntu))
 
 1. Leta reda på `opcache.save_comments` och avkommentera den om det behövs.
 1. Kontrollera att värdet är `1`.
@@ -206,9 +206,9 @@ Så här anger du `opcache.ini` alternativ:
 Se följande Adobe Commerce supportartiklar för hjälp med felsökning av PHP-problem:
 
 - [PHP-versionsfel eller 404-fel vid åtkomst till Adobe Commerce i en webbläsare](https://support.magento.com/hc/en-us/articles/360033117152-PHP-version-error-or-404-error-when-accessing-Magento-in-browser)
-- [PHP-inställningsfel](https://support.magento.com/hc/en-us/articles/360034599631-PHP-settings-errors)
-- [PHP-krypteringstillägget har inte installerats korrekt](https://support.magento.com/hc/en-us/articles/360034280132-PHP-mcrypt-extension-not-installed-properly-)
-- [Problem med beredskapskontroll av PHP-version](https://support.magento.com/hc/en-us/articles/360033546411)
-- [Vanliga PHP-allvarliga fel och lösningar](https://support.magento.com/hc/en-us/articles/360030568432)
+- [PHP-inställningsfel](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/php-settings-errors)
+- [PHP-krypteringstillägget har inte installerats korrekt](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/php-mcrypt-extension-not-installed-properly)
+- [Problem med beredskapskontroll av PHP-version](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/cron-readiness-check-issues)
+- [Vanliga PHP-allvarliga fel och lösningar](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/common-php-fatal-errors-and-solutions)
 
 <!-- Last updated from includes: 2025-04-04 22:27:22 -->

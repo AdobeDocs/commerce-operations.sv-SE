@@ -2,9 +2,9 @@
 title: Lokala installationskrav
 description: Läs mer om vilka programvaruberoenden som krävs för lokala installationer av Adobe Commerce.
 exl-id: dd4694e7-5437-440c-bb67-804ae36149de
-source-git-commit: db2256f5327897a4376a0d038ce697e8f93235af
+source-git-commit: 766226dc998aafe54bc84d77cabee6fb0a969e6c
 workflow-type: tm+mt
-source-wordcount: '332'
+source-wordcount: '350'
 ht-degree: 1%
 
 ---
@@ -82,12 +82,12 @@ Exempel:
 mysql -u magento -p
 ```
 
-Följande resultat anger vilken version du kör.
+I kommandoutdata anger raden `Server version` vilken version du kör. Bekräfta att den matchar en version som stöds för den Adobe Commerce-utgåva som du installerar.
 
 ```
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 871
-Server version: 5.7.9 MySQL Community Server (GPL)
+Server version: <supported MySQL version> MySQL Community Server (GPL)
 
 Copyright (c) 2000, 2019, Oracle and/or its affiliates. All rights reserved.
 

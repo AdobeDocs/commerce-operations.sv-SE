@@ -2,9 +2,9 @@
 title: MySQL-riktlinjer
 description: Följ de här stegen för att installera och konfigurera MySQL och MariaDB för lokala installationer av Adobe Commerce.
 exl-id: dc5771a8-4066-445c-b1cd-9d5f449ec9e9
-source-git-commit: 2d17da1f8cbda1462839ad2fa3ea569833443827
+source-git-commit: 766226dc998aafe54bc84d77cabee6fb0a969e6c
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: '1053'
 ht-degree: 0%
 
 ---
@@ -15,14 +15,14 @@ Mer information om vilka versioner av MySQL som stöds finns i [Systemkrav](../.
 
 Adobe _rekommenderar starkt_ att du följer följande standard när du konfigurerar databasen:
 
-* Adobe Commerce använder [MySQL-databasutlösare](https://dev.mysql.com/doc/refman/8.0/en/triggers.html) för att förbättra databasåtkomsten under omindexering. Dessa skapas när indexeringsläget är inställt på [schedule](../../../configuration/cli/manage-indexers.md#configure-indexers). Programmet stöder inte några anpassade utlösare i databasen eftersom anpassade utlösare kan orsaka inkompatibilitet med framtida Adobe Commerce-versioner.
-* Bekanta dig med [dessa potentiella begränsningar för MySQL-utlösare](https://dev.mysql.com/doc/mysql-reslimits-excerpt/8.0/en/stored-program-restrictions.html) innan du fortsätter.
-* Aktivera SQL-läget [`STRICT_ALL_TABLES`](https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html#sqlmode_strict_all_tables) om du vill förbättra databasens säkerhetsposition och förhindra att ogiltiga datavärden lagras, vilket kan orsaka oönskade databasinteraktioner.
-* Adobe Commerce har _inte_ stöd för MySQL-satsbaserad replikering. Se till att du använder _endast_ [radbaserad replikering](https://dev.mysql.com/doc/refman/8.0/en/replication-formats.html).
+* Adobe Commerce använder [MySQL-databasutlösare](https://dev.mysql.com/doc/refman/8.4/en/triggers.html) för att förbättra databasåtkomsten under omindexering. Dessa skapas när indexeringsläget är inställt på [schedule](../../../configuration/cli/manage-indexers.md#configure-indexers). Programmet stöder inte några anpassade utlösare i databasen eftersom anpassade utlösare kan orsaka inkompatibilitet med framtida Adobe Commerce-versioner.
+* Bekanta dig med [dessa potentiella begränsningar för MySQL-utlösare](https://dev.mysql.com/doc/refman/8.4/en/stored-program-restrictions.html) innan du fortsätter.
+* Aktivera SQL-läget [`STRICT_ALL_TABLES`](https://dev.mysql.com/doc/refman/8.4/en/sql-mode.html#sqlmode_strict_all_tables) om du vill förbättra databasens säkerhetsposition och förhindra att ogiltiga datavärden lagras, vilket kan orsaka oönskade databasinteraktioner.
+* Adobe Commerce har _inte_ stöd för MySQL-satsbaserad replikering. Se till att du använder _endast_ [radbaserad replikering](https://dev.mysql.com/doc/refman/8.4/en/replication-formats.html).
 
 >[!WARNING]
 >
->Adobe Commerce använder för närvarande `CREATE TEMPORARY TABLE`-satser inuti transaktioner, som är [inkompatibla](https://dev.mysql.com/doc/refman/5.7/en/replication-gtids-restrictions.html) med databasimplementeringar använder GTID-baserad replikering, till exempel [Google Cloud SQL-instanser av andra generationen](https://cloud.google.com/sql/docs/features#differences). Överväg MySQL för Cloud SQL 8.0 som ett alternativ.
+>Adobe Commerce använder för närvarande `CREATE TEMPORARY TABLE`-satser inuti transaktioner, som är [inkompatibla](https://dev.mysql.com/doc/refman/8.4/en/replication-gtids-restrictions.html) med databasimplementeringar använder GTID-baserad replikering, till exempel [Google Cloud SQL-instanser av andra generationen](https://docs.cloud.google.com/sql/docs/features#differences). Överväg MySQL för Cloud SQL 8.0 som ett alternativ.
 
 >[!NOTE]
 >
@@ -30,12 +30,12 @@ Adobe _rekommenderar starkt_ att du följer följande standard när du konfigure
 
 ## Installerar MySQL på Ubuntu
 
-Adobe Commerce 2.4 kräver en ren installation av MySQL 8.0. Följ länkarna nedan för instruktioner om hur du installerar MySQL på datorn.
+Adobe Commerce 2.4 stöder olika MySQL 8-versioner beroende på vilken version du installerar. Använd en version som listas i [Systemkrav](../../system-requirements.md) och följ länkarna nedan för instruktioner om hur du installerar MySQL på datorn.
 
-* [Ubuntu](https://ubuntu.com/server/docs/databases-mysql)
-* [CentOS](https://dev.mysql.com/doc/refman/8.0/en/linux-installation-yum-repo.html)
+* [Ubuntu](https://ubuntu.com/server/docs/databases-mysql/)
+* [CentOS](https://dev.mysql.com/doc/refman/8.4/en/linux-installation-yum-repo.html)
 
-Om du förväntar dig att importera ett stort antal produkter kan du öka värdet för [`max_allowed_packet`](https://dev.mysql.com/doc/refman/5.6/en/program-variables.html) som är större än standardvärdet, 16 MB.
+Om du förväntar dig att importera ett stort antal produkter kan du öka värdet för [`max_allowed_packet`](https://dev.mysql.com/doc/refman/8.4/en/server-system-variables.html#sysvar_max_allowed_packet) till ett värde som är större än standardvärdet, 16 MB.
 
 >[!NOTE]
 >
@@ -186,8 +186,8 @@ Så här konfigurerar du en MySQL-databasinstans:
 
    Referenser:
 
-   * [MySQL 5.7](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_explicit_defaults_for_timestamp)
-   * [MariaDB](https://mariadb.com/kb/en/server-system-variables/#explicit_defaults_for_timestamp)
+   * [MySQL 8.4](https://dev.mysql.com/doc/refman/8.4/en/server-system-variables.html#sysvar_explicit_defaults_for_timestamp)
+   * [MariaDB](https://mariadb.com/docs/server/server-management/variables-and-modes/server-system-variables#explicit_defaults_for_timestamp)
 
    Om den här inställningen inte är aktiverad rapporterar `bin/magento setup:db:status` alltid att `Declarative Schema is not up to date`.
 
