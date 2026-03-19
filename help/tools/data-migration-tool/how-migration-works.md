@@ -3,7 +3,7 @@ title: Så fungerar datamigrering
 description: Läs om datamigreringsprocessen mellan Magento 1 och Magento 2, inklusive terminologi, arbetsflödesdiagram och steg.
 exl-id: 821492dc-ee5b-4c4a-9479-680ee8c5756d
 topic: Commerce, Migration
-source-git-commit: 6896d31a202957d7354c3dd5eb6459eda426e8d7
+source-git-commit: 6171b2d8ed2ca73e3221fe6ab07060a3c43a6dbf
 workflow-type: tm+mt
 source-wordcount: '781'
 ht-degree: 0%
@@ -83,7 +83,7 @@ Mer information om hur du utvecklar tillägg för Magento 2 finns i [PHP Develop
 
 ### Teman och anpassningar
 
-Magento 2 använder nya metoder och tekniker som ger handlarna oöverträffade möjligheter att skapa innovativa shoppingupplevelser och anpassa sig till nya nivåer. För att kunna utnyttja dessa framsteg måste utvecklarna göra ändringar i sina teman och anpassningar. Dokumentation finns online för att skapa Magento 2 [teman](https://developer.adobe.com/commerce/frontend-core/guide/themes/), [layouter](https://developer.adobe.com/commerce/frontend-core/guide/layouts/) och [anpassningar](https://developer.adobe.com/commerce/frontend-core/guide/layouts/xml-manage/).
+Magento 2 använder nya metoder och tekniker som ger handlarna oöverträffade möjligheter att skapa innovativa shoppingupplevelser och anpassa sig till nya nivåer. För att kunna utnyttja dessa framsteg måste utvecklarna göra ändringar i sina teman och anpassningar. Dokumentation finns online för att skapa Magento 2 [teman](https://developer.adobe.com/commerce/frontend-core/guide/themes/), [layouter](https://developer.adobe.com/commerce/frontend-core/guide/layouts/) och [anpassningar](https://developer.adobe.com/commerce/frontend-core/guide/layouts/xml-manage).
 
 ## Migreringsarbete
 
