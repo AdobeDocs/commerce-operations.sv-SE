@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Allmän och avancerad konfigurationssökvägsreferens
 
-I det här avsnittet visas allmänna och avancerade konfigurationssökvägar och _inte_ [känsliga och systemspecifika värden](config-reference-sens.md). [`magento app:config:dump`-kommandot ](../cli/export-configuration.md) skriver dessa värden till den delade konfigurationsfilen `app/etc/config.php` som ska finnas i källkontrollen.
+I det här avsnittet visas allmänna och avancerade konfigurationssökvägar och _inte_ [känsliga och systemspecifika värden](config-reference-sens.md). [`magento app:config:dump`-kommandot &#x200B;](../cli/export-configuration.md) skriver dessa värden till den delade konfigurationsfilen `app/etc/config.php` som ska finnas i källkontrollen.
 
 Om du vill åsidosätta konfigurationsinställningar eller ange känsliga inställningar läser du [Använda miljövariabler för att åsidosätta konfigurationsinställningar](override-config-settings.md#environment-variables).
 

@@ -62,7 +62,7 @@ Adobe Commerce 2.3.5
 Statustabellen innehåller:
 
 - **Typ**:
-   - `Optional` - Alla korrigeringar från [!DNL Quality Patches Tool] och [ Commerce on Cloud Infrastructure Guide > Apply patches](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) är valfria för Adobe Commerce-installationer.
+   - `Optional` - Alla korrigeringar från [!DNL Quality Patches Tool] och [&#x200B; Commerce on Cloud Infrastructure Guide > Apply patches](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) är valfria för Adobe Commerce-installationer.
    - `Deprecated` - Adobe har ersatt den enskilda korrigeringen. Om du har använt korrigeringen rekommenderar vi att du återställer den. Återställningsåtgärden tar även bort korrigeringen från statustabellen.
 
 - **Status**:

@@ -298,7 +298,7 @@ For security, remove write permissions from these directories: '/var/www/html/ma
 ```
 
 Efter installationen kan du skapa en administratörsanvändare med kommandot `admin:user:create`:
-[ Skapa eller redigera en administratör ](tutorials/admin.md#create-or-edit-an-administrator)
+[&#x200B; Skapa eller redigera en administratör &#x200B;](tutorials/admin.md#create-or-edit-an-administrator)
 
 #### Exempel 3 - Installera med ytterligare alternativ
 
