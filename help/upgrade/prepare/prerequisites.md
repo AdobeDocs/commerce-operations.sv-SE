@@ -33,7 +33,7 @@ Se till att du har uppdaterat alla systemkrav och beroenden i din miljö. Gransk
 
 >[!NOTE]
 >
->För Adobe Commerce i molnbaserade infrastrukturproprojekt måste du skapa en [supportbiljett](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) för att kunna installera eller uppdatera tjänster i mellanlagrings- och produktionsmiljöer. Ange de tjänständringar som krävs och inkludera dina uppdaterade `.magento.app.yaml`- och `services.yaml`-filer och PHP-version i biljetten. Det kan ta upp till 48 timmar för molninfrastrukturteamet att uppdatera ditt projekt. Se [Program och tjänster som stöds](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/cloud-architecture#supported-software-and-services).
+>För Adobe Commerce i molnbaserade infrastrukturproprojekt måste du skapa en [supportbiljett](https://experienceleague.adobe.com/sv/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) för att kunna installera eller uppdatera tjänster i mellanlagrings- och produktionsmiljöer. Ange de tjänständringar som krävs och inkludera dina uppdaterade `.magento.app.yaml`- och `services.yaml`-filer och PHP-version i biljetten. Det kan ta upp till 48 timmar för molninfrastrukturteamet att uppdatera ditt projekt. Se [Program och tjänster som stöds](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/architecture/cloud-architecture#supported-software-and-services).
 
 ## Kontrollera att en sökmotor som stöds är installerad
 

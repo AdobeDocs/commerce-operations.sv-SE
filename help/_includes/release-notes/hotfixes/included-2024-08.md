@@ -9,7 +9,7 @@ ht-degree: 0%
 
 Den här versionen innehåller följande snabbkorrigeringar:
 
-* Snabbkorrigering som åtgärdar ett JavaScript-fel som gjorde att Google Maps inte kunde återges korrekt i [!UICONTROL **PageBuilder**] -redigeraren. Mer information finns i artikeln [Uppdaterade korrigeringsfiler för åtkomstförlust för Google Maps i alla Adobe Commerce-versioner](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/site-down-or-unresponsive/revised-patches-for-google-maps-access-loss-on-all-adobe-commerce-versions) kunskapsbas.
+* Snabbkorrigering som åtgärdar ett JavaScript-fel som gjorde att Google Maps inte kunde återges korrekt i [!UICONTROL **PageBuilder**] -redigeraren. Mer information finns i artikeln [Uppdaterade korrigeringsfiler för åtkomstförlust för Google Maps i alla Adobe Commerce-versioner](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/troubleshooting/site-down-or-unresponsive/revised-patches-for-google-maps-access-loss-on-all-adobe-commerce-versions) kunskapsbas.
 
 <!--
 ACP2E-3156
@@ -18,7 +18,7 @@ ACP2E-3158
 ACP2E-3159
 -->
 
-* Snabbkorrigering för att lösa ett JSON-valideringsfel (JWT) för CVE-2024-34102. Mer information finns i artikeln [Säkerhetsuppdatering för Adobe Commerce-APSB24-40](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-40-revised-to-include-isolated-patch-for-cve-2024-34102) i kunskapsbasen.
+* Snabbkorrigering för att lösa ett JSON-valideringsfel (JWT) för CVE-2024-34102. Mer information finns i artikeln [Säkerhetsuppdatering för Adobe Commerce-APSB24-40](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-40-revised-to-include-isolated-patch-for-cve-2024-34102) i kunskapsbasen.
 
 <!--
 AC-12486
