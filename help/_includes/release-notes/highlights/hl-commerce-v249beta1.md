@@ -1,5 +1,5 @@
 ---
-source-git-commit: fd421e8c2455a2b45d3f3cc93573d2a609e4936d
+source-git-commit: adda02b9d05b66ab066f110e877584bc1c77515d
 workflow-type: tm+mt
 source-wordcount: '2408'
 ht-degree: 0%
@@ -281,7 +281,7 @@ _AC-14078 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/9a7352
 
 Administratörsanvändare behöver nu bara konfigurera en av handlarens aktiverade 2FA-leverantörer (till exempel Google Authenticator eller U2F) för att få åtkomst till administrationspanelen. Ytterligare aktiverade providers kan konfigureras senare efter behov. När flera 2FA-providers var aktiverade tidigare krävdes det att alla Admin-användare konfigurerade alla aktiverade leverantörer innan de kunde logga in, vilket skapade en funktion för användare som inte hade tillgång till alla faktorer.
 
-_AC-8253 - [GitHub-kodbidrag](https://github.com/magento/security-package/commit/71e7936b)_
+_AC-8253 - [GitHub-kodbidrag](https://github.com/magento-commerce/security-package/commit/41e5a26bd36528cb6b1bdc27b249696a2c721779)_
 
 ### Leverans
 

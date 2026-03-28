@@ -2,7 +2,7 @@
 title: Implementering av uppgradering
 description: Läs om de olika faserna i uppgraderingsimplementeringen för Adobe Commerce-projekt.
 exl-id: d64855a7-73ee-463f-a314-6a8d4ebe4726
-source-git-commit: a81d2c0b6526c2c8c8c5c4652c83595667985543
+source-git-commit: 7054a5286f01e26e324401f4d8505e4e0faed93e
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 1%
@@ -88,4 +88,4 @@ Till sist kan du diskutera med teamet för att ta reda på vad de lärt sig och 
 
 När webbplatsen har startats bör du kontrollera dina analysdata, Google Search Console och andra resurser så att du kan vara säker på att inga oväntade problem uppstår och att allt fungerar som förväntat.
 
-Det är alltid en bra idé att hålla ett öga på prestanda med väldesignade övervakningsverktyg. Det finns många verktyg och verktyg för att övervaka webbplatsens prestanda, så se till att du väljer ett som passar bra ihop med din organisation. Vi rekommenderar att Adobe Commerce-kunder som använder vårt molninfrastrukturhanteringssystem utnyttjar tjänster som [New Relic](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/new-relic-service.html?lang=sv-SE) för att övervaka webbplatsens prestanda.
+Det är alltid en bra idé att hålla ett öga på prestanda med väldesignade övervakningsverktyg. Det finns många verktyg och verktyg för att övervaka webbplatsens prestanda, så se till att du väljer ett som passar bra ihop med din organisation. Vi rekommenderar att Adobe Commerce-kunder som använder vårt molninfrastrukturhanteringssystem utnyttjar tjänster som [New Relic](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic/new-relic-service.html) för att övervaka webbplatsens prestanda.

@@ -3,7 +3,7 @@ title: Allmän referens för konfigurationssökvägar
 description: Läs mer om allmänna och avancerade konfigurationssökvägar och -värden för Adobe Commerce. Upptäck alternativ för system, säkerhet och administrativ konfiguration.
 feature: Configuration, Observability, Roles/Permissions, System
 exl-id: 3c557746-5182-4929-aebf-5b6fe76f0d8f
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 7054a5286f01e26e324401f4d8505e4e0faed93e
 workflow-type: tm+mt
 source-wordcount: '971'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Allmän och avancerad konfigurationssökvägsreferens
 
-I det här avsnittet visas allmänna och avancerade konfigurationssökvägar och _inte_ [känsliga och systemspecifika värden](config-reference-sens.md). [`magento app:config:dump`-kommandot &#x200B;](../cli/export-configuration.md) skriver dessa värden till den delade konfigurationsfilen `app/etc/config.php` som ska finnas i källkontrollen.
+I det här avsnittet visas allmänna och avancerade konfigurationssökvägar och _inte_ [känsliga och systemspecifika värden](config-reference-sens.md). [`magento app:config:dump`-kommandot ](../cli/export-configuration.md) skriver dessa värden till den delade konfigurationsfilen `app/etc/config.php` som ska finnas i källkontrollen.
 
 Om du vill åsidosätta konfigurationsinställningar eller ange känsliga inställningar läser du [Använda miljövariabler för att åsidosätta konfigurationsinställningar](override-config-settings.md#environment-variables).
 
@@ -30,8 +30,8 @@ Dessa konfigurationsvärden är tillgängliga i Admin i **Lagrar** > Inställnin
 | Tillåt länder | `general/country/allow` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 | Postnummer kan användas | `general/country/optional_zip_countries` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | ![Känslig](/help/assets/configuration/cloud-sens.png) |
 | Europeiska unionens länder | `general/country/eu_countries` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | ![Känslig](/help/assets/configuration/cloud-sens.png) |
-| Mest populära destinationer | `general/country/destinations` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
-| Tillstånd krävs för | `general/region/state_required` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> |
+| Mest populära destinationer | `general/country/destinations` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
+| Tillstånd krävs för | `general/region/state_required` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
 | Tillåt val av stat om det är valfritt för land | `general/region/display_all` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
 | Tidszon | `general/locale/timezone` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |
 | Språk | `general/locale/code` | <!-- ![Not Commerce-only](/help/assets/configuration/red-x.png) --> | |

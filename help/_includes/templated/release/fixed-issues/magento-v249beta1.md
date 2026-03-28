@@ -1,7 +1,7 @@
 ---
-source-git-commit: 0a22d08d6965c6abc288a1a171d25f4ff8bbd7ce
+source-git-commit: 7054a5286f01e26e324401f4d8505e4e0faed93e
 workflow-type: tm+mt
-source-wordcount: '24356'
+source-wordcount: '24355'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ API:erna validerar indata korrekt och returnerar 400-fel för ogiltiga nyttolast
 
 _AC-6419 - [GitHub-problem](https://github.com/magento/magento2/issues/35934) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/a7ef6300)_
 
-#### Internt serverfel i API-slutpunkten `/V1/order/&lbrace;orderId&rbrace;/ship`
+#### Internt serverfel i API-slutpunkten `/V1/order/{orderId}/ship`
 
 Systemet åtgärdar nu det interna serverfelet i API-slutpunkten `/V1/order/{orderId}/ship` och returnerar ett 400-fel eftersom begäran har fel format.
 
@@ -730,7 +730,7 @@ _AC-14464 - [GitHub-problem](https://github.com/magento/magento2/issues/39820) -
 
 #### [2.4.8] Det går inte att placera order där City har siffrorna 0-9, Ampersand, stopp eller parentes i stadsnamnet
 
-Ett problem har korrigerats där utcheckningen misslyckades för stadsnamn som innehåller specialtecken som . och, eller parenteser.
+Ett problem har korrigerats där utcheckningen misslyckades för stadsnamn som innehåller specialtecken som . , &amp; eller parenteser.
 Nu kan beställningar med sådana stadsnamn placeras utan valideringsfel.
 
 _AC-14495 - [GitHub-problem](https://github.com/magento/magento2/issues/39854) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/b9f5d6f7)_
@@ -2168,7 +2168,7 @@ _AC-8949 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/3b5ac07
 
 #### GraphQL-svar för orderplacering innehåller inte något undantagsmeddelande
 
-Återställde tidigare ändring som returnerade fel i ett annat format. Nu returneras potentiella fel på ett konsekvent sätt, inte GraphQL-schemat. Detta bör läggas till som känd BIC, godkänd av PM här: https://jira.corp.adobe.com/browse/ACP2E-3399?focusedId=45248897&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-45248897
+Återställde tidigare ändring som returnerade fel i ett annat format. Nu returneras potentiella fel på ett konsekvent sätt, inte GraphQL-schemat. Detta bör läggas till som känd BIC, godkänd av PM här: https://jira.corp.adobe.com/browse/ACP2E-3399?focusedId=45248897&amp;page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-45248897
 
 _ACP2E-3399 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/9608ca21)_
 
@@ -2447,7 +2447,7 @@ _ACP2E-4233 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/98f0
 
 #### [MSI] Misslyckade MFTF-tester relaterade till de senaste huvudlinjeändringarna.
 
-Innan de gästkunder som valde Pickup i butik utan leveransadress korrigerades fylldes fakturaadressen automatiskt i med butikens adress, som inte kunde ändras, vilket ledde till felaktig fakturainformation. När den fasta faktureringsadressen nu är redigerbar i det här scenariot kan gästerna ange sina egna uppgifter. Registrerade användare ser sin sparade faktureringsadress istället för butikens.
+Innan de gästkunder som valde Pickup i butik utan leveransadress korrigerades fylldes fakturaadressen automatiskt i med butikens adress, som inte kunde ändras, vilket ledde till felaktig fakturainformation. När den fasta faktureringsadressen nu är redigerbar i det här scenariot kan gästerna ange sina egna uppgifter. Registrerade användare ser sin sparade faktureringsadress i stället för butikens.
 
 _ACP2E-4260 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/ab891304) - [GitHub-kodbidrag](https://github.com/magento/inventory/commit/13e432a6)_
 
@@ -2964,7 +2964,7 @@ Frågan körs nu och returnerar rätt kuponginformation i svaret.
 
 _AC-14889 - [GitHub-problem](https://github.com/magento/magento2/issues/39962) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/fe72c407)_
 
-#### [Molnet][experienceleague] - ingen katalogprisregel används
+#### `[Cloud][experienceleague]`-katalogprisregeln används inte
 
 Innan reglerna för korrigeringspriset för kataloger inte tillämpades när `special_price` bara angavs på webbplatsnivå (inte vid Alla butiksvyer). Efter att prisreglerna för korrigeringskatalogen nu har tillämpats korrekt när `special_price` har angetts på webbplatsnivå genom att kontrollera webbplatsens standardbutik först.
 
@@ -3152,7 +3152,7 @@ _ACP2E-4212 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/ab89
 
 #### Det går inte att navigera mellan webbplatser i förhandsversionen av schemauppdateringen
 
-Före den här korrigeringen bryts förhandsgranskningen av den schemalagda uppdateringen när innehåll för butiker med anpassade domäner förhandsgranskas. Efter den här korrigeringen kan anpassade butiksdomäner förhandsgranskas som de är och navigeras i förhandsvisningsbildrutan. Korrigeringen omfattar produkter, kategorier, CMS-sidor och CMS-block, och stöder navigeringslänkar med `{{store url}}`-taggar enligt [Adobe Commerce Variables and Markup Tags &#x200B;](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/variables/markup-tags).
+Före den här korrigeringen bryts förhandsgranskningen av den schemalagda uppdateringen när innehåll för butiker med anpassade domäner förhandsgranskas. Efter den här korrigeringen kan anpassade butiksdomäner förhandsgranskas som de är och navigeras i förhandsvisningsbildrutan. Korrigeringen omfattar produkter, kategorier, CMS-sidor och CMS-block, och stöder navigeringslänkar med `{{store url}}`-taggar enligt [Adobe Commerce Variables and Markup Tags ](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/variables/markup-tags).
 
 _ACP2E-4308 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/0a3b7032)_
 

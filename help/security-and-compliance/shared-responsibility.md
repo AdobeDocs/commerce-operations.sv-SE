@@ -2,7 +2,7 @@
 title: Delat ansvar, säkerhet och operativ modell
 description: Läs mer om säkerhetsansvar för alla parter som deltar i ditt Adobe Commerce i molninfrastrukturprojekt.
 exl-id: f3cc1685-e469-4e30-b18e-55ce10dd69ce
-source-git-commit: aac78fc95b86951f352a636eef33e0b79b22a183
+source-git-commit: 7054a5286f01e26e324401f4d8505e4e0faed93e
 workflow-type: tm+mt
 source-wordcount: '2939'
 ht-degree: 0%
@@ -793,10 +793,11 @@ Handlarna ansvarar för att synkronisera data mellan olika miljöer.
 
 {style="table-layout:auto"}
 
+>[!NOTE]
 >
 >Handlarna måste använda den senaste versionen av Live Search, produktrekommendationer och betaltjänster för att säkerställa högsta stabilitet, funktionalitet och rätt till support.
 >Adobe har inte stöd för gamla versioner och en uppgradering säkerställer att du kan dra nytta av de senaste förbättringarna och felkorrigeringarna.
->Mer information om vilka versioner som stöds finns i [Produkttillgänglighetsmatrisen för Commerce Services](https://experienceleague.adobe.com/sv/docs/commerce-operations/release/product-availability#commerce-services).
+>Mer information om vilka versioner som stöds finns i [Produkttillgänglighetsmatrisen för Commerce Services](https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability#commerce-services).
 
 #### Produktrekommendationer
 

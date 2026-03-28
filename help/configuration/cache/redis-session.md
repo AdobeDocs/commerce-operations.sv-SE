@@ -3,7 +3,7 @@ title: Använd Redis för sessionslagring
 description: Lär dig hur du konfigurerar Redis för sessionslagring i Adobe Commerce. Upptäck kommandoradskonfiguration, konfigurationsalternativ och prestandaoptimeringstekniker.
 feature: Configuration, Cache
 exl-id: f93f500d-65b0-4788-96ab-f1c3d2d40a38
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 7054a5286f01e26e324401f4d8505e4e0faed93e
 workflow-type: tm+mt
 source-wordcount: '724'
 ht-degree: 1%
@@ -37,7 +37,7 @@ där
 | session-save-redis-port | port | Redis-serverns avlyssningsport. | 6379 |
 | session-save-redis-password | lösenord | Anger ett lösenord om Redis-servern kräver autentisering. | tom |
 | session-save-redis-timeout | timeout | Anslutningens timeout, i sekunder. | 2,5 |
-| session-save-redis-persistent-id | persistent_identifier | Unik sträng för att aktivera beständiga anslutningar (till exempel sess-db0).<br>[Kända fel med phpredis och php-fpm](https://github.com/phpredis/phpredis/issues/70). |
+| session-save-redis-persistent-id | persistent_identifier | Unik sträng för att aktivera beständiga anslutningar (till exempel sess-db0).<br>[Kända fel med phpredis och php-fpm](https://github.com/phpredis/phpredis/issues/70). |  |
 | session-save-redis-db | databas | Unikt Redis-databasnummer som rekommenderas för att skydda mot dataförlust.<br><br>**Viktigt**: Om du använder Redis för mer än en typ av cachelagring måste databasnumren vara olika. Vi rekommenderar att du tilldelar standardvärdet för cachningsdatabasen till 0, sidcachningsdatabasnumret till 1 och sessionslagringsdatabasnumret till 2. | 0 |
 | session-save-redis-compression-threshold | compression_threshold | Ange 0 om du vill inaktivera komprimering (rekommenderas när `suhosin.session.encrypt = On`).<br>[Känt fel med strängar som är större än 64 kB](https://github.com/colinmollenhour/Cm_Cache_Backend_Redis/issues/18). | 2048 |
 | session-save-redis-compression-lib | compression_library | Alternativ: gzip, lzf, lz4 eller snappy. | gzip |

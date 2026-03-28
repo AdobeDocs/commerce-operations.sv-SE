@@ -2,7 +2,7 @@
 title: Förutsättningar
 description: Förbered ditt Adobe Commerce-projekt för en uppgradering genom att slutföra dessa nödvändiga steg.
 exl-id: f7775900-1d10-4547-8af0-3d1283d9b89e
-source-git-commit: 766226dc998aafe54bc84d77cabee6fb0a969e6c
+source-git-commit: 7054a5286f01e26e324401f4d8505e4e0faed93e
 workflow-type: tm+mt
 source-wordcount: '1865'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Se till att du har uppdaterat alla systemkrav och beroenden i din miljö. Gransk
 
 >[!NOTE]
 >
->För Adobe Commerce i molnbaserade infrastrukturproprojekt måste du skapa en [supportbiljett](https://experienceleague.adobe.com/sv/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) för att kunna installera eller uppdatera tjänster i mellanlagrings- och produktionsmiljöer. Ange de tjänständringar som krävs och inkludera dina uppdaterade `.magento.app.yaml`- och `services.yaml`-filer och PHP-version i biljetten. Det kan ta upp till 48 timmar för molninfrastrukturteamet att uppdatera ditt projekt. Se [Program och tjänster som stöds](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/architecture/cloud-architecture#supported-software-and-services).
+>För Adobe Commerce i molnbaserade infrastrukturproprojekt måste du skapa en [supportbiljett](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) för att kunna installera eller uppdatera tjänster i mellanlagrings- och produktionsmiljöer. Ange de tjänständringar som krävs och inkludera dina uppdaterade `.magento.app.yaml`- och `services.yaml`-filer och PHP-version i biljetten. Det kan ta upp till 48 timmar för molninfrastrukturteamet att uppdatera ditt projekt. Se [Program och tjänster som stöds](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/cloud-architecture#supported-software-and-services).
 
 ## Kontrollera att en sökmotor som stöds är installerad
 
@@ -102,6 +102,7 @@ För att kunna uppgradera MySQL från version 8.0 till version 8.4 måste du fö
    >```sql
    > ERROR 6125 (HY000) at line 2164: Failed to add the foreign key constraint. Missing unique key for constraint 'CAT_PRD_FRONTEND_ACTION_PRD_ID_CAT_PRD_ENTT_ENTT_ID' in the referenced table 'catalog_product_entity'
    >```
+
 1. Starta om MySQL-servern.
 1. Importera säkerhetskopierade data till MySQL.
 1. Rensa cachen:
@@ -358,7 +359,7 @@ Så här anger du miljövariabeln:
 
 Av säkerhetsskäl kräver Adobe Commerce vissa behörigheter i filsystemet. Behörigheter skiljer sig från _[ägarskap](../../upgrade/prepare/prerequisites.md#verify-file-system-permissions)_. Ägarskapet avgör vem som kan utföra åtgärder i filsystemet. Behörigheterna avgör vad användaren kan göra.
 
-Kataloger i filsystemet måste vara skrivbara av [filsystemets ägargrupp &#x200B;](../../installation/prerequisites/file-system/overview.md).
+Kataloger i filsystemet måste vara skrivbara av [filsystemets ägargrupp ](../../installation/prerequisites/file-system/overview.md).
 
 Om du vill verifiera att filsystembehörigheterna är korrekt loggar du antingen in på programservern eller använder värdtjänstleverantörens filhanterarprogram.
 

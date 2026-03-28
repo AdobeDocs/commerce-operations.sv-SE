@@ -1,7 +1,7 @@
 ---
-source-git-commit: e50883135e13621f9668914a260bd5a2bf48641d
+source-git-commit: 7054a5286f01e26e324401f4d8505e4e0faed93e
 workflow-type: tm+mt
-source-wordcount: '8232'
+source-wordcount: '8012'
 ht-degree: 0%
 
 ---
@@ -403,7 +403,7 @@ Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 #### `--magento-init-params`
 
-Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - Kräver ett värde
 
@@ -2240,7 +2240,7 @@ Lägg till IP-adressen i den befintliga listan
 
 #### `--magento-init-params`
 
-Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - Kräver ett värde
 
@@ -2266,7 +2266,7 @@ Tillåtna IP-adresser (använd &#39;none&#39; för att rensa tillåten IP-lista)
 
 #### `--magento-init-params`
 
-Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - Kräver ett värde
 
@@ -2292,7 +2292,7 @@ Tillåtna IP-adresser (använd &#39;none&#39; för att rensa tillåten IP-lista)
 
 #### `--magento-init-params`
 
-Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - Kräver ett värde
 
@@ -2311,7 +2311,7 @@ Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 #### `--magento-init-params`
 
-Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - Kräver ett värde
 
@@ -2399,7 +2399,7 @@ Rensa genererade statiska vyfiler. Om modulerna har statiska visningsfiler kräv
 
 #### `--magento-init-params`
 
-Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - Kräver ett värde
 
@@ -2448,7 +2448,7 @@ Rensa genererade statiska vyfiler. Om modulerna har statiska visningsfiler kräv
 
 #### `--magento-init-params`
 
-Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - Kräver ett värde
 
@@ -2490,7 +2490,7 @@ Skriv bara ut inaktiverade moduler
 
 #### `--magento-init-params`
 
-Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - Kräver ett värde
 
@@ -2562,7 +2562,7 @@ Rensa genererade statiska vyfiler. Om modulerna har statiska visningsfiler kräv
 
 #### `--magento-init-params`
 
-Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - Kräver ett värde
 
@@ -3085,7 +3085,7 @@ Utför fullständig säkerhetskopiering av databasen
 
 #### `--magento-init-params`
 
-Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - Kräver ett värde
 
@@ -3703,7 +3703,7 @@ ID-prefix för nycklar
 
 #### `--magento-init-params`
 
-Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - Kräver ett värde
 
@@ -3722,7 +3722,7 @@ Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 #### `--magento-init-params`
 
-Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - Kräver ett värde
 
@@ -3850,7 +3850,7 @@ Maximal tillåten fördröjd slavanslutning (i sekunder)
 
 #### `--magento-init-params`
 
-Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - Kräver ett värde
 
@@ -3907,7 +3907,7 @@ Utcheckningsresursnamn
 
 #### `--magento-init-params`
 
-Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - Kräver ett värde
 
@@ -3964,7 +3964,7 @@ Namn på försäljningsresurs
 
 #### `--magento-init-params`
 
-Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - Kräver ett värde
 
@@ -3990,7 +3990,7 @@ Tillåter konvertering av gamla skript (InstallSchema, UpgradeSchema) till forma
 
 #### `--magento-init-params`
 
-Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - Kräver ett värde
 
@@ -4009,7 +4009,7 @@ Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 #### `--magento-init-params`
 
-Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - Kräver ett värde
 
@@ -4879,7 +4879,7 @@ Magento-installationen körs i torrt läge
 
 #### `--magento-init-params`
 
-Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - Kräver ett värde
 
@@ -4944,7 +4944,7 @@ Basnamn för databassäkerhetskopieringsfilen i var/backups
 
 #### `--magento-init-params`
 
-Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - Kräver ett värde
 
@@ -5199,7 +5199,7 @@ Om en säkerhetsnyckel ska användas i Magento Admin URL:er och formulär. Inakt
 
 #### `--magento-init-params`
 
-Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - Kräver ett värde
 
@@ -5218,7 +5218,7 @@ Information om globala alternativ finns i [Globala alternativ](#global-options).
 
 #### `--magento-init-params`
 
-Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - Kräver ett värde
 
@@ -5270,7 +5270,7 @@ Magento-installationen körs i torrt läge
 
 #### `--magento-init-params`
 
-Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: &quot;MAGE_MODE=developer&amp;MAGE_DIRS[base][path]=/var/www/example.com&amp;MAGE_DIRS[cache][path]=/var/tmp/cache&quot;
+Lägg till i valfritt kommando för att anpassa Magento initieringsparametrar Till exempel: `MAGE_MODE=developer&MAGE_DIRS[base][path]=/var/www/example.com&MAGE_DIRS[cache][path]=/var/tmp/cache`
 
 - Kräver ett värde
 

@@ -3,7 +3,7 @@ title: Använd Valkey för sessionslagring
 description: Lär dig hur du konfigurerar Valkey för sessionslagring i Adobe Commerce. Upptäck konfigurationssteg, konfigurationsalternativ och tekniker för prestandaoptimering.
 feature: Configuration, Cache
 exl-id: 986ddb5c-8fc5-4210-8a41-a29e3a7625b7
-source-git-commit: 10f324478e9a5e80fc4d28ce680929687291e990
+source-git-commit: 7054a5286f01e26e324401f4d8505e4e0faed93e
 workflow-type: tm+mt
 source-wordcount: '807'
 ht-degree: 1%
@@ -44,7 +44,7 @@ bin/magento setup:config:set --session-save=redis --session-save-redis-<paramete
 | session-save-valkey-port | port | Valkey server listen port. | 6379 |
 | session-save-valkey-password | lösenord | Anger ett lösenord om din Valkey-server kräver autentisering. | tom |
 | session-save-valkey-timeout | timeout | Anslutningens timeout, i sekunder. | 2,5 |
-| session-save-valkey-persistent-id | persistent_identifier | Unik sträng för att aktivera beständiga anslutningar (till exempel sess-db0).<br>[Kända fel med phpredis och php-fpm](https://github.com/phpredis/phpredis/issues/70). |
+| session-save-valkey-persistent-id | persistent_identifier | Unik sträng för att aktivera beständiga anslutningar (till exempel sess-db0).<br>[Kända fel med phpredis och php-fpm](https://github.com/phpredis/phpredis/issues/70). |  |
 | session-save-valkey-db | databas | Unikt Valkey-databasnummer som rekommenderas för att skydda mot dataförlust.<br><br>**Viktigt**: Om du använder Valkey för mer än en typ av cachelagring måste databasnumren vara olika. Vi rekommenderar att du tilldelar standardvärdet för cachningsdatabasen till `0`, sidcachningsdatabasnumret till `1` och sessionslagringsdatabasnumret till `2`. | 0 |
 | session-save-valkey-compression-threshold | compression_threshold | Ange `0` om du vill inaktivera komprimering (rekommenderas när `suhosin.session.encrypt = On`). | 2048 |
 | session-save-valkey-compression-lib | compression_library | Alternativ: gzip, lzf, lz4 eller snappy. | gzip |

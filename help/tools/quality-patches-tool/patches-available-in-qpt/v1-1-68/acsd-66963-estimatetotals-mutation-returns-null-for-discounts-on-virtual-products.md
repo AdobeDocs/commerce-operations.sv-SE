@@ -4,13 +4,13 @@ description: Använd patchen ACSD-66963 för att korrigera Adobe Commerce-proble
 feature: GraphQL
 role: Admin, Developer
 type: Troubleshooting
-source-git-commit: 0eede09026df98426cd3b6b1550be274c26d7e13
+exl-id: b62e48f5-a9d6-456a-97e7-96f740d8e927
+source-git-commit: 7054a5286f01e26e324401f4d8505e4e0faed93e
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '310'
 ht-degree: 0%
 
 ---
-
 
 # ACSD-66963: `estimateTotals`-mutation returnerar null för rabatter på virtuella produkter
 
@@ -28,7 +28,7 @@ Korrigeringen ACSD-66963 åtgärdar ett problem där `estimateTotals` returnerar
 
 >[!NOTE]
 >
->Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler &#x200B;](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). Använd patch-ID:t som söknyckelord för att hitta patchen.
+>Korrigeringen kan bli tillämplig för andra versioner med nya [!DNL Quality Patches Tool]-versioner. Om du vill kontrollera om korrigeringen är kompatibel med din Adobe Commerce-version uppdaterar du `magento/quality-patches`-paketet till den senaste versionen och kontrollerar kompatibiliteten på [[!DNL Quality Patches Tool]: Sök efter korrigeringsfiler ](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). Använd patch-ID:t som söknyckelord för att hitta patchen.
 
 ## Problem
 
@@ -81,60 +81,59 @@ Korrigeringen ACSD-66963 åtgärdar ett problem där `estimateTotals` returnerar
 
 Rabattinformation ingår för kundvagnar som endast innehåller virtuella produkter.
 
-    &quot;
-    &lbrace;
-    &quot;data&quot;: &lbrace;
-    &quot;estimsummor&quot;: &lbrace;
-    &quot;kundvagn&quot;: &lbrace;
-    &quot;priser&quot;: &lbrace;
-    &quot;rabatter&quot;: &lbrack;
-    &lbrace;
-    &quot;belopp&quot;: &lbrace;
-    &quot;värde&quot;: 100.5,
-    &quot;valuta&quot;: &quot;USD&quot;
-    &rbrace;,
-     
-    &quot;label&quot;: &quot;A second rabatt code for testing&quot;,
-    &quot;coupon&quot;: &lbrace;
-    &quot;code&quot;: &quot;z3r0c00l&quot;
-    &rbrace;,
-    &quot;applied_to&quot;: &quot;ITEM&quot;,
-    &quot;type&quot;: null
-    
-    &rbrack;
-    &rbrace; 
-    &rbrace;
-    ,
-    &quot;extensions&quot;: {}
-    &rbrace;
-    &quot;
+```
+    {
+      "data": {
+        "estimateTotals": {
+          "cart": {
+            "prices": {
+              "discounts": [
+                {
+                  "amount": {
+                    "value": 100.5,
+                    "currency": "USD"
+                  },
+                  "label": "A second discount code for testing",
+                  "coupon": {
+                    "code": "z3r0c00l"
+                  },
+                  "applied_to": "ITEM",
+                  "type": null
+                }
+              ]
+            }
+          }
+        }
+      },
+      "extensions": {}
+    }
+```
 
 <u>Faktiska resultat</u>:
 
 Rabattinformationen returneras som *null* för kundvagnar med endast virtuella produkter.
 
-    &quot;
-    &lbrace;
-    &quot;data&quot;: 
-    &quot;estimsummor&quot;: 
-    &quot;kundvagn&quot;: 
-    &quot;priser&quot;: 
-    &quot;rabatter&quot;: null
-    &rbrace;
-    &rbrace;
-    &rbrace;
-    ,
-    &quot;tillägg&quot;: {}
-    &rbrace;
-    &quot;
- 15&rbrace;
+```
+    {
+      "data": {
+        "estimateTotals": {
+          "cart": {
+            "prices": {
+              "discounts": null
+            }
+          }
+        }
+      },
+      "extensions": {}
+    }
+```
 
 ## Tillämpa korrigeringen
 
 Använd följande länkar beroende på distributionsmetod för att tillämpa enskilda korrigeringsfiler:
 
-* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning &#x200B;](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
-* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html?lang=sv-SE) i Commerce om molninfrastruktur.
+* Lokal användning för Adobe Commerce eller Magento Open Source: [[!DNL Quality Patches Tool] > Användning ](/help/tools/quality-patches-tool/usage.md) i guiden [!DNL Quality Patches Tool].
+* Adobe Commerce om molninfrastruktur: [Uppgraderingar och korrigeringar > Tillämpa korrigeringar](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/develop/upgrade/apply-patches.html) i Commerce om molninfrastruktur.
 
 ## Relaterad läsning
 
