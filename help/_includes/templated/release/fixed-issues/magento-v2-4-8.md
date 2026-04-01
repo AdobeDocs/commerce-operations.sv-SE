@@ -1,7 +1,7 @@
 ---
-source-git-commit: 7054a5286f01e26e324401f4d8505e4e0faed93e
+source-git-commit: 1dcfbd53f79c83dbf6c44ffce952de101f7e01f1
 workflow-type: tm+mt
-source-wordcount: '25717'
+source-wordcount: '25765'
 ht-degree: 0%
 
 ---
@@ -32,6 +32,8 @@ jQuery/fileUploader-biblioteket har tagits bort eftersom det har migrerats till 
 _AC-11911 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/7cabfb46)_
 
 #### Lägg till kompatibilitet med MySQL 8.4 LTS för Magento CE
+
+Det finns ingen beskrivning.
 
 _AC-11995 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/672a2e61)_
 
@@ -67,13 +69,19 @@ _AC-12025 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/de4dfb
 
 #### Lägg till kompatibilitet med MySQL 8.4 LTS för EE
 
+Det finns ingen beskrivning.
+
 _AC-12032 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/672a2e61)_
 
 #### Lägg till kompatibilitet med MySQL 8.4 LTS för B2B
 
+Det finns ingen beskrivning.
+
 _AC-12034 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/672a2e61)_
 
 #### Lägg till kompatibilitet med MySQL 8.4 LTS för pakettillägg
+
+Det finns ingen beskrivning.
 
 _AC-12074 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/672a2e61)_
 
@@ -85,6 +93,8 @@ _AC-12085 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/b34c0a
 
 #### Prenumerantoptimering - PhpUnit10
 
+Det finns ingen beskrivning.
+
 _AC-12165 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/90e25b6b)_
 
 #### Stöd för anslutningsförsök för Redis-sessioner och kompatibelt med colinkvarenhour/php-redis-session-abstract v2.0.0
@@ -94,6 +104,8 @@ Uppdaterad senaste version av colinkvart-hour/php-redis-session-abstract v2.0.0 
 _AC-12267 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/672a2e61)_
 
 #### Undersök automatiseringstester av fel med MySQL 8.4 LTS
+
+Det finns ingen beskrivning.
 
 _AC-12576 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/672a2e61)_
 
@@ -115,6 +127,8 @@ säkerställa kompatibilitet och aktuell funktionalitet. Tidigare kunde uppdater
 _AC-12715 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/b34c0a75)_
 
 #### Undersök enhetstestfel på grund av phpunit patch-uppdatering under komponentuppgradering
+
+Det finns ingen beskrivning.
 
 _AC-12823 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/b34c0a75)_
 
@@ -299,6 +313,8 @@ _AC-10782 - [GitHub-problem](https://github.com/magento/magento2/issues/38331) -
 
 #### administratörslösenord - uppdatering.
 
+Det finns ingen beskrivning.
+
 _AC-10886 - [GitHub-problem](https://github.com/magento/magento2/issues/38352) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/4bca5dfe)_
 
 #### mitt konto lägger till adress kraschar när jag sparar
@@ -387,6 +403,8 @@ _ACP2E-3038 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/7377
 ### Konto, kundvagn och utcheckning
 
 #### &quot;välj&quot;-attribut för anpassad kundadress återges inte för ny kundadress
+
+Det finns ingen beskrivning.
 
 _AC-2341 - [GitHub-problem](https://github.com/magento/magento2/issues/34950)_
 
@@ -1482,6 +1500,8 @@ _AC-12283 - [GitHub-problem](https://github.com/magento/magento2/issues/38845) -
 
 #### Widgetkategoriträdet återges inte korrekt
 
+Det finns ingen beskrivning.
+
 _AC-12692 - [GitHub-problem](https://github.com/magento/magento2/issues/39008) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/58e40ceb)_
 
 #### Det går inte att se meddelandet&quot;Använda standardvärde&quot; när du ändrar temat på designkonfigurationssidan
@@ -1878,7 +1898,7 @@ Systemet följer nu kodningsstandarden genom att ta bort den förbjudna taggen `
 
 _AC-8356 - [GitHub-problem](https://github.com/magento/magento2/issues/37250) - [GitHub-kodbidrag](https://github.com/magento/magento2/pull/37000)_
 
-#### Utrymme i syntaxbrytningsregel för redigerarconfig för `[&lbrace;composer,auth&rbrace;.json]`
+#### Utrymme i syntaxbrytningsregel för redigerarconfig för `[{composer,auth}.json]`
 
 Systemet tillämpar nu indrag med 4 blanksteg korrekt på Composer- och auth.json-filer, efter en korrigering av ett syntaxfel i EditorConfig. Tidigare formaterades dessa filer felaktigt med ett indrag med två blanksteg på grund av ett blanksteg i editorconfig-syntaxen.
 
@@ -2022,7 +2042,7 @@ Problemet har korrigerats efter att kontrollen tillämpats när en produktsökni
 
 _ACP2E-2653 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/12e071c3)_
 
-#### GraphQL Products-anropet som innehåller prisfiltret `&lbrace;from:"0"&rbrace;` returnerar inget resultat
+#### GraphQL Products-anropet som innehåller prisfiltret `{from:"0"}` returnerar inget resultat
 
 Tidigare sökning med grafikprocessorer med filter för nollpriser returnerade inga resultat alls på grund av ett utlöst undantag. Nu returnerar sökningen det förväntade resultatet.
 
@@ -2765,6 +2785,8 @@ _AC-11474 - [GitHub-problem](https://github.com/magento/magento2/issues/38486) -
 
 #### Navigering i kategoriträdet leder till fel i Redis: &quot;Redis-sessionen har överskridit samtidiga anslutningar&quot;
 
+Det finns ingen beskrivning.
+
 _AC-12571 - [GitHub-problem](https://github.com/magento/magento2/issues/38851) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/0611e750)_
 
 #### CSP-problem i kombination med dev/css/use_css_critical_path
@@ -2891,6 +2913,8 @@ Systemet visar nu priset på enkla produkter korrekt när det efterfrågas via O
 _AC-11810 - [GitHub-problem](https://github.com/magento/magento2/issues/38603)_
 
 #### Ögont avrundningsfel i katalogregel
+
+Det finns ingen beskrivning.
 
 _AC-13855 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/276e0acd)_
 
@@ -3072,6 +3096,8 @@ _AC-13053 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/3ea266
 
 #### magento/module-open-search är beroende av grenen open search-php som inte finns
 
+Det finns ingen beskrivning.
+
 _AC-13721 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/05dc0bbf)_
 
 #### söktabell när den är mycket stor har stor inverkan på inläsningstidens förskjutning
@@ -3202,9 +3228,13 @@ _AC-13362 - [GitHub-problem](https://github.com/magento/magento2/issues/31399) -
 
 #### MAGETWO-95118: Kontrollera beteendet med den beständiga kundvagnen efter att sessionen har upphört
 
+Det finns ingen beskrivning.
+
 _AC-13478 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/7d5e3906)_
 
 #### Åtgärda statiska tester för att aktivera användning med tillägg från tredje part
+
+Det finns ingen beskrivning.
 
 _AC-13848 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/9e383b4d)_
 
@@ -3271,6 +3301,8 @@ Den här PR-funktionen förbättrar felmeddelandet när en komponent inte kan l�
 _AC-13472 - [GitHub-problem](https://github.com/magento/magento2/issues/36761) - [GitHub-kodbidrag](https://github.com/magento/magento2/pull/38971)_
 
 #### PHP 8.4-borttagningsfel som orsakar byggfel i 2.4-utvecklingen
+
+Det finns ingen beskrivning.
 
 _AC-14004 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/1da9ba6f)_
 

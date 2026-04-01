@@ -1,7 +1,7 @@
 ---
-source-git-commit: 7054a5286f01e26e324401f4d8505e4e0faed93e
+source-git-commit: 1dcfbd53f79c83dbf6c44ffce952de101f7e01f1
 workflow-type: tm+mt
-source-wordcount: '27921'
+source-wordcount: '27999'
 ht-degree: 0%
 
 ---
@@ -132,6 +132,8 @@ _AC-10782 - [GitHub-problem](https://github.com/magento/magento2/issues/38331) -
 
 #### administratörslösenord - uppdatering.
 
+Det finns ingen beskrivning.
+
 _AC-10886 - [GitHub-problem](https://github.com/magento/magento2/issues/38352) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/4bca5dfe)_
 
 #### mitt konto lägger till adress kraschar när jag sparar
@@ -171,6 +173,8 @@ Systemet tillåter nu att kryssrutorna&quot;Inloggning som kundanmälan&quot; oc
 _AC-13000 - [GitHub-problem](https://github.com/magento/magento2/issues/32329) - [GitHub-kodbidrag](https://github.com/magento/magento2/pull/32359)_
 
 #### Gränssnittets startsida i min profillistruta är inte där.(intermittent)
+
+Det finns ingen beskrivning.
 
 _AC-14299_
 
@@ -237,6 +241,8 @@ _ACP2E-3038 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/7377
 
 #### &quot;välj&quot;-attribut för anpassad kundadress återges inte för ny kundadress
 
+Det finns ingen beskrivning.
+
 _AC-2341 - [GitHub-problem](https://github.com/magento/magento2/issues/34950)_
 
 ### Administratörsgränssnitt
@@ -285,9 +291,13 @@ _AC-13529 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/6cfb9b
 
 #### När maximalt antal begäranden om återställning av lösenord har angetts är större än 0, t.ex. 3, skickas felmeddelanden om att gränsen överskrids innan gränsen nåtts, dvs. från andra gången
 
+Det finns ingen beskrivning.
+
 _AC-13767_
 
 #### Trots att maximalt antal begäranden om återställning av lösenord har angetts till 0 ( inaktiverat) skickas felmeddelanden om att gränsen överskrids från och med 2:a gången
+
+Det finns ingen beskrivning.
 
 _AC-13768_
 
@@ -298,6 +308,8 @@ Tidigare röd asterisk visades inte för telefonnummer, men  telefonnummer var 
 _AC-13850 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/c699c206)_
 
 #### I Admin: När vi försöker ändra ordningen på skickar vi en beställningsknapp går det inte att klicka på. (intermittent)
+
+Det finns ingen beskrivning.
 
 _AC-14300_
 
@@ -605,6 +617,8 @@ _ACP2E-3187 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/ec7e
 
 #### 2.4.8-beta102 package Enterprise Edition fungerar inte med programundantag
 
+Det finns ingen beskrivning.
+
 _AC-13501_
 
 #### Produkter som tilldelats en delad katalog återspeglas inte i början när partiellt index körs
@@ -684,6 +698,8 @@ _ACP2E-3391_
 
 #### Knappen för snabb utcheckning av administratör är inaktiverad.
 
+Det finns ingen beskrivning.
+
 _AC-14293_
 
 #### Betala via LPM
@@ -699,6 +715,8 @@ Systemet tillåter nu expressbetalningsmetoder för konfigurerbara produkter som
 _BUNDLE-3368_
 
 #### CVV-verifieringen misslyckades
+
+Det finns ingen beskrivning.
 
 _BUNDLE-3369_
 
@@ -810,9 +828,13 @@ _AC-13302 - [GitHub-problem](https://github.com/magento/magento2/issues/39292) -
 
 #### Presentregisterprodukten visas inte korrekt
 
+Det finns ingen beskrivning.
+
 _AC-13797_
 
 #### Presentregisterprodukten visas inte korrekt
+
+Det finns ingen beskrivning.
 
 _AC-13841_
 
@@ -1531,6 +1553,8 @@ _AC-12283 - [GitHub-problem](https://github.com/magento/magento2/issues/38845) -
 
 #### Widgetkategoriträdet återges inte korrekt
 
+Det finns ingen beskrivning.
+
 _AC-12692 - [GitHub-problem](https://github.com/magento/magento2/issues/39008) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/58e40ceb)_
 
 #### Det går inte att se meddelandet&quot;Använda standardvärde&quot; när du ändrar temat på designkonfigurationssidan
@@ -1909,6 +1933,8 @@ _AC-13149 - [GitHub-problem](https://github.com/magento/magento2/issues/39219) -
 
 #### installationen:upgrade misslyckas med MariaDB 11.4-versionen på grund av ändringar i teckenuppsättning och sortering
 
+Det finns ingen beskrivning.
+
 _AC-13247_
 
 #### [Problem] Ta bort alla parametrar för marknadsföringsinhämtning för att minimera cachen
@@ -1971,7 +1997,7 @@ Systemet följer nu kodningsstandarden genom att ta bort den förbjudna taggen `
 
 _AC-8356 - [GitHub-problem](https://github.com/magento/magento2/issues/37250) - [GitHub-kodbidrag](https://github.com/magento/magento2/pull/37000)_
 
-#### Utrymme i syntaxbrytningsregel för redigerarconfig för `[&lbrace;composer,auth&rbrace;.json]`
+#### Utrymme i syntaxbrytningsregel för redigerarconfig för `[{composer,auth}.json]`
 
 Systemet tillämpar nu indrag med 4 blanksteg korrekt på Composer- och auth.json-filer, efter en korrigering av ett syntaxfel i EditorConfig. Tidigare formaterades dessa filer felaktigt med ett indrag med två blanksteg på grund av ett blanksteg i editorconfig-syntaxen.
 
@@ -2085,6 +2111,8 @@ _AC-7976 - [GitHub-problem](https://github.com/magento/magento2/issues/36877) - 
 
 #### 2.4.8-beta1 EE-rapporter genereras inte på grund av ett magento-undantag
 
+Det finns ingen beskrivning.
+
 _AC-13011_
 
 ### Framework, UI Framework
@@ -2127,7 +2155,7 @@ Problemet har korrigerats efter att kontrollen tillämpats när en produktsökni
 
 _ACP2E-2653 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/12e071c3)_
 
-#### GraphQL Products-anropet som innehåller prisfiltret `&lbrace;from:"0"&rbrace;` returnerar inget resultat
+#### GraphQL Products-anropet som innehåller prisfiltret `{from:"0"}` returnerar inget resultat
 
 Tidigare sökning med grafikprocessorer med filter för nollpriser returnerade inga resultat alls på grund av ett utlöst undantag. Nu returnerar sökningen det förväntade resultatet.
 
@@ -2662,13 +2690,19 @@ _ACP2E-3003 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/9af7
 
 #### [Braintree] Återbetala onlinelagringstransaktion som transactionid-returned
 
+Det finns ingen beskrivning.
+
 _BUNDLE-3394_
 
 #### [Braintree] + [CLOUD] Braintree-beställningar (kreditkort) kan inte dela upp tilläggen
 
+Det finns ingen beskrivning.
+
 _BUNDLE-3421_
 
 #### [Braintree] [Cloud]Braintree SSL-certifikat upphör att gälla den 30 juni
+
+Det finns ingen beskrivning.
 
 _BUNDLE-3422_
 
@@ -2981,6 +3015,8 @@ _AC-11474 - [GitHub-problem](https://github.com/magento/magento2/issues/38486) -
 
 #### Navigering i kategoriträdet leder till fel i Redis: &quot;Redis-sessionen har överskridit samtidiga anslutningar&quot;
 
+Det finns ingen beskrivning.
+
 _AC-12571 - [GitHub-problem](https://github.com/magento/magento2/issues/38851) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/0611e750)_
 
 #### CSP-problem i kombination med dev/css/use_css_critical_path
@@ -3115,6 +3151,8 @@ Systemet visar nu priset på enkla produkter korrekt när det efterfrågas via O
 _AC-11810 - [GitHub-problem](https://github.com/magento/magento2/issues/38603)_
 
 #### Ögont avrundningsfel i katalogregel
+
+Det finns ingen beskrivning.
 
 _AC-13855 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/276e0acd)_
 
@@ -3335,6 +3373,8 @@ _ACP2E-3383 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/2d62
 
 #### Andra kundvagnsprisregeln tillämpas inte om första kundvagnsregeln redan används
 
+Det finns ingen beskrivning.
+
 _AC-13751_
 
 ### Sök
@@ -3346,6 +3386,8 @@ Sökresultaten visas nu korrekt på sidan Avancerad sökning när ett produktatt
 _AC-13053 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/3ea26621)_
 
 #### magento/module-open-search är beroende av grenen open search-php som inte finns
+
+Det finns ingen beskrivning.
 
 _AC-13721 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/05dc0bbf)_
 
@@ -3396,6 +3438,8 @@ Se till att UPS-hastigheterna visas i kassan och i kundvagnen.
 _AC-11938 - [GitHub-problem](https://github.com/magento/magento2/issues/38618) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/493e01f5)_
 
 #### UPS REST &quot;sandbox&quot; och &quot;prod&quot; inställningsinstruktionsuppdateringar i devdoc
+
+Det finns ingen beskrivning.
 
 _AC-12938_
 
@@ -3505,9 +3549,13 @@ _AC-13362 - [GitHub-problem](https://github.com/magento/magento2/issues/31399) -
 
 #### MAGETWO-95118: Kontrollera beteendet med den beständiga kundvagnen efter att sessionen har upphört
 
+Det finns ingen beskrivning.
+
 _AC-13478 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/7d5e3906)_
 
 #### Integrationstester misslyckades Magento\NegotiableQuote\Controller\Quote\DownloadTest::testCompanyManagerDownloadWithNQSubPermission
+
+Det finns ingen beskrivning.
 
 _AC-13716_
 
@@ -3518,6 +3566,8 @@ Tidigare om databasen innehåller poster om målregeln utan något villkor uppst
 _AC-13722_
 
 #### Åtgärda statiska tester för att aktivera användning med tillägg från tredje part
+
+Det finns ingen beskrivning.
 
 _AC-13848 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/9e383b4d)_
 
@@ -3584,6 +3634,8 @@ Den här PR-funktionen förbättrar felmeddelandet när en komponent inte kan l�
 _AC-13472 - [GitHub-problem](https://github.com/magento/magento2/issues/36761) - [GitHub-kodbidrag](https://github.com/magento/magento2/pull/38971)_
 
 #### PHP 8.4-borttagningsfel som orsakar byggfel i 2.4-utvecklingen
+
+Det finns ingen beskrivning.
 
 _AC-14004 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/1da9ba6f)_
 

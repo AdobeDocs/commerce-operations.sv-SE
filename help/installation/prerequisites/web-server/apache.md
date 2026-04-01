@@ -1,42 +1,50 @@
 ---
-title: Apache
-description: Följ de här stegen för att installera och konfigurera Apache-webbservern för lokala installationer av Adobe Commerce.
+title: Installera Apache för lokala distributioner
+description: Lär dig hur du installerar och konfigurerar Apache för lokala Adobe Commerce-distributioner. Aktivera nödvändiga inställningar för moduler, omskrivningar och `.htaccess`.
+feature: Install, Configuration
+badgePaas: label="Lokalt" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="Gäller endast Adobe Commerce lokala projekt."
 exl-id: a9a394c9-389f-42ef-9029-dd22c979cfb8
-source-git-commit: f8c5d714a4e96d0508f745d1b7617696c8cc94a7
+source-git-commit: 352a71cb88ff38c0920201f49f1d7b889509fd61
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: '1015'
 ht-degree: 0%
 
 ---
 
-# Apache
+# Installera Apache för lokala distributioner {#apache}
 
-Adobe Commerce stöder Apache 2.4.x.
+I den här guiden får du hjälp med att installera Apache för Adobe Commerce lokala distributioner och konfigurera Apache-inställningarna som Commerce kräver. Den innehåller delade Apache-krav och operativsystemsspecifika procedurer för Ubuntu och CentOS. Adobe rekommenderar att du följer konfigurationsinstruktionerna i den här handboken för att bevara både funktionaliteten och säkerheten i Commerce-programmet.
 
-## Apache-obligatoriska direktiv
+Adobe stöder Apache-versionerna som listas i [systemkraven](../../system-requirements.md) för din Adobe Commerce-version. Versioner som stöds varierar beroende på version. Apache kräver också en PHP-konfiguration som stöds. Relaterade PHP-krav finns i [PHP-inställningar](../php-settings.md).
 
-1. Ange `AllowEncodedSlashes` i serverkonfigurationen (globalt) eller i den virtuella värdkonfigurationen för att undvika avkodning av kodade snedstreck som kan orsaka problem för URL:er. Om du till exempel hämtar produkter med ett snedstreck i SKU via API:t, vill du inte att det ska konverteras. Exempelblocket är inte fullständigt och andra direktiv krävs.
+Börja med det avsnitt som passar din miljö:
 
-   ```conf
-   <VirtualHost *:443>
-     # Allow encoded slashes
-     AllowEncodedSlashes NoDecode
-   </VirtualHost>
-   ```
+- Om Apache redan är installerat börjar du med [Granska Apache-krav](#review-apache-requirements).
+- Om du behöver installera eller uppgradera Apache på Ubuntu går du till [Installera eller uppgradera Apache på Ubuntu](#installing-or-upgrading-apache-on-ubuntu).
+- Om du behöver installera Apache på CentOS går du till [Installera Apache på CentOS](#installing-apache-on-centos).
 
-## Apache-skrivningar och åtkomst
+## Granska Apache-krav
 
-I det här avsnittet beskrivs hur du aktiverar Apache 2.4-omskrivningar och anger en inställning för den [distribuerade konfigurationsfilen, `.htaccess`](https://github.com/magento/magento2/blob/2.4-develop/.htaccess.sample).
+Uppfyll dessa krav på alla Apache-servrar som har Adobe Commerce som värd.
 
-Adobe Commerce använder serverskrivningar och `.htaccess` för att tillhandahålla katalognivåinstruktioner för Apache. Följande instruktioner finns även i alla andra avsnitt i det här avsnittet.
+### Konfigurera obligatoriska direktiv
 
-Använd det här avsnittet om du vill aktivera Apache 2.4-omskrivningar och ange en inställning för den [distribuerade konfigurationsfilen, `.htaccess`](https://httpd.apache.org/docs/current/howto/htaccess.html)
+Ange `AllowEncodedSlashes` i serverkonfigurationen (globalt) eller i den virtuella värdkonfigurationen för att undvika avkodning av kodade snedstreck som kan orsaka problem för URL:er. Om du till exempel hämtar produkter med ett snedstreck i SKU via API:t, vill du inte att snedstrecket ska konverteras. Följande exempelblock är inte fullständigt och andra direktiv krävs.
 
-Adobe Commerce använder serverskrivningar och `.htaccess` för att tillhandahålla katalognivåinstruktioner för Apache.
+```conf
+<VirtualHost *:443>
+  # Allow encoded slashes
+  AllowEncodedSlashes NoDecode
+</VirtualHost>
+```
 
->[!NOTE]
+### Konfigurera återskrivningar och .htaccess {#apache-rewrites-and-htaccess}
+
+Använd det här avsnittet om du vill aktivera Apache-omskrivning och konfigurera den [distribuerade `.htaccess` filen ](https://httpd.apache.org/docs/current/howto/htaccess.html). Adobe Commerce använder serverskrivningar och `.htaccess` för att tillhandahålla katalognivåinstruktioner för Apache.
+
+>[!IMPORTANT]
 >
->Om du inte aktiverar de här inställningarna visas vanligtvis inga format i din butik eller administratör.
+>Om du inte aktiverar de här inställningarna visas vanligtvis inga format i din butik eller administratör. Det kan också hindra Apache från att tillämpa Adobe Commerce-säkerhetsskydd som definieras i `.htaccess`.
 
 1. Aktivera modulen för omskrivning av Apache:
 
@@ -44,40 +52,31 @@ Adobe Commerce använder serverskrivningar och `.htaccess` för att tillhandahå
    a2enmod rewrite
    ```
 
-1. Om du vill att programmet ska kunna använda den distribuerade konfigurationsfilen `.htaccess` läser du riktlinjerna i [&#x200B; Apache 2.4-dokumentationen](https://httpd.apache.org/docs/current/mod/mod_rewrite.html).
+1. Aktivera programmet att använda den distribuerade konfigurationsfilen `.htaccess`.
 
-   >[!TIP]
-   >
-   >I Apache 2.4 är serverns standardkonfigurationsfil `/etc/apache2/sites-available/000-default.conf`.
+   1. Redigera `/etc/apache2/sites-available/000-default.conf` på Ubuntu. Information om andra Apache-layouter eller om ytterligare parametrar krävs finns i [dokumentationen för Apache](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) och i [dokumentationen för Apache-åtkomstkontroll](https://httpd.apache.org/docs/2.4/mod/mod_access_compat.html#order).
 
-   Du kan till exempel lägga till följande i slutet av `000-default.conf`:
+   1. Lägg till eller uppdatera direktivet `AllowOverride` för den katalog där du tänker installera Adobe Commerce.
 
-   ```
+   Om du till exempel installerar Adobe Commerce i standardinställningen `docroot` lägger du till följande block i `000-default.conf`:
+
+   ```conf
    <Directory "/var/www/html">
-       AllowOverride All
+     AllowOverride All
    </Directory>
    ```
 
    >[!NOTE]
    >
-   >Ibland kan ytterligare parametrar behövas. Mer information finns i [Apache 2.4-dokumentationen](https://httpd.apache.org/docs/2.4/mod/mod_access_compat.html#order).
+   >Om du uppgraderade från en tidigare Apache-version söker du först efter ett befintligt `<Directory "/var/www/html">`- eller `<Directory "/var/www">`-block i `000-default.conf`. Om du installerar Adobe Commerce i en annan `docroot` ska du uppdatera det matchande `<Directory>`-blocket för den sökvägen.
 
-1. Om du har ändrat Apache-inställningarna startar du om Apache:
+1. Starta om Apache för att tillämpa ändringarna:
 
    ```bash
    service apache2 restart
    ```
 
-   >[!NOTE]
-   >
-   >- Om du uppgraderade från en tidigare Apache-version söker du först efter `<Directory "/var/www/html">` eller `<Directory "/var/www">` i `000-default.conf`.
-   >- Du måste ändra värdet för `AllowOverride` i direktivet för den katalog som du vill installera Adobe Commerce-programvaran i. Om du till exempel vill installera i webbserverdokumentet redigerar du direktivet i `<Directory /var/www>`.
-
->[!NOTE]
->
->Om du inte aktiverar de här inställningarna visas vanligtvis format som inte finns i storefront eller Admin.
-
-## Nödvändiga moduler för Apache
+### Installera nödvändiga moduler
 
 Adobe Commerce kräver att följande Apache-moduler är installerade:
 
@@ -88,76 +87,75 @@ Adobe Commerce kräver att följande Apache-moduler är installerade:
 - [mod_security.c](https://modsecurity.org)
 - [mod_ssl.c](https://httpd.apache.org/docs/2.4/mod/mod_ssl.html)
 
-## Verifiera Apache-versionen
+## Kontrollera att Apache är installerat
 
-Kontrollera vilken Apache-version du kör genom att ange:
+Kontrollera att Apache är installerat och visa den aktuella versionen genom att ange:
 
 ```bash
 apache2 -v
 ```
 
-Resultatet ser ut ungefär så här:
+Resultatet visar information som liknar följande:
 
-```
-Server version: Apache/2.4.04 (Ubuntu)
-Server built: Jul 22 2020 14:35:32
+```text
+Server version: Apache/<installed-version>
+Server built: <build-date>
 ```
 
 - Om Apache *inte* är installerat, se:
-   - [Installera eller uppgradera Apache på Ubuntu](#installing-apache-on-ubuntu)
-   - [Installerar Apache på CentOS](#installing-apache-on-centos)
+   - [Installera eller uppgradera Apache på Ubuntu](#installing-or-upgrading-apache-on-ubuntu)
+   - [Installera Apache på CentOS](#installing-apache-on-centos)
 
-## Installera eller uppgradera Apache på Ubuntu
+## Installera eller uppgradera Apache på Ubuntu {#installing-or-upgrading-apache-on-ubuntu}
 
-I följande avsnitt beskrivs hur du installerar eller uppgraderar Apache:
+Installation och konfigurering av Apache i Ubuntu är en process i tre steg:
 
-- Installera Apache
-- Uppgradera till Apache 2.4 i Ubuntu för att använda PHP 7.4.
+1. Installera programvaran.
+1. Aktivera omskrivningar.
+1. Ange `.htaccess` direktiv.
 
-### Installerar Apache på Ubuntu
+När du konfigurerar omskrivningar av Apache-servern måste du ange vilken typ av direktiv som kan användas i `.htaccess`, som programmet använder för att ange omskrivningsregler och säkerhetsskydd.
 
-Installera standardversionen av Apache:
+### Installera Apache på Ubuntu
 
-1. Installera Apache
+1. Installera Apache om du inte redan har gjort det:
 
    ```bash
    apt-get -y install apache2
    ```
 
-1. Verifiera installationen.
+1. Verifiera installationen:
 
    ```bash
    apache2 -v
    ```
 
-   Resultatet ser ut ungefär så här:
+   Meddelanden som liknar följande för att bekräfta att installationen lyckades:
 
+   ```text
+   Server version: Apache/<installed-version>
+   Server built: <build-date>
    ```
-   Server version: Apache/2.4.18 (Ubuntu)
-   Server built: 2020-04-15T18:00:57
-   ```
 
-1. Aktivera [omskrivningar och `.htaccess`](#apache-rewrites-and-htaccess).
+1. Fortsätt med nästa avsnitt.
 
-### Uppgraderar Apache på Ubuntu
+   >[!NOTE]
+   >
+   >Även om Apache tillhandahålls som standard med Ubuntu, se följande avsnitt för att konfigurera det.
 
-Uppgradera till Apache 2.4:
+### Uppgradera Apache på Ubuntu
 
-1. Lägg till databasen `ppa:ondrej` som har Apache 2.4:
+Om Apache redan är installerat och du använder en version som är tidigare än `2.4` uppgraderar du till Apache `2.4` eller till den senaste versionen som stöds av den Adobe Commerce-version som du har distribuerat. Se [systemkrav](../../system-requirements.md).
+
+1. Uppdatera paketinformation:
 
    ```bash
    apt-get -y update
    ```
 
-   ```bash
-   apt-add-repository ppa:ondrej/apache2
-   ```
+1. Lägg till en databas som innehåller en Apache-version som stöds för din miljö, om det behövs.
 
-   ```bash
-   apt-get -y update
-   ```
-
-1. Installera Apache 2.4:
+1. Installera eller uppgradera Apache:
 
    ```bash
    apt-get install -y apache2
@@ -165,62 +163,24 @@ Uppgradera till Apache 2.4:
 
    >[!NOTE]
    >
-   >Om kommandot &quot;apt-get install&quot; misslyckas på grund av ofullständiga beroenden bör du kontakta en resurs som [https://askubuntu.com/](https://askubuntu.com/questions/140246/how-do-i-resolve-unmet-dependencies-after-adding-a-ppa).
+   >Om kommandot `apt-get install` inte fungerar på grund av att beroenden inte uppfylls, bör du läsa dokumentationen till operativsystemspaketet eller distributionssupportresurserna.
 
-1. Verifiera installationen.
+1. Verifiera installationen:
 
    ```bash
    apache2 -v
    ```
 
-   Meddelanden som liknar följande bör visas:
+1. Kontrollera att den installerade versionen matchar den version som stöds för din Adobe Commerce-version i [systemkraven](../../system-requirements.md).
 
-   ```
-   Server version: Apache/2.4.10 (Ubuntu)
-   Server built: Jul 22 2020 22:46:25
-   ```
+1. Aktivera [omskrivningar och `.htaccess` för Ubuntu](#enable-rewrites-and-htaccess-for-ubuntu).
 
-1. Aktivera [omskrivningar och `.htaccess`](#apache-rewrites-and-htaccess).
+### Aktivera omskrivning och .htaccess för Ubuntu
 
-## Installerar Apache på CentOS
-
-Adobe Commerce kräver omskrivning av Apache-servern. Du måste också ange vilken typ av direktiv som kan användas i `.htaccess`, som programmet använder för att ange regler för omskrivning.
-
-Installation och konfigurering av Apache är i princip en trestegsprocess: installera programmet, aktivera omskrivningar och ange `.htaccess` direktiv.
-
-### Installerar Apache
-
-1. Installera Apache 2.4 om du inte redan har gjort det.
+1. Öppna filen `/etc/apache2/sites-available/000-default.conf` för redigering:
 
    ```bash
-   yum -y install httpd
-   ```
-
-1. Verifiera installationen:
-
-   ```bash
-   httpd -v
-   ```
-
-   Meddelanden som liknar följande för att bekräfta att installationen lyckades:
-
-   ```
-   Server version: Apache/2.4.40 (Unix)
-   Server built: Oct 16 2020 14:48:21
-   ```
-
-1. Fortsätt med nästa avsnitt.
-
-   >[!NOTE]
-   >
-   >Även om Apache 2.4 finns som standard med CentOS, se följande avsnitt för att konfigurera det.
-
-### Aktivera omskrivning och .htaccess för CentOS
-
-1. Öppna filen `/etc/httpd/conf/httpd.conf` för redigering:
-
-   ```bash
-   vim /etc/httpd/conf/httpd.conf`
+   vim /etc/apache2/sites-available/000-default.conf
    ```
 
 1. Leta reda på det block som börjar med:
@@ -228,47 +188,6 @@ Installation och konfigurering av Apache är i princip en trestegsprocess: insta
    ```conf
    <Directory "/var/www/html">
    ```
-
-1. Ändra värdet för `AllowOverride` till `All`.
-
-   Exempel:
-
-   ```conf
-   <Directory "/var/www/">
-     Options Indexes FollowSymLinks MultiViews
-     AllowOverride All
-     Order allow,deny
-     Allow from all
-   </Directory>
-   ```
-
-   >[!NOTE]
-   >
-   >Föregående värden för `Order` kanske inte fungerar i alla fall. Mer information finns i Apache-dokumentationen ([2.4](https://httpd.apache.org/docs/2.4/mod/mod_authz_host.html#order)).
-
-1. Spara filen och avsluta textredigeraren.
-
-1. Starta om Apache om du vill använda Apache-inställningarna.
-
-   ```bash
-   service apache2 restart
-   ```
-
->[!NOTE]
->
->Om du inte aktiverar de här inställningarna visas vanligtvis inga format i din butik eller administratör.
-
-### Aktivera omskrivning och .htaccess för Ubuntu
-
-1. Öppna filen `/etc/apache2/sites-available/default` för redigering:
-
-   ```bash
-   vim /etc/apache2/sites-available/default
-   ```
-
-1. Leta reda på det block som börjar med:
-
-   `<Directory "/var/www/html">`
 
 1. Ändra värdet för `AllowOverride` till `All`.
 
@@ -301,13 +220,97 @@ Installation och konfigurering av Apache är i princip en trestegsprocess: insta
    service apache2 restart
    ```
 
+>[!IMPORTANT]
+>
+>Om du inte aktiverar de här inställningarna visas vanligtvis inga format i din butik eller administratör. Det kan också hindra Apache från att tillämpa Adobe Commerce-säkerhetsskydd som definieras i `.htaccess`.
+
+## Installera Apache på CentOS {#installing-apache-on-centos}
+
+Installation och konfigurering av Apache i CentOS är en process i tre steg:
+
+1. Installera programvaran
+2. Aktivera omskrivning
+3. Ange `.htaccess` direktiv.
+
+När du konfigurerar omskrivningar av Apache-servern måste du ange vilken typ av direktiv som kan användas i `.htaccess`, som programmet använder för att ange omskrivningsregler och säkerhetsskydd.
+
+### Installerar Apache
+
+1. Installera Apache om du inte redan har gjort det.
+
+   ```bash
+   yum -y install httpd
+   ```
+
+1. Verifiera installationen:
+
+   ```bash
+   httpd -v
+   ```
+
+   Meddelanden som liknar följande för att bekräfta att installationen lyckades:
+
+   ```text
+   Server version: Apache/<installed-version>
+   Server built: <build-date>
+   ```
+
+1. Fortsätt med nästa avsnitt.
+
+   >[!NOTE]
+   >
+   >Även om Apache tillhandahålls som standard med CentOS läser du följande avsnitt för att konfigurera det.
+
+### Aktivera omskrivning och .htaccess för CentOS
+
+1. Öppna filen `/etc/httpd/conf/httpd.conf` för redigering:
+
+   ```bash
+   vim /etc/httpd/conf/httpd.conf
+   ```
+
+1. Leta reda på det block som börjar med:
+
+   ```conf
+   <Directory "/var/www/html">
+   ```
+
+1. Ändra värdet för `AllowOverride` till `All`.
+
+   Exempel:
+
+   ```conf
+   <Directory "/var/www/">
+     Options Indexes FollowSymLinks MultiViews
+     AllowOverride All
+     Order allow,deny
+     Allow from all
+   </Directory>
+   ```
+
+   >[!NOTE]
+   >
+   >Föregående värden för `Order` kanske inte fungerar i alla fall. Mer information finns i [Apache-dokumentationen](https://httpd.apache.org/docs/2.4/mod/mod_authz_host.html#order).
+
+1. Spara filen och avsluta textredigeraren.
+
+1. Starta om Apache om du vill använda Apache-inställningarna.
+
+   ```bash
+   systemctl restart httpd
+   ```
+
+>[!IMPORTANT]
+>
+>Om du inte aktiverar de här inställningarna visas vanligtvis inga format i din butik eller administratör. Det kan också hindra Apache från att tillämpa Adobe Commerce-säkerhetsskydd som definieras i `.htaccess`.
+
 ## Lösa 403-fel (ej tillåtet)
 
 Om du stöter på 403 Otillåtna fel när du försöker få åtkomst till webbplatsen kan du uppdatera din Apache-konfiguration eller din virtuella värdkonfiguration så att besökarna kan komma åt webbplatsen:
 
-### Lösning av 403 Otillåtna fel för Apache 2.4
+### Lös 403 Otillåtna fel för Apache
 
-Använd något av [direktiven &#x200B;](https://httpd.apache.org/docs/2.4/howto/access.html) som krävs om du vill att webbplatsbesökare ska kunna komma åt din webbplats.
+Använd något av [direktiven ](https://httpd.apache.org/docs/2.4/howto/access.html) som krävs om du vill att webbplatsbesökare ska kunna komma åt din webbplats.
 
 Exempel:
 

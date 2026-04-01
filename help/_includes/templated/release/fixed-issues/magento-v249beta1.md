@@ -1,7 +1,7 @@
 ---
-source-git-commit: 7054a5286f01e26e324401f4d8505e4e0faed93e
+source-git-commit: 34e2262ad8b4fa1a2e7ade8d3b16258f9873822d
 workflow-type: tm+mt
-source-wordcount: '24355'
+source-wordcount: '24322'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ API:erna validerar indata korrekt och returnerar 400-fel för ogiltiga nyttolast
 
 _AC-6419 - [GitHub-problem](https://github.com/magento/magento2/issues/35934) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/a7ef6300)_
 
-#### Internt serverfel i API-slutpunkten `/V1/order/&lbrace;orderId&rbrace;/ship`
+#### Internt serverfel i API-slutpunkten `/V1/order/{orderId}/ship`
 
 Systemet åtgärdar nu det interna serverfelet i API-slutpunkten `/V1/order/{orderId}/ship` och returnerar ett 400-fel eftersom begäran har fel format.
 
@@ -150,7 +150,7 @@ _ACP2E-4227 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/6e13
 
 Före korrigeringen fick du skapa presentkortsprodukter som inte innehöll något belopp i det globala omfånget. Med korrigeringen har en validering lagts till som söker efter belopp i globalt omfång.
 
-_ACP2E-4395 - [GitHub-problem](https://mcstaging.panini.it/shp_ita_it/)_
+_ACP2E-4395_
 
 ### API:er, kundvagn och utcheckning
 
@@ -396,7 +396,7 @@ _AC-14266 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/b5e99d
 
 Adobe Commerce skickar nu registreringsmeddelanden när en anpassad retursökvägsadress har konfigurerats för SMTP. Tidigare i vanilj Adobe Commerce 2.4.8 med system/smtp/set_return_path inställd på 2 och system/smtp/return_path_email inställd på en anpassad adress, slutfördes kundregistreringen men e-postmeddelandet skickades inte och Adobe Commerce loggade detta fel: Symfony\Component\Mime\Exception\LogicException: &quot;Sender&quot;-huvudet måste vara en instans av &quot;Symfony\Component\Mime\Header\MailboxHeader&quot; (fick &quot;Symfony\Component\Mime\Header\MailboxListHeader&quot;).
 
-_AC-14520 - [GitHub-problem](https://github.com/magento/magento2/issues/39823) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/1e14bd72) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/1514117f)_
+_AC-14520 - [GitHub-problem](https://github.com/magento/magento2/issues/39823) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/1e14bd72)_
 
 #### Uppdateringsordningen hämtar inte de senaste anpassade attributdata
 
@@ -499,13 +499,13 @@ _ACP2E-4044 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/4772
 
 Födelsedagsfiltret och -kolumnen kommer att använda det enhetliga formatet M/d/y, samma som &quot;Kundens sedan&quot;-filtret/kolumnen
 
-_ACP2E-4052 - [GitHub-problem](https://stg1.navi-online.kakuyasu.co.jp/adminCgWN7zCh/admin/system_account/index/key/d6fdbee50ff25178d1fef981ec823c5e82e8cee6959717790031bb900c4d6633/) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/52f46328)_
+_ACP2E-4052 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/52f46328)_
 
 #### Vita block visas på båda sidor om administratörens rutnätshuvud
 
 Ett problem med visuell justering i administratörsrutnät har korrigerats. Tidigare visades vita block vara feljusterade till vänster och höger om stödrasterrubriken när du bläddrar vågrätt genom produktrutnät på adminpanelen. Rutnätets rubrikelement behåller nu korrekt vertikal justering vid bläddring, vilket ger en renare visuell upplevelse för administratörer som hanterar stora produktkataloger.
 
-_ACP2E-4104 - [GitHub-problem](https://mcprod.pap-store.acer.com/index.html)_
+_ACP2E-4104_
 
 #### Ui-komponenten fileUploader fungerar inte korrekt i 2.4.8-p1/ 2.4-develop
 
@@ -553,7 +553,7 @@ _ACP2E-4336 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/2687
 
 Korrigerade problemet när systemkonfigurationsfält kunde återges aktiverade efter sidinläsning, trots att alternativet Använd standard/webbplats har markerats.
 
-_ACP2E-4337 - [GitHub-problem](https://mcstaging.pap-store.acer.com) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/31258bf6)_
+_ACP2E-4337 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/31258bf6)_
 
 #### Admin Dashboard orderdiagram animerar till den slutliga storleken
 
@@ -798,13 +798,13 @@ _ACP2E-3493 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/11be
 
 #### Ett fel uppstod vid utcheckning av inaktivt företag
 
-Före korrigeringen slutfördes inte utloggningsåtgärden korrekt på kundvagnssidan om det utloggade användarföretaget inte längre var aktiverat. Om företaget inte längre är tillgängligt utförs utloggningen korrekt.
+Före korrigeringen slutfördes inte utloggningsåtgärden korrekt på kundvagnssidan om det inloggade användarföretaget inte längre var aktiverat. Om företaget inte längre är tillgängligt utförs utloggningen korrekt.
 
 _ACP2E-3541 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/df92debe)_
 
 #### Markeringen av adresser sparas inte när vi checkar ut med flera adresser
 
-Innan korrigeringen avbröts valdes inte adressen i förväg när du återgick till flera leveranser. Nu ersätts standardadressen med ett av de val som gjorts på skärmen för flera leveranser.
+Innan korrigeringen avbröts valdes inte adressen i förväg när du återgick till multileverans. Nu ersätts standardadressen med ett av de val som gjorts på skärmen för flera leveranser.
 
 _ACP2E-3646 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/6ea61121)_
 
@@ -848,7 +848,7 @@ _ACP2E-4223 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/0a8c
 
 Korrigerat problemet med paketpris på kundvagnssidan för butiker med flera valutor
 
-_ACP2E-4245 - [GitHub-problem](https://www.techbuyer.com/) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/cbca0396)_
+_ACP2E-4245 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/cbca0396)_
 
 #### Hantera problem med kundvagnsbutiker
 
@@ -897,7 +897,7 @@ _ACP2E-3885 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/3ad9
 Det går inte längre att välja en butik vid utcheckning med&quot;Välj i butik&quot; på grund av långa URL:er när många produkter finns i vagnen.
 Tidigare utlöste detta ett 414-fel som orsakats av alltför långa URL:er som genererats under valet av butik, vilket hindrade kunderna från att slutföra utcheckningen.
 
-_ACP2E-4266 - [GitHub-problem](https://mcstaging.casamyers.com.mx/) - [GitHub-kodbidrag](https://github.com/magento/inventory/commit/ae1f272f)_
+_ACP2E-4266 - [GitHub-kodbidrag](https://github.com/magento/inventory/commit/ae1f272f)_
 
 ### Kundvagn och kassan, kampanj
 
@@ -905,7 +905,7 @@ _ACP2E-4266 - [GitHub-problem](https://mcstaging.casamyers.com.mx/) - [GitHub-ko
 
 Begränsade saldokontrollen för presentkort med det tilldelade webbplatsomfånget.
 
-_ACP2E-4379 - [GitHub-problem](https://www.panini.it)_
+_ACP2E-4379_
 
 ### Kort och utcheckning, säkerhet
 
@@ -913,7 +913,7 @@ _ACP2E-4379 - [GitHub-problem](https://www.panini.it)_
 
 Före korrigeringsblandningarna hade de inte lästs in i varukorgen och i kassan när minify och bundling är aktiverat. Efter korrigeringen ska alla mixins läsas in som förväntat.
 
-_ACP2E-4128 - [GitHub-problem](https://ansg.integration-5ojmyuq-f46gejjrfa7be.ap-3.magentosite.cloud/) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/e457c5e2)_
+_ACP2E-4128 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/e457c5e2)_
 
 ### Kundvagn och utcheckning, leverans
 
@@ -990,7 +990,7 @@ Detta beteende är förenligt med Magento standarddesign, där prisomfånget är
 
 _AC-13857 - [GitHub-problem](https://github.com/magento/magento2/issues/33559)_
 
-#### [\Magento\ConfigurableProduct\Model\Product\Type\Configurable] PHP-fel okänt
+#### [\Magento\ConfigurableProduct\Model\Product\Type\Configurable] PHP-fel har inte åtgärdats
 
 Ändrade ett loopvariabelnamn så att &quot;_cache_instance_product_ids&quot;-data på den angivna produkten lades till korrekt för efterföljande anrop.
 
@@ -1181,7 +1181,7 @@ Ett problem med dubblettposter när schemalagda uppdateringar skapades för milj
 
 _ACP2E-4159 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/a1c57b2e)_
 
-#### [CLOUD] Fel vid jämförelse av antalet produkter för olika butiker
+#### [CLOUD] Jämför antalet produkter matchar inte för olika butiker
 
 Jämför produktlistan fungerar nu korrekt när du har bytt till en annan granskning
 
@@ -1511,7 +1511,7 @@ _AC-15336 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/68a45d
 
 ### Ramverk
 
-#### Kompileringskod för inaktiverad modul.
+#### Kompilera kod för inaktiverad modul
 
 Denna pull-begäran escape inaktiverade moduler innan kodkompilering.
 
@@ -1534,7 +1534,7 @@ _AC-11578 - [GitHub-problem](https://github.com/magento/magento2/issues/38501) -
 
 #### Det går inte att utöka entitetsformuläret Website/Group/Store med formulärelement med flera värden för tilläggsattribut
 
-Denna PR tillåter formulärelement med flera värden att skicka data till webbplatsen/gruppen/butiksformuläret.
+Denna PR tillåter formulärelement med flera värden att skicka data till webbplats/grupp/butik.
 
 _AC-11657 - [GitHub-problem](https://github.com/magento/magento2/issues/24070) - [GitHub-kodbidrag](https://github.com/magento/magento2/pull/24094)_
 
@@ -1621,7 +1621,7 @@ _AC-13719 - [GitHub-problem](https://github.com/magento/magento2/issues/39456) -
 
 #### [Problem] [PHPDOC] Korrigera felaktig bild för Magento\Framework\Message\ManagerInterface
 
-Denna PR åtgärdar det felaktiga fotot för \Magento\Framework\Message\ManagerInterface och tar bort alla duplicerade foton i \Magento\Framework\Message\Manager (använd arvsdokumentsyntax).
+Denna PR korrigerar det felaktiga fotot för \Magento\Framework\Message\ManagerInterface och tar bort alla duplicerade foton i \Magento\Framework\Message\Manager (använd arvssyntax).
 
 _AC-14312 - [GitHub-problem](https://github.com/magento/magento2/issues/39593) - [GitHub-kodbidrag](https://github.com/magento/magento2/pull/39153)_
 
@@ -1700,7 +1700,7 @@ SMTP-mejl som skickas med TLS fungerar nu som förväntat.
 Tidigare uppstod ett fel när e-post skickades via SMTP med TLS: fel :1408F10B:SSL-rutiner:ssl3_get_record:fel versionsnummer.
 AC-14883
 
-_AC-14883 - [GitHub-problem](https://github.com/magento/magento2/issues/39947) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/3717e6cb) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/8b453942) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/d3ea191d)_
+_AC-14883 - [GitHub-problem](https://github.com/magento/magento2/issues/39947) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/3717e6cb) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/d3ea191d)_
 
 #### [Problem] Åtgärda samtidighetsproblem vid distribuering av statiskt innehåll
 
@@ -1819,7 +1819,7 @@ Klassen EmailMessage hanterar nu hämtning av e-postbrödtext korrekt.
 Tidigare, i Magento 2.4.8-p2 med magento/framework version 103.0.8-p2, försökte klassen Magento\Framework\Mail\EmailMessage anropa en metod som inte finns (getTextBody) i meddelandeobjektet Symfony. Detta orsakade fel när moduler eller anpassningar från tredje part förlitade sig på den här metoden för e-postbearbetning.
 Klassen EmailMessage anropar nu inte längre odefinierade metoder, vilket förhindrar dessa fel. AC-15446
 
-_AC-15446 - [GitHub-problem](https://github.com/magento/magento2/issues/40170) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/059fd469) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/e9412b24)_
+_AC-15446 - [GitHub-problem](https://github.com/magento/magento2/issues/40170) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/e9412b24)_
 
 #### [Magento 2.3.x] Data/Schema Patches getAliases() orsakar fel under `setup:upgrade`
 
@@ -1828,6 +1828,8 @@ getAliases() orsakar fel under installationen:upgrade, denna PR korrigerar samma
 _AC-15559 - [GitHub-problem](https://github.com/magento/magento2/issues/31396) - [GitHub-kodbidrag](https://github.com/magento/magento2/pull/38239)_
 
 #### Ogiltig blandning av kollationer för operation
+
+Det finns ingen beskrivning.
 
 _AC-15614 - [GitHub-problem](https://github.com/magento/magento2/issues/40138) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/44329e9d)_
 
@@ -1838,6 +1840,8 @@ Den här PR uppdaterar PHPDoc för \Magento\Framework\DB\Adapter\AdapterInterfac
 _AC-15626 - [GitHub-problem](https://github.com/magento/magento2/issues/39598) - [GitHub-kodbidrag](https://github.com/magento/magento2/pull/39581)_
 
 #### Ogiltig blandning av kollationer i urlrewrite-modulen
+
+Det finns ingen beskrivning.
 
 _AC-15647 - [GitHub-problem](https://github.com/magento/magento2/issues/40189) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/44329e9d)_
 
@@ -2098,7 +2102,7 @@ _ACP2E-4058 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/6dd3
 
 Ett problem har korrigerats där kalenderpopup-fönstret för datumattribut visades utanför skärmen när det tilldelats anpassade attributgrupper.
 
-_ACP2E-4060 - [GitHub-problem](https://integration-5ojmyuq-3ssteurpe3xzy.us-5.magentosite.cloud/) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/6dd3fa99)_
+_ACP2E-4060 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/6dd3fa99)_
 
 #### Kontroll av behörighet för produktionsåtkomstkontrollista orsakade prestandaförsämring - metoden populateAcl är flaskhalsen
 
@@ -2108,7 +2112,7 @@ _ACP2E-4114 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/98f0
 
 #### Checkout not loading in latest version with AC-15867 + ACP2E-4296 and SCD compact
 
-Före korrigeringen kunde anpassade javascript-skript ha lästs in via head-avsnittet ha orsakat problem. När den nya inställningen har introducerats kan sådana skript förskjutas automatiskt, vilket ger bättre kompatibilitet med Magento 2-ramverket.
+Före korrigeringen kunde anpassade javascript-skript ha lästs in via head-avsnittet ha orsakat problem. När den nya inställningen har introducerats kan sådana skript automatiskt fördröjas, vilket ger bättre kompatibilitet med Magento 2 Framework.
 
 _ACP2E-4319 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/1c547060)_
 
@@ -2168,7 +2172,7 @@ _AC-8949 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/3b5ac07
 
 #### GraphQL-svar för orderplacering innehåller inte något undantagsmeddelande
 
-Återställde tidigare ändring som returnerade fel i ett annat format. Nu returneras potentiella fel på ett konsekvent sätt, inte GraphQL-schemat. Detta bör läggas till som känd BIC, godkänd av PM här: https://jira.corp.adobe.com/browse/ACP2E-3399?focusedId=45248897&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-45248897
+Återställde tidigare ändring som returnerade fel i ett annat format. Nu returneras potentiella fel på ett konsekvent sätt, inte GraphQL-schemat. Detta bör läggas till som känd BIC, godkänd av PM här: https://jira.corp.adobe.com/browse/ACP2E-3399?focusedId=45248897&amp;page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-45248897
 
 _ACP2E-3399 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/9608ca21)_
 
@@ -2194,7 +2198,7 @@ _ACP2E-3785 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/c8ba
 
 Före den här korrigeringen via mutationen updateGiftRegistry ändrades eller uppdaterades inte det anpassade attributet i presentregistret via GraphQL-mutationer. När korrigeringen har tillämpats kan presentregistrets dynamiska attribut uppdateras med mutationen updateGiftRegistry.
 
-_ACP2E-3805 - [GitHub-problem](https://mcstaging.briscoes.co.nz/)_
+_ACP2E-3805_
 
 #### Customer Order GraphQL: Retrieve product categories for the associated product is &quot;not visible individual
 
@@ -2471,7 +2475,7 @@ _ACP2E-4375 - [GitHub-kodbidrag](https://github.com/magento/inventory/commit/083
 
 #### Beställ per pris-/prisfaktor med ogiltiga data
 
-Före korrigeringen indexerades paketpriserna inte korrekt när underordnade produkter hade lager under anpassade källor. Efter korrigeringen indexeras paketpriserna korrekt oberoende av tilldelning av underordnade produkter.
+Före korrigeringen indexerades paketpriserna inte korrekt när underordnade produkter hade lager under anpassade källor. Efter korrigeringen indexeras paketpriserna korrekt oavsett vilken produkt som är underordnad.
 
 _ACP2E-4380 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/1c547060) - [GitHub-kodbidrag](https://github.com/magento/inventory/commit/1f83ed24)_
 
@@ -2486,6 +2490,8 @@ AC-10568
 _AC-10568 - [GitHub-problem](https://github.com/magento/magento2/issues/31644)_
 
 #### När kunden har angetts för offertordern är den fortfarande en gästorder
+
+Det finns ingen beskrivning.
 
 _AC-11689 - [GitHub-problem](https://github.com/magento/magento2/issues/38540)_
 
@@ -2596,7 +2602,7 @@ _ACP2E-3947 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/2a25
 
 #### [Cloud]Magento OOTB-kod - Problem med konfiguration av e-postmall
 
-Före korrigeringen, när asynkron e-postutsändning användes, var e-postutskick inkonsekvent med butiksbeställningen. Efter korrigeringen levereras rätt e-postorder för leverans i butik.
+Före korrigeringen, när asynkron e-postutsändning användes, var e-postmeddelandena inte i linje med butiksbeställningen. Efter korrigeringen levereras rätt e-postorder för leverans i butik.
 
 _ACP2E-3998 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/462ede94)_
 
@@ -2634,7 +2640,7 @@ _ACP2E-4384 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/61c9
 
 #### Administratören visar felaktig valutasymbol när retur skapas
 
-I en flerwebbplatskonfiguration med olika valutor (EUR/USD/GBP) visas nu rätt valutasymbol på sidan för val av returprodukt i admin. Tidigare visades standardvalutasymbolen.
+I en flerwebbplatskonfiguration med olika valutor (EUR/USD/GBP) visas nu rätt valutasymbol på sidan för val av returprodukt i administratören. Tidigare visades standardvalutasymbolen.
 
 _ACP2E-3658 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/df92debe)_
 
@@ -2666,10 +2672,10 @@ Nu skickas System med tillgänglighetspoängen 100
 
 _AC-12783 - [GitHub-problem](https://github.com/magento/magento2/issues/39054) - [GitHub-kodbidrag](https://github.com/magento/magento2/pull/39164)_
 
-#### Inaktivera Captcha storefont config fortfarande läsa in captcha js-filer
+#### Inaktivera captcha storefront-konfigurationen fortfarande läsa in captcha js-filer
 
 Systemet läser nu inte in captcha js-filer när vi har inaktiverat captcha
-för storefont
+för storefront
 
 _AC-14267 - [GitHub-problem](https://github.com/magento/magento2/issues/32987) - [GitHub-kodbidrag](https://github.com/magento/magento2/pull/39154)_
 
@@ -2771,7 +2777,7 @@ _ACP2E-4324 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/2687
 
 #### Undersök orsakerna till att fler redis-nycklar och cachenycklar har skapats
 
-Före korrigeringen gick cacheminnesnycklar som används för fjärrlagringsmetadata inte ut. Efter korrigeringen kan du nu ange en TTL för sådana cachenycklar genom beroendeinjektion.
+Cachenycklar som används för fjärrlagringsmetadata upphörde inte att gälla innan korrigeringen utfördes. Efter korrigeringen kan du nu ange en TTL för sådana cachenycklar genom beroendeinjektion.
 
 _ACP2E-4345 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/0a3b7032)_
 
@@ -2897,7 +2903,7 @@ Korrigerade ett problem där ett ogiltigt attributuppsättnings-ID i URL:en orsa
 
 _AC-15753 - [GitHub-problem](https://github.com/magento/magento2/issues/40213) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/a06a4a57)_
 
-#### Återbetalning med negativ kvantitet som alltid återbetalas
+#### Återbetalning med negativ kvantitet återbetalas alltid
 
 Ett problem har korrigerats där en kreditnota med en negativ kvantitet felaktigt återbetalade rabattbeloppet.
 Rabatterna återbetalas inte för negativa kvantiteter och bidragsbeloppet är korrekt inställt på noll.
@@ -3014,7 +3020,7 @@ _ACP2E-3902 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/52f4
 
 Ett problem har korrigerats där växling mellan butiksvyer omdirigerade användare till hemsidan i stället för till motsvarande översatta CMS-sida. Butiksväljaren söker nu efter URL-omskrivningar i målbutiken för att säkerställa korrekt omdirigering (t.ex. sidan med vanliga frågor och svar på engelska → sidan med vanliga frågor på franska).
 
-_ACP2E-4112 - [GitHub-problem](https://adobe-ent.crm.dynamics.com/main.aspx?appid=f2e74f34-7119-ea11-a811-000d3a5936c5&forceUCI=1&pagetype=entityrecord&etn=incident&id=3e1df344-8a69-f011-bec3-6045bd04f475)_
+_ACP2E-4112_
 
 #### [Cloud] Inaktivera den gamla genereringen av webbplatskartan
 
@@ -3152,7 +3158,7 @@ _ACP2E-4212 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/ab89
 
 #### Det går inte att navigera mellan webbplatser i förhandsversionen av schemauppdateringen
 
-Före den här korrigeringen bryts förhandsgranskningen av den schemalagda uppdateringen när innehåll för butiker med anpassade domäner förhandsgranskas. Efter den här korrigeringen kan anpassade butiksdomäner förhandsgranskas som de är och navigeras i förhandsvisningsbildrutan. Korrigeringen omfattar produkter, kategorier, CMS-sidor och CMS-block, och stöder navigeringslänkar med `{{store url}}`-taggar enligt [Adobe Commerce Variables and Markup Tags &#x200B;](https://experienceleague.adobe.com/sv/docs/commerce-admin/systems/variables/markup-tags).
+Före den här korrigeringen bryts förhandsgranskningen av den schemalagda uppdateringen när innehåll för butiker med anpassade domäner förhandsgranskas. Efter den här korrigeringen kan anpassade butiksdomäner förhandsgranskas som de är och navigeras i förhandsvisningsbildrutan. Korrigeringen omfattar produkter, kategorier, CMS-sidor och CMS-block, och stöder navigeringslänkar med `{{store url}}`-taggar enligt [Adobe Commerce Variables and Markup Tags ](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/variables/markup-tags).
 
 _ACP2E-4308 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/0a3b7032)_
 
@@ -3204,6 +3210,8 @@ Testfallet åtgärdar funktionaliteten i formuläret&quot;E-post till vän&quot;
 _AC-13492 - [GitHub-problem](https://github.com/magento/magento2/issues/39462) - [GitHub-kodbidrag](https://github.com/magento/magento2/pull/32830)_
 
 #### Hårdkodade korrigeringsbanor misslyckades i Composer-byggen
+
+Det finns ingen beskrivning.
 
 _AC-16488_
 
