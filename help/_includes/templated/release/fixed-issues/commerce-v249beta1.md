@@ -61,7 +61,7 @@ API:erna validerar indata korrekt och returnerar 400-fel för ogiltiga nyttolast
 
 _AC-6419 - [GitHub-problem](https://github.com/magento/magento2/issues/35934) - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/a7ef6300)_
 
-#### Internt serverfel i API-slutpunkten `/V1/order/{orderId}/ship`
+#### Internt serverfel i API-slutpunkten `/V1/order/&lbrace;orderId&rbrace;/ship`
 
 Systemet åtgärdar nu det interna serverfelet i API-slutpunkten `/V1/order/{orderId}/ship` och returnerar ett 400-fel eftersom begäran har fel format.
 
@@ -2359,7 +2359,7 @@ _AC-8949 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/3b5ac07
 
 #### GraphQL-svar för orderplacering innehåller inte något undantagsmeddelande
 
-Återställde tidigare ändring som returnerade fel i ett annat format. Nu returneras potentiella fel på ett konsekvent sätt, inte GraphQL-schemat. Detta bör läggas till som känd BIC, godkänd av PM här: https://jira.corp.adobe.com/browse/ACP2E-3399?focusedId=45248897&amp;page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-45248897
+Återställde tidigare ändring som returnerade fel i ett annat format. Nu returneras potentiella fel på ett konsekvent sätt, inte GraphQL-schemat. Detta bör läggas till som känd BIC, godkänd av PM här: https://jira.corp.adobe.com/browse/ACP2E-3399?focusedId=45248897&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-45248897
 
 _ACP2E-3399 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/9608ca21)_
 
@@ -3497,7 +3497,7 @@ _ACP2E-4226_
 
 #### Det går inte att navigera mellan webbplatser i förhandsversionen av schemauppdateringen
 
-Före den här korrigeringen bryts förhandsgranskningen av den schemalagda uppdateringen när innehåll för butiker med anpassade domäner förhandsgranskas. Efter den här korrigeringen kan anpassade butiksdomäner förhandsgranskas som de är och navigeras i förhandsvisningsbildrutan. Korrigeringen omfattar produkter, kategorier, CMS-sidor och CMS-block, och stöder navigeringslänkar med `{{store url}}`-taggar enligt [Adobe Commerce Variables and Markup Tags ](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/variables/markup-tags).
+Före den här korrigeringen bryts förhandsgranskningen av den schemalagda uppdateringen när innehåll för butiker med anpassade domäner förhandsgranskas. Efter den här korrigeringen kan anpassade butiksdomäner förhandsgranskas som de är och navigeras i förhandsvisningsbildrutan. Korrigeringen omfattar produkter, kategorier, CMS-sidor och CMS-block, och stöder navigeringslänkar med `{{store url}}`-taggar enligt [Adobe Commerce Variables and Markup Tags &#x200B;](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/variables/markup-tags).
 
 _ACP2E-4308 - [GitHub-kodbidrag](https://github.com/magento/magento2/commit/0a3b7032)_
 

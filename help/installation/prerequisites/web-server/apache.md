@@ -1,6 +1,6 @@
 ---
 title: Installera Apache för lokala distributioner
-description: Lär dig hur du installerar och konfigurerar Apache för lokala Adobe Commerce-distributioner. Aktivera nödvändiga inställningar för moduler, omskrivningar och `.htaccess`.
+description: Lär dig hur du installerar och konfigurerar Apache för lokala Adobe Commerce-distributioner. Aktivera nödvändiga inställningar för moduler, omskrivningar och &grave;.htaccess&grave;.
 feature: Install, Configuration
 badgePaas: label="Lokalt" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="Gäller endast Adobe Commerce lokala projekt."
 exl-id: a9a394c9-389f-42ef-9029-dd22c979cfb8
@@ -40,7 +40,7 @@ Ange `AllowEncodedSlashes` i serverkonfigurationen (globalt) eller i den virtuel
 
 ### Konfigurera återskrivningar och .htaccess {#apache-rewrites-and-htaccess}
 
-Använd det här avsnittet om du vill aktivera Apache-omskrivning och konfigurera den [distribuerade `.htaccess` filen ](https://httpd.apache.org/docs/current/howto/htaccess.html). Adobe Commerce använder serverskrivningar och `.htaccess` för att tillhandahålla katalognivåinstruktioner för Apache.
+Använd det här avsnittet om du vill aktivera Apache-omskrivning och konfigurera den [distribuerade `.htaccess` filen &#x200B;](https://httpd.apache.org/docs/current/howto/htaccess.html). Adobe Commerce använder serverskrivningar och `.htaccess` för att tillhandahålla katalognivåinstruktioner för Apache.
 
 >[!IMPORTANT]
 >
@@ -310,7 +310,7 @@ Om du stöter på 403 Otillåtna fel när du försöker få åtkomst till webbpl
 
 ### Lös 403 Otillåtna fel för Apache
 
-Använd något av [direktiven ](https://httpd.apache.org/docs/2.4/howto/access.html) som krävs om du vill att webbplatsbesökare ska kunna komma åt din webbplats.
+Använd något av [direktiven &#x200B;](https://httpd.apache.org/docs/2.4/howto/access.html) som krävs om du vill att webbplatsbesökare ska kunna komma åt din webbplats.
 
 Exempel:
 
