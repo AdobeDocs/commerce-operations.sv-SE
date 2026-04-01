@@ -2,7 +2,7 @@
 title: Installera Nginx för lokala distributioner
 description: Lär dig hur du installerar och konfigurerar Nginx-webbservern för lokala Adobe Commerce-distributioner. Konfigurera PHP-FPM och din virtuella värd.
 feature: Install, Configuration
-badgePaas: label="Lokalt" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="Gäller endast Adobe Commerce lokala projekt."
+badgePaas: label="Lokalt" type="Informative" url="https://experienceleague.adobe.com/sv/docs/commerce/user-guides/product-solutions" tooltip="Gäller endast Adobe Commerce lokala projekt."
 exl-id: 041ddb9d-868e-4021-9388-1c9ea11bfd8f
 source-git-commit: 352a71cb88ff38c0920201f49f1d7b889509fd61
 workflow-type: tm+mt
