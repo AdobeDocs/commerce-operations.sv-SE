@@ -227,7 +227,7 @@ Du kan identifiera tangenter som används ofta genom att övervaka aktiva komman
 
 >[!BEGINTABS]
 
->[!TAB Avvisa konfigurationen för förinläsningsnyckeln] igen
+>[!TAB Avvisa konfigurationen för förinläsningsnyckeln igen]
 
 Förinläsningsnycklarna är konfigurerade i konfigurationsfilen `.magento.env.yaml`.
 
