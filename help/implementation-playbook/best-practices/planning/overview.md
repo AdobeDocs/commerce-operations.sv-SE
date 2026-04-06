@@ -4,10 +4,10 @@ description: Lär dig mer om de effektivaste strategierna för implementering i 
 role: Developer, Admin, User
 feature: Best Practices
 exl-id: 6baeac79-8dc3-45b4-bb25-8f2add8b3443
-source-git-commit: ee7551374aa6d4ad462dd64ee3d05b934b43ce45
+source-git-commit: 28ca422543728123edcaa41dedca6e3cc53536b6
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 0%
+source-wordcount: '407'
+ht-degree: 1%
 
 ---
 
@@ -42,11 +42,11 @@ Följande avsnitt innehåller information om god praxis för planeringsfasen.
     <td>Konfigurera webbplatser, butiker och butiksvyer för att maximera webbplatsens prestanda.</td>
   </tr>
   <tr>
-    <td><a href="https://business.adobe.com/se/blog/how-to/the-usual-suspects-5-configuration-issues-to-maximize-your-peak-sales">Vanliga konfigurationsproblem</a></td>
+    <td><a href="https://business.adobe.com/blog/how-to/the-usual-suspects-5-configuration-issues-to-maximize-your-peak-sales">Vanliga konfigurationsproblem</a></td>
     <td>Åtgärda och förhindra de fem vanligaste konfigurationsproblemen för Adobe Commerce webbplatser.</td>
   </tr>
   <tr>
-    <td><a href="https://experienceleague.adobe.com/docs/commerce-admin/systems/tools/cache-management.html?lang=sv-SE">Cachning</a></td>
+    <td><a href="https://experienceleague.adobe.com/docs/commerce-admin/systems/tools/cache-management.html">Cachning</a></td>
     <td>Använd verktygen för cachehantering för att förbättra platsens prestanda.</td>
   </tr>
   <tr>
@@ -76,15 +76,15 @@ Följande avsnitt innehåller information om god praxis för planeringsfasen.
     <td colspan="2"><em>Tjänstkonfiguration</em></td>
   </tr>
   <tr>
-    <td><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/setup-fastly/fastly-configuration.html?lang=sv-SE">Konfigurera snabbt</a></td>
+    <td><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/setup-fastly/fastly-configuration.html">Konfigurera snabbt</a></td>
     <td>Konfigurera snabbtjänster för ditt Adobe Commerce i molninfrastrukturprojekt.</td>
   </tr>
   <tr>
-    <td><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic.html?lang=sv-SE">Konfigurera meddelandekanaler för New Relic</a></td>
+    <td><a href="https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/monitor/new-relic.html">Konfigurera meddelandekanaler för New Relic</a></td>
     <td>Få tillgång till din New Relic-kontrollpanel och analysera data från din Adobe Commerce i molninfrastrukturprojekt.</td>
   </tr>
   <tr>
-    <td><a href="redis-service-configuration.md">Konfigurera Redis</a></td>
+    <td><a href="redis-valkey-service-configuration.md">Konfigurera Redis/Valkey</a></td>
     <td>Förbättra cacheprestanda genom att använda den utökade Redis-cacheimplementeringen för Adobe Commerce.</td>
   </tr>
   <tr>
