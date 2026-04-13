@@ -1,5 +1,5 @@
 ---
-source-git-commit: 86d7fba92705b808b45d655a432bb92ed9f9181a
+source-git-commit: 0c31e19fd731a6f55808ac1424d889abd719478b
 workflow-type: tm+mt
 source-wordcount: '576'
 ht-degree: 1%
@@ -19,7 +19,7 @@ du förväntas behålla den här koden. Rapportera oacceptabla beteenden till
 
 ## Handbok för Contributor
 
-Se [Contributor-handboken](https://experienceleague.adobe.com/sv/docs/contributor/contributor-guide/introduction).
+Se [Contributor-handboken](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction).
 
 ## Har du en fråga?
 
@@ -41,7 +41,7 @@ Alla inlagor ska lämnas in i form av en begäran om utlysning och behöver gran
 efter projektcommitters. Läs dokumentationen för [GitHub-begäran](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
 om du vill ha mer information om hur du skickar pull-begäranden.
 
-Till sist följer du mallen för [pull-begäran](PULL_REQUEST_TEMPLATE.md) när
+Till sist följer du mallen för [pull-begäran](.github/PULL_REQUEST_TEMPLATE.md) när
 skicka en pull-förfrågan!
 
 
@@ -56,11 +56,11 @@ Jag kan kontakta befintliga committers för att diskutera det.
 
 ## Säkerhetsproblem
 
-Säkerhetsproblem ska inte rapporteras i den här felspåraren. [Rapportera i stället ett problem till våra säkerhetsexperter](https://helpx.adobe.com/se/security/alertus.html).
+Säkerhetsproblem ska inte rapporteras i den här felspåraren. [Rapportera i stället ett problem till våra säkerhetsexperter](https://helpx.adobe.com/security/alertus.html).
 
 ## Nyheter
 
-Om dina ändringar innehåller nya ämnen, viktiga uppdateringar eller korrigeringar som behöver markeras, kan du lägga till en kort beskrivning i avsnittet [Nyheter](https://experienceleague.adobe.com/sv/docs/commerce-operations/operational-guides/home#whats-new) direkt från din pull-begäran.
+Om dina ändringar innehåller nya ämnen, viktiga uppdateringar eller korrigeringar som behöver markeras, kan du lägga till en kort beskrivning i avsnittet [Nyheter](https://experienceleague.adobe.com/en/docs/commerce-operations/operational-guides/home#whats-new) direkt från din pull-begäran.
 
 Så här lägger du till en markering med nyheter:
 
@@ -108,4 +108,4 @@ Så här lägger du till en markering med nyheter:
 1. `whatsnew`-delen måste börja från `whatsnew`-taggen och vara i slutet av pull-begärandetexten.
 1. Beskrivningarna av ändringarna måste innehålla fungerande länkar. Kontrollera att länkarna är korrekta och leder till rätt avsnitt. Om ämnet är nytt kontrollerar du att länkarna fungerar efter att du har sammanfogat pull-begäran och publicerat det nya ämnet. Det går bra att åtgärda länkarna när pull-begäran har sammanfogats.
 
-Du kan till exempel söka i stängda pull-begäranden i databasen för att se hur befintliga markeringar formateras och jämföra dem med avsnittet [Nyheter](https://experienceleague.adobe.com/sv/docs/commerce-operations/operational-guides/home#whats-new) för att se hur de visas i dokumentationen.
+Du kan till exempel söka i stängda pull-begäranden i databasen för att se hur befintliga markeringar formateras och jämföra dem med avsnittet [Nyheter](https://experienceleague.adobe.com/en/docs/commerce-operations/operational-guides/home#whats-new) för att se hur de visas i dokumentationen.
