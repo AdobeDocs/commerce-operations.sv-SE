@@ -46,7 +46,7 @@ ht-degree: 0%
 * **ACP2E-4732** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar ett fel där partiell indexering stoppades för kunder med ett stort antal uppdateringar när kolumnen version_id i ändringstabellen nådde sitt högsta värde.
 * **ACP2E-4763** (för Adobe Commerce och Magento Open Source >=2.4.8 &lt;2.4.9) - Korrigerar det problem där GraphQL customerOrders-frågan returnerar inflated original_price_including_tax och original_row_total_including_tax när Catalog Prices är inställt på Inklusive tax på grund av att moms tillämpas två gånger.
 * **ACSD-60989** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet där ändringar av en kolumn med en sekundärnyckel via ett deklarativt schema orsakar fel på MariaDB.
-* Uppdaterade versioner: **ACSD-59280**, **ACSD-45255**, **ACSD-50336**, **ACSD-49737**, **ACSD-50849**, **,  10}ACSD-53750**, **ACSD-55031**, **ACSD-51819**, **ACSD-55628**, **ACSD-5 4965-V2**, **ACSD-56546**, **ACSD-61756**, **ACSD-68040**, **ACSD-627 08**, **ACSD-63283**, **ACSD-64732**, **ACSD-65775**, **ACSD-66965**, **ACP2E-4050**
+* Uppdaterade versioner: **ACSD-59280**, **ACSD-45255**, **ACSD-50336**, **ACSD-49737**, **ACSD-50849**, **,  10&rbrace;ACSD-53750**, **ACSD-55031**, **ACSD-51819**, **ACSD-55628**, **ACSD-5 4965-V2**, **ACSD-56546**, **ACSD-61756**, **ACSD-68040**, **ACSD-627 08**, **ACSD-63283**, **ACSD-64732**, **ACSD-65775**, **ACSD-66965**, **ACP2E-4050**
 * Ersatta korrigeringsfiler: **ACSD-58446**, **ACSD-67904**
 
 ## v1.1.77 {#v1-1-77}
@@ -135,7 +135,7 @@ ht-degree: 0%
 * **ACSD-68092** (för Adobe Commerce och Magento Open Source >=2.4.8 &lt;2.4.9) - Korrigerar problemet där produktalternativ för paket förloras efter flera sparningar på grund av felaktig synkronisering mellan schemalagda uppdateringar och basproduktdata.
 * **ACSD-67424** (för Adobe Commerce, B2B >=1.5.0 &lt;1.5.3) - Korrigerar problemet där värdet `updated_at` i `GET /carts/search` [!DNL REST] API-svaret inte matchar värdet som visas i **[!UICONTROL Admin panel]** när Negotiable Quotes används.
 * **ACSD-67187** (för Adobe Commerce, B2B >=1.5.1 &lt;1.5.3) - Korrigerar problemet där administratörsanvändare som är begränsade till icke-standardwebbplatser kan se felet, *Skapa minst en offentlig delad katalog för att fortsätta* och inte komma åt knappen **[!UICONTROL Add New Company]** i företagsrutnätet .
-* Uppdaterade versioner: **ACSD-49737**, **ACSD-53750**, **ACSD-51819**, **ACSD-55566**, **ACSD-62965**, **10}ACSD-63323**, **ACSD-63406**, **ACSD-66139**, **ACSD-66404**, **ACSD-6 7659**, **ACSD-66301**
+* Uppdaterade versioner: **ACSD-49737**, **ACSD-53750**, **ACSD-51819**, **ACSD-55566**, **ACSD-62965**, **10&rbrace;ACSD-63323**, **ACSD-63406**, **ACSD-66139**, **ACSD-66404**, **ACSD-6 7659**, **ACSD-66301**
 * Ersatta korrigeringsfiler: **ACSD-62577**, **ACSD-63325**, **ACSD-67102**
 
 ## v1.1.71 {#v1-1-71}
@@ -289,8 +289,8 @@ ht-degree: 0%
 * **ACSD-64431** (för Adobe Commerce och Magento Open Source >=2.4.7 &lt;2.4.8) - mutationen `placeOrder` som innehåller kupongkodsinformationen i begäran genererar inte längre ett internt fel, utan visar i stället att ordern har placerats korrekt.
 * **ACSD-64467** (för Adobe Commerce och Magento Open Source >=2.4.7 &lt;2.4.8) - Korrigerar problemet där WYSIWYG-redigeraren ser tom ut när en kategoribeskrivning har sparats på butiksvynivån.
 * **ACSD-64546** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet där ett generiskt felmeddelande visas i användargränssnittet och ett *Array to string conversion* -undantag sparas i loggarna när UPS-etiketten skapas, vilket säkerställer att det faktiska felet visas i användargränssnittet och rätt felmeddelande sparas i loggarna.
-* **ACSD-64684** (för Adobe Commerce >=2.4.4 &lt;2.4.8) - Korrigerar problemet där ett valideringsfel inträffar när ett presentkort redigeras och sparas med ett värde som är större än *999* på grund av kommatecken (tusentalsavgränsare) i talet *ett tusen (1,0} (00)*.
-* Uppdaterade versioner: **ACSD-49392**, **ACSD-50368**, **ACSD-51819**, **ACSD-54966-V2**, **ACSD-57003{9** ACSD-62979 **,** ACSD-64112 ****
+* **ACSD-64684** (för Adobe Commerce >=2.4.4 &lt;2.4.8) - Korrigerar problemet där ett valideringsfel inträffar när ett presentkort redigeras och sparas med ett värde som är större än *999* på grund av kommatecken (tusentalsavgränsare) i talet *ett tusen (1,0&rbrace; (00)*.
+* Uppdaterade versioner: **ACSD-49392**, **ACSD-50368**, **ACSD-51819**, **ACSD-54966-V2**, **ACSD-57003&lbrace;9** ACSD-62979 **,** ACSD-64112 **&#x200B;**
 * Ersatta korrigeringsfiler: **ACSD-49392**, **ACSD-58739**, **ACSD-62689**, **ACSD-64112**
 * Inaktuella korrigeringsfiler: **ACSD-46192**, **ACSD-52133**
 
@@ -301,7 +301,7 @@ ht-degree: 0%
 * **ACSD-64111** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet där ett fel inträffar när kapslade villkor för en produktkomponent ställs in i [!DNL Page Builder].
 * **ACSD-64137** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet där sökning efter upphämtningsplatser med zip-kod inte fungerar som den nederländska lokaliseringen.
 * **ACSD-64149** (för Adobe Commerce och Magento Open Source >=2.4.4 &lt;2.4.8) - Korrigerar problemet där ett kundsegment med ett datumintervallvillkor kan sparas när endast ett av datumen redigeras.
-* Uppdaterade versioner: **MDVA-12304**, **ACSD-45049**, **MDVA-43824**, **ACSD-46192**, **ACSD-50368**, **ACSD-52133**, **ACSD-47657**, **ACSD-51819**, **ACSD-54966-V2**, **}ACSD-55628**, **ACSD-45049**, **ACSD-63242**
+* Uppdaterade versioner: **MDVA-12304**, **ACSD-45049**, **MDVA-43824**, **ACSD-46192**, **ACSD-50368**, **ACSD-52133**, **ACSD-47657**, **ACSD-51819**, **ACSD-54966-V2**, **&rbrace;ACSD-55628**, **ACSD-45049**, **ACSD-63242**
 
 ## v1.1.59 {#v1-1-59}
 
@@ -393,7 +393,7 @@ ht-degree: 0%
 * **ACSD-61785** (för Adobe Commerce >=2.4.4 &lt;2.4.8) - Åtgärdar problemet där det inte gick att uppdatera attributet `reward_warning_notification` via [!DNL GraphQL] mutation och [!DNL REST API] anrop, vilket justerar beteendet med `reward_update_notification`.
 * **ACSD-62591** (för Adobe Commerce och Magento Open Source >=2.4.7 &lt;2.4.8) - Korrigerar problemet där temat inte växlar korrekt när **[!UICONTROL User Agent Rules]** är konfigurerat.
 * **ACSD-62793** (för Adobe Commerce och Magento Open Source >=2.4.7 &lt;2.4.8) - Korrigerar problemet där `datetime`-attribut i exporterade data inte inkluderar tidskomponenten. Om **[!UICONTROL Fields Enclosure]** dessutom är *aktiverad* kommer attributvärden i kolumnen `additional_attributes` att omslutas av dubbla citattecken.
-* **ACSD-62332** (för Adobe Commerce >=2.4.6 &lt;2.4.7) - Korrigerar problemet där frågan [!DNL GraphQL] begränsades till `total_count` av 10 000 produkter. Korrigerar problemet där [!DNL Live Search] ställer in den aktuella sidan till ** i stället för sidan ** i sökvillkoren när frågan ställs via [!DNL GraphQL].
+* **ACSD-62332** (för Adobe Commerce >=2.4.6 &lt;2.4.7) - Korrigerar problemet där frågan [!DNL GraphQL] begränsades till `total_count` av 10 000 produkter. Korrigerar problemet där [!DNL Live Search] ställer in den aktuella sidan till **&#x200B; i stället för sidan &#x200B;** i sökvillkoren när frågan ställs via [!DNL GraphQL].
 * Uppdaterade versioner: **ACSD-46581**, **ACSD-49513**, **ACSD-52801**, **ACSD-59514**
 * Ersatta korrigeringsfiler: **ACSD-52801**, **ACSD-55100**
 * Föråldrade korrigeringsfiler: **ACSD-52085**, **ACSD-57854**
@@ -1358,7 +1358,7 @@ Mindre korrigeringar för korrigeringsversioner
 * **MDVA-30112** (*för Adobe Commerce >=2.3.4 &lt;2.4.2*) - Korrigerar problemet där om antalet order överstiger värdet *bundle-size* betraktar Adobe Commerce order med statusen *pending* som inkonsekvenser.
 * **MDVA-31150** (*för Adobe Commerce >=2.3.0 &lt;2.4.2*) - Korrigerar problemet där butikskreditsaldon och presentkortsaldon inte returneras av GET Invoice Rest API-anropet, när fakturan bokfördes av Rest API-anropet och ordern delvis betalades av butikskreditkortskonton.
 * **MDVA-30963** (*för Adobe Commerce >=2.3.2 &lt;2.4.2*) - Korrigerar problemet där produktfiltreringsresultat endast innehåller värden som angetts för omfattningen *Alla butiksvyer* i Admin, inkludera produkter med värden som åsidosatts på butiksvynivån.
-* **MDVA-29954** (*för Adobe Commerce >=2.3.0 &lt;2.3.6 || 2.4.0 || 2.4.2 med B2B-tillägg*) - Korrigerar problemet där *Ny registreringsbegäran för företag* och *Du har länkats till ett företag*} e-postmeddelanden skickas från fel adress.
+* **MDVA-29954** (*för Adobe Commerce >=2.3.0 &lt;2.3.6 || 2.4.0 || 2.4.2 med B2B-tillägg*) - Korrigerar problemet där *Ny registreringsbegäran för företag* och *Du har länkats till ett företag*&rbrace; e-postmeddelanden skickas från fel adress.
 * **MDVA-28357** (*för Adobe Commerce >=2.3.2 &lt;2.3.6 || >=2.4.0 &lt;2.4.1*) - Ersätter standardanalyseraren med en anpassad analyserare med nyckelordstoken för SKU-fältet i &lt;ph id=&#39;177 &#39;/> index to make wildcard search queries with SKUs containing a hyphen (&quot;-&quot;).[!DNL ElasticSearch]
 
 ## v1.0.7 {#v1-0-7}
