@@ -30,7 +30,7 @@ Använd de här rekommendationerna för att konfigurera Redis eller Valkey för 
 
 >[!NOTE]
 >
->Kontrollera att du använder den senaste versionen av `ece-tools`-paketet för infrastrukturmiljöer i Commerce på Cloud. Om inte, [uppgradera till den senaste versionen](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/update-package.html). Du kan kontrollera vilken version som är installerad i din lokala miljö med hjälp av CLI-kommandot `composer show magento/ece-tools`.
+>Kontrollera att du använder den senaste versionen av `ece-tools`-paketet för infrastrukturmiljöer i Commerce på Cloud. Om inte, [uppgradera till den senaste versionen](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/dev-tools/ece-tools/update-package.html?lang=sv-SE). Du kan kontrollera vilken version som är installerad i din lokala miljö med hjälp av CLI-kommandot `composer show magento/ece-tools`.
 
 ## Konfigurera L2-cache
 
@@ -48,7 +48,7 @@ stage:
     REDIS_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
 ```
 
-Om du vill se miljökonfiguration för molninfrastruktur läser du [`REDIS_BACKEND`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_backend) konfigurationsreferens i _Commerce on Cloud Infrastructure Guide_.
+Om du vill se miljökonfiguration för molninfrastruktur läser du [`REDIS_BACKEND`](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=sv-SE#redis_backend) konfigurationsreferens i _Commerce on Cloud Infrastructure Guide_.
 
 Information om lokala installationer finns i [Konfigurera Redis-sidcache](../../../configuration/cache/redis-pg-cache.md#configure-redis-page-caching) i _konfigurationshandboken_.
 
@@ -62,7 +62,7 @@ stage:
     VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
 ```
 
-Mer information om miljökonfiguration för molninfrastruktur finns i [`VALKEY_BACKEND`](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_backend) konfigurationsreferens i _Commerce on Cloud Infrastructure Guide_.
+Mer information om miljökonfiguration för molninfrastruktur finns i [`VALKEY_BACKEND`](https://experienceleague.adobe.com/sv/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#valkey_backend) konfigurationsreferens i _Commerce on Cloud Infrastructure Guide_.
 
 Information om lokala installationer finns i [Konfigurera Valkey](../../../configuration/cache/config-valkey.md) i _Konfigurationshandboken_.
 
@@ -145,7 +145,7 @@ stage:
     REDIS_USE_SLAVE_CONNECTION: true
 ```
 
-Om du vill se miljökonfiguration för Commerce Cloud infrastruktur läser du [REDIS_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#redis_use_slave_connection) i _Commerce on Cloud Infrastructure Guide_.
+Om du vill se miljökonfiguration för Commerce Cloud infrastruktur läser du [REDIS_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=sv-SE#redis_use_slave_connection) i _Commerce on Cloud Infrastructure Guide_.
 
 För Adobe Commerce lokala installationer konfigurerar du den nya Redis-cacheimplementeringen med kommandona `bin/magento setup`. Se [Använd Redis för standardcache](../../../configuration/cache/redis-pg-cache.md#configure-redis-page-caching) i _Konfigurationshandboken_.
 
@@ -159,7 +159,7 @@ stage:
     VALKEY_USE_SLAVE_CONNECTION: true
 ```
 
-Om du vill se miljökonfiguration för Commerce Cloud infrastruktur läser du [VALKEY_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html#valkey_use_slave_connection) i _Commerce on Cloud Infrastructure Guide_.
+Om du vill se miljökonfiguration för Commerce Cloud infrastruktur läser du [VALKEY_USE_SLAVE_CONNECTION](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure/env/stage/variables-deploy.html?lang=sv-SE#valkey_use_slave_connection) i _Commerce on Cloud Infrastructure Guide_.
 
 För Adobe Commerce lokala installationer konfigurerar du den nya Valkey-cacheimplementeringen med kommandona `bin/magento setup`. Se [Konfigurera Valkey](../../../configuration/cache/config-valkey.md) i _Konfigurationshandboken_.
 
@@ -305,7 +305,7 @@ stage:
 
 >[!NOTE]
 >
->Cachetypen `full_page` är inte relevant för Adobe Commerce i Cloud-infrastrukturprojekt eftersom de använder [Fast](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/cdn/fastly).
+>Cachetypen `full_page` är inte relevant för Adobe Commerce i Cloud-infrastrukturprojekt eftersom de använder [Fast](https://experienceleague.adobe.com/sv/docs/commerce-cloud-service/user-guide/cdn/fastly).
 
 Lokala installationer beskrivs i [Alternativ för inaktuell cache](../../../configuration/cache/level-two-cache.md#stale-cache-options) i _Konfigurationshandboken_.
 
@@ -490,7 +490,7 @@ Följ stegen nedan för att skapa en dedikerad instans för sessioner:
 
 1. Begär en ny Redis-instans som är dedikerad till sessioner i produktions- och mellanlagringsmiljöer.
 
-   Skicka en [Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket). Inkludera de uppdaterade konfigurationsfilerna för `.magento/services.yaml` och `.magento.app.yaml`.
+   Skicka en [Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket). Inkludera de uppdaterade konfigurationsfilerna för `.magento/services.yaml` och `.magento.app.yaml`.
 
    Uppdateringen orsakar inga driftavbrott, men en distribution krävs för att aktivera den nya tjänsten.
 
@@ -565,7 +565,7 @@ Följ stegen nedan för att skapa en dedikerad instans för sessioner:
 
 1. Begär en ny Valkey-instans som är dedikerad till sessioner i produktions- och mellanlagringsmiljöer.
 
-   Skicka en [Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket). Inkludera de uppdaterade konfigurationsfilerna för `.magento/services.yaml` och `.magento.app.yaml`.
+   Skicka en [Adobe Commerce-supportanmälan](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket). Inkludera de uppdaterade konfigurationsfilerna för `.magento/services.yaml` och `.magento.app.yaml`.
 
    Uppdateringen orsakar inga driftavbrott, men en distribution krävs för att aktivera den nya tjänsten.
 
@@ -625,7 +625,7 @@ stage:
 
 ## Aktivera asynkron frigivning
 
-Om du vill aktivera `lazyfree` på Adobe Commerce i molninfrastrukturen skickar du en [Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) med en begäran om att följande Redis- eller Valkey-konfiguration ska användas i dina miljöer:
+Om du vill aktivera `lazyfree` på Adobe Commerce i molninfrastrukturen skickar du en [Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) med en begäran om att följande Redis- eller Valkey-konfiguration ska användas i dina miljöer:
 
 ```text
 lazyfree-lazy-eviction yes
@@ -647,7 +647,7 @@ När `lazyfree` är aktiverat avlastar Redis eller Valkey minnesåtergivningen t
 
 ## Aktivera flertrådig I/O
 
-Om du vill aktivera Redis I/O-trådning på Adobe Commerce i molninfrastruktur skickar du en [Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) med en I/O-trådningskonfiguration nedan. Den här konfigurationen kan förbättra genomströmningen genom att avlasta socketläsningar och -skrivningar och kommandoparsning från huvudtråden, till priset av högre CPU-användning. Validera under inläsning och övervaka dina värdar.
+Om du vill aktivera Redis I/O-trådning på Adobe Commerce i molninfrastruktur skickar du en [Adobe Commerce Support-biljett](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=sv-SE#submit-ticket) med en I/O-trådningskonfiguration nedan. Den här konfigurationen kan förbättra genomströmningen genom att avlasta socketläsningar och -skrivningar och kommandoparsning från huvudtråden, till priset av högre CPU-användning. Validera under inläsning och övervaka dina värdar.
 
 >[!BEGINTABS]
 
