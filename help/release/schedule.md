@@ -24,7 +24,7 @@ Förutom de schemalagda kvalitets-, säkerhets- och betatestarna på den här si
 
 Adobe Commerce patch-releaser släpps baserat på följande riktlinjer:
 
-- **Isolerad säkerhetspatchningsfil** - Enskilda, icke-kumulativa [säkerhetspatchningsfiler ](versioning-policy.md#isolated-security-patch-file) frigörs separat för att möjliggöra snabbare åtgärder och införlivas i nästa fullständiga säkerhetskorrigering. Om du vill använda en isolerad säkerhetskorrigeringsfil måste kunderna finnas på den senaste säkerhetspatchversionen (den senaste -p-versionen) för den versionslinje som stöds, eftersom isolerade säkerhetskorrigeringar endast testas mot den versionen.
+- **Isolerad säkerhetspatchningsfil** - Enskilda, icke-kumulativa [säkerhetspatchningsfiler &#x200B;](versioning-policy.md#isolated-security-patch-file) frigörs separat för att möjliggöra snabbare åtgärder och införlivas i nästa fullständiga säkerhetskorrigering. Om du vill använda en isolerad säkerhetskorrigeringsfil måste kunderna finnas på den senaste säkerhetspatchversionen (den senaste -p-versionen) för den versionslinje som stöds, eftersom isolerade säkerhetskorrigeringar endast testas mot den versionen.
 
 - **Säkerhetsuppdateringar** - [Säkerhetsuppdateringar](versioning-policy.md#security-patch-release) släpps årligen för alla [supportade](lifecycle-policy.md) versionsrader. Dessa korrigeringar innehåller alla tidigare släppta säkerhets-, kompatibilitets- och kvalitetsuppdateringar.  Adobe kan vid behov släppa ytterligare säkerhetsuppdateringar, men det är inte säkert.
 

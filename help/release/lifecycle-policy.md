@@ -59,7 +59,7 @@ Observera följande under den här etableringsperioden för säkerhetskorrigerin
 
   Om du vill använda en isolerad säkerhetskorrigeringsfil måste kunderna finnas på den senaste säkerhetspatchversionen (den senaste -p-versionen) för den versionslinje som stöds, eftersom isolerade säkerhetskorrigeringar endast testas mot den versionen.
 
-- **Inga kvalitetskorrigeringar eller teknisk assistans**-Inga felkorrigeringar, kvalitetsuppdateringar ([kvalitetsuppdateringar ](../tools/quality-patches-tool/usage.md)) eller teknisk assistans ([Adobe Commerce Support](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)) kommer att ges för version 2.4.4 eller 2.4.5 under den här perioden.
+- **Inga kvalitetskorrigeringar eller teknisk assistans**-Inga felkorrigeringar, kvalitetsuppdateringar ([kvalitetsuppdateringar &#x200B;](../tools/quality-patches-tool/usage.md)) eller teknisk assistans ([Adobe Commerce Support](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)) kommer att ges för version 2.4.4 eller 2.4.5 under den här perioden.
 
 - **PCI-kompatibilitet garanteras inte:**-Eftersom PHP-versionerna 2.4.4 och 2.4.5 använder PHP som har nått slutet på livscykeln kan PCI-kompatibilitet inte garanteras för handlare i dessa versioner. Om du fortsätter att köra dessa versioner kan det innebära en risk för din PCI-kompatibilitet.
 
