@@ -2,9 +2,9 @@
 title: Versionspolicy
 description: Läs mer om de olika versionerna av Adobe Commerce.
 exl-id: 61a83de6-6a7b-4a88-8fff-1638b4fe472a
-source-git-commit: bf7049ad5b805397f823e7e4cb430e9ecca5965e
+source-git-commit: ef1f4b3199e7e1daa670e537b97175f58327aa12
 workflow-type: tm+mt
-source-wordcount: '746'
+source-wordcount: '650'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ Beta-releaser kan innehålla defekter och tillhandahålls i befintligt skick uta
 
 ## Hotfix
 
-Programfixar är korrigeringar som innehåller effektiva säkerhets- eller kvalitetskorrigeringar, t.ex. korrigeringar av noll-dagars sårbarheter, som påverkar många handlare. Adobe släpper snabbkorrigeringar (efter behov) för Adobe Commerce-versioner som stöds när viktiga säkerhets- eller kvalitetsproblem påverkar dem. Programfixar publiceras i avsnittet [Kända fel](https://support.magento.com/hc/en-us/sections/360003869892-Known-issues-patches-attached-) i kunskapsbasen. Dessa korrigeringar ingår i nästa planerade korrigeringsversion.
+Programfixar är korrigeringar som innehåller effektiva säkerhets- eller kvalitetskorrigeringar, t.ex. korrigeringar av noll-dagars sårbarheter, som påverkar många handlare. Adobe släpper snabbkorrigeringar (efter behov) för Adobe Commerce-versioner som stöds när viktiga säkerhets- eller kvalitetsproblem påverkar dem. Snabbkorrigeringar levereras via [kvalitetskorrigeringsverktyget](../tools/quality-patches-tool/usage.md). Dessa korrigeringar ingår i nästa planerade korrigeringsversion.
 
 >[!NOTE]
 >
@@ -71,20 +71,14 @@ Programfixar är korrigeringar som innehåller effektiva säkerhets- eller kvali
 
 ## Enskild patch
 
-Enskilda korrigeringsfiler innehåller korrigeringar av låg kvalitet för ett specifikt problem. Dessa korrigeringar tillämpas på de mindre versioner av Adobe Commerce som stöds. Adobe släpper enskilda korrigeringsfiler efter behov för Adobe Commerce i enlighet med [Software Lifecycle Policy](https://www.adobe.com/content/dam/cc/en/legal/terms/enterprise/pdfs/Adobe-Commerce-Software-Lifecycle-Policy.pdf).
+Enskilda korrigeringsfiler innehåller korrigeringar av låg kvalitet för ett specifikt problem. Dessa korrigeringar tillämpas på de mindre versioner av Adobe Commerce som stöds. Adobe släpper enskilda korrigeringsfiler efter behov för Adobe Commerce i enlighet med [Software Lifecycle Policy](https://www.adobe.com/content/dam/cc/en/legal/terms/enterprise/pdfs/Adobe-Commerce-Software-Lifecycle-Policy.pdf). De levereras med [kvalitetsverktyget](../tools/quality-patches-tool/usage.md).
 
 >[!NOTE]
 >
 >Enskilda korrigeringsfiler innehåller inte ändringar som är bakåtkompatibla.
 
-## Isolerade säkerhetskorrigeringar
-
-Isolerade korrigeringsfiler är icke-kumulativa säkerhetskorrigeringar som har släppts oberoende av en fullständig säkerhetskorrigering för att möjliggöra en snabbare implementering. Varje enskild säkerhetskorrigering åtgärdar ett specifikt säkerhetsproblem och ingår antingen i den senaste eller i en kommande fullständig säkerhetskorrigering. Information om problemet finns i den relaterade säkerhetsbulletinen, som länkar till en KB-artikel (Knowledge Base) med korrigeringsinformation, hur korrigeringen ska tillämpas och ytterligare information.
-
-Gå till [Säkerhetscenter](https://helpx.adobe.com/se/security/products/magento.html) för att hitta de senaste säkerhetsuppdateringarna för Adobe Commerce.
-
 ## Egen korrigering
 
-Skapas av icke-Adobe-personal för att åtgärda ett problem eller ändra Adobe Commerce-koden av olika anledningar. Anpassade korrigeringsfiler levereras via [kvalitetskorrigeringsverktyget](https://experienceleague.adobe.com/sv/docs/commerce-operations/tools/quality-patches-tool/usage).
+Skapas av icke-Adobe-personal för att åtgärda ett problem eller ändra Adobe Commerce-koden av olika anledningar.
 
 <!-- Last updated from includes: 2025-10-09 22:53:22 -->

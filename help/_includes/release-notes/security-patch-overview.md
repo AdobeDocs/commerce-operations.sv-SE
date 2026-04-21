@@ -1,7 +1,7 @@
 ---
-source-git-commit: 4a2266f2df235b98ed3b738af4b97cb4b74dc664
+source-git-commit: 52c330f62d722a4cae7f7f360ca61eca0f04b961
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '388'
 ht-degree: 0%
 
 ---
@@ -17,8 +17,17 @@ Säkerhetsuppdateringar kan även innehålla kompatibilitetsrelaterade ändringa
 
 Varje säkerhetsuppdatering baseras på den tidigare fullständiga patchversionen. Den innehåller kvalitets- och säkerhetskorrigeringar från tidigare korrigeringsversioner och säkerhetskorrigeringar som skapats mellan den tidigare fullständiga korrigeringsversionen och säkerhetsuppdateringen.
 
-Instruktioner om hur du hämtar och använder säkerhetsuppdateringar finns i [Så här hämtar och använder du säkerhetsuppdateringar](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/how-to/how-to-obtain-and-apply-security-patches) i _Adobe Commerce Knowledgebase_.
+Instruktioner om hur du hämtar och använder säkerhetsuppdateringar finns i [Så här hämtar och använder du säkerhetsuppdateringar](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/how-to-obtain-and-apply-security-patches) i _Adobe Commerce Knowledgebase_.
 
 >[!NOTE]
 >
->Utökade säkerhetsuppdateringar för 2.4.4 och 2.4.5 är bara tillgängliga för Adobe Commerce-kunder och inte för Magento Open Source kodbas. Se [Utökad support](https://experienceleague.adobe.com/sv/docs/commerce-operations/release/planning/lifecycle-policy#extended-support).
+>Utökade säkerhetsuppdateringar för support är bara tillgängliga för Adobe Commerce-kunder och är inte tillgängliga för Magento Open Source kodbas. Se [Utökad support](https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/lifecycle-policy#extended-support).
+
+## Isolerad säkerhetskorrigeringsfil
+
+Isolerade säkerhetspatchfiler är icke-kumulativa, fristående korrigeringsfiler som endast innehåller korrigeringar för en eller flera säkerhetsluckor, utan ytterligare funktionsuppdateringar eller icke-säkerhetsändringar. Dessa patchar släpps fristående för att möjliggöra snabbare åtgärder och ingår i nästa fullständiga säkerhetskorrigering. Information om säkerhetsluckorna finns i den tillhörande säkerhetsbulletinen som länkar till en KB-artikel (Knowledge Base) med anvisningar om hur du tillämpar patchen och ytterligare information.
+
+För att kunna använda en isolerad säkerhetsuppdateringsfil måste kunden ha den senaste säkerhetsuppdateringen (den senaste -p-versionen) för den versionslinje som stöds, eftersom isolerade säkerhetsuppdateringsfiler endast testas mot den versionen.
+
+Gå till [Säkerhetscenter](https://helpx.adobe.com/security/products/magento.html) för att hitta de senaste säkerhetsuppdateringarna för Adobe Commerce.
+
