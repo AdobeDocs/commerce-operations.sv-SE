@@ -17,11 +17,11 @@ Säkerhetsuppdateringar kan även innehålla kompatibilitetsrelaterade ändringa
 
 Varje säkerhetsuppdatering baseras på den tidigare fullständiga patchversionen. Den innehåller kvalitets- och säkerhetskorrigeringar från tidigare korrigeringsversioner och säkerhetskorrigeringar som skapats mellan den tidigare fullständiga korrigeringsversionen och säkerhetsuppdateringen.
 
-Instruktioner om hur du hämtar och använder säkerhetsuppdateringar finns i [Så här hämtar och använder du säkerhetsuppdateringar](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/how-to-obtain-and-apply-security-patches) i _Adobe Commerce Knowledgebase_.
+Instruktioner om hur du hämtar och använder säkerhetsuppdateringar finns i [Så här hämtar och använder du säkerhetsuppdateringar](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/how-to/how-to-obtain-and-apply-security-patches) i _Adobe Commerce Knowledgebase_.
 
 >[!NOTE]
 >
->Utökade säkerhetsuppdateringar för support är bara tillgängliga för Adobe Commerce-kunder och är inte tillgängliga för Magento Open Source kodbas. Se [Utökad support](https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/lifecycle-policy#extended-support).
+>Utökade säkerhetsuppdateringar för support är bara tillgängliga för Adobe Commerce-kunder och är inte tillgängliga för Magento Open Source kodbas. Se [Utökad support](https://experienceleague.adobe.com/sv/docs/commerce-operations/release/planning/lifecycle-policy#extended-support).
 
 ## Isolerad säkerhetskorrigeringsfil
 
@@ -29,5 +29,5 @@ Isolerade säkerhetspatchfiler är icke-kumulativa, fristående korrigeringsfile
 
 För att kunna använda en isolerad säkerhetsuppdateringsfil måste kunden ha den senaste säkerhetsuppdateringen (den senaste -p-versionen) för den versionslinje som stöds, eftersom isolerade säkerhetsuppdateringsfiler endast testas mot den versionen.
 
-Gå till [Säkerhetscenter](https://helpx.adobe.com/security/products/magento.html) för att hitta de senaste säkerhetsuppdateringarna för Adobe Commerce.
+Gå till [Säkerhetscenter](https://helpx.adobe.com/se/security/products/magento.html) för att hitta de senaste säkerhetsuppdateringarna för Adobe Commerce.
 

@@ -16,7 +16,7 @@ För att effektivisera Adobe Commerce livscykelpolicy och stödja kundernas verk
 
 Under den treåriga supportperioden har kunden tillgång till
 
-- **Kvalitetskorrigeringar**-Kunder kan få åtkomst till kvalitetskorrigeringar genom att kontakta [Adobe Commerce Support](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide) eller via självbetjäningen [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html). I följande tabell beskrivs slutdatum för programsupport för Adobe Commerce versionsrader.
+- **Kvalitetskorrigeringar**-Kunder kan få åtkomst till kvalitetskorrigeringar genom att kontakta [Adobe Commerce Support](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide) eller via självbetjäningen [[!DNL Quality Patches Tool]](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE). I följande tabell beskrivs slutdatum för programsupport för Adobe Commerce versionsrader.
 
 - **Säkerhetskorrigeringar**-Adobe tillhandahåller säkerhetskorrigeringar via kumulativa säkerhetspatchar och icke kumulativa [isolerade säkerhetspatchfiler](versioning-policy.md#isolated-security-fixes) under den treåriga supportperioden.
 
@@ -59,11 +59,11 @@ Observera följande under den här etableringsperioden för säkerhetskorrigerin
 
   Om du vill använda en isolerad säkerhetskorrigeringsfil måste kunderna finnas på den senaste säkerhetspatchversionen (den senaste -p-versionen) för den versionslinje som stöds, eftersom isolerade säkerhetskorrigeringar endast testas mot den versionen.
 
-- **Inga kvalitetskorrigeringar eller teknisk assistans**-Inga felkorrigeringar, kvalitetsuppdateringar ([kvalitetsuppdateringar &#x200B;](../tools/quality-patches-tool/usage.md)) eller teknisk assistans ([Adobe Commerce Support](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)) kommer att ges för version 2.4.4 eller 2.4.5 under den här perioden.
+- **Inga kvalitetskorrigeringar eller teknisk assistans**-Inga felkorrigeringar, kvalitetsuppdateringar ([kvalitetsuppdateringar &#x200B;](../tools/quality-patches-tool/usage.md)) eller teknisk assistans ([Adobe Commerce Support](https://experienceleague.adobe.com/sv/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide)) kommer att ges för version 2.4.4 eller 2.4.5 under den här perioden.
 
 - **PCI-kompatibilitet garanteras inte:**-Eftersom PHP-versionerna 2.4.4 och 2.4.5 använder PHP som har nått slutet på livscykeln kan PCI-kompatibilitet inte garanteras för handlare i dessa versioner. Om du fortsätter att köra dessa versioner kan det innebära en risk för din PCI-kompatibilitet.
 
-För att upprätthålla fullständig säkerhetstäckning och säkerställa PCI-kompatibilitet måste kunderna uppgradera till en version av Adobe Commerce som stöds så snart som möjligt eller migrera till [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/en/docs/commerce/cloud-service/overview).
+För att upprätthålla fullständig säkerhetstäckning och säkerställa PCI-kompatibilitet måste kunderna uppgradera till en version av Adobe Commerce som stöds så snart som möjligt eller migrera till [Adobe Commerce as a Cloud Service](https://experienceleague.adobe.com/sv/docs/commerce/cloud-service/overview).
 
 | Frigör | Allmän tillgänglighet | Slutet på utökat stöd | Slut på etablering av säkerhetskorrigeringar |
 |----------------------|----------------------|-------------------------|------------------------------------|
