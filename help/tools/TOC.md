@@ -992,7 +992,7 @@ ht-degree: 0%
    - [Fliken Varningar](observation-for-adobe-commerce/alerts-tab.md)
    - [Fliken WAF](observation-for-adobe-commerce/waf-tab.md)
    - [CDN-fliken](observation-for-adobe-commerce/cdn-tab.md)
-   - [Fliken  [!DNL RabbitMQ] ](observation-for-adobe-commerce/rabbitmq-tab.md)
+   - [Fliken  [!DNL RabbitMQ] &#x200B;](observation-for-adobe-commerce/rabbitmq-tab.md)
    - [Fliken Kron](observation-for-adobe-commerce/cron-tab.md)
    - [Fliken Indexering](observation-for-adobe-commerce/indexing-tab.md)
    - [Fliken QuickView](observation-for-adobe-commerce/oac-quickview-tab.md)
