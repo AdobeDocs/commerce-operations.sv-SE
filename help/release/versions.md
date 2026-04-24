@@ -3,9 +3,9 @@ title: Släppta versioner
 description: Lär dig när vissa versioner av Adobe Commerce släpptes.
 recommendations: noCatalog
 exl-id: 9b03900c-39ba-4757-ab7e-8bc832277192
-source-git-commit: 65a9bd667d434f1deae69798696f66998e6024a0
+source-git-commit: e0905f357c5ab84b30304eeaad00d9ae4ec0c168
 workflow-type: tm+mt
-source-wordcount: '121'
+source-wordcount: '128'
 ht-degree: 0%
 
 ---
@@ -23,9 +23,9 @@ Adobe erbjuder ett års support utan extra kostnad för Adobe Commerce-kunder me
 >[!NOTE]
 >
 >- Adobe rekommenderar att du installerar eller uppgraderar Adobe Commerce till den senaste säkerhetsuppdateringen som är tillgänglig för varje release.
->- Andra säkerhetsuppdateringar finns i [Säkerhetsuppdateringar för Magento/Adobe Commerce](https://helpx.adobe.com/se/security/products/magento.html).
->- Information om priser finns i [Adobe Commerce-priser](https://business.adobe.com/se/products/magento/pricing.html).
+>- Andra säkerhetsuppdateringar finns i [Säkerhetsuppdateringar för Magento/Adobe Commerce](https://helpx.adobe.com/security/products/magento.html).
+>- Information om priser finns i [Adobe Commerce-priser](https://business.adobe.com/products/magento/pricing.html).
 
 {{$include /help/_includes/templated/release/core-releases.md}}
 
-<!-- Last updated from includes: 2026-03-10 09:59:34 -->
+<!-- Last updated from includes: 2026-04-20 02:12:24 -->

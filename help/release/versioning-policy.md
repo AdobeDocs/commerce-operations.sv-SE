@@ -2,16 +2,16 @@
 title: Versionspolicy
 description: Läs mer om de olika versionerna av Adobe Commerce.
 exl-id: 61a83de6-6a7b-4a88-8fff-1638b4fe472a
-source-git-commit: ef1f4b3199e7e1daa670e537b97175f58327aa12
+source-git-commit: e0905f357c5ab84b30304eeaad00d9ae4ec0c168
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '680'
 ht-degree: 0%
 
 ---
 
 # Versionspolicy för Adobe Commerce
 
-Adobe Commerce använder [semantisk versionshantering](https://semver.org/) på den enskilda modulnivån (till exempel `magento/framework 101.1.1`), men inte för marknadsföringsversionsnumret. Exempel:
+Adobe Commerce använder [semantisk versionshantering](https://semver.org/) på den enskilda modulnivån (till exempel `magento/framework 101.1.1`), men inte för marknadsföringsversionsnumret. Till exempel:
 
 - **STÖRSTA VERSIONEN**—2
 - **MINOR release**—2.4
@@ -81,4 +81,4 @@ Enskilda korrigeringsfiler innehåller korrigeringar av låg kvalitet för ett s
 
 Skapas av icke-Adobe-personal för att åtgärda ett problem eller ändra Adobe Commerce-koden av olika anledningar.
 
-<!-- Last updated from includes: 2025-10-09 22:53:22 -->
+<!-- Last updated from includes: 2026-04-20 10:12:04 -->
