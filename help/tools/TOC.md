@@ -2,9 +2,9 @@
 user-guide-title: verktyg
 user-guide-description: Lär dig mer om de olika verktyg du kan använda med Adobe Commerce, deras användningsområden, installationsprocessen och hur du får tillgång till dem.
 feature: Configuration
-source-git-commit: 32d5c91f5a8e6c109be0b1579fff4c4375cd1e5e
+source-git-commit: 25cfa54248c14a5ba1941a2438e0d5c1b53a9051
 workflow-type: tm+mt
-source-wordcount: '9506'
+source-wordcount: '9606'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # verktyg {#tools}
 
-- [Översikt](overview.md)
+- [Ökning](overview.md)
 - Site-Wide Analysis Tool {#site-wide-analysis-tool}
    - [Introduktion](site-wide-analysis-tool/intro.md)
    - [Åtkomst](site-wide-analysis-tool/access.md)
@@ -47,11 +47,11 @@ ht-degree: 0%
    - [Hanterade varningar för Adobe Commerce: CPU-varningsmeddelanden](/help/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce-cpu-warning-alert.md)
 - Verktyget Kvalitetspatchar {#quality-patches-tool}
    - [[!DNL Quality Patches Tool]: Ett självbetjäningsverktyg för korrigeringar av kvalitet](/help/tools/quality-patches-tool/quality-patches-tool-to-self-serve-quality-patches.md)
-   - [[!DNL Quality Patches Tool]: Sök efter patchar](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=sv-SE){target="_blank"}
+   - [[!DNL Quality Patches Tool]: Sök efter patchar](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html){target="_blank"}
    - [Användning](quality-patches-tool/usage.md)
    - [Versionsinformation](quality-patches-tool/release-notes.md)
    - Patchar tillgängliga i verktyget för kvalitetspatchar {#patches-available-in-qpt}
-      - [Översikt](quality-patches-tool/patches-available-in-qpt/patches-available-in-qpt-tool-overview.md)
+      - [Ökning](quality-patches-tool/patches-available-in-qpt/patches-available-in-qpt-tool-overview.md)
       - v1.1.0 {#v1-1-0}
          - [Översikt: QPT (Quality Patches Tool) v1.1.0](quality-patches-tool/patches-available-in-qpt/v1-1-0/overview.md)
          - [MDVA-37592: Sortering efter pris fungerar inte för produkter med priset noll](quality-patches-tool/patches-available-in-qpt/v1-1-0/mdva-37592-sorting-by-price-does-not-work-correctly.md)
@@ -274,7 +274,7 @@ ht-degree: 0%
          - [Översikt: QPT (Quality Patches Tool) v1.1.22](quality-patches-tool/patches-available-in-qpt/v1-1-22/overview.md)
          - [ACSD-47106: Nytt anpassat attribut på företagsskapandesidan har inte sparats](quality-patches-tool/patches-available-in-qpt/v1-1-22/acsd-47106-new-custom-attribute-on-company-creation-page-not-saved.md)
          - [ACSD-47444: [!UICONTROL Trying to access array offset on value of type bool]-fel vid åtkomst till vissa kategorisökvägar som inte finns för kända produkter i PHP 7.4](quality-patches-tool/patches-available-in-qpt/v1-1-22/acsd-47444-trying-access-array-offset-value-type-bool-error.md)
-         - [ACSD-47332: Kron misslyckas och fel rapporteras endast vid körning mellan 00](quality-patches-tool/patches-available-in-qpt/v1-1-22/acsd-47332-cron-fails-with-error-reported-between-00-59.md)
+         - [ACSD-47332: Kron misslyckas och fel rapporteras bara vid körning mellan 00:00 och 0:59 UTC](quality-patches-tool/patches-available-in-qpt/v1-1-22/acsd-47332-cron-fails-with-error-reported-between-00-59.md)
       - v1.1.23 {#v1-1-23}
          - [Översikt: QPT (Quality Patches Tool) v1.1.23](quality-patches-tool/patches-available-in-qpt/v1-1-23/overview.md)
          - [ACSD-46519: product_count i [!UICONTROL categoryList] [!DNL GraphQL] frågan returnerar 0 för ankarkategorier](quality-patches-tool/patches-available-in-qpt/v1-1-23/acsd-46519-product-count-categorylist-graphql-query-returns-zero-anchor-categories.md)
@@ -322,7 +322,7 @@ ht-degree: 0%
          - [ACSD-48366: Produktbilden visas inte på E-postmallen Tillbaka till Stock](quality-patches-tool/patches-available-in-qpt/v1-1-26/acsd-48366-product-image-not-displayed-back-stock-email-template.md)
          - [ACSD-48417: SQL-fel efter att en schemaändring har skapats](quality-patches-tool/patches-available-in-qpt/v1-1-26/acsd-48417-sql-error-after-creating-a-schedule-change.md)
       - V1.1.27 {#v1-1-27}
-         - [Översikt](quality-patches-tool/patches-available-in-qpt/v1-1-27/overview.md)
+         - [Ökning](quality-patches-tool/patches-available-in-qpt/v1-1-27/overview.md)
          - [ACSD-48404: Kom ihåg kategorisidindelning = ja orsakar ett fel](quality-patches-tool/patches-available-in-qpt/v1-1-27/acsd-48404-fixes-the-issue-where-remember-category-pagination-yes-causes-an-error.md)
          - [ACSD-48634: [!DNL JS] fel när [!DNL Google Analytics Content Experiments] är aktiverat](quality-patches-tool/patches-available-in-qpt/v1-1-27/acsd-48634-js-errors-when-google-analytics-content-experiments-enabled.md)
          - [ACSD-49042: Produkt med oändlig backorder kan inte beställas från storefront](quality-patches-tool/patches-available-in-qpt/v1-1-27/acsd-49042-product-with-infinite-backorder-cant-be-ordered-from-storefront.md)
@@ -630,7 +630,7 @@ ht-degree: 0%
          - [ACSD-59036: Undantag inträffar när produktpriser läses in](quality-patches-tool/patches-available-in-qpt/v1-1-50/acsd-59036-exception-occurs-when-loading-product-prices.md)
          - [ACSD-45049: Kundens attributinställning [!UICONTROL Is required] fungerar inte enligt webbplatsomfånget i Admin](quality-patches-tool/patches-available-in-qpt/v1-1-50/acsd-45049-customer-attribute-is-required-setting-doesnt-work.md)
          - [ACSD-59378: Store-level [!DNL URL] återskriver felaktigt uppdaterade under import](quality-patches-tool/patches-available-in-qpt/v1-1-50/acsd-59378-store-level-url-rewrites-incorrectly-updated-during-import.md)
-         - [ACSD-46938: Prestandaproblem med DB-utlösare under installationen](quality-patches-tool/patches-available-in-qpt/v1-1-50/acsd-46938-fix-for-db-triggers-performance-issue-during-setup-upgrade.md)
+         - [ACSD-46938: Prestandaproblem med DB-utlösare under installationen :upgrade](quality-patches-tool/patches-available-in-qpt/v1-1-50/acsd-46938-fix-for-db-triggers-performance-issue-during-setup-upgrade.md)
          - [ACSD-54887: Kundvagnen raderas efter att kundsessionen har upphört](quality-patches-tool/patches-available-in-qpt/v1-1-50/acsd-54887-customer-shopping-cart-gets-cleared-after-session-expiry.md)
          - [ACSD-58141: PHPSESSID återskapar POST-begäranden för inloggade kunder om L2 Redis-cache är aktiverat](quality-patches-tool/patches-available-in-qpt/v1-1-50/acsd-58141-phpsessid-regenerates-on-post-requests-for-logged-in-customers.md)
          - [ACSD-59229: Felallokering av kundgruppsdata på grund av ett inaktuellt X-Magento-Vary-värde](quality-patches-tool/patches-available-in-qpt/v1-1-50/acsd-59229-customer-group-segmentation-fix.md)
@@ -694,7 +694,7 @@ ht-degree: 0%
          - [Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.55](/help//tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/overview.md)
          - [ACSD-58685: Inaktiverade e-postmeddelanden skickas när återaktivering sker](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-58685-ensures-disabled-sales-emails-are-not-sent-upon-re-enabling.md)
          - [ACSD-58828: Meddelandet &quot;adress krävs&quot; på serversidan visas för alla tomma obligatoriska fält, tillsammans med validering på klientsidan](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-58828-server-side-address-required-message-appears-for-any-empty-required-field-alongside-client-side-validation.md)
-         - [ACSD-61534: Det går inte att ange designkonfigurationen med hjälp av bin/magento config](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-61534-design-configuration-cannot-set-using-bin-magento-config-set.md)
+         - [ACSD-61534: Det går inte att ange designkonfigurationen med bin/magento config:set](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-61534-design-configuration-cannot-set-using-bin-magento-config-set.md)
          - [ACSD-61348: Önsklisteobjekt synliga via GraphQL men inte i butiken](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-61348-wishlist-items-visible-via-graphql-but-not-on-storefront.md)
          - [ACSD-61785: Attributet för belöning_varning_notification kan inte uppdateras via GraphQL-mutation och REST API-anrop](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-61785-updating-reward-warning-notification-attribute-not-possible-via-graphql.md)
          - [ACSD-58471: Dynamiskt innehåll läses inte in på produktinformationssidan när katalogprisregler är schemalagda](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-55/acsd-58471-dynamic-content-fails-load-product-detail-page.md)
@@ -910,7 +910,7 @@ ht-degree: 0%
          - [ACSD-67639: Det går inte att skapa en kreditnota för paketprodukter med dynamiskt pris inställt på Nej](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-67639.md)
          - [ACSD-67518: [!DNL Advanced Reporting] genererar duplicerade rubrikrader när radantalet överskrider batchstorleken](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-67518.md)
          - [ACSD-67941: GraphQL-begäranden med okända filternamn orsakar PHP-undantagsloggar](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-67941.md)
-         - [ACSD-68011: Icke-befintliga SKU:er som tilldelats till delad katalog via /V1/sharedCatalog/](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-68011.md)
+         - [ACSD-68011: Ej befintliga SKU:er som tilldelats den delade katalogen via /V1/sharedCatalog/:id/assignProducts API](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-68011.md)
          - [ACSD-68092: Alternativ för paketprodukter går förlorade om flera användare sparar](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-68092.md)
          - [ACSD-67187: Administratörsanvändare som är begränsade till icke-standardwebbplatser får felmeddelandet &quot;Skapa minst en offentlig delad katalog för att fortsätta&quot;](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-67187.md)
          - [ACSD-67696: Media_gallery-poster returneras inte i produktnoden för kundvagnen för GraphQL efter en cachetömning](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-72/acsd-67696.md)
@@ -970,6 +970,8 @@ ht-degree: 0%
          - [ACSD-68537: Utcheckningsprestanda försämras för många kundsegment](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68537.md)
          - [ACSD-69311: felaktig momsberäkning i kreditnotor efter partiella återbetalningar från fakturor](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-69311.md)
          - [ACSD-68341: Flera X-Magento-Vary-cookie-uppdateringar inträffar vid PDP-inläsning](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-77/acsd-68341.md)
+      - v1.1.78 {#v1-1-78}
+         - [Översikt: [!DNL Quality Patches Tool] (QPT) v1.1.78](/help/tools/quality-patches-tool/patches-available-in-qpt/v1-1-78/overview.md)
    - [Leta efter Adobe Commerce-problem med verktyget för kvalitetskorrigeringar](quality-patches-tool/patches-available-in-qpt/check-patch-for-magento-issue-with-magento-quality-patches.md)
 - Referens för kommandoradsverktyg {#cli-reference}
    - [Adobe Commerce (lokalt)](reference/commerce-on-premises.md)
@@ -990,7 +992,7 @@ ht-degree: 0%
    - [Fliken Varningar](observation-for-adobe-commerce/alerts-tab.md)
    - [Fliken WAF](observation-for-adobe-commerce/waf-tab.md)
    - [CDN-fliken](observation-for-adobe-commerce/cdn-tab.md)
-   - [Fliken  [!DNL RabbitMQ] &#x200B;](observation-for-adobe-commerce/rabbitmq-tab.md)
+   - [Fliken  [!DNL RabbitMQ] ](observation-for-adobe-commerce/rabbitmq-tab.md)
    - [Fliken Kron](observation-for-adobe-commerce/cron-tab.md)
    - [Fliken Indexering](observation-for-adobe-commerce/indexing-tab.md)
    - [Fliken QuickView](observation-for-adobe-commerce/oac-quickview-tab.md)
@@ -1010,7 +1012,7 @@ ht-degree: 0%
       - [Anpassa](data-migration-tool/customize.md)
       - [Teknisk specifikation](data-migration-tool/technical-specification.md)
    - Migrera data {#migrate-data}
-      - [Översikt](data-migration-tool/migrate-data/overview.md)
+      - [Ökning](data-migration-tool/migrate-data/overview.md)
       - [Inställningar](data-migration-tool/migrate-data/settings.md)
       - [Data](data-migration-tool/migrate-data/data.md)
       - [Ändringar](data-migration-tool/migrate-data/delta.md)
@@ -1018,6 +1020,6 @@ ht-degree: 0%
       - [Data som kräver manuell migrering](data-migration-tool/migrate-data/manual.md)
       - [Steg efter datamigrering](data-migration-tool/migrate-data/post-migration.md)
    - Resurs {#resources}
-      - [Felsökning](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html?lang=sv-SE)
-      - [Ändra](https://github.com/magento/data-migration-tool/blob/2.4/CHANGELOG.md)
-- [Återgå till åtgärdsguiderna](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html?lang=sv-SE)
+      - [Felsökning](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
+      - [Changelog](https://github.com/magento/data-migration-tool/blob/2.4/CHANGELOG.md)
+- [Återgå till bruksanvisningar](https://experienceleague.adobe.com/docs/commerce-operations/operational-guides/home.html)
